@@ -29,7 +29,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Call Event Type.
-     * 
+     * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      */
     @SerializedName(value = "callEventType", alternate = {"CallEventType"})
     @Expose
@@ -38,7 +38,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Call Id.
-     * 
+     * Unique identifier of the call.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -47,7 +47,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

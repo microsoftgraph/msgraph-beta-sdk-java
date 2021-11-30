@@ -31,7 +31,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Call Duration.
-     * 
+     * Duration of the call.
      */
     @SerializedName(value = "callDuration", alternate = {"CallDuration"})
     @Expose
@@ -40,7 +40,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Call Event Type.
-     * 
+     * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      */
     @SerializedName(value = "callEventType", alternate = {"CallEventType"})
     @Expose
@@ -49,7 +49,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Call Id.
-     * 
+     * Unique identifier of the call.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -58,7 +58,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Call Participants.
-     * 
+     * List of call participants.
      */
     @SerializedName(value = "callParticipants", alternate = {"CallParticipants"})
     @Expose
@@ -67,7 +67,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

@@ -42,7 +42,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Audience.
-     * 
+     * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      */
     @SerializedName(value = "externalAudience", alternate = {"ExternalAudience"})
     @Expose
@@ -51,7 +51,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Reply Message.
-     * 
+     * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
      */
     @SerializedName(value = "externalReplyMessage", alternate = {"ExternalReplyMessage"})
     @Expose
@@ -60,7 +60,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Internal Reply Message.
-     * 
+     * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
      */
     @SerializedName(value = "internalReplyMessage", alternate = {"InternalReplyMessage"})
     @Expose
@@ -69,7 +69,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Scheduled End Date Time.
-     * 
+     * The date and time that automatic replies are set to end, if Status is set to Scheduled.
      */
     @SerializedName(value = "scheduledEndDateTime", alternate = {"ScheduledEndDateTime"})
     @Expose
@@ -78,7 +78,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Scheduled Start Date Time.
-     * 
+     * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
      */
     @SerializedName(value = "scheduledStartDateTime", alternate = {"ScheduledStartDateTime"})
     @Expose
@@ -87,7 +87,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

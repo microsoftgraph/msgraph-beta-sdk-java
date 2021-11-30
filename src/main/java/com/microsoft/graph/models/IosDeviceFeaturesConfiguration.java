@@ -137,7 +137,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
 
     /**
      * The Wallpaper Display Location.
-     * A wallpaper display location specifier.
+     * A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
      */
     @SerializedName(value = "wallpaperDisplayLocation", alternate = {"WallpaperDisplayLocation"})
     @Expose

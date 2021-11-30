@@ -27,7 +27,7 @@ public class InviteNewBotResponse extends ParticipantJoiningResponse implements 
 
     /**
      * The Invite Uri.
-     * 
+     * URI to receive new incoming call notification.
      */
     @SerializedName(value = "inviteUri", alternate = {"InviteUri"})
     @Expose

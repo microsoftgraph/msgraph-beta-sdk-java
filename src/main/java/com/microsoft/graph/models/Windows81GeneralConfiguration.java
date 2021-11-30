@@ -131,7 +131,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Browser Internet Security Level.
-     * The internet security level.
+     * The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
      */
     @SerializedName(value = "browserInternetSecurityLevel", alternate = {"BrowserInternetSecurityLevel"})
     @Expose
@@ -140,7 +140,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Browser Intranet Security Level.
-     * The Intranet security level.
+     * The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
      */
     @SerializedName(value = "browserIntranetSecurityLevel", alternate = {"BrowserIntranetSecurityLevel"})
     @Expose
@@ -194,7 +194,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Browser Trusted Sites Security Level.
-     * The trusted sites security level.
+     * The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
      */
     @SerializedName(value = "browserTrustedSitesSecurityLevel", alternate = {"BrowserTrustedSitesSecurityLevel"})
     @Expose
@@ -221,7 +221,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Minimum Auto Install Classification.
-     * The minimum update classification to install automatically.
+     * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
      */
     @SerializedName(value = "minimumAutoInstallClassification", alternate = {"MinimumAutoInstallClassification"})
     @Expose
@@ -284,7 +284,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Password Required Type.
-     * The required password type.
+     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -311,7 +311,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Updates Minimum Auto Install Classification.
-     * The minimum update classification to install automatically.
+     * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
      */
     @SerializedName(value = "updatesMinimumAutoInstallClassification", alternate = {"UpdatesMinimumAutoInstallClassification"})
     @Expose
@@ -329,7 +329,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The User Account Control Settings.
-     * The user account control settings.
+     * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
      */
     @SerializedName(value = "userAccountControlSettings", alternate = {"UserAccountControlSettings"})
     @Expose

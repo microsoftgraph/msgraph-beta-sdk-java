@@ -40,7 +40,7 @@ public class WorkloadStatus implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the workload. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class WorkloadStatus implements IJsonBackedObject {
 
     /**
      * The Offboarded Date Time.
-     * 
+     * The date and time the workload was offboarded. Optional. Read-only.
      */
     @SerializedName(value = "offboardedDateTime", alternate = {"OffboardedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class WorkloadStatus implements IJsonBackedObject {
 
     /**
      * The Onboarded Date Time.
-     * 
+     * The date and time the workload was onboarded. Optional. Read-only.
      */
     @SerializedName(value = "onboardedDateTime", alternate = {"OnboardedDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class WorkloadStatus implements IJsonBackedObject {
 
     /**
      * The Onboarding Status.
-     * 
+     * The onboarding status for the workload. Possible values are: notOnboarded, onboarded, unknownFutureValue. Optional. Read-only.
      */
     @SerializedName(value = "onboardingStatus", alternate = {"OnboardingStatus"})
     @Expose

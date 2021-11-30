@@ -56,7 +56,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Allowed Inbound Data Transfer Sources.
-     * Sources from which data is allowed to be transferred.
+     * Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
      */
     @SerializedName(value = "allowedInboundDataTransferSources", alternate = {"AllowedInboundDataTransferSources"})
     @Expose
@@ -74,7 +74,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Allowed Outbound Clipboard Sharing Level.
-     * The level to which the clipboard may be shared between apps on the managed device.
+     * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
      */
     @SerializedName(value = "allowedOutboundClipboardSharingLevel", alternate = {"AllowedOutboundClipboardSharingLevel"})
     @Expose
@@ -83,7 +83,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Allowed Outbound Data Transfer Destinations.
-     * Destinations to which data is allowed to be transferred.
+     * Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
      */
     @SerializedName(value = "allowedOutboundDataTransferDestinations", alternate = {"AllowedOutboundDataTransferDestinations"})
     @Expose
@@ -92,7 +92,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The App Action If Device Compliance Required.
-     * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true.
+     * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfDeviceComplianceRequired", alternate = {"AppActionIfDeviceComplianceRequired"})
     @Expose
@@ -101,7 +101,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The App Action If Maximum Pin Retries Exceeded.
-     * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts.
+     * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfMaximumPinRetriesExceeded", alternate = {"AppActionIfMaximumPinRetriesExceeded"})
     @Expose
@@ -110,7 +110,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The App Action If Unable To Authenticate User.
-     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD.
+     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfUnableToAuthenticateUser", alternate = {"AppActionIfUnableToAuthenticateUser"})
     @Expose
@@ -155,7 +155,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Dialer Restriction Level.
-     * The classes of dialer apps that are allowed to click-to-open a phone number.
+     * The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
      */
     @SerializedName(value = "dialerRestrictionLevel", alternate = {"DialerRestrictionLevel"})
     @Expose
@@ -191,7 +191,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Managed Browser.
-     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
      */
     @SerializedName(value = "managedBrowser", alternate = {"ManagedBrowser"})
     @Expose
@@ -209,7 +209,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Maximum Allowed Device Threat Level.
-     * Maximum allowed device threat level, as reported by the MTD app
+     * Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
      */
     @SerializedName(value = "maximumAllowedDeviceThreatLevel", alternate = {"MaximumAllowedDeviceThreatLevel"})
     @Expose
@@ -317,7 +317,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Mobile Threat Defense Remediation Action.
-     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property
+     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "mobileThreatDefenseRemediationAction", alternate = {"MobileThreatDefenseRemediationAction"})
     @Expose
@@ -326,7 +326,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Notification Restriction.
-     * Specify app notification restriction
+     * Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
      */
     @SerializedName(value = "notificationRestriction", alternate = {"NotificationRestriction"})
     @Expose
@@ -380,7 +380,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Pin Character Set.
-     * Character set which may be used for an app-level pin if PinRequired is set to True.
+     * Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
      */
     @SerializedName(value = "pinCharacterSet", alternate = {"PinCharacterSet"})
     @Expose
@@ -425,7 +425,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Save As Blocked.
-     * Indicates whether users may use the "Save As" menu item to save a copy of protected files.
+     * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
      */
     @SerializedName(value = "saveAsBlocked", alternate = {"SaveAsBlocked"})
     @Expose

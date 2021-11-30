@@ -27,7 +27,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements IJsonBacke
 
     /**
      * The Description.
-     * 
+     * The description to set for the directory role. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements IJsonBacke
 
     /**
      * The Display Name.
-     * 
+     * The display name to set for the directory role. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

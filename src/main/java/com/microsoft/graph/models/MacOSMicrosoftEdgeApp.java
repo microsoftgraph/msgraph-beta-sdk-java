@@ -28,7 +28,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements IJsonBackedObjec
 
     /**
      * The Channel.
-     * The channel to install on target devices.
+     * The channel to install on target devices. Possible values are: dev, beta, stable.
      */
     @SerializedName(value = "channel", alternate = {"Channel"})
     @Expose

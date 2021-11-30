@@ -40,7 +40,7 @@ public class TemplateParameter implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the template parameter. Optional. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class TemplateParameter implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the template parameter. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class TemplateParameter implements IJsonBackedObject {
 
     /**
      * The Json Allowed Values.
-     * 
+     * The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
      */
     @SerializedName(value = "jsonAllowedValues", alternate = {"JsonAllowedValues"})
     @Expose
@@ -67,7 +67,7 @@ public class TemplateParameter implements IJsonBackedObject {
 
     /**
      * The Json Default Value.
-     * 
+     * The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
      */
     @SerializedName(value = "jsonDefaultValue", alternate = {"JsonDefaultValue"})
     @Expose
@@ -76,7 +76,7 @@ public class TemplateParameter implements IJsonBackedObject {
 
     /**
      * The Value Type.
-     * 
+     * The data type for the template parameter.. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
      */
     @SerializedName(value = "valueType", alternate = {"ValueType"})
     @Expose

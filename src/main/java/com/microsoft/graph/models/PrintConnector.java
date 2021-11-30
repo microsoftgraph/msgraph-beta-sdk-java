@@ -29,7 +29,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The App Version.
-     * 
+     * The connector's version.
      */
     @SerializedName(value = "appVersion", alternate = {"AppVersion"})
     @Expose
@@ -38,7 +38,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Health.
-     * 
+     * The connector's device health.
      */
     @SerializedName(value = "deviceHealth", alternate = {"DeviceHealth"})
     @Expose
@@ -47,7 +47,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the connector.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Fully Qualified Domain Name.
-     * 
+     * The connector machine's hostname.
      */
     @SerializedName(value = "fullyQualifiedDomainName", alternate = {"FullyQualifiedDomainName"})
     @Expose
@@ -65,7 +65,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * 
+     * The physical and/or organizational location of the connector.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -83,7 +83,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * 
+     * The connector machine's operating system version.
      */
     @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
@@ -92,7 +92,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Registered Date Time.
-     * 
+     * The DateTimeOffset when the connector was registered.
      */
     @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose

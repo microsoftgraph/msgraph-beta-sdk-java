@@ -45,7 +45,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Bcc Recipients.
-     * 
+     * The Bcc: recipients for the message.
      */
     @SerializedName(value = "bccRecipients", alternate = {"BccRecipients"})
     @Expose
@@ -54,7 +54,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
-     * 
+     * The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -63,7 +63,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
-     * 
+     * The first 255 characters of the message body. It is in text format.
      */
     @SerializedName(value = "bodyPreview", alternate = {"BodyPreview"})
     @Expose
@@ -72,7 +72,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Cc Recipients.
-     * 
+     * The Cc: recipients for the message.
      */
     @SerializedName(value = "ccRecipients", alternate = {"CcRecipients"})
     @Expose
@@ -81,7 +81,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Conversation Id.
-     * 
+     * The ID of the conversation the email belongs to.
      */
     @SerializedName(value = "conversationId", alternate = {"ConversationId"})
     @Expose
@@ -90,7 +90,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Conversation Index.
-     * 
+     * Indicates the position of the message within the conversation.
      */
     @SerializedName(value = "conversationIndex", alternate = {"ConversationIndex"})
     @Expose
@@ -99,7 +99,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Flag.
-     * 
+     * The flag value that indicates the status, start date, due date, or completion date for the message.
      */
     @SerializedName(value = "flag", alternate = {"Flag"})
     @Expose
@@ -108,7 +108,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
-     * 
+     * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      */
     @SerializedName(value = "from", alternate = {"From"})
     @Expose
@@ -117,7 +117,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * 
+     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -306,7 +306,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * 
+     * The fileAttachment and itemAttachment attachments for the message.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -315,7 +315,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * 
+     * The collection of open extensions defined for the message. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -324,7 +324,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Mentions.
-     * 
+     * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      */
     @SerializedName(value = "mentions", alternate = {"Mentions"})
     @Expose
@@ -333,7 +333,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * 
+     * The collection of multi-value extended properties defined for the message. Nullable.
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -342,7 +342,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * 
+     * The collection of single-value extended properties defined for the message. Nullable.
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose

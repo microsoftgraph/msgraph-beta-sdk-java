@@ -82,7 +82,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Windows udpate status.
+     * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -39,7 +39,7 @@ public class IncompleteData implements IJsonBackedObject {
 
     /**
      * The Missing Data Before Date Time.
-     * 
+     * The service does not have source data before the specified time.
      */
     @SerializedName(value = "missingDataBeforeDateTime", alternate = {"MissingDataBeforeDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class IncompleteData implements IJsonBackedObject {
 
     /**
      * The Was Throttled.
-     * 
+     * Some data was not recorded due to excessive activity.
      */
     @SerializedName(value = "wasThrottled", alternate = {"WasThrottled"})
     @Expose

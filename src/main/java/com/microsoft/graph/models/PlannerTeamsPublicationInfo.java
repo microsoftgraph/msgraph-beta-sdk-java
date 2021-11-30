@@ -39,7 +39,7 @@ public class PlannerTeamsPublicationInfo implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time when this task was last modified by the publication process. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class PlannerTeamsPublicationInfo implements IJsonBackedObject {
 
     /**
      * The Publication Id.
-     * 
+     * The identifier of the publication. Read-only.
      */
     @SerializedName(value = "publicationId", alternate = {"PublicationId"})
     @Expose
@@ -57,7 +57,7 @@ public class PlannerTeamsPublicationInfo implements IJsonBackedObject {
 
     /**
      * The Published To Plan Id.
-     * 
+     * The identifier of the plannerPlan this task was originally placed in. Read-only.
      */
     @SerializedName(value = "publishedToPlanId", alternate = {"PublishedToPlanId"})
     @Expose
@@ -66,7 +66,7 @@ public class PlannerTeamsPublicationInfo implements IJsonBackedObject {
 
     /**
      * The Publishing Team Id.
-     * 
+     * The identifier of the team that initiated the publication process. Read-only.
      */
     @SerializedName(value = "publishingTeamId", alternate = {"PublishingTeamId"})
     @Expose
@@ -75,7 +75,7 @@ public class PlannerTeamsPublicationInfo implements IJsonBackedObject {
 
     /**
      * The Publishing Team Name.
-     * 
+     * The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
      */
     @SerializedName(value = "publishingTeamName", alternate = {"PublishingTeamName"})
     @Expose

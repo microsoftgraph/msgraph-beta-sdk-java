@@ -39,7 +39,7 @@ public class SortProperty implements IJsonBackedObject {
 
     /**
      * The Is Descending.
-     * 
+     * True if the sort order is descending. Default is false, with the sort order as ascending. Optional.
      */
     @SerializedName(value = "isDescending", alternate = {"IsDescending"})
     @Expose
@@ -48,7 +48,7 @@ public class SortProperty implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the property to sort on. Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

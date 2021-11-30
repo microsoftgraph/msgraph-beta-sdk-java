@@ -28,7 +28,7 @@ public class WorkbookChartGridlines extends Entity implements IJsonBackedObject 
 
     /**
      * The Visible.
-     * 
+     * Boolean value representing if the axis gridlines are visible or not.
      */
     @SerializedName(value = "visible", alternate = {"Visible"})
     @Expose
@@ -37,7 +37,7 @@ public class WorkbookChartGridlines extends Entity implements IJsonBackedObject 
 
     /**
      * The Format.
-     * 
+     * Represents the formatting of chart gridlines. Read-only.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose

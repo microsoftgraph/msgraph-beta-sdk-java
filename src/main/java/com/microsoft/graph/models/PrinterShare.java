@@ -33,7 +33,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Allow All Users.
-     * 
+     * If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
      */
     @SerializedName(value = "allowAllUsers", alternate = {"AllowAllUsers"})
     @Expose
@@ -42,7 +42,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The DateTimeOffset when the printer share was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -51,21 +51,21 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Allowed Groups.
-     * 
+     * The groups whose users have access to print using the printer.
      */
 	@Nullable
     public GroupCollectionPage allowedGroups;
 
     /**
      * The Allowed Users.
-     * 
+     * The users who have access to print using the printer.
      */
 	@Nullable
     public UserCollectionPage allowedUsers;
 
     /**
      * The Printer.
-     * 
+     * The printer that this printer share is related to.
      */
     @SerializedName(value = "printer", alternate = {"Printer"})
     @Expose

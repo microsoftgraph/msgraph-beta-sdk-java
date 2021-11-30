@@ -28,7 +28,7 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Expiration Date Time.
-     * 
+     * The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Is Elevated.
-     * 
+     * true if the role assignment is activated. false if the role assignment is deactivated.
      */
     @SerializedName(value = "isElevated", alternate = {"IsElevated"})
     @Expose
@@ -46,7 +46,7 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Result Message.
-     * 
+     * Result message set by the service.
      */
     @SerializedName(value = "resultMessage", alternate = {"ResultMessage"})
     @Expose
@@ -55,7 +55,7 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Role Id.
-     * 
+     * Role identifier. In GUID string format.
      */
     @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
@@ -64,7 +64,7 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The User Id.
-     * 
+     * User identifier. In GUID string format.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -73,7 +73,7 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Role Info.
-     * 
+     * Read-only. Nullable. The associated role information.
      */
     @SerializedName(value = "roleInfo", alternate = {"RoleInfo"})
     @Expose

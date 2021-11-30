@@ -28,7 +28,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Indexed Item Count.
-     * 
+     * The estimated count of items for the sourceCollection that matched the content query.
      */
     @SerializedName(value = "indexedItemCount", alternate = {"IndexedItemCount"})
     @Expose
@@ -37,7 +37,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Indexed Items Size.
-     * 
+     * The estimated size of items for the sourceCollection that matched the content query.
      */
     @SerializedName(value = "indexedItemsSize", alternate = {"IndexedItemsSize"})
     @Expose
@@ -46,7 +46,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Mailbox Count.
-     * 
+     * The number of mailboxes that had search hits.
      */
     @SerializedName(value = "mailboxCount", alternate = {"MailboxCount"})
     @Expose
@@ -55,7 +55,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Site Count.
-     * 
+     * The number of mailboxes that had search hits.
      */
     @SerializedName(value = "siteCount", alternate = {"SiteCount"})
     @Expose
@@ -64,7 +64,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Unindexed Item Count.
-     * 
+     * The estimated count of unindexed items for the collection.
      */
     @SerializedName(value = "unindexedItemCount", alternate = {"UnindexedItemCount"})
     @Expose
@@ -73,7 +73,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Unindexed Items Size.
-     * 
+     * The estimated size of unindexed items for the collection.
      */
     @SerializedName(value = "unindexedItemsSize", alternate = {"UnindexedItemsSize"})
     @Expose
@@ -82,7 +82,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
 
     /**
      * The Source Collection.
-     * 
+     * eDiscovery collection, commonly known as a search.
      */
     @SerializedName(value = "sourceCollection", alternate = {"SourceCollection"})
     @Expose

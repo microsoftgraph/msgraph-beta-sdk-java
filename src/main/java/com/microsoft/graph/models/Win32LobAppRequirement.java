@@ -49,7 +49,7 @@ public class Win32LobAppRequirement implements IJsonBackedObject {
 
     /**
      * The Operator.
-     * The operator for detection
+     * The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

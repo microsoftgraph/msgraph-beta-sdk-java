@@ -38,7 +38,7 @@ public class WindowsDriverUpdateInventory extends Entity implements IJsonBackedO
 
     /**
      * The Approval Status.
-     * The approval status for this driver.
+     * The approval status for this driver. Possible values are: needsReview, declined, approved, suspended.
      */
     @SerializedName(value = "approvalStatus", alternate = {"ApprovalStatus"})
     @Expose
@@ -47,7 +47,7 @@ public class WindowsDriverUpdateInventory extends Entity implements IJsonBackedO
 
     /**
      * The Category.
-     * The category for this driver.
+     * The category for this driver. Possible values are: recommended, previouslyApproved, other.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose

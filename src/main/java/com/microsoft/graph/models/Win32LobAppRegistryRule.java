@@ -56,7 +56,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements IJsonBac
 
     /**
      * The Operation Type.
-     * The registry operation type.
+     * The registry operation type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
@@ -65,7 +65,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements IJsonBac
 
     /**
      * The Operator.
-     * The operator for registry detection.
+     * The operator for registry detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

@@ -39,7 +39,7 @@ public class Deleted implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Represents the state of the deleted item.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

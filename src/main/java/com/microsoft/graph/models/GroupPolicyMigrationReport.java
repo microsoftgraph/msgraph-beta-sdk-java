@@ -87,7 +87,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
 
     /**
      * The Migration Readiness.
-     * The Intune coverage for the associated Group Policy Object file.
+     * The Intune coverage for the associated Group Policy Object file. Possible values are: none, partial, complete, error, notApplicable.
      */
     @SerializedName(value = "migrationReadiness", alternate = {"MigrationReadiness"})
     @Expose

@@ -36,7 +36,7 @@ public class ProgramControlType extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the program control type
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

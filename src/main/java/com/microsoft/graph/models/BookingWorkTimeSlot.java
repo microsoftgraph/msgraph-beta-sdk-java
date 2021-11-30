@@ -39,7 +39,7 @@ public class BookingWorkTimeSlot implements IJsonBackedObject {
 
     /**
      * The End.
-     * 
+     * The time of the day when work stops. For example, 17:00:00.0000000.
      */
     @SerializedName(value = "end", alternate = {"End"})
     @Expose
@@ -48,7 +48,7 @@ public class BookingWorkTimeSlot implements IJsonBackedObject {
 
     /**
      * The Start.
-     * 
+     * The time of the day when work starts. For example, 08:00:00.0000000.
      */
     @SerializedName(value = "start", alternate = {"Start"})
     @Expose

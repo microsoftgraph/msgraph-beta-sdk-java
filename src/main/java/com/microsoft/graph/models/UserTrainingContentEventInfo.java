@@ -39,7 +39,7 @@ public class UserTrainingContentEventInfo implements IJsonBackedObject {
 
     /**
      * The Browser.
-     * 
+     * Browser of the user from where the training event was generated.
      */
     @SerializedName(value = "browser", alternate = {"Browser"})
     @Expose
@@ -48,7 +48,7 @@ public class UserTrainingContentEventInfo implements IJsonBackedObject {
 
     /**
      * The Content Date Time.
-     * 
+     * Date and time of the training content playback by the user.
      */
     @SerializedName(value = "contentDateTime", alternate = {"ContentDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class UserTrainingContentEventInfo implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * IP address of the user for the training event.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -66,7 +66,7 @@ public class UserTrainingContentEventInfo implements IJsonBackedObject {
 
     /**
      * The Os Platform Device Details.
-     * 
+     * The operating system, platform, and device details of the user for the training event.
      */
     @SerializedName(value = "osPlatformDeviceDetails", alternate = {"OsPlatformDeviceDetails"})
     @Expose
@@ -75,7 +75,7 @@ public class UserTrainingContentEventInfo implements IJsonBackedObject {
 
     /**
      * The Potential Score Impact.
-     * 
+     * Potential improvement in security posture of the tenant after completion of the training by the user.
      */
     @SerializedName(value = "potentialScoreImpact", alternate = {"PotentialScoreImpact"})
     @Expose

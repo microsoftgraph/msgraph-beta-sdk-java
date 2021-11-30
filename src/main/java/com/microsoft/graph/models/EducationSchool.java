@@ -35,7 +35,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Address.
-     * 
+     * Address of the school.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -44,7 +44,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Created By.
-     * 
+     * Entity who created the school.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -53,7 +53,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The External Id.
-     * 
+     * ID of school in syncing system.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -62,7 +62,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The External Principal Id.
-     * 
+     * ID of principal in syncing system.
      */
     @SerializedName(value = "externalPrincipalId", alternate = {"ExternalPrincipalId"})
     @Expose
@@ -80,7 +80,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Highest Grade.
-     * 
+     * Highest grade taught.
      */
     @SerializedName(value = "highestGrade", alternate = {"HighestGrade"})
     @Expose
@@ -89,7 +89,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Lowest Grade.
-     * 
+     * Lowest grade taught.
      */
     @SerializedName(value = "lowestGrade", alternate = {"LowestGrade"})
     @Expose
@@ -98,7 +98,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Phone.
-     * 
+     * Phone number of school.
      */
     @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose
@@ -107,7 +107,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Principal Email.
-     * 
+     * Email address of the principal.
      */
     @SerializedName(value = "principalEmail", alternate = {"PrincipalEmail"})
     @Expose
@@ -116,7 +116,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Principal Name.
-     * 
+     * Name of the principal.
      */
     @SerializedName(value = "principalName", alternate = {"PrincipalName"})
     @Expose
@@ -125,7 +125,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The School Number.
-     * 
+     * School Number.
      */
     @SerializedName(value = "schoolNumber", alternate = {"SchoolNumber"})
     @Expose
@@ -134,7 +134,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Administrative Unit.
-     * 
+     * The underlying administrativeUnit for this school.
      */
     @SerializedName(value = "administrativeUnit", alternate = {"AdministrativeUnit"})
     @Expose
@@ -143,14 +143,14 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Classes.
-     * 
+     * Classes taught at the school. Nullable.
      */
 	@Nullable
     public EducationClassCollectionPage classes;
 
     /**
      * The Users.
-     * 
+     * Users in the school. Nullable.
      */
 	@Nullable
     public EducationUserCollectionPage users;

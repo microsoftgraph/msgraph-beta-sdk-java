@@ -53,7 +53,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Conditions Not Satisfied.
-     * 
+     * Refers to the conditional access policy conditions that are not satisfied. Possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client.
      */
     @SerializedName(value = "conditionsNotSatisfied", alternate = {"ConditionsNotSatisfied"})
     @Expose
@@ -62,7 +62,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Conditions Satisfied.
-     * 
+     * Refers to the conditional access policy conditions that are satisfied. Possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client.
      */
     @SerializedName(value = "conditionsSatisfied", alternate = {"ConditionsSatisfied"})
     @Expose
@@ -71,7 +71,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -80,7 +80,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Enforced Grant Controls.
-     * 
+     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
      */
     @SerializedName(value = "enforcedGrantControls", alternate = {"EnforcedGrantControls"})
     @Expose
@@ -89,7 +89,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Enforced Session Controls.
-     * 
+     * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
      */
     @SerializedName(value = "enforcedSessionControls", alternate = {"EnforcedSessionControls"})
     @Expose
@@ -107,7 +107,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * An identifier of the conditional access policy.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -125,7 +125,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Result.
-     * 
+     * Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      */
     @SerializedName(value = "result", alternate = {"Result"})
     @Expose

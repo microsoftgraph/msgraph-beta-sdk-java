@@ -32,7 +32,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Assignment State.
-     * 
+     * Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
      */
     @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
@@ -41,7 +41,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Linked Eligible Role Assignment Id.
-     * 
+     * If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
      */
     @SerializedName(value = "linkedEligibleRoleAssignmentId", alternate = {"LinkedEligibleRoleAssignmentId"})
     @Expose
@@ -50,7 +50,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Reason.
-     * 
+     * A message provided by users and administrators when create the request about why it is needed.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
@@ -59,7 +59,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Requested Date Time.
-     * 
+     * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "requestedDateTime", alternate = {"RequestedDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Resource Id.
-     * 
+     * Required. The id of the resource which the role assignment request is associated with.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -77,7 +77,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Role Definition Id.
-     * 
+     * Required. The id of the role definition which the role assignment request is associated with.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -86,7 +86,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Schedule.
-     * 
+     * The schedule object of the role assignment request.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -95,7 +95,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Status.
-     * 
+     * The status of the role assignment request.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -104,7 +104,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Subject Id.
-     * 
+     * Required. The id of the subject which the role assignment request is associated with.
      */
     @SerializedName(value = "subjectId", alternate = {"SubjectId"})
     @Expose
@@ -113,7 +113,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Type.
-     * 
+     * Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -122,7 +122,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Resource.
-     * 
+     * Read-only. The resource that the request aims to.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
@@ -131,7 +131,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Role Definition.
-     * 
+     * Read-only. The role definition that the request aims to.
      */
     @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
@@ -140,7 +140,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Subject.
-     * 
+     * Read-only. The user/group principal.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

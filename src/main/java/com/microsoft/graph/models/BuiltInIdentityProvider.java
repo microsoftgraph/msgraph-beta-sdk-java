@@ -27,7 +27,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements IJs
 
     /**
      * The Identity Provider Type.
-     * 
+     * The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
      */
     @SerializedName(value = "identityProviderType", alternate = {"IdentityProviderType"})
     @Expose

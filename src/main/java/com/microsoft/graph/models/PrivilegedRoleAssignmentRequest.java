@@ -29,7 +29,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Assignment State.
-     * 
+     * The state of the assignment. The value can be Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
      */
     @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
@@ -38,7 +38,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Duration.
-     * 
+     * The duration of a role assignment.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -47,7 +47,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Reason.
-     * 
+     * The reason for the role assignment.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
@@ -56,7 +56,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Requested Date Time.
-     * 
+     * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "requestedDateTime", alternate = {"RequestedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Role Id.
-     * 
+     * The id of the role.
      */
     @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
@@ -74,7 +74,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Schedule.
-     * 
+     * The schedule object of the role assignment request.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -83,7 +83,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Status.
-     * 
+     * Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -92,7 +92,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Ticket Number.
-     * 
+     * The ticketNumber for the role assignment.
      */
     @SerializedName(value = "ticketNumber", alternate = {"TicketNumber"})
     @Expose
@@ -101,7 +101,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Ticket System.
-     * 
+     * The ticketSystem for the role assignment.
      */
     @SerializedName(value = "ticketSystem", alternate = {"TicketSystem"})
     @Expose
@@ -110,7 +110,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Type.
-     * 
+     * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -119,7 +119,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The User Id.
-     * 
+     * The id of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -128,7 +128,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Role Info.
-     * 
+     * The roleInfo object of the role assignment request.
      */
     @SerializedName(value = "roleInfo", alternate = {"RoleInfo"})
     @Expose

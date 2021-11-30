@@ -41,7 +41,7 @@ public class PasswordValidationInformation implements IJsonBackedObject {
 
     /**
      * The Is Valid.
-     * 
+     * Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only.
      */
     @SerializedName(value = "isValid", alternate = {"IsValid"})
     @Expose
@@ -50,7 +50,7 @@ public class PasswordValidationInformation implements IJsonBackedObject {
 
     /**
      * The Validation Results.
-     * 
+     * The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.
      */
     @SerializedName(value = "validationResults", alternate = {"ValidationResults"})
     @Expose

@@ -29,7 +29,7 @@ public class WorkbookChartAxisFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Font.
-     * 
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      */
     @SerializedName(value = "font", alternate = {"Font"})
     @Expose
@@ -38,7 +38,7 @@ public class WorkbookChartAxisFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Line.
-     * 
+     * Represents chart line formatting. Read-only.
      */
     @SerializedName(value = "line", alternate = {"Line"})
     @Expose

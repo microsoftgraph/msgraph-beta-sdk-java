@@ -29,7 +29,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
 
     /**
      * The Source.
-     * Type of resource used for deployment to a group, direct or parcel/policySet
+     * Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

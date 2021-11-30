@@ -43,7 +43,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Address.
-     * 
+     * The street address of the location.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -52,7 +52,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Coordinates.
-     * 
+     * The geographic coordinates and elevation of the location.
      */
     @SerializedName(value = "coordinates", alternate = {"Coordinates"})
     @Expose
@@ -61,7 +61,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name associated with the location.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -70,7 +70,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Location Email Address.
-     * 
+     * Optional email address of the location.
      */
     @SerializedName(value = "locationEmailAddress", alternate = {"LocationEmailAddress"})
     @Expose
@@ -79,7 +79,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Location Type.
-     * 
+     * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      */
     @SerializedName(value = "locationType", alternate = {"LocationType"})
     @Expose
@@ -88,7 +88,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Location Uri.
-     * 
+     * Optional URI representing the location.
      */
     @SerializedName(value = "locationUri", alternate = {"LocationUri"})
     @Expose
@@ -97,7 +97,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Unique Id.
-     * 
+     * For internal use only.
      */
     @SerializedName(value = "uniqueId", alternate = {"UniqueId"})
     @Expose
@@ -106,7 +106,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Unique Id Type.
-     * 
+     * For internal use only.
      */
     @SerializedName(value = "uniqueIdType", alternate = {"UniqueIdType"})
     @Expose

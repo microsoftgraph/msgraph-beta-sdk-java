@@ -29,7 +29,7 @@ public class ManagedEBookAssignment extends Entity implements IJsonBackedObject 
 
     /**
      * The Install Intent.
-     * The install intent for eBook.
+     * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
      */
     @SerializedName(value = "installIntent", alternate = {"InstallIntent"})
     @Expose

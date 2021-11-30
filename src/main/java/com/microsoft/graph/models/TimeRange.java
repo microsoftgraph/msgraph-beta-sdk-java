@@ -39,7 +39,7 @@ public class TimeRange implements IJsonBackedObject {
 
     /**
      * The End Time.
-     * 
+     * End time for the time range.
      */
     @SerializedName(value = "endTime", alternate = {"EndTime"})
     @Expose
@@ -48,7 +48,7 @@ public class TimeRange implements IJsonBackedObject {
 
     /**
      * The Start Time.
-     * 
+     * Start time for the time range.
      */
     @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose

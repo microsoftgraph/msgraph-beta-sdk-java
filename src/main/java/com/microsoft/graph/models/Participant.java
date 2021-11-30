@@ -31,7 +31,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Info.
-     * 
+     * Information about the participant.
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -40,7 +40,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Is In Lobby.
-     * 
+     * true if the participant is in lobby.
      */
     @SerializedName(value = "isInLobby", alternate = {"IsInLobby"})
     @Expose
@@ -49,7 +49,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Muted.
-     * 
+     * true if the participant is muted (client or server muted).
      */
     @SerializedName(value = "isMuted", alternate = {"IsMuted"})
     @Expose
@@ -58,7 +58,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Streams.
-     * 
+     * The list of media streams.
      */
     @SerializedName(value = "mediaStreams", alternate = {"MediaStreams"})
     @Expose
@@ -67,7 +67,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * A blob of data provided by the participant in the roster.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -76,7 +76,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Recording Info.
-     * 
+     * Information about whether the participant has recording capability.
      */
     @SerializedName(value = "recordingInfo", alternate = {"RecordingInfo"})
     @Expose

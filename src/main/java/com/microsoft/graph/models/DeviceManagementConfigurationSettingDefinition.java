@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Access Types.
-     * Read/write access mode of the setting
+     * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
      */
     @SerializedName(value = "accessTypes", alternate = {"AccessTypes"})
     @Expose
@@ -161,7 +161,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Setting Usage.
-     * Setting type, for example, configuration and compliance
+     * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
      */
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose
@@ -170,7 +170,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Ux Behavior.
-     * Setting control type representation in the UX
+     * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
      */
     @SerializedName(value = "uxBehavior", alternate = {"UxBehavior"})
     @Expose
@@ -188,7 +188,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Visibility.
-     * Setting visibility scope to UX
+     * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose

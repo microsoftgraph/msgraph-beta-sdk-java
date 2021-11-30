@@ -39,7 +39,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category1.
-     * 
+     * The label associated with Category 1
      */
     @SerializedName(value = "category1", alternate = {"Category1"})
     @Expose
@@ -48,7 +48,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category10.
-     * 
+     * The label associated with Category 10
      */
     @SerializedName(value = "category10", alternate = {"Category10"})
     @Expose
@@ -57,7 +57,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category11.
-     * 
+     * The label associated with Category 11
      */
     @SerializedName(value = "category11", alternate = {"Category11"})
     @Expose
@@ -66,7 +66,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category12.
-     * 
+     * The label associated with Category 12
      */
     @SerializedName(value = "category12", alternate = {"Category12"})
     @Expose
@@ -75,7 +75,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category13.
-     * 
+     * The label associated with Category 13
      */
     @SerializedName(value = "category13", alternate = {"Category13"})
     @Expose
@@ -84,7 +84,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category14.
-     * 
+     * The label associated with Category 14
      */
     @SerializedName(value = "category14", alternate = {"Category14"})
     @Expose
@@ -93,7 +93,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category15.
-     * 
+     * The label associated with Category 15
      */
     @SerializedName(value = "category15", alternate = {"Category15"})
     @Expose
@@ -102,7 +102,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category16.
-     * 
+     * The label associated with Category 16
      */
     @SerializedName(value = "category16", alternate = {"Category16"})
     @Expose
@@ -111,7 +111,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category17.
-     * 
+     * The label associated with Category 17
      */
     @SerializedName(value = "category17", alternate = {"Category17"})
     @Expose
@@ -120,7 +120,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category18.
-     * 
+     * The label associated with Category 18
      */
     @SerializedName(value = "category18", alternate = {"Category18"})
     @Expose
@@ -129,7 +129,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category19.
-     * 
+     * The label associated with Category 19
      */
     @SerializedName(value = "category19", alternate = {"Category19"})
     @Expose
@@ -138,7 +138,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category2.
-     * 
+     * The label associated with Category 2
      */
     @SerializedName(value = "category2", alternate = {"Category2"})
     @Expose
@@ -147,7 +147,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category20.
-     * 
+     * The label associated with Category 20
      */
     @SerializedName(value = "category20", alternate = {"Category20"})
     @Expose
@@ -156,7 +156,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category21.
-     * 
+     * The label associated with Category 21
      */
     @SerializedName(value = "category21", alternate = {"Category21"})
     @Expose
@@ -165,7 +165,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category22.
-     * 
+     * The label associated with Category 22
      */
     @SerializedName(value = "category22", alternate = {"Category22"})
     @Expose
@@ -174,7 +174,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category23.
-     * 
+     * The label associated with Category 23
      */
     @SerializedName(value = "category23", alternate = {"Category23"})
     @Expose
@@ -183,7 +183,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category24.
-     * 
+     * The label associated with Category 24
      */
     @SerializedName(value = "category24", alternate = {"Category24"})
     @Expose
@@ -192,7 +192,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category25.
-     * 
+     * The label associated with Category 25
      */
     @SerializedName(value = "category25", alternate = {"Category25"})
     @Expose
@@ -201,7 +201,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category3.
-     * 
+     * The label associated with Category 3
      */
     @SerializedName(value = "category3", alternate = {"Category3"})
     @Expose
@@ -210,7 +210,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category4.
-     * 
+     * The label associated with Category 4
      */
     @SerializedName(value = "category4", alternate = {"Category4"})
     @Expose
@@ -219,7 +219,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category5.
-     * 
+     * The label associated with Category 5
      */
     @SerializedName(value = "category5", alternate = {"Category5"})
     @Expose
@@ -228,7 +228,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category6.
-     * 
+     * The label associated with Category 6
      */
     @SerializedName(value = "category6", alternate = {"Category6"})
     @Expose
@@ -237,7 +237,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category7.
-     * 
+     * The label associated with Category 7
      */
     @SerializedName(value = "category7", alternate = {"Category7"})
     @Expose
@@ -246,7 +246,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category8.
-     * 
+     * The label associated with Category 8
      */
     @SerializedName(value = "category8", alternate = {"Category8"})
     @Expose
@@ -255,7 +255,7 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category9.
-     * 
+     * The label associated with Category 9
      */
     @SerializedName(value = "category9", alternate = {"Category9"})
     @Expose

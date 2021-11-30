@@ -27,7 +27,7 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
 
     /**
      * The User Principal Name.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

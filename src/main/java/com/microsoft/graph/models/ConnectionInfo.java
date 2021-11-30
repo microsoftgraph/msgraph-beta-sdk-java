@@ -39,7 +39,7 @@ public class ConnectionInfo implements IJsonBackedObject {
 
     /**
      * The Url.
-     * 
+     * The endpoint that is used by Entitlement Management to communicate with the access package resource.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

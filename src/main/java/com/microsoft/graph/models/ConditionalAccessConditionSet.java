@@ -49,7 +49,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * 
+     * Applications and user actions included in and excluded from the policy. Required.
      */
     @SerializedName(value = "applications", alternate = {"Applications"})
     @Expose
@@ -67,7 +67,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Client App Types.
-     * 
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
      */
     @SerializedName(value = "clientAppTypes", alternate = {"ClientAppTypes"})
     @Expose
@@ -76,7 +76,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Devices.
-     * 
+     * Devices in the policy.
      */
     @SerializedName(value = "devices", alternate = {"Devices"})
     @Expose
@@ -85,7 +85,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Device States.
-     * 
+     * Device states in the policy.
      */
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
@@ -94,7 +94,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Locations.
-     * 
+     * Locations included in and excluded from the policy.
      */
     @SerializedName(value = "locations", alternate = {"Locations"})
     @Expose
@@ -103,7 +103,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Platforms.
-     * 
+     * Platforms included in and excluded from the policy.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
@@ -112,7 +112,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Sign In Risk Levels.
-     * 
+     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      */
     @SerializedName(value = "signInRiskLevels", alternate = {"SignInRiskLevels"})
     @Expose
@@ -121,7 +121,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The User Risk Levels.
-     * 
+     * User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      */
     @SerializedName(value = "userRiskLevels", alternate = {"UserRiskLevels"})
     @Expose
@@ -130,7 +130,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Users.
-     * 
+     * Users, groups, and roles included in and excluded from the policy. Required.
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

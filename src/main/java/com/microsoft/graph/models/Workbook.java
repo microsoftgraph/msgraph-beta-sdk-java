@@ -67,7 +67,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Names.
-     * 
+     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
@@ -76,7 +76,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -85,7 +85,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Tables.
-     * 
+     * Represents a collection of tables associated with the workbook. Read-only.
      */
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
@@ -94,7 +94,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheets.
-     * 
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      */
     @SerializedName(value = "worksheets", alternate = {"Worksheets"})
     @Expose

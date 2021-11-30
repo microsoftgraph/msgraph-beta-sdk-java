@@ -39,7 +39,7 @@ public class WindowsDeviceAccount implements IJsonBackedObject {
 
     /**
      * The Password.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "password", alternate = {"Password"})
     @Expose

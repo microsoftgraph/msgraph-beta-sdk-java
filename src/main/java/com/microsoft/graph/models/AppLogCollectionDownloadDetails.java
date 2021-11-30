@@ -40,7 +40,7 @@ public class AppLogCollectionDownloadDetails implements IJsonBackedObject {
 
     /**
      * The App Log Decryption Algorithm.
-     * DecryptionAlgorithm for Content
+     * DecryptionAlgorithm for Content. Possible values are: aes256.
      */
     @SerializedName(value = "appLogDecryptionAlgorithm", alternate = {"AppLogDecryptionAlgorithm"})
     @Expose

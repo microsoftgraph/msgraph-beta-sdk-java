@@ -46,7 +46,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
 
     /**
      * The Status.
-     * Compliance status of the policy report.
+     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

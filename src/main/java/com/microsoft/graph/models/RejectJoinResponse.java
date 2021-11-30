@@ -28,7 +28,7 @@ public class RejectJoinResponse extends ParticipantJoiningResponse implements IJ
 
     /**
      * The Reason.
-     * 
+     * The rejection reason. Possible values are None, Busy, and Forbidden.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose

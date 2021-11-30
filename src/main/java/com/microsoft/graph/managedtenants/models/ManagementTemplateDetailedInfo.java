@@ -40,7 +40,7 @@ public class ManagementTemplateDetailedInfo implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -49,7 +49,7 @@ public class ManagementTemplateDetailedInfo implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the management template. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,12 +58,21 @@ public class ManagementTemplateDetailedInfo implements IJsonBackedObject {
 
     /**
      * The Management Template Id.
-     * 
+     * The unique identifier for the management template. Required. Read-only.
      */
     @SerializedName(value = "managementTemplateId", alternate = {"ManagementTemplateId"})
     @Expose
 	@Nullable
     public String managementTemplateId;
+
+    /**
+     * The Version.
+     * 
+     */
+    @SerializedName(value = "version", alternate = {"Version"})
+    @Expose
+	@Nullable
+    public Integer version;
 
 
     /**

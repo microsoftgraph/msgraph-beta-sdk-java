@@ -28,7 +28,7 @@ public class ThreatAssessmentResult extends Entity implements IJsonBackedObject 
 
     /**
      * The Created Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class ThreatAssessmentResult extends Entity implements IJsonBackedObject 
 
     /**
      * The Message.
-     * 
+     * The result message for each threat assessment.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -46,7 +46,7 @@ public class ThreatAssessmentResult extends Entity implements IJsonBackedObject 
 
     /**
      * The Result Type.
-     * 
+     * The threat assessment result type. Possible values are: checkPolicy, rescan.
      */
     @SerializedName(value = "resultType", alternate = {"ResultType"})
     @Expose

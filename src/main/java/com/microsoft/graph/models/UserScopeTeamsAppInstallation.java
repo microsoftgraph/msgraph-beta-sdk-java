@@ -28,7 +28,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
 
     /**
      * The Chat.
-     * 
+     * The chat between the user and Teams app.
      */
     @SerializedName(value = "chat", alternate = {"Chat"})
     @Expose

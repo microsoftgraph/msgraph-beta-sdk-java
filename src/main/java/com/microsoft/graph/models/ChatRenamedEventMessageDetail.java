@@ -28,7 +28,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Chat Display Name.
-     * 
+     * The updated name of the chat.
      */
     @SerializedName(value = "chatDisplayName", alternate = {"ChatDisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Chat Id.
-     * 
+     * Unique identifier of the chat.
      */
     @SerializedName(value = "chatId", alternate = {"ChatId"})
     @Expose
@@ -46,7 +46,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

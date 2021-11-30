@@ -76,7 +76,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
 
     /**
      * The Compliant App List Type.
-     * List that is in the AppComplianceList.
+     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
     @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
@@ -202,7 +202,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
 
     /**
      * The Password Required Type.
-     * Password type that is required.
+     * Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose

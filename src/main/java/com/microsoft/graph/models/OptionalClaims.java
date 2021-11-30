@@ -41,7 +41,7 @@ public class OptionalClaims implements IJsonBackedObject {
 
     /**
      * The Access Token.
-     * 
+     * The optional claims returned in the JWT access token.
      */
     @SerializedName(value = "accessToken", alternate = {"AccessToken"})
     @Expose
@@ -50,7 +50,7 @@ public class OptionalClaims implements IJsonBackedObject {
 
     /**
      * The Id Token.
-     * 
+     * The optional claims returned in the JWT ID token.
      */
     @SerializedName(value = "idToken", alternate = {"IdToken"})
     @Expose
@@ -59,7 +59,7 @@ public class OptionalClaims implements IJsonBackedObject {
 
     /**
      * The Saml2Token.
-     * 
+     * The optional claims returned in the SAML token.
      */
     @SerializedName(value = "saml2Token", alternate = {"Saml2Token"})
     @Expose

@@ -39,7 +39,7 @@ public class UserSimulationEventInfo implements IJsonBackedObject {
 
     /**
      * The Browser.
-     * 
+     * Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
      */
     @SerializedName(value = "browser", alternate = {"Browser"})
     @Expose
@@ -48,7 +48,7 @@ public class UserSimulationEventInfo implements IJsonBackedObject {
 
     /**
      * The Event Date Time.
-     * 
+     * Date and time of the simulation event by a user in an attack simulation and training campaign.
      */
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class UserSimulationEventInfo implements IJsonBackedObject {
 
     /**
      * The Event Name.
-     * 
+     * Name of the simulation event by a user in an attack simulation and training campaign.
      */
     @SerializedName(value = "eventName", alternate = {"EventName"})
     @Expose
@@ -66,7 +66,7 @@ public class UserSimulationEventInfo implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -75,7 +75,7 @@ public class UserSimulationEventInfo implements IJsonBackedObject {
 
     /**
      * The Os Platform Device Details.
-     * 
+     * The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
      */
     @SerializedName(value = "osPlatformDeviceDetails", alternate = {"OsPlatformDeviceDetails"})
     @Expose

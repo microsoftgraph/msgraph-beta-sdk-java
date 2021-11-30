@@ -27,7 +27,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements IJsonBa
 
     /**
      * The Active.
-     * 
+     * The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
      */
     @SerializedName(value = "active", alternate = {"Active"})
     @Expose
@@ -36,7 +36,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements IJsonBa
 
     /**
      * The Report Date.
-     * 
+     * The date on which a number of files were active in the group's SharePoint site.
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -45,7 +45,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements IJsonBa
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -54,7 +54,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements IJsonBa
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -63,7 +63,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements IJsonBa
 
     /**
      * The Total.
-     * 
+     * The total number of files in the group's SharePoint document library.
      */
     @SerializedName(value = "total", alternate = {"Total"})
     @Expose

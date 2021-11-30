@@ -27,7 +27,7 @@ public class EducationExcelResource extends EducationResource implements IJsonBa
 
     /**
      * The File Url.
-     * 
+     * Pointer to the Excel file object.
      */
     @SerializedName(value = "fileUrl", alternate = {"FileUrl"})
     @Expose

@@ -65,7 +65,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
 
     /**
      * The Intended Purpose.
-     * Certificate's intended purpose from the point-of-view of deployment.
+     * Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
      */
     @SerializedName(value = "intendedPurpose", alternate = {"IntendedPurpose"})
     @Expose
@@ -92,7 +92,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
 
     /**
      * The Padding Scheme.
-     * Padding scheme used by the provider during encryption/decryption.
+     * Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
      */
     @SerializedName(value = "paddingScheme", alternate = {"PaddingScheme"})
     @Expose

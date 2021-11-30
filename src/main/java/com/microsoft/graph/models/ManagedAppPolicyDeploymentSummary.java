@@ -29,7 +29,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
 
     /**
      * The Configuration Deployed User Count.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "configurationDeployedUserCount", alternate = {"ConfigurationDeployedUserCount"})
     @Expose
@@ -38,7 +38,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
 
     /**
      * The Configuration Deployment Summary Per App.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "configurationDeploymentSummaryPerApp", alternate = {"ConfigurationDeploymentSummaryPerApp"})
     @Expose
@@ -47,7 +47,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
 
     /**
      * The Display Name.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
 
     /**
      * The Last Refresh Time.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "lastRefreshTime", alternate = {"LastRefreshTime"})
     @Expose

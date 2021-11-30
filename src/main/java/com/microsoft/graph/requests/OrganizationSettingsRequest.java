@@ -8,7 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OrganizationSettings;
-import com.microsoft.graph.requests.ItemInsightsSettingsRequestBuilder;
+import com.microsoft.graph.requests.InsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder;
 import java.util.Arrays;

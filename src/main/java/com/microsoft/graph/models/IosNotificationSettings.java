@@ -41,7 +41,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
 
     /**
      * The Alert Type.
-     * Indicates the type of alert for notifications for this app.
+     * Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
      */
     @SerializedName(value = "alertType", alternate = {"AlertType"})
     @Expose
@@ -86,7 +86,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
 
     /**
      * The Preview Visibility.
-     * Overrides the notification preview policy set by the user on an iOS device.
+     * Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
      */
     @SerializedName(value = "previewVisibility", alternate = {"PreviewVisibility"})
     @Expose

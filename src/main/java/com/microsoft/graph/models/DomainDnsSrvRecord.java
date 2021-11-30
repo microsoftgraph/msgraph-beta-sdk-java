@@ -27,7 +27,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Name Target.
-     * 
+     * Value to use when configuring the Target property of the SRV record at the DNS host.
      */
     @SerializedName(value = "nameTarget", alternate = {"NameTarget"})
     @Expose
@@ -36,7 +36,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Port.
-     * 
+     * Value to use when configuring the port property of the SRV record at the DNS host.
      */
     @SerializedName(value = "port", alternate = {"Port"})
     @Expose
@@ -45,7 +45,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Priority.
-     * 
+     * Value to use when configuring the priority property of the SRV record at the DNS host.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -54,7 +54,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Protocol.
-     * 
+     * Value to use when configuring the protocol property of the SRV record at the DNS host.
      */
     @SerializedName(value = "protocol", alternate = {"Protocol"})
     @Expose
@@ -63,7 +63,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Service.
-     * 
+     * Value to use when configuring the service property of the SRV record at the DNS host.
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose
@@ -72,7 +72,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Weight.
-     * 
+     * Value to use when configuring the weight property of the SRV record at the DNS host.
      */
     @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose

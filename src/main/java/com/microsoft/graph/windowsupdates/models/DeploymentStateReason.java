@@ -40,7 +40,7 @@ public class DeploymentStateReason implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: faultedByContentOutdated. Read-only.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

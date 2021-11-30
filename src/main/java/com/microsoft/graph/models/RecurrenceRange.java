@@ -40,7 +40,7 @@ public class RecurrenceRange implements IJsonBackedObject {
 
     /**
      * The End Date.
-     * 
+     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
      */
     @SerializedName(value = "endDate", alternate = {"EndDate"})
     @Expose
@@ -49,7 +49,7 @@ public class RecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Number Of Occurrences.
-     * 
+     * The number of times to repeat the event. Required and must be positive if type is numbered.
      */
     @SerializedName(value = "numberOfOccurrences", alternate = {"NumberOfOccurrences"})
     @Expose
@@ -58,7 +58,7 @@ public class RecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Recurrence Time Zone.
-     * 
+     * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
      */
     @SerializedName(value = "recurrenceTimeZone", alternate = {"RecurrenceTimeZone"})
     @Expose
@@ -67,7 +67,7 @@ public class RecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Start Date.
-     * 
+     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
      */
     @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose
@@ -76,7 +76,7 @@ public class RecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

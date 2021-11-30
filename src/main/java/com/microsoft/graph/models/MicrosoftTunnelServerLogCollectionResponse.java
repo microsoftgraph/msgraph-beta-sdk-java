@@ -73,7 +73,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
 
     /**
      * The Start Date Time.
-     * The start time of the logs collected 
+     * The start time of the logs collected
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -82,7 +82,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
 
     /**
      * The Status.
-     * The status of log collection
+     * The status of log collection. Possible values are: pending, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

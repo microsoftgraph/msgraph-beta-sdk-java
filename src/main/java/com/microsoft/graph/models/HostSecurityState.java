@@ -39,7 +39,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Fqdn.
-     * 
+     * Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
      */
     @SerializedName(value = "fqdn", alternate = {"Fqdn"})
     @Expose
@@ -66,7 +66,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Is Hybrid Azure Domain Joined.
-     * 
+     * True if the host is domain joined to an on-premises Active Directory domain.
      */
     @SerializedName(value = "isHybridAzureDomainJoined", alternate = {"IsHybridAzureDomainJoined"})
     @Expose
@@ -75,7 +75,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Net Bios Name.
-     * 
+     * The local host name, without the DNS domain name.
      */
     @SerializedName(value = "netBiosName", alternate = {"NetBiosName"})
     @Expose
@@ -84,7 +84,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Os.
-     * 
+     * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      */
     @SerializedName(value = "os", alternate = {"Os"})
     @Expose
@@ -93,7 +93,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Private Ip Address.
-     * 
+     * Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
      */
     @SerializedName(value = "privateIpAddress", alternate = {"PrivateIpAddress"})
     @Expose
@@ -102,7 +102,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Public Ip Address.
-     * 
+     * Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
      */
     @SerializedName(value = "publicIpAddress", alternate = {"PublicIpAddress"})
     @Expose
@@ -111,7 +111,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * 
+     * Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
      */
     @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose

@@ -141,7 +141,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Compliant App List Type.
-     * Type of list that is in the CompliantAppsList.
+     * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
     @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
@@ -321,7 +321,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Password Required Type.
-     * Type of password that is required.
+     * Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -348,7 +348,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Required Password Complexity.
-     * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
      */
     @SerializedName(value = "requiredPasswordComplexity", alternate = {"RequiredPasswordComplexity"})
     @Expose
@@ -465,7 +465,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Web Browser Cookie Settings.
-     * Cookie settings within the web browser.
+     * Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
      */
     @SerializedName(value = "webBrowserCookieSettings", alternate = {"WebBrowserCookieSettings"})
     @Expose

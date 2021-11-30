@@ -27,7 +27,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
 
     /**
      * The Is Single Line Question.
-     * 
+     * Indicates whether the answer will be in single or multiple line format.
      */
     @SerializedName(value = "isSingleLineQuestion", alternate = {"IsSingleLineQuestion"})
     @Expose

@@ -28,7 +28,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
 
     /**
      * The Key Storage Provider.
-     * 
+     * Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
      */
     @SerializedName(value = "keyStorageProvider", alternate = {"KeyStorageProvider"})
     @Expose

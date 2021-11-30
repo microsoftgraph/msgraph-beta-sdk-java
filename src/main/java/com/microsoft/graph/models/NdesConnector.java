@@ -46,7 +46,7 @@ public class NdesConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Ndes Connector Status
+     * Ndes Connector Status. Possible values are: none, active, inactive.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

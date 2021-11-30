@@ -30,7 +30,7 @@ public class RoomList extends Place implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * 
+     * The email address of the room list.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
@@ -39,7 +39,7 @@ public class RoomList extends Place implements IJsonBackedObject {
 
     /**
      * The Rooms.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "rooms", alternate = {"Rooms"})
     @Expose

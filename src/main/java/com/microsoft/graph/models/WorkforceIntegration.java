@@ -30,7 +30,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Api Version.
-     * 
+     * API version for the call back URL. Start with 1.
      */
     @SerializedName(value = "apiVersion", alternate = {"ApiVersion"})
     @Expose
@@ -39,7 +39,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Display Name.
-     * 
+     * Name of the workforce integration.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Encryption.
-     * 
+     * The workforce integration encryption resource.
      */
     @SerializedName(value = "encryption", alternate = {"Encryption"})
     @Expose
@@ -66,7 +66,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Is Active.
-     * 
+     * Indicates whether this workforce integration is currently active and available.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -75,7 +75,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Supported Entities.
-     * 
+     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
      */
     @SerializedName(value = "supportedEntities", alternate = {"SupportedEntities"})
     @Expose
@@ -84,7 +84,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Supports.
-     * 
+     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      */
     @SerializedName(value = "supports", alternate = {"Supports"})
     @Expose
@@ -93,7 +93,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
     /**
      * The Url.
-     * 
+     * Workforce Integration URL for callbacks from the Shifts service.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

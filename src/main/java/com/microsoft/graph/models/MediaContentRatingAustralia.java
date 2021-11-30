@@ -41,7 +41,7 @@ public class MediaContentRatingAustralia implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for Australia
+     * Movies rating selected for Australia. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18.
      */
     @SerializedName(value = "movieRating", alternate = {"MovieRating"})
     @Expose
@@ -50,7 +50,7 @@ public class MediaContentRatingAustralia implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for Australia
+     * TV rating selected for Australia. Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence.
      */
     @SerializedName(value = "tvRating", alternate = {"TvRating"})
     @Expose

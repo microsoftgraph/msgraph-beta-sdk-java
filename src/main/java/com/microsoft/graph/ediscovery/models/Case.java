@@ -45,7 +45,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Closed By.
-     * 
+     * The user who closed the case.
      */
     @SerializedName(value = "closedBy", alternate = {"ClosedBy"})
     @Expose
@@ -54,7 +54,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Closed Date Time.
-     * 
+     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -72,7 +72,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The case description.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -81,7 +81,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The case name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -90,7 +90,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * The external case number for customer reference.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -99,7 +99,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * The last user who modified the entity.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -108,7 +108,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -117,7 +117,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -126,7 +126,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Custodians.
-     * 
+     * Returns a list of case custodian objects for this case.  Nullable.
      */
     @SerializedName(value = "custodians", alternate = {"Custodians"})
     @Expose
@@ -135,7 +135,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Legal Holds.
-     * 
+     * Returns a list of case legalHold objects for this case.  Nullable.
      */
     @SerializedName(value = "legalHolds", alternate = {"LegalHolds"})
     @Expose
@@ -144,7 +144,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Noncustodial Data Sources.
-     * 
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      */
     @SerializedName(value = "noncustodialDataSources", alternate = {"NoncustodialDataSources"})
     @Expose
@@ -153,7 +153,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * Returns a list of case operation objects for this case. Nullable.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -162,7 +162,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Review Sets.
-     * 
+     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
      */
     @SerializedName(value = "reviewSets", alternate = {"ReviewSets"})
     @Expose
@@ -180,7 +180,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Source Collections.
-     * 
+     * Returns a list of sourceCollection objects associated with this case.
      */
     @SerializedName(value = "sourceCollections", alternate = {"SourceCollections"})
     @Expose
@@ -189,7 +189,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Returns a list of tag objects associated to this case.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose

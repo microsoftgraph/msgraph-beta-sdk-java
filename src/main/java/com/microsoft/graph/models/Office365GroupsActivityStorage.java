@@ -27,7 +27,7 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
 
     /**
      * The Mailbox Storage Used In Bytes.
-     * 
+     * The storage used in group mailbox.
      */
     @SerializedName(value = "mailboxStorageUsedInBytes", alternate = {"MailboxStorageUsedInBytes"})
     @Expose
@@ -36,7 +36,7 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
 
     /**
      * The Report Date.
-     * 
+     * The snapshot date for Exchange and SharePoint used storage.
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -45,7 +45,7 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -54,7 +54,7 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -63,7 +63,7 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
 
     /**
      * The Site Storage Used In Bytes.
-     * 
+     * The storage used in SharePoint document library.
      */
     @SerializedName(value = "siteStorageUsedInBytes", alternate = {"SiteStorageUsedInBytes"})
     @Expose

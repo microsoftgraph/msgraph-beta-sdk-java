@@ -30,7 +30,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
     /**
      * The Advanced Threat Protection Required Security Level.
-     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      */
     @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -48,7 +48,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
     /**
      * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      */
     @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -129,7 +129,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
     /**
      * The Password Required Type.
-     * Type of characters in password
+     * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -183,7 +183,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
     /**
      * The Security Required Android Safety Net Evaluation Type.
-     * Require a specific SafetyNet evaluation type for compliance.
+     * Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
      */
     @SerializedName(value = "securityRequiredAndroidSafetyNetEvaluationType", alternate = {"SecurityRequiredAndroidSafetyNetEvaluationType"})
     @Expose
