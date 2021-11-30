@@ -7,7 +7,7 @@ package com.microsoft.graph.managedtenants.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateCollection;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;

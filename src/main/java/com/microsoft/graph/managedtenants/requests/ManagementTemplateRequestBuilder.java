@@ -8,8 +8,8 @@ package com.microsoft.graph.managedtenants.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionWithReferenceRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder;
 import java.util.Arrays;
@@ -61,24 +61,24 @@ public class ManagementTemplateRequestBuilder extends BaseRequestBuilder<Managem
 
 
     /**
-     *  Gets a request builder for the ManagementTemplateCollection collection
+     *  Gets a request builder for the ManagementTemplateCollectionObject collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateCollectionCollectionWithReferencesRequestBuilder managementTemplateCollections() {
-        return new ManagementTemplateCollectionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
+    public ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder managementTemplateCollections() {
+        return new ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the ManagementTemplateCollection item
+     * Gets a request builder for the ManagementTemplateCollectionObject item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateCollectionWithReferenceRequestBuilder managementTemplateCollections(@Nonnull final String id) {
-        return new ManagementTemplateCollectionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
+    public ManagementTemplateCollectionObjectWithReferenceRequestBuilder managementTemplateCollections(@Nonnull final String id) {
+        return new ManagementTemplateCollectionObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateStep collection
