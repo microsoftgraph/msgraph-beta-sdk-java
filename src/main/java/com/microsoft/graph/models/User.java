@@ -170,7 +170,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Business Phones.
-     * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq and not).
+     * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose

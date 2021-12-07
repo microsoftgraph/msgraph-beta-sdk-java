@@ -29,7 +29,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
     /**
      * The Certified Client Applications Only.
-     * 
+     * Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
      */
     @SerializedName(value = "certifiedClientApplicationsOnly", alternate = {"CertifiedClientApplicationsOnly"})
     @Expose

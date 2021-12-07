@@ -27,7 +27,7 @@ public class InsightsSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Disabled For Group.
-     * 
+     * The ID of an Azure AD group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
      */
     @SerializedName(value = "disabledForGroup", alternate = {"DisabledForGroup"})
     @Expose
@@ -36,7 +36,7 @@ public class InsightsSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled In Organization.
-     * 
+     * true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
      */
     @SerializedName(value = "isEnabledInOrganization", alternate = {"IsEnabledInOrganization"})
     @Expose

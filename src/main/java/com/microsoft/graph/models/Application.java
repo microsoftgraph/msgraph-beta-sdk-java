@@ -101,7 +101,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Description.
-     * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
