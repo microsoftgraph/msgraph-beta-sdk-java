@@ -8,10 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExternalGroupMember;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.ExternalGroupMemberCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -48,17 +45,6 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 	@Nullable
     public String displayName;
 
-    /**
-     * The Members.
-     * 
-     * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
-     */
-    @Deprecated
-    @SerializedName(value = "members", alternate = {"Members"})
-    @Expose
-	@Nullable
-    public ExternalGroupMemberCollectionPage members;
-
 
     /**
      * Sets the raw JSON object
@@ -68,9 +54,5 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), ExternalGroupMemberCollectionPage.class);
-        }
     }
 }

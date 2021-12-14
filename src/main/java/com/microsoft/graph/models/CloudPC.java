@@ -10,9 +10,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CloudPcLoginResult;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
+import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcServicePlanType;
 import com.microsoft.graph.models.CloudPcStatus;
 import com.microsoft.graph.models.CloudPcStatusDetails;
+import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -32,7 +34,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Aad Device Id.
-     * 
+     * The Azure Active Directory (Azure AD) device ID of the Cloud PC.
      */
     @SerializedName(value = "aadDeviceId", alternate = {"AadDeviceId"})
     @Expose
@@ -41,7 +43,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The Cloud PC display name.
+     * The display name of the Cloud PC.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -50,7 +52,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Grace Period End Date Time.
-     * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "gracePeriodEndDateTime", alternate = {"GracePeriodEndDateTime"})
     @Expose
@@ -68,7 +70,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Login Result.
-     * 
+     * The last login result of the Cloud PC. For example, { 'time': '2014-01-01T00:00:00Z'}.
      */
     @SerializedName(value = "lastLoginResult", alternate = {"LastLoginResult"})
     @Expose
@@ -77,7 +79,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The Cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -86,7 +88,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Remote Action Result.
-     * 
+     * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Rename, Reboot, Reprovision, and Troubleshoot.
      */
     @SerializedName(value = "lastRemoteActionResult", alternate = {"LastRemoteActionResult"})
     @Expose
@@ -95,7 +97,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Id.
-     * The Cloud PC’s Intune device ID.
+     * The Intune device ID of the Cloud PC.
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -104,7 +106,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Name.
-     * The Cloud PC’s Intune device name.
+     * The Intune device name of the Cloud PC.
      */
     @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
@@ -113,7 +115,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Connection Name.
-     * The on-premises connection that is applied during provisioning of Cloud PCs.
+     * The on-premises connection that is applied during the provisioning of Cloud PCs.
      */
     @SerializedName(value = "onPremisesConnectionName", alternate = {"OnPremisesConnectionName"})
     @Expose
@@ -121,8 +123,17 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     public String onPremisesConnectionName;
 
     /**
+     * The Os Version.
+     * 
+     */
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
+    @Expose
+	@Nullable
+    public CloudPcOperatingSystem osVersion;
+
+    /**
      * The Provisioning Policy Id.
-     * The Cloud PC's provisioning policy ID.
+     * The provisioning policy ID of the Cloud PC.
      */
     @SerializedName(value = "provisioningPolicyId", alternate = {"ProvisioningPolicyId"})
     @Expose
@@ -131,7 +142,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Provisioning Policy Name.
-     * The provisioning policy that is applied during provisioning of Cloud PCs.
+     * The provisioning policy that is applied during the provisioning of Cloud PCs.
      */
     @SerializedName(value = "provisioningPolicyName", alternate = {"ProvisioningPolicyName"})
     @Expose
@@ -140,7 +151,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plan Id.
-     * The Cloud PC's service plan ID.
+     * The service plan ID of the Cloud PC.
      */
     @SerializedName(value = "servicePlanId", alternate = {"ServicePlanId"})
     @Expose
@@ -149,7 +160,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plan Name.
-     * The Cloud PC's service plan name.
+     * The service plan name of the Cloud PC.
      */
     @SerializedName(value = "servicePlanName", alternate = {"ServicePlanName"})
     @Expose
@@ -158,7 +169,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plan Type.
-     * 
+     * The service plan type of the Cloud PC.
      */
     @SerializedName(value = "servicePlanType", alternate = {"ServicePlanType"})
     @Expose
@@ -167,7 +178,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
+     * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -182,6 +193,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudPcStatusDetails statusDetails;
+
+    /**
+     * The User Account Type.
+     * 
+     */
+    @SerializedName(value = "userAccountType", alternate = {"UserAccountType"})
+    @Expose
+	@Nullable
+    public CloudPcUserAccountType userAccountType;
 
     /**
      * The User Principal Name.

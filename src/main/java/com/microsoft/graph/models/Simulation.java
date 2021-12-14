@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.SimulationAttackTechnique;
 import com.microsoft.graph.models.SimulationAttackType;
 import com.microsoft.graph.models.EmailIdentity;
-import com.microsoft.graph.models.SimulationMode;
 import com.microsoft.graph.models.PayloadDeliveryPlatform;
 import com.microsoft.graph.models.PayloadSource;
 import com.microsoft.graph.models.SimulationReport;
@@ -160,15 +159,6 @@ public class Simulation extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime launchDateTime;
-
-    /**
-     * The Mode.
-     * 
-     */
-    @SerializedName(value = "mode", alternate = {"Mode"})
-    @Expose
-	@Nullable
-    public SimulationMode mode;
 
     /**
      * The Payload Delivery Platform.

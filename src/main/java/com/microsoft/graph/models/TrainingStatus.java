@@ -32,10 +32,6 @@ public enum TrainingStatus
     */
     OVERDUE,
     /**
-    * not Completed
-    */
-    NOT_COMPLETED,
-    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

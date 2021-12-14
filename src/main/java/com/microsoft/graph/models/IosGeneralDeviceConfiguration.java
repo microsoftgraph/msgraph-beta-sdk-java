@@ -772,6 +772,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean iCloudBlockSharedPhotoStream;
 
     /**
+     * The ICloud Private Relay Blocked.
+     * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running iOS 15 and later.
+     */
+    @SerializedName(value = "iCloudPrivateRelayBlocked", alternate = {"ICloudPrivateRelayBlocked"})
+    @Expose
+	@Nullable
+    public Boolean iCloudPrivateRelayBlocked;
+
+    /**
      * The ICloud Require Encrypted Backup.
      * Indicates whether or not to require backups to iCloud be encrypted.
      */

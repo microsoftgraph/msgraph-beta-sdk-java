@@ -16,9 +16,6 @@ import com.microsoft.graph.models.CredentialUsageSummary;
 import com.microsoft.graph.models.CredentialUserRegistrationCount;
 import com.microsoft.graph.models.RelyingPartyDetailedSummary;
 import com.microsoft.graph.models.Report;
-import com.microsoft.graph.models.Office365ActivationCounts;
-import com.microsoft.graph.models.Office365ActivationsUserCounts;
-import com.microsoft.graph.models.Office365ActivationsUserDetail;
 import com.microsoft.graph.models.Office365ActiveUserCounts;
 import com.microsoft.graph.models.Office365ActiveUserDetail;
 import com.microsoft.graph.models.Office365GroupsActivityCounts;
@@ -27,42 +24,6 @@ import com.microsoft.graph.models.Office365GroupsActivityFileCounts;
 import com.microsoft.graph.models.Office365GroupsActivityGroupCounts;
 import com.microsoft.graph.models.Office365GroupsActivityStorage;
 import com.microsoft.graph.models.Office365ServicesUserCounts;
-import com.microsoft.graph.models.SiteActivitySummary;
-import com.microsoft.graph.models.OneDriveActivityUserDetail;
-import com.microsoft.graph.models.OneDriveUsageAccountCounts;
-import com.microsoft.graph.models.OneDriveUsageAccountDetail;
-import com.microsoft.graph.models.OneDriveUsageFileCounts;
-import com.microsoft.graph.models.SiteUsageStorage;
-import com.microsoft.graph.models.SharePointActivityPages;
-import com.microsoft.graph.models.SharePointActivityUserCounts;
-import com.microsoft.graph.models.SharePointActivityUserDetail;
-import com.microsoft.graph.models.SharePointSiteUsageDetail;
-import com.microsoft.graph.models.SharePointSiteUsageFileCounts;
-import com.microsoft.graph.models.SharePointSiteUsagePages;
-import com.microsoft.graph.models.SharePointSiteUsageSiteCounts;
-import com.microsoft.graph.models.SkypeForBusinessActivityCounts;
-import com.microsoft.graph.models.SkypeForBusinessActivityUserCounts;
-import com.microsoft.graph.models.SkypeForBusinessActivityUserDetail;
-import com.microsoft.graph.models.SkypeForBusinessDeviceUsageDistributionUserCounts;
-import com.microsoft.graph.models.SkypeForBusinessDeviceUsageUserCounts;
-import com.microsoft.graph.models.SkypeForBusinessDeviceUsageUserDetail;
-import com.microsoft.graph.models.SkypeForBusinessOrganizerActivityCounts;
-import com.microsoft.graph.models.SkypeForBusinessOrganizerActivityMinuteCounts;
-import com.microsoft.graph.models.SkypeForBusinessOrganizerActivityUserCounts;
-import com.microsoft.graph.models.SkypeForBusinessParticipantActivityCounts;
-import com.microsoft.graph.models.SkypeForBusinessParticipantActivityMinuteCounts;
-import com.microsoft.graph.models.SkypeForBusinessParticipantActivityUserCounts;
-import com.microsoft.graph.models.SkypeForBusinessPeerToPeerActivityCounts;
-import com.microsoft.graph.models.SkypeForBusinessPeerToPeerActivityMinuteCounts;
-import com.microsoft.graph.models.SkypeForBusinessPeerToPeerActivityUserCounts;
-import com.microsoft.graph.models.YammerActivitySummary;
-import com.microsoft.graph.models.YammerActivityUserDetail;
-import com.microsoft.graph.models.YammerDeviceUsageDistributionUserCounts;
-import com.microsoft.graph.models.YammerDeviceUsageUserCounts;
-import com.microsoft.graph.models.YammerDeviceUsageUserDetail;
-import com.microsoft.graph.models.YammerGroupsActivityCounts;
-import com.microsoft.graph.models.YammerGroupsActivityDetail;
-import com.microsoft.graph.models.YammerGroupsActivityGroupCounts;
 import com.microsoft.graph.models.ArchivedPrintJob;
 import com.microsoft.graph.models.AttackSimulationRepeatOffender;
 import com.microsoft.graph.models.AttackSimulationSimulationUserCoverage;
@@ -744,29 +705,29 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      */
     @Nonnull
-    public ReportRootGetOffice365ActivationCountsCollectionRequestBuilder getOffice365ActivationCounts() {
-        return new ReportRootGetOffice365ActivationCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationCounts"), getClient(), null);
+    public ReportRootGetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
+        return new ReportRootGetOffice365ActivationCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationCounts"), getClient(), null);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      */
     @Nonnull
-    public ReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder getOffice365ActivationsUserCounts() {
-        return new ReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserCounts"), getClient(), null);
+    public ReportRootGetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
+        return new ReportRootGetOffice365ActivationsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserCounts"), getClient(), null);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      */
     @Nonnull
-    public ReportRootGetOffice365ActivationsUserDetailCollectionRequestBuilder getOffice365ActivationsUserDetail() {
-        return new ReportRootGetOffice365ActivationsUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserDetail"), getClient(), null);
+    public ReportRootGetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
+        return new ReportRootGetOffice365ActivationsUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserDetail"), getClient(), null);
     }
 
     /**
@@ -851,312 +812,312 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveActivityFileCountsCollectionRequestBuilder getOneDriveActivityFileCounts(@Nonnull final ReportRootGetOneDriveActivityFileCountsParameterSet parameters) {
-        return new ReportRootGetOneDriveActivityFileCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityFileCounts"), getClient(), null, parameters);
+    public ReportRootGetOneDriveActivityFileCountsRequestBuilder getOneDriveActivityFileCounts(@Nonnull final ReportRootGetOneDriveActivityFileCountsParameterSet parameters) {
+        return new ReportRootGetOneDriveActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityFileCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveActivityUserCountsCollectionRequestBuilder getOneDriveActivityUserCounts(@Nonnull final ReportRootGetOneDriveActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetOneDriveActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetOneDriveActivityUserCountsRequestBuilder getOneDriveActivityUserCounts(@Nonnull final ReportRootGetOneDriveActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetOneDriveActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder getOneDriveActivityUserDetail(@Nonnull final ReportRootGetOneDriveActivityUserDetailParameterSet parameters) {
-        return new ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserDetail"), getClient(), null, parameters);
+    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(@Nonnull final ReportRootGetOneDriveActivityUserDetailParameterSet parameters) {
+        return new ReportRootGetOneDriveActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveUsageAccountCountsCollectionRequestBuilder getOneDriveUsageAccountCounts(@Nonnull final ReportRootGetOneDriveUsageAccountCountsParameterSet parameters) {
-        return new ReportRootGetOneDriveUsageAccountCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountCounts"), getClient(), null, parameters);
+    public ReportRootGetOneDriveUsageAccountCountsRequestBuilder getOneDriveUsageAccountCounts(@Nonnull final ReportRootGetOneDriveUsageAccountCountsParameterSet parameters) {
+        return new ReportRootGetOneDriveUsageAccountCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder getOneDriveUsageAccountDetail(@Nonnull final ReportRootGetOneDriveUsageAccountDetailParameterSet parameters) {
-        return new ReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountDetail"), getClient(), null, parameters);
+    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(@Nonnull final ReportRootGetOneDriveUsageAccountDetailParameterSet parameters) {
+        return new ReportRootGetOneDriveUsageAccountDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveUsageFileCountsCollectionRequestBuilder getOneDriveUsageFileCounts(@Nonnull final ReportRootGetOneDriveUsageFileCountsParameterSet parameters) {
-        return new ReportRootGetOneDriveUsageFileCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageFileCounts"), getClient(), null, parameters);
+    public ReportRootGetOneDriveUsageFileCountsRequestBuilder getOneDriveUsageFileCounts(@Nonnull final ReportRootGetOneDriveUsageFileCountsParameterSet parameters) {
+        return new ReportRootGetOneDriveUsageFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageFileCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetOneDriveUsageStorageCollectionRequestBuilder getOneDriveUsageStorage(@Nonnull final ReportRootGetOneDriveUsageStorageParameterSet parameters) {
-        return new ReportRootGetOneDriveUsageStorageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageStorage"), getClient(), null, parameters);
+    public ReportRootGetOneDriveUsageStorageRequestBuilder getOneDriveUsageStorage(@Nonnull final ReportRootGetOneDriveUsageStorageParameterSet parameters) {
+        return new ReportRootGetOneDriveUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageStorage"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointActivityFileCountsCollectionRequestBuilder getSharePointActivityFileCounts(@Nonnull final ReportRootGetSharePointActivityFileCountsParameterSet parameters) {
-        return new ReportRootGetSharePointActivityFileCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityFileCounts"), getClient(), null, parameters);
+    public ReportRootGetSharePointActivityFileCountsRequestBuilder getSharePointActivityFileCounts(@Nonnull final ReportRootGetSharePointActivityFileCountsParameterSet parameters) {
+        return new ReportRootGetSharePointActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityFileCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointActivityPagesCollectionRequestBuilder getSharePointActivityPages(@Nonnull final ReportRootGetSharePointActivityPagesParameterSet parameters) {
-        return new ReportRootGetSharePointActivityPagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityPages"), getClient(), null, parameters);
+    public ReportRootGetSharePointActivityPagesRequestBuilder getSharePointActivityPages(@Nonnull final ReportRootGetSharePointActivityPagesParameterSet parameters) {
+        return new ReportRootGetSharePointActivityPagesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityPages"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointActivityUserCountsCollectionRequestBuilder getSharePointActivityUserCounts(@Nonnull final ReportRootGetSharePointActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetSharePointActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSharePointActivityUserCountsRequestBuilder getSharePointActivityUserCounts(@Nonnull final ReportRootGetSharePointActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetSharePointActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointActivityUserDetailCollectionRequestBuilder getSharePointActivityUserDetail(@Nonnull final ReportRootGetSharePointActivityUserDetailParameterSet parameters) {
-        return new ReportRootGetSharePointActivityUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserDetail"), getClient(), null, parameters);
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(@Nonnull final ReportRootGetSharePointActivityUserDetailParameterSet parameters) {
+        return new ReportRootGetSharePointActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder getSharePointSiteUsageDetail(@Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSet parameters) {
-        return new ReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageDetail"), getClient(), null, parameters);
+    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(@Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSet parameters) {
+        return new ReportRootGetSharePointSiteUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointSiteUsageFileCountsCollectionRequestBuilder getSharePointSiteUsageFileCounts(@Nonnull final ReportRootGetSharePointSiteUsageFileCountsParameterSet parameters) {
-        return new ReportRootGetSharePointSiteUsageFileCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageFileCounts"), getClient(), null, parameters);
+    public ReportRootGetSharePointSiteUsageFileCountsRequestBuilder getSharePointSiteUsageFileCounts(@Nonnull final ReportRootGetSharePointSiteUsageFileCountsParameterSet parameters) {
+        return new ReportRootGetSharePointSiteUsageFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageFileCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointSiteUsagePagesCollectionRequestBuilder getSharePointSiteUsagePages(@Nonnull final ReportRootGetSharePointSiteUsagePagesParameterSet parameters) {
-        return new ReportRootGetSharePointSiteUsagePagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsagePages"), getClient(), null, parameters);
+    public ReportRootGetSharePointSiteUsagePagesRequestBuilder getSharePointSiteUsagePages(@Nonnull final ReportRootGetSharePointSiteUsagePagesParameterSet parameters) {
+        return new ReportRootGetSharePointSiteUsagePagesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsagePages"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointSiteUsageSiteCountsCollectionRequestBuilder getSharePointSiteUsageSiteCounts(@Nonnull final ReportRootGetSharePointSiteUsageSiteCountsParameterSet parameters) {
-        return new ReportRootGetSharePointSiteUsageSiteCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageSiteCounts"), getClient(), null, parameters);
+    public ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder getSharePointSiteUsageSiteCounts(@Nonnull final ReportRootGetSharePointSiteUsageSiteCountsParameterSet parameters) {
+        return new ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageSiteCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSharePointSiteUsageStorageCollectionRequestBuilder getSharePointSiteUsageStorage(@Nonnull final ReportRootGetSharePointSiteUsageStorageParameterSet parameters) {
-        return new ReportRootGetSharePointSiteUsageStorageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageStorage"), getClient(), null, parameters);
+    public ReportRootGetSharePointSiteUsageStorageRequestBuilder getSharePointSiteUsageStorage(@Nonnull final ReportRootGetSharePointSiteUsageStorageParameterSet parameters) {
+        return new ReportRootGetSharePointSiteUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageStorage"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessActivityCountsCollectionRequestBuilder getSkypeForBusinessActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessActivityCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessActivityCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessActivityCountsRequestBuilder getSkypeForBusinessActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessActivityCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessActivityUserCountsCollectionRequestBuilder getSkypeForBusinessActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder getSkypeForBusinessActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessActivityUserDetailCollectionRequestBuilder getSkypeForBusinessActivityUserDetail(@Nonnull final ReportRootGetSkypeForBusinessActivityUserDetailParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessActivityUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserDetail"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(@Nonnull final ReportRootGetSkypeForBusinessActivityUserDetailParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageDistributionUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageDistributionUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionRequestBuilder getSkypeForBusinessOrganizerActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessOrganizerActivityCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder getSkypeForBusinessOrganizerActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessOrganizerActivityCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsCollectionRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(@Nonnull final ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityMinuteCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(@Nonnull final ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityMinuteCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsCollectionRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessOrganizerActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessOrganizerActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessOrganizerActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessParticipantActivityCountsCollectionRequestBuilder getSkypeForBusinessParticipantActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessParticipantActivityCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder getSkypeForBusinessParticipantActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityMinuteCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityMinuteCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityMinuteCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityMinuteCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsCollectionRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
@@ -1281,92 +1242,92 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerActivityCountsCollectionRequestBuilder getYammerActivityCounts(@Nonnull final ReportRootGetYammerActivityCountsParameterSet parameters) {
-        return new ReportRootGetYammerActivityCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityCounts"), getClient(), null, parameters);
+    public ReportRootGetYammerActivityCountsRequestBuilder getYammerActivityCounts(@Nonnull final ReportRootGetYammerActivityCountsParameterSet parameters) {
+        return new ReportRootGetYammerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerActivityUserCountsCollectionRequestBuilder getYammerActivityUserCounts(@Nonnull final ReportRootGetYammerActivityUserCountsParameterSet parameters) {
-        return new ReportRootGetYammerActivityUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserCounts"), getClient(), null, parameters);
+    public ReportRootGetYammerActivityUserCountsRequestBuilder getYammerActivityUserCounts(@Nonnull final ReportRootGetYammerActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetYammerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerActivityUserDetailCollectionRequestBuilder getYammerActivityUserDetail(@Nonnull final ReportRootGetYammerActivityUserDetailParameterSet parameters) {
-        return new ReportRootGetYammerActivityUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserDetail"), getClient(), null, parameters);
+    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(@Nonnull final ReportRootGetYammerActivityUserDetailParameterSet parameters) {
+        return new ReportRootGetYammerActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerDeviceUsageDistributionUserCountsCollectionRequestBuilder getYammerDeviceUsageDistributionUserCounts(@Nonnull final ReportRootGetYammerDeviceUsageDistributionUserCountsParameterSet parameters) {
-        return new ReportRootGetYammerDeviceUsageDistributionUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageDistributionUserCounts"), getClient(), null, parameters);
+    public ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder getYammerDeviceUsageDistributionUserCounts(@Nonnull final ReportRootGetYammerDeviceUsageDistributionUserCountsParameterSet parameters) {
+        return new ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageDistributionUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerDeviceUsageUserCountsCollectionRequestBuilder getYammerDeviceUsageUserCounts(@Nonnull final ReportRootGetYammerDeviceUsageUserCountsParameterSet parameters) {
-        return new ReportRootGetYammerDeviceUsageUserCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserCounts"), getClient(), null, parameters);
+    public ReportRootGetYammerDeviceUsageUserCountsRequestBuilder getYammerDeviceUsageUserCounts(@Nonnull final ReportRootGetYammerDeviceUsageUserCountsParameterSet parameters) {
+        return new ReportRootGetYammerDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerDeviceUsageUserDetailCollectionRequestBuilder getYammerDeviceUsageUserDetail(@Nonnull final ReportRootGetYammerDeviceUsageUserDetailParameterSet parameters) {
-        return new ReportRootGetYammerDeviceUsageUserDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserDetail"), getClient(), null, parameters);
+    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(@Nonnull final ReportRootGetYammerDeviceUsageUserDetailParameterSet parameters) {
+        return new ReportRootGetYammerDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerGroupsActivityCountsCollectionRequestBuilder getYammerGroupsActivityCounts(@Nonnull final ReportRootGetYammerGroupsActivityCountsParameterSet parameters) {
-        return new ReportRootGetYammerGroupsActivityCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityCounts"), getClient(), null, parameters);
+    public ReportRootGetYammerGroupsActivityCountsRequestBuilder getYammerGroupsActivityCounts(@Nonnull final ReportRootGetYammerGroupsActivityCountsParameterSet parameters) {
+        return new ReportRootGetYammerGroupsActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityCounts"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder getYammerGroupsActivityDetail(@Nonnull final ReportRootGetYammerGroupsActivityDetailParameterSet parameters) {
-        return new ReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityDetail"), getClient(), null, parameters);
+    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(@Nonnull final ReportRootGetYammerGroupsActivityDetailParameterSet parameters) {
+        return new ReportRootGetYammerGroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityDetail"), getClient(), null, parameters);
     }
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ReportRootGetYammerGroupsActivityGroupCountsCollectionRequestBuilder getYammerGroupsActivityGroupCounts(@Nonnull final ReportRootGetYammerGroupsActivityGroupCountsParameterSet parameters) {
-        return new ReportRootGetYammerGroupsActivityGroupCountsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityGroupCounts"), getClient(), null, parameters);
+    public ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(@Nonnull final ReportRootGetYammerGroupsActivityGroupCountsParameterSet parameters) {
+        return new ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityGroupCounts"), getClient(), null, parameters);
     }
 
     /**

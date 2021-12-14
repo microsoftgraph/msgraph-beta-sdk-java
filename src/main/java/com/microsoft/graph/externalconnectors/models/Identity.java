@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.externalconnectors.models.IdentityType;
+import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,30 +23,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Identity.
  */
-public class Identity implements IJsonBackedObject {
+public class Identity extends Entity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
-
-    /**
-     * The Id.
-     * The unique ID of the identity. It would be the objectId property in case of Azure Active Directory (Azure AD) users or groups and the id property of the externalGroup in the case of external groups.
-     */
-    @SerializedName(value = "id", alternate = {"Id"})
-    @Expose
-	@Nullable
-    public String id;
 
     /**
      * The Type.

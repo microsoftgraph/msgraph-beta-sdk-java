@@ -32,7 +32,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Automatic Sample Submission.
-     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable automatic file sample submission for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "advancedThreatProtectionAutomaticSampleSubmission", alternate = {"AdvancedThreatProtectionAutomaticSampleSubmission"})
     @Expose
@@ -41,7 +41,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Cloud Delivered.
-     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "advancedThreatProtectionCloudDelivered", alternate = {"AdvancedThreatProtectionCloudDelivered"})
     @Expose
@@ -50,7 +50,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Diagnostic Data Collection.
-     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "advancedThreatProtectionDiagnosticDataCollection", alternate = {"AdvancedThreatProtectionDiagnosticDataCollection"})
     @Expose
@@ -59,7 +59,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Excluded Extensions.
-     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionExcludedExtensions", alternate = {"AdvancedThreatProtectionExcludedExtensions"})
     @Expose
@@ -68,7 +68,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Excluded Files.
-     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionExcludedFiles", alternate = {"AdvancedThreatProtectionExcludedFiles"})
     @Expose
@@ -77,7 +77,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Excluded Folders.
-     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionExcludedFolders", alternate = {"AdvancedThreatProtectionExcludedFolders"})
     @Expose
@@ -86,7 +86,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Excluded Processes.
-     * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     * A list of process names to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionExcludedProcesses", alternate = {"AdvancedThreatProtectionExcludedProcesses"})
     @Expose
@@ -95,7 +95,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Real Time.
-     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable real-time protection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "advancedThreatProtectionRealTime", alternate = {"AdvancedThreatProtectionRealTime"})
     @Expose

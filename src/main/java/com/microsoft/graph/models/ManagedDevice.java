@@ -859,7 +859,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Windows Protection State.
-     * The device protection status.
+     * The device protection status. This property is read-only.
      */
     @SerializedName(value = "windowsProtectionState", alternate = {"WindowsProtectionState"})
     @Expose

@@ -224,7 +224,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     @SerializedName(value = "contentCachingMaxSizeBytes", alternate = {"ContentCachingMaxSizeBytes"})
     @Expose
 	@Nullable
-    public Integer contentCachingMaxSizeBytes;
+    public Long contentCachingMaxSizeBytes;
 
     /**
      * The Content Caching Parents.

@@ -73,7 +73,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * 
+     * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
      */
     @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose

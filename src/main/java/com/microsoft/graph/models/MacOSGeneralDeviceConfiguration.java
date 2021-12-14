@@ -257,6 +257,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Boolean iCloudBlockReminders;
 
     /**
+     * The ICloud Private Relay Blocked.
+     * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
+     */
+    @SerializedName(value = "iCloudPrivateRelayBlocked", alternate = {"ICloudPrivateRelayBlocked"})
+    @Expose
+	@Nullable
+    public Boolean iCloudPrivateRelayBlocked;
+
+    /**
      * The ITunes Block File Sharing.
      * Indicates whether or not to block files from being transferred using iTunes.
      */
@@ -516,6 +525,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @Expose
 	@Nullable
     public Boolean spotlightBlockInternetResults;
+
+    /**
+     * The Touch Id Timeout In Hours.
+     * Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "touchIdTimeoutInHours", alternate = {"TouchIdTimeoutInHours"})
+    @Expose
+	@Nullable
+    public Integer touchIdTimeoutInHours;
 
     /**
      * The Update Delay Policy.

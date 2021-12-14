@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.UserExperienceAnalyticsMetric;
 import com.microsoft.graph.models.Entity;
 
 
@@ -52,15 +51,6 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements IJso
     @Expose
 	@Nullable
     public String metricType;
-
-    /**
-     * The User Experience Analytics Metric.
-     * User experience analytics metric.
-     */
-    @SerializedName(value = "userExperienceAnalyticsMetric", alternate = {"UserExperienceAnalyticsMetric"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsMetric userExperienceAnalyticsMetric;
 
 
     /**

@@ -87,7 +87,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Microsoft Managed Desktop.
-     * 
+     * The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
      */
     @SerializedName(value = "microsoftManagedDesktop", alternate = {"MicrosoftManagedDesktop"})
     @Expose

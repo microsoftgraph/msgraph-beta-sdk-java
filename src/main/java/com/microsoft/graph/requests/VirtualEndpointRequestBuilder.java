@@ -18,6 +18,7 @@ import com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcOrganizationSettingsRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
 import com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder;
@@ -173,6 +174,16 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public CloudPcOnPremisesConnectionRequestBuilder onPremisesConnections(@Nonnull final String id) {
         return new CloudPcOnPremisesConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for CloudPcOrganizationSettings
+     *
+     * @return the CloudPcOrganizationSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public CloudPcOrganizationSettingsRequestBuilder organizationSettings() {
+        return new CloudPcOrganizationSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("organizationSettings"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcProvisioningPolicy collection

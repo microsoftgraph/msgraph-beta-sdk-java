@@ -36,6 +36,15 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Boolean allowPartnerToCollectIOSApplicationMetadata;
 
     /**
+     * The Allow Partner To Collect IOSPersonal Application Metadata.
+     * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+     */
+    @SerializedName(value = "allowPartnerToCollectIOSPersonalApplicationMetadata", alternate = {"AllowPartnerToCollectIOSPersonalApplicationMetadata"})
+    @Expose
+	@Nullable
+    public Boolean allowPartnerToCollectIOSPersonalApplicationMetadata;
+
+    /**
      * The Android Device Blocked On Missing Partner Data.
      * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      */

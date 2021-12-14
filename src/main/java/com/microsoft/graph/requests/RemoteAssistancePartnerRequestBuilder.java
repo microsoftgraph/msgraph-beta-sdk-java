@@ -58,20 +58,20 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<Re
 
 
     /**
-     * A request to start onboarding.  Must be coupled with the appropriate TeamViewer account information
-     * @return the request builder
-     */
-    @Nonnull
-    public RemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
-        return new RemoteAssistancePartnerBeginOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beginOnboarding"), getClient(), null);
-    }
-
-    /**
      * A request to remove the active TeamViewer connector
      * @return the request builder
      */
     @Nonnull
     public RemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
         return new RemoteAssistancePartnerDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);
+    }
+
+    /**
+     * A request to start onboarding.  Must be coupled with the appropriate TeamViewer account information
+     * @return the request builder
+     */
+    @Nonnull
+    public RemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
+        return new RemoteAssistancePartnerBeginOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beginOnboarding"), getClient(), null);
     }
 }

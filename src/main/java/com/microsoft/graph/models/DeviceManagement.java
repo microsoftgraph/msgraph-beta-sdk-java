@@ -40,6 +40,8 @@ import com.microsoft.graph.models.RestrictedAppsViolation;
 import com.microsoft.graph.models.DeviceConfiguration;
 import com.microsoft.graph.models.ManagedAllDeviceCertificateState;
 import com.microsoft.graph.models.DeviceConfigurationUserStateSummary;
+import com.microsoft.graph.models.HardwareConfiguration;
+import com.microsoft.graph.models.HardwarePasswordInfo;
 import com.microsoft.graph.models.IosUpdateDeviceStatus;
 import com.microsoft.graph.models.MacOSSoftwareUpdateAccountSummary;
 import com.microsoft.graph.models.ManagedDeviceEncryptionState;
@@ -176,6 +178,8 @@ import com.microsoft.graph.requests.DeviceConfigurationConflictSummaryCollection
 import com.microsoft.graph.requests.RestrictedAppsViolationCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationCollectionPage;
 import com.microsoft.graph.requests.ManagedAllDeviceCertificateStateCollectionPage;
+import com.microsoft.graph.requests.HardwareConfigurationCollectionPage;
+import com.microsoft.graph.requests.HardwarePasswordInfoCollectionPage;
 import com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionPage;
 import com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage;
@@ -641,6 +645,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceConfigurationUserStateSummary deviceConfigurationUserStateSummaries;
+
+    /**
+     * The Hardware Configurations.
+     * The hardware configurations for this account.
+     */
+    @SerializedName(value = "hardwareConfigurations", alternate = {"HardwareConfigurations"})
+    @Expose
+	@Nullable
+    public HardwareConfigurationCollectionPage hardwareConfigurations;
+
+    /**
+     * The Hardware Password Info.
+     * The hardware password info for this account.
+     */
+    @SerializedName(value = "hardwarePasswordInfo", alternate = {"HardwarePasswordInfo"})
+    @Expose
+	@Nullable
+    public HardwarePasswordInfoCollectionPage hardwarePasswordInfo;
 
     /**
      * The Ios Update Statuses.
@@ -1853,6 +1875,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("deviceConfigurationsAllManagedDeviceCertificateStates")) {
             deviceConfigurationsAllManagedDeviceCertificateStates = serializer.deserializeObject(json.get("deviceConfigurationsAllManagedDeviceCertificateStates"), ManagedAllDeviceCertificateStateCollectionPage.class);
+        }
+
+        if (json.has("hardwareConfigurations")) {
+            hardwareConfigurations = serializer.deserializeObject(json.get("hardwareConfigurations"), HardwareConfigurationCollectionPage.class);
+        }
+
+        if (json.has("hardwarePasswordInfo")) {
+            hardwarePasswordInfo = serializer.deserializeObject(json.get("hardwarePasswordInfo"), HardwarePasswordInfoCollectionPage.class);
         }
 
         if (json.has("iosUpdateStatuses")) {

@@ -12,8 +12,6 @@ import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCol
 import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportScheduleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -153,26 +151,6 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementExportJobRequestBuilder exportJobs(@Nonnull final String id) {
         return new DeviceManagementExportJobRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the DeviceManagementReportSchedule collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public DeviceManagementReportScheduleCollectionRequestBuilder reportSchedules() {
-        return new DeviceManagementReportScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reportSchedules"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the DeviceManagementReportSchedule item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public DeviceManagementReportScheduleRequestBuilder reportSchedules(@Nonnull final String id) {
-        return new DeviceManagementReportScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("reportSchedules") + "/" + id, getClient(), null);
     }
 
     /**

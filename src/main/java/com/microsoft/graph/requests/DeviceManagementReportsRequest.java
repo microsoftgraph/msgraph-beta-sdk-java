@@ -12,8 +12,6 @@ import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCol
 import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportScheduleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -40,7 +40,7 @@ public class MicrosoftManagedDesktop implements IJsonBackedObject {
 
     /**
      * The Profile.
-     * 
+     * The name of the Microsoft Managed Desktop profile that the Windows 365 Cloud PC is associated with.
      */
     @SerializedName(value = "profile", alternate = {"Profile"})
     @Expose
@@ -49,7 +49,7 @@ public class MicrosoftManagedDesktop implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

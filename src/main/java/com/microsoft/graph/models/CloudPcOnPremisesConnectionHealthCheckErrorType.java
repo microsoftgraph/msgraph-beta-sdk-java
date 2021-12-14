@@ -16,6 +16,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     DNS_CHECK_FQDN_NOT_FOUND,
     /**
+    * dns Check Name With Invalid Character
+    */
+    DNS_CHECK_NAME_WITH_INVALID_CHARACTER,
+    /**
     * dns Check Unknown Error
     */
     DNS_CHECK_UNKNOWN_ERROR,
@@ -91,6 +95,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * azure Ad Device Sync Check Duration Exceeded
     */
     AZURE_AD_DEVICE_SYNC_CHECK_DURATION_EXCEEDED,
+    /**
+    * azure Ad Device Sync Check Scp Not Configured
+    */
+    AZURE_AD_DEVICE_SYNC_CHECK_SCP_NOT_CONFIGURED,
     /**
     * azure Ad Device Sync Check Transient Service Error
     */

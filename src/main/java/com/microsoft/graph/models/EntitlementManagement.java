@@ -143,7 +143,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Packages.
-     * 
+     * Access packages.
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
@@ -152,7 +152,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Connected Organizations.
-     * 
+     * Connected organizations.
      */
     @SerializedName(value = "connectedOrganizations", alternate = {"ConnectedOrganizations"})
     @Expose
@@ -161,7 +161,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * Entitlement management settings.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose

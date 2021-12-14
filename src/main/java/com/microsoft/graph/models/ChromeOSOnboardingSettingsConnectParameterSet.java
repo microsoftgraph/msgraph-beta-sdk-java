@@ -30,13 +30,13 @@ public class ChromeOSOnboardingSettingsConnectParameterSet {
     public String ownerUserPrincipalName;
 
     /**
-     * The service Account Credentials.
+     * The owner Access Token.
      * 
      */
-    @SerializedName(value = "serviceAccountCredentials", alternate = {"ServiceAccountCredentials"})
+    @SerializedName(value = "ownerAccessToken", alternate = {"OwnerAccessToken"})
     @Expose
 	@Nullable
-    public String serviceAccountCredentials;
+    public String ownerAccessToken;
 
 
     /**
@@ -49,7 +49,7 @@ public class ChromeOSOnboardingSettingsConnectParameterSet {
      */
     protected ChromeOSOnboardingSettingsConnectParameterSet(@Nonnull final ChromeOSOnboardingSettingsConnectParameterSetBuilder builder) {
         this.ownerUserPrincipalName = builder.ownerUserPrincipalName;
-        this.serviceAccountCredentials = builder.serviceAccountCredentials;
+        this.ownerAccessToken = builder.ownerAccessToken;
     }
     /**
      * Gets a new builder for the body
@@ -79,18 +79,18 @@ public class ChromeOSOnboardingSettingsConnectParameterSet {
             return this;
         }
         /**
-         * The serviceAccountCredentials parameter value
+         * The ownerAccessToken parameter value
          */
         @Nullable
-        protected String serviceAccountCredentials;
+        protected String ownerAccessToken;
         /**
-         * Sets the ServiceAccountCredentials
+         * Sets the OwnerAccessToken
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public ChromeOSOnboardingSettingsConnectParameterSetBuilder withServiceAccountCredentials(@Nullable final String val) {
-            this.serviceAccountCredentials = val;
+        public ChromeOSOnboardingSettingsConnectParameterSetBuilder withOwnerAccessToken(@Nullable final String val) {
+            this.ownerAccessToken = val;
             return this;
         }
         /**
@@ -117,8 +117,8 @@ public class ChromeOSOnboardingSettingsConnectParameterSet {
         if(this.ownerUserPrincipalName != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("ownerUserPrincipalName", ownerUserPrincipalName));
         }
-        if(this.serviceAccountCredentials != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("serviceAccountCredentials", serviceAccountCredentials));
+        if(this.ownerAccessToken != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("ownerAccessToken", ownerAccessToken));
         }
         return result;
     }

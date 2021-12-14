@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewSet;
+import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder;

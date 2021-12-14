@@ -29,6 +29,15 @@ public class DeviceManagementIntentCreateCopyParameterSet {
 	@Nullable
     public String displayName;
 
+    /**
+     * The description.
+     * 
+     */
+    @SerializedName(value = "description", alternate = {"Description"})
+    @Expose
+	@Nullable
+    public String description;
+
 
     /**
      * Instiaciates a new DeviceManagementIntentCreateCopyParameterSet
@@ -40,6 +49,7 @@ public class DeviceManagementIntentCreateCopyParameterSet {
      */
     protected DeviceManagementIntentCreateCopyParameterSet(@Nonnull final DeviceManagementIntentCreateCopyParameterSetBuilder builder) {
         this.displayName = builder.displayName;
+        this.description = builder.description;
     }
     /**
      * Gets a new builder for the body
@@ -69,6 +79,21 @@ public class DeviceManagementIntentCreateCopyParameterSet {
             return this;
         }
         /**
+         * The description parameter value
+         */
+        @Nullable
+        protected String description;
+        /**
+         * Sets the Description
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DeviceManagementIntentCreateCopyParameterSetBuilder withDescription(@Nullable final String val) {
+            this.description = val;
+            return this;
+        }
+        /**
          * Instanciates a new DeviceManagementIntentCreateCopyParameterSetBuilder
          */
         @Nullable
@@ -91,6 +116,9 @@ public class DeviceManagementIntentCreateCopyParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.displayName != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("displayName", displayName));
+        }
+        if(this.description != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("description", description));
         }
         return result;
     }

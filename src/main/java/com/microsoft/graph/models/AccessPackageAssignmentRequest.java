@@ -105,7 +105,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request Type.
-     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -114,7 +114,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Schedule.
-     * The range of dates that access is to be assigned to the requestor. Read-only.
+     * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose

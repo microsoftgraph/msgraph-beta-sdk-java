@@ -286,6 +286,15 @@ public class HardwareInformation implements IJsonBackedObject {
     public String subscriberCarrier;
 
     /**
+     * The System Management BIOSVersion.
+     * BIOS version as reported by SMBIOS
+     */
+    @SerializedName(value = "systemManagementBIOSVersion", alternate = {"SystemManagementBIOSVersion"})
+    @Expose
+	@Nullable
+    public String systemManagementBIOSVersion;
+
+    /**
      * The Total Storage Space.
      * Total storage space of the device.
      */
@@ -295,6 +304,15 @@ public class HardwareInformation implements IJsonBackedObject {
     public Long totalStorageSpace;
 
     /**
+     * The Tpm Manufacturer.
+     * The identifying information that uniquely names the TPM manufacturer
+     */
+    @SerializedName(value = "tpmManufacturer", alternate = {"TpmManufacturer"})
+    @Expose
+	@Nullable
+    public String tpmManufacturer;
+
+    /**
      * The Tpm Specification Version.
      * String that specifies the specification version.
      */
@@ -302,6 +320,15 @@ public class HardwareInformation implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String tpmSpecificationVersion;
+
+    /**
+     * The Tpm Version.
+     * The version of the TPM, as specified by the manufacturer
+     */
+    @SerializedName(value = "tpmVersion", alternate = {"TpmVersion"})
+    @Expose
+	@Nullable
+    public String tpmVersion;
 
     /**
      * The Wifi Mac.
