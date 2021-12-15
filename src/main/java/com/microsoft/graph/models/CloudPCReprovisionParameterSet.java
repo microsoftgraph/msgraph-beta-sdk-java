@@ -5,7 +5,8 @@
 
 package com.microsoft.graph.models;
 
-
+import com.microsoft.graph.models.CloudPcUserAccountType;
+import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -20,6 +21,24 @@ import java.util.ArrayList;
  * The class for the Cloud PCReprovision Parameter Set.
  */
 public class CloudPCReprovisionParameterSet {
+    /**
+     * The user Account Type.
+     * 
+     */
+    @SerializedName(value = "userAccountType", alternate = {"UserAccountType"})
+    @Expose
+	@Nullable
+    public CloudPcUserAccountType userAccountType;
+
+    /**
+     * The os Version.
+     * 
+     */
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
+    @Expose
+	@Nullable
+    public CloudPcOperatingSystem osVersion;
+
 
     /**
      * Instiaciates a new CloudPCReprovisionParameterSet
@@ -30,6 +49,8 @@ public class CloudPCReprovisionParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected CloudPCReprovisionParameterSet(@Nonnull final CloudPCReprovisionParameterSetBuilder builder) {
+        this.userAccountType = builder.userAccountType;
+        this.osVersion = builder.osVersion;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +64,36 @@ public class CloudPCReprovisionParameterSet {
      * Fluent builder for the CloudPCReprovisionParameterSet
      */
     public static final class CloudPCReprovisionParameterSetBuilder {
+        /**
+         * The userAccountType parameter value
+         */
+        @Nullable
+        protected CloudPcUserAccountType userAccountType;
+        /**
+         * Sets the UserAccountType
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public CloudPCReprovisionParameterSetBuilder withUserAccountType(@Nullable final CloudPcUserAccountType val) {
+            this.userAccountType = val;
+            return this;
+        }
+        /**
+         * The osVersion parameter value
+         */
+        @Nullable
+        protected CloudPcOperatingSystem osVersion;
+        /**
+         * Sets the OsVersion
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public CloudPCReprovisionParameterSetBuilder withOsVersion(@Nullable final CloudPcOperatingSystem val) {
+            this.osVersion = val;
+            return this;
+        }
         /**
          * Instanciates a new CloudPCReprovisionParameterSetBuilder
          */
@@ -64,6 +115,12 @@ public class CloudPCReprovisionParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.userAccountType != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("userAccountType", userAccountType));
+        }
+        if(this.osVersion != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("osVersion", osVersion));
+        }
         return result;
     }
 }

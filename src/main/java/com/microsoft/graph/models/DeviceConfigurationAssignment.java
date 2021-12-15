@@ -30,7 +30,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
 
     /**
      * The Intent.
-     * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
+     * The admin intent to apply or remove the profile. Possible values are: apply, remove.
      */
     @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose

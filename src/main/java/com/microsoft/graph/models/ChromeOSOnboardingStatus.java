@@ -28,6 +28,14 @@ public enum ChromeOSOnboardingStatus
     */
     FAILED,
     /**
+    * offboarding
+    */
+    OFFBOARDING,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For ChromeOSOnboardingStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

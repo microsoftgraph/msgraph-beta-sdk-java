@@ -11,11 +11,9 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementCachedReportConfiguration;
 import com.microsoft.graph.models.DeviceManagementExportJob;
-import com.microsoft.graph.models.DeviceManagementReportSchedule;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementReportScheduleCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -50,15 +48,6 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
 	@Nullable
     public DeviceManagementExportJobCollectionPage exportJobs;
 
-    /**
-     * The Report Schedules.
-     * Entity representing a schedule for which reports are delivered
-     */
-    @SerializedName(value = "reportSchedules", alternate = {"ReportSchedules"})
-    @Expose
-	@Nullable
-    public DeviceManagementReportScheduleCollectionPage reportSchedules;
-
 
     /**
      * Sets the raw JSON object
@@ -75,10 +64,6 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
 
         if (json.has("exportJobs")) {
             exportJobs = serializer.deserializeObject(json.get("exportJobs"), DeviceManagementExportJobCollectionPage.class);
-        }
-
-        if (json.has("reportSchedules")) {
-            reportSchedules = serializer.deserializeObject(json.get("reportSchedules"), DeviceManagementReportScheduleCollectionPage.class);
         }
     }
 }

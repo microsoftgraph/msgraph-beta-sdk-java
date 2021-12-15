@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ExternalGroup;
-import com.microsoft.graph.requests.ExternalGroupMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExternalGroupMemberRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -60,24 +58,4 @@ public class ExternalGroupRequestBuilder extends BaseRequestBuilder<ExternalGrou
     }
 
 
-    /**
-     *  Gets a request builder for the ExternalGroupMember collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public ExternalGroupMemberCollectionRequestBuilder members() {
-        return new ExternalGroupMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the ExternalGroupMember item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public ExternalGroupMemberRequestBuilder members(@Nonnull final String id) {
-        return new ExternalGroupMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
-    }
 }

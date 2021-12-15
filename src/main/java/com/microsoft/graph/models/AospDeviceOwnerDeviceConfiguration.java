@@ -27,13 +27,13 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
 
 
     /**
-     * The Apps Allow Install From Unknown Sources.
-     * Indicates whether or not the user is allowed to enable to unknown sources setting.
+     * The Apps Block Install From Unknown Sources.
+     * Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
      */
-    @SerializedName(value = "appsAllowInstallFromUnknownSources", alternate = {"AppsAllowInstallFromUnknownSources"})
+    @SerializedName(value = "appsBlockInstallFromUnknownSources", alternate = {"AppsBlockInstallFromUnknownSources"})
     @Expose
 	@Nullable
-    public Boolean appsAllowInstallFromUnknownSources;
+    public Boolean appsBlockInstallFromUnknownSources;
 
     /**
      * The Backup Blocked.
@@ -151,15 +151,6 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     @Expose
 	@Nullable
     public Boolean securityAllowDebuggingFeatures;
-
-    /**
-     * The Storage Allow Usb.
-     * Indicates whether or not to block USB storage.
-     */
-    @SerializedName(value = "storageAllowUsb", alternate = {"StorageAllowUsb"})
-    @Expose
-	@Nullable
-    public Boolean storageAllowUsb;
 
     /**
      * The Storage Block External Media.

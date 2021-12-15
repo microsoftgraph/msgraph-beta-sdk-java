@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsHealthState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -105,6 +106,15 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     @Expose
 	@Nullable
     public String deviceModel;
+
+    /**
+     * The Health Status.
+     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     */
+    @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsHealthState healthStatus;
 
     /**
      * The Mean Time To Failure In Minutes.

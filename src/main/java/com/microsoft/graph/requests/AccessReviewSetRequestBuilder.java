@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewSet;
+import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder;
@@ -61,6 +63,26 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
     }
 
 
+    /**
+     *  Gets a request builder for the AccessReviewInstanceDecisionItem collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceDecisionItemCollectionRequestBuilder decisions() {
+        return new AccessReviewInstanceDecisionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessReviewInstanceDecisionItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewInstanceDecisionItemRequestBuilder decisions(@Nonnull final String id) {
+        return new AccessReviewInstanceDecisionItemRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the AccessReviewScheduleDefinition collection
      *

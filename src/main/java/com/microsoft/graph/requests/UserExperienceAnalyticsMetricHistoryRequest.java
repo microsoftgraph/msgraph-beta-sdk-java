@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

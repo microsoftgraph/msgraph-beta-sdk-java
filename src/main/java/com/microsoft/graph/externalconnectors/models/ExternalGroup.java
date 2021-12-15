@@ -9,9 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.externalconnectors.models.ExternalGroupMember;
+import com.microsoft.graph.externalconnectors.models.Identity;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.externalconnectors.requests.ExternalGroupMemberCollectionPage;
+import com.microsoft.graph.externalconnectors.requests.IdentityCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -53,7 +53,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public ExternalGroupMemberCollectionPage members;
+    public IdentityCollectionPage members;
 
 
     /**
@@ -66,7 +66,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), ExternalGroupMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), IdentityCollectionPage.class);
         }
     }
 }

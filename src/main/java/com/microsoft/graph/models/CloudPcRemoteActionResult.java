@@ -41,7 +41,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Action Name.
-     * The specified action. Supported values: Reprovision, Resize.
+     * The specified action. Supported values in the Microsoft Endpoint Manager portal are: Reprovision, Resize. Supported values in enterprise Cloud PC devices are: Rename, Reboot, Reprovision, Troubleshoot.
      */
     @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose

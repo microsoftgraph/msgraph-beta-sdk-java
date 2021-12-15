@@ -19,6 +19,7 @@ import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionRequestB
 import com.microsoft.graph.requests.ChromeOSOnboardingSettingsRequestBuilder;
 import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionRequest;
 import com.microsoft.graph.requests.ChromeOSOnboardingSettingsConnectRequestBuilder;
+import com.microsoft.graph.requests.ChromeOSOnboardingSettingsDisconnectRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -51,6 +52,15 @@ public class ChromeOSOnboardingSettingsCollectionRequestBuilder extends BaseColl
     @Nonnull
     public ChromeOSOnboardingSettingsConnectRequestBuilder connect(@Nonnull final ChromeOSOnboardingSettingsConnectParameterSet parameters) {
         return new ChromeOSOnboardingSettingsConnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.connect"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ChromeOSOnboardingSettingsDisconnectRequestBuilder disconnect() {
+        return new ChromeOSOnboardingSettingsDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);
     }
 
     /**

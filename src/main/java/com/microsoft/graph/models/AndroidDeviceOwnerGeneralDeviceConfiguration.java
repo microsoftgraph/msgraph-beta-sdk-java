@@ -11,12 +11,13 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AndroidDeviceOwnerAppAutoUpdatePolicyType;
 import com.microsoft.graph.models.AndroidDeviceOwnerDefaultAppPermissionPolicyType;
+import com.microsoft.graph.models.AppListItem;
+import com.microsoft.graph.models.AndroidDeviceOwnerCrossProfileDataSharing;
 import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfileType;
 import com.microsoft.graph.models.AndroidDeviceOwnerGlobalProxy;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskCustomizationStatusBar;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskCustomizationSystemNavigation;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeAppPositionItem;
-import com.microsoft.graph.models.AppListItem;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeFolderIcon;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeIconSize;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeManagedFolder;
@@ -27,6 +28,7 @@ import com.microsoft.graph.models.MicrosoftLauncherDockPresence;
 import com.microsoft.graph.models.MicrosoftLauncherSearchBarPlacement;
 import com.microsoft.graph.models.AndroidKeyguardFeature;
 import com.microsoft.graph.models.AndroidDeviceOwnerRequiredPasswordType;
+import com.microsoft.graph.models.PersonalProfilePersonalPlayStoreMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerPlayStoreMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerBatteryPluggedMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerSystemUpdateInstallType;
@@ -93,6 +95,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean appsRecommendSkippingFirstUseHints;
 
     /**
+     * The Azure Ad Shared Device Data Clear Apps.
+     * A list of managed apps that will have their data cleared during a global sign-out in AAD shared device mode. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "azureAdSharedDeviceDataClearApps", alternate = {"AzureAdSharedDeviceDataClearApps"})
+    @Expose
+	@Nullable
+    public java.util.List<AppListItem> azureAdSharedDeviceDataClearApps;
+
+    /**
      * The Bluetooth Block Configuration.
      * Indicates whether or not to block a user from configuring bluetooth.
      */
@@ -136,6 +147,33 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean certificateCredentialConfigurationDisabled;
+
+    /**
+     * The Cross Profile Policies Allow Copy Paste.
+     * Indicates whether or not text copied from one profile (personal or work) can be pasted in the other.
+     */
+    @SerializedName(value = "crossProfilePoliciesAllowCopyPaste", alternate = {"CrossProfilePoliciesAllowCopyPaste"})
+    @Expose
+	@Nullable
+    public Boolean crossProfilePoliciesAllowCopyPaste;
+
+    /**
+     * The Cross Profile Policies Allow Data Sharing.
+     * Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
+     */
+    @SerializedName(value = "crossProfilePoliciesAllowDataSharing", alternate = {"CrossProfilePoliciesAllowDataSharing"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerCrossProfileDataSharing crossProfilePoliciesAllowDataSharing;
+
+    /**
+     * The Cross Profile Policies Show Work Contacts In Personal Profile.
+     * Indicates whether or not contacts stored in work profile are shown in personal profile contact searches/incoming calls.
+     */
+    @SerializedName(value = "crossProfilePoliciesShowWorkContactsInPersonalProfile", alternate = {"CrossProfilePoliciesShowWorkContactsInPersonalProfile"})
+    @Expose
+	@Nullable
+    public Boolean crossProfilePoliciesShowWorkContactsInPersonalProfile;
 
     /**
      * The Data Roaming Blocked.
@@ -840,6 +878,24 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean personalProfileCameraBlocked;
 
     /**
+     * The Personal Profile Personal Applications.
+     * Policy applied to applications in the personal profile. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "personalProfilePersonalApplications", alternate = {"PersonalProfilePersonalApplications"})
+    @Expose
+	@Nullable
+    public java.util.List<AppListItem> personalProfilePersonalApplications;
+
+    /**
+     * The Personal Profile Play Store Mode.
+     * Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
+     */
+    @SerializedName(value = "personalProfilePlayStoreMode", alternate = {"PersonalProfilePlayStoreMode"})
+    @Expose
+	@Nullable
+    public PersonalProfilePersonalPlayStoreMode personalProfilePlayStoreMode;
+
+    /**
      * The Personal Profile Screen Capture Blocked.
      * Indicates whether to disable the capability to take screenshots on the personal profile.
      */
@@ -858,15 +914,6 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerPlayStoreMode playStoreMode;
 
     /**
-     * The Safe Boot Blocked.
-     * Indicates whether or not rebooting the device into safe boot is disabled.
-     */
-    @SerializedName(value = "safeBootBlocked", alternate = {"SafeBootBlocked"})
-    @Expose
-	@Nullable
-    public Boolean safeBootBlocked;
-
-    /**
      * The Screen Capture Blocked.
      * Indicates whether or not to disable the capability to take screenshots.
      */
@@ -874,15 +921,6 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean screenCaptureBlocked;
-
-    /**
-     * The Security Allow Debugging Features.
-     * Indicates whether or not to block the user from enabling debugging features on the device.
-     */
-    @SerializedName(value = "securityAllowDebuggingFeatures", alternate = {"SecurityAllowDebuggingFeatures"})
-    @Expose
-	@Nullable
-    public Boolean securityAllowDebuggingFeatures;
 
     /**
      * The Security Developer Settings Enabled.

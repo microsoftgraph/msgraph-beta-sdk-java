@@ -18,6 +18,7 @@ import com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcOrganizationSettingsRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
 import com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder;

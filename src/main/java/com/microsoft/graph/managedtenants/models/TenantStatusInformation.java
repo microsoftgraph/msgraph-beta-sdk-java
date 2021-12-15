@@ -107,7 +107,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Tenant Onboarding Eligibility Reason.
-     * 
+     * Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      */
     @SerializedName(value = "tenantOnboardingEligibilityReason", alternate = {"TenantOnboardingEligibilityReason"})
     @Expose

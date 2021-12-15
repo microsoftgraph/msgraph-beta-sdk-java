@@ -28,6 +28,14 @@ public enum OnboardingStatus
     */
     FAILED,
     /**
+    * offboarding
+    */
+    OFFBOARDING,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OnboardingStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

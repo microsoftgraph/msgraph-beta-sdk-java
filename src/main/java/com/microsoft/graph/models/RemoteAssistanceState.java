@@ -12,10 +12,6 @@ package com.microsoft.graph.models;
 public enum RemoteAssistanceState
 {
     /**
-    * not Configured
-    */
-    NOT_CONFIGURED,
-    /**
     * disabled
     */
     DISABLED,

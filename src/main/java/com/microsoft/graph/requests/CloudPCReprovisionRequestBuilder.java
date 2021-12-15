@@ -6,8 +6,10 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.CloudPCReprovisionRequest;
 import com.microsoft.graph.models.CloudPC;
-
+import com.microsoft.graph.models.CloudPcUserAccountType;
+import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.CloudPCReprovisionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,6 +31,19 @@ public class CloudPCReprovisionRequestBuilder extends BaseActionRequestBuilder<C
      */
     public CloudPCReprovisionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
+    }
+    private CloudPCReprovisionParameterSet body;
+    /**
+     * The request builder for this CloudPCReprovision
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public CloudPCReprovisionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CloudPCReprovisionParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
     }
 
     /**
@@ -54,6 +69,7 @@ public class CloudPCReprovisionRequestBuilder extends BaseActionRequestBuilder<C
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

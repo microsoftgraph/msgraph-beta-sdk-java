@@ -54,6 +54,10 @@ import com.microsoft.graph.requests.DeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.ManagedAllDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedAllDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.HardwareConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.HardwareConfigurationRequestBuilder;
+import com.microsoft.graph.requests.HardwarePasswordInfoCollectionRequestBuilder;
+import com.microsoft.graph.requests.HardwarePasswordInfoRequestBuilder;
 import com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.IosUpdateDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder;
@@ -708,6 +712,46 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceConfigurationUserStateSummaryRequestBuilder deviceConfigurationUserStateSummaries() {
         return new DeviceConfigurationUserStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationUserStateSummaries"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the HardwareConfiguration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public HardwareConfigurationCollectionRequestBuilder hardwareConfigurations() {
+        return new HardwareConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hardwareConfigurations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HardwareConfiguration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public HardwareConfigurationRequestBuilder hardwareConfigurations(@Nonnull final String id) {
+        return new HardwareConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("hardwareConfigurations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the HardwarePasswordInfo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public HardwarePasswordInfoCollectionRequestBuilder hardwarePasswordInfo() {
+        return new HardwarePasswordInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hardwarePasswordInfo"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HardwarePasswordInfo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public HardwarePasswordInfoRequestBuilder hardwarePasswordInfo(@Nonnull final String id) {
+        return new HardwarePasswordInfoRequestBuilder(getRequestUrlWithAdditionalSegment("hardwarePasswordInfo") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IosUpdateDeviceStatus collection

@@ -44,6 +44,10 @@ public enum CloudPcStatus
     */
     RESIZING,
     /**
+    * pending Provision
+    */
+    PENDING_PROVISION,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

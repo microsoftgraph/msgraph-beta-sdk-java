@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ApiApplication;
 import com.microsoft.graph.models.AppRole;
+import com.microsoft.graph.models.Certification;
 import com.microsoft.graph.models.InformationalUrl;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.OptionalClaims;
@@ -82,6 +83,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<AppRole> appRoles;
 
     /**
+     * The Certification.
+     * Specifies the certification status of the application.
+     */
+    @SerializedName(value = "certification", alternate = {"Certification"})
+    @Expose
+	@Nullable
+    public Certification certification;
+
+    /**
      * The Created Date Time.
      * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      */
@@ -101,7 +111,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Description.
-     * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

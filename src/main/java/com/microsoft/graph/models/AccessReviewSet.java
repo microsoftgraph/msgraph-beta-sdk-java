@@ -9,10 +9,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.AccessReviewHistoryDefinition;
 import com.microsoft.graph.models.AccessReviewPolicy;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage;
 
@@ -30,6 +32,15 @@ import javax.annotation.Nonnull;
  */
 public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Decisions.
+     * 
+     */
+    @SerializedName(value = "decisions", alternate = {"Decisions"})
+    @Expose
+	@Nullable
+    public AccessReviewInstanceDecisionItemCollectionPage decisions;
 
     /**
      * The Definitions.
@@ -67,6 +78,10 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("decisions")) {
+            decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);
+        }
 
         if (json.has("definitions")) {
             definitions = serializer.deserializeObject(json.get("definitions"), AccessReviewScheduleDefinitionCollectionPage.class);

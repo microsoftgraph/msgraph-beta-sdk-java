@@ -30,7 +30,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Name.
-     * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
+     * The fully qualified domain name (FQDN) of the Active Directory domain you want to join. Optional.
      */
     @SerializedName(value = "adDomainName", alternate = {"AdDomainName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Username.
-     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
+     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
      */
     @SerializedName(value = "adDomainUsername", alternate = {"AdDomainUsername"})
     @Expose
@@ -138,7 +138,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Type.
-     * 
+     * Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

@@ -8,8 +8,8 @@ package com.microsoft.graph.externalconnectors.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.externalconnectors.models.ExternalGroup;
-import com.microsoft.graph.externalconnectors.requests.ExternalGroupMemberCollectionRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ExternalGroupMemberRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.IdentityCollectionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.IdentityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -59,23 +59,23 @@ public class ExternalGroupRequestBuilder extends BaseRequestBuilder<ExternalGrou
 
 
     /**
-     *  Gets a request builder for the ExternalGroupMember collection
+     *  Gets a request builder for the Identity collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public ExternalGroupMemberCollectionRequestBuilder members() {
-        return new ExternalGroupMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public IdentityCollectionRequestBuilder members() {
+        return new IdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the ExternalGroupMember item
+     * Gets a request builder for the Identity item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public ExternalGroupMemberRequestBuilder members(@Nonnull final String id) {
-        return new ExternalGroupMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public IdentityRequestBuilder members(@Nonnull final String id) {
+        return new IdentityRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

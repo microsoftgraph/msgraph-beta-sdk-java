@@ -14,6 +14,7 @@ import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcDeviceImage;
 import com.microsoft.graph.models.CloudPcGalleryImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
+import com.microsoft.graph.models.CloudPcOrganizationSettings;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.CloudPcServicePlan;
 import com.microsoft.graph.models.CloudPcSupportedRegion;
@@ -88,6 +89,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudPcOnPremisesConnectionCollectionPage onPremisesConnections;
+
+    /**
+     * The Organization Settings.
+     * 
+     */
+    @SerializedName(value = "organizationSettings", alternate = {"OrganizationSettings"})
+    @Expose
+	@Nullable
+    public CloudPcOrganizationSettings organizationSettings;
 
     /**
      * The Provisioning Policies.

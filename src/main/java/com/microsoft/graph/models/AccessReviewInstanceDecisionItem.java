@@ -14,6 +14,7 @@ import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemTarget;
 import com.microsoft.graph.models.GovernanceInsight;
+import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GovernanceInsightCollectionPage;
 
@@ -166,6 +167,15 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public GovernanceInsightCollectionPage insights;
+
+    /**
+     * The Instance.
+     * There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+     */
+    @SerializedName(value = "instance", alternate = {"Instance"})
+    @Expose
+	@Nullable
+    public AccessReviewInstance instance;
 
 
     /**
