@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MeetingRegistration;
 import com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionRequestBuilder;
 import com.microsoft.graph.requests.MeetingRegistrationQuestionRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrantRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

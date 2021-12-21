@@ -31,6 +31,7 @@ import com.microsoft.graph.models.AndroidDeviceOwnerRequiredPasswordType;
 import com.microsoft.graph.models.PersonalProfilePersonalPlayStoreMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerPlayStoreMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerBatteryPluggedMode;
+import com.microsoft.graph.models.AndroidDeviceOwnerSystemUpdateFreezePeriod;
 import com.microsoft.graph.models.AndroidDeviceOwnerSystemUpdateInstallType;
 import com.microsoft.graph.models.DeviceConfiguration;
 
@@ -984,6 +985,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean storageBlockUsbFileTransfer;
+
+    /**
+     * The System Update Freeze Periods.
+     * Indicates the annually repeating time periods during which system updates are postponed. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "systemUpdateFreezePeriods", alternate = {"SystemUpdateFreezePeriods"})
+    @Expose
+	@Nullable
+    public java.util.List<AndroidDeviceOwnerSystemUpdateFreezePeriod> systemUpdateFreezePeriods;
 
     /**
      * The System Update Install Type.

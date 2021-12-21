@@ -14,6 +14,7 @@ import com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionReq
 import com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.SchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

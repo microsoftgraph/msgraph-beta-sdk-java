@@ -125,4 +125,13 @@ public class WindowsDriverUpdateProfileRequestBuilder extends BaseRequestBuilder
     public WindowsDriverUpdateProfileExecuteActionRequestBuilder executeAction(@Nonnull final WindowsDriverUpdateProfileExecuteActionParameterSet parameters) {
         return new WindowsDriverUpdateProfileExecuteActionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.executeAction"), getClient(), null, parameters);
     }
+
+    /**
+     * Sync the driver inventory of a WindowsDriverUpdateProfile.
+     * @return the request builder
+     */
+    @Nonnull
+    public WindowsDriverUpdateProfileSyncInventoryRequestBuilder syncInventory() {
+        return new WindowsDriverUpdateProfileSyncInventoryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncInventory"), getClient(), null);
+    }
 }

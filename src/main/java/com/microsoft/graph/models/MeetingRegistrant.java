@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CustomQuestionAnswer;
 import com.microsoft.graph.models.MeetingRegistrantStatus;
-import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.MeetingRegistrantBase;
 
 
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Meeting Registrant.
  */
-public class MeetingRegistrant extends Entity implements IJsonBackedObject {
+public class MeetingRegistrant extends MeetingRegistrantBase implements IJsonBackedObject {
 
 
     /**
@@ -54,15 +54,6 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String firstName;
-
-    /**
-     * The Join Web Url.
-     * A unique web URL for the registrant to join the meeting. Read-only.
-     */
-    @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
-    @Expose
-	@Nullable
-    public String joinWebUrl;
 
     /**
      * The Last Name.

@@ -64,6 +64,15 @@ public class TenantReferenceRequestBuilder extends BaseRequestBuilder<TenantRefe
 
     /**
      * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public TenantReferenceRemovePersonalDataRequestBuilder removePersonalData() {
+        return new TenantReferenceRemovePersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removePersonalData"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
      */
