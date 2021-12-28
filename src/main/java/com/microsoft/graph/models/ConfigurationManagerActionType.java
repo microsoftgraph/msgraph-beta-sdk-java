@@ -28,6 +28,18 @@ public enum ConfigurationManagerActionType
     */
     APP_EVALUATION,
     /**
+    * quick Scan
+    */
+    QUICK_SCAN,
+    /**
+    * full Scan
+    */
+    FULL_SCAN,
+    /**
+    * windows Defender Update Signatures
+    */
+    WINDOWS_DEFENDER_UPDATE_SIGNATURES,
+    /**
     * For ConfigurationManagerActionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

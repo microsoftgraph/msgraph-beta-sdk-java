@@ -9,13 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MeetingAudience;
 import com.microsoft.graph.models.MeetingSpeaker;
 import com.microsoft.graph.models.MeetingRegistrationQuestion;
-import com.microsoft.graph.models.MeetingRegistrant;
-import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.MeetingRegistrationBase;
 import com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionPage;
-import com.microsoft.graph.requests.MeetingRegistrantCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -29,17 +26,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Meeting Registration.
  */
-public class MeetingRegistration extends Entity implements IJsonBackedObject {
+public class MeetingRegistration extends MeetingRegistrationBase implements IJsonBackedObject {
 
-
-    /**
-     * The Allowed Registrant.
-     * Specifies who can register for the meeting.
-     */
-    @SerializedName(value = "allowedRegistrant", alternate = {"AllowedRegistrant"})
-    @Expose
-	@Nullable
-    public MeetingAudience allowedRegistrant;
 
     /**
      * The Description.
@@ -113,15 +101,6 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 	@Nullable
     public MeetingRegistrationQuestionCollectionPage customQuestions;
 
-    /**
-     * The Registrants.
-     * Registrants of the online meeting.
-     */
-    @SerializedName(value = "registrants", alternate = {"Registrants"})
-    @Expose
-	@Nullable
-    public MeetingRegistrantCollectionPage registrants;
-
 
     /**
      * Sets the raw JSON object
@@ -134,10 +113,6 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
         if (json.has("customQuestions")) {
             customQuestions = serializer.deserializeObject(json.get("customQuestions"), MeetingRegistrationQuestionCollectionPage.class);
-        }
-
-        if (json.has("registrants")) {
-            registrants = serializer.deserializeObject(json.get("registrants"), MeetingRegistrantCollectionPage.class);
         }
     }
 }

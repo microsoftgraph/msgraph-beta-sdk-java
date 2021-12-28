@@ -43,6 +43,7 @@ import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestP
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
+import com.microsoft.graph.models.ManagedDevicePlayLostModeSoundParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
 import com.microsoft.graph.models.ManagedDeviceTriggerConfigurationManagerActionParameterSet;

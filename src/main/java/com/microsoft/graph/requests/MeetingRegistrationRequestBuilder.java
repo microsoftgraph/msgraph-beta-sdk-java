@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MeetingRegistration;
 import com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionRequestBuilder;
 import com.microsoft.graph.requests.MeetingRegistrationQuestionRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrantRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -61,6 +59,26 @@ public class MeetingRegistrationRequestBuilder extends BaseRequestBuilder<Meetin
 
 
     /**
+     *  Gets a request builder for the MeetingRegistrantBase collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MeetingRegistrantBaseCollectionRequestBuilder registrants() {
+        return new MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MeetingRegistrantBase item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
+        return new MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the MeetingRegistrationQuestion collection
      *
      * @return the collection request builder
@@ -79,25 +97,5 @@ public class MeetingRegistrationRequestBuilder extends BaseRequestBuilder<Meetin
     @Nonnull
     public MeetingRegistrationQuestionRequestBuilder customQuestions(@Nonnull final String id) {
         return new MeetingRegistrationQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the MeetingRegistrant collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public MeetingRegistrantCollectionRequestBuilder registrants() {
-        return new MeetingRegistrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the MeetingRegistrant item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public MeetingRegistrantRequestBuilder registrants(@Nonnull final String id) {
-        return new MeetingRegistrantRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
     }
 }

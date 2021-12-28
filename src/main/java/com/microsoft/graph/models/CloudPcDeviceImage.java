@@ -39,7 +39,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date.
-     * 
+     * The date the image became unavailable.
      */
     @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Os Status.
-     * 
+     * The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
      */
     @SerializedName(value = "osStatus", alternate = {"OsStatus"})
     @Expose

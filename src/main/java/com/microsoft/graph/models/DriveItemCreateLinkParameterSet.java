@@ -75,6 +75,15 @@ public class DriveItemCreateLinkParameterSet {
 	@Nullable
     public java.util.List<DriveRecipient> recipients;
 
+    /**
+     * The retain Inherited Permissions.
+     * 
+     */
+    @SerializedName(value = "retainInheritedPermissions", alternate = {"RetainInheritedPermissions"})
+    @Expose
+	@Nullable
+    public Boolean retainInheritedPermissions;
+
 
     /**
      * Instiaciates a new DriveItemCreateLinkParameterSet
@@ -91,6 +100,7 @@ public class DriveItemCreateLinkParameterSet {
         this.password = builder.password;
         this.message = builder.message;
         this.recipients = builder.recipients;
+        this.retainInheritedPermissions = builder.retainInheritedPermissions;
     }
     /**
      * Gets a new builder for the body
@@ -195,6 +205,21 @@ public class DriveItemCreateLinkParameterSet {
             return this;
         }
         /**
+         * The retainInheritedPermissions parameter value
+         */
+        @Nullable
+        protected Boolean retainInheritedPermissions;
+        /**
+         * Sets the RetainInheritedPermissions
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DriveItemCreateLinkParameterSetBuilder withRetainInheritedPermissions(@Nullable final Boolean val) {
+            this.retainInheritedPermissions = val;
+            return this;
+        }
+        /**
          * Instanciates a new DriveItemCreateLinkParameterSetBuilder
          */
         @Nullable
@@ -232,6 +257,9 @@ public class DriveItemCreateLinkParameterSet {
         }
         if(this.recipients != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("recipients", recipients));
+        }
+        if(this.retainInheritedPermissions != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("retainInheritedPermissions", retainInheritedPermissions));
         }
         return result;
     }

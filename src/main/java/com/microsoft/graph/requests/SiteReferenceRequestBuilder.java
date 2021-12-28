@@ -24,6 +24,8 @@ import com.microsoft.graph.requests.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.BaseItemRequestBuilder;
 import com.microsoft.graph.requests.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.SitePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.SitePageRequestBuilder;
 import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;

@@ -14,11 +14,13 @@ import com.microsoft.graph.models.BookingWorkHours;
 import com.microsoft.graph.models.BookingSchedulingPolicy;
 import com.microsoft.graph.models.BookingAppointment;
 import com.microsoft.graph.models.BookingCustomer;
+import com.microsoft.graph.models.BookingCustomQuestion;
 import com.microsoft.graph.models.BookingService;
 import com.microsoft.graph.models.BookingStaffMember;
 import com.microsoft.graph.models.BookingNamedEntity;
 import com.microsoft.graph.requests.BookingAppointmentCollectionPage;
 import com.microsoft.graph.requests.BookingCustomerCollectionPage;
+import com.microsoft.graph.requests.BookingCustomQuestionCollectionPage;
 import com.microsoft.graph.requests.BookingServiceCollectionPage;
 import com.microsoft.graph.requests.BookingStaffMemberCollectionPage;
 
@@ -39,7 +41,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Address.
-     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -155,6 +157,15 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
     public BookingCustomerCollectionPage customers;
 
     /**
+     * The Custom Questions.
+     * All the custom questions of this business. Read-only. Nullable.
+     */
+    @SerializedName(value = "customQuestions", alternate = {"CustomQuestions"})
+    @Expose
+	@Nullable
+    public BookingCustomQuestionCollectionPage customQuestions;
+
+    /**
      * The Services.
      * All the services offered by this business. Read-only. Nullable.
      */
@@ -192,6 +203,10 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
         if (json.has("customers")) {
             customers = serializer.deserializeObject(json.get("customers"), BookingCustomerCollectionPage.class);
+        }
+
+        if (json.has("customQuestions")) {
+            customQuestions = serializer.deserializeObject(json.get("customQuestions"), BookingCustomQuestionCollectionPage.class);
         }
 
         if (json.has("services")) {

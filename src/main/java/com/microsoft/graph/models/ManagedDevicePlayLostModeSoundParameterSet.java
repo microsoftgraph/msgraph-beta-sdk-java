@@ -20,6 +20,15 @@ import java.util.ArrayList;
  * The class for the Managed Device Play Lost Mode Sound Parameter Set.
  */
 public class ManagedDevicePlayLostModeSoundParameterSet {
+    /**
+     * The duration In Minutes.
+     * 
+     */
+    @SerializedName(value = "durationInMinutes", alternate = {"DurationInMinutes"})
+    @Expose
+	@Nullable
+    public String durationInMinutes;
+
 
     /**
      * Instiaciates a new ManagedDevicePlayLostModeSoundParameterSet
@@ -30,6 +39,7 @@ public class ManagedDevicePlayLostModeSoundParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected ManagedDevicePlayLostModeSoundParameterSet(@Nonnull final ManagedDevicePlayLostModeSoundParameterSetBuilder builder) {
+        this.durationInMinutes = builder.durationInMinutes;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +53,21 @@ public class ManagedDevicePlayLostModeSoundParameterSet {
      * Fluent builder for the ManagedDevicePlayLostModeSoundParameterSet
      */
     public static final class ManagedDevicePlayLostModeSoundParameterSetBuilder {
+        /**
+         * The durationInMinutes parameter value
+         */
+        @Nullable
+        protected String durationInMinutes;
+        /**
+         * Sets the DurationInMinutes
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDevicePlayLostModeSoundParameterSetBuilder withDurationInMinutes(@Nullable final String val) {
+            this.durationInMinutes = val;
+            return this;
+        }
         /**
          * Instanciates a new ManagedDevicePlayLostModeSoundParameterSetBuilder
          */
@@ -64,6 +89,9 @@ public class ManagedDevicePlayLostModeSoundParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.durationInMinutes != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("durationInMinutes", durationInMinutes));
+        }
         return result;
     }
 }

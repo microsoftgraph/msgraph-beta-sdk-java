@@ -14,6 +14,7 @@ import com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionReq
 import com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.SchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -122,6 +123,16 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
     @Nonnull
     public ConnectionOperationRequestBuilder operations(@Nonnull final String id) {
         return new ConnectionOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ConnectionQuota
+     *
+     * @return the ConnectionQuotaWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public ConnectionQuotaWithReferenceRequestBuilder quota() {
+        return new ConnectionQuotaWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("quota"), getClient(), null);
     }
 
     /**

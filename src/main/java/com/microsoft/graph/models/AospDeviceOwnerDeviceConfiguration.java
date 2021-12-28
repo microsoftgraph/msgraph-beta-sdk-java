@@ -36,15 +36,6 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     public Boolean appsBlockInstallFromUnknownSources;
 
     /**
-     * The Backup Blocked.
-     * Indicates whether or not to block backup service.
-     */
-    @SerializedName(value = "backupBlocked", alternate = {"BackupBlocked"})
-    @Expose
-	@Nullable
-    public Boolean backupBlocked;
-
-    /**
      * The Bluetooth Block Configuration.
      * Indicates whether or not to block a user from configuring bluetooth.
      */
@@ -52,15 +43,6 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     @Expose
 	@Nullable
     public Boolean bluetoothBlockConfiguration;
-
-    /**
-     * The Bluetooth Block Contact Sharing.
-     * Indicates whether or not to block a user from sharing contacts via bluetooth.
-     */
-    @SerializedName(value = "bluetoothBlockContactSharing", alternate = {"BluetoothBlockContactSharing"})
-    @Expose
-	@Nullable
-    public Boolean bluetoothBlockContactSharing;
 
     /**
      * The Bluetooth Blocked.
@@ -79,15 +61,6 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     @Expose
 	@Nullable
     public Boolean cameraBlocked;
-
-    /**
-     * The Cellular Block Wi Fi Tethering.
-     * Indicates whether or not to block Wi-Fi tethering.
-     */
-    @SerializedName(value = "cellularBlockWiFiTethering", alternate = {"CellularBlockWiFiTethering"})
-    @Expose
-	@Nullable
-    public Boolean cellularBlockWiFiTethering;
 
     /**
      * The Factory Reset Blocked.
