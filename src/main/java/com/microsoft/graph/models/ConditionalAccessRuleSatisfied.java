@@ -41,7 +41,7 @@ public class ConditionalAccessRuleSatisfied implements IJsonBackedObject {
 
     /**
      * The Conditional Access Condition.
-     * 
+     * Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client, ipAddressSeenByAzureAD, ipAddressSeenByResourceProvider, unknownFutureValue, servicePrincipals, servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals, servicePrincipalRisk.
      */
     @SerializedName(value = "conditionalAccessCondition", alternate = {"ConditionalAccessCondition"})
     @Expose
@@ -50,7 +50,7 @@ public class ConditionalAccessRuleSatisfied implements IJsonBackedObject {
 
     /**
      * The Rule Satisfied.
-     * 
+     * Refers to the conditional access policy conditions that were satisfied. The possible values are: allApps, firstPartyApps, office365, appId, acr, appFilter, allUsers, guest, groupId, roleId, userId, allDevicePlatforms, devicePlatform, allLocations, insideCorpnet, allTrustedLocations, locationId, allDevices, deviceFilter, deviceState, unknownFutureValue, deviceFilterIncludeRuleNotMatched, allDeviceStates. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: deviceFilterIncludeRuleNotMatched, allDeviceStates.
      */
     @SerializedName(value = "ruleSatisfied", alternate = {"RuleSatisfied"})
     @Expose

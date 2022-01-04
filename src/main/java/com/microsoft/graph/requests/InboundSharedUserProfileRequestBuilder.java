@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.InboundSharedUserProfileExportPersonalDataParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectGetMemberGroupsParameterSet;
@@ -61,6 +62,25 @@ public class InboundSharedUserProfileRequestBuilder extends BaseRequestBuilder<I
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public InboundSharedUserProfileExportPersonalDataRequestBuilder exportPersonalData(@Nonnull final InboundSharedUserProfileExportPersonalDataParameterSet parameters) {
+        return new InboundSharedUserProfileExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public InboundSharedUserProfileRemovePersonalDataRequestBuilder removePersonalData() {
+        return new InboundSharedUserProfileRemovePersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removePersonalData"), getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

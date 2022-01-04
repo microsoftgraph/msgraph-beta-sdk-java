@@ -34,7 +34,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Package Id.
-     * ID of the access package.
+     * Identifier of the access package.
      */
     @SerializedName(value = "accessPackageId", alternate = {"AccessPackageId"})
     @Expose
@@ -88,7 +88,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Display Name.
-     * The display name of the policy.
+     * The display name of the policy. Supports $filter (eq).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -160,7 +160,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Package.
-     * The access package with this policy. Read-only. Nullable.
+     * The access package with this policy. Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose

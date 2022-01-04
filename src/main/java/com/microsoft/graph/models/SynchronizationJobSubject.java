@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.SynchronizationLinkedObjects;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Links.
+     * 
+     */
+    @SerializedName(value = "links", alternate = {"Links"})
+    @Expose
+	@Nullable
+    public SynchronizationLinkedObjects links;
 
     /**
      * The Object Id.

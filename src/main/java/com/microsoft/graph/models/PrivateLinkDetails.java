@@ -39,7 +39,7 @@ public class PrivateLinkDetails implements IJsonBackedObject {
 
     /**
      * The Policy Id.
-     * 
+     * The unique identifier for the Private Link policy.
      */
     @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
@@ -48,7 +48,7 @@ public class PrivateLinkDetails implements IJsonBackedObject {
 
     /**
      * The Policy Name.
-     * 
+     * The name of the Private Link policy in Azure AD.
      */
     @SerializedName(value = "policyName", alternate = {"PolicyName"})
     @Expose
@@ -57,7 +57,7 @@ public class PrivateLinkDetails implements IJsonBackedObject {
 
     /**
      * The Policy Tenant Id.
-     * 
+     * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
      */
     @SerializedName(value = "policyTenantId", alternate = {"PolicyTenantId"})
     @Expose
@@ -66,7 +66,7 @@ public class PrivateLinkDetails implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * 
+     * The Azure Resource Manager (ARM) path for the Private Link policy resource.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose

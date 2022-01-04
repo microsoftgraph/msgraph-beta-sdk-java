@@ -37,7 +37,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Id.
-     * ID of the access package catalog referencing this access package. Read-only.
+     * Identifier of the access package catalog referencing this access package. Read-only.
      */
     @SerializedName(value = "catalogId", alternate = {"CatalogId"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * UPN of the user or identity of the subject who created this resource. Read-only.
+     * The userPrincipalName of the user or identity of the subject who created this resource. Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -73,7 +73,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package.
+     * The display name of the access package. Supports $filter (eq, contains).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -100,7 +100,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Modified By.
-     * The UPN of the user who last modified this resource. Read-only.
+     * The userPrincipalName of the user who last modified this resource. Read-only.
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -118,7 +118,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignment Policies.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "accessPackageAssignmentPolicies", alternate = {"AccessPackageAssignmentPolicies"})
     @Expose

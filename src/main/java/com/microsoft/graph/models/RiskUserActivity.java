@@ -51,7 +51,7 @@ public class RiskUserActivity implements IJsonBackedObject {
 
     /**
      * The Event Types.
-     * List of risk event types. Deprecated. Use riskEventType instead.
+     * 
      */
     @SerializedName(value = "eventTypes", alternate = {"EventTypes"})
     @Expose

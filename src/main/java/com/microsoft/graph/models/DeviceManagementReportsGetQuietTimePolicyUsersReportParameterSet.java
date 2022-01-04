@@ -101,6 +101,15 @@ public class DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet {
 	@Nullable
     public String filter;
 
+    /**
+     * The skip Token.
+     * 
+     */
+    @SerializedName(value = "skipToken", alternate = {"SkipToken"})
+    @Expose
+	@Nullable
+    public String skipToken;
+
 
     /**
      * Instiaciates a new DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet
@@ -120,6 +129,7 @@ public class DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet {
         this.top = builder.top;
         this.sessionId = builder.sessionId;
         this.filter = builder.filter;
+        this.skipToken = builder.skipToken;
     }
     /**
      * Gets a new builder for the body
@@ -269,6 +279,21 @@ public class DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet {
             return this;
         }
         /**
+         * The skipToken parameter value
+         */
+        @Nullable
+        protected String skipToken;
+        /**
+         * Sets the SkipToken
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSetBuilder withSkipToken(@Nullable final String val) {
+            this.skipToken = val;
+            return this;
+        }
+        /**
          * Instanciates a new DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSetBuilder
          */
         @Nullable
@@ -315,6 +340,9 @@ public class DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet {
         }
         if(this.filter != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("filter", filter));
+        }
+        if(this.skipToken != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("skipToken", skipToken));
         }
         return result;
     }

@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.RichLongRunningOperation;
 import com.microsoft.graph.models.SitePage;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.Site;
@@ -29,6 +30,7 @@ import com.microsoft.graph.requests.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.BaseItemCollectionPage;
 import com.microsoft.graph.requests.ListCollectionPage;
+import com.microsoft.graph.requests.RichLongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.SitePageCollectionPage;
 import com.microsoft.graph.requests.PermissionCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
@@ -164,6 +166,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     public ListCollectionPage lists;
 
     /**
+     * The Operations.
+     * 
+     */
+    @SerializedName(value = "operations", alternate = {"Operations"})
+    @Expose
+	@Nullable
+    public RichLongRunningOperationCollectionPage operations;
+
+    /**
      * The Pages.
      * The collection of pages in the SitePages list in this site.
      */
@@ -240,6 +251,10 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
         if (json.has("lists")) {
             lists = serializer.deserializeObject(json.get("lists"), ListCollectionPage.class);
+        }
+
+        if (json.has("operations")) {
+            operations = serializer.deserializeObject(json.get("operations"), RichLongRunningOperationCollectionPage.class);
         }
 
         if (json.has("pages")) {

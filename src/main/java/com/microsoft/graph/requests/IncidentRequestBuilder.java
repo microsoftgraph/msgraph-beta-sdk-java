@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Incident;
+import com.microsoft.graph.requests.Alert_v2CollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.Alert_v2WithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,4 +58,24 @@ public class IncidentRequestBuilder extends BaseRequestBuilder<Incident> {
     }
 
 
+    /**
+     *  Gets a request builder for the Alert_v2 collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public Alert_v2CollectionWithReferencesRequestBuilder alerts() {
+        return new Alert_v2CollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Alert_v2 item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public Alert_v2WithReferenceRequestBuilder alerts(@Nonnull final String id) {
+        return new Alert_v2WithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
+    }
 }

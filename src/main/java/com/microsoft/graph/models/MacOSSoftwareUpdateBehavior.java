@@ -20,6 +20,22 @@ public enum MacOSSoftwareUpdateBehavior
     */
     DEFAULT,
     /**
+    * download Only
+    */
+    DOWNLOAD_ONLY,
+    /**
+    * install ASAP
+    */
+    INSTALL_ASAP,
+    /**
+    * notify Only
+    */
+    NOTIFY_ONLY,
+    /**
+    * install Later
+    */
+    INSTALL_LATER,
+    /**
     * For MacOSSoftwareUpdateBehavior values that were not expected from the service
     */
     UNEXPECTED_VALUE

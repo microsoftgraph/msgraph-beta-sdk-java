@@ -15,6 +15,7 @@ import com.microsoft.graph.externalconnectors.models.ConnectionState;
 import com.microsoft.graph.externalconnectors.models.ExternalGroup;
 import com.microsoft.graph.externalconnectors.models.ExternalItem;
 import com.microsoft.graph.externalconnectors.models.ConnectionOperation;
+import com.microsoft.graph.externalconnectors.models.ConnectionQuota;
 import com.microsoft.graph.externalconnectors.models.Schema;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage;
@@ -62,6 +63,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Ingested Items Count.
+     * 
+     */
+    @SerializedName(value = "ingestedItemsCount", alternate = {"IngestedItemsCount"})
+    @Expose
+	@Nullable
+    public Long ingestedItemsCount;
 
     /**
      * The Name.
@@ -116,6 +126,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ConnectionOperationCollectionPage operations;
+
+    /**
+     * The Quota.
+     * 
+     */
+    @SerializedName(value = "quota", alternate = {"Quota"})
+    @Expose
+	@Nullable
+    public ConnectionQuota quota;
 
     /**
      * The Schema.

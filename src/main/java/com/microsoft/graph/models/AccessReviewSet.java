@@ -35,7 +35,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The Decisions.
-     * 
+     * Represents an Azure AD access review decision on an instance of a review.
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
@@ -44,7 +44,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The Definitions.
-     * 
+     * Represents the template and scheduling for an access review.
      */
     @SerializedName(value = "definitions", alternate = {"Definitions"})
     @Expose
@@ -53,7 +53,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The History Definitions.
-     * 
+     * Represents a collection of access review history data and the scopes used to collect that data.
      */
     @SerializedName(value = "historyDefinitions", alternate = {"HistoryDefinitions"})
     @Expose
@@ -62,7 +62,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy.
-     * 
+     * Resource that enables administrators to manage directory-level access review policies in their tenant.
      */
     @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose

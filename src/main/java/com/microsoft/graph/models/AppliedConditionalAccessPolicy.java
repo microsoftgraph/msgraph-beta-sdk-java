@@ -44,7 +44,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Authentication Strength.
-     * 
+     * The custom authentication strength enforced in a Conditional Access policy.
      */
     @SerializedName(value = "authenticationStrength", alternate = {"AuthenticationStrength"})
     @Expose
@@ -53,7 +53,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Conditions Not Satisfied.
-     * Refers to the conditional access policy conditions that are not satisfied. Possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client.
+     * Refers to the conditional access policy conditions that are not satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk.
      */
     @SerializedName(value = "conditionsNotSatisfied", alternate = {"ConditionsNotSatisfied"})
     @Expose
@@ -62,7 +62,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Conditions Satisfied.
-     * Refers to the conditional access policy conditions that are satisfied. Possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client.
+     * Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk.
      */
     @SerializedName(value = "conditionsSatisfied", alternate = {"ConditionsSatisfied"})
     @Expose
@@ -98,7 +98,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Exclude Rules Satisfied.
-     * 
+     * List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match.
      */
     @SerializedName(value = "excludeRulesSatisfied", alternate = {"ExcludeRulesSatisfied"})
     @Expose
@@ -116,7 +116,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Include Rules Satisfied.
-     * 
+     * List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ 'application' : 'AllApps'}, {'users': 'Group'}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
      */
     @SerializedName(value = "includeRulesSatisfied", alternate = {"IncludeRulesSatisfied"})
     @Expose

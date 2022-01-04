@@ -58,7 +58,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Description.
-     * The description of this accessPackageResourceEnvironment object.
+     * The description of this object.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -112,7 +112,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Origin System.
-     * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
+     * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      */
     @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose

@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.BookingCustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingCustomerRequestBuilder;
+import com.microsoft.graph.requests.BookingCustomQuestionCollectionRequestBuilder;
+import com.microsoft.graph.requests.BookingCustomQuestionRequestBuilder;
 import com.microsoft.graph.requests.BookingServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingServiceRequestBuilder;
 import com.microsoft.graph.requests.BookingStaffMemberCollectionRequestBuilder;
@@ -123,6 +125,26 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
     @Nonnull
     public BookingCustomerRequestBuilder customers(@Nonnull final String id) {
         return new BookingCustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the BookingCustomQuestion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookingCustomQuestionCollectionRequestBuilder customQuestions() {
+        return new BookingCustomQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the BookingCustomQuestion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookingCustomQuestionRequestBuilder customQuestions(@Nonnull final String id) {
+        return new BookingCustomQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingService collection

@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.BookingCustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingCustomerRequestBuilder;
+import com.microsoft.graph.requests.BookingCustomQuestionCollectionRequestBuilder;
+import com.microsoft.graph.requests.BookingCustomQuestionRequestBuilder;
 import com.microsoft.graph.requests.BookingServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingServiceRequestBuilder;
 import com.microsoft.graph.requests.BookingStaffMemberCollectionRequestBuilder;
