@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.36.0] - 2022-01-05
+
+### Added
+
+- Plenty of class additions and updates relating to Bookings, Alert_V2, MeetingRegistration, & ConnectionQuota. 
+
+### Changed
+
+- Generated beta models and request builders using Typewriter and latest Metadata update. 
+- M365Alert and related classes changed to Alert_V2 classes.
+- HardwareConfig and related classes removed.
+
 ## [0.35.0] - 2021-12-15
 
 ### Added
