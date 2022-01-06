@@ -102,7 +102,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Protocol.
-     * 
+     * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
      */
     @SerializedName(value = "authenticationProtocol", alternate = {"AuthenticationProtocol"})
     @Expose
@@ -120,7 +120,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Requirement Policies.
-     * 
+     * Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
      */
     @SerializedName(value = "authenticationRequirementPolicies", alternate = {"AuthenticationRequirementPolicies"})
     @Expose
@@ -129,7 +129,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Autonomous System Number.
-     * 
+     * The Autonomous System Number (ASN) of the network used by the actor.
      */
     @SerializedName(value = "autonomousSystemNumber", alternate = {"AutonomousSystemNumber"})
     @Expose
@@ -174,7 +174,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Cross Tenant Access Type.
-     * 
+     * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
      */
     @SerializedName(value = "crossTenantAccessType", alternate = {"CrossTenantAccessType"})
     @Expose
@@ -192,7 +192,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Flagged For Review.
-     * 
+     * During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
      */
     @SerializedName(value = "flaggedForReview", alternate = {"FlaggedForReview"})
     @Expose
@@ -201,7 +201,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Home Tenant Id.
-     * 
+     * The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
      */
     @SerializedName(value = "homeTenantId", alternate = {"HomeTenantId"})
     @Expose
@@ -210,7 +210,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Home Tenant Name.
-     * 
+     * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
      */
     @SerializedName(value = "homeTenantName", alternate = {"HomeTenantName"})
     @Expose
@@ -219,7 +219,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Token Type.
-     * 
+     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
      */
     @SerializedName(value = "incomingTokenType", alternate = {"IncomingTokenType"})
     @Expose
@@ -237,7 +237,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address From Resource Provider.
-     * 
+     * The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
      */
     @SerializedName(value = "ipAddressFromResourceProvider", alternate = {"IpAddressFromResourceProvider"})
     @Expose
@@ -255,7 +255,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Tenant Restricted.
-     * 
+     * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
      */
     @SerializedName(value = "isTenantRestricted", alternate = {"IsTenantRestricted"})
     @Expose
@@ -300,7 +300,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Private Link Details.
-     * 
+     * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
      */
     @SerializedName(value = "privateLinkDetails", alternate = {"PrivateLinkDetails"})
     @Expose
@@ -336,7 +336,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Tenant Id.
-     * 
+     * The tenant identifier of the resource referenced in the sign in.
      */
     @SerializedName(value = "resourceTenantId", alternate = {"ResourceTenantId"})
     @Expose
@@ -390,7 +390,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Principal Credential Key Id.
-     * 
+     * The unique identifier of the key credential used by the service principal to authenticate.
      */
     @SerializedName(value = "servicePrincipalCredentialKeyId", alternate = {"ServicePrincipalCredentialKeyId"})
     @Expose
@@ -399,7 +399,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Principal Credential Thumbprint.
-     * 
+     * The certificate thumbprint of the certificate used by the service principal to authenticate.
      */
     @SerializedName(value = "servicePrincipalCredentialThumbprint", alternate = {"ServicePrincipalCredentialThumbprint"})
     @Expose
@@ -426,7 +426,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Sign In Event Types.
-     * 
+     * Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq operator only).
      */
     @SerializedName(value = "signInEventTypes", alternate = {"SignInEventTypes"})
     @Expose
@@ -435,7 +435,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Sign In Identifier.
-     * 
+     * The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
      */
     @SerializedName(value = "signInIdentifier", alternate = {"SignInIdentifier"})
     @Expose
@@ -444,7 +444,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Sign In Identifier Type.
-     * 
+     * The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
      */
     @SerializedName(value = "signInIdentifierType", alternate = {"SignInIdentifierType"})
     @Expose
@@ -471,7 +471,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Issuer Type.
-     * The type of identity provider. Possible values: AzureAD, ADFederationServices, or UnknownFutureValue.
+     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: AzureADBackupAuth.
      */
     @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
@@ -480,7 +480,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Unique Token Identifier.
-     * 
+     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
      */
     @SerializedName(value = "uniqueTokenIdentifier", alternate = {"UniqueTokenIdentifier"})
     @Expose
@@ -525,7 +525,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * 
+     * Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose

@@ -49,6 +49,7 @@ import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestP
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
+import com.microsoft.graph.models.ManagedDevicePlayLostModeSoundParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
 import com.microsoft.graph.models.ManagedDeviceTriggerConfigurationManagerActionParameterSet;
@@ -413,12 +414,13 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Remote lock
+     * Play lost mode sound
      * @return the request builder
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ManagedDevicePlayLostModeSoundRequestBuilder playLostModeSound() {
-        return new ManagedDevicePlayLostModeSoundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.playLostModeSound"), getClient(), null);
+    public ManagedDevicePlayLostModeSoundRequestBuilder playLostModeSound(@Nonnull final ManagedDevicePlayLostModeSoundParameterSet parameters) {
+        return new ManagedDevicePlayLostModeSoundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.playLostModeSound"), getClient(), null, parameters);
     }
 
     /**

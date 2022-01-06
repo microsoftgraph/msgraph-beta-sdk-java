@@ -161,7 +161,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Type.
-     * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
+     * 
      */
     @SerializedName(value = "riskType", alternate = {"RiskType"})
     @Expose

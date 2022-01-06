@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.ManagedDevicePlayLostModeSoundRequest;
 import com.microsoft.graph.models.ManagedDevice;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.ManagedDevicePlayLostModeSoundParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,6 +30,19 @@ public class ManagedDevicePlayLostModeSoundRequestBuilder extends BaseActionRequ
      */
     public ManagedDevicePlayLostModeSoundRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
+    }
+    private ManagedDevicePlayLostModeSoundParameterSet body;
+    /**
+     * The request builder for this ManagedDevicePlayLostModeSound
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public ManagedDevicePlayLostModeSoundRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDevicePlayLostModeSoundParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
     }
 
     /**
@@ -54,6 +68,7 @@ public class ManagedDevicePlayLostModeSoundRequestBuilder extends BaseActionRequ
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

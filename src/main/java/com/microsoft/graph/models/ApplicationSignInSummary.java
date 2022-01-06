@@ -27,7 +27,7 @@ public class ApplicationSignInSummary extends Entity implements IJsonBackedObjec
 
     /**
      * The App Display Name.
-     * Name of the application that the user signed in to.
+     * Name of the application that the user signed into.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose

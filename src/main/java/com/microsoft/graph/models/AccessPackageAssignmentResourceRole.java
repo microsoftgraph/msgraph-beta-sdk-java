@@ -87,7 +87,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Subject.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
      */
     @SerializedName(value = "accessPackageSubject", alternate = {"AccessPackageSubject"})
     @Expose

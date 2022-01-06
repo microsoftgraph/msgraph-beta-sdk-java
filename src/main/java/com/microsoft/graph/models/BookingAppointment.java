@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Location;
+import com.microsoft.graph.models.BookingCustomerInformationBase;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.BookingInvoiceStatus;
 import com.microsoft.graph.models.BookingPriceType;
@@ -33,7 +34,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Information.
-     * 
+     * Additional information that is sent to the customer when an appointment is confirmed.
      */
     @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
@@ -95,6 +96,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public String customerPhone;
 
     /**
+     * The Customers.
+     * It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     */
+    @SerializedName(value = "customers", alternate = {"Customers"})
+    @Expose
+	@Nullable
+    public java.util.List<BookingCustomerInformationBase> customers;
+
+    /**
      * The Customer Time Zone.
      * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      */
@@ -120,6 +130,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DateTimeTimeZone end;
+
+    /**
+     * The Filled Attendees Count.
+     * The current number of customers in the appointment
+     */
+    @SerializedName(value = "filledAttendeesCount", alternate = {"FilledAttendeesCount"})
+    @Expose
+	@Nullable
+    public Integer filledAttendeesCount;
 
     /**
      * The Invoice Amount.
@@ -168,7 +187,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Location Online.
-     * True indicates that the appointment will be held online. Default value is false.
+     * If true, indicates that the appointment will be held online. Default value is false.
      */
     @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
     @Expose
@@ -185,6 +204,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public String joinWebUrl;
 
     /**
+     * The Maximum Attendees Count.
+     * The maximum number of customers allowed in an appointment.
+     */
+    @SerializedName(value = "maximumAttendeesCount", alternate = {"MaximumAttendeesCount"})
+    @Expose
+	@Nullable
+    public Integer maximumAttendeesCount;
+
+    /**
      * The Online Meeting Url.
      * 
      */
@@ -195,7 +223,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Opt Out Of Customer Email.
-     * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      */
     @SerializedName(value = "optOutOfCustomerEmail", alternate = {"OptOutOfCustomerEmail"})
     @Expose
@@ -231,7 +259,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Price Type.
-     * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
+     * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
      */
     @SerializedName(value = "priceType", alternate = {"PriceType"})
     @Expose
@@ -249,7 +277,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Self Service Appointment Id.
-     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
      */
     @SerializedName(value = "selfServiceAppointmentId", alternate = {"SelfServiceAppointmentId"})
     @Expose
@@ -294,7 +322,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Sms Notifications Enabled.
-     * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      */
     @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
     @Expose

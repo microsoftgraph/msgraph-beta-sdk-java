@@ -39,7 +39,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Application Sign In Detailed Summary.
-     * 
+     * Represents a detailed summary of an application sign-in.
      */
     @SerializedName(value = "applicationSignInDetailedSummary", alternate = {"ApplicationSignInDetailedSummary"})
     @Expose
@@ -48,7 +48,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Methods.
-     * 
+     * Container for navigation properties for Azure AD authentication methods resources.
      */
     @SerializedName(value = "authenticationMethods", alternate = {"AuthenticationMethods"})
     @Expose
@@ -57,7 +57,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Credential User Registration Details.
-     * 
+     * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
      */
     @SerializedName(value = "credentialUserRegistrationDetails", alternate = {"CredentialUserRegistrationDetails"})
     @Expose
@@ -66,7 +66,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The User Credential Usage Details.
-     * 
+     * Represents the self-service password reset (SSPR) usage for a given tenant.
      */
     @SerializedName(value = "userCredentialUsageDetails", alternate = {"UserCredentialUsageDetails"})
     @Expose

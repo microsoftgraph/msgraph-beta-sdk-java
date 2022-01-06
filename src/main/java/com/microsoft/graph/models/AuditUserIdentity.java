@@ -27,7 +27,7 @@ public class AuditUserIdentity extends UserIdentity implements IJsonBackedObject
 
     /**
      * The Home Tenant Id.
-     * 
+     * For user sign ins, the identifier of the tenant that the user is a member of.
      */
     @SerializedName(value = "homeTenantId", alternate = {"HomeTenantId"})
     @Expose
@@ -36,7 +36,7 @@ public class AuditUserIdentity extends UserIdentity implements IJsonBackedObject
 
     /**
      * The Home Tenant Name.
-     * 
+     * For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
      */
     @SerializedName(value = "homeTenantName", alternate = {"HomeTenantName"})
     @Expose

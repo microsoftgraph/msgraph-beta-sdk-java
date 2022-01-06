@@ -9,12 +9,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.M365AlertClassification;
-import com.microsoft.graph.models.M365AlertComment;
-import com.microsoft.graph.models.M365AlertDetermination;
-import com.microsoft.graph.models.M365AlertSeverity;
+import com.microsoft.graph.models.AlertClassification_v2;
+import com.microsoft.graph.models.AlertComment_v2;
+import com.microsoft.graph.models.AlertDetermination_v2;
+import com.microsoft.graph.models.AlertSeverity_v2;
 import com.microsoft.graph.models.IncidentStatus;
+import com.microsoft.graph.models.Alert_v2;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.Alert_v2CollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -47,7 +49,7 @@ public class Incident extends Entity implements IJsonBackedObject {
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
 	@Nullable
-    public M365AlertClassification classification;
+    public AlertClassification_v2 classification;
 
     /**
      * The Comments.
@@ -56,7 +58,7 @@ public class Incident extends Entity implements IJsonBackedObject {
     @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
 	@Nullable
-    public java.util.List<M365AlertComment> comments;
+    public java.util.List<AlertComment_v2> comments;
 
     /**
      * The Created Date Time.
@@ -74,7 +76,7 @@ public class Incident extends Entity implements IJsonBackedObject {
     @SerializedName(value = "determination", alternate = {"Determination"})
     @Expose
 	@Nullable
-    public M365AlertDetermination determination;
+    public AlertDetermination_v2 determination;
 
     /**
      * The Display Name.
@@ -119,7 +121,7 @@ public class Incident extends Entity implements IJsonBackedObject {
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
 	@Nullable
-    public M365AlertSeverity severity;
+    public AlertSeverity_v2 severity;
 
     /**
      * The Status.
@@ -139,6 +141,13 @@ public class Incident extends Entity implements IJsonBackedObject {
 	@Nullable
     public java.util.List<String> tags;
 
+    /**
+     * The Alerts.
+     * 
+     */
+	@Nullable
+    public Alert_v2CollectionPage alerts;
+
 
     /**
      * Sets the raw JSON object
@@ -148,5 +157,9 @@ public class Incident extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("alerts")) {
+            alerts = serializer.deserializeObject(json.get("alerts"), Alert_v2CollectionPage.class);
+        }
     }
 }

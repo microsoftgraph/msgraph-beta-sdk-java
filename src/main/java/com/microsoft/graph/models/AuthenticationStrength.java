@@ -39,7 +39,7 @@ public class AuthenticationStrength implements IJsonBackedObject {
 
     /**
      * The Authentication Strength Id.
-     * 
+     * Identifier of the authentication strength.
      */
     @SerializedName(value = "authenticationStrengthId", alternate = {"AuthenticationStrengthId"})
     @Expose
@@ -48,7 +48,7 @@ public class AuthenticationStrength implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the authentication strength.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

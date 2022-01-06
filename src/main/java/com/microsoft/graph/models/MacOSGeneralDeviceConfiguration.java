@@ -257,6 +257,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Boolean iCloudBlockReminders;
 
     /**
+     * The ICloud Desktop And Documents Blocked.
+     * When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
+     */
+    @SerializedName(value = "iCloudDesktopAndDocumentsBlocked", alternate = {"ICloudDesktopAndDocumentsBlocked"})
+    @Expose
+	@Nullable
+    public Boolean iCloudDesktopAndDocumentsBlocked;
+
+    /**
      * The ICloud Private Relay Blocked.
      * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
      */

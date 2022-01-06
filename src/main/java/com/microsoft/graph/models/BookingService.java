@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.BookingQuestionAssignment;
 import com.microsoft.graph.models.Location;
 import com.microsoft.graph.models.BookingPriceType;
 import com.microsoft.graph.models.BookingReminder;
@@ -32,12 +33,21 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Additional Information.
-     * 
+     * Additional information that is sent to the customer when an appointment is confirmed.
      */
     @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
 	@Nullable
     public String additionalInformation;
+
+    /**
+     * The Custom Questions.
+     * Contains the set of custom questions associated with a particular service.
+     */
+    @SerializedName(value = "customQuestions", alternate = {"CustomQuestions"})
+    @Expose
+	@Nullable
+    public java.util.List<BookingQuestionAssignment> customQuestions;
 
     /**
      * The Default Duration.
@@ -68,7 +78,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Default Price Type.
-     * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
+     * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
      */
     @SerializedName(value = "defaultPriceType", alternate = {"DefaultPriceType"})
     @Expose
@@ -110,6 +120,15 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
     @Expose
 	@Nullable
     public Boolean isLocationOnline;
+
+    /**
+     * The Maximum Attendees Count.
+     * The maximum number of customers allowed in a service.
+     */
+    @SerializedName(value = "maximumAttendeesCount", alternate = {"MaximumAttendeesCount"})
+    @Expose
+	@Nullable
+    public Integer maximumAttendeesCount;
 
     /**
      * The Notes.

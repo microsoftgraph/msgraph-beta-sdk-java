@@ -65,7 +65,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Access Package Resource Role.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "accessPackageResourceRole", alternate = {"AccessPackageResourceRole"})
     @Expose

@@ -110,7 +110,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Requestor.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "requestor", alternate = {"Requestor"})
     @Expose
