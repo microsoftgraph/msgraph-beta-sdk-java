@@ -28,7 +28,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
 
     /**
      * The Question.
-     * 
+     * The question asked in order to get the value of the attribute
      */
     @SerializedName(value = "question", alternate = {"Question"})
     @Expose

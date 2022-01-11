@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Teamwork;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder;
+import com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamworkDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,5 +79,25 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
     @Nonnull
     public WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
         return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TeamworkDevice collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamworkDeviceCollectionRequestBuilder devices() {
+        return new TeamworkDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("devices"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamworkDevice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamworkDeviceRequestBuilder devices(@Nonnull final String id) {
+        return new TeamworkDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("devices") + "/" + id, getClient(), null);
     }
 }

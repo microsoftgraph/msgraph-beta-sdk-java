@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.LinkedResource_v2CollectionRequestBuilder;
 import com.microsoft.graph.requests.LinkedResource_v2RequestBuilder;
-import com.microsoft.graph.requests.BaseTaskListRequestBuilder;
+import com.microsoft.graph.requests.BaseTaskListWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.UserRegistrationFeatureSummary;
 import com.microsoft.graph.models.IncludedUserTypes;
 import com.microsoft.graph.models.IncludedUserRoles;
 import com.microsoft.graph.models.UserRegistrationMethodSummary;
+import com.microsoft.graph.requests.UserRegistrationDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserRegistrationDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

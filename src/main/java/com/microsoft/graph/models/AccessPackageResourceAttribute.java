@@ -41,7 +41,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Destination.
-     * 
+     * Information about how to set the attribute.
      */
     @SerializedName(value = "attributeDestination", alternate = {"AttributeDestination"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Name.
-     * 
+     * The name of the attribute in the end system.
      */
     @SerializedName(value = "attributeName", alternate = {"AttributeName"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Source.
-     * 
+     * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled.
      */
     @SerializedName(value = "attributeSource", alternate = {"AttributeSource"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Unique identifier for the attribute.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Is Editable.
-     * 
+     * Specifies whether or not an existing attribute value can be edited by the requester.
      */
     @SerializedName(value = "isEditable", alternate = {"IsEditable"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Is Persisted On Assignment Removal.
-     * 
+     * Specifies whether the attribute will remain in the end system after an assignment ends.
      */
     @SerializedName(value = "isPersistedOnAssignmentRemoval", alternate = {"IsPersistedOnAssignmentRemoval"})
     @Expose

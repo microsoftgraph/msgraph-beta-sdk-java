@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Teamwork;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder;
+import com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamworkDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -10,8 +10,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WorkforceIntegration;
+import com.microsoft.graph.models.TeamworkDevice;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
+import com.microsoft.graph.requests.TeamworkDeviceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +39,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 	@Nullable
     public WorkforceIntegrationCollectionPage workforceIntegrations;
 
+    /**
+     * The Devices.
+     * 
+     */
+    @SerializedName(value = "devices", alternate = {"Devices"})
+    @Expose
+	@Nullable
+    public TeamworkDeviceCollectionPage devices;
+
 
     /**
      * Sets the raw JSON object
@@ -49,6 +60,10 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
         if (json.has("workforceIntegrations")) {
             workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), WorkforceIntegrationCollectionPage.class);
+        }
+
+        if (json.has("devices")) {
+            devices = serializer.deserializeObject(json.get("devices"), TeamworkDeviceCollectionPage.class);
         }
     }
 }

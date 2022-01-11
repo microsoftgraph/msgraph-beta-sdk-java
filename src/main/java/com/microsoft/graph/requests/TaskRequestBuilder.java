@@ -122,11 +122,11 @@ public class TaskRequestBuilder extends BaseRequestBuilder<Task> {
     /**
      * Gets the request builder for BaseTaskList
      *
-     * @return the BaseTaskListRequestBuilder instance
+     * @return the BaseTaskListWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public BaseTaskListRequestBuilder parentList() {
-        return new BaseTaskListRequestBuilder(getRequestUrlWithAdditionalSegment("parentList"), getClient(), null);
+    public BaseTaskListWithReferenceRequestBuilder parentList() {
+        return new BaseTaskListWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parentList"), getClient(), null);
     }
 
     /**

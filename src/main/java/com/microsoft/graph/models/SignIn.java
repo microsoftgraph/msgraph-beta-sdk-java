@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicy;
+import com.microsoft.graph.models.AuthenticationContext;
 import com.microsoft.graph.models.AuthenticationDetail;
 import com.microsoft.graph.models.KeyValue;
 import com.microsoft.graph.models.ProtocolType;
@@ -25,6 +26,7 @@ import com.microsoft.graph.models.PrivateLinkDetails;
 import com.microsoft.graph.models.RiskDetail;
 import com.microsoft.graph.models.RiskLevel;
 import com.microsoft.graph.models.RiskState;
+import com.microsoft.graph.models.SessionLifetimePolicy;
 import com.microsoft.graph.models.SignInIdentifierType;
 import com.microsoft.graph.models.SignInStatus;
 import com.microsoft.graph.models.TokenIssuerType;
@@ -72,6 +74,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
+
+    /**
+     * The Authentication Context Class References.
+     * 
+     */
+    @SerializedName(value = "authenticationContextClassReferences", alternate = {"AuthenticationContextClassReferences"})
+    @Expose
+	@Nullable
+    public java.util.List<AuthenticationContext> authenticationContextClassReferences;
 
     /**
      * The Authentication Details.
@@ -137,6 +148,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public Integer autonomousSystemNumber;
 
     /**
+     * The Azure Resource Id.
+     * 
+     */
+    @SerializedName(value = "azureResourceId", alternate = {"AzureResourceId"})
+    @Expose
+	@Nullable
+    public String azureResourceId;
+
+    /**
      * The Client App Used.
      * Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange Active Sync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
      */
@@ -189,6 +209,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceDetail deviceDetail;
+
+    /**
+     * The Federated Credential Id.
+     * 
+     */
+    @SerializedName(value = "federatedCredentialId", alternate = {"FederatedCredentialId"})
+    @Expose
+	@Nullable
+    public String federatedCredentialId;
 
     /**
      * The Flagged For Review.
@@ -335,6 +364,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public String resourceId;
 
     /**
+     * The Resource Service Principal Id.
+     * 
+     */
+    @SerializedName(value = "resourceServicePrincipalId", alternate = {"ResourceServicePrincipalId"})
+    @Expose
+	@Nullable
+    public String resourceServicePrincipalId;
+
+    /**
      * The Resource Tenant Id.
      * The tenant identifier of the resource referenced in the sign in.
      */
@@ -423,6 +461,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String servicePrincipalName;
+
+    /**
+     * The Session Lifetime Policies.
+     * 
+     */
+    @SerializedName(value = "sessionLifetimePolicies", alternate = {"SessionLifetimePolicies"})
+    @Expose
+	@Nullable
+    public java.util.List<SessionLifetimePolicy> sessionLifetimePolicies;
 
     /**
      * The Sign In Event Types.

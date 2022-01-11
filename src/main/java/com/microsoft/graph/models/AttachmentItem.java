@@ -48,6 +48,15 @@ public class AttachmentItem implements IJsonBackedObject {
     public AttachmentType attachmentType;
 
     /**
+     * The Content Id.
+     * 
+     */
+    @SerializedName(value = "contentId", alternate = {"ContentId"})
+    @Expose
+	@Nullable
+    public String contentId;
+
+    /**
      * The Content Type.
      * The nature of the data in the attachment. Optional.
      */

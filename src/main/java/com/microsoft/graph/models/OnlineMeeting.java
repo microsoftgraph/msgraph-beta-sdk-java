@@ -21,8 +21,10 @@ import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingRegistration;
+import com.microsoft.graph.models.CallTranscript;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
+import com.microsoft.graph.requests.CallTranscriptCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -309,6 +311,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 	@Nullable
     public MeetingRegistration registration;
 
+    /**
+     * The Transcripts.
+     * 
+     */
+    @SerializedName(value = "transcripts", alternate = {"Transcripts"})
+    @Expose
+	@Nullable
+    public CallTranscriptCollectionPage transcripts;
+
 
     /**
      * Sets the raw JSON object
@@ -321,6 +332,10 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
         if (json.has("attendanceReports")) {
             attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), MeetingAttendanceReportCollectionPage.class);
+        }
+
+        if (json.has("transcripts")) {
+            transcripts = serializer.deserializeObject(json.get("transcripts"), CallTranscriptCollectionPage.class);
         }
     }
 }

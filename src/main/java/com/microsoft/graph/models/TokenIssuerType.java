@@ -28,6 +28,14 @@ public enum TokenIssuerType
     */
     AZURE_AD_BACKUP_AUTH,
     /**
+    * ADFederation Services MFAAdapter
+    */
+    AD_FEDERATION_SERVICES_MFA_ADAPTER,
+    /**
+    * NPSExtension
+    */
+    NPS_EXTENSION,
+    /**
     * For TokenIssuerType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AggregationOption;
 import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
+import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.ResultTemplateOption;
 import com.microsoft.graph.models.SortProperty;
 
@@ -116,6 +117,15 @@ public class SearchRequest implements IJsonBackedObject {
     public SearchQuery query;
 
     /**
+     * The Query Alteration Options.
+     * 
+     */
+    @SerializedName(value = "queryAlterationOptions", alternate = {"QueryAlterationOptions"})
+    @Expose
+	@Nullable
+    public SearchAlterationOptions queryAlterationOptions;
+
+    /**
      * The Result Template Options.
      * Provides the search result templates options for rendering connectors search results.
      */
@@ -145,11 +155,22 @@ public class SearchRequest implements IJsonBackedObject {
     /**
      * The Stored_fields.
      * 
+     * @deprecated The stored_fields will be removed on December 31, 2022. Please use the queryString instead.
      */
+    @Deprecated
     @SerializedName(value = "stored_fields", alternate = {"Stored_fields"})
     @Expose
 	@Nullable
     public java.util.List<String> stored_fields;
+
+    /**
+     * The Trim Duplicates.
+     * 
+     */
+    @SerializedName(value = "trimDuplicates", alternate = {"TrimDuplicates"})
+    @Expose
+	@Nullable
+    public Boolean trimDuplicates;
 
 
     /**
