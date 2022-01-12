@@ -52,7 +52,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Attributes.
-     * 
+     * Contains attribute information for the resource.
      */
     @SerializedName(value = "attributes", alternate = {"Attributes"})
     @Expose

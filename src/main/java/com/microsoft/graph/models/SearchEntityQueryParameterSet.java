@@ -6,7 +6,6 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.SearchRequest;
-import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.SearchResponse;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -31,15 +30,6 @@ public class SearchEntityQueryParameterSet {
 	@Nullable
     public java.util.List<SearchRequest> requests;
 
-    /**
-     * The query Alteration Options.
-     * 
-     */
-    @SerializedName(value = "queryAlterationOptions", alternate = {"QueryAlterationOptions"})
-    @Expose
-	@Nullable
-    public SearchAlterationOptions queryAlterationOptions;
-
 
     /**
      * Instiaciates a new SearchEntityQueryParameterSet
@@ -51,7 +41,6 @@ public class SearchEntityQueryParameterSet {
      */
     protected SearchEntityQueryParameterSet(@Nonnull final SearchEntityQueryParameterSetBuilder builder) {
         this.requests = builder.requests;
-        this.queryAlterationOptions = builder.queryAlterationOptions;
     }
     /**
      * Gets a new builder for the body
@@ -81,21 +70,6 @@ public class SearchEntityQueryParameterSet {
             return this;
         }
         /**
-         * The queryAlterationOptions parameter value
-         */
-        @Nullable
-        protected SearchAlterationOptions queryAlterationOptions;
-        /**
-         * Sets the QueryAlterationOptions
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public SearchEntityQueryParameterSetBuilder withQueryAlterationOptions(@Nullable final SearchAlterationOptions val) {
-            this.queryAlterationOptions = val;
-            return this;
-        }
-        /**
          * Instanciates a new SearchEntityQueryParameterSetBuilder
          */
         @Nullable
@@ -118,9 +92,6 @@ public class SearchEntityQueryParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.requests != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("requests", requests));
-        }
-        if(this.queryAlterationOptions != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("queryAlterationOptions", queryAlterationOptions));
         }
         return result;
     }

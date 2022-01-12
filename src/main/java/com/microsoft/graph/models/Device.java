@@ -207,6 +207,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public String managementType;
 
     /**
+     * The Mdm App Id.
+     * Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
+     */
+    @SerializedName(value = "mdmAppId", alternate = {"MdmAppId"})
+    @Expose
+	@Nullable
+    public String mdmAppId;
+
+    /**
      * The On Premises Last Sync Date Time.
      * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
      */

@@ -86,7 +86,9 @@ public class SearchHit implements IJsonBackedObject {
     /**
      * The _id.
      * 
+     * @deprecated The _id will be removed on December 31, 2022. Use the id instead.
      */
+    @Deprecated
     @SerializedName(value = "_id", alternate = {"_id"})
     @Expose
 	@Nullable
@@ -95,7 +97,9 @@ public class SearchHit implements IJsonBackedObject {
     /**
      * The _score.
      * 
+     * @deprecated The _score will be removed on December 31, 2022. Use the rank instead.
      */
+    @Deprecated
     @SerializedName(value = "_score", alternate = {"_score"})
     @Expose
 	@Nullable
@@ -104,7 +108,9 @@ public class SearchHit implements IJsonBackedObject {
     /**
      * The _summary.
      * 
+     * @deprecated The _summary will be removed on December 31, 2022. Use the summary instead.
      */
+    @Deprecated
     @SerializedName(value = "_summary", alternate = {"_summary"})
     @Expose
 	@Nullable

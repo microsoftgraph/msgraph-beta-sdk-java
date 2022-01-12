@@ -13,6 +13,8 @@ import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.requests.MeetingAttendanceReportCollectionRequestBuilder;
 import com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder;
 import com.microsoft.graph.requests.MeetingRegistrationRequestBuilder;
+import com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder;
+import com.microsoft.graph.requests.CallTranscriptRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

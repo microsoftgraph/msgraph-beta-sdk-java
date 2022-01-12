@@ -49,7 +49,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
 
     /**
      * The Is Answer Editable.
-     * 
+     * Specifies whether the requestor is allowed to edit answers to questions.
      */
     @SerializedName(value = "isAnswerEditable", alternate = {"IsAnswerEditable"})
     @Expose

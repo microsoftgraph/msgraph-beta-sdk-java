@@ -44,6 +44,15 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 	@Nullable
     public EnumSet<SourceType> includedSources;
 
+    /**
+     * The Site Web Url.
+     * 
+     */
+    @SerializedName(value = "siteWebUrl", alternate = {"SiteWebUrl"})
+    @Expose
+	@Nullable
+    public String siteWebUrl;
+
 
     /**
      * Sets the raw JSON object

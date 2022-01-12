@@ -12,6 +12,8 @@ import com.microsoft.graph.models.UserRegistrationFeatureSummary;
 import com.microsoft.graph.models.IncludedUserTypes;
 import com.microsoft.graph.models.IncludedUserRoles;
 import com.microsoft.graph.models.UserRegistrationMethodSummary;
+import com.microsoft.graph.requests.UserRegistrationDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserRegistrationDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -62,6 +64,26 @@ public class AuthenticationMethodsRootRequestBuilder extends BaseRequestBuilder<
     }
 
 
+    /**
+     *  Gets a request builder for the UserRegistrationDetails collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserRegistrationDetailsCollectionRequestBuilder userRegistrationDetails() {
+        return new UserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userRegistrationDetails"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserRegistrationDetails item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserRegistrationDetailsRequestBuilder userRegistrationDetails(@Nonnull final String id) {
+        return new UserRegistrationDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userRegistrationDetails") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

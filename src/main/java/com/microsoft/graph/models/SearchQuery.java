@@ -48,9 +48,20 @@ public class SearchQuery implements IJsonBackedObject {
     public String queryString;
 
     /**
-     * The Query_string.
+     * The Query Template.
      * 
      */
+    @SerializedName(value = "queryTemplate", alternate = {"QueryTemplate"})
+    @Expose
+	@Nullable
+    public String queryTemplate;
+
+    /**
+     * The Query_string.
+     * 
+     * @deprecated The query_string will be removed on December 31, 2022. Please use the queryString instead.
+     */
+    @Deprecated
     @SerializedName(value = "query_string", alternate = {"Query_string"})
     @Expose
 	@Nullable

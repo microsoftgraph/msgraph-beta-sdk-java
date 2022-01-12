@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.LinkedResource_v2CollectionRequestBuilder;
 import com.microsoft.graph.requests.LinkedResource_v2RequestBuilder;
-import com.microsoft.graph.requests.BaseTaskListRequestBuilder;
+import com.microsoft.graph.requests.BaseTaskListWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -128,11 +128,11 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
     /**
      * Gets the request builder for BaseTaskList
      *
-     * @return the BaseTaskListRequestBuilder instance
+     * @return the BaseTaskListWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public BaseTaskListRequestBuilder parentList() {
-        return new BaseTaskListRequestBuilder(getRequestUrlWithAdditionalSegment("parentList"), getClient(), null);
+    public BaseTaskListWithReferenceRequestBuilder parentList() {
+        return new BaseTaskListWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parentList"), getClient(), null);
     }
 
     /**

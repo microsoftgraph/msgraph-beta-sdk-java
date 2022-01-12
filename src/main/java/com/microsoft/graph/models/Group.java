@@ -208,7 +208,9 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     /**
      * The Mdm App Id.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "mdmAppId", alternate = {"MdmAppId"})
     @Expose
 	@Nullable

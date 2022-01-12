@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.37.0] - 2022-01-11
+
+### Added
+
+- Models and requet classes related to the Teamwork endpoint. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+
 ## [0.36.0] - 2022-01-05
 
 ### Added

@@ -8,7 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.UserRegistrationDetails;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.UserRegistrationDetailsCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -25,6 +28,15 @@ import javax.annotation.Nonnull;
 public class AuthenticationMethodsRoot extends Entity implements IJsonBackedObject {
 
 
+    /**
+     * The User Registration Details.
+     * 
+     */
+    @SerializedName(value = "userRegistrationDetails", alternate = {"UserRegistrationDetails"})
+    @Expose
+	@Nullable
+    public UserRegistrationDetailsCollectionPage userRegistrationDetails;
+
 
     /**
      * Sets the raw JSON object
@@ -34,5 +46,9 @@ public class AuthenticationMethodsRoot extends Entity implements IJsonBackedObje
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("userRegistrationDetails")) {
+            userRegistrationDetails = serializer.deserializeObject(json.get("userRegistrationDetails"), UserRegistrationDetailsCollectionPage.class);
+        }
     }
 }
