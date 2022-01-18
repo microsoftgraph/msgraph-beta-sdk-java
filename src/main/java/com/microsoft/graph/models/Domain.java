@@ -11,10 +11,12 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DomainState;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.InternalDomainFederation;
 import com.microsoft.graph.models.DomainDnsRecord;
 import com.microsoft.graph.models.SharedEmailDomainInvitation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.InternalDomainFederationCollectionPage;
 import com.microsoft.graph.requests.DomainDnsRecordCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionPage;
 
@@ -125,7 +127,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Services.
-     * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
+     * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
      */
     @SerializedName(value = "supportedServices", alternate = {"SupportedServices"})
     @Expose
@@ -138,6 +140,15 @@ public class Domain extends Entity implements IJsonBackedObject {
      */
 	@Nullable
     public DirectoryObjectCollectionPage domainNameReferences;
+
+    /**
+     * The Federation Configuration.
+     * 
+     */
+    @SerializedName(value = "federationConfiguration", alternate = {"FederationConfiguration"})
+    @Expose
+	@Nullable
+    public InternalDomainFederationCollectionPage federationConfiguration;
 
     /**
      * The Service Configuration Records.
@@ -178,6 +189,10 @@ public class Domain extends Entity implements IJsonBackedObject {
 
         if (json.has("domainNameReferences")) {
             domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences"), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("federationConfiguration")) {
+            federationConfiguration = serializer.deserializeObject(json.get("federationConfiguration"), InternalDomainFederationCollectionPage.class);
         }
 
         if (json.has("serviceConfigurationRecords")) {

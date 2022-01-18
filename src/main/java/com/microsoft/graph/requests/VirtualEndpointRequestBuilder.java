@@ -23,6 +23,8 @@ import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBu
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
 import com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder;
+import com.microsoft.graph.requests.CloudPcSnapshotCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcSnapshotRequestBuilder;
 import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
@@ -224,6 +226,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public CloudPcServicePlanRequestBuilder servicePlans(@Nonnull final String id) {
         return new CloudPcServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPcSnapshot collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcSnapshotCollectionRequestBuilder snapshots() {
+        return new CloudPcSnapshotCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("snapshots"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcSnapshot item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcSnapshotRequestBuilder snapshots(@Nonnull final String id) {
+        return new CloudPcSnapshotRequestBuilder(getRequestUrlWithAdditionalSegment("snapshots") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcSupportedRegion collection

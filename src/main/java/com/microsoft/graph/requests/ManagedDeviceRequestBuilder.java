@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.RestoreTimeRange;
+import com.microsoft.graph.models.CloudPcBulkRemoteActionResult;
 import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.AdministratorConfiguredDeviceComplianceState;
@@ -42,6 +44,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceResizeCloudPcParameterSet;
+import com.microsoft.graph.models.ManagedDeviceRestoreCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
 import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
@@ -296,6 +299,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public ManagedDeviceResizeCloudPcRequestBuilder resizeCloudPc(@Nonnull final ManagedDeviceResizeCloudPcParameterSet parameters) {
         return new ManagedDeviceResizeCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizeCloudPc"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceRestoreCloudPcRequestBuilder restoreCloudPc(@Nonnull final ManagedDeviceRestoreCloudPcParameterSet parameters) {
+        return new ManagedDeviceRestoreCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreCloudPc"), getClient(), null, parameters);
     }
 
     /**

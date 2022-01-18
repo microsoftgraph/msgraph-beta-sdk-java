@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Deleted;
 import com.microsoft.graph.models.Root;
+import com.microsoft.graph.models.SiteSettings;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.SiteCollection;
 import com.microsoft.graph.models.ItemAnalytics;
@@ -76,6 +77,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Root root;
+
+    /**
+     * The Settings.
+     * 
+     */
+    @SerializedName(value = "settings", alternate = {"Settings"})
+    @Expose
+	@Nullable
+    public SiteSettings settings;
 
     /**
      * The Sharepoint Ids.
@@ -149,7 +159,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection cannot be enumerated.
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -203,7 +213,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Term Store.
-     * The default termStore under this site.
+     * The termStore under this site.
      */
     @SerializedName(value = "termStore", alternate = {"TermStore"})
     @Expose

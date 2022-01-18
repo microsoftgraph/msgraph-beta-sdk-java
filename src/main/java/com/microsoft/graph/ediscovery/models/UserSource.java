@@ -46,7 +46,7 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Site Web Url.
-     * 
+     * The URL of the user's OneDrive for Business site. Read-only.
      */
     @SerializedName(value = "siteWebUrl", alternate = {"SiteWebUrl"})
     @Expose
