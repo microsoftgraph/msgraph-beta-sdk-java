@@ -105,7 +105,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Event Detail.
-     * Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
      */
     @SerializedName(value = "eventDetail", alternate = {"EventDetail"})
     @Expose
@@ -159,7 +159,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Mentions.
-     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
      */
     @SerializedName(value = "mentions", alternate = {"Mentions"})
     @Expose
@@ -174,6 +174,15 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ChatMessageType messageType;
+
+    /**
+     * The On Behalf Of.
+     * User attribution of the message when bot sends a message on behalf of a user.
+     */
+    @SerializedName(value = "onBehalfOf", alternate = {"OnBehalfOf"})
+    @Expose
+	@Nullable
+    public ChatMessageFromIdentitySet onBehalfOf;
 
     /**
      * The Policy Violation.

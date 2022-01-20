@@ -17,6 +17,7 @@ import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcOrganizationSettings;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.CloudPcServicePlan;
+import com.microsoft.graph.models.CloudPcSnapshot;
 import com.microsoft.graph.models.CloudPcSupportedRegion;
 import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.Entity;
@@ -27,6 +28,7 @@ import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
 import com.microsoft.graph.requests.CloudPcServicePlanCollectionPage;
+import com.microsoft.graph.requests.CloudPcSnapshotCollectionPage;
 import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionPage;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionPage;
 
@@ -118,6 +120,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     public CloudPcServicePlanCollectionPage servicePlans;
 
     /**
+     * The Snapshots.
+     * 
+     */
+    @SerializedName(value = "snapshots", alternate = {"Snapshots"})
+    @Expose
+	@Nullable
+    public CloudPcSnapshotCollectionPage snapshots;
+
+    /**
      * The Supported Regions.
      * Cloud PC supported regions.
      */
@@ -171,6 +182,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("servicePlans")) {
             servicePlans = serializer.deserializeObject(json.get("servicePlans"), CloudPcServicePlanCollectionPage.class);
+        }
+
+        if (json.has("snapshots")) {
+            snapshots = serializer.deserializeObject(json.get("snapshots"), CloudPcSnapshotCollectionPage.class);
         }
 
         if (json.has("supportedRegions")) {

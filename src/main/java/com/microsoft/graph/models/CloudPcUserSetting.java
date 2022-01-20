@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CloudPcRestorePointSetting;
 import com.microsoft.graph.models.CloudPcUserSettingAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcUserSettingAssignmentCollectionPage;
@@ -63,6 +64,15 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean localAdminEnabled;
+
+    /**
+     * The Restore Point Setting.
+     * 
+     */
+    @SerializedName(value = "restorePointSetting", alternate = {"RestorePointSetting"})
+    @Expose
+	@Nullable
+    public CloudPcRestorePointSetting restorePointSetting;
 
     /**
      * The Self Service Enabled.

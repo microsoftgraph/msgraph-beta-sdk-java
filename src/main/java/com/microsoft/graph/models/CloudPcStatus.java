@@ -44,6 +44,10 @@ public enum CloudPcStatus
     */
     RESIZING,
     /**
+    * restoring
+    */
+    RESTORING,
+    /**
     * pending Provision
     */
     PENDING_PROVISION,

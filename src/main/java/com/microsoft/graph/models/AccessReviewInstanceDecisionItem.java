@@ -98,7 +98,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Principal Link.
-     * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      */
     @SerializedName(value = "principalLink", alternate = {"PrincipalLink"})
     @Expose
@@ -152,7 +152,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Target.
-     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.
+     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

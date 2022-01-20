@@ -23,6 +23,8 @@ import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBu
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
 import com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder;
+import com.microsoft.graph.requests.CloudPcSnapshotCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcSnapshotRequestBuilder;
 import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
