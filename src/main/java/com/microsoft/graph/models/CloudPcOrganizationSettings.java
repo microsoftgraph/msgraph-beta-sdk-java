@@ -29,7 +29,7 @@ public class CloudPcOrganizationSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Os Version.
-     * 
+     * The account type of the user on provisioned Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      */
     @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
@@ -38,7 +38,7 @@ public class CloudPcOrganizationSettings extends Entity implements IJsonBackedOb
 
     /**
      * The User Account Type.
-     * 
+     * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
      */
     @SerializedName(value = "userAccountType", alternate = {"UserAccountType"})
     @Expose

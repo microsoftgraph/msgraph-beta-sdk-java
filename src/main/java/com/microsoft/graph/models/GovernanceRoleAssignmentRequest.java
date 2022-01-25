@@ -68,7 +68,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Resource Id.
-     * Required. The id of the resource which the role assignment request is associated with.
+     * Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -77,7 +77,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Role Definition Id.
-     * Required. The id of the role definition which the role assignment request is associated with.
+     * Required. The identifier of the Azure role definition that the role assignment request is associated with.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -104,7 +104,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
     /**
      * The Subject Id.
-     * Required. The id of the subject which the role assignment request is associated with.
+     * Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
      */
     @SerializedName(value = "subjectId", alternate = {"SubjectId"})
     @Expose

@@ -27,7 +27,7 @@ public class UserSignInInsight extends GovernanceInsight implements IJsonBackedO
 
     /**
      * The Last Sign In Date Time.
-     * 
+     * Indicates when the user last signed in
      */
     @SerializedName(value = "lastSignInDateTime", alternate = {"LastSignInDateTime"})
     @Expose

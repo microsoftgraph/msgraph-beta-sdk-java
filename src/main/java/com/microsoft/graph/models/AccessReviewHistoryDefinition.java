@@ -11,9 +11,12 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.AccessReviewHistoryDecisionFilter;
+import com.microsoft.graph.models.AccessReviewHistoryScheduleSettings;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewHistoryStatus;
+import com.microsoft.graph.models.AccessReviewHistoryInstance;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -69,7 +72,9 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
     /**
      * The Download Uri.
      * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
+     * @deprecated This property is being deprecated. Use the downloadUri value in the individual report instance instead
      */
+    @Deprecated
     @SerializedName(value = "downloadUri", alternate = {"DownloadUri"})
     @Expose
 	@Nullable
@@ -78,7 +83,9 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
     /**
      * The Fulfilled Date Time.
      * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
+     * @deprecated This property is being deprecated. Use the fulfilledDateTime value in the individual report instance instead
      */
+    @Deprecated
     @SerializedName(value = "fulfilledDateTime", alternate = {"FulfilledDateTime"})
     @Expose
 	@Nullable
@@ -103,6 +110,15 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
     public java.time.OffsetDateTime reviewHistoryPeriodStartDateTime;
 
     /**
+     * The Schedule Settings.
+     * 
+     */
+    @SerializedName(value = "scheduleSettings", alternate = {"ScheduleSettings"})
+    @Expose
+	@Nullable
+    public AccessReviewHistoryScheduleSettings scheduleSettings;
+
+    /**
      * The Scopes.
      * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
      */
@@ -120,6 +136,15 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 	@Nullable
     public AccessReviewHistoryStatus status;
 
+    /**
+     * The Instances.
+     * 
+     */
+    @SerializedName(value = "instances", alternate = {"Instances"})
+    @Expose
+	@Nullable
+    public AccessReviewHistoryInstanceCollectionPage instances;
+
 
     /**
      * Sets the raw JSON object
@@ -129,5 +154,9 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("instances")) {
+            instances = serializer.deserializeObject(json.get("instances"), AccessReviewHistoryInstanceCollectionPage.class);
+        }
     }
 }

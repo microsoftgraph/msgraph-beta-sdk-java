@@ -94,7 +94,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Organization Settings.
-     * 
+     * The Cloud PC organization settings for a tenant.
      */
     @SerializedName(value = "organizationSettings", alternate = {"OrganizationSettings"})
     @Expose

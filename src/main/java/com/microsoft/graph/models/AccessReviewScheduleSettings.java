@@ -106,7 +106,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendation Insight Settings.
-     * 
+     * Optional. Describes the types of insights that aid reviewers to make access review decisions.
      */
     @SerializedName(value = "recommendationInsightSettings", alternate = {"RecommendationInsightSettings"})
     @Expose

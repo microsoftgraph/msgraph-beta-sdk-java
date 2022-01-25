@@ -40,7 +40,7 @@ public class SessionLifetimePolicy implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * 
+     * The human-readable details of the conditional access session management policy applied to the sign-in.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -49,7 +49,7 @@ public class SessionLifetimePolicy implements IJsonBackedObject {
 
     /**
      * The Expiration Requirement.
-     * 
+     * If a conditional access session management policy required the user to authenticate in this sign-in event, this field describes the policy type that required authentication. The possible values are: rememberMultifactorAuthenticationOnTrustedDevices, tenantTokenLifetimePolicy, audienceTokenLifetimePolicy, signInFrequencyPeriodicReauthentication, ngcMfa, signInFrequencyEveryTime, unknownFutureValue.
      */
     @SerializedName(value = "expirationRequirement", alternate = {"ExpirationRequirement"})
     @Expose

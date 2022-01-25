@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.PlannerPlanContextType;
+import com.microsoft.graph.models.PlannerContextState;
 
 
 import com.google.gson.JsonObject;
@@ -55,6 +56,15 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PlannerPlanContextType displayLinkType;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName(value = "state", alternate = {"State"})
+    @Expose
+	@Nullable
+    public PlannerContextState state;
 
     /**
      * The Url.
