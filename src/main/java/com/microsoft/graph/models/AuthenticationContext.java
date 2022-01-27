@@ -40,7 +40,7 @@ public class AuthenticationContext implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * 
+     * Describes how the conditional access authentication context was triggered. A value of previouslySatisfied means the auth context was because the user already satisfied the requirements for that authentication context in some previous authentication event. A value of required means the user had to meet the authentication context requirement as part of the sign-in flow. The possible values are: required, previouslySatisfied, notApplicable, unknownFutureValue.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -49,7 +49,7 @@ public class AuthenticationContext implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The identifier of a authentication context in your tenant.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

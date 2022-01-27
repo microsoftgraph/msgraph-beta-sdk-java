@@ -125,7 +125,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * The collection of long running operations for the list.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

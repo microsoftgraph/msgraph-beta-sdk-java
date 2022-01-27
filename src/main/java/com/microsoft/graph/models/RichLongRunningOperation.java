@@ -28,7 +28,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Error.
-     * 
+     * Error due to which the operation failed.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -37,7 +37,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Percentage Complete.
-     * 
+     * A value between 0 and 100 that indicates the progress of the operation.
      */
     @SerializedName(value = "percentageComplete", alternate = {"PercentageComplete"})
     @Expose
@@ -46,7 +46,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Resource Id.
-     * 
+     * A unique identifier for the result.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -55,7 +55,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Type.
-     * 
+     * Type of the operation.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

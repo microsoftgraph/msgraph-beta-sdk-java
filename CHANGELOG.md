@@ -11,11 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.39.0] - 2022-01-27
+
+### Added
+
+- Models and Requests related, but not limited, to AccessReviewHistoryInstance, CrossTenantAccessPolicy, X509Certificate,  & AccessReviewHistory. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+
 ## [0.38.0] - 2022-01-20
 
 ### Added
 
-- Models and Requests related, but not limited to, CloudPc, ManagedDevice, SkypeUser/SkypeBusinessConversationMember, and DomainFederation/Federated behavior. 
+- Models and Requests related, but not limited, to CloudPc, ManagedDevice, SkypeUser/SkypeBusinessConversationMember, and DomainFederation/Federated behavior. 
 
 ### Changed
 

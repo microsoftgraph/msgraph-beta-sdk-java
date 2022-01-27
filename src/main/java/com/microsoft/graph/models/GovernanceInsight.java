@@ -27,7 +27,7 @@ public class GovernanceInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Insight Created Date Time.
-     * 
+     * Indicates when the insight was created.
      */
     @SerializedName(value = "insightCreatedDateTime", alternate = {"InsightCreatedDateTime"})
     @Expose

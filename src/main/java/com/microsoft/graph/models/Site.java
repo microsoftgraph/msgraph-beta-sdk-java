@@ -177,7 +177,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * The collection of long running operations for the site.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

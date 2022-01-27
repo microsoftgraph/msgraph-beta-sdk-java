@@ -28,7 +28,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Capable.
-     * 
+     * Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaCapable", alternate = {"IsMfaCapable"})
     @Expose
@@ -37,7 +37,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Registered.
-     * 
+     * Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq).
      */
     @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose
@@ -46,7 +46,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Passwordless Capable.
-     * 
+     * Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isPasswordlessCapable", alternate = {"IsPasswordlessCapable"})
     @Expose
@@ -55,7 +55,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Sspr Capable.
-     * 
+     * Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
      */
     @SerializedName(value = "isSsprCapable", alternate = {"IsSsprCapable"})
     @Expose
@@ -64,7 +64,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Sspr Enabled.
-     * 
+     * Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
      */
     @SerializedName(value = "isSsprEnabled", alternate = {"IsSsprEnabled"})
     @Expose
@@ -73,7 +73,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Sspr Registered.
-     * 
+     * Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
      */
     @SerializedName(value = "isSsprRegistered", alternate = {"IsSsprRegistered"})
     @Expose
@@ -82,7 +82,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Methods Registered.
-     * 
+     * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
      */
     @SerializedName(value = "methodsRegistered", alternate = {"MethodsRegistered"})
     @Expose
@@ -91,7 +91,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Display Name.
-     * 
+     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -100,7 +100,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

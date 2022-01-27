@@ -17,6 +17,7 @@ import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.TenantAppManagementPolicy;
+import com.microsoft.graph.models.ExternalIdentitiesPolicy;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
@@ -145,6 +146,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TenantAppManagementPolicy defaultAppManagementPolicy;
+
+    /**
+     * The External Identities Policy.
+     * 
+     */
+    @SerializedName(value = "externalIdentitiesPolicy", alternate = {"ExternalIdentitiesPolicy"})
+    @Expose
+	@Nullable
+    public ExternalIdentitiesPolicy externalIdentitiesPolicy;
 
     /**
      * The Home Realm Discovery Policies.

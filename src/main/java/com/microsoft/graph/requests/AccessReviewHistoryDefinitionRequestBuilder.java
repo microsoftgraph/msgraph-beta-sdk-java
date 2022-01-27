@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewHistoryDefinition;
+import com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewHistoryInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,6 +58,26 @@ public class AccessReviewHistoryDefinitionRequestBuilder extends BaseRequestBuil
     }
 
 
+    /**
+     *  Gets a request builder for the AccessReviewHistoryInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewHistoryInstanceCollectionRequestBuilder instances() {
+        return new AccessReviewHistoryInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessReviewHistoryInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewHistoryInstanceRequestBuilder instances(@Nonnull final String id) {
+        return new AccessReviewHistoryInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

@@ -77,7 +77,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Context Class References.
-     * 
+     * Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
      */
     @SerializedName(value = "authenticationContextClassReferences", alternate = {"AuthenticationContextClassReferences"})
     @Expose
@@ -149,7 +149,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure Resource Id.
-     * 
+     * Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
      */
     @SerializedName(value = "azureResourceId", alternate = {"AzureResourceId"})
     @Expose
@@ -212,7 +212,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Federated Credential Id.
-     * 
+     * Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
      */
     @SerializedName(value = "federatedCredentialId", alternate = {"FederatedCredentialId"})
     @Expose
@@ -365,7 +365,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Service Principal Id.
-     * 
+     * The identifier of the service principal representing the target resource in the sign-in event.
      */
     @SerializedName(value = "resourceServicePrincipalId", alternate = {"ResourceServicePrincipalId"})
     @Expose
@@ -464,7 +464,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Session Lifetime Policies.
-     * 
+     * Any conditional access session management policies that were applied during the sign-in event.
      */
     @SerializedName(value = "sessionLifetimePolicies", alternate = {"SessionLifetimePolicies"})
     @Expose
@@ -518,7 +518,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Issuer Type.
-     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: AzureADBackupAuth.
+     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      */
     @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
