@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AttackSimulationRoot;
+import com.microsoft.graph.requests.SimulationAutomationCollectionRequestBuilder;
+import com.microsoft.graph.requests.SimulationAutomationRequestBuilder;
 import com.microsoft.graph.requests.SimulationCollectionRequestBuilder;
 import com.microsoft.graph.requests.SimulationRequestBuilder;
 import java.util.Arrays;
@@ -58,6 +60,26 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
     }
 
 
+    /**
+     *  Gets a request builder for the SimulationAutomation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SimulationAutomationCollectionRequestBuilder simulationAutomations() {
+        return new SimulationAutomationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("simulationAutomations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the SimulationAutomation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SimulationAutomationRequestBuilder simulationAutomations(@Nonnull final String id) {
+        return new SimulationAutomationRequestBuilder(getRequestUrlWithAdditionalSegment("simulationAutomations") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the Simulation collection
      *

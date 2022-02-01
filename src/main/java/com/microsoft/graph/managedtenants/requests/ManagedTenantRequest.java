@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.AuditEventCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.AuditEventRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.CloudPcConnectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionRequestBuilder;

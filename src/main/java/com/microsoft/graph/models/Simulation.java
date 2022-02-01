@@ -12,11 +12,8 @@ import com.microsoft.graph.models.SimulationAttackTechnique;
 import com.microsoft.graph.models.SimulationAttackType;
 import com.microsoft.graph.models.EmailIdentity;
 import com.microsoft.graph.models.PayloadDeliveryPlatform;
-import com.microsoft.graph.models.PayloadSource;
 import com.microsoft.graph.models.SimulationReport;
 import com.microsoft.graph.models.SimulationStatus;
-import com.microsoft.graph.models.TrainingAssignmentPreference;
-import com.microsoft.graph.models.TrainingContentPreference;
 import com.microsoft.graph.models.Entity;
 
 
@@ -53,13 +50,13 @@ public class Simulation extends Entity implements IJsonBackedObject {
     public SimulationAttackType attackType;
 
     /**
-     * The Cleanup Artifacts.
-     * Flag representing if artifacts were cleaned up in the attack simulation and training campaign.
+     * The Automation Id.
+     * 
      */
-    @SerializedName(value = "cleanupArtifacts", alternate = {"CleanupArtifacts"})
+    @SerializedName(value = "automationId", alternate = {"AutomationId"})
     @Expose
 	@Nullable
-    public Boolean cleanupArtifacts;
+    public String automationId;
 
     /**
      * The Completion Date Time.
@@ -107,24 +104,6 @@ public class Simulation extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Enable Region Timezone Delivery.
-     * Flag representing whether to enable or disable timezone-aware delivery of phishing payload in the attack simulation and training campaign.
-     */
-    @SerializedName(value = "enableRegionTimezoneDelivery", alternate = {"EnableRegionTimezoneDelivery"})
-    @Expose
-	@Nullable
-    public Boolean enableRegionTimezoneDelivery;
-
-    /**
-     * The Include All Account Targets.
-     * Flag representing inclusion of all the users of a tenant in the attack simulation and training campaign.
-     */
-    @SerializedName(value = "includeAllAccountTargets", alternate = {"IncludeAllAccountTargets"})
-    @Expose
-	@Nullable
-    public Boolean includeAllAccountTargets;
-
-    /**
      * The Is Automated.
      * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      */
@@ -170,15 +149,6 @@ public class Simulation extends Entity implements IJsonBackedObject {
     public PayloadDeliveryPlatform payloadDeliveryPlatform;
 
     /**
-     * The Payload Source.
-     * Source of phishing payload in the attack simulation and training campaign. Possible values are: unknown, global, tenant, unknownFutureValue.
-     */
-    @SerializedName(value = "payloadSource", alternate = {"PayloadSource"})
-    @Expose
-	@Nullable
-    public PayloadSource payloadSource;
-
-    /**
      * The Report.
      * Report of the attack simulation and training campaign.
      */
@@ -195,33 +165,6 @@ public class Simulation extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SimulationStatus status;
-
-    /**
-     * The Training Assignment Preference.
-     * Preference of the tenant admin to assign training to users in the attack simulation and training campaign. Possible values are: unknown, auto, manual, unknownFutureValue.
-     */
-    @SerializedName(value = "trainingAssignmentPreference", alternate = {"TrainingAssignmentPreference"})
-    @Expose
-	@Nullable
-    public TrainingAssignmentPreference trainingAssignmentPreference;
-
-    /**
-     * The Training Content Preference.
-     * Preference of the tenant admin for the source of training content to assign to users in the attack simulation and training campaign. Possible values are: unknown, microsoft, custom, noTraining, unknownFutureValue.
-     */
-    @SerializedName(value = "trainingContentPreference", alternate = {"TrainingContentPreference"})
-    @Expose
-	@Nullable
-    public TrainingContentPreference trainingContentPreference;
-
-    /**
-     * The Training Due Date Time.
-     * Date and time before which the trainings need to be completed by users in the attack simulation and training campaign.
-     */
-    @SerializedName(value = "trainingDueDateTime", alternate = {"TrainingDueDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime trainingDueDateTime;
 
 
     /**

@@ -40,7 +40,7 @@ public class TeamworkHardwareHealth implements IJsonBackedObject {
 
     /**
      * The Compute Health.
-     * 
+     * The system health details for a teamworkDevice.
      */
     @SerializedName(value = "computeHealth", alternate = {"ComputeHealth"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkHardwareHealth implements IJsonBackedObject {
 
     /**
      * The Hdmi Ingest Health.
-     * 
+     * The health details about the HDMI ingest of a device.
      */
     @SerializedName(value = "hdmiIngestHealth", alternate = {"HdmiIngestHealth"})
     @Expose

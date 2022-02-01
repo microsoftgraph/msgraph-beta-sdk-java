@@ -41,7 +41,7 @@ public class TeamworkAccountConfiguration implements IJsonBackedObject {
 
     /**
      * The On Premises Calendar Sync Configuration.
-     * 
+     * The account used to sync the calendar.
      */
     @SerializedName(value = "onPremisesCalendarSyncConfiguration", alternate = {"OnPremisesCalendarSyncConfiguration"})
     @Expose
@@ -50,7 +50,7 @@ public class TeamworkAccountConfiguration implements IJsonBackedObject {
 
     /**
      * The Supported Client.
-     * 
+     * The supported client for Teams Rooms devices. The possible values are: unknown, skypeDefaultAndTeams, teamsDefaultAndSkype, skypeOnly, teamsOnly, unknownFutureValue.
      */
     @SerializedName(value = "supportedClient", alternate = {"SupportedClient"})
     @Expose

@@ -56,4 +56,13 @@ public class AccessReviewHistoryInstanceRequestBuilder extends BaseRequestBuilde
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewHistoryInstanceGenerateDownloadUriRequestBuilder generateDownloadUri() {
+        return new AccessReviewHistoryInstanceGenerateDownloadUriRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.generateDownloadUri"), getClient(), null);
+    }
 }

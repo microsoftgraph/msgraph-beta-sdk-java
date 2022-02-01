@@ -61,7 +61,7 @@ public class SearchResponse implements IJsonBackedObject {
 
     /**
      * The Result Templates.
-     * 
+     * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
      */
     @SerializedName(value = "resultTemplates", alternate = {"ResultTemplates"})
     @Expose

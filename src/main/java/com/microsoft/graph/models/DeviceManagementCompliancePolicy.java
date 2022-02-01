@@ -90,7 +90,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements IJsonBac
 
     /**
      * The Platforms.
-     * Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+     * Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose

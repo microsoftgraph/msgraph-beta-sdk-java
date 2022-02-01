@@ -147,8 +147,26 @@ public class CustodianRequestBuilder extends BaseRequestBuilder<Custodian> {
      * @return the request builder
      */
     @Nonnull
+    public CustodianApplyHoldRequestBuilder applyHold() {
+        return new CustodianApplyHoldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.applyHold"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public CustodianReleaseRequestBuilder release() {
         return new CustodianReleaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.release"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CustodianRemoveHoldRequestBuilder removeHold() {
+        return new CustodianRemoveHoldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.removeHold"), getClient(), null);
     }
 
     /**

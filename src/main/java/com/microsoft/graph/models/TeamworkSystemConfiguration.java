@@ -41,7 +41,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Date Time Configuration.
-     * 
+     * The date and time configurations for a device.
      */
     @SerializedName(value = "dateTimeConfiguration", alternate = {"DateTimeConfiguration"})
     @Expose
@@ -50,7 +50,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Default Password.
-     * 
+     * The default password for the device. Write-Only.
      */
     @SerializedName(value = "defaultPassword", alternate = {"DefaultPassword"})
     @Expose
@@ -59,7 +59,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Device Lock Timeout.
-     * 
+     * The device lock timeout in seconds.
      */
     @SerializedName(value = "deviceLockTimeout", alternate = {"DeviceLockTimeout"})
     @Expose
@@ -68,7 +68,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Device Lock Enabled.
-     * 
+     * True if the device lock is enabled.
      */
     @SerializedName(value = "isDeviceLockEnabled", alternate = {"IsDeviceLockEnabled"})
     @Expose
@@ -77,7 +77,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Logging Enabled.
-     * 
+     * True if logging is enabled.
      */
     @SerializedName(value = "isLoggingEnabled", alternate = {"IsLoggingEnabled"})
     @Expose
@@ -86,7 +86,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Power Saving Enabled.
-     * 
+     * True if power saving is enabled.
      */
     @SerializedName(value = "isPowerSavingEnabled", alternate = {"IsPowerSavingEnabled"})
     @Expose
@@ -95,7 +95,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Screen Capture Enabled.
-     * 
+     * True if screen capture is enabled.
      */
     @SerializedName(value = "isScreenCaptureEnabled", alternate = {"IsScreenCaptureEnabled"})
     @Expose
@@ -104,7 +104,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Silent Mode Enabled.
-     * 
+     * True if silent mode is enabled.
      */
     @SerializedName(value = "isSilentModeEnabled", alternate = {"IsSilentModeEnabled"})
     @Expose
@@ -113,7 +113,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Language.
-     * 
+     * The language option for the device.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose
@@ -122,7 +122,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Lock Pin.
-     * 
+     * The pin that unlocks the device. Write-Only.
      */
     @SerializedName(value = "lockPin", alternate = {"LockPin"})
     @Expose
@@ -131,7 +131,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Logging Level.
-     * 
+     * The logging level for the device.
      */
     @SerializedName(value = "loggingLevel", alternate = {"LoggingLevel"})
     @Expose
@@ -140,7 +140,7 @@ public class TeamworkSystemConfiguration implements IJsonBackedObject {
 
     /**
      * The Network Configuration.
-     * 
+     * The network configuration for the device.
      */
     @SerializedName(value = "networkConfiguration", alternate = {"NetworkConfiguration"})
     @Expose

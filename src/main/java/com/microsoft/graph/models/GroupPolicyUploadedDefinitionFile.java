@@ -50,7 +50,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
     /**
      * The File Name.
-     * The file name of the uploaded ADML file.
+     * The file name of the ADMX file without the path. For example: edge.admx Inherited from groupPolicyDefinitionFile
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose

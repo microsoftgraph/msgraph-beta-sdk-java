@@ -40,7 +40,7 @@ public class TeamworkHardwareDetail implements IJsonBackedObject {
 
     /**
      * The Mac Addresses.
-     * 
+     * MAC address.
      */
     @SerializedName(value = "macAddresses", alternate = {"MacAddresses"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkHardwareDetail implements IJsonBackedObject {
 
     /**
      * The Manufacturer.
-     * 
+     * Device manufacturer.
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamworkHardwareDetail implements IJsonBackedObject {
 
     /**
      * The Model.
-     * 
+     * Devie model.
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -67,7 +67,7 @@ public class TeamworkHardwareDetail implements IJsonBackedObject {
 
     /**
      * The Serial Number.
-     * 
+     * Device serial number.
      */
     @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
@@ -76,7 +76,7 @@ public class TeamworkHardwareDetail implements IJsonBackedObject {
 
     /**
      * The Unique Id.
-     * 
+     * The unique identifier for the device.
      */
     @SerializedName(value = "uniqueId", alternate = {"UniqueId"})
     @Expose

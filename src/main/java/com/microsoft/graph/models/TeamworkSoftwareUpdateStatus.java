@@ -40,7 +40,7 @@ public class TeamworkSoftwareUpdateStatus implements IJsonBackedObject {
 
     /**
      * The Available Version.
-     * 
+     * The available software version to update.
      */
     @SerializedName(value = "availableVersion", alternate = {"AvailableVersion"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkSoftwareUpdateStatus implements IJsonBackedObject {
 
     /**
      * The Current Version.
-     * 
+     * The current software version.
      */
     @SerializedName(value = "currentVersion", alternate = {"CurrentVersion"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamworkSoftwareUpdateStatus implements IJsonBackedObject {
 
     /**
      * The Software Freshness.
-     * 
+     * The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
      */
     @SerializedName(value = "softwareFreshness", alternate = {"SoftwareFreshness"})
     @Expose

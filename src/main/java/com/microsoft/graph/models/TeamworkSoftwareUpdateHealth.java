@@ -40,7 +40,7 @@ public class TeamworkSoftwareUpdateHealth implements IJsonBackedObject {
 
     /**
      * The Admin Agent Software Update Status.
-     * 
+     * The software update available for the admin agent.
      */
     @SerializedName(value = "adminAgentSoftwareUpdateStatus", alternate = {"AdminAgentSoftwareUpdateStatus"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkSoftwareUpdateHealth implements IJsonBackedObject {
 
     /**
      * The Company Portal Software Update Status.
-     * 
+     * The software update available for the company portal.
      */
     @SerializedName(value = "companyPortalSoftwareUpdateStatus", alternate = {"CompanyPortalSoftwareUpdateStatus"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamworkSoftwareUpdateHealth implements IJsonBackedObject {
 
     /**
      * The Firmware Software Update Status.
-     * 
+     * The software update available for the firmware.
      */
     @SerializedName(value = "firmwareSoftwareUpdateStatus", alternate = {"FirmwareSoftwareUpdateStatus"})
     @Expose
@@ -67,7 +67,7 @@ public class TeamworkSoftwareUpdateHealth implements IJsonBackedObject {
 
     /**
      * The Operating System Software Update Status.
-     * 
+     * The software update available for the operating system.
      */
     @SerializedName(value = "operatingSystemSoftwareUpdateStatus", alternate = {"OperatingSystemSoftwareUpdateStatus"})
     @Expose
@@ -76,7 +76,7 @@ public class TeamworkSoftwareUpdateHealth implements IJsonBackedObject {
 
     /**
      * The Partner Agent Software Update Status.
-     * 
+     * The software update available for the partner agent.
      */
     @SerializedName(value = "partnerAgentSoftwareUpdateStatus", alternate = {"PartnerAgentSoftwareUpdateStatus"})
     @Expose
@@ -85,7 +85,7 @@ public class TeamworkSoftwareUpdateHealth implements IJsonBackedObject {
 
     /**
      * The Teams Client Software Update Status.
-     * 
+     * The software update available for the Teams client.
      */
     @SerializedName(value = "teamsClientSoftwareUpdateStatus", alternate = {"TeamsClientSoftwareUpdateStatus"})
     @Expose

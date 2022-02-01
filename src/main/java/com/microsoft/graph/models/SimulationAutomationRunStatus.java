@@ -7,28 +7,36 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Training Assignment Preference.
+ * The Enum Simulation Automation Run Status.
 */
-public enum TrainingAssignmentPreference
+public enum SimulationAutomationRunStatus
 {
     /**
     * unknown
     */
     UNKNOWN,
     /**
-    * auto
+    * running
     */
-    AUTO,
+    RUNNING,
     /**
-    * manual
+    * succeeded
     */
-    MANUAL,
+    SUCCEEDED,
+    /**
+    * failed
+    */
+    FAILED,
+    /**
+    * skipped
+    */
+    SKIPPED,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For TrainingAssignmentPreference values that were not expected from the service
+    * For SimulationAutomationRunStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

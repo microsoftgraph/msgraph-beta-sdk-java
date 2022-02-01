@@ -53,7 +53,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
      */
     @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose

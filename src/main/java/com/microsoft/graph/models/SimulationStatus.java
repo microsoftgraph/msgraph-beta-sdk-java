@@ -20,21 +20,17 @@ public enum SimulationStatus
     */
     DRAFT,
     /**
-    * in Progress
+    * running
     */
-    IN_PROGRESS,
+    RUNNING,
     /**
     * scheduled
     */
     SCHEDULED,
     /**
-    * completed
+    * succeeded
     */
-    COMPLETED,
-    /**
-    * partially Completed
-    */
-    PARTIALLY_COMPLETED,
+    SUCCEEDED,
     /**
     * failed
     */
@@ -47,14 +43,6 @@ public enum SimulationStatus
     * excluded
     */
     EXCLUDED,
-    /**
-    * deleted
-    */
-    DELETED,
-    /**
-    * included
-    */
-    INCLUDED,
     /**
     * unknown Future Value
     */

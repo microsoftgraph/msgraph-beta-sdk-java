@@ -39,7 +39,7 @@ public class TeamworkDisplayScreenConfiguration implements IJsonBackedObject {
 
     /**
      * The Backlight Brightness.
-     * 
+     * The brightness level on the device (0-100). Not applicable for Microsoft Teams Rooms devices.
      */
     @SerializedName(value = "backlightBrightness", alternate = {"BacklightBrightness"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkDisplayScreenConfiguration implements IJsonBackedObject {
 
     /**
      * The Backlight Timeout.
-     * 
+     * Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
      */
     @SerializedName(value = "backlightTimeout", alternate = {"BacklightTimeout"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkDisplayScreenConfiguration implements IJsonBackedObject {
 
     /**
      * The Is High Contrast Enabled.
-     * 
+     * True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
      */
     @SerializedName(value = "isHighContrastEnabled", alternate = {"IsHighContrastEnabled"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkDisplayScreenConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Screensaver Enabled.
-     * 
+     * True if screensaver is enabled. Not applicable for Teams Rooms devices.
      */
     @SerializedName(value = "isScreensaverEnabled", alternate = {"IsScreensaverEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkDisplayScreenConfiguration implements IJsonBackedObject {
 
     /**
      * The Screensaver Timeout.
-     * 
+     * Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
      */
     @SerializedName(value = "screensaverTimeout", alternate = {"ScreensaverTimeout"})
     @Expose

@@ -3,36 +3,40 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.models;
+package com.microsoft.graph.ediscovery.models;
 
 
 /**
- * The Enum Training Content Preference.
+ * The Enum Data Source Hold Status.
 */
-public enum TrainingContentPreference
+public enum DataSourceHoldStatus
 {
     /**
-    * unknown
+    * not Applied
     */
-    UNKNOWN,
+    NOT_APPLIED,
     /**
-    * microsoft
+    * applied
     */
-    MICROSOFT,
+    APPLIED,
     /**
-    * custom
+    * applying
     */
-    CUSTOM,
+    APPLYING,
     /**
-    * no Training
+    * removing
     */
-    NO_TRAINING,
+    REMOVING,
+    /**
+    * partial
+    */
+    PARTIAL,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For TrainingContentPreference values that were not expected from the service
+    * For DataSourceHoldStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

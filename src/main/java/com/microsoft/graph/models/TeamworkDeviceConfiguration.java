@@ -36,7 +36,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Camera Configuration.
-     * 
+     * The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices.
      */
     @SerializedName(value = "cameraConfiguration", alternate = {"CameraConfiguration"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the device configuration document.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -54,7 +54,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Created Date Time.
-     * 
+     * The UTC date and time when the device configuration document was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Display Configuration.
-     * 
+     * The display configuration.
      */
     @SerializedName(value = "displayConfiguration", alternate = {"DisplayConfiguration"})
     @Expose
@@ -72,7 +72,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Hardware Configuration.
-     * 
+     * The hardware configuration. Applicable only for Teams Rooms-enabled devices.
      */
     @SerializedName(value = "hardwareConfiguration", alternate = {"HardwareConfiguration"})
     @Expose
@@ -81,7 +81,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the device configuration.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -90,7 +90,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The UTC date and time when the device configuration was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -99,7 +99,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Microphone Configuration.
-     * 
+     * The microphone configuration. Applicable only for Teams Rooms-enabled devices.
      */
     @SerializedName(value = "microphoneConfiguration", alternate = {"MicrophoneConfiguration"})
     @Expose
@@ -108,7 +108,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Software Versions.
-     * 
+     * Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
      */
     @SerializedName(value = "softwareVersions", alternate = {"SoftwareVersions"})
     @Expose
@@ -117,7 +117,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Speaker Configuration.
-     * 
+     * The speaker configuration. Applicable only for Teams Rooms-enabled devices.
      */
     @SerializedName(value = "speakerConfiguration", alternate = {"SpeakerConfiguration"})
     @Expose
@@ -126,7 +126,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The System Configuration.
-     * 
+     * The system configuration. Not applicable for Teams Rooms-enabled devices.
      */
     @SerializedName(value = "systemConfiguration", alternate = {"SystemConfiguration"})
     @Expose
@@ -135,7 +135,7 @@ public class TeamworkDeviceConfiguration extends Entity implements IJsonBackedOb
 
     /**
      * The Teams Client Configuration.
-     * 
+     * The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
      */
     @SerializedName(value = "teamsClientConfiguration", alternate = {"TeamsClientConfiguration"})
     @Expose

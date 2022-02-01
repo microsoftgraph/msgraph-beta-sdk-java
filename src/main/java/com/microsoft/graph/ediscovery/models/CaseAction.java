@@ -36,6 +36,10 @@ public enum CaseAction
     */
     ADD_TO_REVIEW_SET,
     /**
+    * hold Update
+    */
+    HOLD_UPDATE,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

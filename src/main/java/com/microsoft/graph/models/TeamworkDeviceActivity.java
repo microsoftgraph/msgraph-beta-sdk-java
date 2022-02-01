@@ -29,7 +29,7 @@ public class TeamworkDeviceActivity extends Entity implements IJsonBackedObject 
 
     /**
      * The Active Peripherals.
-     * 
+     * The active peripheral devices attached to the device.
      */
     @SerializedName(value = "activePeripherals", alternate = {"ActivePeripherals"})
     @Expose
@@ -38,7 +38,7 @@ public class TeamworkDeviceActivity extends Entity implements IJsonBackedObject 
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the device activity document.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -47,7 +47,7 @@ public class TeamworkDeviceActivity extends Entity implements IJsonBackedObject 
 
     /**
      * The Created Date Time.
-     * 
+     * The UTC date and time when the device activity document was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class TeamworkDeviceActivity extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the device activity details.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -65,7 +65,7 @@ public class TeamworkDeviceActivity extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The UTC date and time when the device activity detail was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

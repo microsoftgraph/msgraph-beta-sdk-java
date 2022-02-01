@@ -27,7 +27,7 @@ public class TeamworkPeripheral extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name for the peripheral.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class TeamworkPeripheral extends Entity implements IJsonBackedObject {
 
     /**
      * The Product Id.
-     * 
+     * The product ID of the device. Each product from a vendor has its own ID.
      */
     @SerializedName(value = "productId", alternate = {"ProductId"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamworkPeripheral extends Entity implements IJsonBackedObject {
 
     /**
      * The Vendor Id.
-     * 
+     * The unique identifier for the vendor of the device. Each vendor has a unique ID.
      */
     @SerializedName(value = "vendorId", alternate = {"VendorId"})
     @Expose

@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.AggregatedPolicyCompliance;
+import com.microsoft.graph.managedtenants.models.AuditEvent;
 import com.microsoft.graph.managedtenants.models.CloudPcConnection;
 import com.microsoft.graph.managedtenants.models.CloudPcDevice;
 import com.microsoft.graph.managedtenants.models.CloudPcOverview;
@@ -34,6 +35,7 @@ import com.microsoft.graph.managedtenants.models.WindowsDeviceMalwareState;
 import com.microsoft.graph.managedtenants.models.WindowsProtectionState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage;
+import com.microsoft.graph.managedtenants.requests.AuditEventCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionPage;
@@ -80,6 +82,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AggregatedPolicyComplianceCollectionPage aggregatedPolicyCompliances;
+
+    /**
+     * The Audit Events.
+     * 
+     */
+    @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
+    @Expose
+	@Nullable
+    public AuditEventCollectionPage auditEvents;
 
     /**
      * The Cloud Pc Connections.
@@ -291,6 +302,10 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
         if (json.has("aggregatedPolicyCompliances")) {
             aggregatedPolicyCompliances = serializer.deserializeObject(json.get("aggregatedPolicyCompliances"), AggregatedPolicyComplianceCollectionPage.class);
+        }
+
+        if (json.has("auditEvents")) {
+            auditEvents = serializer.deserializeObject(json.get("auditEvents"), AuditEventCollectionPage.class);
         }
 
         if (json.has("cloudPcConnections")) {

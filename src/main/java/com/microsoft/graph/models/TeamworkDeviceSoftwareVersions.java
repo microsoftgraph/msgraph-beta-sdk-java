@@ -39,7 +39,7 @@ public class TeamworkDeviceSoftwareVersions implements IJsonBackedObject {
 
     /**
      * The Admin Agent Software Version.
-     * 
+     * The software version for the admin agent running on the device.
      */
     @SerializedName(value = "adminAgentSoftwareVersion", alternate = {"AdminAgentSoftwareVersion"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkDeviceSoftwareVersions implements IJsonBackedObject {
 
     /**
      * The Firmware Software Version.
-     * 
+     * The software version for the firmware running on the device.
      */
     @SerializedName(value = "firmwareSoftwareVersion", alternate = {"FirmwareSoftwareVersion"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkDeviceSoftwareVersions implements IJsonBackedObject {
 
     /**
      * The Operating System Software Version.
-     * 
+     * The software version for the operating system on the device.
      */
     @SerializedName(value = "operatingSystemSoftwareVersion", alternate = {"OperatingSystemSoftwareVersion"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkDeviceSoftwareVersions implements IJsonBackedObject {
 
     /**
      * The Partner Agent Software Version.
-     * 
+     * The software version for the partner agent running on the device.
      */
     @SerializedName(value = "partnerAgentSoftwareVersion", alternate = {"PartnerAgentSoftwareVersion"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkDeviceSoftwareVersions implements IJsonBackedObject {
 
     /**
      * The Teams Client Software Version.
-     * 
+     * The software version for the Teams client running on the device.
      */
     @SerializedName(value = "teamsClientSoftwareVersion", alternate = {"TeamsClientSoftwareVersion"})
     @Expose

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.ediscovery.models.DataSourceHoldStatus;
 import com.microsoft.graph.ediscovery.models.DataSourceContainerStatus;
 import com.microsoft.graph.ediscovery.models.CaseIndexOperation;
 import com.microsoft.graph.models.Entity;
@@ -44,6 +45,15 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Hold Status.
+     * 
+     */
+    @SerializedName(value = "holdStatus", alternate = {"HoldStatus"})
+    @Expose
+	@Nullable
+    public DataSourceHoldStatus holdStatus;
 
     /**
      * The Last Modified Date Time.

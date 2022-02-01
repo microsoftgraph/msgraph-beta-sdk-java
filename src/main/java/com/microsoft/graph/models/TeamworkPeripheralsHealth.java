@@ -41,7 +41,7 @@ public class TeamworkPeripheralsHealth implements IJsonBackedObject {
 
     /**
      * The Communication Speaker Health.
-     * 
+     * The health details about the communication speaker.
      */
     @SerializedName(value = "communicationSpeakerHealth", alternate = {"CommunicationSpeakerHealth"})
     @Expose
@@ -50,7 +50,7 @@ public class TeamworkPeripheralsHealth implements IJsonBackedObject {
 
     /**
      * The Content Camera Health.
-     * 
+     * The health details about the content camera.
      */
     @SerializedName(value = "contentCameraHealth", alternate = {"ContentCameraHealth"})
     @Expose
@@ -59,7 +59,7 @@ public class TeamworkPeripheralsHealth implements IJsonBackedObject {
 
     /**
      * The Display Health Collection.
-     * 
+     * The health details about displays.
      */
     @SerializedName(value = "displayHealthCollection", alternate = {"DisplayHealthCollection"})
     @Expose
@@ -68,7 +68,7 @@ public class TeamworkPeripheralsHealth implements IJsonBackedObject {
 
     /**
      * The Microphone Health.
-     * 
+     * The health details about the microphone.
      */
     @SerializedName(value = "microphoneHealth", alternate = {"MicrophoneHealth"})
     @Expose
@@ -77,7 +77,7 @@ public class TeamworkPeripheralsHealth implements IJsonBackedObject {
 
     /**
      * The Room Camera Health.
-     * 
+     * The health details about the room camera.
      */
     @SerializedName(value = "roomCameraHealth", alternate = {"RoomCameraHealth"})
     @Expose
@@ -86,7 +86,7 @@ public class TeamworkPeripheralsHealth implements IJsonBackedObject {
 
     /**
      * The Speaker Health.
-     * 
+     * The health details about the speaker.
      */
     @SerializedName(value = "speakerHealth", alternate = {"SpeakerHealth"})
     @Expose

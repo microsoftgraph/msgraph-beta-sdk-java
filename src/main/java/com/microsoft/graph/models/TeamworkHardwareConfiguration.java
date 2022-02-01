@@ -40,7 +40,7 @@ public class TeamworkHardwareConfiguration implements IJsonBackedObject {
 
     /**
      * The Processor Model.
-     * 
+     * The CPU model on the device.
      */
     @SerializedName(value = "processorModel", alternate = {"ProcessorModel"})
     @Expose

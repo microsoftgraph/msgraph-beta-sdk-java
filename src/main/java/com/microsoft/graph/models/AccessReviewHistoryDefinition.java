@@ -71,7 +71,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Download Uri.
-     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
+     * 
      * @deprecated This property is being deprecated. Use the downloadUri value in the individual report instance instead
      */
     @Deprecated
@@ -82,7 +82,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Fulfilled Date Time.
-     * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
+     * 
      * @deprecated This property is being deprecated. Use the fulfilledDateTime value in the individual report instance instead
      */
     @Deprecated
@@ -93,7 +93,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Review History Period End Date Time.
-     * Timestamp, reviews starting on or after this date will be included in the fetched history data. Required.
+     * A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
      */
     @SerializedName(value = "reviewHistoryPeriodEndDateTime", alternate = {"ReviewHistoryPeriodEndDateTime"})
     @Expose
@@ -102,7 +102,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Review History Period Start Date Time.
-     * Timestamp, reviews starting on or before this date will be included in the fetched history data. Required.
+     * A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
      */
     @SerializedName(value = "reviewHistoryPeriodStartDateTime", alternate = {"ReviewHistoryPeriodStartDateTime"})
     @Expose
@@ -111,7 +111,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Schedule Settings.
-     * 
+     * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined.
      */
     @SerializedName(value = "scheduleSettings", alternate = {"ScheduleSettings"})
     @Expose
@@ -129,7 +129,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Status.
-     * Represents the status of the review history data collection. Possible values are: done, inprogress, error, requested.
+     * Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -138,7 +138,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Instances.
-     * 
+     * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
