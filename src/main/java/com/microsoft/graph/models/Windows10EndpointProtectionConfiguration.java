@@ -1714,7 +1714,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Smart Card Removal Behavior.
-     * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader. Possible values are: lockWorkstation, noAction, forceLogoff, disconnectRemoteDesktopSession.
+     * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader. Possible values are: noAction, lockWorkstation, forceLogoff, disconnectRemoteDesktopSession.
      */
     @SerializedName(value = "localSecurityOptionsSmartCardRemovalBehavior", alternate = {"LocalSecurityOptionsSmartCardRemovalBehavior"})
     @Expose

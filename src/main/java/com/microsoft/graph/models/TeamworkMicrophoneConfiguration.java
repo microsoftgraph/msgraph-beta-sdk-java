@@ -42,7 +42,7 @@ public class TeamworkMicrophoneConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Microphone Optional.
-     * 
+     * True if the configured microphone is optional. False if the microphone is not optional and the health state of the device should be computed.
      */
     @SerializedName(value = "isMicrophoneOptional", alternate = {"IsMicrophoneOptional"})
     @Expose

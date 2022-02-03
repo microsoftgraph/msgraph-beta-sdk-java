@@ -94,7 +94,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Platforms.
-     * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+     * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose

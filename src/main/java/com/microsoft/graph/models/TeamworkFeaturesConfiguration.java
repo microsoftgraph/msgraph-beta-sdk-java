@@ -39,7 +39,7 @@ public class TeamworkFeaturesConfiguration implements IJsonBackedObject {
 
     /**
      * The Email To Send Logs And Feedback.
-     * 
+     * Email address to send logs and feedback.
      */
     @SerializedName(value = "emailToSendLogsAndFeedback", alternate = {"EmailToSendLogsAndFeedback"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkFeaturesConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Auto Screen Share Enabled.
-     * 
+     * True if auto screen shared is enabled.
      */
     @SerializedName(value = "isAutoScreenShareEnabled", alternate = {"IsAutoScreenShareEnabled"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkFeaturesConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Bluetooth Beaconing Enabled.
-     * 
+     * True if Bluetooth beaconing is enabled.
      */
     @SerializedName(value = "isBluetoothBeaconingEnabled", alternate = {"IsBluetoothBeaconingEnabled"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkFeaturesConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Hide Meeting Names Enabled.
-     * 
+     * True if hiding meeting names is enabled.
      */
     @SerializedName(value = "isHideMeetingNamesEnabled", alternate = {"IsHideMeetingNamesEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkFeaturesConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Send Logs And Feedback Enabled.
-     * 
+     * True if sending logs and feedback is enabled.
      */
     @SerializedName(value = "isSendLogsAndFeedbackEnabled", alternate = {"IsSendLogsAndFeedbackEnabled"})
     @Expose

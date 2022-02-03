@@ -56,7 +56,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Disable UDPConnections.
-     * When DisableUDPConnections is set, the clients and VPN server will not use DTLS connctions to tansfer data.
+     * When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to tansfer data.
      */
     @SerializedName(value = "disableUDPConnections", alternate = {"DisableUDPConnections"})
     @Expose

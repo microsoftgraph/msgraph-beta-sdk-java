@@ -40,7 +40,7 @@ public class TeamworkLoginStatus implements IJsonBackedObject {
 
     /**
      * The Exchange Connection.
-     * 
+     * Information about the Exchange connection.
      */
     @SerializedName(value = "exchangeConnection", alternate = {"ExchangeConnection"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkLoginStatus implements IJsonBackedObject {
 
     /**
      * The Skype Connection.
-     * 
+     * Information about the Skype for Business connection.
      */
     @SerializedName(value = "skypeConnection", alternate = {"SkypeConnection"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamworkLoginStatus implements IJsonBackedObject {
 
     /**
      * The Teams Connection.
-     * 
+     * Information about the Teams connection.
      */
     @SerializedName(value = "teamsConnection", alternate = {"TeamsConnection"})
     @Expose

@@ -40,7 +40,7 @@ public class ConditionalAccessClientApplications implements IJsonBackedObject {
 
     /**
      * The Exclude Service Principals.
-     * 
+     * Service principal IDs excluded from the policy scope.
      */
     @SerializedName(value = "excludeServicePrincipals", alternate = {"ExcludeServicePrincipals"})
     @Expose
@@ -49,7 +49,7 @@ public class ConditionalAccessClientApplications implements IJsonBackedObject {
 
     /**
      * The Include Service Principals.
-     * 
+     * Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
      */
     @SerializedName(value = "includeServicePrincipals", alternate = {"IncludeServicePrincipals"})
     @Expose

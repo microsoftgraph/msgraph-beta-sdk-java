@@ -58,7 +58,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Client Applications.
-     * 
+     * Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
      */
     @SerializedName(value = "clientApplications", alternate = {"ClientApplications"})
     @Expose
@@ -130,7 +130,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Users.
-     * Users, groups, and roles included in and excluded from the policy. Required.
+     * Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

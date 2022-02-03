@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.UserInsightsSettings;
+import com.microsoft.graph.models.ContactMergeSuggestions;
 import com.microsoft.graph.models.RegionalAndLanguageSettings;
 import com.microsoft.graph.models.ShiftPreferences;
 import com.microsoft.graph.models.Entity;
@@ -54,6 +55,15 @@ public class UserSettings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public UserInsightsSettings itemInsights;
+
+    /**
+     * The Contact Merge Suggestions.
+     * 
+     */
+    @SerializedName(value = "contactMergeSuggestions", alternate = {"ContactMergeSuggestions"})
+    @Expose
+	@Nullable
+    public ContactMergeSuggestions contactMergeSuggestions;
 
     /**
      * The Regional And Language Settings.

@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.AuditEventCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.AuditEventRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.CloudPcConnectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionRequestBuilder;
@@ -121,6 +123,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
     @Nonnull
     public AggregatedPolicyComplianceRequestBuilder aggregatedPolicyCompliances(@Nonnull final String id) {
         return new AggregatedPolicyComplianceRequestBuilder(getRequestUrlWithAdditionalSegment("aggregatedPolicyCompliances") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AuditEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AuditEventCollectionRequestBuilder auditEvents() {
+        return new AuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuditEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AuditEventRequestBuilder auditEvents(@Nonnull final String id) {
+        return new AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcConnection collection

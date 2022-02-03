@@ -39,7 +39,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity State.
-     * 
+     * The activity state of the device. The possible values are: unknown, busy, idle, unavailable, unknownFutureValue.
      */
     @SerializedName(value = "activityState", alternate = {"ActivityState"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Company Asset Tag.
-     * 
+     * The company asset tag assigned by the admin on the device.
      */
     @SerializedName(value = "companyAssetTag", alternate = {"CompanyAssetTag"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who enrolled the device to the tenant.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The UTC date and time when the device was enrolled to the tenant.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Current User.
-     * 
+     * The signed-in user on the device.
      */
     @SerializedName(value = "currentUser", alternate = {"CurrentUser"})
     @Expose
@@ -84,7 +84,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Type.
-     * 
+     * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
@@ -93,7 +93,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Hardware Detail.
-     * 
+     * A collection of hardware-related properties. For example, oemSerialNumber and model.
      */
     @SerializedName(value = "hardwareDetail", alternate = {"HardwareDetail"})
     @Expose
@@ -102,7 +102,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Health Status.
-     * 
+     * The health status of the device. The possible values are: unknown, offline, critical, nonUrgent, healthy, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -111,7 +111,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the device details.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -120,7 +120,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The UTC date and time when the device detail was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -129,7 +129,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * The notes added by the admin to the device.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -138,7 +138,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * 
+     * The activity properties that change based on the device usage.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -147,7 +147,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Configuration.
-     * 
+     * The configuration properties of the device.
      */
     @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
@@ -156,7 +156,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Health.
-     * 
+     * The health properties of the device.
      */
     @SerializedName(value = "health", alternate = {"Health"})
     @Expose
@@ -165,7 +165,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * The async operations on the device.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

@@ -32,7 +32,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Workforce Integrations.
-     * 
+     * A workforce integration with shifts.
      */
     @SerializedName(value = "workforceIntegrations", alternate = {"WorkforceIntegrations"})
     @Expose
@@ -41,7 +41,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Devices.
-     * 
+     * The Teams devices provisioned for the tenant.
      */
     @SerializedName(value = "devices", alternate = {"Devices"})
     @Expose

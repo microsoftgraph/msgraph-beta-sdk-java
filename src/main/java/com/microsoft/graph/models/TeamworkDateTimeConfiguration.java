@@ -39,7 +39,7 @@ public class TeamworkDateTimeConfiguration implements IJsonBackedObject {
 
     /**
      * The Date Format.
-     * 
+     * The date format for the device.
      */
     @SerializedName(value = "dateFormat", alternate = {"DateFormat"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkDateTimeConfiguration implements IJsonBackedObject {
 
     /**
      * The Office Hours End Time.
-     * 
+     * The time of the day when the device is turned off.
      */
     @SerializedName(value = "officeHoursEndTime", alternate = {"OfficeHoursEndTime"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkDateTimeConfiguration implements IJsonBackedObject {
 
     /**
      * The Office Hours Start Time.
-     * 
+     * The time of the day when the device is turned on.
      */
     @SerializedName(value = "officeHoursStartTime", alternate = {"OfficeHoursStartTime"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkDateTimeConfiguration implements IJsonBackedObject {
 
     /**
      * The Time Format.
-     * 
+     * The time format for the device.
      */
     @SerializedName(value = "timeFormat", alternate = {"TimeFormat"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkDateTimeConfiguration implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-     * 
+     * The time zone to which the office hours apply.
      */
     @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose

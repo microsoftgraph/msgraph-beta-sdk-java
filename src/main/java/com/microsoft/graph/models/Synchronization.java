@@ -33,7 +33,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
 
     /**
      * The Secrets.
-     * 
+     * Represents a collection of credentials to access provisioned cloud applications.
      */
     @SerializedName(value = "secrets", alternate = {"Secrets"})
     @Expose
@@ -42,7 +42,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
 
     /**
      * The Jobs.
-     * 
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      */
     @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
@@ -51,7 +51,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
 
     /**
      * The Templates.
-     * 
+     * Pre-configured synchronization settings for a particular application.
      */
     @SerializedName(value = "templates", alternate = {"Templates"})
     @Expose

@@ -9,8 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.SimulationAutomation;
 import com.microsoft.graph.models.Simulation;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.SimulationAutomationCollectionPage;
 import com.microsoft.graph.requests.SimulationCollectionPage;
 
 
@@ -27,6 +29,15 @@ import javax.annotation.Nonnull;
  */
 public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Simulation Automations.
+     * 
+     */
+    @SerializedName(value = "simulationAutomations", alternate = {"SimulationAutomations"})
+    @Expose
+	@Nullable
+    public SimulationAutomationCollectionPage simulationAutomations;
 
     /**
      * The Simulations.
@@ -46,6 +57,10 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("simulationAutomations")) {
+            simulationAutomations = serializer.deserializeObject(json.get("simulationAutomations"), SimulationAutomationCollectionPage.class);
+        }
 
         if (json.has("simulations")) {
             simulations = serializer.deserializeObject(json.get("simulations"), SimulationCollectionPage.class);

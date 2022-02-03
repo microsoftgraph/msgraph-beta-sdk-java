@@ -42,7 +42,7 @@ public class TeamworkDisplayConfiguration implements IJsonBackedObject {
 
     /**
      * The Configured Displays.
-     * 
+     * The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
      */
     @SerializedName(value = "configuredDisplays", alternate = {"ConfiguredDisplays"})
     @Expose
@@ -51,7 +51,7 @@ public class TeamworkDisplayConfiguration implements IJsonBackedObject {
 
     /**
      * The Display Count.
-     * 
+     * Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
      */
     @SerializedName(value = "displayCount", alternate = {"DisplayCount"})
     @Expose
@@ -60,7 +60,7 @@ public class TeamworkDisplayConfiguration implements IJsonBackedObject {
 
     /**
      * The In Built Display Screen Configuration.
-     * 
+     * Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
      */
     @SerializedName(value = "inBuiltDisplayScreenConfiguration", alternate = {"InBuiltDisplayScreenConfiguration"})
     @Expose
@@ -69,7 +69,7 @@ public class TeamworkDisplayConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Content Duplication Allowed.
-     * 
+     * True if content duplication is allowed. Applicable only for Teams Rooms devices.
      */
     @SerializedName(value = "isContentDuplicationAllowed", alternate = {"IsContentDuplicationAllowed"})
     @Expose
@@ -78,7 +78,7 @@ public class TeamworkDisplayConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Dual Display Mode Enabled.
-     * 
+     * True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
      */
     @SerializedName(value = "isDualDisplayModeEnabled", alternate = {"IsDualDisplayModeEnabled"})
     @Expose

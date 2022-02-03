@@ -40,7 +40,7 @@ public class TeamworkConfiguredPeripheral implements IJsonBackedObject {
 
     /**
      * The Is Optional.
-     * 
+     * True if the current peripheral is optional. If set to false, this property is also used as part of the calculation of the health state for the device.
      */
     @SerializedName(value = "isOptional", alternate = {"IsOptional"})
     @Expose

@@ -30,7 +30,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Completed Date Time.
-     * 
+     * Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled).
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the device operation.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Created Date Time.
-     * 
+     * The UTC date and time when the device operation was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Error.
-     * 
+     * Error details are available only in case of a failed status.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Last Action By.
-     * 
+     * Identity of the user who last modified the device operation.
      */
     @SerializedName(value = "lastActionBy", alternate = {"LastActionBy"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Last Action Date Time.
-     * 
+     * The UTC date and time when the device operation was last modified.
      */
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
@@ -84,7 +84,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Operation Type.
-     * 
+     * Type of async operation on a device. The possible values are: deviceRestart, configUpdate, deviceDiagnostics, softwareUpdate, deviceManagementAgentConfigUpdate, remoteLogin, remoteLogout, unknownFutureValue.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
@@ -93,7 +93,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Started Date Time.
-     * 
+     * Time at which the operation was started.
      */
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
@@ -102,7 +102,7 @@ public class TeamworkDeviceOperation extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * 
+     * The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

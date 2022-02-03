@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.39.0] - 2022-02-03
+
+### Added
+
+- Models and Requests related, but not limited, to AuditEvent, SimulationAutomation.
+- EDiscovery requests related to: Custodian(Apply/Remove)HoldParameterSet, NonCustodialDataSource(Apply/Remove)HoldRequest.
+ 
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+- AccessReviewHistoryDefinitionGenerateDownloadUriRequest(Builder) -> AccessReviewHistoryInstanceGenerateDownloadUriRequest(Builder)
+
 ## [0.39.0] - 2022-01-27
 
 ### Added

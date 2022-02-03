@@ -41,7 +41,7 @@ public class TeamworkTeamsClientConfiguration implements IJsonBackedObject {
 
     /**
      * The Account Configuration.
-     * 
+     * The configuration of the Microsoft Teams client user account for a device.
      */
     @SerializedName(value = "accountConfiguration", alternate = {"AccountConfiguration"})
     @Expose
@@ -50,7 +50,7 @@ public class TeamworkTeamsClientConfiguration implements IJsonBackedObject {
 
     /**
      * The Features Configuration.
-     * 
+     * The configuration of Microsoft Teams client features for a device.
      */
     @SerializedName(value = "featuresConfiguration", alternate = {"FeaturesConfiguration"})
     @Expose

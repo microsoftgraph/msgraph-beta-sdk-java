@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AttackSimulationRoot;
+import com.microsoft.graph.requests.SimulationAutomationCollectionRequestBuilder;
+import com.microsoft.graph.requests.SimulationAutomationRequestBuilder;
 import com.microsoft.graph.requests.SimulationCollectionRequestBuilder;
 import com.microsoft.graph.requests.SimulationRequestBuilder;
 import java.util.Arrays;

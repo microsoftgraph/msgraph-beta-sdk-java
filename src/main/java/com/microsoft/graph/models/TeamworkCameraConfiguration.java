@@ -43,7 +43,7 @@ public class TeamworkCameraConfiguration implements IJsonBackedObject {
 
     /**
      * The Content Camera Configuration.
-     * 
+     * The configuration for the content camera.
      */
     @SerializedName(value = "contentCameraConfiguration", alternate = {"ContentCameraConfiguration"})
     @Expose

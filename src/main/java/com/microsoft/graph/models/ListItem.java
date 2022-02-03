@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ContentTypeInfo;
+import com.microsoft.graph.models.Deleted;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.ItemActivityOLD;
 import com.microsoft.graph.models.ItemAnalytics;
@@ -43,6 +44,15 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ContentTypeInfo contentType;
+
+    /**
+     * The Deleted.
+     * 
+     */
+    @SerializedName(value = "deleted", alternate = {"Deleted"})
+    @Expose
+	@Nullable
+    public Deleted deleted;
 
     /**
      * The Sharepoint Ids.

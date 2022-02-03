@@ -78,13 +78,4 @@ public class AccessReviewHistoryDefinitionRequestBuilder extends BaseRequestBuil
     public AccessReviewHistoryInstanceRequestBuilder instances(@Nonnull final String id) {
         return new AccessReviewHistoryInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public AccessReviewHistoryDefinitionGenerateDownloadUriRequestBuilder generateDownloadUri() {
-        return new AccessReviewHistoryDefinitionGenerateDownloadUriRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.generateDownloadUri"), getClient(), null);
-    }
 }

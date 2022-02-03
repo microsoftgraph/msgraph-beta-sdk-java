@@ -33,7 +33,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Connection.
-     * 
+     * Information about the connection status.
      */
     @SerializedName(value = "connection", alternate = {"Connection"})
     @Expose
@@ -42,7 +42,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the device health document.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -51,7 +51,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The UTC date and time when the device health document was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -60,7 +60,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Hardware Health.
-     * 
+     * Health details about the device hardware.
      */
     @SerializedName(value = "hardwareHealth", alternate = {"HardwareHealth"})
     @Expose
@@ -69,7 +69,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the device health details.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -78,7 +78,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The UTC date and time when the device health detail was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -87,7 +87,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Login Status.
-     * 
+     * The login status of Microsoft Teams, Skype for Business, and Exchange.
      */
     @SerializedName(value = "loginStatus", alternate = {"LoginStatus"})
     @Expose
@@ -96,7 +96,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Peripherals Health.
-     * 
+     * Health details about all peripherals (for example, speaker and microphone) attached to a device.
      */
     @SerializedName(value = "peripheralsHealth", alternate = {"PeripheralsHealth"})
     @Expose
@@ -105,7 +105,7 @@ public class TeamworkDeviceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Software Update Health.
-     * 
+     * Software updates available for the device.
      */
     @SerializedName(value = "softwareUpdateHealth", alternate = {"SoftwareUpdateHealth"})
     @Expose

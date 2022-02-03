@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.Identity;
+import com.microsoft.graph.models.DecisionItemPrincipalResourceMembership;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemTarget;
 import com.microsoft.graph.models.GovernanceInsight;
@@ -104,6 +105,15 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public String principalLink;
+
+    /**
+     * The Principal Resource Membership.
+     * 
+     */
+    @SerializedName(value = "principalResourceMembership", alternate = {"PrincipalResourceMembership"})
+    @Expose
+	@Nullable
+    public DecisionItemPrincipalResourceMembership principalResourceMembership;
 
     /**
      * The Recommendation.

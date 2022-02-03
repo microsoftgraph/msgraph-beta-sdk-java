@@ -7,28 +7,36 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Payload Source.
+ * The Enum Simulation Automation Status.
 */
-public enum PayloadSource
+public enum SimulationAutomationStatus
 {
     /**
     * unknown
     */
     UNKNOWN,
     /**
-    * global
+    * draft
     */
-    GLOBAL,
+    DRAFT,
     /**
-    * tenant
+    * not Running
     */
-    TENANT,
+    NOT_RUNNING,
+    /**
+    * running
+    */
+    RUNNING,
+    /**
+    * completed
+    */
+    COMPLETED,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For PayloadSource values that were not expected from the service
+    * For SimulationAutomationStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

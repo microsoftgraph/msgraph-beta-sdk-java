@@ -42,7 +42,7 @@ public class TeamworkSpeakerConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Communication Speaker Optional.
-     * 
+     * True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
      */
     @SerializedName(value = "isCommunicationSpeakerOptional", alternate = {"IsCommunicationSpeakerOptional"})
     @Expose
@@ -51,7 +51,7 @@ public class TeamworkSpeakerConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Speaker Optional.
-     * 
+     * True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
      */
     @SerializedName(value = "isSpeakerOptional", alternate = {"IsSpeakerOptional"})
     @Expose

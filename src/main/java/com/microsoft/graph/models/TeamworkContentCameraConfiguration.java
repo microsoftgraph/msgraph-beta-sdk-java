@@ -39,7 +39,7 @@ public class TeamworkContentCameraConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Content Camera Inverted.
-     * 
+     * True if the content camera is inverted.
      */
     @SerializedName(value = "isContentCameraInverted", alternate = {"IsContentCameraInverted"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkContentCameraConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Content Camera Optional.
-     * 
+     * True if the content camera is optional.
      */
     @SerializedName(value = "isContentCameraOptional", alternate = {"IsContentCameraOptional"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkContentCameraConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Content Enhancement Enabled.
-     * 
+     * True if the content enhancement is enabled.
      */
     @SerializedName(value = "isContentEnhancementEnabled", alternate = {"IsContentEnhancementEnabled"})
     @Expose

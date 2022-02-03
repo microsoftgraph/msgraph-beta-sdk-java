@@ -40,7 +40,7 @@ public class TeamworkConnection implements IJsonBackedObject {
 
     /**
      * The Connection Status.
-     * 
+     * Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
      */
     @SerializedName(value = "connectionStatus", alternate = {"ConnectionStatus"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkConnection implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

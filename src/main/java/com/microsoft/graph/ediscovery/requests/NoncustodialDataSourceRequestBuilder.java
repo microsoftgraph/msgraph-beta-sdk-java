@@ -83,8 +83,26 @@ public class NoncustodialDataSourceRequestBuilder extends BaseRequestBuilder<Non
      * @return the request builder
      */
     @Nonnull
+    public NoncustodialDataSourceApplyHoldRequestBuilder applyHold() {
+        return new NoncustodialDataSourceApplyHoldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.applyHold"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public NoncustodialDataSourceReleaseRequestBuilder release() {
         return new NoncustodialDataSourceReleaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.release"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public NoncustodialDataSourceRemoveHoldRequestBuilder removeHold() {
+        return new NoncustodialDataSourceRemoveHoldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.removeHold"), getClient(), null);
     }
 
     /**

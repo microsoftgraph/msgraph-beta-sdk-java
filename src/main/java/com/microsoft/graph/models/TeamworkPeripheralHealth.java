@@ -41,7 +41,7 @@ public class TeamworkPeripheralHealth implements IJsonBackedObject {
 
     /**
      * The Connection.
-     * 
+     * The connected state and time since the peripheral device was connected.
      */
     @SerializedName(value = "connection", alternate = {"Connection"})
     @Expose
@@ -50,7 +50,7 @@ public class TeamworkPeripheralHealth implements IJsonBackedObject {
 
     /**
      * The Is Optional.
-     * 
+     * True if the peripheral is optional. Used for health computation.
      */
     @SerializedName(value = "isOptional", alternate = {"IsOptional"})
     @Expose

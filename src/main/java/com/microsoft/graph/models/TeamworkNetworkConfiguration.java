@@ -39,7 +39,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Default Gateway.
-     * 
+     * The default gateway is the path used to pass information when the destination is unknown to the device.
      */
     @SerializedName(value = "defaultGateway", alternate = {"DefaultGateway"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Domain Name.
-     * 
+     * The network domain of the device, for example, contoso.com.
      */
     @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Host Name.
-     * 
+     * The device name on a network.
      */
     @SerializedName(value = "hostName", alternate = {"HostName"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * The IP address is a numerical label that uniquely identifies every device connected to the internet.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Dhcp Enabled.
-     * 
+     * True if DHCP is enabled.
      */
     @SerializedName(value = "isDhcpEnabled", alternate = {"IsDhcpEnabled"})
     @Expose
@@ -84,7 +84,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Is PCPort Enabled.
-     * 
+     * True if the PC port is enabled.
      */
     @SerializedName(value = "isPCPortEnabled", alternate = {"IsPCPortEnabled"})
     @Expose
@@ -93,7 +93,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Primary Dns.
-     * 
+     * A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
      */
     @SerializedName(value = "primaryDns", alternate = {"PrimaryDns"})
     @Expose
@@ -102,7 +102,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Secondary Dns.
-     * 
+     * A secondary DNS is used when the primary DNS is not available.
      */
     @SerializedName(value = "secondaryDns", alternate = {"SecondaryDns"})
     @Expose
@@ -111,7 +111,7 @@ public class TeamworkNetworkConfiguration implements IJsonBackedObject {
 
     /**
      * The Subnet Mask.
-     * 
+     * A subnet mask is a number that distinguishes the network address and the host address within an IP address.
      */
     @SerializedName(value = "subnetMask", alternate = {"SubnetMask"})
     @Expose
