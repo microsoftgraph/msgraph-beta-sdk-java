@@ -124,6 +124,8 @@ import com.microsoft.graph.requests.DeviceShellScriptRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceOverviewWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventRequestBuilder;
+import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionRequestBuilder;
+import com.microsoft.graph.requests.OemWarrantyInformationOnboardingRequestBuilder;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteActionAuditRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
@@ -193,6 +195,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryRequestBu
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder;
 import com.microsoft.graph.requests.WindowsMalwareInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsMalwareInformationRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionRequestBuilder;
@@ -1500,6 +1504,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new MobileAppTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the OemWarrantyInformationOnboarding collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OemWarrantyInformationOnboardingCollectionRequestBuilder oemWarrantyInformationOnboarding() {
+        return new OemWarrantyInformationOnboardingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("oemWarrantyInformationOnboarding"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OemWarrantyInformationOnboarding item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OemWarrantyInformationOnboardingRequestBuilder oemWarrantyInformationOnboarding(@Nonnull final String id) {
+        return new OemWarrantyInformationOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("oemWarrantyInformationOnboarding") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the RemoteActionAudit collection
      *
      * @return the collection request builder
@@ -2218,6 +2242,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics(@Nonnull final String id) {
         return new UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereMetrics") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereModelPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance() {
+        return new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereModelPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance(@Nonnull final String id) {
+        return new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereModelPerformance") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsMalwareInformation collection

@@ -27,7 +27,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAcce
 
     /**
      * The Is Service Provider.
-     * 
+     * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      */
     @SerializedName(value = "isServiceProvider", alternate = {"IsServiceProvider"})
     @Expose
@@ -36,7 +36,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAcce
 
     /**
      * The Tenant Id.
-     * 
+     * The tenant identifier for the partner Azure AD organization. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

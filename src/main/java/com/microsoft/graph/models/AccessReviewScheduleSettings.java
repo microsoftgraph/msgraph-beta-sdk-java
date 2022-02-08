@@ -60,8 +60,17 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     public Boolean autoApplyDecisionsEnabled;
 
     /**
+     * The Decision Histories For Reviewers Enabled.
+     * 
+     */
+    @SerializedName(value = "decisionHistoriesForReviewersEnabled", alternate = {"DecisionHistoriesForReviewersEnabled"})
+    @Expose
+	@Nullable
+    public Boolean decisionHistoriesForReviewersEnabled;
+
+    /**
      * The Default Decision.
-     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
+     * Decision chosen if defaultDecisionEnabled is true. Can be one of Approve, Deny, or Recommendation.
      */
     @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
@@ -133,7 +142,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
+     * Detailed settings for recurrence using the standard Outlook recurrence object.  Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

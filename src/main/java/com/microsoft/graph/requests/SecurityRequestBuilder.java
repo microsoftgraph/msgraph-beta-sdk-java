@@ -8,11 +8,11 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Security;
-import com.microsoft.graph.models.HuntingQueryResults;
-import com.microsoft.graph.requests.Alert_v2CollectionRequestBuilder;
-import com.microsoft.graph.requests.Alert_v2RequestBuilder;
-import com.microsoft.graph.requests.IncidentCollectionRequestBuilder;
-import com.microsoft.graph.requests.IncidentRequestBuilder;
+import com.microsoft.graph.security.models.HuntingQueryResults;
+import com.microsoft.graph.security.requests.AlertCollectionRequestBuilder;
+import com.microsoft.graph.security.requests.AlertRequestBuilder;
+import com.microsoft.graph.security.requests.IncidentCollectionRequestBuilder;
+import com.microsoft.graph.security.requests.IncidentRequestBuilder;
 import com.microsoft.graph.requests.AttackSimulationRootRequestBuilder;
 import com.microsoft.graph.requests.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.AlertRequestBuilder;
@@ -88,24 +88,24 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
 
 
     /**
-     *  Gets a request builder for the Alert_v2 collection
+     *  Gets a request builder for the Alert collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public Alert_v2CollectionRequestBuilder alerts_v2() {
-        return new Alert_v2CollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts_v2"), getClient(), null);
+    public AlertCollectionRequestBuilder alerts_v2() {
+        return new AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts_v2"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the Alert_v2 item
+     * Gets a request builder for the Alert item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public Alert_v2RequestBuilder alerts_v2(@Nonnull final String id) {
-        return new Alert_v2RequestBuilder(getRequestUrlWithAdditionalSegment("alerts_v2") + "/" + id, getClient(), null);
+    public AlertRequestBuilder alerts_v2(@Nonnull final String id) {
+        return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts_v2") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Incident collection

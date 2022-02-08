@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.HuntingQueryResults;
+import com.microsoft.graph.security.models.HuntingQueryResults;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;

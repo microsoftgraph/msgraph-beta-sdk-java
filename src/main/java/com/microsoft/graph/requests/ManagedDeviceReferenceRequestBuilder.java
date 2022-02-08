@@ -20,6 +20,7 @@ import com.microsoft.graph.models.ConfigurationManagerAction;
 import com.microsoft.graph.models.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
+import com.microsoft.graph.models.OemWarranty;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder;

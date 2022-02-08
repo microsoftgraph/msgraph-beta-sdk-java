@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsHealthState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -77,7 +78,16 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
 	@Nullable
-    public String healthStatus;
+    public UserExperienceAnalyticsHealthState healthStatus;
+
+    /**
+     * The Manufacturer.
+     * The manufacturer name of the device.
+     */
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
+    @Expose
+	@Nullable
+    public String manufacturer;
 
     /**
      * The Max Capacity Percentage.

@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.SecurityRunHuntingQueryRequest;
 import com.microsoft.graph.models.Security;
-import com.microsoft.graph.models.HuntingQueryResults;
+import com.microsoft.graph.security.models.HuntingQueryResults;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.SecurityRunHuntingQueryParameterSet;
 import com.microsoft.graph.core.IBaseClient;
