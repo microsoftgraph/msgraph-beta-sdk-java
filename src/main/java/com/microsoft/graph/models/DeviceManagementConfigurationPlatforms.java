@@ -36,6 +36,14 @@ public enum DeviceManagementConfigurationPlatforms
     */
     WINDOWS10,
     /**
+    * linux
+    */
+    LINUX,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementConfigurationPlatforms values that were not expected from the service
     */
     UNEXPECTED_VALUE

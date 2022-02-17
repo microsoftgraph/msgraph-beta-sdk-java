@@ -29,7 +29,7 @@ public class CrossTenantAccessPolicyConfigurationBase extends Entity implements 
 
     /**
      * The B2b Collaboration Inbound.
-     * 
+     * Defines your configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationInbound", alternate = {"B2bCollaborationInbound"})
     @Expose
@@ -38,7 +38,7 @@ public class CrossTenantAccessPolicyConfigurationBase extends Entity implements 
 
     /**
      * The B2b Collaboration Outbound.
-     * 
+     * Defines your configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationOutbound", alternate = {"B2bCollaborationOutbound"})
     @Expose
@@ -47,7 +47,7 @@ public class CrossTenantAccessPolicyConfigurationBase extends Entity implements 
 
     /**
      * The B2b Direct Connect Inbound.
-     * 
+     * Defines your configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectInbound", alternate = {"B2bDirectConnectInbound"})
     @Expose
@@ -56,7 +56,7 @@ public class CrossTenantAccessPolicyConfigurationBase extends Entity implements 
 
     /**
      * The B2b Direct Connect Outbound.
-     * 
+     * Defines your configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectOutbound", alternate = {"B2bDirectConnectOutbound"})
     @Expose
@@ -65,7 +65,7 @@ public class CrossTenantAccessPolicyConfigurationBase extends Entity implements 
 
     /**
      * The Inbound Trust.
-     * 
+     * Determines the configuration for trusting other Conditional Access claims from external Azure AD organizations.
      */
     @SerializedName(value = "inboundTrust", alternate = {"InboundTrust"})
     @Expose

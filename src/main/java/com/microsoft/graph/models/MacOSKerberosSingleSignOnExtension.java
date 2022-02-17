@@ -261,15 +261,6 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     public String signInHelpText;
 
     /**
-     * The Single Sign On Extension Preferred KDCs.
-     * Soon to be deprecated.
-     */
-    @SerializedName(value = "singleSignOnExtensionPreferredKDCs", alternate = {"SingleSignOnExtensionPreferredKDCs"})
-    @Expose
-	@Nullable
-    public java.util.List<String> singleSignOnExtensionPreferredKDCs;
-
-    /**
      * The Tls For LDAPRequired.
      * When set to True, LDAP connections are required to use Transport Layer Security (TLS). Available for devices running macOS versions 11 and later.
      */
@@ -286,15 +277,6 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     @Expose
 	@Nullable
     public String usernameLabelCustom;
-
-    /**
-     * The Username Lable Custom.
-     * Soon to be deprecated.
-     */
-    @SerializedName(value = "usernameLableCustom", alternate = {"UsernameLableCustom"})
-    @Expose
-	@Nullable
-    public String usernameLableCustom;
 
     /**
      * The User Principal Name.

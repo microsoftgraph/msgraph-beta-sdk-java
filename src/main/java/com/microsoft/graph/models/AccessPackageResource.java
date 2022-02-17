@@ -34,7 +34,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Added By.
-     * Read-only.
+     * The name of the user or application that first added this resource. Read-only.
      */
     @SerializedName(value = "addedBy", alternate = {"AddedBy"})
     @Expose
@@ -52,7 +52,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Attributes.
-     * Contains attribute information for the resource.
+     * Contains information about the attributes to be collected from the requestor and sent to the resource application.
      */
     @SerializedName(value = "attributes", alternate = {"Attributes"})
     @Expose

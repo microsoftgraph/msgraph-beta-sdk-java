@@ -41,7 +41,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Destination.
-     * Information about how to set the attribute.
+     * Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore object type.
      */
     @SerializedName(value = "attributeDestination", alternate = {"AttributeDestination"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Name.
-     * The name of the attribute in the end system.
+     * The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension_2b676109c7c74ae2b41549205f1947ed_personalTitle.
      */
     @SerializedName(value = "attributeName", alternate = {"AttributeName"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Source.
-     * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled.
+     * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion object type.
      */
     @SerializedName(value = "attributeSource", alternate = {"AttributeSource"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique identifier for the attribute.
+     * Unique identifier for the attribute on the access package resource. Read-only.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
