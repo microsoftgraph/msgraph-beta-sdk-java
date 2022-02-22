@@ -12,10 +12,6 @@ package com.microsoft.graph.models;
 public enum DiskType
 {
     /**
-    * unkown
-    */
-    UNKOWN,
-    /**
     * hdd
     */
     HDD,
@@ -23,6 +19,10 @@ public enum DiskType
     * ssd
     */
     SSD,
+    /**
+    * unknown
+    */
+    UNKNOWN,
     /**
     * For DiskType values that were not expected from the service
     */

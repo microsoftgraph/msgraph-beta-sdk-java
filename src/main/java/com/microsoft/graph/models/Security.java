@@ -10,8 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityProviderStatus;
-import com.microsoft.graph.models.Alert_v2;
-import com.microsoft.graph.models.Incident;
+import com.microsoft.graph.security.models.Alert;
+import com.microsoft.graph.security.models.Incident;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.CloudAppSecurityProfile;
@@ -26,8 +26,8 @@ import com.microsoft.graph.models.SecurityAction;
 import com.microsoft.graph.models.TiIndicator;
 import com.microsoft.graph.models.UserSecurityProfile;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.Alert_v2CollectionPage;
-import com.microsoft.graph.requests.IncidentCollectionPage;
+import com.microsoft.graph.security.requests.AlertCollectionPage;
+import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage;
 import com.microsoft.graph.requests.DomainSecurityProfileCollectionPage;
@@ -72,7 +72,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "alerts_v2", alternate = {"Alerts_v2"})
     @Expose
 	@Nullable
-    public Alert_v2CollectionPage alerts_v2;
+    public AlertCollectionPage alerts_v2;
 
     /**
      * The Incidents.
@@ -94,7 +94,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Read-only. Nullable.
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
@@ -211,7 +211,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts_v2")) {
-            alerts_v2 = serializer.deserializeObject(json.get("alerts_v2"), Alert_v2CollectionPage.class);
+            alerts_v2 = serializer.deserializeObject(json.get("alerts_v2"), AlertCollectionPage.class);
         }
 
         if (json.has("incidents")) {

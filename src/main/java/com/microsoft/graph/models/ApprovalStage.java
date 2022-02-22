@@ -50,7 +50,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Approvers.
-     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
+     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers are not required for the stage, the value of this property should be an empty collection.
      */
     @SerializedName(value = "escalationApprovers", alternate = {"EscalationApprovers"})
     @Expose
@@ -86,7 +86,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Primary Approvers.
-     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
+     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
      */
     @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose

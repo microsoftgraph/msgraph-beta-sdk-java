@@ -65,7 +65,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Account Reset Credentials Url.
-     * 
+     * A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      */
     @SerializedName(value = "customAccountResetCredentialsUrl", alternate = {"CustomAccountResetCredentialsUrl"})
     @Expose
@@ -74,7 +74,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Cannot Access Your Account Text.
-     * 
+     * A string to replace the default 'Can't access your account?' self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
      */
     @SerializedName(value = "customCannotAccessYourAccountText", alternate = {"CustomCannotAccessYourAccountText"})
     @Expose
@@ -83,7 +83,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Cannot Access Your Account Url.
-     * 
+     * A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
      */
     @SerializedName(value = "customCannotAccessYourAccountUrl", alternate = {"CustomCannotAccessYourAccountUrl"})
     @Expose
@@ -92,7 +92,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Forgot My Password Text.
-     * 
+     * A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
      */
     @SerializedName(value = "customForgotMyPasswordText", alternate = {"CustomForgotMyPasswordText"})
     @Expose
@@ -101,7 +101,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Privacy And Cookies Text.
-     * 
+     * A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      */
     @SerializedName(value = "customPrivacyAndCookiesText", alternate = {"CustomPrivacyAndCookiesText"})
     @Expose
@@ -110,7 +110,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Privacy And Cookies Url.
-     * 
+     * A custom URL to replace the default URL of the 'Privacy and Cookies' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      */
     @SerializedName(value = "customPrivacyAndCookiesUrl", alternate = {"CustomPrivacyAndCookiesUrl"})
     @Expose
@@ -119,7 +119,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Reset It Now Text.
-     * 
+     * A string to replace the default 'reset it now' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the 'reset it now' hyperlink text is currently not supported.
      */
     @SerializedName(value = "customResetItNowText", alternate = {"CustomResetItNowText"})
     @Expose
@@ -128,7 +128,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Terms Of Use Text.
-     * 
+     * A string to replace the the default 'Terms of Use' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      */
     @SerializedName(value = "customTermsOfUseText", alternate = {"CustomTermsOfUseText"})
     @Expose
@@ -137,7 +137,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Custom Terms Of Use Url.
-     * 
+     * A custom URL to replace the default URL of the 'Terms of Use' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
      */
     @SerializedName(value = "customTermsOfUseUrl", alternate = {"CustomTermsOfUseUrl"})
     @Expose
@@ -146,7 +146,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Favicon Relative Url.
-     * 
+     * A relative url for the favicon above that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
      */
     @SerializedName(value = "faviconRelativeUrl", alternate = {"FaviconRelativeUrl"})
     @Expose
@@ -155,7 +155,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Header Background Color.
-     * 
+     * The RGB color to apply to customize the color of the header.
      */
     @SerializedName(value = "headerBackgroundColor", alternate = {"HeaderBackgroundColor"})
     @Expose
@@ -164,7 +164,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Login Page Text Visibility Settings.
-     * 
+     * Represents the various texts that can be hidden on the login page for a tenant.
      */
     @SerializedName(value = "loginPageTextVisibilitySettings", alternate = {"LoginPageTextVisibilitySettings"})
     @Expose

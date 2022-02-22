@@ -40,7 +40,7 @@ public class CrossTenantAccessPolicyB2BSetting implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * 
+     * The list of applications targeted with your cross-tenant access policy.
      */
     @SerializedName(value = "applications", alternate = {"Applications"})
     @Expose
@@ -49,7 +49,7 @@ public class CrossTenantAccessPolicyB2BSetting implements IJsonBackedObject {
 
     /**
      * The Users And Groups.
-     * 
+     * The list of users and groups targeted with your cross-tenant access policy.
      */
     @SerializedName(value = "usersAndGroups", alternate = {"UsersAndGroups"})
     @Expose

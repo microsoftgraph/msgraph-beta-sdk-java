@@ -42,7 +42,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements IJsonBackedOb
 
     /**
      * The Access Type.
-     * 
+     * Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
      */
     @SerializedName(value = "accessType", alternate = {"AccessType"})
     @Expose
@@ -51,7 +51,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements IJsonBackedOb
 
     /**
      * The Targets.
-     * 
+     * Specifies whether to target users, groups, or applications with this rule.
      */
     @SerializedName(value = "targets", alternate = {"Targets"})
     @Expose

@@ -27,7 +27,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends CrossTenantAcce
 
     /**
      * The Is Service Default.
-     * 
+     * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
      */
     @SerializedName(value = "isServiceDefault", alternate = {"IsServiceDefault"})
     @Expose

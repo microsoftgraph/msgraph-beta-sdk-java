@@ -45,7 +45,7 @@ public class MailboxSettings implements IJsonBackedObject {
 
     /**
      * The Archive Folder.
-     * Folder ID of an archive folder for the user. Read only.
+     * Folder ID of an archive folder for the user.
      */
     @SerializedName(value = "archiveFolder", alternate = {"ArchiveFolder"})
     @Expose
@@ -72,7 +72,7 @@ public class MailboxSettings implements IJsonBackedObject {
 
     /**
      * The Delegate Meeting Message Delivery Options.
-     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      */
     @SerializedName(value = "delegateMeetingMessageDeliveryOptions", alternate = {"DelegateMeetingMessageDeliveryOptions"})
     @Expose
@@ -118,7 +118,9 @@ public class MailboxSettings implements IJsonBackedObject {
     /**
      * The User Purpose V2.
      * 
+     * @deprecated The UserPurposeV2 API is deprecated and will stop returning data on April 30, 2022. Please use the UserPurpose API.
      */
+    @Deprecated
     @SerializedName(value = "userPurposeV2", alternate = {"UserPurposeV2"})
     @Expose
 	@Nullable

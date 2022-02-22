@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageAnswer;
+import com.microsoft.graph.models.CustomExtensionHandlerInstance;
 import com.microsoft.graph.models.RequestSchedule;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignment;
@@ -59,6 +60,15 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Custom Extension Handler Instances.
+     * 
+     */
+    @SerializedName(value = "customExtensionHandlerInstances", alternate = {"CustomExtensionHandlerInstances"})
+    @Expose
+	@Nullable
+    public java.util.List<CustomExtensionHandlerInstance> customExtensionHandlerInstances;
+
+    /**
      * The Expiration Date Time.
      * 
      */
@@ -105,7 +115,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request Type.
-     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -114,7 +124,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Schedule.
-     * The range of dates that access is to be assigned to the requestor. Read-only.
+     * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -123,7 +133,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Access Package.
-     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
+     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
