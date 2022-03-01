@@ -29,6 +29,24 @@ public class ManagementTemplateCollectionObject extends Entity implements IJsonB
 
 
     /**
+     * The Created By User Id.
+     * 
+     */
+    @SerializedName(value = "createdByUserId", alternate = {"CreatedByUserId"})
+    @Expose
+	@Nullable
+    public String createdByUserId;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Description.
      * 
      */
@@ -45,6 +63,24 @@ public class ManagementTemplateCollectionObject extends Entity implements IJsonB
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Last Action By User Id.
+     * 
+     */
+    @SerializedName(value = "lastActionByUserId", alternate = {"LastActionByUserId"})
+    @Expose
+	@Nullable
+    public String lastActionByUserId;
+
+    /**
+     * The Last Action Date Time.
+     * 
+     */
+    @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastActionDateTime;
 
     /**
      * The Management Templates.

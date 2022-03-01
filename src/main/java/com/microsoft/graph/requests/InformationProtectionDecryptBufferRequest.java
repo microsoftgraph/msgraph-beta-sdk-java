@@ -20,7 +20,9 @@ import com.microsoft.graph.models.InformationProtectionDecryptBufferParameterSet
 
 /**
  * The class for the Information Protection Decrypt Buffer Request.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionDecryptBufferRequest extends BaseRequest<BufferDecryptionResult> {
     /**
      * The request for this InformationProtectionDecryptBuffer

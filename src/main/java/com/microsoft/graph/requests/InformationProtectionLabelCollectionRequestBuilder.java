@@ -38,7 +38,9 @@ import com.microsoft.graph.models.InformationProtectionLabelExtractLabelParamete
 
 /**
  * The class for the Information Protection Label Collection Request Builder.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelCollectionRequestBuilder extends BaseCollectionRequestBuilder<InformationProtectionLabel, InformationProtectionLabelRequestBuilder, InformationProtectionLabelCollectionResponse, InformationProtectionLabelCollectionPage, InformationProtectionLabelCollectionRequest> {
 
     /**
@@ -58,7 +60,9 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseColl
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionLabelEvaluateApplicationCollectionRequestBuilder evaluateApplication(@Nonnull final InformationProtectionLabelEvaluateApplicationParameterSet parameters) {
         return new InformationProtectionLabelEvaluateApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateApplication"), getClient(), null, parameters);
@@ -68,7 +72,9 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseColl
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder evaluateClassificationResults(@Nonnull final InformationProtectionLabelEvaluateClassificationResultsParameterSet parameters) {
         return new InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateClassificationResults"), getClient(), null, parameters);
@@ -78,7 +84,9 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseColl
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder evaluateRemoval(@Nonnull final InformationProtectionLabelEvaluateRemovalParameterSet parameters) {
         return new InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateRemoval"), getClient(), null, parameters);
@@ -88,7 +96,9 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseColl
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionLabelExtractLabelRequestBuilder extractLabel(@Nonnull final InformationProtectionLabelExtractLabelParameterSet parameters) {
         return new InformationProtectionLabelExtractLabelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.extractLabel"), getClient(), null, parameters);

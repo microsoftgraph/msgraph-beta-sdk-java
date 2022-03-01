@@ -8,9 +8,9 @@ package com.microsoft.graph.managedtenants.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionWithReferenceRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateWithReferenceRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -61,6 +61,16 @@ public class ManagementTemplateStepRequestBuilder extends BaseRequestBuilder<Man
 
 
     /**
+     * Gets the request builder for ManagementTemplateStepVersion
+     *
+     * @return the ManagementTemplateStepVersionWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public ManagementTemplateStepVersionWithReferenceRequestBuilder acceptedVersion() {
+        return new ManagementTemplateStepVersionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedVersion"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ManagementTemplate
      *
      * @return the ManagementTemplateWithReferenceRequestBuilder instance
@@ -75,8 +85,8 @@ public class ManagementTemplateStepRequestBuilder extends BaseRequestBuilder<Man
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateStepVersionCollectionWithReferencesRequestBuilder stepVersions() {
-        return new ManagementTemplateStepVersionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("stepVersions"), getClient(), null);
+    public ManagementTemplateStepVersionCollectionWithReferencesRequestBuilder versions() {
+        return new ManagementTemplateStepVersionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
     /**
@@ -86,7 +96,7 @@ public class ManagementTemplateStepRequestBuilder extends BaseRequestBuilder<Man
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateStepVersionWithReferenceRequestBuilder stepVersions(@Nonnull final String id) {
-        return new ManagementTemplateStepVersionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("stepVersions") + "/" + id, getClient(), null);
+    public ManagementTemplateStepVersionWithReferenceRequestBuilder versions(@Nonnull final String id) {
+        return new ManagementTemplateStepVersionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 }

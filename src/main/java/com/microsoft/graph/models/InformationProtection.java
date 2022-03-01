@@ -74,7 +74,9 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     /**
      * The Policy.
      * 
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose
 	@Nullable

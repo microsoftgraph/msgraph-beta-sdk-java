@@ -13,11 +13,13 @@ import com.microsoft.graph.models.AccessPackageResourceRole;
 import com.microsoft.graph.models.AccessPackageResource;
 import com.microsoft.graph.models.AccessPackageResourceScope;
 import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.CustomAccessPackageWorkflowExtension;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage;
 import com.microsoft.graph.requests.AccessPackageCollectionPage;
+import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -45,7 +47,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Type.
-     * One of UserManaged or ServiceDefault.
+     * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      */
     @SerializedName(value = "catalogType", alternate = {"CatalogType"})
     @Expose
@@ -81,7 +83,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package catalog. Supports $filter (eq, contains).
+     * The display name of the access package catalog.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -117,7 +119,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resource Roles.
-     * 
+     * The roles in each resource in a catalog. Read-only.
      */
     @SerializedName(value = "accessPackageResourceRoles", alternate = {"AccessPackageResourceRoles"})
     @Expose
@@ -135,7 +137,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resource Scopes.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose
@@ -144,12 +146,21 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Packages.
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
 	@Nullable
     public AccessPackageCollectionPage accessPackages;
+
+    /**
+     * The Custom Access Package Workflow Extensions.
+     * 
+     */
+    @SerializedName(value = "customAccessPackageWorkflowExtensions", alternate = {"CustomAccessPackageWorkflowExtensions"})
+    @Expose
+	@Nullable
+    public CustomAccessPackageWorkflowExtensionCollectionPage customAccessPackageWorkflowExtensions;
 
 
     /**
@@ -175,6 +186,10 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
         if (json.has("accessPackages")) {
             accessPackages = serializer.deserializeObject(json.get("accessPackages"), AccessPackageCollectionPage.class);
+        }
+
+        if (json.has("customAccessPackageWorkflowExtensions")) {
+            customAccessPackageWorkflowExtensions = serializer.deserializeObject(json.get("customAccessPackageWorkflowExtensions"), CustomAccessPackageWorkflowExtensionCollectionPage.class);
         }
     }
 }

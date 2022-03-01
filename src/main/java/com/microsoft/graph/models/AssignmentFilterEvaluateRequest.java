@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DevicePlatformType;
 
 
@@ -37,6 +38,15 @@ public class AssignmentFilterEvaluateRequest implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Order By.
+     * Order the devices should be sorted in. Default is ascending on device name.
+     */
+    @SerializedName(value = "orderBy", alternate = {"OrderBy"})
+    @Expose
+	@Nullable
+    public java.util.List<String> orderBy;
 
     /**
      * The Platform.

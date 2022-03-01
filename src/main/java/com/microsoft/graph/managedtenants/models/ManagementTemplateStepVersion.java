@@ -9,9 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.managedtenants.models.TemplateAction;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateStepDeployment;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateStepDeployment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionPage;
 
@@ -31,22 +30,58 @@ public class ManagementTemplateStepVersion extends Entity implements IJsonBacked
 
 
     /**
-     * The Configuration Action.
+     * The Content Markdown.
      * 
      */
-    @SerializedName(value = "configurationAction", alternate = {"ConfigurationAction"})
+    @SerializedName(value = "contentMarkdown", alternate = {"ContentMarkdown"})
     @Expose
 	@Nullable
-    public TemplateAction configurationAction;
+    public String contentMarkdown;
 
     /**
-     * The Validation Action.
+     * The Created By User Id.
      * 
      */
-    @SerializedName(value = "validationAction", alternate = {"ValidationAction"})
+    @SerializedName(value = "createdByUserId", alternate = {"CreatedByUserId"})
     @Expose
 	@Nullable
-    public TemplateAction validationAction;
+    public String createdByUserId;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The Last Action By User Id.
+     * 
+     */
+    @SerializedName(value = "lastActionByUserId", alternate = {"LastActionByUserId"})
+    @Expose
+	@Nullable
+    public String lastActionByUserId;
+
+    /**
+     * The Last Action Date Time.
+     * 
+     */
+    @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastActionDateTime;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName(value = "name", alternate = {"Name"})
+    @Expose
+	@Nullable
+    public String name;
 
     /**
      * The Version.
@@ -56,6 +91,24 @@ public class ManagementTemplateStepVersion extends Entity implements IJsonBacked
     @Expose
 	@Nullable
     public Integer version;
+
+    /**
+     * The Version Information.
+     * 
+     */
+    @SerializedName(value = "versionInformation", alternate = {"VersionInformation"})
+    @Expose
+	@Nullable
+    public String versionInformation;
+
+    /**
+     * The Accepted For.
+     * 
+     */
+    @SerializedName(value = "acceptedFor", alternate = {"AcceptedFor"})
+    @Expose
+	@Nullable
+    public ManagementTemplateStep acceptedFor;
 
     /**
      * The Deployments.

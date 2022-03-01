@@ -28,7 +28,7 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
 
     /**
      * The Action Verb.
-     * 
+     * HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values.
      */
     @SerializedName(value = "actionVerb", alternate = {"ActionVerb"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * 
+     * Description for the action. Supports $filter (eq).
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
 
     /**
      * The Name.
-     * 
+     * Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
 
     /**
      * The Resource Scope Id.
-     * 
+     * Not implemented.
      */
     @SerializedName(value = "resourceScopeId", alternate = {"ResourceScopeId"})
     @Expose

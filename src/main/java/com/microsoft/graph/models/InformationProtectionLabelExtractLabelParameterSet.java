@@ -19,7 +19,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Information Protection Label Extract Label Parameter Set.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelExtractLabelParameterSet {
     /**
      * The content Info.

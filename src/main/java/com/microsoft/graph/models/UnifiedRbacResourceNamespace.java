@@ -30,7 +30,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements IJsonBackedO
 
     /**
      * The Name.
-     * 
+     * Name of the resource namespace. Typically, the same name as the id property, such as microsoft.aad.b2c. Required. Supports $filter (eq, startsWith).
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -39,7 +39,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements IJsonBackedO
 
     /**
      * The Resource Actions.
-     * 
+     * Operations that an authorized principal are allowed to perform.
      */
     @SerializedName(value = "resourceActions", alternate = {"ResourceActions"})
     @Expose

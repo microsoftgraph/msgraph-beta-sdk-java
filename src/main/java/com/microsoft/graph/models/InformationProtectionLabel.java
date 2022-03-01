@@ -22,7 +22,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Information Protection Label.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabel extends Entity implements IJsonBackedObject {
 
 

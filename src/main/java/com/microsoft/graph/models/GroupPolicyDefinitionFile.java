@@ -48,6 +48,15 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
     public String displayName;
 
     /**
+     * The File Name.
+     * The file name of the ADMX file without the path. For example: edge.admx
+     */
+    @SerializedName(value = "fileName", alternate = {"FileName"})
+    @Expose
+	@Nullable
+    public String fileName;
+
+    /**
      * The Language Codes.
      * The supported language codes for the ADMX file.
      */

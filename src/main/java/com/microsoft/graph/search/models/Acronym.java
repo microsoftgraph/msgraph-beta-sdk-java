@@ -28,7 +28,7 @@ public class Acronym extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Stands For.
-     * 
+     * What the acronym stands for.
      */
     @SerializedName(value = "standsFor", alternate = {"StandsFor"})
     @Expose
@@ -37,7 +37,7 @@ public class Acronym extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * State of the acronym. Possible values are: published, draft, excluded, or unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

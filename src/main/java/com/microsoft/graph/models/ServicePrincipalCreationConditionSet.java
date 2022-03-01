@@ -62,6 +62,15 @@ public class ServicePrincipalCreationConditionSet extends Entity implements IJso
 	@Nullable
     public java.util.List<String> applicationTenantIds;
 
+    /**
+     * The Certified Applications Only.
+     * 
+     */
+    @SerializedName(value = "certifiedApplicationsOnly", alternate = {"CertifiedApplicationsOnly"})
+    @Expose
+	@Nullable
+    public Boolean certifiedApplicationsOnly;
+
 
     /**
      * Sets the raw JSON object

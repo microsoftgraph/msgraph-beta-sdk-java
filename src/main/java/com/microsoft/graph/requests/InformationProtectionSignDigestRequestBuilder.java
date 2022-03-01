@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Information Protection Sign Digest Request Builder.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionSignDigestRequestBuilder extends BaseActionRequestBuilder<SigningResult> {
 
     /**

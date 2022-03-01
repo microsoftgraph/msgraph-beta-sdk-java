@@ -20,7 +20,9 @@ import com.microsoft.graph.models.InformationProtectionSignDigestParameterSet;
 
 /**
  * The class for the Information Protection Sign Digest Request.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionSignDigestRequest extends BaseRequest<SigningResult> {
     /**
      * The request for this InformationProtectionSignDigest

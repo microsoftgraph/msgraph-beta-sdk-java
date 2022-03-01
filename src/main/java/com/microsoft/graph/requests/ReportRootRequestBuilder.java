@@ -59,6 +59,9 @@ import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentAbandonmentDe
 import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentAbandonmentSummaryParameterSet;
 import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet;
 import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentTopFailuresParameterSet;
+import com.microsoft.graph.models.ReportRootGetBrowserDistributionUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetBrowserUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetBrowserUserDetailParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailActivityCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailActivityUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailActivityUserDetailParameterSet;
@@ -117,10 +120,14 @@ import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageDistributionUserC
 import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageTotalUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageUserDetailParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamActivityCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamActivityDetailParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamActivityDistributionCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityDistributionTotalUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityDistributionUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityTotalCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsUserActivityTotalDistributionCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityTotalUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityUserDetailParameterSet;
@@ -561,6 +568,36 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(@Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresParameterSet parameters) {
         return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetBrowserDistributionUserCountsRequestBuilder getBrowserDistributionUserCounts(@Nonnull final ReportRootGetBrowserDistributionUserCountsParameterSet parameters) {
+        return new ReportRootGetBrowserDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getBrowserDistributionUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetBrowserUserCountsRequestBuilder getBrowserUserCounts(@Nonnull final ReportRootGetBrowserUserCountsParameterSet parameters) {
+        return new ReportRootGetBrowserUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getBrowserUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetBrowserUserDetailRequestBuilder getBrowserUserDetail(@Nonnull final ReportRootGetBrowserUserDetailParameterSet parameters) {
+        return new ReportRootGetBrowserUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getBrowserUserDetail"), getClient(), null, parameters);
     }
 
     /**
@@ -1176,6 +1213,36 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public ReportRootGetTeamsTeamActivityCountsRequestBuilder getTeamsTeamActivityCounts(@Nonnull final ReportRootGetTeamsTeamActivityCountsParameterSet parameters) {
+        return new ReportRootGetTeamsTeamActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamActivityCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsTeamActivityDetailRequestBuilder getTeamsTeamActivityDetail(@Nonnull final ReportRootGetTeamsTeamActivityDetailParameterSet parameters) {
+        return new ReportRootGetTeamsTeamActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamActivityDetail"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsTeamActivityDistributionCountsRequestBuilder getTeamsTeamActivityDistributionCounts(@Nonnull final ReportRootGetTeamsTeamActivityDistributionCountsParameterSet parameters) {
+        return new ReportRootGetTeamsTeamActivityDistributionCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamActivityDistributionCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public ReportRootGetTeamsUserActivityCountsRequestBuilder getTeamsUserActivityCounts(@Nonnull final ReportRootGetTeamsUserActivityCountsParameterSet parameters) {
         return new ReportRootGetTeamsUserActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityCounts"), getClient(), null, parameters);
     }
@@ -1208,6 +1275,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootGetTeamsUserActivityTotalCountsRequestBuilder getTeamsUserActivityTotalCounts(@Nonnull final ReportRootGetTeamsUserActivityTotalCountsParameterSet parameters) {
         return new ReportRootGetTeamsUserActivityTotalCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityTotalCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsUserActivityTotalDistributionCountsRequestBuilder getTeamsUserActivityTotalDistributionCounts(@Nonnull final ReportRootGetTeamsUserActivityTotalDistributionCountsParameterSet parameters) {
+        return new ReportRootGetTeamsUserActivityTotalDistributionCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityTotalDistributionCounts"), getClient(), null, parameters);
     }
 
     /**

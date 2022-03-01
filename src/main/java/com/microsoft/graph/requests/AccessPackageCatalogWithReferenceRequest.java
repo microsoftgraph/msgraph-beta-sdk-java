@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestB
 import com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageRequestBuilder;
+import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

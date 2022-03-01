@@ -88,7 +88,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Remote Action Result.
-     * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Rename, Reboot, Reprovision, and Troubleshoot.
+     * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, and Troubleshoot.
      */
     @SerializedName(value = "lastRemoteActionResult", alternate = {"LastRemoteActionResult"})
     @Expose
@@ -178,7 +178,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
+     * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

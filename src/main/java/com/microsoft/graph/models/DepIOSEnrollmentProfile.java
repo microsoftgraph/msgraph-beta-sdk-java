@@ -245,6 +245,15 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean updateCompleteScreenDisabled;
 
     /**
+     * The Userless Shared Aad Mode Enabled.
+     * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices.
+     */
+    @SerializedName(value = "userlessSharedAadModeEnabled", alternate = {"UserlessSharedAadModeEnabled"})
+    @Expose
+	@Nullable
+    public Boolean userlessSharedAadModeEnabled;
+
+    /**
      * The User Session Timeout In Seconds.
      * Indicates timeout of temporary session
      */

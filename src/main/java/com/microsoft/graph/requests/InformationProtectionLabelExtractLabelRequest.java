@@ -20,7 +20,9 @@ import com.microsoft.graph.models.InformationProtectionLabelExtractLabelParamete
 
 /**
  * The class for the Information Protection Label Extract Label Request.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelExtractLabelRequest extends BaseRequest<InformationProtectionContentLabel> {
     /**
      * The request for this InformationProtectionLabelExtractLabel

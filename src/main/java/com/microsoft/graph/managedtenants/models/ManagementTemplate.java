@@ -10,7 +10,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagementCategory;
+import com.microsoft.graph.models.ActionUrl;
 import com.microsoft.graph.managedtenants.models.TemplateParameter;
+import com.microsoft.graph.managedtenants.models.ManagementProvider;
 import com.microsoft.graph.managedtenants.models.WorkloadAction;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
@@ -43,6 +45,24 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
     public ManagementCategory category;
 
     /**
+     * The Created By User Id.
+     * 
+     */
+    @SerializedName(value = "createdByUserId", alternate = {"CreatedByUserId"})
+    @Expose
+	@Nullable
+    public String createdByUserId;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Description.
      * The description for the management template. Optional. Read-only.
      */
@@ -61,6 +81,33 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Information Links.
+     * 
+     */
+    @SerializedName(value = "informationLinks", alternate = {"InformationLinks"})
+    @Expose
+	@Nullable
+    public java.util.List<ActionUrl> informationLinks;
+
+    /**
+     * The Last Action By User Id.
+     * 
+     */
+    @SerializedName(value = "lastActionByUserId", alternate = {"LastActionByUserId"})
+    @Expose
+	@Nullable
+    public String lastActionByUserId;
+
+    /**
+     * The Last Action Date Time.
+     * 
+     */
+    @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastActionDateTime;
+
+    /**
      * The Parameters.
      * The collection of parameters used by the management template. Optional. Read-only.
      */
@@ -68,6 +115,33 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<TemplateParameter> parameters;
+
+    /**
+     * The Priority.
+     * 
+     */
+    @SerializedName(value = "priority", alternate = {"Priority"})
+    @Expose
+	@Nullable
+    public Integer priority;
+
+    /**
+     * The Provider.
+     * 
+     */
+    @SerializedName(value = "provider", alternate = {"Provider"})
+    @Expose
+	@Nullable
+    public ManagementProvider provider;
+
+    /**
+     * The User Impact.
+     * 
+     */
+    @SerializedName(value = "userImpact", alternate = {"UserImpact"})
+    @Expose
+	@Nullable
+    public String userImpact;
 
     /**
      * The Version.

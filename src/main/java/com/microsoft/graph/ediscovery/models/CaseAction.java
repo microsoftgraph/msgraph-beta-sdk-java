@@ -44,6 +44,10 @@ public enum CaseAction
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * purge Data
+    */
+    PURGE_DATA,
+    /**
     * For CaseAction values that were not expected from the service
     */
     UNEXPECTED_VALUE
