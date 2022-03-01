@@ -19,6 +19,7 @@ import com.microsoft.graph.requests.AuthorizationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyRequestBuilder;
+import com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.TenantAppManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.ExternalIdentitiesPolicyRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -202,6 +203,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
         return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for CrossTenantAccessPolicy
+     *
+     * @return the CrossTenantAccessPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
+        return new CrossTenantAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("crossTenantAccessPolicy"), getClient(), null);
     }
 
     /**

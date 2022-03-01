@@ -15,9 +15,11 @@ import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewReviewer;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
+import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewReviewerCollectionPage;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
+import com.microsoft.graph.requests.AccessReviewStageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -108,7 +110,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Decisions.
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
@@ -123,6 +125,15 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AccessReviewScheduleDefinition definition;
+
+    /**
+     * The Stages.
+     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     */
+    @SerializedName(value = "stages", alternate = {"Stages"})
+    @Expose
+	@Nullable
+    public AccessReviewStageCollectionPage stages;
 
 
     /**
@@ -140,6 +151,10 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
         if (json.has("decisions")) {
             decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);
+        }
+
+        if (json.has("stages")) {
+            stages = serializer.deserializeObject(json.get("stages"), AccessReviewStageCollectionPage.class);
         }
     }
 }

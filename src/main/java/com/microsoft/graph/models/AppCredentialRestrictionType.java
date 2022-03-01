@@ -28,6 +28,10 @@ public enum AppCredentialRestrictionType
     */
     SYMMETRIC_KEY_LIFETIME,
     /**
+    * custom Password Addition
+    */
+    CUSTOM_PASSWORD_ADDITION,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

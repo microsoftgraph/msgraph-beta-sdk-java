@@ -75,7 +75,7 @@ public class LabelingOptions implements IJsonBackedObject {
     @SerializedName(value = "labelId", alternate = {"LabelId"})
     @Expose
 	@Nullable
-    public java.util.UUID labelId;
+    public String labelId;
 
 
     /**

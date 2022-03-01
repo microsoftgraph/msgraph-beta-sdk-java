@@ -56,4 +56,13 @@ public class CrossTenantAccessPolicyConfigurationDefaultRequestBuilder extends B
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CrossTenantAccessPolicyConfigurationDefaultResetToSystemDefaultRequestBuilder resetToSystemDefault() {
+        return new CrossTenantAccessPolicyConfigurationDefaultResetToSystemDefaultRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetToSystemDefault"), getClient(), null);
+    }
 }

@@ -77,6 +77,7 @@ import com.microsoft.graph.models.DeviceManagementScript;
 import com.microsoft.graph.models.DeviceShellScript;
 import com.microsoft.graph.models.ManagedDeviceOverview;
 import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
+import com.microsoft.graph.models.OemWarrantyInformationOnboarding;
 import com.microsoft.graph.models.RemoteActionAudit;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
@@ -114,6 +115,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsScoreHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformance;
 import com.microsoft.graph.models.WindowsMalwareInformation;
 import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
 import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
@@ -209,6 +211,7 @@ import com.microsoft.graph.requests.DeviceHealthScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceShellScriptCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage;
@@ -241,6 +244,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionColle
 import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage;
 import com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementResourceAccessProfileBaseCollectionPage;
@@ -311,7 +315,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Intune Account Id.
-     * Intune Account ID for given tenant
+     * Intune Account Id for given tenant
      */
     @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
     @Expose
@@ -1021,6 +1025,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
 
     /**
+     * The Oem Warranty Information Onboarding.
+     * List of OEM Warranty Statuses
+     */
+    @SerializedName(value = "oemWarrantyInformationOnboarding", alternate = {"OemWarrantyInformationOnboarding"})
+    @Expose
+	@Nullable
+    public OemWarrantyInformationOnboardingCollectionPage oemWarrantyInformationOnboarding;
+
+    /**
      * The Remote Action Audits.
      * The list of device remote action audits with the tenant.
      */
@@ -1370,6 +1383,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage userExperienceAnalyticsWorkFromAnywhereMetrics;
+
+    /**
+     * The User Experience Analytics Work From Anywhere Model Performance.
+     * The user experience analytics work from anywhere model performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereModelPerformance", alternate = {"UserExperienceAnalyticsWorkFromAnywhereModelPerformance"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage userExperienceAnalyticsWorkFromAnywhereModelPerformance;
 
     /**
      * The Windows Malware Information.
@@ -2003,6 +2025,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), MobileAppTroubleshootingEventCollectionPage.class);
         }
 
+        if (json.has("oemWarrantyInformationOnboarding")) {
+            oemWarrantyInformationOnboarding = serializer.deserializeObject(json.get("oemWarrantyInformationOnboarding"), OemWarrantyInformationOnboardingCollectionPage.class);
+        }
+
         if (json.has("remoteActionAudits")) {
             remoteActionAudits = serializer.deserializeObject(json.get("remoteActionAudits"), RemoteActionAuditCollectionPage.class);
         }
@@ -2133,6 +2159,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsWorkFromAnywhereMetrics")) {
             userExperienceAnalyticsWorkFromAnywhereMetrics = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereMetrics"), UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsWorkFromAnywhereModelPerformance")) {
+            userExperienceAnalyticsWorkFromAnywhereModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage.class);
         }
 
         if (json.has("windowsMalwareInformation")) {

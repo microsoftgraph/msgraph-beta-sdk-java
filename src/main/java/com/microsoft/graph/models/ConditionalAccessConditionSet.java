@@ -111,6 +111,15 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
     public ConditionalAccessPlatforms platforms;
 
     /**
+     * The Service Principal Risk Levels.
+     * Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     */
+    @SerializedName(value = "servicePrincipalRiskLevels", alternate = {"ServicePrincipalRiskLevels"})
+    @Expose
+	@Nullable
+    public java.util.List<RiskLevel> servicePrincipalRiskLevels;
+
+    /**
      * The Sign In Risk Levels.
      * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      */
@@ -130,7 +139,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Users.
-     * Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     * Users, groups, and roles included in and excluded from the policy. Required.
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

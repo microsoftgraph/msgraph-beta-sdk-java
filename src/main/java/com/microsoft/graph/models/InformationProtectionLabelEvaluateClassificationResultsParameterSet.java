@@ -20,7 +20,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Information Protection Label Evaluate Classification Results Parameter Set.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelEvaluateClassificationResultsParameterSet {
     /**
      * The content Info.

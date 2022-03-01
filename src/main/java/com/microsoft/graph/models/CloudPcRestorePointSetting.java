@@ -39,7 +39,7 @@ public class CloudPcRestorePointSetting implements IJsonBackedObject {
 
     /**
      * The Frequency In Hours.
-     * 
+     * The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours.
      */
     @SerializedName(value = "frequencyInHours", alternate = {"FrequencyInHours"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcRestorePointSetting implements IJsonBackedObject {
 
     /**
      * The User Restore Enabled.
-     * 
+     * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
      */
     @SerializedName(value = "userRestoreEnabled", alternate = {"UserRestoreEnabled"})
     @Expose

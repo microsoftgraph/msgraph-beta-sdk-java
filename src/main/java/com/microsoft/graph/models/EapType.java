@@ -36,6 +36,10 @@ public enum EapType
     */
     EAP_FAST,
     /**
+    * teap
+    */
+    TEAP,
+    /**
     * For EapType values that were not expected from the service
     */
     UNEXPECTED_VALUE

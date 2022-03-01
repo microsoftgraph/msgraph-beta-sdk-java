@@ -32,7 +32,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Availability End Date Time.
-     * 
+     * Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available.
      */
     @SerializedName(value = "availabilityEndDateTime", alternate = {"AvailabilityEndDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Availability Start Date Time.
-     * 
+     * Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
      */
     @SerializedName(value = "availabilityStartDateTime", alternate = {"AvailabilityStartDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * Categories commonly used to describe this bookmark. For example, IT and HR.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -59,7 +59,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Group Ids.
-     * 
+     * List of security groups able to view this bookmark.
      */
     @SerializedName(value = "groupIds", alternate = {"GroupIds"})
     @Expose
@@ -68,7 +68,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Is Suggested.
-     * 
+     * True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
      */
     @SerializedName(value = "isSuggested", alternate = {"IsSuggested"})
     @Expose
@@ -77,7 +77,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Keywords.
-     * 
+     * Keywords that trigger this bookmark to appear in search results.
      */
     @SerializedName(value = "keywords", alternate = {"Keywords"})
     @Expose
@@ -86,7 +86,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Language Tags.
-     * 
+     * A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{REGION}. As an example, en-US is English as used in the United States. See supported language tags for the list of possible values.
      */
     @SerializedName(value = "languageTags", alternate = {"LanguageTags"})
     @Expose
@@ -95,7 +95,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Platforms.
-     * 
+     * List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
@@ -104,7 +104,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Power App Ids.
-     * 
+     * List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
      */
     @SerializedName(value = "powerAppIds", alternate = {"PowerAppIds"})
     @Expose
@@ -113,7 +113,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * State of the bookmark. Possible values are: published, draft, excluded, or unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -122,7 +122,7 @@ public class Bookmark extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Targeted Variations.
-     * 
+     * Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
      */
     @SerializedName(value = "targetedVariations", alternate = {"TargetedVariations"})
     @Expose

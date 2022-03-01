@@ -26,7 +26,9 @@ import com.microsoft.graph.http.HttpMethod;
 
 /**
  * The class for the Information Protection Label Request.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelRequest extends BaseRequest<InformationProtectionLabel> {
 	
     /**

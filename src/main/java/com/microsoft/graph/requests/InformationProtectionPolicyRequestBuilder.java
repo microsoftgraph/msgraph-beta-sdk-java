@@ -21,7 +21,9 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 
 /**
  * The class for the Information Protection Policy Request Builder.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilder<InformationProtectionPolicy> {
 
     /**

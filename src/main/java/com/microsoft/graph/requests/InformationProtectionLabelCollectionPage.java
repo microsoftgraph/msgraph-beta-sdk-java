@@ -15,7 +15,9 @@ import com.microsoft.graph.http.BaseCollectionPage;
 
 /**
  * The class for the Information Protection Label Collection Page.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelCollectionPage extends BaseCollectionPage<InformationProtectionLabel, InformationProtectionLabelCollectionRequestBuilder> {
 
     /**

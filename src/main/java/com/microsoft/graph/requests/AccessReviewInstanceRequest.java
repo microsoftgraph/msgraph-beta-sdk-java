@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewStageCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewStageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

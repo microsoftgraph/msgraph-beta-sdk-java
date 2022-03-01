@@ -9,12 +9,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.Importance;
-import com.microsoft.graph.models.PersonalTaskProperties;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus_v2;
+import com.microsoft.graph.models.TaskViewpoint;
 import com.microsoft.graph.models.ChecklistItem;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.LinkedResource_v2;
@@ -38,15 +37,6 @@ import javax.annotation.Nonnull;
  */
 public class BaseTask extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Body.
-     * The task body that typically contains information about the task.
-     */
-    @SerializedName(value = "body", alternate = {"Body"})
-    @Expose
-	@Nullable
-    public ItemBody body;
 
     /**
      * The Body Last Modified Date Time.
@@ -112,15 +102,6 @@ public class BaseTask extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
-     * The Personal Properties.
-     * Properties that are personal to a user such as reminderDateTime.
-     */
-    @SerializedName(value = "personalProperties", alternate = {"PersonalProperties"})
-    @Expose
-	@Nullable
-    public PersonalTaskProperties personalProperties;
-
-    /**
      * The Recurrence.
      * The recurrence pattern for the task.
      */
@@ -146,6 +127,24 @@ public class BaseTask extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TaskStatus_v2 status;
+
+    /**
+     * The Text Body.
+     * 
+     */
+    @SerializedName(value = "textBody", alternate = {"TextBody"})
+    @Expose
+	@Nullable
+    public String textBody;
+
+    /**
+     * The Viewpoint.
+     * 
+     */
+    @SerializedName(value = "viewpoint", alternate = {"Viewpoint"})
+    @Expose
+	@Nullable
+    public TaskViewpoint viewpoint;
 
     /**
      * The Checklist Items.

@@ -20,7 +20,9 @@ import com.microsoft.graph.models.InformationProtectionVerifySignatureParameterS
 
 /**
  * The class for the Information Protection Verify Signature Request.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionVerifySignatureRequest extends BaseRequest<VerificationResult> {
     /**
      * The request for this InformationProtectionVerifySignature

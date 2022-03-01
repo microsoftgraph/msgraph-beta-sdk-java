@@ -9,6 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TenantRelationship;
 import com.microsoft.graph.managedtenants.requests.ManagedTenantRequestBuilder;
+import com.microsoft.graph.requests.DelegatedAdminCustomerCollectionRequestBuilder;
+import com.microsoft.graph.requests.DelegatedAdminCustomerRequestBuilder;
+import com.microsoft.graph.requests.DelegatedAdminRelationshipCollectionRequestBuilder;
+import com.microsoft.graph.requests.DelegatedAdminRelationshipRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,5 +70,45 @@ public class TenantRelationshipRequestBuilder extends BaseRequestBuilder<TenantR
     @Nonnull
     public ManagedTenantRequestBuilder managedTenants() {
         return new ManagedTenantRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenants"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DelegatedAdminCustomer collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DelegatedAdminCustomerCollectionRequestBuilder delegatedAdminCustomers() {
+        return new DelegatedAdminCustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedAdminCustomers"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DelegatedAdminCustomer item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DelegatedAdminCustomerRequestBuilder delegatedAdminCustomers(@Nonnull final String id) {
+        return new DelegatedAdminCustomerRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedAdminCustomers") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DelegatedAdminRelationship collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DelegatedAdminRelationshipCollectionRequestBuilder delegatedAdminRelationships() {
+        return new DelegatedAdminRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedAdminRelationships"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DelegatedAdminRelationship item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DelegatedAdminRelationshipRequestBuilder delegatedAdminRelationships(@Nonnull final String id) {
+        return new DelegatedAdminRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedAdminRelationships") + "/" + id, getClient(), null);
     }
 }

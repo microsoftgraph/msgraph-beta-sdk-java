@@ -40,6 +40,24 @@ public class DlpPoliciesJobResult implements IJsonBackedObject {
     }
 
     /**
+     * The Audit Correlation Id.
+     * 
+     */
+    @SerializedName(value = "auditCorrelationId", alternate = {"AuditCorrelationId"})
+    @Expose
+	@Nullable
+    public String auditCorrelationId;
+
+    /**
+     * The Evaluation Date Time.
+     * 
+     */
+    @SerializedName(value = "evaluationDateTime", alternate = {"EvaluationDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime evaluationDateTime;
+
+    /**
      * The Matching Rules.
      * 
      */

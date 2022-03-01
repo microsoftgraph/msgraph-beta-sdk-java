@@ -141,6 +141,26 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder<RbacApplic
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the UnifiedRoleAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentCollectionRequestBuilder transitiveRoleAssignments() {
+        return new UnifiedRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveRoleAssignments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentRequestBuilder transitiveRoleAssignments(@Nonnull final String id) {
+        return new UnifiedRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveRoleAssignments") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the Approval collection
      *
      * @return the collection request builder

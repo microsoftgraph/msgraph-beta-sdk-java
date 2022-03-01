@@ -24,7 +24,9 @@ import com.microsoft.graph.requests.InformationProtectionLabelEvaluateRemovalCol
 
 /**
  * The class for the Information Protection Label Evaluate Removal Collection Page.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelEvaluateRemovalCollectionPage extends BaseCollectionPage<InformationProtectionAction, InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder> {
 
     /**

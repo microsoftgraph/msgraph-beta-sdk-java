@@ -31,7 +31,9 @@ import com.microsoft.graph.requests.InformationProtectionLabelCollectionRequest;
 
 /**
  * The class for the Information Protection Label Collection Request.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelCollectionRequest extends BaseEntityCollectionRequest<InformationProtectionLabel, InformationProtectionLabelCollectionResponse, InformationProtectionLabelCollectionPage> {
 
     /**

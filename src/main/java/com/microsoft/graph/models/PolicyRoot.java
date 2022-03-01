@@ -16,6 +16,7 @@ import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
+import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.graph.models.ExternalIdentitiesPolicy;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
@@ -137,6 +138,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+
+    /**
+     * The Cross Tenant Access Policy.
+     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     */
+    @SerializedName(value = "crossTenantAccessPolicy", alternate = {"CrossTenantAccessPolicy"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicy crossTenantAccessPolicy;
 
     /**
      * The Default App Management Policy.

@@ -10,9 +10,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagementCategory;
-import com.microsoft.graph.managedtenants.models.ManagementProvider;
-import com.microsoft.graph.managedtenants.models.ManagementTemplate;
+import com.microsoft.graph.models.ActionUrl;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
+import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage;
 
@@ -41,6 +41,24 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
     public ManagementCategory category;
 
     /**
+     * The Created By User Id.
+     * 
+     */
+    @SerializedName(value = "createdByUserId", alternate = {"CreatedByUserId"})
+    @Expose
+	@Nullable
+    public String createdByUserId;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Description.
      * 
      */
@@ -59,13 +77,22 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
     public String displayName;
 
     /**
-     * The Management Portal.
+     * The Last Action By User Id.
      * 
      */
-    @SerializedName(value = "managementPortal", alternate = {"ManagementPortal"})
+    @SerializedName(value = "lastActionByUserId", alternate = {"LastActionByUserId"})
     @Expose
 	@Nullable
-    public String managementPortal;
+    public String lastActionByUserId;
+
+    /**
+     * The Last Action Date Time.
+     * 
+     */
+    @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastActionDateTime;
 
     /**
      * The Portal Link.
@@ -74,7 +101,7 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
     @SerializedName(value = "portalLink", alternate = {"PortalLink"})
     @Expose
 	@Nullable
-    public String portalLink;
+    public ActionUrl portalLink;
 
     /**
      * The Priority.
@@ -86,13 +113,13 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
     public Integer priority;
 
     /**
-     * The Provider.
+     * The Accepted Version.
      * 
      */
-    @SerializedName(value = "provider", alternate = {"Provider"})
+    @SerializedName(value = "acceptedVersion", alternate = {"AcceptedVersion"})
     @Expose
 	@Nullable
-    public ManagementProvider provider;
+    public ManagementTemplateStepVersion acceptedVersion;
 
     /**
      * The Management Template.
@@ -104,11 +131,11 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
     public ManagementTemplate managementTemplate;
 
     /**
-     * The Step Versions.
+     * The Versions.
      * 
      */
 	@Nullable
-    public ManagementTemplateStepVersionCollectionPage stepVersions;
+    public ManagementTemplateStepVersionCollectionPage versions;
 
 
     /**
@@ -120,8 +147,8 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
-        if (json.has("stepVersions")) {
-            stepVersions = serializer.deserializeObject(json.get("stepVersions"), ManagementTemplateStepVersionCollectionPage.class);
+        if (json.has("versions")) {
+            versions = serializer.deserializeObject(json.get("versions"), ManagementTemplateStepVersionCollectionPage.class);
         }
     }
 }

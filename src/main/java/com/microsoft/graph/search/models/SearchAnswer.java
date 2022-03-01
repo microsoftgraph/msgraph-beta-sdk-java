@@ -28,7 +28,7 @@ public class SearchAnswer extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Search answer description shown on search results page.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -37,7 +37,7 @@ public class SearchAnswer extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Search answer name displayed in search results.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class SearchAnswer extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Details of the user that created or last modified the search answer. Read-only.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -55,7 +55,7 @@ public class SearchAnswer extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Timestamp of when the search answer is created or edited. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class SearchAnswer extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Search answer URL link. When users click this search answer in search results, they will go to this URL.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

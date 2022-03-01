@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Information Protection Encrypt Buffer Request Builder.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionEncryptBufferRequestBuilder extends BaseActionRequestBuilder<BufferEncryptionResult> {
 
     /**

@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestB
 import com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageRequestBuilder;
+import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -143,5 +145,25 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
     @Nonnull
     public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
         return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CustomAccessPackageWorkflowExtension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomAccessPackageWorkflowExtensionCollectionRequestBuilder customAccessPackageWorkflowExtensions() {
+        return new CustomAccessPackageWorkflowExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customAccessPackageWorkflowExtensions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomAccessPackageWorkflowExtension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomAccessPackageWorkflowExtensionRequestBuilder customAccessPackageWorkflowExtensions(@Nonnull final String id) {
+        return new CustomAccessPackageWorkflowExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("customAccessPackageWorkflowExtensions") + "/" + id, getClient(), null);
     }
 }

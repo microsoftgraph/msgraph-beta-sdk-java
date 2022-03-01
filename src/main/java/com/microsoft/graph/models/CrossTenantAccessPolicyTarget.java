@@ -40,7 +40,7 @@ public class CrossTenantAccessPolicyTarget implements IJsonBackedObject {
 
     /**
      * The Target.
-     * 
+     * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose
@@ -49,7 +49,7 @@ public class CrossTenantAccessPolicyTarget implements IJsonBackedObject {
 
     /**
      * The Target Type.
-     * 
+     * The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose

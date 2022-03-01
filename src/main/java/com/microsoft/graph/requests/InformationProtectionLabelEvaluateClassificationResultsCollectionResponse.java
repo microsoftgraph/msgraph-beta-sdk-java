@@ -15,6 +15,8 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Information Protection Label Evaluate Classification Results Collection Response.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelEvaluateClassificationResultsCollectionResponse extends BaseCollectionResponse<InformationProtectionAction> {
 }

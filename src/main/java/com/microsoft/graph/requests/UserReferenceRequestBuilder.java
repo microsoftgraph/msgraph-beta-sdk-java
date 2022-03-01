@@ -84,6 +84,7 @@ import com.microsoft.graph.requests.AccessReviewInstanceCollectionRequestBuilder
 import com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder;
 import com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.AgreementAcceptanceWithReferenceRequestBuilder;
+import com.microsoft.graph.security.requests.SecurityRequestBuilder;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
