@@ -11,7 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-## [0.39.0] - 2022-02-03
+## [0.41.0] - 2022-03-03
+
+### Added
+
+- Models and Requests for the recently added Microsoft.graph.security namespace. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+- Alerts V_2 removed for testing. 
+
+## [0.40.0] - 2022-02-03
 
 ### Added
 
