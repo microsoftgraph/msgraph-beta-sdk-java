@@ -12,13 +12,13 @@ package com.microsoft.graph.models;
 public enum LocalSecurityOptionsSmartCardRemovalBehaviorType
 {
     /**
-    * lock Workstation
-    */
-    LOCK_WORKSTATION,
-    /**
     * no Action
     */
     NO_ACTION,
+    /**
+    * lock Workstation
+    */
+    LOCK_WORKSTATION,
     /**
     * force Logoff
     */

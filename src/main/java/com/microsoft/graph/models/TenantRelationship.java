@@ -8,8 +8,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
+import com.microsoft.graph.models.DelegatedAdminCustomer;
+import com.microsoft.graph.models.DelegatedAdminRelationship;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.DelegatedAdminCustomerCollectionPage;
+import com.microsoft.graph.requests.DelegatedAdminRelationshipCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,6 +40,24 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
 	@Nullable
     public ManagedTenant managedTenants;
 
+    /**
+     * The Delegated Admin Customers.
+     * 
+     */
+    @SerializedName(value = "delegatedAdminCustomers", alternate = {"DelegatedAdminCustomers"})
+    @Expose
+	@Nullable
+    public DelegatedAdminCustomerCollectionPage delegatedAdminCustomers;
+
+    /**
+     * The Delegated Admin Relationships.
+     * 
+     */
+    @SerializedName(value = "delegatedAdminRelationships", alternate = {"DelegatedAdminRelationships"})
+    @Expose
+	@Nullable
+    public DelegatedAdminRelationshipCollectionPage delegatedAdminRelationships;
+
 
     /**
      * Sets the raw JSON object
@@ -44,5 +67,13 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("delegatedAdminCustomers")) {
+            delegatedAdminCustomers = serializer.deserializeObject(json.get("delegatedAdminCustomers"), DelegatedAdminCustomerCollectionPage.class);
+        }
+
+        if (json.has("delegatedAdminRelationships")) {
+            delegatedAdminRelationships = serializer.deserializeObject(json.get("delegatedAdminRelationships"), DelegatedAdminRelationshipCollectionPage.class);
+        }
     }
 }

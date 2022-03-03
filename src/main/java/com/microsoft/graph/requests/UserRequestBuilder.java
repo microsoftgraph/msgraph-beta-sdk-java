@@ -83,6 +83,7 @@ import com.microsoft.graph.requests.AccessReviewInstanceCollectionRequestBuilder
 import com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder;
 import com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.AgreementAcceptanceWithReferenceRequestBuilder;
+import com.microsoft.graph.security.requests.SecurityRequestBuilder;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
@@ -1334,6 +1335,16 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public AgreementAcceptanceWithReferenceRequestBuilder agreementAcceptances(@Nonnull final String id) {
         return new AgreementAcceptanceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Security
+     *
+     * @return the SecurityRequestBuilder instance
+     */
+    @Nonnull
+    public SecurityRequestBuilder security() {
+        return new SecurityRequestBuilder(getRequestUrlWithAdditionalSegment("security"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceEnrollmentConfiguration collection

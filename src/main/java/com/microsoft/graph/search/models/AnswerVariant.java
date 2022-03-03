@@ -40,7 +40,7 @@ public class AnswerVariant implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Answer variation description shown on search results page.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class AnswerVariant implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Answer variation name displayed in search results.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class AnswerVariant implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

@@ -28,7 +28,7 @@ public class CloudPcSnapshot extends Entity implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Id.
-     * 
+     * The unique identifier for the Cloud PC.
      */
     @SerializedName(value = "cloudPcId", alternate = {"CloudPcId"})
     @Expose
@@ -37,7 +37,7 @@ public class CloudPcSnapshot extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class CloudPcSnapshot extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Restored Date Time.
-     * 
+     * The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastRestoredDateTime", alternate = {"LastRestoredDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class CloudPcSnapshot extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

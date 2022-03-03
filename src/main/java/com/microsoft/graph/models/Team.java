@@ -15,6 +15,7 @@ import com.microsoft.graph.models.TeamGuestSettings;
 import com.microsoft.graph.models.TeamMemberSettings;
 import com.microsoft.graph.models.TeamMessagingSettings;
 import com.microsoft.graph.models.TeamSpecialization;
+import com.microsoft.graph.models.TeamSummary;
 import com.microsoft.graph.models.TeamVisibilityType;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.Group;
@@ -169,6 +170,15 @@ public class Team extends Entity implements IJsonBackedObject {
     public TeamSpecialization specialization;
 
     /**
+     * The Summary.
+     * 
+     */
+    @SerializedName(value = "summary", alternate = {"Summary"})
+    @Expose
+	@Nullable
+    public TeamSummary summary;
+
+    /**
      * The Visibility.
      * The visibility of the group and team. Defaults to Public.
      */
@@ -188,7 +198,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Channels.
-     * The collection of channels &amp; messages associated with the team.
+     * The collection of channels and messages associated with the team.
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose

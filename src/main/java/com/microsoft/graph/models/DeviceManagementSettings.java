@@ -84,6 +84,33 @@ public class DeviceManagementSettings implements IJsonBackedObject {
     public Integer deviceInactivityBeforeRetirementInDay;
 
     /**
+     * The Enable Autopilot Diagnostics.
+     * Determines whether the autopilot diagnostic feature is enabled or not.
+     */
+    @SerializedName(value = "enableAutopilotDiagnostics", alternate = {"EnableAutopilotDiagnostics"})
+    @Expose
+	@Nullable
+    public Boolean enableAutopilotDiagnostics;
+
+    /**
+     * The Enable Device Group Membership Report.
+     * Determines whether the device group membership report feature is enabled or not.
+     */
+    @SerializedName(value = "enableDeviceGroupMembershipReport", alternate = {"EnableDeviceGroupMembershipReport"})
+    @Expose
+	@Nullable
+    public Boolean enableDeviceGroupMembershipReport;
+
+    /**
+     * The Enable Enhanced Troubleshooting Experience.
+     * Determines whether the enhanced troubleshooting UX is enabled or not.
+     */
+    @SerializedName(value = "enableEnhancedTroubleshootingExperience", alternate = {"EnableEnhancedTroubleshootingExperience"})
+    @Expose
+	@Nullable
+    public Boolean enableEnhancedTroubleshootingExperience;
+
+    /**
      * The Enable Log Collection.
      * Determines whether the log collection feature should be available for use.
      */

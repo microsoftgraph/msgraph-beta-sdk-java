@@ -40,7 +40,7 @@ public class CloudPcBulkRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Failed Device Ids.
-     * 
+     * A list of all the Intune managed device IDs that completed the bulk action with a failure.
      */
     @SerializedName(value = "failedDeviceIds", alternate = {"FailedDeviceIds"})
     @Expose
@@ -49,7 +49,7 @@ public class CloudPcBulkRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Not Found Device Ids.
-     * 
+     * A list of all the Intune managed device IDs that were not found when the bulk action was attempted.
      */
     @SerializedName(value = "notFoundDeviceIds", alternate = {"NotFoundDeviceIds"})
     @Expose
@@ -58,7 +58,7 @@ public class CloudPcBulkRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Not Supported Device Ids.
-     * 
+     * A list of all the Intune managed device IDs that were identified as unsupported for the bulk action.
      */
     @SerializedName(value = "notSupportedDeviceIds", alternate = {"NotSupportedDeviceIds"})
     @Expose
@@ -67,7 +67,7 @@ public class CloudPcBulkRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Successful Device Ids.
-     * 
+     * A list of all the Intune managed device IDs that completed the bulk action successfully.
      */
     @SerializedName(value = "successfulDeviceIds", alternate = {"SuccessfulDeviceIds"})
     @Expose

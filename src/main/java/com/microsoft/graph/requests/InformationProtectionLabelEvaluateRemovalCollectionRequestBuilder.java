@@ -27,7 +27,9 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
 
 /**
  * The class for the Information Protection Label Evaluate Removal Collection Request Builder.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<InformationProtectionAction, InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder, InformationProtectionLabelEvaluateRemovalCollectionResponse, InformationProtectionLabelEvaluateRemovalCollectionPage, InformationProtectionLabelEvaluateRemovalCollectionRequest> {
 
     /**

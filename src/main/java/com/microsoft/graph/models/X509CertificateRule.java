@@ -41,7 +41,7 @@ public class X509CertificateRule implements IJsonBackedObject {
 
     /**
      * The Identifier.
-     * 
+     * The identifier of the X.509 certificate. Required.
      */
     @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
@@ -50,7 +50,7 @@ public class X509CertificateRule implements IJsonBackedObject {
 
     /**
      * The X509Certificate Authentication Mode.
-     * 
+     * The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      */
     @SerializedName(value = "x509CertificateAuthenticationMode", alternate = {"X509CertificateAuthenticationMode"})
     @Expose
@@ -59,7 +59,7 @@ public class X509CertificateRule implements IJsonBackedObject {
 
     /**
      * The X509Certificate Rule Type.
-     * 
+     * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
      */
     @SerializedName(value = "x509CertificateRuleType", alternate = {"X509CertificateRuleType"})
     @Expose

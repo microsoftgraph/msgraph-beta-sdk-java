@@ -19,6 +19,7 @@ import com.microsoft.graph.requests.AuthorizationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyRequestBuilder;
+import com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.TenantAppManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.ExternalIdentitiesPolicyRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder;

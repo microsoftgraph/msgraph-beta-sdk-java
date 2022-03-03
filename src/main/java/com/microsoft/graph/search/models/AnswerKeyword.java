@@ -40,7 +40,7 @@ public class AnswerKeyword implements IJsonBackedObject {
 
     /**
      * The Keywords.
-     * 
+     * A collection of keywords used to trigger the search answer.
      */
     @SerializedName(value = "keywords", alternate = {"Keywords"})
     @Expose
@@ -49,7 +49,7 @@ public class AnswerKeyword implements IJsonBackedObject {
 
     /**
      * The Match Similar Keywords.
-     * 
+     * If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
      */
     @SerializedName(value = "matchSimilarKeywords", alternate = {"MatchSimilarKeywords"})
     @Expose
@@ -58,7 +58,7 @@ public class AnswerKeyword implements IJsonBackedObject {
 
     /**
      * The Reserved Keywords.
-     * 
+     * Unique keywords that will guarantee the search answer is triggered.
      */
     @SerializedName(value = "reservedKeywords", alternate = {"ReservedKeywords"})
     @Expose

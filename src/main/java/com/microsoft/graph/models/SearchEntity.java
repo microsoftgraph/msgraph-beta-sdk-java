@@ -34,7 +34,7 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
 
     /**
      * The Acronyms.
-     * 
+     * Administrative answer in Microsoft Search results to define common acronyms in a organization.
      */
     @SerializedName(value = "acronyms", alternate = {"Acronyms"})
     @Expose
@@ -43,7 +43,7 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
 
     /**
      * The Bookmarks.
-     * 
+     * Administrative answer in Microsoft Search results for common search queries in an organization.
      */
     @SerializedName(value = "bookmarks", alternate = {"Bookmarks"})
     @Expose
@@ -52,7 +52,7 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
 
     /**
      * The Qnas.
-     * 
+     * Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
      */
     @SerializedName(value = "qnas", alternate = {"Qnas"})
     @Expose

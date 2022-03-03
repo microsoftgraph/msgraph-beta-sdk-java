@@ -45,15 +45,6 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     public DeviceEnrollmentPlatformRestriction androidRestriction;
 
     /**
-     * The Aosp Restriction.
-     * AOSP restrictions based on platform, platform operating system version, and device ownership
-     */
-    @SerializedName(value = "aospRestriction", alternate = {"AospRestriction"})
-    @Expose
-	@Nullable
-    public DeviceEnrollmentPlatformRestriction aospRestriction;
-
-    /**
      * The Ios Restriction.
      * Ios restrictions based on platform, platform operating system version, and device ownership
      */

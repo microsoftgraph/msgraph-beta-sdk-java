@@ -24,7 +24,9 @@ import com.microsoft.graph.requests.InformationProtectionLabelEvaluateApplicatio
 
 /**
  * The class for the Information Protection Label Evaluate Application Collection Page.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelEvaluateApplicationCollectionPage extends BaseCollectionPage<InformationProtectionAction, InformationProtectionLabelEvaluateApplicationCollectionRequestBuilder> {
 
     /**

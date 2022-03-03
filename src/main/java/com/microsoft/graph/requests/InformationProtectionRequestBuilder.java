@@ -168,7 +168,9 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionDecryptBufferRequestBuilder decryptBuffer(@Nonnull final InformationProtectionDecryptBufferParameterSet parameters) {
         return new InformationProtectionDecryptBufferRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decryptBuffer"), getClient(), null, parameters);
@@ -178,7 +180,9 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionEncryptBufferRequestBuilder encryptBuffer(@Nonnull final InformationProtectionEncryptBufferParameterSet parameters) {
         return new InformationProtectionEncryptBufferRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.encryptBuffer"), getClient(), null, parameters);
@@ -188,7 +192,9 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionSignDigestRequestBuilder signDigest(@Nonnull final InformationProtectionSignDigestParameterSet parameters) {
         return new InformationProtectionSignDigestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.signDigest"), getClient(), null, parameters);
@@ -198,7 +204,9 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @Nonnull
     public InformationProtectionVerifySignatureRequestBuilder verifySignature(@Nonnull final InformationProtectionVerifySignatureParameterSet parameters) {
         return new InformationProtectionVerifySignatureRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verifySignature"), getClient(), null, parameters);

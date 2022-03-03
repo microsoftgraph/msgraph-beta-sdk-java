@@ -36,10 +36,6 @@ public enum EnrollmentRestrictionPlatformType
     */
     ANDROID_FOR_WORK,
     /**
-    * android Aosp
-    */
-    ANDROID_AOSP,
-    /**
     * mac
     */
     MAC,

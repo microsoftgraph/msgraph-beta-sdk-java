@@ -32,13 +32,13 @@ public class ReviewSetAddToReviewSetParameterSet {
     public SourceCollection sourceCollection;
 
     /**
-     * The additional Data.
+     * The additional Data Options.
      * 
      */
-    @SerializedName(value = "additionalData", alternate = {"AdditionalData"})
+    @SerializedName(value = "additionalDataOptions", alternate = {"AdditionalDataOptions"})
     @Expose
 	@Nullable
-    public EnumSet<AdditionalDataOptions> additionalData;
+    public EnumSet<AdditionalDataOptions> additionalDataOptions;
 
 
     /**
@@ -51,7 +51,7 @@ public class ReviewSetAddToReviewSetParameterSet {
      */
     protected ReviewSetAddToReviewSetParameterSet(@Nonnull final ReviewSetAddToReviewSetParameterSetBuilder builder) {
         this.sourceCollection = builder.sourceCollection;
-        this.additionalData = builder.additionalData;
+        this.additionalDataOptions = builder.additionalDataOptions;
     }
     /**
      * Gets a new builder for the body
@@ -81,18 +81,18 @@ public class ReviewSetAddToReviewSetParameterSet {
             return this;
         }
         /**
-         * The additionalData parameter value
+         * The additionalDataOptions parameter value
          */
         @Nullable
-        protected EnumSet<AdditionalDataOptions> additionalData;
+        protected EnumSet<AdditionalDataOptions> additionalDataOptions;
         /**
-         * Sets the AdditionalData
+         * Sets the AdditionalDataOptions
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public ReviewSetAddToReviewSetParameterSetBuilder withAdditionalData(@Nullable final EnumSet<AdditionalDataOptions> val) {
-            this.additionalData = val;
+        public ReviewSetAddToReviewSetParameterSetBuilder withAdditionalDataOptions(@Nullable final EnumSet<AdditionalDataOptions> val) {
+            this.additionalDataOptions = val;
             return this;
         }
         /**
@@ -119,8 +119,8 @@ public class ReviewSetAddToReviewSetParameterSet {
         if(this.sourceCollection != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("sourceCollection", sourceCollection));
         }
-        if(this.additionalData != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("additionalData", additionalData));
+        if(this.additionalDataOptions != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("additionalDataOptions", additionalDataOptions));
         }
         return result;
     }

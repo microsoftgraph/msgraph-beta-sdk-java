@@ -15,7 +15,9 @@ import com.microsoft.graph.models.ApprovalSettings;
 import com.microsoft.graph.models.RequestorSettings;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCatalog;
+import com.microsoft.graph.models.CustomExtensionHandler;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -176,6 +178,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 	@Nullable
     public AccessPackageCatalog accessPackageCatalog;
 
+    /**
+     * The Custom Extension Handlers.
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
+     */
+    @SerializedName(value = "customExtensionHandlers", alternate = {"CustomExtensionHandlers"})
+    @Expose
+	@Nullable
+    public CustomExtensionHandlerCollectionPage customExtensionHandlers;
+
 
     /**
      * Sets the raw JSON object
@@ -185,5 +196,9 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("customExtensionHandlers")) {
+            customExtensionHandlers = serializer.deserializeObject(json.get("customExtensionHandlers"), CustomExtensionHandlerCollectionPage.class);
+        }
     }
 }

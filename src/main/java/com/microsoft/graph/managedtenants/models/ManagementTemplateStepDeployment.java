@@ -8,9 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.GraphAPIErrorDetails;
-import com.microsoft.graph.managedtenants.models.Setting;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateDeploymentStatus;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
 import com.microsoft.graph.models.Entity;
@@ -31,6 +29,24 @@ public class ManagementTemplateStepDeployment extends Entity implements IJsonBac
 
 
     /**
+     * The Created By User Id.
+     * 
+     */
+    @SerializedName(value = "createdByUserId", alternate = {"CreatedByUserId"})
+    @Expose
+	@Nullable
+    public String createdByUserId;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Error.
      * 
      */
@@ -40,13 +56,22 @@ public class ManagementTemplateStepDeployment extends Entity implements IJsonBac
     public GraphAPIErrorDetails error;
 
     /**
-     * The Settings.
+     * The Last Action By User Id.
      * 
      */
-    @SerializedName(value = "settings", alternate = {"Settings"})
+    @SerializedName(value = "lastActionByUserId", alternate = {"LastActionByUserId"})
     @Expose
 	@Nullable
-    public java.util.List<Setting> settings;
+    public String lastActionByUserId;
+
+    /**
+     * The Last Action Date Time.
+     * 
+     */
+    @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastActionDateTime;
 
     /**
      * The Status.

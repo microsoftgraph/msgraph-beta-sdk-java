@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DeviceEnrollmentConfigurationType;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionPage;
@@ -45,6 +46,15 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Device Enrollment Configuration Type.
+     * Support for Enrollment Configuration Type
+     */
+    @SerializedName(value = "deviceEnrollmentConfigurationType", alternate = {"DeviceEnrollmentConfigurationType"})
+    @Expose
+	@Nullable
+    public DeviceEnrollmentConfigurationType deviceEnrollmentConfigurationType;
 
     /**
      * The Display Name.

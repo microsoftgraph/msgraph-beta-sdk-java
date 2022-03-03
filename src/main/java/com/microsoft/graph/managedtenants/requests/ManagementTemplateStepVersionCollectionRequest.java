@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
-import com.microsoft.graph.managedtenants.models.Setting;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateStepDeployment;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

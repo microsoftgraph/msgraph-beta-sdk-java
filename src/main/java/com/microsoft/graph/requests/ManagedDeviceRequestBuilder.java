@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ConfigurationManagerAction;
 import com.microsoft.graph.models.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
+import com.microsoft.graph.models.OemWarranty;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder;
@@ -638,5 +639,14 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public ManagedDeviceGetFileVaultKeyRequestBuilder getFileVaultKey() {
         return new ManagedDeviceGetFileVaultKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFileVaultKey"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceGetOemWarrantyRequestBuilder getOemWarranty() {
+        return new ManagedDeviceGetOemWarrantyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOemWarranty"), getClient(), null);
     }
 }

@@ -74,6 +74,15 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
     public UnifiedRoleDefinitionCollectionPage roleDefinitions;
 
     /**
+     * The Transitive Role Assignments.
+     * 
+     */
+    @SerializedName(value = "transitiveRoleAssignments", alternate = {"TransitiveRoleAssignments"})
+    @Expose
+	@Nullable
+    public UnifiedRoleAssignmentCollectionPage transitiveRoleAssignments;
+
+    /**
      * The Role Assignment Approvals.
      * 
      */
@@ -156,6 +165,10 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
         if (json.has("roleDefinitions")) {
             roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), UnifiedRoleDefinitionCollectionPage.class);
+        }
+
+        if (json.has("transitiveRoleAssignments")) {
+            transitiveRoleAssignments = serializer.deserializeObject(json.get("transitiveRoleAssignments"), UnifiedRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("roleAssignmentApprovals")) {

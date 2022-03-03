@@ -27,7 +27,9 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
 
 /**
  * The class for the Information Protection Label Evaluate Classification Results Collection Request Builder.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<InformationProtectionAction, InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder, InformationProtectionLabelEvaluateClassificationResultsCollectionResponse, InformationProtectionLabelEvaluateClassificationResultsCollectionPage, InformationProtectionLabelEvaluateClassificationResultsCollectionRequest> {
 
     /**

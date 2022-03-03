@@ -61,6 +61,15 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
 	@Nullable
     public Integer batteryCapacityPoor;
 
+    /**
+     * The Last Refreshed Date Time.
+     * Recorded date time of this capacity details instance.
+     */
+    @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastRefreshedDateTime;
+
 
     /**
      * Sets the raw JSON object

@@ -62,7 +62,7 @@ public class ClassificationResult implements IJsonBackedObject {
     @SerializedName(value = "sensitiveTypeId", alternate = {"SensitiveTypeId"})
     @Expose
 	@Nullable
-    public java.util.UUID sensitiveTypeId;
+    public String sensitiveTypeId;
 
 
     /**

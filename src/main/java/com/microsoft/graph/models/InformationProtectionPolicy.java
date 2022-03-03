@@ -24,14 +24,18 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Information Protection Policy.
+ * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
  */
+@Deprecated
 public class InformationProtectionPolicy extends Entity implements IJsonBackedObject {
 
 
     /**
      * The Labels.
      * 
+     * @deprecated This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs.
      */
+    @Deprecated
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
 	@Nullable

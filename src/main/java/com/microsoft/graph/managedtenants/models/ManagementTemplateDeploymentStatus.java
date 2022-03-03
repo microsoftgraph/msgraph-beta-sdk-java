@@ -12,41 +12,25 @@ package com.microsoft.graph.managedtenants.models;
 public enum ManagementTemplateDeploymentStatus
 {
     /**
-    * to Address
+    * unknown
     */
-    TO_ADDRESS,
-    /**
-    * completed
-    */
-    COMPLETED,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * time Out
-    */
-    TIME_OUT,
+    UNKNOWN,
     /**
     * in Progress
     */
     IN_PROGRESS,
     /**
-    * planned
+    * completed
     */
-    PLANNED,
+    COMPLETED,
     /**
-    * resolved By3rd Party
+    * failed
     */
-    RESOLVED_BY3RD_PARTY,
+    FAILED,
     /**
-    * resolved Through Alternate Mitigation
+    * ineligible
     */
-    RESOLVED_THROUGH_ALTERNATE_MITIGATION,
-    /**
-    * risk Accepted
-    */
-    RISK_ACCEPTED,
+    INELIGIBLE,
     /**
     * unknown Future Value
     */

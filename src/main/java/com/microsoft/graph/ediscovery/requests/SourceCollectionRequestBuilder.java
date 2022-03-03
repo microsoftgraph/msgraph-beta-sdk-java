@@ -153,4 +153,13 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
     public SourceCollectionEstimateStatisticsRequestBuilder estimateStatistics() {
         return new SourceCollectionEstimateStatisticsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.estimateStatistics"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SourceCollectionPurgeDataRequestBuilder purgeData() {
+        return new SourceCollectionPurgeDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.purgeData"), getClient(), null);
+    }
 }
