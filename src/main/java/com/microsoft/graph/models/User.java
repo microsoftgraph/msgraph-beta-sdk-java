@@ -811,7 +811,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Usage Rights.
-     * 
+     * Represents the usage rights a user has been granted.
      */
     @SerializedName(value = "usageRights", alternate = {"UsageRights"})
     @Expose

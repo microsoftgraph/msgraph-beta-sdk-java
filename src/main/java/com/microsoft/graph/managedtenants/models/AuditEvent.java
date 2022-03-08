@@ -27,7 +27,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * 
+     * A string which uniquely represents the operation that occurred. Required. Read-only.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -36,7 +36,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * 
+     * The time when the activity ocurred. Required. Read-only.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Id.
-     * 
+     * The identifier of the activity request that made the audit event. Required. Read-only.
      */
     @SerializedName(value = "activityId", alternate = {"ActivityId"})
     @Expose
@@ -54,7 +54,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * A category which represents a logical grouping of activities. Required. Read-only.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -63,7 +63,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Http Verb.
-     * 
+     * The HTTP verb that was used when making the API request. Required. Read-only.
      */
     @SerializedName(value = "httpVerb", alternate = {"HttpVerb"})
     @Expose
@@ -72,7 +72,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Initiated By App Id.
-     * 
+     * The identifier of the app that was used to make the request. Required. Read-only.
      */
     @SerializedName(value = "initiatedByAppId", alternate = {"InitiatedByAppId"})
     @Expose
@@ -81,7 +81,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Initiated By Upn.
-     * 
+     * The UPN of the user who initiated the activity. Required. Read-only.
      */
     @SerializedName(value = "initiatedByUpn", alternate = {"InitiatedByUpn"})
     @Expose
@@ -90,7 +90,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Initiated By User Id.
-     * 
+     * The identifier of the user who initiated the activity. Required. Read-only.
      */
     @SerializedName(value = "initiatedByUserId", alternate = {"InitiatedByUserId"})
     @Expose
@@ -99,7 +99,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -108,7 +108,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Request Body.
-     * 
+     * The raw HTTP request body. Some sensitive information may be removed.
      */
     @SerializedName(value = "requestBody", alternate = {"RequestBody"})
     @Expose
@@ -117,7 +117,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Request Url.
-     * 
+     * The raw HTTP request URL. Required. Read-only.
      */
     @SerializedName(value = "requestUrl", alternate = {"RequestUrl"})
     @Expose
@@ -126,7 +126,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Ids.
-     * 
+     * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
      */
     @SerializedName(value = "tenantIds", alternate = {"TenantIds"})
     @Expose
@@ -135,7 +135,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Names.
-     * 
+     * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
      */
     @SerializedName(value = "tenantNames", alternate = {"TenantNames"})
     @Expose

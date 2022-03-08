@@ -31,7 +31,7 @@ public class AppManagementPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Is Enabled.
-     * Denotes whether the policy is enabled.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -40,7 +40,7 @@ public class AppManagementPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Restrictions.
-     * Restrictions that apply to an application or service principal object.
+     * 
      */
     @SerializedName(value = "restrictions", alternate = {"Restrictions"})
     @Expose
@@ -49,7 +49,7 @@ public class AppManagementPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Applies To.
-     * Collection of application and service principals to which a policy is applied.
+     * 
      */
 	@Nullable
     public DirectoryObjectCollectionPage appliesTo;

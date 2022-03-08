@@ -47,7 +47,7 @@ public class DirectorySetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * Collection of name value pairs. Must contain and set all the settings defined in the template.
+     * Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced directorySettingTemplates object.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

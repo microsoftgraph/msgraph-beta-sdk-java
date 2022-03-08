@@ -33,7 +33,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
 
     /**
      * The Certificate Store.
-     * Target store certificate
+     * Target store certificate. Possible values are: user, machine.
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
@@ -69,7 +69,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
 
     /**
      * The Certification Authority Type.
-     * Certification authority type
+     * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
      */
     @SerializedName(value = "certificationAuthorityType", alternate = {"CertificationAuthorityType"})
     @Expose
