@@ -46,6 +46,15 @@ public class CallOptions implements IJsonBackedObject {
 	@Nullable
     public Boolean hideBotAfterEscalation;
 
+    /**
+     * The Is Content Sharing Notification Enabled.
+     * 
+     */
+    @SerializedName(value = "isContentSharingNotificationEnabled", alternate = {"IsContentSharingNotificationEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isContentSharingNotificationEnabled;
+
 
     /**
      * Sets the raw JSON object

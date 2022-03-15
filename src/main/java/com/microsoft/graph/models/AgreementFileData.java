@@ -39,7 +39,7 @@ public class AgreementFileData implements IJsonBackedObject {
 
     /**
      * The Data.
-     * 
+     * Data that represents the terms of use PDF document. Read-only.
      */
     @SerializedName(value = "data", alternate = {"Data"})
     @Expose

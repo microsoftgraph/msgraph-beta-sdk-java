@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
+import com.microsoft.graph.models.CloudPcLaunchInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -117,5 +118,14 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
     @Nonnull
     public CloudPCTroubleshootRequestBuilder troubleshoot() {
         return new CloudPCTroubleshootRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.troubleshoot"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPCGetCloudPcLaunchInfoRequestBuilder getCloudPcLaunchInfo() {
+        return new CloudPCGetCloudPcLaunchInfoRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCloudPcLaunchInfo"), getClient(), null);
     }
 }

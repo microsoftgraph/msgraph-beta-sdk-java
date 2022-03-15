@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
+import com.microsoft.graph.models.CloudPcLaunchInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

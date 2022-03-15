@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Disk Type.
-     * The user experience analytics device disk type. Possible values are: hdd, ssd, unknown.
+     * The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue.
      */
     @SerializedName(value = "diskType", alternate = {"DiskType"})
     @Expose

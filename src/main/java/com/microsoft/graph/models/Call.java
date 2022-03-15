@@ -27,10 +27,12 @@ import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.ToneInfo;
 import com.microsoft.graph.models.CallTranscriptionInfo;
 import com.microsoft.graph.models.AudioRoutingGroup;
+import com.microsoft.graph.models.ContentSharingSession;
 import com.microsoft.graph.models.CommsOperation;
 import com.microsoft.graph.models.Participant;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AudioRoutingGroupCollectionPage;
+import com.microsoft.graph.requests.ContentSharingSessionCollectionPage;
 import com.microsoft.graph.requests.CommsOperationCollectionPage;
 import com.microsoft.graph.requests.ParticipantCollectionPage;
 
@@ -293,6 +295,15 @@ public class Call extends Entity implements IJsonBackedObject {
     public AudioRoutingGroupCollectionPage audioRoutingGroups;
 
     /**
+     * The Content Sharing Sessions.
+     * 
+     */
+    @SerializedName(value = "contentSharingSessions", alternate = {"ContentSharingSessions"})
+    @Expose
+	@Nullable
+    public ContentSharingSessionCollectionPage contentSharingSessions;
+
+    /**
      * The Operations.
      * Read-only. Nullable.
      */
@@ -322,6 +333,10 @@ public class Call extends Entity implements IJsonBackedObject {
 
         if (json.has("audioRoutingGroups")) {
             audioRoutingGroups = serializer.deserializeObject(json.get("audioRoutingGroups"), AudioRoutingGroupCollectionPage.class);
+        }
+
+        if (json.has("contentSharingSessions")) {
+            contentSharingSessions = serializer.deserializeObject(json.get("contentSharingSessions"), ContentSharingSessionCollectionPage.class);
         }
 
         if (json.has("operations")) {

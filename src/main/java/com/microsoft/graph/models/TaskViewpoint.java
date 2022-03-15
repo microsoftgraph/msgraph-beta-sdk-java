@@ -41,7 +41,7 @@ public class TaskViewpoint implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -50,7 +50,7 @@ public class TaskViewpoint implements IJsonBackedObject {
 
     /**
      * The Reminder Date Time.
-     * 
+     * The date and time for a reminder alert of the task to occur.
      */
     @SerializedName(value = "reminderDateTime", alternate = {"ReminderDateTime"})
     @Expose

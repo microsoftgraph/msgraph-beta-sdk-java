@@ -85,7 +85,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Audit Events.
-     * 
+     * The collection of audit events across managed tenants.
      */
     @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
     @Expose

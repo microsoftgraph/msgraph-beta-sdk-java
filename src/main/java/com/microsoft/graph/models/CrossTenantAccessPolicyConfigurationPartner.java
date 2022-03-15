@@ -36,7 +36,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAcce
 
     /**
      * The Tenant Id.
-     * The tenant identifier for the partner Azure AD organization. Read-only.
+     * The tenant identifier for the partner Azure AD organization. Read-only. Key.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

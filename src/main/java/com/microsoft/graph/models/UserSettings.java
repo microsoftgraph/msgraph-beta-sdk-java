@@ -58,7 +58,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Contact Merge Suggestions.
-     * 
+     * The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list.
      */
     @SerializedName(value = "contactMergeSuggestions", alternate = {"ContactMergeSuggestions"})
     @Expose

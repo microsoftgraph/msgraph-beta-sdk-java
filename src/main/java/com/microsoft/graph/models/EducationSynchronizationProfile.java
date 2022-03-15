@@ -53,7 +53,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Expiration Date.
-     * The date the profile should be considered expired and cease syncing. When null. the profile will never expire. (optional)
+     * The date the profile should be considered expired and cease syncing. Provide the date in YYYY-MM-DD format, following ISO 8601. Maximum value is 18 months from profile creation.  (optional)
      */
     @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
     @Expose

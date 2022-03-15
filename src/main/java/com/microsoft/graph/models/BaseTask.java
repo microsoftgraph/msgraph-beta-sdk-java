@@ -130,7 +130,7 @@ public class BaseTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Text Body.
-     * 
+     * The task body in text format that typically contains information about the task.
      */
     @SerializedName(value = "textBody", alternate = {"TextBody"})
     @Expose
@@ -139,7 +139,7 @@ public class BaseTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Viewpoint.
-     * 
+     * Properties that are personal to a user such as reminderDateTime and categories.
      */
     @SerializedName(value = "viewpoint", alternate = {"Viewpoint"})
     @Expose

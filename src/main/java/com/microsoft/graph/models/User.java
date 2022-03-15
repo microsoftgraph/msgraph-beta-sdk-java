@@ -23,6 +23,7 @@ import com.microsoft.graph.models.PasswordProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.MailboxSettings;
 import com.microsoft.graph.models.UserAnalytics;
+import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.UsageRight;
 import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.AppRoleAssignment;
@@ -73,6 +74,7 @@ import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
+import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.UsageRightCollectionPage;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
@@ -810,8 +812,17 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public UserAnalytics analytics;
 
     /**
-     * The Usage Rights.
+     * The Cloud PCs.
      * 
+     */
+    @SerializedName(value = "cloudPCs", alternate = {"CloudPCs"})
+    @Expose
+	@Nullable
+    public CloudPCCollectionPage cloudPCs;
+
+    /**
+     * The Usage Rights.
+     * Represents the usage rights a user has been granted.
      */
     @SerializedName(value = "usageRights", alternate = {"UsageRights"})
     @Expose
@@ -1348,6 +1359,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("cloudPCs")) {
+            cloudPCs = serializer.deserializeObject(json.get("cloudPCs"), CloudPCCollectionPage.class);
+        }
 
         if (json.has("usageRights")) {
             usageRights = serializer.deserializeObject(json.get("usageRights"), UsageRightCollectionPage.class);

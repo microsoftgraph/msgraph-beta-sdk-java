@@ -59,7 +59,7 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Indicates the state of the associated plannerPlanContext.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
