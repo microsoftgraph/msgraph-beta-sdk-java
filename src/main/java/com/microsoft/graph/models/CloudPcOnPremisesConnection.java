@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CloudPcOnPremisesConnectionStatus;
 import com.microsoft.graph.models.CloudPcOnPremisesConnectionStatusDetails;
+import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.CloudPcOnPremisesConnectionType;
 import com.microsoft.graph.models.Entity;
 
@@ -90,6 +91,15 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public Boolean inUse;
+
+    /**
+     * The Managed By.
+     * 
+     */
+    @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
+    @Expose
+	@Nullable
+    public EnumSet<CloudPcManagementService> managedBy;
 
     /**
      * The Organizational Unit.

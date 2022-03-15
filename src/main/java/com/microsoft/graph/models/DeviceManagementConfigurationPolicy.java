@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Created Date Time.
-     * Policy creation date and time. This property is read-only.
+     * Policy creation date and time
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Last Modified Date Time.
-     * Policy last modification date and time. This property is read-only.
+     * Policy last modification date and time
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -107,7 +107,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Setting Count.
-     * Number of settings. This property is read-only.
+     * Number of settings
      */
     @SerializedName(value = "settingCount", alternate = {"SettingCount"})
     @Expose

@@ -171,12 +171,21 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * 
+     * Contains summary information about the team, including number of owners, members, and guests.
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose
 	@Nullable
     public TeamSummary summary;
+
+    /**
+     * The Tenant Id.
+     * 
+     */
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
+    @Expose
+	@Nullable
+    public String tenantId;
 
     /**
      * The Visibility.
@@ -197,6 +206,13 @@ public class Team extends Entity implements IJsonBackedObject {
     public String webUrl;
 
     /**
+     * The All Channels.
+     * 
+     */
+	@Nullable
+    public ChannelCollectionPage allChannels;
+
+    /**
      * The Channels.
      * The collection of channels and messages associated with the team.
      */
@@ -213,6 +229,13 @@ public class Team extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Group group;
+
+    /**
+     * The Incoming Channels.
+     * 
+     */
+	@Nullable
+    public ChannelCollectionPage incomingChannels;
 
     /**
      * The Installed Apps.
@@ -312,8 +335,16 @@ public class Team extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("allChannels")) {
+            allChannels = serializer.deserializeObject(json.get("allChannels"), ChannelCollectionPage.class);
+        }
+
         if (json.has("channels")) {
             channels = serializer.deserializeObject(json.get("channels"), ChannelCollectionPage.class);
+        }
+
+        if (json.has("incomingChannels")) {
+            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), ChannelCollectionPage.class);
         }
 
         if (json.has("installedApps")) {

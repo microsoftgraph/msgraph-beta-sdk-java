@@ -55,6 +55,24 @@ public class CloudPcSourceDeviceImage implements IJsonBackedObject {
 	@Nullable
     public String id;
 
+    /**
+     * The Subscription Display Name.
+     * 
+     */
+    @SerializedName(value = "subscriptionDisplayName", alternate = {"SubscriptionDisplayName"})
+    @Expose
+	@Nullable
+    public String subscriptionDisplayName;
+
+    /**
+     * The Subscription Id.
+     * 
+     */
+    @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
+    @Expose
+	@Nullable
+    public String subscriptionId;
+
 
     /**
      * Sets the raw JSON object

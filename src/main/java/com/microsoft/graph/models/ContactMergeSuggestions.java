@@ -27,7 +27,7 @@ public class ContactMergeSuggestions extends Entity implements IJsonBackedObject
 
     /**
      * The Is Enabled.
-     * 
+     * true if the duplicate contact merge suggestions feature is enabled for the user; false if the feature is disabled. Default value is true.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

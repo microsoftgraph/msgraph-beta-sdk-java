@@ -53,7 +53,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignment Approvals.
-     * 
+     * Approval stages for assignment requests.
      */
     @SerializedName(value = "accessPackageAssignmentApprovals", alternate = {"AccessPackageAssignmentApprovals"})
     @Expose

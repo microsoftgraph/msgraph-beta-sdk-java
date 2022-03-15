@@ -30,6 +30,8 @@ import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.models.ManagedDeviceSummarizedAppState;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.UserAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.UsageRightCollectionRequestBuilder;
 import com.microsoft.graph.requests.UsageRightRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
@@ -195,6 +197,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public UserAnalyticsRequestBuilder analytics() {
         return new UserAnalyticsRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPC collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPCCollectionRequestBuilder cloudPCs() {
+        return new CloudPCCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPC item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPCRequestBuilder cloudPCs(@Nonnull final String id) {
+        return new CloudPCRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UsageRight collection

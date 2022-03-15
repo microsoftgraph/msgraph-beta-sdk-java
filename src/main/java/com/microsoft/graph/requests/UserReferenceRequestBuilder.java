@@ -31,6 +31,8 @@ import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.models.ManagedDeviceSummarizedAppState;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.UserAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.UsageRightCollectionRequestBuilder;
 import com.microsoft.graph.requests.UsageRightRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
