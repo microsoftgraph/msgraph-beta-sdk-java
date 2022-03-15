@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.42.0] - 2022-03-17
+
+### Added
+
+- CloudPC and related models and requests.
+- TeamInfo and related models and requests.
+- ChannelDoesUserHaveAccess and related models and requests. 
+- ContentSharingSession and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+- Updated referances to the added models and requests builders in related classes. 
+
 ## [0.41.0] - 2022-03-03
 
 ### Added
