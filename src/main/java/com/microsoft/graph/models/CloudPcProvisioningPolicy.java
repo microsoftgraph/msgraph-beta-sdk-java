@@ -106,7 +106,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Windows Settings.
-     * 
+     * Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
      */
     @SerializedName(value = "windowsSettings", alternate = {"WindowsSettings"})
     @Expose

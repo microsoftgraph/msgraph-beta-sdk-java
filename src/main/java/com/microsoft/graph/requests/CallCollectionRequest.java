@@ -11,6 +11,7 @@ import com.microsoft.graph.models.CommsApplication;
 import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.CallDisposition;
+import com.microsoft.graph.models.AddLargeGalleryViewOperation;
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
 import com.microsoft.graph.models.IncomingCallOptions;
