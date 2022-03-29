@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.43.0] - 2022-03-29
+
+### Added
+
+- CloudPC and related models and requests.
+- AddLargeGalleryViewOperation and related models and requests.
+- MicrosoftApplicationDataAccessSettings and related requests.
+- ChatMessageSoftDeleteParameterSet and ChatMessageUndoSoftDeleteParameterSet along with related models and requests for both. 
+- InformationalUrls, JoinMeetingIdMeetingInfo, PrinterShareViewpoint, & UserPrint models. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+- Updated referances to the added models and request builders in related classes. 
+
 ## [0.42.0] - 2022-03-17
 
 ### Added

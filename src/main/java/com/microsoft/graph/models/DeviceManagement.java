@@ -342,7 +342,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Maximum Dep Tokens.
-     * Maximum number of DEP tokens allowed per-tenant.
+     * Maximum number of dep tokens allowed per-tenant.
      */
     @SerializedName(value = "maximumDepTokens", alternate = {"MaximumDepTokens"})
     @Expose
@@ -414,7 +414,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscriptions.
-     * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+     * Tenant's Subscription.
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose

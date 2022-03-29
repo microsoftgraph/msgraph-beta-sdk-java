@@ -50,7 +50,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Email Methods.
-     * 
+     * Represents the email addresses registered to a user for authentication.
      */
     @SerializedName(value = "emailMethods", alternate = {"EmailMethods"})
     @Expose
@@ -59,7 +59,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Fido2Methods.
-     * 
+     * Represents the FIDO2 security keys registered to a user for authentication.
      */
     @SerializedName(value = "fido2Methods", alternate = {"Fido2Methods"})
     @Expose
@@ -68,7 +68,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Methods.
-     * 
+     * Represents all authentication methods registered to a user.
      */
     @SerializedName(value = "methods", alternate = {"Methods"})
     @Expose
@@ -77,7 +77,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Microsoft Authenticator Methods.
-     * 
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @deprecated 
      */
     @Deprecated
@@ -97,7 +97,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Passwordless Microsoft Authenticator Methods.
-     * 
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      */
     @SerializedName(value = "passwordlessMicrosoftAuthenticatorMethods", alternate = {"PasswordlessMicrosoftAuthenticatorMethods"})
     @Expose
@@ -106,7 +106,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Password Methods.
-     * 
+     * Represents the details of the password authentication method registered to a user for authentication.
      */
     @SerializedName(value = "passwordMethods", alternate = {"PasswordMethods"})
     @Expose
@@ -115,7 +115,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Phone Methods.
-     * 
+     * Represents the phone registered to a user for authentication.
      */
     @SerializedName(value = "phoneMethods", alternate = {"PhoneMethods"})
     @Expose
@@ -133,7 +133,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Temporary Access Pass Methods.
-     * 
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      */
     @SerializedName(value = "temporaryAccessPassMethods", alternate = {"TemporaryAccessPassMethods"})
     @Expose
@@ -142,7 +142,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
     /**
      * The Windows Hello For Business Methods.
-     * 
+     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
      */
     @SerializedName(value = "windowsHelloForBusinessMethods", alternate = {"WindowsHelloForBusinessMethods"})
     @Expose

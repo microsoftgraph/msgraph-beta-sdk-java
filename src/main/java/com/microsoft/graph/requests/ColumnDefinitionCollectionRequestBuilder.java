@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.DocumentSet;
+import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.ColumnDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ColumnDefinitionCollectionRequestBuilder extends BaseCollectionRequestBuilder<ColumnDefinition, ColumnDefinitionRequestBuilder, ColumnDefinitionCollectionResponse, ColumnDefinitionCollectionPage, ColumnDefinitionCollectionRequest> {
 
     /**
-     * The request builder for this collection of DocumentSet
+     * The request builder for this collection of List
      *
      * @param requestUrl     the request URL
      * @param client         the service client

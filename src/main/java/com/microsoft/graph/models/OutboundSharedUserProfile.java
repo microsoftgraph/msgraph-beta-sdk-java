@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TenantReference;
-import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.TenantReferenceCollectionPage;
 
 
@@ -25,8 +24,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Outbound Shared User Profile.
  */
-public class OutboundSharedUserProfile extends DirectoryObject implements IJsonBackedObject {
+public class OutboundSharedUserProfile implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The User Id.

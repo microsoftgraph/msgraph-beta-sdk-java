@@ -71,7 +71,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Should Prefix Name To File.
-     * Add the name of the document set to each file name.
+     * Indicates whether to add the name of the document set to each file name.
      */
     @SerializedName(value = "shouldPrefixNameToFile", alternate = {"ShouldPrefixNameToFile"})
     @Expose
@@ -91,8 +91,6 @@ public class DocumentSet implements IJsonBackedObject {
      * The Shared Columns.
      * 
      */
-    @SerializedName(value = "sharedColumns", alternate = {"SharedColumns"})
-    @Expose
 	@Nullable
     public ColumnDefinitionCollectionPage sharedColumns;
 
@@ -100,8 +98,6 @@ public class DocumentSet implements IJsonBackedObject {
      * The Welcome Page Columns.
      * 
      */
-    @SerializedName(value = "welcomePageColumns", alternate = {"WelcomePageColumns"})
-    @Expose
 	@Nullable
     public ColumnDefinitionCollectionPage welcomePageColumns;
 

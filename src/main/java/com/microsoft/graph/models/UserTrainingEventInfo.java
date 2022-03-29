@@ -50,7 +50,7 @@ public class UserTrainingEventInfo implements IJsonBackedObject {
 
     /**
      * The Latest Training Status.
-     * Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
+     * Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      */
     @SerializedName(value = "latestTrainingStatus", alternate = {"LatestTrainingStatus"})
     @Expose

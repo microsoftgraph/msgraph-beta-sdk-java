@@ -24,6 +24,14 @@ public enum DelegatedPrivilegeStatus
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * granular Delegated Admin Privileges
+    */
+    GRANULAR_DELEGATED_ADMIN_PRIVILEGES,
+    /**
+    * delegated And Granular Delegeted Admin Privileges
+    */
+    DELEGATED_AND_GRANULAR_DELEGETED_ADMIN_PRIVILEGES,
+    /**
     * For DelegatedPrivilegeStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OutboundSharedUserProfile;
-import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.TenantReferenceCollectionRequestBuilder;
 import com.microsoft.graph.requests.TenantReferenceRequestBuilder;
 import java.util.Arrays;

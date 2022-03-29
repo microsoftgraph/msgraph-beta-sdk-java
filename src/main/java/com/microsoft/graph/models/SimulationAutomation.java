@@ -32,7 +32,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the attack simulation automation.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -41,7 +41,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the attack simulation automation was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the attack simulation automation.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -59,7 +59,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the attack simulation automation. Supports $filter and $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who most recently modified the attack simulation automation.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -77,7 +77,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the attack simulation automation was most recently modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Run Date Time.
-     * 
+     * Date and time of the latest run of the attack simulation automation.
      */
     @SerializedName(value = "lastRunDateTime", alternate = {"LastRunDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Next Run Date Time.
-     * 
+     * Date and time of the upcoming run of the attack simulation automation.
      */
     @SerializedName(value = "nextRunDateTime", alternate = {"NextRunDateTime"})
     @Expose
@@ -104,7 +104,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -113,7 +113,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
     /**
      * The Runs.
-     * 
+     * A collection of simulation automation runs.
      */
     @SerializedName(value = "runs", alternate = {"Runs"})
     @Expose

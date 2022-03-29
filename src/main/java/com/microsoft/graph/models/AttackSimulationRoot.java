@@ -32,7 +32,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Simulation Automations.
-     * 
+     * Represents simulation automations created to run on a tenant.
      */
     @SerializedName(value = "simulationAutomations", alternate = {"SimulationAutomations"})
     @Expose
@@ -41,7 +41,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Simulations.
-     * Represent attack simulation and training campaign of a tenant.
+     * Represents an attack simulation training campaign in a tenant.
      */
     @SerializedName(value = "simulations", alternate = {"Simulations"})
     @Expose

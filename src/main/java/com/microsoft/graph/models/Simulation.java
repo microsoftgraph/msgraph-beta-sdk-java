@@ -51,7 +51,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Automation Id.
-     * 
+     * Unique identifier for the attack simulation automation.
      */
     @SerializedName(value = "automationId", alternate = {"AutomationId"})
     @Expose
@@ -159,7 +159,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, inProgress, scheduled, completed, partiallyCompleted, failed, cancelled, excluded, deleted, included, unknownFutureValue.
+     * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

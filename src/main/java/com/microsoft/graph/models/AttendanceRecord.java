@@ -56,6 +56,15 @@ public class AttendanceRecord extends Entity implements IJsonBackedObject {
     public Identity identity;
 
     /**
+     * The Registrant Id.
+     * Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
+     */
+    @SerializedName(value = "registrantId", alternate = {"RegistrantId"})
+    @Expose
+	@Nullable
+    public String registrantId;
+
+    /**
      * The Role.
      * Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
      */
