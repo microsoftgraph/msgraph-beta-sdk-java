@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OrganizationSettings;
+import com.microsoft.graph.requests.MicrosoftApplicationDataAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.InsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder;
@@ -59,6 +60,16 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
     }
 
 
+
+    /**
+     * Gets the request builder for MicrosoftApplicationDataAccessSettings
+     *
+     * @return the MicrosoftApplicationDataAccessSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public MicrosoftApplicationDataAccessSettingsRequestBuilder microsoftApplicationDataAccess() {
+        return new MicrosoftApplicationDataAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftApplicationDataAccess"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for InsightsSettings

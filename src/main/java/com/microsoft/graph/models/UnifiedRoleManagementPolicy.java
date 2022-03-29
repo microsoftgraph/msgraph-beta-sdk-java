@@ -76,7 +76,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Scope Id.
-     * The id of the scope where the policy is created. E.g. '/', groupId, etc.
+     * The id of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -85,7 +85,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Scope Type.
-     * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group.
+     * The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -94,7 +94,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Effective Rules.
-     * The list of effective rules like approval rule, expiration rule, etc. evaluated based on inherited referenced rules. E.g. If there is a tenant wide policy to enforce enabling approval rule, the effective rule will be to enable approval even if the polcy has a rule to disable approval.
+     * Not implemented. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval.
      */
     @SerializedName(value = "effectiveRules", alternate = {"EffectiveRules"})
     @Expose
@@ -103,7 +103,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Rules.
-     * The collection of rules like approval rule, expiration rule, etc.
+     * The collection of rules like approval rules and expiration rules.
      */
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose

@@ -57,7 +57,7 @@ public class CloudPcSourceDeviceImage implements IJsonBackedObject {
 
     /**
      * The Subscription Display Name.
-     * 
+     * The display name of subscription that hosts the source image.
      */
     @SerializedName(value = "subscriptionDisplayName", alternate = {"SubscriptionDisplayName"})
     @Expose
@@ -66,7 +66,7 @@ public class CloudPcSourceDeviceImage implements IJsonBackedObject {
 
     /**
      * The Subscription Id.
-     * 
+     * The ID of subscription that hosts the source image.
      */
     @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose

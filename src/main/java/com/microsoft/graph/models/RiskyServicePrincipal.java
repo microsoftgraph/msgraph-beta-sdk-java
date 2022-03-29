@@ -114,7 +114,7 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
 
     /**
      * The History.
-     * 
+     * Represents the risk history of Azure AD service principals.
      */
     @SerializedName(value = "history", alternate = {"History"})
     @Expose

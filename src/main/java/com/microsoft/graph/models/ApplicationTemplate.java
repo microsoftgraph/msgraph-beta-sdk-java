@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.InformationalUrls;
 import com.microsoft.graph.models.Entity;
 
 
@@ -61,6 +62,15 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String homePageUrl;
+
+    /**
+     * The Informational Urls.
+     * 
+     */
+    @SerializedName(value = "informationalUrls", alternate = {"InformationalUrls"})
+    @Expose
+	@Nullable
+    public InformationalUrls informationalUrls;
 
     /**
      * The Logo Url.

@@ -22,6 +22,7 @@ import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.PasswordProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.MailboxSettings;
+import com.microsoft.graph.models.UserPrint;
 import com.microsoft.graph.models.UserAnalytics;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.UsageRight;
@@ -713,6 +714,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public Integer deviceEnrollmentLimit;
 
     /**
+     * The Print.
+     * 
+     */
+    @SerializedName(value = "print", alternate = {"Print"})
+    @Expose
+	@Nullable
+    public UserPrint print;
+
+    /**
      * The About Me.
      * A freeform text entry field for the user to describe themselves. Returned only on $select.
      */
@@ -1300,7 +1310,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authentication.
-     * 
+     * The authentication methods that are supported for the user.
      */
     @SerializedName(value = "authentication", alternate = {"Authentication"})
     @Expose

@@ -39,7 +39,7 @@ public class CloudPcWindowsSettings implements IJsonBackedObject {
 
     /**
      * The Language.
-     * 
+     * The Windows language/region tag to use for language pack configuration and localization of the Cloud PC. The default value is en-US, which corresponds to English (United States).
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose

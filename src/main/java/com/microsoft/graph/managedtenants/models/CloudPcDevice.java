@@ -35,6 +35,15 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
     public String cloudPcStatus;
 
     /**
+     * The Device Specification.
+     * 
+     */
+    @SerializedName(value = "deviceSpecification", alternate = {"DeviceSpecification"})
+    @Expose
+	@Nullable
+    public String deviceSpecification;
+
+    /**
      * The Display Name.
      * The display name for the cloud PC. Required. Read-only.
      */
@@ -87,6 +96,15 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String servicePlanName;
+
+    /**
+     * The Service Plan Type.
+     * 
+     */
+    @SerializedName(value = "servicePlanType", alternate = {"ServicePlanType"})
+    @Expose
+	@Nullable
+    public String servicePlanType;
 
     /**
      * The Tenant Display Name.

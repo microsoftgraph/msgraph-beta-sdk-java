@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.termstore.models.Term;
+import com.microsoft.graph.termstore.models.Set;
 
 
 import com.google.gson.JsonObject;
@@ -54,6 +56,24 @@ public class TermColumn implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean showFullyQualifiedName;
+
+    /**
+     * The Parent Term.
+     * 
+     */
+    @SerializedName(value = "parentTerm", alternate = {"ParentTerm"})
+    @Expose
+	@Nullable
+    public Term parentTerm;
+
+    /**
+     * The Term Set.
+     * 
+     */
+    @SerializedName(value = "termSet", alternate = {"TermSet"})
+    @Expose
+	@Nullable
+    public Set termSet;
 
 
     /**

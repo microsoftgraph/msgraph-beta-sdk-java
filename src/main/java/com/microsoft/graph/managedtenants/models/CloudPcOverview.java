@@ -170,6 +170,15 @@ public class CloudPcOverview extends Entity implements IJsonBackedObject {
     public String tenantId;
 
     /**
+     * The Total Business Licenses.
+     * 
+     */
+    @SerializedName(value = "totalBusinessLicenses", alternate = {"TotalBusinessLicenses"})
+    @Expose
+	@Nullable
+    public Integer totalBusinessLicenses;
+
+    /**
      * The Total Cloud Pc Connection Status.
      * The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
      */
@@ -186,6 +195,15 @@ public class CloudPcOverview extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer totalCloudPcStatus;
+
+    /**
+     * The Total Enterprise Licenses.
+     * 
+     */
+    @SerializedName(value = "totalEnterpriseLicenses", alternate = {"TotalEnterpriseLicenses"})
+    @Expose
+	@Nullable
+    public Integer totalEnterpriseLicenses;
 
 
     /**

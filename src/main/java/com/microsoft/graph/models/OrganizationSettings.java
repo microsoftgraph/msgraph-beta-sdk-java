@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
 import com.microsoft.graph.models.InsightsSettings;
 import com.microsoft.graph.models.ProfileCardProperty;
 import com.microsoft.graph.models.Entity;
@@ -28,6 +29,15 @@ import javax.annotation.Nonnull;
  */
 public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Microsoft Application Data Access.
+     * 
+     */
+    @SerializedName(value = "microsoftApplicationDataAccess", alternate = {"MicrosoftApplicationDataAccess"})
+    @Expose
+	@Nullable
+    public MicrosoftApplicationDataAccessSettings microsoftApplicationDataAccess;
 
     /**
      * The Item Insights.

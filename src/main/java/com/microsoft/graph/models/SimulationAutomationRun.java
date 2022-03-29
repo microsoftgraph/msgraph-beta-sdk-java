@@ -28,7 +28,7 @@ public class SimulationAutomationRun extends Entity implements IJsonBackedObject
 
     /**
      * The End Date Time.
-     * 
+     * Date and time when the run ends in an attack simulation automation.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class SimulationAutomationRun extends Entity implements IJsonBackedObject
 
     /**
      * The Simulation Id.
-     * 
+     * Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
      */
     @SerializedName(value = "simulationId", alternate = {"SimulationId"})
     @Expose
@@ -46,7 +46,7 @@ public class SimulationAutomationRun extends Entity implements IJsonBackedObject
 
     /**
      * The Start Date Time.
-     * 
+     * Date and time when the run starts in an attack simulation automation.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class SimulationAutomationRun extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * 
+     * Status of the run of an attack simulation automation. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

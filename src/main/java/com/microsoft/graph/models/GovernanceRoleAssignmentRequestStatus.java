@@ -41,7 +41,7 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
 
     /**
      * The Status.
-     * 
+     * The status of the role assignment request. The value can be InProgress or Closed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -50,7 +50,7 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
 
     /**
      * The Status Details.
-     * 
+     * The details of the status of the role assignment request. It represents the evaluation results of different rules.
      */
     @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose
@@ -59,7 +59,7 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
 
     /**
      * The Sub Status.
-     * 
+     * The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
      */
     @SerializedName(value = "subStatus", alternate = {"SubStatus"})
     @Expose
