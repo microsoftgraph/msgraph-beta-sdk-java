@@ -42,7 +42,7 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
 
     /**
      * The Delegated Admin Customers.
-     * 
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      */
     @SerializedName(value = "delegatedAdminCustomers", alternate = {"DelegatedAdminCustomers"})
     @Expose
@@ -51,7 +51,7 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
 
     /**
      * The Delegated Admin Relationships.
-     * 
+     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      */
     @SerializedName(value = "delegatedAdminRelationships", alternate = {"DelegatedAdminRelationships"})
     @Expose

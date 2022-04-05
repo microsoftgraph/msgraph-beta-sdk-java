@@ -189,6 +189,16 @@ public class AospDeviceOwnerPkcsCertificateProfileRequestBuilder extends BaseReq
     public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for AospDeviceOwnerTrustedRootCertificate
+     *
+     * @return the AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
+        return new AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the ManagedDeviceCertificateState collection
      *

@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DriverUpdateProfileApprovalType;
+import com.microsoft.graph.models.WindowsDriverUpdateProfileInventorySyncStatus;
 import com.microsoft.graph.models.WindowsDriverUpdateProfileAssignment;
 import com.microsoft.graph.models.WindowsDriverUpdateInventory;
 import com.microsoft.graph.models.Entity;
@@ -84,6 +85,15 @@ public class WindowsDriverUpdateProfile extends Entity implements IJsonBackedObj
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Inventory Sync Status.
+     * Driver inventory sync status for this profile.
+     */
+    @SerializedName(value = "inventorySyncStatus", alternate = {"InventorySyncStatus"})
+    @Expose
+	@Nullable
+    public WindowsDriverUpdateProfileInventorySyncStatus inventorySyncStatus;
 
     /**
      * The Last Modified Date Time.

@@ -80,7 +80,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * The settings on this site. Returned only on $select. Read-only.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose

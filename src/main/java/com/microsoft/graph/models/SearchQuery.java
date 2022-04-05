@@ -49,7 +49,7 @@ public class SearchQuery implements IJsonBackedObject {
 
     /**
      * The Query Template.
-     * 
+     * Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      */
     @SerializedName(value = "queryTemplate", alternate = {"QueryTemplate"})
     @Expose

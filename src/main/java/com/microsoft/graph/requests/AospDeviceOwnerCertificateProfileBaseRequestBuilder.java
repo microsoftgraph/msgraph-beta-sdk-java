@@ -15,6 +15,7 @@ import com.microsoft.graph.models.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.WindowsAssignedAccessProfile;
 import com.microsoft.graph.models.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.IosAvailableUpdateVersion;
+import com.microsoft.graph.requests.AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -186,6 +187,16 @@ public class AospDeviceOwnerCertificateProfileBaseRequestBuilder extends BaseReq
     @Nonnull
     public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AospDeviceOwnerTrustedRootCertificate
+     *
+     * @return the AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
+        return new AospDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 
     /**

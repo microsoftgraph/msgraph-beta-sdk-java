@@ -29,7 +29,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements IJsonBa
 
     /**
      * The Action.
-     * 
+     * The action to be performed on the delegated admin relationship.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -38,7 +38,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements IJsonBa
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements IJsonBa
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements IJsonBa
 
     /**
      * The Status.
-     * 
+     * The status of the request. Read-only. The possible values are: created, pending, complete, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

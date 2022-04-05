@@ -39,7 +39,7 @@ public class SiteSettings implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * 
+     * The language tag for the language used on this site.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
@@ -48,7 +48,7 @@ public class SiteSettings implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-     * 
+     * Indicates the time offset for the time zone of the site from Coordinated Universal Time (UTC).
      */
     @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose

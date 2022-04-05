@@ -83,6 +83,15 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
     public Boolean v14_0;
 
     /**
+     * The V15_0.
+     * Version 15.0 or later.
+     */
+    @SerializedName(value = "v15_0", alternate = {"V15_0"})
+    @Expose
+	@Nullable
+    public Boolean v15_0;
+
+    /**
      * The V8_0.
      * Version 8.0 or later.
      */

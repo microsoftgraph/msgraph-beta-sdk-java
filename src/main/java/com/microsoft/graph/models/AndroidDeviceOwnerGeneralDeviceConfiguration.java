@@ -23,6 +23,7 @@ import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeIconSize;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeManagedFolder;
 import com.microsoft.graph.models.KioskModeManagedHomeScreenPinComplexity;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeScreenOrientation;
+import com.microsoft.graph.models.KioskModeType;
 import com.microsoft.graph.models.AndroidDeviceOwnerVirtualHomeButtonType;
 import com.microsoft.graph.models.MicrosoftLauncherDockPresence;
 import com.microsoft.graph.models.MicrosoftLauncherSearchBarPlacement;
@@ -580,6 +581,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean kioskModeShowDeviceInfo;
+
+    /**
+     * The Kiosk Mode Use Managed Home Screen App.
+     * Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
+     */
+    @SerializedName(value = "kioskModeUseManagedHomeScreenApp", alternate = {"KioskModeUseManagedHomeScreenApp"})
+    @Expose
+	@Nullable
+    public KioskModeType kioskModeUseManagedHomeScreenApp;
 
     /**
      * The Kiosk Mode Virtual Home Button Enabled.
