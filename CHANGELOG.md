@@ -11,6 +11,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.44.0] - 2022-04-05
+
+### Added
+ 
+- AvailabilityItem model. 
+- ExtractSensitivityLabelsResult model.
+- KioskModeType model. 
+- WindowsWiredNetworkConfiguration model and related requests.
+- AospDeviceOwner models and related requests.
+- BookingsAvailabilityStatus models and related requests.
+- DeviceManagementConfigurationSecretSettingValue models. 
+- DriveItemExtractSensitivityLabelsParameterSet models and related requests.
+- SensitivityLabelAssignment models. 
+- TenantAttachRBAC models and related requests. 
+- WindowsDriverUpdateProfileInventorySync models.
+- WiredNetworkAuthentication models. 
+- ManagedDeviceCertificateState requests. 
+- Windows81TrustedRootCertificateCollection requests.
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+- Updated referances to the added models and request builders in related classes, ex: AospDeviceOwnerCertificateProfileBase model, DeviceManagement model, DriveItemRequestBuilder request etc.
+
 ## [0.43.0] - 2022-03-29
 
 ### Added
