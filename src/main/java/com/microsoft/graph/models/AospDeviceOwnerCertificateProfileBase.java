@@ -8,6 +8,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CertificateValidityPeriodScale;
+import com.microsoft.graph.models.ExtendedKeyUsage;
+import com.microsoft.graph.models.SubjectAlternativeNameType;
+import com.microsoft.graph.models.SubjectNameFormat;
+import com.microsoft.graph.models.AospDeviceOwnerTrustedRootCertificate;
 import com.microsoft.graph.models.DeviceConfiguration;
 
 
@@ -24,6 +30,69 @@ import javax.annotation.Nonnull;
  */
 public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Certificate Validity Period Scale.
+     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     */
+    @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
+    @Expose
+	@Nullable
+    public CertificateValidityPeriodScale certificateValidityPeriodScale;
+
+    /**
+     * The Certificate Validity Period Value.
+     * Value for the Certificate Validity Period.
+     */
+    @SerializedName(value = "certificateValidityPeriodValue", alternate = {"CertificateValidityPeriodValue"})
+    @Expose
+	@Nullable
+    public Integer certificateValidityPeriodValue;
+
+    /**
+     * The Extended Key Usages.
+     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "extendedKeyUsages", alternate = {"ExtendedKeyUsages"})
+    @Expose
+	@Nullable
+    public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
+
+    /**
+     * The Renewal Threshold Percentage.
+     * Certificate renewal threshold percentage. Valid values 1 to 99
+     */
+    @SerializedName(value = "renewalThresholdPercentage", alternate = {"RenewalThresholdPercentage"})
+    @Expose
+	@Nullable
+    public Integer renewalThresholdPercentage;
+
+    /**
+     * The Subject Alternative Name Type.
+     * Certificate Subject Alternative Name Type. This collection can contain a maximum of 500 elements. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     */
+    @SerializedName(value = "subjectAlternativeNameType", alternate = {"SubjectAlternativeNameType"})
+    @Expose
+	@Nullable
+    public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
+
+    /**
+     * The Subject Name Format.
+     * Certificate Subject Name Format. This collection can contain a maximum of 500 elements. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     */
+    @SerializedName(value = "subjectNameFormat", alternate = {"SubjectNameFormat"})
+    @Expose
+	@Nullable
+    public SubjectNameFormat subjectNameFormat;
+
+    /**
+     * The Root Certificate.
+     * Trusted Root Certificate.
+     */
+    @SerializedName(value = "rootCertificate", alternate = {"RootCertificate"})
+    @Expose
+	@Nullable
+    public AospDeviceOwnerTrustedRootCertificate rootCertificate;
 
 
     /**

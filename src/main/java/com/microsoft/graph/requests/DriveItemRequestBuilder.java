@@ -13,6 +13,7 @@ import com.microsoft.graph.models.DriveItemUploadableProperties;
 import com.microsoft.graph.models.UploadSession;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.Permission;
+import com.microsoft.graph.models.ExtractSensitivityLabelsResult;
 import com.microsoft.graph.models.ItemPreviewInfo;
 import com.microsoft.graph.models.ItemActivityStat;
 import com.microsoft.graph.requests.WorkbookRequestBuilder;
@@ -343,6 +344,15 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
     @Nonnull
     public DriveItemCreateLinkRequestBuilder createLink(@Nonnull final DriveItemCreateLinkParameterSet parameters) {
         return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DriveItemExtractSensitivityLabelsRequestBuilder extractSensitivityLabels() {
+        return new DriveItemExtractSensitivityLabelsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.extractSensitivityLabels"), getClient(), null);
     }
 
     /**

@@ -39,7 +39,7 @@ public class UnifiedRole implements IJsonBackedObject {
 
     /**
      * The Role Definition Id.
-     * 
+     * The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose

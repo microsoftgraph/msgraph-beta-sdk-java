@@ -30,7 +30,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements IJsonBacke
 
     /**
      * The Access Container.
-     * 
+     * The access container through which members are assigned access. For example, a security group.
      */
     @SerializedName(value = "accessContainer", alternate = {"AccessContainer"})
     @Expose
@@ -39,7 +39,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements IJsonBacke
 
     /**
      * The Access Details.
-     * 
+     * The access details containing the identifiers of the administrative roles that the partner is assigned in the customer tenant.
      */
     @SerializedName(value = "accessDetails", alternate = {"AccessDetails"})
     @Expose
@@ -48,7 +48,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements IJsonBacke
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements IJsonBacke
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements IJsonBacke
 
     /**
      * The Status.
-     * 
+     * The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -41,7 +41,7 @@ public class DelegatedAdminAccessDetails implements IJsonBackedObject {
 
     /**
      * The Unified Roles.
-     * 
+     * The directory roles that the Microsoft partner is assigned in the customer tenant.
      */
     @SerializedName(value = "unifiedRoles", alternate = {"UnifiedRoles"})
     @Expose

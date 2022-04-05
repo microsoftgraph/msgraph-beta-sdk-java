@@ -128,6 +128,7 @@ import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionRe
 import com.microsoft.graph.requests.OemWarrantyInformationOnboardingRequestBuilder;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteActionAuditRequestBuilder;
+import com.microsoft.graph.requests.TenantAttachRBACRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionRequestBuilder;
@@ -1542,6 +1543,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public RemoteActionAuditRequestBuilder remoteActionAudits(@Nonnull final String id) {
         return new RemoteActionAuditRequestBuilder(getRequestUrlWithAdditionalSegment("remoteActionAudits") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TenantAttachRBAC
+     *
+     * @return the TenantAttachRBACRequestBuilder instance
+     */
+    @Nonnull
+    public TenantAttachRBACRequestBuilder tenantAttachRBAC() {
+        return new TenantAttachRBACRequestBuilder(getRequestUrlWithAdditionalSegment("tenantAttachRBAC"), getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsAppHealthApplicationPerformance collection

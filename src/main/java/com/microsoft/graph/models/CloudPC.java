@@ -115,7 +115,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Connection Name.
-     * The on-premises connection that is applied during the provisioning of Cloud PCs.
+     * The Azure network connection that is applied during the provisioning of Cloud PCs.
      */
     @SerializedName(value = "onPremisesConnectionName", alternate = {"OnPremisesConnectionName"})
     @Expose

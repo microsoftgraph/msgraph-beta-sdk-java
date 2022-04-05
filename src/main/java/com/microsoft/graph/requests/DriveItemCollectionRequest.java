@@ -13,6 +13,7 @@ import com.microsoft.graph.models.DriveItemUploadableProperties;
 import com.microsoft.graph.models.UploadSession;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.Permission;
+import com.microsoft.graph.models.ExtractSensitivityLabelsResult;
 import com.microsoft.graph.models.ItemPreviewInfo;
 import com.microsoft.graph.models.ItemActivityStat;
 import java.util.Arrays;

@@ -68,4 +68,30 @@ public class Windows81TrustedRootCertificateReferenceRequest extends BaseReferen
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the Windows81TrustedRootCertificate
+     *
+     * @param srcWindows81TrustedRootCertificate the Windows81TrustedRootCertificate reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows81TrustedRootCertificate> putAsync(@Nonnull final Windows81TrustedRootCertificate srcWindows81TrustedRootCertificate) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/rootCertificatesForServerValidation/" + srcWindows81TrustedRootCertificate.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the Windows81TrustedRootCertificate
+     *
+     * @param srcWindows81TrustedRootCertificate the Windows81TrustedRootCertificate reference to PUT
+     * @return the Windows81TrustedRootCertificate
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public Windows81TrustedRootCertificate put(@Nonnull final Windows81TrustedRootCertificate srcWindows81TrustedRootCertificate) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/rootCertificatesForServerValidation/" + srcWindows81TrustedRootCertificate.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

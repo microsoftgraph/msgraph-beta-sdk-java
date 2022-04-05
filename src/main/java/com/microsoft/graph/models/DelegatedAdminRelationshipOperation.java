@@ -29,7 +29,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Created Date Time.
-     * 
+     * The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -38,7 +38,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Data.
-     * 
+     * The data (payload) for the operation. Read-only.
      */
     @SerializedName(value = "data", alternate = {"Data"})
     @Expose
@@ -47,7 +47,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Operation Type.
-     * 
+     * The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
@@ -65,7 +65,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Status.
-     * 
+     * The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

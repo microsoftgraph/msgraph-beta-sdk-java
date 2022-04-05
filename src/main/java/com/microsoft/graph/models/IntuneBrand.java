@@ -224,7 +224,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Send Device Ownership Change Push Notification.
-     * Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
+     * SendDeviceOwnershipChangePushNotification will be deprecated in 06/2022 and will stop returning a value in 07/2022. A boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
      */
     @SerializedName(value = "sendDeviceOwnershipChangePushNotification", alternate = {"SendDeviceOwnershipChangePushNotification"})
     @Expose

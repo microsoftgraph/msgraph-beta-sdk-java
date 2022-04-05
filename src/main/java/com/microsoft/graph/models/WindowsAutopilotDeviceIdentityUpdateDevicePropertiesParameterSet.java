@@ -56,6 +56,33 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSet {
 	@Nullable
     public String displayName;
 
+    /**
+     * The device Account Upn.
+     * 
+     */
+    @SerializedName(value = "deviceAccountUpn", alternate = {"DeviceAccountUpn"})
+    @Expose
+	@Nullable
+    public String deviceAccountUpn;
+
+    /**
+     * The device Account Password.
+     * 
+     */
+    @SerializedName(value = "deviceAccountPassword", alternate = {"DeviceAccountPassword"})
+    @Expose
+	@Nullable
+    public String deviceAccountPassword;
+
+    /**
+     * The device Friendly Name.
+     * 
+     */
+    @SerializedName(value = "deviceFriendlyName", alternate = {"DeviceFriendlyName"})
+    @Expose
+	@Nullable
+    public String deviceFriendlyName;
+
 
     /**
      * Instiaciates a new WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSet
@@ -70,6 +97,9 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSet {
         this.addressableUserName = builder.addressableUserName;
         this.groupTag = builder.groupTag;
         this.displayName = builder.displayName;
+        this.deviceAccountUpn = builder.deviceAccountUpn;
+        this.deviceAccountPassword = builder.deviceAccountPassword;
+        this.deviceFriendlyName = builder.deviceFriendlyName;
     }
     /**
      * Gets a new builder for the body
@@ -144,6 +174,51 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSet {
             return this;
         }
         /**
+         * The deviceAccountUpn parameter value
+         */
+        @Nullable
+        protected String deviceAccountUpn;
+        /**
+         * Sets the DeviceAccountUpn
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSetBuilder withDeviceAccountUpn(@Nullable final String val) {
+            this.deviceAccountUpn = val;
+            return this;
+        }
+        /**
+         * The deviceAccountPassword parameter value
+         */
+        @Nullable
+        protected String deviceAccountPassword;
+        /**
+         * Sets the DeviceAccountPassword
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSetBuilder withDeviceAccountPassword(@Nullable final String val) {
+            this.deviceAccountPassword = val;
+            return this;
+        }
+        /**
+         * The deviceFriendlyName parameter value
+         */
+        @Nullable
+        protected String deviceFriendlyName;
+        /**
+         * Sets the DeviceFriendlyName
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSetBuilder withDeviceFriendlyName(@Nullable final String val) {
+            this.deviceFriendlyName = val;
+            return this;
+        }
+        /**
          * Instanciates a new WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSetBuilder
          */
         @Nullable
@@ -175,6 +250,15 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesParameterSet {
         }
         if(this.displayName != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("displayName", displayName));
+        }
+        if(this.deviceAccountUpn != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deviceAccountUpn", deviceAccountUpn));
+        }
+        if(this.deviceAccountPassword != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deviceAccountPassword", deviceAccountPassword));
+        }
+        if(this.deviceFriendlyName != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deviceFriendlyName", deviceFriendlyName));
         }
         return result;
     }

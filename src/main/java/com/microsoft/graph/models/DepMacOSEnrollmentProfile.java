@@ -35,6 +35,15 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public Boolean accessibilityScreenDisabled;
 
     /**
+     * The Auto Unlock With Watch Disabled.
+     * Indicates if UnlockWithWatch screen is disabled
+     */
+    @SerializedName(value = "autoUnlockWithWatchDisabled", alternate = {"AutoUnlockWithWatchDisabled"})
+    @Expose
+	@Nullable
+    public Boolean autoUnlockWithWatchDisabled;
+
+    /**
      * The Choose Your Lock Screen Disabled.
      * Indicates if iCloud Documents and Desktop screen is disabled
      */

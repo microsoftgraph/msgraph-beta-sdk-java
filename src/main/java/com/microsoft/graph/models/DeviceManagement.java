@@ -79,6 +79,7 @@ import com.microsoft.graph.models.ManagedDeviceOverview;
 import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
 import com.microsoft.graph.models.OemWarrantyInformationOnboarding;
 import com.microsoft.graph.models.RemoteActionAudit;
+import com.microsoft.graph.models.TenantAttachRBAC;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails;
@@ -342,7 +343,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Maximum Dep Tokens.
-     * Maximum number of dep tokens allowed per-tenant.
+     * Maximum number of DEP tokens allowed per-tenant.
      */
     @SerializedName(value = "maximumDepTokens", alternate = {"MaximumDepTokens"})
     @Expose
@@ -414,7 +415,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscriptions.
-     * Tenant's Subscription.
+     * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
@@ -1041,6 +1042,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RemoteActionAuditCollectionPage remoteActionAudits;
+
+    /**
+     * The Tenant Attach RBAC.
+     * TenantAttach RBAC Enablement
+     */
+    @SerializedName(value = "tenantAttachRBAC", alternate = {"TenantAttachRBAC"})
+    @Expose
+	@Nullable
+    public TenantAttachRBAC tenantAttachRBAC;
 
     /**
      * The User Experience Analytics App Health Application Performance.

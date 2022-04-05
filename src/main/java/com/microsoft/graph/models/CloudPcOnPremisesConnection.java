@@ -58,7 +58,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * The display name for the on-premises connection.
+     * The display name for the Azure network connection.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -67,7 +67,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status.
-     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+     * The status of the most recent health check done on the Azure network connection. For example, if status is 'passed', the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "healthCheckStatus", alternate = {"HealthCheckStatus"})
     @Expose
@@ -76,7 +76,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status Details.
-     * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
+     * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      */
     @SerializedName(value = "healthCheckStatusDetails", alternate = {"HealthCheckStatusDetails"})
     @Expose
@@ -85,7 +85,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The In Use.
-     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
+     * When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      */
     @SerializedName(value = "inUse", alternate = {"InUse"})
     @Expose

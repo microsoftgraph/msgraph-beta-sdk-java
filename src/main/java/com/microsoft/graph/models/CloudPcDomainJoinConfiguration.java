@@ -40,7 +40,7 @@ public class CloudPcDomainJoinConfiguration implements IJsonBackedObject {
 
     /**
      * The On Premises Connection Id.
-     * The on-premises connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
+     * The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
      */
     @SerializedName(value = "onPremisesConnectionId", alternate = {"OnPremisesConnectionId"})
     @Expose

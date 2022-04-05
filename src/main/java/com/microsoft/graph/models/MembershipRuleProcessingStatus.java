@@ -58,7 +58,7 @@ public class MembershipRuleProcessingStatus implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.   Required. Read-only.
+     * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -31,7 +31,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics
+     * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose

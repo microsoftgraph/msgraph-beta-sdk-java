@@ -84,6 +84,33 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     public WindowsAutopilotProfileAssignmentStatus deploymentProfileAssignmentStatus;
 
     /**
+     * The Device Account Password.
+     * Surface Hub Device Account Password
+     */
+    @SerializedName(value = "deviceAccountPassword", alternate = {"DeviceAccountPassword"})
+    @Expose
+	@Nullable
+    public String deviceAccountPassword;
+
+    /**
+     * The Device Account Upn.
+     * Surface Hub Device Account Upn
+     */
+    @SerializedName(value = "deviceAccountUpn", alternate = {"DeviceAccountUpn"})
+    @Expose
+	@Nullable
+    public String deviceAccountUpn;
+
+    /**
+     * The Device Friendly Name.
+     * Surface Hub Device Friendly Name
+     */
+    @SerializedName(value = "deviceFriendlyName", alternate = {"DeviceFriendlyName"})
+    @Expose
+	@Nullable
+    public String deviceFriendlyName;
+
+    /**
      * The Display Name.
      * Display Name
      */

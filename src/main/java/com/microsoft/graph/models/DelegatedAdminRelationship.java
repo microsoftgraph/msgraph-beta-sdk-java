@@ -38,7 +38,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Access Details.
-     * 
+     * The access details containing the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
      */
     @SerializedName(value = "accessDetails", alternate = {"AccessDetails"})
     @Expose
@@ -47,7 +47,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Activated Date Time.
-     * 
+     * The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
      */
     @SerializedName(value = "activatedDateTime", alternate = {"ActivatedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Customer.
-     * 
+     * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
      */
     @SerializedName(value = "customer", alternate = {"Customer"})
     @Expose
@@ -74,7 +74,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Display Name.
-     * 
+     * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -83,7 +83,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Duration.
-     * 
+     * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -92,7 +92,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The End Date Time.
-     * 
+     * The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -101,7 +101,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -119,7 +119,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Status.
-     * 
+     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -128,7 +128,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Access Assignments.
-     * 
+     * The access assignments associated with the delegated admin relationship.
      */
     @SerializedName(value = "accessAssignments", alternate = {"AccessAssignments"})
     @Expose
@@ -137,7 +137,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Operations.
-     * 
+     * The long running operations associated with the delegated admin relationship.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -146,7 +146,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Requests.
-     * 
+     * The requests associated with the delegated admin relationship.
      */
     @SerializedName(value = "requests", alternate = {"Requests"})
     @Expose
