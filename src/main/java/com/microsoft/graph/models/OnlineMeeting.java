@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessLevel;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
 import com.microsoft.graph.models.MeetingChatMode;
 import com.microsoft.graph.models.AudioConferencing;
@@ -39,15 +38,6 @@ import javax.annotation.Nonnull;
  */
 public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Access Level.
-     * 
-     */
-    @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
-    @Expose
-	@Nullable
-    public AccessLevel accessLevel;
 
     /**
      * The Allow Attendee To Enable Camera.
@@ -113,15 +103,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public BroadcastMeetingSettings broadcastSettings;
 
     /**
-     * The Canceled Date Time.
-     * 
-     */
-    @SerializedName(value = "canceledDateTime", alternate = {"CanceledDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime canceledDateTime;
-
-    /**
      * The Capabilities.
      * 
      */
@@ -158,24 +139,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime endDateTime;
 
     /**
-     * The Entry Exit Announcement.
-     * 
-     */
-    @SerializedName(value = "entryExitAnnouncement", alternate = {"EntryExitAnnouncement"})
-    @Expose
-	@Nullable
-    public Boolean entryExitAnnouncement;
-
-    /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime expirationDateTime;
-
-    /**
      * The External Id.
      * The external ID. A custom ID. Optional.
      */
@@ -192,15 +155,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isBroadcast;
-
-    /**
-     * The Is Cancelled.
-     * 
-     */
-    @SerializedName(value = "isCancelled", alternate = {"IsCancelled"})
-    @Expose
-	@Nullable
-    public Boolean isCancelled;
 
     /**
      * The Is Entry Exit Announced.
@@ -237,6 +191,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String joinUrl;
+
+    /**
+     * The Join Web Url.
+     * The join URL of the online meeting. Read-only.
+     */
+    @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
+    @Expose
+	@Nullable
+    public String joinWebUrl;
 
     /**
      * The Lobby Bypass Settings.

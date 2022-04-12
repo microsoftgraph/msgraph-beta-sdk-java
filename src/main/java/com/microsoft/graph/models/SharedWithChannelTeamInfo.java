@@ -30,7 +30,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements IJsonBackedOb
 
     /**
      * The Is Host Team.
-     * 
+     * Indicates whether the team is the host of the channel.
      */
     @SerializedName(value = "isHostTeam", alternate = {"IsHostTeam"})
     @Expose
@@ -39,7 +39,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements IJsonBackedOb
 
     /**
      * The Allowed Members.
-     * 
+     * A collection of team members who have access to the shared channel.
      */
 	@Nullable
     public ConversationMemberCollectionPage allowedMembers;

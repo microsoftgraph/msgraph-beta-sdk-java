@@ -166,6 +166,7 @@ import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.PrivacyRequestBuilder;
+import com.microsoft.graph.requests.SecurityRequestBuilder;
 import com.microsoft.graph.requests.ComplianceRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.TrustFrameworkRequestBuilder;
@@ -185,7 +186,6 @@ import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.FinancialsRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
-import com.microsoft.graph.requests.SecurityRequestBuilder;
 import com.microsoft.graph.requests.CommsApplicationRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
@@ -2010,6 +2010,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Security
+     */
+    @Nonnull
+    public SecurityRequestBuilder security() {
+        return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Compliance
      */
     @Nonnull
@@ -2215,16 +2225,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public PrintRequestBuilder print() {
         return new PrintRequestBuilder(getServiceRoot() + "/print", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Security
-     */
-    @Nonnull
-    public SecurityRequestBuilder security() {
-        return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
     /**

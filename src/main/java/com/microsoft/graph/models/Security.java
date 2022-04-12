@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityProviderStatus;
+import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.security.models.InformationProtection;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Alert;
@@ -25,6 +26,7 @@ import com.microsoft.graph.models.SecurityAction;
 import com.microsoft.graph.models.TiIndicator;
 import com.microsoft.graph.models.UserSecurityProfile;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.SubjectRightsRequestCollectionPage;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage;
 import com.microsoft.graph.requests.DomainSecurityProfileCollectionPage;
@@ -61,6 +63,15 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<SecurityProviderStatus> providerStatus;
+
+    /**
+     * The Subject Rights Requests.
+     * 
+     */
+    @SerializedName(value = "subjectRightsRequests", alternate = {"SubjectRightsRequests"})
+    @Expose
+	@Nullable
+    public SubjectRightsRequestCollectionPage subjectRightsRequests;
 
     /**
      * The Information Protection.
@@ -197,6 +208,10 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("subjectRightsRequests")) {
+            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), SubjectRightsRequestCollectionPage.class);
+        }
 
         if (json.has("alerts")) {
             alerts = serializer.deserializeObject(json.get("alerts"), AlertCollectionPage.class);

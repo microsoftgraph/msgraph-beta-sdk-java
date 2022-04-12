@@ -14,6 +14,8 @@ import com.microsoft.graph.models.ItemActivityStat;
 import com.microsoft.graph.requests.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.ItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.DocumentSetVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.DocumentSetVersionRequestBuilder;
 import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.FieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder;
