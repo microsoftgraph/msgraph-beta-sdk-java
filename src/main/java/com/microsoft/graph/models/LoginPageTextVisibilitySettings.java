@@ -38,6 +38,15 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
     }
 
     /**
+     * The Hide Account Reset Credentials.
+     * 
+     */
+    @SerializedName(value = "hideAccountResetCredentials", alternate = {"HideAccountResetCredentials"})
+    @Expose
+	@Nullable
+    public Boolean hideAccountResetCredentials;
+
+    /**
      * The Hide Cannot Access Your Account.
      * Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      */

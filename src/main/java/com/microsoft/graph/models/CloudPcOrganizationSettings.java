@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcUserAccountType;
+import com.microsoft.graph.models.CloudPcWindowsSettings;
 import com.microsoft.graph.models.Entity;
 
 
@@ -44,6 +45,15 @@ public class CloudPcOrganizationSettings extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public CloudPcUserAccountType userAccountType;
+
+    /**
+     * The Windows Settings.
+     * Represents the Cloud PC organization settings for a tenant. A tenant has only one cloudPcOrganizationSettings object. The default language value en-US.
+     */
+    @SerializedName(value = "windowsSettings", alternate = {"WindowsSettings"})
+    @Expose
+	@Nullable
+    public CloudPcWindowsSettings windowsSettings;
 
 
     /**

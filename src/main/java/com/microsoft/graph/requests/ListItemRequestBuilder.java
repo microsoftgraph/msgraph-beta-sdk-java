@@ -14,6 +14,8 @@ import com.microsoft.graph.models.ItemActivityStat;
 import com.microsoft.graph.requests.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.ItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.DocumentSetVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.DocumentSetVersionRequestBuilder;
 import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.FieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder;
@@ -117,6 +119,26 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
     @Nonnull
     public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DocumentSetVersion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DocumentSetVersionCollectionRequestBuilder documentSetVersions() {
+        return new DocumentSetVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("documentSetVersions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DocumentSetVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DocumentSetVersionRequestBuilder documentSetVersions(@Nonnull final String id) {
+        return new DocumentSetVersionRequestBuilder(getRequestUrlWithAdditionalSegment("documentSetVersions") + "/" + id, getClient(), null);
     }
 
     /**

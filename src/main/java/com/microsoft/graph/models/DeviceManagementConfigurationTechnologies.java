@@ -28,6 +28,10 @@ public enum DeviceManagementConfigurationTechnologies
     */
     CONFIG_MANAGER,
     /**
+    * apple Remote Management
+    */
+    APPLE_REMOTE_MANAGEMENT,
+    /**
     * microsoft Sense
     */
     MICROSOFT_SENSE,

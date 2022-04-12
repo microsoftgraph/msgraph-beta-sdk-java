@@ -11,6 +11,7 @@ import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.models.RestoreTimeRange;
 import com.microsoft.graph.models.CloudPcBulkRemoteActionResult;
+import com.microsoft.graph.models.CloudPcReviewStatus;
 import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.AdministratorConfiguredDeviceComplianceState;
@@ -31,6 +32,7 @@ import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequest;
 import com.microsoft.graph.requests.ManagedDeviceBulkReprovisionCloudPcRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceBulkRestoreCloudPcRequestBuilder;
+import com.microsoft.graph.requests.ManagedDeviceBulkSetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceExecuteActionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMoveDevicesToOURequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
@@ -38,10 +40,12 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceBulkReprovisionCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceBulkRestoreCloudPcParameterSet;
+import com.microsoft.graph.models.ManagedDeviceBulkSetCloudPcReviewStatusParameterSet;
 import com.microsoft.graph.models.ManagedDeviceExecuteActionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceMoveDevicesToOUParameterSet;
 import com.microsoft.graph.models.ManagedDeviceResizeCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceRestoreCloudPcParameterSet;
+import com.microsoft.graph.models.ManagedDeviceSetCloudPcReviewStatusParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
 import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
@@ -94,6 +98,16 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseCollectionRequest
     @Nonnull
     public ManagedDeviceBulkRestoreCloudPcRequestBuilder bulkRestoreCloudPc(@Nonnull final ManagedDeviceBulkRestoreCloudPcParameterSet parameters) {
         return new ManagedDeviceBulkRestoreCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bulkRestoreCloudPc"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceBulkSetCloudPcReviewStatusRequestBuilder bulkSetCloudPcReviewStatus(@Nonnull final ManagedDeviceBulkSetCloudPcReviewStatusParameterSet parameters) {
+        return new ManagedDeviceBulkSetCloudPcReviewStatusRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bulkSetCloudPcReviewStatus"), getClient(), null, parameters);
     }
 
     /**

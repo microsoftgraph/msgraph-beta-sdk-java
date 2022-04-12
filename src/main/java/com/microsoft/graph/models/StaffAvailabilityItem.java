@@ -41,7 +41,7 @@ public class StaffAvailabilityItem implements IJsonBackedObject {
 
     /**
      * The Availability Items.
-     * 
+     * Each item in this collection indicates a slot and the status of the staff member.
      */
     @SerializedName(value = "availabilityItems", alternate = {"AvailabilityItems"})
     @Expose
@@ -50,7 +50,7 @@ public class StaffAvailabilityItem implements IJsonBackedObject {
 
     /**
      * The Staff Id.
-     * 
+     * The ID of the staff member.
      */
     @SerializedName(value = "staffId", alternate = {"StaffId"})
     @Expose

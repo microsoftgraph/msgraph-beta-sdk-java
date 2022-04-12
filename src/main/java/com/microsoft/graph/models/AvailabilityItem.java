@@ -41,7 +41,7 @@ public class AvailabilityItem implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The end time of the time slot.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class AvailabilityItem implements IJsonBackedObject {
 
     /**
      * The Service Id.
-     * 
+     * Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
      */
     @SerializedName(value = "serviceId", alternate = {"ServiceId"})
     @Expose
@@ -59,7 +59,7 @@ public class AvailabilityItem implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The start time of the time slot.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class AvailabilityItem implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

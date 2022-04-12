@@ -32,6 +32,10 @@ public enum IncomingTokenType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * remote Desktop Token
+    */
+    REMOTE_DESKTOP_TOKEN,
+    /**
     * For IncomingTokenType values that were not expected from the service
     */
     UNEXPECTED_VALUE

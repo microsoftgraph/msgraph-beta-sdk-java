@@ -28,7 +28,7 @@ public class TeamInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the team.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class TeamInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The ID of the Azure Active Directory tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

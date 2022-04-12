@@ -180,7 +180,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The ID of the Azure Active Directory tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -207,7 +207,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The All Channels.
-     * 
+     * List of channels either hosted in or shared with the team (incoming channels).
      */
 	@Nullable
     public ChannelCollectionPage allChannels;

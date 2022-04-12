@@ -32,7 +32,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Associated Teams.
-     * 
+     * The list of associatedTeamInfo objects that a user is associated with.
      */
     @SerializedName(value = "associatedTeams", alternate = {"AssociatedTeams"})
     @Expose

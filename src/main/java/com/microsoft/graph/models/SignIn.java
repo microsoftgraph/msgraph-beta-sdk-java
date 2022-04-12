@@ -15,6 +15,7 @@ import com.microsoft.graph.models.AuthenticationDetail;
 import com.microsoft.graph.models.KeyValue;
 import com.microsoft.graph.models.ProtocolType;
 import com.microsoft.graph.models.AuthenticationRequirementPolicy;
+import com.microsoft.graph.models.ClientCredentialType;
 import com.microsoft.graph.models.ConditionalAccessStatus;
 import com.microsoft.graph.models.SignInAccessType;
 import com.microsoft.graph.models.DeviceDetail;
@@ -164,6 +165,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String clientAppUsed;
+
+    /**
+     * The Client Credential Type.
+     * 
+     */
+    @SerializedName(value = "clientCredentialType", alternate = {"ClientCredentialType"})
+    @Expose
+	@Nullable
+    public ClientCredentialType clientCredentialType;
 
     /**
      * The Conditional Access Status.
