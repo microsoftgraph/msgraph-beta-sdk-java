@@ -11,6 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.45.0] - 2022-04-12
+
+### Added
+ 
+- ClientCredentialType model. 
+- CloudPcUserAccessLevel model. 
+- CloudPcReviewStatus models and related requests. 
+- DocumentSetVersion models and related requests. 
+- SignInConfirm models and related requests. 
+- SubjectRightsRequest models. 
+- DocumentSetVersion requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata. 
+- Models and requests related to the added models such as CloudPcOrganizationSettings model, SignIn model, SubjectRightsRequest model etc. 
+
 ## [0.44.0] - 2022-04-05
 
 ### Added
