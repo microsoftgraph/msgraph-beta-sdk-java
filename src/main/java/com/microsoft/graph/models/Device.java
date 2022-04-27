@@ -189,6 +189,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public Boolean isManaged;
 
     /**
+     * The Is Management Restricted.
+     * 
+     */
+    @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
+    @Expose
+	@Nullable
+    public Boolean isManagementRestricted;
+
+    /**
      * The Is Rooted.
      * true if device is rooted; false if device is jail-broken. This can only be updated by Intune.
      */

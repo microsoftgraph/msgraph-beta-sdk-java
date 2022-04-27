@@ -170,6 +170,15 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean isAssignableToRole;
 
     /**
+     * The Is Management Restricted.
+     * 
+     */
+    @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
+    @Expose
+	@Nullable
+    public Boolean isManagementRestricted;
+
+    /**
      * The License Processing State.
      * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
      */
@@ -733,7 +742,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Team.
-     * 
+     * The team associated with this group.
      */
     @SerializedName(value = "team", alternate = {"Team"})
     @Expose

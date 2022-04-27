@@ -372,6 +372,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> infoCatalogs;
 
     /**
+     * The Is Management Restricted.
+     * 
+     */
+    @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
+    @Expose
+	@Nullable
+    public Boolean isManagementRestricted;
+
+    /**
      * The Is Resource Account.
      * Do not use – reserved for future use.
      */

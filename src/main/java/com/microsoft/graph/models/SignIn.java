@@ -168,7 +168,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Credential Type.
-     * 
+     * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
      */
     @SerializedName(value = "clientCredentialType", alternate = {"ClientCredentialType"})
     @Expose
@@ -258,7 +258,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Token Type.
-     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
+     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      */
     @SerializedName(value = "incomingTokenType", alternate = {"IncomingTokenType"})
     @Expose

@@ -143,7 +143,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Federation Configuration.
-     * 
+     * Domain settings configured by customer when federated with Azure AD.
      */
     @SerializedName(value = "federationConfiguration", alternate = {"FederationConfiguration"})
     @Expose

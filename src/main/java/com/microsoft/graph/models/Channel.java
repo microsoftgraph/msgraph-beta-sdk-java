@@ -147,7 +147,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Shared With Teams.
-     * A collection of teams shared with the channel.
+     * A collection of teams with which a channel is shared.
      */
     @SerializedName(value = "sharedWithTeams", alternate = {"SharedWithTeams"})
     @Expose

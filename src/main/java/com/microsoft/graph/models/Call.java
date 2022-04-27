@@ -89,7 +89,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Options.
-     * 
+     * Contains the optional features for the call.
      */
     @SerializedName(value = "callOptions", alternate = {"CallOptions"})
     @Expose
@@ -296,7 +296,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Sharing Sessions.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "contentSharingSessions", alternate = {"ContentSharingSessions"})
     @Expose
