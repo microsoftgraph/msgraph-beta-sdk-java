@@ -93,7 +93,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * Read-only. Nullable.
+     * Notifications for suspicious or potential security issues in a customer’s tenant.
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose

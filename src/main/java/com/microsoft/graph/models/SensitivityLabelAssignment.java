@@ -40,7 +40,7 @@ public class SensitivityLabelAssignment implements IJsonBackedObject {
 
     /**
      * The Assignment Method.
-     * 
+     * Indicates whether the label assignment is done automatically, as a standard, or a privileged operation. The possible values are: standard, privileged, auto, unknownFutureValue.
      */
     @SerializedName(value = "assignmentMethod", alternate = {"AssignmentMethod"})
     @Expose
@@ -49,7 +49,7 @@ public class SensitivityLabelAssignment implements IJsonBackedObject {
 
     /**
      * The Sensitivity Label Id.
-     * 
+     * The unique identifier for the sensitivity label assigned to the file.
      */
     @SerializedName(value = "sensitivityLabelId", alternate = {"SensitivityLabelId"})
     @Expose
@@ -58,7 +58,7 @@ public class SensitivityLabelAssignment implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The unique identifier for the tenant that hosts the file when this label is applied.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
