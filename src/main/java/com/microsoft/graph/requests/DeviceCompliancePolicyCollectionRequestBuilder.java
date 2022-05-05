@@ -11,11 +11,11 @@ import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.DeviceCompliancePolicy;
 import com.microsoft.graph.models.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
-import com.microsoft.graph.models.RetireScheduledManagedDevice;
 import com.microsoft.graph.models.ScheduledRetireState;
 import com.microsoft.graph.models.DeviceCompliancePolicyScript;
 import com.microsoft.graph.models.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.DeviceComplianceScheduledActionForRule;
+import com.microsoft.graph.models.RetireScheduledManagedDevice;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionRequestBuild
 import com.microsoft.graph.requests.DeviceCompliancePolicyRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionRequest;
 import com.microsoft.graph.requests.DeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicySetScheduledRetireStateRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyValidateComplianceScriptRequestBuilder;
+import com.microsoft.graph.requests.DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -69,15 +69,6 @@ public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseCollecti
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
-     */
-    @Nonnull
-    public DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder getDevicesScheduledToRetire() {
-        return new DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDevicesScheduledToRetire"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
      * @return the request builder
      */
     @Nonnull
@@ -103,6 +94,15 @@ public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseCollecti
     @Nonnull
     public DeviceCompliancePolicyValidateComplianceScriptRequestBuilder validateComplianceScript(@Nonnull final DeviceCompliancePolicyValidateComplianceScriptParameterSet parameters) {
         return new DeviceCompliancePolicyValidateComplianceScriptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateComplianceScript"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder getDevicesScheduledToRetire() {
+        return new DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDevicesScheduledToRetire"), getClient(), null);
     }
 
     /**

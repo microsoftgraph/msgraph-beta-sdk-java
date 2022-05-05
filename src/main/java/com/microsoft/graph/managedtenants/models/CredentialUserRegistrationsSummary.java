@@ -53,6 +53,15 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
     public String mfaConditionalAccessPolicyState;
 
     /**
+     * The Mfa Excluded User Count.
+     * 
+     */
+    @SerializedName(value = "mfaExcludedUserCount", alternate = {"MfaExcludedUserCount"})
+    @Expose
+	@Nullable
+    public Integer mfaExcludedUserCount;
+
+    /**
      * The Mfa Registered User Count.
      * The number of users registered for multi-factor authentication. Optional. Read-only.
      */

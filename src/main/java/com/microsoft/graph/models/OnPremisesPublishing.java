@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExternalAuthenticationType;
+import com.microsoft.graph.models.OnPremisesApplicationSegment;
 import com.microsoft.graph.models.OnPremisesPublishingSingleSignOn;
 import com.microsoft.graph.models.VerifiedCustomDomainCertificatesMetadata;
 import com.microsoft.graph.models.KeyCredential;
@@ -142,6 +144,15 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     public Boolean isSecureCookieEnabled;
 
     /**
+     * The Is State Session Enabled.
+     * 
+     */
+    @SerializedName(value = "isStateSessionEnabled", alternate = {"IsStateSessionEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isStateSessionEnabled;
+
+    /**
      * The Is Translate Host Header Enabled.
      * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
      */
@@ -158,6 +169,15 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isTranslateLinksInBodyEnabled;
+
+    /**
+     * The On Premises Application Segments.
+     * 
+     */
+    @SerializedName(value = "onPremisesApplicationSegments", alternate = {"OnPremisesApplicationSegments"})
+    @Expose
+	@Nullable
+    public java.util.List<OnPremisesApplicationSegment> onPremisesApplicationSegments;
 
     /**
      * The Single Sign On Settings.

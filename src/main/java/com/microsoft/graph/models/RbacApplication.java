@@ -93,7 +93,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignment Schedule Instances.
-     * 
+     * Instances for active role assignments.
      */
     @SerializedName(value = "roleAssignmentScheduleInstances", alternate = {"RoleAssignmentScheduleInstances"})
     @Expose
@@ -102,7 +102,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignment Schedule Requests.
-     * 
+     * Requests for active role assignments to principals through PIM.
      */
     @SerializedName(value = "roleAssignmentScheduleRequests", alternate = {"RoleAssignmentScheduleRequests"})
     @Expose
@@ -111,7 +111,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignment Schedules.
-     * 
+     * Schedules for active role assignment operations.
      */
     @SerializedName(value = "roleAssignmentSchedules", alternate = {"RoleAssignmentSchedules"})
     @Expose
@@ -120,7 +120,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Eligibility Schedule Instances.
-     * 
+     * Instances for role eligibility requests.
      */
     @SerializedName(value = "roleEligibilityScheduleInstances", alternate = {"RoleEligibilityScheduleInstances"})
     @Expose
@@ -129,7 +129,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Eligibility Schedule Requests.
-     * 
+     * Requests for role eligibilities for principals through PIM.
      */
     @SerializedName(value = "roleEligibilityScheduleRequests", alternate = {"RoleEligibilityScheduleRequests"})
     @Expose
@@ -138,7 +138,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Eligibility Schedules.
-     * 
+     * Schedules for role eligibility operations.
      */
     @SerializedName(value = "roleEligibilitySchedules", alternate = {"RoleEligibilitySchedules"})
     @Expose

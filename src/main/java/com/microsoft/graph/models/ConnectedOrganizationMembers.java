@@ -27,7 +27,7 @@ public class ConnectedOrganizationMembers extends UserSet implements IJsonBacked
 
     /**
      * The Description.
-     * The name of the connected organization.
+     * The name of the connected organization. Read only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
