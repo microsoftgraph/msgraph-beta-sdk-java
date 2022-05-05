@@ -84,7 +84,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Membership Type.
-     * The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+     * The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      */
     @SerializedName(value = "membershipType", alternate = {"MembershipType"})
     @Expose
@@ -147,7 +147,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Shared With Teams.
-     * A collection of teams shared with the channel.
+     * A collection of teams with which a channel is shared.
      */
     @SerializedName(value = "sharedWithTeams", alternate = {"SharedWithTeams"})
     @Expose

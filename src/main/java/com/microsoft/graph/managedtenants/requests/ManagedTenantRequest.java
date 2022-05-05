@@ -42,6 +42,8 @@ import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollect
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.MyRoleCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.MyRoleRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;

@@ -51,7 +51,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Display Name.
-     * App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
+     * The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -60,7 +60,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).
+     * The application identifier in Azure Active Directory. Supports $filter (eq operator only).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -159,7 +159,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Client App Used.
-     * Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
+     * The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
      */
     @SerializedName(value = "clientAppUsed", alternate = {"ClientAppUsed"})
     @Expose
@@ -168,7 +168,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Credential Type.
-     * 
+     * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
      */
     @SerializedName(value = "clientCredentialType", alternate = {"ClientCredentialType"})
     @Expose
@@ -177,7 +177,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Conditional Access Status.
-     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).
+     * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).
      */
     @SerializedName(value = "conditionalAccessStatus", alternate = {"ConditionalAccessStatus"})
     @Expose
@@ -186,7 +186,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).
+     * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -195,7 +195,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
+     * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -213,7 +213,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Detail.
-     * Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.
+     * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties.
      */
     @SerializedName(value = "deviceDetail", alternate = {"DeviceDetail"})
     @Expose
@@ -258,7 +258,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Token Type.
-     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
+     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      */
     @SerializedName(value = "incomingTokenType", alternate = {"IncomingTokenType"})
     @Expose
@@ -267,7 +267,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).
+     * The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -285,7 +285,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Interactive.
-     * Indicates if a sign-in is interactive or not.
+     * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
      */
     @SerializedName(value = "isInteractive", alternate = {"IsInteractive"})
     @Expose
@@ -303,7 +303,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
+     * The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -357,7 +357,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Display Name.
-     * Name of the resource the user signed into. Supports $filter (eq operator only).
+     * The name of the resource that the user signed in to. Supports $filter (eq operator only).
      */
     @SerializedName(value = "resourceDisplayName", alternate = {"ResourceDisplayName"})
     @Expose
@@ -366,7 +366,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * ID of the resource that the user signed into. Supports $filter (eq operator only).
+     * The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -393,7 +393,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
+     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -411,7 +411,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level Aggregated.
-     * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskLevelAggregated", alternate = {"RiskLevelAggregated"})
     @Expose
@@ -420,7 +420,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level During Sign In.
-     * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskLevelDuringSignIn", alternate = {"RiskLevelDuringSignIn"})
     @Expose
@@ -429,7 +429,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).
+     * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -510,7 +510,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
+     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -555,7 +555,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
+     * The display name of the user. Supports $filter (eq and startsWith operators only).
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -564,7 +564,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * ID of the user that initiated the sign-in. Supports $filter (eq operator only).
+     * The identifier of the user. Supports $filter (eq operator only).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -573,7 +573,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
+     * The UPN of the user. Supports $filter (eq and startsWith operators only).
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

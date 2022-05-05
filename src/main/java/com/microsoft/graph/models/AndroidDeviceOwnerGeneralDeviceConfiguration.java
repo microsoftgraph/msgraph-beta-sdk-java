@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AndroidDeviceOwnerAppAutoUpdatePolicyType;
 import com.microsoft.graph.models.AndroidDeviceOwnerDefaultAppPermissionPolicyType;
 import com.microsoft.graph.models.AppListItem;
 import com.microsoft.graph.models.AndroidDeviceOwnerCrossProfileDataSharing;
+import com.microsoft.graph.models.AndroidDeviceOwnerUserFacingMessage;
 import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfileType;
 import com.microsoft.graph.models.AndroidDeviceOwnerGlobalProxy;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskCustomizationStatusBar;
@@ -29,6 +30,7 @@ import com.microsoft.graph.models.MicrosoftLauncherDockPresence;
 import com.microsoft.graph.models.MicrosoftLauncherSearchBarPlacement;
 import com.microsoft.graph.models.AndroidKeyguardFeature;
 import com.microsoft.graph.models.AndroidDeviceOwnerRequiredPasswordType;
+import com.microsoft.graph.models.AndroidDeviceOwnerRequiredPasswordUnlock;
 import com.microsoft.graph.models.PersonalProfilePersonalPlayStoreMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerPlayStoreMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerBatteryPluggedMode;
@@ -194,6 +196,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean dateTimeConfigurationBlocked;
+
+    /**
+     * The Detailed Help Text.
+     * Represents the customized detailed help text provided to users when they attempt to modify managed settings on their device.
+     */
+    @SerializedName(value = "detailedHelpText", alternate = {"DetailedHelpText"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerUserFacingMessage detailedHelpText;
 
     /**
      * The Enrollment Profile.
@@ -862,6 +873,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
 
     /**
+     * The Password Require Unlock.
+     * Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+     */
+    @SerializedName(value = "passwordRequireUnlock", alternate = {"PasswordRequireUnlock"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerRequiredPasswordUnlock passwordRequireUnlock;
+
+    /**
      * The Password Sign In Failure Count Before Factory Reset.
      * Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
      */
@@ -950,6 +970,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean securityRequireVerifyApps;
+
+    /**
+     * The Short Help Text.
+     * Represents the customized short help text provided to users when they attempt to modify managed settings on their device.
+     */
+    @SerializedName(value = "shortHelpText", alternate = {"ShortHelpText"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerUserFacingMessage shortHelpText;
 
     /**
      * The Status Bar Blocked.

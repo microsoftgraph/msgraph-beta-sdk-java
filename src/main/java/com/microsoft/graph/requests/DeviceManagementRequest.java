@@ -169,6 +169,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollecti
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder;
@@ -217,10 +219,11 @@ import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileRequestBuil
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.WindowsAutopilotSettingsRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionStatementCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionStatementRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaArtifactCollectionRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaArtifactRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaConnectorRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaDeploymentCollectionRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaDeploymentRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyMigrationReportRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyObjectFileCollectionRequestBuilder;
