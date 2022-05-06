@@ -85,7 +85,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Document Set Versions.
-     * 
+     * Version information for a document set version created by a user.
      */
     @SerializedName(value = "documentSetVersions", alternate = {"DocumentSetVersions"})
     @Expose

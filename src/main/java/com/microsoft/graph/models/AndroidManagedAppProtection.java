@@ -98,6 +98,33 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public ManagedAppRemediationAction appActionIfDeviceLockNotSet;
 
     /**
+     * The App Action If Device Passcode Complexity Less Than High.
+     * If the device does not have a passcode of high complexity or higher, trigger the stored action.
+     */
+    @SerializedName(value = "appActionIfDevicePasscodeComplexityLessThanHigh", alternate = {"AppActionIfDevicePasscodeComplexityLessThanHigh"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanHigh;
+
+    /**
+     * The App Action If Device Passcode Complexity Less Than Low.
+     * If the device does not have a passcode of low complexity or higher, trigger the stored action.
+     */
+    @SerializedName(value = "appActionIfDevicePasscodeComplexityLessThanLow", alternate = {"AppActionIfDevicePasscodeComplexityLessThanLow"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanLow;
+
+    /**
+     * The App Action If Device Passcode Complexity Less Than Medium.
+     * If the device does not have a passcode of medium complexity or higher, trigger the stored action.
+     */
+    @SerializedName(value = "appActionIfDevicePasscodeComplexityLessThanMedium", alternate = {"AppActionIfDevicePasscodeComplexityLessThanMedium"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanMedium;
+
+    /**
      * The Approved Keyboards.
      * If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
      */
@@ -135,7 +162,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Display Name.
-     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Friendly name of the preferred custom browser to open weblink on Android.
      */
     @SerializedName(value = "customBrowserDisplayName", alternate = {"CustomBrowserDisplayName"})
     @Expose
@@ -144,7 +171,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Package Id.
-     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Unique identifier of a custom browser to open weblink on Android.
      */
     @SerializedName(value = "customBrowserPackageId", alternate = {"CustomBrowserPackageId"})
     @Expose

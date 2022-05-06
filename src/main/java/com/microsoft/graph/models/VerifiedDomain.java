@@ -39,7 +39,7 @@ public class VerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Capabilities.
-     * For example, 'Email', 'OfficeCommunicationsOnline'.
+     * For example, Email, OfficeCommunicationsOnline.
      */
     @SerializedName(value = "capabilities", alternate = {"Capabilities"})
     @Expose
@@ -57,7 +57,7 @@ public class VerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Is Initial.
-     * true if this is the initial domain associated with the tenant; otherwise, false
+     * true if this is the initial domain associated with the tenant; otherwise, false.
      */
     @SerializedName(value = "isInitial", alternate = {"IsInitial"})
     @Expose
@@ -66,7 +66,7 @@ public class VerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The domain name; for example, 'contoso.onmicrosoft.com'
+     * The domain name; for example, contoso.onmicrosoft.com.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -75,7 +75,7 @@ public class VerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Type.
-     * For example, 'Managed'.
+     * For example, Managed.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

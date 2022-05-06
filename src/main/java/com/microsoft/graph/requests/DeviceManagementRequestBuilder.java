@@ -169,6 +169,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollecti
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder;
@@ -217,10 +219,11 @@ import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileRequestBuil
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.WindowsAutopilotSettingsRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionStatementCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagementConditionStatementRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaArtifactCollectionRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaArtifactRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaConnectorRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaDeploymentCollectionRequestBuilder;
+import com.microsoft.graph.requests.ZebraFotaDeploymentRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyMigrationReportRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyObjectFileCollectionRequestBuilder;
@@ -1964,6 +1967,36 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public UserExperienceAnalyticsDevicePerformanceRequestBuilder userExperienceAnalyticsDevicePerformance(@Nonnull final String id) {
         return new UserExperienceAnalyticsDevicePerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicePerformance") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsDeviceScope
+     *
+     * @return the UserExperienceAnalyticsDeviceScopeRequestBuilder instance
+     */
+    @Nonnull
+    public UserExperienceAnalyticsDeviceScopeRequestBuilder userExperienceAnalyticsDeviceScope() {
+        return new UserExperienceAnalyticsDeviceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScope"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsDeviceScopeCollectionRequestBuilder userExperienceAnalyticsDeviceScopes() {
+        return new UserExperienceAnalyticsDeviceScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScopes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDeviceScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsDeviceScopeRequestBuilder userExperienceAnalyticsDeviceScopes(@Nonnull final String id) {
+        return new UserExperienceAnalyticsDeviceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScopes") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsDeviceScores collection
      *
@@ -2465,44 +2498,54 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new WindowsAutopilotSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("windowsAutopilotSettings"), getClient(), null);
     }
     /**
-     *  Gets a request builder for the ManagementCondition collection
+     *  Gets a request builder for the ZebraFotaArtifact collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementConditionCollectionRequestBuilder managementConditions() {
-        return new ManagementConditionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditions"), getClient(), null);
+    public ZebraFotaArtifactCollectionRequestBuilder zebraFotaArtifacts() {
+        return new ZebraFotaArtifactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("zebraFotaArtifacts"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the ManagementCondition item
+     * Gets a request builder for the ZebraFotaArtifact item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementConditionRequestBuilder managementConditions(@Nonnull final String id) {
-        return new ManagementConditionRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditions") + "/" + id, getClient(), null);
+    public ZebraFotaArtifactRequestBuilder zebraFotaArtifacts(@Nonnull final String id) {
+        return new ZebraFotaArtifactRequestBuilder(getRequestUrlWithAdditionalSegment("zebraFotaArtifacts") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ZebraFotaConnector
+     *
+     * @return the ZebraFotaConnectorRequestBuilder instance
+     */
+    @Nonnull
+    public ZebraFotaConnectorRequestBuilder zebraFotaConnector() {
+        return new ZebraFotaConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("zebraFotaConnector"), getClient(), null);
     }
     /**
-     *  Gets a request builder for the ManagementConditionStatement collection
+     *  Gets a request builder for the ZebraFotaDeployment collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementConditionStatementCollectionRequestBuilder managementConditionStatements() {
-        return new ManagementConditionStatementCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements"), getClient(), null);
+    public ZebraFotaDeploymentCollectionRequestBuilder zebraFotaDeployments() {
+        return new ZebraFotaDeploymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("zebraFotaDeployments"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the ManagementConditionStatement item
+     * Gets a request builder for the ZebraFotaDeployment item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementConditionStatementRequestBuilder managementConditionStatements(@Nonnull final String id) {
-        return new ManagementConditionStatementRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements") + "/" + id, getClient(), null);
+    public ZebraFotaDeploymentRequestBuilder zebraFotaDeployments(@Nonnull final String id) {
+        return new ZebraFotaDeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("zebraFotaDeployments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GroupPolicyMigrationReport collection

@@ -39,7 +39,7 @@ public class CloudPcLaunchInfo implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Id.
-     * 
+     * The unique identifier of the Cloud PC.
      */
     @SerializedName(value = "cloudPcId", alternate = {"CloudPcId"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcLaunchInfo implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Launch Url.
-     * 
+     * The connect URL of the Cloud PC.
      */
     @SerializedName(value = "cloudPcLaunchUrl", alternate = {"CloudPcLaunchUrl"})
     @Expose

@@ -101,6 +101,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerforma
 import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
 import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScope;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcess;
@@ -127,8 +128,9 @@ import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.WindowsAutopilotSettings;
-import com.microsoft.graph.models.ManagementCondition;
-import com.microsoft.graph.models.ManagementConditionStatement;
+import com.microsoft.graph.models.ZebraFotaArtifact;
+import com.microsoft.graph.models.ZebraFotaConnector;
+import com.microsoft.graph.models.ZebraFotaDeployment;
 import com.microsoft.graph.models.GroupPolicyMigrationReport;
 import com.microsoft.graph.models.GroupPolicyObjectFile;
 import com.microsoft.graph.models.GroupPolicyCategory;
@@ -233,6 +235,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerfor
 import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
@@ -255,8 +258,8 @@ import com.microsoft.graph.requests.ImportedDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileCollectionPage;
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.ManagementConditionCollectionPage;
-import com.microsoft.graph.requests.ManagementConditionStatementCollectionPage;
+import com.microsoft.graph.requests.ZebraFotaArtifactCollectionPage;
+import com.microsoft.graph.requests.ZebraFotaDeploymentCollectionPage;
 import com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionPage;
 import com.microsoft.graph.requests.GroupPolicyObjectFileCollectionPage;
 import com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage;
@@ -316,7 +319,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Intune Account Id.
-     * Intune Account Id for given tenant
+     * Intune Account ID for given tenant
      */
     @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
     @Expose
@@ -1251,6 +1254,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsDevicePerformanceCollectionPage userExperienceAnalyticsDevicePerformance;
 
     /**
+     * The User Experience Analytics Device Scope.
+     * The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceScope", alternate = {"UserExperienceAnalyticsDeviceScope"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsDeviceScope userExperienceAnalyticsDeviceScope;
+
+    /**
+     * The User Experience Analytics Device Scopes.
+     * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceScopes", alternate = {"UserExperienceAnalyticsDeviceScopes"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsDeviceScopeCollectionPage userExperienceAnalyticsDeviceScopes;
+
+    /**
      * The User Experience Analytics Device Scores.
      * User experience analytics device scores
      */
@@ -1494,22 +1515,31 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsAutopilotSettings windowsAutopilotSettings;
 
     /**
-     * The Management Conditions.
-     * The management conditions associated with device management of the company.
+     * The Zebra Fota Artifacts.
+     * The Collection of ZebraFotaArtifacts.
      */
-    @SerializedName(value = "managementConditions", alternate = {"ManagementConditions"})
+    @SerializedName(value = "zebraFotaArtifacts", alternate = {"ZebraFotaArtifacts"})
     @Expose
 	@Nullable
-    public ManagementConditionCollectionPage managementConditions;
+    public ZebraFotaArtifactCollectionPage zebraFotaArtifacts;
 
     /**
-     * The Management Condition Statements.
-     * The management condition statements associated with device management of the company.
+     * The Zebra Fota Connector.
+     * The singleton ZebraFotaConnector associated with account.
      */
-    @SerializedName(value = "managementConditionStatements", alternate = {"ManagementConditionStatements"})
+    @SerializedName(value = "zebraFotaConnector", alternate = {"ZebraFotaConnector"})
     @Expose
 	@Nullable
-    public ManagementConditionStatementCollectionPage managementConditionStatements;
+    public ZebraFotaConnector zebraFotaConnector;
+
+    /**
+     * The Zebra Fota Deployments.
+     * Collection of ZebraFotaDeployments associated with account.
+     */
+    @SerializedName(value = "zebraFotaDeployments", alternate = {"ZebraFotaDeployments"})
+    @Expose
+	@Nullable
+    public ZebraFotaDeploymentCollectionPage zebraFotaDeployments;
 
     /**
      * The Group Policy Migration Reports.
@@ -2119,6 +2149,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance"), UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
         }
 
+        if (json.has("userExperienceAnalyticsDeviceScopes")) {
+            userExperienceAnalyticsDeviceScopes = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScopes"), UserExperienceAnalyticsDeviceScopeCollectionPage.class);
+        }
+
         if (json.has("userExperienceAnalyticsDeviceScores")) {
             userExperienceAnalyticsDeviceScores = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScores"), UserExperienceAnalyticsDeviceScoresCollectionPage.class);
         }
@@ -2211,12 +2245,12 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), WindowsAutopilotDeviceIdentityCollectionPage.class);
         }
 
-        if (json.has("managementConditions")) {
-            managementConditions = serializer.deserializeObject(json.get("managementConditions"), ManagementConditionCollectionPage.class);
+        if (json.has("zebraFotaArtifacts")) {
+            zebraFotaArtifacts = serializer.deserializeObject(json.get("zebraFotaArtifacts"), ZebraFotaArtifactCollectionPage.class);
         }
 
-        if (json.has("managementConditionStatements")) {
-            managementConditionStatements = serializer.deserializeObject(json.get("managementConditionStatements"), ManagementConditionStatementCollectionPage.class);
+        if (json.has("zebraFotaDeployments")) {
+            zebraFotaDeployments = serializer.deserializeObject(json.get("zebraFotaDeployments"), ZebraFotaDeploymentCollectionPage.class);
         }
 
         if (json.has("groupPolicyMigrationReports")) {
