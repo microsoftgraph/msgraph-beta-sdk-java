@@ -60,6 +60,10 @@ public enum DeviceEnrollmentConfigurationType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * enrollment Notifications Configuration
+    */
+    ENROLLMENT_NOTIFICATIONS_CONFIGURATION,
+    /**
     * For DeviceEnrollmentConfigurationType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -30,7 +30,7 @@ public class DocumentSetVersion extends ListItemVersion implements IJsonBackedOb
 
     /**
      * The Comment.
-     * 
+     * Comment about the captured version.
      */
     @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
@@ -39,7 +39,7 @@ public class DocumentSetVersion extends ListItemVersion implements IJsonBackedOb
 
     /**
      * The Created By.
-     * 
+     * User who captured the version.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -48,7 +48,7 @@ public class DocumentSetVersion extends ListItemVersion implements IJsonBackedOb
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when this version was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class DocumentSetVersion extends ListItemVersion implements IJsonBackedOb
 
     /**
      * The Items.
-     * 
+     * Items within the document set that are captured as part of this version.
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -66,7 +66,7 @@ public class DocumentSetVersion extends ListItemVersion implements IJsonBackedOb
 
     /**
      * The Should Capture Minor Version.
-     * 
+     * If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
      */
     @SerializedName(value = "shouldCaptureMinorVersion", alternate = {"ShouldCaptureMinorVersion"})
     @Expose

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.BaseTask;
+import com.microsoft.graph.models.TodoTask;
 import com.microsoft.graph.models.ChecklistItem;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ChecklistItemCollectionRequestBuilder extends BaseCollectionRequestBuilder<ChecklistItem, ChecklistItemRequestBuilder, ChecklistItemCollectionResponse, ChecklistItemCollectionPage, ChecklistItemCollectionRequest> {
 
     /**
-     * The request builder for this collection of BaseTask
+     * The request builder for this collection of TodoTask
      *
      * @param requestUrl     the request URL
      * @param client         the service client

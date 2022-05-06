@@ -48,7 +48,7 @@ public class CallOptions implements IJsonBackedObject {
 
     /**
      * The Is Content Sharing Notification Enabled.
-     * 
+     * Indicates whether content sharing notifications should be enabled for the call.
      */
     @SerializedName(value = "isContentSharingNotificationEnabled", alternate = {"IsContentSharingNotificationEnabled"})
     @Expose

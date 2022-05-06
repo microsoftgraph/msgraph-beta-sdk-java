@@ -54,6 +54,7 @@ import com.microsoft.graph.models.UserGetMailTipsParameterSet;
 import com.microsoft.graph.models.UserSendMailParameterSet;
 import com.microsoft.graph.models.UserTranslateExchangeIdsParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationByDeviceTagParameterSet;
+import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByAzureAdDeviceIdParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByDeviceTagParameterSet;
 import com.microsoft.graph.models.UserExportPersonalDataParameterSet;
 import com.microsoft.graph.models.UserValidatePasswordParameterSet;

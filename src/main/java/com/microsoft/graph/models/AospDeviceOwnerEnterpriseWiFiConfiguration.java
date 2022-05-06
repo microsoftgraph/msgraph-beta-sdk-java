@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WiFiAuthenticationMethod;
 import com.microsoft.graph.models.AndroidEapType;
 import com.microsoft.graph.models.NonEapAuthenticationMethodForEapTtlsType;
@@ -75,6 +76,15 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
     @Expose
 	@Nullable
     public String outerIdentityPrivacyTemporaryValue;
+
+    /**
+     * The Trusted Server Certificate Names.
+     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+     */
+    @SerializedName(value = "trustedServerCertificateNames", alternate = {"TrustedServerCertificateNames"})
+    @Expose
+	@Nullable
+    public java.util.List<String> trustedServerCertificateNames;
 
     /**
      * The Identity Certificate For Client Authentication.
