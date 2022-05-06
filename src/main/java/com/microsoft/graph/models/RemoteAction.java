@@ -1,114 +1,69 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Remote Action.
-*/
-public enum RemoteAction
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * factory Reset
-    */
-    FACTORY_RESET,
-    /**
-    * remove Company Data
-    */
-    REMOVE_COMPANY_DATA,
-    /**
-    * reset Passcode
-    */
-    RESET_PASSCODE,
-    /**
-    * remote Lock
-    */
-    REMOTE_LOCK,
-    /**
-    * enable Lost Mode
-    */
-    ENABLE_LOST_MODE,
-    /**
-    * disable Lost Mode
-    */
-    DISABLE_LOST_MODE,
-    /**
-    * locate Device
-    */
-    LOCATE_DEVICE,
-    /**
-    * reboot Now
-    */
-    REBOOT_NOW,
-    /**
-    * recover Passcode
-    */
-    RECOVER_PASSCODE,
-    /**
-    * clean Windows Device
-    */
-    CLEAN_WINDOWS_DEVICE,
-    /**
-    * logout Shared Apple Device Active User
-    */
-    LOGOUT_SHARED_APPLE_DEVICE_ACTIVE_USER,
-    /**
-    * quick Scan
-    */
-    QUICK_SCAN,
-    /**
-    * full Scan
-    */
-    FULL_SCAN,
-    /**
-    * windows Defender Update Signatures
-    */
-    WINDOWS_DEFENDER_UPDATE_SIGNATURES,
-    /**
-    * factory Reset Keep Enrollment Data
-    */
-    FACTORY_RESET_KEEP_ENROLLMENT_DATA,
-    /**
-    * update Device Account
-    */
-    UPDATE_DEVICE_ACCOUNT,
-    /**
-    * automatic Redeployment
-    */
-    AUTOMATIC_REDEPLOYMENT,
-    /**
-    * shut Down
-    */
-    SHUT_DOWN,
-    /**
-    * rotate Bit Locker Keys
-    */
-    ROTATE_BIT_LOCKER_KEYS,
-    /**
-    * rotate File Vault Key
-    */
-    ROTATE_FILE_VAULT_KEY,
-    /**
-    * get File Vault Key
-    */
-    GET_FILE_VAULT_KEY,
-    /**
-    * set Device Name
-    */
-    SET_DEVICE_NAME,
-    /**
-    * activate Device Esim
-    */
-    ACTIVATE_DEVICE_ESIM,
-    /**
-    * For RemoteAction values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum RemoteAction implements ValuedEnum {
+    Unknown("unknown"),
+    FactoryReset("factoryReset"),
+    RemoveCompanyData("removeCompanyData"),
+    ResetPasscode("resetPasscode"),
+    RemoteLock("remoteLock"),
+    EnableLostMode("enableLostMode"),
+    DisableLostMode("disableLostMode"),
+    LocateDevice("locateDevice"),
+    RebootNow("rebootNow"),
+    RecoverPasscode("recoverPasscode"),
+    CleanWindowsDevice("cleanWindowsDevice"),
+    LogoutSharedAppleDeviceActiveUser("logoutSharedAppleDeviceActiveUser"),
+    QuickScan("quickScan"),
+    FullScan("fullScan"),
+    WindowsDefenderUpdateSignatures("windowsDefenderUpdateSignatures"),
+    FactoryResetKeepEnrollmentData("factoryResetKeepEnrollmentData"),
+    UpdateDeviceAccount("updateDeviceAccount"),
+    AutomaticRedeployment("automaticRedeployment"),
+    ShutDown("shutDown"),
+    RotateBitLockerKeys("rotateBitLockerKeys"),
+    RotateFileVaultKey("rotateFileVaultKey"),
+    GetFileVaultKey("getFileVaultKey"),
+    SetDeviceName("setDeviceName"),
+    ActivateDeviceEsim("activateDeviceEsim");
+    public final String value;
+    RemoteAction(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RemoteAction forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "factoryReset": return FactoryReset;
+            case "removeCompanyData": return RemoveCompanyData;
+            case "resetPasscode": return ResetPasscode;
+            case "remoteLock": return RemoteLock;
+            case "enableLostMode": return EnableLostMode;
+            case "disableLostMode": return DisableLostMode;
+            case "locateDevice": return LocateDevice;
+            case "rebootNow": return RebootNow;
+            case "recoverPasscode": return RecoverPasscode;
+            case "cleanWindowsDevice": return CleanWindowsDevice;
+            case "logoutSharedAppleDeviceActiveUser": return LogoutSharedAppleDeviceActiveUser;
+            case "quickScan": return QuickScan;
+            case "fullScan": return FullScan;
+            case "windowsDefenderUpdateSignatures": return WindowsDefenderUpdateSignatures;
+            case "factoryResetKeepEnrollmentData": return FactoryResetKeepEnrollmentData;
+            case "updateDeviceAccount": return UpdateDeviceAccount;
+            case "automaticRedeployment": return AutomaticRedeployment;
+            case "shutDown": return ShutDown;
+            case "rotateBitLockerKeys": return RotateBitLockerKeys;
+            case "rotateFileVaultKey": return RotateFileVaultKey;
+            case "getFileVaultKey": return GetFileVaultKey;
+            case "setDeviceName": return SetDeviceName;
+            case "activateDeviceEsim": return ActivateDeviceEsim;
+            default: return null;
+        }
+    }
 }

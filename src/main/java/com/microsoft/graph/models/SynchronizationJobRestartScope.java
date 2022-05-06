@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Synchronization Job Restart Scope.
-*/
-public enum SynchronizationJobRestartScope
-{
-    /**
-    * None
-    */
-    NONE,
-    /**
-    * Connector Data Store
-    */
-    CONNECTOR_DATA_STORE,
-    /**
-    * Escrows
-    */
-    ESCROWS,
-    /**
-    * Watermark
-    */
-    WATERMARK,
-    /**
-    * Quarantine State
-    */
-    QUARANTINE_STATE,
-    /**
-    * Full
-    */
-    FULL,
-    /**
-    * Force Deletes
-    */
-    FORCE_DELETES,
-    /**
-    * For SynchronizationJobRestartScope values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the restart method.  */
+public enum SynchronizationJobRestartScope implements ValuedEnum {
+    None("None"),
+    ConnectorDataStore("ConnectorDataStore"),
+    Escrows("Escrows"),
+    Watermark("Watermark"),
+    QuarantineState("QuarantineState"),
+    Full("Full"),
+    ForceDeletes("ForceDeletes");
+    public final String value;
+    SynchronizationJobRestartScope(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SynchronizationJobRestartScope forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "None": return None;
+            case "ConnectorDataStore": return ConnectorDataStore;
+            case "Escrows": return Escrows;
+            case "Watermark": return Watermark;
+            case "QuarantineState": return QuarantineState;
+            case "Full": return Full;
+            case "ForceDeletes": return ForceDeletes;
+            default: return null;
+        }
+    }
 }

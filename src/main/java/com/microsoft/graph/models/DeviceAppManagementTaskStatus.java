@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device App Management Task Status.
-*/
-public enum DeviceAppManagementTaskStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * active
-    */
-    ACTIVE,
-    /**
-    * completed
-    */
-    COMPLETED,
-    /**
-    * rejected
-    */
-    REJECTED,
-    /**
-    * For DeviceAppManagementTaskStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum DeviceAppManagementTaskStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Pending("pending"),
+    Active("active"),
+    Completed("completed"),
+    Rejected("rejected");
+    public final String value;
+    DeviceAppManagementTaskStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceAppManagementTaskStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "pending": return Pending;
+            case "active": return Active;
+            case "completed": return Completed;
+            case "rejected": return Rejected;
+            default: return null;
+        }
+    }
 }

@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Cloud Pc Device Image Status Details.
-*/
-public enum CloudPcDeviceImageStatusDetails
-{
-    /**
-    * internal Server Error
-    */
-    INTERNAL_SERVER_ERROR,
-    /**
-    * source Image Not Found
-    */
-    SOURCE_IMAGE_NOT_FOUND,
-    /**
-    * os Version Not Supported
-    */
-    OS_VERSION_NOT_SUPPORTED,
-    /**
-    * source Image Invalid
-    */
-    SOURCE_IMAGE_INVALID,
-    /**
-    * source Image Not Generalized
-    */
-    SOURCE_IMAGE_NOT_GENERALIZED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For CloudPcDeviceImageStatusDetails values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum CloudPcDeviceImageStatusDetails implements ValuedEnum {
+    InternalServerError("internalServerError"),
+    SourceImageNotFound("sourceImageNotFound"),
+    OsVersionNotSupported("osVersionNotSupported"),
+    SourceImageInvalid("sourceImageInvalid"),
+    SourceImageNotGeneralized("sourceImageNotGeneralized"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    CloudPcDeviceImageStatusDetails(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CloudPcDeviceImageStatusDetails forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "internalServerError": return InternalServerError;
+            case "sourceImageNotFound": return SourceImageNotFound;
+            case "osVersionNotSupported": return OsVersionNotSupported;
+            case "sourceImageInvalid": return SourceImageInvalid;
+            case "sourceImageNotGeneralized": return SourceImageNotGeneralized;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Group Policy Operation Type.
-*/
-public enum GroupPolicyOperationType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * upload
-    */
-    UPLOAD,
-    /**
-    * upload New Version
-    */
-    UPLOAD_NEW_VERSION,
-    /**
-    * add Language Files
-    */
-    ADD_LANGUAGE_FILES,
-    /**
-    * remove Language Files
-    */
-    REMOVE_LANGUAGE_FILES,
-    /**
-    * update Language Files
-    */
-    UPDATE_LANGUAGE_FILES,
-    /**
-    * remove
-    */
-    REMOVE,
-    /**
-    * For GroupPolicyOperationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum GroupPolicyOperationType implements ValuedEnum {
+    None("none"),
+    Upload("upload"),
+    UploadNewVersion("uploadNewVersion"),
+    AddLanguageFiles("addLanguageFiles"),
+    RemoveLanguageFiles("removeLanguageFiles"),
+    UpdateLanguageFiles("updateLanguageFiles"),
+    Remove("remove");
+    public final String value;
+    GroupPolicyOperationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GroupPolicyOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "upload": return Upload;
+            case "uploadNewVersion": return UploadNewVersion;
+            case "addLanguageFiles": return AddLanguageFiles;
+            case "removeLanguageFiles": return RemoveLanguageFiles;
+            case "updateLanguageFiles": return UpdateLanguageFiles;
+            case "remove": return Remove;
+            default: return null;
+        }
+    }
 }

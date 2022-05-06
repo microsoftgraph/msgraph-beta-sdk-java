@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum App Credential Restriction Type.
-*/
-public enum AppCredentialRestrictionType
-{
-    /**
-    * password Addition
-    */
-    PASSWORD_ADDITION,
-    /**
-    * password Lifetime
-    */
-    PASSWORD_LIFETIME,
-    /**
-    * symmetric Key Addition
-    */
-    SYMMETRIC_KEY_ADDITION,
-    /**
-    * symmetric Key Lifetime
-    */
-    SYMMETRIC_KEY_LIFETIME,
-    /**
-    * custom Password Addition
-    */
-    CUSTOM_PASSWORD_ADDITION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AppCredentialRestrictionType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities.  */
+public enum AppCredentialRestrictionType implements ValuedEnum {
+    PasswordAddition("passwordAddition"),
+    PasswordLifetime("passwordLifetime"),
+    SymmetricKeyAddition("symmetricKeyAddition"),
+    SymmetricKeyLifetime("symmetricKeyLifetime"),
+    CustomPasswordAddition("customPasswordAddition"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AppCredentialRestrictionType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AppCredentialRestrictionType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "passwordAddition": return PasswordAddition;
+            case "passwordLifetime": return PasswordLifetime;
+            case "symmetricKeyAddition": return SymmetricKeyAddition;
+            case "symmetricKeyLifetime": return SymmetricKeyLifetime;
+            case "customPasswordAddition": return CustomPasswordAddition;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

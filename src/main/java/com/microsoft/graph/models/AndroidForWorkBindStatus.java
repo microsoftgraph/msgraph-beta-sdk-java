@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android For Work Bind Status.
-*/
-public enum AndroidForWorkBindStatus
-{
-    /**
-    * not Bound
-    */
-    NOT_BOUND,
-    /**
-    * bound
-    */
-    BOUND,
-    /**
-    * bound And Validated
-    */
-    BOUND_AND_VALIDATED,
-    /**
-    * unbinding
-    */
-    UNBINDING,
-    /**
-    * For AndroidForWorkBindStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum AndroidForWorkBindStatus implements ValuedEnum {
+    NotBound("notBound"),
+    Bound("bound"),
+    BoundAndValidated("boundAndValidated"),
+    Unbinding("unbinding");
+    public final String value;
+    AndroidForWorkBindStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidForWorkBindStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notBound": return NotBound;
+            case "bound": return Bound;
+            case "boundAndValidated": return BoundAndValidated;
+            case "unbinding": return Unbinding;
+            default: return null;
+        }
+    }
 }

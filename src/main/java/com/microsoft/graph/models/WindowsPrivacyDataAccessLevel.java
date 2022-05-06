@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Privacy Data Access Level.
-*/
-public enum WindowsPrivacyDataAccessLevel
-{
-    /**
-    * not Configured
-    */
-    NOT_CONFIGURED,
-    /**
-    * force Allow
-    */
-    FORCE_ALLOW,
-    /**
-    * force Deny
-    */
-    FORCE_DENY,
-    /**
-    * user In Control
-    */
-    USER_IN_CONTROL,
-    /**
-    * For WindowsPrivacyDataAccessLevel values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the windowsPrivacyAccessControls method.  */
+public enum WindowsPrivacyDataAccessLevel implements ValuedEnum {
+    NotConfigured("notConfigured"),
+    ForceAllow("forceAllow"),
+    ForceDeny("forceDeny"),
+    UserInControl("userInControl");
+    public final String value;
+    WindowsPrivacyDataAccessLevel(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsPrivacyDataAccessLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notConfigured": return NotConfigured;
+            case "forceAllow": return ForceAllow;
+            case "forceDeny": return ForceDeny;
+            case "userInControl": return UserInControl;
+            default: return null;
+        }
+    }
 }

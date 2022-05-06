@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Configuration Control Type.
-*/
-public enum DeviceManagementConfigurationControlType
-{
-    /**
-    * default
-    */
-    DEFAULT,
-    /**
-    * dropdown
-    */
-    DROPDOWN,
-    /**
-    * small Text Box
-    */
-    SMALL_TEXT_BOX,
-    /**
-    * large Text Box
-    */
-    LARGE_TEXT_BOX,
-    /**
-    * toggle
-    */
-    TOGGLE,
-    /**
-    * multiheader Grid
-    */
-    MULTIHEADER_GRID,
-    /**
-    * context Pane
-    */
-    CONTEXT_PANE,
-    /**
-    * For DeviceManagementConfigurationControlType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum DeviceManagementConfigurationControlType implements ValuedEnum {
+    Default_escaped("default_escaped"),
+    Dropdown("dropdown"),
+    SmallTextBox("smallTextBox"),
+    LargeTextBox("largeTextBox"),
+    Toggle("toggle"),
+    MultiheaderGrid("multiheaderGrid"),
+    ContextPane("contextPane");
+    public final String value;
+    DeviceManagementConfigurationControlType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementConfigurationControlType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "default_escaped": return Default_escaped;
+            case "dropdown": return Dropdown;
+            case "smallTextBox": return SmallTextBox;
+            case "largeTextBox": return LargeTextBox;
+            case "toggle": return Toggle;
+            case "multiheaderGrid": return MultiheaderGrid;
+            case "contextPane": return ContextPane;
+            default: return null;
+        }
+    }
 }

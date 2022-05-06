@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Group Policy Operation Status.
-*/
-public enum GroupPolicyOperationStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * in Progress
-    */
-    IN_PROGRESS,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * For GroupPolicyOperationStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum GroupPolicyOperationStatus implements ValuedEnum {
+    Unknown("unknown"),
+    InProgress("inProgress"),
+    Success("success"),
+    Failed("failed");
+    public final String value;
+    GroupPolicyOperationStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GroupPolicyOperationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "inProgress": return InProgress;
+            case "success": return Success;
+            case "failed": return Failed;
+            default: return null;
+        }
+    }
 }

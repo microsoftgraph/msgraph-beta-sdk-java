@@ -1,74 +1,49 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Risk Detail.
-*/
-public enum RiskDetail
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * admin Generated Temporary Password
-    */
-    ADMIN_GENERATED_TEMPORARY_PASSWORD,
-    /**
-    * user Performed Secured Password Change
-    */
-    USER_PERFORMED_SECURED_PASSWORD_CHANGE,
-    /**
-    * user Performed Secured Password Reset
-    */
-    USER_PERFORMED_SECURED_PASSWORD_RESET,
-    /**
-    * admin Confirmed Signin Safe
-    */
-    ADMIN_CONFIRMED_SIGNIN_SAFE,
-    /**
-    * ai Confirmed Signin Safe
-    */
-    AI_CONFIRMED_SIGNIN_SAFE,
-    /**
-    * user Passed MFADriven By Risk Based Policy
-    */
-    USER_PASSED_MFA_DRIVEN_BY_RISK_BASED_POLICY,
-    /**
-    * admin Dismissed All Risk For User
-    */
-    ADMIN_DISMISSED_ALL_RISK_FOR_USER,
-    /**
-    * admin Confirmed Signin Compromised
-    */
-    ADMIN_CONFIRMED_SIGNIN_COMPROMISED,
-    /**
-    * hidden
-    */
-    HIDDEN,
-    /**
-    * admin Confirmed User Compromised
-    */
-    ADMIN_CONFIRMED_USER_COMPROMISED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * admin Confirmed Service Principal Compromised
-    */
-    ADMIN_CONFIRMED_SERVICE_PRINCIPAL_COMPROMISED,
-    /**
-    * admin Dismissed All Risk For Service Principal
-    */
-    ADMIN_DISMISSED_ALL_RISK_FOR_SERVICE_PRINCIPAL,
-    /**
-    * For RiskDetail values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton.  */
+public enum RiskDetail implements ValuedEnum {
+    None("none"),
+    AdminGeneratedTemporaryPassword("adminGeneratedTemporaryPassword"),
+    UserPerformedSecuredPasswordChange("userPerformedSecuredPasswordChange"),
+    UserPerformedSecuredPasswordReset("userPerformedSecuredPasswordReset"),
+    AdminConfirmedSigninSafe("adminConfirmedSigninSafe"),
+    AiConfirmedSigninSafe("aiConfirmedSigninSafe"),
+    UserPassedMFADrivenByRiskBasedPolicy("userPassedMFADrivenByRiskBasedPolicy"),
+    AdminDismissedAllRiskForUser("adminDismissedAllRiskForUser"),
+    AdminConfirmedSigninCompromised("adminConfirmedSigninCompromised"),
+    Hidden("hidden"),
+    AdminConfirmedUserCompromised("adminConfirmedUserCompromised"),
+    UnknownFutureValue("unknownFutureValue"),
+    AdminConfirmedServicePrincipalCompromised("adminConfirmedServicePrincipalCompromised"),
+    AdminDismissedAllRiskForServicePrincipal("adminDismissedAllRiskForServicePrincipal");
+    public final String value;
+    RiskDetail(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RiskDetail forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "adminGeneratedTemporaryPassword": return AdminGeneratedTemporaryPassword;
+            case "userPerformedSecuredPasswordChange": return UserPerformedSecuredPasswordChange;
+            case "userPerformedSecuredPasswordReset": return UserPerformedSecuredPasswordReset;
+            case "adminConfirmedSigninSafe": return AdminConfirmedSigninSafe;
+            case "aiConfirmedSigninSafe": return AiConfirmedSigninSafe;
+            case "userPassedMFADrivenByRiskBasedPolicy": return UserPassedMFADrivenByRiskBasedPolicy;
+            case "adminDismissedAllRiskForUser": return AdminDismissedAllRiskForUser;
+            case "adminConfirmedSigninCompromised": return AdminConfirmedSigninCompromised;
+            case "hidden": return Hidden;
+            case "adminConfirmedUserCompromised": return AdminConfirmedUserCompromised;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "adminConfirmedServicePrincipalCompromised": return AdminConfirmedServicePrincipalCompromised;
+            case "adminDismissedAllRiskForServicePrincipal": return AdminDismissedAllRiskForServicePrincipal;
+            default: return null;
+        }
+    }
 }

@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Usage Right State.
-*/
-public enum UsageRightState
-{
-    /**
-    * active
-    */
-    ACTIVE,
-    /**
-    * inactive
-    */
-    INACTIVE,
-    /**
-    * warning
-    */
-    WARNING,
-    /**
-    * suspended
-    */
-    SUSPENDED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For UsageRightState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum UsageRightState implements ValuedEnum {
+    Active("active"),
+    Inactive("inactive"),
+    Warning("warning"),
+    Suspended("suspended"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    UsageRightState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static UsageRightState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "active": return Active;
+            case "inactive": return Inactive;
+            case "warning": return Warning;
+            case "suspended": return Suspended;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

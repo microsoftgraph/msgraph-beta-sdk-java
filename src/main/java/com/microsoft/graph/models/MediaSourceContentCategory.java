@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Media Source Content Category.
-*/
-public enum MediaSourceContentCategory
-{
-    /**
-    * meeting
-    */
-    MEETING,
-    /**
-    * live Stream
-    */
-    LIVE_STREAM,
-    /**
-    * presentation
-    */
-    PRESENTATION,
-    /**
-    * screen Recording
-    */
-    SCREEN_RECORDING,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For MediaSourceContentCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum MediaSourceContentCategory implements ValuedEnum {
+    Meeting("meeting"),
+    LiveStream("liveStream"),
+    Presentation("presentation"),
+    ScreenRecording("screenRecording"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    MediaSourceContentCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MediaSourceContentCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "meeting": return Meeting;
+            case "liveStream": return LiveStream;
+            case "presentation": return Presentation;
+            case "screenRecording": return ScreenRecording;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

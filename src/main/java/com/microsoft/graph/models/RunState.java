@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Run State.
-*/
-public enum RunState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * fail
-    */
-    FAIL,
-    /**
-    * script Error
-    */
-    SCRIPT_ERROR,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * not Applicable
-    */
-    NOT_APPLICABLE,
-    /**
-    * For RunState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum RunState implements ValuedEnum {
+    Unknown("unknown"),
+    Success("success"),
+    Fail("fail"),
+    ScriptError("scriptError"),
+    Pending("pending"),
+    NotApplicable("notApplicable");
+    public final String value;
+    RunState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RunState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "success": return Success;
+            case "fail": return Fail;
+            case "scriptError": return ScriptError;
+            case "pending": return Pending;
+            case "notApplicable": return NotApplicable;
+            default: return null;
+        }
+    }
 }

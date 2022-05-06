@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Resultant App State.
-*/
-public enum ResultantAppState
-{
-    /**
-    * not Applicable
-    */
-    NOT_APPLICABLE,
-    /**
-    * installed
-    */
-    INSTALLED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * not Installed
-    */
-    NOT_INSTALLED,
-    /**
-    * uninstall Failed
-    */
-    UNINSTALL_FAILED,
-    /**
-    * pending Install
-    */
-    PENDING_INSTALL,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * For ResultantAppState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum ResultantAppState implements ValuedEnum {
+    NotApplicable("notApplicable"),
+    Installed("installed"),
+    Failed("failed"),
+    NotInstalled("notInstalled"),
+    UninstallFailed("uninstallFailed"),
+    PendingInstall("pendingInstall"),
+    Unknown("unknown");
+    public final String value;
+    ResultantAppState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ResultantAppState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notApplicable": return NotApplicable;
+            case "installed": return Installed;
+            case "failed": return Failed;
+            case "notInstalled": return NotInstalled;
+            case "uninstallFailed": return UninstallFailed;
+            case "pendingInstall": return PendingInstall;
+            case "unknown": return Unknown;
+            default: return null;
+        }
+    }
 }

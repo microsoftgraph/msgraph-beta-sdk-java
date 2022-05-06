@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device App Management Task Category.
-*/
-public enum DeviceAppManagementTaskCategory
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * advanced Threat Protection
-    */
-    ADVANCED_THREAT_PROTECTION,
-    /**
-    * For DeviceAppManagementTaskCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum DeviceAppManagementTaskCategory implements ValuedEnum {
+    Unknown("unknown"),
+    AdvancedThreatProtection("advancedThreatProtection");
+    public final String value;
+    DeviceAppManagementTaskCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceAppManagementTaskCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "advancedThreatProtection": return AdvancedThreatProtection;
+            default: return null;
+        }
+    }
 }

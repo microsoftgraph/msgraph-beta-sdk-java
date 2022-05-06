@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Autopilot Profile Assignment Status.
-*/
-public enum WindowsAutopilotProfileAssignmentStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * assigned In Sync
-    */
-    ASSIGNED_IN_SYNC,
-    /**
-    * assigned Out Of Sync
-    */
-    ASSIGNED_OUT_OF_SYNC,
-    /**
-    * assigned Unkown Sync State
-    */
-    ASSIGNED_UNKOWN_SYNC_STATE,
-    /**
-    * not Assigned
-    */
-    NOT_ASSIGNED,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * For WindowsAutopilotProfileAssignmentStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum WindowsAutopilotProfileAssignmentStatus implements ValuedEnum {
+    Unknown("unknown"),
+    AssignedInSync("assignedInSync"),
+    AssignedOutOfSync("assignedOutOfSync"),
+    AssignedUnkownSyncState("assignedUnkownSyncState"),
+    NotAssigned("notAssigned"),
+    Pending("pending"),
+    Failed("failed");
+    public final String value;
+    WindowsAutopilotProfileAssignmentStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsAutopilotProfileAssignmentStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "assignedInSync": return AssignedInSync;
+            case "assignedOutOfSync": return AssignedOutOfSync;
+            case "assignedUnkownSyncState": return AssignedUnkownSyncState;
+            case "notAssigned": return NotAssigned;
+            case "pending": return Pending;
+            case "failed": return Failed;
+            default: return null;
+        }
+    }
 }

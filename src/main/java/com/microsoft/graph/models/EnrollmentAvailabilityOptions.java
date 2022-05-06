@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Enrollment Availability Options.
-*/
-public enum EnrollmentAvailabilityOptions
-{
-    /**
-    * available With Prompts
-    */
-    AVAILABLE_WITH_PROMPTS,
-    /**
-    * available Without Prompts
-    */
-    AVAILABLE_WITHOUT_PROMPTS,
-    /**
-    * unavailable
-    */
-    UNAVAILABLE,
-    /**
-    * For EnrollmentAvailabilityOptions values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum EnrollmentAvailabilityOptions implements ValuedEnum {
+    AvailableWithPrompts("availableWithPrompts"),
+    AvailableWithoutPrompts("availableWithoutPrompts"),
+    Unavailable("unavailable");
+    public final String value;
+    EnrollmentAvailabilityOptions(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static EnrollmentAvailabilityOptions forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "availableWithPrompts": return AvailableWithPrompts;
+            case "availableWithoutPrompts": return AvailableWithoutPrompts;
+            case "unavailable": return Unavailable;
+            default: return null;
+        }
+    }
 }

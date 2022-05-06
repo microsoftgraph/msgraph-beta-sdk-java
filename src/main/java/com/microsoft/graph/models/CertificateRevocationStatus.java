@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Certificate Revocation Status.
-*/
-public enum CertificateRevocationStatus
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * issued
-    */
-    ISSUED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * revoked
-    */
-    REVOKED,
-    /**
-    * For CertificateRevocationStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum CertificateRevocationStatus implements ValuedEnum {
+    None("none"),
+    Pending("pending"),
+    Issued("issued"),
+    Failed("failed"),
+    Revoked("revoked");
+    public final String value;
+    CertificateRevocationStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CertificateRevocationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "pending": return Pending;
+            case "issued": return Issued;
+            case "failed": return Failed;
+            case "revoked": return Revoked;
+            default: return null;
+        }
+    }
 }

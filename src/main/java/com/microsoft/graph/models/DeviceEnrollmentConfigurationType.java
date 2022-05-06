@@ -1,66 +1,47 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Enrollment Configuration Type.
-*/
-public enum DeviceEnrollmentConfigurationType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * limit
-    */
-    LIMIT,
-    /**
-    * platform Restrictions
-    */
-    PLATFORM_RESTRICTIONS,
-    /**
-    * windows Hello For Business
-    */
-    WINDOWS_HELLO_FOR_BUSINESS,
-    /**
-    * default Limit
-    */
-    DEFAULT_LIMIT,
-    /**
-    * default Platform Restrictions
-    */
-    DEFAULT_PLATFORM_RESTRICTIONS,
-    /**
-    * default Windows Hello For Business
-    */
-    DEFAULT_WINDOWS_HELLO_FOR_BUSINESS,
-    /**
-    * default Windows10Enrollment Completion Page Configuration
-    */
-    DEFAULT_WINDOWS10_ENROLLMENT_COMPLETION_PAGE_CONFIGURATION,
-    /**
-    * windows10Enrollment Completion Page Configuration
-    */
-    WINDOWS10_ENROLLMENT_COMPLETION_PAGE_CONFIGURATION,
-    /**
-    * device Comanagement Authority Configuration
-    */
-    DEVICE_COMANAGEMENT_AUTHORITY_CONFIGURATION,
-    /**
-    * single Platform Restriction
-    */
-    SINGLE_PLATFORM_RESTRICTION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DeviceEnrollmentConfigurationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum DeviceEnrollmentConfigurationType implements ValuedEnum {
+    Unknown("unknown"),
+    Limit("limit"),
+    PlatformRestrictions("platformRestrictions"),
+    WindowsHelloForBusiness("windowsHelloForBusiness"),
+    DefaultLimit("defaultLimit"),
+    DefaultPlatformRestrictions("defaultPlatformRestrictions"),
+    DefaultWindowsHelloForBusiness("defaultWindowsHelloForBusiness"),
+    DefaultWindows10EnrollmentCompletionPageConfiguration("defaultWindows10EnrollmentCompletionPageConfiguration"),
+    Windows10EnrollmentCompletionPageConfiguration("windows10EnrollmentCompletionPageConfiguration"),
+    DeviceComanagementAuthorityConfiguration("deviceComanagementAuthorityConfiguration"),
+    SinglePlatformRestriction("singlePlatformRestriction"),
+    UnknownFutureValue("unknownFutureValue"),
+    EnrollmentNotificationsConfiguration("enrollmentNotificationsConfiguration");
+    public final String value;
+    DeviceEnrollmentConfigurationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceEnrollmentConfigurationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "limit": return Limit;
+            case "platformRestrictions": return PlatformRestrictions;
+            case "windowsHelloForBusiness": return WindowsHelloForBusiness;
+            case "defaultLimit": return DefaultLimit;
+            case "defaultPlatformRestrictions": return DefaultPlatformRestrictions;
+            case "defaultWindowsHelloForBusiness": return DefaultWindowsHelloForBusiness;
+            case "defaultWindows10EnrollmentCompletionPageConfiguration": return DefaultWindows10EnrollmentCompletionPageConfiguration;
+            case "windows10EnrollmentCompletionPageConfiguration": return Windows10EnrollmentCompletionPageConfiguration;
+            case "deviceComanagementAuthorityConfiguration": return DeviceComanagementAuthorityConfiguration;
+            case "singlePlatformRestriction": return SinglePlatformRestriction;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "enrollmentNotificationsConfiguration": return EnrollmentNotificationsConfiguration;
+            default: return null;
+        }
+    }
 }

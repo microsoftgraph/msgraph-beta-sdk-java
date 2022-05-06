@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Azure ADLicense Type.
-*/
-public enum AzureADLicenseType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * free
-    */
-    FREE,
-    /**
-    * basic
-    */
-    BASIC,
-    /**
-    * premium P1
-    */
-    PREMIUM_P1,
-    /**
-    * premium P2
-    */
-    PREMIUM_P2,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AzureADLicenseType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the getAzureADLicenseUsage method.  */
+public enum AzureADLicenseType implements ValuedEnum {
+    None("none"),
+    Free("free"),
+    Basic("basic"),
+    PremiumP1("premiumP1"),
+    PremiumP2("premiumP2"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AzureADLicenseType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AzureADLicenseType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "free": return Free;
+            case "basic": return Basic;
+            case "premiumP1": return PremiumP1;
+            case "premiumP2": return PremiumP2;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

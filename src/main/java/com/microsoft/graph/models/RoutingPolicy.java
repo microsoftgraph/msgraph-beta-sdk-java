@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Routing Policy.
-*/
-public enum RoutingPolicy
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * no Missed Call
-    */
-    NO_MISSED_CALL,
-    /**
-    * disable Forwarding Except Phone
-    */
-    DISABLE_FORWARDING_EXCEPT_PHONE,
-    /**
-    * disable Forwarding
-    */
-    DISABLE_FORWARDING,
-    /**
-    * prefer Skype For Business
-    */
-    PREFER_SKYPE_FOR_BUSINESS,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RoutingPolicy values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the commsApplication singleton.  */
+public enum RoutingPolicy implements ValuedEnum {
+    None("none"),
+    NoMissedCall("noMissedCall"),
+    DisableForwardingExceptPhone("disableForwardingExceptPhone"),
+    DisableForwarding("disableForwarding"),
+    PreferSkypeForBusiness("preferSkypeForBusiness"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RoutingPolicy(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RoutingPolicy forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "noMissedCall": return NoMissedCall;
+            case "disableForwardingExceptPhone": return DisableForwardingExceptPhone;
+            case "disableForwarding": return DisableForwarding;
+            case "preferSkypeForBusiness": return PreferSkypeForBusiness;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Allowed Audiences.
-*/
-public enum AllowedAudiences
-{
-    /**
-    * me
-    */
-    ME,
-    /**
-    * family
-    */
-    FAMILY,
-    /**
-    * contacts
-    */
-    CONTACTS,
-    /**
-    * group Members
-    */
-    GROUP_MEMBERS,
-    /**
-    * organization
-    */
-    ORGANIZATION,
-    /**
-    * federated Organizations
-    */
-    FEDERATED_ORGANIZATIONS,
-    /**
-    * everyone
-    */
-    EVERYONE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AllowedAudiences values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum AllowedAudiences implements ValuedEnum {
+    Me("me"),
+    Family("family"),
+    Contacts("contacts"),
+    GroupMembers("groupMembers"),
+    Organization("organization"),
+    FederatedOrganizations("federatedOrganizations"),
+    Everyone("everyone"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AllowedAudiences(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AllowedAudiences forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "me": return Me;
+            case "family": return Family;
+            case "contacts": return Contacts;
+            case "groupMembers": return GroupMembers;
+            case "organization": return Organization;
+            case "federatedOrganizations": return FederatedOrganizations;
+            case "everyone": return Everyone;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,146 +1,85 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Code.
-*/
-public enum Code
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * json File Invalid
-    */
-    JSON_FILE_INVALID,
-    /**
-    * json File Missing
-    */
-    JSON_FILE_MISSING,
-    /**
-    * json File Too Large
-    */
-    JSON_FILE_TOO_LARGE,
-    /**
-    * rules Missing
-    */
-    RULES_MISSING,
-    /**
-    * duplicate Rules
-    */
-    DUPLICATE_RULES,
-    /**
-    * too Many Rules Specified
-    */
-    TOO_MANY_RULES_SPECIFIED,
-    /**
-    * operator Missing
-    */
-    OPERATOR_MISSING,
-    /**
-    * operator Not Supported
-    */
-    OPERATOR_NOT_SUPPORTED,
-    /**
-    * datatype Missing
-    */
-    DATATYPE_MISSING,
-    /**
-    * datatype Not Supported
-    */
-    DATATYPE_NOT_SUPPORTED,
-    /**
-    * operator Data Type Combination Not Supported
-    */
-    OPERATOR_DATA_TYPE_COMBINATION_NOT_SUPPORTED,
-    /**
-    * more Info Uri Missing
-    */
-    MORE_INFO_URI_MISSING,
-    /**
-    * more Info Uri Invalid
-    */
-    MORE_INFO_URI_INVALID,
-    /**
-    * more Info Uri Too Large
-    */
-    MORE_INFO_URI_TOO_LARGE,
-    /**
-    * description Missing
-    */
-    DESCRIPTION_MISSING,
-    /**
-    * description Invalid
-    */
-    DESCRIPTION_INVALID,
-    /**
-    * description Too Large
-    */
-    DESCRIPTION_TOO_LARGE,
-    /**
-    * title Missing
-    */
-    TITLE_MISSING,
-    /**
-    * title Invalid
-    */
-    TITLE_INVALID,
-    /**
-    * title Too Large
-    */
-    TITLE_TOO_LARGE,
-    /**
-    * operand Missing
-    */
-    OPERAND_MISSING,
-    /**
-    * operand Invalid
-    */
-    OPERAND_INVALID,
-    /**
-    * operand Too Large
-    */
-    OPERAND_TOO_LARGE,
-    /**
-    * setting Name Missing
-    */
-    SETTING_NAME_MISSING,
-    /**
-    * setting Name Invalid
-    */
-    SETTING_NAME_INVALID,
-    /**
-    * setting Name Too Large
-    */
-    SETTING_NAME_TOO_LARGE,
-    /**
-    * english Locale Missing
-    */
-    ENGLISH_LOCALE_MISSING,
-    /**
-    * duplicate Locales
-    */
-    DUPLICATE_LOCALES,
-    /**
-    * unrecognized Locale
-    */
-    UNRECOGNIZED_LOCALE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * remediation Strings Missing
-    */
-    REMEDIATION_STRINGS_MISSING,
-    /**
-    * For Code values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the validateComplianceScript method.  */
+public enum Code implements ValuedEnum {
+    None("none"),
+    JsonFileInvalid("jsonFileInvalid"),
+    JsonFileMissing("jsonFileMissing"),
+    JsonFileTooLarge("jsonFileTooLarge"),
+    RulesMissing("rulesMissing"),
+    DuplicateRules("duplicateRules"),
+    TooManyRulesSpecified("tooManyRulesSpecified"),
+    OperatorMissing("operatorMissing"),
+    OperatorNotSupported("operatorNotSupported"),
+    DatatypeMissing("datatypeMissing"),
+    DatatypeNotSupported("datatypeNotSupported"),
+    OperatorDataTypeCombinationNotSupported("operatorDataTypeCombinationNotSupported"),
+    MoreInfoUriMissing("moreInfoUriMissing"),
+    MoreInfoUriInvalid("moreInfoUriInvalid"),
+    MoreInfoUriTooLarge("moreInfoUriTooLarge"),
+    DescriptionMissing("descriptionMissing"),
+    DescriptionInvalid("descriptionInvalid"),
+    DescriptionTooLarge("descriptionTooLarge"),
+    TitleMissing("titleMissing"),
+    TitleInvalid("titleInvalid"),
+    TitleTooLarge("titleTooLarge"),
+    OperandMissing("operandMissing"),
+    OperandInvalid("operandInvalid"),
+    OperandTooLarge("operandTooLarge"),
+    SettingNameMissing("settingNameMissing"),
+    SettingNameInvalid("settingNameInvalid"),
+    SettingNameTooLarge("settingNameTooLarge"),
+    EnglishLocaleMissing("englishLocaleMissing"),
+    DuplicateLocales("duplicateLocales"),
+    UnrecognizedLocale("unrecognizedLocale"),
+    Unknown("unknown"),
+    RemediationStringsMissing("remediationStringsMissing");
+    public final String value;
+    Code(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static Code forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "jsonFileInvalid": return JsonFileInvalid;
+            case "jsonFileMissing": return JsonFileMissing;
+            case "jsonFileTooLarge": return JsonFileTooLarge;
+            case "rulesMissing": return RulesMissing;
+            case "duplicateRules": return DuplicateRules;
+            case "tooManyRulesSpecified": return TooManyRulesSpecified;
+            case "operatorMissing": return OperatorMissing;
+            case "operatorNotSupported": return OperatorNotSupported;
+            case "datatypeMissing": return DatatypeMissing;
+            case "datatypeNotSupported": return DatatypeNotSupported;
+            case "operatorDataTypeCombinationNotSupported": return OperatorDataTypeCombinationNotSupported;
+            case "moreInfoUriMissing": return MoreInfoUriMissing;
+            case "moreInfoUriInvalid": return MoreInfoUriInvalid;
+            case "moreInfoUriTooLarge": return MoreInfoUriTooLarge;
+            case "descriptionMissing": return DescriptionMissing;
+            case "descriptionInvalid": return DescriptionInvalid;
+            case "descriptionTooLarge": return DescriptionTooLarge;
+            case "titleMissing": return TitleMissing;
+            case "titleInvalid": return TitleInvalid;
+            case "titleTooLarge": return TitleTooLarge;
+            case "operandMissing": return OperandMissing;
+            case "operandInvalid": return OperandInvalid;
+            case "operandTooLarge": return OperandTooLarge;
+            case "settingNameMissing": return SettingNameMissing;
+            case "settingNameInvalid": return SettingNameInvalid;
+            case "settingNameTooLarge": return SettingNameTooLarge;
+            case "englishLocaleMissing": return EnglishLocaleMissing;
+            case "duplicateLocales": return DuplicateLocales;
+            case "unrecognizedLocale": return UnrecognizedLocale;
+            case "unknown": return Unknown;
+            case "remediationStringsMissing": return RemediationStringsMissing;
+            default: return null;
+        }
+    }
 }

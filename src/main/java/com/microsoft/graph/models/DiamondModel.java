@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Diamond Model.
-*/
-public enum DiamondModel
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * adversary
-    */
-    ADVERSARY,
-    /**
-    * capability
-    */
-    CAPABILITY,
-    /**
-    * infrastructure
-    */
-    INFRASTRUCTURE,
-    /**
-    * victim
-    */
-    VICTIM,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DiamondModel values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the tiIndicators property of the microsoft.graph.security entity.  */
+public enum DiamondModel implements ValuedEnum {
+    Unknown("unknown"),
+    Adversary("adversary"),
+    Capability("capability"),
+    Infrastructure("infrastructure"),
+    Victim("victim"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    DiamondModel(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DiamondModel forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "adversary": return Adversary;
+            case "capability": return Capability;
+            case "infrastructure": return Infrastructure;
+            case "victim": return Victim;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

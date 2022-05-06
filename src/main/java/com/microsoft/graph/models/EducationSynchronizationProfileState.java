@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Education Synchronization Profile State.
-*/
-public enum EducationSynchronizationProfileState
-{
-    /**
-    * deleting
-    */
-    DELETING,
-    /**
-    * deletion Failed
-    */
-    DELETION_FAILED,
-    /**
-    * provisioning Failed
-    */
-    PROVISIONING_FAILED,
-    /**
-    * provisioned
-    */
-    PROVISIONED,
-    /**
-    * provisioning
-    */
-    PROVISIONING,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For EducationSynchronizationProfileState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the educationRoot singleton.  */
+public enum EducationSynchronizationProfileState implements ValuedEnum {
+    Deleting("deleting"),
+    DeletionFailed("deletionFailed"),
+    ProvisioningFailed("provisioningFailed"),
+    Provisioned("provisioned"),
+    Provisioning("provisioning"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    EducationSynchronizationProfileState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static EducationSynchronizationProfileState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "deleting": return Deleting;
+            case "deletionFailed": return DeletionFailed;
+            case "provisioningFailed": return ProvisioningFailed;
+            case "provisioned": return Provisioned;
+            case "provisioning": return Provisioning;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

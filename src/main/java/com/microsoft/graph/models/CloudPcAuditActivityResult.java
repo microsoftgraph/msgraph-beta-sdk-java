@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Cloud Pc Audit Activity Result.
-*/
-public enum CloudPcAuditActivityResult
-{
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * client Error
-    */
-    CLIENT_ERROR,
-    /**
-    * failure
-    */
-    FAILURE,
-    /**
-    * timeout
-    */
-    TIMEOUT,
-    /**
-    * other
-    */
-    OTHER,
-    /**
-    * For CloudPcAuditActivityResult values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum CloudPcAuditActivityResult implements ValuedEnum {
+    Success("success"),
+    ClientError("clientError"),
+    Failure("failure"),
+    Timeout("timeout"),
+    Other("other");
+    public final String value;
+    CloudPcAuditActivityResult(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CloudPcAuditActivityResult forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "success": return Success;
+            case "clientError": return ClientError;
+            case "failure": return Failure;
+            case "timeout": return Timeout;
+            case "other": return Other;
+            default: return null;
+        }
+    }
 }

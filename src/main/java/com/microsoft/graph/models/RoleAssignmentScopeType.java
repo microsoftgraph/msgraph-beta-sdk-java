@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Role Assignment Scope Type.
-*/
-public enum RoleAssignmentScopeType
-{
-    /**
-    * resource Scope
-    */
-    RESOURCE_SCOPE,
-    /**
-    * all Devices
-    */
-    ALL_DEVICES,
-    /**
-    * all Licensed Users
-    */
-    ALL_LICENSED_USERS,
-    /**
-    * all Devices And Licensed Users
-    */
-    ALL_DEVICES_AND_LICENSED_USERS,
-    /**
-    * For RoleAssignmentScopeType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum RoleAssignmentScopeType implements ValuedEnum {
+    ResourceScope("resourceScope"),
+    AllDevices("allDevices"),
+    AllLicensedUsers("allLicensedUsers"),
+    AllDevicesAndLicensedUsers("allDevicesAndLicensedUsers");
+    public final String value;
+    RoleAssignmentScopeType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RoleAssignmentScopeType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "resourceScope": return ResourceScope;
+            case "allDevices": return AllDevices;
+            case "allLicensedUsers": return AllLicensedUsers;
+            case "allDevicesAndLicensedUsers": return AllDevicesAndLicensedUsers;
+            default: return null;
+        }
+    }
 }

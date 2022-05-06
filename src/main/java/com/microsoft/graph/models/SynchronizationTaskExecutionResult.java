@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Synchronization Task Execution Result.
-*/
-public enum SynchronizationTaskExecutionResult
-{
-    /**
-    * Succeeded
-    */
-    SUCCEEDED,
-    /**
-    * Failed
-    */
-    FAILED,
-    /**
-    * Entry Level Errors
-    */
-    ENTRY_LEVEL_ERRORS,
-    /**
-    * For SynchronizationTaskExecutionResult values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities.  */
+public enum SynchronizationTaskExecutionResult implements ValuedEnum {
+    Succeeded("Succeeded"),
+    Failed("Failed"),
+    EntryLevelErrors("EntryLevelErrors");
+    public final String value;
+    SynchronizationTaskExecutionResult(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SynchronizationTaskExecutionResult forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "Succeeded": return Succeeded;
+            case "Failed": return Failed;
+            case "EntryLevelErrors": return EntryLevelErrors;
+            default: return null;
+        }
+    }
 }

@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Discovery Source.
-*/
-public enum DiscoverySource
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * admin Import
-    */
-    ADMIN_IMPORT,
-    /**
-    * device Enrollment Program
-    */
-    DEVICE_ENROLLMENT_PROGRAM,
-    /**
-    * For DiscoverySource values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum DiscoverySource implements ValuedEnum {
+    Unknown("unknown"),
+    AdminImport("adminImport"),
+    DeviceEnrollmentProgram("deviceEnrollmentProgram");
+    public final String value;
+    DiscoverySource(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DiscoverySource forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "adminImport": return AdminImport;
+            case "deviceEnrollmentProgram": return DeviceEnrollmentProgram;
+            default: return null;
+        }
+    }
 }

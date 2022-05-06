@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Approval State.
-*/
-public enum ApprovalState
-{
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * approved
-    */
-    APPROVED,
-    /**
-    * denied
-    */
-    DENIED,
-    /**
-    * aborted
-    */
-    ABORTED,
-    /**
-    * canceled
-    */
-    CANCELED,
-    /**
-    * For ApprovalState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of privilegedApproval entities.  */
+public enum ApprovalState implements ValuedEnum {
+    Pending("pending"),
+    Approved("approved"),
+    Denied("denied"),
+    Aborted("aborted"),
+    Canceled("canceled");
+    public final String value;
+    ApprovalState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ApprovalState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "pending": return Pending;
+            case "approved": return Approved;
+            case "denied": return Denied;
+            case "aborted": return Aborted;
+            case "canceled": return Canceled;
+            default: return null;
+        }
+    }
 }

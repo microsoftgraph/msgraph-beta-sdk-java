@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Group Policy Type.
-*/
-public enum GroupPolicyType
-{
-    /**
-    * admx Backed
-    */
-    ADMX_BACKED,
-    /**
-    * admx Ingested
-    */
-    ADMX_INGESTED,
-    /**
-    * For GroupPolicyType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum GroupPolicyType implements ValuedEnum {
+    AdmxBacked("admxBacked"),
+    AdmxIngested("admxIngested");
+    public final String value;
+    GroupPolicyType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GroupPolicyType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "admxBacked": return AdmxBacked;
+            case "admxIngested": return AdmxIngested;
+            default: return null;
+        }
+    }
 }

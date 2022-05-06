@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Owner Type.
-*/
-public enum OwnerType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * company
-    */
-    COMPANY,
-    /**
-    * personal
-    */
-    PERSONAL,
-    /**
-    * For OwnerType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum OwnerType implements ValuedEnum {
+    Unknown("unknown"),
+    Company("company"),
+    Personal("personal");
+    public final String value;
+    OwnerType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static OwnerType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "company": return Company;
+            case "personal": return Personal;
+            default: return null;
+        }
+    }
 }

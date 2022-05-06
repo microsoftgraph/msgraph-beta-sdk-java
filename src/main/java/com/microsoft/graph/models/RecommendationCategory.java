@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Recommendation Category.
-*/
-public enum RecommendationCategory
-{
-    /**
-    * usage And Compliance
-    */
-    USAGE_AND_COMPLIANCE,
-    /**
-    * security
-    */
-    SECURITY,
-    /**
-    * productivity
-    */
-    PRODUCTIVITY,
-    /**
-    * health
-    */
-    HEALTH,
-    /**
-    * configuration
-    */
-    CONFIGURATION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RecommendationCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the directory singleton.  */
+public enum RecommendationCategory implements ValuedEnum {
+    UsageAndCompliance("usageAndCompliance"),
+    Security("security"),
+    Productivity("productivity"),
+    Health("health"),
+    Configuration("configuration"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RecommendationCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RecommendationCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "usageAndCompliance": return UsageAndCompliance;
+            case "security": return Security;
+            case "productivity": return Productivity;
+            case "health": return Health;
+            case "configuration": return Configuration;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

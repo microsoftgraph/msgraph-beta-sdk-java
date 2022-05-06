@@ -1,110 +1,67 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Conditional Access Rule.
-*/
-public enum ConditionalAccessRule
-{
-    /**
-    * all Apps
-    */
-    ALL_APPS,
-    /**
-    * first Party Apps
-    */
-    FIRST_PARTY_APPS,
-    /**
-    * office365
-    */
-    OFFICE365,
-    /**
-    * app Id
-    */
-    APP_ID,
-    /**
-    * acr
-    */
-    ACR,
-    /**
-    * app Filter
-    */
-    APP_FILTER,
-    /**
-    * all Users
-    */
-    ALL_USERS,
-    /**
-    * guest
-    */
-    GUEST,
-    /**
-    * group Id
-    */
-    GROUP_ID,
-    /**
-    * role Id
-    */
-    ROLE_ID,
-    /**
-    * user Id
-    */
-    USER_ID,
-    /**
-    * all Device Platforms
-    */
-    ALL_DEVICE_PLATFORMS,
-    /**
-    * device Platform
-    */
-    DEVICE_PLATFORM,
-    /**
-    * all Locations
-    */
-    ALL_LOCATIONS,
-    /**
-    * inside Corpnet
-    */
-    INSIDE_CORPNET,
-    /**
-    * all Trusted Locations
-    */
-    ALL_TRUSTED_LOCATIONS,
-    /**
-    * location Id
-    */
-    LOCATION_ID,
-    /**
-    * all Devices
-    */
-    ALL_DEVICES,
-    /**
-    * device Filter
-    */
-    DEVICE_FILTER,
-    /**
-    * device State
-    */
-    DEVICE_STATE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * device Filter Include Rule Not Matched
-    */
-    DEVICE_FILTER_INCLUDE_RULE_NOT_MATCHED,
-    /**
-    * all Device States
-    */
-    ALL_DEVICE_STATES,
-    /**
-    * For ConditionalAccessRule values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton.  */
+public enum ConditionalAccessRule implements ValuedEnum {
+    AllApps("allApps"),
+    FirstPartyApps("firstPartyApps"),
+    Office365("office365"),
+    AppId("appId"),
+    Acr("acr"),
+    AppFilter("appFilter"),
+    AllUsers("allUsers"),
+    Guest("guest"),
+    GroupId("groupId"),
+    RoleId("roleId"),
+    UserId("userId"),
+    AllDevicePlatforms("allDevicePlatforms"),
+    DevicePlatform("devicePlatform"),
+    AllLocations("allLocations"),
+    InsideCorpnet("insideCorpnet"),
+    AllTrustedLocations("allTrustedLocations"),
+    LocationId("locationId"),
+    AllDevices("allDevices"),
+    DeviceFilter("deviceFilter"),
+    DeviceState("deviceState"),
+    UnknownFutureValue("unknownFutureValue"),
+    DeviceFilterIncludeRuleNotMatched("deviceFilterIncludeRuleNotMatched"),
+    AllDeviceStates("allDeviceStates");
+    public final String value;
+    ConditionalAccessRule(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ConditionalAccessRule forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "allApps": return AllApps;
+            case "firstPartyApps": return FirstPartyApps;
+            case "office365": return Office365;
+            case "appId": return AppId;
+            case "acr": return Acr;
+            case "appFilter": return AppFilter;
+            case "allUsers": return AllUsers;
+            case "guest": return Guest;
+            case "groupId": return GroupId;
+            case "roleId": return RoleId;
+            case "userId": return UserId;
+            case "allDevicePlatforms": return AllDevicePlatforms;
+            case "devicePlatform": return DevicePlatform;
+            case "allLocations": return AllLocations;
+            case "insideCorpnet": return InsideCorpnet;
+            case "allTrustedLocations": return AllTrustedLocations;
+            case "locationId": return LocationId;
+            case "allDevices": return AllDevices;
+            case "deviceFilter": return DeviceFilter;
+            case "deviceState": return DeviceState;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "deviceFilterIncludeRuleNotMatched": return DeviceFilterIncludeRuleNotMatched;
+            case "allDeviceStates": return AllDeviceStates;
+            default: return null;
+        }
+    }
 }

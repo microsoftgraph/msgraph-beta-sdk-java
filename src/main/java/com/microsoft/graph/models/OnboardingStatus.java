@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Onboarding Status.
-*/
-public enum OnboardingStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * inprogress
-    */
-    INPROGRESS,
-    /**
-    * onboarded
-    */
-    ONBOARDED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * offboarding
-    */
-    OFFBOARDING,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For OnboardingStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum OnboardingStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Inprogress("inprogress"),
+    Onboarded("onboarded"),
+    Failed("failed"),
+    Offboarding("offboarding"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    OnboardingStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static OnboardingStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "inprogress": return Inprogress;
+            case "onboarded": return Onboarded;
+            case "failed": return Failed;
+            case "offboarding": return Offboarding;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

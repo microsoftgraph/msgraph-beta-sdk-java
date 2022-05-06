@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Application Permissions Required.
-*/
-public enum ApplicationPermissionsRequired
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * anonymous
-    */
-    ANONYMOUS,
-    /**
-    * guest
-    */
-    GUEST,
-    /**
-    * user
-    */
-    USER,
-    /**
-    * administrator
-    */
-    ADMINISTRATOR,
-    /**
-    * system
-    */
-    SYSTEM,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ApplicationPermissionsRequired values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the cloudAppSecurityProfiles property of the microsoft.graph.security entity.  */
+public enum ApplicationPermissionsRequired implements ValuedEnum {
+    Unknown("unknown"),
+    Anonymous("anonymous"),
+    Guest("guest"),
+    User("user"),
+    Administrator("administrator"),
+    System("system"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ApplicationPermissionsRequired(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ApplicationPermissionsRequired forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "anonymous": return Anonymous;
+            case "guest": return Guest;
+            case "user": return User;
+            case "administrator": return Administrator;
+            case "system": return System;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

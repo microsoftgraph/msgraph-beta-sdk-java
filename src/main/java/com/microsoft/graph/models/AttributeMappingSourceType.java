@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Attribute Mapping Source Type.
-*/
-public enum AttributeMappingSourceType
-{
-    /**
-    * Attribute
-    */
-    ATTRIBUTE,
-    /**
-    * Constant
-    */
-    CONSTANT,
-    /**
-    * Function
-    */
-    FUNCTION,
-    /**
-    * For AttributeMappingSourceType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities.  */
+public enum AttributeMappingSourceType implements ValuedEnum {
+    Attribute("Attribute"),
+    Constant("Constant"),
+    Function("Function");
+    public final String value;
+    AttributeMappingSourceType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AttributeMappingSourceType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "Attribute": return Attribute;
+            case "Constant": return Constant;
+            case "Function": return Function;
+            default: return null;
+        }
+    }
 }

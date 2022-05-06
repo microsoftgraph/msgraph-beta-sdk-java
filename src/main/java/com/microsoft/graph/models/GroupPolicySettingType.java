@@ -1,130 +1,77 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Group Policy Setting Type.
-*/
-public enum GroupPolicySettingType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * policy
-    */
-    POLICY,
-    /**
-    * account
-    */
-    ACCOUNT,
-    /**
-    * security Options
-    */
-    SECURITY_OPTIONS,
-    /**
-    * user Rights Assignment
-    */
-    USER_RIGHTS_ASSIGNMENT,
-    /**
-    * audit Setting
-    */
-    AUDIT_SETTING,
-    /**
-    * windows Firewall Settings
-    */
-    WINDOWS_FIREWALL_SETTINGS,
-    /**
-    * app Locker Rule Collection
-    */
-    APP_LOCKER_RULE_COLLECTION,
-    /**
-    * data Sources Settings
-    */
-    DATA_SOURCES_SETTINGS,
-    /**
-    * devices Settings
-    */
-    DEVICES_SETTINGS,
-    /**
-    * drive Map Settings
-    */
-    DRIVE_MAP_SETTINGS,
-    /**
-    * environment Variables
-    */
-    ENVIRONMENT_VARIABLES,
-    /**
-    * files Settings
-    */
-    FILES_SETTINGS,
-    /**
-    * folder Options
-    */
-    FOLDER_OPTIONS,
-    /**
-    * folders
-    */
-    FOLDERS,
-    /**
-    * ini Files
-    */
-    INI_FILES,
-    /**
-    * internet Options
-    */
-    INTERNET_OPTIONS,
-    /**
-    * local Users And Groups
-    */
-    LOCAL_USERS_AND_GROUPS,
-    /**
-    * network Options
-    */
-    NETWORK_OPTIONS,
-    /**
-    * network Shares
-    */
-    NETWORK_SHARES,
-    /**
-    * nt Services
-    */
-    NT_SERVICES,
-    /**
-    * power Options
-    */
-    POWER_OPTIONS,
-    /**
-    * printers
-    */
-    PRINTERS,
-    /**
-    * regional Options Settings
-    */
-    REGIONAL_OPTIONS_SETTINGS,
-    /**
-    * registry Settings
-    */
-    REGISTRY_SETTINGS,
-    /**
-    * scheduled Tasks
-    */
-    SCHEDULED_TASKS,
-    /**
-    * shortcut Settings
-    */
-    SHORTCUT_SETTINGS,
-    /**
-    * start Menu Settings
-    */
-    START_MENU_SETTINGS,
-    /**
-    * For GroupPolicySettingType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum GroupPolicySettingType implements ValuedEnum {
+    Unknown("unknown"),
+    Policy("policy"),
+    Account("account"),
+    SecurityOptions("securityOptions"),
+    UserRightsAssignment("userRightsAssignment"),
+    AuditSetting("auditSetting"),
+    WindowsFirewallSettings("windowsFirewallSettings"),
+    AppLockerRuleCollection("appLockerRuleCollection"),
+    DataSourcesSettings("dataSourcesSettings"),
+    DevicesSettings("devicesSettings"),
+    DriveMapSettings("driveMapSettings"),
+    EnvironmentVariables("environmentVariables"),
+    FilesSettings("filesSettings"),
+    FolderOptions("folderOptions"),
+    Folders("folders"),
+    IniFiles("iniFiles"),
+    InternetOptions("internetOptions"),
+    LocalUsersAndGroups("localUsersAndGroups"),
+    NetworkOptions("networkOptions"),
+    NetworkShares("networkShares"),
+    NtServices("ntServices"),
+    PowerOptions("powerOptions"),
+    Printers("printers"),
+    RegionalOptionsSettings("regionalOptionsSettings"),
+    RegistrySettings("registrySettings"),
+    ScheduledTasks("scheduledTasks"),
+    ShortcutSettings("shortcutSettings"),
+    StartMenuSettings("startMenuSettings");
+    public final String value;
+    GroupPolicySettingType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GroupPolicySettingType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "policy": return Policy;
+            case "account": return Account;
+            case "securityOptions": return SecurityOptions;
+            case "userRightsAssignment": return UserRightsAssignment;
+            case "auditSetting": return AuditSetting;
+            case "windowsFirewallSettings": return WindowsFirewallSettings;
+            case "appLockerRuleCollection": return AppLockerRuleCollection;
+            case "dataSourcesSettings": return DataSourcesSettings;
+            case "devicesSettings": return DevicesSettings;
+            case "driveMapSettings": return DriveMapSettings;
+            case "environmentVariables": return EnvironmentVariables;
+            case "filesSettings": return FilesSettings;
+            case "folderOptions": return FolderOptions;
+            case "folders": return Folders;
+            case "iniFiles": return IniFiles;
+            case "internetOptions": return InternetOptions;
+            case "localUsersAndGroups": return LocalUsersAndGroups;
+            case "networkOptions": return NetworkOptions;
+            case "networkShares": return NetworkShares;
+            case "ntServices": return NtServices;
+            case "powerOptions": return PowerOptions;
+            case "printers": return Printers;
+            case "regionalOptionsSettings": return RegionalOptionsSettings;
+            case "registrySettings": return RegistrySettings;
+            case "scheduledTasks": return ScheduledTasks;
+            case "shortcutSettings": return ShortcutSettings;
+            case "startMenuSettings": return StartMenuSettings;
+            default: return null;
+        }
+    }
 }

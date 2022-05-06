@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Policy Set Status.
-*/
-public enum PolicySetStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * validating
-    */
-    VALIDATING,
-    /**
-    * partial Success
-    */
-    PARTIAL_SUCCESS,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * not Assigned
-    */
-    NOT_ASSIGNED,
-    /**
-    * For PolicySetStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum PolicySetStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Validating("validating"),
+    PartialSuccess("partialSuccess"),
+    Success("success"),
+    Error("error"),
+    NotAssigned("notAssigned");
+    public final String value;
+    PolicySetStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PolicySetStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "validating": return Validating;
+            case "partialSuccess": return PartialSuccess;
+            case "success": return Success;
+            case "error": return Error;
+            case "notAssigned": return NotAssigned;
+            default: return null;
+        }
+    }
 }

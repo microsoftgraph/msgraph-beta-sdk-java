@@ -1,82 +1,53 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed Device Remote Action.
-*/
-public enum ManagedDeviceRemoteAction
-{
-    /**
-    * retire
-    */
-    RETIRE,
-    /**
-    * delete
-    */
-    DELETE,
-    /**
-    * full Scan
-    */
-    FULL_SCAN,
-    /**
-    * quick Scan
-    */
-    QUICK_SCAN,
-    /**
-    * signature Update
-    */
-    SIGNATURE_UPDATE,
-    /**
-    * wipe
-    */
-    WIPE,
-    /**
-    * custom Text Notification
-    */
-    CUSTOM_TEXT_NOTIFICATION,
-    /**
-    * reboot Now
-    */
-    REBOOT_NOW,
-    /**
-    * set Device Name
-    */
-    SET_DEVICE_NAME,
-    /**
-    * sync Device
-    */
-    SYNC_DEVICE,
-    /**
-    * deprovision
-    */
-    DEPROVISION,
-    /**
-    * disable
-    */
-    DISABLE,
-    /**
-    * reenable
-    */
-    REENABLE,
-    /**
-    * move Device To Organizational Unit
-    */
-    MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT,
-    /**
-    * activate Device Esim
-    */
-    ACTIVATE_DEVICE_ESIM,
-    /**
-    * collect Diagnostics
-    */
-    COLLECT_DIAGNOSTICS,
-    /**
-    * For ManagedDeviceRemoteAction values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the executeAction method.  */
+public enum ManagedDeviceRemoteAction implements ValuedEnum {
+    Retire("retire"),
+    Delete("delete"),
+    FullScan("fullScan"),
+    QuickScan("quickScan"),
+    SignatureUpdate("signatureUpdate"),
+    Wipe("wipe"),
+    CustomTextNotification("customTextNotification"),
+    RebootNow("rebootNow"),
+    SetDeviceName("setDeviceName"),
+    SyncDevice("syncDevice"),
+    Deprovision("deprovision"),
+    Disable("disable"),
+    Reenable("reenable"),
+    MoveDeviceToOrganizationalUnit("moveDeviceToOrganizationalUnit"),
+    ActivateDeviceEsim("activateDeviceEsim"),
+    CollectDiagnostics("collectDiagnostics");
+    public final String value;
+    ManagedDeviceRemoteAction(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedDeviceRemoteAction forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "retire": return Retire;
+            case "delete": return Delete;
+            case "fullScan": return FullScan;
+            case "quickScan": return QuickScan;
+            case "signatureUpdate": return SignatureUpdate;
+            case "wipe": return Wipe;
+            case "customTextNotification": return CustomTextNotification;
+            case "rebootNow": return RebootNow;
+            case "setDeviceName": return SetDeviceName;
+            case "syncDevice": return SyncDevice;
+            case "deprovision": return Deprovision;
+            case "disable": return Disable;
+            case "reenable": return Reenable;
+            case "moveDeviceToOrganizationalUnit": return MoveDeviceToOrganizationalUnit;
+            case "activateDeviceEsim": return ActivateDeviceEsim;
+            case "collectDiagnostics": return CollectDiagnostics;
+            default: return null;
+        }
+    }
 }

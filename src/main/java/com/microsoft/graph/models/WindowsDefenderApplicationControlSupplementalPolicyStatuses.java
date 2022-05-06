@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Defender Application Control Supplemental Policy Statuses.
-*/
-public enum WindowsDefenderApplicationControlSupplementalPolicyStatuses
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * token Error
-    */
-    TOKEN_ERROR,
-    /**
-    * not Authorized By Token
-    */
-    NOT_AUTHORIZED_BY_TOKEN,
-    /**
-    * policy Not Found
-    */
-    POLICY_NOT_FOUND,
-    /**
-    * For WindowsDefenderApplicationControlSupplementalPolicyStatuses values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum WindowsDefenderApplicationControlSupplementalPolicyStatuses implements ValuedEnum {
+    Unknown("unknown"),
+    Success("success"),
+    TokenError("tokenError"),
+    NotAuthorizedByToken("notAuthorizedByToken"),
+    PolicyNotFound("policyNotFound");
+    public final String value;
+    WindowsDefenderApplicationControlSupplementalPolicyStatuses(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsDefenderApplicationControlSupplementalPolicyStatuses forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "success": return Success;
+            case "tokenError": return TokenError;
+            case "notAuthorizedByToken": return NotAuthorizedByToken;
+            case "policyNotFound": return PolicyNotFound;
+            default: return null;
+        }
+    }
 }

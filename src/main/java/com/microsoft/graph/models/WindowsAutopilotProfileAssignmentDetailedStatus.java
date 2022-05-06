@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Autopilot Profile Assignment Detailed Status.
-*/
-public enum WindowsAutopilotProfileAssignmentDetailedStatus
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * hardware Requirements Not Met
-    */
-    HARDWARE_REQUIREMENTS_NOT_MET,
-    /**
-    * surface Hub Profile Not Supported
-    */
-    SURFACE_HUB_PROFILE_NOT_SUPPORTED,
-    /**
-    * holo Lens Profile Not Supported
-    */
-    HOLO_LENS_PROFILE_NOT_SUPPORTED,
-    /**
-    * windows Pc Profile Not Supported
-    */
-    WINDOWS_PC_PROFILE_NOT_SUPPORTED,
-    /**
-    * surface Hub2SProfile Not Supported
-    */
-    SURFACE_HUB2_S_PROFILE_NOT_SUPPORTED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For WindowsAutopilotProfileAssignmentDetailedStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum WindowsAutopilotProfileAssignmentDetailedStatus implements ValuedEnum {
+    None("none"),
+    HardwareRequirementsNotMet("hardwareRequirementsNotMet"),
+    SurfaceHubProfileNotSupported("surfaceHubProfileNotSupported"),
+    HoloLensProfileNotSupported("holoLensProfileNotSupported"),
+    WindowsPcProfileNotSupported("windowsPcProfileNotSupported"),
+    SurfaceHub2SProfileNotSupported("surfaceHub2SProfileNotSupported"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    WindowsAutopilotProfileAssignmentDetailedStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsAutopilotProfileAssignmentDetailedStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "hardwareRequirementsNotMet": return HardwareRequirementsNotMet;
+            case "surfaceHubProfileNotSupported": return SurfaceHubProfileNotSupported;
+            case "holoLensProfileNotSupported": return HoloLensProfileNotSupported;
+            case "windowsPcProfileNotSupported": return WindowsPcProfileNotSupported;
+            case "surfaceHub2SProfileNotSupported": return SurfaceHub2SProfileNotSupported;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

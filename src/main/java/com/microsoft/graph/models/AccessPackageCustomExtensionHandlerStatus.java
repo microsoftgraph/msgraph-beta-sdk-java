@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Package Custom Extension Handler Status.
-*/
-public enum AccessPackageCustomExtensionHandlerStatus
-{
-    /**
-    * request Sent
-    */
-    REQUEST_SENT,
-    /**
-    * request Received
-    */
-    REQUEST_RECEIVED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccessPackageCustomExtensionHandlerStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton.  */
+public enum AccessPackageCustomExtensionHandlerStatus implements ValuedEnum {
+    RequestSent("requestSent"),
+    RequestReceived("requestReceived"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccessPackageCustomExtensionHandlerStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessPackageCustomExtensionHandlerStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "requestSent": return RequestSent;
+            case "requestReceived": return RequestReceived;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

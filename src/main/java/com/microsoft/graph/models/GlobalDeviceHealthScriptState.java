@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Global Device Health Script State.
-*/
-public enum GlobalDeviceHealthScriptState
-{
-    /**
-    * not Configured
-    */
-    NOT_CONFIGURED,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * enabled
-    */
-    ENABLED,
-    /**
-    * For GlobalDeviceHealthScriptState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the areGlobalScriptsAvailable method.  */
+public enum GlobalDeviceHealthScriptState implements ValuedEnum {
+    NotConfigured("notConfigured"),
+    Pending("pending"),
+    Enabled("enabled");
+    public final String value;
+    GlobalDeviceHealthScriptState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GlobalDeviceHealthScriptState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notConfigured": return NotConfigured;
+            case "pending": return Pending;
+            case "enabled": return Enabled;
+            default: return null;
+        }
+    }
 }

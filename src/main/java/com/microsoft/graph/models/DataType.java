@@ -1,78 +1,51 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Data Type.
-*/
-public enum DataType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * boolean
-    */
-    BOOLEAN,
-    /**
-    * int64
-    */
-    INT64,
-    /**
-    * double
-    */
-    DOUBLE,
-    /**
-    * string
-    */
-    STRING,
-    /**
-    * date Time
-    */
-    DATE_TIME,
-    /**
-    * version
-    */
-    VERSION,
-    /**
-    * base64
-    */
-    BASE64,
-    /**
-    * xml
-    */
-    XML,
-    /**
-    * boolean Array
-    */
-    BOOLEAN_ARRAY,
-    /**
-    * int64Array
-    */
-    INT64_ARRAY,
-    /**
-    * double Array
-    */
-    DOUBLE_ARRAY,
-    /**
-    * string Array
-    */
-    STRING_ARRAY,
-    /**
-    * date Time Array
-    */
-    DATE_TIME_ARRAY,
-    /**
-    * version Array
-    */
-    VERSION_ARRAY,
-    /**
-    * For DataType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the validateComplianceScript method.  */
+public enum DataType implements ValuedEnum {
+    None("none"),
+    Boolean_escaped("boolean_escaped"),
+    Int64("int64"),
+    Double_escaped("double_escaped"),
+    String("string"),
+    DateTime("dateTime"),
+    Version("version"),
+    Base64("base64"),
+    Xml("xml"),
+    BooleanArray("booleanArray"),
+    Int64Array("int64Array"),
+    DoubleArray("doubleArray"),
+    StringArray("stringArray"),
+    DateTimeArray("dateTimeArray"),
+    VersionArray("versionArray");
+    public final String value;
+    DataType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DataType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "boolean_escaped": return Boolean_escaped;
+            case "int64": return Int64;
+            case "double_escaped": return Double_escaped;
+            case "string": return String;
+            case "dateTime": return DateTime;
+            case "version": return Version;
+            case "base64": return Base64;
+            case "xml": return Xml;
+            case "booleanArray": return BooleanArray;
+            case "int64Array": return Int64Array;
+            case "doubleArray": return DoubleArray;
+            case "stringArray": return StringArray;
+            case "dateTimeArray": return DateTimeArray;
+            case "versionArray": return VersionArray;
+            default: return null;
+        }
+    }
 }

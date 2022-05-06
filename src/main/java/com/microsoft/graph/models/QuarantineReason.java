@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Quarantine Reason.
-*/
-public enum QuarantineReason
-{
-    /**
-    * Encountered Base Escrow Threshold
-    */
-    ENCOUNTERED_BASE_ESCROW_THRESHOLD,
-    /**
-    * Encountered Total Escrow Threshold
-    */
-    ENCOUNTERED_TOTAL_ESCROW_THRESHOLD,
-    /**
-    * Encountered Escrow Proportion Threshold
-    */
-    ENCOUNTERED_ESCROW_PROPORTION_THRESHOLD,
-    /**
-    * Encountered Quarantine Exception
-    */
-    ENCOUNTERED_QUARANTINE_EXCEPTION,
-    /**
-    * Unknown
-    */
-    UNKNOWN,
-    /**
-    * Quarantined On Demand
-    */
-    QUARANTINED_ON_DEMAND,
-    /**
-    * Too Many Deletes
-    */
-    TOO_MANY_DELETES,
-    /**
-    * Ingestion Interrupted
-    */
-    INGESTION_INTERRUPTED,
-    /**
-    * For QuarantineReason values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities.  */
+public enum QuarantineReason implements ValuedEnum {
+    EncounteredBaseEscrowThreshold("EncounteredBaseEscrowThreshold"),
+    EncounteredTotalEscrowThreshold("EncounteredTotalEscrowThreshold"),
+    EncounteredEscrowProportionThreshold("EncounteredEscrowProportionThreshold"),
+    EncounteredQuarantineException("EncounteredQuarantineException"),
+    Unknown("Unknown"),
+    QuarantinedOnDemand("QuarantinedOnDemand"),
+    TooManyDeletes("TooManyDeletes"),
+    IngestionInterrupted("IngestionInterrupted");
+    public final String value;
+    QuarantineReason(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static QuarantineReason forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "EncounteredBaseEscrowThreshold": return EncounteredBaseEscrowThreshold;
+            case "EncounteredTotalEscrowThreshold": return EncounteredTotalEscrowThreshold;
+            case "EncounteredEscrowProportionThreshold": return EncounteredEscrowProportionThreshold;
+            case "EncounteredQuarantineException": return EncounteredQuarantineException;
+            case "Unknown": return Unknown;
+            case "QuarantinedOnDemand": return QuarantinedOnDemand;
+            case "TooManyDeletes": return TooManyDeletes;
+            case "IngestionInterrupted": return IngestionInterrupted;
+            default: return null;
+        }
+    }
 }

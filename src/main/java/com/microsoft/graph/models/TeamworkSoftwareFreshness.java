@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teamwork Software Freshness.
-*/
-public enum TeamworkSoftwareFreshness
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * latest
-    */
-    LATEST,
-    /**
-    * update Available
-    */
-    UPDATE_AVAILABLE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamworkSoftwareFreshness values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the teamwork singleton.  */
+public enum TeamworkSoftwareFreshness implements ValuedEnum {
+    Unknown("unknown"),
+    Latest("latest"),
+    UpdateAvailable("updateAvailable"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamworkSoftwareFreshness(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamworkSoftwareFreshness forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "latest": return Latest;
+            case "updateAvailable": return UpdateAvailable;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

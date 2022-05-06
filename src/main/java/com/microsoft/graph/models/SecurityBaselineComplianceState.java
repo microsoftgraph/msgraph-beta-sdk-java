@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Security Baseline Compliance State.
-*/
-public enum SecurityBaselineComplianceState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * secure
-    */
-    SECURE,
-    /**
-    * not Applicable
-    */
-    NOT_APPLICABLE,
-    /**
-    * not Secure
-    */
-    NOT_SECURE,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * conflict
-    */
-    CONFLICT,
-    /**
-    * For SecurityBaselineComplianceState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum SecurityBaselineComplianceState implements ValuedEnum {
+    Unknown("unknown"),
+    Secure("secure"),
+    NotApplicable("notApplicable"),
+    NotSecure("notSecure"),
+    Error("error"),
+    Conflict("conflict");
+    public final String value;
+    SecurityBaselineComplianceState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SecurityBaselineComplianceState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "secure": return Secure;
+            case "notApplicable": return NotApplicable;
+            case "notSecure": return NotSecure;
+            case "error": return Error;
+            case "conflict": return Conflict;
+            default: return null;
+        }
+    }
 }

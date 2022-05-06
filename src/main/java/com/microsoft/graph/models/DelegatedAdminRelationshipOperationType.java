@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Delegated Admin Relationship Operation Type.
-*/
-public enum DelegatedAdminRelationshipOperationType
-{
-    /**
-    * delegated Admin Access Assignment Update
-    */
-    DELEGATED_ADMIN_ACCESS_ASSIGNMENT_UPDATE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DelegatedAdminRelationshipOperationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the tenantRelationship singleton.  */
+public enum DelegatedAdminRelationshipOperationType implements ValuedEnum {
+    DelegatedAdminAccessAssignmentUpdate("delegatedAdminAccessAssignmentUpdate"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    DelegatedAdminRelationshipOperationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DelegatedAdminRelationshipOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "delegatedAdminAccessAssignmentUpdate": return DelegatedAdminAccessAssignmentUpdate;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

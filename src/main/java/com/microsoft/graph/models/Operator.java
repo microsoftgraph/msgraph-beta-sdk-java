@@ -1,118 +1,71 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Operator.
-*/
-public enum Operator
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * and
-    */
-    AND,
-    /**
-    * or
-    */
-    OR,
-    /**
-    * is Equals
-    */
-    IS_EQUALS,
-    /**
-    * not Equals
-    */
-    NOT_EQUALS,
-    /**
-    * greater Than
-    */
-    GREATER_THAN,
-    /**
-    * less Than
-    */
-    LESS_THAN,
-    /**
-    * between
-    */
-    BETWEEN,
-    /**
-    * not Between
-    */
-    NOT_BETWEEN,
-    /**
-    * greater Equals
-    */
-    GREATER_EQUALS,
-    /**
-    * less Equals
-    */
-    LESS_EQUALS,
-    /**
-    * day Time Between
-    */
-    DAY_TIME_BETWEEN,
-    /**
-    * begins With
-    */
-    BEGINS_WITH,
-    /**
-    * not Begins With
-    */
-    NOT_BEGINS_WITH,
-    /**
-    * ends With
-    */
-    ENDS_WITH,
-    /**
-    * not Ends With
-    */
-    NOT_ENDS_WITH,
-    /**
-    * contains
-    */
-    CONTAINS,
-    /**
-    * not Contains
-    */
-    NOT_CONTAINS,
-    /**
-    * all Of
-    */
-    ALL_OF,
-    /**
-    * one Of
-    */
-    ONE_OF,
-    /**
-    * none Of
-    */
-    NONE_OF,
-    /**
-    * set Equals
-    */
-    SET_EQUALS,
-    /**
-    * ordered Set Equals
-    */
-    ORDERED_SET_EQUALS,
-    /**
-    * subset Of
-    */
-    SUBSET_OF,
-    /**
-    * excludes All
-    */
-    EXCLUDES_ALL,
-    /**
-    * For Operator values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the validateComplianceScript method.  */
+public enum Operator implements ValuedEnum {
+    None("none"),
+    And("and"),
+    Or("or"),
+    IsEquals("isEquals"),
+    NotEquals("notEquals"),
+    GreaterThan("greaterThan"),
+    LessThan("lessThan"),
+    Between("between"),
+    NotBetween("notBetween"),
+    GreaterEquals("greaterEquals"),
+    LessEquals("lessEquals"),
+    DayTimeBetween("dayTimeBetween"),
+    BeginsWith("beginsWith"),
+    NotBeginsWith("notBeginsWith"),
+    EndsWith("endsWith"),
+    NotEndsWith("notEndsWith"),
+    Contains("contains"),
+    NotContains("notContains"),
+    AllOf("allOf"),
+    OneOf("oneOf"),
+    NoneOf("noneOf"),
+    SetEquals("setEquals"),
+    OrderedSetEquals("orderedSetEquals"),
+    SubsetOf("subsetOf"),
+    ExcludesAll("excludesAll");
+    public final String value;
+    Operator(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static Operator forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "and": return And;
+            case "or": return Or;
+            case "isEquals": return IsEquals;
+            case "notEquals": return NotEquals;
+            case "greaterThan": return GreaterThan;
+            case "lessThan": return LessThan;
+            case "between": return Between;
+            case "notBetween": return NotBetween;
+            case "greaterEquals": return GreaterEquals;
+            case "lessEquals": return LessEquals;
+            case "dayTimeBetween": return DayTimeBetween;
+            case "beginsWith": return BeginsWith;
+            case "notBeginsWith": return NotBeginsWith;
+            case "endsWith": return EndsWith;
+            case "notEndsWith": return NotEndsWith;
+            case "contains": return Contains;
+            case "notContains": return NotContains;
+            case "allOf": return AllOf;
+            case "oneOf": return OneOf;
+            case "noneOf": return NoneOf;
+            case "setEquals": return SetEquals;
+            case "orderedSetEquals": return OrderedSetEquals;
+            case "subsetOf": return SubsetOf;
+            case "excludesAll": return ExcludesAll;
+            default: return null;
+        }
+    }
 }

@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Simulation Automation Status.
-*/
-public enum SimulationAutomationStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * draft
-    */
-    DRAFT,
-    /**
-    * not Running
-    */
-    NOT_RUNNING,
-    /**
-    * running
-    */
-    RUNNING,
-    /**
-    * completed
-    */
-    COMPLETED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SimulationAutomationStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the attackSimulation property of the microsoft.graph.security entity.  */
+public enum SimulationAutomationStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Draft("draft"),
+    NotRunning("notRunning"),
+    Running("running"),
+    Completed("completed"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SimulationAutomationStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SimulationAutomationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "draft": return Draft;
+            case "notRunning": return NotRunning;
+            case "running": return Running;
+            case "completed": return Completed;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

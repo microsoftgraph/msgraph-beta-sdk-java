@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android For Work Sync Status.
-*/
-public enum AndroidForWorkSyncStatus
-{
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * credentials Not Valid
-    */
-    CREDENTIALS_NOT_VALID,
-    /**
-    * android For Work Api Error
-    */
-    ANDROID_FOR_WORK_API_ERROR,
-    /**
-    * management Service Error
-    */
-    MANAGEMENT_SERVICE_ERROR,
-    /**
-    * unknown Error
-    */
-    UNKNOWN_ERROR,
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * For AndroidForWorkSyncStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum AndroidForWorkSyncStatus implements ValuedEnum {
+    Success("success"),
+    CredentialsNotValid("credentialsNotValid"),
+    AndroidForWorkApiError("androidForWorkApiError"),
+    ManagementServiceError("managementServiceError"),
+    UnknownError("unknownError"),
+    None("none");
+    public final String value;
+    AndroidForWorkSyncStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidForWorkSyncStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "success": return Success;
+            case "credentialsNotValid": return CredentialsNotValid;
+            case "androidForWorkApiError": return AndroidForWorkApiError;
+            case "managementServiceError": return ManagementServiceError;
+            case "unknownError": return UnknownError;
+            case "none": return None;
+            default: return null;
+        }
+    }
 }

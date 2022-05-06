@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Print Color Configuration.
-*/
-public enum PrintColorConfiguration
-{
-    /**
-    * black And White
-    */
-    BLACK_AND_WHITE,
-    /**
-    * grayscale
-    */
-    GRAYSCALE,
-    /**
-    * color
-    */
-    COLOR,
-    /**
-    * auto
-    */
-    AUTO,
-    /**
-    * For PrintColorConfiguration values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum PrintColorConfiguration implements ValuedEnum {
+    BlackAndWhite("blackAndWhite"),
+    Grayscale("grayscale"),
+    Color("color"),
+    Auto("auto");
+    public final String value;
+    PrintColorConfiguration(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrintColorConfiguration forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "blackAndWhite": return BlackAndWhite;
+            case "grayscale": return Grayscale;
+            case "color": return Color;
+            case "auto": return Auto;
+            default: return null;
+        }
+    }
 }

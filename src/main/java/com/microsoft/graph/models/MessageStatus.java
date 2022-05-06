@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Message Status.
-*/
-public enum MessageStatus
-{
-    /**
-    * getting Status
-    */
-    GETTING_STATUS,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * delivered
-    */
-    DELIVERED,
-    /**
-    * expanded
-    */
-    EXPANDED,
-    /**
-    * quarantined
-    */
-    QUARANTINED,
-    /**
-    * filtered As Spam
-    */
-    FILTERED_AS_SPAM,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For MessageStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of messageRecipient entities.  */
+public enum MessageStatus implements ValuedEnum {
+    GettingStatus("gettingStatus"),
+    Pending("pending"),
+    Failed("failed"),
+    Delivered("delivered"),
+    Expanded("expanded"),
+    Quarantined("quarantined"),
+    FilteredAsSpam("filteredAsSpam"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    MessageStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MessageStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "gettingStatus": return GettingStatus;
+            case "pending": return Pending;
+            case "failed": return Failed;
+            case "delivered": return Delivered;
+            case "expanded": return Expanded;
+            case "quarantined": return Quarantined;
+            case "filteredAsSpam": return FilteredAsSpam;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

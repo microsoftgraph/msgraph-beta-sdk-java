@@ -1,22 +1,23 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum App Log Decryption Algorithm.
-*/
-public enum AppLogDecryptionAlgorithm
-{
-    /**
-    * aes256
-    */
-    AES256,
-    /**
-    * For AppLogDecryptionAlgorithm values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the createDownloadUrl method.  */
+public enum AppLogDecryptionAlgorithm implements ValuedEnum {
+    Aes256("aes256");
+    public final String value;
+    AppLogDecryptionAlgorithm(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AppLogDecryptionAlgorithm forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "aes256": return Aes256;
+            default: return null;
+        }
+    }
 }

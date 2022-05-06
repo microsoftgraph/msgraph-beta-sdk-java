@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Comanagement Eligible Type.
-*/
-public enum ComanagementEligibleType
-{
-    /**
-    * comanaged
-    */
-    COMANAGED,
-    /**
-    * eligible
-    */
-    ELIGIBLE,
-    /**
-    * eligible But Not Azure Ad Joined
-    */
-    ELIGIBLE_BUT_NOT_AZURE_AD_JOINED,
-    /**
-    * needs Os Update
-    */
-    NEEDS_OS_UPDATE,
-    /**
-    * ineligible
-    */
-    INELIGIBLE,
-    /**
-    * For ComanagementEligibleType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum ComanagementEligibleType implements ValuedEnum {
+    Comanaged("comanaged"),
+    Eligible("eligible"),
+    EligibleButNotAzureAdJoined("eligibleButNotAzureAdJoined"),
+    NeedsOsUpdate("needsOsUpdate"),
+    Ineligible("ineligible");
+    public final String value;
+    ComanagementEligibleType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ComanagementEligibleType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "comanaged": return Comanaged;
+            case "eligible": return Eligible;
+            case "eligibleButNotAzureAdJoined": return EligibleButNotAzureAdJoined;
+            case "needsOsUpdate": return NeedsOsUpdate;
+            case "ineligible": return Ineligible;
+            default: return null;
+        }
+    }
 }

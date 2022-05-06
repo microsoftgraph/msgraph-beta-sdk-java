@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Account Status.
-*/
-public enum AccountStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * staged
-    */
-    STAGED,
-    /**
-    * active
-    */
-    ACTIVE,
-    /**
-    * suspended
-    */
-    SUSPENDED,
-    /**
-    * deleted
-    */
-    DELETED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccountStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity.  */
+public enum AccountStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Staged("staged"),
+    Active("active"),
+    Suspended("suspended"),
+    Deleted("deleted"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccountStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccountStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "staged": return Staged;
+            case "active": return Active;
+            case "suspended": return Suspended;
+            case "deleted": return Deleted;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

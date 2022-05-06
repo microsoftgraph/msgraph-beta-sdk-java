@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Group Policy Uploaded Definition File Status.
-*/
-public enum GroupPolicyUploadedDefinitionFileStatus
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * upload In Progress
-    */
-    UPLOAD_IN_PROGRESS,
-    /**
-    * available
-    */
-    AVAILABLE,
-    /**
-    * assigned
-    */
-    ASSIGNED,
-    /**
-    * removal In Progress
-    */
-    REMOVAL_IN_PROGRESS,
-    /**
-    * upload Failed
-    */
-    UPLOAD_FAILED,
-    /**
-    * removal Failed
-    */
-    REMOVAL_FAILED,
-    /**
-    * For GroupPolicyUploadedDefinitionFileStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum GroupPolicyUploadedDefinitionFileStatus implements ValuedEnum {
+    None("none"),
+    UploadInProgress("uploadInProgress"),
+    Available("available"),
+    Assigned("assigned"),
+    RemovalInProgress("removalInProgress"),
+    UploadFailed("uploadFailed"),
+    RemovalFailed("removalFailed");
+    public final String value;
+    GroupPolicyUploadedDefinitionFileStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GroupPolicyUploadedDefinitionFileStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "uploadInProgress": return UploadInProgress;
+            case "available": return Available;
+            case "assigned": return Assigned;
+            case "removalInProgress": return RemovalInProgress;
+            case "uploadFailed": return UploadFailed;
+            case "removalFailed": return RemovalFailed;
+            default: return null;
+        }
+    }
 }

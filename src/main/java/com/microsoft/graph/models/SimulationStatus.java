@@ -1,54 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Simulation Status.
-*/
-public enum SimulationStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * draft
-    */
-    DRAFT,
-    /**
-    * running
-    */
-    RUNNING,
-    /**
-    * scheduled
-    */
-    SCHEDULED,
-    /**
-    * succeeded
-    */
-    SUCCEEDED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * cancelled
-    */
-    CANCELLED,
-    /**
-    * excluded
-    */
-    EXCLUDED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SimulationStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the attackSimulation property of the microsoft.graph.security entity.  */
+public enum SimulationStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Draft("draft"),
+    Running("running"),
+    Scheduled("scheduled"),
+    Succeeded("succeeded"),
+    Failed("failed"),
+    Cancelled("cancelled"),
+    Excluded("excluded"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SimulationStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SimulationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "draft": return Draft;
+            case "running": return Running;
+            case "scheduled": return Scheduled;
+            case "succeeded": return Succeeded;
+            case "failed": return Failed;
+            case "cancelled": return Cancelled;
+            case "excluded": return Excluded;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

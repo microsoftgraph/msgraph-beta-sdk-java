@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Continuous Access Evaluation Mode.
-*/
-public enum ContinuousAccessEvaluationMode
-{
-    /**
-    * strict Enforcement
-    */
-    STRICT_ENFORCEMENT,
-    /**
-    * disabled
-    */
-    DISABLED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ContinuousAccessEvaluationMode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityContainer singleton.  */
+public enum ContinuousAccessEvaluationMode implements ValuedEnum {
+    StrictEnforcement("strictEnforcement"),
+    Disabled("disabled"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ContinuousAccessEvaluationMode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ContinuousAccessEvaluationMode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "strictEnforcement": return StrictEnforcement;
+            case "disabled": return Disabled;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

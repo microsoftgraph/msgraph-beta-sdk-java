@@ -1,102 +1,63 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Requirement Provider.
-*/
-public enum RequirementProvider
-{
-    /**
-    * user
-    */
-    USER,
-    /**
-    * request
-    */
-    REQUEST,
-    /**
-    * service Principal
-    */
-    SERVICE_PRINCIPAL,
-    /**
-    * v1Conditional Access
-    */
-    V1_CONDITIONAL_ACCESS,
-    /**
-    * multi Conditional Access
-    */
-    MULTI_CONDITIONAL_ACCESS,
-    /**
-    * tenant Session Risk Policy
-    */
-    TENANT_SESSION_RISK_POLICY,
-    /**
-    * account Compromise Policies
-    */
-    ACCOUNT_COMPROMISE_POLICIES,
-    /**
-    * v1Conditional Access Dependency
-    */
-    V1_CONDITIONAL_ACCESS_DEPENDENCY,
-    /**
-    * v1Conditional Access Policy Id Requested
-    */
-    V1_CONDITIONAL_ACCESS_POLICY_ID_REQUESTED,
-    /**
-    * mfa Registration Required By Identity Protection Policy
-    */
-    MFA_REGISTRATION_REQUIRED_BY_IDENTITY_PROTECTION_POLICY,
-    /**
-    * baseline Protection
-    */
-    BASELINE_PROTECTION,
-    /**
-    * mfa Registration Required By Baseline Protection
-    */
-    MFA_REGISTRATION_REQUIRED_BY_BASELINE_PROTECTION,
-    /**
-    * mfa Registration Required By Multi Conditional Access
-    */
-    MFA_REGISTRATION_REQUIRED_BY_MULTI_CONDITIONAL_ACCESS,
-    /**
-    * enforced For Csp Admins
-    */
-    ENFORCED_FOR_CSP_ADMINS,
-    /**
-    * security Defaults
-    */
-    SECURITY_DEFAULTS,
-    /**
-    * mfa Registration Required By Security Defaults
-    */
-    MFA_REGISTRATION_REQUIRED_BY_SECURITY_DEFAULTS,
-    /**
-    * proof Up Code Request
-    */
-    PROOF_UP_CODE_REQUEST,
-    /**
-    * cross Tenant Outbound Rule
-    */
-    CROSS_TENANT_OUTBOUND_RULE,
-    /**
-    * gps Location Condition
-    */
-    GPS_LOCATION_CONDITION,
-    /**
-    * risk Based Policy
-    */
-    RISK_BASED_POLICY,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RequirementProvider values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton.  */
+public enum RequirementProvider implements ValuedEnum {
+    User("user"),
+    Request("request"),
+    ServicePrincipal("servicePrincipal"),
+    V1ConditionalAccess("v1ConditionalAccess"),
+    MultiConditionalAccess("multiConditionalAccess"),
+    TenantSessionRiskPolicy("tenantSessionRiskPolicy"),
+    AccountCompromisePolicies("accountCompromisePolicies"),
+    V1ConditionalAccessDependency("v1ConditionalAccessDependency"),
+    V1ConditionalAccessPolicyIdRequested("v1ConditionalAccessPolicyIdRequested"),
+    MfaRegistrationRequiredByIdentityProtectionPolicy("mfaRegistrationRequiredByIdentityProtectionPolicy"),
+    BaselineProtection("baselineProtection"),
+    MfaRegistrationRequiredByBaselineProtection("mfaRegistrationRequiredByBaselineProtection"),
+    MfaRegistrationRequiredByMultiConditionalAccess("mfaRegistrationRequiredByMultiConditionalAccess"),
+    EnforcedForCspAdmins("enforcedForCspAdmins"),
+    SecurityDefaults("securityDefaults"),
+    MfaRegistrationRequiredBySecurityDefaults("mfaRegistrationRequiredBySecurityDefaults"),
+    ProofUpCodeRequest("proofUpCodeRequest"),
+    CrossTenantOutboundRule("crossTenantOutboundRule"),
+    GpsLocationCondition("gpsLocationCondition"),
+    RiskBasedPolicy("riskBasedPolicy"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RequirementProvider(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RequirementProvider forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "user": return User;
+            case "request": return Request;
+            case "servicePrincipal": return ServicePrincipal;
+            case "v1ConditionalAccess": return V1ConditionalAccess;
+            case "multiConditionalAccess": return MultiConditionalAccess;
+            case "tenantSessionRiskPolicy": return TenantSessionRiskPolicy;
+            case "accountCompromisePolicies": return AccountCompromisePolicies;
+            case "v1ConditionalAccessDependency": return V1ConditionalAccessDependency;
+            case "v1ConditionalAccessPolicyIdRequested": return V1ConditionalAccessPolicyIdRequested;
+            case "mfaRegistrationRequiredByIdentityProtectionPolicy": return MfaRegistrationRequiredByIdentityProtectionPolicy;
+            case "baselineProtection": return BaselineProtection;
+            case "mfaRegistrationRequiredByBaselineProtection": return MfaRegistrationRequiredByBaselineProtection;
+            case "mfaRegistrationRequiredByMultiConditionalAccess": return MfaRegistrationRequiredByMultiConditionalAccess;
+            case "enforcedForCspAdmins": return EnforcedForCspAdmins;
+            case "securityDefaults": return SecurityDefaults;
+            case "mfaRegistrationRequiredBySecurityDefaults": return MfaRegistrationRequiredBySecurityDefaults;
+            case "proofUpCodeRequest": return ProofUpCodeRequest;
+            case "crossTenantOutboundRule": return CrossTenantOutboundRule;
+            case "gpsLocationCondition": return GpsLocationCondition;
+            case "riskBasedPolicy": return RiskBasedPolicy;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

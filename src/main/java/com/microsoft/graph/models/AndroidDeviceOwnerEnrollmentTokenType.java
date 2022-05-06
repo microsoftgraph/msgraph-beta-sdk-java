@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android Device Owner Enrollment Token Type.
-*/
-public enum AndroidDeviceOwnerEnrollmentTokenType
-{
-    /**
-    * default
-    */
-    DEFAULT,
-    /**
-    * corporate Owned Dedicated Device With Azure ADShared Mode
-    */
-    CORPORATE_OWNED_DEDICATED_DEVICE_WITH_AZURE_AD_SHARED_MODE,
-    /**
-    * For AndroidDeviceOwnerEnrollmentTokenType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum AndroidDeviceOwnerEnrollmentTokenType implements ValuedEnum {
+    Default_escaped("default_escaped"),
+    CorporateOwnedDedicatedDeviceWithAzureADSharedMode("corporateOwnedDedicatedDeviceWithAzureADSharedMode");
+    public final String value;
+    AndroidDeviceOwnerEnrollmentTokenType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidDeviceOwnerEnrollmentTokenType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "default_escaped": return Default_escaped;
+            case "corporateOwnedDedicatedDeviceWithAzureADSharedMode": return CorporateOwnedDedicatedDeviceWithAzureADSharedMode;
+            default: return null;
+        }
+    }
 }

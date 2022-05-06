@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Config Assignment Intent.
-*/
-public enum DeviceConfigAssignmentIntent
-{
-    /**
-    * apply
-    */
-    APPLY,
-    /**
-    * remove
-    */
-    REMOVE,
-    /**
-    * For DeviceConfigAssignmentIntent values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum DeviceConfigAssignmentIntent implements ValuedEnum {
+    Apply("apply"),
+    Remove("remove");
+    public final String value;
+    DeviceConfigAssignmentIntent(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceConfigAssignmentIntent forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "apply": return Apply;
+            case "remove": return Remove;
+            default: return null;
+        }
+    }
 }

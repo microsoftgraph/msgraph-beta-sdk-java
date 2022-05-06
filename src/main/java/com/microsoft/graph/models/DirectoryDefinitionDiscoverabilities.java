@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Directory Definition Discoverabilities.
-*/
-public enum DirectoryDefinitionDiscoverabilities
-{
-    /**
-    * None
-    */
-    NONE,
-    /**
-    * Attribute Names
-    */
-    ATTRIBUTE_NAMES,
-    /**
-    * Attribute Data Types
-    */
-    ATTRIBUTE_DATA_TYPES,
-    /**
-    * Attribute Read Only
-    */
-    ATTRIBUTE_READ_ONLY,
-    /**
-    * Reference Attributes
-    */
-    REFERENCE_ATTRIBUTES,
-    /**
-    * Unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DirectoryDefinitionDiscoverabilities values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities.  */
+public enum DirectoryDefinitionDiscoverabilities implements ValuedEnum {
+    None("None"),
+    AttributeNames("AttributeNames"),
+    AttributeDataTypes("AttributeDataTypes"),
+    AttributeReadOnly("AttributeReadOnly"),
+    ReferenceAttributes("ReferenceAttributes"),
+    UnknownFutureValue("UnknownFutureValue");
+    public final String value;
+    DirectoryDefinitionDiscoverabilities(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DirectoryDefinitionDiscoverabilities forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "None": return None;
+            case "AttributeNames": return AttributeNames;
+            case "AttributeDataTypes": return AttributeDataTypes;
+            case "AttributeReadOnly": return AttributeReadOnly;
+            case "ReferenceAttributes": return ReferenceAttributes;
+            case "UnknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

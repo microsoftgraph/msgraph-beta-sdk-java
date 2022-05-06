@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android For Work Enrollment Target.
-*/
-public enum AndroidForWorkEnrollmentTarget
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * all
-    */
-    ALL,
-    /**
-    * targeted
-    */
-    TARGETED,
-    /**
-    * targeted As Enrollment Restrictions
-    */
-    TARGETED_AS_ENROLLMENT_RESTRICTIONS,
-    /**
-    * For AndroidForWorkEnrollmentTarget values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum AndroidForWorkEnrollmentTarget implements ValuedEnum {
+    None("none"),
+    All("all"),
+    Targeted("targeted"),
+    TargetedAsEnrollmentRestrictions("targetedAsEnrollmentRestrictions");
+    public final String value;
+    AndroidForWorkEnrollmentTarget(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidForWorkEnrollmentTarget forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "all": return All;
+            case "targeted": return Targeted;
+            case "targetedAsEnrollmentRestrictions": return TargetedAsEnrollmentRestrictions;
+            default: return null;
+        }
+    }
 }

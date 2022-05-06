@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Comparison Result.
-*/
-public enum DeviceManagementComparisonResult
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * equal
-    */
-    EQUAL,
-    /**
-    * not Equal
-    */
-    NOT_EQUAL,
-    /**
-    * added
-    */
-    ADDED,
-    /**
-    * removed
-    */
-    REMOVED,
-    /**
-    * For DeviceManagementComparisonResult values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the compare method.  */
+public enum DeviceManagementComparisonResult implements ValuedEnum {
+    Unknown("unknown"),
+    Equal("equal"),
+    NotEqual("notEqual"),
+    Added("added"),
+    Removed("removed");
+    public final String value;
+    DeviceManagementComparisonResult(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementComparisonResult forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "equal": return Equal;
+            case "notEqual": return NotEqual;
+            case "added": return Added;
+            case "removed": return Removed;
+            default: return null;
+        }
+    }
 }
