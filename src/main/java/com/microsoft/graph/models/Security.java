@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityProviderStatus;
 import com.microsoft.graph.models.SubjectRightsRequest;
+import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.security.models.InformationProtection;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Alert;
@@ -74,6 +75,15 @@ public class Security extends Entity implements IJsonBackedObject {
     public SubjectRightsRequestCollectionPage subjectRightsRequests;
 
     /**
+     * The Cases.
+     * 
+     */
+    @SerializedName(value = "cases", alternate = {"Cases"})
+    @Expose
+	@Nullable
+    public CasesRoot cases;
+
+    /**
      * The Information Protection.
      * 
      */
@@ -93,7 +103,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * Read-only. Nullable.
+     * Notifications for suspicious or potential security issues in a customer’s tenant.
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose

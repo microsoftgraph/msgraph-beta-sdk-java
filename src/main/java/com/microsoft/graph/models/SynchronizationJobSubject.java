@@ -49,7 +49,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The identifier of an object to which a synchronizationJob  is to be applied.
+     * The identifier of an object to which a synchronizationJob is to be applied. Can be one of the following: An onPremisesDistinguishedName for synchronization from Active Directory to Azure AD.The user ID for synchronization from Azure AD to a third-party.The Worker ID of the Workday worker for synchronization from Workday to either Active Directory or Azure AD.
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
@@ -58,7 +58,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
 
     /**
      * The Object Type Name.
-     * The type of the object to which a synchronizationJob  is to be applied.
+     * The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronization from Active Directory to Azure AD.User for synchronization from Azure AD to a third-party application. Worker for synchronization from Workday to either Active Directory or Azure AD.
      */
     @SerializedName(value = "objectTypeName", alternate = {"ObjectTypeName"})
     @Expose

@@ -127,7 +127,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Services.
-     * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
+     * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
      */
     @SerializedName(value = "supportedServices", alternate = {"SupportedServices"})
     @Expose
@@ -136,14 +136,14 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Domain Name References.
-     * Read-only, Nullable
+     * The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      */
 	@Nullable
     public DirectoryObjectCollectionPage domainNameReferences;
 
     /**
      * The Federation Configuration.
-     * 
+     * Domain settings configured by customer when federated with Azure AD. Supports $expand.
      */
     @SerializedName(value = "federationConfiguration", alternate = {"FederationConfiguration"})
     @Expose
@@ -152,7 +152,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Configuration Records.
-     * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable
+     * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
      */
     @SerializedName(value = "serviceConfigurationRecords", alternate = {"ServiceConfigurationRecords"})
     @Expose
@@ -170,7 +170,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Verification Dns Records.
-     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable
+     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
      */
     @SerializedName(value = "verificationDnsRecords", alternate = {"VerificationDnsRecords"})
     @Expose

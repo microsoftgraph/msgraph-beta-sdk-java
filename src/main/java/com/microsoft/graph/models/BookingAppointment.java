@@ -133,7 +133,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Filled Attendees Count.
-     * The current number of customers in the appointment
+     * The current number of customers in the appointment.
      */
     @SerializedName(value = "filledAttendeesCount", alternate = {"FilledAttendeesCount"})
     @Expose
@@ -187,7 +187,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Location Online.
-     * If true, indicates that the appointment will be held online. Default value is false.
+     * True indicates that the appointment will be held online. Default value is false.
      */
     @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
     @Expose
@@ -223,7 +223,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Opt Out Of Customer Email.
-     * If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      */
     @SerializedName(value = "optOutOfCustomerEmail", alternate = {"OptOutOfCustomerEmail"})
     @Expose
@@ -277,7 +277,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Self Service Appointment Id.
-     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
+     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
      */
     @SerializedName(value = "selfServiceAppointmentId", alternate = {"SelfServiceAppointmentId"})
     @Expose
@@ -322,7 +322,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Sms Notifications Enabled.
-     * If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      */
     @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
     @Expose
