@@ -42,6 +42,8 @@ import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollect
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.MyRoleCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.MyRoleRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;
@@ -443,6 +445,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
     @Nonnull
     public ManagementTemplateStepVersionRequestBuilder managementTemplateStepVersions(@Nonnull final String id) {
         return new ManagementTemplateStepVersionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MyRole collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MyRoleCollectionRequestBuilder myRoles() {
+        return new MyRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myRoles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MyRole item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MyRoleRequestBuilder myRoles(@Nonnull final String id) {
+        return new MyRoleRequestBuilder(getRequestUrlWithAdditionalSegment("myRoles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantGroup collection

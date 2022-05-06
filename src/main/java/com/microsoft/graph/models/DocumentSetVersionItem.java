@@ -39,7 +39,7 @@ public class DocumentSetVersionItem implements IJsonBackedObject {
 
     /**
      * The Item Id.
-     * 
+     * The unique identifier for the item.
      */
     @SerializedName(value = "itemId", alternate = {"ItemId"})
     @Expose
@@ -48,7 +48,7 @@ public class DocumentSetVersionItem implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * The title of the item.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -57,7 +57,7 @@ public class DocumentSetVersionItem implements IJsonBackedObject {
 
     /**
      * The Version Id.
-     * 
+     * The version ID of the item.
      */
     @SerializedName(value = "versionId", alternate = {"VersionId"})
     @Expose
