@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Ml Classification Match Tolerance.
-*/
-public enum MlClassificationMatchTolerance
-{
-    /**
-    * exact
-    */
-    EXACT,
-    /**
-    * near
-    */
-    NEAR,
-    /**
-    * For MlClassificationMatchTolerance values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the classifyText method. */
+public enum MlClassificationMatchTolerance implements ValuedEnum {
+    Exact("exact"),
+    Near("near");
+    public final String value;
+    MlClassificationMatchTolerance(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MlClassificationMatchTolerance forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "exact": return Exact;
+            case "near": return Near;
+            default: return null;
+        }
+    }
 }

@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Decision Item Principal Resource Membership Type.
-*/
-public enum DecisionItemPrincipalResourceMembershipType
-{
-    /**
-    * direct
-    */
-    DIRECT,
-    /**
-    * indirect
-    */
-    INDIRECT,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DecisionItemPrincipalResourceMembershipType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum DecisionItemPrincipalResourceMembershipType implements ValuedEnum {
+    Direct("direct"),
+    Indirect("indirect"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    DecisionItemPrincipalResourceMembershipType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DecisionItemPrincipalResourceMembershipType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "direct": return Direct;
+            case "indirect": return Indirect;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

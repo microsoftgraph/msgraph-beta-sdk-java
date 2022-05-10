@@ -1,26 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Device Usage Type.
-*/
-public enum WindowsDeviceUsageType
-{
-    /**
-    * single User
-    */
-    SINGLE_USER,
-    /**
-    * shared
-    */
-    SHARED,
-    /**
-    * For WindowsDeviceUsageType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum WindowsDeviceUsageType implements ValuedEnum {
+    /** Single User Device Type */
+    SingleUser("singleUser"),
+    /** Shared Device Type */
+    Shared("shared");
+    public final String value;
+    WindowsDeviceUsageType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsDeviceUsageType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "singleUser": return SingleUser;
+            case "shared": return Shared;
+            default: return null;
+        }
+    }
 }

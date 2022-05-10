@@ -1,42 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Subscriptions.
-*/
-public enum DeviceManagementSubscriptions
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * intune
-    */
-    INTUNE,
-    /**
-    * office365
-    */
-    OFFICE365,
-    /**
-    * intune Premium
-    */
-    INTUNE_PREMIUM,
-    /**
-    * intune_EDU
-    */
-    INTUNE_EDU,
-    /**
-    * intune_SMB
-    */
-    INTUNE_SMB,
-    /**
-    * For DeviceManagementSubscriptions values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementSubscriptions implements ValuedEnum {
+    /** None */
+    None("none"),
+    /** Microsoft Intune Subscription */
+    Intune("intune"),
+    /** Office365 Subscription */
+    Office365("office365"),
+    /** Microsoft Intune Premium Subscription */
+    IntunePremium("intunePremium"),
+    /** Microsoft Intune for Education Subscription */
+    Intune_EDU("intune_EDU"),
+    /** Microsoft Intune for Small Businesses Subscription */
+    Intune_SMB("intune_SMB");
+    public final String value;
+    DeviceManagementSubscriptions(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementSubscriptions forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "intune": return Intune;
+            case "office365": return Office365;
+            case "intunePremium": return IntunePremium;
+            case "intune_EDU": return Intune_EDU;
+            case "intune_SMB": return Intune_SMB;
+            default: return null;
+        }
+    }
 }

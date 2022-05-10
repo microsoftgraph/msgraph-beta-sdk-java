@@ -1,62 +1,43 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teamwork Device Type.
-*/
-public enum TeamworkDeviceType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * ip Phone
-    */
-    IP_PHONE,
-    /**
-    * teams Room
-    */
-    TEAMS_ROOM,
-    /**
-    * surface Hub
-    */
-    SURFACE_HUB,
-    /**
-    * collaboration Bar
-    */
-    COLLABORATION_BAR,
-    /**
-    * teams Display
-    */
-    TEAMS_DISPLAY,
-    /**
-    * touch Console
-    */
-    TOUCH_CONSOLE,
-    /**
-    * low Cost Phone
-    */
-    LOW_COST_PHONE,
-    /**
-    * teams Panel
-    */
-    TEAMS_PANEL,
-    /**
-    * sip
-    */
-    SIP,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamworkDeviceType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the teamwork singleton. */
+public enum TeamworkDeviceType implements ValuedEnum {
+    Unknown("unknown"),
+    IpPhone("ipPhone"),
+    TeamsRoom("teamsRoom"),
+    SurfaceHub("surfaceHub"),
+    CollaborationBar("collaborationBar"),
+    TeamsDisplay("teamsDisplay"),
+    TouchConsole("touchConsole"),
+    LowCostPhone("lowCostPhone"),
+    TeamsPanel("teamsPanel"),
+    Sip("sip"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamworkDeviceType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamworkDeviceType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "ipPhone": return IpPhone;
+            case "teamsRoom": return TeamsRoom;
+            case "surfaceHub": return SurfaceHub;
+            case "collaborationBar": return CollaborationBar;
+            case "teamsDisplay": return TeamsDisplay;
+            case "touchConsole": return TouchConsole;
+            case "lowCostPhone": return LowCostPhone;
+            case "teamsPanel": return TeamsPanel;
+            case "sip": return Sip;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

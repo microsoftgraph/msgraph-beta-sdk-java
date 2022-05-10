@@ -1,54 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Autopilot Enrollment Type.
-*/
-public enum WindowsAutopilotEnrollmentType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * azure ADJoined With Autopilot Profile
-    */
-    AZURE_AD_JOINED_WITH_AUTOPILOT_PROFILE,
-    /**
-    * offline Domain Joined
-    */
-    OFFLINE_DOMAIN_JOINED,
-    /**
-    * azure ADJoined Using Device Auth With Autopilot Profile
-    */
-    AZURE_AD_JOINED_USING_DEVICE_AUTH_WITH_AUTOPILOT_PROFILE,
-    /**
-    * azure ADJoined Using Device Auth Without Autopilot Profile
-    */
-    AZURE_AD_JOINED_USING_DEVICE_AUTH_WITHOUT_AUTOPILOT_PROFILE,
-    /**
-    * azure ADJoined With Offline Autopilot Profile
-    */
-    AZURE_AD_JOINED_WITH_OFFLINE_AUTOPILOT_PROFILE,
-    /**
-    * azure ADJoined With White Glove
-    */
-    AZURE_AD_JOINED_WITH_WHITE_GLOVE,
-    /**
-    * offline Domain Joined With White Glove
-    */
-    OFFLINE_DOMAIN_JOINED_WITH_WHITE_GLOVE,
-    /**
-    * offline Domain Joined With Offline Autopilot Profile
-    */
-    OFFLINE_DOMAIN_JOINED_WITH_OFFLINE_AUTOPILOT_PROFILE,
-    /**
-    * For WindowsAutopilotEnrollmentType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum WindowsAutopilotEnrollmentType implements ValuedEnum {
+    Unknown("unknown"),
+    AzureADJoinedWithAutopilotProfile("azureADJoinedWithAutopilotProfile"),
+    OfflineDomainJoined("offlineDomainJoined"),
+    AzureADJoinedUsingDeviceAuthWithAutopilotProfile("azureADJoinedUsingDeviceAuthWithAutopilotProfile"),
+    AzureADJoinedUsingDeviceAuthWithoutAutopilotProfile("azureADJoinedUsingDeviceAuthWithoutAutopilotProfile"),
+    AzureADJoinedWithOfflineAutopilotProfile("azureADJoinedWithOfflineAutopilotProfile"),
+    AzureADJoinedWithWhiteGlove("azureADJoinedWithWhiteGlove"),
+    OfflineDomainJoinedWithWhiteGlove("offlineDomainJoinedWithWhiteGlove"),
+    OfflineDomainJoinedWithOfflineAutopilotProfile("offlineDomainJoinedWithOfflineAutopilotProfile");
+    public final String value;
+    WindowsAutopilotEnrollmentType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsAutopilotEnrollmentType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "azureADJoinedWithAutopilotProfile": return AzureADJoinedWithAutopilotProfile;
+            case "offlineDomainJoined": return OfflineDomainJoined;
+            case "azureADJoinedUsingDeviceAuthWithAutopilotProfile": return AzureADJoinedUsingDeviceAuthWithAutopilotProfile;
+            case "azureADJoinedUsingDeviceAuthWithoutAutopilotProfile": return AzureADJoinedUsingDeviceAuthWithoutAutopilotProfile;
+            case "azureADJoinedWithOfflineAutopilotProfile": return AzureADJoinedWithOfflineAutopilotProfile;
+            case "azureADJoinedWithWhiteGlove": return AzureADJoinedWithWhiteGlove;
+            case "offlineDomainJoinedWithWhiteGlove": return OfflineDomainJoinedWithWhiteGlove;
+            case "offlineDomainJoinedWithOfflineAutopilotProfile": return OfflineDomainJoinedWithOfflineAutopilotProfile;
+            default: return null;
+        }
+    }
 }

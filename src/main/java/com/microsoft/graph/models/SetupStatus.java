@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Setup Status.
-*/
-public enum SetupStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * not Registered Yet
-    */
-    NOT_REGISTERED_YET,
-    /**
-    * registered Setup Not Started
-    */
-    REGISTERED_SETUP_NOT_STARTED,
-    /**
-    * registered Setup In Progress
-    */
-    REGISTERED_SETUP_IN_PROGRESS,
-    /**
-    * registration And Setup Completed
-    */
-    REGISTRATION_AND_SETUP_COMPLETED,
-    /**
-    * registration Failed
-    */
-    REGISTRATION_FAILED,
-    /**
-    * registration Timed Out
-    */
-    REGISTRATION_TIMED_OUT,
-    /**
-    * disabled
-    */
-    DISABLED,
-    /**
-    * For SetupStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of privilegedSignupStatus entities. */
+public enum SetupStatus implements ValuedEnum {
+    Unknown("unknown"),
+    NotRegisteredYet("notRegisteredYet"),
+    RegisteredSetupNotStarted("registeredSetupNotStarted"),
+    RegisteredSetupInProgress("registeredSetupInProgress"),
+    RegistrationAndSetupCompleted("registrationAndSetupCompleted"),
+    RegistrationFailed("registrationFailed"),
+    RegistrationTimedOut("registrationTimedOut"),
+    Disabled("disabled");
+    public final String value;
+    SetupStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SetupStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "notRegisteredYet": return NotRegisteredYet;
+            case "registeredSetupNotStarted": return RegisteredSetupNotStarted;
+            case "registeredSetupInProgress": return RegisteredSetupInProgress;
+            case "registrationAndSetupCompleted": return RegistrationAndSetupCompleted;
+            case "registrationFailed": return RegistrationFailed;
+            case "registrationTimedOut": return RegistrationTimedOut;
+            case "disabled": return Disabled;
+            default: return null;
+        }
+    }
 }

@@ -1,162 +1,129 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Resultant App State Detail.
-*/
-public enum ResultantAppStateDetail
-{
-    /**
-    * processor Architecture Not Applicable
-    */
-    PROCESSOR_ARCHITECTURE_NOT_APPLICABLE,
-    /**
-    * minimum Disk Space Not Met
-    */
-    MINIMUM_DISK_SPACE_NOT_MET,
-    /**
-    * minimum Os Version Not Met
-    */
-    MINIMUM_OS_VERSION_NOT_MET,
-    /**
-    * minimum Physical Memory Not Met
-    */
-    MINIMUM_PHYSICAL_MEMORY_NOT_MET,
-    /**
-    * minimum Logical Processor Count Not Met
-    */
-    MINIMUM_LOGICAL_PROCESSOR_COUNT_NOT_MET,
-    /**
-    * minimum Cpu Speed Not Met
-    */
-    MINIMUM_CPU_SPEED_NOT_MET,
-    /**
-    * platform Not Applicable
-    */
-    PLATFORM_NOT_APPLICABLE,
-    /**
-    * file System Requirement Not Met
-    */
-    FILE_SYSTEM_REQUIREMENT_NOT_MET,
-    /**
-    * registry Requirement Not Met
-    */
-    REGISTRY_REQUIREMENT_NOT_MET,
-    /**
-    * power Shell Script Requirement Not Met
-    */
-    POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET,
-    /**
-    * superseding Apps Not Applicable
-    */
-    SUPERSEDING_APPS_NOT_APPLICABLE,
-    /**
-    * no Additional Details
-    */
-    NO_ADDITIONAL_DETAILS,
-    /**
-    * dependency Failed To Install
-    */
-    DEPENDENCY_FAILED_TO_INSTALL,
-    /**
-    * dependency With Requirements Not Met
-    */
-    DEPENDENCY_WITH_REQUIREMENTS_NOT_MET,
-    /**
-    * dependency Pending Reboot
-    */
-    DEPENDENCY_PENDING_REBOOT,
-    /**
-    * dependency With Auto Install Disabled
-    */
-    DEPENDENCY_WITH_AUTO_INSTALL_DISABLED,
-    /**
-    * superseded App Uninstall Failed
-    */
-    SUPERSEDED_APP_UNINSTALL_FAILED,
-    /**
-    * superseded App Uninstall Pending Reboot
-    */
-    SUPERSEDED_APP_UNINSTALL_PENDING_REBOOT,
-    /**
-    * removing Superseded Apps
-    */
-    REMOVING_SUPERSEDED_APPS,
-    /**
-    * ios App Store Update Failed To Install
-    */
-    IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL,
-    /**
-    * vpp App Has Update Available
-    */
-    VPP_APP_HAS_UPDATE_AVAILABLE,
-    /**
-    * user Rejected Update
-    */
-    USER_REJECTED_UPDATE,
-    /**
-    * uninstall Pending Reboot
-    */
-    UNINSTALL_PENDING_REBOOT,
-    /**
-    * superseding Apps Detected
-    */
-    SUPERSEDING_APPS_DETECTED,
-    /**
-    * superseded Apps Detected
-    */
-    SUPERSEDED_APPS_DETECTED,
-    /**
-    * see Install Error Code
-    */
-    SEE_INSTALL_ERROR_CODE,
-    /**
-    * auto Install Disabled
-    */
-    AUTO_INSTALL_DISABLED,
-    /**
-    * managed App No Longer Present
-    */
-    MANAGED_APP_NO_LONGER_PRESENT,
-    /**
-    * user Rejected Install
-    */
-    USER_REJECTED_INSTALL,
-    /**
-    * user Is Not Logged Into App Store
-    */
-    USER_IS_NOT_LOGGED_INTO_APP_STORE,
-    /**
-    * untargeted Superseding Apps Detected
-    */
-    UNTARGETED_SUPERSEDING_APPS_DETECTED,
-    /**
-    * app Removed By Supersedence
-    */
-    APP_REMOVED_BY_SUPERSEDENCE,
-    /**
-    * see Uninstall Error Code
-    */
-    SEE_UNINSTALL_ERROR_CODE,
-    /**
-    * pending Reboot
-    */
-    PENDING_REBOOT,
-    /**
-    * installing Dependencies
-    */
-    INSTALLING_DEPENDENCIES,
-    /**
-    * content Downloaded
-    */
-    CONTENT_DOWNLOADED,
-    /**
-    * For ResultantAppStateDetail values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum ResultantAppStateDetail implements ValuedEnum {
+    /** Device architecture (e.g. x86/amd64) is not applicable for the application. */
+    ProcessorArchitectureNotApplicable("processorArchitectureNotApplicable"),
+    /** Available disk space on the target device is less than the configured minimum. */
+    MinimumDiskSpaceNotMet("minimumDiskSpaceNotMet"),
+    /** OS version on the target device is less than the configured minimum. */
+    MinimumOsVersionNotMet("minimumOsVersionNotMet"),
+    /** Amount of RAM on the target device is less than the configured minimum. */
+    MinimumPhysicalMemoryNotMet("minimumPhysicalMemoryNotMet"),
+    /** Count of logical processors on the target device is less than the configured minimum. */
+    MinimumLogicalProcessorCountNotMet("minimumLogicalProcessorCountNotMet"),
+    /** CPU speed on the target device is less than the configured minimum. */
+    MinimumCpuSpeedNotMet("minimumCpuSpeedNotMet"),
+    /** Application is not applicable to this platform. (e.g. Android app targeted to IOS) */
+    PlatformNotApplicable("platformNotApplicable"),
+    /** File system requirement rule is not met */
+    FileSystemRequirementNotMet("fileSystemRequirementNotMet"),
+    /** Registry requirement rule is not met */
+    RegistryRequirementNotMet("registryRequirementNotMet"),
+    /** PowerShell script requirement rule is not met */
+    PowerShellScriptRequirementNotMet("powerShellScriptRequirementNotMet"),
+    /** All targeted, superseding apps are not applicable. */
+    SupersedingAppsNotApplicable("supersedingAppsNotApplicable"),
+    /** No additional details are available. */
+    NoAdditionalDetails("noAdditionalDetails"),
+    /** One or more of the application's dependencies failed to install. */
+    DependencyFailedToInstall("dependencyFailedToInstall"),
+    /** One or more of the application's dependencies have requirements which are not met. */
+    DependencyWithRequirementsNotMet("dependencyWithRequirementsNotMet"),
+    /** One or more of the application's dependencies require a device reboot to complete installation. */
+    DependencyPendingReboot("dependencyPendingReboot"),
+    /** One or more of the application's dependencies are configured to not automatically install. */
+    DependencyWithAutoInstallDisabled("dependencyWithAutoInstallDisabled"),
+    /** A superseded app failed to uninstall. */
+    SupersededAppUninstallFailed("supersededAppUninstallFailed"),
+    /** A superseded app requires a reboot to complete uninstall. */
+    SupersededAppUninstallPendingReboot("supersededAppUninstallPendingReboot"),
+    /** Superseded apps are being removed. */
+    RemovingSupersededApps("removingSupersededApps"),
+    /** The latest version of the app failed to update from an earlier version. */
+    IosAppStoreUpdateFailedToInstall("iosAppStoreUpdateFailedToInstall"),
+    /** An update is available. */
+    VppAppHasUpdateAvailable("vppAppHasUpdateAvailable"),
+    /** The user rejected the app update. */
+    UserRejectedUpdate("userRejectedUpdate"),
+    /** To complete the removal of the app, the device must be rebooted. */
+    UninstallPendingReboot("uninstallPendingReboot"),
+    /** Superseding applications are detected. */
+    SupersedingAppsDetected("supersedingAppsDetected"),
+    /** Superseded applications are detected. */
+    SupersededAppsDetected("supersededAppsDetected"),
+    /** Application failed to install. See error code property for more details. */
+    SeeInstallErrorCode("seeInstallErrorCode"),
+    /** Application is configured to not be automatically installed. */
+    AutoInstallDisabled("autoInstallDisabled"),
+    /** The app is managed but no longer installed. */
+    ManagedAppNoLongerPresent("managedAppNoLongerPresent"),
+    /** The user rejected the app install. */
+    UserRejectedInstall("userRejectedInstall"),
+    /** The user must log into the App Store to install app. */
+    UserIsNotLoggedIntoAppStore("userIsNotLoggedIntoAppStore"),
+    /** App cannot be installed. An untargeted, superseding app was detected, which created a conflict. */
+    UntargetedSupersedingAppsDetected("untargetedSupersedingAppsDetected"),
+    /** App was removed in order to install a superseding app. */
+    AppRemovedBySupersedence("appRemovedBySupersedence"),
+    /** Application failed to uninstall. See error code property for more details. */
+    SeeUninstallErrorCode("seeUninstallErrorCode"),
+    /** Device must be rebooted to complete installation of the application. */
+    PendingReboot("pendingReboot"),
+    /** One or more of the application's dependencies are installing. */
+    InstallingDependencies("installingDependencies"),
+    /** Application content was downloaded to the device. */
+    ContentDownloaded("contentDownloaded");
+    public final String value;
+    ResultantAppStateDetail(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ResultantAppStateDetail forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "processorArchitectureNotApplicable": return ProcessorArchitectureNotApplicable;
+            case "minimumDiskSpaceNotMet": return MinimumDiskSpaceNotMet;
+            case "minimumOsVersionNotMet": return MinimumOsVersionNotMet;
+            case "minimumPhysicalMemoryNotMet": return MinimumPhysicalMemoryNotMet;
+            case "minimumLogicalProcessorCountNotMet": return MinimumLogicalProcessorCountNotMet;
+            case "minimumCpuSpeedNotMet": return MinimumCpuSpeedNotMet;
+            case "platformNotApplicable": return PlatformNotApplicable;
+            case "fileSystemRequirementNotMet": return FileSystemRequirementNotMet;
+            case "registryRequirementNotMet": return RegistryRequirementNotMet;
+            case "powerShellScriptRequirementNotMet": return PowerShellScriptRequirementNotMet;
+            case "supersedingAppsNotApplicable": return SupersedingAppsNotApplicable;
+            case "noAdditionalDetails": return NoAdditionalDetails;
+            case "dependencyFailedToInstall": return DependencyFailedToInstall;
+            case "dependencyWithRequirementsNotMet": return DependencyWithRequirementsNotMet;
+            case "dependencyPendingReboot": return DependencyPendingReboot;
+            case "dependencyWithAutoInstallDisabled": return DependencyWithAutoInstallDisabled;
+            case "supersededAppUninstallFailed": return SupersededAppUninstallFailed;
+            case "supersededAppUninstallPendingReboot": return SupersededAppUninstallPendingReboot;
+            case "removingSupersededApps": return RemovingSupersededApps;
+            case "iosAppStoreUpdateFailedToInstall": return IosAppStoreUpdateFailedToInstall;
+            case "vppAppHasUpdateAvailable": return VppAppHasUpdateAvailable;
+            case "userRejectedUpdate": return UserRejectedUpdate;
+            case "uninstallPendingReboot": return UninstallPendingReboot;
+            case "supersedingAppsDetected": return SupersedingAppsDetected;
+            case "supersededAppsDetected": return SupersededAppsDetected;
+            case "seeInstallErrorCode": return SeeInstallErrorCode;
+            case "autoInstallDisabled": return AutoInstallDisabled;
+            case "managedAppNoLongerPresent": return ManagedAppNoLongerPresent;
+            case "userRejectedInstall": return UserRejectedInstall;
+            case "userIsNotLoggedIntoAppStore": return UserIsNotLoggedIntoAppStore;
+            case "untargetedSupersedingAppsDetected": return UntargetedSupersedingAppsDetected;
+            case "appRemovedBySupersedence": return AppRemovedBySupersedence;
+            case "seeUninstallErrorCode": return SeeUninstallErrorCode;
+            case "pendingReboot": return PendingReboot;
+            case "installingDependencies": return InstallingDependencies;
+            case "contentDownloaded": return ContentDownloaded;
+            default: return null;
+        }
+    }
 }

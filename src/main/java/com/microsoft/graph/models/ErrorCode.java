@@ -1,34 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Error Code.
-*/
-public enum ErrorCode
-{
-    /**
-    * no Error
-    */
-    NO_ERROR,
-    /**
-    * unauthorized
-    */
-    UNAUTHORIZED,
-    /**
-    * not Found
-    */
-    NOT_FOUND,
-    /**
-    * deleted
-    */
-    DELETED,
-    /**
-    * For ErrorCode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum ErrorCode implements ValuedEnum {
+    /** Default Value to indicate no error. */
+    NoError("noError"),
+    /** The current user does not have access due to lack of RBAC permissions on the resource. */
+    Unauthorized("unauthorized"),
+    /** The current user does not have access due to lack of RBAC Scope Tags on the resource. */
+    NotFound("notFound"),
+    /** The resource has been deleted. */
+    Deleted("deleted");
+    public final String value;
+    ErrorCode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ErrorCode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "noError": return NoError;
+            case "unauthorized": return Unauthorized;
+            case "notFound": return NotFound;
+            case "deleted": return Deleted;
+            default: return null;
+        }
+    }
 }

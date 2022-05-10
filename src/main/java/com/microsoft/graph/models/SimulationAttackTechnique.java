@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Simulation Attack Technique.
-*/
-public enum SimulationAttackTechnique
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * credential Harvesting
-    */
-    CREDENTIAL_HARVESTING,
-    /**
-    * attachment Malware
-    */
-    ATTACHMENT_MALWARE,
-    /**
-    * drive By Url
-    */
-    DRIVE_BY_URL,
-    /**
-    * link In Attachment
-    */
-    LINK_IN_ATTACHMENT,
-    /**
-    * link To Malware File
-    */
-    LINK_TO_MALWARE_FILE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SimulationAttackTechnique values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the attackSimulation property of the microsoft.graph.security entity. */
+public enum SimulationAttackTechnique implements ValuedEnum {
+    Unknown("unknown"),
+    CredentialHarvesting("credentialHarvesting"),
+    AttachmentMalware("attachmentMalware"),
+    DriveByUrl("driveByUrl"),
+    LinkInAttachment("linkInAttachment"),
+    LinkToMalwareFile("linkToMalwareFile"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SimulationAttackTechnique(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SimulationAttackTechnique forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "credentialHarvesting": return CredentialHarvesting;
+            case "attachmentMalware": return AttachmentMalware;
+            case "driveByUrl": return DriveByUrl;
+            case "linkInAttachment": return LinkInAttachment;
+            case "linkToMalwareFile": return LinkToMalwareFile;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Print Presentation Direction.
-*/
-public enum PrintPresentationDirection
-{
-    /**
-    * clockwise From Top Left
-    */
-    CLOCKWISE_FROM_TOP_LEFT,
-    /**
-    * counter Clockwise From Top Left
-    */
-    COUNTER_CLOCKWISE_FROM_TOP_LEFT,
-    /**
-    * counter Clockwise From Top Right
-    */
-    COUNTER_CLOCKWISE_FROM_TOP_RIGHT,
-    /**
-    * clockwise From Top Right
-    */
-    CLOCKWISE_FROM_TOP_RIGHT,
-    /**
-    * counter Clockwise From Bottom Left
-    */
-    COUNTER_CLOCKWISE_FROM_BOTTOM_LEFT,
-    /**
-    * clockwise From Bottom Left
-    */
-    CLOCKWISE_FROM_BOTTOM_LEFT,
-    /**
-    * counter Clockwise From Bottom Right
-    */
-    COUNTER_CLOCKWISE_FROM_BOTTOM_RIGHT,
-    /**
-    * clockwise From Bottom Right
-    */
-    CLOCKWISE_FROM_BOTTOM_RIGHT,
-    /**
-    * For PrintPresentationDirection values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum PrintPresentationDirection implements ValuedEnum {
+    ClockwiseFromTopLeft("clockwiseFromTopLeft"),
+    CounterClockwiseFromTopLeft("counterClockwiseFromTopLeft"),
+    CounterClockwiseFromTopRight("counterClockwiseFromTopRight"),
+    ClockwiseFromTopRight("clockwiseFromTopRight"),
+    CounterClockwiseFromBottomLeft("counterClockwiseFromBottomLeft"),
+    ClockwiseFromBottomLeft("clockwiseFromBottomLeft"),
+    CounterClockwiseFromBottomRight("counterClockwiseFromBottomRight"),
+    ClockwiseFromBottomRight("clockwiseFromBottomRight");
+    public final String value;
+    PrintPresentationDirection(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrintPresentationDirection forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "clockwiseFromTopLeft": return ClockwiseFromTopLeft;
+            case "counterClockwiseFromTopLeft": return CounterClockwiseFromTopLeft;
+            case "counterClockwiseFromTopRight": return CounterClockwiseFromTopRight;
+            case "clockwiseFromTopRight": return ClockwiseFromTopRight;
+            case "counterClockwiseFromBottomLeft": return CounterClockwiseFromBottomLeft;
+            case "clockwiseFromBottomLeft": return ClockwiseFromBottomLeft;
+            case "counterClockwiseFromBottomRight": return CounterClockwiseFromBottomRight;
+            case "clockwiseFromBottomRight": return ClockwiseFromBottomRight;
+            default: return null;
+        }
+    }
 }

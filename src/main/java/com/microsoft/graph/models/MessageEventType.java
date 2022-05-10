@@ -1,106 +1,65 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Message Event Type.
-*/
-public enum MessageEventType
-{
-    /**
-    * received
-    */
-    RECEIVED,
-    /**
-    * sent
-    */
-    SENT,
-    /**
-    * delivered
-    */
-    DELIVERED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * processing Failed
-    */
-    PROCESSING_FAILED,
-    /**
-    * distribution Group Expanded
-    */
-    DISTRIBUTION_GROUP_EXPANDED,
-    /**
-    * submitted
-    */
-    SUBMITTED,
-    /**
-    * delayed
-    */
-    DELAYED,
-    /**
-    * redirected
-    */
-    REDIRECTED,
-    /**
-    * resolved
-    */
-    RESOLVED,
-    /**
-    * dropped
-    */
-    DROPPED,
-    /**
-    * recipients Added
-    */
-    RECIPIENTS_ADDED,
-    /**
-    * malware Detected
-    */
-    MALWARE_DETECTED,
-    /**
-    * malware Detected In Message
-    */
-    MALWARE_DETECTED_IN_MESSAGE,
-    /**
-    * malware Detected In Attachment
-    */
-    MALWARE_DETECTED_IN_ATTACHMENT,
-    /**
-    * tt Zapped
-    */
-    TT_ZAPPED,
-    /**
-    * tt Delivered
-    */
-    TT_DELIVERED,
-    /**
-    * spam Detected
-    */
-    SPAM_DETECTED,
-    /**
-    * transport Rule Triggered
-    */
-    TRANSPORT_RULE_TRIGGERED,
-    /**
-    * dlp Rule Triggered
-    */
-    DLP_RULE_TRIGGERED,
-    /**
-    * journaled
-    */
-    JOURNALED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For MessageEventType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of messageEvent entities. */
+public enum MessageEventType implements ValuedEnum {
+    Received("received"),
+    Sent("sent"),
+    Delivered("delivered"),
+    Failed("failed"),
+    ProcessingFailed("processingFailed"),
+    DistributionGroupExpanded("distributionGroupExpanded"),
+    Submitted("submitted"),
+    Delayed("delayed"),
+    Redirected("redirected"),
+    Resolved("resolved"),
+    Dropped("dropped"),
+    RecipientsAdded("recipientsAdded"),
+    MalwareDetected("malwareDetected"),
+    MalwareDetectedInMessage("malwareDetectedInMessage"),
+    MalwareDetectedInAttachment("malwareDetectedInAttachment"),
+    TtZapped("ttZapped"),
+    TtDelivered("ttDelivered"),
+    SpamDetected("spamDetected"),
+    TransportRuleTriggered("transportRuleTriggered"),
+    DlpRuleTriggered("dlpRuleTriggered"),
+    Journaled("journaled"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    MessageEventType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MessageEventType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "received": return Received;
+            case "sent": return Sent;
+            case "delivered": return Delivered;
+            case "failed": return Failed;
+            case "processingFailed": return ProcessingFailed;
+            case "distributionGroupExpanded": return DistributionGroupExpanded;
+            case "submitted": return Submitted;
+            case "delayed": return Delayed;
+            case "redirected": return Redirected;
+            case "resolved": return Resolved;
+            case "dropped": return Dropped;
+            case "recipientsAdded": return RecipientsAdded;
+            case "malwareDetected": return MalwareDetected;
+            case "malwareDetectedInMessage": return MalwareDetectedInMessage;
+            case "malwareDetectedInAttachment": return MalwareDetectedInAttachment;
+            case "ttZapped": return TtZapped;
+            case "ttDelivered": return TtDelivered;
+            case "spamDetected": return SpamDetected;
+            case "transportRuleTriggered": return TransportRuleTriggered;
+            case "dlpRuleTriggered": return DlpRuleTriggered;
+            case "journaled": return Journaled;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

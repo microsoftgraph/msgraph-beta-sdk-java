@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Skill Proficiency Level.
-*/
-public enum SkillProficiencyLevel
-{
-    /**
-    * elementary
-    */
-    ELEMENTARY,
-    /**
-    * limited Working
-    */
-    LIMITED_WORKING,
-    /**
-    * general Professional
-    */
-    GENERAL_PROFESSIONAL,
-    /**
-    * advanced Professional
-    */
-    ADVANCED_PROFESSIONAL,
-    /**
-    * expert
-    */
-    EXPERT,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SkillProficiencyLevel values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum SkillProficiencyLevel implements ValuedEnum {
+    Elementary("elementary"),
+    LimitedWorking("limitedWorking"),
+    GeneralProfessional("generalProfessional"),
+    AdvancedProfessional("advancedProfessional"),
+    Expert("expert"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SkillProficiencyLevel(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SkillProficiencyLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "elementary": return Elementary;
+            case "limitedWorking": return LimitedWorking;
+            case "generalProfessional": return GeneralProfessional;
+            case "advancedProfessional": return AdvancedProfessional;
+            case "expert": return Expert;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

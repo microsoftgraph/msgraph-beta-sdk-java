@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Expiration Requirement.
-*/
-public enum ExpirationRequirement
-{
-    /**
-    * remember Multifactor Authentication On Trusted Devices
-    */
-    REMEMBER_MULTIFACTOR_AUTHENTICATION_ON_TRUSTED_DEVICES,
-    /**
-    * tenant Token Lifetime Policy
-    */
-    TENANT_TOKEN_LIFETIME_POLICY,
-    /**
-    * audience Token Lifetime Policy
-    */
-    AUDIENCE_TOKEN_LIFETIME_POLICY,
-    /**
-    * sign In Frequency Periodic Reauthentication
-    */
-    SIGN_IN_FREQUENCY_PERIODIC_REAUTHENTICATION,
-    /**
-    * ngc Mfa
-    */
-    NGC_MFA,
-    /**
-    * sign In Frequency Every Time
-    */
-    SIGN_IN_FREQUENCY_EVERY_TIME,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ExpirationRequirement values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum ExpirationRequirement implements ValuedEnum {
+    RememberMultifactorAuthenticationOnTrustedDevices("rememberMultifactorAuthenticationOnTrustedDevices"),
+    TenantTokenLifetimePolicy("tenantTokenLifetimePolicy"),
+    AudienceTokenLifetimePolicy("audienceTokenLifetimePolicy"),
+    SignInFrequencyPeriodicReauthentication("signInFrequencyPeriodicReauthentication"),
+    NgcMfa("ngcMfa"),
+    SignInFrequencyEveryTime("signInFrequencyEveryTime"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ExpirationRequirement(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ExpirationRequirement forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "rememberMultifactorAuthenticationOnTrustedDevices": return RememberMultifactorAuthenticationOnTrustedDevices;
+            case "tenantTokenLifetimePolicy": return TenantTokenLifetimePolicy;
+            case "audienceTokenLifetimePolicy": return AudienceTokenLifetimePolicy;
+            case "signInFrequencyPeriodicReauthentication": return SignInFrequencyPeriodicReauthentication;
+            case "ngcMfa": return NgcMfa;
+            case "signInFrequencyEveryTime": return SignInFrequencyEveryTime;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

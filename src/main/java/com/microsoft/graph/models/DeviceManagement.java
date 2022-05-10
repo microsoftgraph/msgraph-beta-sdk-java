@@ -1,2350 +1,3469 @@
-// Template Source: BaseEntity.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
-
-package com.microsoft.graph.models;
-import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.serializer.IJsonBackedObject;
-import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementSettings;
-import com.microsoft.graph.models.IntuneBrand;
-import com.microsoft.graph.models.AdminConsent;
-import com.microsoft.graph.models.DeviceProtectionOverview;
-import com.microsoft.graph.models.ManagedDeviceCleanupSettings;
-import com.microsoft.graph.models.DeviceManagementSubscriptions;
-import com.microsoft.graph.models.DeviceManagementSubscriptionState;
-import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
-import com.microsoft.graph.models.WindowsMalwareOverview;
-import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
-import com.microsoft.graph.models.VirtualEndpoint;
-import com.microsoft.graph.models.AndroidForWorkAppConfigurationSchema;
-import com.microsoft.graph.models.AndroidForWorkEnrollmentProfile;
-import com.microsoft.graph.models.AndroidForWorkSettings;
-import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettings;
-import com.microsoft.graph.models.AndroidManagedStoreAppConfigurationSchema;
-import com.microsoft.graph.models.AuditEvent;
-import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
-import com.microsoft.graph.models.ChromeOSOnboardingSettings;
-import com.microsoft.graph.models.TermsAndConditions;
-import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingStateSummary;
-import com.microsoft.graph.models.CartToClassAssociation;
-import com.microsoft.graph.models.DeviceCompliancePolicy;
-import com.microsoft.graph.models.DeviceCompliancePolicyDeviceStateSummary;
-import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.models.DeviceConfigurationConflictSummary;
-import com.microsoft.graph.models.DeviceConfigurationDeviceStateSummary;
-import com.microsoft.graph.models.RestrictedAppsViolation;
-import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.models.ManagedAllDeviceCertificateState;
-import com.microsoft.graph.models.DeviceConfigurationUserStateSummary;
-import com.microsoft.graph.models.IosUpdateDeviceStatus;
-import com.microsoft.graph.models.MacOSSoftwareUpdateAccountSummary;
-import com.microsoft.graph.models.ManagedDeviceEncryptionState;
-import com.microsoft.graph.models.NdesConnector;
-import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
-import com.microsoft.graph.models.DeviceManagementConfigurationCategory;
-import com.microsoft.graph.models.DeviceManagementCompliancePolicy;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
-import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
-import com.microsoft.graph.models.ComplianceManagementPartner;
-import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
-import com.microsoft.graph.models.DeviceCategory;
-import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
-import com.microsoft.graph.models.DeviceManagementPartner;
-import com.microsoft.graph.models.DeviceManagementExchangeConnector;
-import com.microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
-import com.microsoft.graph.models.MobileThreatDefenseConnector;
-import com.microsoft.graph.models.DeviceManagementSettingCategory;
-import com.microsoft.graph.models.DeviceManagementIntent;
-import com.microsoft.graph.models.DeviceManagementSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementTemplate;
-import com.microsoft.graph.models.ApplePushNotificationCertificate;
-import com.microsoft.graph.models.CloudPCConnectivityIssue;
-import com.microsoft.graph.models.ManagedDevice;
-import com.microsoft.graph.models.ComanagementEligibleDevice;
-import com.microsoft.graph.models.DataSharingConsent;
-import com.microsoft.graph.models.DetectedApp;
-import com.microsoft.graph.models.DeviceComplianceScript;
-import com.microsoft.graph.models.DeviceCustomAttributeShellScript;
-import com.microsoft.graph.models.DeviceHealthScript;
-import com.microsoft.graph.models.DeviceManagementScript;
-import com.microsoft.graph.models.DeviceShellScript;
-import com.microsoft.graph.models.ManagedDeviceOverview;
-import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
-import com.microsoft.graph.models.OemWarrantyInformationOnboarding;
-import com.microsoft.graph.models.RemoteActionAudit;
-import com.microsoft.graph.models.TenantAttachRBAC;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDeviceModelPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformanceDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthOSVersionPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
-import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpact;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthCapacityDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceAppImpact;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDevicePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthModelPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcess;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
-import com.microsoft.graph.models.UserExperienceAnalyticsImpactingProcess;
-import com.microsoft.graph.models.UserExperienceAnalyticsModelScores;
-import com.microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
-import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
-import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
-import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
-import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsScoreHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
-import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
-import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformance;
-import com.microsoft.graph.models.WindowsMalwareInformation;
-import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
-import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
-import com.microsoft.graph.models.AppleUserInitiatedEnrollmentProfile;
-import com.microsoft.graph.models.DepOnboardingSetting;
-import com.microsoft.graph.models.ImportedDeviceIdentity;
-import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
-import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.WindowsAutopilotSettings;
-import com.microsoft.graph.models.ManagementCondition;
-import com.microsoft.graph.models.ManagementConditionStatement;
-import com.microsoft.graph.models.GroupPolicyMigrationReport;
-import com.microsoft.graph.models.GroupPolicyObjectFile;
-import com.microsoft.graph.models.GroupPolicyCategory;
-import com.microsoft.graph.models.GroupPolicyConfiguration;
-import com.microsoft.graph.models.GroupPolicyDefinitionFile;
-import com.microsoft.graph.models.GroupPolicyDefinition;
-import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
-import com.microsoft.graph.models.MicrosoftTunnelConfiguration;
-import com.microsoft.graph.models.MicrosoftTunnelHealthThreshold;
-import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
-import com.microsoft.graph.models.MicrosoftTunnelSite;
-import com.microsoft.graph.models.NotificationMessageTemplate;
-import com.microsoft.graph.models.DeviceManagementDomainJoinConnector;
-import com.microsoft.graph.models.ConfigManagerCollection;
-import com.microsoft.graph.models.ResourceOperation;
-import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.models.RoleDefinition;
-import com.microsoft.graph.models.RoleScopeTag;
-import com.microsoft.graph.models.RemoteAssistancePartner;
-import com.microsoft.graph.models.RemoteAssistanceSettings;
-import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
-import com.microsoft.graph.models.TelecomExpenseManagementPartner;
-import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
-import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.models.WindowsDriverUpdateProfile;
-import com.microsoft.graph.models.WindowsFeatureUpdateProfile;
-import com.microsoft.graph.models.WindowsQualityUpdateProfile;
-import com.microsoft.graph.models.WindowsUpdateCatalogItem;
-import com.microsoft.graph.models.IntuneBrandingProfile;
-import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
-import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
-import com.microsoft.graph.models.CertificateConnectorDetails;
-import com.microsoft.graph.models.UserPFXCertificate;
-import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage;
-import com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaCollectionPage;
-import com.microsoft.graph.requests.AndroidForWorkEnrollmentProfileCollectionPage;
-import com.microsoft.graph.requests.AndroidManagedStoreAppConfigurationSchemaCollectionPage;
-import com.microsoft.graph.requests.AuditEventCollectionPage;
-import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionPage;
-import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionPage;
-import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
-import com.microsoft.graph.requests.CartToClassAssociationCollectionPage;
-import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage;
-import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
-import com.microsoft.graph.requests.DeviceConfigurationConflictSummaryCollectionPage;
-import com.microsoft.graph.requests.RestrictedAppsViolationCollectionPage;
-import com.microsoft.graph.requests.DeviceConfigurationCollectionPage;
-import com.microsoft.graph.requests.ManagedAllDeviceCertificateStateCollectionPage;
-import com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionPage;
-import com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage;
-import com.microsoft.graph.requests.NdesConnectorCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage;
-import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage;
-import com.microsoft.graph.requests.DeviceCategoryCollectionPage;
-import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementPartnerCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementExchangeOnPremisesPolicyCollectionPage;
-import com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementSettingCategoryCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementIntentCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage;
-import com.microsoft.graph.requests.CloudPCConnectivityIssueCollectionPage;
-import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
-import com.microsoft.graph.requests.ComanagementEligibleDeviceCollectionPage;
-import com.microsoft.graph.requests.DataSharingConsentCollectionPage;
-import com.microsoft.graph.requests.DetectedAppCollectionPage;
-import com.microsoft.graph.requests.DeviceComplianceScriptCollectionPage;
-import com.microsoft.graph.requests.DeviceCustomAttributeShellScriptCollectionPage;
-import com.microsoft.graph.requests.DeviceHealthScriptCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementScriptCollectionPage;
-import com.microsoft.graph.requests.DeviceShellScriptCollectionPage;
-import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
-import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage;
-import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage;
-import com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementResourceAccessProfileBaseCollectionPage;
-import com.microsoft.graph.requests.AppleUserInitiatedEnrollmentProfileCollectionPage;
-import com.microsoft.graph.requests.DepOnboardingSettingCollectionPage;
-import com.microsoft.graph.requests.ImportedDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileCollectionPage;
-import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.ManagementConditionCollectionPage;
-import com.microsoft.graph.requests.ManagementConditionStatementCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyObjectFileCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyConfigurationCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyDefinitionFileCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage;
-import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionPage;
-import com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionPage;
-import com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionPage;
-import com.microsoft.graph.requests.MicrosoftTunnelServerLogCollectionResponseCollectionPage;
-import com.microsoft.graph.requests.MicrosoftTunnelSiteCollectionPage;
-import com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionPage;
-import com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage;
-import com.microsoft.graph.requests.ResourceOperationCollectionPage;
-import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.RoleDefinitionCollectionPage;
-import com.microsoft.graph.requests.RoleScopeTagCollectionPage;
-import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionPage;
-import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionPage;
-import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementAutopilotEventCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage;
-import com.microsoft.graph.requests.WindowsDriverUpdateProfileCollectionPage;
-import com.microsoft.graph.requests.WindowsFeatureUpdateProfileCollectionPage;
-import com.microsoft.graph.requests.WindowsQualityUpdateProfileCollectionPage;
-import com.microsoft.graph.requests.WindowsUpdateCatalogItemCollectionPage;
-import com.microsoft.graph.requests.IntuneBrandingProfileCollectionPage;
-import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryCollectionPage;
-import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
-import com.microsoft.graph.requests.CertificateConnectorDetailsCollectionPage;
-import com.microsoft.graph.requests.UserPFXCertificateCollectionPage;
-
-
-import com.google.gson.JsonObject;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.annotations.Expose;
-import javax.annotation.Nullable;
-import javax.annotation.Nonnull;
-
-// **NOTE** This file was generated by a tool and any changes will be overwritten.
-
-/**
- * The class for the Device Management.
- */
-public class DeviceManagement extends Entity implements IJsonBackedObject {
-
-
-    /**
-     * The Device Compliance Report Summarization Date Time.
-     * The last requested time of device compliance reporting for this account. This property is read-only.
-     */
-    @SerializedName(value = "deviceComplianceReportSummarizationDateTime", alternate = {"DeviceComplianceReportSummarizationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime deviceComplianceReportSummarizationDateTime;
-
-    /**
-     * The Intune Account Id.
-     * Intune Account Id for given tenant
-     */
-    @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
-    @Expose
-	@Nullable
-    public java.util.UUID intuneAccountId;
-
-    /**
-     * The Last Report Aggregation Date Time.
-     * The last modified time of reporting for this account. This property is read-only.
-     */
-    @SerializedName(value = "lastReportAggregationDateTime", alternate = {"LastReportAggregationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime lastReportAggregationDateTime;
-
-    /**
-     * The Legacy Pc Manangement Enabled.
-     * The property to enable Non-MDM managed legacy PC management for this account. This property is read-only.
-     */
-    @SerializedName(value = "legacyPcManangementEnabled", alternate = {"LegacyPcManangementEnabled"})
-    @Expose
-	@Nullable
-    public Boolean legacyPcManangementEnabled;
-
-    /**
-     * The Maximum Dep Tokens.
-     * Maximum number of DEP tokens allowed per-tenant.
-     */
-    @SerializedName(value = "maximumDepTokens", alternate = {"MaximumDepTokens"})
-    @Expose
-	@Nullable
-    public Integer maximumDepTokens;
-
-    /**
-     * The Settings.
-     * Account level settings.
-     */
-    @SerializedName(value = "settings", alternate = {"Settings"})
-    @Expose
-	@Nullable
-    public DeviceManagementSettings settings;
-
-    /**
-     * The Unlicensed Adminstrators Enabled.
-     * When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only.
-     */
-    @SerializedName(value = "unlicensedAdminstratorsEnabled", alternate = {"UnlicensedAdminstratorsEnabled"})
-    @Expose
-	@Nullable
-    public Boolean unlicensedAdminstratorsEnabled;
-
-    /**
-     * The Intune Brand.
-     * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
-     */
-    @SerializedName(value = "intuneBrand", alternate = {"IntuneBrand"})
-    @Expose
-	@Nullable
-    public IntuneBrand intuneBrand;
-
-    /**
-     * The Account Move Completion Date Time.
-     * The date &amp; time when tenant data moved between scaleunits.
-     */
-    @SerializedName(value = "accountMoveCompletionDateTime", alternate = {"AccountMoveCompletionDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime accountMoveCompletionDateTime;
-
-    /**
-     * The Admin Consent.
-     * Admin consent information.
-     */
-    @SerializedName(value = "adminConsent", alternate = {"AdminConsent"})
-    @Expose
-	@Nullable
-    public AdminConsent adminConsent;
-
-    /**
-     * The Device Protection Overview.
-     * Device protection overview.
-     */
-    @SerializedName(value = "deviceProtectionOverview", alternate = {"DeviceProtectionOverview"})
-    @Expose
-	@Nullable
-    public DeviceProtectionOverview deviceProtectionOverview;
-
-    /**
-     * The Managed Device Cleanup Settings.
-     * Device cleanup rule
-     */
-    @SerializedName(value = "managedDeviceCleanupSettings", alternate = {"ManagedDeviceCleanupSettings"})
-    @Expose
-	@Nullable
-    public ManagedDeviceCleanupSettings managedDeviceCleanupSettings;
-
-    /**
-     * The Subscriptions.
-     * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
-     */
-    @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
-    @Expose
-	@Nullable
-    public EnumSet<DeviceManagementSubscriptions> subscriptions;
-
-    /**
-     * The Subscription State.
-     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
-     */
-    @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
-    @Expose
-	@Nullable
-    public DeviceManagementSubscriptionState subscriptionState;
-
-    /**
-     * The User Experience Analytics Settings.
-     * User experience analytics device settings
-     */
-    @SerializedName(value = "userExperienceAnalyticsSettings", alternate = {"UserExperienceAnalyticsSettings"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsSettings userExperienceAnalyticsSettings;
-
-    /**
-     * The Windows Malware Overview.
-     * Malware overview for windows devices.
-     */
-    @SerializedName(value = "windowsMalwareOverview", alternate = {"WindowsMalwareOverview"})
-    @Expose
-	@Nullable
-    public WindowsMalwareOverview windowsMalwareOverview;
-
-    /**
-     * The Android Device Owner Enrollment Profiles.
-     * Android device owner enrollment profile entities.
-     */
-    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
-    @Expose
-	@Nullable
-    public AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
-
-    /**
-     * The Virtual Endpoint.
-     * 
-     */
-    @SerializedName(value = "virtualEndpoint", alternate = {"VirtualEndpoint"})
-    @Expose
-	@Nullable
-    public VirtualEndpoint virtualEndpoint;
-
-    /**
-     * The Android For Work App Configuration Schemas.
-     * Android for Work app configuration schema entities.
-     */
-    @SerializedName(value = "androidForWorkAppConfigurationSchemas", alternate = {"AndroidForWorkAppConfigurationSchemas"})
-    @Expose
-	@Nullable
-    public AndroidForWorkAppConfigurationSchemaCollectionPage androidForWorkAppConfigurationSchemas;
-
-    /**
-     * The Android For Work Enrollment Profiles.
-     * Android for Work enrollment profile entities.
-     */
-    @SerializedName(value = "androidForWorkEnrollmentProfiles", alternate = {"AndroidForWorkEnrollmentProfiles"})
-    @Expose
-	@Nullable
-    public AndroidForWorkEnrollmentProfileCollectionPage androidForWorkEnrollmentProfiles;
-
-    /**
-     * The Android For Work Settings.
-     * The singleton Android for Work settings entity.
-     */
-    @SerializedName(value = "androidForWorkSettings", alternate = {"AndroidForWorkSettings"})
-    @Expose
-	@Nullable
-    public AndroidForWorkSettings androidForWorkSettings;
-
-    /**
-     * The Android Managed Store Account Enterprise Settings.
-     * The singleton Android managed store account enterprise settings entity.
-     */
-    @SerializedName(value = "androidManagedStoreAccountEnterpriseSettings", alternate = {"AndroidManagedStoreAccountEnterpriseSettings"})
-    @Expose
-	@Nullable
-    public AndroidManagedStoreAccountEnterpriseSettings androidManagedStoreAccountEnterpriseSettings;
-
-    /**
-     * The Android Managed Store App Configuration Schemas.
-     * Android Enterprise app configuration schema entities.
-     */
-    @SerializedName(value = "androidManagedStoreAppConfigurationSchemas", alternate = {"AndroidManagedStoreAppConfigurationSchemas"})
-    @Expose
-	@Nullable
-    public AndroidManagedStoreAppConfigurationSchemaCollectionPage androidManagedStoreAppConfigurationSchemas;
-
-    /**
-     * The Audit Events.
-     * The Audit Events
-     */
-    @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
-    @Expose
-	@Nullable
-    public AuditEventCollectionPage auditEvents;
-
-    /**
-     * The Assignment Filters.
-     * The list of assignment filters
-     */
-    @SerializedName(value = "assignmentFilters", alternate = {"AssignmentFilters"})
-    @Expose
-	@Nullable
-    public DeviceAndAppManagementAssignmentFilterCollectionPage assignmentFilters;
-
-    /**
-     * The Chrome OSOnboarding Settings.
-     * Collection of ChromeOSOnboardingSettings settings associated with account.
-     */
-    @SerializedName(value = "chromeOSOnboardingSettings", alternate = {"ChromeOSOnboardingSettings"})
-    @Expose
-	@Nullable
-    public ChromeOSOnboardingSettingsCollectionPage chromeOSOnboardingSettings;
-
-    /**
-     * The Terms And Conditions.
-     * The terms and conditions associated with device management of the company.
-     */
-    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
-    @Expose
-	@Nullable
-    public TermsAndConditionsCollectionPage termsAndConditions;
-
-    /**
-     * The Advanced Threat Protection Onboarding State Summary.
-     * The summary state of ATP onboarding state for this account.
-     */
-    @SerializedName(value = "advancedThreatProtectionOnboardingStateSummary", alternate = {"AdvancedThreatProtectionOnboardingStateSummary"})
-    @Expose
-	@Nullable
-    public AdvancedThreatProtectionOnboardingStateSummary advancedThreatProtectionOnboardingStateSummary;
-
-    /**
-     * The Cart To Class Associations.
-     * The Cart To Class Associations.
-     */
-    @SerializedName(value = "cartToClassAssociations", alternate = {"CartToClassAssociations"})
-    @Expose
-	@Nullable
-    public CartToClassAssociationCollectionPage cartToClassAssociations;
-
-    /**
-     * The Device Compliance Policies.
-     * The device compliance policies.
-     */
-    @SerializedName(value = "deviceCompliancePolicies", alternate = {"DeviceCompliancePolicies"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
-
-    /**
-     * The Device Compliance Policy Device State Summary.
-     * The device compliance state summary for this account.
-     */
-    @SerializedName(value = "deviceCompliancePolicyDeviceStateSummary", alternate = {"DeviceCompliancePolicyDeviceStateSummary"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicyDeviceStateSummary deviceCompliancePolicyDeviceStateSummary;
-
-    /**
-     * The Device Compliance Policy Setting State Summaries.
-     * The summary states of compliance policy settings for this account.
-     */
-    @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
-
-    /**
-     * The Device Configuration Conflict Summary.
-     * Summary of policies in conflict state for this account.
-     */
-    @SerializedName(value = "deviceConfigurationConflictSummary", alternate = {"DeviceConfigurationConflictSummary"})
-    @Expose
-	@Nullable
-    public DeviceConfigurationConflictSummaryCollectionPage deviceConfigurationConflictSummary;
-
-    /**
-     * The Device Configuration Device State Summaries.
-     * The device configuration device state summary for this account.
-     */
-    @SerializedName(value = "deviceConfigurationDeviceStateSummaries", alternate = {"DeviceConfigurationDeviceStateSummaries"})
-    @Expose
-	@Nullable
-    public DeviceConfigurationDeviceStateSummary deviceConfigurationDeviceStateSummaries;
-
-    /**
-     * The Device Configuration Restricted Apps Violations.
-     * Restricted apps violations for this account.
-     */
-    @SerializedName(value = "deviceConfigurationRestrictedAppsViolations", alternate = {"DeviceConfigurationRestrictedAppsViolations"})
-    @Expose
-	@Nullable
-    public RestrictedAppsViolationCollectionPage deviceConfigurationRestrictedAppsViolations;
-
-    /**
-     * The Device Configurations.
-     * The device configurations.
-     */
-    @SerializedName(value = "deviceConfigurations", alternate = {"DeviceConfigurations"})
-    @Expose
-	@Nullable
-    public DeviceConfigurationCollectionPage deviceConfigurations;
-
-    /**
-     * The Device Configurations All Managed Device Certificate States.
-     * Summary of all certificates for all devices.
-     */
-    @SerializedName(value = "deviceConfigurationsAllManagedDeviceCertificateStates", alternate = {"DeviceConfigurationsAllManagedDeviceCertificateStates"})
-    @Expose
-	@Nullable
-    public ManagedAllDeviceCertificateStateCollectionPage deviceConfigurationsAllManagedDeviceCertificateStates;
-
-    /**
-     * The Device Configuration User State Summaries.
-     * The device configuration user state summary for this account.
-     */
-    @SerializedName(value = "deviceConfigurationUserStateSummaries", alternate = {"DeviceConfigurationUserStateSummaries"})
-    @Expose
-	@Nullable
-    public DeviceConfigurationUserStateSummary deviceConfigurationUserStateSummaries;
-
-    /**
-     * The Ios Update Statuses.
-     * The IOS software update installation statuses for this account.
-     */
-    @SerializedName(value = "iosUpdateStatuses", alternate = {"IosUpdateStatuses"})
-    @Expose
-	@Nullable
-    public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
-
-    /**
-     * The Mac OSSoftware Update Account Summaries.
-     * The MacOS software update account summaries for this account.
-     */
-    @SerializedName(value = "macOSSoftwareUpdateAccountSummaries", alternate = {"MacOSSoftwareUpdateAccountSummaries"})
-    @Expose
-	@Nullable
-    public MacOSSoftwareUpdateAccountSummaryCollectionPage macOSSoftwareUpdateAccountSummaries;
-
-    /**
-     * The Managed Device Encryption States.
-     * Encryption report for devices in this account
-     */
-    @SerializedName(value = "managedDeviceEncryptionStates", alternate = {"ManagedDeviceEncryptionStates"})
-    @Expose
-	@Nullable
-    public ManagedDeviceEncryptionStateCollectionPage managedDeviceEncryptionStates;
-
-    /**
-     * The Ndes Connectors.
-     * The collection of Ndes connectors for this account.
-     */
-    @SerializedName(value = "ndesConnectors", alternate = {"NdesConnectors"})
-    @Expose
-	@Nullable
-    public NdesConnectorCollectionPage ndesConnectors;
-
-    /**
-     * The Software Update Status Summary.
-     * The software update status summary.
-     */
-    @SerializedName(value = "softwareUpdateStatusSummary", alternate = {"SoftwareUpdateStatusSummary"})
-    @Expose
-	@Nullable
-    public SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
-
-    /**
-     * The Compliance Categories.
-     * List of all compliance categories
-     */
-    @SerializedName(value = "complianceCategories", alternate = {"ComplianceCategories"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationCategoryCollectionPage complianceCategories;
-
-    /**
-     * The Compliance Policies.
-     * List of all compliance policies
-     */
-    @SerializedName(value = "compliancePolicies", alternate = {"CompliancePolicies"})
-    @Expose
-	@Nullable
-    public DeviceManagementCompliancePolicyCollectionPage compliancePolicies;
-
-    /**
-     * The Compliance Settings.
-     * List of all ComplianceSettings
-     */
-    @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage complianceSettings;
-
-    /**
-     * The Configuration Categories.
-     * List of all Configuration Categories
-     */
-    @SerializedName(value = "configurationCategories", alternate = {"ConfigurationCategories"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationCategoryCollectionPage configurationCategories;
-
-    /**
-     * The Configuration Policies.
-     * List of all Configuration policies
-     */
-    @SerializedName(value = "configurationPolicies", alternate = {"ConfigurationPolicies"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationPolicyCollectionPage configurationPolicies;
-
-    /**
-     * The Configuration Policy Templates.
-     * List of all templates
-     */
-    @SerializedName(value = "configurationPolicyTemplates", alternate = {"ConfigurationPolicyTemplates"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationPolicyTemplateCollectionPage configurationPolicyTemplates;
-
-    /**
-     * The Configuration Settings.
-     * List of all ConfigurationSettings
-     */
-    @SerializedName(value = "configurationSettings", alternate = {"ConfigurationSettings"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage configurationSettings;
-
-    /**
-     * The Reusable Policy Settings.
-     * List of all reusable settings that can be referred in a policy
-     */
-    @SerializedName(value = "reusablePolicySettings", alternate = {"ReusablePolicySettings"})
-    @Expose
-	@Nullable
-    public DeviceManagementReusablePolicySettingCollectionPage reusablePolicySettings;
-
-    /**
-     * The Reusable Settings.
-     * List of all reusable settings
-     */
-    @SerializedName(value = "reusableSettings", alternate = {"ReusableSettings"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage reusableSettings;
-
-    /**
-     * The Template Settings.
-     * List of all TemplateSettings
-     */
-    @SerializedName(value = "templateSettings", alternate = {"TemplateSettings"})
-    @Expose
-	@Nullable
-    public DeviceManagementConfigurationSettingTemplateCollectionPage templateSettings;
-
-    /**
-     * The Compliance Management Partners.
-     * The list of Compliance Management Partners configured by the tenant.
-     */
-    @SerializedName(value = "complianceManagementPartners", alternate = {"ComplianceManagementPartners"})
-    @Expose
-	@Nullable
-    public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
-
-    /**
-     * The Conditional Access Settings.
-     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
-     */
-    @SerializedName(value = "conditionalAccessSettings", alternate = {"ConditionalAccessSettings"})
-    @Expose
-	@Nullable
-    public OnPremisesConditionalAccessSettings conditionalAccessSettings;
-
-    /**
-     * The Device Categories.
-     * The list of device categories with the tenant.
-     */
-    @SerializedName(value = "deviceCategories", alternate = {"DeviceCategories"})
-    @Expose
-	@Nullable
-    public DeviceCategoryCollectionPage deviceCategories;
-
-    /**
-     * The Device Enrollment Configurations.
-     * The list of device enrollment configurations
-     */
-    @SerializedName(value = "deviceEnrollmentConfigurations", alternate = {"DeviceEnrollmentConfigurations"})
-    @Expose
-	@Nullable
-    public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
-
-    /**
-     * The Device Management Partners.
-     * The list of Device Management Partners configured by the tenant.
-     */
-    @SerializedName(value = "deviceManagementPartners", alternate = {"DeviceManagementPartners"})
-    @Expose
-	@Nullable
-    public DeviceManagementPartnerCollectionPage deviceManagementPartners;
-
-    /**
-     * The Exchange Connectors.
-     * The list of Exchange Connectors configured by the tenant.
-     */
-    @SerializedName(value = "exchangeConnectors", alternate = {"ExchangeConnectors"})
-    @Expose
-	@Nullable
-    public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
-
-    /**
-     * The Exchange On Premises Policies.
-     * The list of Exchange On Premisis policies configured by the tenant.
-     */
-    @SerializedName(value = "exchangeOnPremisesPolicies", alternate = {"ExchangeOnPremisesPolicies"})
-    @Expose
-	@Nullable
-    public DeviceManagementExchangeOnPremisesPolicyCollectionPage exchangeOnPremisesPolicies;
-
-    /**
-     * The Exchange On Premises Policy.
-     * The policy which controls mobile device access to Exchange On Premises
-     */
-    @SerializedName(value = "exchangeOnPremisesPolicy", alternate = {"ExchangeOnPremisesPolicy"})
-    @Expose
-	@Nullable
-    public DeviceManagementExchangeOnPremisesPolicy exchangeOnPremisesPolicy;
-
-    /**
-     * The Mobile Threat Defense Connectors.
-     * The list of Mobile threat Defense connectors configured by the tenant.
-     */
-    @SerializedName(value = "mobileThreatDefenseConnectors", alternate = {"MobileThreatDefenseConnectors"})
-    @Expose
-	@Nullable
-    public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
-
-    /**
-     * The Categories.
-     * The available categories
-     */
-    @SerializedName(value = "categories", alternate = {"Categories"})
-    @Expose
-	@Nullable
-    public DeviceManagementSettingCategoryCollectionPage categories;
-
-    /**
-     * The Intents.
-     * The device management intents
-     */
-    @SerializedName(value = "intents", alternate = {"Intents"})
-    @Expose
-	@Nullable
-    public DeviceManagementIntentCollectionPage intents;
-
-    /**
-     * The Setting Definitions.
-     * The device management intent setting definitions
-     */
-    @SerializedName(value = "settingDefinitions", alternate = {"SettingDefinitions"})
-    @Expose
-	@Nullable
-    public DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
-
-    /**
-     * The Templates.
-     * The available templates
-     */
-    @SerializedName(value = "templates", alternate = {"Templates"})
-    @Expose
-	@Nullable
-    public DeviceManagementTemplateCollectionPage templates;
-
-    /**
-     * The Apple Push Notification Certificate.
-     * Apple push notification certificate.
-     */
-    @SerializedName(value = "applePushNotificationCertificate", alternate = {"ApplePushNotificationCertificate"})
-    @Expose
-	@Nullable
-    public ApplePushNotificationCertificate applePushNotificationCertificate;
-
-    /**
-     * The Cloud PCConnectivity Issues.
-     * The list of CloudPC Connectivity Issue.
-     */
-    @SerializedName(value = "cloudPCConnectivityIssues", alternate = {"CloudPCConnectivityIssues"})
-    @Expose
-	@Nullable
-    public CloudPCConnectivityIssueCollectionPage cloudPCConnectivityIssues;
-
-    /**
-     * The Comanaged Devices.
-     * The list of co-managed devices report
-     */
-    @SerializedName(value = "comanagedDevices", alternate = {"ComanagedDevices"})
-    @Expose
-	@Nullable
-    public ManagedDeviceCollectionPage comanagedDevices;
-
-    /**
-     * The Comanagement Eligible Devices.
-     * The list of co-management eligible devices report
-     */
-    @SerializedName(value = "comanagementEligibleDevices", alternate = {"ComanagementEligibleDevices"})
-    @Expose
-	@Nullable
-    public ComanagementEligibleDeviceCollectionPage comanagementEligibleDevices;
-
-    /**
-     * The Data Sharing Consents.
-     * Data sharing consents.
-     */
-    @SerializedName(value = "dataSharingConsents", alternate = {"DataSharingConsents"})
-    @Expose
-	@Nullable
-    public DataSharingConsentCollectionPage dataSharingConsents;
-
-    /**
-     * The Detected Apps.
-     * The list of detected apps associated with a device.
-     */
-    @SerializedName(value = "detectedApps", alternate = {"DetectedApps"})
-    @Expose
-	@Nullable
-    public DetectedAppCollectionPage detectedApps;
-
-    /**
-     * The Device Compliance Scripts.
-     * The list of device compliance scripts associated with the tenant.
-     */
-    @SerializedName(value = "deviceComplianceScripts", alternate = {"DeviceComplianceScripts"})
-    @Expose
-	@Nullable
-    public DeviceComplianceScriptCollectionPage deviceComplianceScripts;
-
-    /**
-     * The Device Custom Attribute Shell Scripts.
-     * The list of device custom attribute shell scripts associated with the tenant.
-     */
-    @SerializedName(value = "deviceCustomAttributeShellScripts", alternate = {"DeviceCustomAttributeShellScripts"})
-    @Expose
-	@Nullable
-    public DeviceCustomAttributeShellScriptCollectionPage deviceCustomAttributeShellScripts;
-
-    /**
-     * The Device Health Scripts.
-     * The list of device health scripts associated with the tenant.
-     */
-    @SerializedName(value = "deviceHealthScripts", alternate = {"DeviceHealthScripts"})
-    @Expose
-	@Nullable
-    public DeviceHealthScriptCollectionPage deviceHealthScripts;
-
-    /**
-     * The Device Management Scripts.
-     * The list of device management scripts associated with the tenant.
-     */
-    @SerializedName(value = "deviceManagementScripts", alternate = {"DeviceManagementScripts"})
-    @Expose
-	@Nullable
-    public DeviceManagementScriptCollectionPage deviceManagementScripts;
-
-    /**
-     * The Device Shell Scripts.
-     * The list of device shell scripts associated with the tenant.
-     */
-    @SerializedName(value = "deviceShellScripts", alternate = {"DeviceShellScripts"})
-    @Expose
-	@Nullable
-    public DeviceShellScriptCollectionPage deviceShellScripts;
-
-    /**
-     * The Managed Device Overview.
-     * Device overview
-     */
-    @SerializedName(value = "managedDeviceOverview", alternate = {"ManagedDeviceOverview"})
-    @Expose
-	@Nullable
-    public ManagedDeviceOverview managedDeviceOverview;
-
-    /**
-     * The Managed Devices.
-     * The list of managed devices.
-     */
-    @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
-    @Expose
-	@Nullable
-    public ManagedDeviceCollectionPage managedDevices;
-
-    /**
-     * The Mobile App Troubleshooting Events.
-     * The collection property of MobileAppTroubleshootingEvent.
-     */
-    @SerializedName(value = "mobileAppTroubleshootingEvents", alternate = {"MobileAppTroubleshootingEvents"})
-    @Expose
-	@Nullable
-    public MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
-
-    /**
-     * The Oem Warranty Information Onboarding.
-     * List of OEM Warranty Statuses
-     */
-    @SerializedName(value = "oemWarrantyInformationOnboarding", alternate = {"OemWarrantyInformationOnboarding"})
-    @Expose
-	@Nullable
-    public OemWarrantyInformationOnboardingCollectionPage oemWarrantyInformationOnboarding;
-
-    /**
-     * The Remote Action Audits.
-     * The list of device remote action audits with the tenant.
-     */
-    @SerializedName(value = "remoteActionAudits", alternate = {"RemoteActionAudits"})
-    @Expose
-	@Nullable
-    public RemoteActionAuditCollectionPage remoteActionAudits;
-
-    /**
-     * The Tenant Attach RBAC.
-     * TenantAttach RBAC Enablement
-     */
-    @SerializedName(value = "tenantAttachRBAC", alternate = {"TenantAttachRBAC"})
-    @Expose
-	@Nullable
-    public TenantAttachRBAC tenantAttachRBAC;
-
-    /**
-     * The User Experience Analytics App Health Application Performance.
-     * User experience analytics appHealth Application Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformance", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage userExperienceAnalyticsAppHealthApplicationPerformance;
-
-    /**
-     * The User Experience Analytics App Health Application Performance By App Version.
-     * User experience analytics appHealth Application Performance by App Version
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
-
-    /**
-     * The User Experience Analytics App Health Application Performance By App Version Details.
-     * User experience analytics appHealth Application Performance by App Version details
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
-
-    /**
-     * The User Experience Analytics App Health Application Performance By App Version Device Id.
-     * User experience analytics appHealth Application Performance by App Version Device Id
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
-
-    /**
-     * The User Experience Analytics App Health Application Performance By OSVersion.
-     * User experience analytics appHealth Application Performance by OS Version
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
-
-    /**
-     * The User Experience Analytics App Health Device Model Performance.
-     * User experience analytics appHealth Model Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthDeviceModelPerformance", alternate = {"UserExperienceAnalyticsAppHealthDeviceModelPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage userExperienceAnalyticsAppHealthDeviceModelPerformance;
-
-    /**
-     * The User Experience Analytics App Health Device Performance.
-     * User experience analytics appHealth Device Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthDevicePerformance", alternate = {"UserExperienceAnalyticsAppHealthDevicePerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage userExperienceAnalyticsAppHealthDevicePerformance;
-
-    /**
-     * The User Experience Analytics App Health Device Performance Details.
-     * User experience analytics device performance details
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthDevicePerformanceDetails", alternate = {"UserExperienceAnalyticsAppHealthDevicePerformanceDetails"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage userExperienceAnalyticsAppHealthDevicePerformanceDetails;
-
-    /**
-     * The User Experience Analytics App Health OSVersion Performance.
-     * User experience analytics appHealth OS version Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthOSVersionPerformance", alternate = {"UserExperienceAnalyticsAppHealthOSVersionPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage userExperienceAnalyticsAppHealthOSVersionPerformance;
-
-    /**
-     * The User Experience Analytics App Health Overview.
-     * User experience analytics appHealth overview
-     */
-    @SerializedName(value = "userExperienceAnalyticsAppHealthOverview", alternate = {"UserExperienceAnalyticsAppHealthOverview"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsCategory userExperienceAnalyticsAppHealthOverview;
-
-    /**
-     * The User Experience Analytics Baselines.
-     * User experience analytics baselines
-     */
-    @SerializedName(value = "userExperienceAnalyticsBaselines", alternate = {"UserExperienceAnalyticsBaselines"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBaselineCollectionPage userExperienceAnalyticsBaselines;
-
-    /**
-     * The User Experience Analytics Battery Health App Impact.
-     * User Experience Analytics Battery Health App Impact
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthAppImpact", alternate = {"UserExperienceAnalyticsBatteryHealthAppImpact"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage userExperienceAnalyticsBatteryHealthAppImpact;
-
-    /**
-     * The User Experience Analytics Battery Health Capacity Details.
-     * User Experience Analytics Battery Health Capacity Details
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthCapacityDetails", alternate = {"UserExperienceAnalyticsBatteryHealthCapacityDetails"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthCapacityDetails userExperienceAnalyticsBatteryHealthCapacityDetails;
-
-    /**
-     * The User Experience Analytics Battery Health Device App Impact.
-     * User Experience Analytics Battery Health Device App Impact
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthDeviceAppImpact", alternate = {"UserExperienceAnalyticsBatteryHealthDeviceAppImpact"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage userExperienceAnalyticsBatteryHealthDeviceAppImpact;
-
-    /**
-     * The User Experience Analytics Battery Health Device Performance.
-     * User Experience Analytics Battery Health Device Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthDevicePerformance", alternate = {"UserExperienceAnalyticsBatteryHealthDevicePerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage userExperienceAnalyticsBatteryHealthDevicePerformance;
-
-    /**
-     * The User Experience Analytics Battery Health Device Runtime History.
-     * User Experience Analytics Battery Health Device Runtime History
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", alternate = {"UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
-
-    /**
-     * The User Experience Analytics Battery Health Model Performance.
-     * User Experience Analytics Battery Health Model Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthModelPerformance", alternate = {"UserExperienceAnalyticsBatteryHealthModelPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage userExperienceAnalyticsBatteryHealthModelPerformance;
-
-    /**
-     * The User Experience Analytics Battery Health Os Performance.
-     * User Experience Analytics Battery Health Os Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthOsPerformance", alternate = {"UserExperienceAnalyticsBatteryHealthOsPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage userExperienceAnalyticsBatteryHealthOsPerformance;
-
-    /**
-     * The User Experience Analytics Battery Health Runtime Details.
-     * User Experience Analytics Battery Health Runtime Details
-     */
-    @SerializedName(value = "userExperienceAnalyticsBatteryHealthRuntimeDetails", alternate = {"UserExperienceAnalyticsBatteryHealthRuntimeDetails"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsBatteryHealthRuntimeDetails userExperienceAnalyticsBatteryHealthRuntimeDetails;
-
-    /**
-     * The User Experience Analytics Categories.
-     * User experience analytics categories
-     */
-    @SerializedName(value = "userExperienceAnalyticsCategories", alternate = {"UserExperienceAnalyticsCategories"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsCategoryCollectionPage userExperienceAnalyticsCategories;
-
-    /**
-     * The User Experience Analytics Device Metric History.
-     * User experience analytics device metric history
-     */
-    @SerializedName(value = "userExperienceAnalyticsDeviceMetricHistory", alternate = {"UserExperienceAnalyticsDeviceMetricHistory"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsDeviceMetricHistory;
-
-    /**
-     * The User Experience Analytics Device Performance.
-     * User experience analytics device performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsDevicePerformance", alternate = {"UserExperienceAnalyticsDevicePerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsDevicePerformanceCollectionPage userExperienceAnalyticsDevicePerformance;
-
-    /**
-     * The User Experience Analytics Device Scores.
-     * User experience analytics device scores
-     */
-    @SerializedName(value = "userExperienceAnalyticsDeviceScores", alternate = {"UserExperienceAnalyticsDeviceScores"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsDeviceScoresCollectionPage userExperienceAnalyticsDeviceScores;
-
-    /**
-     * The User Experience Analytics Device Startup History.
-     * User experience analytics device Startup History
-     */
-    @SerializedName(value = "userExperienceAnalyticsDeviceStartupHistory", alternate = {"UserExperienceAnalyticsDeviceStartupHistory"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsDeviceStartupHistoryCollectionPage userExperienceAnalyticsDeviceStartupHistory;
-
-    /**
-     * The User Experience Analytics Device Startup Processes.
-     * User experience analytics device Startup Processes
-     */
-    @SerializedName(value = "userExperienceAnalyticsDeviceStartupProcesses", alternate = {"UserExperienceAnalyticsDeviceStartupProcesses"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsDeviceStartupProcessCollectionPage userExperienceAnalyticsDeviceStartupProcesses;
-
-    /**
-     * The User Experience Analytics Device Startup Process Performance.
-     * User experience analytics device Startup Process Performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsDeviceStartupProcessPerformance", alternate = {"UserExperienceAnalyticsDeviceStartupProcessPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage userExperienceAnalyticsDeviceStartupProcessPerformance;
-
-    /**
-     * The User Experience Analytics Devices Without Cloud Identity.
-     * User experience analytics devices without cloud identity.
-     */
-    @SerializedName(value = "userExperienceAnalyticsDevicesWithoutCloudIdentity", alternate = {"UserExperienceAnalyticsDevicesWithoutCloudIdentity"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
-
-    /**
-     * The User Experience Analytics Impacting Process.
-     * User experience analytics impacting process
-     */
-    @SerializedName(value = "userExperienceAnalyticsImpactingProcess", alternate = {"UserExperienceAnalyticsImpactingProcess"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsImpactingProcessCollectionPage userExperienceAnalyticsImpactingProcess;
-
-    /**
-     * The User Experience Analytics Metric History.
-     * User experience analytics metric history
-     */
-    @SerializedName(value = "userExperienceAnalyticsMetricHistory", alternate = {"UserExperienceAnalyticsMetricHistory"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsMetricHistory;
-
-    /**
-     * The User Experience Analytics Model Scores.
-     * User experience analytics model scores
-     */
-    @SerializedName(value = "userExperienceAnalyticsModelScores", alternate = {"UserExperienceAnalyticsModelScores"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsModelScoresCollectionPage userExperienceAnalyticsModelScores;
-
-    /**
-     * The User Experience Analytics Not Autopilot Ready Device.
-     * User experience analytics devices not Windows Autopilot ready.
-     */
-    @SerializedName(value = "userExperienceAnalyticsNotAutopilotReadyDevice", alternate = {"UserExperienceAnalyticsNotAutopilotReadyDevice"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage userExperienceAnalyticsNotAutopilotReadyDevice;
-
-    /**
-     * The User Experience Analytics Overview.
-     * User experience analytics overview
-     */
-    @SerializedName(value = "userExperienceAnalyticsOverview", alternate = {"UserExperienceAnalyticsOverview"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsOverview userExperienceAnalyticsOverview;
-
-    /**
-     * The User Experience Analytics Regression Summary.
-     * User experience analytics regression summary
-     */
-    @SerializedName(value = "userExperienceAnalyticsRegressionSummary", alternate = {"UserExperienceAnalyticsRegressionSummary"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsRegressionSummary userExperienceAnalyticsRegressionSummary;
-
-    /**
-     * The User Experience Analytics Remote Connection.
-     * User experience analytics remote connection
-     */
-    @SerializedName(value = "userExperienceAnalyticsRemoteConnection", alternate = {"UserExperienceAnalyticsRemoteConnection"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsRemoteConnectionCollectionPage userExperienceAnalyticsRemoteConnection;
-
-    /**
-     * The User Experience Analytics Resource Performance.
-     * User experience analytics resource performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsResourcePerformance", alternate = {"UserExperienceAnalyticsResourcePerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsResourcePerformanceCollectionPage userExperienceAnalyticsResourcePerformance;
-
-    /**
-     * The User Experience Analytics Score History.
-     * User experience analytics device Startup Score History
-     */
-    @SerializedName(value = "userExperienceAnalyticsScoreHistory", alternate = {"UserExperienceAnalyticsScoreHistory"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsScoreHistoryCollectionPage userExperienceAnalyticsScoreHistory;
-
-    /**
-     * The User Experience Analytics Work From Anywhere Hardware Readiness Metric.
-     * User experience analytics work from anywhere hardware readiness metrics.
-     */
-    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", alternate = {"UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
-
-    /**
-     * The User Experience Analytics Work From Anywhere Metrics.
-     * User experience analytics work from anywhere metrics.
-     */
-    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereMetrics", alternate = {"UserExperienceAnalyticsWorkFromAnywhereMetrics"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage userExperienceAnalyticsWorkFromAnywhereMetrics;
-
-    /**
-     * The User Experience Analytics Work From Anywhere Model Performance.
-     * The user experience analytics work from anywhere model performance
-     */
-    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereModelPerformance", alternate = {"UserExperienceAnalyticsWorkFromAnywhereModelPerformance"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage userExperienceAnalyticsWorkFromAnywhereModelPerformance;
-
-    /**
-     * The Windows Malware Information.
-     * The list of affected malware in the tenant.
-     */
-    @SerializedName(value = "windowsMalwareInformation", alternate = {"WindowsMalwareInformation"})
-    @Expose
-	@Nullable
-    public WindowsMalwareInformationCollectionPage windowsMalwareInformation;
-
-    /**
-     * The Derived Credentials.
-     * Collection of Derived credential settings associated with account.
-     */
-    @SerializedName(value = "derivedCredentials", alternate = {"DerivedCredentials"})
-    @Expose
-	@Nullable
-    public DeviceManagementDerivedCredentialSettingsCollectionPage derivedCredentials;
-
-    /**
-     * The Resource Access Profiles.
-     * Collection of resource access settings associated with account.
-     */
-    @SerializedName(value = "resourceAccessProfiles", alternate = {"ResourceAccessProfiles"})
-    @Expose
-	@Nullable
-    public DeviceManagementResourceAccessProfileBaseCollectionPage resourceAccessProfiles;
-
-    /**
-     * The Apple User Initiated Enrollment Profiles.
-     * Apple user initiated enrollment profiles
-     */
-    @SerializedName(value = "appleUserInitiatedEnrollmentProfiles", alternate = {"AppleUserInitiatedEnrollmentProfiles"})
-    @Expose
-	@Nullable
-    public AppleUserInitiatedEnrollmentProfileCollectionPage appleUserInitiatedEnrollmentProfiles;
-
-    /**
-     * The Dep Onboarding Settings.
-     * This collections of multiple DEP tokens per-tenant.
-     */
-    @SerializedName(value = "depOnboardingSettings", alternate = {"DepOnboardingSettings"})
-    @Expose
-	@Nullable
-    public DepOnboardingSettingCollectionPage depOnboardingSettings;
-
-    /**
-     * The Imported Device Identities.
-     * The imported device identities.
-     */
-    @SerializedName(value = "importedDeviceIdentities", alternate = {"ImportedDeviceIdentities"})
-    @Expose
-	@Nullable
-    public ImportedDeviceIdentityCollectionPage importedDeviceIdentities;
-
-    /**
-     * The Imported Windows Autopilot Device Identities.
-     * Collection of imported Windows autopilot devices.
-     */
-    @SerializedName(value = "importedWindowsAutopilotDeviceIdentities", alternate = {"ImportedWindowsAutopilotDeviceIdentities"})
-    @Expose
-	@Nullable
-    public ImportedWindowsAutopilotDeviceIdentityCollectionPage importedWindowsAutopilotDeviceIdentities;
-
-    /**
-     * The Windows Autopilot Deployment Profiles.
-     * Windows auto pilot deployment profiles
-     */
-    @SerializedName(value = "windowsAutopilotDeploymentProfiles", alternate = {"WindowsAutopilotDeploymentProfiles"})
-    @Expose
-	@Nullable
-    public WindowsAutopilotDeploymentProfileCollectionPage windowsAutopilotDeploymentProfiles;
-
-    /**
-     * The Windows Autopilot Device Identities.
-     * The Windows autopilot device identities contained collection.
-     */
-    @SerializedName(value = "windowsAutopilotDeviceIdentities", alternate = {"WindowsAutopilotDeviceIdentities"})
-    @Expose
-	@Nullable
-    public WindowsAutopilotDeviceIdentityCollectionPage windowsAutopilotDeviceIdentities;
-
-    /**
-     * The Windows Autopilot Settings.
-     * The Windows autopilot account settings.
-     */
-    @SerializedName(value = "windowsAutopilotSettings", alternate = {"WindowsAutopilotSettings"})
-    @Expose
-	@Nullable
-    public WindowsAutopilotSettings windowsAutopilotSettings;
-
-    /**
-     * The Management Conditions.
-     * The management conditions associated with device management of the company.
-     */
-    @SerializedName(value = "managementConditions", alternate = {"ManagementConditions"})
-    @Expose
-	@Nullable
-    public ManagementConditionCollectionPage managementConditions;
-
-    /**
-     * The Management Condition Statements.
-     * The management condition statements associated with device management of the company.
-     */
-    @SerializedName(value = "managementConditionStatements", alternate = {"ManagementConditionStatements"})
-    @Expose
-	@Nullable
-    public ManagementConditionStatementCollectionPage managementConditionStatements;
-
-    /**
-     * The Group Policy Migration Reports.
-     * A list of Group Policy migration reports.
-     */
-    @SerializedName(value = "groupPolicyMigrationReports", alternate = {"GroupPolicyMigrationReports"})
-    @Expose
-	@Nullable
-    public GroupPolicyMigrationReportCollectionPage groupPolicyMigrationReports;
-
-    /**
-     * The Group Policy Object Files.
-     * A list of Group Policy Object files uploaded.
-     */
-    @SerializedName(value = "groupPolicyObjectFiles", alternate = {"GroupPolicyObjectFiles"})
-    @Expose
-	@Nullable
-    public GroupPolicyObjectFileCollectionPage groupPolicyObjectFiles;
-
-    /**
-     * The Group Policy Categories.
-     * The available group policy categories for this account.
-     */
-    @SerializedName(value = "groupPolicyCategories", alternate = {"GroupPolicyCategories"})
-    @Expose
-	@Nullable
-    public GroupPolicyCategoryCollectionPage groupPolicyCategories;
-
-    /**
-     * The Group Policy Configurations.
-     * The group policy configurations created by this account.
-     */
-    @SerializedName(value = "groupPolicyConfigurations", alternate = {"GroupPolicyConfigurations"})
-    @Expose
-	@Nullable
-    public GroupPolicyConfigurationCollectionPage groupPolicyConfigurations;
-
-    /**
-     * The Group Policy Definition Files.
-     * The available group policy definition files for this account.
-     */
-    @SerializedName(value = "groupPolicyDefinitionFiles", alternate = {"GroupPolicyDefinitionFiles"})
-    @Expose
-	@Nullable
-    public GroupPolicyDefinitionFileCollectionPage groupPolicyDefinitionFiles;
-
-    /**
-     * The Group Policy Definitions.
-     * The available group policy definitions for this account.
-     */
-    @SerializedName(value = "groupPolicyDefinitions", alternate = {"GroupPolicyDefinitions"})
-    @Expose
-	@Nullable
-    public GroupPolicyDefinitionCollectionPage groupPolicyDefinitions;
-
-    /**
-     * The Group Policy Uploaded Definition Files.
-     * The available group policy uploaded definition files for this account.
-     */
-    @SerializedName(value = "groupPolicyUploadedDefinitionFiles", alternate = {"GroupPolicyUploadedDefinitionFiles"})
-    @Expose
-	@Nullable
-    public GroupPolicyUploadedDefinitionFileCollectionPage groupPolicyUploadedDefinitionFiles;
-
-    /**
-     * The Microsoft Tunnel Configurations.
-     * Collection of MicrosoftTunnelConfiguration settings associated with account.
-     */
-    @SerializedName(value = "microsoftTunnelConfigurations", alternate = {"MicrosoftTunnelConfigurations"})
-    @Expose
-	@Nullable
-    public MicrosoftTunnelConfigurationCollectionPage microsoftTunnelConfigurations;
-
-    /**
-     * The Microsoft Tunnel Health Thresholds.
-     * Collection of MicrosoftTunnelHealthThreshold settings associated with account.
-     */
-    @SerializedName(value = "microsoftTunnelHealthThresholds", alternate = {"MicrosoftTunnelHealthThresholds"})
-    @Expose
-	@Nullable
-    public MicrosoftTunnelHealthThresholdCollectionPage microsoftTunnelHealthThresholds;
-
-    /**
-     * The Microsoft Tunnel Server Log Collection Responses.
-     * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
-     */
-    @SerializedName(value = "microsoftTunnelServerLogCollectionResponses", alternate = {"MicrosoftTunnelServerLogCollectionResponses"})
-    @Expose
-	@Nullable
-    public MicrosoftTunnelServerLogCollectionResponseCollectionPage microsoftTunnelServerLogCollectionResponses;
-
-    /**
-     * The Microsoft Tunnel Sites.
-     * Collection of MicrosoftTunnelSite settings associated with account.
-     */
-    @SerializedName(value = "microsoftTunnelSites", alternate = {"MicrosoftTunnelSites"})
-    @Expose
-	@Nullable
-    public MicrosoftTunnelSiteCollectionPage microsoftTunnelSites;
-
-    /**
-     * The Notification Message Templates.
-     * The Notification Message Templates.
-     */
-    @SerializedName(value = "notificationMessageTemplates", alternate = {"NotificationMessageTemplates"})
-    @Expose
-	@Nullable
-    public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
-
-    /**
-     * The Domain Join Connectors.
-     * A list of connector objects.
-     */
-    @SerializedName(value = "domainJoinConnectors", alternate = {"DomainJoinConnectors"})
-    @Expose
-	@Nullable
-    public DeviceManagementDomainJoinConnectorCollectionPage domainJoinConnectors;
-
-    /**
-     * The Config Manager Collections.
-     * A list of ConfigManagerCollection
-     */
-    @SerializedName(value = "configManagerCollections", alternate = {"ConfigManagerCollections"})
-    @Expose
-	@Nullable
-    public ConfigManagerCollectionCollectionPage configManagerCollections;
-
-    /**
-     * The Resource Operations.
-     * The Resource Operations.
-     */
-    @SerializedName(value = "resourceOperations", alternate = {"ResourceOperations"})
-    @Expose
-	@Nullable
-    public ResourceOperationCollectionPage resourceOperations;
-
-    /**
-     * The Role Assignments.
-     * The Role Assignments.
-     */
-    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
-    @Expose
-	@Nullable
-    public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
-
-    /**
-     * The Role Definitions.
-     * The Role Definitions.
-     */
-    @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
-    @Expose
-	@Nullable
-    public RoleDefinitionCollectionPage roleDefinitions;
-
-    /**
-     * The Role Scope Tags.
-     * The Role Scope Tags.
-     */
-    @SerializedName(value = "roleScopeTags", alternate = {"RoleScopeTags"})
-    @Expose
-	@Nullable
-    public RoleScopeTagCollectionPage roleScopeTags;
-
-    /**
-     * The Remote Assistance Partners.
-     * The remote assist partners.
-     */
-    @SerializedName(value = "remoteAssistancePartners", alternate = {"RemoteAssistancePartners"})
-    @Expose
-	@Nullable
-    public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
-
-    /**
-     * The Remote Assistance Settings.
-     * The remote assistance settings singleton
-     */
-    @SerializedName(value = "remoteAssistanceSettings", alternate = {"RemoteAssistanceSettings"})
-    @Expose
-	@Nullable
-    public RemoteAssistanceSettings remoteAssistanceSettings;
-
-    /**
-     * The Reports.
-     * Reports singleton
-     */
-    @SerializedName(value = "reports", alternate = {"Reports"})
-    @Expose
-	@Nullable
-    public DeviceManagementReports reports;
-
-    /**
-     * The Embedded SIMActivation Code Pools.
-     * The embedded SIM activation code pools created by this account.
-     */
-    @SerializedName(value = "embeddedSIMActivationCodePools", alternate = {"EmbeddedSIMActivationCodePools"})
-    @Expose
-	@Nullable
-    public EmbeddedSIMActivationCodePoolCollectionPage embeddedSIMActivationCodePools;
-
-    /**
-     * The Telecom Expense Management Partners.
-     * The telecom expense management partners.
-     */
-    @SerializedName(value = "telecomExpenseManagementPartners", alternate = {"TelecomExpenseManagementPartners"})
-    @Expose
-	@Nullable
-    public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
-
-    /**
-     * The Autopilot Events.
-     * The list of autopilot events for the tenant.
-     */
-    @SerializedName(value = "autopilotEvents", alternate = {"AutopilotEvents"})
-    @Expose
-	@Nullable
-    public DeviceManagementAutopilotEventCollectionPage autopilotEvents;
-
-    /**
-     * The Troubleshooting Events.
-     * The list of troubleshooting events for the tenant.
-     */
-    @SerializedName(value = "troubleshootingEvents", alternate = {"TroubleshootingEvents"})
-    @Expose
-	@Nullable
-    public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
-
-    /**
-     * The Windows Driver Update Profiles.
-     * A collection of windows driver update profiles
-     */
-    @SerializedName(value = "windowsDriverUpdateProfiles", alternate = {"WindowsDriverUpdateProfiles"})
-    @Expose
-	@Nullable
-    public WindowsDriverUpdateProfileCollectionPage windowsDriverUpdateProfiles;
-
-    /**
-     * The Windows Feature Update Profiles.
-     * A collection of windows feature update profiles
-     */
-    @SerializedName(value = "windowsFeatureUpdateProfiles", alternate = {"WindowsFeatureUpdateProfiles"})
-    @Expose
-	@Nullable
-    public WindowsFeatureUpdateProfileCollectionPage windowsFeatureUpdateProfiles;
-
-    /**
-     * The Windows Quality Update Profiles.
-     * A collection of windows quality update profiles
-     */
-    @SerializedName(value = "windowsQualityUpdateProfiles", alternate = {"WindowsQualityUpdateProfiles"})
-    @Expose
-	@Nullable
-    public WindowsQualityUpdateProfileCollectionPage windowsQualityUpdateProfiles;
-
-    /**
-     * The Windows Update Catalog Items.
-     * A collection of windows update catalog items (fetaure updates item , quality updates item)
-     */
-    @SerializedName(value = "windowsUpdateCatalogItems", alternate = {"WindowsUpdateCatalogItems"})
-    @Expose
-	@Nullable
-    public WindowsUpdateCatalogItemCollectionPage windowsUpdateCatalogItems;
-
-    /**
-     * The Intune Branding Profiles.
-     * Intune branding profiles targeted to AAD groups
-     */
-    @SerializedName(value = "intuneBrandingProfiles", alternate = {"IntuneBrandingProfiles"})
-    @Expose
-	@Nullable
-    public IntuneBrandingProfileCollectionPage intuneBrandingProfiles;
-
-    /**
-     * The Windows Information Protection App Learning Summaries.
-     * The windows information protection app learning summaries.
-     */
-    @SerializedName(value = "windowsInformationProtectionAppLearningSummaries", alternate = {"WindowsInformationProtectionAppLearningSummaries"})
-    @Expose
-	@Nullable
-    public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
-
-    /**
-     * The Windows Information Protection Network Learning Summaries.
-     * The windows information protection network learning summaries.
-     */
-    @SerializedName(value = "windowsInformationProtectionNetworkLearningSummaries", alternate = {"WindowsInformationProtectionNetworkLearningSummaries"})
-    @Expose
-	@Nullable
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
-
-    /**
-     * The Certificate Connector Details.
-     * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
-     */
-    @SerializedName(value = "certificateConnectorDetails", alternate = {"CertificateConnectorDetails"})
-    @Expose
-	@Nullable
-    public CertificateConnectorDetailsCollectionPage certificateConnectorDetails;
-
-    /**
-     * The User Pfx Certificates.
-     * Collection of PFX certificates associated with a user.
-     */
-    @SerializedName(value = "userPfxCertificates", alternate = {"UserPfxCertificates"})
-    @Expose
-	@Nullable
-    public UserPFXCertificateCollectionPage userPfxCertificates;
-
-
-    /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json the JSON object to set this object to
-     */
-    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-
-
-        if (json.has("androidDeviceOwnerEnrollmentProfiles")) {
-            androidDeviceOwnerEnrollmentProfiles = serializer.deserializeObject(json.get("androidDeviceOwnerEnrollmentProfiles"), AndroidDeviceOwnerEnrollmentProfileCollectionPage.class);
-        }
-
-        if (json.has("androidForWorkAppConfigurationSchemas")) {
-            androidForWorkAppConfigurationSchemas = serializer.deserializeObject(json.get("androidForWorkAppConfigurationSchemas"), AndroidForWorkAppConfigurationSchemaCollectionPage.class);
-        }
-
-        if (json.has("androidForWorkEnrollmentProfiles")) {
-            androidForWorkEnrollmentProfiles = serializer.deserializeObject(json.get("androidForWorkEnrollmentProfiles"), AndroidForWorkEnrollmentProfileCollectionPage.class);
-        }
-
-        if (json.has("androidManagedStoreAppConfigurationSchemas")) {
-            androidManagedStoreAppConfigurationSchemas = serializer.deserializeObject(json.get("androidManagedStoreAppConfigurationSchemas"), AndroidManagedStoreAppConfigurationSchemaCollectionPage.class);
-        }
-
-        if (json.has("auditEvents")) {
-            auditEvents = serializer.deserializeObject(json.get("auditEvents"), AuditEventCollectionPage.class);
-        }
-
-        if (json.has("assignmentFilters")) {
-            assignmentFilters = serializer.deserializeObject(json.get("assignmentFilters"), DeviceAndAppManagementAssignmentFilterCollectionPage.class);
-        }
-
-        if (json.has("chromeOSOnboardingSettings")) {
-            chromeOSOnboardingSettings = serializer.deserializeObject(json.get("chromeOSOnboardingSettings"), ChromeOSOnboardingSettingsCollectionPage.class);
-        }
-
-        if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), TermsAndConditionsCollectionPage.class);
-        }
-
-        if (json.has("cartToClassAssociations")) {
-            cartToClassAssociations = serializer.deserializeObject(json.get("cartToClassAssociations"), CartToClassAssociationCollectionPage.class);
-        }
-
-        if (json.has("deviceCompliancePolicies")) {
-            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies"), DeviceCompliancePolicyCollectionPage.class);
-        }
-
-        if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
-        }
-
-        if (json.has("deviceConfigurationConflictSummary")) {
-            deviceConfigurationConflictSummary = serializer.deserializeObject(json.get("deviceConfigurationConflictSummary"), DeviceConfigurationConflictSummaryCollectionPage.class);
-        }
-
-        if (json.has("deviceConfigurationRestrictedAppsViolations")) {
-            deviceConfigurationRestrictedAppsViolations = serializer.deserializeObject(json.get("deviceConfigurationRestrictedAppsViolations"), RestrictedAppsViolationCollectionPage.class);
-        }
-
-        if (json.has("deviceConfigurations")) {
-            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations"), DeviceConfigurationCollectionPage.class);
-        }
-
-        if (json.has("deviceConfigurationsAllManagedDeviceCertificateStates")) {
-            deviceConfigurationsAllManagedDeviceCertificateStates = serializer.deserializeObject(json.get("deviceConfigurationsAllManagedDeviceCertificateStates"), ManagedAllDeviceCertificateStateCollectionPage.class);
-        }
-
-        if (json.has("iosUpdateStatuses")) {
-            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses"), IosUpdateDeviceStatusCollectionPage.class);
-        }
-
-        if (json.has("macOSSoftwareUpdateAccountSummaries")) {
-            macOSSoftwareUpdateAccountSummaries = serializer.deserializeObject(json.get("macOSSoftwareUpdateAccountSummaries"), MacOSSoftwareUpdateAccountSummaryCollectionPage.class);
-        }
-
-        if (json.has("managedDeviceEncryptionStates")) {
-            managedDeviceEncryptionStates = serializer.deserializeObject(json.get("managedDeviceEncryptionStates"), ManagedDeviceEncryptionStateCollectionPage.class);
-        }
-
-        if (json.has("ndesConnectors")) {
-            ndesConnectors = serializer.deserializeObject(json.get("ndesConnectors"), NdesConnectorCollectionPage.class);
-        }
-
-        if (json.has("complianceCategories")) {
-            complianceCategories = serializer.deserializeObject(json.get("complianceCategories"), DeviceManagementConfigurationCategoryCollectionPage.class);
-        }
-
-        if (json.has("compliancePolicies")) {
-            compliancePolicies = serializer.deserializeObject(json.get("compliancePolicies"), DeviceManagementCompliancePolicyCollectionPage.class);
-        }
-
-        if (json.has("complianceSettings")) {
-            complianceSettings = serializer.deserializeObject(json.get("complianceSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
-        }
-
-        if (json.has("configurationCategories")) {
-            configurationCategories = serializer.deserializeObject(json.get("configurationCategories"), DeviceManagementConfigurationCategoryCollectionPage.class);
-        }
-
-        if (json.has("configurationPolicies")) {
-            configurationPolicies = serializer.deserializeObject(json.get("configurationPolicies"), DeviceManagementConfigurationPolicyCollectionPage.class);
-        }
-
-        if (json.has("configurationPolicyTemplates")) {
-            configurationPolicyTemplates = serializer.deserializeObject(json.get("configurationPolicyTemplates"), DeviceManagementConfigurationPolicyTemplateCollectionPage.class);
-        }
-
-        if (json.has("configurationSettings")) {
-            configurationSettings = serializer.deserializeObject(json.get("configurationSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
-        }
-
-        if (json.has("reusablePolicySettings")) {
-            reusablePolicySettings = serializer.deserializeObject(json.get("reusablePolicySettings"), DeviceManagementReusablePolicySettingCollectionPage.class);
-        }
-
-        if (json.has("reusableSettings")) {
-            reusableSettings = serializer.deserializeObject(json.get("reusableSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
-        }
-
-        if (json.has("templateSettings")) {
-            templateSettings = serializer.deserializeObject(json.get("templateSettings"), DeviceManagementConfigurationSettingTemplateCollectionPage.class);
-        }
-
-        if (json.has("complianceManagementPartners")) {
-            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners"), ComplianceManagementPartnerCollectionPage.class);
-        }
-
-        if (json.has("deviceCategories")) {
-            deviceCategories = serializer.deserializeObject(json.get("deviceCategories"), DeviceCategoryCollectionPage.class);
-        }
-
-        if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), DeviceEnrollmentConfigurationCollectionPage.class);
-        }
-
-        if (json.has("deviceManagementPartners")) {
-            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners"), DeviceManagementPartnerCollectionPage.class);
-        }
-
-        if (json.has("exchangeConnectors")) {
-            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors"), DeviceManagementExchangeConnectorCollectionPage.class);
-        }
-
-        if (json.has("exchangeOnPremisesPolicies")) {
-            exchangeOnPremisesPolicies = serializer.deserializeObject(json.get("exchangeOnPremisesPolicies"), DeviceManagementExchangeOnPremisesPolicyCollectionPage.class);
-        }
-
-        if (json.has("mobileThreatDefenseConnectors")) {
-            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors"), MobileThreatDefenseConnectorCollectionPage.class);
-        }
-
-        if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), DeviceManagementSettingCategoryCollectionPage.class);
-        }
-
-        if (json.has("intents")) {
-            intents = serializer.deserializeObject(json.get("intents"), DeviceManagementIntentCollectionPage.class);
-        }
-
-        if (json.has("settingDefinitions")) {
-            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), DeviceManagementSettingDefinitionCollectionPage.class);
-        }
-
-        if (json.has("templates")) {
-            templates = serializer.deserializeObject(json.get("templates"), DeviceManagementTemplateCollectionPage.class);
-        }
-
-        if (json.has("cloudPCConnectivityIssues")) {
-            cloudPCConnectivityIssues = serializer.deserializeObject(json.get("cloudPCConnectivityIssues"), CloudPCConnectivityIssueCollectionPage.class);
-        }
-
-        if (json.has("comanagedDevices")) {
-            comanagedDevices = serializer.deserializeObject(json.get("comanagedDevices"), ManagedDeviceCollectionPage.class);
-        }
-
-        if (json.has("comanagementEligibleDevices")) {
-            comanagementEligibleDevices = serializer.deserializeObject(json.get("comanagementEligibleDevices"), ComanagementEligibleDeviceCollectionPage.class);
-        }
-
-        if (json.has("dataSharingConsents")) {
-            dataSharingConsents = serializer.deserializeObject(json.get("dataSharingConsents"), DataSharingConsentCollectionPage.class);
-        }
-
-        if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps"), DetectedAppCollectionPage.class);
-        }
-
-        if (json.has("deviceComplianceScripts")) {
-            deviceComplianceScripts = serializer.deserializeObject(json.get("deviceComplianceScripts"), DeviceComplianceScriptCollectionPage.class);
-        }
-
-        if (json.has("deviceCustomAttributeShellScripts")) {
-            deviceCustomAttributeShellScripts = serializer.deserializeObject(json.get("deviceCustomAttributeShellScripts"), DeviceCustomAttributeShellScriptCollectionPage.class);
-        }
-
-        if (json.has("deviceHealthScripts")) {
-            deviceHealthScripts = serializer.deserializeObject(json.get("deviceHealthScripts"), DeviceHealthScriptCollectionPage.class);
-        }
-
-        if (json.has("deviceManagementScripts")) {
-            deviceManagementScripts = serializer.deserializeObject(json.get("deviceManagementScripts"), DeviceManagementScriptCollectionPage.class);
-        }
-
-        if (json.has("deviceShellScripts")) {
-            deviceShellScripts = serializer.deserializeObject(json.get("deviceShellScripts"), DeviceShellScriptCollectionPage.class);
-        }
-
-        if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
-        }
-
-        if (json.has("mobileAppTroubleshootingEvents")) {
-            mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), MobileAppTroubleshootingEventCollectionPage.class);
-        }
-
-        if (json.has("oemWarrantyInformationOnboarding")) {
-            oemWarrantyInformationOnboarding = serializer.deserializeObject(json.get("oemWarrantyInformationOnboarding"), OemWarrantyInformationOnboardingCollectionPage.class);
-        }
-
-        if (json.has("remoteActionAudits")) {
-            remoteActionAudits = serializer.deserializeObject(json.get("remoteActionAudits"), RemoteActionAuditCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformance")) {
-            userExperienceAnalyticsAppHealthApplicationPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformance"), UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"), UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthDeviceModelPerformance")) {
-            userExperienceAnalyticsAppHealthDeviceModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDeviceModelPerformance"), UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthDevicePerformance")) {
-            userExperienceAnalyticsAppHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformance"), UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthDevicePerformanceDetails")) {
-            userExperienceAnalyticsAppHealthDevicePerformanceDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformanceDetails"), UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsAppHealthOSVersionPerformance")) {
-            userExperienceAnalyticsAppHealthOSVersionPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthOSVersionPerformance"), UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBaselines")) {
-            userExperienceAnalyticsBaselines = serializer.deserializeObject(json.get("userExperienceAnalyticsBaselines"), UserExperienceAnalyticsBaselineCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBatteryHealthAppImpact")) {
-            userExperienceAnalyticsBatteryHealthAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthAppImpact"), UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBatteryHealthDeviceAppImpact")) {
-            userExperienceAnalyticsBatteryHealthDeviceAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceAppImpact"), UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBatteryHealthDevicePerformance")) {
-            userExperienceAnalyticsBatteryHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDevicePerformance"), UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory")) {
-            userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"), UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBatteryHealthModelPerformance")) {
-            userExperienceAnalyticsBatteryHealthModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthModelPerformance"), UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsBatteryHealthOsPerformance")) {
-            userExperienceAnalyticsBatteryHealthOsPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthOsPerformance"), UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsCategories")) {
-            userExperienceAnalyticsCategories = serializer.deserializeObject(json.get("userExperienceAnalyticsCategories"), UserExperienceAnalyticsCategoryCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDeviceMetricHistory")) {
-            userExperienceAnalyticsDeviceMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceMetricHistory"), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDevicePerformance")) {
-            userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance"), UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDeviceScores")) {
-            userExperienceAnalyticsDeviceScores = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScores"), UserExperienceAnalyticsDeviceScoresCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDeviceStartupHistory")) {
-            userExperienceAnalyticsDeviceStartupHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupHistory"), UserExperienceAnalyticsDeviceStartupHistoryCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDeviceStartupProcesses")) {
-            userExperienceAnalyticsDeviceStartupProcesses = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcesses"), UserExperienceAnalyticsDeviceStartupProcessCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDeviceStartupProcessPerformance")) {
-            userExperienceAnalyticsDeviceStartupProcessPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcessPerformance"), UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsDevicesWithoutCloudIdentity")) {
-            userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity"), UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsImpactingProcess")) {
-            userExperienceAnalyticsImpactingProcess = serializer.deserializeObject(json.get("userExperienceAnalyticsImpactingProcess"), UserExperienceAnalyticsImpactingProcessCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsMetricHistory")) {
-            userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory"), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsModelScores")) {
-            userExperienceAnalyticsModelScores = serializer.deserializeObject(json.get("userExperienceAnalyticsModelScores"), UserExperienceAnalyticsModelScoresCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsNotAutopilotReadyDevice")) {
-            userExperienceAnalyticsNotAutopilotReadyDevice = serializer.deserializeObject(json.get("userExperienceAnalyticsNotAutopilotReadyDevice"), UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsRemoteConnection")) {
-            userExperienceAnalyticsRemoteConnection = serializer.deserializeObject(json.get("userExperienceAnalyticsRemoteConnection"), UserExperienceAnalyticsRemoteConnectionCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsResourcePerformance")) {
-            userExperienceAnalyticsResourcePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsResourcePerformance"), UserExperienceAnalyticsResourcePerformanceCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsScoreHistory")) {
-            userExperienceAnalyticsScoreHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsScoreHistory"), UserExperienceAnalyticsScoreHistoryCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsWorkFromAnywhereMetrics")) {
-            userExperienceAnalyticsWorkFromAnywhereMetrics = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereMetrics"), UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage.class);
-        }
-
-        if (json.has("userExperienceAnalyticsWorkFromAnywhereModelPerformance")) {
-            userExperienceAnalyticsWorkFromAnywhereModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage.class);
-        }
-
-        if (json.has("windowsMalwareInformation")) {
-            windowsMalwareInformation = serializer.deserializeObject(json.get("windowsMalwareInformation"), WindowsMalwareInformationCollectionPage.class);
-        }
-
-        if (json.has("derivedCredentials")) {
-            derivedCredentials = serializer.deserializeObject(json.get("derivedCredentials"), DeviceManagementDerivedCredentialSettingsCollectionPage.class);
-        }
-
-        if (json.has("resourceAccessProfiles")) {
-            resourceAccessProfiles = serializer.deserializeObject(json.get("resourceAccessProfiles"), DeviceManagementResourceAccessProfileBaseCollectionPage.class);
-        }
-
-        if (json.has("appleUserInitiatedEnrollmentProfiles")) {
-            appleUserInitiatedEnrollmentProfiles = serializer.deserializeObject(json.get("appleUserInitiatedEnrollmentProfiles"), AppleUserInitiatedEnrollmentProfileCollectionPage.class);
-        }
-
-        if (json.has("depOnboardingSettings")) {
-            depOnboardingSettings = serializer.deserializeObject(json.get("depOnboardingSettings"), DepOnboardingSettingCollectionPage.class);
-        }
-
-        if (json.has("importedDeviceIdentities")) {
-            importedDeviceIdentities = serializer.deserializeObject(json.get("importedDeviceIdentities"), ImportedDeviceIdentityCollectionPage.class);
-        }
-
-        if (json.has("importedWindowsAutopilotDeviceIdentities")) {
-            importedWindowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("importedWindowsAutopilotDeviceIdentities"), ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
-        }
-
-        if (json.has("windowsAutopilotDeploymentProfiles")) {
-            windowsAutopilotDeploymentProfiles = serializer.deserializeObject(json.get("windowsAutopilotDeploymentProfiles"), WindowsAutopilotDeploymentProfileCollectionPage.class);
-        }
-
-        if (json.has("windowsAutopilotDeviceIdentities")) {
-            windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), WindowsAutopilotDeviceIdentityCollectionPage.class);
-        }
-
-        if (json.has("managementConditions")) {
-            managementConditions = serializer.deserializeObject(json.get("managementConditions"), ManagementConditionCollectionPage.class);
-        }
-
-        if (json.has("managementConditionStatements")) {
-            managementConditionStatements = serializer.deserializeObject(json.get("managementConditionStatements"), ManagementConditionStatementCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyMigrationReports")) {
-            groupPolicyMigrationReports = serializer.deserializeObject(json.get("groupPolicyMigrationReports"), GroupPolicyMigrationReportCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyObjectFiles")) {
-            groupPolicyObjectFiles = serializer.deserializeObject(json.get("groupPolicyObjectFiles"), GroupPolicyObjectFileCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyCategories")) {
-            groupPolicyCategories = serializer.deserializeObject(json.get("groupPolicyCategories"), GroupPolicyCategoryCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyConfigurations")) {
-            groupPolicyConfigurations = serializer.deserializeObject(json.get("groupPolicyConfigurations"), GroupPolicyConfigurationCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyDefinitionFiles")) {
-            groupPolicyDefinitionFiles = serializer.deserializeObject(json.get("groupPolicyDefinitionFiles"), GroupPolicyDefinitionFileCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyDefinitions")) {
-            groupPolicyDefinitions = serializer.deserializeObject(json.get("groupPolicyDefinitions"), GroupPolicyDefinitionCollectionPage.class);
-        }
-
-        if (json.has("groupPolicyUploadedDefinitionFiles")) {
-            groupPolicyUploadedDefinitionFiles = serializer.deserializeObject(json.get("groupPolicyUploadedDefinitionFiles"), GroupPolicyUploadedDefinitionFileCollectionPage.class);
-        }
-
-        if (json.has("microsoftTunnelConfigurations")) {
-            microsoftTunnelConfigurations = serializer.deserializeObject(json.get("microsoftTunnelConfigurations"), MicrosoftTunnelConfigurationCollectionPage.class);
-        }
-
-        if (json.has("microsoftTunnelHealthThresholds")) {
-            microsoftTunnelHealthThresholds = serializer.deserializeObject(json.get("microsoftTunnelHealthThresholds"), MicrosoftTunnelHealthThresholdCollectionPage.class);
-        }
-
-        if (json.has("microsoftTunnelServerLogCollectionResponses")) {
-            microsoftTunnelServerLogCollectionResponses = serializer.deserializeObject(json.get("microsoftTunnelServerLogCollectionResponses"), MicrosoftTunnelServerLogCollectionResponseCollectionPage.class);
-        }
-
-        if (json.has("microsoftTunnelSites")) {
-            microsoftTunnelSites = serializer.deserializeObject(json.get("microsoftTunnelSites"), MicrosoftTunnelSiteCollectionPage.class);
-        }
-
-        if (json.has("notificationMessageTemplates")) {
-            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates"), NotificationMessageTemplateCollectionPage.class);
-        }
-
-        if (json.has("domainJoinConnectors")) {
-            domainJoinConnectors = serializer.deserializeObject(json.get("domainJoinConnectors"), DeviceManagementDomainJoinConnectorCollectionPage.class);
-        }
-
-        if (json.has("configManagerCollections")) {
-            configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections"), ConfigManagerCollectionCollectionPage.class);
-        }
-
-        if (json.has("resourceOperations")) {
-            resourceOperations = serializer.deserializeObject(json.get("resourceOperations"), ResourceOperationCollectionPage.class);
-        }
-
-        if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
-        }
-
-        if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), RoleDefinitionCollectionPage.class);
-        }
-
-        if (json.has("roleScopeTags")) {
-            roleScopeTags = serializer.deserializeObject(json.get("roleScopeTags"), RoleScopeTagCollectionPage.class);
-        }
-
-        if (json.has("remoteAssistancePartners")) {
-            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners"), RemoteAssistancePartnerCollectionPage.class);
-        }
-
-        if (json.has("embeddedSIMActivationCodePools")) {
-            embeddedSIMActivationCodePools = serializer.deserializeObject(json.get("embeddedSIMActivationCodePools"), EmbeddedSIMActivationCodePoolCollectionPage.class);
-        }
-
-        if (json.has("telecomExpenseManagementPartners")) {
-            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners"), TelecomExpenseManagementPartnerCollectionPage.class);
-        }
-
-        if (json.has("autopilotEvents")) {
-            autopilotEvents = serializer.deserializeObject(json.get("autopilotEvents"), DeviceManagementAutopilotEventCollectionPage.class);
-        }
-
-        if (json.has("troubleshootingEvents")) {
-            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
-        }
-
-        if (json.has("windowsDriverUpdateProfiles")) {
-            windowsDriverUpdateProfiles = serializer.deserializeObject(json.get("windowsDriverUpdateProfiles"), WindowsDriverUpdateProfileCollectionPage.class);
-        }
-
-        if (json.has("windowsFeatureUpdateProfiles")) {
-            windowsFeatureUpdateProfiles = serializer.deserializeObject(json.get("windowsFeatureUpdateProfiles"), WindowsFeatureUpdateProfileCollectionPage.class);
-        }
-
-        if (json.has("windowsQualityUpdateProfiles")) {
-            windowsQualityUpdateProfiles = serializer.deserializeObject(json.get("windowsQualityUpdateProfiles"), WindowsQualityUpdateProfileCollectionPage.class);
-        }
-
-        if (json.has("windowsUpdateCatalogItems")) {
-            windowsUpdateCatalogItems = serializer.deserializeObject(json.get("windowsUpdateCatalogItems"), WindowsUpdateCatalogItemCollectionPage.class);
-        }
-
-        if (json.has("intuneBrandingProfiles")) {
-            intuneBrandingProfiles = serializer.deserializeObject(json.get("intuneBrandingProfiles"), IntuneBrandingProfileCollectionPage.class);
-        }
-
-        if (json.has("windowsInformationProtectionAppLearningSummaries")) {
-            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries"), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
-        }
-
-        if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
-            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries"), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
-        }
-
-        if (json.has("certificateConnectorDetails")) {
-            certificateConnectorDetails = serializer.deserializeObject(json.get("certificateConnectorDetails"), CertificateConnectorDetailsCollectionPage.class);
-        }
-
-        if (json.has("userPfxCertificates")) {
-            userPfxCertificates = serializer.deserializeObject(json.get("userPfxCertificates"), UserPFXCertificateCollectionPage.class);
-        }
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/** Singleton entity that acts as a container for all device management functionality. */
+public class DeviceManagement extends Entity implements Parsable {
+    /** The date & time when tenant data moved between scaleunits. */
+    private OffsetDateTime _accountMoveCompletionDateTime;
+    /** Admin consent information. */
+    private AdminConsent _adminConsent;
+    /** The summary state of ATP onboarding state for this account. */
+    private AdvancedThreatProtectionOnboardingStateSummary _advancedThreatProtectionOnboardingStateSummary;
+    /** Android device owner enrollment profile entities. */
+    private java.util.List<AndroidDeviceOwnerEnrollmentProfile> _androidDeviceOwnerEnrollmentProfiles;
+    /** Android for Work app configuration schema entities. */
+    private java.util.List<AndroidForWorkAppConfigurationSchema> _androidForWorkAppConfigurationSchemas;
+    /** Android for Work enrollment profile entities. */
+    private java.util.List<AndroidForWorkEnrollmentProfile> _androidForWorkEnrollmentProfiles;
+    /** The singleton Android for Work settings entity. */
+    private AndroidForWorkSettings _androidForWorkSettings;
+    /** The singleton Android managed store account enterprise settings entity. */
+    private AndroidManagedStoreAccountEnterpriseSettings _androidManagedStoreAccountEnterpriseSettings;
+    /** Android Enterprise app configuration schema entities. */
+    private java.util.List<AndroidManagedStoreAppConfigurationSchema> _androidManagedStoreAppConfigurationSchemas;
+    /** Apple push notification certificate. */
+    private ApplePushNotificationCertificate _applePushNotificationCertificate;
+    /** Apple user initiated enrollment profiles */
+    private java.util.List<AppleUserInitiatedEnrollmentProfile> _appleUserInitiatedEnrollmentProfiles;
+    /** The list of assignment filters */
+    private java.util.List<DeviceAndAppManagementAssignmentFilter> _assignmentFilters;
+    /** The Audit Events */
+    private java.util.List<AuditEvent> _auditEvents;
+    /** The list of autopilot events for the tenant. */
+    private java.util.List<DeviceManagementAutopilotEvent> _autopilotEvents;
+    /** The Cart To Class Associations. */
+    private java.util.List<CartToClassAssociation> _cartToClassAssociations;
+    /** The available categories */
+    private java.util.List<DeviceManagementSettingCategory> _categories;
+    /** Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector. */
+    private java.util.List<CertificateConnectorDetails> _certificateConnectorDetails;
+    /** Collection of ChromeOSOnboardingSettings settings associated with account. */
+    private java.util.List<ChromeOSOnboardingSettings> _chromeOSOnboardingSettings;
+    /** The list of CloudPC Connectivity Issue. */
+    private java.util.List<CloudPCConnectivityIssue> _cloudPCConnectivityIssues;
+    /** The list of co-managed devices report */
+    private java.util.List<ManagedDevice> _comanagedDevices;
+    /** The list of co-management eligible devices report */
+    private java.util.List<ComanagementEligibleDevice> _comanagementEligibleDevices;
+    /** List of all compliance categories */
+    private java.util.List<DeviceManagementConfigurationCategory> _complianceCategories;
+    /** The list of Compliance Management Partners configured by the tenant. */
+    private java.util.List<ComplianceManagementPartner> _complianceManagementPartners;
+    /** List of all compliance policies */
+    private java.util.List<DeviceManagementCompliancePolicy> _compliancePolicies;
+    /** List of all ComplianceSettings */
+    private java.util.List<DeviceManagementConfigurationSettingDefinition> _complianceSettings;
+    /** The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
+    private OnPremisesConditionalAccessSettings _conditionalAccessSettings;
+    /** A list of ConfigManagerCollection */
+    private java.util.List<ConfigManagerCollection> _configManagerCollections;
+    /** List of all Configuration Categories */
+    private java.util.List<DeviceManagementConfigurationCategory> _configurationCategories;
+    /** List of all Configuration policies */
+    private java.util.List<DeviceManagementConfigurationPolicy> _configurationPolicies;
+    /** List of all templates */
+    private java.util.List<DeviceManagementConfigurationPolicyTemplate> _configurationPolicyTemplates;
+    /** List of all ConfigurationSettings */
+    private java.util.List<DeviceManagementConfigurationSettingDefinition> _configurationSettings;
+    /** Data sharing consents. */
+    private java.util.List<DataSharingConsent> _dataSharingConsents;
+    /** This collections of multiple DEP tokens per-tenant. */
+    private java.util.List<DepOnboardingSetting> _depOnboardingSettings;
+    /** Collection of Derived credential settings associated with account. */
+    private java.util.List<DeviceManagementDerivedCredentialSettings> _derivedCredentials;
+    /** The list of detected apps associated with a device. */
+    private java.util.List<DetectedApp> _detectedApps;
+    /** The list of device categories with the tenant. */
+    private java.util.List<DeviceCategory> _deviceCategories;
+    /** The device compliance policies. */
+    private java.util.List<DeviceCompliancePolicy> _deviceCompliancePolicies;
+    /** The device compliance state summary for this account. */
+    private DeviceCompliancePolicyDeviceStateSummary _deviceCompliancePolicyDeviceStateSummary;
+    /** The summary states of compliance policy settings for this account. */
+    private java.util.List<DeviceCompliancePolicySettingStateSummary> _deviceCompliancePolicySettingStateSummaries;
+    /** The last requested time of device compliance reporting for this account. This property is read-only. */
+    private OffsetDateTime _deviceComplianceReportSummarizationDateTime;
+    /** The list of device compliance scripts associated with the tenant. */
+    private java.util.List<DeviceComplianceScript> _deviceComplianceScripts;
+    /** Summary of policies in conflict state for this account. */
+    private java.util.List<DeviceConfigurationConflictSummary> _deviceConfigurationConflictSummary;
+    /** The device configuration device state summary for this account. */
+    private DeviceConfigurationDeviceStateSummary _deviceConfigurationDeviceStateSummaries;
+    /** Restricted apps violations for this account. */
+    private java.util.List<RestrictedAppsViolation> _deviceConfigurationRestrictedAppsViolations;
+    /** The device configurations. */
+    private java.util.List<DeviceConfiguration> _deviceConfigurations;
+    /** Summary of all certificates for all devices. */
+    private java.util.List<ManagedAllDeviceCertificateState> _deviceConfigurationsAllManagedDeviceCertificateStates;
+    /** The device configuration user state summary for this account. */
+    private DeviceConfigurationUserStateSummary _deviceConfigurationUserStateSummaries;
+    /** The list of device custom attribute shell scripts associated with the tenant. */
+    private java.util.List<DeviceCustomAttributeShellScript> _deviceCustomAttributeShellScripts;
+    /** The list of device enrollment configurations */
+    private java.util.List<DeviceEnrollmentConfiguration> _deviceEnrollmentConfigurations;
+    /** The list of device health scripts associated with the tenant. */
+    private java.util.List<DeviceHealthScript> _deviceHealthScripts;
+    /** The list of Device Management Partners configured by the tenant. */
+    private java.util.List<DeviceManagementPartner> _deviceManagementPartners;
+    /** The list of device management scripts associated with the tenant. */
+    private java.util.List<DeviceManagementScript> _deviceManagementScripts;
+    /** Device protection overview. */
+    private DeviceProtectionOverview _deviceProtectionOverview;
+    /** The list of device shell scripts associated with the tenant. */
+    private java.util.List<DeviceShellScript> _deviceShellScripts;
+    /** A list of connector objects. */
+    private java.util.List<DeviceManagementDomainJoinConnector> _domainJoinConnectors;
+    /** The embedded SIM activation code pools created by this account. */
+    private java.util.List<EmbeddedSIMActivationCodePool> _embeddedSIMActivationCodePools;
+    /** The list of Exchange Connectors configured by the tenant. */
+    private java.util.List<DeviceManagementExchangeConnector> _exchangeConnectors;
+    /** The list of Exchange On Premisis policies configured by the tenant. */
+    private java.util.List<DeviceManagementExchangeOnPremisesPolicy> _exchangeOnPremisesPolicies;
+    /** The policy which controls mobile device access to Exchange On Premises */
+    private DeviceManagementExchangeOnPremisesPolicy _exchangeOnPremisesPolicy;
+    /** The available group policy categories for this account. */
+    private java.util.List<GroupPolicyCategory> _groupPolicyCategories;
+    /** The group policy configurations created by this account. */
+    private java.util.List<GroupPolicyConfiguration> _groupPolicyConfigurations;
+    /** The available group policy definition files for this account. */
+    private java.util.List<GroupPolicyDefinitionFile> _groupPolicyDefinitionFiles;
+    /** The available group policy definitions for this account. */
+    private java.util.List<GroupPolicyDefinition> _groupPolicyDefinitions;
+    /** A list of Group Policy migration reports. */
+    private java.util.List<GroupPolicyMigrationReport> _groupPolicyMigrationReports;
+    /** A list of Group Policy Object files uploaded. */
+    private java.util.List<GroupPolicyObjectFile> _groupPolicyObjectFiles;
+    /** The available group policy uploaded definition files for this account. */
+    private java.util.List<GroupPolicyUploadedDefinitionFile> _groupPolicyUploadedDefinitionFiles;
+    /** The imported device identities. */
+    private java.util.List<ImportedDeviceIdentity> _importedDeviceIdentities;
+    /** Collection of imported Windows autopilot devices. */
+    private java.util.List<ImportedWindowsAutopilotDeviceIdentity> _importedWindowsAutopilotDeviceIdentities;
+    /** The device management intents */
+    private java.util.List<DeviceManagementIntent> _intents;
+    /** Intune Account ID for given tenant */
+    private String _intuneAccountId;
+    /** intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
+    private IntuneBrand _intuneBrand;
+    /** Intune branding profiles targeted to AAD groups */
+    private java.util.List<IntuneBrandingProfile> _intuneBrandingProfiles;
+    /** The IOS software update installation statuses for this account. */
+    private java.util.List<IosUpdateDeviceStatus> _iosUpdateStatuses;
+    /** The last modified time of reporting for this account. This property is read-only. */
+    private OffsetDateTime _lastReportAggregationDateTime;
+    /** The property to enable Non-MDM managed legacy PC management for this account. This property is read-only. */
+    private Boolean _legacyPcManangementEnabled;
+    /** The MacOS software update account summaries for this account. */
+    private java.util.List<MacOSSoftwareUpdateAccountSummary> _macOSSoftwareUpdateAccountSummaries;
+    /** Device cleanup rule */
+    private ManagedDeviceCleanupSettings _managedDeviceCleanupSettings;
+    /** Encryption report for devices in this account */
+    private java.util.List<ManagedDeviceEncryptionState> _managedDeviceEncryptionStates;
+    /** Device overview */
+    private ManagedDeviceOverview _managedDeviceOverview;
+    /** The list of managed devices. */
+    private java.util.List<ManagedDevice> _managedDevices;
+    /** Maximum number of DEP tokens allowed per-tenant. */
+    private Integer _maximumDepTokens;
+    /** Collection of MicrosoftTunnelConfiguration settings associated with account. */
+    private java.util.List<MicrosoftTunnelConfiguration> _microsoftTunnelConfigurations;
+    /** Collection of MicrosoftTunnelHealthThreshold settings associated with account. */
+    private java.util.List<MicrosoftTunnelHealthThreshold> _microsoftTunnelHealthThresholds;
+    /** Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account. */
+    private java.util.List<MicrosoftTunnelServerLogCollectionResponse> _microsoftTunnelServerLogCollectionResponses;
+    /** Collection of MicrosoftTunnelSite settings associated with account. */
+    private java.util.List<MicrosoftTunnelSite> _microsoftTunnelSites;
+    /** The collection property of MobileAppTroubleshootingEvent. */
+    private java.util.List<MobileAppTroubleshootingEvent> _mobileAppTroubleshootingEvents;
+    /** The list of Mobile threat Defense connectors configured by the tenant. */
+    private java.util.List<MobileThreatDefenseConnector> _mobileThreatDefenseConnectors;
+    /** The collection of Ndes connectors for this account. */
+    private java.util.List<NdesConnector> _ndesConnectors;
+    /** The Notification Message Templates. */
+    private java.util.List<NotificationMessageTemplate> _notificationMessageTemplates;
+    /** List of OEM Warranty Statuses */
+    private java.util.List<OemWarrantyInformationOnboarding> _oemWarrantyInformationOnboarding;
+    /** The list of device remote action audits with the tenant. */
+    private java.util.List<RemoteActionAudit> _remoteActionAudits;
+    /** The remote assist partners. */
+    private java.util.List<RemoteAssistancePartner> _remoteAssistancePartners;
+    /** The remote assistance settings singleton */
+    private RemoteAssistanceSettings _remoteAssistanceSettings;
+    /** Reports singleton */
+    private DeviceManagementReports _reports;
+    /** Collection of resource access settings associated with account. */
+    private java.util.List<DeviceManagementResourceAccessProfileBase> _resourceAccessProfiles;
+    /** The Resource Operations. */
+    private java.util.List<ResourceOperation> _resourceOperations;
+    /** List of all reusable settings that can be referred in a policy */
+    private java.util.List<DeviceManagementReusablePolicySetting> _reusablePolicySettings;
+    /** List of all reusable settings */
+    private java.util.List<DeviceManagementConfigurationSettingDefinition> _reusableSettings;
+    /** The Role Assignments. */
+    private java.util.List<DeviceAndAppManagementRoleAssignment> _roleAssignments;
+    /** The Role Definitions. */
+    private java.util.List<RoleDefinition> _roleDefinitions;
+    /** The Role Scope Tags. */
+    private java.util.List<RoleScopeTag> _roleScopeTags;
+    /** The device management intent setting definitions */
+    private java.util.List<DeviceManagementSettingDefinition> _settingDefinitions;
+    /** Account level settings. */
+    private DeviceManagementSettings _settings;
+    /** The software update status summary. */
+    private SoftwareUpdateStatusSummary _softwareUpdateStatusSummary;
+    /** Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB. */
+    private DeviceManagementSubscriptions _subscriptions;
+    /** Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut. */
+    private DeviceManagementSubscriptionState _subscriptionState;
+    /** The telecom expense management partners. */
+    private java.util.List<TelecomExpenseManagementPartner> _telecomExpenseManagementPartners;
+    /** The available templates */
+    private java.util.List<DeviceManagementTemplate> _templates;
+    /** List of all TemplateSettings */
+    private java.util.List<DeviceManagementConfigurationSettingTemplate> _templateSettings;
+    /** TenantAttach RBAC Enablement */
+    private TenantAttachRBAC _tenantAttachRBAC;
+    /** The terms and conditions associated with device management of the company. */
+    private java.util.List<TermsAndConditions> _termsAndConditions;
+    /** The list of troubleshooting events for the tenant. */
+    private java.util.List<DeviceManagementTroubleshootingEvent> _troubleshootingEvents;
+    /** When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only. */
+    private Boolean _unlicensedAdminstratorsEnabled;
+    /** User experience analytics appHealth Application Performance */
+    private java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> _userExperienceAnalyticsAppHealthApplicationPerformance;
+    /** User experience analytics appHealth Application Performance by App Version */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> _userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
+    /** User experience analytics appHealth Application Performance by App Version details */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> _userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+    /** User experience analytics appHealth Application Performance by App Version Device Id */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> _userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+    /** User experience analytics appHealth Application Performance by OS Version */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> _userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+    /** User experience analytics appHealth Model Performance */
+    private java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> _userExperienceAnalyticsAppHealthDeviceModelPerformance;
+    /** User experience analytics appHealth Device Performance */
+    private java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> _userExperienceAnalyticsAppHealthDevicePerformance;
+    /** User experience analytics device performance details */
+    private java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> _userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+    /** User experience analytics appHealth OS version Performance */
+    private java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> _userExperienceAnalyticsAppHealthOSVersionPerformance;
+    /** User experience analytics appHealth overview */
+    private UserExperienceAnalyticsCategory _userExperienceAnalyticsAppHealthOverview;
+    /** User experience analytics baselines */
+    private java.util.List<UserExperienceAnalyticsBaseline> _userExperienceAnalyticsBaselines;
+    /** User Experience Analytics Battery Health App Impact */
+    private java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact> _userExperienceAnalyticsBatteryHealthAppImpact;
+    /** User Experience Analytics Battery Health Capacity Details */
+    private UserExperienceAnalyticsBatteryHealthCapacityDetails _userExperienceAnalyticsBatteryHealthCapacityDetails;
+    /** User Experience Analytics Battery Health Device App Impact */
+    private java.util.List<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> _userExperienceAnalyticsBatteryHealthDeviceAppImpact;
+    /** User Experience Analytics Battery Health Device Performance */
+    private java.util.List<UserExperienceAnalyticsBatteryHealthDevicePerformance> _userExperienceAnalyticsBatteryHealthDevicePerformance;
+    /** User Experience Analytics Battery Health Device Runtime History */
+    private java.util.List<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> _userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
+    /** User Experience Analytics Battery Health Model Performance */
+    private java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> _userExperienceAnalyticsBatteryHealthModelPerformance;
+    /** User Experience Analytics Battery Health Os Performance */
+    private java.util.List<UserExperienceAnalyticsBatteryHealthOsPerformance> _userExperienceAnalyticsBatteryHealthOsPerformance;
+    /** User Experience Analytics Battery Health Runtime Details */
+    private UserExperienceAnalyticsBatteryHealthRuntimeDetails _userExperienceAnalyticsBatteryHealthRuntimeDetails;
+    /** User experience analytics categories */
+    private java.util.List<UserExperienceAnalyticsCategory> _userExperienceAnalyticsCategories;
+    /** User experience analytics device metric history */
+    private java.util.List<UserExperienceAnalyticsMetricHistory> _userExperienceAnalyticsDeviceMetricHistory;
+    /** User experience analytics device performance */
+    private java.util.List<UserExperienceAnalyticsDevicePerformance> _userExperienceAnalyticsDevicePerformance;
+    /** The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration. */
+    private UserExperienceAnalyticsDeviceScope _userExperienceAnalyticsDeviceScope;
+    /** The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports. */
+    private java.util.List<UserExperienceAnalyticsDeviceScope> _userExperienceAnalyticsDeviceScopes;
+    /** User experience analytics device scores */
+    private java.util.List<UserExperienceAnalyticsDeviceScores> _userExperienceAnalyticsDeviceScores;
+    /** User experience analytics device Startup History */
+    private java.util.List<UserExperienceAnalyticsDeviceStartupHistory> _userExperienceAnalyticsDeviceStartupHistory;
+    /** User experience analytics device Startup Processes */
+    private java.util.List<UserExperienceAnalyticsDeviceStartupProcess> _userExperienceAnalyticsDeviceStartupProcesses;
+    /** User experience analytics device Startup Process Performance */
+    private java.util.List<UserExperienceAnalyticsDeviceStartupProcessPerformance> _userExperienceAnalyticsDeviceStartupProcessPerformance;
+    /** User experience analytics devices without cloud identity. */
+    private java.util.List<UserExperienceAnalyticsDeviceWithoutCloudIdentity> _userExperienceAnalyticsDevicesWithoutCloudIdentity;
+    /** User experience analytics impacting process */
+    private java.util.List<UserExperienceAnalyticsImpactingProcess> _userExperienceAnalyticsImpactingProcess;
+    /** User experience analytics metric history */
+    private java.util.List<UserExperienceAnalyticsMetricHistory> _userExperienceAnalyticsMetricHistory;
+    /** User experience analytics model scores */
+    private java.util.List<UserExperienceAnalyticsModelScores> _userExperienceAnalyticsModelScores;
+    /** User experience analytics devices not Windows Autopilot ready. */
+    private java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice> _userExperienceAnalyticsNotAutopilotReadyDevice;
+    /** User experience analytics overview */
+    private UserExperienceAnalyticsOverview _userExperienceAnalyticsOverview;
+    /** User experience analytics regression summary */
+    private UserExperienceAnalyticsRegressionSummary _userExperienceAnalyticsRegressionSummary;
+    /** User experience analytics remote connection */
+    private java.util.List<UserExperienceAnalyticsRemoteConnection> _userExperienceAnalyticsRemoteConnection;
+    /** User experience analytics resource performance */
+    private java.util.List<UserExperienceAnalyticsResourcePerformance> _userExperienceAnalyticsResourcePerformance;
+    /** User experience analytics device Startup Score History */
+    private java.util.List<UserExperienceAnalyticsScoreHistory> _userExperienceAnalyticsScoreHistory;
+    /** User experience analytics device settings */
+    private UserExperienceAnalyticsSettings _userExperienceAnalyticsSettings;
+    /** User experience analytics work from anywhere hardware readiness metrics. */
+    private UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric _userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
+    /** User experience analytics work from anywhere metrics. */
+    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> _userExperienceAnalyticsWorkFromAnywhereMetrics;
+    /** The user experience analytics work from anywhere model performance */
+    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> _userExperienceAnalyticsWorkFromAnywhereModelPerformance;
+    /** Collection of PFX certificates associated with a user. */
+    private java.util.List<UserPFXCertificate> _userPfxCertificates;
+    /** The virtualEndpoint property */
+    private VirtualEndpoint _virtualEndpoint;
+    /** Windows auto pilot deployment profiles */
+    private java.util.List<WindowsAutopilotDeploymentProfile> _windowsAutopilotDeploymentProfiles;
+    /** The Windows autopilot device identities contained collection. */
+    private java.util.List<WindowsAutopilotDeviceIdentity> _windowsAutopilotDeviceIdentities;
+    /** The Windows autopilot account settings. */
+    private WindowsAutopilotSettings _windowsAutopilotSettings;
+    /** A collection of windows driver update profiles */
+    private java.util.List<WindowsDriverUpdateProfile> _windowsDriverUpdateProfiles;
+    /** A collection of windows feature update profiles */
+    private java.util.List<WindowsFeatureUpdateProfile> _windowsFeatureUpdateProfiles;
+    /** The windows information protection app learning summaries. */
+    private java.util.List<WindowsInformationProtectionAppLearningSummary> _windowsInformationProtectionAppLearningSummaries;
+    /** The windows information protection network learning summaries. */
+    private java.util.List<WindowsInformationProtectionNetworkLearningSummary> _windowsInformationProtectionNetworkLearningSummaries;
+    /** The list of affected malware in the tenant. */
+    private java.util.List<WindowsMalwareInformation> _windowsMalwareInformation;
+    /** Malware overview for windows devices. */
+    private WindowsMalwareOverview _windowsMalwareOverview;
+    /** A collection of windows quality update profiles */
+    private java.util.List<WindowsQualityUpdateProfile> _windowsQualityUpdateProfiles;
+    /** A collection of windows update catalog items (fetaure updates item , quality updates item) */
+    private java.util.List<WindowsUpdateCatalogItem> _windowsUpdateCatalogItems;
+    /** The Collection of ZebraFotaArtifacts. */
+    private java.util.List<ZebraFotaArtifact> _zebraFotaArtifacts;
+    /** The singleton ZebraFotaConnector associated with account. */
+    private ZebraFotaConnector _zebraFotaConnector;
+    /** Collection of ZebraFotaDeployments associated with account. */
+    private java.util.List<ZebraFotaDeployment> _zebraFotaDeployments;
+    /**
+     * Instantiates a new deviceManagement and sets the default values.
+     * @return a void
+     */
+    public DeviceManagement() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a deviceManagement
+     */
+    @javax.annotation.Nonnull
+    public static DeviceManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new DeviceManagement();
+    }
+    /**
+     * Gets the accountMoveCompletionDateTime property value. The date & time when tenant data moved between scaleunits.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getAccountMoveCompletionDateTime() {
+        return this._accountMoveCompletionDateTime;
+    }
+    /**
+     * Gets the adminConsent property value. Admin consent information.
+     * @return a adminConsent
+     */
+    @javax.annotation.Nullable
+    public AdminConsent getAdminConsent() {
+        return this._adminConsent;
+    }
+    /**
+     * Gets the advancedThreatProtectionOnboardingStateSummary property value. The summary state of ATP onboarding state for this account.
+     * @return a advancedThreatProtectionOnboardingStateSummary
+     */
+    @javax.annotation.Nullable
+    public AdvancedThreatProtectionOnboardingStateSummary getAdvancedThreatProtectionOnboardingStateSummary() {
+        return this._advancedThreatProtectionOnboardingStateSummary;
+    }
+    /**
+     * Gets the androidDeviceOwnerEnrollmentProfiles property value. Android device owner enrollment profile entities.
+     * @return a androidDeviceOwnerEnrollmentProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidDeviceOwnerEnrollmentProfile> getAndroidDeviceOwnerEnrollmentProfiles() {
+        return this._androidDeviceOwnerEnrollmentProfiles;
+    }
+    /**
+     * Gets the androidForWorkAppConfigurationSchemas property value. Android for Work app configuration schema entities.
+     * @return a androidForWorkAppConfigurationSchema
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidForWorkAppConfigurationSchema> getAndroidForWorkAppConfigurationSchemas() {
+        return this._androidForWorkAppConfigurationSchemas;
+    }
+    /**
+     * Gets the androidForWorkEnrollmentProfiles property value. Android for Work enrollment profile entities.
+     * @return a androidForWorkEnrollmentProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidForWorkEnrollmentProfile> getAndroidForWorkEnrollmentProfiles() {
+        return this._androidForWorkEnrollmentProfiles;
+    }
+    /**
+     * Gets the androidForWorkSettings property value. The singleton Android for Work settings entity.
+     * @return a androidForWorkSettings
+     */
+    @javax.annotation.Nullable
+    public AndroidForWorkSettings getAndroidForWorkSettings() {
+        return this._androidForWorkSettings;
+    }
+    /**
+     * Gets the androidManagedStoreAccountEnterpriseSettings property value. The singleton Android managed store account enterprise settings entity.
+     * @return a androidManagedStoreAccountEnterpriseSettings
+     */
+    @javax.annotation.Nullable
+    public AndroidManagedStoreAccountEnterpriseSettings getAndroidManagedStoreAccountEnterpriseSettings() {
+        return this._androidManagedStoreAccountEnterpriseSettings;
+    }
+    /**
+     * Gets the androidManagedStoreAppConfigurationSchemas property value. Android Enterprise app configuration schema entities.
+     * @return a androidManagedStoreAppConfigurationSchema
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidManagedStoreAppConfigurationSchema> getAndroidManagedStoreAppConfigurationSchemas() {
+        return this._androidManagedStoreAppConfigurationSchemas;
+    }
+    /**
+     * Gets the applePushNotificationCertificate property value. Apple push notification certificate.
+     * @return a applePushNotificationCertificate
+     */
+    @javax.annotation.Nullable
+    public ApplePushNotificationCertificate getApplePushNotificationCertificate() {
+        return this._applePushNotificationCertificate;
+    }
+    /**
+     * Gets the appleUserInitiatedEnrollmentProfiles property value. Apple user initiated enrollment profiles
+     * @return a appleUserInitiatedEnrollmentProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppleUserInitiatedEnrollmentProfile> getAppleUserInitiatedEnrollmentProfiles() {
+        return this._appleUserInitiatedEnrollmentProfiles;
+    }
+    /**
+     * Gets the assignmentFilters property value. The list of assignment filters
+     * @return a deviceAndAppManagementAssignmentFilter
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceAndAppManagementAssignmentFilter> getAssignmentFilters() {
+        return this._assignmentFilters;
+    }
+    /**
+     * Gets the auditEvents property value. The Audit Events
+     * @return a auditEvent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuditEvent> getAuditEvents() {
+        return this._auditEvents;
+    }
+    /**
+     * Gets the autopilotEvents property value. The list of autopilot events for the tenant.
+     * @return a deviceManagementAutopilotEvent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementAutopilotEvent> getAutopilotEvents() {
+        return this._autopilotEvents;
+    }
+    /**
+     * Gets the cartToClassAssociations property value. The Cart To Class Associations.
+     * @return a cartToClassAssociation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CartToClassAssociation> getCartToClassAssociations() {
+        return this._cartToClassAssociations;
+    }
+    /**
+     * Gets the categories property value. The available categories
+     * @return a deviceManagementSettingCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementSettingCategory> getCategories() {
+        return this._categories;
+    }
+    /**
+     * Gets the certificateConnectorDetails property value. Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
+     * @return a certificateConnectorDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CertificateConnectorDetails> getCertificateConnectorDetails() {
+        return this._certificateConnectorDetails;
+    }
+    /**
+     * Gets the chromeOSOnboardingSettings property value. Collection of ChromeOSOnboardingSettings settings associated with account.
+     * @return a chromeOSOnboardingSettings
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ChromeOSOnboardingSettings> getChromeOSOnboardingSettings() {
+        return this._chromeOSOnboardingSettings;
+    }
+    /**
+     * Gets the cloudPCConnectivityIssues property value. The list of CloudPC Connectivity Issue.
+     * @return a cloudPCConnectivityIssue
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CloudPCConnectivityIssue> getCloudPCConnectivityIssues() {
+        return this._cloudPCConnectivityIssues;
+    }
+    /**
+     * Gets the comanagedDevices property value. The list of co-managed devices report
+     * @return a managedDevice
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ManagedDevice> getComanagedDevices() {
+        return this._comanagedDevices;
+    }
+    /**
+     * Gets the comanagementEligibleDevices property value. The list of co-management eligible devices report
+     * @return a comanagementEligibleDevice
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ComanagementEligibleDevice> getComanagementEligibleDevices() {
+        return this._comanagementEligibleDevices;
+    }
+    /**
+     * Gets the complianceCategories property value. List of all compliance categories
+     * @return a deviceManagementConfigurationCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationCategory> getComplianceCategories() {
+        return this._complianceCategories;
+    }
+    /**
+     * Gets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
+     * @return a complianceManagementPartner
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ComplianceManagementPartner> getComplianceManagementPartners() {
+        return this._complianceManagementPartners;
+    }
+    /**
+     * Gets the compliancePolicies property value. List of all compliance policies
+     * @return a deviceManagementCompliancePolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementCompliancePolicy> getCompliancePolicies() {
+        return this._compliancePolicies;
+    }
+    /**
+     * Gets the complianceSettings property value. List of all ComplianceSettings
+     * @return a deviceManagementConfigurationSettingDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationSettingDefinition> getComplianceSettings() {
+        return this._complianceSettings;
+    }
+    /**
+     * Gets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * @return a onPremisesConditionalAccessSettings
+     */
+    @javax.annotation.Nullable
+    public OnPremisesConditionalAccessSettings getConditionalAccessSettings() {
+        return this._conditionalAccessSettings;
+    }
+    /**
+     * Gets the configManagerCollections property value. A list of ConfigManagerCollection
+     * @return a configManagerCollection
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ConfigManagerCollection> getConfigManagerCollections() {
+        return this._configManagerCollections;
+    }
+    /**
+     * Gets the configurationCategories property value. List of all Configuration Categories
+     * @return a deviceManagementConfigurationCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationCategory> getConfigurationCategories() {
+        return this._configurationCategories;
+    }
+    /**
+     * Gets the configurationPolicies property value. List of all Configuration policies
+     * @return a deviceManagementConfigurationPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationPolicy> getConfigurationPolicies() {
+        return this._configurationPolicies;
+    }
+    /**
+     * Gets the configurationPolicyTemplates property value. List of all templates
+     * @return a deviceManagementConfigurationPolicyTemplate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationPolicyTemplate> getConfigurationPolicyTemplates() {
+        return this._configurationPolicyTemplates;
+    }
+    /**
+     * Gets the configurationSettings property value. List of all ConfigurationSettings
+     * @return a deviceManagementConfigurationSettingDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationSettingDefinition> getConfigurationSettings() {
+        return this._configurationSettings;
+    }
+    /**
+     * Gets the dataSharingConsents property value. Data sharing consents.
+     * @return a dataSharingConsent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DataSharingConsent> getDataSharingConsents() {
+        return this._dataSharingConsents;
+    }
+    /**
+     * Gets the depOnboardingSettings property value. This collections of multiple DEP tokens per-tenant.
+     * @return a depOnboardingSetting
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DepOnboardingSetting> getDepOnboardingSettings() {
+        return this._depOnboardingSettings;
+    }
+    /**
+     * Gets the derivedCredentials property value. Collection of Derived credential settings associated with account.
+     * @return a deviceManagementDerivedCredentialSettings
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementDerivedCredentialSettings> getDerivedCredentials() {
+        return this._derivedCredentials;
+    }
+    /**
+     * Gets the detectedApps property value. The list of detected apps associated with a device.
+     * @return a detectedApp
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DetectedApp> getDetectedApps() {
+        return this._detectedApps;
+    }
+    /**
+     * Gets the deviceCategories property value. The list of device categories with the tenant.
+     * @return a deviceCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCategory> getDeviceCategories() {
+        return this._deviceCategories;
+    }
+    /**
+     * Gets the deviceCompliancePolicies property value. The device compliance policies.
+     * @return a deviceCompliancePolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCompliancePolicy> getDeviceCompliancePolicies() {
+        return this._deviceCompliancePolicies;
+    }
+    /**
+     * Gets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
+     * @return a deviceCompliancePolicyDeviceStateSummary
+     */
+    @javax.annotation.Nullable
+    public DeviceCompliancePolicyDeviceStateSummary getDeviceCompliancePolicyDeviceStateSummary() {
+        return this._deviceCompliancePolicyDeviceStateSummary;
+    }
+    /**
+     * Gets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
+     * @return a deviceCompliancePolicySettingStateSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCompliancePolicySettingStateSummary> getDeviceCompliancePolicySettingStateSummaries() {
+        return this._deviceCompliancePolicySettingStateSummaries;
+    }
+    /**
+     * Gets the deviceComplianceReportSummarizationDateTime property value. The last requested time of device compliance reporting for this account. This property is read-only.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getDeviceComplianceReportSummarizationDateTime() {
+        return this._deviceComplianceReportSummarizationDateTime;
+    }
+    /**
+     * Gets the deviceComplianceScripts property value. The list of device compliance scripts associated with the tenant.
+     * @return a deviceComplianceScript
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceComplianceScript> getDeviceComplianceScripts() {
+        return this._deviceComplianceScripts;
+    }
+    /**
+     * Gets the deviceConfigurationConflictSummary property value. Summary of policies in conflict state for this account.
+     * @return a deviceConfigurationConflictSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceConfigurationConflictSummary> getDeviceConfigurationConflictSummary() {
+        return this._deviceConfigurationConflictSummary;
+    }
+    /**
+     * Gets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
+     * @return a deviceConfigurationDeviceStateSummary
+     */
+    @javax.annotation.Nullable
+    public DeviceConfigurationDeviceStateSummary getDeviceConfigurationDeviceStateSummaries() {
+        return this._deviceConfigurationDeviceStateSummaries;
+    }
+    /**
+     * Gets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.
+     * @return a restrictedAppsViolation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RestrictedAppsViolation> getDeviceConfigurationRestrictedAppsViolations() {
+        return this._deviceConfigurationRestrictedAppsViolations;
+    }
+    /**
+     * Gets the deviceConfigurations property value. The device configurations.
+     * @return a deviceConfiguration
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceConfiguration> getDeviceConfigurations() {
+        return this._deviceConfigurations;
+    }
+    /**
+     * Gets the deviceConfigurationsAllManagedDeviceCertificateStates property value. Summary of all certificates for all devices.
+     * @return a managedAllDeviceCertificateState
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ManagedAllDeviceCertificateState> getDeviceConfigurationsAllManagedDeviceCertificateStates() {
+        return this._deviceConfigurationsAllManagedDeviceCertificateStates;
+    }
+    /**
+     * Gets the deviceConfigurationUserStateSummaries property value. The device configuration user state summary for this account.
+     * @return a deviceConfigurationUserStateSummary
+     */
+    @javax.annotation.Nullable
+    public DeviceConfigurationUserStateSummary getDeviceConfigurationUserStateSummaries() {
+        return this._deviceConfigurationUserStateSummaries;
+    }
+    /**
+     * Gets the deviceCustomAttributeShellScripts property value. The list of device custom attribute shell scripts associated with the tenant.
+     * @return a deviceCustomAttributeShellScript
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCustomAttributeShellScript> getDeviceCustomAttributeShellScripts() {
+        return this._deviceCustomAttributeShellScripts;
+    }
+    /**
+     * Gets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
+     * @return a deviceEnrollmentConfiguration
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceEnrollmentConfiguration> getDeviceEnrollmentConfigurations() {
+        return this._deviceEnrollmentConfigurations;
+    }
+    /**
+     * Gets the deviceHealthScripts property value. The list of device health scripts associated with the tenant.
+     * @return a deviceHealthScript
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceHealthScript> getDeviceHealthScripts() {
+        return this._deviceHealthScripts;
+    }
+    /**
+     * Gets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
+     * @return a deviceManagementPartner
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementPartner> getDeviceManagementPartners() {
+        return this._deviceManagementPartners;
+    }
+    /**
+     * Gets the deviceManagementScripts property value. The list of device management scripts associated with the tenant.
+     * @return a deviceManagementScript
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementScript> getDeviceManagementScripts() {
+        return this._deviceManagementScripts;
+    }
+    /**
+     * Gets the deviceProtectionOverview property value. Device protection overview.
+     * @return a deviceProtectionOverview
+     */
+    @javax.annotation.Nullable
+    public DeviceProtectionOverview getDeviceProtectionOverview() {
+        return this._deviceProtectionOverview;
+    }
+    /**
+     * Gets the deviceShellScripts property value. The list of device shell scripts associated with the tenant.
+     * @return a deviceShellScript
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceShellScript> getDeviceShellScripts() {
+        return this._deviceShellScripts;
+    }
+    /**
+     * Gets the domainJoinConnectors property value. A list of connector objects.
+     * @return a deviceManagementDomainJoinConnector
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementDomainJoinConnector> getDomainJoinConnectors() {
+        return this._domainJoinConnectors;
+    }
+    /**
+     * Gets the embeddedSIMActivationCodePools property value. The embedded SIM activation code pools created by this account.
+     * @return a embeddedSIMActivationCodePool
+     */
+    @javax.annotation.Nullable
+    public java.util.List<EmbeddedSIMActivationCodePool> getEmbeddedSIMActivationCodePools() {
+        return this._embeddedSIMActivationCodePools;
+    }
+    /**
+     * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
+     * @return a deviceManagementExchangeConnector
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementExchangeConnector> getExchangeConnectors() {
+        return this._exchangeConnectors;
+    }
+    /**
+     * Gets the exchangeOnPremisesPolicies property value. The list of Exchange On Premisis policies configured by the tenant.
+     * @return a deviceManagementExchangeOnPremisesPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementExchangeOnPremisesPolicy> getExchangeOnPremisesPolicies() {
+        return this._exchangeOnPremisesPolicies;
+    }
+    /**
+     * Gets the exchangeOnPremisesPolicy property value. The policy which controls mobile device access to Exchange On Premises
+     * @return a deviceManagementExchangeOnPremisesPolicy
+     */
+    @javax.annotation.Nullable
+    public DeviceManagementExchangeOnPremisesPolicy getExchangeOnPremisesPolicy() {
+        return this._exchangeOnPremisesPolicy;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final DeviceManagement currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("accountMoveCompletionDateTime", (n) -> { currentObject.setAccountMoveCompletionDateTime(n.getOffsetDateTimeValue()); });
+            this.put("adminConsent", (n) -> { currentObject.setAdminConsent(n.getObjectValue(AdminConsent::createFromDiscriminatorValue)); });
+            this.put("advancedThreatProtectionOnboardingStateSummary", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingStateSummary(n.getObjectValue(AdvancedThreatProtectionOnboardingStateSummary::createFromDiscriminatorValue)); });
+            this.put("androidDeviceOwnerEnrollmentProfiles", (n) -> { currentObject.setAndroidDeviceOwnerEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidDeviceOwnerEnrollmentProfile::createFromDiscriminatorValue)); });
+            this.put("androidForWorkAppConfigurationSchemas", (n) -> { currentObject.setAndroidForWorkAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidForWorkAppConfigurationSchema::createFromDiscriminatorValue)); });
+            this.put("androidForWorkEnrollmentProfiles", (n) -> { currentObject.setAndroidForWorkEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidForWorkEnrollmentProfile::createFromDiscriminatorValue)); });
+            this.put("androidForWorkSettings", (n) -> { currentObject.setAndroidForWorkSettings(n.getObjectValue(AndroidForWorkSettings::createFromDiscriminatorValue)); });
+            this.put("androidManagedStoreAccountEnterpriseSettings", (n) -> { currentObject.setAndroidManagedStoreAccountEnterpriseSettings(n.getObjectValue(AndroidManagedStoreAccountEnterpriseSettings::createFromDiscriminatorValue)); });
+            this.put("androidManagedStoreAppConfigurationSchemas", (n) -> { currentObject.setAndroidManagedStoreAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchema::createFromDiscriminatorValue)); });
+            this.put("applePushNotificationCertificate", (n) -> { currentObject.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
+            this.put("appleUserInitiatedEnrollmentProfiles", (n) -> { currentObject.setAppleUserInitiatedEnrollmentProfiles(n.getCollectionOfObjectValues(AppleUserInitiatedEnrollmentProfile::createFromDiscriminatorValue)); });
+            this.put("assignmentFilters", (n) -> { currentObject.setAssignmentFilters(n.getCollectionOfObjectValues(DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue)); });
+            this.put("auditEvents", (n) -> { currentObject.setAuditEvents(n.getCollectionOfObjectValues(AuditEvent::createFromDiscriminatorValue)); });
+            this.put("autopilotEvents", (n) -> { currentObject.setAutopilotEvents(n.getCollectionOfObjectValues(DeviceManagementAutopilotEvent::createFromDiscriminatorValue)); });
+            this.put("cartToClassAssociations", (n) -> { currentObject.setCartToClassAssociations(n.getCollectionOfObjectValues(CartToClassAssociation::createFromDiscriminatorValue)); });
+            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementSettingCategory::createFromDiscriminatorValue)); });
+            this.put("certificateConnectorDetails", (n) -> { currentObject.setCertificateConnectorDetails(n.getCollectionOfObjectValues(CertificateConnectorDetails::createFromDiscriminatorValue)); });
+            this.put("chromeOSOnboardingSettings", (n) -> { currentObject.setChromeOSOnboardingSettings(n.getCollectionOfObjectValues(ChromeOSOnboardingSettings::createFromDiscriminatorValue)); });
+            this.put("cloudPCConnectivityIssues", (n) -> { currentObject.setCloudPCConnectivityIssues(n.getCollectionOfObjectValues(CloudPCConnectivityIssue::createFromDiscriminatorValue)); });
+            this.put("comanagedDevices", (n) -> { currentObject.setComanagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+            this.put("comanagementEligibleDevices", (n) -> { currentObject.setComanagementEligibleDevices(n.getCollectionOfObjectValues(ComanagementEligibleDevice::createFromDiscriminatorValue)); });
+            this.put("complianceCategories", (n) -> { currentObject.setComplianceCategories(n.getCollectionOfObjectValues(DeviceManagementConfigurationCategory::createFromDiscriminatorValue)); });
+            this.put("complianceManagementPartners", (n) -> { currentObject.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
+            this.put("compliancePolicies", (n) -> { currentObject.setCompliancePolicies(n.getCollectionOfObjectValues(DeviceManagementCompliancePolicy::createFromDiscriminatorValue)); });
+            this.put("complianceSettings", (n) -> { currentObject.setComplianceSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+            this.put("conditionalAccessSettings", (n) -> { currentObject.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
+            this.put("configManagerCollections", (n) -> { currentObject.setConfigManagerCollections(n.getCollectionOfObjectValues(ConfigManagerCollection::createFromDiscriminatorValue)); });
+            this.put("configurationCategories", (n) -> { currentObject.setConfigurationCategories(n.getCollectionOfObjectValues(DeviceManagementConfigurationCategory::createFromDiscriminatorValue)); });
+            this.put("configurationPolicies", (n) -> { currentObject.setConfigurationPolicies(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicy::createFromDiscriminatorValue)); });
+            this.put("configurationPolicyTemplates", (n) -> { currentObject.setConfigurationPolicyTemplates(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyTemplate::createFromDiscriminatorValue)); });
+            this.put("configurationSettings", (n) -> { currentObject.setConfigurationSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+            this.put("dataSharingConsents", (n) -> { currentObject.setDataSharingConsents(n.getCollectionOfObjectValues(DataSharingConsent::createFromDiscriminatorValue)); });
+            this.put("depOnboardingSettings", (n) -> { currentObject.setDepOnboardingSettings(n.getCollectionOfObjectValues(DepOnboardingSetting::createFromDiscriminatorValue)); });
+            this.put("derivedCredentials", (n) -> { currentObject.setDerivedCredentials(n.getCollectionOfObjectValues(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+            this.put("detectedApps", (n) -> { currentObject.setDetectedApps(n.getCollectionOfObjectValues(DetectedApp::createFromDiscriminatorValue)); });
+            this.put("deviceCategories", (n) -> { currentObject.setDeviceCategories(n.getCollectionOfObjectValues(DeviceCategory::createFromDiscriminatorValue)); });
+            this.put("deviceCompliancePolicies", (n) -> { currentObject.setDeviceCompliancePolicies(n.getCollectionOfObjectValues(DeviceCompliancePolicy::createFromDiscriminatorValue)); });
+            this.put("deviceCompliancePolicyDeviceStateSummary", (n) -> { currentObject.setDeviceCompliancePolicyDeviceStateSummary(n.getObjectValue(DeviceCompliancePolicyDeviceStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceCompliancePolicySettingStateSummaries", (n) -> { currentObject.setDeviceCompliancePolicySettingStateSummaries(n.getCollectionOfObjectValues(DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceComplianceReportSummarizationDateTime", (n) -> { currentObject.setDeviceComplianceReportSummarizationDateTime(n.getOffsetDateTimeValue()); });
+            this.put("deviceComplianceScripts", (n) -> { currentObject.setDeviceComplianceScripts(n.getCollectionOfObjectValues(DeviceComplianceScript::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurationConflictSummary", (n) -> { currentObject.setDeviceConfigurationConflictSummary(n.getCollectionOfObjectValues(DeviceConfigurationConflictSummary::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurationDeviceStateSummaries", (n) -> { currentObject.setDeviceConfigurationDeviceStateSummaries(n.getObjectValue(DeviceConfigurationDeviceStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurationRestrictedAppsViolations", (n) -> { currentObject.setDeviceConfigurationRestrictedAppsViolations(n.getCollectionOfObjectValues(RestrictedAppsViolation::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurations", (n) -> { currentObject.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurationsAllManagedDeviceCertificateStates", (n) -> { currentObject.setDeviceConfigurationsAllManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedAllDeviceCertificateState::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurationUserStateSummaries", (n) -> { currentObject.setDeviceConfigurationUserStateSummaries(n.getObjectValue(DeviceConfigurationUserStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceCustomAttributeShellScripts", (n) -> { currentObject.setDeviceCustomAttributeShellScripts(n.getCollectionOfObjectValues(DeviceCustomAttributeShellScript::createFromDiscriminatorValue)); });
+            this.put("deviceEnrollmentConfigurations", (n) -> { currentObject.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
+            this.put("deviceHealthScripts", (n) -> { currentObject.setDeviceHealthScripts(n.getCollectionOfObjectValues(DeviceHealthScript::createFromDiscriminatorValue)); });
+            this.put("deviceManagementPartners", (n) -> { currentObject.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
+            this.put("deviceManagementScripts", (n) -> { currentObject.setDeviceManagementScripts(n.getCollectionOfObjectValues(DeviceManagementScript::createFromDiscriminatorValue)); });
+            this.put("deviceProtectionOverview", (n) -> { currentObject.setDeviceProtectionOverview(n.getObjectValue(DeviceProtectionOverview::createFromDiscriminatorValue)); });
+            this.put("deviceShellScripts", (n) -> { currentObject.setDeviceShellScripts(n.getCollectionOfObjectValues(DeviceShellScript::createFromDiscriminatorValue)); });
+            this.put("domainJoinConnectors", (n) -> { currentObject.setDomainJoinConnectors(n.getCollectionOfObjectValues(DeviceManagementDomainJoinConnector::createFromDiscriminatorValue)); });
+            this.put("embeddedSIMActivationCodePools", (n) -> { currentObject.setEmbeddedSIMActivationCodePools(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePool::createFromDiscriminatorValue)); });
+            this.put("exchangeConnectors", (n) -> { currentObject.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
+            this.put("exchangeOnPremisesPolicies", (n) -> { currentObject.setExchangeOnPremisesPolicies(n.getCollectionOfObjectValues(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
+            this.put("exchangeOnPremisesPolicy", (n) -> { currentObject.setExchangeOnPremisesPolicy(n.getObjectValue(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
+            this.put("groupPolicyCategories", (n) -> { currentObject.setGroupPolicyCategories(n.getCollectionOfObjectValues(GroupPolicyCategory::createFromDiscriminatorValue)); });
+            this.put("groupPolicyConfigurations", (n) -> { currentObject.setGroupPolicyConfigurations(n.getCollectionOfObjectValues(GroupPolicyConfiguration::createFromDiscriminatorValue)); });
+            this.put("groupPolicyDefinitionFiles", (n) -> { currentObject.setGroupPolicyDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
+            this.put("groupPolicyDefinitions", (n) -> { currentObject.setGroupPolicyDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+            this.put("groupPolicyMigrationReports", (n) -> { currentObject.setGroupPolicyMigrationReports(n.getCollectionOfObjectValues(GroupPolicyMigrationReport::createFromDiscriminatorValue)); });
+            this.put("groupPolicyObjectFiles", (n) -> { currentObject.setGroupPolicyObjectFiles(n.getCollectionOfObjectValues(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
+            this.put("groupPolicyUploadedDefinitionFiles", (n) -> { currentObject.setGroupPolicyUploadedDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue)); });
+            this.put("importedDeviceIdentities", (n) -> { currentObject.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
+            this.put("importedWindowsAutopilotDeviceIdentities", (n) -> { currentObject.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+            this.put("intents", (n) -> { currentObject.setIntents(n.getCollectionOfObjectValues(DeviceManagementIntent::createFromDiscriminatorValue)); });
+            this.put("intuneAccountId", (n) -> { currentObject.setIntuneAccountId(n.getStringValue()); });
+            this.put("intuneBrand", (n) -> { currentObject.setIntuneBrand(n.getObjectValue(IntuneBrand::createFromDiscriminatorValue)); });
+            this.put("intuneBrandingProfiles", (n) -> { currentObject.setIntuneBrandingProfiles(n.getCollectionOfObjectValues(IntuneBrandingProfile::createFromDiscriminatorValue)); });
+            this.put("iosUpdateStatuses", (n) -> { currentObject.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
+            this.put("lastReportAggregationDateTime", (n) -> { currentObject.setLastReportAggregationDateTime(n.getOffsetDateTimeValue()); });
+            this.put("legacyPcManangementEnabled", (n) -> { currentObject.setLegacyPcManangementEnabled(n.getBooleanValue()); });
+            this.put("macOSSoftwareUpdateAccountSummaries", (n) -> { currentObject.setMacOSSoftwareUpdateAccountSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateAccountSummary::createFromDiscriminatorValue)); });
+            this.put("managedDeviceCleanupSettings", (n) -> { currentObject.setManagedDeviceCleanupSettings(n.getObjectValue(ManagedDeviceCleanupSettings::createFromDiscriminatorValue)); });
+            this.put("managedDeviceEncryptionStates", (n) -> { currentObject.setManagedDeviceEncryptionStates(n.getCollectionOfObjectValues(ManagedDeviceEncryptionState::createFromDiscriminatorValue)); });
+            this.put("managedDeviceOverview", (n) -> { currentObject.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
+            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+            this.put("maximumDepTokens", (n) -> { currentObject.setMaximumDepTokens(n.getIntegerValue()); });
+            this.put("microsoftTunnelConfigurations", (n) -> { currentObject.setMicrosoftTunnelConfigurations(n.getCollectionOfObjectValues(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
+            this.put("microsoftTunnelHealthThresholds", (n) -> { currentObject.setMicrosoftTunnelHealthThresholds(n.getCollectionOfObjectValues(MicrosoftTunnelHealthThreshold::createFromDiscriminatorValue)); });
+            this.put("microsoftTunnelServerLogCollectionResponses", (n) -> { currentObject.setMicrosoftTunnelServerLogCollectionResponses(n.getCollectionOfObjectValues(MicrosoftTunnelServerLogCollectionResponse::createFromDiscriminatorValue)); });
+            this.put("microsoftTunnelSites", (n) -> { currentObject.setMicrosoftTunnelSites(n.getCollectionOfObjectValues(MicrosoftTunnelSite::createFromDiscriminatorValue)); });
+            this.put("mobileAppTroubleshootingEvents", (n) -> { currentObject.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
+            this.put("mobileThreatDefenseConnectors", (n) -> { currentObject.setMobileThreatDefenseConnectors(n.getCollectionOfObjectValues(MobileThreatDefenseConnector::createFromDiscriminatorValue)); });
+            this.put("ndesConnectors", (n) -> { currentObject.setNdesConnectors(n.getCollectionOfObjectValues(NdesConnector::createFromDiscriminatorValue)); });
+            this.put("notificationMessageTemplates", (n) -> { currentObject.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
+            this.put("oemWarrantyInformationOnboarding", (n) -> { currentObject.setOemWarrantyInformationOnboarding(n.getCollectionOfObjectValues(OemWarrantyInformationOnboarding::createFromDiscriminatorValue)); });
+            this.put("remoteActionAudits", (n) -> { currentObject.setRemoteActionAudits(n.getCollectionOfObjectValues(RemoteActionAudit::createFromDiscriminatorValue)); });
+            this.put("remoteAssistancePartners", (n) -> { currentObject.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
+            this.put("remoteAssistanceSettings", (n) -> { currentObject.setRemoteAssistanceSettings(n.getObjectValue(RemoteAssistanceSettings::createFromDiscriminatorValue)); });
+            this.put("reports", (n) -> { currentObject.setReports(n.getObjectValue(DeviceManagementReports::createFromDiscriminatorValue)); });
+            this.put("resourceAccessProfiles", (n) -> { currentObject.setResourceAccessProfiles(n.getCollectionOfObjectValues(DeviceManagementResourceAccessProfileBase::createFromDiscriminatorValue)); });
+            this.put("resourceOperations", (n) -> { currentObject.setResourceOperations(n.getCollectionOfObjectValues(ResourceOperation::createFromDiscriminatorValue)); });
+            this.put("reusablePolicySettings", (n) -> { currentObject.setReusablePolicySettings(n.getCollectionOfObjectValues(DeviceManagementReusablePolicySetting::createFromDiscriminatorValue)); });
+            this.put("reusableSettings", (n) -> { currentObject.setReusableSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(DeviceAndAppManagementRoleAssignment::createFromDiscriminatorValue)); });
+            this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
+            this.put("roleScopeTags", (n) -> { currentObject.setRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTag::createFromDiscriminatorValue)); });
+            this.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
+            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
+            this.put("softwareUpdateStatusSummary", (n) -> { currentObject.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
+            this.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getEnumValue(DeviceManagementSubscriptions.class)); });
+            this.put("subscriptionState", (n) -> { currentObject.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState.class)); });
+            this.put("telecomExpenseManagementPartners", (n) -> { currentObject.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
+            this.put("templates", (n) -> { currentObject.setTemplates(n.getCollectionOfObjectValues(DeviceManagementTemplate::createFromDiscriminatorValue)); });
+            this.put("templateSettings", (n) -> { currentObject.setTemplateSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingTemplate::createFromDiscriminatorValue)); });
+            this.put("tenantAttachRBAC", (n) -> { currentObject.setTenantAttachRBAC(n.getObjectValue(TenantAttachRBAC::createFromDiscriminatorValue)); });
+            this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getCollectionOfObjectValues(TermsAndConditions::createFromDiscriminatorValue)); });
+            this.put("troubleshootingEvents", (n) -> { currentObject.setTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
+            this.put("unlicensedAdminstratorsEnabled", (n) -> { currentObject.setUnlicensedAdminstratorsEnabled(n.getBooleanValue()); });
+            this.put("userExperienceAnalyticsAppHealthApplicationPerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthDeviceModelPerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthDeviceModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthDevicePerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthDevicePerformanceDetails", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformanceDetails::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthOSVersionPerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthOSVersionPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsAppHealthOverview", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthOverview(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBaselines", (n) -> { currentObject.setUserExperienceAnalyticsBaselines(n.getCollectionOfObjectValues(UserExperienceAnalyticsBaseline::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthAppImpact", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthAppImpact(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthAppImpact::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthCapacityDetails", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthCapacityDetails(n.getObjectValue(UserExperienceAnalyticsBatteryHealthCapacityDetails::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthDeviceAppImpact", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthDeviceAppImpact(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDeviceAppImpact::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthDevicePerformance", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDevicePerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthModelPerformance", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthModelPerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthOsPerformance", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthOsPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthOsPerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsBatteryHealthRuntimeDetails", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthRuntimeDetails(n.getObjectValue(UserExperienceAnalyticsBatteryHealthRuntimeDetails::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsCategories", (n) -> { currentObject.setUserExperienceAnalyticsCategories(n.getCollectionOfObjectValues(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceMetricHistory", (n) -> { currentObject.setUserExperienceAnalyticsDeviceMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDevicePerformance", (n) -> { currentObject.setUserExperienceAnalyticsDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceScope", (n) -> { currentObject.setUserExperienceAnalyticsDeviceScope(n.getObjectValue(UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceScopes", (n) -> { currentObject.setUserExperienceAnalyticsDeviceScopes(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceScores", (n) -> { currentObject.setUserExperienceAnalyticsDeviceScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceStartupHistory", (n) -> { currentObject.setUserExperienceAnalyticsDeviceStartupHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceStartupProcesses", (n) -> { currentObject.setUserExperienceAnalyticsDeviceStartupProcesses(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcess::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDeviceStartupProcessPerformance", (n) -> { currentObject.setUserExperienceAnalyticsDeviceStartupProcessPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcessPerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsDevicesWithoutCloudIdentity", (n) -> { currentObject.setUserExperienceAnalyticsDevicesWithoutCloudIdentity(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceWithoutCloudIdentity::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsImpactingProcess", (n) -> { currentObject.setUserExperienceAnalyticsImpactingProcess(n.getCollectionOfObjectValues(UserExperienceAnalyticsImpactingProcess::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsMetricHistory", (n) -> { currentObject.setUserExperienceAnalyticsMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsModelScores", (n) -> { currentObject.setUserExperienceAnalyticsModelScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsModelScores::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsNotAutopilotReadyDevice", (n) -> { currentObject.setUserExperienceAnalyticsNotAutopilotReadyDevice(n.getCollectionOfObjectValues(UserExperienceAnalyticsNotAutopilotReadyDevice::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsOverview", (n) -> { currentObject.setUserExperienceAnalyticsOverview(n.getObjectValue(UserExperienceAnalyticsOverview::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsRegressionSummary", (n) -> { currentObject.setUserExperienceAnalyticsRegressionSummary(n.getObjectValue(UserExperienceAnalyticsRegressionSummary::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsRemoteConnection", (n) -> { currentObject.setUserExperienceAnalyticsRemoteConnection(n.getCollectionOfObjectValues(UserExperienceAnalyticsRemoteConnection::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsResourcePerformance", (n) -> { currentObject.setUserExperienceAnalyticsResourcePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsResourcePerformance::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsScoreHistory", (n) -> { currentObject.setUserExperienceAnalyticsScoreHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsScoreHistory::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsSettings", (n) -> { currentObject.setUserExperienceAnalyticsSettings(n.getObjectValue(UserExperienceAnalyticsSettings::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", (n) -> { currentObject.setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsWorkFromAnywhereMetrics", (n) -> { currentObject.setUserExperienceAnalyticsWorkFromAnywhereMetrics(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereMetric::createFromDiscriminatorValue)); });
+            this.put("userExperienceAnalyticsWorkFromAnywhereModelPerformance", (n) -> { currentObject.setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue)); });
+            this.put("userPfxCertificates", (n) -> { currentObject.setUserPfxCertificates(n.getCollectionOfObjectValues(UserPFXCertificate::createFromDiscriminatorValue)); });
+            this.put("virtualEndpoint", (n) -> { currentObject.setVirtualEndpoint(n.getObjectValue(VirtualEndpoint::createFromDiscriminatorValue)); });
+            this.put("windowsAutopilotDeploymentProfiles", (n) -> { currentObject.setWindowsAutopilotDeploymentProfiles(n.getCollectionOfObjectValues(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
+            this.put("windowsAutopilotDeviceIdentities", (n) -> { currentObject.setWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+            this.put("windowsAutopilotSettings", (n) -> { currentObject.setWindowsAutopilotSettings(n.getObjectValue(WindowsAutopilotSettings::createFromDiscriminatorValue)); });
+            this.put("windowsDriverUpdateProfiles", (n) -> { currentObject.setWindowsDriverUpdateProfiles(n.getCollectionOfObjectValues(WindowsDriverUpdateProfile::createFromDiscriminatorValue)); });
+            this.put("windowsFeatureUpdateProfiles", (n) -> { currentObject.setWindowsFeatureUpdateProfiles(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfile::createFromDiscriminatorValue)); });
+            this.put("windowsInformationProtectionAppLearningSummaries", (n) -> { currentObject.setWindowsInformationProtectionAppLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue)); });
+            this.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { currentObject.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
+            this.put("windowsMalwareInformation", (n) -> { currentObject.setWindowsMalwareInformation(n.getCollectionOfObjectValues(WindowsMalwareInformation::createFromDiscriminatorValue)); });
+            this.put("windowsMalwareOverview", (n) -> { currentObject.setWindowsMalwareOverview(n.getObjectValue(WindowsMalwareOverview::createFromDiscriminatorValue)); });
+            this.put("windowsQualityUpdateProfiles", (n) -> { currentObject.setWindowsQualityUpdateProfiles(n.getCollectionOfObjectValues(WindowsQualityUpdateProfile::createFromDiscriminatorValue)); });
+            this.put("windowsUpdateCatalogItems", (n) -> { currentObject.setWindowsUpdateCatalogItems(n.getCollectionOfObjectValues(WindowsUpdateCatalogItem::createFromDiscriminatorValue)); });
+            this.put("zebraFotaArtifacts", (n) -> { currentObject.setZebraFotaArtifacts(n.getCollectionOfObjectValues(ZebraFotaArtifact::createFromDiscriminatorValue)); });
+            this.put("zebraFotaConnector", (n) -> { currentObject.setZebraFotaConnector(n.getObjectValue(ZebraFotaConnector::createFromDiscriminatorValue)); });
+            this.put("zebraFotaDeployments", (n) -> { currentObject.setZebraFotaDeployments(n.getCollectionOfObjectValues(ZebraFotaDeployment::createFromDiscriminatorValue)); });
+        }};
+    }
+    /**
+     * Gets the groupPolicyCategories property value. The available group policy categories for this account.
+     * @return a groupPolicyCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyCategory> getGroupPolicyCategories() {
+        return this._groupPolicyCategories;
+    }
+    /**
+     * Gets the groupPolicyConfigurations property value. The group policy configurations created by this account.
+     * @return a groupPolicyConfiguration
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyConfiguration> getGroupPolicyConfigurations() {
+        return this._groupPolicyConfigurations;
+    }
+    /**
+     * Gets the groupPolicyDefinitionFiles property value. The available group policy definition files for this account.
+     * @return a groupPolicyDefinitionFile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyDefinitionFile> getGroupPolicyDefinitionFiles() {
+        return this._groupPolicyDefinitionFiles;
+    }
+    /**
+     * Gets the groupPolicyDefinitions property value. The available group policy definitions for this account.
+     * @return a groupPolicyDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyDefinition> getGroupPolicyDefinitions() {
+        return this._groupPolicyDefinitions;
+    }
+    /**
+     * Gets the groupPolicyMigrationReports property value. A list of Group Policy migration reports.
+     * @return a groupPolicyMigrationReport
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyMigrationReport> getGroupPolicyMigrationReports() {
+        return this._groupPolicyMigrationReports;
+    }
+    /**
+     * Gets the groupPolicyObjectFiles property value. A list of Group Policy Object files uploaded.
+     * @return a groupPolicyObjectFile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyObjectFile> getGroupPolicyObjectFiles() {
+        return this._groupPolicyObjectFiles;
+    }
+    /**
+     * Gets the groupPolicyUploadedDefinitionFiles property value. The available group policy uploaded definition files for this account.
+     * @return a groupPolicyUploadedDefinitionFile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GroupPolicyUploadedDefinitionFile> getGroupPolicyUploadedDefinitionFiles() {
+        return this._groupPolicyUploadedDefinitionFiles;
+    }
+    /**
+     * Gets the importedDeviceIdentities property value. The imported device identities.
+     * @return a importedDeviceIdentity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ImportedDeviceIdentity> getImportedDeviceIdentities() {
+        return this._importedDeviceIdentities;
+    }
+    /**
+     * Gets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
+     * @return a importedWindowsAutopilotDeviceIdentity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getImportedWindowsAutopilotDeviceIdentities() {
+        return this._importedWindowsAutopilotDeviceIdentities;
+    }
+    /**
+     * Gets the intents property value. The device management intents
+     * @return a deviceManagementIntent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementIntent> getIntents() {
+        return this._intents;
+    }
+    /**
+     * Gets the intuneAccountId property value. Intune Account ID for given tenant
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getIntuneAccountId() {
+        return this._intuneAccountId;
+    }
+    /**
+     * Gets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     * @return a intuneBrand
+     */
+    @javax.annotation.Nullable
+    public IntuneBrand getIntuneBrand() {
+        return this._intuneBrand;
+    }
+    /**
+     * Gets the intuneBrandingProfiles property value. Intune branding profiles targeted to AAD groups
+     * @return a intuneBrandingProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<IntuneBrandingProfile> getIntuneBrandingProfiles() {
+        return this._intuneBrandingProfiles;
+    }
+    /**
+     * Gets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
+     * @return a iosUpdateDeviceStatus
+     */
+    @javax.annotation.Nullable
+    public java.util.List<IosUpdateDeviceStatus> getIosUpdateStatuses() {
+        return this._iosUpdateStatuses;
+    }
+    /**
+     * Gets the lastReportAggregationDateTime property value. The last modified time of reporting for this account. This property is read-only.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getLastReportAggregationDateTime() {
+        return this._lastReportAggregationDateTime;
+    }
+    /**
+     * Gets the legacyPcManangementEnabled property value. The property to enable Non-MDM managed legacy PC management for this account. This property is read-only.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getLegacyPcManangementEnabled() {
+        return this._legacyPcManangementEnabled;
+    }
+    /**
+     * Gets the macOSSoftwareUpdateAccountSummaries property value. The MacOS software update account summaries for this account.
+     * @return a macOSSoftwareUpdateAccountSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MacOSSoftwareUpdateAccountSummary> getMacOSSoftwareUpdateAccountSummaries() {
+        return this._macOSSoftwareUpdateAccountSummaries;
+    }
+    /**
+     * Gets the managedDeviceCleanupSettings property value. Device cleanup rule
+     * @return a managedDeviceCleanupSettings
+     */
+    @javax.annotation.Nullable
+    public ManagedDeviceCleanupSettings getManagedDeviceCleanupSettings() {
+        return this._managedDeviceCleanupSettings;
+    }
+    /**
+     * Gets the managedDeviceEncryptionStates property value. Encryption report for devices in this account
+     * @return a managedDeviceEncryptionState
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ManagedDeviceEncryptionState> getManagedDeviceEncryptionStates() {
+        return this._managedDeviceEncryptionStates;
+    }
+    /**
+     * Gets the managedDeviceOverview property value. Device overview
+     * @return a managedDeviceOverview
+     */
+    @javax.annotation.Nullable
+    public ManagedDeviceOverview getManagedDeviceOverview() {
+        return this._managedDeviceOverview;
+    }
+    /**
+     * Gets the managedDevices property value. The list of managed devices.
+     * @return a managedDevice
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ManagedDevice> getManagedDevices() {
+        return this._managedDevices;
+    }
+    /**
+     * Gets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMaximumDepTokens() {
+        return this._maximumDepTokens;
+    }
+    /**
+     * Gets the microsoftTunnelConfigurations property value. Collection of MicrosoftTunnelConfiguration settings associated with account.
+     * @return a microsoftTunnelConfiguration
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MicrosoftTunnelConfiguration> getMicrosoftTunnelConfigurations() {
+        return this._microsoftTunnelConfigurations;
+    }
+    /**
+     * Gets the microsoftTunnelHealthThresholds property value. Collection of MicrosoftTunnelHealthThreshold settings associated with account.
+     * @return a microsoftTunnelHealthThreshold
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MicrosoftTunnelHealthThreshold> getMicrosoftTunnelHealthThresholds() {
+        return this._microsoftTunnelHealthThresholds;
+    }
+    /**
+     * Gets the microsoftTunnelServerLogCollectionResponses property value. Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
+     * @return a microsoftTunnelServerLogCollectionResponse
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MicrosoftTunnelServerLogCollectionResponse> getMicrosoftTunnelServerLogCollectionResponses() {
+        return this._microsoftTunnelServerLogCollectionResponses;
+    }
+    /**
+     * Gets the microsoftTunnelSites property value. Collection of MicrosoftTunnelSite settings associated with account.
+     * @return a microsoftTunnelSite
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MicrosoftTunnelSite> getMicrosoftTunnelSites() {
+        return this._microsoftTunnelSites;
+    }
+    /**
+     * Gets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
+     * @return a mobileAppTroubleshootingEvent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MobileAppTroubleshootingEvent> getMobileAppTroubleshootingEvents() {
+        return this._mobileAppTroubleshootingEvents;
+    }
+    /**
+     * Gets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
+     * @return a mobileThreatDefenseConnector
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MobileThreatDefenseConnector> getMobileThreatDefenseConnectors() {
+        return this._mobileThreatDefenseConnectors;
+    }
+    /**
+     * Gets the ndesConnectors property value. The collection of Ndes connectors for this account.
+     * @return a ndesConnector
+     */
+    @javax.annotation.Nullable
+    public java.util.List<NdesConnector> getNdesConnectors() {
+        return this._ndesConnectors;
+    }
+    /**
+     * Gets the notificationMessageTemplates property value. The Notification Message Templates.
+     * @return a notificationMessageTemplate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<NotificationMessageTemplate> getNotificationMessageTemplates() {
+        return this._notificationMessageTemplates;
+    }
+    /**
+     * Gets the oemWarrantyInformationOnboarding property value. List of OEM Warranty Statuses
+     * @return a oemWarrantyInformationOnboarding
+     */
+    @javax.annotation.Nullable
+    public java.util.List<OemWarrantyInformationOnboarding> getOemWarrantyInformationOnboarding() {
+        return this._oemWarrantyInformationOnboarding;
+    }
+    /**
+     * Gets the remoteActionAudits property value. The list of device remote action audits with the tenant.
+     * @return a remoteActionAudit
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RemoteActionAudit> getRemoteActionAudits() {
+        return this._remoteActionAudits;
+    }
+    /**
+     * Gets the remoteAssistancePartners property value. The remote assist partners.
+     * @return a remoteAssistancePartner
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RemoteAssistancePartner> getRemoteAssistancePartners() {
+        return this._remoteAssistancePartners;
+    }
+    /**
+     * Gets the remoteAssistanceSettings property value. The remote assistance settings singleton
+     * @return a remoteAssistanceSettings
+     */
+    @javax.annotation.Nullable
+    public RemoteAssistanceSettings getRemoteAssistanceSettings() {
+        return this._remoteAssistanceSettings;
+    }
+    /**
+     * Gets the reports property value. Reports singleton
+     * @return a deviceManagementReports
+     */
+    @javax.annotation.Nullable
+    public DeviceManagementReports getReports() {
+        return this._reports;
+    }
+    /**
+     * Gets the resourceAccessProfiles property value. Collection of resource access settings associated with account.
+     * @return a deviceManagementResourceAccessProfileBase
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementResourceAccessProfileBase> getResourceAccessProfiles() {
+        return this._resourceAccessProfiles;
+    }
+    /**
+     * Gets the resourceOperations property value. The Resource Operations.
+     * @return a resourceOperation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ResourceOperation> getResourceOperations() {
+        return this._resourceOperations;
+    }
+    /**
+     * Gets the reusablePolicySettings property value. List of all reusable settings that can be referred in a policy
+     * @return a deviceManagementReusablePolicySetting
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementReusablePolicySetting> getReusablePolicySettings() {
+        return this._reusablePolicySettings;
+    }
+    /**
+     * Gets the reusableSettings property value. List of all reusable settings
+     * @return a deviceManagementConfigurationSettingDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationSettingDefinition> getReusableSettings() {
+        return this._reusableSettings;
+    }
+    /**
+     * Gets the roleAssignments property value. The Role Assignments.
+     * @return a deviceAndAppManagementRoleAssignment
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceAndAppManagementRoleAssignment> getRoleAssignments() {
+        return this._roleAssignments;
+    }
+    /**
+     * Gets the roleDefinitions property value. The Role Definitions.
+     * @return a roleDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RoleDefinition> getRoleDefinitions() {
+        return this._roleDefinitions;
+    }
+    /**
+     * Gets the roleScopeTags property value. The Role Scope Tags.
+     * @return a roleScopeTag
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RoleScopeTag> getRoleScopeTags() {
+        return this._roleScopeTags;
+    }
+    /**
+     * Gets the settingDefinitions property value. The device management intent setting definitions
+     * @return a deviceManagementSettingDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementSettingDefinition> getSettingDefinitions() {
+        return this._settingDefinitions;
+    }
+    /**
+     * Gets the settings property value. Account level settings.
+     * @return a deviceManagementSettings
+     */
+    @javax.annotation.Nullable
+    public DeviceManagementSettings getSettings() {
+        return this._settings;
+    }
+    /**
+     * Gets the softwareUpdateStatusSummary property value. The software update status summary.
+     * @return a softwareUpdateStatusSummary
+     */
+    @javax.annotation.Nullable
+    public SoftwareUpdateStatusSummary getSoftwareUpdateStatusSummary() {
+        return this._softwareUpdateStatusSummary;
+    }
+    /**
+     * Gets the subscriptions property value. Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+     * @return a deviceManagementSubscriptions
+     */
+    @javax.annotation.Nullable
+    public DeviceManagementSubscriptions getSubscriptions() {
+        return this._subscriptions;
+    }
+    /**
+     * Gets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * @return a deviceManagementSubscriptionState
+     */
+    @javax.annotation.Nullable
+    public DeviceManagementSubscriptionState getSubscriptionState() {
+        return this._subscriptionState;
+    }
+    /**
+     * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
+     * @return a telecomExpenseManagementPartner
+     */
+    @javax.annotation.Nullable
+    public java.util.List<TelecomExpenseManagementPartner> getTelecomExpenseManagementPartners() {
+        return this._telecomExpenseManagementPartners;
+    }
+    /**
+     * Gets the templates property value. The available templates
+     * @return a deviceManagementTemplate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementTemplate> getTemplates() {
+        return this._templates;
+    }
+    /**
+     * Gets the templateSettings property value. List of all TemplateSettings
+     * @return a deviceManagementConfigurationSettingTemplate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementConfigurationSettingTemplate> getTemplateSettings() {
+        return this._templateSettings;
+    }
+    /**
+     * Gets the tenantAttachRBAC property value. TenantAttach RBAC Enablement
+     * @return a tenantAttachRBAC
+     */
+    @javax.annotation.Nullable
+    public TenantAttachRBAC getTenantAttachRBAC() {
+        return this._tenantAttachRBAC;
+    }
+    /**
+     * Gets the termsAndConditions property value. The terms and conditions associated with device management of the company.
+     * @return a termsAndConditions
+     */
+    @javax.annotation.Nullable
+    public java.util.List<TermsAndConditions> getTermsAndConditions() {
+        return this._termsAndConditions;
+    }
+    /**
+     * Gets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
+     * @return a deviceManagementTroubleshootingEvent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementTroubleshootingEvent> getTroubleshootingEvents() {
+        return this._troubleshootingEvents;
+    }
+    /**
+     * Gets the unlicensedAdminstratorsEnabled property value. When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getUnlicensedAdminstratorsEnabled() {
+        return this._unlicensedAdminstratorsEnabled;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
+     * @return a userExperienceAnalyticsAppHealthApplicationPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> getUserExperienceAnalyticsAppHealthApplicationPerformance() {
+        return this._userExperienceAnalyticsAppHealthApplicationPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion property value. User experience analytics appHealth Application Performance by App Version
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion() {
+        return this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+        return this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+        return this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
+        return this._userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
+     * @return a userExperienceAnalyticsAppHealthDeviceModelPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> getUserExperienceAnalyticsAppHealthDeviceModelPerformance() {
+        return this._userExperienceAnalyticsAppHealthDeviceModelPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
+     * @return a userExperienceAnalyticsAppHealthDevicePerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> getUserExperienceAnalyticsAppHealthDevicePerformance() {
+        return this._userExperienceAnalyticsAppHealthDevicePerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
+     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> getUserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
+        return this._userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
+     * @return a userExperienceAnalyticsAppHealthOSVersionPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> getUserExperienceAnalyticsAppHealthOSVersionPerformance() {
+        return this._userExperienceAnalyticsAppHealthOSVersionPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
+     * @return a userExperienceAnalyticsCategory
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsCategory getUserExperienceAnalyticsAppHealthOverview() {
+        return this._userExperienceAnalyticsAppHealthOverview;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
+     * @return a userExperienceAnalyticsBaseline
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBaseline> getUserExperienceAnalyticsBaselines() {
+        return this._userExperienceAnalyticsBaselines;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthAppImpact property value. User Experience Analytics Battery Health App Impact
+     * @return a userExperienceAnalyticsBatteryHealthAppImpact
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact> getUserExperienceAnalyticsBatteryHealthAppImpact() {
+        return this._userExperienceAnalyticsBatteryHealthAppImpact;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthCapacityDetails property value. User Experience Analytics Battery Health Capacity Details
+     * @return a userExperienceAnalyticsBatteryHealthCapacityDetails
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsBatteryHealthCapacityDetails getUserExperienceAnalyticsBatteryHealthCapacityDetails() {
+        return this._userExperienceAnalyticsBatteryHealthCapacityDetails;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthDeviceAppImpact property value. User Experience Analytics Battery Health Device App Impact
+     * @return a userExperienceAnalyticsBatteryHealthDeviceAppImpact
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> getUserExperienceAnalyticsBatteryHealthDeviceAppImpact() {
+        return this._userExperienceAnalyticsBatteryHealthDeviceAppImpact;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthDevicePerformance property value. User Experience Analytics Battery Health Device Performance
+     * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBatteryHealthDevicePerformance> getUserExperienceAnalyticsBatteryHealthDevicePerformance() {
+        return this._userExperienceAnalyticsBatteryHealthDevicePerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property value. User Experience Analytics Battery Health Device Runtime History
+     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> getUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
+        return this._userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthModelPerformance property value. User Experience Analytics Battery Health Model Performance
+     * @return a userExperienceAnalyticsBatteryHealthModelPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> getUserExperienceAnalyticsBatteryHealthModelPerformance() {
+        return this._userExperienceAnalyticsBatteryHealthModelPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthOsPerformance property value. User Experience Analytics Battery Health Os Performance
+     * @return a userExperienceAnalyticsBatteryHealthOsPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBatteryHealthOsPerformance> getUserExperienceAnalyticsBatteryHealthOsPerformance() {
+        return this._userExperienceAnalyticsBatteryHealthOsPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBatteryHealthRuntimeDetails property value. User Experience Analytics Battery Health Runtime Details
+     * @return a userExperienceAnalyticsBatteryHealthRuntimeDetails
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsBatteryHealthRuntimeDetails getUserExperienceAnalyticsBatteryHealthRuntimeDetails() {
+        return this._userExperienceAnalyticsBatteryHealthRuntimeDetails;
+    }
+    /**
+     * Gets the userExperienceAnalyticsCategories property value. User experience analytics categories
+     * @return a userExperienceAnalyticsCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsCategory> getUserExperienceAnalyticsCategories() {
+        return this._userExperienceAnalyticsCategories;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history
+     * @return a userExperienceAnalyticsMetricHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsMetricHistory> getUserExperienceAnalyticsDeviceMetricHistory() {
+        return this._userExperienceAnalyticsDeviceMetricHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
+     * @return a userExperienceAnalyticsDevicePerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDevicePerformance> getUserExperienceAnalyticsDevicePerformance() {
+        return this._userExperienceAnalyticsDevicePerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceScope property value. The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
+     * @return a userExperienceAnalyticsDeviceScope
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScope getUserExperienceAnalyticsDeviceScope() {
+        return this._userExperienceAnalyticsDeviceScope;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceScopes property value. The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
+     * @return a userExperienceAnalyticsDeviceScope
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceScope> getUserExperienceAnalyticsDeviceScopes() {
+        return this._userExperienceAnalyticsDeviceScopes;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
+     * @return a userExperienceAnalyticsDeviceScores
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceScores> getUserExperienceAnalyticsDeviceScores() {
+        return this._userExperienceAnalyticsDeviceScores;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
+     * @return a userExperienceAnalyticsDeviceStartupHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceStartupHistory> getUserExperienceAnalyticsDeviceStartupHistory() {
+        return this._userExperienceAnalyticsDeviceStartupHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
+     * @return a userExperienceAnalyticsDeviceStartupProcess
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceStartupProcess> getUserExperienceAnalyticsDeviceStartupProcesses() {
+        return this._userExperienceAnalyticsDeviceStartupProcesses;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcessPerformance property value. User experience analytics device Startup Process Performance
+     * @return a userExperienceAnalyticsDeviceStartupProcessPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceStartupProcessPerformance> getUserExperienceAnalyticsDeviceStartupProcessPerformance() {
+        return this._userExperienceAnalyticsDeviceStartupProcessPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDevicesWithoutCloudIdentity property value. User experience analytics devices without cloud identity.
+     * @return a userExperienceAnalyticsDeviceWithoutCloudIdentity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceWithoutCloudIdentity> getUserExperienceAnalyticsDevicesWithoutCloudIdentity() {
+        return this._userExperienceAnalyticsDevicesWithoutCloudIdentity;
+    }
+    /**
+     * Gets the userExperienceAnalyticsImpactingProcess property value. User experience analytics impacting process
+     * @return a userExperienceAnalyticsImpactingProcess
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsImpactingProcess> getUserExperienceAnalyticsImpactingProcess() {
+        return this._userExperienceAnalyticsImpactingProcess;
+    }
+    /**
+     * Gets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
+     * @return a userExperienceAnalyticsMetricHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsMetricHistory> getUserExperienceAnalyticsMetricHistory() {
+        return this._userExperienceAnalyticsMetricHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
+     * @return a userExperienceAnalyticsModelScores
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsModelScores> getUserExperienceAnalyticsModelScores() {
+        return this._userExperienceAnalyticsModelScores;
+    }
+    /**
+     * Gets the userExperienceAnalyticsNotAutopilotReadyDevice property value. User experience analytics devices not Windows Autopilot ready.
+     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice> getUserExperienceAnalyticsNotAutopilotReadyDevice() {
+        return this._userExperienceAnalyticsNotAutopilotReadyDevice;
+    }
+    /**
+     * Gets the userExperienceAnalyticsOverview property value. User experience analytics overview
+     * @return a userExperienceAnalyticsOverview
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsOverview getUserExperienceAnalyticsOverview() {
+        return this._userExperienceAnalyticsOverview;
+    }
+    /**
+     * Gets the userExperienceAnalyticsRegressionSummary property value. User experience analytics regression summary
+     * @return a userExperienceAnalyticsRegressionSummary
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsRegressionSummary getUserExperienceAnalyticsRegressionSummary() {
+        return this._userExperienceAnalyticsRegressionSummary;
+    }
+    /**
+     * Gets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
+     * @return a userExperienceAnalyticsRemoteConnection
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsRemoteConnection> getUserExperienceAnalyticsRemoteConnection() {
+        return this._userExperienceAnalyticsRemoteConnection;
+    }
+    /**
+     * Gets the userExperienceAnalyticsResourcePerformance property value. User experience analytics resource performance
+     * @return a userExperienceAnalyticsResourcePerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsResourcePerformance> getUserExperienceAnalyticsResourcePerformance() {
+        return this._userExperienceAnalyticsResourcePerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
+     * @return a userExperienceAnalyticsScoreHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsScoreHistory> getUserExperienceAnalyticsScoreHistory() {
+        return this._userExperienceAnalyticsScoreHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsSettings property value. User experience analytics device settings
+     * @return a userExperienceAnalyticsSettings
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsSettings getUserExperienceAnalyticsSettings() {
+        return this._userExperienceAnalyticsSettings;
+    }
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
+     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
+        return this._userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
+    }
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
+     * @return a userExperienceAnalyticsWorkFromAnywhereMetric
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> getUserExperienceAnalyticsWorkFromAnywhereMetrics() {
+        return this._userExperienceAnalyticsWorkFromAnywhereMetrics;
+    }
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
+     * @return a userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> getUserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
+        return this._userExperienceAnalyticsWorkFromAnywhereModelPerformance;
+    }
+    /**
+     * Gets the userPfxCertificates property value. Collection of PFX certificates associated with a user.
+     * @return a userPFXCertificate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserPFXCertificate> getUserPfxCertificates() {
+        return this._userPfxCertificates;
+    }
+    /**
+     * Gets the virtualEndpoint property value. The virtualEndpoint property
+     * @return a virtualEndpoint
+     */
+    @javax.annotation.Nullable
+    public VirtualEndpoint getVirtualEndpoint() {
+        return this._virtualEndpoint;
+    }
+    /**
+     * Gets the windowsAutopilotDeploymentProfiles property value. Windows auto pilot deployment profiles
+     * @return a windowsAutopilotDeploymentProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsAutopilotDeploymentProfile> getWindowsAutopilotDeploymentProfiles() {
+        return this._windowsAutopilotDeploymentProfiles;
+    }
+    /**
+     * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
+     * @return a windowsAutopilotDeviceIdentity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsAutopilotDeviceIdentity> getWindowsAutopilotDeviceIdentities() {
+        return this._windowsAutopilotDeviceIdentities;
+    }
+    /**
+     * Gets the windowsAutopilotSettings property value. The Windows autopilot account settings.
+     * @return a windowsAutopilotSettings
+     */
+    @javax.annotation.Nullable
+    public WindowsAutopilotSettings getWindowsAutopilotSettings() {
+        return this._windowsAutopilotSettings;
+    }
+    /**
+     * Gets the windowsDriverUpdateProfiles property value. A collection of windows driver update profiles
+     * @return a windowsDriverUpdateProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsDriverUpdateProfile> getWindowsDriverUpdateProfiles() {
+        return this._windowsDriverUpdateProfiles;
+    }
+    /**
+     * Gets the windowsFeatureUpdateProfiles property value. A collection of windows feature update profiles
+     * @return a windowsFeatureUpdateProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsFeatureUpdateProfile> getWindowsFeatureUpdateProfiles() {
+        return this._windowsFeatureUpdateProfiles;
+    }
+    /**
+     * Gets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
+     * @return a windowsInformationProtectionAppLearningSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsInformationProtectionAppLearningSummary> getWindowsInformationProtectionAppLearningSummaries() {
+        return this._windowsInformationProtectionAppLearningSummaries;
+    }
+    /**
+     * Gets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
+     * @return a windowsInformationProtectionNetworkLearningSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsInformationProtectionNetworkLearningSummary> getWindowsInformationProtectionNetworkLearningSummaries() {
+        return this._windowsInformationProtectionNetworkLearningSummaries;
+    }
+    /**
+     * Gets the windowsMalwareInformation property value. The list of affected malware in the tenant.
+     * @return a windowsMalwareInformation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsMalwareInformation> getWindowsMalwareInformation() {
+        return this._windowsMalwareInformation;
+    }
+    /**
+     * Gets the windowsMalwareOverview property value. Malware overview for windows devices.
+     * @return a windowsMalwareOverview
+     */
+    @javax.annotation.Nullable
+    public WindowsMalwareOverview getWindowsMalwareOverview() {
+        return this._windowsMalwareOverview;
+    }
+    /**
+     * Gets the windowsQualityUpdateProfiles property value. A collection of windows quality update profiles
+     * @return a windowsQualityUpdateProfile
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsQualityUpdateProfile> getWindowsQualityUpdateProfiles() {
+        return this._windowsQualityUpdateProfiles;
+    }
+    /**
+     * Gets the windowsUpdateCatalogItems property value. A collection of windows update catalog items (fetaure updates item , quality updates item)
+     * @return a windowsUpdateCatalogItem
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsUpdateCatalogItem> getWindowsUpdateCatalogItems() {
+        return this._windowsUpdateCatalogItems;
+    }
+    /**
+     * Gets the zebraFotaArtifacts property value. The Collection of ZebraFotaArtifacts.
+     * @return a zebraFotaArtifact
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ZebraFotaArtifact> getZebraFotaArtifacts() {
+        return this._zebraFotaArtifacts;
+    }
+    /**
+     * Gets the zebraFotaConnector property value. The singleton ZebraFotaConnector associated with account.
+     * @return a zebraFotaConnector
+     */
+    @javax.annotation.Nullable
+    public ZebraFotaConnector getZebraFotaConnector() {
+        return this._zebraFotaConnector;
+    }
+    /**
+     * Gets the zebraFotaDeployments property value. Collection of ZebraFotaDeployments associated with account.
+     * @return a zebraFotaDeployment
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ZebraFotaDeployment> getZebraFotaDeployments() {
+        return this._zebraFotaDeployments;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeOffsetDateTimeValue("accountMoveCompletionDateTime", this.getAccountMoveCompletionDateTime());
+        writer.writeObjectValue("adminConsent", this.getAdminConsent());
+        writer.writeObjectValue("advancedThreatProtectionOnboardingStateSummary", this.getAdvancedThreatProtectionOnboardingStateSummary());
+        writer.writeCollectionOfObjectValues("androidDeviceOwnerEnrollmentProfiles", this.getAndroidDeviceOwnerEnrollmentProfiles());
+        writer.writeCollectionOfObjectValues("androidForWorkAppConfigurationSchemas", this.getAndroidForWorkAppConfigurationSchemas());
+        writer.writeCollectionOfObjectValues("androidForWorkEnrollmentProfiles", this.getAndroidForWorkEnrollmentProfiles());
+        writer.writeObjectValue("androidForWorkSettings", this.getAndroidForWorkSettings());
+        writer.writeObjectValue("androidManagedStoreAccountEnterpriseSettings", this.getAndroidManagedStoreAccountEnterpriseSettings());
+        writer.writeCollectionOfObjectValues("androidManagedStoreAppConfigurationSchemas", this.getAndroidManagedStoreAppConfigurationSchemas());
+        writer.writeObjectValue("applePushNotificationCertificate", this.getApplePushNotificationCertificate());
+        writer.writeCollectionOfObjectValues("appleUserInitiatedEnrollmentProfiles", this.getAppleUserInitiatedEnrollmentProfiles());
+        writer.writeCollectionOfObjectValues("assignmentFilters", this.getAssignmentFilters());
+        writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
+        writer.writeCollectionOfObjectValues("autopilotEvents", this.getAutopilotEvents());
+        writer.writeCollectionOfObjectValues("cartToClassAssociations", this.getCartToClassAssociations());
+        writer.writeCollectionOfObjectValues("categories", this.getCategories());
+        writer.writeCollectionOfObjectValues("certificateConnectorDetails", this.getCertificateConnectorDetails());
+        writer.writeCollectionOfObjectValues("chromeOSOnboardingSettings", this.getChromeOSOnboardingSettings());
+        writer.writeCollectionOfObjectValues("cloudPCConnectivityIssues", this.getCloudPCConnectivityIssues());
+        writer.writeCollectionOfObjectValues("comanagedDevices", this.getComanagedDevices());
+        writer.writeCollectionOfObjectValues("comanagementEligibleDevices", this.getComanagementEligibleDevices());
+        writer.writeCollectionOfObjectValues("complianceCategories", this.getComplianceCategories());
+        writer.writeCollectionOfObjectValues("complianceManagementPartners", this.getComplianceManagementPartners());
+        writer.writeCollectionOfObjectValues("compliancePolicies", this.getCompliancePolicies());
+        writer.writeCollectionOfObjectValues("complianceSettings", this.getComplianceSettings());
+        writer.writeObjectValue("conditionalAccessSettings", this.getConditionalAccessSettings());
+        writer.writeCollectionOfObjectValues("configManagerCollections", this.getConfigManagerCollections());
+        writer.writeCollectionOfObjectValues("configurationCategories", this.getConfigurationCategories());
+        writer.writeCollectionOfObjectValues("configurationPolicies", this.getConfigurationPolicies());
+        writer.writeCollectionOfObjectValues("configurationPolicyTemplates", this.getConfigurationPolicyTemplates());
+        writer.writeCollectionOfObjectValues("configurationSettings", this.getConfigurationSettings());
+        writer.writeCollectionOfObjectValues("dataSharingConsents", this.getDataSharingConsents());
+        writer.writeCollectionOfObjectValues("depOnboardingSettings", this.getDepOnboardingSettings());
+        writer.writeCollectionOfObjectValues("derivedCredentials", this.getDerivedCredentials());
+        writer.writeCollectionOfObjectValues("detectedApps", this.getDetectedApps());
+        writer.writeCollectionOfObjectValues("deviceCategories", this.getDeviceCategories());
+        writer.writeCollectionOfObjectValues("deviceCompliancePolicies", this.getDeviceCompliancePolicies());
+        writer.writeObjectValue("deviceCompliancePolicyDeviceStateSummary", this.getDeviceCompliancePolicyDeviceStateSummary());
+        writer.writeCollectionOfObjectValues("deviceCompliancePolicySettingStateSummaries", this.getDeviceCompliancePolicySettingStateSummaries());
+        writer.writeOffsetDateTimeValue("deviceComplianceReportSummarizationDateTime", this.getDeviceComplianceReportSummarizationDateTime());
+        writer.writeCollectionOfObjectValues("deviceComplianceScripts", this.getDeviceComplianceScripts());
+        writer.writeCollectionOfObjectValues("deviceConfigurationConflictSummary", this.getDeviceConfigurationConflictSummary());
+        writer.writeObjectValue("deviceConfigurationDeviceStateSummaries", this.getDeviceConfigurationDeviceStateSummaries());
+        writer.writeCollectionOfObjectValues("deviceConfigurationRestrictedAppsViolations", this.getDeviceConfigurationRestrictedAppsViolations());
+        writer.writeCollectionOfObjectValues("deviceConfigurations", this.getDeviceConfigurations());
+        writer.writeCollectionOfObjectValues("deviceConfigurationsAllManagedDeviceCertificateStates", this.getDeviceConfigurationsAllManagedDeviceCertificateStates());
+        writer.writeObjectValue("deviceConfigurationUserStateSummaries", this.getDeviceConfigurationUserStateSummaries());
+        writer.writeCollectionOfObjectValues("deviceCustomAttributeShellScripts", this.getDeviceCustomAttributeShellScripts());
+        writer.writeCollectionOfObjectValues("deviceEnrollmentConfigurations", this.getDeviceEnrollmentConfigurations());
+        writer.writeCollectionOfObjectValues("deviceHealthScripts", this.getDeviceHealthScripts());
+        writer.writeCollectionOfObjectValues("deviceManagementPartners", this.getDeviceManagementPartners());
+        writer.writeCollectionOfObjectValues("deviceManagementScripts", this.getDeviceManagementScripts());
+        writer.writeObjectValue("deviceProtectionOverview", this.getDeviceProtectionOverview());
+        writer.writeCollectionOfObjectValues("deviceShellScripts", this.getDeviceShellScripts());
+        writer.writeCollectionOfObjectValues("domainJoinConnectors", this.getDomainJoinConnectors());
+        writer.writeCollectionOfObjectValues("embeddedSIMActivationCodePools", this.getEmbeddedSIMActivationCodePools());
+        writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
+        writer.writeCollectionOfObjectValues("exchangeOnPremisesPolicies", this.getExchangeOnPremisesPolicies());
+        writer.writeObjectValue("exchangeOnPremisesPolicy", this.getExchangeOnPremisesPolicy());
+        writer.writeCollectionOfObjectValues("groupPolicyCategories", this.getGroupPolicyCategories());
+        writer.writeCollectionOfObjectValues("groupPolicyConfigurations", this.getGroupPolicyConfigurations());
+        writer.writeCollectionOfObjectValues("groupPolicyDefinitionFiles", this.getGroupPolicyDefinitionFiles());
+        writer.writeCollectionOfObjectValues("groupPolicyDefinitions", this.getGroupPolicyDefinitions());
+        writer.writeCollectionOfObjectValues("groupPolicyMigrationReports", this.getGroupPolicyMigrationReports());
+        writer.writeCollectionOfObjectValues("groupPolicyObjectFiles", this.getGroupPolicyObjectFiles());
+        writer.writeCollectionOfObjectValues("groupPolicyUploadedDefinitionFiles", this.getGroupPolicyUploadedDefinitionFiles());
+        writer.writeCollectionOfObjectValues("importedDeviceIdentities", this.getImportedDeviceIdentities());
+        writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
+        writer.writeCollectionOfObjectValues("intents", this.getIntents());
+        writer.writeStringValue("intuneAccountId", this.getIntuneAccountId());
+        writer.writeObjectValue("intuneBrand", this.getIntuneBrand());
+        writer.writeCollectionOfObjectValues("intuneBrandingProfiles", this.getIntuneBrandingProfiles());
+        writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
+        writer.writeOffsetDateTimeValue("lastReportAggregationDateTime", this.getLastReportAggregationDateTime());
+        writer.writeBooleanValue("legacyPcManangementEnabled", this.getLegacyPcManangementEnabled());
+        writer.writeCollectionOfObjectValues("macOSSoftwareUpdateAccountSummaries", this.getMacOSSoftwareUpdateAccountSummaries());
+        writer.writeObjectValue("managedDeviceCleanupSettings", this.getManagedDeviceCleanupSettings());
+        writer.writeCollectionOfObjectValues("managedDeviceEncryptionStates", this.getManagedDeviceEncryptionStates());
+        writer.writeObjectValue("managedDeviceOverview", this.getManagedDeviceOverview());
+        writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
+        writer.writeIntegerValue("maximumDepTokens", this.getMaximumDepTokens());
+        writer.writeCollectionOfObjectValues("microsoftTunnelConfigurations", this.getMicrosoftTunnelConfigurations());
+        writer.writeCollectionOfObjectValues("microsoftTunnelHealthThresholds", this.getMicrosoftTunnelHealthThresholds());
+        writer.writeCollectionOfObjectValues("microsoftTunnelServerLogCollectionResponses", this.getMicrosoftTunnelServerLogCollectionResponses());
+        writer.writeCollectionOfObjectValues("microsoftTunnelSites", this.getMicrosoftTunnelSites());
+        writer.writeCollectionOfObjectValues("mobileAppTroubleshootingEvents", this.getMobileAppTroubleshootingEvents());
+        writer.writeCollectionOfObjectValues("mobileThreatDefenseConnectors", this.getMobileThreatDefenseConnectors());
+        writer.writeCollectionOfObjectValues("ndesConnectors", this.getNdesConnectors());
+        writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
+        writer.writeCollectionOfObjectValues("oemWarrantyInformationOnboarding", this.getOemWarrantyInformationOnboarding());
+        writer.writeCollectionOfObjectValues("remoteActionAudits", this.getRemoteActionAudits());
+        writer.writeCollectionOfObjectValues("remoteAssistancePartners", this.getRemoteAssistancePartners());
+        writer.writeObjectValue("remoteAssistanceSettings", this.getRemoteAssistanceSettings());
+        writer.writeObjectValue("reports", this.getReports());
+        writer.writeCollectionOfObjectValues("resourceAccessProfiles", this.getResourceAccessProfiles());
+        writer.writeCollectionOfObjectValues("resourceOperations", this.getResourceOperations());
+        writer.writeCollectionOfObjectValues("reusablePolicySettings", this.getReusablePolicySettings());
+        writer.writeCollectionOfObjectValues("reusableSettings", this.getReusableSettings());
+        writer.writeCollectionOfObjectValues("roleAssignments", this.getRoleAssignments());
+        writer.writeCollectionOfObjectValues("roleDefinitions", this.getRoleDefinitions());
+        writer.writeCollectionOfObjectValues("roleScopeTags", this.getRoleScopeTags());
+        writer.writeCollectionOfObjectValues("settingDefinitions", this.getSettingDefinitions());
+        writer.writeObjectValue("settings", this.getSettings());
+        writer.writeObjectValue("softwareUpdateStatusSummary", this.getSoftwareUpdateStatusSummary());
+        writer.writeEnumValue("subscriptions", this.getSubscriptions());
+        writer.writeEnumValue("subscriptionState", this.getSubscriptionState());
+        writer.writeCollectionOfObjectValues("telecomExpenseManagementPartners", this.getTelecomExpenseManagementPartners());
+        writer.writeCollectionOfObjectValues("templates", this.getTemplates());
+        writer.writeCollectionOfObjectValues("templateSettings", this.getTemplateSettings());
+        writer.writeObjectValue("tenantAttachRBAC", this.getTenantAttachRBAC());
+        writer.writeCollectionOfObjectValues("termsAndConditions", this.getTermsAndConditions());
+        writer.writeCollectionOfObjectValues("troubleshootingEvents", this.getTroubleshootingEvents());
+        writer.writeBooleanValue("unlicensedAdminstratorsEnabled", this.getUnlicensedAdminstratorsEnabled());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformance", this.getUserExperienceAnalyticsAppHealthApplicationPerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthDeviceModelPerformance", this.getUserExperienceAnalyticsAppHealthDeviceModelPerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthDevicePerformance", this.getUserExperienceAnalyticsAppHealthDevicePerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthDevicePerformanceDetails", this.getUserExperienceAnalyticsAppHealthDevicePerformanceDetails());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthOSVersionPerformance", this.getUserExperienceAnalyticsAppHealthOSVersionPerformance());
+        writer.writeObjectValue("userExperienceAnalyticsAppHealthOverview", this.getUserExperienceAnalyticsAppHealthOverview());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBaselines", this.getUserExperienceAnalyticsBaselines());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBatteryHealthAppImpact", this.getUserExperienceAnalyticsBatteryHealthAppImpact());
+        writer.writeObjectValue("userExperienceAnalyticsBatteryHealthCapacityDetails", this.getUserExperienceAnalyticsBatteryHealthCapacityDetails());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBatteryHealthDeviceAppImpact", this.getUserExperienceAnalyticsBatteryHealthDeviceAppImpact());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBatteryHealthDevicePerformance", this.getUserExperienceAnalyticsBatteryHealthDevicePerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", this.getUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBatteryHealthModelPerformance", this.getUserExperienceAnalyticsBatteryHealthModelPerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBatteryHealthOsPerformance", this.getUserExperienceAnalyticsBatteryHealthOsPerformance());
+        writer.writeObjectValue("userExperienceAnalyticsBatteryHealthRuntimeDetails", this.getUserExperienceAnalyticsBatteryHealthRuntimeDetails());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsCategories", this.getUserExperienceAnalyticsCategories());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceMetricHistory", this.getUserExperienceAnalyticsDeviceMetricHistory());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDevicePerformance", this.getUserExperienceAnalyticsDevicePerformance());
+        writer.writeObjectValue("userExperienceAnalyticsDeviceScope", this.getUserExperienceAnalyticsDeviceScope());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceScopes", this.getUserExperienceAnalyticsDeviceScopes());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceScores", this.getUserExperienceAnalyticsDeviceScores());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceStartupHistory", this.getUserExperienceAnalyticsDeviceStartupHistory());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceStartupProcesses", this.getUserExperienceAnalyticsDeviceStartupProcesses());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceStartupProcessPerformance", this.getUserExperienceAnalyticsDeviceStartupProcessPerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDevicesWithoutCloudIdentity", this.getUserExperienceAnalyticsDevicesWithoutCloudIdentity());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsImpactingProcess", this.getUserExperienceAnalyticsImpactingProcess());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsMetricHistory", this.getUserExperienceAnalyticsMetricHistory());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsModelScores", this.getUserExperienceAnalyticsModelScores());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsNotAutopilotReadyDevice", this.getUserExperienceAnalyticsNotAutopilotReadyDevice());
+        writer.writeObjectValue("userExperienceAnalyticsOverview", this.getUserExperienceAnalyticsOverview());
+        writer.writeObjectValue("userExperienceAnalyticsRegressionSummary", this.getUserExperienceAnalyticsRegressionSummary());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsRemoteConnection", this.getUserExperienceAnalyticsRemoteConnection());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsResourcePerformance", this.getUserExperienceAnalyticsResourcePerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsScoreHistory", this.getUserExperienceAnalyticsScoreHistory());
+        writer.writeObjectValue("userExperienceAnalyticsSettings", this.getUserExperienceAnalyticsSettings());
+        writer.writeObjectValue("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", this.getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsWorkFromAnywhereMetrics", this.getUserExperienceAnalyticsWorkFromAnywhereMetrics());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsWorkFromAnywhereModelPerformance", this.getUserExperienceAnalyticsWorkFromAnywhereModelPerformance());
+        writer.writeCollectionOfObjectValues("userPfxCertificates", this.getUserPfxCertificates());
+        writer.writeObjectValue("virtualEndpoint", this.getVirtualEndpoint());
+        writer.writeCollectionOfObjectValues("windowsAutopilotDeploymentProfiles", this.getWindowsAutopilotDeploymentProfiles());
+        writer.writeCollectionOfObjectValues("windowsAutopilotDeviceIdentities", this.getWindowsAutopilotDeviceIdentities());
+        writer.writeObjectValue("windowsAutopilotSettings", this.getWindowsAutopilotSettings());
+        writer.writeCollectionOfObjectValues("windowsDriverUpdateProfiles", this.getWindowsDriverUpdateProfiles());
+        writer.writeCollectionOfObjectValues("windowsFeatureUpdateProfiles", this.getWindowsFeatureUpdateProfiles());
+        writer.writeCollectionOfObjectValues("windowsInformationProtectionAppLearningSummaries", this.getWindowsInformationProtectionAppLearningSummaries());
+        writer.writeCollectionOfObjectValues("windowsInformationProtectionNetworkLearningSummaries", this.getWindowsInformationProtectionNetworkLearningSummaries());
+        writer.writeCollectionOfObjectValues("windowsMalwareInformation", this.getWindowsMalwareInformation());
+        writer.writeObjectValue("windowsMalwareOverview", this.getWindowsMalwareOverview());
+        writer.writeCollectionOfObjectValues("windowsQualityUpdateProfiles", this.getWindowsQualityUpdateProfiles());
+        writer.writeCollectionOfObjectValues("windowsUpdateCatalogItems", this.getWindowsUpdateCatalogItems());
+        writer.writeCollectionOfObjectValues("zebraFotaArtifacts", this.getZebraFotaArtifacts());
+        writer.writeObjectValue("zebraFotaConnector", this.getZebraFotaConnector());
+        writer.writeCollectionOfObjectValues("zebraFotaDeployments", this.getZebraFotaDeployments());
+    }
+    /**
+     * Sets the accountMoveCompletionDateTime property value. The date & time when tenant data moved between scaleunits.
+     * @param value Value to set for the accountMoveCompletionDateTime property.
+     * @return a void
+     */
+    public void setAccountMoveCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this._accountMoveCompletionDateTime = value;
+    }
+    /**
+     * Sets the adminConsent property value. Admin consent information.
+     * @param value Value to set for the adminConsent property.
+     * @return a void
+     */
+    public void setAdminConsent(@javax.annotation.Nullable final AdminConsent value) {
+        this._adminConsent = value;
+    }
+    /**
+     * Sets the advancedThreatProtectionOnboardingStateSummary property value. The summary state of ATP onboarding state for this account.
+     * @param value Value to set for the advancedThreatProtectionOnboardingStateSummary property.
+     * @return a void
+     */
+    public void setAdvancedThreatProtectionOnboardingStateSummary(@javax.annotation.Nullable final AdvancedThreatProtectionOnboardingStateSummary value) {
+        this._advancedThreatProtectionOnboardingStateSummary = value;
+    }
+    /**
+     * Sets the androidDeviceOwnerEnrollmentProfiles property value. Android device owner enrollment profile entities.
+     * @param value Value to set for the androidDeviceOwnerEnrollmentProfiles property.
+     * @return a void
+     */
+    public void setAndroidDeviceOwnerEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerEnrollmentProfile> value) {
+        this._androidDeviceOwnerEnrollmentProfiles = value;
+    }
+    /**
+     * Sets the androidForWorkAppConfigurationSchemas property value. Android for Work app configuration schema entities.
+     * @param value Value to set for the androidForWorkAppConfigurationSchemas property.
+     * @return a void
+     */
+    public void setAndroidForWorkAppConfigurationSchemas(@javax.annotation.Nullable final java.util.List<AndroidForWorkAppConfigurationSchema> value) {
+        this._androidForWorkAppConfigurationSchemas = value;
+    }
+    /**
+     * Sets the androidForWorkEnrollmentProfiles property value. Android for Work enrollment profile entities.
+     * @param value Value to set for the androidForWorkEnrollmentProfiles property.
+     * @return a void
+     */
+    public void setAndroidForWorkEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<AndroidForWorkEnrollmentProfile> value) {
+        this._androidForWorkEnrollmentProfiles = value;
+    }
+    /**
+     * Sets the androidForWorkSettings property value. The singleton Android for Work settings entity.
+     * @param value Value to set for the androidForWorkSettings property.
+     * @return a void
+     */
+    public void setAndroidForWorkSettings(@javax.annotation.Nullable final AndroidForWorkSettings value) {
+        this._androidForWorkSettings = value;
+    }
+    /**
+     * Sets the androidManagedStoreAccountEnterpriseSettings property value. The singleton Android managed store account enterprise settings entity.
+     * @param value Value to set for the androidManagedStoreAccountEnterpriseSettings property.
+     * @return a void
+     */
+    public void setAndroidManagedStoreAccountEnterpriseSettings(@javax.annotation.Nullable final AndroidManagedStoreAccountEnterpriseSettings value) {
+        this._androidManagedStoreAccountEnterpriseSettings = value;
+    }
+    /**
+     * Sets the androidManagedStoreAppConfigurationSchemas property value. Android Enterprise app configuration schema entities.
+     * @param value Value to set for the androidManagedStoreAppConfigurationSchemas property.
+     * @return a void
+     */
+    public void setAndroidManagedStoreAppConfigurationSchemas(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchema> value) {
+        this._androidManagedStoreAppConfigurationSchemas = value;
+    }
+    /**
+     * Sets the applePushNotificationCertificate property value. Apple push notification certificate.
+     * @param value Value to set for the applePushNotificationCertificate property.
+     * @return a void
+     */
+    public void setApplePushNotificationCertificate(@javax.annotation.Nullable final ApplePushNotificationCertificate value) {
+        this._applePushNotificationCertificate = value;
+    }
+    /**
+     * Sets the appleUserInitiatedEnrollmentProfiles property value. Apple user initiated enrollment profiles
+     * @param value Value to set for the appleUserInitiatedEnrollmentProfiles property.
+     * @return a void
+     */
+    public void setAppleUserInitiatedEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<AppleUserInitiatedEnrollmentProfile> value) {
+        this._appleUserInitiatedEnrollmentProfiles = value;
+    }
+    /**
+     * Sets the assignmentFilters property value. The list of assignment filters
+     * @param value Value to set for the assignmentFilters property.
+     * @return a void
+     */
+    public void setAssignmentFilters(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentFilter> value) {
+        this._assignmentFilters = value;
+    }
+    /**
+     * Sets the auditEvents property value. The Audit Events
+     * @param value Value to set for the auditEvents property.
+     * @return a void
+     */
+    public void setAuditEvents(@javax.annotation.Nullable final java.util.List<AuditEvent> value) {
+        this._auditEvents = value;
+    }
+    /**
+     * Sets the autopilotEvents property value. The list of autopilot events for the tenant.
+     * @param value Value to set for the autopilotEvents property.
+     * @return a void
+     */
+    public void setAutopilotEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementAutopilotEvent> value) {
+        this._autopilotEvents = value;
+    }
+    /**
+     * Sets the cartToClassAssociations property value. The Cart To Class Associations.
+     * @param value Value to set for the cartToClassAssociations property.
+     * @return a void
+     */
+    public void setCartToClassAssociations(@javax.annotation.Nullable final java.util.List<CartToClassAssociation> value) {
+        this._cartToClassAssociations = value;
+    }
+    /**
+     * Sets the categories property value. The available categories
+     * @param value Value to set for the categories property.
+     * @return a void
+     */
+    public void setCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingCategory> value) {
+        this._categories = value;
+    }
+    /**
+     * Sets the certificateConnectorDetails property value. Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
+     * @param value Value to set for the certificateConnectorDetails property.
+     * @return a void
+     */
+    public void setCertificateConnectorDetails(@javax.annotation.Nullable final java.util.List<CertificateConnectorDetails> value) {
+        this._certificateConnectorDetails = value;
+    }
+    /**
+     * Sets the chromeOSOnboardingSettings property value. Collection of ChromeOSOnboardingSettings settings associated with account.
+     * @param value Value to set for the chromeOSOnboardingSettings property.
+     * @return a void
+     */
+    public void setChromeOSOnboardingSettings(@javax.annotation.Nullable final java.util.List<ChromeOSOnboardingSettings> value) {
+        this._chromeOSOnboardingSettings = value;
+    }
+    /**
+     * Sets the cloudPCConnectivityIssues property value. The list of CloudPC Connectivity Issue.
+     * @param value Value to set for the cloudPCConnectivityIssues property.
+     * @return a void
+     */
+    public void setCloudPCConnectivityIssues(@javax.annotation.Nullable final java.util.List<CloudPCConnectivityIssue> value) {
+        this._cloudPCConnectivityIssues = value;
+    }
+    /**
+     * Sets the comanagedDevices property value. The list of co-managed devices report
+     * @param value Value to set for the comanagedDevices property.
+     * @return a void
+     */
+    public void setComanagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
+        this._comanagedDevices = value;
+    }
+    /**
+     * Sets the comanagementEligibleDevices property value. The list of co-management eligible devices report
+     * @param value Value to set for the comanagementEligibleDevices property.
+     * @return a void
+     */
+    public void setComanagementEligibleDevices(@javax.annotation.Nullable final java.util.List<ComanagementEligibleDevice> value) {
+        this._comanagementEligibleDevices = value;
+    }
+    /**
+     * Sets the complianceCategories property value. List of all compliance categories
+     * @param value Value to set for the complianceCategories property.
+     * @return a void
+     */
+    public void setComplianceCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationCategory> value) {
+        this._complianceCategories = value;
+    }
+    /**
+     * Sets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
+     * @param value Value to set for the complianceManagementPartners property.
+     * @return a void
+     */
+    public void setComplianceManagementPartners(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartner> value) {
+        this._complianceManagementPartners = value;
+    }
+    /**
+     * Sets the compliancePolicies property value. List of all compliance policies
+     * @param value Value to set for the compliancePolicies property.
+     * @return a void
+     */
+    public void setCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementCompliancePolicy> value) {
+        this._compliancePolicies = value;
+    }
+    /**
+     * Sets the complianceSettings property value. List of all ComplianceSettings
+     * @param value Value to set for the complianceSettings property.
+     * @return a void
+     */
+    public void setComplianceSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
+        this._complianceSettings = value;
+    }
+    /**
+     * Sets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * @param value Value to set for the conditionalAccessSettings property.
+     * @return a void
+     */
+    public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
+        this._conditionalAccessSettings = value;
+    }
+    /**
+     * Sets the configManagerCollections property value. A list of ConfigManagerCollection
+     * @param value Value to set for the configManagerCollections property.
+     * @return a void
+     */
+    public void setConfigManagerCollections(@javax.annotation.Nullable final java.util.List<ConfigManagerCollection> value) {
+        this._configManagerCollections = value;
+    }
+    /**
+     * Sets the configurationCategories property value. List of all Configuration Categories
+     * @param value Value to set for the configurationCategories property.
+     * @return a void
+     */
+    public void setConfigurationCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationCategory> value) {
+        this._configurationCategories = value;
+    }
+    /**
+     * Sets the configurationPolicies property value. List of all Configuration policies
+     * @param value Value to set for the configurationPolicies property.
+     * @return a void
+     */
+    public void setConfigurationPolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicy> value) {
+        this._configurationPolicies = value;
+    }
+    /**
+     * Sets the configurationPolicyTemplates property value. List of all templates
+     * @param value Value to set for the configurationPolicyTemplates property.
+     * @return a void
+     */
+    public void setConfigurationPolicyTemplates(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyTemplate> value) {
+        this._configurationPolicyTemplates = value;
+    }
+    /**
+     * Sets the configurationSettings property value. List of all ConfigurationSettings
+     * @param value Value to set for the configurationSettings property.
+     * @return a void
+     */
+    public void setConfigurationSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
+        this._configurationSettings = value;
+    }
+    /**
+     * Sets the dataSharingConsents property value. Data sharing consents.
+     * @param value Value to set for the dataSharingConsents property.
+     * @return a void
+     */
+    public void setDataSharingConsents(@javax.annotation.Nullable final java.util.List<DataSharingConsent> value) {
+        this._dataSharingConsents = value;
+    }
+    /**
+     * Sets the depOnboardingSettings property value. This collections of multiple DEP tokens per-tenant.
+     * @param value Value to set for the depOnboardingSettings property.
+     * @return a void
+     */
+    public void setDepOnboardingSettings(@javax.annotation.Nullable final java.util.List<DepOnboardingSetting> value) {
+        this._depOnboardingSettings = value;
+    }
+    /**
+     * Sets the derivedCredentials property value. Collection of Derived credential settings associated with account.
+     * @param value Value to set for the derivedCredentials property.
+     * @return a void
+     */
+    public void setDerivedCredentials(@javax.annotation.Nullable final java.util.List<DeviceManagementDerivedCredentialSettings> value) {
+        this._derivedCredentials = value;
+    }
+    /**
+     * Sets the detectedApps property value. The list of detected apps associated with a device.
+     * @param value Value to set for the detectedApps property.
+     * @return a void
+     */
+    public void setDetectedApps(@javax.annotation.Nullable final java.util.List<DetectedApp> value) {
+        this._detectedApps = value;
+    }
+    /**
+     * Sets the deviceCategories property value. The list of device categories with the tenant.
+     * @param value Value to set for the deviceCategories property.
+     * @return a void
+     */
+    public void setDeviceCategories(@javax.annotation.Nullable final java.util.List<DeviceCategory> value) {
+        this._deviceCategories = value;
+    }
+    /**
+     * Sets the deviceCompliancePolicies property value. The device compliance policies.
+     * @param value Value to set for the deviceCompliancePolicies property.
+     * @return a void
+     */
+    public void setDeviceCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicy> value) {
+        this._deviceCompliancePolicies = value;
+    }
+    /**
+     * Sets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
+     * @param value Value to set for the deviceCompliancePolicyDeviceStateSummary property.
+     * @return a void
+     */
+    public void setDeviceCompliancePolicyDeviceStateSummary(@javax.annotation.Nullable final DeviceCompliancePolicyDeviceStateSummary value) {
+        this._deviceCompliancePolicyDeviceStateSummary = value;
+    }
+    /**
+     * Sets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
+     * @param value Value to set for the deviceCompliancePolicySettingStateSummaries property.
+     * @return a void
+     */
+    public void setDeviceCompliancePolicySettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
+        this._deviceCompliancePolicySettingStateSummaries = value;
+    }
+    /**
+     * Sets the deviceComplianceReportSummarizationDateTime property value. The last requested time of device compliance reporting for this account. This property is read-only.
+     * @param value Value to set for the deviceComplianceReportSummarizationDateTime property.
+     * @return a void
+     */
+    public void setDeviceComplianceReportSummarizationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this._deviceComplianceReportSummarizationDateTime = value;
+    }
+    /**
+     * Sets the deviceComplianceScripts property value. The list of device compliance scripts associated with the tenant.
+     * @param value Value to set for the deviceComplianceScripts property.
+     * @return a void
+     */
+    public void setDeviceComplianceScripts(@javax.annotation.Nullable final java.util.List<DeviceComplianceScript> value) {
+        this._deviceComplianceScripts = value;
+    }
+    /**
+     * Sets the deviceConfigurationConflictSummary property value. Summary of policies in conflict state for this account.
+     * @param value Value to set for the deviceConfigurationConflictSummary property.
+     * @return a void
+     */
+    public void setDeviceConfigurationConflictSummary(@javax.annotation.Nullable final java.util.List<DeviceConfigurationConflictSummary> value) {
+        this._deviceConfigurationConflictSummary = value;
+    }
+    /**
+     * Sets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
+     * @param value Value to set for the deviceConfigurationDeviceStateSummaries property.
+     * @return a void
+     */
+    public void setDeviceConfigurationDeviceStateSummaries(@javax.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
+        this._deviceConfigurationDeviceStateSummaries = value;
+    }
+    /**
+     * Sets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.
+     * @param value Value to set for the deviceConfigurationRestrictedAppsViolations property.
+     * @return a void
+     */
+    public void setDeviceConfigurationRestrictedAppsViolations(@javax.annotation.Nullable final java.util.List<RestrictedAppsViolation> value) {
+        this._deviceConfigurationRestrictedAppsViolations = value;
+    }
+    /**
+     * Sets the deviceConfigurations property value. The device configurations.
+     * @param value Value to set for the deviceConfigurations property.
+     * @return a void
+     */
+    public void setDeviceConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
+        this._deviceConfigurations = value;
+    }
+    /**
+     * Sets the deviceConfigurationsAllManagedDeviceCertificateStates property value. Summary of all certificates for all devices.
+     * @param value Value to set for the deviceConfigurationsAllManagedDeviceCertificateStates property.
+     * @return a void
+     */
+    public void setDeviceConfigurationsAllManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedAllDeviceCertificateState> value) {
+        this._deviceConfigurationsAllManagedDeviceCertificateStates = value;
+    }
+    /**
+     * Sets the deviceConfigurationUserStateSummaries property value. The device configuration user state summary for this account.
+     * @param value Value to set for the deviceConfigurationUserStateSummaries property.
+     * @return a void
+     */
+    public void setDeviceConfigurationUserStateSummaries(@javax.annotation.Nullable final DeviceConfigurationUserStateSummary value) {
+        this._deviceConfigurationUserStateSummaries = value;
+    }
+    /**
+     * Sets the deviceCustomAttributeShellScripts property value. The list of device custom attribute shell scripts associated with the tenant.
+     * @param value Value to set for the deviceCustomAttributeShellScripts property.
+     * @return a void
+     */
+    public void setDeviceCustomAttributeShellScripts(@javax.annotation.Nullable final java.util.List<DeviceCustomAttributeShellScript> value) {
+        this._deviceCustomAttributeShellScripts = value;
+    }
+    /**
+     * Sets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
+     * @param value Value to set for the deviceEnrollmentConfigurations property.
+     * @return a void
+     */
+    public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
+        this._deviceEnrollmentConfigurations = value;
+    }
+    /**
+     * Sets the deviceHealthScripts property value. The list of device health scripts associated with the tenant.
+     * @param value Value to set for the deviceHealthScripts property.
+     * @return a void
+     */
+    public void setDeviceHealthScripts(@javax.annotation.Nullable final java.util.List<DeviceHealthScript> value) {
+        this._deviceHealthScripts = value;
+    }
+    /**
+     * Sets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
+     * @param value Value to set for the deviceManagementPartners property.
+     * @return a void
+     */
+    public void setDeviceManagementPartners(@javax.annotation.Nullable final java.util.List<DeviceManagementPartner> value) {
+        this._deviceManagementPartners = value;
+    }
+    /**
+     * Sets the deviceManagementScripts property value. The list of device management scripts associated with the tenant.
+     * @param value Value to set for the deviceManagementScripts property.
+     * @return a void
+     */
+    public void setDeviceManagementScripts(@javax.annotation.Nullable final java.util.List<DeviceManagementScript> value) {
+        this._deviceManagementScripts = value;
+    }
+    /**
+     * Sets the deviceProtectionOverview property value. Device protection overview.
+     * @param value Value to set for the deviceProtectionOverview property.
+     * @return a void
+     */
+    public void setDeviceProtectionOverview(@javax.annotation.Nullable final DeviceProtectionOverview value) {
+        this._deviceProtectionOverview = value;
+    }
+    /**
+     * Sets the deviceShellScripts property value. The list of device shell scripts associated with the tenant.
+     * @param value Value to set for the deviceShellScripts property.
+     * @return a void
+     */
+    public void setDeviceShellScripts(@javax.annotation.Nullable final java.util.List<DeviceShellScript> value) {
+        this._deviceShellScripts = value;
+    }
+    /**
+     * Sets the domainJoinConnectors property value. A list of connector objects.
+     * @param value Value to set for the domainJoinConnectors property.
+     * @return a void
+     */
+    public void setDomainJoinConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementDomainJoinConnector> value) {
+        this._domainJoinConnectors = value;
+    }
+    /**
+     * Sets the embeddedSIMActivationCodePools property value. The embedded SIM activation code pools created by this account.
+     * @param value Value to set for the embeddedSIMActivationCodePools property.
+     * @return a void
+     */
+    public void setEmbeddedSIMActivationCodePools(@javax.annotation.Nullable final java.util.List<EmbeddedSIMActivationCodePool> value) {
+        this._embeddedSIMActivationCodePools = value;
+    }
+    /**
+     * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
+     * @param value Value to set for the exchangeConnectors property.
+     * @return a void
+     */
+    public void setExchangeConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeConnector> value) {
+        this._exchangeConnectors = value;
+    }
+    /**
+     * Sets the exchangeOnPremisesPolicies property value. The list of Exchange On Premisis policies configured by the tenant.
+     * @param value Value to set for the exchangeOnPremisesPolicies property.
+     * @return a void
+     */
+    public void setExchangeOnPremisesPolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeOnPremisesPolicy> value) {
+        this._exchangeOnPremisesPolicies = value;
+    }
+    /**
+     * Sets the exchangeOnPremisesPolicy property value. The policy which controls mobile device access to Exchange On Premises
+     * @param value Value to set for the exchangeOnPremisesPolicy property.
+     * @return a void
+     */
+    public void setExchangeOnPremisesPolicy(@javax.annotation.Nullable final DeviceManagementExchangeOnPremisesPolicy value) {
+        this._exchangeOnPremisesPolicy = value;
+    }
+    /**
+     * Sets the groupPolicyCategories property value. The available group policy categories for this account.
+     * @param value Value to set for the groupPolicyCategories property.
+     * @return a void
+     */
+    public void setGroupPolicyCategories(@javax.annotation.Nullable final java.util.List<GroupPolicyCategory> value) {
+        this._groupPolicyCategories = value;
+    }
+    /**
+     * Sets the groupPolicyConfigurations property value. The group policy configurations created by this account.
+     * @param value Value to set for the groupPolicyConfigurations property.
+     * @return a void
+     */
+    public void setGroupPolicyConfigurations(@javax.annotation.Nullable final java.util.List<GroupPolicyConfiguration> value) {
+        this._groupPolicyConfigurations = value;
+    }
+    /**
+     * Sets the groupPolicyDefinitionFiles property value. The available group policy definition files for this account.
+     * @param value Value to set for the groupPolicyDefinitionFiles property.
+     * @return a void
+     */
+    public void setGroupPolicyDefinitionFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinitionFile> value) {
+        this._groupPolicyDefinitionFiles = value;
+    }
+    /**
+     * Sets the groupPolicyDefinitions property value. The available group policy definitions for this account.
+     * @param value Value to set for the groupPolicyDefinitions property.
+     * @return a void
+     */
+    public void setGroupPolicyDefinitions(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
+        this._groupPolicyDefinitions = value;
+    }
+    /**
+     * Sets the groupPolicyMigrationReports property value. A list of Group Policy migration reports.
+     * @param value Value to set for the groupPolicyMigrationReports property.
+     * @return a void
+     */
+    public void setGroupPolicyMigrationReports(@javax.annotation.Nullable final java.util.List<GroupPolicyMigrationReport> value) {
+        this._groupPolicyMigrationReports = value;
+    }
+    /**
+     * Sets the groupPolicyObjectFiles property value. A list of Group Policy Object files uploaded.
+     * @param value Value to set for the groupPolicyObjectFiles property.
+     * @return a void
+     */
+    public void setGroupPolicyObjectFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyObjectFile> value) {
+        this._groupPolicyObjectFiles = value;
+    }
+    /**
+     * Sets the groupPolicyUploadedDefinitionFiles property value. The available group policy uploaded definition files for this account.
+     * @param value Value to set for the groupPolicyUploadedDefinitionFiles property.
+     * @return a void
+     */
+    public void setGroupPolicyUploadedDefinitionFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyUploadedDefinitionFile> value) {
+        this._groupPolicyUploadedDefinitionFiles = value;
+    }
+    /**
+     * Sets the importedDeviceIdentities property value. The imported device identities.
+     * @param value Value to set for the importedDeviceIdentities property.
+     * @return a void
+     */
+    public void setImportedDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedDeviceIdentity> value) {
+        this._importedDeviceIdentities = value;
+    }
+    /**
+     * Sets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
+     * @param value Value to set for the importedWindowsAutopilotDeviceIdentities property.
+     * @return a void
+     */
+    public void setImportedWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
+        this._importedWindowsAutopilotDeviceIdentities = value;
+    }
+    /**
+     * Sets the intents property value. The device management intents
+     * @param value Value to set for the intents property.
+     * @return a void
+     */
+    public void setIntents(@javax.annotation.Nullable final java.util.List<DeviceManagementIntent> value) {
+        this._intents = value;
+    }
+    /**
+     * Sets the intuneAccountId property value. Intune Account ID for given tenant
+     * @param value Value to set for the intuneAccountId property.
+     * @return a void
+     */
+    public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
+        this._intuneAccountId = value;
+    }
+    /**
+     * Sets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     * @param value Value to set for the intuneBrand property.
+     * @return a void
+     */
+    public void setIntuneBrand(@javax.annotation.Nullable final IntuneBrand value) {
+        this._intuneBrand = value;
+    }
+    /**
+     * Sets the intuneBrandingProfiles property value. Intune branding profiles targeted to AAD groups
+     * @param value Value to set for the intuneBrandingProfiles property.
+     * @return a void
+     */
+    public void setIntuneBrandingProfiles(@javax.annotation.Nullable final java.util.List<IntuneBrandingProfile> value) {
+        this._intuneBrandingProfiles = value;
+    }
+    /**
+     * Sets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
+     * @param value Value to set for the iosUpdateStatuses property.
+     * @return a void
+     */
+    public void setIosUpdateStatuses(@javax.annotation.Nullable final java.util.List<IosUpdateDeviceStatus> value) {
+        this._iosUpdateStatuses = value;
+    }
+    /**
+     * Sets the lastReportAggregationDateTime property value. The last modified time of reporting for this account. This property is read-only.
+     * @param value Value to set for the lastReportAggregationDateTime property.
+     * @return a void
+     */
+    public void setLastReportAggregationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this._lastReportAggregationDateTime = value;
+    }
+    /**
+     * Sets the legacyPcManangementEnabled property value. The property to enable Non-MDM managed legacy PC management for this account. This property is read-only.
+     * @param value Value to set for the legacyPcManangementEnabled property.
+     * @return a void
+     */
+    public void setLegacyPcManangementEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._legacyPcManangementEnabled = value;
+    }
+    /**
+     * Sets the macOSSoftwareUpdateAccountSummaries property value. The MacOS software update account summaries for this account.
+     * @param value Value to set for the macOSSoftwareUpdateAccountSummaries property.
+     * @return a void
+     */
+    public void setMacOSSoftwareUpdateAccountSummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateAccountSummary> value) {
+        this._macOSSoftwareUpdateAccountSummaries = value;
+    }
+    /**
+     * Sets the managedDeviceCleanupSettings property value. Device cleanup rule
+     * @param value Value to set for the managedDeviceCleanupSettings property.
+     * @return a void
+     */
+    public void setManagedDeviceCleanupSettings(@javax.annotation.Nullable final ManagedDeviceCleanupSettings value) {
+        this._managedDeviceCleanupSettings = value;
+    }
+    /**
+     * Sets the managedDeviceEncryptionStates property value. Encryption report for devices in this account
+     * @param value Value to set for the managedDeviceEncryptionStates property.
+     * @return a void
+     */
+    public void setManagedDeviceEncryptionStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceEncryptionState> value) {
+        this._managedDeviceEncryptionStates = value;
+    }
+    /**
+     * Sets the managedDeviceOverview property value. Device overview
+     * @param value Value to set for the managedDeviceOverview property.
+     * @return a void
+     */
+    public void setManagedDeviceOverview(@javax.annotation.Nullable final ManagedDeviceOverview value) {
+        this._managedDeviceOverview = value;
+    }
+    /**
+     * Sets the managedDevices property value. The list of managed devices.
+     * @param value Value to set for the managedDevices property.
+     * @return a void
+     */
+    public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
+        this._managedDevices = value;
+    }
+    /**
+     * Sets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
+     * @param value Value to set for the maximumDepTokens property.
+     * @return a void
+     */
+    public void setMaximumDepTokens(@javax.annotation.Nullable final Integer value) {
+        this._maximumDepTokens = value;
+    }
+    /**
+     * Sets the microsoftTunnelConfigurations property value. Collection of MicrosoftTunnelConfiguration settings associated with account.
+     * @param value Value to set for the microsoftTunnelConfigurations property.
+     * @return a void
+     */
+    public void setMicrosoftTunnelConfigurations(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelConfiguration> value) {
+        this._microsoftTunnelConfigurations = value;
+    }
+    /**
+     * Sets the microsoftTunnelHealthThresholds property value. Collection of MicrosoftTunnelHealthThreshold settings associated with account.
+     * @param value Value to set for the microsoftTunnelHealthThresholds property.
+     * @return a void
+     */
+    public void setMicrosoftTunnelHealthThresholds(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelHealthThreshold> value) {
+        this._microsoftTunnelHealthThresholds = value;
+    }
+    /**
+     * Sets the microsoftTunnelServerLogCollectionResponses property value. Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
+     * @param value Value to set for the microsoftTunnelServerLogCollectionResponses property.
+     * @return a void
+     */
+    public void setMicrosoftTunnelServerLogCollectionResponses(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelServerLogCollectionResponse> value) {
+        this._microsoftTunnelServerLogCollectionResponses = value;
+    }
+    /**
+     * Sets the microsoftTunnelSites property value. Collection of MicrosoftTunnelSite settings associated with account.
+     * @param value Value to set for the microsoftTunnelSites property.
+     * @return a void
+     */
+    public void setMicrosoftTunnelSites(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelSite> value) {
+        this._microsoftTunnelSites = value;
+    }
+    /**
+     * Sets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
+     * @param value Value to set for the mobileAppTroubleshootingEvents property.
+     * @return a void
+     */
+    public void setMobileAppTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
+        this._mobileAppTroubleshootingEvents = value;
+    }
+    /**
+     * Sets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
+     * @param value Value to set for the mobileThreatDefenseConnectors property.
+     * @return a void
+     */
+    public void setMobileThreatDefenseConnectors(@javax.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
+        this._mobileThreatDefenseConnectors = value;
+    }
+    /**
+     * Sets the ndesConnectors property value. The collection of Ndes connectors for this account.
+     * @param value Value to set for the ndesConnectors property.
+     * @return a void
+     */
+    public void setNdesConnectors(@javax.annotation.Nullable final java.util.List<NdesConnector> value) {
+        this._ndesConnectors = value;
+    }
+    /**
+     * Sets the notificationMessageTemplates property value. The Notification Message Templates.
+     * @param value Value to set for the notificationMessageTemplates property.
+     * @return a void
+     */
+    public void setNotificationMessageTemplates(@javax.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
+        this._notificationMessageTemplates = value;
+    }
+    /**
+     * Sets the oemWarrantyInformationOnboarding property value. List of OEM Warranty Statuses
+     * @param value Value to set for the oemWarrantyInformationOnboarding property.
+     * @return a void
+     */
+    public void setOemWarrantyInformationOnboarding(@javax.annotation.Nullable final java.util.List<OemWarrantyInformationOnboarding> value) {
+        this._oemWarrantyInformationOnboarding = value;
+    }
+    /**
+     * Sets the remoteActionAudits property value. The list of device remote action audits with the tenant.
+     * @param value Value to set for the remoteActionAudits property.
+     * @return a void
+     */
+    public void setRemoteActionAudits(@javax.annotation.Nullable final java.util.List<RemoteActionAudit> value) {
+        this._remoteActionAudits = value;
+    }
+    /**
+     * Sets the remoteAssistancePartners property value. The remote assist partners.
+     * @param value Value to set for the remoteAssistancePartners property.
+     * @return a void
+     */
+    public void setRemoteAssistancePartners(@javax.annotation.Nullable final java.util.List<RemoteAssistancePartner> value) {
+        this._remoteAssistancePartners = value;
+    }
+    /**
+     * Sets the remoteAssistanceSettings property value. The remote assistance settings singleton
+     * @param value Value to set for the remoteAssistanceSettings property.
+     * @return a void
+     */
+    public void setRemoteAssistanceSettings(@javax.annotation.Nullable final RemoteAssistanceSettings value) {
+        this._remoteAssistanceSettings = value;
+    }
+    /**
+     * Sets the reports property value. Reports singleton
+     * @param value Value to set for the reports property.
+     * @return a void
+     */
+    public void setReports(@javax.annotation.Nullable final DeviceManagementReports value) {
+        this._reports = value;
+    }
+    /**
+     * Sets the resourceAccessProfiles property value. Collection of resource access settings associated with account.
+     * @param value Value to set for the resourceAccessProfiles property.
+     * @return a void
+     */
+    public void setResourceAccessProfiles(@javax.annotation.Nullable final java.util.List<DeviceManagementResourceAccessProfileBase> value) {
+        this._resourceAccessProfiles = value;
+    }
+    /**
+     * Sets the resourceOperations property value. The Resource Operations.
+     * @param value Value to set for the resourceOperations property.
+     * @return a void
+     */
+    public void setResourceOperations(@javax.annotation.Nullable final java.util.List<ResourceOperation> value) {
+        this._resourceOperations = value;
+    }
+    /**
+     * Sets the reusablePolicySettings property value. List of all reusable settings that can be referred in a policy
+     * @param value Value to set for the reusablePolicySettings property.
+     * @return a void
+     */
+    public void setReusablePolicySettings(@javax.annotation.Nullable final java.util.List<DeviceManagementReusablePolicySetting> value) {
+        this._reusablePolicySettings = value;
+    }
+    /**
+     * Sets the reusableSettings property value. List of all reusable settings
+     * @param value Value to set for the reusableSettings property.
+     * @return a void
+     */
+    public void setReusableSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
+        this._reusableSettings = value;
+    }
+    /**
+     * Sets the roleAssignments property value. The Role Assignments.
+     * @param value Value to set for the roleAssignments property.
+     * @return a void
+     */
+    public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
+        this._roleAssignments = value;
+    }
+    /**
+     * Sets the roleDefinitions property value. The Role Definitions.
+     * @param value Value to set for the roleDefinitions property.
+     * @return a void
+     */
+    public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<RoleDefinition> value) {
+        this._roleDefinitions = value;
+    }
+    /**
+     * Sets the roleScopeTags property value. The Role Scope Tags.
+     * @param value Value to set for the roleScopeTags property.
+     * @return a void
+     */
+    public void setRoleScopeTags(@javax.annotation.Nullable final java.util.List<RoleScopeTag> value) {
+        this._roleScopeTags = value;
+    }
+    /**
+     * Sets the settingDefinitions property value. The device management intent setting definitions
+     * @param value Value to set for the settingDefinitions property.
+     * @return a void
+     */
+    public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingDefinition> value) {
+        this._settingDefinitions = value;
+    }
+    /**
+     * Sets the settings property value. Account level settings.
+     * @param value Value to set for the settings property.
+     * @return a void
+     */
+    public void setSettings(@javax.annotation.Nullable final DeviceManagementSettings value) {
+        this._settings = value;
+    }
+    /**
+     * Sets the softwareUpdateStatusSummary property value. The software update status summary.
+     * @param value Value to set for the softwareUpdateStatusSummary property.
+     * @return a void
+     */
+    public void setSoftwareUpdateStatusSummary(@javax.annotation.Nullable final SoftwareUpdateStatusSummary value) {
+        this._softwareUpdateStatusSummary = value;
+    }
+    /**
+     * Sets the subscriptions property value. Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+     * @param value Value to set for the subscriptions property.
+     * @return a void
+     */
+    public void setSubscriptions(@javax.annotation.Nullable final DeviceManagementSubscriptions value) {
+        this._subscriptions = value;
+    }
+    /**
+     * Sets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * @param value Value to set for the subscriptionState property.
+     * @return a void
+     */
+    public void setSubscriptionState(@javax.annotation.Nullable final DeviceManagementSubscriptionState value) {
+        this._subscriptionState = value;
+    }
+    /**
+     * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
+     * @param value Value to set for the telecomExpenseManagementPartners property.
+     * @return a void
+     */
+    public void setTelecomExpenseManagementPartners(@javax.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
+        this._telecomExpenseManagementPartners = value;
+    }
+    /**
+     * Sets the templates property value. The available templates
+     * @param value Value to set for the templates property.
+     * @return a void
+     */
+    public void setTemplates(@javax.annotation.Nullable final java.util.List<DeviceManagementTemplate> value) {
+        this._templates = value;
+    }
+    /**
+     * Sets the templateSettings property value. List of all TemplateSettings
+     * @param value Value to set for the templateSettings property.
+     * @return a void
+     */
+    public void setTemplateSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingTemplate> value) {
+        this._templateSettings = value;
+    }
+    /**
+     * Sets the tenantAttachRBAC property value. TenantAttach RBAC Enablement
+     * @param value Value to set for the tenantAttachRBAC property.
+     * @return a void
+     */
+    public void setTenantAttachRBAC(@javax.annotation.Nullable final TenantAttachRBAC value) {
+        this._tenantAttachRBAC = value;
+    }
+    /**
+     * Sets the termsAndConditions property value. The terms and conditions associated with device management of the company.
+     * @param value Value to set for the termsAndConditions property.
+     * @return a void
+     */
+    public void setTermsAndConditions(@javax.annotation.Nullable final java.util.List<TermsAndConditions> value) {
+        this._termsAndConditions = value;
+    }
+    /**
+     * Sets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
+     * @param value Value to set for the troubleshootingEvents property.
+     * @return a void
+     */
+    public void setTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
+        this._troubleshootingEvents = value;
+    }
+    /**
+     * Sets the unlicensedAdminstratorsEnabled property value. When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only.
+     * @param value Value to set for the unlicensedAdminstratorsEnabled property.
+     * @return a void
+     */
+    public void setUnlicensedAdminstratorsEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._unlicensedAdminstratorsEnabled = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> value) {
+        this._userExperienceAnalyticsAppHealthApplicationPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion property value. User experience analytics appHealth Application Performance by App Version
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> value) {
+        this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value) {
+        this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value) {
+        this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> value) {
+        this._userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthDeviceModelPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthDeviceModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> value) {
+        this._userExperienceAnalyticsAppHealthDeviceModelPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> value) {
+        this._userExperienceAnalyticsAppHealthDevicePerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
+     * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformanceDetails property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> value) {
+        this._userExperienceAnalyticsAppHealthDevicePerformanceDetails = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthOSVersionPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthOSVersionPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> value) {
+        this._userExperienceAnalyticsAppHealthOSVersionPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
+     * @param value Value to set for the userExperienceAnalyticsAppHealthOverview property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsAppHealthOverview(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+        this._userExperienceAnalyticsAppHealthOverview = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
+     * @param value Value to set for the userExperienceAnalyticsBaselines property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBaselines(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBaseline> value) {
+        this._userExperienceAnalyticsBaselines = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthAppImpact property value. User Experience Analytics Battery Health App Impact
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthAppImpact property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthAppImpact(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact> value) {
+        this._userExperienceAnalyticsBatteryHealthAppImpact = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthCapacityDetails property value. User Experience Analytics Battery Health Capacity Details
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthCapacityDetails property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthCapacityDetails(@javax.annotation.Nullable final UserExperienceAnalyticsBatteryHealthCapacityDetails value) {
+        this._userExperienceAnalyticsBatteryHealthCapacityDetails = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthDeviceAppImpact property value. User Experience Analytics Battery Health Device App Impact
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthDeviceAppImpact property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthDeviceAppImpact(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> value) {
+        this._userExperienceAnalyticsBatteryHealthDeviceAppImpact = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthDevicePerformance property value. User Experience Analytics Battery Health Device Performance
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthDevicePerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthDevicePerformance> value) {
+        this._userExperienceAnalyticsBatteryHealthDevicePerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property value. User Experience Analytics Battery Health Device Runtime History
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> value) {
+        this._userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthModelPerformance property value. User Experience Analytics Battery Health Model Performance
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthModelPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> value) {
+        this._userExperienceAnalyticsBatteryHealthModelPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthOsPerformance property value. User Experience Analytics Battery Health Os Performance
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthOsPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthOsPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthOsPerformance> value) {
+        this._userExperienceAnalyticsBatteryHealthOsPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBatteryHealthRuntimeDetails property value. User Experience Analytics Battery Health Runtime Details
+     * @param value Value to set for the userExperienceAnalyticsBatteryHealthRuntimeDetails property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsBatteryHealthRuntimeDetails(@javax.annotation.Nullable final UserExperienceAnalyticsBatteryHealthRuntimeDetails value) {
+        this._userExperienceAnalyticsBatteryHealthRuntimeDetails = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsCategories property value. User experience analytics categories
+     * @param value Value to set for the userExperienceAnalyticsCategories property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsCategories(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsCategory> value) {
+        this._userExperienceAnalyticsCategories = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history
+     * @param value Value to set for the userExperienceAnalyticsDeviceMetricHistory property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceMetricHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
+        this._userExperienceAnalyticsDeviceMetricHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
+     * @param value Value to set for the userExperienceAnalyticsDevicePerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDevicePerformance> value) {
+        this._userExperienceAnalyticsDevicePerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceScope property value. The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
+     * @param value Value to set for the userExperienceAnalyticsDeviceScope property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceScope(@javax.annotation.Nullable final UserExperienceAnalyticsDeviceScope value) {
+        this._userExperienceAnalyticsDeviceScope = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceScopes property value. The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
+     * @param value Value to set for the userExperienceAnalyticsDeviceScopes property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceScopes(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceScope> value) {
+        this._userExperienceAnalyticsDeviceScopes = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
+     * @param value Value to set for the userExperienceAnalyticsDeviceScores property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceScores(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceScores> value) {
+        this._userExperienceAnalyticsDeviceScores = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
+     * @param value Value to set for the userExperienceAnalyticsDeviceStartupHistory property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceStartupHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupHistory> value) {
+        this._userExperienceAnalyticsDeviceStartupHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
+     * @param value Value to set for the userExperienceAnalyticsDeviceStartupProcesses property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceStartupProcesses(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupProcess> value) {
+        this._userExperienceAnalyticsDeviceStartupProcesses = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupProcessPerformance property value. User experience analytics device Startup Process Performance
+     * @param value Value to set for the userExperienceAnalyticsDeviceStartupProcessPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDeviceStartupProcessPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupProcessPerformance> value) {
+        this._userExperienceAnalyticsDeviceStartupProcessPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDevicesWithoutCloudIdentity property value. User experience analytics devices without cloud identity.
+     * @param value Value to set for the userExperienceAnalyticsDevicesWithoutCloudIdentity property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsDevicesWithoutCloudIdentity(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceWithoutCloudIdentity> value) {
+        this._userExperienceAnalyticsDevicesWithoutCloudIdentity = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsImpactingProcess property value. User experience analytics impacting process
+     * @param value Value to set for the userExperienceAnalyticsImpactingProcess property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsImpactingProcess(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsImpactingProcess> value) {
+        this._userExperienceAnalyticsImpactingProcess = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
+     * @param value Value to set for the userExperienceAnalyticsMetricHistory property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsMetricHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
+        this._userExperienceAnalyticsMetricHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
+     * @param value Value to set for the userExperienceAnalyticsModelScores property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsModelScores(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsModelScores> value) {
+        this._userExperienceAnalyticsModelScores = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsNotAutopilotReadyDevice property value. User experience analytics devices not Windows Autopilot ready.
+     * @param value Value to set for the userExperienceAnalyticsNotAutopilotReadyDevice property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsNotAutopilotReadyDevice(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice> value) {
+        this._userExperienceAnalyticsNotAutopilotReadyDevice = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsOverview property value. User experience analytics overview
+     * @param value Value to set for the userExperienceAnalyticsOverview property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsOverview(@javax.annotation.Nullable final UserExperienceAnalyticsOverview value) {
+        this._userExperienceAnalyticsOverview = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsRegressionSummary property value. User experience analytics regression summary
+     * @param value Value to set for the userExperienceAnalyticsRegressionSummary property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsRegressionSummary(@javax.annotation.Nullable final UserExperienceAnalyticsRegressionSummary value) {
+        this._userExperienceAnalyticsRegressionSummary = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
+     * @param value Value to set for the userExperienceAnalyticsRemoteConnection property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsRemoteConnection(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsRemoteConnection> value) {
+        this._userExperienceAnalyticsRemoteConnection = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsResourcePerformance property value. User experience analytics resource performance
+     * @param value Value to set for the userExperienceAnalyticsResourcePerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsResourcePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsResourcePerformance> value) {
+        this._userExperienceAnalyticsResourcePerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
+     * @param value Value to set for the userExperienceAnalyticsScoreHistory property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsScoreHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsScoreHistory> value) {
+        this._userExperienceAnalyticsScoreHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsSettings property value. User experience analytics device settings
+     * @param value Value to set for the userExperienceAnalyticsSettings property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsSettings(@javax.annotation.Nullable final UserExperienceAnalyticsSettings value) {
+        this._userExperienceAnalyticsSettings = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
+     * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(@javax.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric value) {
+        this._userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
+     * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereMetrics property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsWorkFromAnywhereMetrics(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> value) {
+        this._userExperienceAnalyticsWorkFromAnywhereMetrics = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
+     * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereModelPerformance property.
+     * @return a void
+     */
+    public void setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value) {
+        this._userExperienceAnalyticsWorkFromAnywhereModelPerformance = value;
+    }
+    /**
+     * Sets the userPfxCertificates property value. Collection of PFX certificates associated with a user.
+     * @param value Value to set for the userPfxCertificates property.
+     * @return a void
+     */
+    public void setUserPfxCertificates(@javax.annotation.Nullable final java.util.List<UserPFXCertificate> value) {
+        this._userPfxCertificates = value;
+    }
+    /**
+     * Sets the virtualEndpoint property value. The virtualEndpoint property
+     * @param value Value to set for the virtualEndpoint property.
+     * @return a void
+     */
+    public void setVirtualEndpoint(@javax.annotation.Nullable final VirtualEndpoint value) {
+        this._virtualEndpoint = value;
+    }
+    /**
+     * Sets the windowsAutopilotDeploymentProfiles property value. Windows auto pilot deployment profiles
+     * @param value Value to set for the windowsAutopilotDeploymentProfiles property.
+     * @return a void
+     */
+    public void setWindowsAutopilotDeploymentProfiles(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeploymentProfile> value) {
+        this._windowsAutopilotDeploymentProfiles = value;
+    }
+    /**
+     * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
+     * @param value Value to set for the windowsAutopilotDeviceIdentities property.
+     * @return a void
+     */
+    public void setWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
+        this._windowsAutopilotDeviceIdentities = value;
+    }
+    /**
+     * Sets the windowsAutopilotSettings property value. The Windows autopilot account settings.
+     * @param value Value to set for the windowsAutopilotSettings property.
+     * @return a void
+     */
+    public void setWindowsAutopilotSettings(@javax.annotation.Nullable final WindowsAutopilotSettings value) {
+        this._windowsAutopilotSettings = value;
+    }
+    /**
+     * Sets the windowsDriverUpdateProfiles property value. A collection of windows driver update profiles
+     * @param value Value to set for the windowsDriverUpdateProfiles property.
+     * @return a void
+     */
+    public void setWindowsDriverUpdateProfiles(@javax.annotation.Nullable final java.util.List<WindowsDriverUpdateProfile> value) {
+        this._windowsDriverUpdateProfiles = value;
+    }
+    /**
+     * Sets the windowsFeatureUpdateProfiles property value. A collection of windows feature update profiles
+     * @param value Value to set for the windowsFeatureUpdateProfiles property.
+     * @return a void
+     */
+    public void setWindowsFeatureUpdateProfiles(@javax.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfile> value) {
+        this._windowsFeatureUpdateProfiles = value;
+    }
+    /**
+     * Sets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
+     * @param value Value to set for the windowsInformationProtectionAppLearningSummaries property.
+     * @return a void
+     */
+    public void setWindowsInformationProtectionAppLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLearningSummary> value) {
+        this._windowsInformationProtectionAppLearningSummaries = value;
+    }
+    /**
+     * Sets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
+     * @param value Value to set for the windowsInformationProtectionNetworkLearningSummaries property.
+     * @return a void
+     */
+    public void setWindowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
+        this._windowsInformationProtectionNetworkLearningSummaries = value;
+    }
+    /**
+     * Sets the windowsMalwareInformation property value. The list of affected malware in the tenant.
+     * @param value Value to set for the windowsMalwareInformation property.
+     * @return a void
+     */
+    public void setWindowsMalwareInformation(@javax.annotation.Nullable final java.util.List<WindowsMalwareInformation> value) {
+        this._windowsMalwareInformation = value;
+    }
+    /**
+     * Sets the windowsMalwareOverview property value. Malware overview for windows devices.
+     * @param value Value to set for the windowsMalwareOverview property.
+     * @return a void
+     */
+    public void setWindowsMalwareOverview(@javax.annotation.Nullable final WindowsMalwareOverview value) {
+        this._windowsMalwareOverview = value;
+    }
+    /**
+     * Sets the windowsQualityUpdateProfiles property value. A collection of windows quality update profiles
+     * @param value Value to set for the windowsQualityUpdateProfiles property.
+     * @return a void
+     */
+    public void setWindowsQualityUpdateProfiles(@javax.annotation.Nullable final java.util.List<WindowsQualityUpdateProfile> value) {
+        this._windowsQualityUpdateProfiles = value;
+    }
+    /**
+     * Sets the windowsUpdateCatalogItems property value. A collection of windows update catalog items (fetaure updates item , quality updates item)
+     * @param value Value to set for the windowsUpdateCatalogItems property.
+     * @return a void
+     */
+    public void setWindowsUpdateCatalogItems(@javax.annotation.Nullable final java.util.List<WindowsUpdateCatalogItem> value) {
+        this._windowsUpdateCatalogItems = value;
+    }
+    /**
+     * Sets the zebraFotaArtifacts property value. The Collection of ZebraFotaArtifacts.
+     * @param value Value to set for the zebraFotaArtifacts property.
+     * @return a void
+     */
+    public void setZebraFotaArtifacts(@javax.annotation.Nullable final java.util.List<ZebraFotaArtifact> value) {
+        this._zebraFotaArtifacts = value;
+    }
+    /**
+     * Sets the zebraFotaConnector property value. The singleton ZebraFotaConnector associated with account.
+     * @param value Value to set for the zebraFotaConnector property.
+     * @return a void
+     */
+    public void setZebraFotaConnector(@javax.annotation.Nullable final ZebraFotaConnector value) {
+        this._zebraFotaConnector = value;
+    }
+    /**
+     * Sets the zebraFotaDeployments property value. Collection of ZebraFotaDeployments associated with account.
+     * @param value Value to set for the zebraFotaDeployments property.
+     * @return a void
+     */
+    public void setZebraFotaDeployments(@javax.annotation.Nullable final java.util.List<ZebraFotaDeployment> value) {
+        this._zebraFotaDeployments = value;
     }
 }

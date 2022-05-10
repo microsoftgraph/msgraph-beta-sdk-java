@@ -1,62 +1,43 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Delegated Admin Relationship Status.
-*/
-public enum DelegatedAdminRelationshipStatus
-{
-    /**
-    * activating
-    */
-    ACTIVATING,
-    /**
-    * active
-    */
-    ACTIVE,
-    /**
-    * approval Pending
-    */
-    APPROVAL_PENDING,
-    /**
-    * approved
-    */
-    APPROVED,
-    /**
-    * created
-    */
-    CREATED,
-    /**
-    * expired
-    */
-    EXPIRED,
-    /**
-    * expiring
-    */
-    EXPIRING,
-    /**
-    * terminated
-    */
-    TERMINATED,
-    /**
-    * terminating
-    */
-    TERMINATING,
-    /**
-    * termination Requested
-    */
-    TERMINATION_REQUESTED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DelegatedAdminRelationshipStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the tenantRelationship singleton. */
+public enum DelegatedAdminRelationshipStatus implements ValuedEnum {
+    Activating("activating"),
+    Active("active"),
+    ApprovalPending("approvalPending"),
+    Approved("approved"),
+    Created("created"),
+    Expired("expired"),
+    Expiring("expiring"),
+    Terminated("terminated"),
+    Terminating("terminating"),
+    TerminationRequested("terminationRequested"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    DelegatedAdminRelationshipStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DelegatedAdminRelationshipStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "activating": return Activating;
+            case "active": return Active;
+            case "approvalPending": return ApprovalPending;
+            case "approved": return Approved;
+            case "created": return Created;
+            case "expired": return Expired;
+            case "expiring": return Expiring;
+            case "terminated": return Terminated;
+            case "terminating": return Terminating;
+            case "terminationRequested": return TerminationRequested;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

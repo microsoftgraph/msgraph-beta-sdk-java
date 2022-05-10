@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Authentication Method Feature.
-*/
-public enum AuthenticationMethodFeature
-{
-    /**
-    * sspr Registered
-    */
-    SSPR_REGISTERED,
-    /**
-    * sspr Enabled
-    */
-    SSPR_ENABLED,
-    /**
-    * sspr Capable
-    */
-    SSPR_CAPABLE,
-    /**
-    * passwordless Capable
-    */
-    PASSWORDLESS_CAPABLE,
-    /**
-    * mfa Capable
-    */
-    MFA_CAPABLE,
-    /**
-    * For AuthenticationMethodFeature values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the usersRegisteredByFeature method. */
+public enum AuthenticationMethodFeature implements ValuedEnum {
+    SsprRegistered("ssprRegistered"),
+    SsprEnabled("ssprEnabled"),
+    SsprCapable("ssprCapable"),
+    PasswordlessCapable("passwordlessCapable"),
+    MfaCapable("mfaCapable");
+    public final String value;
+    AuthenticationMethodFeature(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AuthenticationMethodFeature forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "ssprRegistered": return SsprRegistered;
+            case "ssprEnabled": return SsprEnabled;
+            case "ssprCapable": return SsprCapable;
+            case "passwordlessCapable": return PasswordlessCapable;
+            case "mfaCapable": return MfaCapable;
+            default: return null;
+        }
+    }
 }

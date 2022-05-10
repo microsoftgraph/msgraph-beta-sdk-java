@@ -1,198 +1,111 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Synchronization Secret.
-*/
-public enum SynchronizationSecret
-{
-    /**
-    * None
-    */
-    NONE,
-    /**
-    * User Name
-    */
-    USER_NAME,
-    /**
-    * Password
-    */
-    PASSWORD,
-    /**
-    * Secret Token
-    */
-    SECRET_TOKEN,
-    /**
-    * App Key
-    */
-    APP_KEY,
-    /**
-    * Base Address
-    */
-    BASE_ADDRESS,
-    /**
-    * Client Identifier
-    */
-    CLIENT_IDENTIFIER,
-    /**
-    * Client Secret
-    */
-    CLIENT_SECRET,
-    /**
-    * Single Sign On Type
-    */
-    SINGLE_SIGN_ON_TYPE,
-    /**
-    * Sandbox
-    */
-    SANDBOX,
-    /**
-    * Url
-    */
-    URL,
-    /**
-    * Domain
-    */
-    DOMAIN,
-    /**
-    * Consumer Key
-    */
-    CONSUMER_KEY,
-    /**
-    * Consumer Secret
-    */
-    CONSUMER_SECRET,
-    /**
-    * Token Key
-    */
-    TOKEN_KEY,
-    /**
-    * Token Expiration
-    */
-    TOKEN_EXPIRATION,
-    /**
-    * Oauth2Access Token
-    */
-    OAUTH2_ACCESS_TOKEN,
-    /**
-    * Oauth2Access Token Creation Time
-    */
-    OAUTH2_ACCESS_TOKEN_CREATION_TIME,
-    /**
-    * Oauth2Refresh Token
-    */
-    OAUTH2_REFRESH_TOKEN,
-    /**
-    * Sync All
-    */
-    SYNC_ALL,
-    /**
-    * Instance Name
-    */
-    INSTANCE_NAME,
-    /**
-    * Oauth2Client Id
-    */
-    OAUTH2_CLIENT_ID,
-    /**
-    * Oauth2Client Secret
-    */
-    OAUTH2_CLIENT_SECRET,
-    /**
-    * Company Id
-    */
-    COMPANY_ID,
-    /**
-    * Update Key On Soft Delete
-    */
-    UPDATE_KEY_ON_SOFT_DELETE,
-    /**
-    * Synchronization Schedule
-    */
-    SYNCHRONIZATION_SCHEDULE,
-    /**
-    * System Of Record
-    */
-    SYSTEM_OF_RECORD,
-    /**
-    * Sandbox Name
-    */
-    SANDBOX_NAME,
-    /**
-    * Enforce Domain
-    */
-    ENFORCE_DOMAIN,
-    /**
-    * Sync Notification Settings
-    */
-    SYNC_NOTIFICATION_SETTINGS,
-    /**
-    * Skip Out Of Scope Deletions
-    */
-    SKIP_OUT_OF_SCOPE_DELETIONS,
-    /**
-    * Oauth2Authorization Code
-    */
-    OAUTH2_AUTHORIZATION_CODE,
-    /**
-    * Oauth2Redirect Uri
-    */
-    OAUTH2_REDIRECT_URI,
-    /**
-    * Application Template Identifier
-    */
-    APPLICATION_TEMPLATE_IDENTIFIER,
-    /**
-    * Oauth2Token Exchange Uri
-    */
-    OAUTH2_TOKEN_EXCHANGE_URI,
-    /**
-    * Oauth2Authorization Uri
-    */
-    OAUTH2_AUTHORIZATION_URI,
-    /**
-    * Authentication Type
-    */
-    AUTHENTICATION_TYPE,
-    /**
-    * Server
-    */
-    SERVER,
-    /**
-    * Perform Inbound Entitlement Grants
-    */
-    PERFORM_INBOUND_ENTITLEMENT_GRANTS,
-    /**
-    * Hard Deletes Enabled
-    */
-    HARD_DELETES_ENABLED,
-    /**
-    * Sync Agent Compatibility Key
-    */
-    SYNC_AGENT_COMPATIBILITY_KEY,
-    /**
-    * Sync Agent ADContainer
-    */
-    SYNC_AGENT_AD_CONTAINER,
-    /**
-    * Validate Domain
-    */
-    VALIDATE_DOMAIN,
-    /**
-    * Test References
-    */
-    TEST_REFERENCES,
-    /**
-    * Connection String
-    */
-    CONNECTION_STRING,
-    /**
-    * For SynchronizationSecret values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities. */
+public enum SynchronizationSecret implements ValuedEnum {
+    None("None"),
+    UserName("UserName"),
+    Password("Password"),
+    SecretToken("SecretToken"),
+    AppKey("AppKey"),
+    BaseAddress("BaseAddress"),
+    ClientIdentifier("ClientIdentifier"),
+    ClientSecret("ClientSecret"),
+    SingleSignOnType("SingleSignOnType"),
+    Sandbox("Sandbox"),
+    Url("Url"),
+    Domain("Domain"),
+    ConsumerKey("ConsumerKey"),
+    ConsumerSecret("ConsumerSecret"),
+    TokenKey("TokenKey"),
+    TokenExpiration("TokenExpiration"),
+    Oauth2AccessToken("Oauth2AccessToken"),
+    Oauth2AccessTokenCreationTime("Oauth2AccessTokenCreationTime"),
+    Oauth2RefreshToken("Oauth2RefreshToken"),
+    SyncAll("SyncAll"),
+    InstanceName("InstanceName"),
+    Oauth2ClientId("Oauth2ClientId"),
+    Oauth2ClientSecret("Oauth2ClientSecret"),
+    CompanyId("CompanyId"),
+    UpdateKeyOnSoftDelete("UpdateKeyOnSoftDelete"),
+    SynchronizationSchedule("SynchronizationSchedule"),
+    SystemOfRecord("SystemOfRecord"),
+    SandboxName("SandboxName"),
+    EnforceDomain("EnforceDomain"),
+    SyncNotificationSettings("SyncNotificationSettings"),
+    SkipOutOfScopeDeletions("SkipOutOfScopeDeletions"),
+    Oauth2AuthorizationCode("Oauth2AuthorizationCode"),
+    Oauth2RedirectUri("Oauth2RedirectUri"),
+    ApplicationTemplateIdentifier("ApplicationTemplateIdentifier"),
+    Oauth2TokenExchangeUri("Oauth2TokenExchangeUri"),
+    Oauth2AuthorizationUri("Oauth2AuthorizationUri"),
+    AuthenticationType("AuthenticationType"),
+    Server("Server"),
+    PerformInboundEntitlementGrants("PerformInboundEntitlementGrants"),
+    HardDeletesEnabled("HardDeletesEnabled"),
+    SyncAgentCompatibilityKey("SyncAgentCompatibilityKey"),
+    SyncAgentADContainer("SyncAgentADContainer"),
+    ValidateDomain("ValidateDomain"),
+    TestReferences("TestReferences"),
+    ConnectionString("ConnectionString");
+    public final String value;
+    SynchronizationSecret(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SynchronizationSecret forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "None": return None;
+            case "UserName": return UserName;
+            case "Password": return Password;
+            case "SecretToken": return SecretToken;
+            case "AppKey": return AppKey;
+            case "BaseAddress": return BaseAddress;
+            case "ClientIdentifier": return ClientIdentifier;
+            case "ClientSecret": return ClientSecret;
+            case "SingleSignOnType": return SingleSignOnType;
+            case "Sandbox": return Sandbox;
+            case "Url": return Url;
+            case "Domain": return Domain;
+            case "ConsumerKey": return ConsumerKey;
+            case "ConsumerSecret": return ConsumerSecret;
+            case "TokenKey": return TokenKey;
+            case "TokenExpiration": return TokenExpiration;
+            case "Oauth2AccessToken": return Oauth2AccessToken;
+            case "Oauth2AccessTokenCreationTime": return Oauth2AccessTokenCreationTime;
+            case "Oauth2RefreshToken": return Oauth2RefreshToken;
+            case "SyncAll": return SyncAll;
+            case "InstanceName": return InstanceName;
+            case "Oauth2ClientId": return Oauth2ClientId;
+            case "Oauth2ClientSecret": return Oauth2ClientSecret;
+            case "CompanyId": return CompanyId;
+            case "UpdateKeyOnSoftDelete": return UpdateKeyOnSoftDelete;
+            case "SynchronizationSchedule": return SynchronizationSchedule;
+            case "SystemOfRecord": return SystemOfRecord;
+            case "SandboxName": return SandboxName;
+            case "EnforceDomain": return EnforceDomain;
+            case "SyncNotificationSettings": return SyncNotificationSettings;
+            case "SkipOutOfScopeDeletions": return SkipOutOfScopeDeletions;
+            case "Oauth2AuthorizationCode": return Oauth2AuthorizationCode;
+            case "Oauth2RedirectUri": return Oauth2RedirectUri;
+            case "ApplicationTemplateIdentifier": return ApplicationTemplateIdentifier;
+            case "Oauth2TokenExchangeUri": return Oauth2TokenExchangeUri;
+            case "Oauth2AuthorizationUri": return Oauth2AuthorizationUri;
+            case "AuthenticationType": return AuthenticationType;
+            case "Server": return Server;
+            case "PerformInboundEntitlementGrants": return PerformInboundEntitlementGrants;
+            case "HardDeletesEnabled": return HardDeletesEnabled;
+            case "SyncAgentCompatibilityKey": return SyncAgentCompatibilityKey;
+            case "SyncAgentADContainer": return SyncAgentADContainer;
+            case "ValidateDomain": return ValidateDomain;
+            case "TestReferences": return TestReferences;
+            case "ConnectionString": return ConnectionString;
+            default: return null;
+        }
+    }
 }

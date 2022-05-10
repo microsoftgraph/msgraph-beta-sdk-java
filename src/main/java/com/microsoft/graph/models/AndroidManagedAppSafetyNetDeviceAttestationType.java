@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android Managed App Safety Net Device Attestation Type.
-*/
-public enum AndroidManagedAppSafetyNetDeviceAttestationType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * basic Integrity
-    */
-    BASIC_INTEGRITY,
-    /**
-    * basic Integrity And Device Certification
-    */
-    BASIC_INTEGRITY_AND_DEVICE_CERTIFICATION,
-    /**
-    * For AndroidManagedAppSafetyNetDeviceAttestationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum AndroidManagedAppSafetyNetDeviceAttestationType implements ValuedEnum {
+    /** no requirement set */
+    None("none"),
+    /** require that Android device passes SafetyNet Basic Integrity validation */
+    BasicIntegrity("basicIntegrity"),
+    /** require that Android device passes SafetyNet Basic Integrity and Device Certification validations */
+    BasicIntegrityAndDeviceCertification("basicIntegrityAndDeviceCertification");
+    public final String value;
+    AndroidManagedAppSafetyNetDeviceAttestationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidManagedAppSafetyNetDeviceAttestationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "basicIntegrity": return BasicIntegrity;
+            case "basicIntegrityAndDeviceCertification": return BasicIntegrityAndDeviceCertification;
+            default: return null;
+        }
+    }
 }

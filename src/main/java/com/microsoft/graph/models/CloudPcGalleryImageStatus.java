@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Cloud Pc Gallery Image Status.
-*/
-public enum CloudPcGalleryImageStatus
-{
-    /**
-    * supported
-    */
-    SUPPORTED,
-    /**
-    * supported With Warning
-    */
-    SUPPORTED_WITH_WARNING,
-    /**
-    * not Supported
-    */
-    NOT_SUPPORTED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For CloudPcGalleryImageStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum CloudPcGalleryImageStatus implements ValuedEnum {
+    Supported("supported"),
+    SupportedWithWarning("supportedWithWarning"),
+    NotSupported("notSupported"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    CloudPcGalleryImageStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CloudPcGalleryImageStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "supported": return Supported;
+            case "supportedWithWarning": return SupportedWithWarning;
+            case "notSupported": return NotSupported;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

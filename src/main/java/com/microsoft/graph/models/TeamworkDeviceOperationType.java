@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teamwork Device Operation Type.
-*/
-public enum TeamworkDeviceOperationType
-{
-    /**
-    * device Restart
-    */
-    DEVICE_RESTART,
-    /**
-    * config Update
-    */
-    CONFIG_UPDATE,
-    /**
-    * device Diagnostics
-    */
-    DEVICE_DIAGNOSTICS,
-    /**
-    * software Update
-    */
-    SOFTWARE_UPDATE,
-    /**
-    * device Management Agent Config Update
-    */
-    DEVICE_MANAGEMENT_AGENT_CONFIG_UPDATE,
-    /**
-    * remote Login
-    */
-    REMOTE_LOGIN,
-    /**
-    * remote Logout
-    */
-    REMOTE_LOGOUT,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamworkDeviceOperationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the teamwork singleton. */
+public enum TeamworkDeviceOperationType implements ValuedEnum {
+    DeviceRestart("deviceRestart"),
+    ConfigUpdate("configUpdate"),
+    DeviceDiagnostics("deviceDiagnostics"),
+    SoftwareUpdate("softwareUpdate"),
+    DeviceManagementAgentConfigUpdate("deviceManagementAgentConfigUpdate"),
+    RemoteLogin("remoteLogin"),
+    RemoteLogout("remoteLogout"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamworkDeviceOperationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamworkDeviceOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "deviceRestart": return DeviceRestart;
+            case "configUpdate": return ConfigUpdate;
+            case "deviceDiagnostics": return DeviceDiagnostics;
+            case "softwareUpdate": return SoftwareUpdate;
+            case "deviceManagementAgentConfigUpdate": return DeviceManagementAgentConfigUpdate;
+            case "remoteLogin": return RemoteLogin;
+            case "remoteLogout": return RemoteLogout;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

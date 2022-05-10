@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teams App Installation Scopes.
-*/
-public enum TeamsAppInstallationScopes
-{
-    /**
-    * team
-    */
-    TEAM,
-    /**
-    * group Chat
-    */
-    GROUP_CHAT,
-    /**
-    * personal
-    */
-    PERSONAL,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamsAppInstallationScopes values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the appCatalogs singleton. */
+public enum TeamsAppInstallationScopes implements ValuedEnum {
+    Team("team"),
+    GroupChat("groupChat"),
+    Personal("personal"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamsAppInstallationScopes(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamsAppInstallationScopes forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "team": return Team;
+            case "groupChat": return GroupChat;
+            case "personal": return Personal;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

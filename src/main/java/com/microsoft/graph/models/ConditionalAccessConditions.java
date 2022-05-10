@@ -1,82 +1,53 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Conditional Access Conditions.
-*/
-public enum ConditionalAccessConditions
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * application
-    */
-    APPLICATION,
-    /**
-    * users
-    */
-    USERS,
-    /**
-    * device Platform
-    */
-    DEVICE_PLATFORM,
-    /**
-    * location
-    */
-    LOCATION,
-    /**
-    * client Type
-    */
-    CLIENT_TYPE,
-    /**
-    * sign In Risk
-    */
-    SIGN_IN_RISK,
-    /**
-    * user Risk
-    */
-    USER_RISK,
-    /**
-    * time
-    */
-    TIME,
-    /**
-    * device State
-    */
-    DEVICE_STATE,
-    /**
-    * client
-    */
-    CLIENT,
-    /**
-    * ip Address Seen By Azure AD
-    */
-    IP_ADDRESS_SEEN_BY_AZURE_AD,
-    /**
-    * ip Address Seen By Resource Provider
-    */
-    IP_ADDRESS_SEEN_BY_RESOURCE_PROVIDER,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * service Principals
-    */
-    SERVICE_PRINCIPALS,
-    /**
-    * service Principal Risk
-    */
-    SERVICE_PRINCIPAL_RISK,
-    /**
-    * For ConditionalAccessConditions values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum ConditionalAccessConditions implements ValuedEnum {
+    None("none"),
+    Application("application"),
+    Users("users"),
+    DevicePlatform("devicePlatform"),
+    Location("location"),
+    ClientType("clientType"),
+    SignInRisk("signInRisk"),
+    UserRisk("userRisk"),
+    Time("time"),
+    DeviceState("deviceState"),
+    Client("client"),
+    IpAddressSeenByAzureAD("ipAddressSeenByAzureAD"),
+    IpAddressSeenByResourceProvider("ipAddressSeenByResourceProvider"),
+    UnknownFutureValue("unknownFutureValue"),
+    ServicePrincipals("servicePrincipals"),
+    ServicePrincipalRisk("servicePrincipalRisk");
+    public final String value;
+    ConditionalAccessConditions(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ConditionalAccessConditions forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "application": return Application;
+            case "users": return Users;
+            case "devicePlatform": return DevicePlatform;
+            case "location": return Location;
+            case "clientType": return ClientType;
+            case "signInRisk": return SignInRisk;
+            case "userRisk": return UserRisk;
+            case "time": return Time;
+            case "deviceState": return DeviceState;
+            case "client": return Client;
+            case "ipAddressSeenByAzureAD": return IpAddressSeenByAzureAD;
+            case "ipAddressSeenByResourceProvider": return IpAddressSeenByResourceProvider;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "servicePrincipals": return ServicePrincipals;
+            case "servicePrincipalRisk": return ServicePrincipalRisk;
+            default: return null;
+        }
+    }
 }

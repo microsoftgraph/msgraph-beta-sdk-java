@@ -1,118 +1,96 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Compliance Script Rul Operator.
-*/
-public enum DeviceComplianceScriptRulOperator
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * and
-    */
-    AND,
-    /**
-    * or
-    */
-    OR,
-    /**
-    * is Equals
-    */
-    IS_EQUALS,
-    /**
-    * not Equals
-    */
-    NOT_EQUALS,
-    /**
-    * greater Than
-    */
-    GREATER_THAN,
-    /**
-    * less Than
-    */
-    LESS_THAN,
-    /**
-    * between
-    */
-    BETWEEN,
-    /**
-    * not Between
-    */
-    NOT_BETWEEN,
-    /**
-    * greater Equals
-    */
-    GREATER_EQUALS,
-    /**
-    * less Equals
-    */
-    LESS_EQUALS,
-    /**
-    * day Time Between
-    */
-    DAY_TIME_BETWEEN,
-    /**
-    * begins With
-    */
-    BEGINS_WITH,
-    /**
-    * not Begins With
-    */
-    NOT_BEGINS_WITH,
-    /**
-    * ends With
-    */
-    ENDS_WITH,
-    /**
-    * not Ends With
-    */
-    NOT_ENDS_WITH,
-    /**
-    * contains
-    */
-    CONTAINS,
-    /**
-    * not Contains
-    */
-    NOT_CONTAINS,
-    /**
-    * all Of
-    */
-    ALL_OF,
-    /**
-    * one Of
-    */
-    ONE_OF,
-    /**
-    * none Of
-    */
-    NONE_OF,
-    /**
-    * set Equals
-    */
-    SET_EQUALS,
-    /**
-    * ordered Set Equals
-    */
-    ORDERED_SET_EQUALS,
-    /**
-    * subset Of
-    */
-    SUBSET_OF,
-    /**
-    * excludes All
-    */
-    EXCLUDES_ALL,
-    /**
-    * For DeviceComplianceScriptRulOperator values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the validateComplianceScript method. */
+public enum DeviceComplianceScriptRulOperator implements ValuedEnum {
+    /** None operator. */
+    None("none"),
+    /** And operator. */
+    And("and"),
+    /** Or operator. */
+    Or("or"),
+    /** IsEquals operator. */
+    IsEquals("isEquals"),
+    /** NotEquals operator. */
+    NotEquals("notEquals"),
+    /** GreaterThan operator. */
+    GreaterThan("greaterThan"),
+    /** LessThan operator. */
+    LessThan("lessThan"),
+    /** Between operator. */
+    Between("between"),
+    /** NotBetween operator. */
+    NotBetween("notBetween"),
+    /** GreaterEquals operator. */
+    GreaterEquals("greaterEquals"),
+    /** LessEquals operator. */
+    LessEquals("lessEquals"),
+    /** DayTimeBetween operator. */
+    DayTimeBetween("dayTimeBetween"),
+    /** BeginsWith operator. */
+    BeginsWith("beginsWith"),
+    /** NotBeginsWith operator. */
+    NotBeginsWith("notBeginsWith"),
+    /** EndsWith operator. */
+    EndsWith("endsWith"),
+    /** NotEndsWith operator. */
+    NotEndsWith("notEndsWith"),
+    /** Contains operator. */
+    Contains("contains"),
+    /** NotContains operator. */
+    NotContains("notContains"),
+    /** AllOf operator. */
+    AllOf("allOf"),
+    /** OneOf operator. */
+    OneOf("oneOf"),
+    /** NoneOf operator. */
+    NoneOf("noneOf"),
+    /** SetEquals operator. */
+    SetEquals("setEquals"),
+    /** OrderedSetEquals operator. */
+    OrderedSetEquals("orderedSetEquals"),
+    /** SubsetOf operator. */
+    SubsetOf("subsetOf"),
+    /** ExcludesAll operator. */
+    ExcludesAll("excludesAll");
+    public final String value;
+    DeviceComplianceScriptRulOperator(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceComplianceScriptRulOperator forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "and": return And;
+            case "or": return Or;
+            case "isEquals": return IsEquals;
+            case "notEquals": return NotEquals;
+            case "greaterThan": return GreaterThan;
+            case "lessThan": return LessThan;
+            case "between": return Between;
+            case "notBetween": return NotBetween;
+            case "greaterEquals": return GreaterEquals;
+            case "lessEquals": return LessEquals;
+            case "dayTimeBetween": return DayTimeBetween;
+            case "beginsWith": return BeginsWith;
+            case "notBeginsWith": return NotBeginsWith;
+            case "endsWith": return EndsWith;
+            case "notEndsWith": return NotEndsWith;
+            case "contains": return Contains;
+            case "notContains": return NotContains;
+            case "allOf": return AllOf;
+            case "oneOf": return OneOf;
+            case "noneOf": return NoneOf;
+            case "setEquals": return SetEquals;
+            case "orderedSetEquals": return OrderedSetEquals;
+            case "subsetOf": return SubsetOf;
+            case "excludesAll": return ExcludesAll;
+            default: return null;
+        }
+    }
 }

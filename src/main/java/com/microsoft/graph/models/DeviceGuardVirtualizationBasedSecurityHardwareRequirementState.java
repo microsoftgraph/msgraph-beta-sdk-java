@@ -1,38 +1,36 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Guard Virtualization Based Security Hardware Requirement State.
-*/
-public enum DeviceGuardVirtualizationBasedSecurityHardwareRequirementState
-{
-    /**
-    * meet Hardware Requirements
-    */
-    MEET_HARDWARE_REQUIREMENTS,
-    /**
-    * secure Boot Required
-    */
-    SECURE_BOOT_REQUIRED,
-    /**
-    * dma Protection Required
-    */
-    DMA_PROTECTION_REQUIRED,
-    /**
-    * hyper VNot Supported For Guest VM
-    */
-    HYPER_V_NOT_SUPPORTED_FOR_GUEST_VM,
-    /**
-    * hyper VNot Available
-    */
-    HYPER_V_NOT_AVAILABLE,
-    /**
-    * For DeviceGuardVirtualizationBasedSecurityHardwareRequirementState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum DeviceGuardVirtualizationBasedSecurityHardwareRequirementState implements ValuedEnum {
+    /** System meets hardware configuration requirements */
+    MeetHardwareRequirements("meetHardwareRequirements"),
+    /** Secure boot required */
+    SecureBootRequired("secureBootRequired"),
+    /** DMA protection required */
+    DmaProtectionRequired("dmaProtectionRequired"),
+    /** HyperV not supported for Guest VM */
+    HyperVNotSupportedForGuestVM("hyperVNotSupportedForGuestVM"),
+    /** HyperV feature is not available */
+    HyperVNotAvailable("hyperVNotAvailable");
+    public final String value;
+    DeviceGuardVirtualizationBasedSecurityHardwareRequirementState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceGuardVirtualizationBasedSecurityHardwareRequirementState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "meetHardwareRequirements": return MeetHardwareRequirements;
+            case "secureBootRequired": return SecureBootRequired;
+            case "dmaProtectionRequired": return DmaProtectionRequired;
+            case "hyperVNotSupportedForGuestVM": return HyperVNotSupportedForGuestVM;
+            case "hyperVNotAvailable": return HyperVNotAvailable;
+            default: return null;
+        }
+    }
 }

@@ -1,38 +1,36 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed Device Architecture.
-*/
-public enum ManagedDeviceArchitecture
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * x86
-    */
-    X86,
-    /**
-    * x64
-    */
-    X64,
-    /**
-    * arm
-    */
-    ARM,
-    /**
-    * ar M64
-    */
-    AR_M64,
-    /**
-    * For ManagedDeviceArchitecture values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum ManagedDeviceArchitecture implements ValuedEnum {
+    /** Unknown architecture */
+    Unknown("unknown"),
+    /** X86 */
+    X86("x86"),
+    /** X64 */
+    X64("x64"),
+    /** ARM */
+    Arm("arm"),
+    /** ARM64 */
+    ArM64("arM64");
+    public final String value;
+    ManagedDeviceArchitecture(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedDeviceArchitecture forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "x86": return X86;
+            case "x64": return X64;
+            case "arm": return Arm;
+            case "arM64": return ArM64;
+            default: return null;
+        }
+    }
 }

@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Package Custom Extension Stage.
-*/
-public enum AccessPackageCustomExtensionStage
-{
-    /**
-    * assignment Request Created
-    */
-    ASSIGNMENT_REQUEST_CREATED,
-    /**
-    * assignment Request Approved
-    */
-    ASSIGNMENT_REQUEST_APPROVED,
-    /**
-    * assignment Request Granted
-    */
-    ASSIGNMENT_REQUEST_GRANTED,
-    /**
-    * assignment Request Removed
-    */
-    ASSIGNMENT_REQUEST_REMOVED,
-    /**
-    * assignment Fourteen Days Before Expiration
-    */
-    ASSIGNMENT_FOURTEEN_DAYS_BEFORE_EXPIRATION,
-    /**
-    * assignment One Day Before Expiration
-    */
-    ASSIGNMENT_ONE_DAY_BEFORE_EXPIRATION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccessPackageCustomExtensionStage values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton. */
+public enum AccessPackageCustomExtensionStage implements ValuedEnum {
+    AssignmentRequestCreated("assignmentRequestCreated"),
+    AssignmentRequestApproved("assignmentRequestApproved"),
+    AssignmentRequestGranted("assignmentRequestGranted"),
+    AssignmentRequestRemoved("assignmentRequestRemoved"),
+    AssignmentFourteenDaysBeforeExpiration("assignmentFourteenDaysBeforeExpiration"),
+    AssignmentOneDayBeforeExpiration("assignmentOneDayBeforeExpiration"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccessPackageCustomExtensionStage(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessPackageCustomExtensionStage forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "assignmentRequestCreated": return AssignmentRequestCreated;
+            case "assignmentRequestApproved": return AssignmentRequestApproved;
+            case "assignmentRequestGranted": return AssignmentRequestGranted;
+            case "assignmentRequestRemoved": return AssignmentRequestRemoved;
+            case "assignmentFourteenDaysBeforeExpiration": return AssignmentFourteenDaysBeforeExpiration;
+            case "assignmentOneDayBeforeExpiration": return AssignmentOneDayBeforeExpiration;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

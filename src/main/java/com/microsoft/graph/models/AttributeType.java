@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Attribute Type.
-*/
-public enum AttributeType
-{
-    /**
-    * String
-    */
-    STRING,
-    /**
-    * Integer
-    */
-    INTEGER,
-    /**
-    * Reference
-    */
-    REFERENCE,
-    /**
-    * Binary
-    */
-    BINARY,
-    /**
-    * Boolean
-    */
-    BOOLEAN,
-    /**
-    * Date Time
-    */
-    DATE_TIME,
-    /**
-    * For AttributeType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities. */
+public enum AttributeType implements ValuedEnum {
+    String("String"),
+    Integer("Integer"),
+    Reference("Reference"),
+    Binary("Binary"),
+    Boolean_escaped("Boolean_escaped"),
+    DateTime("DateTime");
+    public final String value;
+    AttributeType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AttributeType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "String": return String;
+            case "Integer": return Integer;
+            case "Reference": return Reference;
+            case "Binary": return Binary;
+            case "Boolean": return Boolean_escaped;
+            case "DateTime": return DateTime;
+            default: return null;
+        }
+    }
 }

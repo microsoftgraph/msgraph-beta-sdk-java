@@ -1,66 +1,57 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Management State.
-*/
-public enum ManagementState
-{
-    /**
-    * managed
-    */
-    MANAGED,
-    /**
-    * retire Pending
-    */
-    RETIRE_PENDING,
-    /**
-    * retire Failed
-    */
-    RETIRE_FAILED,
-    /**
-    * wipe Pending
-    */
-    WIPE_PENDING,
-    /**
-    * wipe Failed
-    */
-    WIPE_FAILED,
-    /**
-    * unhealthy
-    */
-    UNHEALTHY,
-    /**
-    * delete Pending
-    */
-    DELETE_PENDING,
-    /**
-    * retire Issued
-    */
-    RETIRE_ISSUED,
-    /**
-    * wipe Issued
-    */
-    WIPE_ISSUED,
-    /**
-    * wipe Canceled
-    */
-    WIPE_CANCELED,
-    /**
-    * retire Canceled
-    */
-    RETIRE_CANCELED,
-    /**
-    * discovered
-    */
-    DISCOVERED,
-    /**
-    * For ManagementState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum ManagementState implements ValuedEnum {
+    /** The device is under management */
+    Managed("managed"),
+    /** A retire command is occuring on the device and in the process of unenrolling from management */
+    RetirePending("retirePending"),
+    /** Retire command failed on the device */
+    RetireFailed("retireFailed"),
+    /** A wipe command is occuring on the device and in the process of unenrolling from management */
+    WipePending("wipePending"),
+    /** Wipe command failed on the device */
+    WipeFailed("wipeFailed"),
+    /** The device is unhealthy. */
+    Unhealthy("unhealthy"),
+    /** A delete command is occuring on the device  */
+    DeletePending("deletePending"),
+    /** A retire command was issued for the device */
+    RetireIssued("retireIssued"),
+    /** A wipe command was issued for the device */
+    WipeIssued("wipeIssued"),
+    /** A wipe command for this device has been canceled */
+    WipeCanceled("wipeCanceled"),
+    /** A retire command for this device has been canceled */
+    RetireCanceled("retireCanceled"),
+    /** The device is discovered but not fully enrolled. */
+    Discovered("discovered");
+    public final String value;
+    ManagementState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagementState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "managed": return Managed;
+            case "retirePending": return RetirePending;
+            case "retireFailed": return RetireFailed;
+            case "wipePending": return WipePending;
+            case "wipeFailed": return WipeFailed;
+            case "unhealthy": return Unhealthy;
+            case "deletePending": return DeletePending;
+            case "retireIssued": return RetireIssued;
+            case "wipeIssued": return WipeIssued;
+            case "wipeCanceled": return WipeCanceled;
+            case "retireCanceled": return RetireCanceled;
+            case "discovered": return Discovered;
+            default: return null;
+        }
+    }
 }

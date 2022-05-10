@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Autopilot Deployment State.
-*/
-public enum WindowsAutopilotDeploymentState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * in Progress
-    */
-    IN_PROGRESS,
-    /**
-    * failure
-    */
-    FAILURE,
-    /**
-    * success With Timeout
-    */
-    SUCCESS_WITH_TIMEOUT,
-    /**
-    * not Attempted
-    */
-    NOT_ATTEMPTED,
-    /**
-    * disabled
-    */
-    DISABLED,
-    /**
-    * For WindowsAutopilotDeploymentState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum WindowsAutopilotDeploymentState implements ValuedEnum {
+    Unknown("unknown"),
+    Success("success"),
+    InProgress("inProgress"),
+    Failure("failure"),
+    SuccessWithTimeout("successWithTimeout"),
+    NotAttempted("notAttempted"),
+    Disabled("disabled");
+    public final String value;
+    WindowsAutopilotDeploymentState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsAutopilotDeploymentState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "success": return Success;
+            case "inProgress": return InProgress;
+            case "failure": return Failure;
+            case "successWithTimeout": return SuccessWithTimeout;
+            case "notAttempted": return NotAttempted;
+            case "disabled": return Disabled;
+            default: return null;
+        }
+    }
 }

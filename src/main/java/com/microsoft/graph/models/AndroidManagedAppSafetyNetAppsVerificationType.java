@@ -1,26 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android Managed App Safety Net Apps Verification Type.
-*/
-public enum AndroidManagedAppSafetyNetAppsVerificationType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * enabled
-    */
-    ENABLED,
-    /**
-    * For AndroidManagedAppSafetyNetAppsVerificationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum AndroidManagedAppSafetyNetAppsVerificationType implements ValuedEnum {
+    /** no requirement set */
+    None("none"),
+    /** require that Android device has SafetyNet Apps Verification enabled */
+    Enabled("enabled");
+    public final String value;
+    AndroidManagedAppSafetyNetAppsVerificationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidManagedAppSafetyNetAppsVerificationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "enabled": return Enabled;
+            default: return null;
+        }
+    }
 }

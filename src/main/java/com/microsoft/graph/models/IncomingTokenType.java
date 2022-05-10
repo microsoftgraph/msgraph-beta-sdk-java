@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Incoming Token Type.
-*/
-public enum IncomingTokenType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * primary Refresh Token
-    */
-    PRIMARY_REFRESH_TOKEN,
-    /**
-    * saml11
-    */
-    SAML11,
-    /**
-    * saml20
-    */
-    SAML20,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * remote Desktop Token
-    */
-    REMOTE_DESKTOP_TOKEN,
-    /**
-    * For IncomingTokenType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum IncomingTokenType implements ValuedEnum {
+    None("none"),
+    PrimaryRefreshToken("primaryRefreshToken"),
+    Saml11("saml11"),
+    Saml20("saml20"),
+    UnknownFutureValue("unknownFutureValue"),
+    RemoteDesktopToken("remoteDesktopToken");
+    public final String value;
+    IncomingTokenType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static IncomingTokenType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "primaryRefreshToken": return PrimaryRefreshToken;
+            case "saml11": return Saml11;
+            case "saml20": return Saml20;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "remoteDesktopToken": return RemoteDesktopToken;
+            default: return null;
+        }
+    }
 }

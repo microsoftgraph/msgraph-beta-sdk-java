@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Derived Credential Notification Type.
-*/
-public enum DeviceManagementDerivedCredentialNotificationType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * company Portal
-    */
-    COMPANY_PORTAL,
-    /**
-    * email
-    */
-    EMAIL,
-    /**
-    * For DeviceManagementDerivedCredentialNotificationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementDerivedCredentialNotificationType implements ValuedEnum {
+    /** None */
+    None("none"),
+    /** Company Portal */
+    CompanyPortal("companyPortal"),
+    /** Email */
+    Email("email");
+    public final String value;
+    DeviceManagementDerivedCredentialNotificationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementDerivedCredentialNotificationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "companyPortal": return CompanyPortal;
+            case "email": return Email;
+            default: return null;
+        }
+    }
 }

@@ -1,58 +1,51 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Template Subtype.
-*/
-public enum DeviceManagementTemplateSubtype
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * firewall
-    */
-    FIREWALL,
-    /**
-    * disk Encryption
-    */
-    DISK_ENCRYPTION,
-    /**
-    * attack Surface Reduction
-    */
-    ATTACK_SURFACE_REDUCTION,
-    /**
-    * endpoint Detection Reponse
-    */
-    ENDPOINT_DETECTION_REPONSE,
-    /**
-    * account Protection
-    */
-    ACCOUNT_PROTECTION,
-    /**
-    * antivirus
-    */
-    ANTIVIRUS,
-    /**
-    * firewall Shared App List
-    */
-    FIREWALL_SHARED_APP_LIST,
-    /**
-    * firewall Shared Ip List
-    */
-    FIREWALL_SHARED_IP_LIST,
-    /**
-    * firewall Shared Portlist
-    */
-    FIREWALL_SHARED_PORTLIST,
-    /**
-    * For DeviceManagementTemplateSubtype values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementTemplateSubtype implements ValuedEnum {
+    /** Template has no subtype */
+    None("none"),
+    /** Endpoint security firewall subtype */
+    Firewall("firewall"),
+    /** Endpoint security disk encryption subtype */
+    DiskEncryption("diskEncryption"),
+    /** Endpoint security attack surface reduction subtype */
+    AttackSurfaceReduction("attackSurfaceReduction"),
+    /** Endpoint security endpoint detection and response subtype */
+    EndpointDetectionReponse("endpointDetectionReponse"),
+    /** Endpoint security account protection subtype */
+    AccountProtection("accountProtection"),
+    /** Endpoint security anitivirus subtype */
+    Antivirus("antivirus"),
+    /** Endpoint security firewall shared app subtype */
+    FirewallSharedAppList("firewallSharedAppList"),
+    /** Endpoint security firewall shared ip range list subtype */
+    FirewallSharedIpList("firewallSharedIpList"),
+    /** Endpoint security firewall shared port range list subtype */
+    FirewallSharedPortlist("firewallSharedPortlist");
+    public final String value;
+    DeviceManagementTemplateSubtype(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementTemplateSubtype forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "firewall": return Firewall;
+            case "diskEncryption": return DiskEncryption;
+            case "attackSurfaceReduction": return AttackSurfaceReduction;
+            case "endpointDetectionReponse": return EndpointDetectionReponse;
+            case "accountProtection": return AccountProtection;
+            case "antivirus": return Antivirus;
+            case "firewallSharedAppList": return FirewallSharedAppList;
+            case "firewallSharedIpList": return FirewallSharedIpList;
+            case "firewallSharedPortlist": return FirewallSharedPortlist;
+            default: return null;
+        }
+    }
 }

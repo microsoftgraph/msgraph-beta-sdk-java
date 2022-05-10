@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Sign In Identifier Type.
-*/
-public enum SignInIdentifierType
-{
-    /**
-    * user Principal Name
-    */
-    USER_PRINCIPAL_NAME,
-    /**
-    * phone Number
-    */
-    PHONE_NUMBER,
-    /**
-    * proxy Address
-    */
-    PROXY_ADDRESS,
-    /**
-    * qr Code
-    */
-    QR_CODE,
-    /**
-    * on Premises User Principal Name
-    */
-    ON_PREMISES_USER_PRINCIPAL_NAME,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SignInIdentifierType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum SignInIdentifierType implements ValuedEnum {
+    UserPrincipalName("userPrincipalName"),
+    PhoneNumber("phoneNumber"),
+    ProxyAddress("proxyAddress"),
+    QrCode("qrCode"),
+    OnPremisesUserPrincipalName("onPremisesUserPrincipalName"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SignInIdentifierType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SignInIdentifierType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "userPrincipalName": return UserPrincipalName;
+            case "phoneNumber": return PhoneNumber;
+            case "proxyAddress": return ProxyAddress;
+            case "qrCode": return QrCode;
+            case "onPremisesUserPrincipalName": return OnPremisesUserPrincipalName;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

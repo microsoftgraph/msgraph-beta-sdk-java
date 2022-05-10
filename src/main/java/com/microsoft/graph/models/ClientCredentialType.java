@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Client Credential Type.
-*/
-public enum ClientCredentialType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * client Secret
-    */
-    CLIENT_SECRET,
-    /**
-    * client Assertion
-    */
-    CLIENT_ASSERTION,
-    /**
-    * federated Identity Credential
-    */
-    FEDERATED_IDENTITY_CREDENTIAL,
-    /**
-    * managed Identity
-    */
-    MANAGED_IDENTITY,
-    /**
-    * certificate
-    */
-    CERTIFICATE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ClientCredentialType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum ClientCredentialType implements ValuedEnum {
+    None("none"),
+    ClientSecret("clientSecret"),
+    ClientAssertion("clientAssertion"),
+    FederatedIdentityCredential("federatedIdentityCredential"),
+    ManagedIdentity("managedIdentity"),
+    Certificate("certificate"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ClientCredentialType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ClientCredentialType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "clientSecret": return ClientSecret;
+            case "clientAssertion": return ClientAssertion;
+            case "federatedIdentityCredential": return FederatedIdentityCredential;
+            case "managedIdentity": return ManagedIdentity;
+            case "certificate": return Certificate;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

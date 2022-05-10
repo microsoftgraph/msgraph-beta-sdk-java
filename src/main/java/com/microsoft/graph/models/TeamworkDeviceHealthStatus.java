@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teamwork Device Health Status.
-*/
-public enum TeamworkDeviceHealthStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * offline
-    */
-    OFFLINE,
-    /**
-    * critical
-    */
-    CRITICAL,
-    /**
-    * non Urgent
-    */
-    NON_URGENT,
-    /**
-    * healthy
-    */
-    HEALTHY,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamworkDeviceHealthStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the teamwork singleton. */
+public enum TeamworkDeviceHealthStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Offline("offline"),
+    Critical("critical"),
+    NonUrgent("nonUrgent"),
+    Healthy("healthy"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamworkDeviceHealthStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamworkDeviceHealthStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "offline": return Offline;
+            case "critical": return Critical;
+            case "nonUrgent": return NonUrgent;
+            case "healthy": return Healthy;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

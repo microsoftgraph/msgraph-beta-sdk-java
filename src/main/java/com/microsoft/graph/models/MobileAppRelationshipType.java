@@ -1,26 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Mobile App Relationship Type.
-*/
-public enum MobileAppRelationshipType
-{
-    /**
-    * child
-    */
-    CHILD,
-    /**
-    * parent
-    */
-    PARENT,
-    /**
-    * For MobileAppRelationshipType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum MobileAppRelationshipType implements ValuedEnum {
+    /** Indicates that the target of a relationship is the child in the relationship. */
+    Child("child"),
+    /** Indicates that the target of a relationship is the parent in the relationship. */
+    Parent("parent");
+    public final String value;
+    MobileAppRelationshipType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MobileAppRelationshipType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "child": return Child;
+            case "parent": return Parent;
+            default: return null;
+        }
+    }
 }

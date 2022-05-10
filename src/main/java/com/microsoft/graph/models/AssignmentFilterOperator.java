@@ -1,62 +1,54 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Assignment Filter Operator.
-*/
-public enum AssignmentFilterOperator
-{
-    /**
-    * not Set
-    */
-    NOT_SET,
-    /**
-    * equals
-    */
-    EQUALS,
-    /**
-    * not Equals
-    */
-    NOT_EQUALS,
-    /**
-    * starts With
-    */
-    STARTS_WITH,
-    /**
-    * not Starts With
-    */
-    NOT_STARTS_WITH,
-    /**
-    * contains
-    */
-    CONTAINS,
-    /**
-    * not Contains
-    */
-    NOT_CONTAINS,
-    /**
-    * in
-    */
-    IN,
-    /**
-    * not In
-    */
-    NOT_IN,
-    /**
-    * ends With
-    */
-    ENDS_WITH,
-    /**
-    * not Ends With
-    */
-    NOT_ENDS_WITH,
-    /**
-    * For AssignmentFilterOperator values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the getSupportedProperties method. */
+public enum AssignmentFilterOperator implements ValuedEnum {
+    /** NotSet. */
+    NotSet("notSet"),
+    /** Equals. */
+    Equals("equals"),
+    /** NotEquals. */
+    NotEquals("notEquals"),
+    /** StartsWith. */
+    StartsWith("startsWith"),
+    /** NotStartsWith. */
+    NotStartsWith("notStartsWith"),
+    /** Contains. */
+    Contains("contains"),
+    /** NotContains. */
+    NotContains("notContains"),
+    /** In. */
+    In("in"),
+    /** NotIn. */
+    NotIn("notIn"),
+    /** EndsWith. */
+    EndsWith("endsWith"),
+    /** NotEndsWith. */
+    NotEndsWith("notEndsWith");
+    public final String value;
+    AssignmentFilterOperator(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AssignmentFilterOperator forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notSet": return NotSet;
+            case "equals": return Equals;
+            case "notEquals": return NotEquals;
+            case "startsWith": return StartsWith;
+            case "notStartsWith": return NotStartsWith;
+            case "contains": return Contains;
+            case "notContains": return NotContains;
+            case "in": return In;
+            case "notIn": return NotIn;
+            case "endsWith": return EndsWith;
+            case "notEndsWith": return NotEndsWith;
+            default: return null;
+        }
+    }
 }

@@ -1,42 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Autopilot Device Type.
-*/
-public enum WindowsAutopilotDeviceType
-{
-    /**
-    * windows Pc
-    */
-    WINDOWS_PC,
-    /**
-    * surface Hub2
-    */
-    SURFACE_HUB2,
-    /**
-    * holo Lens
-    */
-    HOLO_LENS,
-    /**
-    * surface Hub2S
-    */
-    SURFACE_HUB2_S,
-    /**
-    * virtual Machine
-    */
-    VIRTUAL_MACHINE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For WindowsAutopilotDeviceType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum WindowsAutopilotDeviceType implements ValuedEnum {
+    /** Windows PC */
+    WindowsPc("windowsPc"),
+    /** Surface Hub 2 */
+    SurfaceHub2("surfaceHub2"),
+    /** HoloLens */
+    HoloLens("holoLens"),
+    /** SurfaceHub2S */
+    SurfaceHub2S("surfaceHub2S"),
+    /** VirtualMachine */
+    VirtualMachine("virtualMachine"),
+    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.          */
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    WindowsAutopilotDeviceType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsAutopilotDeviceType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "windowsPc": return WindowsPc;
+            case "surfaceHub2": return SurfaceHub2;
+            case "holoLens": return HoloLens;
+            case "surfaceHub2S": return SurfaceHub2S;
+            case "virtualMachine": return VirtualMachine;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

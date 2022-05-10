@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Scope.
-*/
-public enum AccessScope
-{
-    /**
-    * in Organization
-    */
-    IN_ORGANIZATION,
-    /**
-    * not In Organization
-    */
-    NOT_IN_ORGANIZATION,
-    /**
-    * For AccessScope values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the evaluate method. */
+public enum AccessScope implements ValuedEnum {
+    InOrganization("inOrganization"),
+    NotInOrganization("notInOrganization");
+    public final String value;
+    AccessScope(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessScope forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "inOrganization": return InOrganization;
+            case "notInOrganization": return NotInOrganization;
+            default: return null;
+        }
+    }
 }

@@ -1,46 +1,42 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Microsoft Tunnel Server Health Status.
-*/
-public enum MicrosoftTunnelServerHealthStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * healthy
-    */
-    HEALTHY,
-    /**
-    * unhealthy
-    */
-    UNHEALTHY,
-    /**
-    * warning
-    */
-    WARNING,
-    /**
-    * offline
-    */
-    OFFLINE,
-    /**
-    * upgrade In Progress
-    */
-    UPGRADE_IN_PROGRESS,
-    /**
-    * upgrade Failed
-    */
-    UPGRADE_FAILED,
-    /**
-    * For MicrosoftTunnelServerHealthStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
+    /** The state is unknown */
+    Unknown("unknown"),
+    /** The state is healthy */
+    Healthy("healthy"),
+    /** The state is unhealthy */
+    Unhealthy("unhealthy"),
+    /** The state is warning */
+    Warning("warning"),
+    /** The state is offline */
+    Offline("offline"),
+    /** The state is upgradeInProgress */
+    UpgradeInProgress("upgradeInProgress"),
+    /** The state is upgradeFailed */
+    UpgradeFailed("upgradeFailed");
+    public final String value;
+    MicrosoftTunnelServerHealthStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MicrosoftTunnelServerHealthStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "healthy": return Healthy;
+            case "unhealthy": return Unhealthy;
+            case "warning": return Warning;
+            case "offline": return Offline;
+            case "upgradeInProgress": return UpgradeInProgress;
+            case "upgradeFailed": return UpgradeFailed;
+            default: return null;
+        }
+    }
 }

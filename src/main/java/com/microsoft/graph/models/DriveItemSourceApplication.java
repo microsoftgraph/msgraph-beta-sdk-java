@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Drive Item Source Application.
-*/
-public enum DriveItemSourceApplication
-{
-    /**
-    * teams
-    */
-    TEAMS,
-    /**
-    * yammer
-    */
-    YAMMER,
-    /**
-    * share Point
-    */
-    SHARE_POINT,
-    /**
-    * one Drive
-    */
-    ONE_DRIVE,
-    /**
-    * stream
-    */
-    STREAM,
-    /**
-    * power Point
-    */
-    POWER_POINT,
-    /**
-    * office
-    */
-    OFFICE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DriveItemSourceApplication values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum DriveItemSourceApplication implements ValuedEnum {
+    Teams("teams"),
+    Yammer("yammer"),
+    SharePoint("sharePoint"),
+    OneDrive("oneDrive"),
+    Stream("stream"),
+    PowerPoint("powerPoint"),
+    Office("office"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    DriveItemSourceApplication(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DriveItemSourceApplication forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "teams": return Teams;
+            case "yammer": return Yammer;
+            case "sharePoint": return SharePoint;
+            case "oneDrive": return OneDrive;
+            case "stream": return Stream;
+            case "powerPoint": return PowerPoint;
+            case "office": return Office;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }
