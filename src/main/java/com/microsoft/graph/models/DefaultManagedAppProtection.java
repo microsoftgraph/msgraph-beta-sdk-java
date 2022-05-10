@@ -108,6 +108,33 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public ManagedAppRemediationAction appActionIfDeviceLockNotSet;
 
     /**
+     * The App Action If Device Passcode Complexity Less Than High.
+     * If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+     */
+    @SerializedName(value = "appActionIfDevicePasscodeComplexityLessThanHigh", alternate = {"AppActionIfDevicePasscodeComplexityLessThanHigh"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanHigh;
+
+    /**
+     * The App Action If Device Passcode Complexity Less Than Low.
+     * If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+     */
+    @SerializedName(value = "appActionIfDevicePasscodeComplexityLessThanLow", alternate = {"AppActionIfDevicePasscodeComplexityLessThanLow"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanLow;
+
+    /**
+     * The App Action If Device Passcode Complexity Less Than Medium.
+     * If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+     */
+    @SerializedName(value = "appActionIfDevicePasscodeComplexityLessThanMedium", alternate = {"AppActionIfDevicePasscodeComplexityLessThanMedium"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanMedium;
+
+    /**
      * The App Action If Ios Device Model Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only). Possible values are: block, wipe, warn.
      */

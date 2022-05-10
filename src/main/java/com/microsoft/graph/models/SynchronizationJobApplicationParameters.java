@@ -41,7 +41,7 @@ public class SynchronizationJobApplicationParameters implements IJsonBackedObjec
 
     /**
      * The Rule Id.
-     * The identifier of a the synchronizationRule to be applied.
+     * The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
      */
     @SerializedName(value = "ruleId", alternate = {"RuleId"})
     @Expose

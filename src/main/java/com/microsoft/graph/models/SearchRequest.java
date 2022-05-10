@@ -126,6 +126,15 @@ public class SearchRequest implements IJsonBackedObject {
     public SearchAlterationOptions queryAlterationOptions;
 
     /**
+     * The Region.
+     * 
+     */
+    @SerializedName(value = "region", alternate = {"Region"})
+    @Expose
+	@Nullable
+    public String region;
+
+    /**
      * The Result Template Options.
      * Provides the search result templates options for rendering connectors search results.
      */
