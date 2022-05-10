@@ -1,38 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android Device Owner Enrollment Mode.
-*/
-public enum AndroidDeviceOwnerEnrollmentMode
-{
-    /**
-    * corporate Owned Dedicated Device
-    */
-    CORPORATE_OWNED_DEDICATED_DEVICE,
-    /**
-    * corporate Owned Fully Managed
-    */
-    CORPORATE_OWNED_FULLY_MANAGED,
-    /**
-    * corporate Owned Work Profile
-    */
-    CORPORATE_OWNED_WORK_PROFILE,
-    /**
-    * corporate Owned AOSPUserless Device
-    */
-    CORPORATE_OWNED_AOSP_USERLESS_DEVICE,
-    /**
-    * corporate Owned AOSPUser Associated Device
-    */
-    CORPORATE_OWNED_AOSP_USER_ASSOCIATED_DEVICE,
-    /**
-    * For AndroidDeviceOwnerEnrollmentMode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum AndroidDeviceOwnerEnrollmentMode implements ValuedEnum {
+    CorporateOwnedDedicatedDevice("corporateOwnedDedicatedDevice"),
+    CorporateOwnedFullyManaged("corporateOwnedFullyManaged"),
+    CorporateOwnedWorkProfile("corporateOwnedWorkProfile"),
+    /** Corporate owned, userless Android Open Source Project (AOSP) device, without Google Mobile Services. */
+    CorporateOwnedAOSPUserlessDevice("corporateOwnedAOSPUserlessDevice"),
+    /** Corporate owned, user-associated Android Open Source Project (AOSP) device, without Google Mobile Services. */
+    CorporateOwnedAOSPUserAssociatedDevice("corporateOwnedAOSPUserAssociatedDevice");
+    public final String value;
+    AndroidDeviceOwnerEnrollmentMode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidDeviceOwnerEnrollmentMode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "corporateOwnedDedicatedDevice": return CorporateOwnedDedicatedDevice;
+            case "corporateOwnedFullyManaged": return CorporateOwnedFullyManaged;
+            case "corporateOwnedWorkProfile": return CorporateOwnedWorkProfile;
+            case "corporateOwnedAOSPUserlessDevice": return CorporateOwnedAOSPUserlessDevice;
+            case "corporateOwnedAOSPUserAssociatedDevice": return CorporateOwnedAOSPUserAssociatedDevice;
+            default: return null;
+        }
+    }
 }

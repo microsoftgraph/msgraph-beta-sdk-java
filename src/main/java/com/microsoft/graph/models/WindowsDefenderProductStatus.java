@@ -1,122 +1,99 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Defender Product Status.
-*/
-public enum WindowsDefenderProductStatus
-{
-    /**
-    * no Status
-    */
-    NO_STATUS,
-    /**
-    * service Not Running
-    */
-    SERVICE_NOT_RUNNING,
-    /**
-    * service Started Without Malware Protection
-    */
-    SERVICE_STARTED_WITHOUT_MALWARE_PROTECTION,
-    /**
-    * pending Full Scan Due To Threat Action
-    */
-    PENDING_FULL_SCAN_DUE_TO_THREAT_ACTION,
-    /**
-    * pending Reboot Due To Threat Action
-    */
-    PENDING_REBOOT_DUE_TO_THREAT_ACTION,
-    /**
-    * pending Manual Steps Due To Threat Action
-    */
-    PENDING_MANUAL_STEPS_DUE_TO_THREAT_ACTION,
-    /**
-    * av Signatures Out Of Date
-    */
-    AV_SIGNATURES_OUT_OF_DATE,
-    /**
-    * as Signatures Out Of Date
-    */
-    AS_SIGNATURES_OUT_OF_DATE,
-    /**
-    * no Quick Scan Happened For Specified Period
-    */
-    NO_QUICK_SCAN_HAPPENED_FOR_SPECIFIED_PERIOD,
-    /**
-    * no Full Scan Happened For Specified Period
-    */
-    NO_FULL_SCAN_HAPPENED_FOR_SPECIFIED_PERIOD,
-    /**
-    * system Initiated Scan In Progress
-    */
-    SYSTEM_INITIATED_SCAN_IN_PROGRESS,
-    /**
-    * system Initiated Clean In Progress
-    */
-    SYSTEM_INITIATED_CLEAN_IN_PROGRESS,
-    /**
-    * samples Pending Submission
-    */
-    SAMPLES_PENDING_SUBMISSION,
-    /**
-    * product Running In Evaluation Mode
-    */
-    PRODUCT_RUNNING_IN_EVALUATION_MODE,
-    /**
-    * product Running In Non Genuine Mode
-    */
-    PRODUCT_RUNNING_IN_NON_GENUINE_MODE,
-    /**
-    * product Expired
-    */
-    PRODUCT_EXPIRED,
-    /**
-    * offline Scan Required
-    */
-    OFFLINE_SCAN_REQUIRED,
-    /**
-    * service Shutdown As Part Of System Shutdown
-    */
-    SERVICE_SHUTDOWN_AS_PART_OF_SYSTEM_SHUTDOWN,
-    /**
-    * threat Remediation Failed Critically
-    */
-    THREAT_REMEDIATION_FAILED_CRITICALLY,
-    /**
-    * threat Remediation Failed Non Critically
-    */
-    THREAT_REMEDIATION_FAILED_NON_CRITICALLY,
-    /**
-    * no Status Flags Set
-    */
-    NO_STATUS_FLAGS_SET,
-    /**
-    * platform Out Of Date
-    */
-    PLATFORM_OUT_OF_DATE,
-    /**
-    * platform Update In Progress
-    */
-    PLATFORM_UPDATE_IN_PROGRESS,
-    /**
-    * platform About To Be Outdated
-    */
-    PLATFORM_ABOUT_TO_BE_OUTDATED,
-    /**
-    * signature Or Platform End Of Life Is Past Or Is Impending
-    */
-    SIGNATURE_OR_PLATFORM_END_OF_LIFE_IS_PAST_OR_IS_IMPENDING,
-    /**
-    * windows SMode Signatures In Use On Non Win10SInstall
-    */
-    WINDOWS_S_MODE_SIGNATURES_IN_USE_ON_NON_WIN10_S_INSTALL,
-    /**
-    * For WindowsDefenderProductStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum WindowsDefenderProductStatus implements ValuedEnum {
+    /** No status */
+    NoStatus("noStatus"),
+    /** Service not running */
+    ServiceNotRunning("serviceNotRunning"),
+    /** Service started without any malware protection engine */
+    ServiceStartedWithoutMalwareProtection("serviceStartedWithoutMalwareProtection"),
+    /** Pending full scan due to threat action */
+    PendingFullScanDueToThreatAction("pendingFullScanDueToThreatAction"),
+    /** Pending reboot due to threat action */
+    PendingRebootDueToThreatAction("pendingRebootDueToThreatAction"),
+    /** Pending manual steps due to threat action  */
+    PendingManualStepsDueToThreatAction("pendingManualStepsDueToThreatAction"),
+    /** AV signatures out of date */
+    AvSignaturesOutOfDate("avSignaturesOutOfDate"),
+    /** AS signatures out of date */
+    AsSignaturesOutOfDate("asSignaturesOutOfDate"),
+    /** No quick scan has happened for a specified period */
+    NoQuickScanHappenedForSpecifiedPeriod("noQuickScanHappenedForSpecifiedPeriod"),
+    /** No full scan has happened for a specified period */
+    NoFullScanHappenedForSpecifiedPeriod("noFullScanHappenedForSpecifiedPeriod"),
+    /** System initiated scan in progress */
+    SystemInitiatedScanInProgress("systemInitiatedScanInProgress"),
+    /** System initiated clean in progress */
+    SystemInitiatedCleanInProgress("systemInitiatedCleanInProgress"),
+    /** There are samples pending submission */
+    SamplesPendingSubmission("samplesPendingSubmission"),
+    /** Product running in evaluation mode */
+    ProductRunningInEvaluationMode("productRunningInEvaluationMode"),
+    /** Product running in non-genuine Windows mode */
+    ProductRunningInNonGenuineMode("productRunningInNonGenuineMode"),
+    /** Product expired */
+    ProductExpired("productExpired"),
+    /** Off-line scan required */
+    OfflineScanRequired("offlineScanRequired"),
+    /** Service is shutting down as part of system shutdown */
+    ServiceShutdownAsPartOfSystemShutdown("serviceShutdownAsPartOfSystemShutdown"),
+    /** Threat remediation failed critically */
+    ThreatRemediationFailedCritically("threatRemediationFailedCritically"),
+    /** Threat remediation failed non-critically */
+    ThreatRemediationFailedNonCritically("threatRemediationFailedNonCritically"),
+    /** No status flags set (well initialized state) */
+    NoStatusFlagsSet("noStatusFlagsSet"),
+    /** Platform is out of date */
+    PlatformOutOfDate("platformOutOfDate"),
+    /** Platform update is in progress */
+    PlatformUpdateInProgress("platformUpdateInProgress"),
+    /** Platform is about to be outdated */
+    PlatformAboutToBeOutdated("platformAboutToBeOutdated"),
+    /** Signature or platform end of life is past or is impending */
+    SignatureOrPlatformEndOfLifeIsPastOrIsImpending("signatureOrPlatformEndOfLifeIsPastOrIsImpending"),
+    /** Windows SMode signatures still in use on non-Win10S install */
+    WindowsSModeSignaturesInUseOnNonWin10SInstall("windowsSModeSignaturesInUseOnNonWin10SInstall");
+    public final String value;
+    WindowsDefenderProductStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsDefenderProductStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "noStatus": return NoStatus;
+            case "serviceNotRunning": return ServiceNotRunning;
+            case "serviceStartedWithoutMalwareProtection": return ServiceStartedWithoutMalwareProtection;
+            case "pendingFullScanDueToThreatAction": return PendingFullScanDueToThreatAction;
+            case "pendingRebootDueToThreatAction": return PendingRebootDueToThreatAction;
+            case "pendingManualStepsDueToThreatAction": return PendingManualStepsDueToThreatAction;
+            case "avSignaturesOutOfDate": return AvSignaturesOutOfDate;
+            case "asSignaturesOutOfDate": return AsSignaturesOutOfDate;
+            case "noQuickScanHappenedForSpecifiedPeriod": return NoQuickScanHappenedForSpecifiedPeriod;
+            case "noFullScanHappenedForSpecifiedPeriod": return NoFullScanHappenedForSpecifiedPeriod;
+            case "systemInitiatedScanInProgress": return SystemInitiatedScanInProgress;
+            case "systemInitiatedCleanInProgress": return SystemInitiatedCleanInProgress;
+            case "samplesPendingSubmission": return SamplesPendingSubmission;
+            case "productRunningInEvaluationMode": return ProductRunningInEvaluationMode;
+            case "productRunningInNonGenuineMode": return ProductRunningInNonGenuineMode;
+            case "productExpired": return ProductExpired;
+            case "offlineScanRequired": return OfflineScanRequired;
+            case "serviceShutdownAsPartOfSystemShutdown": return ServiceShutdownAsPartOfSystemShutdown;
+            case "threatRemediationFailedCritically": return ThreatRemediationFailedCritically;
+            case "threatRemediationFailedNonCritically": return ThreatRemediationFailedNonCritically;
+            case "noStatusFlagsSet": return NoStatusFlagsSet;
+            case "platformOutOfDate": return PlatformOutOfDate;
+            case "platformUpdateInProgress": return PlatformUpdateInProgress;
+            case "platformAboutToBeOutdated": return PlatformAboutToBeOutdated;
+            case "signatureOrPlatformEndOfLifeIsPastOrIsImpending": return SignatureOrPlatformEndOfLifeIsPastOrIsImpending;
+            case "windowsSModeSignaturesInUseOnNonWin10SInstall": return WindowsSModeSignaturesInUseOnNonWin10SInstall;
+            default: return null;
+        }
+    }
 }

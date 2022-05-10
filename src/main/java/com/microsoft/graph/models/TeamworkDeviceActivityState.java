@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teamwork Device Activity State.
-*/
-public enum TeamworkDeviceActivityState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * busy
-    */
-    BUSY,
-    /**
-    * idle
-    */
-    IDLE,
-    /**
-    * unavailable
-    */
-    UNAVAILABLE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamworkDeviceActivityState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the teamwork singleton. */
+public enum TeamworkDeviceActivityState implements ValuedEnum {
+    Unknown("unknown"),
+    Busy("busy"),
+    Idle("idle"),
+    Unavailable("unavailable"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamworkDeviceActivityState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamworkDeviceActivityState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "busy": return Busy;
+            case "idle": return Idle;
+            case "unavailable": return Unavailable;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

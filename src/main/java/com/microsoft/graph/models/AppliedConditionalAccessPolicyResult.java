@@ -1,58 +1,41 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Applied Conditional Access Policy Result.
-*/
-public enum AppliedConditionalAccessPolicyResult
-{
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * failure
-    */
-    FAILURE,
-    /**
-    * not Applied
-    */
-    NOT_APPLIED,
-    /**
-    * not Enabled
-    */
-    NOT_ENABLED,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * report Only Success
-    */
-    REPORT_ONLY_SUCCESS,
-    /**
-    * report Only Failure
-    */
-    REPORT_ONLY_FAILURE,
-    /**
-    * report Only Not Applied
-    */
-    REPORT_ONLY_NOT_APPLIED,
-    /**
-    * report Only Interrupted
-    */
-    REPORT_ONLY_INTERRUPTED,
-    /**
-    * For AppliedConditionalAccessPolicyResult values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum AppliedConditionalAccessPolicyResult implements ValuedEnum {
+    Success("success"),
+    Failure("failure"),
+    NotApplied("notApplied"),
+    NotEnabled("notEnabled"),
+    Unknown("unknown"),
+    UnknownFutureValue("unknownFutureValue"),
+    ReportOnlySuccess("reportOnlySuccess"),
+    ReportOnlyFailure("reportOnlyFailure"),
+    ReportOnlyNotApplied("reportOnlyNotApplied"),
+    ReportOnlyInterrupted("reportOnlyInterrupted");
+    public final String value;
+    AppliedConditionalAccessPolicyResult(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AppliedConditionalAccessPolicyResult forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "success": return Success;
+            case "failure": return Failure;
+            case "notApplied": return NotApplied;
+            case "notEnabled": return NotEnabled;
+            case "unknown": return Unknown;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "reportOnlySuccess": return ReportOnlySuccess;
+            case "reportOnlyFailure": return ReportOnlyFailure;
+            case "reportOnlyNotApplied": return ReportOnlyNotApplied;
+            case "reportOnlyInterrupted": return ReportOnlyInterrupted;
+            default: return null;
+        }
+    }
 }

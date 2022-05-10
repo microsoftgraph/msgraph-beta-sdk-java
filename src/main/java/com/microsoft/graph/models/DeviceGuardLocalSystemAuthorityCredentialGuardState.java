@@ -1,38 +1,36 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Guard Local System Authority Credential Guard State.
-*/
-public enum DeviceGuardLocalSystemAuthorityCredentialGuardState
-{
-    /**
-    * running
-    */
-    RUNNING,
-    /**
-    * reboot Required
-    */
-    REBOOT_REQUIRED,
-    /**
-    * not Licensed
-    */
-    NOT_LICENSED,
-    /**
-    * not Configured
-    */
-    NOT_CONFIGURED,
-    /**
-    * virtualization Based Security Not Running
-    */
-    VIRTUALIZATION_BASED_SECURITY_NOT_RUNNING,
-    /**
-    * For DeviceGuardLocalSystemAuthorityCredentialGuardState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum DeviceGuardLocalSystemAuthorityCredentialGuardState implements ValuedEnum {
+    /** Running */
+    Running("running"),
+    /** Reboot required */
+    RebootRequired("rebootRequired"),
+    /** Not licensed for Credential Guard */
+    NotLicensed("notLicensed"),
+    /** Not configured */
+    NotConfigured("notConfigured"),
+    /** Virtualization Based security is not running */
+    VirtualizationBasedSecurityNotRunning("virtualizationBasedSecurityNotRunning");
+    public final String value;
+    DeviceGuardLocalSystemAuthorityCredentialGuardState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceGuardLocalSystemAuthorityCredentialGuardState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "running": return Running;
+            case "rebootRequired": return RebootRequired;
+            case "notLicensed": return NotLicensed;
+            case "notConfigured": return NotConfigured;
+            case "virtualizationBasedSecurityNotRunning": return VirtualizationBasedSecurityNotRunning;
+            default: return null;
+        }
+    }
 }

@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device App Management Task Priority.
-*/
-public enum DeviceAppManagementTaskPriority
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * high
-    */
-    HIGH,
-    /**
-    * low
-    */
-    LOW,
-    /**
-    * For DeviceAppManagementTaskPriority values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum DeviceAppManagementTaskPriority implements ValuedEnum {
+    /** No priority set. */
+    None("none"),
+    /** High priority. */
+    High("high"),
+    /** Low priority. */
+    Low("low");
+    public final String value;
+    DeviceAppManagementTaskPriority(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceAppManagementTaskPriority forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "high": return High;
+            case "low": return Low;
+            default: return null;
+        }
+    }
 }

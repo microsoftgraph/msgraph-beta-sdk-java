@@ -1,158 +1,91 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Printer Processing State Reason.
-*/
-public enum PrinterProcessingStateReason
-{
-    /**
-    * paused
-    */
-    PAUSED,
-    /**
-    * media Jam
-    */
-    MEDIA_JAM,
-    /**
-    * media Needed
-    */
-    MEDIA_NEEDED,
-    /**
-    * media Low
-    */
-    MEDIA_LOW,
-    /**
-    * media Empty
-    */
-    MEDIA_EMPTY,
-    /**
-    * cover Open
-    */
-    COVER_OPEN,
-    /**
-    * interlock Open
-    */
-    INTERLOCK_OPEN,
-    /**
-    * output Tray Missing
-    */
-    OUTPUT_TRAY_MISSING,
-    /**
-    * output Area Full
-    */
-    OUTPUT_AREA_FULL,
-    /**
-    * marker Supply Low
-    */
-    MARKER_SUPPLY_LOW,
-    /**
-    * marker Supply Empty
-    */
-    MARKER_SUPPLY_EMPTY,
-    /**
-    * input Tray Missing
-    */
-    INPUT_TRAY_MISSING,
-    /**
-    * output Area Almost Full
-    */
-    OUTPUT_AREA_ALMOST_FULL,
-    /**
-    * marker Waste Almost Full
-    */
-    MARKER_WASTE_ALMOST_FULL,
-    /**
-    * marker Waste Full
-    */
-    MARKER_WASTE_FULL,
-    /**
-    * fuser Over Temp
-    */
-    FUSER_OVER_TEMP,
-    /**
-    * fuser Under Temp
-    */
-    FUSER_UNDER_TEMP,
-    /**
-    * other
-    */
-    OTHER,
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * moving To Paused
-    */
-    MOVING_TO_PAUSED,
-    /**
-    * shutdown
-    */
-    SHUTDOWN,
-    /**
-    * connecting To Device
-    */
-    CONNECTING_TO_DEVICE,
-    /**
-    * timed Out
-    */
-    TIMED_OUT,
-    /**
-    * stopping
-    */
-    STOPPING,
-    /**
-    * stopped Partially
-    */
-    STOPPED_PARTIALLY,
-    /**
-    * toner Low
-    */
-    TONER_LOW,
-    /**
-    * toner Empty
-    */
-    TONER_EMPTY,
-    /**
-    * spool Area Full
-    */
-    SPOOL_AREA_FULL,
-    /**
-    * door Open
-    */
-    DOOR_OPEN,
-    /**
-    * optical Photo Conductor Near End Of Life
-    */
-    OPTICAL_PHOTO_CONDUCTOR_NEAR_END_OF_LIFE,
-    /**
-    * optical Photo Conductor Life Over
-    */
-    OPTICAL_PHOTO_CONDUCTOR_LIFE_OVER,
-    /**
-    * developer Low
-    */
-    DEVELOPER_LOW,
-    /**
-    * developer Empty
-    */
-    DEVELOPER_EMPTY,
-    /**
-    * interpreter Resource Unavailable
-    */
-    INTERPRETER_RESOURCE_UNAVAILABLE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PrinterProcessingStateReason values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum PrinterProcessingStateReason implements ValuedEnum {
+    Paused("paused"),
+    MediaJam("mediaJam"),
+    MediaNeeded("mediaNeeded"),
+    MediaLow("mediaLow"),
+    MediaEmpty("mediaEmpty"),
+    CoverOpen("coverOpen"),
+    InterlockOpen("interlockOpen"),
+    OutputTrayMissing("outputTrayMissing"),
+    OutputAreaFull("outputAreaFull"),
+    MarkerSupplyLow("markerSupplyLow"),
+    MarkerSupplyEmpty("markerSupplyEmpty"),
+    InputTrayMissing("inputTrayMissing"),
+    OutputAreaAlmostFull("outputAreaAlmostFull"),
+    MarkerWasteAlmostFull("markerWasteAlmostFull"),
+    MarkerWasteFull("markerWasteFull"),
+    FuserOverTemp("fuserOverTemp"),
+    FuserUnderTemp("fuserUnderTemp"),
+    Other("other"),
+    None("none"),
+    MovingToPaused("movingToPaused"),
+    Shutdown("shutdown"),
+    ConnectingToDevice("connectingToDevice"),
+    TimedOut("timedOut"),
+    Stopping("stopping"),
+    StoppedPartially("stoppedPartially"),
+    TonerLow("tonerLow"),
+    TonerEmpty("tonerEmpty"),
+    SpoolAreaFull("spoolAreaFull"),
+    DoorOpen("doorOpen"),
+    OpticalPhotoConductorNearEndOfLife("opticalPhotoConductorNearEndOfLife"),
+    OpticalPhotoConductorLifeOver("opticalPhotoConductorLifeOver"),
+    DeveloperLow("developerLow"),
+    DeveloperEmpty("developerEmpty"),
+    InterpreterResourceUnavailable("interpreterResourceUnavailable"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PrinterProcessingStateReason(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrinterProcessingStateReason forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "paused": return Paused;
+            case "mediaJam": return MediaJam;
+            case "mediaNeeded": return MediaNeeded;
+            case "mediaLow": return MediaLow;
+            case "mediaEmpty": return MediaEmpty;
+            case "coverOpen": return CoverOpen;
+            case "interlockOpen": return InterlockOpen;
+            case "outputTrayMissing": return OutputTrayMissing;
+            case "outputAreaFull": return OutputAreaFull;
+            case "markerSupplyLow": return MarkerSupplyLow;
+            case "markerSupplyEmpty": return MarkerSupplyEmpty;
+            case "inputTrayMissing": return InputTrayMissing;
+            case "outputAreaAlmostFull": return OutputAreaAlmostFull;
+            case "markerWasteAlmostFull": return MarkerWasteAlmostFull;
+            case "markerWasteFull": return MarkerWasteFull;
+            case "fuserOverTemp": return FuserOverTemp;
+            case "fuserUnderTemp": return FuserUnderTemp;
+            case "other": return Other;
+            case "none": return None;
+            case "movingToPaused": return MovingToPaused;
+            case "shutdown": return Shutdown;
+            case "connectingToDevice": return ConnectingToDevice;
+            case "timedOut": return TimedOut;
+            case "stopping": return Stopping;
+            case "stoppedPartially": return StoppedPartially;
+            case "tonerLow": return TonerLow;
+            case "tonerEmpty": return TonerEmpty;
+            case "spoolAreaFull": return SpoolAreaFull;
+            case "doorOpen": return DoorOpen;
+            case "opticalPhotoConductorNearEndOfLife": return OpticalPhotoConductorNearEndOfLife;
+            case "opticalPhotoConductorLifeOver": return OpticalPhotoConductorLifeOver;
+            case "developerLow": return DeveloperLow;
+            case "developerEmpty": return DeveloperEmpty;
+            case "interpreterResourceUnavailable": return InterpreterResourceUnavailable;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

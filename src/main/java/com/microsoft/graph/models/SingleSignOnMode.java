@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Single Sign On Mode.
-*/
-public enum SingleSignOnMode
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * on Premises Kerberos
-    */
-    ON_PREMISES_KERBEROS,
-    /**
-    * saml
-    */
-    SAML,
-    /**
-    * ping Header Based
-    */
-    PING_HEADER_BASED,
-    /**
-    * aad Header Based
-    */
-    AAD_HEADER_BASED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SingleSignOnMode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of application entities. */
+public enum SingleSignOnMode implements ValuedEnum {
+    None("none"),
+    OnPremisesKerberos("onPremisesKerberos"),
+    Saml("saml"),
+    PingHeaderBased("pingHeaderBased"),
+    AadHeaderBased("aadHeaderBased"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SingleSignOnMode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SingleSignOnMode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "onPremisesKerberos": return OnPremisesKerberos;
+            case "saml": return Saml;
+            case "pingHeaderBased": return PingHeaderBased;
+            case "aadHeaderBased": return AadHeaderBased;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

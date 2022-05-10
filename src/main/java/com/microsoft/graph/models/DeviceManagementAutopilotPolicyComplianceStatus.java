@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Autopilot Policy Compliance Status.
-*/
-public enum DeviceManagementAutopilotPolicyComplianceStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * compliant
-    */
-    COMPLIANT,
-    /**
-    * installed
-    */
-    INSTALLED,
-    /**
-    * not Compliant
-    */
-    NOT_COMPLIANT,
-    /**
-    * not Installed
-    */
-    NOT_INSTALLED,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * For DeviceManagementAutopilotPolicyComplianceStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementAutopilotPolicyComplianceStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Compliant("compliant"),
+    Installed("installed"),
+    NotCompliant("notCompliant"),
+    NotInstalled("notInstalled"),
+    Error("error");
+    public final String value;
+    DeviceManagementAutopilotPolicyComplianceStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementAutopilotPolicyComplianceStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "compliant": return Compliant;
+            case "installed": return Installed;
+            case "notCompliant": return NotCompliant;
+            case "notInstalled": return NotInstalled;
+            case "error": return Error;
+            default: return null;
+        }
+    }
 }

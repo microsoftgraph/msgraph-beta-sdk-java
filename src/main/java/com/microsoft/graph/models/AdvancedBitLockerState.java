@@ -1,86 +1,72 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Advanced Bit Locker State.
-*/
-public enum AdvancedBitLockerState
-{
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * no User Consent
-    */
-    NO_USER_CONSENT,
-    /**
-    * os Volume Unprotected
-    */
-    OS_VOLUME_UNPROTECTED,
-    /**
-    * os Volume Tpm Required
-    */
-    OS_VOLUME_TPM_REQUIRED,
-    /**
-    * os Volume Tpm Only Required
-    */
-    OS_VOLUME_TPM_ONLY_REQUIRED,
-    /**
-    * os Volume Tpm Pin Required
-    */
-    OS_VOLUME_TPM_PIN_REQUIRED,
-    /**
-    * os Volume Tpm Startup Key Required
-    */
-    OS_VOLUME_TPM_STARTUP_KEY_REQUIRED,
-    /**
-    * os Volume Tpm Pin Startup Key Required
-    */
-    OS_VOLUME_TPM_PIN_STARTUP_KEY_REQUIRED,
-    /**
-    * os Volume Encryption Method Mismatch
-    */
-    OS_VOLUME_ENCRYPTION_METHOD_MISMATCH,
-    /**
-    * recovery Key Backup Failed
-    */
-    RECOVERY_KEY_BACKUP_FAILED,
-    /**
-    * fixed Drive Not Encrypted
-    */
-    FIXED_DRIVE_NOT_ENCRYPTED,
-    /**
-    * fixed Drive Encryption Method Mismatch
-    */
-    FIXED_DRIVE_ENCRYPTION_METHOD_MISMATCH,
-    /**
-    * logged On User Non Admin
-    */
-    LOGGED_ON_USER_NON_ADMIN,
-    /**
-    * windows Recovery Environment Not Configured
-    */
-    WINDOWS_RECOVERY_ENVIRONMENT_NOT_CONFIGURED,
-    /**
-    * tpm Not Available
-    */
-    TPM_NOT_AVAILABLE,
-    /**
-    * tpm Not Ready
-    */
-    TPM_NOT_READY,
-    /**
-    * network Error
-    */
-    NETWORK_ERROR,
-    /**
-    * For AdvancedBitLockerState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum AdvancedBitLockerState implements ValuedEnum {
+    /** Advanced BitLocker State Success */
+    Success("success"),
+    /** User never gave consent for Encryption */
+    NoUserConsent("noUserConsent"),
+    /** Un-protected OS Volume was detected */
+    OsVolumeUnprotected("osVolumeUnprotected"),
+    /** TPM not used for protection of OS volume, but is required by policy */
+    OsVolumeTpmRequired("osVolumeTpmRequired"),
+    /** TPM only protection not used for OS volume, but is required by policy */
+    OsVolumeTpmOnlyRequired("osVolumeTpmOnlyRequired"),
+    /** TPM+PIN protection not used for OS volume, but is required by policy */
+    OsVolumeTpmPinRequired("osVolumeTpmPinRequired"),
+    /** TPM+Startup Key protection not used for OS volume, but is required by policy */
+    OsVolumeTpmStartupKeyRequired("osVolumeTpmStartupKeyRequired"),
+    /** TPM+PIN+Startup Key not used for OS volume, but is required by policy */
+    OsVolumeTpmPinStartupKeyRequired("osVolumeTpmPinStartupKeyRequired"),
+    /** Encryption method of OS Volume is different than that set by policy */
+    OsVolumeEncryptionMethodMismatch("osVolumeEncryptionMethodMismatch"),
+    /** Recovery key backup failed */
+    RecoveryKeyBackupFailed("recoveryKeyBackupFailed"),
+    /** Fixed Drive not encrypted */
+    FixedDriveNotEncrypted("fixedDriveNotEncrypted"),
+    /** Encryption method of Fixed Drive is different than that set by policy */
+    FixedDriveEncryptionMethodMismatch("fixedDriveEncryptionMethodMismatch"),
+    /** Logged on user is non-admin. This requires “AllowStandardUserEncryption” policy set to 1 */
+    LoggedOnUserNonAdmin("loggedOnUserNonAdmin"),
+    /** WinRE is not configured */
+    WindowsRecoveryEnvironmentNotConfigured("windowsRecoveryEnvironmentNotConfigured"),
+    /** TPM is not available for BitLocker. This means TPM is not present, or TPM unavailable registry override is set or host OS is on portable/rome-able drive */
+    TpmNotAvailable("tpmNotAvailable"),
+    /** TPM is not ready for BitLocker */
+    TpmNotReady("tpmNotReady"),
+    /** Network not available. This is required for recovery key backup. This is reported for Drive Encryption capable devices */
+    NetworkError("networkError");
+    public final String value;
+    AdvancedBitLockerState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AdvancedBitLockerState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "success": return Success;
+            case "noUserConsent": return NoUserConsent;
+            case "osVolumeUnprotected": return OsVolumeUnprotected;
+            case "osVolumeTpmRequired": return OsVolumeTpmRequired;
+            case "osVolumeTpmOnlyRequired": return OsVolumeTpmOnlyRequired;
+            case "osVolumeTpmPinRequired": return OsVolumeTpmPinRequired;
+            case "osVolumeTpmStartupKeyRequired": return OsVolumeTpmStartupKeyRequired;
+            case "osVolumeTpmPinStartupKeyRequired": return OsVolumeTpmPinStartupKeyRequired;
+            case "osVolumeEncryptionMethodMismatch": return OsVolumeEncryptionMethodMismatch;
+            case "recoveryKeyBackupFailed": return RecoveryKeyBackupFailed;
+            case "fixedDriveNotEncrypted": return FixedDriveNotEncrypted;
+            case "fixedDriveEncryptionMethodMismatch": return FixedDriveEncryptionMethodMismatch;
+            case "loggedOnUserNonAdmin": return LoggedOnUserNonAdmin;
+            case "windowsRecoveryEnvironmentNotConfigured": return WindowsRecoveryEnvironmentNotConfigured;
+            case "tpmNotAvailable": return TpmNotAvailable;
+            case "tpmNotReady": return TpmNotReady;
+            case "networkError": return NetworkError;
+            default: return null;
+        }
+    }
 }

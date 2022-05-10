@@ -1,42 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Assignment Filter Evaluation Result.
-*/
-public enum AssignmentFilterEvaluationResult
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * match
-    */
-    MATCH,
-    /**
-    * not Match
-    */
-    NOT_MATCH,
-    /**
-    * inconclusive
-    */
-    INCONCLUSIVE,
-    /**
-    * failure
-    */
-    FAILURE,
-    /**
-    * not Evaluated
-    */
-    NOT_EVALUATED,
-    /**
-    * For AssignmentFilterEvaluationResult values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the getAssignmentFiltersStatusDetails method. */
+public enum AssignmentFilterEvaluationResult implements ValuedEnum {
+    /** Unknown. */
+    Unknown("unknown"),
+    /** Match. */
+    Match("match"),
+    /** NotMatch. */
+    NotMatch("notMatch"),
+    /** Inconclusive. */
+    Inconclusive("inconclusive"),
+    /** Failure. */
+    Failure("failure"),
+    /** NotEvaluated. */
+    NotEvaluated("notEvaluated");
+    public final String value;
+    AssignmentFilterEvaluationResult(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AssignmentFilterEvaluationResult forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "match": return Match;
+            case "notMatch": return NotMatch;
+            case "inconclusive": return Inconclusive;
+            case "failure": return Failure;
+            case "notEvaluated": return NotEvaluated;
+            default: return null;
+        }
+    }
 }

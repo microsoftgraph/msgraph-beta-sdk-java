@@ -1,42 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Device Health State.
-*/
-public enum WindowsDeviceHealthState
-{
-    /**
-    * clean
-    */
-    CLEAN,
-    /**
-    * full Scan Pending
-    */
-    FULL_SCAN_PENDING,
-    /**
-    * reboot Pending
-    */
-    REBOOT_PENDING,
-    /**
-    * manual Steps Pending
-    */
-    MANUAL_STEPS_PENDING,
-    /**
-    * offline Scan Pending
-    */
-    OFFLINE_SCAN_PENDING,
-    /**
-    * critical
-    */
-    CRITICAL,
-    /**
-    * For WindowsDeviceHealthState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum WindowsDeviceHealthState implements ValuedEnum {
+    /** Computer is clean and no action is required */
+    Clean("clean"),
+    /** Computer is in pending full scan state */
+    FullScanPending("fullScanPending"),
+    /** Computer is in pending reboot state */
+    RebootPending("rebootPending"),
+    /** Computer is in pending manual steps state */
+    ManualStepsPending("manualStepsPending"),
+    /** Computer is in pending offline scan state */
+    OfflineScanPending("offlineScanPending"),
+    /** Computer is in critical failure state */
+    Critical("critical");
+    public final String value;
+    WindowsDeviceHealthState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsDeviceHealthState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "clean": return Clean;
+            case "fullScanPending": return FullScanPending;
+            case "rebootPending": return RebootPending;
+            case "manualStepsPending": return ManualStepsPending;
+            case "offlineScanPending": return OfflineScanPending;
+            case "critical": return Critical;
+            default: return null;
+        }
+    }
 }

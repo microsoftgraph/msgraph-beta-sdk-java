@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Cross Tenant Access Policy Target Type.
-*/
-public enum CrossTenantAccessPolicyTargetType
-{
-    /**
-    * user
-    */
-    USER,
-    /**
-    * group
-    */
-    GROUP,
-    /**
-    * application
-    */
-    APPLICATION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For CrossTenantAccessPolicyTargetType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the policyRoot singleton. */
+public enum CrossTenantAccessPolicyTargetType implements ValuedEnum {
+    User("user"),
+    Group("group"),
+    Application("application"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    CrossTenantAccessPolicyTargetType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CrossTenantAccessPolicyTargetType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "user": return User;
+            case "group": return Group;
+            case "application": return Application;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

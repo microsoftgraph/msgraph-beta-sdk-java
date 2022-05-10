@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Person Annual Event Type.
-*/
-public enum PersonAnnualEventType
-{
-    /**
-    * birthday
-    */
-    BIRTHDAY,
-    /**
-    * wedding
-    */
-    WEDDING,
-    /**
-    * work
-    */
-    WORK,
-    /**
-    * other
-    */
-    OTHER,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PersonAnnualEventType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum PersonAnnualEventType implements ValuedEnum {
+    Birthday("birthday"),
+    Wedding("wedding"),
+    Work("work"),
+    Other("other"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PersonAnnualEventType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PersonAnnualEventType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "birthday": return Birthday;
+            case "wedding": return Wedding;
+            case "work": return Work;
+            case "other": return Other;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

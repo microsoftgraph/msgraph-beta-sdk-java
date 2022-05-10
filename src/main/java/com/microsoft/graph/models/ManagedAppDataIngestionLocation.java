@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed App Data Ingestion Location.
-*/
-public enum ManagedAppDataIngestionLocation
-{
-    /**
-    * one Drive For Business
-    */
-    ONE_DRIVE_FOR_BUSINESS,
-    /**
-    * share Point
-    */
-    SHARE_POINT,
-    /**
-    * camera
-    */
-    CAMERA,
-    /**
-    * For ManagedAppDataIngestionLocation values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum ManagedAppDataIngestionLocation implements ValuedEnum {
+    /** OneDrive for business */
+    OneDriveForBusiness("oneDriveForBusiness"),
+    /** SharePoint Online */
+    SharePoint("sharePoint"),
+    /** The device's camera */
+    Camera("camera");
+    public final String value;
+    ManagedAppDataIngestionLocation(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedAppDataIngestionLocation forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "oneDriveForBusiness": return OneDriveForBusiness;
+            case "sharePoint": return SharePoint;
+            case "camera": return Camera;
+            default: return null;
+        }
+    }
 }

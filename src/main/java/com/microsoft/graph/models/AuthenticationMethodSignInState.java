@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Authentication Method Sign In State.
-*/
-public enum AuthenticationMethodSignInState
-{
-    /**
-    * not Supported
-    */
-    NOT_SUPPORTED,
-    /**
-    * not Allowed By Policy
-    */
-    NOT_ALLOWED_BY_POLICY,
-    /**
-    * not Enabled
-    */
-    NOT_ENABLED,
-    /**
-    * phone Number Not Unique
-    */
-    PHONE_NUMBER_NOT_UNIQUE,
-    /**
-    * ready
-    */
-    READY,
-    /**
-    * not Configured
-    */
-    NOT_CONFIGURED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AuthenticationMethodSignInState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum AuthenticationMethodSignInState implements ValuedEnum {
+    NotSupported("notSupported"),
+    NotAllowedByPolicy("notAllowedByPolicy"),
+    NotEnabled("notEnabled"),
+    PhoneNumberNotUnique("phoneNumberNotUnique"),
+    Ready("ready"),
+    NotConfigured("notConfigured"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AuthenticationMethodSignInState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AuthenticationMethodSignInState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notSupported": return NotSupported;
+            case "notAllowedByPolicy": return NotAllowedByPolicy;
+            case "notEnabled": return NotEnabled;
+            case "phoneNumberNotUnique": return PhoneNumberNotUnique;
+            case "ready": return Ready;
+            case "notConfigured": return NotConfigured;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

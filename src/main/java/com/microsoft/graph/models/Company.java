@@ -1,600 +1,827 @@
-// Template Source: BaseEntity.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
-import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.serializer.IJsonBackedObject;
-import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Account;
-import com.microsoft.graph.models.AgedAccountsPayable;
-import com.microsoft.graph.models.AgedAccountsReceivable;
-import com.microsoft.graph.models.CompanyInformation;
-import com.microsoft.graph.models.CountryRegion;
-import com.microsoft.graph.models.Currency;
-import com.microsoft.graph.models.CustomerPaymentJournal;
-import com.microsoft.graph.models.CustomerPayment;
-import com.microsoft.graph.models.Customer;
-import com.microsoft.graph.models.Dimension;
-import com.microsoft.graph.models.DimensionValue;
-import com.microsoft.graph.models.Employee;
-import com.microsoft.graph.models.GeneralLedgerEntry;
-import com.microsoft.graph.models.ItemCategory;
-import com.microsoft.graph.models.Item;
-import com.microsoft.graph.models.JournalLine;
-import com.microsoft.graph.models.Journal;
-import com.microsoft.graph.models.PaymentMethod;
-import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.Picture;
-import com.microsoft.graph.models.PurchaseInvoiceLine;
-import com.microsoft.graph.models.PurchaseInvoice;
-import com.microsoft.graph.models.SalesCreditMemoLine;
-import com.microsoft.graph.models.SalesCreditMemo;
-import com.microsoft.graph.models.SalesInvoiceLine;
-import com.microsoft.graph.models.SalesInvoice;
-import com.microsoft.graph.models.SalesOrderLine;
-import com.microsoft.graph.models.SalesOrder;
-import com.microsoft.graph.models.SalesQuoteLine;
-import com.microsoft.graph.models.SalesQuote;
-import com.microsoft.graph.models.ShipmentMethod;
-import com.microsoft.graph.models.TaxArea;
-import com.microsoft.graph.models.TaxGroup;
-import com.microsoft.graph.models.UnitOfMeasure;
-import com.microsoft.graph.models.Vendor;
-import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.AccountCollectionPage;
-import com.microsoft.graph.requests.AgedAccountsPayableCollectionPage;
-import com.microsoft.graph.requests.AgedAccountsReceivableCollectionPage;
-import com.microsoft.graph.requests.CompanyInformationCollectionPage;
-import com.microsoft.graph.requests.CountryRegionCollectionPage;
-import com.microsoft.graph.requests.CurrencyCollectionPage;
-import com.microsoft.graph.requests.CustomerPaymentJournalCollectionPage;
-import com.microsoft.graph.requests.CustomerPaymentCollectionPage;
-import com.microsoft.graph.requests.CustomerCollectionPage;
-import com.microsoft.graph.requests.DimensionCollectionPage;
-import com.microsoft.graph.requests.DimensionValueCollectionPage;
-import com.microsoft.graph.requests.EmployeeCollectionPage;
-import com.microsoft.graph.requests.GeneralLedgerEntryCollectionPage;
-import com.microsoft.graph.requests.ItemCategoryCollectionPage;
-import com.microsoft.graph.requests.ItemCollectionPage;
-import com.microsoft.graph.requests.JournalLineCollectionPage;
-import com.microsoft.graph.requests.JournalCollectionPage;
-import com.microsoft.graph.requests.PaymentMethodCollectionPage;
-import com.microsoft.graph.requests.PaymentTermCollectionPage;
-import com.microsoft.graph.requests.PictureCollectionPage;
-import com.microsoft.graph.requests.PurchaseInvoiceLineCollectionPage;
-import com.microsoft.graph.requests.PurchaseInvoiceCollectionPage;
-import com.microsoft.graph.requests.SalesCreditMemoLineCollectionPage;
-import com.microsoft.graph.requests.SalesCreditMemoCollectionPage;
-import com.microsoft.graph.requests.SalesInvoiceLineCollectionPage;
-import com.microsoft.graph.requests.SalesInvoiceCollectionPage;
-import com.microsoft.graph.requests.SalesOrderLineCollectionPage;
-import com.microsoft.graph.requests.SalesOrderCollectionPage;
-import com.microsoft.graph.requests.SalesQuoteLineCollectionPage;
-import com.microsoft.graph.requests.SalesQuoteCollectionPage;
-import com.microsoft.graph.requests.ShipmentMethodCollectionPage;
-import com.microsoft.graph.requests.TaxAreaCollectionPage;
-import com.microsoft.graph.requests.TaxGroupCollectionPage;
-import com.microsoft.graph.requests.UnitOfMeasureCollectionPage;
-import com.microsoft.graph.requests.VendorCollectionPage;
-
-
-import com.google.gson.JsonObject;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.annotations.Expose;
-import javax.annotation.Nullable;
-import javax.annotation.Nonnull;
-
-// **NOTE** This file was generated by a tool and any changes will be overwritten.
-
-/**
- * The class for the Company.
- */
-public class Company extends Entity implements IJsonBackedObject {
-
-
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class Company extends Entity implements Parsable {
+    /** The accounts property */
+    private java.util.List<Account> _accounts;
+    /** The agedAccountsPayable property */
+    private java.util.List<AgedAccountsPayable> _agedAccountsPayable;
+    /** The agedAccountsReceivable property */
+    private java.util.List<AgedAccountsReceivable> _agedAccountsReceivable;
+    /** The businessProfileId property */
+    private String _businessProfileId;
+    /** The companyInformation property */
+    private java.util.List<CompanyInformation> _companyInformation;
+    /** The countriesRegions property */
+    private java.util.List<CountryRegion> _countriesRegions;
+    /** The currencies property */
+    private java.util.List<Currency> _currencies;
+    /** The customerPaymentJournals property */
+    private java.util.List<CustomerPaymentJournal> _customerPaymentJournals;
+    /** The customerPayments property */
+    private java.util.List<CustomerPayment> _customerPayments;
+    /** The customers property */
+    private java.util.List<Customer> _customers;
+    /** The dimensions property */
+    private java.util.List<Dimension> _dimensions;
+    /** The dimensionValues property */
+    private java.util.List<DimensionValue> _dimensionValues;
+    /** The displayName property */
+    private String _displayName;
+    /** The employees property */
+    private java.util.List<Employee> _employees;
+    /** The generalLedgerEntries property */
+    private java.util.List<GeneralLedgerEntry> _generalLedgerEntries;
+    /** The itemCategories property */
+    private java.util.List<ItemCategory> _itemCategories;
+    /** The items property */
+    private java.util.List<Item> _items;
+    /** The journalLines property */
+    private java.util.List<JournalLine> _journalLines;
+    /** The journals property */
+    private java.util.List<Journal> _journals;
+    /** The name property */
+    private String _name;
+    /** The paymentMethods property */
+    private java.util.List<PaymentMethod> _paymentMethods;
+    /** The paymentTerms property */
+    private java.util.List<PaymentTerm> _paymentTerms;
+    /** The picture property */
+    private java.util.List<Picture> _picture;
+    /** The purchaseInvoiceLines property */
+    private java.util.List<PurchaseInvoiceLine> _purchaseInvoiceLines;
+    /** The purchaseInvoices property */
+    private java.util.List<PurchaseInvoice> _purchaseInvoices;
+    /** The salesCreditMemoLines property */
+    private java.util.List<SalesCreditMemoLine> _salesCreditMemoLines;
+    /** The salesCreditMemos property */
+    private java.util.List<SalesCreditMemo> _salesCreditMemos;
+    /** The salesInvoiceLines property */
+    private java.util.List<SalesInvoiceLine> _salesInvoiceLines;
+    /** The salesInvoices property */
+    private java.util.List<SalesInvoice> _salesInvoices;
+    /** The salesOrderLines property */
+    private java.util.List<SalesOrderLine> _salesOrderLines;
+    /** The salesOrders property */
+    private java.util.List<SalesOrder> _salesOrders;
+    /** The salesQuoteLines property */
+    private java.util.List<SalesQuoteLine> _salesQuoteLines;
+    /** The salesQuotes property */
+    private java.util.List<SalesQuote> _salesQuotes;
+    /** The shipmentMethods property */
+    private java.util.List<ShipmentMethod> _shipmentMethods;
+    /** The systemVersion property */
+    private String _systemVersion;
+    /** The taxAreas property */
+    private java.util.List<TaxArea> _taxAreas;
+    /** The taxGroups property */
+    private java.util.List<TaxGroup> _taxGroups;
+    /** The unitsOfMeasure property */
+    private java.util.List<UnitOfMeasure> _unitsOfMeasure;
+    /** The vendors property */
+    private java.util.List<Vendor> _vendors;
     /**
-     * The Business Profile Id.
-     * 
+     * Instantiates a new company and sets the default values.
+     * @return a void
      */
-    @SerializedName(value = "businessProfileId", alternate = {"BusinessProfileId"})
-    @Expose
-	@Nullable
-    public String businessProfileId;
-
+    public Company() {
+        super();
+    }
     /**
-     * The Display Name.
-     * 
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a company
      */
-    @SerializedName(value = "displayName", alternate = {"DisplayName"})
-    @Expose
-	@Nullable
-    public String displayName;
-
+    @javax.annotation.Nonnull
+    public static Company createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new Company();
+    }
     /**
-     * The Name.
-     * 
+     * Gets the accounts property value. The accounts property
+     * @return a account
      */
-    @SerializedName(value = "name", alternate = {"Name"})
-    @Expose
-	@Nullable
-    public String name;
-
+    @javax.annotation.Nullable
+    public java.util.List<Account> getAccounts() {
+        return this._accounts;
+    }
     /**
-     * The System Version.
-     * 
+     * Gets the agedAccountsPayable property value. The agedAccountsPayable property
+     * @return a agedAccountsPayable
      */
-    @SerializedName(value = "systemVersion", alternate = {"SystemVersion"})
-    @Expose
-	@Nullable
-    public String systemVersion;
-
+    @javax.annotation.Nullable
+    public java.util.List<AgedAccountsPayable> getAgedAccountsPayable() {
+        return this._agedAccountsPayable;
+    }
     /**
-     * The Accounts.
-     * 
+     * Gets the agedAccountsReceivable property value. The agedAccountsReceivable property
+     * @return a agedAccountsReceivable
      */
-    @SerializedName(value = "accounts", alternate = {"Accounts"})
-    @Expose
-	@Nullable
-    public AccountCollectionPage accounts;
-
+    @javax.annotation.Nullable
+    public java.util.List<AgedAccountsReceivable> getAgedAccountsReceivable() {
+        return this._agedAccountsReceivable;
+    }
     /**
-     * The Aged Accounts Payable.
-     * 
+     * Gets the businessProfileId property value. The businessProfileId property
+     * @return a string
      */
-    @SerializedName(value = "agedAccountsPayable", alternate = {"AgedAccountsPayable"})
-    @Expose
-	@Nullable
-    public AgedAccountsPayableCollectionPage agedAccountsPayable;
-
+    @javax.annotation.Nullable
+    public String getBusinessProfileId() {
+        return this._businessProfileId;
+    }
     /**
-     * The Aged Accounts Receivable.
-     * 
+     * Gets the companyInformation property value. The companyInformation property
+     * @return a companyInformation
      */
-    @SerializedName(value = "agedAccountsReceivable", alternate = {"AgedAccountsReceivable"})
-    @Expose
-	@Nullable
-    public AgedAccountsReceivableCollectionPage agedAccountsReceivable;
-
+    @javax.annotation.Nullable
+    public java.util.List<CompanyInformation> getCompanyInformation() {
+        return this._companyInformation;
+    }
     /**
-     * The Company Information.
-     * 
+     * Gets the countriesRegions property value. The countriesRegions property
+     * @return a countryRegion
      */
-    @SerializedName(value = "companyInformation", alternate = {"CompanyInformation"})
-    @Expose
-	@Nullable
-    public CompanyInformationCollectionPage companyInformation;
-
+    @javax.annotation.Nullable
+    public java.util.List<CountryRegion> getCountriesRegions() {
+        return this._countriesRegions;
+    }
     /**
-     * The Countries Regions.
-     * 
+     * Gets the currencies property value. The currencies property
+     * @return a currency
      */
-    @SerializedName(value = "countriesRegions", alternate = {"CountriesRegions"})
-    @Expose
-	@Nullable
-    public CountryRegionCollectionPage countriesRegions;
-
+    @javax.annotation.Nullable
+    public java.util.List<Currency> getCurrencies() {
+        return this._currencies;
+    }
     /**
-     * The Currencies.
-     * 
+     * Gets the customerPaymentJournals property value. The customerPaymentJournals property
+     * @return a customerPaymentJournal
      */
-    @SerializedName(value = "currencies", alternate = {"Currencies"})
-    @Expose
-	@Nullable
-    public CurrencyCollectionPage currencies;
-
+    @javax.annotation.Nullable
+    public java.util.List<CustomerPaymentJournal> getCustomerPaymentJournals() {
+        return this._customerPaymentJournals;
+    }
     /**
-     * The Customer Payment Journals.
-     * 
+     * Gets the customerPayments property value. The customerPayments property
+     * @return a customerPayment
      */
-    @SerializedName(value = "customerPaymentJournals", alternate = {"CustomerPaymentJournals"})
-    @Expose
-	@Nullable
-    public CustomerPaymentJournalCollectionPage customerPaymentJournals;
-
+    @javax.annotation.Nullable
+    public java.util.List<CustomerPayment> getCustomerPayments() {
+        return this._customerPayments;
+    }
     /**
-     * The Customer Payments.
-     * 
+     * Gets the customers property value. The customers property
+     * @return a customer
      */
-    @SerializedName(value = "customerPayments", alternate = {"CustomerPayments"})
-    @Expose
-	@Nullable
-    public CustomerPaymentCollectionPage customerPayments;
-
+    @javax.annotation.Nullable
+    public java.util.List<Customer> getCustomers() {
+        return this._customers;
+    }
     /**
-     * The Customers.
-     * 
+     * Gets the dimensions property value. The dimensions property
+     * @return a dimension
      */
-    @SerializedName(value = "customers", alternate = {"Customers"})
-    @Expose
-	@Nullable
-    public CustomerCollectionPage customers;
-
+    @javax.annotation.Nullable
+    public java.util.List<Dimension> getDimensions() {
+        return this._dimensions;
+    }
     /**
-     * The Dimensions.
-     * 
+     * Gets the dimensionValues property value. The dimensionValues property
+     * @return a dimensionValue
      */
-    @SerializedName(value = "dimensions", alternate = {"Dimensions"})
-    @Expose
-	@Nullable
-    public DimensionCollectionPage dimensions;
-
+    @javax.annotation.Nullable
+    public java.util.List<DimensionValue> getDimensionValues() {
+        return this._dimensionValues;
+    }
     /**
-     * The Dimension Values.
-     * 
+     * Gets the displayName property value. The displayName property
+     * @return a string
      */
-    @SerializedName(value = "dimensionValues", alternate = {"DimensionValues"})
-    @Expose
-	@Nullable
-    public DimensionValueCollectionPage dimensionValues;
-
+    @javax.annotation.Nullable
+    public String getDisplayName() {
+        return this._displayName;
+    }
     /**
-     * The Employees.
-     * 
+     * Gets the employees property value. The employees property
+     * @return a employee
      */
-    @SerializedName(value = "employees", alternate = {"Employees"})
-    @Expose
-	@Nullable
-    public EmployeeCollectionPage employees;
-
+    @javax.annotation.Nullable
+    public java.util.List<Employee> getEmployees() {
+        return this._employees;
+    }
     /**
-     * The General Ledger Entries.
-     * 
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
      */
-    @SerializedName(value = "generalLedgerEntries", alternate = {"GeneralLedgerEntries"})
-    @Expose
-	@Nullable
-    public GeneralLedgerEntryCollectionPage generalLedgerEntries;
-
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final Company currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("accounts", (n) -> { currentObject.setAccounts(n.getCollectionOfObjectValues(Account::createFromDiscriminatorValue)); });
+            this.put("agedAccountsPayable", (n) -> { currentObject.setAgedAccountsPayable(n.getCollectionOfObjectValues(AgedAccountsPayable::createFromDiscriminatorValue)); });
+            this.put("agedAccountsReceivable", (n) -> { currentObject.setAgedAccountsReceivable(n.getCollectionOfObjectValues(AgedAccountsReceivable::createFromDiscriminatorValue)); });
+            this.put("businessProfileId", (n) -> { currentObject.setBusinessProfileId(n.getStringValue()); });
+            this.put("companyInformation", (n) -> { currentObject.setCompanyInformation(n.getCollectionOfObjectValues(CompanyInformation::createFromDiscriminatorValue)); });
+            this.put("countriesRegions", (n) -> { currentObject.setCountriesRegions(n.getCollectionOfObjectValues(CountryRegion::createFromDiscriminatorValue)); });
+            this.put("currencies", (n) -> { currentObject.setCurrencies(n.getCollectionOfObjectValues(Currency::createFromDiscriminatorValue)); });
+            this.put("customerPaymentJournals", (n) -> { currentObject.setCustomerPaymentJournals(n.getCollectionOfObjectValues(CustomerPaymentJournal::createFromDiscriminatorValue)); });
+            this.put("customerPayments", (n) -> { currentObject.setCustomerPayments(n.getCollectionOfObjectValues(CustomerPayment::createFromDiscriminatorValue)); });
+            this.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(Customer::createFromDiscriminatorValue)); });
+            this.put("dimensions", (n) -> { currentObject.setDimensions(n.getCollectionOfObjectValues(Dimension::createFromDiscriminatorValue)); });
+            this.put("dimensionValues", (n) -> { currentObject.setDimensionValues(n.getCollectionOfObjectValues(DimensionValue::createFromDiscriminatorValue)); });
+            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("employees", (n) -> { currentObject.setEmployees(n.getCollectionOfObjectValues(Employee::createFromDiscriminatorValue)); });
+            this.put("generalLedgerEntries", (n) -> { currentObject.setGeneralLedgerEntries(n.getCollectionOfObjectValues(GeneralLedgerEntry::createFromDiscriminatorValue)); });
+            this.put("itemCategories", (n) -> { currentObject.setItemCategories(n.getCollectionOfObjectValues(ItemCategory::createFromDiscriminatorValue)); });
+            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(Item::createFromDiscriminatorValue)); });
+            this.put("journalLines", (n) -> { currentObject.setJournalLines(n.getCollectionOfObjectValues(JournalLine::createFromDiscriminatorValue)); });
+            this.put("journals", (n) -> { currentObject.setJournals(n.getCollectionOfObjectValues(Journal::createFromDiscriminatorValue)); });
+            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("paymentMethods", (n) -> { currentObject.setPaymentMethods(n.getCollectionOfObjectValues(PaymentMethod::createFromDiscriminatorValue)); });
+            this.put("paymentTerms", (n) -> { currentObject.setPaymentTerms(n.getCollectionOfObjectValues(PaymentTerm::createFromDiscriminatorValue)); });
+            this.put("picture", (n) -> { currentObject.setPicture(n.getCollectionOfObjectValues(Picture::createFromDiscriminatorValue)); });
+            this.put("purchaseInvoiceLines", (n) -> { currentObject.setPurchaseInvoiceLines(n.getCollectionOfObjectValues(PurchaseInvoiceLine::createFromDiscriminatorValue)); });
+            this.put("purchaseInvoices", (n) -> { currentObject.setPurchaseInvoices(n.getCollectionOfObjectValues(PurchaseInvoice::createFromDiscriminatorValue)); });
+            this.put("salesCreditMemoLines", (n) -> { currentObject.setSalesCreditMemoLines(n.getCollectionOfObjectValues(SalesCreditMemoLine::createFromDiscriminatorValue)); });
+            this.put("salesCreditMemos", (n) -> { currentObject.setSalesCreditMemos(n.getCollectionOfObjectValues(SalesCreditMemo::createFromDiscriminatorValue)); });
+            this.put("salesInvoiceLines", (n) -> { currentObject.setSalesInvoiceLines(n.getCollectionOfObjectValues(SalesInvoiceLine::createFromDiscriminatorValue)); });
+            this.put("salesInvoices", (n) -> { currentObject.setSalesInvoices(n.getCollectionOfObjectValues(SalesInvoice::createFromDiscriminatorValue)); });
+            this.put("salesOrderLines", (n) -> { currentObject.setSalesOrderLines(n.getCollectionOfObjectValues(SalesOrderLine::createFromDiscriminatorValue)); });
+            this.put("salesOrders", (n) -> { currentObject.setSalesOrders(n.getCollectionOfObjectValues(SalesOrder::createFromDiscriminatorValue)); });
+            this.put("salesQuoteLines", (n) -> { currentObject.setSalesQuoteLines(n.getCollectionOfObjectValues(SalesQuoteLine::createFromDiscriminatorValue)); });
+            this.put("salesQuotes", (n) -> { currentObject.setSalesQuotes(n.getCollectionOfObjectValues(SalesQuote::createFromDiscriminatorValue)); });
+            this.put("shipmentMethods", (n) -> { currentObject.setShipmentMethods(n.getCollectionOfObjectValues(ShipmentMethod::createFromDiscriminatorValue)); });
+            this.put("systemVersion", (n) -> { currentObject.setSystemVersion(n.getStringValue()); });
+            this.put("taxAreas", (n) -> { currentObject.setTaxAreas(n.getCollectionOfObjectValues(TaxArea::createFromDiscriminatorValue)); });
+            this.put("taxGroups", (n) -> { currentObject.setTaxGroups(n.getCollectionOfObjectValues(TaxGroup::createFromDiscriminatorValue)); });
+            this.put("unitsOfMeasure", (n) -> { currentObject.setUnitsOfMeasure(n.getCollectionOfObjectValues(UnitOfMeasure::createFromDiscriminatorValue)); });
+            this.put("vendors", (n) -> { currentObject.setVendors(n.getCollectionOfObjectValues(Vendor::createFromDiscriminatorValue)); });
+        }};
+    }
     /**
-     * The Item Categories.
-     * 
+     * Gets the generalLedgerEntries property value. The generalLedgerEntries property
+     * @return a generalLedgerEntry
      */
-    @SerializedName(value = "itemCategories", alternate = {"ItemCategories"})
-    @Expose
-	@Nullable
-    public ItemCategoryCollectionPage itemCategories;
-
+    @javax.annotation.Nullable
+    public java.util.List<GeneralLedgerEntry> getGeneralLedgerEntries() {
+        return this._generalLedgerEntries;
+    }
     /**
-     * The Items.
-     * 
+     * Gets the itemCategories property value. The itemCategories property
+     * @return a itemCategory
      */
-    @SerializedName(value = "items", alternate = {"Items"})
-    @Expose
-	@Nullable
-    public ItemCollectionPage items;
-
+    @javax.annotation.Nullable
+    public java.util.List<ItemCategory> getItemCategories() {
+        return this._itemCategories;
+    }
     /**
-     * The Journal Lines.
-     * 
+     * Gets the items property value. The items property
+     * @return a item
      */
-    @SerializedName(value = "journalLines", alternate = {"JournalLines"})
-    @Expose
-	@Nullable
-    public JournalLineCollectionPage journalLines;
-
+    @javax.annotation.Nullable
+    public java.util.List<Item> getItems() {
+        return this._items;
+    }
     /**
-     * The Journals.
-     * 
+     * Gets the journalLines property value. The journalLines property
+     * @return a journalLine
      */
-    @SerializedName(value = "journals", alternate = {"Journals"})
-    @Expose
-	@Nullable
-    public JournalCollectionPage journals;
-
+    @javax.annotation.Nullable
+    public java.util.List<JournalLine> getJournalLines() {
+        return this._journalLines;
+    }
     /**
-     * The Payment Methods.
-     * 
+     * Gets the journals property value. The journals property
+     * @return a journal
      */
-    @SerializedName(value = "paymentMethods", alternate = {"PaymentMethods"})
-    @Expose
-	@Nullable
-    public PaymentMethodCollectionPage paymentMethods;
-
+    @javax.annotation.Nullable
+    public java.util.List<Journal> getJournals() {
+        return this._journals;
+    }
     /**
-     * The Payment Terms.
-     * 
+     * Gets the name property value. The name property
+     * @return a string
      */
-    @SerializedName(value = "paymentTerms", alternate = {"PaymentTerms"})
-    @Expose
-	@Nullable
-    public PaymentTermCollectionPage paymentTerms;
-
+    @javax.annotation.Nullable
+    public String getName() {
+        return this._name;
+    }
     /**
-     * The Picture.
-     * 
+     * Gets the paymentMethods property value. The paymentMethods property
+     * @return a paymentMethod
      */
-    @SerializedName(value = "picture", alternate = {"Picture"})
-    @Expose
-	@Nullable
-    public PictureCollectionPage picture;
-
+    @javax.annotation.Nullable
+    public java.util.List<PaymentMethod> getPaymentMethods() {
+        return this._paymentMethods;
+    }
     /**
-     * The Purchase Invoice Lines.
-     * 
+     * Gets the paymentTerms property value. The paymentTerms property
+     * @return a paymentTerm
      */
-    @SerializedName(value = "purchaseInvoiceLines", alternate = {"PurchaseInvoiceLines"})
-    @Expose
-	@Nullable
-    public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
-
+    @javax.annotation.Nullable
+    public java.util.List<PaymentTerm> getPaymentTerms() {
+        return this._paymentTerms;
+    }
     /**
-     * The Purchase Invoices.
-     * 
+     * Gets the picture property value. The picture property
+     * @return a picture
      */
-    @SerializedName(value = "purchaseInvoices", alternate = {"PurchaseInvoices"})
-    @Expose
-	@Nullable
-    public PurchaseInvoiceCollectionPage purchaseInvoices;
-
+    @javax.annotation.Nullable
+    public java.util.List<Picture> getPicture() {
+        return this._picture;
+    }
     /**
-     * The Sales Credit Memo Lines.
-     * 
+     * Gets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
+     * @return a purchaseInvoiceLine
      */
-    @SerializedName(value = "salesCreditMemoLines", alternate = {"SalesCreditMemoLines"})
-    @Expose
-	@Nullable
-    public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
-
+    @javax.annotation.Nullable
+    public java.util.List<PurchaseInvoiceLine> getPurchaseInvoiceLines() {
+        return this._purchaseInvoiceLines;
+    }
     /**
-     * The Sales Credit Memos.
-     * 
+     * Gets the purchaseInvoices property value. The purchaseInvoices property
+     * @return a purchaseInvoice
      */
-    @SerializedName(value = "salesCreditMemos", alternate = {"SalesCreditMemos"})
-    @Expose
-	@Nullable
-    public SalesCreditMemoCollectionPage salesCreditMemos;
-
+    @javax.annotation.Nullable
+    public java.util.List<PurchaseInvoice> getPurchaseInvoices() {
+        return this._purchaseInvoices;
+    }
     /**
-     * The Sales Invoice Lines.
-     * 
+     * Gets the salesCreditMemoLines property value. The salesCreditMemoLines property
+     * @return a salesCreditMemoLine
      */
-    @SerializedName(value = "salesInvoiceLines", alternate = {"SalesInvoiceLines"})
-    @Expose
-	@Nullable
-    public SalesInvoiceLineCollectionPage salesInvoiceLines;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesCreditMemoLine> getSalesCreditMemoLines() {
+        return this._salesCreditMemoLines;
+    }
     /**
-     * The Sales Invoices.
-     * 
+     * Gets the salesCreditMemos property value. The salesCreditMemos property
+     * @return a salesCreditMemo
      */
-    @SerializedName(value = "salesInvoices", alternate = {"SalesInvoices"})
-    @Expose
-	@Nullable
-    public SalesInvoiceCollectionPage salesInvoices;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesCreditMemo> getSalesCreditMemos() {
+        return this._salesCreditMemos;
+    }
     /**
-     * The Sales Order Lines.
-     * 
+     * Gets the salesInvoiceLines property value. The salesInvoiceLines property
+     * @return a salesInvoiceLine
      */
-    @SerializedName(value = "salesOrderLines", alternate = {"SalesOrderLines"})
-    @Expose
-	@Nullable
-    public SalesOrderLineCollectionPage salesOrderLines;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesInvoiceLine> getSalesInvoiceLines() {
+        return this._salesInvoiceLines;
+    }
     /**
-     * The Sales Orders.
-     * 
+     * Gets the salesInvoices property value. The salesInvoices property
+     * @return a salesInvoice
      */
-    @SerializedName(value = "salesOrders", alternate = {"SalesOrders"})
-    @Expose
-	@Nullable
-    public SalesOrderCollectionPage salesOrders;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesInvoice> getSalesInvoices() {
+        return this._salesInvoices;
+    }
     /**
-     * The Sales Quote Lines.
-     * 
+     * Gets the salesOrderLines property value. The salesOrderLines property
+     * @return a salesOrderLine
      */
-    @SerializedName(value = "salesQuoteLines", alternate = {"SalesQuoteLines"})
-    @Expose
-	@Nullable
-    public SalesQuoteLineCollectionPage salesQuoteLines;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesOrderLine> getSalesOrderLines() {
+        return this._salesOrderLines;
+    }
     /**
-     * The Sales Quotes.
-     * 
+     * Gets the salesOrders property value. The salesOrders property
+     * @return a salesOrder
      */
-    @SerializedName(value = "salesQuotes", alternate = {"SalesQuotes"})
-    @Expose
-	@Nullable
-    public SalesQuoteCollectionPage salesQuotes;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesOrder> getSalesOrders() {
+        return this._salesOrders;
+    }
     /**
-     * The Shipment Methods.
-     * 
+     * Gets the salesQuoteLines property value. The salesQuoteLines property
+     * @return a salesQuoteLine
      */
-    @SerializedName(value = "shipmentMethods", alternate = {"ShipmentMethods"})
-    @Expose
-	@Nullable
-    public ShipmentMethodCollectionPage shipmentMethods;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesQuoteLine> getSalesQuoteLines() {
+        return this._salesQuoteLines;
+    }
     /**
-     * The Tax Areas.
-     * 
+     * Gets the salesQuotes property value. The salesQuotes property
+     * @return a salesQuote
      */
-    @SerializedName(value = "taxAreas", alternate = {"TaxAreas"})
-    @Expose
-	@Nullable
-    public TaxAreaCollectionPage taxAreas;
-
+    @javax.annotation.Nullable
+    public java.util.List<SalesQuote> getSalesQuotes() {
+        return this._salesQuotes;
+    }
     /**
-     * The Tax Groups.
-     * 
+     * Gets the shipmentMethods property value. The shipmentMethods property
+     * @return a shipmentMethod
      */
-    @SerializedName(value = "taxGroups", alternate = {"TaxGroups"})
-    @Expose
-	@Nullable
-    public TaxGroupCollectionPage taxGroups;
-
+    @javax.annotation.Nullable
+    public java.util.List<ShipmentMethod> getShipmentMethods() {
+        return this._shipmentMethods;
+    }
     /**
-     * The Units Of Measure.
-     * 
+     * Gets the systemVersion property value. The systemVersion property
+     * @return a string
      */
-    @SerializedName(value = "unitsOfMeasure", alternate = {"UnitsOfMeasure"})
-    @Expose
-	@Nullable
-    public UnitOfMeasureCollectionPage unitsOfMeasure;
-
+    @javax.annotation.Nullable
+    public String getSystemVersion() {
+        return this._systemVersion;
+    }
     /**
-     * The Vendors.
-     * 
+     * Gets the taxAreas property value. The taxAreas property
+     * @return a taxArea
      */
-    @SerializedName(value = "vendors", alternate = {"Vendors"})
-    @Expose
-	@Nullable
-    public VendorCollectionPage vendors;
-
-
+    @javax.annotation.Nullable
+    public java.util.List<TaxArea> getTaxAreas() {
+        return this._taxAreas;
+    }
     /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json the JSON object to set this object to
+     * Gets the taxGroups property value. The taxGroups property
+     * @return a taxGroup
      */
-    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-
-
-        if (json.has("accounts")) {
-            accounts = serializer.deserializeObject(json.get("accounts"), AccountCollectionPage.class);
-        }
-
-        if (json.has("agedAccountsPayable")) {
-            agedAccountsPayable = serializer.deserializeObject(json.get("agedAccountsPayable"), AgedAccountsPayableCollectionPage.class);
-        }
-
-        if (json.has("agedAccountsReceivable")) {
-            agedAccountsReceivable = serializer.deserializeObject(json.get("agedAccountsReceivable"), AgedAccountsReceivableCollectionPage.class);
-        }
-
-        if (json.has("companyInformation")) {
-            companyInformation = serializer.deserializeObject(json.get("companyInformation"), CompanyInformationCollectionPage.class);
-        }
-
-        if (json.has("countriesRegions")) {
-            countriesRegions = serializer.deserializeObject(json.get("countriesRegions"), CountryRegionCollectionPage.class);
-        }
-
-        if (json.has("currencies")) {
-            currencies = serializer.deserializeObject(json.get("currencies"), CurrencyCollectionPage.class);
-        }
-
-        if (json.has("customerPaymentJournals")) {
-            customerPaymentJournals = serializer.deserializeObject(json.get("customerPaymentJournals"), CustomerPaymentJournalCollectionPage.class);
-        }
-
-        if (json.has("customerPayments")) {
-            customerPayments = serializer.deserializeObject(json.get("customerPayments"), CustomerPaymentCollectionPage.class);
-        }
-
-        if (json.has("customers")) {
-            customers = serializer.deserializeObject(json.get("customers"), CustomerCollectionPage.class);
-        }
-
-        if (json.has("dimensions")) {
-            dimensions = serializer.deserializeObject(json.get("dimensions"), DimensionCollectionPage.class);
-        }
-
-        if (json.has("dimensionValues")) {
-            dimensionValues = serializer.deserializeObject(json.get("dimensionValues"), DimensionValueCollectionPage.class);
-        }
-
-        if (json.has("employees")) {
-            employees = serializer.deserializeObject(json.get("employees"), EmployeeCollectionPage.class);
-        }
-
-        if (json.has("generalLedgerEntries")) {
-            generalLedgerEntries = serializer.deserializeObject(json.get("generalLedgerEntries"), GeneralLedgerEntryCollectionPage.class);
-        }
-
-        if (json.has("itemCategories")) {
-            itemCategories = serializer.deserializeObject(json.get("itemCategories"), ItemCategoryCollectionPage.class);
-        }
-
-        if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), ItemCollectionPage.class);
-        }
-
-        if (json.has("journalLines")) {
-            journalLines = serializer.deserializeObject(json.get("journalLines"), JournalLineCollectionPage.class);
-        }
-
-        if (json.has("journals")) {
-            journals = serializer.deserializeObject(json.get("journals"), JournalCollectionPage.class);
-        }
-
-        if (json.has("paymentMethods")) {
-            paymentMethods = serializer.deserializeObject(json.get("paymentMethods"), PaymentMethodCollectionPage.class);
-        }
-
-        if (json.has("paymentTerms")) {
-            paymentTerms = serializer.deserializeObject(json.get("paymentTerms"), PaymentTermCollectionPage.class);
-        }
-
-        if (json.has("picture")) {
-            picture = serializer.deserializeObject(json.get("picture"), PictureCollectionPage.class);
-        }
-
-        if (json.has("purchaseInvoiceLines")) {
-            purchaseInvoiceLines = serializer.deserializeObject(json.get("purchaseInvoiceLines"), PurchaseInvoiceLineCollectionPage.class);
-        }
-
-        if (json.has("purchaseInvoices")) {
-            purchaseInvoices = serializer.deserializeObject(json.get("purchaseInvoices"), PurchaseInvoiceCollectionPage.class);
-        }
-
-        if (json.has("salesCreditMemoLines")) {
-            salesCreditMemoLines = serializer.deserializeObject(json.get("salesCreditMemoLines"), SalesCreditMemoLineCollectionPage.class);
-        }
-
-        if (json.has("salesCreditMemos")) {
-            salesCreditMemos = serializer.deserializeObject(json.get("salesCreditMemos"), SalesCreditMemoCollectionPage.class);
-        }
-
-        if (json.has("salesInvoiceLines")) {
-            salesInvoiceLines = serializer.deserializeObject(json.get("salesInvoiceLines"), SalesInvoiceLineCollectionPage.class);
-        }
-
-        if (json.has("salesInvoices")) {
-            salesInvoices = serializer.deserializeObject(json.get("salesInvoices"), SalesInvoiceCollectionPage.class);
-        }
-
-        if (json.has("salesOrderLines")) {
-            salesOrderLines = serializer.deserializeObject(json.get("salesOrderLines"), SalesOrderLineCollectionPage.class);
-        }
-
-        if (json.has("salesOrders")) {
-            salesOrders = serializer.deserializeObject(json.get("salesOrders"), SalesOrderCollectionPage.class);
-        }
-
-        if (json.has("salesQuoteLines")) {
-            salesQuoteLines = serializer.deserializeObject(json.get("salesQuoteLines"), SalesQuoteLineCollectionPage.class);
-        }
-
-        if (json.has("salesQuotes")) {
-            salesQuotes = serializer.deserializeObject(json.get("salesQuotes"), SalesQuoteCollectionPage.class);
-        }
-
-        if (json.has("shipmentMethods")) {
-            shipmentMethods = serializer.deserializeObject(json.get("shipmentMethods"), ShipmentMethodCollectionPage.class);
-        }
-
-        if (json.has("taxAreas")) {
-            taxAreas = serializer.deserializeObject(json.get("taxAreas"), TaxAreaCollectionPage.class);
-        }
-
-        if (json.has("taxGroups")) {
-            taxGroups = serializer.deserializeObject(json.get("taxGroups"), TaxGroupCollectionPage.class);
-        }
-
-        if (json.has("unitsOfMeasure")) {
-            unitsOfMeasure = serializer.deserializeObject(json.get("unitsOfMeasure"), UnitOfMeasureCollectionPage.class);
-        }
-
-        if (json.has("vendors")) {
-            vendors = serializer.deserializeObject(json.get("vendors"), VendorCollectionPage.class);
-        }
+    @javax.annotation.Nullable
+    public java.util.List<TaxGroup> getTaxGroups() {
+        return this._taxGroups;
+    }
+    /**
+     * Gets the unitsOfMeasure property value. The unitsOfMeasure property
+     * @return a unitOfMeasure
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UnitOfMeasure> getUnitsOfMeasure() {
+        return this._unitsOfMeasure;
+    }
+    /**
+     * Gets the vendors property value. The vendors property
+     * @return a vendor
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Vendor> getVendors() {
+        return this._vendors;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeCollectionOfObjectValues("accounts", this.getAccounts());
+        writer.writeCollectionOfObjectValues("agedAccountsPayable", this.getAgedAccountsPayable());
+        writer.writeCollectionOfObjectValues("agedAccountsReceivable", this.getAgedAccountsReceivable());
+        writer.writeStringValue("businessProfileId", this.getBusinessProfileId());
+        writer.writeCollectionOfObjectValues("companyInformation", this.getCompanyInformation());
+        writer.writeCollectionOfObjectValues("countriesRegions", this.getCountriesRegions());
+        writer.writeCollectionOfObjectValues("currencies", this.getCurrencies());
+        writer.writeCollectionOfObjectValues("customerPaymentJournals", this.getCustomerPaymentJournals());
+        writer.writeCollectionOfObjectValues("customerPayments", this.getCustomerPayments());
+        writer.writeCollectionOfObjectValues("customers", this.getCustomers());
+        writer.writeCollectionOfObjectValues("dimensions", this.getDimensions());
+        writer.writeCollectionOfObjectValues("dimensionValues", this.getDimensionValues());
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("employees", this.getEmployees());
+        writer.writeCollectionOfObjectValues("generalLedgerEntries", this.getGeneralLedgerEntries());
+        writer.writeCollectionOfObjectValues("itemCategories", this.getItemCategories());
+        writer.writeCollectionOfObjectValues("items", this.getItems());
+        writer.writeCollectionOfObjectValues("journalLines", this.getJournalLines());
+        writer.writeCollectionOfObjectValues("journals", this.getJournals());
+        writer.writeStringValue("name", this.getName());
+        writer.writeCollectionOfObjectValues("paymentMethods", this.getPaymentMethods());
+        writer.writeCollectionOfObjectValues("paymentTerms", this.getPaymentTerms());
+        writer.writeCollectionOfObjectValues("picture", this.getPicture());
+        writer.writeCollectionOfObjectValues("purchaseInvoiceLines", this.getPurchaseInvoiceLines());
+        writer.writeCollectionOfObjectValues("purchaseInvoices", this.getPurchaseInvoices());
+        writer.writeCollectionOfObjectValues("salesCreditMemoLines", this.getSalesCreditMemoLines());
+        writer.writeCollectionOfObjectValues("salesCreditMemos", this.getSalesCreditMemos());
+        writer.writeCollectionOfObjectValues("salesInvoiceLines", this.getSalesInvoiceLines());
+        writer.writeCollectionOfObjectValues("salesInvoices", this.getSalesInvoices());
+        writer.writeCollectionOfObjectValues("salesOrderLines", this.getSalesOrderLines());
+        writer.writeCollectionOfObjectValues("salesOrders", this.getSalesOrders());
+        writer.writeCollectionOfObjectValues("salesQuoteLines", this.getSalesQuoteLines());
+        writer.writeCollectionOfObjectValues("salesQuotes", this.getSalesQuotes());
+        writer.writeCollectionOfObjectValues("shipmentMethods", this.getShipmentMethods());
+        writer.writeStringValue("systemVersion", this.getSystemVersion());
+        writer.writeCollectionOfObjectValues("taxAreas", this.getTaxAreas());
+        writer.writeCollectionOfObjectValues("taxGroups", this.getTaxGroups());
+        writer.writeCollectionOfObjectValues("unitsOfMeasure", this.getUnitsOfMeasure());
+        writer.writeCollectionOfObjectValues("vendors", this.getVendors());
+    }
+    /**
+     * Sets the accounts property value. The accounts property
+     * @param value Value to set for the accounts property.
+     * @return a void
+     */
+    public void setAccounts(@javax.annotation.Nullable final java.util.List<Account> value) {
+        this._accounts = value;
+    }
+    /**
+     * Sets the agedAccountsPayable property value. The agedAccountsPayable property
+     * @param value Value to set for the agedAccountsPayable property.
+     * @return a void
+     */
+    public void setAgedAccountsPayable(@javax.annotation.Nullable final java.util.List<AgedAccountsPayable> value) {
+        this._agedAccountsPayable = value;
+    }
+    /**
+     * Sets the agedAccountsReceivable property value. The agedAccountsReceivable property
+     * @param value Value to set for the agedAccountsReceivable property.
+     * @return a void
+     */
+    public void setAgedAccountsReceivable(@javax.annotation.Nullable final java.util.List<AgedAccountsReceivable> value) {
+        this._agedAccountsReceivable = value;
+    }
+    /**
+     * Sets the businessProfileId property value. The businessProfileId property
+     * @param value Value to set for the businessProfileId property.
+     * @return a void
+     */
+    public void setBusinessProfileId(@javax.annotation.Nullable final String value) {
+        this._businessProfileId = value;
+    }
+    /**
+     * Sets the companyInformation property value. The companyInformation property
+     * @param value Value to set for the companyInformation property.
+     * @return a void
+     */
+    public void setCompanyInformation(@javax.annotation.Nullable final java.util.List<CompanyInformation> value) {
+        this._companyInformation = value;
+    }
+    /**
+     * Sets the countriesRegions property value. The countriesRegions property
+     * @param value Value to set for the countriesRegions property.
+     * @return a void
+     */
+    public void setCountriesRegions(@javax.annotation.Nullable final java.util.List<CountryRegion> value) {
+        this._countriesRegions = value;
+    }
+    /**
+     * Sets the currencies property value. The currencies property
+     * @param value Value to set for the currencies property.
+     * @return a void
+     */
+    public void setCurrencies(@javax.annotation.Nullable final java.util.List<Currency> value) {
+        this._currencies = value;
+    }
+    /**
+     * Sets the customerPaymentJournals property value. The customerPaymentJournals property
+     * @param value Value to set for the customerPaymentJournals property.
+     * @return a void
+     */
+    public void setCustomerPaymentJournals(@javax.annotation.Nullable final java.util.List<CustomerPaymentJournal> value) {
+        this._customerPaymentJournals = value;
+    }
+    /**
+     * Sets the customerPayments property value. The customerPayments property
+     * @param value Value to set for the customerPayments property.
+     * @return a void
+     */
+    public void setCustomerPayments(@javax.annotation.Nullable final java.util.List<CustomerPayment> value) {
+        this._customerPayments = value;
+    }
+    /**
+     * Sets the customers property value. The customers property
+     * @param value Value to set for the customers property.
+     * @return a void
+     */
+    public void setCustomers(@javax.annotation.Nullable final java.util.List<Customer> value) {
+        this._customers = value;
+    }
+    /**
+     * Sets the dimensions property value. The dimensions property
+     * @param value Value to set for the dimensions property.
+     * @return a void
+     */
+    public void setDimensions(@javax.annotation.Nullable final java.util.List<Dimension> value) {
+        this._dimensions = value;
+    }
+    /**
+     * Sets the dimensionValues property value. The dimensionValues property
+     * @param value Value to set for the dimensionValues property.
+     * @return a void
+     */
+    public void setDimensionValues(@javax.annotation.Nullable final java.util.List<DimensionValue> value) {
+        this._dimensionValues = value;
+    }
+    /**
+     * Sets the displayName property value. The displayName property
+     * @param value Value to set for the displayName property.
+     * @return a void
+     */
+    public void setDisplayName(@javax.annotation.Nullable final String value) {
+        this._displayName = value;
+    }
+    /**
+     * Sets the employees property value. The employees property
+     * @param value Value to set for the employees property.
+     * @return a void
+     */
+    public void setEmployees(@javax.annotation.Nullable final java.util.List<Employee> value) {
+        this._employees = value;
+    }
+    /**
+     * Sets the generalLedgerEntries property value. The generalLedgerEntries property
+     * @param value Value to set for the generalLedgerEntries property.
+     * @return a void
+     */
+    public void setGeneralLedgerEntries(@javax.annotation.Nullable final java.util.List<GeneralLedgerEntry> value) {
+        this._generalLedgerEntries = value;
+    }
+    /**
+     * Sets the itemCategories property value. The itemCategories property
+     * @param value Value to set for the itemCategories property.
+     * @return a void
+     */
+    public void setItemCategories(@javax.annotation.Nullable final java.util.List<ItemCategory> value) {
+        this._itemCategories = value;
+    }
+    /**
+     * Sets the items property value. The items property
+     * @param value Value to set for the items property.
+     * @return a void
+     */
+    public void setItems(@javax.annotation.Nullable final java.util.List<Item> value) {
+        this._items = value;
+    }
+    /**
+     * Sets the journalLines property value. The journalLines property
+     * @param value Value to set for the journalLines property.
+     * @return a void
+     */
+    public void setJournalLines(@javax.annotation.Nullable final java.util.List<JournalLine> value) {
+        this._journalLines = value;
+    }
+    /**
+     * Sets the journals property value. The journals property
+     * @param value Value to set for the journals property.
+     * @return a void
+     */
+    public void setJournals(@javax.annotation.Nullable final java.util.List<Journal> value) {
+        this._journals = value;
+    }
+    /**
+     * Sets the name property value. The name property
+     * @param value Value to set for the name property.
+     * @return a void
+     */
+    public void setName(@javax.annotation.Nullable final String value) {
+        this._name = value;
+    }
+    /**
+     * Sets the paymentMethods property value. The paymentMethods property
+     * @param value Value to set for the paymentMethods property.
+     * @return a void
+     */
+    public void setPaymentMethods(@javax.annotation.Nullable final java.util.List<PaymentMethod> value) {
+        this._paymentMethods = value;
+    }
+    /**
+     * Sets the paymentTerms property value. The paymentTerms property
+     * @param value Value to set for the paymentTerms property.
+     * @return a void
+     */
+    public void setPaymentTerms(@javax.annotation.Nullable final java.util.List<PaymentTerm> value) {
+        this._paymentTerms = value;
+    }
+    /**
+     * Sets the picture property value. The picture property
+     * @param value Value to set for the picture property.
+     * @return a void
+     */
+    public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
+        this._picture = value;
+    }
+    /**
+     * Sets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
+     * @param value Value to set for the purchaseInvoiceLines property.
+     * @return a void
+     */
+    public void setPurchaseInvoiceLines(@javax.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
+        this._purchaseInvoiceLines = value;
+    }
+    /**
+     * Sets the purchaseInvoices property value. The purchaseInvoices property
+     * @param value Value to set for the purchaseInvoices property.
+     * @return a void
+     */
+    public void setPurchaseInvoices(@javax.annotation.Nullable final java.util.List<PurchaseInvoice> value) {
+        this._purchaseInvoices = value;
+    }
+    /**
+     * Sets the salesCreditMemoLines property value. The salesCreditMemoLines property
+     * @param value Value to set for the salesCreditMemoLines property.
+     * @return a void
+     */
+    public void setSalesCreditMemoLines(@javax.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
+        this._salesCreditMemoLines = value;
+    }
+    /**
+     * Sets the salesCreditMemos property value. The salesCreditMemos property
+     * @param value Value to set for the salesCreditMemos property.
+     * @return a void
+     */
+    public void setSalesCreditMemos(@javax.annotation.Nullable final java.util.List<SalesCreditMemo> value) {
+        this._salesCreditMemos = value;
+    }
+    /**
+     * Sets the salesInvoiceLines property value. The salesInvoiceLines property
+     * @param value Value to set for the salesInvoiceLines property.
+     * @return a void
+     */
+    public void setSalesInvoiceLines(@javax.annotation.Nullable final java.util.List<SalesInvoiceLine> value) {
+        this._salesInvoiceLines = value;
+    }
+    /**
+     * Sets the salesInvoices property value. The salesInvoices property
+     * @param value Value to set for the salesInvoices property.
+     * @return a void
+     */
+    public void setSalesInvoices(@javax.annotation.Nullable final java.util.List<SalesInvoice> value) {
+        this._salesInvoices = value;
+    }
+    /**
+     * Sets the salesOrderLines property value. The salesOrderLines property
+     * @param value Value to set for the salesOrderLines property.
+     * @return a void
+     */
+    public void setSalesOrderLines(@javax.annotation.Nullable final java.util.List<SalesOrderLine> value) {
+        this._salesOrderLines = value;
+    }
+    /**
+     * Sets the salesOrders property value. The salesOrders property
+     * @param value Value to set for the salesOrders property.
+     * @return a void
+     */
+    public void setSalesOrders(@javax.annotation.Nullable final java.util.List<SalesOrder> value) {
+        this._salesOrders = value;
+    }
+    /**
+     * Sets the salesQuoteLines property value. The salesQuoteLines property
+     * @param value Value to set for the salesQuoteLines property.
+     * @return a void
+     */
+    public void setSalesQuoteLines(@javax.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
+        this._salesQuoteLines = value;
+    }
+    /**
+     * Sets the salesQuotes property value. The salesQuotes property
+     * @param value Value to set for the salesQuotes property.
+     * @return a void
+     */
+    public void setSalesQuotes(@javax.annotation.Nullable final java.util.List<SalesQuote> value) {
+        this._salesQuotes = value;
+    }
+    /**
+     * Sets the shipmentMethods property value. The shipmentMethods property
+     * @param value Value to set for the shipmentMethods property.
+     * @return a void
+     */
+    public void setShipmentMethods(@javax.annotation.Nullable final java.util.List<ShipmentMethod> value) {
+        this._shipmentMethods = value;
+    }
+    /**
+     * Sets the systemVersion property value. The systemVersion property
+     * @param value Value to set for the systemVersion property.
+     * @return a void
+     */
+    public void setSystemVersion(@javax.annotation.Nullable final String value) {
+        this._systemVersion = value;
+    }
+    /**
+     * Sets the taxAreas property value. The taxAreas property
+     * @param value Value to set for the taxAreas property.
+     * @return a void
+     */
+    public void setTaxAreas(@javax.annotation.Nullable final java.util.List<TaxArea> value) {
+        this._taxAreas = value;
+    }
+    /**
+     * Sets the taxGroups property value. The taxGroups property
+     * @param value Value to set for the taxGroups property.
+     * @return a void
+     */
+    public void setTaxGroups(@javax.annotation.Nullable final java.util.List<TaxGroup> value) {
+        this._taxGroups = value;
+    }
+    /**
+     * Sets the unitsOfMeasure property value. The unitsOfMeasure property
+     * @param value Value to set for the unitsOfMeasure property.
+     * @return a void
+     */
+    public void setUnitsOfMeasure(@javax.annotation.Nullable final java.util.List<UnitOfMeasure> value) {
+        this._unitsOfMeasure = value;
+    }
+    /**
+     * Sets the vendors property value. The vendors property
+     * @param value Value to set for the vendors property.
+     * @return a void
+     */
+    public void setVendors(@javax.annotation.Nullable final java.util.List<Vendor> value) {
+        this._vendors = value;
     }
 }

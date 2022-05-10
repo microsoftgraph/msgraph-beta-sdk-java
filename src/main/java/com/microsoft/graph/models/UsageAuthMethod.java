@@ -1,62 +1,43 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Usage Auth Method.
-*/
-public enum UsageAuthMethod
-{
-    /**
-    * email
-    */
-    EMAIL,
-    /**
-    * mobile SMS
-    */
-    MOBILE_SMS,
-    /**
-    * mobile Call
-    */
-    MOBILE_CALL,
-    /**
-    * office Phone
-    */
-    OFFICE_PHONE,
-    /**
-    * security Question
-    */
-    SECURITY_QUESTION,
-    /**
-    * app Notification
-    */
-    APP_NOTIFICATION,
-    /**
-    * app Code
-    */
-    APP_CODE,
-    /**
-    * alternate Mobile Call
-    */
-    ALTERNATE_MOBILE_CALL,
-    /**
-    * fido
-    */
-    FIDO,
-    /**
-    * app Password
-    */
-    APP_PASSWORD,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For UsageAuthMethod values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the reportRoot singleton. */
+public enum UsageAuthMethod implements ValuedEnum {
+    Email("email"),
+    MobileSMS("mobileSMS"),
+    MobileCall("mobileCall"),
+    OfficePhone("officePhone"),
+    SecurityQuestion("securityQuestion"),
+    AppNotification("appNotification"),
+    AppCode("appCode"),
+    AlternateMobileCall("alternateMobileCall"),
+    Fido("fido"),
+    AppPassword("appPassword"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    UsageAuthMethod(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static UsageAuthMethod forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "email": return Email;
+            case "mobileSMS": return MobileSMS;
+            case "mobileCall": return MobileCall;
+            case "officePhone": return OfficePhone;
+            case "securityQuestion": return SecurityQuestion;
+            case "appNotification": return AppNotification;
+            case "appCode": return AppCode;
+            case "alternateMobileCall": return AlternateMobileCall;
+            case "fido": return Fido;
+            case "appPassword": return AppPassword;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

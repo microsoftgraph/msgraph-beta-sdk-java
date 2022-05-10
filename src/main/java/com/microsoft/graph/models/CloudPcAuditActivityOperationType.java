@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Cloud Pc Audit Activity Operation Type.
-*/
-public enum CloudPcAuditActivityOperationType
-{
-    /**
-    * create
-    */
-    CREATE,
-    /**
-    * delete
-    */
-    DELETE,
-    /**
-    * patch
-    */
-    PATCH,
-    /**
-    * other
-    */
-    OTHER,
-    /**
-    * For CloudPcAuditActivityOperationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum CloudPcAuditActivityOperationType implements ValuedEnum {
+    Create("create"),
+    Delete("delete"),
+    Patch("patch"),
+    Other("other");
+    public final String value;
+    CloudPcAuditActivityOperationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CloudPcAuditActivityOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "create": return Create;
+            case "delete": return Delete;
+            case "patch": return Patch;
+            case "other": return Other;
+            default: return null;
+        }
+    }
 }

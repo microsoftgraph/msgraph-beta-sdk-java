@@ -1,54 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teams Async Operation Type.
-*/
-public enum TeamsAsyncOperationType
-{
-    /**
-    * invalid
-    */
-    INVALID,
-    /**
-    * clone Team
-    */
-    CLONE_TEAM,
-    /**
-    * archive Team
-    */
-    ARCHIVE_TEAM,
-    /**
-    * unarchive Team
-    */
-    UNARCHIVE_TEAM,
-    /**
-    * create Team
-    */
-    CREATE_TEAM,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * teamify Group
-    */
-    TEAMIFY_GROUP,
-    /**
-    * create Channel
-    */
-    CREATE_CHANNEL,
-    /**
-    * create Chat
-    */
-    CREATE_CHAT,
-    /**
-    * For TeamsAsyncOperationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of chat entities. */
+public enum TeamsAsyncOperationType implements ValuedEnum {
+    Invalid("invalid"),
+    CloneTeam("cloneTeam"),
+    ArchiveTeam("archiveTeam"),
+    UnarchiveTeam("unarchiveTeam"),
+    CreateTeam("createTeam"),
+    UnknownFutureValue("unknownFutureValue"),
+    TeamifyGroup("teamifyGroup"),
+    CreateChannel("createChannel"),
+    CreateChat("createChat");
+    public final String value;
+    TeamsAsyncOperationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamsAsyncOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "invalid": return Invalid;
+            case "cloneTeam": return CloneTeam;
+            case "archiveTeam": return ArchiveTeam;
+            case "unarchiveTeam": return UnarchiveTeam;
+            case "createTeam": return CreateTeam;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "teamifyGroup": return TeamifyGroup;
+            case "createChannel": return CreateChannel;
+            case "createChat": return CreateChat;
+            default: return null;
+        }
+    }
 }

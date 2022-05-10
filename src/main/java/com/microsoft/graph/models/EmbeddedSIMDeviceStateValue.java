@@ -1,50 +1,45 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Embedded SIMDevice State Value.
-*/
-public enum EmbeddedSIMDeviceStateValue
-{
-    /**
-    * not Evaluated
-    */
-    NOT_EVALUATED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * installing
-    */
-    INSTALLING,
-    /**
-    * installed
-    */
-    INSTALLED,
-    /**
-    * deleting
-    */
-    DELETING,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * deleted
-    */
-    DELETED,
-    /**
-    * removed By User
-    */
-    REMOVED_BY_USER,
-    /**
-    * For EmbeddedSIMDeviceStateValue values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum EmbeddedSIMDeviceStateValue implements ValuedEnum {
+    /** Designates that the embedded SIM activation code is free and available to be assigned to a device. */
+    NotEvaluated("notEvaluated"),
+    /** Designates that Intune Service failed to deliver this profile to a device. */
+    Failed("failed"),
+    /** Designates that the embedded SIM activation code has been assigned to a device and the device is installing the token. */
+    Installing("installing"),
+    /** Designates that the embedded SIM activation code has been successfully installed on the target device. */
+    Installed("installed"),
+    /** Designates that Intune Service is trying to delete the profile from the device. */
+    Deleting("deleting"),
+    /** Designates that there is error with this profile. */
+    Error("error"),
+    /** Designates that the profile is deleted from the device. */
+    Deleted("deleted"),
+    /** Designates that the profile is removed from the device by the user */
+    RemovedByUser("removedByUser");
+    public final String value;
+    EmbeddedSIMDeviceStateValue(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static EmbeddedSIMDeviceStateValue forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notEvaluated": return NotEvaluated;
+            case "failed": return Failed;
+            case "installing": return Installing;
+            case "installed": return Installed;
+            case "deleting": return Deleting;
+            case "error": return Error;
+            case "deleted": return Deleted;
+            case "removedByUser": return RemovedByUser;
+            default: return null;
+        }
+    }
 }

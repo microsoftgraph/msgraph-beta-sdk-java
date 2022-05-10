@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Android For Work App Configuration Schema Item Data Type.
-*/
-public enum AndroidForWorkAppConfigurationSchemaItemDataType
-{
-    /**
-    * bool
-    */
-    BOOL,
-    /**
-    * integer
-    */
-    INTEGER,
-    /**
-    * string
-    */
-    STRING,
-    /**
-    * choice
-    */
-    CHOICE,
-    /**
-    * multiselect
-    */
-    MULTISELECT,
-    /**
-    * bundle
-    */
-    BUNDLE,
-    /**
-    * bundle Array
-    */
-    BUNDLE_ARRAY,
-    /**
-    * hidden
-    */
-    HIDDEN,
-    /**
-    * For AndroidForWorkAppConfigurationSchemaItemDataType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum AndroidForWorkAppConfigurationSchemaItemDataType implements ValuedEnum {
+    Bool("bool"),
+    Integer("integer"),
+    String("string"),
+    Choice("choice"),
+    Multiselect("multiselect"),
+    Bundle("bundle"),
+    BundleArray("bundleArray"),
+    Hidden("hidden");
+    public final String value;
+    AndroidForWorkAppConfigurationSchemaItemDataType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AndroidForWorkAppConfigurationSchemaItemDataType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "bool": return Bool;
+            case "integer": return Integer;
+            case "string": return String;
+            case "choice": return Choice;
+            case "multiselect": return Multiselect;
+            case "bundle": return Bundle;
+            case "bundleArray": return BundleArray;
+            case "hidden": return Hidden;
+            default: return null;
+        }
+    }
 }

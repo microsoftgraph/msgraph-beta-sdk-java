@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Ndes Connector State.
-*/
-public enum NdesConnectorState
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * active
-    */
-    ACTIVE,
-    /**
-    * inactive
-    */
-    INACTIVE,
-    /**
-    * For NdesConnectorState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum NdesConnectorState implements ValuedEnum {
+    /** State not available yet for this connector. */
+    None("none"),
+    /** Ndes connector has connected recently */
+    Active("active"),
+    /** No recent activity for the Ndes connector */
+    Inactive("inactive");
+    public final String value;
+    NdesConnectorState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static NdesConnectorState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "active": return Active;
+            case "inactive": return Inactive;
+            default: return null;
+        }
+    }
 }

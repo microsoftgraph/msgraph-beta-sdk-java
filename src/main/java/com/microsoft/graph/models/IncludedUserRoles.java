@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Included User Roles.
-*/
-public enum IncludedUserRoles
-{
-    /**
-    * all
-    */
-    ALL,
-    /**
-    * privileged Admin
-    */
-    PRIVILEGED_ADMIN,
-    /**
-    * admin
-    */
-    ADMIN,
-    /**
-    * user
-    */
-    USER,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For IncludedUserRoles values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the usersRegisteredByFeature method. */
+public enum IncludedUserRoles implements ValuedEnum {
+    All("all"),
+    PrivilegedAdmin("privilegedAdmin"),
+    Admin("admin"),
+    User("user"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    IncludedUserRoles(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static IncludedUserRoles forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "all": return All;
+            case "privilegedAdmin": return PrivilegedAdmin;
+            case "admin": return Admin;
+            case "user": return User;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

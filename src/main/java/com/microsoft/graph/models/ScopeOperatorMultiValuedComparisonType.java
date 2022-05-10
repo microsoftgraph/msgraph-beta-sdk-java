@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Scope Operator Multi Valued Comparison Type.
-*/
-public enum ScopeOperatorMultiValuedComparisonType
-{
-    /**
-    * All
-    */
-    ALL,
-    /**
-    * Any
-    */
-    ANY,
-    /**
-    * For ScopeOperatorMultiValuedComparisonType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the filterOperators method. */
+public enum ScopeOperatorMultiValuedComparisonType implements ValuedEnum {
+    All("All"),
+    Any("Any");
+    public final String value;
+    ScopeOperatorMultiValuedComparisonType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ScopeOperatorMultiValuedComparisonType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "All": return All;
+            case "Any": return Any;
+            default: return null;
+        }
+    }
 }

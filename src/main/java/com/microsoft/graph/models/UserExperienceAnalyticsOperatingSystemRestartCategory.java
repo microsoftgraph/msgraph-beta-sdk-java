@@ -1,54 +1,48 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum User Experience Analytics Operating System Restart Category.
-*/
-public enum UserExperienceAnalyticsOperatingSystemRestartCategory
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * restart With Update
-    */
-    RESTART_WITH_UPDATE,
-    /**
-    * restart Without Update
-    */
-    RESTART_WITHOUT_UPDATE,
-    /**
-    * blue Screen
-    */
-    BLUE_SCREEN,
-    /**
-    * shutdown With Update
-    */
-    SHUTDOWN_WITH_UPDATE,
-    /**
-    * shutdown Without Update
-    */
-    SHUTDOWN_WITHOUT_UPDATE,
-    /**
-    * long Power Button Press
-    */
-    LONG_POWER_BUTTON_PRESS,
-    /**
-    * boot Error
-    */
-    BOOT_ERROR,
-    /**
-    * update
-    */
-    UPDATE,
-    /**
-    * For UserExperienceAnalyticsOperatingSystemRestartCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum UserExperienceAnalyticsOperatingSystemRestartCategory implements ValuedEnum {
+    /** Unknown */
+    Unknown("unknown"),
+    /** Restart with update */
+    RestartWithUpdate("restartWithUpdate"),
+    /** Restart without update */
+    RestartWithoutUpdate("restartWithoutUpdate"),
+    /** Blue screen restart */
+    BlueScreen("blueScreen"),
+    /** Shutdown with update */
+    ShutdownWithUpdate("shutdownWithUpdate"),
+    /** Shutdown without update */
+    ShutdownWithoutUpdate("shutdownWithoutUpdate"),
+    /** Long power button press */
+    LongPowerButtonPress("longPowerButtonPress"),
+    /** Boot error */
+    BootError("bootError"),
+    /** Update */
+    Update("update");
+    public final String value;
+    UserExperienceAnalyticsOperatingSystemRestartCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static UserExperienceAnalyticsOperatingSystemRestartCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "restartWithUpdate": return RestartWithUpdate;
+            case "restartWithoutUpdate": return RestartWithoutUpdate;
+            case "blueScreen": return BlueScreen;
+            case "shutdownWithUpdate": return ShutdownWithUpdate;
+            case "shutdownWithoutUpdate": return ShutdownWithoutUpdate;
+            case "longPowerButtonPress": return LongPowerButtonPress;
+            case "bootError": return BootError;
+            case "update": return Update;
+            default: return null;
+        }
+    }
 }

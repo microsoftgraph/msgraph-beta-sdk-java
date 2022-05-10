@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Time Card State.
-*/
-public enum TimeCardState
-{
-    /**
-    * clocked In
-    */
-    CLOCKED_IN,
-    /**
-    * on Break
-    */
-    ON_BREAK,
-    /**
-    * clocked Out
-    */
-    CLOCKED_OUT,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TimeCardState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum TimeCardState implements ValuedEnum {
+    ClockedIn("clockedIn"),
+    OnBreak("onBreak"),
+    ClockedOut("clockedOut"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TimeCardState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TimeCardState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "clockedIn": return ClockedIn;
+            case "onBreak": return OnBreak;
+            case "clockedOut": return ClockedOut;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

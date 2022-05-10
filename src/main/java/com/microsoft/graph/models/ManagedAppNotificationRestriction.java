@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed App Notification Restriction.
-*/
-public enum ManagedAppNotificationRestriction
-{
-    /**
-    * allow
-    */
-    ALLOW,
-    /**
-    * block Organizational Data
-    */
-    BLOCK_ORGANIZATIONAL_DATA,
-    /**
-    * block
-    */
-    BLOCK,
-    /**
-    * For ManagedAppNotificationRestriction values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum ManagedAppNotificationRestriction implements ValuedEnum {
+    /** Share all notifications. */
+    Allow("allow"),
+    /** Do not share Orgnizational data in notifications. */
+    BlockOrganizationalData("blockOrganizationalData"),
+    /** Do not share notifications. */
+    Block("block");
+    public final String value;
+    ManagedAppNotificationRestriction(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedAppNotificationRestriction forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "allow": return Allow;
+            case "blockOrganizationalData": return BlockOrganizationalData;
+            case "block": return Block;
+            default: return null;
+        }
+    }
 }

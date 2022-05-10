@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Federated Idp Mfa Behavior.
-*/
-public enum FederatedIdpMfaBehavior
-{
-    /**
-    * accept If Mfa Done By Federated Idp
-    */
-    ACCEPT_IF_MFA_DONE_BY_FEDERATED_IDP,
-    /**
-    * enforce Mfa By Federated Idp
-    */
-    ENFORCE_MFA_BY_FEDERATED_IDP,
-    /**
-    * reject Mfa By Federated Idp
-    */
-    REJECT_MFA_BY_FEDERATED_IDP,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For FederatedIdpMfaBehavior values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of domain entities. */
+public enum FederatedIdpMfaBehavior implements ValuedEnum {
+    AcceptIfMfaDoneByFederatedIdp("acceptIfMfaDoneByFederatedIdp"),
+    EnforceMfaByFederatedIdp("enforceMfaByFederatedIdp"),
+    RejectMfaByFederatedIdp("rejectMfaByFederatedIdp"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    FederatedIdpMfaBehavior(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static FederatedIdpMfaBehavior forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "acceptIfMfaDoneByFederatedIdp": return AcceptIfMfaDoneByFederatedIdp;
+            case "enforceMfaByFederatedIdp": return EnforceMfaByFederatedIdp;
+            case "rejectMfaByFederatedIdp": return RejectMfaByFederatedIdp;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

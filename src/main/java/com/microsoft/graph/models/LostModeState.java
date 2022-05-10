@@ -1,26 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Lost Mode State.
-*/
-public enum LostModeState
-{
-    /**
-    * disabled
-    */
-    DISABLED,
-    /**
-    * enabled
-    */
-    ENABLED,
-    /**
-    * For LostModeState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum LostModeState implements ValuedEnum {
+    /** Lost mode is disabled. */
+    Disabled("disabled"),
+    /** Lost mode is enabled. */
+    Enabled("enabled");
+    public final String value;
+    LostModeState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static LostModeState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "disabled": return Disabled;
+            case "enabled": return Enabled;
+            default: return null;
+        }
+    }
 }

@@ -1,126 +1,102 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Type.
-*/
-public enum DeviceType
-{
-    /**
-    * desktop
-    */
-    DESKTOP,
-    /**
-    * windows RT
-    */
-    WINDOWS_RT,
-    /**
-    * win MO6
-    */
-    WIN_MO6,
-    /**
-    * nokia
-    */
-    NOKIA,
-    /**
-    * windows Phone
-    */
-    WINDOWS_PHONE,
-    /**
-    * mac
-    */
-    MAC,
-    /**
-    * win CE
-    */
-    WIN_CE,
-    /**
-    * win Embedded
-    */
-    WIN_EMBEDDED,
-    /**
-    * i Phone
-    */
-    I_PHONE,
-    /**
-    * i Pad
-    */
-    I_PAD,
-    /**
-    * i Pod
-    */
-    I_POD,
-    /**
-    * android
-    */
-    ANDROID,
-    /**
-    * i Soc Consumer
-    */
-    I_SOC_CONSUMER,
-    /**
-    * unix
-    */
-    UNIX,
-    /**
-    * mac MDM
-    */
-    MAC_MDM,
-    /**
-    * holo Lens
-    */
-    HOLO_LENS,
-    /**
-    * surface Hub
-    */
-    SURFACE_HUB,
-    /**
-    * android For Work
-    */
-    ANDROID_FOR_WORK,
-    /**
-    * android Enterprise
-    */
-    ANDROID_ENTERPRISE,
-    /**
-    * windows10x
-    */
-    WINDOWS10X,
-    /**
-    * androidn GMS
-    */
-    ANDROIDN_GMS,
-    /**
-    * chrome OS
-    */
-    CHROME_OS,
-    /**
-    * linux
-    */
-    LINUX,
-    /**
-    * blackberry
-    */
-    BLACKBERRY,
-    /**
-    * palm
-    */
-    PALM,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * cloud PC
-    */
-    CLOUD_PC,
-    /**
-    * For DeviceType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the compliance singleton. */
+public enum DeviceType implements ValuedEnum {
+    /** Desktop. */
+    Desktop("desktop"),
+    /** WindowsRT. */
+    WindowsRT("windowsRT"),
+    /** WinMO6. */
+    WinMO6("winMO6"),
+    /** Nokia. */
+    Nokia("nokia"),
+    /** Windows phone. */
+    WindowsPhone("windowsPhone"),
+    /** Mac. */
+    Mac("mac"),
+    /** WinCE. */
+    WinCE("winCE"),
+    /** WinEmbedded. */
+    WinEmbedded("winEmbedded"),
+    /** iPhone. */
+    IPhone("iPhone"),
+    /** iPad. */
+    IPad("iPad"),
+    /** iPodTouch. */
+    IPod("iPod"),
+    /** Android. */
+    Android("android"),
+    /** iSocConsumer. */
+    ISocConsumer("iSocConsumer"),
+    /** Unix. */
+    Unix("unix"),
+    /** Mac OS X client using built in MDM agent. */
+    MacMDM("macMDM"),
+    /** Representing the fancy Windows 10 goggles. */
+    HoloLens("holoLens"),
+    /** Surface HUB device. */
+    SurfaceHub("surfaceHub"),
+    /** Android for work device. */
+    AndroidForWork("androidForWork"),
+    /** Android enterprise device. */
+    AndroidEnterprise("androidEnterprise"),
+    /** Windows 10x device. */
+    Windows10x("windows10x"),
+    /** Android non Google managed device. */
+    AndroidnGMS("androidnGMS"),
+    /** ChromeOS device. */
+    ChromeOS("chromeOS"),
+    /** Linux device. */
+    Linux("linux"),
+    /** Blackberry. */
+    Blackberry("blackberry"),
+    /** Palm. */
+    Palm("palm"),
+    /** Represents that the device type is unknown. */
+    Unknown("unknown"),
+    /** Cloud PC device. */
+    CloudPC("cloudPC");
+    public final String value;
+    DeviceType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "desktop": return Desktop;
+            case "windowsRT": return WindowsRT;
+            case "winMO6": return WinMO6;
+            case "nokia": return Nokia;
+            case "windowsPhone": return WindowsPhone;
+            case "mac": return Mac;
+            case "winCE": return WinCE;
+            case "winEmbedded": return WinEmbedded;
+            case "iPhone": return IPhone;
+            case "iPad": return IPad;
+            case "iPod": return IPod;
+            case "android": return Android;
+            case "iSocConsumer": return ISocConsumer;
+            case "unix": return Unix;
+            case "macMDM": return MacMDM;
+            case "holoLens": return HoloLens;
+            case "surfaceHub": return SurfaceHub;
+            case "androidForWork": return AndroidForWork;
+            case "androidEnterprise": return AndroidEnterprise;
+            case "windows10x": return Windows10x;
+            case "androidnGMS": return AndroidnGMS;
+            case "chromeOS": return ChromeOS;
+            case "linux": return Linux;
+            case "blackberry": return Blackberry;
+            case "palm": return Palm;
+            case "unknown": return Unknown;
+            case "cloudPC": return CloudPC;
+            default: return null;
+        }
+    }
 }
