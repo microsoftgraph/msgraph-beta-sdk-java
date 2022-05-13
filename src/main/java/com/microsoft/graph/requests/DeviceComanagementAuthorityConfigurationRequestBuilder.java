@@ -94,6 +94,15 @@ public class DeviceComanagementAuthorityConfigurationRequestBuilder extends Base
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     */
+    @Nonnull
+    public DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
+        return new DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createEnrollmentNotificationConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull

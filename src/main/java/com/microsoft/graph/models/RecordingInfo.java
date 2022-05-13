@@ -51,7 +51,7 @@ public class RecordingInfo implements IJsonBackedObject {
 
     /**
      * The Initiator.
-     * The identities of the recording initiator.
+     * The identities of recording initiator.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

@@ -80,7 +80,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * The settings on this site. Returned only on $select. Read-only.
+     * The settings on this site. Read-only.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -159,7 +159,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection cannot be enumerated.
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -213,7 +213,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Term Store.
-     * The default termStore under this site.
+     * The termStore under this site.
      */
     @SerializedName(value = "termStore", alternate = {"TermStore"})
     @Expose

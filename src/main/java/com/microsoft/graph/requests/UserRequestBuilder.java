@@ -137,6 +137,7 @@ import com.microsoft.graph.models.UserGetMailTipsParameterSet;
 import com.microsoft.graph.models.UserSendMailParameterSet;
 import com.microsoft.graph.models.UserTranslateExchangeIdsParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationByDeviceTagParameterSet;
+import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByAzureAdDeviceIdParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByDeviceTagParameterSet;
 import com.microsoft.graph.models.UserExportPersonalDataParameterSet;
 import com.microsoft.graph.models.UserFindRoomsParameterSet;
@@ -1891,6 +1892,16 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public UserWipeManagedAppRegistrationByDeviceTagRequestBuilder wipeManagedAppRegistrationByDeviceTag(@Nonnull final UserWipeManagedAppRegistrationByDeviceTagParameterSet parameters) {
         return new UserWipeManagedAppRegistrationByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationByDeviceTag"), getClient(), null, parameters);
+    }
+
+    /**
+     * Issues a wipe operation on an app registration with specified aad device Id.
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserWipeManagedAppRegistrationsByAzureAdDeviceIdRequestBuilder wipeManagedAppRegistrationsByAzureAdDeviceId(@Nonnull final UserWipeManagedAppRegistrationsByAzureAdDeviceIdParameterSet parameters) {
+        return new UserWipeManagedAppRegistrationsByAzureAdDeviceIdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId"), getClient(), null, parameters);
     }
 
     /**
