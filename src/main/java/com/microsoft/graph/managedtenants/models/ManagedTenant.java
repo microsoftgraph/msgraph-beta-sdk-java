@@ -26,6 +26,7 @@ import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObj
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
+import com.microsoft.graph.managedtenants.models.MyRole;
 import com.microsoft.graph.managedtenants.models.TenantGroup;
 import com.microsoft.graph.managedtenants.models.Tenant;
 import com.microsoft.graph.managedtenants.models.TenantCustomizedInformation;
@@ -51,6 +52,7 @@ import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionO
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage;
+import com.microsoft.graph.managedtenants.requests.MyRoleCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionPage;
@@ -228,6 +230,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     public ManagementTemplateStepVersionCollectionPage managementTemplateStepVersions;
 
     /**
+     * The My Roles.
+     * 
+     */
+    @SerializedName(value = "myRoles", alternate = {"MyRoles"})
+    @Expose
+	@Nullable
+    public MyRoleCollectionPage myRoles;
+
+    /**
      * The Tenant Groups.
      * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      */
@@ -366,6 +377,10 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
         if (json.has("managementTemplateStepVersions")) {
             managementTemplateStepVersions = serializer.deserializeObject(json.get("managementTemplateStepVersions"), ManagementTemplateStepVersionCollectionPage.class);
+        }
+
+        if (json.has("myRoles")) {
+            myRoles = serializer.deserializeObject(json.get("myRoles"), MyRoleCollectionPage.class);
         }
 
         if (json.has("tenantGroups")) {

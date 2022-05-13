@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.WindowsAutopilotProfileAssignmentDetailedStatus;
 import com.microsoft.graph.models.WindowsAutopilotProfileAssignmentStatus;
 import com.microsoft.graph.models.EnrollmentState;
+import com.microsoft.graph.models.WindowsAutopilotDeviceRemediationState;
 import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.Entity;
 
@@ -121,7 +122,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Enrollment State.
-     * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted.
+     * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
@@ -190,6 +191,24 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     @Expose
 	@Nullable
     public String purchaseOrderIdentifier;
+
+    /**
+     * The Remediation State.
+     * Device Remediation State. Possible values are: unknown, noRemediationRequired, automaticRemediationRequired, manualRemediationRequired, unknownFutureValue.
+     */
+    @SerializedName(value = "remediationState", alternate = {"RemediationState"})
+    @Expose
+	@Nullable
+    public WindowsAutopilotDeviceRemediationState remediationState;
+
+    /**
+     * The Remediation State Last Modified Date Time.
+     * RemediationState set time of Autopilot device.
+     */
+    @SerializedName(value = "remediationStateLastModifiedDateTime", alternate = {"RemediationStateLastModifiedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime remediationStateLastModifiedDateTime;
 
     /**
      * The Resource Name.

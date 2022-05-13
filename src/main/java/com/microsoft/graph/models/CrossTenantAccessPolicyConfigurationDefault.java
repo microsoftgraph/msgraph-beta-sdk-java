@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationBase;
+import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
+import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
+import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,8 +24,53 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Cross Tenant Access Policy Configuration Default.
  */
-public class CrossTenantAccessPolicyConfigurationDefault extends CrossTenantAccessPolicyConfigurationBase implements IJsonBackedObject {
+public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The B2b Collaboration Inbound.
+     * Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     */
+    @SerializedName(value = "b2bCollaborationInbound", alternate = {"B2bCollaborationInbound"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
+
+    /**
+     * The B2b Collaboration Outbound.
+     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     */
+    @SerializedName(value = "b2bCollaborationOutbound", alternate = {"B2bCollaborationOutbound"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
+
+    /**
+     * The B2b Direct Connect Inbound.
+     * Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
+     */
+    @SerializedName(value = "b2bDirectConnectInbound", alternate = {"B2bDirectConnectInbound"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
+
+    /**
+     * The B2b Direct Connect Outbound.
+     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     */
+    @SerializedName(value = "b2bDirectConnectOutbound", alternate = {"B2bDirectConnectOutbound"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
+
+    /**
+     * The Inbound Trust.
+     * Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     */
+    @SerializedName(value = "inboundTrust", alternate = {"InboundTrust"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyInboundTrust inboundTrust;
 
     /**
      * The Is Service Default.

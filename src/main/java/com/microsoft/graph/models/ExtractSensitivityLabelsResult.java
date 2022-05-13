@@ -41,7 +41,7 @@ public class ExtractSensitivityLabelsResult implements IJsonBackedObject {
 
     /**
      * The Labels.
-     * 
+     * List of sensitivity labels assigned to a file.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
