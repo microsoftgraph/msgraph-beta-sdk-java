@@ -11,6 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.47.0] - 2022-05-12
+
+### Added
+ 
+- Added security features (models and requests) related to the Ediscovery-namespace to the Security-namespace.
+- Added models and requests to the ManagedTenants-namespace.
+- SignInConfirmation & SignInFrequency models and related requests. 
+- ZebraFoto models and related requests.  
+- DocumentSetVersion models and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Removed managementCondition models and related requests from the general microsoftGraph-namespace.
+- Updated dependencies of classes related to added models, added requests, and namespace updates.
+
 ## [0.46.0] - 2022-04-22
 
 ### Added
