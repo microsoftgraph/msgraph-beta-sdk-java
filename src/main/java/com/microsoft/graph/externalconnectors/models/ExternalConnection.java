@@ -66,7 +66,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Ingested Items Count.
-     * 
+     * The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null.
      */
     @SerializedName(value = "ingestedItemsCount", alternate = {"IngestedItemsCount"})
     @Expose
@@ -129,7 +129,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Quota.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "quota", alternate = {"Quota"})
     @Expose

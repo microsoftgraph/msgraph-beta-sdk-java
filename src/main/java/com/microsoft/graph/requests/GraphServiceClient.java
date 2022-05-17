@@ -190,6 +190,7 @@ import com.microsoft.graph.requests.CommsApplicationRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
+import com.microsoft.graph.requests.StorageRequestBuilder;
 import com.microsoft.graph.requests.AdminRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -2265,6 +2266,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Storage
+     */
+    @Nonnull
+    public StorageRequestBuilder storage() {
+        return new StorageRequestBuilder(getServiceRoot() + "/storage", this, null);
     }
 
     /**

@@ -362,7 +362,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
@@ -371,7 +371,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
