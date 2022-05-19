@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.48.0] - 2022-05-19
+
+### Added
+ 
+- CloudPcForensicStorageAccount models and related requests. 
+- Storage model and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Updated models and requests related to the newly added CloudPcForensicsStorageAccount & Storage models, ie: CloudPcSnapshotCollectionRequestBuilder, GraphServiceClient, & ManagedDeviceBulkReprovisionCloudPcRequest. 
+
 ## [0.47.0] - 2022-05-12
 
 ### Added
