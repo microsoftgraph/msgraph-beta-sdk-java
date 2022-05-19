@@ -130,7 +130,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Activity.
-     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.
+     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020.
      */
     @SerializedName(value = "signInActivity", alternate = {"SignInActivity"})
     @Expose
@@ -157,7 +157,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Licenses.
-     * The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq and not).
+     * The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
      */
     @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
@@ -553,7 +553,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -616,7 +616,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
      */
     @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
