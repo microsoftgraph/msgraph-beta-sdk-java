@@ -10,8 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ConnectorGroup;
 import com.microsoft.graph.requests.ApplicationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.ApplicationWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConnectorRequestBuilder;
+import com.microsoft.graph.requests.ConnectorCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.ConnectorWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -86,8 +86,8 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder<ConnectorGr
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectorCollectionRequestBuilder members() {
-        return new ConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public ConnectorCollectionWithReferencesRequestBuilder members() {
+        return new ConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
@@ -97,7 +97,7 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder<ConnectorGr
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectorRequestBuilder members(@Nonnull final String id) {
-        return new ConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public ConnectorWithReferenceRequestBuilder members(@Nonnull final String id) {
+        return new ConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

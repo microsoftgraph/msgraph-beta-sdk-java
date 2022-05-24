@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DefaultMfaMethodType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class UserRegistrationDetails extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Default Mfa Method.
+     * 
+     */
+    @SerializedName(value = "defaultMfaMethod", alternate = {"DefaultMfaMethod"})
+    @Expose
+	@Nullable
+    public DefaultMfaMethodType defaultMfaMethod;
 
     /**
      * The Is Mfa Capable.

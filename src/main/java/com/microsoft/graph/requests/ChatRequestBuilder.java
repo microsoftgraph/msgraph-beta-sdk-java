@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder;
+import com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;
@@ -189,6 +191,26 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
     @Nonnull
     public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
         return new ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the PinnedChatMessageInfo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PinnedChatMessageInfoCollectionRequestBuilder pinnedMessages() {
+        return new PinnedChatMessageInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PinnedChatMessageInfo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PinnedChatMessageInfoRequestBuilder pinnedMessages(@Nonnull final String id) {
+        return new PinnedChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamsTab collection
