@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.B2cAuthenticationMethodsPolicy;
+import com.microsoft.graph.models.DeviceRegistrationPolicy;
 import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
@@ -102,6 +103,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public B2cAuthenticationMethodsPolicy b2cAuthenticationMethodsPolicy;
+
+    /**
+     * The Device Registration Policy.
+     * 
+     */
+    @SerializedName(value = "deviceRegistrationPolicy", alternate = {"DeviceRegistrationPolicy"})
+    @Expose
+	@Nullable
+    public DeviceRegistrationPolicy deviceRegistrationPolicy;
 
     /**
      * The Activity Based Timeout Policies.

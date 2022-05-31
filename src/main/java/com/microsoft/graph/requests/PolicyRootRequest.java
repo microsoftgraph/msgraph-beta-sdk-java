@@ -11,6 +11,7 @@ import com.microsoft.graph.models.PolicyRoot;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.B2cAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionRequestBuilder;

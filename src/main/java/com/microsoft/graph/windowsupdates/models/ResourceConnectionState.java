@@ -3,36 +3,32 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.models;
+package com.microsoft.graph.windowsupdates.models;
 
 
 /**
- * The Enum Delegated Admin Relationship Operation Status.
+ * The Enum Resource Connection State.
 */
-public enum DelegatedAdminRelationshipOperationStatus
+public enum ResourceConnectionState
 {
     /**
-    * not Started
+    * connected
     */
-    NOT_STARTED,
+    CONNECTED,
     /**
-    * running
+    * not Authorized
     */
-    RUNNING,
+    NOT_AUTHORIZED,
     /**
-    * complete
+    * not Found
     */
-    COMPLETE,
-    /**
-    * failed
-    */
-    FAILED,
+    NOT_FOUND,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For DelegatedAdminRelationshipOperationStatus values that were not expected from the service
+    * For ResourceConnectionState values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

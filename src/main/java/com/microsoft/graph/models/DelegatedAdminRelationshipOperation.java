@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.DelegatedAdminRelationshipOperationType;
-import com.microsoft.graph.models.DelegatedAdminRelationshipOperationStatus;
+import com.microsoft.graph.models.LongRunningOperationStatus;
 import com.microsoft.graph.models.Entity;
 
 
@@ -70,7 +70,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
 	@Nullable
-    public DelegatedAdminRelationshipOperationStatus status;
+    public LongRunningOperationStatus status;
 
 
     /**

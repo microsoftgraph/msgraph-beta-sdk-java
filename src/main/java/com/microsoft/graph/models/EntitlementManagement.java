@@ -53,7 +53,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignment Approvals.
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      */
     @SerializedName(value = "accessPackageAssignmentApprovals", alternate = {"AccessPackageAssignmentApprovals"})
     @Expose
@@ -89,7 +89,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignments.
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      */
     @SerializedName(value = "accessPackageAssignments", alternate = {"AccessPackageAssignments"})
     @Expose
@@ -98,7 +98,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Catalogs.
-     * Represents a group of access packages.
+     * A container of access packages.
      */
     @SerializedName(value = "accessPackageCatalogs", alternate = {"AccessPackageCatalogs"})
     @Expose

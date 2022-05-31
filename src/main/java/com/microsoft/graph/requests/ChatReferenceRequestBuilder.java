@@ -26,6 +26,8 @@ import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder;
+import com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;

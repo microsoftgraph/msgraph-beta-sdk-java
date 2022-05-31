@@ -158,6 +158,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime dueDateTime;
 
     /**
+     * The Feedback Resources Folder Url.
+     * 
+     */
+    @SerializedName(value = "feedbackResourcesFolderUrl", alternate = {"FeedbackResourcesFolderUrl"})
+    @Expose
+	@Nullable
+    public String feedbackResourcesFolderUrl;
+
+    /**
      * The Grading.
      * How the assignment will be graded.
      */

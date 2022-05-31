@@ -20,9 +20,9 @@ public enum DelegatedAdminRelationshipRequestStatus
     */
     PENDING,
     /**
-    * complete
+    * succeeded
     */
-    COMPLETE,
+    SUCCEEDED,
     /**
     * failed
     */
