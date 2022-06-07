@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics Regression Summary. */
 public class UserExperienceAnalyticsRegressionSummary extends Entity implements Parsable {
     /** The metric values for the user experience analytics Manufacturer regression. */
     private java.util.List<UserExperienceAnalyticsMetric> _manufacturerRegression;

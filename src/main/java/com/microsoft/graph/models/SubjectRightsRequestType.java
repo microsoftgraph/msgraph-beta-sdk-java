@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the subjectRightsRequests property of the microsoft.graph.security entity. */
+/** Provides operations to manage the privacy singleton. */
 public enum SubjectRightsRequestType implements ValuedEnum {
     Export("export"),
     Delete("delete"),

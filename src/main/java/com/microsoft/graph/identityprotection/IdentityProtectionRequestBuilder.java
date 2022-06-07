@@ -99,6 +99,7 @@ public class IdentityProtectionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityProtectionRequestBuilderGetRequestConfiguration requestConfig = new IdentityProtectionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics top impacting process entity. */
 public class UserExperienceAnalyticsImpactingProcess extends Entity implements Parsable {
     /** The category of impacting process. */
     private String _category;

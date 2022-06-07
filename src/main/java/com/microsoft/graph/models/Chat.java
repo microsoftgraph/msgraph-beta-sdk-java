@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class Chat extends Entity implements Parsable {
     /** Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue. */
     private ChatType _chatType;
@@ -29,6 +30,8 @@ public class Chat extends Entity implements Parsable {
     private java.util.List<TeamsAsyncOperation> _operations;
     /** A collection of permissions granted to apps for the chat. */
     private java.util.List<ResourceSpecificPermissionGrant> _permissionGrants;
+    /** A collection of all the pinned messages in the chat. Nullable. */
+    private java.util.List<PinnedChatMessageInfo> _pinnedMessages;
     /** A collection of all the tabs in the chat. Nullable. */
     private java.util.List<TeamsTab> _tabs;
     /** The identifier of the tenant in which the chat was created. Read-only. */
@@ -90,6 +93,7 @@ public class Chat extends Entity implements Parsable {
             this.put("onlineMeetingInfo", (n) -> { currentObject.setOnlineMeetingInfo(n.getObjectValue(TeamworkOnlineMeetingInfo::createFromDiscriminatorValue)); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(TeamsAsyncOperation::createFromDiscriminatorValue)); });
             this.put("permissionGrants", (n) -> { currentObject.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
+            this.put("pinnedMessages", (n) -> { currentObject.setPinnedMessages(n.getCollectionOfObjectValues(PinnedChatMessageInfo::createFromDiscriminatorValue)); });
             this.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
@@ -162,6 +166,14 @@ public class Chat extends Entity implements Parsable {
         return this._permissionGrants;
     }
     /**
+     * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
+     * @return a pinnedChatMessageInfo
+     */
+    @javax.annotation.Nullable
+    public java.util.List<PinnedChatMessageInfo> getPinnedMessages() {
+        return this._pinnedMessages;
+    }
+    /**
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
      * @return a teamsTab
      */
@@ -219,6 +231,7 @@ public class Chat extends Entity implements Parsable {
         writer.writeObjectValue("onlineMeetingInfo", this.getOnlineMeetingInfo());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("permissionGrants", this.getPermissionGrants());
+        writer.writeCollectionOfObjectValues("pinnedMessages", this.getPinnedMessages());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("topic", this.getTopic());
@@ -304,6 +317,14 @@ public class Chat extends Entity implements Parsable {
      */
     public void setPermissionGrants(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
         this._permissionGrants = value;
+    }
+    /**
+     * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
+     * @param value Value to set for the pinnedMessages property.
+     * @return a void
+     */
+    public void setPinnedMessages(@javax.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
+        this._pinnedMessages = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the chat. Nullable.

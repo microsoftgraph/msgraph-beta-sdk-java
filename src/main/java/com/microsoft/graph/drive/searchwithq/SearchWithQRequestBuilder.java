@@ -33,7 +33,7 @@ public class SearchWithQRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/drive/microsoft.graph.search(q='{q}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", q);
+        urlTplParams.put("q", q);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class SearchWithQRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SearchWithQRequestBuilderGetRequestConfiguration requestConfig = new SearchWithQRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

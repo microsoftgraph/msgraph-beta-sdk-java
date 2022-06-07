@@ -7,11 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a staff member who provides services in a business. */
 public class BookingStaffMember extends BookingPerson implements Parsable {
     /** True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking. */
     private Boolean _availabilityIsAffectedByPersonalCalendar;
     /** Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app. */
     private Integer _colorIndex;
+    /** The isEmailNotificationEnabled property */
+    private Boolean _isEmailNotificationEnabled;
     /** The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required. */
     private BookingStaffRole _role;
     /** The time zone of the staff member. For a list of possible values, see dateTimeTimeZone. */
@@ -63,11 +66,20 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("availabilityIsAffectedByPersonalCalendar", (n) -> { currentObject.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
             this.put("colorIndex", (n) -> { currentObject.setColorIndex(n.getIntegerValue()); });
+            this.put("isEmailNotificationEnabled", (n) -> { currentObject.setIsEmailNotificationEnabled(n.getBooleanValue()); });
             this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(BookingStaffRole.class)); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
             this.put("useBusinessHours", (n) -> { currentObject.setUseBusinessHours(n.getBooleanValue()); });
             this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsEmailNotificationEnabled() {
+        return this._isEmailNotificationEnabled;
     }
     /**
      * Gets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
@@ -111,6 +123,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         super.serialize(writer);
         writer.writeBooleanValue("availabilityIsAffectedByPersonalCalendar", this.getAvailabilityIsAffectedByPersonalCalendar());
         writer.writeIntegerValue("colorIndex", this.getColorIndex());
+        writer.writeBooleanValue("isEmailNotificationEnabled", this.getIsEmailNotificationEnabled());
         writer.writeEnumValue("role", this.getRole());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeBooleanValue("useBusinessHours", this.getUseBusinessHours());
@@ -131,6 +144,14 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     public void setColorIndex(@javax.annotation.Nullable final Integer value) {
         this._colorIndex = value;
+    }
+    /**
+     * Sets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * @param value Value to set for the isEmailNotificationEnabled property.
+     * @return a void
+     */
+    public void setIsEmailNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isEmailNotificationEnabled = value;
     }
     /**
      * Sets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.

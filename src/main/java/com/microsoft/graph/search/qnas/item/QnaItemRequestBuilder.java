@@ -99,6 +99,7 @@ public class QnaItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final QnaItemRequestBuilderGetRequestConfiguration requestConfig = new QnaItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

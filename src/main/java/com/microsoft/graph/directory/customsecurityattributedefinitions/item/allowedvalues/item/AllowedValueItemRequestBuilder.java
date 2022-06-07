@@ -99,6 +99,7 @@ public class AllowedValueItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllowedValueItemRequestBuilderGetRequestConfiguration requestConfig = new AllowedValueItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

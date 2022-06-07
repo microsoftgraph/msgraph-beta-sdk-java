@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Zebra FOTA deployment entity that describes settings, deployment device groups required to create a FOTA deployment, and deployment status. */
 public class ZebraFotaDeployment extends Entity implements Parsable {
     /** Collection of Android FOTA Assignment */
     private java.util.List<AndroidFotaDeploymentAssignment> _deploymentAssignments;

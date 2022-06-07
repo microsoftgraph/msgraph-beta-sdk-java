@@ -19,7 +19,6 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.deviceenrollmentconfigurations.item.assign.AssignRequestBuilder;
 import microsoft.graph.users.item.deviceenrollmentconfigurations.item.assignments.AssignmentsRequestBuilder;
 import microsoft.graph.users.item.deviceenrollmentconfigurations.item.assignments.item.EnrollmentConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.users.item.deviceenrollmentconfigurations.item.createenrollmentnotificationconfiguration.CreateEnrollmentNotificationConfigurationRequestBuilder;
 import microsoft.graph.users.item.deviceenrollmentconfigurations.item.setpriority.SetPriorityRequestBuilder;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity. */
 public class DeviceEnrollmentConfigurationItemRequestBuilder {
@@ -32,11 +31,6 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The createEnrollmentNotificationConfiguration property */
-    @javax.annotation.Nonnull
-    public CreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
-        return new CreateEnrollmentNotificationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -136,6 +130,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

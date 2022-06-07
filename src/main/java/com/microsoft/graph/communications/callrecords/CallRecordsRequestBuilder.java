@@ -9,12 +9,15 @@ import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
+import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.communications.callrecords.count.CountRequestBuilder;
+import microsoft.graph.communications.callrecords.getdirectroutingcallswithfromdatetimewithtodatetime.GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+import microsoft.graph.communications.callrecords.getpstncallswithfromdatetimewithtodatetime.GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import microsoft.graph.models.callrecords.CallRecord;
 import microsoft.graph.models.callrecords.CallRecordCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -78,6 +81,7 @@ public class CallRecordsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CallRecordsRequestBuilderGetRequestConfiguration requestConfig = new CallRecordsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +114,7 @@ public class CallRecordsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final CallRecordsRequestBuilderPostRequestConfiguration requestConfig = new CallRecordsRequestBuilderPostRequestConfiguration();
@@ -169,6 +174,30 @@ public class CallRecordsRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getDirectRoutingCalls method.
+     * @param fromDateTime Usage: fromDateTime='{fromDateTime}'
+     * @param toDateTime Usage: toDateTime='{toDateTime}'
+     * @return a getDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder getDirectRoutingCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
+        Objects.requireNonNull(fromDateTime);
+        Objects.requireNonNull(toDateTime);
+        return new GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+    }
+    /**
+     * Provides operations to call the getPstnCalls method.
+     * @param fromDateTime Usage: fromDateTime='{fromDateTime}'
+     * @param toDateTime Usage: toDateTime='{toDateTime}'
+     * @return a getPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder getPstnCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
+        Objects.requireNonNull(fromDateTime);
+        Objects.requireNonNull(toDateTime);
+        return new GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Create new navigation property to callRecords for communications

@@ -124,6 +124,7 @@ public class EdiscoveryFileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EdiscoveryFileItemRequestBuilderGetRequestConfiguration requestConfig = new EdiscoveryFileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

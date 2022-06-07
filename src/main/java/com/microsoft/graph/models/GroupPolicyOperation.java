@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The entity represents an group policy operation. */
 public class GroupPolicyOperation extends Entity implements Parsable {
     /** The date and time the entity was last modified. */
     private OffsetDateTime _lastModifiedDateTime;

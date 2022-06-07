@@ -60,7 +60,7 @@ public class AccessPackageCatalogsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AccessPackageCatalogsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -79,6 +79,7 @@ public class AccessPackageCatalogsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageCatalogsRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageCatalogsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class AccessPackageCatalogsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AccessPackageCatalogsRequestBuilderPostRequestConfiguration requestConfig = new AccessPackageCatalogsRequestBuilderPostRequestConfiguration();
@@ -121,7 +123,7 @@ public class AccessPackageCatalogsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageCatalogCollectionResponse> get() {
@@ -137,7 +139,7 @@ public class AccessPackageCatalogsRequestBuilder {
         }
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
      */
@@ -154,7 +156,7 @@ public class AccessPackageCatalogsRequestBuilder {
         }
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
@@ -234,7 +236,7 @@ public class AccessPackageCatalogsRequestBuilder {
     public SearchRequestBuilder search() {
         return new SearchRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Represents a group of access packages. */
+    /** A container of access packages. */
     public class AccessPackageCatalogsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

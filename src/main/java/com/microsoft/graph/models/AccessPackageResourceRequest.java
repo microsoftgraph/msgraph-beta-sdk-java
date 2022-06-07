@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /** Nullable. */
     private AccessPackageResource _accessPackageResource;

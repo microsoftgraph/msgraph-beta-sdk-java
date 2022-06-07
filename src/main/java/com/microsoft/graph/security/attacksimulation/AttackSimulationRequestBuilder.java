@@ -113,6 +113,7 @@ public class AttackSimulationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AttackSimulationRequestBuilderGetRequestConfiguration requestConfig = new AttackSimulationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

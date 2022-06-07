@@ -112,6 +112,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -58,7 +58,7 @@ public class ProgramControlItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete programControl
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class ProgramControlItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete programControl
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -105,6 +105,7 @@ public class ProgramControlItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProgramControlItemRequestBuilderGetRequestConfiguration requestConfig = new ProgramControlItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -147,7 +148,7 @@ public class ProgramControlItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete programControl
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -163,7 +164,7 @@ public class ProgramControlItemRequestBuilder {
         }
     }
     /**
-     * Delete programControl
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -180,7 +181,7 @@ public class ProgramControlItemRequestBuilder {
         }
     }
     /**
-     * Delete programControl
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void

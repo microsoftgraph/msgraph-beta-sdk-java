@@ -131,6 +131,7 @@ public class TeamworkRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamworkRequestBuilderGetRequestConfiguration requestConfig = new TeamworkRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

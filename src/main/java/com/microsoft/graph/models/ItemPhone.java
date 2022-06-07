@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ItemPhone extends ItemFacet implements Parsable {
     /** Friendly name the user has assigned this phone number. */
     private String _displayName;

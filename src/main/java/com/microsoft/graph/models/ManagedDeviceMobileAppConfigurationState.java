@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Managed Device Mobile App Configuration State for a given device. */
 public class ManagedDeviceMobileAppConfigurationState extends Entity implements Parsable {
     /** The name of the policy for this policyBase */
     private String _displayName;

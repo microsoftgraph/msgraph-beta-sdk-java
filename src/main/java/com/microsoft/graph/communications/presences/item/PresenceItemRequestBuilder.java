@@ -123,6 +123,7 @@ public class PresenceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PresenceItemRequestBuilderGetRequestConfiguration requestConfig = new PresenceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

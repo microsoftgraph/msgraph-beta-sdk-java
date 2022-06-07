@@ -8,12 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the privacy singleton. */
 public class SubjectRightsRequest extends Entity implements Parsable {
     /** Identity that the request is assigned to. */
     private Identity _assignedTo;
     /** The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _closedDateTime;
-    /** The contentQuery property */
+    /** KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
     private String _contentQuery;
     /** Identity information for the entity that created the request. */
     private IdentitySet _createdBy;
@@ -27,13 +28,13 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private String _description;
     /** The name of the request. */
     private String _displayName;
-    /** The externalId property */
+    /** The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
     private String _externalId;
     /** Collection of history change events. */
     private java.util.List<SubjectRightsRequestHistory> _history;
-    /** The includeAllVersions property */
+    /** Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
     private Boolean _includeAllVersions;
-    /** The includeAuthoredContent property */
+    /** Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
     private Boolean _includeAuthoredContent;
     /** Insight about the request. */
     private SubjectRightsRequestDetail _insight;
@@ -45,9 +46,9 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The mailboxlocations property */
     private SubjectRightsRequestMailboxLocation _mailboxlocations;
-    /** List of notes associcated with the request. */
+    /** List of notes associated with the request. */
     private java.util.List<AuthoredNote> _notes;
-    /** The pauseAfterEstimate property */
+    /** Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
     private Boolean _pauseAfterEstimate;
     /** List of regulations that this request will fulfill. */
     private java.util.List<String> _regulations;
@@ -55,7 +56,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private SubjectRightsRequestSiteLocation _sitelocations;
     /** Information about the different stages for the request. */
     private java.util.List<SubjectRightsRequestStageDetail> _stages;
-    /** The status of the request.. Possible values are: active, closed, unknownFutureValue. */
+    /** The status of the request. Possible values are: active, closed, unknownFutureValue. */
     private SubjectRightsRequestStatus _status;
     /** Information about the Microsoft Teams team that was created for the request. */
     private Team _team;
@@ -95,7 +96,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._closedDateTime;
     }
     /**
-     * Gets the contentQuery property value. The contentQuery property
+     * Gets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,7 +152,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the externalId property value. The externalId property
+     * Gets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -203,7 +204,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._history;
     }
     /**
-     * Gets the includeAllVersions property value. The includeAllVersions property
+     * Gets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -211,7 +212,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._includeAllVersions;
     }
     /**
-     * Gets the includeAuthoredContent property value. The includeAuthoredContent property
+     * Gets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -259,7 +260,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._mailboxlocations;
     }
     /**
-     * Gets the notes property value. List of notes associcated with the request.
+     * Gets the notes property value. List of notes associated with the request.
      * @return a authoredNote
      */
     @javax.annotation.Nullable
@@ -267,7 +268,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._notes;
     }
     /**
-     * Gets the pauseAfterEstimate property value. The pauseAfterEstimate property
+     * Gets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -299,7 +300,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._stages;
     }
     /**
-     * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @return a subjectRightsRequestStatus
      */
     @javax.annotation.Nullable
@@ -374,7 +375,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._closedDateTime = value;
     }
     /**
-     * Sets the contentQuery property value. The contentQuery property
+     * Sets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
@@ -430,7 +431,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the externalId property value. The externalId property
+     * Sets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the externalId property.
      * @return a void
      */
@@ -446,7 +447,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._history = value;
     }
     /**
-     * Sets the includeAllVersions property value. The includeAllVersions property
+     * Sets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the includeAllVersions property.
      * @return a void
      */
@@ -454,7 +455,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._includeAllVersions = value;
     }
     /**
-     * Sets the includeAuthoredContent property value. The includeAuthoredContent property
+     * Sets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the includeAuthoredContent property.
      * @return a void
      */
@@ -502,7 +503,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._mailboxlocations = value;
     }
     /**
-     * Sets the notes property value. List of notes associcated with the request.
+     * Sets the notes property value. List of notes associated with the request.
      * @param value Value to set for the notes property.
      * @return a void
      */
@@ -510,7 +511,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._notes = value;
     }
     /**
-     * Sets the pauseAfterEstimate property value. The pauseAfterEstimate property
+     * Sets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the pauseAfterEstimate property.
      * @return a void
      */
@@ -542,7 +543,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._stages = value;
     }
     /**
-     * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */

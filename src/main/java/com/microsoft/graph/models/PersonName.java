@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class PersonName extends ItemFacet implements Parsable {
     /** Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device. */
     private String _displayName;

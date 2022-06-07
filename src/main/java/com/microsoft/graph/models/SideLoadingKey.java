@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** SideLoadingKey entity is required for Windows 8 and 8.1 devices to intall Line Of Business Apps for a tenant. */
 public class SideLoadingKey extends Entity implements Parsable {
     /** Side Loading Key description displayed to the ITPro Admins.. */
     private String _description;

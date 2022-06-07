@@ -99,6 +99,7 @@ public class CloudPcProvisioningPolicyAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

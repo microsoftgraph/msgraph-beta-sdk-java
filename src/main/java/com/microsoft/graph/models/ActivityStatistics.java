@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ActivityStatistics extends Entity implements Parsable {
     /** The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting. */
     private AnalyticsActivityType _activity;
@@ -35,6 +36,13 @@ public class ActivityStatistics extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ActivityStatistics createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.activityStatistics": return new ActivityStatistics();
+            }
+        }
         return new ActivityStatistics();
     }
     /**

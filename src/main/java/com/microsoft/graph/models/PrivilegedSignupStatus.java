@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of privilegedSignupStatus entities. */
 public class PrivilegedSignupStatus extends Entity implements Parsable {
     /** The isRegistered property */
     private Boolean _isRegistered;

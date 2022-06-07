@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.DataSource;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.models.security.DataSource;
 /** Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity. */
 public class DataSourceItemRequestBuilder {
     /** Path parameters for the request */
@@ -71,6 +71,7 @@ public class DataSourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DataSourceItemRequestBuilderGetRequestConfiguration requestConfig = new DataSourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

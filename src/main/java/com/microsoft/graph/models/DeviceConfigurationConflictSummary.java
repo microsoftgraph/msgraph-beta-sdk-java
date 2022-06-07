@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Conflict summary for a set of device configuration policies. */
 public class DeviceConfigurationConflictSummary extends Entity implements Parsable {
     /** The set of policies in conflict with the given setting */
     private java.util.List<SettingSource> _conflictingDeviceConfigurations;

@@ -78,6 +78,7 @@ public class B2cUserFlowsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final B2cUserFlowsRequestBuilderGetRequestConfiguration requestConfig = new B2cUserFlowsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class B2cUserFlowsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final B2cUserFlowsRequestBuilderPostRequestConfiguration requestConfig = new B2cUserFlowsRequestBuilderPostRequestConfiguration();

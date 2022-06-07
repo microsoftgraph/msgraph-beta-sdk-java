@@ -14,7 +14,7 @@ public class VerificationResult implements AdditionalDataHolder, Parsable {
     /** The signatureValid property */
     private Boolean _signatureValid;
     /**
-     * Instantiates a new verificationResult and sets the default values.
+     * Instantiates a new VerificationResult and sets the default values.
      * @return a void
      */
     public VerificationResult() {
@@ -23,7 +23,7 @@ public class VerificationResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a verificationResult
+     * @return a VerificationResult
      */
     @javax.annotation.Nonnull
     public static VerificationResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

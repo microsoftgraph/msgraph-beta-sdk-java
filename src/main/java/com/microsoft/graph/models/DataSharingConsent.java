@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Data sharing consent information. */
 public class DataSharingConsent extends Entity implements Parsable {
     /** The time consent was granted for this account */
     private OffsetDateTime _grantDateTime;

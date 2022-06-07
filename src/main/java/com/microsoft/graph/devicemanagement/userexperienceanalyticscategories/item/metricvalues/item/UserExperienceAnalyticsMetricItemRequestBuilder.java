@@ -99,6 +99,7 @@ public class UserExperienceAnalyticsMetricItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsMetricItemRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsMetricItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

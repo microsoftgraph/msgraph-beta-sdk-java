@@ -68,6 +68,7 @@ public class CanSignUpRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CanSignUpRequestBuilderGetRequestConfiguration requestConfig = new CanSignUpRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

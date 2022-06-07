@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewPolicy extends Entity implements Parsable {
     /** Description for this policy. Read-only. */
     private String _description;

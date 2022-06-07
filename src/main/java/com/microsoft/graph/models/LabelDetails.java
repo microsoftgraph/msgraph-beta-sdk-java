@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the extractLabel method. */
 public class LabelDetails extends ParentLabelDetails implements Parsable {
     /**
      * Instantiates a new labelDetails and sets the default values.

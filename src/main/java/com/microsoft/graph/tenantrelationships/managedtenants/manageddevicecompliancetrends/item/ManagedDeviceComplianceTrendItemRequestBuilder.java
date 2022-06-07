@@ -99,6 +99,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceComplianceTrendItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceComplianceTrendItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

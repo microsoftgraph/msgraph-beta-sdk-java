@@ -113,6 +113,7 @@ public class PlannerRosterItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlannerRosterItemRequestBuilderGetRequestConfiguration requestConfig = new PlannerRosterItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

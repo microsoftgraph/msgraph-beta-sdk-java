@@ -29,8 +29,8 @@ import microsoft.graph.directory.federationconfigurations.item.IdentityProviderB
 import microsoft.graph.directory.impactedresources.ImpactedResourcesRequestBuilder;
 import microsoft.graph.directory.impactedresources.item.RecommendationResourceItemRequestBuilder;
 import microsoft.graph.directory.inboundshareduserprofiles.InboundSharedUserProfilesRequestBuilder;
-import microsoft.graph.directory.inboundshareduserprofiles.item.InboundSharedUserProfileItemRequestBuilder;
-import microsoft.graph.directory.outboundshareduserprofiles.item.OutboundSharedUserProfileItemRequestBuilder;
+import microsoft.graph.directory.inboundshareduserprofiles.item.InboundSharedUserProfileUserItemRequestBuilder;
+import microsoft.graph.directory.outboundshareduserprofiles.item.OutboundSharedUserProfileUserItemRequestBuilder;
 import microsoft.graph.directory.outboundshareduserprofiles.OutboundSharedUserProfilesRequestBuilder;
 import microsoft.graph.directory.recommendations.item.RecommendationItemRequestBuilder;
 import microsoft.graph.directory.recommendations.RecommendationsRequestBuilder;
@@ -172,6 +172,7 @@ public class DirectoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryRequestBuilderGetRequestConfiguration requestConfig = new DirectoryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -327,26 +328,26 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.inboundSharedUserProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a inboundSharedUserProfileItemRequestBuilder
+     * @return a inboundSharedUserProfileUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public InboundSharedUserProfileItemRequestBuilder inboundSharedUserProfiles(@javax.annotation.Nonnull final String id) {
+    public InboundSharedUserProfileUserItemRequestBuilder inboundSharedUserProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("inboundSharedUserProfile%2DuserId", id);
-        return new InboundSharedUserProfileItemRequestBuilder(urlTplParams, requestAdapter);
+        return new InboundSharedUserProfileUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.directory.outboundSharedUserProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a outboundSharedUserProfileItemRequestBuilder
+     * @return a outboundSharedUserProfileUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public OutboundSharedUserProfileItemRequestBuilder outboundSharedUserProfiles(@javax.annotation.Nonnull final String id) {
+    public OutboundSharedUserProfileUserItemRequestBuilder outboundSharedUserProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("outboundSharedUserProfile%2DuserId", id);
-        return new OutboundSharedUserProfileItemRequestBuilder(urlTplParams, requestAdapter);
+        return new OutboundSharedUserProfileUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update directory

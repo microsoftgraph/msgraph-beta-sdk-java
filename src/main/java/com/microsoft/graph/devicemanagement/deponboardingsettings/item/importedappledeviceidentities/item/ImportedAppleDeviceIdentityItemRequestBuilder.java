@@ -99,6 +99,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ImportedAppleDeviceIdentityItemRequestBuilderGetRequestConfiguration requestConfig = new ImportedAppleDeviceIdentityItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

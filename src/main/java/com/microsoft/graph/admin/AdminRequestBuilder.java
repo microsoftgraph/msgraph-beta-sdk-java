@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
+import microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
 import microsoft.graph.admin.windows.WindowsRequestBuilder;
 import microsoft.graph.models.Admin;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -28,6 +29,11 @@ public class AdminRequestBuilder {
     @javax.annotation.Nonnull
     public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new ServiceAnnouncementRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The sharepoint property */
+    @javax.annotation.Nonnull
+    public SharepointRequestBuilder sharepoint() {
+        return new SharepointRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
@@ -83,6 +89,7 @@ public class AdminRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdminRequestBuilderGetRequestConfiguration requestConfig = new AdminRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

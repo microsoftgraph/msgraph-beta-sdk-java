@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup process performance. */
 public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity implements Parsable {
     /** User experience analytics device startup process summarized count. */
     private Long _deviceCount;

@@ -106,6 +106,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

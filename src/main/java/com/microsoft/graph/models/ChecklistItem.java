@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ChecklistItem extends Entity implements Parsable {
     /** The date and time when the checklistItem was finished. */
     private OffsetDateTime _checkedDateTime;

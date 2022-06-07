@@ -105,6 +105,7 @@ public class ManagementActionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagementActionItemRequestBuilderGetRequestConfiguration requestConfig = new ManagementActionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class OfficeGraphInsights extends Entity implements Parsable {
     /** Access this property from the derived type itemInsights. */
     private java.util.List<SharedInsight> _shared;
@@ -29,6 +30,13 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static OfficeGraphInsights createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.officeGraphInsights": return new OfficeGraphInsights();
+            }
+        }
         return new OfficeGraphInsights();
     }
     /**

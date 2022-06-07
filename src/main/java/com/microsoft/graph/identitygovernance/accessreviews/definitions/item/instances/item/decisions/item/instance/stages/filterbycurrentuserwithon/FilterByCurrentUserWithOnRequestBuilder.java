@@ -33,7 +33,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/decisions/{accessReviewInstanceDecisionItem%2Did}/instance/stages/microsoft.graph.filterByCurrentUser(on='{on}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", on);
+        urlTplParams.put("on", on);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration requestConfig = new FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

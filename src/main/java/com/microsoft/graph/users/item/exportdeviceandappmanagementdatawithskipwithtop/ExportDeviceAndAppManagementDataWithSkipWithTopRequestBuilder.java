@@ -35,8 +35,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", skip);
-        urlTplParams.put("", top);
+        urlTplParams.put("skip", skip);
+        urlTplParams.put("top", top);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -73,6 +73,7 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration requestConfig = new ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -83,7 +84,7 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder {
     }
     /**
      * Invoke function exportDeviceAndAppManagementData
-     * @return a CompletableFuture of deviceAndAppManagementData
+     * @return a CompletableFuture of DeviceAndAppManagementData
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get() {
         try {
@@ -96,7 +97,7 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder {
     /**
      * Invoke function exportDeviceAndAppManagementData
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementData
+     * @return a CompletableFuture of DeviceAndAppManagementData
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get(@javax.annotation.Nullable final java.util.function.Consumer<ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -110,7 +111,7 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder {
      * Invoke function exportDeviceAndAppManagementData
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceAndAppManagementData
+     * @return a CompletableFuture of DeviceAndAppManagementData
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get(@javax.annotation.Nullable final java.util.function.Consumer<ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

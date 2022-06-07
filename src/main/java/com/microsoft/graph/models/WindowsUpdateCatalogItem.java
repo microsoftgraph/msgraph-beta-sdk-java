@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows update catalog item entity */
 public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /** The display name for the catalog item. */
     private String _displayName;
@@ -30,6 +31,13 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static WindowsUpdateCatalogItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdateCatalogItem": return new WindowsUpdateCatalogItem();
+            }
+        }
         return new WindowsUpdateCatalogItem();
     }
     /**

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Security baseline state for a device. */
 public class SecurityBaselineState extends Entity implements Parsable {
     /** The display name of the security baseline */
     private String _displayName;

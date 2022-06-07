@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Schema describing an Android application's custom configurations. */
 public class AndroidManagedStoreAppConfigurationSchema extends Entity implements Parsable {
     /** UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app */
     private byte[] _exampleJson;

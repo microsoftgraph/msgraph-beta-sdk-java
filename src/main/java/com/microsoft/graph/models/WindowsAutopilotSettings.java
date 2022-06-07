@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The windowsAutopilotSettings resource represents a Windows Autopilot Account to sync data with Windows device data sync service. */
 public class WindowsAutopilotSettings extends Entity implements Parsable {
     /** Last data sync date time with DDS service. */
     private OffsetDateTime _lastManualSyncTriggerDateTime;

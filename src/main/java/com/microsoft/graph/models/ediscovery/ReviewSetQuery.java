@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the compliance singleton. */
 public class ReviewSetQuery extends Entity implements Parsable {
     /** The user who created the query. */
     private IdentitySet _createdBy;

@@ -105,6 +105,7 @@ public class DeploymentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeploymentItemRequestBuilderGetRequestConfiguration requestConfig = new DeploymentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

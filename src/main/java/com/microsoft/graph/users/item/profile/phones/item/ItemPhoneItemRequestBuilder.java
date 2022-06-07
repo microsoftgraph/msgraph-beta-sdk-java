@@ -99,6 +99,7 @@ public class ItemPhoneItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ItemPhoneItemRequestBuilderGetRequestConfiguration requestConfig = new ItemPhoneItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

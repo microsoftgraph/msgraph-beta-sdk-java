@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the teamwork singleton. */
 public class TeamworkDeviceOperation extends Entity implements Parsable {
     /** Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled). */
     private OffsetDateTime _completedDateTime;

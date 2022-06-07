@@ -33,7 +33,7 @@ public class GetMobileAppCountWithStatusRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceAppManagement/mobileApps/microsoft.graph.getMobileAppCount(status='{status}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", status);
+        urlTplParams.put("status", status);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetMobileAppCountWithStatusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetMobileAppCountWithStatusRequestBuilderGetRequestConfiguration requestConfig = new GetMobileAppCountWithStatusRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

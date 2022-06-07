@@ -78,6 +78,7 @@ public class TenantsDetailedInformationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TenantsDetailedInformationRequestBuilderGetRequestConfiguration requestConfig = new TenantsDetailedInformationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class TenantsDetailedInformationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final TenantsDetailedInformationRequestBuilderPostRequestConfiguration requestConfig = new TenantsDetailedInformationRequestBuilderPostRequestConfiguration();

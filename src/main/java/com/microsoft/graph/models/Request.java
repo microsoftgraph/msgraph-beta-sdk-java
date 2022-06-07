@@ -8,12 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class Request extends Entity implements Parsable {
     /** The identifier of the approval of the request. */
     private String _approvalId;
     /** The request completion date time. */
     private OffsetDateTime _completedDateTime;
-    /** The user who created this request. */
+    /** The principal that created the request. */
     private IdentitySet _createdBy;
     /** The request creation date time. */
     private OffsetDateTime _createdDateTime;
@@ -36,6 +37,13 @@ public class Request extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Request createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.request": return new Request();
+            }
+        }
         return new Request();
     }
     /**
@@ -55,7 +63,7 @@ public class Request extends Entity implements Parsable {
         return this._completedDateTime;
     }
     /**
-     * Gets the createdBy property value. The user who created this request.
+     * Gets the createdBy property value. The principal that created the request.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -134,7 +142,7 @@ public class Request extends Entity implements Parsable {
         this._completedDateTime = value;
     }
     /**
-     * Sets the createdBy property value. The user who created this request.
+     * Sets the createdBy property value. The principal that created the request.
      * @param value Value to set for the createdBy property.
      * @return a void
      */

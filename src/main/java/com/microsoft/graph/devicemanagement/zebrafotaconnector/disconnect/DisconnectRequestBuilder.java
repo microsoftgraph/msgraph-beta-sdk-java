@@ -68,6 +68,7 @@ public class DisconnectRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DisconnectRequestBuilderPostRequestConfiguration requestConfig = new DisconnectRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

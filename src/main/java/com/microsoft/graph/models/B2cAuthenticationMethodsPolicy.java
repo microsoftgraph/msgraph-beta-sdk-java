@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     /** The tenant admin can configure local accounts using email if the email and password authentication method is enabled. */
     private Boolean _isEmailPasswordAuthenticationEnabled;

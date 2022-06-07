@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intent assignment entity */
 public class DeviceManagementIntentAssignment extends Entity implements Parsable {
     /** The assignment target */
     private DeviceAndAppManagementAssignmentTarget _target;

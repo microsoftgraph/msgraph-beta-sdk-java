@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The email address registered to this user. */
     private String _emailAddress;

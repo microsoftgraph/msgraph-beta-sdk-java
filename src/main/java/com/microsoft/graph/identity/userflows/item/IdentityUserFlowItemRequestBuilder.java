@@ -99,6 +99,7 @@ public class IdentityUserFlowItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityUserFlowItemRequestBuilderGetRequestConfiguration requestConfig = new IdentityUserFlowItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

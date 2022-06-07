@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to application. */
 public class Synchronization extends Entity implements Parsable {
     /** Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory. */
     private java.util.List<SynchronizationJob> _jobs;

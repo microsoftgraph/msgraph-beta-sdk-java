@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the compliance singleton. */
 public class SourceCollection extends Entity implements Parsable {
     /** Adds an additional source to the sourceCollection. */
     private java.util.List<DataSource> _additionalSources;

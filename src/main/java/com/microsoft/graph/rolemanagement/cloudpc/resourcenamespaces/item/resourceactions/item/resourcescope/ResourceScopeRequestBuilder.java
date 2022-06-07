@@ -99,6 +99,7 @@ public class ResourceScopeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ResourceScopeRequestBuilderGetRequestConfiguration requestConfig = new ResourceScopeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

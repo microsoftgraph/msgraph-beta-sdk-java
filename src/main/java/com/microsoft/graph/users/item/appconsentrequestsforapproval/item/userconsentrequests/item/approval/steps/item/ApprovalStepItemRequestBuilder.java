@@ -99,6 +99,7 @@ public class ApprovalStepItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApprovalStepItemRequestBuilderGetRequestConfiguration requestConfig = new ApprovalStepItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

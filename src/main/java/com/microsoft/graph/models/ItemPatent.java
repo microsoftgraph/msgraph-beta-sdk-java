@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ItemPatent extends ItemFacet implements Parsable {
     /** Descpription of the patent or filing. */
     private String _description;

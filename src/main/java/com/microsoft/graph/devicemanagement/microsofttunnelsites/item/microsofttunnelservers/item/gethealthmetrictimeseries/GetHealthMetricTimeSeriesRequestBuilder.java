@@ -54,7 +54,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class GetHealthMetricTimeSeriesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration requestConfig = new GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder {
      * @param body 
      * @return a CompletableFuture of getHealthMetricTimeSeriesResponse
      */
-    public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GetHealthMetricTimeSeriesResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getHealthMetricTimeSeriesResponse
      */
-    public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GetHealthMetricTimeSeriesResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of getHealthMetricTimeSeriesResponse
      */
-    public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@javax.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetHealthMetricTimeSeriesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

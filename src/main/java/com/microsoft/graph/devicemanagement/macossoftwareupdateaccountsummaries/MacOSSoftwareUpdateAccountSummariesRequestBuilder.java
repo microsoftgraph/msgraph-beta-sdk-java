@@ -78,6 +78,7 @@ public class MacOSSoftwareUpdateAccountSummariesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MacOSSoftwareUpdateAccountSummariesRequestBuilderGetRequestConfiguration requestConfig = new MacOSSoftwareUpdateAccountSummariesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class MacOSSoftwareUpdateAccountSummariesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MacOSSoftwareUpdateAccountSummariesRequestBuilderPostRequestConfiguration requestConfig = new MacOSSoftwareUpdateAccountSummariesRequestBuilderPostRequestConfiguration();

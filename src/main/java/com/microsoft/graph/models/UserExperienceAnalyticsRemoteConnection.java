@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analyte remote connection entity. */
 public class UserExperienceAnalyticsRemoteConnection extends Entity implements Parsable {
     /** The sign in failure percentage of Cloud PC Device. Valid values 0 to 100 */
     private Double _cloudPcFailurePercentage;

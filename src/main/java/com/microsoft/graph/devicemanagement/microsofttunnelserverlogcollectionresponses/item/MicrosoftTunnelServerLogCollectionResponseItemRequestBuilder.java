@@ -105,6 +105,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderGetRequestConfiguration requestConfig = new MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

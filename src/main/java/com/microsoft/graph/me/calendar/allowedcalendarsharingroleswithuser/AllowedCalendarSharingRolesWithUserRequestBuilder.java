@@ -33,7 +33,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/calendar/microsoft.graph.allowedCalendarSharingRoles(User='{User}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", user);
+        urlTplParams.put("User", user);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration requestConfig = new AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

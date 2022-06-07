@@ -68,6 +68,7 @@ public class GetDevicesScheduledToRetireRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetDevicesScheduledToRetireRequestBuilderGetRequestConfiguration requestConfig = new GetDevicesScheduledToRetireRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

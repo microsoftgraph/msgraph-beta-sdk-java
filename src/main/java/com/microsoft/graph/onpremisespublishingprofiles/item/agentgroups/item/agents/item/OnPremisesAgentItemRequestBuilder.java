@@ -118,6 +118,7 @@ public class OnPremisesAgentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnPremisesAgentItemRequestBuilderGetRequestConfiguration requestConfig = new OnPremisesAgentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

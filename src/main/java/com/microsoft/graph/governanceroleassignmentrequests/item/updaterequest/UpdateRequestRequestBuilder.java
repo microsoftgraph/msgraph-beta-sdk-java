@@ -55,7 +55,7 @@ public class UpdateRequestRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRequestRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class UpdateRequestRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRequestRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UpdateRequestRequestBuilderPostRequestConfiguration requestConfig = new UpdateRequestRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class UpdateRequestRequestBuilder {
      * @param body 
      * @return a CompletableFuture of governanceRoleAssignmentRequest
      */
-    public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class UpdateRequestRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of governanceRoleAssignmentRequest
      */
-    public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class UpdateRequestRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of governanceRoleAssignmentRequest
      */
-    public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

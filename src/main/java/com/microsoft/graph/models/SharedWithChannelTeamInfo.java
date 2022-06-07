@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     /** A collection of team members who have access to the shared channel. */
     private java.util.List<ConversationMember> _allowedMembers;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics hardware readiness entity contains account level information about hardware blockers for windows upgrade. */
 public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Entity implements Parsable {
     /** The percentage of devices for which OS check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _osCheckFailedPercentage;

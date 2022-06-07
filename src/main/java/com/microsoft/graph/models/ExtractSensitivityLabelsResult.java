@@ -14,7 +14,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
     /** List of sensitivity labels assigned to a file. */
     private java.util.List<SensitivityLabelAssignment> _labels;
     /**
-     * Instantiates a new extractSensitivityLabelsResult and sets the default values.
+     * Instantiates a new ExtractSensitivityLabelsResult and sets the default values.
      * @return a void
      */
     public ExtractSensitivityLabelsResult() {
@@ -23,7 +23,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a extractSensitivityLabelsResult
+     * @return a ExtractSensitivityLabelsResult
      */
     @javax.annotation.Nonnull
     public static ExtractSensitivityLabelsResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

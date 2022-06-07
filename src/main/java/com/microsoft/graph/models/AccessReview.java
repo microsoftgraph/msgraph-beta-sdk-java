@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class AccessReview extends Entity implements Parsable {
     /** The business flow template identifier. Required on create.  This value is case sensitive. */
     private String _businessFlowTemplateId;

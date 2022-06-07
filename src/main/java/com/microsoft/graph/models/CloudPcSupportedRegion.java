@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcSupportedRegion extends Entity implements Parsable {
     /** The name for the supported region. Read-only. */
     private String _displayName;

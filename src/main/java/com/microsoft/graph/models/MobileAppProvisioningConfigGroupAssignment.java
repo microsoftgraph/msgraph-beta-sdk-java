@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains the properties used to assign an App provisioning configuration to a group. */
 public class MobileAppProvisioningConfigGroupAssignment extends Entity implements Parsable {
     /** The ID of the AAD group in which the app provisioning configuration is being targeted. */
     private String _targetGroupId;

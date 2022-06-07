@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** MacOS software update state summary for a device and user */
 public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable {
     /** Human readable name of the software update */
     private String _displayName;

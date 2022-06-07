@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class RegionalAndLanguageSettings extends Entity implements Parsable {
     /** Prioritized list of languages the user reads and authors in.Returned by default. Not nullable. */
     private java.util.List<LocaleInfo> _authoringLanguages;

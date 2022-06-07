@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows management app health state entity. */
 public class WindowsManagementAppHealthState extends Entity implements Parsable {
     /** Name of the device on which Windows management app is installed. */
     private String _deviceName;

@@ -68,6 +68,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration requestConfig = new GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

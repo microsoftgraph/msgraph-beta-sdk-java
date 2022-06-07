@@ -99,6 +99,7 @@ public class AccountRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccountRequestBuilderGetRequestConfiguration requestConfig = new AccountRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

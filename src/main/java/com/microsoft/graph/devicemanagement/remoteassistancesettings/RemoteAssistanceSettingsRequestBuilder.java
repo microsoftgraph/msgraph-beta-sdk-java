@@ -99,6 +99,7 @@ public class RemoteAssistanceSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RemoteAssistanceSettingsRequestBuilderGetRequestConfiguration requestConfig = new RemoteAssistanceSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

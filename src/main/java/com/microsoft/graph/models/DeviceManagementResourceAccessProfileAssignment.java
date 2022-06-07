@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that describes tenant level settings for derived credentials */
 public class DeviceManagementResourceAccessProfileAssignment extends Entity implements Parsable {
     /** The assignment intent for the resource access profile. Possible values are: apply, remove. */
     private DeviceManagementResourceAccessProfileIntent _intent;

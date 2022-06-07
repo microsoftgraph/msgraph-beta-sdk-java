@@ -99,6 +99,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuild
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

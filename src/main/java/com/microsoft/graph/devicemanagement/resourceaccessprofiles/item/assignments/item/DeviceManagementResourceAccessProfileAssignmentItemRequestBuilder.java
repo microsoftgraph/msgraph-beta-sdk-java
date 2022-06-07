@@ -99,6 +99,7 @@ public class DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -118,6 +118,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration requestConfig = new MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

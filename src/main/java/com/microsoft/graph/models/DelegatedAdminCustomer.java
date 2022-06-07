@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /** The Azure AD display name of the customer tenant. Read-only. Supports $orderBy. */
     private String _displayName;

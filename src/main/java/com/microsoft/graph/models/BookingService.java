@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a particular service offered by a booking business. */
 public class BookingService extends BookingNamedEntity implements Parsable {
     /** Additional information that is sent to the customer when an appointment is confirmed. */
     private String _additionalInformation;
@@ -25,10 +26,14 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     private java.util.List<BookingReminder> _defaultReminders;
     /** A text description for the service. */
     private String _description;
+    /** The isAnonymousJoinEnabled property */
+    private Boolean _isAnonymousJoinEnabled;
     /** True means this service is not available to customers for booking. */
     private Boolean _isHiddenFromCustomers;
     /** True indicates that the appointments for the service will be held online. Default value is false. */
     private Boolean _isLocationOnline;
+    /** The languageTag property */
+    private String _languageTag;
     /** The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation. */
     private Integer _maximumAttendeesCount;
     /** Additional information about this service. */
@@ -142,8 +147,10 @@ public class BookingService extends BookingNamedEntity implements Parsable {
             this.put("defaultPriceType", (n) -> { currentObject.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
             this.put("defaultReminders", (n) -> { currentObject.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+            this.put("isAnonymousJoinEnabled", (n) -> { currentObject.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
             this.put("isHiddenFromCustomers", (n) -> { currentObject.setIsHiddenFromCustomers(n.getBooleanValue()); });
             this.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
+            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
             this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
             this.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
@@ -153,6 +160,14 @@ public class BookingService extends BookingNamedEntity implements Parsable {
             this.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsAnonymousJoinEnabled() {
+        return this._isAnonymousJoinEnabled;
     }
     /**
      * Gets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
@@ -169,6 +184,14 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getIsLocationOnline() {
         return this._isLocationOnline;
+    }
+    /**
+     * Gets the languageTag property value. The languageTag property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getLanguageTag() {
+        return this._languageTag;
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
@@ -250,8 +273,10 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         writer.writeEnumValue("defaultPriceType", this.getDefaultPriceType());
         writer.writeCollectionOfObjectValues("defaultReminders", this.getDefaultReminders());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeBooleanValue("isAnonymousJoinEnabled", this.getIsAnonymousJoinEnabled());
         writer.writeBooleanValue("isHiddenFromCustomers", this.getIsHiddenFromCustomers());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
+        writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());
         writer.writeStringValue("notes", this.getNotes());
         writer.writePeriodValue("postBuffer", this.getPostBuffer());
@@ -326,6 +351,14 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this._description = value;
     }
     /**
+     * Sets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * @param value Value to set for the isAnonymousJoinEnabled property.
+     * @return a void
+     */
+    public void setIsAnonymousJoinEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isAnonymousJoinEnabled = value;
+    }
+    /**
      * Sets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
      * @param value Value to set for the isHiddenFromCustomers property.
      * @return a void
@@ -340,6 +373,14 @@ public class BookingService extends BookingNamedEntity implements Parsable {
      */
     public void setIsLocationOnline(@javax.annotation.Nullable final Boolean value) {
         this._isLocationOnline = value;
+    }
+    /**
+     * Sets the languageTag property value. The languageTag property
+     * @param value Value to set for the languageTag property.
+     * @return a void
+     */
+    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+        this._languageTag = value;
     }
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.

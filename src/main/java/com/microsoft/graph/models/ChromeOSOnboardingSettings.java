@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a Chromebook tenant settings */
 public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     /** The ChromebookTenant's LastDirectorySyncDateTime */
     private OffsetDateTime _lastDirectorySyncDateTime;

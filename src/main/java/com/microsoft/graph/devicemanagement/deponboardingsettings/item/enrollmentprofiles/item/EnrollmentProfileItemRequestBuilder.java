@@ -112,6 +112,7 @@ public class EnrollmentProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EnrollmentProfileItemRequestBuilderGetRequestConfiguration requestConfig = new EnrollmentProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

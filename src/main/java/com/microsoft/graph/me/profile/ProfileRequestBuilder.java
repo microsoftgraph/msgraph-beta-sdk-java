@@ -292,6 +292,7 @@ public class ProfileRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProfileRequestBuilderGetRequestConfiguration requestConfig = new ProfileRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that encapsulates all information required for a user's PFX certificates. */
 public class UserPFXCertificate extends Entity implements Parsable {
     /** Date/time when this PFX certificate was imported. */
     private OffsetDateTime _createdDateTime;

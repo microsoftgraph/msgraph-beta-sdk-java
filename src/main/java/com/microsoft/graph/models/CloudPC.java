@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class CloudPC extends Entity implements Parsable {
     /** The Azure Active Directory (Azure AD) device ID of the Cloud PC. */
     private String _aadDeviceId;

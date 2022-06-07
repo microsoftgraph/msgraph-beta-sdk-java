@@ -137,6 +137,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EducationSynchronizationProfileItemRequestBuilderGetRequestConfiguration requestConfig = new EducationSynchronizationProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

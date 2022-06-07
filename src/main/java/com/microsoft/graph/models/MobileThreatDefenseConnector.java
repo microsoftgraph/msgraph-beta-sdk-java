@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents a connection to Mobile threat defense partner. */
 public class MobileThreatDefenseConnector extends Entity implements Parsable {
     /** For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune */
     private Boolean _allowPartnerToCollectIOSApplicationMetadata;

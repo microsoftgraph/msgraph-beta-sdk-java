@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the compliance singleton. */
 public class CaseIndexOperation extends CaseOperation implements Parsable {
     /**
      * Instantiates a new caseIndexOperation and sets the default values.

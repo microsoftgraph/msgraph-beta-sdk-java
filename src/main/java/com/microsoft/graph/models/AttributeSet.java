@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the directory singleton. */
 public class AttributeSet extends Entity implements Parsable {
     /** Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later. */
     private String _description;

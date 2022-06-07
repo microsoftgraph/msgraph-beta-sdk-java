@@ -99,6 +99,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MeetingRegistrationQuestionItemRequestBuilderGetRequestConfiguration requestConfig = new MeetingRegistrationQuestionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

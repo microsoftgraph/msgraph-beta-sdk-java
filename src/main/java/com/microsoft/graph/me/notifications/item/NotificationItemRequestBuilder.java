@@ -99,6 +99,7 @@ public class NotificationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NotificationItemRequestBuilderGetRequestConfiguration requestConfig = new NotificationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

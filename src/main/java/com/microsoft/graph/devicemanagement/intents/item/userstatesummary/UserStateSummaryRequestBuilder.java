@@ -99,6 +99,7 @@ public class UserStateSummaryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserStateSummaryRequestBuilderGetRequestConfiguration requestConfig = new UserStateSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

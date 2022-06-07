@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Zebra FOTA connector entity that represents the tenant's authorization status for Intune to call Zebra Update Services. */
 public class ZebraFotaConnector extends Entity implements Parsable {
     /** Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations. */
     private String _enrollmentAuthorizationUrl;

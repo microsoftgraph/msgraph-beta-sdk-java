@@ -99,6 +99,7 @@ public class ProjectParticipationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProjectParticipationItemRequestBuilderGetRequestConfiguration requestConfig = new ProjectParticipationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

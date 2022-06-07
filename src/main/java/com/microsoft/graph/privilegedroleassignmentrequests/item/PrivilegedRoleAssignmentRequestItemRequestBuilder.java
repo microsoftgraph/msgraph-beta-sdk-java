@@ -111,6 +111,7 @@ public class PrivilegedRoleAssignmentRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedRoleAssignmentRequestItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedRoleAssignmentRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

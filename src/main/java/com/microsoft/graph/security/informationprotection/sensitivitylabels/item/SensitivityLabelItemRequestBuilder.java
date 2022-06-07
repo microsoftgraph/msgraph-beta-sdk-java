@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SensitivityLabel;
+import microsoft.graph.models.security.SensitivityLabel;
 import microsoft.graph.security.informationprotection.sensitivitylabels.item.parent.ParentRequestBuilder;
 /** Provides operations to manage the sensitivityLabels property of the microsoft.graph.security.informationProtection entity. */
 public class SensitivityLabelItemRequestBuilder {
@@ -105,6 +105,7 @@ public class SensitivityLabelItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SensitivityLabelItemRequestBuilderGetRequestConfiguration requestConfig = new SensitivityLabelItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -59,7 +59,7 @@ public class ProgramControlsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List programControls
+     * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ProgramControlsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List programControls
+     * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class ProgramControlsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProgramControlsRequestBuilderGetRequestConfiguration requestConfig = new ProgramControlsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -88,7 +89,7 @@ public class ProgramControlsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create programControl
+     * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +98,7 @@ public class ProgramControlsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create programControl
+     * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -110,6 +111,7 @@ public class ProgramControlsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ProgramControlsRequestBuilderPostRequestConfiguration requestConfig = new ProgramControlsRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class ProgramControlsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List programControls
+     * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @return a CompletableFuture of ProgramControlCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ProgramControlCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class ProgramControlsRequestBuilder {
         }
     }
     /**
-     * List programControls
+     * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProgramControlCollectionResponse
      */
@@ -153,7 +155,7 @@ public class ProgramControlsRequestBuilder {
         }
     }
     /**
-     * List programControls
+     * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ProgramControlCollectionResponse
@@ -171,7 +173,7 @@ public class ProgramControlsRequestBuilder {
         }
     }
     /**
-     * Create programControl
+     * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body 
      * @return a CompletableFuture of programControl
      */
@@ -188,7 +190,7 @@ public class ProgramControlsRequestBuilder {
         }
     }
     /**
-     * Create programControl
+     * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of programControl
@@ -206,7 +208,7 @@ public class ProgramControlsRequestBuilder {
         }
     }
     /**
-     * Create programControl
+     * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +227,7 @@ public class ProgramControlsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List programControls */
+    /** In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant. */
     public class ProgramControlsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

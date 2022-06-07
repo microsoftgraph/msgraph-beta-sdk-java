@@ -99,6 +99,7 @@ public class WindowsFeatureUpdateProfileAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsFeatureUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsFeatureUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the security singleton. */
 public class EmailIdentity extends Identity implements Parsable {
     /** Email address of the user. */
     private String _email;

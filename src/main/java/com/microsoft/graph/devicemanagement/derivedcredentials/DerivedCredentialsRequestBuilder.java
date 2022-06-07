@@ -78,6 +78,7 @@ public class DerivedCredentialsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DerivedCredentialsRequestBuilderGetRequestConfiguration requestConfig = new DerivedCredentialsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class DerivedCredentialsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DerivedCredentialsRequestBuilderPostRequestConfiguration requestConfig = new DerivedCredentialsRequestBuilderPostRequestConfiguration();

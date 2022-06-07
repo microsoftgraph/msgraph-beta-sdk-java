@@ -51,6 +51,7 @@ import microsoft.graph.users.item.manageddevices.item.rebootnow.RebootNowRequest
 import microsoft.graph.users.item.manageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.reenable.ReenableRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.remotelock.RemoteLockRequestBuilder;
+import microsoft.graph.users.item.manageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.reprovisioncloudpc.ReprovisionCloudPcRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
@@ -69,7 +70,6 @@ import microsoft.graph.users.item.manageddevices.item.shutdown.ShutDownRequestBu
 import microsoft.graph.users.item.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.triggerconfigurationmanageraction.TriggerConfigurationManagerActionRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
-import microsoft.graph.users.item.manageddevices.item.users.item.UserItemRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.users.UsersRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
 import microsoft.graph.users.item.manageddevices.item.windowsdefenderupdatesignatures.WindowsDefenderUpdateSignaturesRequestBuilder;
@@ -198,6 +198,11 @@ public class ManagedDeviceItemRequestBuilder {
     @javax.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The removeDeviceFirmwareConfigurationInterfaceManagement property */
+    @javax.annotation.Nonnull
+    public RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
+        return new RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /** The reprovisionCloudPc property */
     @javax.annotation.Nonnull
@@ -400,6 +405,7 @@ public class ManagedDeviceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -709,18 +715,6 @@ public class ManagedDeviceItemRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("securityBaselineState%2Did", id);
         return new SecurityBaselineStateItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the Microsoft.Graph.users.item.managedDevices.item.users.item collection
-     * @param id Unique identifier of the item
-     * @return a userItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("user%2Did1", id);
-        return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class ManagedDeviceItemRequestBuilderDeleteRequestConfiguration {

@@ -120,6 +120,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OutlookTaskFolderItemRequestBuilderGetRequestConfiguration requestConfig = new OutlookTaskFolderItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

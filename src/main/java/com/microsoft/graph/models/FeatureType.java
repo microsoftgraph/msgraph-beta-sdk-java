@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the reportRoot singleton. */
+/** Provides operations to manage the print singleton. */
 public enum FeatureType implements ValuedEnum {
     Registration("registration"),
     Reset("reset"),

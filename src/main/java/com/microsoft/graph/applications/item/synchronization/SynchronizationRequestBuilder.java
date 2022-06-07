@@ -120,6 +120,7 @@ public class SynchronizationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SynchronizationRequestBuilderGetRequestConfiguration requestConfig = new SynchronizationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device boot performance details. */
 public class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable {
     /** Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999 */
     private Double _averageBlueScreens;

@@ -69,6 +69,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetComanagementEligibleDevicesSummaryRequestBuilderGetRequestConfiguration requestConfig = new GetComanagementEligibleDevicesSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder {
     }
     /**
      * Invoke function getComanagementEligibleDevicesSummary
-     * @return a CompletableFuture of comanagementEligibleDevicesSummary
+     * @return a CompletableFuture of ComanagementEligibleDevicesSummary
      */
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevicesSummary> get() {
         try {
@@ -92,7 +93,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder {
     /**
      * Invoke function getComanagementEligibleDevicesSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of comanagementEligibleDevicesSummary
+     * @return a CompletableFuture of ComanagementEligibleDevicesSummary
      */
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevicesSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetComanagementEligibleDevicesSummaryRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder {
      * Invoke function getComanagementEligibleDevicesSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of comanagementEligibleDevicesSummary
+     * @return a CompletableFuture of ComanagementEligibleDevicesSummary
      */
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevicesSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetComanagementEligibleDevicesSummaryRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

@@ -69,7 +69,7 @@ public class ChatsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List chats
+     * Retrieve the list of chats that the user is part of.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -77,7 +77,7 @@ public class ChatsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List chats
+     * Retrieve the list of chats that the user is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,6 +88,7 @@ public class ChatsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChatsRequestBuilderGetRequestConfiguration requestConfig = new ChatsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -98,7 +99,7 @@ public class ChatsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create chat
+     * Create a new chat object.
      * @param body 
      * @return a RequestInformation
      */
@@ -107,7 +108,7 @@ public class ChatsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create chat
+     * Create a new chat object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -120,6 +121,7 @@ public class ChatsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ChatsRequestBuilderPostRequestConfiguration requestConfig = new ChatsRequestBuilderPostRequestConfiguration();
@@ -130,7 +132,7 @@ public class ChatsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List chats
+     * Retrieve the list of chats that the user is part of.
      * @return a CompletableFuture of ChatCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChatCollectionResponse> get() {
@@ -146,7 +148,7 @@ public class ChatsRequestBuilder {
         }
     }
     /**
-     * List chats
+     * Retrieve the list of chats that the user is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChatCollectionResponse
      */
@@ -163,7 +165,7 @@ public class ChatsRequestBuilder {
         }
     }
     /**
-     * List chats
+     * Retrieve the list of chats that the user is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ChatCollectionResponse
@@ -189,7 +191,7 @@ public class ChatsRequestBuilder {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Create chat
+     * Create a new chat object.
      * @param body 
      * @return a CompletableFuture of chat
      */
@@ -206,7 +208,7 @@ public class ChatsRequestBuilder {
         }
     }
     /**
-     * Create chat
+     * Create a new chat object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
@@ -224,7 +226,7 @@ public class ChatsRequestBuilder {
         }
     }
     /**
-     * Create chat
+     * Create a new chat object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -243,7 +245,7 @@ public class ChatsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List chats */
+    /** Retrieve the list of chats that the user is part of. */
     public class ChatsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

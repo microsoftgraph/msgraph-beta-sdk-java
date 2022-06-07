@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class EducationalActivity extends ItemFacet implements Parsable {
     /** The month and year the user graduated or completed the activity. */
     private LocalDate _completionMonthYear;

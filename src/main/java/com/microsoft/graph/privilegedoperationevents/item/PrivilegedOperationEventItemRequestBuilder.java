@@ -99,6 +99,7 @@ public class PrivilegedOperationEventItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedOperationEventItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedOperationEventItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

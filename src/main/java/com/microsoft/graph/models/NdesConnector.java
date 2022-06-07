@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents an OnPrem Ndes connector. */
 public class NdesConnector extends Entity implements Parsable {
     /** The friendly name of the Ndes Connector. */
     private String _displayName;

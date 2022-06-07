@@ -92,7 +92,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get privilegedApproval
+     * Retrieve the properties and relationships of privilegedapproval object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get privilegedApproval
+     * Retrieve the properties and relationships of privilegedapproval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,6 +111,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedApprovalItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedApprovalItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -121,7 +122,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update privilegedapproval
+     * Update the properties of privilegedapproval object.
      * @param body 
      * @return a RequestInformation
      */
@@ -130,7 +131,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update privilegedapproval
+     * Update the properties of privilegedapproval object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -204,7 +205,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedApproval
+     * Retrieve the properties and relationships of privilegedapproval object.
      * @return a CompletableFuture of privilegedApproval
      */
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> get() {
@@ -220,7 +221,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedApproval
+     * Retrieve the properties and relationships of privilegedapproval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedApproval
      */
@@ -237,7 +238,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedApproval
+     * Retrieve the properties and relationships of privilegedapproval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of privilegedApproval
@@ -255,7 +256,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }
     }
     /**
-     * Update privilegedapproval
+     * Update the properties of privilegedapproval object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -272,7 +273,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }
     }
     /**
-     * Update privilegedapproval
+     * Update the properties of privilegedapproval object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -290,7 +291,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         }
     }
     /**
-     * Update privilegedapproval
+     * Update the properties of privilegedapproval object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -324,7 +325,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         public PrivilegedApprovalItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get privilegedApproval */
+    /** Retrieve the properties and relationships of privilegedapproval object. */
     public class PrivilegedApprovalItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

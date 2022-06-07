@@ -99,6 +99,7 @@ public class PrivilegedSignupStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedSignupStatusItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedSignupStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

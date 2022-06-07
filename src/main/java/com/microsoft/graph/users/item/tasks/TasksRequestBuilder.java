@@ -125,6 +125,7 @@ public class TasksRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TasksRequestBuilderGetRequestConfiguration requestConfig = new TasksRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The type for deployment of groups or apps. */
 public class TargetedManagedAppPolicyAssignment extends Entity implements Parsable {
     /** Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets. */
     private DeviceAndAppManagementAssignmentSource _source;

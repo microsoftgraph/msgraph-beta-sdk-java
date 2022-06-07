@@ -111,6 +111,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AndroidForWorkEnrollmentProfileItemRequestBuilderGetRequestConfiguration requestConfig = new AndroidForWorkEnrollmentProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

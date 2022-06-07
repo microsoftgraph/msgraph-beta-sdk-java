@@ -224,7 +224,7 @@ public class TeamItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get team
+     * Retrieve the properties and relationships of the specified team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -232,7 +232,7 @@ public class TeamItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get team
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -243,6 +243,7 @@ public class TeamItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamItemRequestBuilderGetRequestConfiguration requestConfig = new TeamItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -253,7 +254,7 @@ public class TeamItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update team
+     * Update the properties of the specified team.
      * @param body 
      * @return a RequestInformation
      */
@@ -262,7 +263,7 @@ public class TeamItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update team
+     * Update the properties of the specified team.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -336,7 +337,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * Get team
+     * Retrieve the properties and relationships of the specified team.
      * @return a CompletableFuture of team
      */
     public java.util.concurrent.CompletableFuture<Team> get() {
@@ -352,7 +353,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * Get team
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
      */
@@ -369,7 +370,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * Get team
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of team
@@ -447,7 +448,7 @@ public class TeamItemRequestBuilder {
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update team
+     * Update the properties of the specified team.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -464,7 +465,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * Update team
+     * Update the properties of the specified team.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -482,7 +483,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * Update team
+     * Update the properties of the specified team.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -540,7 +541,7 @@ public class TeamItemRequestBuilder {
         public TeamItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get team */
+    /** Retrieve the properties and relationships of the specified team. */
     public class TeamItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

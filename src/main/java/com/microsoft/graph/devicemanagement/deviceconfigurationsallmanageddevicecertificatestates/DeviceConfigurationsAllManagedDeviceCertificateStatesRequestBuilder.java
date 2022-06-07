@@ -78,6 +78,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilderGetRequestConfiguration requestConfig = new DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilderPostRequestConfiguration requestConfig = new DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilderPostRequestConfiguration();

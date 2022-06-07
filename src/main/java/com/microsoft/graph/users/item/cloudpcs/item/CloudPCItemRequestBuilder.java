@@ -136,6 +136,7 @@ public class CloudPCItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPCItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPCItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -78,6 +78,7 @@ public class RoleAssignmentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleAssignmentRequestsRequestBuilderGetRequestConfiguration requestConfig = new RoleAssignmentRequestsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class RoleAssignmentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RoleAssignmentRequestsRequestBuilderPostRequestConfiguration requestConfig = new RoleAssignmentRequestsRequestBuilderPostRequestConfiguration();

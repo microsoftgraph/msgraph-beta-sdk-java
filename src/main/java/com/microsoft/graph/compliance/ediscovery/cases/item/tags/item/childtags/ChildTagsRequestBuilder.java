@@ -77,6 +77,7 @@ public class ChildTagsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChildTagsRequestBuilderGetRequestConfiguration requestConfig = new ChildTagsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

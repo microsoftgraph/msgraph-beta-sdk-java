@@ -87,7 +87,7 @@ public class RiskyUserItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get riskyUser
+     * Retrieve the properties and relationships of a **riskyUser** object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RiskyUserItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get riskyUser
+     * Retrieve the properties and relationships of a **riskyUser** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,6 +106,7 @@ public class RiskyUserItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskyUserItemRequestBuilderGetRequestConfiguration requestConfig = new RiskyUserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -199,7 +200,7 @@ public class RiskyUserItemRequestBuilder {
         }
     }
     /**
-     * Get riskyUser
+     * Retrieve the properties and relationships of a **riskyUser** object.
      * @return a CompletableFuture of riskyUser
      */
     public java.util.concurrent.CompletableFuture<RiskyUser> get() {
@@ -215,7 +216,7 @@ public class RiskyUserItemRequestBuilder {
         }
     }
     /**
-     * Get riskyUser
+     * Retrieve the properties and relationships of a **riskyUser** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of riskyUser
      */
@@ -232,7 +233,7 @@ public class RiskyUserItemRequestBuilder {
         }
     }
     /**
-     * Get riskyUser
+     * Retrieve the properties and relationships of a **riskyUser** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of riskyUser
@@ -331,7 +332,7 @@ public class RiskyUserItemRequestBuilder {
         public RiskyUserItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get riskyUser */
+    /** Retrieve the properties and relationships of a **riskyUser** object. */
     public class RiskyUserItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

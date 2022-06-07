@@ -111,6 +111,7 @@ public class VppTokenItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final VppTokenItemRequestBuilderGetRequestConfiguration requestConfig = new VppTokenItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

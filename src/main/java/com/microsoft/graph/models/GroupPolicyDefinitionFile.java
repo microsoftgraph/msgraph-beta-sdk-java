@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The entity represents an ADMX (Administrative Template) XML file. The ADMX file contains a collection of group policy definitions and their locations by category path. The group policy definition file also contains the languages supported as determined by the language dependent ADML (Administrative Template) language files. */
 public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     /** The group policy definitions associated with the file. */
     private java.util.List<GroupPolicyDefinition> _definitions;
@@ -44,6 +45,13 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static GroupPolicyDefinitionFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.groupPolicyDefinitionFile": return new GroupPolicyDefinitionFile();
+            }
+        }
         return new GroupPolicyDefinitionFile();
     }
     /**

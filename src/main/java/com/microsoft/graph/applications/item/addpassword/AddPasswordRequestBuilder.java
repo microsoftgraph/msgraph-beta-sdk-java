@@ -55,7 +55,7 @@ public class AddPasswordRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PasswordCredentialRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class AddPasswordRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PasswordCredentialRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AddPasswordRequestBuilderPostRequestConfiguration requestConfig = new AddPasswordRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class AddPasswordRequestBuilder {
      * @param body 
      * @return a CompletableFuture of PasswordCredential
      */
-    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialRequestBody body) {
+    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, PasswordCredential::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class AddPasswordRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PasswordCredential
      */
-    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, PasswordCredential::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class AddPasswordRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PasswordCredential
      */
-    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

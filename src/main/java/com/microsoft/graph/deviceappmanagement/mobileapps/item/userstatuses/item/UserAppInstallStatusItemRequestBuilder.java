@@ -112,6 +112,7 @@ public class UserAppInstallStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserAppInstallStatusItemRequestBuilderGetRequestConfiguration requestConfig = new UserAppInstallStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

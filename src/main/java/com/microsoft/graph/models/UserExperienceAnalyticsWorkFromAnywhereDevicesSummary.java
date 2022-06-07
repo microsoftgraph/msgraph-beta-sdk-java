@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     /** The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647 */
     private Integer _windows10DevicesWithoutTenantAttach;
     /**
-     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsWorkFromAnywhereDevicesSummary
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevicesSummary
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereDevicesSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

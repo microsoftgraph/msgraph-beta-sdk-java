@@ -49,6 +49,7 @@ import microsoft.graph.devicemanagement.comanageddevices.item.rebootnow.RebootNo
 import microsoft.graph.devicemanagement.comanageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.reenable.ReenableRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.remotelock.RemoteLockRequestBuilder;
+import microsoft.graph.devicemanagement.comanageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.reprovisioncloudpc.ReprovisionCloudPcRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
@@ -67,7 +68,6 @@ import microsoft.graph.devicemanagement.comanageddevices.item.shutdown.ShutDownR
 import microsoft.graph.devicemanagement.comanageddevices.item.syncdevice.SyncDeviceRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.triggerconfigurationmanageraction.TriggerConfigurationManagerActionRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.item.users.item.UserItemRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.users.UsersRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.item.windowsdefenderupdatesignatures.WindowsDefenderUpdateSignaturesRequestBuilder;
@@ -198,6 +198,11 @@ public class ManagedDeviceItemRequestBuilder {
     @javax.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The removeDeviceFirmwareConfigurationInterfaceManagement property */
+    @javax.annotation.Nonnull
+    public RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
+        return new RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /** The reprovisionCloudPc property */
     @javax.annotation.Nonnull
@@ -400,6 +405,7 @@ public class ManagedDeviceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -709,18 +715,6 @@ public class ManagedDeviceItemRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("securityBaselineState%2Did", id);
         return new SecurityBaselineStateItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.comanagedDevices.item.users.item collection
-     * @param id Unique identifier of the item
-     * @return a userItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("user%2Did", id);
-        return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class ManagedDeviceItemRequestBuilderDeleteRequestConfiguration {

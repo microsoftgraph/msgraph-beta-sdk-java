@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class PersonWebsite extends ItemFacet implements Parsable {
     /** Contains categories a user has associated with the website (for example, personal, recipes). */
     private java.util.List<String> _categories;

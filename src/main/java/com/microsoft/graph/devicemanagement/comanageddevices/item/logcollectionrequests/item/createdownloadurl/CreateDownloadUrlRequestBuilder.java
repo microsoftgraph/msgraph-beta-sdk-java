@@ -68,6 +68,7 @@ public class CreateDownloadUrlRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CreateDownloadUrlRequestBuilderPostRequestConfiguration requestConfig = new CreateDownloadUrlRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

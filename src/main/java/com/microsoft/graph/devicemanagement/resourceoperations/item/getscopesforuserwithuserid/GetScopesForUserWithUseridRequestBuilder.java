@@ -33,7 +33,7 @@ public class GetScopesForUserWithUseridRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/resourceOperations/{resourceOperation%2Did}/microsoft.graph.getScopesForUser(userid='{userid}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", userid);
+        urlTplParams.put("userid", userid);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetScopesForUserWithUseridRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetScopesForUserWithUseridRequestBuilderGetRequestConfiguration requestConfig = new GetScopesForUserWithUseridRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

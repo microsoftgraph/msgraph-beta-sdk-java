@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.CaseOperation;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.models.security.CaseOperation;
 import microsoft.graph.security.cases.ediscoverycases.item.operations.item.ediscoveryexportoperation.EdiscoveryExportOperationRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity. */
 public class CaseOperationItemRequestBuilder {
@@ -105,6 +105,7 @@ public class CaseOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CaseOperationItemRequestBuilderGetRequestConfiguration requestConfig = new CaseOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

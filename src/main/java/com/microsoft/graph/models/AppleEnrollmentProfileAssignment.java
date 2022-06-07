@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An assignment of an Apple profile. */
 public class AppleEnrollmentProfileAssignment extends Entity implements Parsable {
     /** The assignment target for the Apple user initiated deployment profile. */
     private DeviceAndAppManagementAssignmentTarget _target;

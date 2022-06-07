@@ -84,6 +84,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration requestConfig = new MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration requestConfig = new MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration();

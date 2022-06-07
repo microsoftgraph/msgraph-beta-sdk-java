@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the security singleton. */
 public class File extends Entity implements Parsable {
     /** The content property */
     private byte[] _content;
@@ -49,6 +50,13 @@ public class File extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static File createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.security.file": return new File();
+            }
+        }
         return new File();
     }
     /**

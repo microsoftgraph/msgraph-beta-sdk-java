@@ -68,6 +68,7 @@ public class IsSignedUpRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IsSignedUpRequestBuilderGetRequestConfiguration requestConfig = new IsSignedUpRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

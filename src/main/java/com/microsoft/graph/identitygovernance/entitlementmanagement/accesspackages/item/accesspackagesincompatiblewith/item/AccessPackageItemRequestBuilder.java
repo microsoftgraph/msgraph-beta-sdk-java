@@ -71,6 +71,7 @@ public class AccessPackageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageItemRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -58,7 +58,7 @@ public class SubscriptionItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete subscription
+     * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class SubscriptionItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete subscription
+     * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -86,7 +86,7 @@ public class SubscriptionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get subscription
+     * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SubscriptionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get subscription
+     * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -105,6 +105,7 @@ public class SubscriptionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SubscriptionItemRequestBuilderGetRequestConfiguration requestConfig = new SubscriptionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -115,7 +116,7 @@ public class SubscriptionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update subscription
+     * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body 
      * @return a RequestInformation
      */
@@ -124,7 +125,7 @@ public class SubscriptionItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update subscription
+     * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -147,7 +148,7 @@ public class SubscriptionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete subscription
+     * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -163,7 +164,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Delete subscription
+     * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -180,7 +181,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Delete subscription
+     * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -198,7 +199,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Get subscription
+     * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @return a CompletableFuture of subscription
      */
     public java.util.concurrent.CompletableFuture<Subscription> get() {
@@ -214,7 +215,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Get subscription
+     * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subscription
      */
@@ -231,7 +232,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Get subscription
+     * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of subscription
@@ -249,7 +250,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Update subscription
+     * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -266,7 +267,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Update subscription
+     * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -284,7 +285,7 @@ public class SubscriptionItemRequestBuilder {
         }
     }
     /**
-     * Update subscription
+     * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -318,7 +319,7 @@ public class SubscriptionItemRequestBuilder {
         public SubscriptionItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get subscription */
+    /** Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications. */
     public class SubscriptionItemRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

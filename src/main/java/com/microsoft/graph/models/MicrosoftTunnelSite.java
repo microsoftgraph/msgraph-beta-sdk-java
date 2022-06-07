@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a Microsoft Tunnel site */
 public class MicrosoftTunnelSite extends Entity implements Parsable {
     /** The MicrosoftTunnelSite's description */
     private String _description;

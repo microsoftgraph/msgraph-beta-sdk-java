@@ -99,6 +99,7 @@ public class TenantCustomizedInformationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TenantCustomizedInformationItemRequestBuilderGetRequestConfiguration requestConfig = new TenantCustomizedInformationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

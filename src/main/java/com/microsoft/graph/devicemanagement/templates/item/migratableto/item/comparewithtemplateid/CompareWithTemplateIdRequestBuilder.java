@@ -33,7 +33,7 @@ public class CompareWithTemplateIdRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}/microsoft.graph.compare(templateId='{templateId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", templateId);
+        urlTplParams.put("templateId", templateId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class CompareWithTemplateIdRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CompareWithTemplateIdRequestBuilderGetRequestConfiguration requestConfig = new CompareWithTemplateIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the dataClassificationService singleton. */
 public class JobResponseBase extends Entity implements Parsable {
     /** The creationDateTime property */
     private OffsetDateTime _creationDateTime;
@@ -38,6 +39,13 @@ public class JobResponseBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static JobResponseBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.jobResponseBase": return new JobResponseBase();
+            }
+        }
         return new JobResponseBase();
     }
     /**

@@ -17,12 +17,24 @@ import java.util.Objects;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.registereddevices.count.CountRequestBuilder;
+import microsoft.graph.users.item.registereddevices.device.DeviceRequestBuilder;
+import microsoft.graph.users.item.registereddevices.endpoint.EndpointRequestBuilder;
 /** Provides operations to manage the registeredDevices property of the microsoft.graph.user entity. */
 public class RegisteredDevicesRequestBuilder {
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The device property */
+    @javax.annotation.Nonnull
+    public DeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -77,6 +89,7 @@ public class RegisteredDevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RegisteredDevicesRequestBuilderGetRequestConfiguration requestConfig = new RegisteredDevicesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

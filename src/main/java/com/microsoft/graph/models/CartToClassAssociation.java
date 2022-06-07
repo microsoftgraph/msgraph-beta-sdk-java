@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** CartToClassAssociation for associating device carts with classrooms. */
 public class CartToClassAssociation extends Entity implements Parsable {
     /** Identifiers of classrooms to be associated with device carts. */
     private java.util.List<String> _classroomIds;

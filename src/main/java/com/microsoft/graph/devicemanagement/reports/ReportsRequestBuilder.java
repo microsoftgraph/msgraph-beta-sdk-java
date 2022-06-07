@@ -72,6 +72,7 @@ import microsoft.graph.devicemanagement.reports.getwindowsqualityupdatealertsper
 import microsoft.graph.devicemanagement.reports.getwindowsqualityupdatealertsummaryreport.GetWindowsQualityUpdateAlertSummaryReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
+import microsoft.graph.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
 import microsoft.graph.models.DeviceManagementReports;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the reports property of the microsoft.graph.deviceManagement entity. */
@@ -356,6 +357,11 @@ public class ReportsRequestBuilder {
     public GetWindowsUpdateAlertSummaryReportRequestBuilder getWindowsUpdateAlertSummaryReport() {
         return new GetWindowsUpdateAlertSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The getZebraFotaDeploymentReport property */
+    @javax.annotation.Nonnull
+    public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
+        return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -449,6 +455,7 @@ public class ReportsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ReportsRequestBuilderGetRequestConfiguration requestConfig = new ReportsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

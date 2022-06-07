@@ -78,6 +78,7 @@ public class SalesQuoteLinesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SalesQuoteLinesRequestBuilderGetRequestConfiguration requestConfig = new SalesQuoteLinesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class SalesQuoteLinesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SalesQuoteLinesRequestBuilderPostRequestConfiguration requestConfig = new SalesQuoteLinesRequestBuilderPostRequestConfiguration();

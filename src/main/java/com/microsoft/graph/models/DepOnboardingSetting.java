@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The depOnboardingSetting represents an instance of the Apple DEP service being onboarded to Intune. The onboarded service instance manages an Apple Token used to synchronize data between Apple and Intune. */
 public class DepOnboardingSetting extends Entity implements Parsable {
     /** The Apple ID used to obtain the current token. */
     private String _appleIdentifier;

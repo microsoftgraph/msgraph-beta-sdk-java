@@ -12,24 +12,24 @@ import java.util.Objects;
 public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The azureStorageAccountId property */
+    /** The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved. */
     private String _azureStorageAccountId;
-    /** The azureStorageAccountName property */
+    /** The name of the Azure Storage account in which the Cloud PC snapshot is being saved. */
     private String _azureStorageAccountName;
-    /** The inReview property */
+    /** True if the Cloud PC is set to in review by the administrator. */
     private Boolean _inReview;
-    /** The restorePointDateTime property */
+    /** The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
     private OffsetDateTime _restorePointDateTime;
-    /** The reviewStartDateTime property */
+    /** The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
     private OffsetDateTime _reviewStartDateTime;
-    /** The subscriptionId property */
+    /** The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format. */
     private String _subscriptionId;
-    /** The subscriptionName property */
+    /** The name of the Azure subscription in which the Cloud PC snapshot is being saved. */
     private String _subscriptionName;
-    /** The userAccessLevel property */
+    /** The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted. */
     private CloudPcUserAccessLevel _userAccessLevel;
     /**
-     * Instantiates a new cloudPcReviewStatus and sets the default values.
+     * Instantiates a new CloudPcReviewStatus and sets the default values.
      * @return a void
      */
     public CloudPcReviewStatus() {
@@ -38,7 +38,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcReviewStatus
+     * @return a CloudPcReviewStatus
      */
     @javax.annotation.Nonnull
     public static CloudPcReviewStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the azureStorageAccountId property value. The azureStorageAccountId property
+     * Gets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._azureStorageAccountId;
     }
     /**
-     * Gets the azureStorageAccountName property value. The azureStorageAccountName property
+     * Gets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the inReview property value. The inReview property
+     * Gets the inReview property value. True if the Cloud PC is set to in review by the administrator.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._inReview;
     }
     /**
-     * Gets the restorePointDateTime property value. The restorePointDateTime property
+     * Gets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._restorePointDateTime;
     }
     /**
-     * Gets the reviewStartDateTime property value. The reviewStartDateTime property
+     * Gets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._reviewStartDateTime;
     }
     /**
-     * Gets the subscriptionId property value. The subscriptionId property
+     * Gets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._subscriptionId;
     }
     /**
-     * Gets the subscriptionName property value. The subscriptionName property
+     * Gets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._subscriptionName;
     }
     /**
-     * Gets the userAccessLevel property value. The userAccessLevel property
+     * Gets the userAccessLevel property value. The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted.
      * @return a cloudPcUserAccessLevel
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the azureStorageAccountId property value. The azureStorageAccountId property
+     * Sets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageAccountId property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._azureStorageAccountId = value;
     }
     /**
-     * Sets the azureStorageAccountName property value. The azureStorageAccountName property
+     * Sets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageAccountName property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._azureStorageAccountName = value;
     }
     /**
-     * Sets the inReview property value. The inReview property
+     * Sets the inReview property value. True if the Cloud PC is set to in review by the administrator.
      * @param value Value to set for the inReview property.
      * @return a void
      */
@@ -185,7 +185,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._inReview = value;
     }
     /**
-     * Sets the restorePointDateTime property value. The restorePointDateTime property
+     * Sets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the restorePointDateTime property.
      * @return a void
      */
@@ -193,7 +193,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._restorePointDateTime = value;
     }
     /**
-     * Sets the reviewStartDateTime property value. The reviewStartDateTime property
+     * Sets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the reviewStartDateTime property.
      * @return a void
      */
@@ -201,7 +201,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._reviewStartDateTime = value;
     }
     /**
-     * Sets the subscriptionId property value. The subscriptionId property
+     * Sets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
@@ -209,7 +209,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._subscriptionId = value;
     }
     /**
-     * Sets the subscriptionName property value. The subscriptionName property
+     * Sets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the subscriptionName property.
      * @return a void
      */
@@ -217,7 +217,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._subscriptionName = value;
     }
     /**
-     * Sets the userAccessLevel property value. The userAccessLevel property
+     * Sets the userAccessLevel property value. The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted.
      * @param value Value to set for the userAccessLevel property.
      * @return a void
      */

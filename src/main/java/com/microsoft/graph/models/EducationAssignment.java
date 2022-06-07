@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationAssignment extends Entity implements Parsable {
     /** Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen. */
     private EducationAddedStudentAction _addedStudentAction;
@@ -37,6 +38,8 @@ public class EducationAssignment extends Entity implements Parsable {
     private String _displayName;
     /** Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _dueDateTime;
+    /** Folder URL where all the feedback file resources for this assignment are stored. */
+    private String _feedbackResourcesFolderUrl;
     /** How the assignment will be graded. */
     private EducationAssignmentGradeType _grading;
     /** Instructions for the assignment.  This along with the display name tell the student what to do. */
@@ -189,6 +192,14 @@ public class EducationAssignment extends Entity implements Parsable {
         return this._dueDateTime;
     }
     /**
+     * Gets the feedbackResourcesFolderUrl property value. Folder URL where all the feedback file resources for this assignment are stored.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getFeedbackResourcesFolderUrl() {
+        return this._feedbackResourcesFolderUrl;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -210,6 +221,7 @@ public class EducationAssignment extends Entity implements Parsable {
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
+            this.put("feedbackResourcesFolderUrl", (n) -> { currentObject.setFeedbackResourcesFolderUrl(n.getStringValue()); });
             this.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
             this.put("instructions", (n) -> { currentObject.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -333,6 +345,7 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
+        writer.writeStringValue("feedbackResourcesFolderUrl", this.getFeedbackResourcesFolderUrl());
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("instructions", this.getInstructions());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
@@ -456,6 +469,14 @@ public class EducationAssignment extends Entity implements Parsable {
      */
     public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dueDateTime = value;
+    }
+    /**
+     * Sets the feedbackResourcesFolderUrl property value. Folder URL where all the feedback file resources for this assignment are stored.
+     * @param value Value to set for the feedbackResourcesFolderUrl property.
+     * @return a void
+     */
+    public void setFeedbackResourcesFolderUrl(@javax.annotation.Nullable final String value) {
+        this._feedbackResourcesFolderUrl = value;
     }
     /**
      * Sets the grading property value. How the assignment will be graded.

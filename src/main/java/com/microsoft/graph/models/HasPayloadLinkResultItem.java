@@ -19,7 +19,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     /** Key of the Payload, In the format of Guid. */
     private String _payloadId;
     /** The reason where the link comes from. */
-    private java.util.List<DeviceAndAppManagementAssignmentSource> _sources;
+    private java.util.List<String> _sources;
     /**
      * Instantiates a new hasPayloadLinkResultItem and sets the default values.
      * @return a void
@@ -64,7 +64,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
             this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
             this.put("hasLink", (n) -> { currentObject.setHasLink(n.getBooleanValue()); });
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfEnumValues(DeviceAndAppManagementAssignmentSource.class)); });
+            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
@@ -85,10 +85,10 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the sources property value. The reason where the link comes from.
-     * @return a deviceAndAppManagementAssignmentSource
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<DeviceAndAppManagementAssignmentSource> getSources() {
+    public java.util.List<String> getSources() {
         return this._sources;
     }
     /**
@@ -101,7 +101,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
         writer.writeStringValue("error", this.getError());
         writer.writeBooleanValue("hasLink", this.getHasLink());
         writer.writeStringValue("payloadId", this.getPayloadId());
-        writer.writeCollectionOfEnumValues("sources", this.getSources());
+        writer.writeCollectionOfPrimitiveValues("sources", this.getSources());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -141,7 +141,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the sources property.
      * @return a void
      */
-    public void setSources(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentSource> value) {
+    public void setSources(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sources = value;
     }
 }

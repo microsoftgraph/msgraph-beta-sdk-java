@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics application performance entity contains app performance details. */
 public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity implements Parsable {
     /** The number of devices where the app has been active. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;

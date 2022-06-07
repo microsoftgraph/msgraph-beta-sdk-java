@@ -99,6 +99,7 @@ public class AttributeSetItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AttributeSetItemRequestBuilderGetRequestConfiguration requestConfig = new AttributeSetItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

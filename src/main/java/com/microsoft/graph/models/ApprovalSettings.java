@@ -11,13 +11,13 @@ import java.util.Objects;
 public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false. */
+    /** One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false. */
     private String _approvalMode;
     /** If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required. */
     private java.util.List<ApprovalStage> _approvalStages;
-    /** If false, then approval is not required for requests in this policy. */
+    /** Indicates whether approval is required for requests in this policy. */
     private Boolean _isApprovalRequired;
-    /** If false, then approval is not required for a user who already has an assignment to extend their assignment. */
+    /** Indicates whether approval is required for a user to extend their assignment. */
     private Boolean _isApprovalRequiredForExtension;
     /** Indicates whether the requestor is required to supply a justification in their request. */
     private Boolean _isRequestorJustificationRequired;
@@ -47,7 +47,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the approvalMode property value. One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
+     * Gets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the isApprovalRequired property value. If false, then approval is not required for requests in this policy.
+     * Gets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         return this._isApprovalRequired;
     }
     /**
-     * Gets the isApprovalRequiredForExtension property value. If false, then approval is not required for a user who already has an assignment to extend their assignment.
+     * Gets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the approvalMode property value. One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
+     * Sets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
      * @param value Value to set for the approvalMode property.
      * @return a void
      */
@@ -140,7 +140,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         this._approvalStages = value;
     }
     /**
-     * Sets the isApprovalRequired property value. If false, then approval is not required for requests in this policy.
+     * Sets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
      * @param value Value to set for the isApprovalRequired property.
      * @return a void
      */
@@ -148,7 +148,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         this._isApprovalRequired = value;
     }
     /**
-     * Sets the isApprovalRequiredForExtension property value. If false, then approval is not required for a user who already has an assignment to extend their assignment.
+     * Sets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
      * @param value Value to set for the isApprovalRequiredForExtension property.
      * @return a void
      */

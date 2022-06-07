@@ -68,6 +68,7 @@ public class HasCustomRoleScopeTagRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final HasCustomRoleScopeTagRequestBuilderGetRequestConfiguration requestConfig = new HasCustomRoleScopeTagRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

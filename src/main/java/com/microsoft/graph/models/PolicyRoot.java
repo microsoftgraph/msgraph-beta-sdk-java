@@ -35,6 +35,8 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     private CrossTenantAccessPolicy _crossTenantAccessPolicy;
     /** The tenant-wide policy that enforces app management restrictions for all applications and service principals. */
     private TenantAppManagementPolicy _defaultAppManagementPolicy;
+    /** The deviceRegistrationPolicy property */
+    private DeviceRegistrationPolicy _deviceRegistrationPolicy;
     /** The directoryRoleAccessReviewPolicy property */
     private DirectoryRoleAccessReviewPolicy _directoryRoleAccessReviewPolicy;
     /** The externalIdentitiesPolicy property */
@@ -183,6 +185,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         return this._defaultAppManagementPolicy;
     }
     /**
+     * Gets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * @return a deviceRegistrationPolicy
+     */
+    @javax.annotation.Nullable
+    public DeviceRegistrationPolicy getDeviceRegistrationPolicy() {
+        return this._deviceRegistrationPolicy;
+    }
+    /**
      * Gets the directoryRoleAccessReviewPolicy property value. The directoryRoleAccessReviewPolicy property
      * @return a directoryRoleAccessReviewPolicy
      */
@@ -213,7 +223,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PolicyRoot currentObject = this;
-        return new HashMap<>(25) {{
+        return new HashMap<>(26) {{
             this.put("accessReviewPolicy", (n) -> { currentObject.setAccessReviewPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
             this.put("activityBasedTimeoutPolicies", (n) -> { currentObject.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
             this.put("adminConsentRequestPolicy", (n) -> { currentObject.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
@@ -226,6 +236,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
             this.put("conditionalAccessPolicies", (n) -> { currentObject.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
             this.put("crossTenantAccessPolicy", (n) -> { currentObject.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
             this.put("defaultAppManagementPolicy", (n) -> { currentObject.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
+            this.put("deviceRegistrationPolicy", (n) -> { currentObject.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
             this.put("directoryRoleAccessReviewPolicy", (n) -> { currentObject.setDirectoryRoleAccessReviewPolicy(n.getObjectValue(DirectoryRoleAccessReviewPolicy::createFromDiscriminatorValue)); });
             this.put("externalIdentitiesPolicy", (n) -> { currentObject.setExternalIdentitiesPolicy(n.getObjectValue(ExternalIdentitiesPolicy::createFromDiscriminatorValue)); });
             this.put("featureRolloutPolicies", (n) -> { currentObject.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
@@ -340,6 +351,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
         writer.writeObjectValue("crossTenantAccessPolicy", this.getCrossTenantAccessPolicy());
         writer.writeObjectValue("defaultAppManagementPolicy", this.getDefaultAppManagementPolicy());
+        writer.writeObjectValue("deviceRegistrationPolicy", this.getDeviceRegistrationPolicy());
         writer.writeObjectValue("directoryRoleAccessReviewPolicy", this.getDirectoryRoleAccessReviewPolicy());
         writer.writeObjectValue("externalIdentitiesPolicy", this.getExternalIdentitiesPolicy());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
@@ -458,6 +470,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      */
     public void setDefaultAppManagementPolicy(@javax.annotation.Nullable final TenantAppManagementPolicy value) {
         this._defaultAppManagementPolicy = value;
+    }
+    /**
+     * Sets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * @param value Value to set for the deviceRegistrationPolicy property.
+     * @return a void
+     */
+    public void setDeviceRegistrationPolicy(@javax.annotation.Nullable final DeviceRegistrationPolicy value) {
+        this._deviceRegistrationPolicy = value;
     }
     /**
      * Sets the directoryRoleAccessReviewPolicy property value. The directoryRoleAccessReviewPolicy property

@@ -99,6 +99,7 @@ public class DeviceHealthScriptAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceHealthScriptAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceHealthScriptAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -8,10 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class BaseTask extends Entity implements Parsable {
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
-    /** A collection of checklistItems linked to a task. */
+    /** A collection of smaller subtasks linked to the more complex parent task. */
     private java.util.List<ChecklistItem> _checklistItems;
     /** The date when the task was finished. */
     private OffsetDateTime _completedDateTime;
@@ -56,6 +57,13 @@ public class BaseTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static BaseTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.baseTask": return new BaseTask();
+            }
+        }
         return new BaseTask();
     }
     /**
@@ -67,7 +75,7 @@ public class BaseTask extends Entity implements Parsable {
         return this._bodyLastModifiedDateTime;
     }
     /**
-     * Gets the checklistItems property value. A collection of checklistItems linked to a task.
+     * Gets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
      * @return a checklistItem
      */
     @javax.annotation.Nullable
@@ -246,7 +254,7 @@ public class BaseTask extends Entity implements Parsable {
         this._bodyLastModifiedDateTime = value;
     }
     /**
-     * Sets the checklistItems property value. A collection of checklistItems linked to a task.
+     * Sets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
      * @param value Value to set for the checklistItems property.
      * @return a void
      */

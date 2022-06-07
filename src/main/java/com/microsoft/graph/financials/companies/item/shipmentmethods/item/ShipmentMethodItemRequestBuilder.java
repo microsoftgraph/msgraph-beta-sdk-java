@@ -99,6 +99,7 @@ public class ShipmentMethodItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ShipmentMethodItemRequestBuilderGetRequestConfiguration requestConfig = new ShipmentMethodItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

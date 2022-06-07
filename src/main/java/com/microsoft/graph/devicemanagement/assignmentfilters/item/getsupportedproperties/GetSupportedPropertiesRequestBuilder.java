@@ -68,6 +68,7 @@ public class GetSupportedPropertiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSupportedPropertiesRequestBuilderGetRequestConfiguration requestConfig = new GetSupportedPropertiesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -144,6 +144,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementCompliancePolicyItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementCompliancePolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

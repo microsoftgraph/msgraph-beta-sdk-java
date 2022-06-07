@@ -123,6 +123,7 @@ public class ZebraFotaConnectorRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ZebraFotaConnectorRequestBuilderGetRequestConfiguration requestConfig = new ZebraFotaConnectorRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

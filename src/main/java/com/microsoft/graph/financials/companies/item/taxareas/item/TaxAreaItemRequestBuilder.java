@@ -99,6 +99,7 @@ public class TaxAreaItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TaxAreaItemRequestBuilderGetRequestConfiguration requestConfig = new TaxAreaItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

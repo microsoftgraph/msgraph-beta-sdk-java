@@ -71,6 +71,7 @@ public class RebootAnalyticsMetricsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RebootAnalyticsMetricsRequestBuilderGetRequestConfiguration requestConfig = new RebootAnalyticsMetricsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

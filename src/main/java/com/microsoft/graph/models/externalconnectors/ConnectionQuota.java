@@ -8,8 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ConnectionQuota extends Entity implements Parsable {
-    /** The itemsRemaining property */
+    /** The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection} – {number of items in the connection}, {tenant quota} – {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection. */
     private Long _itemsRemaining;
     /**
      * Instantiates a new connectionQuota and sets the default values.
@@ -40,7 +41,7 @@ public class ConnectionQuota extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the itemsRemaining property value. The itemsRemaining property
+     * Gets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection} – {number of items in the connection}, {tenant quota} – {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -58,7 +59,7 @@ public class ConnectionQuota extends Entity implements Parsable {
         writer.writeLongValue("itemsRemaining", this.getItemsRemaining());
     }
     /**
-     * Sets the itemsRemaining property value. The itemsRemaining property
+     * Sets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection} – {number of items in the connection}, {tenant quota} – {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
      * @param value Value to set for the itemsRemaining property.
      * @return a void
      */

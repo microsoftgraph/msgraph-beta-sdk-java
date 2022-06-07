@@ -78,6 +78,7 @@ public class MobileAppManagementPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppManagementPoliciesRequestBuilderGetRequestConfiguration requestConfig = new MobileAppManagementPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class MobileAppManagementPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MobileAppManagementPoliciesRequestBuilderPostRequestConfiguration requestConfig = new MobileAppManagementPoliciesRequestBuilderPostRequestConfiguration();

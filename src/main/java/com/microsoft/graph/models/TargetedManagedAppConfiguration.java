@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Configuration used to deliver a set of custom settings as-is to all users in the targeted security group */
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
     /** Public Apps selection: group or individual */
     private TargetedManagedAppGroupType _appGroupType;

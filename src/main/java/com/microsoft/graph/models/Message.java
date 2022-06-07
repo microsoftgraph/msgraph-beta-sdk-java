@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class Message extends OutlookItem implements Parsable {
     /** The fileAttachment and itemAttachment attachments for the message. */
     private java.util.List<Attachment> _attachments;
@@ -92,6 +93,13 @@ public class Message extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public static Message createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.message": return new Message();
+            }
+        }
         return new Message();
     }
     /**

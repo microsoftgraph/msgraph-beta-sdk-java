@@ -99,6 +99,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

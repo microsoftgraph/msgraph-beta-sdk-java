@@ -54,7 +54,7 @@ public class DeleteTiIndicatorsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class DeleteTiIndicatorsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeleteTiIndicatorsRequestBuilderPostRequestConfiguration requestConfig = new DeleteTiIndicatorsRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class DeleteTiIndicatorsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of deleteTiIndicatorsResponse
      */
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class DeleteTiIndicatorsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deleteTiIndicatorsResponse
      */
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class DeleteTiIndicatorsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of deleteTiIndicatorsResponse
      */
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

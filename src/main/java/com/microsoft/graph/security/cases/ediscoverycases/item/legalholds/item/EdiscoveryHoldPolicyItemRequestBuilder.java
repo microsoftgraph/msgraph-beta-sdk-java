@@ -113,6 +113,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EdiscoveryHoldPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new EdiscoveryHoldPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

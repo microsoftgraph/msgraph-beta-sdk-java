@@ -33,7 +33,7 @@ public class GetPlatformSupportedPropertiesWithPlatformRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/assignmentFilters/microsoft.graph.getPlatformSupportedProperties(platform='{platform}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", platform);
+        urlTplParams.put("platform", platform);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetPlatformSupportedPropertiesWithPlatformRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetPlatformSupportedPropertiesWithPlatformRequestBuilderGetRequestConfiguration requestConfig = new GetPlatformSupportedPropertiesWithPlatformRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

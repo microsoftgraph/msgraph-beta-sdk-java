@@ -105,6 +105,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

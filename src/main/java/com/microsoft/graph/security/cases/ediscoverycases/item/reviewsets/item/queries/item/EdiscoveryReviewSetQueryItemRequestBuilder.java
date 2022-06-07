@@ -112,6 +112,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration requestConfig = new EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

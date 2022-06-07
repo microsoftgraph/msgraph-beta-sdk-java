@@ -99,6 +99,7 @@ public class CloudAppSecurityProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudAppSecurityProfileItemRequestBuilderGetRequestConfiguration requestConfig = new CloudAppSecurityProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

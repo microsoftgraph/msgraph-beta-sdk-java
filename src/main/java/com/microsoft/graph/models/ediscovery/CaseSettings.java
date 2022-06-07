@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the compliance singleton. */
 public class CaseSettings extends Entity implements Parsable {
     /** The OCR (Optical Character Recognition) settings for the case. */
     private OcrSettings _ocr;

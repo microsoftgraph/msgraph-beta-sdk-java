@@ -99,6 +99,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration requestConfig = new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

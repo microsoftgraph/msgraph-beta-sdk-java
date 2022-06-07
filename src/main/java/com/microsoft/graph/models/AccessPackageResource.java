@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageResource extends Entity implements Parsable {
     /** Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand. */
     private AccessPackageResourceEnvironment _accessPackageResourceEnvironment;

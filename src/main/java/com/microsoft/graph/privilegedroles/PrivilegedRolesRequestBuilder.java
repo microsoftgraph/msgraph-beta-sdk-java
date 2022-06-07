@@ -59,7 +59,7 @@ public class PrivilegedRolesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List privilegedRoles
+     * Retrieve a list of privilegedRole objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PrivilegedRolesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List privilegedRoles
+     * Retrieve a list of privilegedRole objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class PrivilegedRolesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedRolesRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedRolesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class PrivilegedRolesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PrivilegedRolesRequestBuilderPostRequestConfiguration requestConfig = new PrivilegedRolesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class PrivilegedRolesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List privilegedRoles
+     * Retrieve a list of privilegedRole objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @return a CompletableFuture of PrivilegedRoleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PrivilegedRoleCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class PrivilegedRolesRequestBuilder {
         }
     }
     /**
-     * List privilegedRoles
+     * Retrieve a list of privilegedRole objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrivilegedRoleCollectionResponse
      */
@@ -153,7 +155,7 @@ public class PrivilegedRolesRequestBuilder {
         }
     }
     /**
-     * List privilegedRoles
+     * Retrieve a list of privilegedRole objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PrivilegedRoleCollectionResponse
@@ -225,7 +227,7 @@ public class PrivilegedRolesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List privilegedRoles */
+    /** Retrieve a list of privilegedRole objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs. */
     public class PrivilegedRolesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

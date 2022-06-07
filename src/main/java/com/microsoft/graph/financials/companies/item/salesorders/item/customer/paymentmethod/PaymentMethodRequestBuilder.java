@@ -99,6 +99,7 @@ public class PaymentMethodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PaymentMethodRequestBuilderGetRequestConfiguration requestConfig = new PaymentMethodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

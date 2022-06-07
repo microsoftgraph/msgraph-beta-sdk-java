@@ -25,7 +25,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     /** User logon ID. */
     private String _logonId;
     /** Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
-    private java.util.List<LogonType> _logonTypes;
+    private java.util.List<String> _logonTypes;
     /**
      * Instantiates a new logonUser and sets the default values.
      * @return a void
@@ -89,7 +89,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
             this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
             this.put("logonId", (n) -> { currentObject.setLogonId(n.getStringValue()); });
-            this.put("logonTypes", (n) -> { currentObject.setLogonTypes(n.getCollectionOfEnumValues(LogonType.class)); });
+            this.put("logonTypes", (n) -> { currentObject.setLogonTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
@@ -118,10 +118,10 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a logonType
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<LogonType> getLogonTypes() {
+    public java.util.List<String> getLogonTypes() {
         return this._logonTypes;
     }
     /**
@@ -137,7 +137,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("logonId", this.getLogonId());
-        writer.writeCollectionOfEnumValues("logonTypes", this.getLogonTypes());
+        writer.writeCollectionOfPrimitiveValues("logonTypes", this.getLogonTypes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -201,7 +201,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logonTypes property.
      * @return a void
      */
-    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<LogonType> value) {
+    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._logonTypes = value;
     }
 }

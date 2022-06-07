@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of privilegedAccess entities. */
 public class PrivilegedAccess extends Entity implements Parsable {
     /** The display name of the provider managed by PIM. */
     private String _displayName;

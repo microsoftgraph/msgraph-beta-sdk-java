@@ -71,6 +71,7 @@ public class DeviceConfigurationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceConfigurationRequestBuilderGetRequestConfiguration requestConfig = new DeviceConfigurationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

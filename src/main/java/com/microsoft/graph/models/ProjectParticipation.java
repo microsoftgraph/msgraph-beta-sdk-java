@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ProjectParticipation extends ItemFacet implements Parsable {
     /** Contains categories a user has associated with the project (for example, digital transformation, oil rig). */
     private java.util.List<String> _categories;

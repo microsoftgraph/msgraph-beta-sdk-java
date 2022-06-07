@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class AccessReviewError extends GenericError implements Parsable {
     /**
      * Instantiates a new accessReviewError and sets the default values.

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Violation of restricted apps configuration profile per device per user */
 public class RestrictedAppsViolation extends Entity implements Parsable {
     /** Device configuration profile unique identifier, must be Guid */
     private String _deviceConfigurationId;

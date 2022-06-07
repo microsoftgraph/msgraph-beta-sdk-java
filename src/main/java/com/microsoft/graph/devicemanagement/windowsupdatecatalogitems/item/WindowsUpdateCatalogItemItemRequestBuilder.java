@@ -99,6 +99,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsUpdateCatalogItemItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsUpdateCatalogItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

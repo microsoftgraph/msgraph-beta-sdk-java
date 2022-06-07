@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A device app management task. */
 public class DeviceAppManagementTask extends Entity implements Parsable {
     /** The name or email of the admin this task is assigned to. */
     private String _assignedTo;
@@ -44,6 +45,13 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static DeviceAppManagementTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceAppManagementTask": return new DeviceAppManagementTask();
+            }
+        }
         return new DeviceAppManagementTask();
     }
     /**

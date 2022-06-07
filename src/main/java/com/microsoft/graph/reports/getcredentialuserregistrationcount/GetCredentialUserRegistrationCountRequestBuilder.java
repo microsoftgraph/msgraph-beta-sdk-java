@@ -68,6 +68,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetCredentialUserRegistrationCountRequestBuilderGetRequestConfiguration requestConfig = new GetCredentialUserRegistrationCountRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for PolicySet Item. */
 public class PolicySetItem extends Entity implements Parsable {
     /** Creation time of the PolicySetItem. */
     private OffsetDateTime _createdDateTime;
@@ -40,6 +41,13 @@ public class PolicySetItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static PolicySetItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.policySetItem": return new PolicySetItem();
+            }
+        }
         return new PolicySetItem();
     }
     /**

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of governanceResource entities. */
 public class GovernanceSubject extends Entity implements Parsable {
     /** The display name of the subject. */
     private String _displayName;

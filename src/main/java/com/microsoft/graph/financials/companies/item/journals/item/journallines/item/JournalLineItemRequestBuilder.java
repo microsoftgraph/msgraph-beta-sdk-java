@@ -105,6 +105,7 @@ public class JournalLineItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final JournalLineItemRequestBuilderGetRequestConfiguration requestConfig = new JournalLineItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

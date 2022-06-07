@@ -68,6 +68,7 @@ public class DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameReques
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilderGetRequestConfiguration requestConfig = new DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

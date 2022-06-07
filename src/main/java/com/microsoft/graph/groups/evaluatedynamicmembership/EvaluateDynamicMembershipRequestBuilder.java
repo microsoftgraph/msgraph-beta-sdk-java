@@ -55,7 +55,7 @@ public class EvaluateDynamicMembershipRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateDynamicMembershipRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class EvaluateDynamicMembershipRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateDynamicMembershipRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration requestConfig = new EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class EvaluateDynamicMembershipRequestBuilder {
     /**
      * Invoke action evaluateDynamicMembership
      * @param body 
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      */
-    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipRequestBody body) {
+    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class EvaluateDynamicMembershipRequestBuilder {
      * Invoke action evaluateDynamicMembership
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      */
-    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class EvaluateDynamicMembershipRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      */
-    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

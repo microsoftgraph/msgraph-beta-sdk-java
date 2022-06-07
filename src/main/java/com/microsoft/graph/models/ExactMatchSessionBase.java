@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the dataClassificationService singleton. */
 public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable {
     /** The dataStoreId property */
     private String _dataStoreId;
@@ -40,6 +41,13 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     @javax.annotation.Nonnull
     public static ExactMatchSessionBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.exactMatchSessionBase": return new ExactMatchSessionBase();
+            }
+        }
         return new ExactMatchSessionBase();
     }
     /**

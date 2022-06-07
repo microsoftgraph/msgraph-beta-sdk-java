@@ -203,7 +203,7 @@ public class ApplicationItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete application
+     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -211,7 +211,7 @@ public class ApplicationItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete application
+     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -231,7 +231,7 @@ public class ApplicationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get application
+     * Get the properties and relationships of an application object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -239,7 +239,7 @@ public class ApplicationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get application
+     * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -250,6 +250,7 @@ public class ApplicationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApplicationItemRequestBuilderGetRequestConfiguration requestConfig = new ApplicationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -260,7 +261,7 @@ public class ApplicationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Update the properties of an application object.
      * @param body 
      * @return a RequestInformation
      */
@@ -269,7 +270,7 @@ public class ApplicationItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Update the properties of an application object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -292,7 +293,7 @@ public class ApplicationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete application
+     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -308,7 +309,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Delete application
+     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -325,7 +326,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Delete application
+     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -367,7 +368,7 @@ public class ApplicationItemRequestBuilder {
         return new FederatedIdentityCredentialItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get application
+     * Get the properties and relationships of an application object.
      * @return a CompletableFuture of application
      */
     public java.util.concurrent.CompletableFuture<Application> get() {
@@ -383,7 +384,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Get application
+     * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of application
      */
@@ -400,7 +401,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Get application
+     * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of application
@@ -442,7 +443,7 @@ public class ApplicationItemRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Update the properties of an application object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -459,7 +460,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Update the properties of an application object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -477,7 +478,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Update the properties of an application object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -535,7 +536,7 @@ public class ApplicationItemRequestBuilder {
         public ApplicationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get application */
+    /** Get the properties and relationships of an application object. */
     public class ApplicationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

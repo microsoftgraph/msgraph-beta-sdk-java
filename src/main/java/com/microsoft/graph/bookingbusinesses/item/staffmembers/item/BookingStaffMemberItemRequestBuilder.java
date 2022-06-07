@@ -99,6 +99,7 @@ public class BookingStaffMemberItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingStaffMemberItemRequestBuilderGetRequestConfiguration requestConfig = new BookingStaffMemberItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

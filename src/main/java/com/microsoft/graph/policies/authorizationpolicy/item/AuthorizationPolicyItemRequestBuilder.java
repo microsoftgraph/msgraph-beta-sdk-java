@@ -106,6 +106,7 @@ public class AuthorizationPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AuthorizationPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new AuthorizationPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

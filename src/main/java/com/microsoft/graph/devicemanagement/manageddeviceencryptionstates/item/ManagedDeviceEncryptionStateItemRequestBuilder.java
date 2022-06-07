@@ -99,6 +99,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceEncryptionStateItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceEncryptionStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

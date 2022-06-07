@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for device run state of the device compliance script. */
 public class DeviceComplianceScriptDeviceState extends Entity implements Parsable {
     /** Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable. */
     private RunState _detectionState;

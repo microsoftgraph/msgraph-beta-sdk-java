@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the security singleton. */
 public class Search extends Entity implements Parsable {
     /** The contentQuery property */
     private String _contentQuery;
@@ -40,6 +41,13 @@ public class Search extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Search createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.security.search": return new Search();
+            }
+        }
         return new Search();
     }
     /**

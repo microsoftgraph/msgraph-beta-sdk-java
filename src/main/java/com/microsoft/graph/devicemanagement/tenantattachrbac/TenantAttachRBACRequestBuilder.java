@@ -106,6 +106,7 @@ public class TenantAttachRBACRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TenantAttachRBACRequestBuilderGetRequestConfiguration requestConfig = new TenantAttachRBACRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

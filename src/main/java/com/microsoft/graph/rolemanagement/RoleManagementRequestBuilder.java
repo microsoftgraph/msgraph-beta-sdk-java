@@ -95,6 +95,7 @@ public class RoleManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleManagementRequestBuilderGetRequestConfiguration requestConfig = new RoleManagementRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

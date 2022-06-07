@@ -18,7 +18,7 @@ public class DeviceComplianceScriptValidationResult implements AdditionalDataHol
     /** Errors in json for the script. */
     private java.util.List<DeviceComplianceScriptError> _scriptErrors;
     /**
-     * Instantiates a new deviceComplianceScriptValidationResult and sets the default values.
+     * Instantiates a new DeviceComplianceScriptValidationResult and sets the default values.
      * @return a void
      */
     public DeviceComplianceScriptValidationResult() {
@@ -27,7 +27,7 @@ public class DeviceComplianceScriptValidationResult implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptValidationResult
+     * @return a DeviceComplianceScriptValidationResult
      */
     @javax.annotation.Nonnull
     public static DeviceComplianceScriptValidationResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

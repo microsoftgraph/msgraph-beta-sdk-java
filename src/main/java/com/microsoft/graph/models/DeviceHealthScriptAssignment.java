@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties used to assign a device management script to a group. */
 public class DeviceHealthScriptAssignment extends Entity implements Parsable {
     /** Determine whether we want to run detection script only or run both detection script and remediation script */
     private Boolean _runRemediationScript;

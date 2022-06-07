@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ItemFacet extends Entity implements Parsable {
     /** The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue. */
     private AllowedAudiences _allowedAudiences;
@@ -40,6 +41,13 @@ public class ItemFacet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ItemFacet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.itemFacet": return new ItemFacet();
+            }
+        }
         return new ItemFacet();
     }
     /**

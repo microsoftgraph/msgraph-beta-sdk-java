@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The DeviceManagementConfigurationPolicyAssignment entity assigns a specific DeviceManagementConfigurationPolicy to an AAD group. */
 public class DeviceManagementConfigurationPolicyAssignment extends Entity implements Parsable {
     /** The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets. */
     private DeviceAndAppManagementAssignmentSource _source;

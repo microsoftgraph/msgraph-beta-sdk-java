@@ -129,6 +129,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GovernanceRoleAssignmentRequestItemRequestBuilderGetRequestConfiguration requestConfig = new GovernanceRoleAssignmentRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

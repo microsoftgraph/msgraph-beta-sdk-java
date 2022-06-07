@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This topic provides descriptions of the declared methods, properties and relationships exposed by the iOS Lob App Provisioning Configuration resource. */
 public class IosLobAppProvisioningConfiguration extends Entity implements Parsable {
     /** The associated group assignments for IosLobAppProvisioningConfiguration. */
     private java.util.List<IosLobAppProvisioningConfigurationAssignment> _assignments;

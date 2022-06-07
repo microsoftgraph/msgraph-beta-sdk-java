@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the reportRoot singleton. */
+/** Provides operations to manage the print singleton. */
 public class ReportRoot extends Entity implements Parsable {
     /** Represents a detailed summary of an application sign-in. */
     private java.util.List<ApplicationSignInDetailedSummary> _applicationSignInDetailedSummary;

@@ -212,7 +212,7 @@ import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicat
 import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversion.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionRequestBuilder;
 import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondetails.item.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsItemRequestBuilder;
 import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondetails.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondeviceid.item.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceItemRequestBuilder;
+import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondeviceid.item.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder;
 import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondeviceid.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder;
 import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyosversion.item.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemRequestBuilder;
 import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyosversion.UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder;
@@ -1458,6 +1458,7 @@ public class DeviceManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -2458,14 +2459,14 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceItemRequestBuilder
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@javax.annotation.Nonnull final String id) {
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId%2Did", id);
-        return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion.item collection

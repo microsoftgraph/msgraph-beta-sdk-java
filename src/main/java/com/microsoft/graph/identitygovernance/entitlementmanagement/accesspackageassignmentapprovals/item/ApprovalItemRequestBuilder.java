@@ -87,7 +87,7 @@ public class ApprovalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ApprovalItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,6 +106,7 @@ public class ApprovalItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApprovalItemRequestBuilderGetRequestConfiguration requestConfig = new ApprovalItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -199,7 +200,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @return a CompletableFuture of approval
      */
     public java.util.concurrent.CompletableFuture<Approval> get() {
@@ -215,7 +216,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approval
      */
@@ -232,7 +233,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of approval
@@ -331,7 +332,7 @@ public class ApprovalItemRequestBuilder {
         public ApprovalItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Approval stages for assignment requests. */
+    /** Approval stages for decisions associated with access package assignment requests. */
     public class ApprovalItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

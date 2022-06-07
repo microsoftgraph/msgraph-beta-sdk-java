@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
     /** The allowDeletedIdentitiesDataRemoval property */
     private Boolean _allowDeletedIdentitiesDataRemoval;

@@ -68,6 +68,7 @@ public class InvalidateAllRefreshTokensRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InvalidateAllRefreshTokensRequestBuilderPostRequestConfiguration requestConfig = new InvalidateAllRefreshTokensRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

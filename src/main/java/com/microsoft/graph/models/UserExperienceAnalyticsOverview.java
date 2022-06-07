@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics overview entity contains the overall score and the scores and insights of every metric of all categories. */
 public class UserExperienceAnalyticsOverview extends Entity implements Parsable {
     /** The user experience analytics insights. */
     private java.util.List<UserExperienceAnalyticsInsight> _insights;

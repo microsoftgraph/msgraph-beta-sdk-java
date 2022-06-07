@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of directorySettingTemplate entities. */
 public class DirectorySettingTemplate extends DirectoryObject implements Parsable {
     /** Description of the template. Read-only. */
     private String _description;

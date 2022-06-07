@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains the properties used to assign a branding profile to a group. */
 public class IntuneBrandingProfileAssignment extends Entity implements Parsable {
     /** Assignment target that the branding profile is assigned to. */
     private DeviceAndAppManagementAssignmentTarget _target;

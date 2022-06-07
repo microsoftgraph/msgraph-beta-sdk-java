@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the officeConfiguration singleton. */
 public class OfficeClientConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the policy. */
     private java.util.List<OfficeClientConfigurationAssignment> _assignments;
@@ -39,6 +40,13 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static OfficeClientConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.officeClientConfiguration": return new OfficeClientConfiguration();
+            }
+        }
         return new OfficeClientConfiguration();
     }
     /**

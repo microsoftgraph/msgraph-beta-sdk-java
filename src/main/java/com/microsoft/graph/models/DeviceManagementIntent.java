@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents an intent to apply settings to a device */
 public class DeviceManagementIntent extends Entity implements Parsable {
     /** Collection of assignments */
     private java.util.List<DeviceManagementIntentAssignment> _assignments;

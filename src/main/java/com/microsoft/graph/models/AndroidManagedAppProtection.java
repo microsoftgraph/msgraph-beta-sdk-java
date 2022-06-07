@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an Android device */
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. */
     private String _allowedAndroidDeviceManufacturers;
@@ -58,6 +59,8 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     private Boolean _encryptAppData;
     /** App packages in this list will be exempt from the policy and will be able to receive data from managed apps. */
     private java.util.List<KeyValuePair> _exemptedAppPackages;
+    /** If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled. */
+    private Boolean _fingerprintAndBiometricEnabled;
     /** Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well. */
     private Boolean _keyboardsRestricted;
     /** Minimum version of the Company portal that must be installed on the device or app access will be blocked */
@@ -72,12 +75,16 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     private String _minimumWipeCompanyPortalVersion;
     /** Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. */
     private String _minimumWipePatchVersion;
+    /** Require user to apply Class 3 Biometrics on their Android device. */
+    private Boolean _requireClass3Biometrics;
     /** Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled. */
     private AndroidManagedAppSafetyNetAppsVerificationType _requiredAndroidSafetyNetAppsVerificationType;
     /** Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification. */
     private AndroidManagedAppSafetyNetDeviceAttestationType _requiredAndroidSafetyNetDeviceAttestationType;
     /** Defines the Android SafetyNet evaluation type requirement for a managed app to work. */
     private AndroidManagedAppSafetyNetEvaluationType _requiredAndroidSafetyNetEvaluationType;
+    /** A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device. */
+    private Boolean _requirePinAfterBiometricChange;
     /** Indicates whether a managed user can take screen captures of managed apps */
     private Boolean _screenCaptureBlocked;
     /** Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning */
@@ -334,6 +341,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
             this.put("disableAppEncryptionIfDeviceEncryptionIsEnabled", (n) -> { currentObject.setDisableAppEncryptionIfDeviceEncryptionIsEnabled(n.getBooleanValue()); });
             this.put("encryptAppData", (n) -> { currentObject.setEncryptAppData(n.getBooleanValue()); });
             this.put("exemptedAppPackages", (n) -> { currentObject.setExemptedAppPackages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+            this.put("fingerprintAndBiometricEnabled", (n) -> { currentObject.setFingerprintAndBiometricEnabled(n.getBooleanValue()); });
             this.put("keyboardsRestricted", (n) -> { currentObject.setKeyboardsRestricted(n.getBooleanValue()); });
             this.put("minimumRequiredCompanyPortalVersion", (n) -> { currentObject.setMinimumRequiredCompanyPortalVersion(n.getStringValue()); });
             this.put("minimumRequiredPatchVersion", (n) -> { currentObject.setMinimumRequiredPatchVersion(n.getStringValue()); });
@@ -341,13 +349,23 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
             this.put("minimumWarningPatchVersion", (n) -> { currentObject.setMinimumWarningPatchVersion(n.getStringValue()); });
             this.put("minimumWipeCompanyPortalVersion", (n) -> { currentObject.setMinimumWipeCompanyPortalVersion(n.getStringValue()); });
             this.put("minimumWipePatchVersion", (n) -> { currentObject.setMinimumWipePatchVersion(n.getStringValue()); });
+            this.put("requireClass3Biometrics", (n) -> { currentObject.setRequireClass3Biometrics(n.getBooleanValue()); });
             this.put("requiredAndroidSafetyNetAppsVerificationType", (n) -> { currentObject.setRequiredAndroidSafetyNetAppsVerificationType(n.getEnumValue(AndroidManagedAppSafetyNetAppsVerificationType.class)); });
             this.put("requiredAndroidSafetyNetDeviceAttestationType", (n) -> { currentObject.setRequiredAndroidSafetyNetDeviceAttestationType(n.getEnumValue(AndroidManagedAppSafetyNetDeviceAttestationType.class)); });
             this.put("requiredAndroidSafetyNetEvaluationType", (n) -> { currentObject.setRequiredAndroidSafetyNetEvaluationType(n.getEnumValue(AndroidManagedAppSafetyNetEvaluationType.class)); });
+            this.put("requirePinAfterBiometricChange", (n) -> { currentObject.setRequirePinAfterBiometricChange(n.getBooleanValue()); });
             this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
             this.put("warnAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWarnAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
             this.put("wipeAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWipeAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the fingerprintAndBiometricEnabled property value. If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getFingerprintAndBiometricEnabled() {
+        return this._fingerprintAndBiometricEnabled;
     }
     /**
      * Gets the keyboardsRestricted property value. Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
@@ -406,6 +424,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._minimumWipePatchVersion;
     }
     /**
+     * Gets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getRequireClass3Biometrics() {
+        return this._requireClass3Biometrics;
+    }
+    /**
      * Gets the requiredAndroidSafetyNetAppsVerificationType property value. Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
      * @return a androidManagedAppSafetyNetAppsVerificationType
      */
@@ -428,6 +454,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     @javax.annotation.Nullable
     public AndroidManagedAppSafetyNetEvaluationType getRequiredAndroidSafetyNetEvaluationType() {
         return this._requiredAndroidSafetyNetEvaluationType;
+    }
+    /**
+     * Gets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getRequirePinAfterBiometricChange() {
+        return this._requirePinAfterBiometricChange;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
@@ -486,6 +520,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         writer.writeBooleanValue("disableAppEncryptionIfDeviceEncryptionIsEnabled", this.getDisableAppEncryptionIfDeviceEncryptionIsEnabled());
         writer.writeBooleanValue("encryptAppData", this.getEncryptAppData());
         writer.writeCollectionOfObjectValues("exemptedAppPackages", this.getExemptedAppPackages());
+        writer.writeBooleanValue("fingerprintAndBiometricEnabled", this.getFingerprintAndBiometricEnabled());
         writer.writeBooleanValue("keyboardsRestricted", this.getKeyboardsRestricted());
         writer.writeStringValue("minimumRequiredCompanyPortalVersion", this.getMinimumRequiredCompanyPortalVersion());
         writer.writeStringValue("minimumRequiredPatchVersion", this.getMinimumRequiredPatchVersion());
@@ -493,9 +528,11 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         writer.writeStringValue("minimumWarningPatchVersion", this.getMinimumWarningPatchVersion());
         writer.writeStringValue("minimumWipeCompanyPortalVersion", this.getMinimumWipeCompanyPortalVersion());
         writer.writeStringValue("minimumWipePatchVersion", this.getMinimumWipePatchVersion());
+        writer.writeBooleanValue("requireClass3Biometrics", this.getRequireClass3Biometrics());
         writer.writeEnumValue("requiredAndroidSafetyNetAppsVerificationType", this.getRequiredAndroidSafetyNetAppsVerificationType());
         writer.writeEnumValue("requiredAndroidSafetyNetDeviceAttestationType", this.getRequiredAndroidSafetyNetDeviceAttestationType());
         writer.writeEnumValue("requiredAndroidSafetyNetEvaluationType", this.getRequiredAndroidSafetyNetEvaluationType());
+        writer.writeBooleanValue("requirePinAfterBiometricChange", this.getRequirePinAfterBiometricChange());
         writer.writeBooleanValue("screenCaptureBlocked", this.getScreenCaptureBlocked());
         writer.writeIntegerValue("warnAfterCompanyPortalUpdateDeferralInDays", this.getWarnAfterCompanyPortalUpdateDeferralInDays());
         writer.writeIntegerValue("wipeAfterCompanyPortalUpdateDeferralInDays", this.getWipeAfterCompanyPortalUpdateDeferralInDays());
@@ -701,6 +738,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._exemptedAppPackages = value;
     }
     /**
+     * Sets the fingerprintAndBiometricEnabled property value. If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
+     * @param value Value to set for the fingerprintAndBiometricEnabled property.
+     * @return a void
+     */
+    public void setFingerprintAndBiometricEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._fingerprintAndBiometricEnabled = value;
+    }
+    /**
      * Sets the keyboardsRestricted property value. Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
      * @param value Value to set for the keyboardsRestricted property.
      * @return a void
@@ -757,6 +802,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._minimumWipePatchVersion = value;
     }
     /**
+     * Sets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
+     * @param value Value to set for the requireClass3Biometrics property.
+     * @return a void
+     */
+    public void setRequireClass3Biometrics(@javax.annotation.Nullable final Boolean value) {
+        this._requireClass3Biometrics = value;
+    }
+    /**
      * Sets the requiredAndroidSafetyNetAppsVerificationType property value. Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
      * @param value Value to set for the requiredAndroidSafetyNetAppsVerificationType property.
      * @return a void
@@ -779,6 +832,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     public void setRequiredAndroidSafetyNetEvaluationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetEvaluationType value) {
         this._requiredAndroidSafetyNetEvaluationType = value;
+    }
+    /**
+     * Sets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
+     * @param value Value to set for the requirePinAfterBiometricChange property.
+     * @return a void
+     */
+    public void setRequirePinAfterBiometricChange(@javax.annotation.Nullable final Boolean value) {
+        this._requirePinAfterBiometricChange = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps

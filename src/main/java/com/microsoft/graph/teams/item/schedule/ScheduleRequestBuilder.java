@@ -175,6 +175,7 @@ public class ScheduleRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ScheduleRequestBuilderGetRequestConfiguration requestConfig = new ScheduleRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

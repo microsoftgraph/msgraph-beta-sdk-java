@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
 public class OnPremisesAgent extends Entity implements Parsable {
     /** List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;
@@ -17,7 +18,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     /** Possible values are: active, inactive. */
     private AgentStatus _status;
     /** The supportedPublishingTypes property */
-    private java.util.List<OnPremisesPublishingType> _supportedPublishingTypes;
+    private java.util.List<String> _supportedPublishingTypes;
     /**
      * Instantiates a new onPremisesAgent and sets the default values.
      * @return a void
@@ -63,7 +64,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
             this.put("externalIp", (n) -> { currentObject.setExternalIp(n.getStringValue()); });
             this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AgentStatus.class)); });
-            this.put("supportedPublishingTypes", (n) -> { currentObject.setSupportedPublishingTypes(n.getCollectionOfEnumValues(OnPremisesPublishingType.class)); });
+            this.put("supportedPublishingTypes", (n) -> { currentObject.setSupportedPublishingTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
@@ -84,10 +85,10 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the supportedPublishingTypes property value. The supportedPublishingTypes property
-     * @return a onPremisesPublishingType
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<OnPremisesPublishingType> getSupportedPublishingTypes() {
+    public java.util.List<String> getSupportedPublishingTypes() {
         return this._supportedPublishingTypes;
     }
     /**
@@ -102,7 +103,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
         writer.writeStringValue("externalIp", this.getExternalIp());
         writer.writeStringValue("machineName", this.getMachineName());
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeCollectionOfEnumValues("supportedPublishingTypes", this.getSupportedPublishingTypes());
+        writer.writeCollectionOfPrimitiveValues("supportedPublishingTypes", this.getSupportedPublishingTypes());
     }
     /**
      * Sets the agentGroups property value. List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
@@ -141,7 +142,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the supportedPublishingTypes property.
      * @return a void
      */
-    public void setSupportedPublishingTypes(@javax.annotation.Nullable final java.util.List<OnPremisesPublishingType> value) {
+    public void setSupportedPublishingTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedPublishingTypes = value;
     }
 }

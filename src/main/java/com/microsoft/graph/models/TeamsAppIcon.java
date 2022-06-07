@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsAppIcon extends Entity implements Parsable {
     /** The contents of the app icon if the icon is hosted within the Teams infrastructure. */
     private TeamworkHostedContent _hostedContent;

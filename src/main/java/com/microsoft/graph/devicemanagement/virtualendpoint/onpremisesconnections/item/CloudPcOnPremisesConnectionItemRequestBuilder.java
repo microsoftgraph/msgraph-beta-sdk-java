@@ -111,6 +111,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

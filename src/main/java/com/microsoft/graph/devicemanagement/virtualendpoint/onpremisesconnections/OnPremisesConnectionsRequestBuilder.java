@@ -78,6 +78,7 @@ public class OnPremisesConnectionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnPremisesConnectionsRequestBuilderGetRequestConfiguration requestConfig = new OnPremisesConnectionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class OnPremisesConnectionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final OnPremisesConnectionsRequestBuilderPostRequestConfiguration requestConfig = new OnPremisesConnectionsRequestBuilderPostRequestConfiguration();

@@ -99,6 +99,7 @@ public class BusinessFlowTemplateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BusinessFlowTemplateItemRequestBuilderGetRequestConfiguration requestConfig = new BusinessFlowTemplateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

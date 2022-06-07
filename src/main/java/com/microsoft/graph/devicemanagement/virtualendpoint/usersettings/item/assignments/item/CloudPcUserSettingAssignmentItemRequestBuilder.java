@@ -99,6 +99,7 @@ public class CloudPcUserSettingAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

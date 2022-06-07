@@ -60,7 +60,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List privilegedRoleAssignmentRequests
+     * Retrieve a collection of privilegedRoleAssignmentRequest.  **Note:** This requester must have at least one role assignment on the resource.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List privilegedRoleAssignmentRequests
+     * Retrieve a collection of privilegedRoleAssignmentRequest.  **Note:** This requester must have at least one role assignment on the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -79,6 +79,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedRoleAssignmentRequestsRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedRoleAssignmentRequestsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -89,7 +90,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create privilegedRoleAssignmentRequest
+     * Create a privilegedroleassignmentrequest object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +99,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create privilegedRoleAssignmentRequest
+     * Create a privilegedroleassignmentrequest object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -111,6 +112,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PrivilegedRoleAssignmentRequestsRequestBuilderPostRequestConfiguration requestConfig = new PrivilegedRoleAssignmentRequestsRequestBuilderPostRequestConfiguration();
@@ -121,7 +123,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List privilegedRoleAssignmentRequests
+     * Retrieve a collection of privilegedRoleAssignmentRequest.  **Note:** This requester must have at least one role assignment on the resource.
      * @return a CompletableFuture of PrivilegedRoleAssignmentRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentRequestCollectionResponse> get() {
@@ -137,7 +139,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         }
     }
     /**
-     * List privilegedRoleAssignmentRequests
+     * Retrieve a collection of privilegedRoleAssignmentRequest.  **Note:** This requester must have at least one role assignment on the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrivilegedRoleAssignmentRequestCollectionResponse
      */
@@ -154,7 +156,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         }
     }
     /**
-     * List privilegedRoleAssignmentRequests
+     * Retrieve a collection of privilegedRoleAssignmentRequest.  **Note:** This requester must have at least one role assignment on the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PrivilegedRoleAssignmentRequestCollectionResponse
@@ -180,7 +182,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         return new MyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Create privilegedRoleAssignmentRequest
+     * Create a privilegedroleassignmentrequest object.
      * @param body 
      * @return a CompletableFuture of privilegedRoleAssignmentRequest
      */
@@ -197,7 +199,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         }
     }
     /**
-     * Create privilegedRoleAssignmentRequest
+     * Create a privilegedroleassignmentrequest object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedRoleAssignmentRequest
@@ -215,7 +217,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
         }
     }
     /**
-     * Create privilegedRoleAssignmentRequest
+     * Create a privilegedroleassignmentrequest object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -234,7 +236,7 @@ public class PrivilegedRoleAssignmentRequestsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List privilegedRoleAssignmentRequests */
+    /** Retrieve a collection of privilegedRoleAssignmentRequest.  **Note:** This requester must have at least one role assignment on the resource. */
     public class PrivilegedRoleAssignmentRequestsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

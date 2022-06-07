@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the security singleton. */
 public class EdiscoveryCase extends Case_escaped implements Parsable {
     /** The closedBy property */
     private IdentitySet _closedBy;

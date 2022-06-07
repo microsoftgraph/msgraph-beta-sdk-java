@@ -17,6 +17,8 @@ import java.util.Objects;
 import microsoft.graph.admin.windows.updates.catalog.CatalogRequestBuilder;
 import microsoft.graph.admin.windows.updates.deployments.DeploymentsRequestBuilder;
 import microsoft.graph.admin.windows.updates.deployments.item.DeploymentItemRequestBuilder;
+import microsoft.graph.admin.windows.updates.resourceconnections.item.ResourceConnectionItemRequestBuilder;
+import microsoft.graph.admin.windows.updates.resourceconnections.ResourceConnectionsRequestBuilder;
 import microsoft.graph.admin.windows.updates.updatableassets.item.UpdatableAssetItemRequestBuilder;
 import microsoft.graph.admin.windows.updates.updatableassets.UpdatableAssetsRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -37,6 +39,11 @@ public class UpdatesRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The resourceConnections property */
+    @javax.annotation.Nonnull
+    public ResourceConnectionsRequestBuilder resourceConnections() {
+        return new ResourceConnectionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The updatableAssets property */
     @javax.annotation.Nonnull
     public UpdatableAssetsRequestBuilder updatableAssets() {
@@ -119,6 +126,7 @@ public class UpdatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UpdatesRequestBuilderGetRequestConfiguration requestConfig = new UpdatesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -328,6 +336,18 @@ public class UpdatesRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.admin.windows.updates.resourceConnections.item collection
+     * @param id Unique identifier of the item
+     * @return a resourceConnectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ResourceConnectionItemRequestBuilder resourceConnections(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("resourceConnection%2Did", id);
+        return new ResourceConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.updatableAssets.item collection

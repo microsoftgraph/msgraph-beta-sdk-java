@@ -99,6 +99,7 @@ public class AllowedDataLocationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllowedDataLocationItemRequestBuilderGetRequestConfiguration requestConfig = new AllowedDataLocationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

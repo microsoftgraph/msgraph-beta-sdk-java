@@ -99,6 +99,7 @@ public class SimulationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SimulationItemRequestBuilderGetRequestConfiguration requestConfig = new SimulationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

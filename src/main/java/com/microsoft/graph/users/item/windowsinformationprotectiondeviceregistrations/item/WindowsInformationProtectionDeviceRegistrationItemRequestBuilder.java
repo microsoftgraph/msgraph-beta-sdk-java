@@ -71,6 +71,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

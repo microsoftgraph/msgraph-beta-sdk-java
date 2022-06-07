@@ -111,6 +111,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServicePrincipalCreationPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new ServicePrincipalCreationPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -105,6 +105,7 @@ public class CaseOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CaseOperationItemRequestBuilderGetRequestConfiguration requestConfig = new CaseOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

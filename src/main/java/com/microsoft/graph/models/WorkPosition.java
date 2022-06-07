@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class WorkPosition extends ItemFacet implements Parsable {
     /** Categories that the user has associated with this position. */
     private java.util.List<String> _categories;

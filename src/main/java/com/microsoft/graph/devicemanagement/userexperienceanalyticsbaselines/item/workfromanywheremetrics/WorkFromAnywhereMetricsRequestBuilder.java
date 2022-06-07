@@ -71,6 +71,7 @@ public class WorkFromAnywhereMetricsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WorkFromAnywhereMetricsRequestBuilderGetRequestConfiguration requestConfig = new WorkFromAnywhereMetricsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

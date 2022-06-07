@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Casts the previous resource to group. */
 public class Security extends Entity implements Parsable {
     /** The informationProtection property */
     private InformationProtection _informationProtection;

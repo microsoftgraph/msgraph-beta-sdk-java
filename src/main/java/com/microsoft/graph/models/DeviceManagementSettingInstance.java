@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Base type for a setting instance */
 public class DeviceManagementSettingInstance extends Entity implements Parsable {
     /** The ID of the setting definition for this instance */
     private String _definitionId;
@@ -27,6 +28,13 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public static DeviceManagementSettingInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementSettingInstance": return new DeviceManagementSettingInstance();
+            }
+        }
         return new DeviceManagementSettingInstance();
     }
     /**

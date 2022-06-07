@@ -99,6 +99,7 @@ public class CloudPcGalleryImageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPcGalleryImageItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPcGalleryImageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

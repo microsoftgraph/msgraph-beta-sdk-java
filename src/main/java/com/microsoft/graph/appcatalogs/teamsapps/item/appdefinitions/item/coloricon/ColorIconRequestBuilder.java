@@ -105,6 +105,7 @@ public class ColorIconRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ColorIconRequestBuilderGetRequestConfiguration requestConfig = new ColorIconRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

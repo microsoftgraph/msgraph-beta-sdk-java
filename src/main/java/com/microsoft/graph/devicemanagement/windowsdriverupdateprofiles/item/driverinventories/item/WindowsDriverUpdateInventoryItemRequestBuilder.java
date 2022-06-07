@@ -99,6 +99,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsDriverUpdateInventoryItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsDriverUpdateInventoryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

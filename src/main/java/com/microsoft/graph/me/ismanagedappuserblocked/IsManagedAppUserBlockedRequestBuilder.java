@@ -68,6 +68,7 @@ public class IsManagedAppUserBlockedRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IsManagedAppUserBlockedRequestBuilderGetRequestConfiguration requestConfig = new IsManagedAppUserBlockedRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

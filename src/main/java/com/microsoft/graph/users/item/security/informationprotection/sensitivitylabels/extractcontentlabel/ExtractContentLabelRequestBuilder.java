@@ -55,7 +55,7 @@ public class ExtractContentLabelRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ExtractContentLabelRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class ExtractContentLabelRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ExtractContentLabelRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ExtractContentLabelRequestBuilderPostRequestConfiguration requestConfig = new ExtractContentLabelRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class ExtractContentLabelRequestBuilder {
     /**
      * Invoke action extractContentLabel
      * @param body 
-     * @return a CompletableFuture of contentLabel
+     * @return a CompletableFuture of ContentLabel
      */
-    public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelRequestBody body) {
+    public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, ContentLabel::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class ExtractContentLabelRequestBuilder {
      * Invoke action extractContentLabel
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentLabel
+     * @return a CompletableFuture of ContentLabel
      */
-    public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, ContentLabel::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class ExtractContentLabelRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of contentLabel
+     * @return a CompletableFuture of ContentLabel
      */
-    public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Group;
+/** Provides operations to manage the compliance singleton. */
 public class UnifiedGroupSource extends DataSource implements Parsable {
     /** The group property */
     private Group _group;

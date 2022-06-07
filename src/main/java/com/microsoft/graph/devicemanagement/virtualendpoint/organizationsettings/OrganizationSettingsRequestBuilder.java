@@ -99,6 +99,7 @@ public class OrganizationSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OrganizationSettingsRequestBuilderGetRequestConfiguration requestConfig = new OrganizationSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

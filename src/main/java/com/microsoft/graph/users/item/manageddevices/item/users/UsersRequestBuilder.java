@@ -16,14 +16,8 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.UserCollectionResponse;
-import microsoft.graph.users.item.manageddevices.item.users.count.CountRequestBuilder;
 /** Provides operations to manage the users property of the microsoft.graph.managedDevice entity. */
 public class UsersRequestBuilder {
-    /** The count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -77,6 +71,7 @@ public class UsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UsersRequestBuilderGetRequestConfiguration requestConfig = new UsersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

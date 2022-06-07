@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for device run state of the device health script. */
 public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     /** A list of the assignment filter ids used for health script applicability evaluation */
     private java.util.List<String> _assignmentFilterIds;

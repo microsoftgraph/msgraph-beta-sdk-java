@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.devicemanagement.virtualendpoint.snapshots.count.CountRequestBuilder;
+import microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid.GetStorageAccountsWithSubscriptionIdRequestBuilder;
+import microsoft.graph.devicemanagement.virtualendpoint.snapshots.getsubscriptions.GetSubscriptionsRequestBuilder;
 import microsoft.graph.models.CloudPcSnapshot;
 import microsoft.graph.models.CloudPcSnapshotCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -78,6 +80,7 @@ public class SnapshotsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SnapshotsRequestBuilderGetRequestConfiguration requestConfig = new SnapshotsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +113,7 @@ public class SnapshotsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SnapshotsRequestBuilderPostRequestConfiguration requestConfig = new SnapshotsRequestBuilderPostRequestConfiguration();
@@ -169,6 +173,24 @@ public class SnapshotsRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getStorageAccounts method.
+     * @param subscriptionId Usage: subscriptionId='{subscriptionId}'
+     * @return a getStorageAccountsWithSubscriptionIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetStorageAccountsWithSubscriptionIdRequestBuilder getStorageAccountsWithSubscriptionId(@javax.annotation.Nonnull final String subscriptionId) {
+        Objects.requireNonNull(subscriptionId);
+        return new GetStorageAccountsWithSubscriptionIdRequestBuilder(pathParameters, requestAdapter, subscriptionId);
+    }
+    /**
+     * Provides operations to call the getSubscriptions method.
+     * @return a getSubscriptionsRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetSubscriptionsRequestBuilder getSubscriptions() {
+        return new GetSubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Create new navigation property to snapshots for deviceManagement

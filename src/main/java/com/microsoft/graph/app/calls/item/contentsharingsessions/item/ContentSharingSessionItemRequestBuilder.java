@@ -99,6 +99,7 @@ public class ContentSharingSessionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContentSharingSessionItemRequestBuilderGetRequestConfiguration requestConfig = new ContentSharingSessionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

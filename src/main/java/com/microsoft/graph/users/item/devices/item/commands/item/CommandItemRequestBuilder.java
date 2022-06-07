@@ -105,6 +105,7 @@ public class CommandItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CommandItemRequestBuilderGetRequestConfiguration requestConfig = new CommandItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

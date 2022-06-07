@@ -99,6 +99,7 @@ public class PlannerDeltaItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlannerDeltaItemRequestBuilderGetRequestConfiguration requestConfig = new PlannerDeltaItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

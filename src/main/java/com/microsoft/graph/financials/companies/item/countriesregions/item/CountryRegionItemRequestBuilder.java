@@ -99,6 +99,7 @@ public class CountryRegionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CountryRegionItemRequestBuilderGetRequestConfiguration requestConfig = new CountryRegionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

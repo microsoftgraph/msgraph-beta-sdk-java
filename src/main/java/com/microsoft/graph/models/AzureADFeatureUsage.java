@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getAzureADFeatureUsage method. */
 public class AzureADFeatureUsage extends Entity implements Parsable {
     /** The featureName property */
     private String _featureName;

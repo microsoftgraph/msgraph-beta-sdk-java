@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** AppLogCollectionRequest Entity. */
 public class AppLogCollectionRequest extends Entity implements Parsable {
     /** Time at which the upload log request reached a terminal state */
     private OffsetDateTime _completedDateTime;

@@ -99,6 +99,7 @@ public class CatalogEntryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CatalogEntryItemRequestBuilderGetRequestConfiguration requestConfig = new CatalogEntryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

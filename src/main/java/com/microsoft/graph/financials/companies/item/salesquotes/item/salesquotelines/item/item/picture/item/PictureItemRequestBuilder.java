@@ -105,6 +105,7 @@ public class PictureItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PictureItemRequestBuilderGetRequestConfiguration requestConfig = new PictureItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

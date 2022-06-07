@@ -71,6 +71,7 @@ public class DeviceBootPerformanceMetricsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceBootPerformanceMetricsRequestBuilderGetRequestConfiguration requestConfig = new DeviceBootPerformanceMetricsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

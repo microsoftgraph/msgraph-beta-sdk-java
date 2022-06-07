@@ -59,7 +59,7 @@ public class SettingsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class SettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SettingsRequestBuilderGetRequestConfiguration requestConfig = new SettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -88,7 +89,7 @@ public class SettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in directorySettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +98,7 @@ public class SettingsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in directorySettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -110,6 +111,7 @@ public class SettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SettingsRequestBuilderPostRequestConfiguration requestConfig = new SettingsRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class SettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @return a CompletableFuture of DirectorySettingCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectorySettingCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectorySettingCollectionResponse
      */
@@ -153,7 +155,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectorySettingCollectionResponse
@@ -171,7 +173,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in directorySettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @return a CompletableFuture of directorySetting
      */
@@ -188,7 +190,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in directorySettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directorySetting
@@ -206,7 +208,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in directorySettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +227,7 @@ public class SettingsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List settings */
+    /** Retrieve a list of tenant-level or group-specific group settings objects. */
     public class SettingsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -69,6 +69,7 @@ public class ConsentToDataSharingRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConsentToDataSharingRequestBuilderPostRequestConfiguration requestConfig = new ConsentToDataSharingRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

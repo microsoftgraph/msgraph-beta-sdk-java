@@ -118,6 +118,7 @@ public class PublishedResourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PublishedResourceItemRequestBuilderGetRequestConfiguration requestConfig = new PublishedResourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

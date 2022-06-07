@@ -8,11 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the admin singleton. */
 public class Updates extends Entity implements Parsable {
     /** Catalog of content that can be approved for deployment by the deployment service. Read-only. */
     private Catalog _catalog;
     /** Deployments created using the deployment service. Read-only. */
     private java.util.List<Deployment> _deployments;
+    /** The resourceConnections property */
+    private java.util.List<ResourceConnection> _resourceConnections;
     /** Assets registered with the deployment service that can receive updates. Read-only. */
     private java.util.List<UpdatableAsset> _updatableAssets;
     /**
@@ -58,8 +61,17 @@ public class Updates extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
             this.put("deployments", (n) -> { currentObject.setDeployments(n.getCollectionOfObjectValues(Deployment::createFromDiscriminatorValue)); });
+            this.put("resourceConnections", (n) -> { currentObject.setResourceConnections(n.getCollectionOfObjectValues(ResourceConnection::createFromDiscriminatorValue)); });
             this.put("updatableAssets", (n) -> { currentObject.setUpdatableAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the resourceConnections property value. The resourceConnections property
+     * @return a resourceConnection
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ResourceConnection> getResourceConnections() {
+        return this._resourceConnections;
     }
     /**
      * Gets the updatableAssets property value. Assets registered with the deployment service that can receive updates. Read-only.
@@ -79,6 +91,7 @@ public class Updates extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("catalog", this.getCatalog());
         writer.writeCollectionOfObjectValues("deployments", this.getDeployments());
+        writer.writeCollectionOfObjectValues("resourceConnections", this.getResourceConnections());
         writer.writeCollectionOfObjectValues("updatableAssets", this.getUpdatableAssets());
     }
     /**
@@ -96,6 +109,14 @@ public class Updates extends Entity implements Parsable {
      */
     public void setDeployments(@javax.annotation.Nullable final java.util.List<Deployment> value) {
         this._deployments = value;
+    }
+    /**
+     * Sets the resourceConnections property value. The resourceConnections property
+     * @param value Value to set for the resourceConnections property.
+     * @return a void
+     */
+    public void setResourceConnections(@javax.annotation.Nullable final java.util.List<ResourceConnection> value) {
+        this._resourceConnections = value;
     }
     /**
      * Sets the updatableAssets property value. Assets registered with the deployment service that can receive updates. Read-only.

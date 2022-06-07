@@ -78,6 +78,7 @@ public class NdesConnectorsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NdesConnectorsRequestBuilderGetRequestConfiguration requestConfig = new NdesConnectorsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class NdesConnectorsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final NdesConnectorsRequestBuilderPostRequestConfiguration requestConfig = new NdesConnectorsRequestBuilderPostRequestConfiguration();

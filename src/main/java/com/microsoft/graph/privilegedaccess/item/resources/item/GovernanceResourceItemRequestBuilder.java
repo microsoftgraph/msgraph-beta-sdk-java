@@ -133,6 +133,7 @@ public class GovernanceResourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GovernanceResourceItemRequestBuilderGetRequestConfiguration requestConfig = new GovernanceResourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

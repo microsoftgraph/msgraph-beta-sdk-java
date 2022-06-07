@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getOffice365GroupsActivityDetail method. */
 public class Office365GroupsActivityDetail extends Entity implements Parsable {
     /** The storage used of the group mailbox. */
     private Long _exchangeMailboxStorageUsedInBytes;

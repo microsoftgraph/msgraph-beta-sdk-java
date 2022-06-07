@@ -102,6 +102,7 @@ public class ExclusionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExclusionsRequestBuilderGetRequestConfiguration requestConfig = new ExclusionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -134,6 +135,7 @@ public class ExclusionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ExclusionsRequestBuilderPostRequestConfiguration requestConfig = new ExclusionsRequestBuilderPostRequestConfiguration();

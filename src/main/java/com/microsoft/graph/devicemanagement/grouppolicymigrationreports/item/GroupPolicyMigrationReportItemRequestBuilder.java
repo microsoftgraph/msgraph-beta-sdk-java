@@ -113,6 +113,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupPolicyMigrationReportItemRequestBuilderGetRequestConfiguration requestConfig = new GroupPolicyMigrationReportItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

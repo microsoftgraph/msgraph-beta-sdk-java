@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to device. */
 public class Device extends DirectoryObject implements Parsable {
     /** true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
     private Boolean _accountEnabled;
@@ -73,7 +74,7 @@ public class Device extends DirectoryObject implements Parsable {
     private String _operatingSystem;
     /** Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
     private String _operatingSystemVersion;
-    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
+    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
     private java.util.List<String> _physicalIds;
     /** Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome. */
     private String _platform;
@@ -87,7 +88,7 @@ public class Device extends DirectoryObject implements Parsable {
     private OffsetDateTime _registrationDateTime;
     /** Device is online or offline. Only returned if user signs in with a Microsoft account as part of Project Rome. */
     private String _status;
-    /** List of labels applied to the device by the system. */
+    /** List of labels applied to the device by the system. Supports $filter (eq when counting empty collections). */
     private java.util.List<String> _systemLabels;
     /** Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
@@ -422,7 +423,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._operatingSystemVersion;
     }
     /**
-     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -478,7 +479,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._status;
     }
     /**
-     * Gets the systemLabels property value. List of labels applied to the device by the system.
+     * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -818,7 +819,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._operatingSystemVersion = value;
     }
     /**
-     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @param value Value to set for the physicalIds property.
      * @return a void
      */
@@ -874,7 +875,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the systemLabels property value. List of labels applied to the device by the system.
+     * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
      * @param value Value to set for the systemLabels property.
      * @return a void
      */

@@ -105,6 +105,7 @@ public class MobileAppInstallStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppInstallStatusItemRequestBuilderGetRequestConfiguration requestConfig = new MobileAppInstallStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

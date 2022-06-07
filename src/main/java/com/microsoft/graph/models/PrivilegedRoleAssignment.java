@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of privilegedApproval entities. */
 public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /** The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null. */
     private OffsetDateTime _expirationDateTime;

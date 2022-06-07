@@ -123,7 +123,7 @@ public class PrivilegedRoleItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get privilegedRole
+     * Retrieve the properties and relationships of privilegedRole object. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -131,7 +131,7 @@ public class PrivilegedRoleItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get privilegedRole
+     * Retrieve the properties and relationships of privilegedRole object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,6 +142,7 @@ public class PrivilegedRoleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedRoleItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedRoleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -235,7 +236,7 @@ public class PrivilegedRoleItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedRole
+     * Retrieve the properties and relationships of privilegedRole object. 
      * @return a CompletableFuture of privilegedRole
      */
     public java.util.concurrent.CompletableFuture<PrivilegedRole> get() {
@@ -251,7 +252,7 @@ public class PrivilegedRoleItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedRole
+     * Retrieve the properties and relationships of privilegedRole object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedRole
      */
@@ -268,7 +269,7 @@ public class PrivilegedRoleItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedRole
+     * Retrieve the properties and relationships of privilegedRole object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of privilegedRole
@@ -355,7 +356,7 @@ public class PrivilegedRoleItemRequestBuilder {
         public PrivilegedRoleItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get privilegedRole */
+    /** Retrieve the properties and relationships of privilegedRole object.  */
     public class PrivilegedRoleItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

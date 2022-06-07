@@ -99,6 +99,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration requestConfig = new FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

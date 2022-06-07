@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The category entity stores the category of a group policy definition */
 public class GroupPolicyCategory extends Entity implements Parsable {
     /** The children categories */
     private java.util.List<GroupPolicyCategory> _children;

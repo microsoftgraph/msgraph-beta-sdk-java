@@ -99,6 +99,7 @@ public class DeviceManagementConfigurationCategoryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementConfigurationCategoryItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementConfigurationCategoryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

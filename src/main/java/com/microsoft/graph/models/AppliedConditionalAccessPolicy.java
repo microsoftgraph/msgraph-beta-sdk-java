@@ -31,7 +31,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     private java.util.List<ConditionalAccessRuleSatisfied> _includeRulesSatisfied;
     /** Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. */
     private AppliedConditionalAccessPolicyResult _result;
-    /** The sessionControlsNotSatisfied property */
+    /** Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions). */
     private java.util.List<String> _sessionControlsNotSatisfied;
     /**
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
@@ -160,7 +160,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         return this._result;
     }
     /**
-     * Gets the sessionControlsNotSatisfied property value. The sessionControlsNotSatisfied property
+     * Gets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -276,7 +276,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         this._result = value;
     }
     /**
-     * Sets the sessionControlsNotSatisfied property value. The sessionControlsNotSatisfied property
+     * Sets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions).
      * @param value Value to set for the sessionControlsNotSatisfied property.
      * @return a void
      */

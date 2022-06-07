@@ -106,6 +106,7 @@ public class DelegatedAdminCustomerItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration requestConfig = new DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

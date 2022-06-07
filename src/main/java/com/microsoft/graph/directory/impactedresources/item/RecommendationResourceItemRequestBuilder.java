@@ -123,6 +123,7 @@ public class RecommendationResourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RecommendationResourceItemRequestBuilderGetRequestConfiguration requestConfig = new RecommendationResourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

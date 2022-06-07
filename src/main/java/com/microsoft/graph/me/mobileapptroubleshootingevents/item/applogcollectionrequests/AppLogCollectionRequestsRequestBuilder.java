@@ -78,6 +78,7 @@ public class AppLogCollectionRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppLogCollectionRequestsRequestBuilderGetRequestConfiguration requestConfig = new AppLogCollectionRequestsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class AppLogCollectionRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AppLogCollectionRequestsRequestBuilderPostRequestConfiguration requestConfig = new AppLogCollectionRequestsRequestBuilderPostRequestConfiguration();

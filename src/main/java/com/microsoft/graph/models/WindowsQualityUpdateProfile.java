@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Quality Update Profile */
 public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /** The list of group assignments of the profile. */
     private java.util.List<WindowsQualityUpdateProfileAssignment> _assignments;

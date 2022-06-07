@@ -120,6 +120,7 @@ public class CloudPCRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPCRequestBuilderGetRequestConfiguration requestConfig = new CloudPCRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

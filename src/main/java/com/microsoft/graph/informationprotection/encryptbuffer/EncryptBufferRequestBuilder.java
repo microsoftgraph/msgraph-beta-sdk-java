@@ -55,7 +55,7 @@ public class EncryptBufferRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EncryptBufferRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class EncryptBufferRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EncryptBufferRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final EncryptBufferRequestBuilderPostRequestConfiguration requestConfig = new EncryptBufferRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class EncryptBufferRequestBuilder {
     /**
      * Invoke action encryptBuffer
      * @param body 
-     * @return a CompletableFuture of bufferEncryptionResult
+     * @return a CompletableFuture of BufferEncryptionResult
      */
-    public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferRequestBody body) {
+    public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, BufferEncryptionResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class EncryptBufferRequestBuilder {
      * Invoke action encryptBuffer
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bufferEncryptionResult
+     * @return a CompletableFuture of BufferEncryptionResult
      */
-    public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, BufferEncryptionResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class EncryptBufferRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of bufferEncryptionResult
+     * @return a CompletableFuture of BufferEncryptionResult
      */
-    public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

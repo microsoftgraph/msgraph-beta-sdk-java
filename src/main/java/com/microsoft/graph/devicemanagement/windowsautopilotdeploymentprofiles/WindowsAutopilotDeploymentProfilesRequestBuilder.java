@@ -84,6 +84,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsAutopilotDeploymentProfilesRequestBuilderGetRequestConfiguration requestConfig = new WindowsAutopilotDeploymentProfilesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final WindowsAutopilotDeploymentProfilesRequestBuilderPostRequestConfiguration requestConfig = new WindowsAutopilotDeploymentProfilesRequestBuilderPostRequestConfiguration();

@@ -99,6 +99,7 @@ public class PersonAnnotationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PersonAnnotationItemRequestBuilderGetRequestConfiguration requestConfig = new PersonAnnotationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -111,6 +111,7 @@ public class CertificateConnectorDetailsItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CertificateConnectorDetailsItemRequestBuilderGetRequestConfiguration requestConfig = new CertificateConnectorDetailsItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

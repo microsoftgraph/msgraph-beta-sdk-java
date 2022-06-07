@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup score history. */
 public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsable {
     /** The user experience analytics device startup date time. */
     private OffsetDateTime _startupDateTime;

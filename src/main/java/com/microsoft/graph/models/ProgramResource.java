@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of programControl entities. */
 public class ProgramResource extends Identity implements Parsable {
     /** Type of the resource, indicating whether it is a group or an app. */
     private String _type;

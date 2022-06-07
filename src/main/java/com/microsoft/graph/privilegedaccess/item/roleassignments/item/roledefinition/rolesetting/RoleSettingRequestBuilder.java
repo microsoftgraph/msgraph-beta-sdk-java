@@ -71,6 +71,7 @@ public class RoleSettingRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleSettingRequestBuilderGetRequestConfiguration requestConfig = new RoleSettingRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

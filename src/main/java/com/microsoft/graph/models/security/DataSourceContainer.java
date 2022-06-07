@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the security singleton. */
 public class DataSourceContainer extends Entity implements Parsable {
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
@@ -37,6 +38,13 @@ public class DataSourceContainer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static DataSourceContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.security.dataSourceContainer": return new DataSourceContainer();
+            }
+        }
         return new DataSourceContainer();
     }
     /**

@@ -78,6 +78,7 @@ public class ManufacturerRegressionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManufacturerRegressionRequestBuilderGetRequestConfiguration requestConfig = new ManufacturerRegressionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ManufacturerRegressionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ManufacturerRegressionRequestBuilderPostRequestConfiguration requestConfig = new ManufacturerRegressionRequestBuilderPostRequestConfiguration();

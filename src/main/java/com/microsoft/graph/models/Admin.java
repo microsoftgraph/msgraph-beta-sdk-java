@@ -8,12 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.tenantadmin.Sharepoint;
 import microsoft.graph.models.windowsupdates.Windows;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** A container for service communications resources. Read-only. */
     private ServiceAnnouncement _serviceAnnouncement;
+    /** A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive. */
+    private Sharepoint _sharepoint;
     /** A container for all Windows Update for Business deployment service functionality. Read-only. */
     private Windows _windows;
     /**
@@ -48,8 +51,9 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Admin currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("serviceAnnouncement", (n) -> { currentObject.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
+            this.put("sharepoint", (n) -> { currentObject.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
             this.put("windows", (n) -> { currentObject.setWindows(n.getObjectValue(Windows::createFromDiscriminatorValue)); });
         }};
     }
@@ -60,6 +64,14 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ServiceAnnouncement getServiceAnnouncement() {
         return this._serviceAnnouncement;
+    }
+    /**
+     * Gets the sharepoint property value. A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
+     * @return a sharepoint
+     */
+    @javax.annotation.Nullable
+    public Sharepoint getSharepoint() {
+        return this._sharepoint;
     }
     /**
      * Gets the windows property value. A container for all Windows Update for Business deployment service functionality. Read-only.
@@ -77,6 +89,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
+        writer.writeObjectValue("sharepoint", this.getSharepoint());
         writer.writeObjectValue("windows", this.getWindows());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public void setServiceAnnouncement(@javax.annotation.Nullable final ServiceAnnouncement value) {
         this._serviceAnnouncement = value;
+    }
+    /**
+     * Sets the sharepoint property value. A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
+     * @param value Value to set for the sharepoint property.
+     * @return a void
+     */
+    public void setSharepoint(@javax.annotation.Nullable final Sharepoint value) {
+        this._sharepoint = value;
     }
     /**
      * Sets the windows property value. A container for all Windows Update for Business deployment service functionality. Read-only.

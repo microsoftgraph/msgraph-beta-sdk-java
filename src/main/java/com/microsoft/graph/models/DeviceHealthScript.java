@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intune will provide customer the ability to run their Powershell Health scripts (remediation + detection) on the enrolled windows 10 Azure Active Directory joined devices. */
 public class DeviceHealthScript extends Entity implements Parsable {
     /** The list of group assignments for the device health script */
     private java.util.List<DeviceHealthScriptAssignment> _assignments;

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time when the temporaryAccessPass was created. */
     private OffsetDateTime _createdDateTime;

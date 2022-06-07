@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Warranty status entity for a given OEM */
 public class OemWarrantyInformationOnboarding extends Entity implements Parsable {
     /** Specifies whether warranty API is available. This property is read-only. */
     private Boolean _available;

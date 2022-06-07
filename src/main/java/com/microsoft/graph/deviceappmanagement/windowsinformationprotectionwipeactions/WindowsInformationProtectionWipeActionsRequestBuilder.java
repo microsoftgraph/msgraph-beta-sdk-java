@@ -78,6 +78,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsInformationProtectionWipeActionsRequestBuilderGetRequestConfiguration requestConfig = new WindowsInformationProtectionWipeActionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final WindowsInformationProtectionWipeActionsRequestBuilderPostRequestConfiguration requestConfig = new WindowsInformationProtectionWipeActionsRequestBuilderPostRequestConfiguration();

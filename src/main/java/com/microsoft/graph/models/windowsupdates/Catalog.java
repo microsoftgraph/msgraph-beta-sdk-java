@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the admin singleton. */
 public class Catalog extends Entity implements Parsable {
     /** Lists the content that you can approve for deployment. Read-only. */
     private java.util.List<CatalogEntry> _entries;

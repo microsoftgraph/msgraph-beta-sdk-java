@@ -80,7 +80,7 @@ public class SubscribedSkuItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get subscribedSku
+     * Get a specific commercial subscription that an organization has acquired.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SubscribedSkuItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get subscribedSku
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +99,7 @@ public class SubscribedSkuItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SubscribedSkuItemRequestBuilderGetRequestConfiguration requestConfig = new SubscribedSkuItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -192,7 +193,7 @@ public class SubscribedSkuItemRequestBuilder {
         }
     }
     /**
-     * Get subscribedSku
+     * Get a specific commercial subscription that an organization has acquired.
      * @return a CompletableFuture of subscribedSku
      */
     public java.util.concurrent.CompletableFuture<SubscribedSku> get() {
@@ -208,7 +209,7 @@ public class SubscribedSkuItemRequestBuilder {
         }
     }
     /**
-     * Get subscribedSku
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subscribedSku
      */
@@ -225,7 +226,7 @@ public class SubscribedSkuItemRequestBuilder {
         }
     }
     /**
-     * Get subscribedSku
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of subscribedSku
@@ -312,7 +313,7 @@ public class SubscribedSkuItemRequestBuilder {
         public SubscribedSkuItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get subscribedSku */
+    /** Get a specific commercial subscription that an organization has acquired. */
     public class SubscribedSkuItemRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

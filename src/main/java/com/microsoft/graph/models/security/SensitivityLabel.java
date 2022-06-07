@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Casts the previous resource to group. */
 public class SensitivityLabel extends Entity implements Parsable {
     /** The color property */
     private String _color;

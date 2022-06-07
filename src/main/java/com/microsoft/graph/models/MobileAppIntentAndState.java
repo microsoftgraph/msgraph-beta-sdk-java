@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** MobileApp Intent and Install State for a given device. */
 public class MobileAppIntentAndState extends Entity implements Parsable {
     /** Device identifier created or collected by Intune. */
     private String _managedDeviceIdentifier;

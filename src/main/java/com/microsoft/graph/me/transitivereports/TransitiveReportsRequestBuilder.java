@@ -77,6 +77,7 @@ public class TransitiveReportsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TransitiveReportsRequestBuilderGetRequestConfiguration requestConfig = new TransitiveReportsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

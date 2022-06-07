@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class CredentialUserRegistrationsSummary extends Entity implements Parsable {
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
     private OffsetDateTime _lastRefreshedDateTime;
@@ -16,7 +17,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     private Integer _mfaAndSsprCapableUserCount;
     /** The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only. */
     private String _mfaConditionalAccessPolicyState;
-    /** The mfaExcludedUserCount property */
+    /** The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only. */
     private Integer _mfaExcludedUserCount;
     /** The number of users registered for multi-factor authentication. Optional. Read-only. */
     private Integer _mfaRegisteredUserCount;
@@ -95,7 +96,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
         return this._mfaConditionalAccessPolicyState;
     }
     /**
-     * Gets the mfaExcludedUserCount property value. The mfaExcludedUserCount property
+     * Gets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -203,7 +204,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
         this._mfaConditionalAccessPolicyState = value;
     }
     /**
-     * Sets the mfaExcludedUserCount property value. The mfaExcludedUserCount property
+     * Sets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
      * @param value Value to set for the mfaExcludedUserCount property.
      * @return a void
      */

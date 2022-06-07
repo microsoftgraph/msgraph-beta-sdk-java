@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing information about the payloads on which filter has been applied. */
 public class AssignmentFilterEvaluationStatusDetails extends Entity implements Parsable {
     /** PayloadId on which filter has been applied. */
     private String _payloadId;

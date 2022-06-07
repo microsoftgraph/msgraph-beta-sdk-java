@@ -99,6 +99,7 @@ public class ItemCategoryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ItemCategoryItemRequestBuilderGetRequestConfiguration requestConfig = new ItemCategoryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

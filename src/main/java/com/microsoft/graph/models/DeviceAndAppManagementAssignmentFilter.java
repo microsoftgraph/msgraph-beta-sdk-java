@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for Assignment Filter. */
 public class DeviceAndAppManagementAssignmentFilter extends Entity implements Parsable {
     /** Creation time of the Assignment Filter. */
     private OffsetDateTime _createdDateTime;
@@ -38,6 +39,13 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     @javax.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentFilter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceAndAppManagementAssignmentFilter": return new DeviceAndAppManagementAssignmentFilter();
+            }
+        }
         return new DeviceAndAppManagementAssignmentFilter();
     }
     /**

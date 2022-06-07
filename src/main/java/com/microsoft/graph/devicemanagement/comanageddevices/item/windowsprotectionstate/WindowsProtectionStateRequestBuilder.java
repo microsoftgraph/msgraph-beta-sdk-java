@@ -106,6 +106,7 @@ public class WindowsProtectionStateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsProtectionStateRequestBuilderGetRequestConfiguration requestConfig = new WindowsProtectionStateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

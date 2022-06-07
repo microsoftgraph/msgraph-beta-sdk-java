@@ -34,7 +34,7 @@ public class GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.getSuggestedEnrollmentLimit(enrollmentType='{enrollmentType}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", enrollmentType);
+        urlTplParams.put("enrollmentType", enrollmentType);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -71,6 +71,7 @@ public class GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilderGetRequestConfiguration requestConfig = new GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -81,7 +82,7 @@ public class GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder {
     }
     /**
      * Invoke function getSuggestedEnrollmentLimit
-     * @return a CompletableFuture of suggestedEnrollmentLimit
+     * @return a CompletableFuture of SuggestedEnrollmentLimit
      */
     public java.util.concurrent.CompletableFuture<SuggestedEnrollmentLimit> get() {
         try {
@@ -94,7 +95,7 @@ public class GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder {
     /**
      * Invoke function getSuggestedEnrollmentLimit
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of suggestedEnrollmentLimit
+     * @return a CompletableFuture of SuggestedEnrollmentLimit
      */
     public java.util.concurrent.CompletableFuture<SuggestedEnrollmentLimit> get(@javax.annotation.Nullable final java.util.function.Consumer<GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -108,7 +109,7 @@ public class GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder {
      * Invoke function getSuggestedEnrollmentLimit
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of suggestedEnrollmentLimit
+     * @return a CompletableFuture of SuggestedEnrollmentLimit
      */
     public java.util.concurrent.CompletableFuture<SuggestedEnrollmentLimit> get(@javax.annotation.Nullable final java.util.function.Consumer<GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

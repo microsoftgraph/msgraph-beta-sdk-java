@@ -55,7 +55,7 @@ public class MakePermanentRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MakePermanentRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MakePermanentPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class MakePermanentRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MakePermanentRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MakePermanentRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MakePermanentPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MakePermanentRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MakePermanentRequestBuilderPostRequestConfiguration requestConfig = new MakePermanentRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class MakePermanentRequestBuilder {
      * @param body 
      * @return a CompletableFuture of privilegedRoleAssignment
      */
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final MakePermanentRequestBody body) {
+    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final MakePermanentPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, PrivilegedRoleAssignment::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class MakePermanentRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedRoleAssignment
      */
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final MakePermanentRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MakePermanentRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final MakePermanentPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MakePermanentRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, PrivilegedRoleAssignment::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class MakePermanentRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of privilegedRoleAssignment
      */
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final MakePermanentRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MakePermanentRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final MakePermanentPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MakePermanentRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

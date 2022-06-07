@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** MacOS software update category summary report for a device and user */
 public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsable {
     /** The device ID. */
     private String _deviceId;

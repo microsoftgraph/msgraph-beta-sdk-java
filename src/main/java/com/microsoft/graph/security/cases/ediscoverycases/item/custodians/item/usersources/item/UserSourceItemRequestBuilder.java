@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.UserSource;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.models.security.UserSource;
 /** Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class UserSourceItemRequestBuilder {
     /** Path parameters for the request */
@@ -99,6 +99,7 @@ public class UserSourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserSourceItemRequestBuilderGetRequestConfiguration requestConfig = new UserSourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

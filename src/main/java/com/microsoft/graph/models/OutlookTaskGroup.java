@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class OutlookTaskGroup extends Entity implements Parsable {
     /** The version of the task group. */
     private String _changeKey;

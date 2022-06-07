@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cloudAppSecurityProfiles property of the microsoft.graph.security entity. */
+/** Provides operations to manage the security singleton. */
 public enum ApplicationPermissionsRequired implements ValuedEnum {
     Unknown("unknown"),
     Anonymous("anonymous"),

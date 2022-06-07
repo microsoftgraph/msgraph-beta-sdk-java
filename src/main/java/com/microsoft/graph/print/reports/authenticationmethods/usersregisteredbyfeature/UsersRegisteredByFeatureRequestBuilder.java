@@ -69,6 +69,7 @@ public class UsersRegisteredByFeatureRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UsersRegisteredByFeatureRequestBuilderGetRequestConfiguration requestConfig = new UsersRegisteredByFeatureRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -34,8 +34,8 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/microsoft.graph.additionalAccess(accessPackageId='{accessPackageId}',incompatibleAccessPackageId='{incompatibleAccessPackageId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", accessPackageId);
-        urlTplParams.put("", incompatibleAccessPackageId);
+        urlTplParams.put("accessPackageId", accessPackageId);
+        urlTplParams.put("incompatibleAccessPackageId", incompatibleAccessPackageId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -72,6 +72,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilderGetRequestConfiguration requestConfig = new AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

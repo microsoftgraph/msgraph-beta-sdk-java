@@ -79,6 +79,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsDevicePerformanceRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsDevicePerformanceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsDevicePerformanceRequestBuilderPostRequestConfiguration requestConfig = new UserExperienceAnalyticsDevicePerformanceRequestBuilderPostRequestConfiguration();

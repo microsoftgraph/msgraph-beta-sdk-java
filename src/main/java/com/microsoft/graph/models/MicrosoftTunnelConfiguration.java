@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a collection of Microsoft Tunnel settings */
 public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /** Additional settings that may be applied to the server */
     private java.util.List<KeyValuePair> _advancedSettings;

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes the embedded SIM activation code deployment state in relation to a device. */
 public class EmbeddedSIMDeviceState extends Entity implements Parsable {
     /** The time the embedded SIM device status was created. Generated service side. */
     private OffsetDateTime _createdDateTime;

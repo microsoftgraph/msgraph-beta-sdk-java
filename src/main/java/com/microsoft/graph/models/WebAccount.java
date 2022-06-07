@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class WebAccount extends ItemFacet implements Parsable {
     /** Contains the description the user has provided for the account on the service being referenced. */
     private String _description;

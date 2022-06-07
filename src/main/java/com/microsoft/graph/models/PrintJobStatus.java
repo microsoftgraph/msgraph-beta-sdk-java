@@ -16,7 +16,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     /** A human-readable description of the print job's current processing state. Read-only. */
     private String _description;
     /** Additional details for print job state. Valid values are described in the following table. Read-only. */
-    private java.util.List<PrintJobStateDetail> _details;
+    private java.util.List<String> _details;
     /** True if the job was acknowledged by a printer; false otherwise. Read-only. */
     private Boolean _isAcquiredByPrinter;
     /** The processingState property */
@@ -68,10 +68,10 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the details property value. Additional details for print job state. Valid values are described in the following table. Read-only.
-     * @return a printJobStateDetail
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<PrintJobStateDetail> getDetails() {
+    public java.util.List<String> getDetails() {
         return this._details;
     }
     /**
@@ -84,7 +84,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
         return new HashMap<>(7) {{
             this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
+            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isAcquiredByPrinter", (n) -> { currentObject.setIsAcquiredByPrinter(n.getBooleanValue()); });
             this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
             this.put("processingStateDescription", (n) -> { currentObject.setProcessingStateDescription(n.getStringValue()); });
@@ -132,7 +132,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acquiredByPrinter", this.getAcquiredByPrinter());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeCollectionOfEnumValues("details", this.getDetails());
+        writer.writeCollectionOfPrimitiveValues("details", this.getDetails());
         writer.writeBooleanValue("isAcquiredByPrinter", this.getIsAcquiredByPrinter());
         writer.writeEnumValue("processingState", this.getProcessingState());
         writer.writeStringValue("processingStateDescription", this.getProcessingStateDescription());
@@ -168,7 +168,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
-    public void setDetails(@javax.annotation.Nullable final java.util.List<PrintJobStateDetail> value) {
+    public void setDetails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._details = value;
     }
     /**

@@ -7,7 +7,7 @@ import java.util.Objects;
 public enum DelegatedAdminRelationshipRequestStatus implements ValuedEnum {
     Created("created"),
     Pending("pending"),
-    Complete("complete"),
+    Succeeded("succeeded"),
     Failed("failed"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -22,7 +22,7 @@ public enum DelegatedAdminRelationshipRequestStatus implements ValuedEnum {
         switch(searchValue) {
             case "created": return Created;
             case "pending": return Pending;
-            case "complete": return Complete;
+            case "succeeded": return Succeeded;
             case "failed": return Failed;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

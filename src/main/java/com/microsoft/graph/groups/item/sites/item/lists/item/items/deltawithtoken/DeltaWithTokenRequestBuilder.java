@@ -33,7 +33,7 @@ public class DeltaWithTokenRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items/microsoft.graph.delta(token='{token}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", token);
+        urlTplParams.put("token", token);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class DeltaWithTokenRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeltaWithTokenRequestBuilderGetRequestConfiguration requestConfig = new DeltaWithTokenRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

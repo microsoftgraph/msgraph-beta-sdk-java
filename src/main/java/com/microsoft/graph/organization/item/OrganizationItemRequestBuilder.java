@@ -160,7 +160,7 @@ public class OrganizationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get organization
+     * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -168,7 +168,7 @@ public class OrganizationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get organization
+     * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,6 +179,7 @@ public class OrganizationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OrganizationItemRequestBuilderGetRequestConfiguration requestConfig = new OrganizationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -189,7 +190,7 @@ public class OrganizationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update organization
+     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
      * @param body 
      * @return a RequestInformation
      */
@@ -198,7 +199,7 @@ public class OrganizationItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update organization
+     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -284,7 +285,7 @@ public class OrganizationItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get organization
+     * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.
      * @return a CompletableFuture of organization
      */
     public java.util.concurrent.CompletableFuture<Organization> get() {
@@ -300,7 +301,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Get organization
+     * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organization
      */
@@ -317,7 +318,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Get organization
+     * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of organization
@@ -335,7 +336,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Update organization
+     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -352,7 +353,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Update organization
+     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -370,7 +371,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Update organization
+     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -404,7 +405,7 @@ public class OrganizationItemRequestBuilder {
         public OrganizationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get organization */
+    /** Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance. */
     public class OrganizationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

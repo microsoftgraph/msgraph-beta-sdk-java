@@ -18,6 +18,8 @@ import microsoft.graph.deviceappmanagement.mobileapps.count.CountRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.getmobileappcountwithstatus.GetMobileAppCountWithStatusRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.gettopmobileappswithstatuswithcount.GetTopMobileAppsWithStatusWithCountRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.mobilelobapp.MobileLobAppRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.validatexml.ValidateXmlRequestBuilder;
 import microsoft.graph.models.MobileApp;
 import microsoft.graph.models.MobileAppCollectionResponse;
@@ -33,6 +35,16 @@ public class MobileAppsRequestBuilder {
     @javax.annotation.Nonnull
     public HasPayloadLinksRequestBuilder hasPayloadLinks() {
         return new HasPayloadLinksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The managedMobileLobApp property */
+    @javax.annotation.Nonnull
+    public ManagedMobileLobAppRequestBuilder managedMobileLobApp() {
+        return new ManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The mobileLobApp property */
+    @javax.annotation.Nonnull
+    public MobileLobAppRequestBuilder mobileLobApp() {
+        return new MobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -92,6 +104,7 @@ public class MobileAppsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppsRequestBuilderGetRequestConfiguration requestConfig = new MobileAppsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -124,6 +137,7 @@ public class MobileAppsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MobileAppsRequestBuilderPostRequestConfiguration requestConfig = new MobileAppsRequestBuilderPostRequestConfiguration();

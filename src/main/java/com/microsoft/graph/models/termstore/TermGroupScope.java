@@ -3,7 +3,7 @@ package microsoft.graph.models.termstore;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the compliance singleton. */
+/** Casts the previous resource to group. */
 public enum TermGroupScope implements ValuedEnum {
     Global("global"),
     System("system"),

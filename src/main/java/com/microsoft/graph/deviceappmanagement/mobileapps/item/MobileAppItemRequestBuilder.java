@@ -24,6 +24,8 @@ import microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item.M
 import microsoft.graph.deviceappmanagement.mobileapps.item.getrelatedappstateswithuserprincipalnamewithdeviceid.GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.installsummary.InstallSummaryRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.iosvppapp.IosVppAppRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.relationships.item.MobileAppRelationshipItemRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.relationships.RelationshipsRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.updaterelationships.UpdateRelationshipsRequestBuilder;
@@ -62,6 +64,16 @@ public class MobileAppItemRequestBuilder {
     @javax.annotation.Nonnull
     public IosVppAppRequestBuilder iosVppApp() {
         return new IosVppAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The managedMobileLobApp property */
+    @javax.annotation.Nonnull
+    public ManagedMobileLobAppRequestBuilder managedMobileLobApp() {
+        return new ManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The mobileLobApp property */
+    @javax.annotation.Nonnull
+    public MobileLobAppRequestBuilder mobileLobApp() {
+        return new MobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -183,6 +195,7 @@ public class MobileAppItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppItemRequestBuilderGetRequestConfiguration requestConfig = new MobileAppItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

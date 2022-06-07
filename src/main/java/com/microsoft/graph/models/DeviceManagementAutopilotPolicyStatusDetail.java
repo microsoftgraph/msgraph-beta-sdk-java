@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy status detail item contained by an autopilot event. */
 public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implements Parsable {
     /** The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error. */
     private DeviceManagementAutopilotPolicyComplianceStatus _complianceStatus;

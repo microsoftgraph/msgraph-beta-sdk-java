@@ -88,6 +88,7 @@ public class ChannelsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChannelsRequestBuilderGetRequestConfiguration requestConfig = new ChannelsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -120,6 +121,7 @@ public class ChannelsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ChannelsRequestBuilderPostRequestConfiguration requestConfig = new ChannelsRequestBuilderPostRequestConfiguration();

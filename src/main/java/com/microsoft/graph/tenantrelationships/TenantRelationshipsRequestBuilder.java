@@ -91,6 +91,7 @@ public class TenantRelationshipsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TenantRelationshipsRequestBuilderGetRequestConfiguration requestConfig = new TenantRelationshipsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

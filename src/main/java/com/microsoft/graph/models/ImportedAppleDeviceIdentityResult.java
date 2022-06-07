@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The importedAppleDeviceIdentityResult resource represents the result of attempting to import Apple devices identities. */
 public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdentity implements Parsable {
     /** Status of imported device identity */
     private Boolean _status;

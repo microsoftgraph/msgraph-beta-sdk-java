@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Base Profile Type for Resource Access */
 public class DeviceManagementResourceAccessProfileBase extends Entity implements Parsable {
     /** The list of assignments for the device configuration profile. */
     private java.util.List<DeviceManagementResourceAccessProfileAssignment> _assignments;
@@ -38,6 +39,13 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     @javax.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementResourceAccessProfileBase": return new DeviceManagementResourceAccessProfileBase();
+            }
+        }
         return new DeviceManagementResourceAccessProfileBase();
     }
     /**

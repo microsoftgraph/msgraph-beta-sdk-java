@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Management Configuration Policy Template */
 public class DeviceManagementConfigurationPolicyTemplate extends Entity implements Parsable {
     /** Allow unmanaged setting templates */
     private Boolean _allowUnmanagedSettings;

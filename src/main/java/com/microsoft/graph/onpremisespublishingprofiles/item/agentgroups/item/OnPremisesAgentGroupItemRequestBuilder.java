@@ -125,6 +125,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnPremisesAgentGroupItemRequestBuilderGetRequestConfiguration requestConfig = new OnPremisesAgentGroupItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the completeSetup method. */
 public class TenantSetupInfo extends Entity implements Parsable {
     /** The defaultRolesSettings property */
     private PrivilegedRoleSettings _defaultRolesSettings;

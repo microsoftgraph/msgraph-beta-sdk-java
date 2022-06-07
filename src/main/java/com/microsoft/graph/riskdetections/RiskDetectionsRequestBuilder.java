@@ -53,7 +53,7 @@ public class RiskDetectionsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List riskDetection
+     * Retrieve the properties of a collection of **riskDetection** objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +61,7 @@ public class RiskDetectionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List riskDetection
+     * Retrieve the properties of a collection of **riskDetection** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -72,6 +72,7 @@ public class RiskDetectionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskDetectionsRequestBuilderGetRequestConfiguration requestConfig = new RiskDetectionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -104,6 +105,7 @@ public class RiskDetectionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RiskDetectionsRequestBuilderPostRequestConfiguration requestConfig = new RiskDetectionsRequestBuilderPostRequestConfiguration();
@@ -114,7 +116,7 @@ public class RiskDetectionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List riskDetection
+     * Retrieve the properties of a collection of **riskDetection** objects.
      * @return a CompletableFuture of RiskDetectionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get() {
@@ -130,7 +132,7 @@ public class RiskDetectionsRequestBuilder {
         }
     }
     /**
-     * List riskDetection
+     * Retrieve the properties of a collection of **riskDetection** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskDetectionCollectionResponse
      */
@@ -147,7 +149,7 @@ public class RiskDetectionsRequestBuilder {
         }
     }
     /**
-     * List riskDetection
+     * Retrieve the properties of a collection of **riskDetection** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RiskDetectionCollectionResponse
@@ -219,7 +221,7 @@ public class RiskDetectionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List riskDetection */
+    /** Retrieve the properties of a collection of **riskDetection** objects. */
     public class RiskDetectionsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

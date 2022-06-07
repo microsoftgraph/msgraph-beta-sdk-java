@@ -85,6 +85,7 @@ public class DecisionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DecisionsRequestBuilderGetRequestConfiguration requestConfig = new DecisionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -117,6 +118,7 @@ public class DecisionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DecisionsRequestBuilderPostRequestConfiguration requestConfig = new DecisionsRequestBuilderPostRequestConfiguration();

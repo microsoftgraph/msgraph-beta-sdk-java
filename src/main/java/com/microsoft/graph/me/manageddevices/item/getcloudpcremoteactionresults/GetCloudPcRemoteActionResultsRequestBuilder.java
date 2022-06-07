@@ -68,6 +68,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetCloudPcRemoteActionResultsRequestBuilderGetRequestConfiguration requestConfig = new GetCloudPcRemoteActionResultsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

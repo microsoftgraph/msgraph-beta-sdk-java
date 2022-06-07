@@ -124,6 +124,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementResourceAccessProfileBaseItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementResourceAccessProfileBaseItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

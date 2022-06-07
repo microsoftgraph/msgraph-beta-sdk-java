@@ -156,6 +156,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DepOnboardingSettingItemRequestBuilderGetRequestConfiguration requestConfig = new DepOnboardingSettingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

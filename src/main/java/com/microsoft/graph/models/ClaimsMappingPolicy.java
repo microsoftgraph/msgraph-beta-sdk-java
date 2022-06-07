@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to servicePrincipal. */
 public class ClaimsMappingPolicy extends StsPolicy implements Parsable {
     /**
      * Instantiates a new claimsMappingPolicy and sets the default values.

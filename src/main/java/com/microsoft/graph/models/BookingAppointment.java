@@ -8,9 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a booked appointment of a service by a customer in a business. */
 public class BookingAppointment extends Entity implements Parsable {
     /** Additional information that is sent to the customer when an appointment is confirmed. */
     private String _additionalInformation;
+    /** The anonymousJoinWebUrl property */
+    private String _anonymousJoinWebUrl;
     /** The SMTP address of the bookingCustomer who is booking the appointment. */
     private String _customerEmailAddress;
     /** The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable. */
@@ -105,6 +108,14 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._additionalInformation;
     }
     /**
+     * Gets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAnonymousJoinWebUrl() {
+        return this._anonymousJoinWebUrl;
+    }
+    /**
      * Gets the customerEmailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
      * @return a string
      */
@@ -193,6 +204,7 @@ public class BookingAppointment extends Entity implements Parsable {
         final BookingAppointment currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
+            this.put("anonymousJoinWebUrl", (n) -> { currentObject.setAnonymousJoinWebUrl(n.getStringValue()); });
             this.put("customerEmailAddress", (n) -> { currentObject.setCustomerEmailAddress(n.getStringValue()); });
             this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
             this.put("customerLocation", (n) -> { currentObject.setCustomerLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
@@ -430,6 +442,7 @@ public class BookingAppointment extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
+        writer.writeStringValue("anonymousJoinWebUrl", this.getAnonymousJoinWebUrl());
         writer.writeStringValue("customerEmailAddress", this.getCustomerEmailAddress());
         writer.writeStringValue("customerId", this.getCustomerId());
         writer.writeObjectValue("customerLocation", this.getCustomerLocation());
@@ -472,6 +485,14 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
         this._additionalInformation = value;
+    }
+    /**
+     * Sets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * @param value Value to set for the anonymousJoinWebUrl property.
+     * @return a void
+     */
+    public void setAnonymousJoinWebUrl(@javax.annotation.Nullable final String value) {
+        this._anonymousJoinWebUrl = value;
     }
     /**
      * Sets the customerEmailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.

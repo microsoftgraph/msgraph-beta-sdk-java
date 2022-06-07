@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity representing a template setting category */
 public class DeviceManagementTemplateSettingCategory extends DeviceManagementSettingCategory implements Parsable {
     /** The settings this category contains */
     private java.util.List<DeviceManagementSettingInstance> _recommendedSettings;

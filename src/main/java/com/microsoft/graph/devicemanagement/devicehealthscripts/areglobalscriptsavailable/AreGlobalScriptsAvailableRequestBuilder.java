@@ -5,15 +5,11 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.ResponseHandler;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import com.microsoft.kiota.serialization.ParseNode;
-import com.microsoft.kiota.serialization.SerializationWriter;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -73,6 +69,7 @@ public class AreGlobalScriptsAvailableRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration requestConfig = new AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -83,12 +80,12 @@ public class AreGlobalScriptsAvailableRequestBuilder {
     }
     /**
      * Invoke function areGlobalScriptsAvailable
-     * @return a CompletableFuture of areGlobalScriptsAvailableResponse
+     * @return a CompletableFuture of GlobalDeviceHealthScriptState
      */
-    public java.util.concurrent.CompletableFuture<AreGlobalScriptsAvailableResponse> get() {
+    public java.util.concurrent.CompletableFuture<GlobalDeviceHealthScriptState> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, AreGlobalScriptsAvailableResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendAsync(requestInfo, GlobalDeviceHealthScriptState.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -96,12 +93,12 @@ public class AreGlobalScriptsAvailableRequestBuilder {
     /**
      * Invoke function areGlobalScriptsAvailable
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of areGlobalScriptsAvailableResponse
+     * @return a CompletableFuture of GlobalDeviceHealthScriptState
      */
-    public java.util.concurrent.CompletableFuture<AreGlobalScriptsAvailableResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GlobalDeviceHealthScriptState> get(@javax.annotation.Nullable final java.util.function.Consumer<AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, AreGlobalScriptsAvailableResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendAsync(requestInfo, GlobalDeviceHealthScriptState.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -110,12 +107,12 @@ public class AreGlobalScriptsAvailableRequestBuilder {
      * Invoke function areGlobalScriptsAvailable
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of areGlobalScriptsAvailableResponse
+     * @return a CompletableFuture of GlobalDeviceHealthScriptState
      */
-    public java.util.concurrent.CompletableFuture<AreGlobalScriptsAvailableResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GlobalDeviceHealthScriptState> get(@javax.annotation.Nullable final java.util.function.Consumer<AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, AreGlobalScriptsAvailableResponse::createFromDiscriminatorValue, responseHandler, null);
+            return this.requestAdapter.sendAsync(requestInfo, GlobalDeviceHealthScriptState.class, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -133,78 +130,6 @@ public class AreGlobalScriptsAvailableRequestBuilder {
          * @return a void
          */
         public AreGlobalScriptsAvailableRequestBuilderGetRequestConfiguration() {
-        }
-    }
-    /** Union type wrapper for classes globalDeviceHealthScriptState */
-    public class AreGlobalScriptsAvailableResponse implements AdditionalDataHolder, Parsable {
-        /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-        private Map<String, Object> _additionalData;
-        /** Union type representation for type globalDeviceHealthScriptState */
-        private GlobalDeviceHealthScriptState _globalDeviceHealthScriptState;
-        /**
-         * Instantiates a new areGlobalScriptsAvailableResponse and sets the default values.
-         * @return a void
-         */
-        public AreGlobalScriptsAvailableResponse() {
-            this.setAdditionalData(new HashMap<>());
-        }
-        @javax.annotation.Nonnull
-        public static AreGlobalScriptsAvailableResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
-            Objects.requireNonNull(parseNode);
-            return new AreGlobalScriptsAvailableResponse();
-        }
-        /**
-         * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-         * @return a Map<String, Object>
-         */
-        @javax.annotation.Nonnull
-        public Map<String, Object> getAdditionalData() {
-            return this._additionalData;
-        }
-        /**
-         * The deserialization information for the current model
-         * @return a Map<String, Consumer<ParseNode>>
-         */
-        @javax.annotation.Nonnull
-        public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-            final AreGlobalScriptsAvailableResponse currentObject = this;
-            return new HashMap<>(1) {{
-                this.put("globalDeviceHealthScriptState", (n) -> { currentObject.setGlobalDeviceHealthScriptState(n.getEnumValue(GlobalDeviceHealthScriptState.class)); });
-            }};
-        }
-        /**
-         * Gets the globalDeviceHealthScriptState property value. Union type representation for type globalDeviceHealthScriptState
-         * @return a globalDeviceHealthScriptState
-         */
-        @javax.annotation.Nullable
-        public GlobalDeviceHealthScriptState getGlobalDeviceHealthScriptState() {
-            return this._globalDeviceHealthScriptState;
-        }
-        /**
-         * Serializes information the current object
-         * @param writer Serialization writer to use to serialize this model
-         * @return a void
-         */
-        public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
-            Objects.requireNonNull(writer);
-            writer.writeEnumValue("globalDeviceHealthScriptState", this.getGlobalDeviceHealthScriptState());
-            writer.writeAdditionalData(this.getAdditionalData());
-        }
-        /**
-         * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-         * @param value Value to set for the AdditionalData property.
-         * @return a void
-         */
-        public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-            this._additionalData = value;
-        }
-        /**
-         * Sets the globalDeviceHealthScriptState property value. Union type representation for type globalDeviceHealthScriptState
-         * @param value Value to set for the globalDeviceHealthScriptState property.
-         * @return a void
-         */
-        public void setGlobalDeviceHealthScriptState(@javax.annotation.Nullable final GlobalDeviceHealthScriptState value) {
-            this._globalDeviceHealthScriptState = value;
         }
     }
 }

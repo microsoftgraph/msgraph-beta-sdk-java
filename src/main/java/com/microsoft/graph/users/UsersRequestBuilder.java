@@ -85,7 +85,7 @@ public class UsersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List users
+     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -93,7 +93,7 @@ public class UsersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List users
+     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -104,6 +104,7 @@ public class UsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UsersRequestBuilderGetRequestConfiguration requestConfig = new UsersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -114,7 +115,7 @@ public class UsersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a `$select` OData query option.
      * @param body 
      * @return a RequestInformation
      */
@@ -123,7 +124,7 @@ public class UsersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a `$select` OData query option.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -136,6 +137,7 @@ public class UsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UsersRequestBuilderPostRequestConfiguration requestConfig = new UsersRequestBuilderPostRequestConfiguration();
@@ -154,7 +156,7 @@ public class UsersRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * List users
+     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option.
      * @return a CompletableFuture of UserCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -170,7 +172,7 @@ public class UsersRequestBuilder {
         }
     }
     /**
-     * List users
+     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserCollectionResponse
      */
@@ -187,7 +189,7 @@ public class UsersRequestBuilder {
         }
     }
     /**
-     * List users
+     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserCollectionResponse
@@ -213,7 +215,7 @@ public class UsersRequestBuilder {
         return new GetManagedAppBlockedUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a `$select` OData query option.
      * @param body 
      * @return a CompletableFuture of user
      */
@@ -230,7 +232,7 @@ public class UsersRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a `$select` OData query option.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
@@ -248,7 +250,7 @@ public class UsersRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a `$select` OData query option.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -267,7 +269,7 @@ public class UsersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List users */
+    /** Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. */
     public class UsersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

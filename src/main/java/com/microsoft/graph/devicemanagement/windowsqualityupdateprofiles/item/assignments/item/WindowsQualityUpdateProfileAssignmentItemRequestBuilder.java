@@ -99,6 +99,7 @@ public class WindowsQualityUpdateProfileAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsQualityUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsQualityUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

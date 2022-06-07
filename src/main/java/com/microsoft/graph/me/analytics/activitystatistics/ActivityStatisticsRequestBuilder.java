@@ -78,6 +78,7 @@ public class ActivityStatisticsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ActivityStatisticsRequestBuilderGetRequestConfiguration requestConfig = new ActivityStatisticsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ActivityStatisticsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ActivityStatisticsRequestBuilderPostRequestConfiguration requestConfig = new ActivityStatisticsRequestBuilderPostRequestConfiguration();

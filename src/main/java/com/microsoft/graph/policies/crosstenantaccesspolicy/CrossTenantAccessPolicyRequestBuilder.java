@@ -17,7 +17,7 @@ import java.util.Objects;
 import microsoft.graph.models.CrossTenantAccessPolicy;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.crosstenantaccesspolicy.default_escaped.DefaultRequestBuilder;
-import microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerItemRequestBuilder;
+import microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
 import microsoft.graph.policies.crosstenantaccesspolicy.partners.PartnersRequestBuilder;
 /** Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity. */
 public class CrossTenantAccessPolicyRequestBuilder {
@@ -112,6 +112,7 @@ public class CrossTenantAccessPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration requestConfig = new CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -258,14 +259,14 @@ public class CrossTenantAccessPolicyRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.crossTenantAccessPolicy.partners.item collection
      * @param id Unique identifier of the item
-     * @return a crossTenantAccessPolicyConfigurationPartnerItemRequestBuilder
+     * @return a crossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CrossTenantAccessPolicyConfigurationPartnerItemRequestBuilder partners(@javax.annotation.Nonnull final String id) {
+    public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder partners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("crossTenantAccessPolicyConfigurationPartner%2DtenantId", id);
-        return new CrossTenantAccessPolicyConfigurationPartnerItemRequestBuilder(urlTplParams, requestAdapter);
+        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property crossTenantAccessPolicy in policies

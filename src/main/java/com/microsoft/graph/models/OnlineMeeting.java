@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the commsApplication singleton. */
 public class OnlineMeeting extends Entity implements Parsable {
     /** Indicates whether attendees can turn on their camera. */
     private Boolean _allowAttendeeToEnableCamera;
@@ -30,7 +31,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /** Settings related to a live event. */
     private BroadcastMeetingSettings _broadcastSettings;
     /** The capabilities property */
-    private java.util.List<MeetingCapabilities> _capabilities;
+    private java.util.List<String> _capabilities;
     /** The chat information associated with this online meeting. */
     private ChatInfo _chatInfo;
     /** The meeting creation time in UTC. Read-only. */
@@ -168,10 +169,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the capabilities property value. The capabilities property
-     * @return a meetingCapabilities
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<MeetingCapabilities> getCapabilities() {
+    public java.util.List<String> getCapabilities() {
         return this._capabilities;
     }
     /**
@@ -224,7 +225,7 @@ public class OnlineMeeting extends Entity implements Parsable {
             this.put("attendeeReport", (n) -> { currentObject.setAttendeeReport(n.getByteArrayValue()); });
             this.put("audioConferencing", (n) -> { currentObject.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
             this.put("broadcastSettings", (n) -> { currentObject.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getCollectionOfEnumValues(MeetingCapabilities.class)); });
+            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
             this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -384,7 +385,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("broadcastSettings", this.getBroadcastSettings());
-        writer.writeCollectionOfEnumValues("capabilities", this.getCapabilities());
+        writer.writeCollectionOfPrimitiveValues("capabilities", this.getCapabilities());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -490,7 +491,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the capabilities property.
      * @return a void
      */
-    public void setCapabilities(@javax.annotation.Nullable final java.util.List<MeetingCapabilities> value) {
+    public void setCapabilities(@javax.annotation.Nullable final java.util.List<String> value) {
         this._capabilities = value;
     }
     /**

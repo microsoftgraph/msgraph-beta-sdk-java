@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup history entity contains device boot performance history details. */
 public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Parsable {
     /** The user experience analytics device core boot time in milliseconds. */
     private Integer _coreBootTimeInMs;

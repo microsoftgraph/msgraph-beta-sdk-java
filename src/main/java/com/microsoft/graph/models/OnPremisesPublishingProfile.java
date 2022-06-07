@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
 public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /** List of existing onPremisesAgentGroup objects. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;

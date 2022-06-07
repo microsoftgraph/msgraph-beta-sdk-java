@@ -26,7 +26,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     /** The feedOrientation property */
     private PrinterFeedOrientation _feedOrientation;
     /** The finishings property */
-    private java.util.List<PrintFinishing> _finishings;
+    private java.util.List<String> _finishings;
     /** The fitPdfToPage property */
     private Boolean _fitPdfToPage;
     /** The inputBin property */
@@ -147,7 +147,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
             this.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
             this.put("feedDirection", (n) -> { currentObject.setFeedDirection(n.getEnumValue(PrinterFeedDirection.class)); });
             this.put("feedOrientation", (n) -> { currentObject.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
             this.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
             this.put("margin", (n) -> { currentObject.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
@@ -164,10 +164,10 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a printFinishing
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<String> getFinishings() {
         return this._finishings;
     }
     /**
@@ -280,7 +280,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         writer.writeEnumValue("duplexMode", this.getDuplexMode());
         writer.writeEnumValue("feedDirection", this.getFeedDirection());
         writer.writeEnumValue("feedOrientation", this.getFeedOrientation());
-        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
+        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
         writer.writeBooleanValue("fitPdfToPage", this.getFitPdfToPage());
         writer.writeStringValue("inputBin", this.getInputBin());
         writer.writeObjectValue("margin", this.getMargin());
@@ -364,7 +364,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the finishings property.
      * @return a void
      */
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@javax.annotation.Nullable final java.util.List<String> value) {
         this._finishings = value;
     }
     /**

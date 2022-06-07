@@ -7,9 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device scores entity consolidates the various endpoint analytics scores. */
 public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsable {
     /** The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _appReliabilityScore;
+    /** The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
+    private Double _batteryHealthScore;
     /** The user experience analytics device name. */
     private String _deviceName;
     /** The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
@@ -50,6 +53,14 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         return this._appReliabilityScore;
     }
     /**
+     * Gets the batteryHealthScore property value. The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @return a double
+     */
+    @javax.annotation.Nullable
+    public Double getBatteryHealthScore() {
+        return this._batteryHealthScore;
+    }
+    /**
      * Gets the deviceName property value. The user experience analytics device name.
      * @return a string
      */
@@ -74,6 +85,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         final UserExperienceAnalyticsDeviceScores currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("appReliabilityScore", (n) -> { currentObject.setAppReliabilityScore(n.getDoubleValue()); });
+            this.put("batteryHealthScore", (n) -> { currentObject.setBatteryHealthScore(n.getDoubleValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("endpointAnalyticsScore", (n) -> { currentObject.setEndpointAnalyticsScore(n.getDoubleValue()); });
             this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
@@ -132,6 +144,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("appReliabilityScore", this.getAppReliabilityScore());
+        writer.writeDoubleValue("batteryHealthScore", this.getBatteryHealthScore());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeDoubleValue("endpointAnalyticsScore", this.getEndpointAnalyticsScore());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
@@ -147,6 +160,14 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      */
     public void setAppReliabilityScore(@javax.annotation.Nullable final Double value) {
         this._appReliabilityScore = value;
+    }
+    /**
+     * Sets the batteryHealthScore property value. The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @param value Value to set for the batteryHealthScore property.
+     * @return a void
+     */
+    public void setBatteryHealthScore(@javax.annotation.Nullable final Double value) {
+        this._batteryHealthScore = value;
     }
     /**
      * Sets the deviceName property value. The user experience analytics device name.

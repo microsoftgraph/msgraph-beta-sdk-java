@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties for Audit Event. */
 public class AuditEvent extends Entity implements Parsable {
     /** Friendly name of the activity. */
     private String _activity;

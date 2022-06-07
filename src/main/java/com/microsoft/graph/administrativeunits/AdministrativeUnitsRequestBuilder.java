@@ -78,7 +78,7 @@ public class AdministrativeUnitsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List administrativeUnits
+     * Retrieve a list of administrativeUnit objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class AdministrativeUnitsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List administrativeUnits
+     * Retrieve a list of administrativeUnit objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,6 +97,7 @@ public class AdministrativeUnitsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdministrativeUnitsRequestBuilderGetRequestConfiguration requestConfig = new AdministrativeUnitsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -107,7 +108,7 @@ public class AdministrativeUnitsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create administrativeUnit
+     * Use this API to create a new administrativeUnit.
      * @param body 
      * @return a RequestInformation
      */
@@ -116,7 +117,7 @@ public class AdministrativeUnitsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create administrativeUnit
+     * Use this API to create a new administrativeUnit.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -129,6 +130,7 @@ public class AdministrativeUnitsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AdministrativeUnitsRequestBuilderPostRequestConfiguration requestConfig = new AdministrativeUnitsRequestBuilderPostRequestConfiguration();
@@ -147,7 +149,7 @@ public class AdministrativeUnitsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * List administrativeUnits
+     * Retrieve a list of administrativeUnit objects.
      * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get() {
@@ -163,7 +165,7 @@ public class AdministrativeUnitsRequestBuilder {
         }
     }
     /**
-     * List administrativeUnits
+     * Retrieve a list of administrativeUnit objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      */
@@ -180,7 +182,7 @@ public class AdministrativeUnitsRequestBuilder {
         }
     }
     /**
-     * List administrativeUnits
+     * Retrieve a list of administrativeUnit objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AdministrativeUnitCollectionResponse
@@ -198,7 +200,7 @@ public class AdministrativeUnitsRequestBuilder {
         }
     }
     /**
-     * Create administrativeUnit
+     * Use this API to create a new administrativeUnit.
      * @param body 
      * @return a CompletableFuture of administrativeUnit
      */
@@ -215,7 +217,7 @@ public class AdministrativeUnitsRequestBuilder {
         }
     }
     /**
-     * Create administrativeUnit
+     * Use this API to create a new administrativeUnit.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
@@ -233,7 +235,7 @@ public class AdministrativeUnitsRequestBuilder {
         }
     }
     /**
-     * Create administrativeUnit
+     * Use this API to create a new administrativeUnit.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -252,7 +254,7 @@ public class AdministrativeUnitsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List administrativeUnits */
+    /** Retrieve a list of administrativeUnit objects. */
     public class AdministrativeUnitsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

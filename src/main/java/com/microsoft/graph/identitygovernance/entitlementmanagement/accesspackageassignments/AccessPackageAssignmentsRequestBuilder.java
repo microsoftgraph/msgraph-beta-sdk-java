@@ -82,7 +82,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -90,7 +90,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -101,6 +101,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageAssignmentsRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageAssignmentsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -133,6 +134,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AccessPackageAssignmentsRequestBuilderPostRequestConfiguration requestConfig = new AccessPackageAssignmentsRequestBuilderPostRequestConfiguration();
@@ -153,7 +155,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @return a CompletableFuture of AccessPackageAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentCollectionResponse> get() {
@@ -169,7 +171,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         }
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageAssignmentCollectionResponse
      */
@@ -186,7 +188,7 @@ public class AccessPackageAssignmentsRequestBuilder {
         }
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageAssignmentCollectionResponse
@@ -258,7 +260,7 @@ public class AccessPackageAssignmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the grant of an access package to a subject (user or group). */
+    /** The assignment of an access package to a subject for a period of time. */
     public class AccessPackageAssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

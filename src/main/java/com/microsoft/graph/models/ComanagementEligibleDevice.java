@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Co-Management eligibility state */
 public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown. */
     private DeviceRegistrationState _clientRegistrationStatus;

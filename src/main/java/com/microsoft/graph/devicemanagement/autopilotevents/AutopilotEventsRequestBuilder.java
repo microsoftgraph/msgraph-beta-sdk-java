@@ -78,6 +78,7 @@ public class AutopilotEventsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AutopilotEventsRequestBuilderGetRequestConfiguration requestConfig = new AutopilotEventsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class AutopilotEventsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AutopilotEventsRequestBuilderPostRequestConfiguration requestConfig = new AutopilotEventsRequestBuilderPostRequestConfiguration();

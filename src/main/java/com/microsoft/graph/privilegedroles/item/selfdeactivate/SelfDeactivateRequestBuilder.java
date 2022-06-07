@@ -69,6 +69,7 @@ public class SelfDeactivateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SelfDeactivateRequestBuilderPostRequestConfiguration requestConfig = new SelfDeactivateRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

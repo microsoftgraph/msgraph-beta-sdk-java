@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Enrollment Configuration Assignment */
 public class EnrollmentConfigurationAssignment extends Entity implements Parsable {
     /** Type of resource used for deployment to a group, direct or policySet. Possible values are: direct, policySets. */
     private DeviceAndAppManagementAssignmentSource _source;

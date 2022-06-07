@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics Device without Cloud Identity. */
 public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity implements Parsable {
     /** Azure Active Directory Device Id */
     private String _azureAdDeviceId;

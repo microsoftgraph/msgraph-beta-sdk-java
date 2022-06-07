@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the filterOperators method. */
 public class FilterOperatorSchema extends Entity implements Parsable {
     /** Arity of the operator. Possible values are: Binary, Unary. The default is Binary. */
     private ScopeOperatorType _arity;
     /** Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All. */
     private ScopeOperatorMultiValuedComparisonType _multivaluedComparisonType;
     /** Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String. */
-    private java.util.List<AttributeType> _supportedAttributeTypes;
+    private java.util.List<String> _supportedAttributeTypes;
     /**
      * Instantiates a new filterOperatorSchema and sets the default values.
      * @return a void
@@ -49,7 +50,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("arity", (n) -> { currentObject.setArity(n.getEnumValue(ScopeOperatorType.class)); });
             this.put("multivaluedComparisonType", (n) -> { currentObject.setMultivaluedComparisonType(n.getEnumValue(ScopeOperatorMultiValuedComparisonType.class)); });
-            this.put("supportedAttributeTypes", (n) -> { currentObject.setSupportedAttributeTypes(n.getCollectionOfEnumValues(AttributeType.class)); });
+            this.put("supportedAttributeTypes", (n) -> { currentObject.setSupportedAttributeTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
@@ -62,10 +63,10 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     }
     /**
      * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
-     * @return a attributeType
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<AttributeType> getSupportedAttributeTypes() {
+    public java.util.List<String> getSupportedAttributeTypes() {
         return this._supportedAttributeTypes;
     }
     /**
@@ -78,7 +79,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeEnumValue("arity", this.getArity());
         writer.writeEnumValue("multivaluedComparisonType", this.getMultivaluedComparisonType());
-        writer.writeCollectionOfEnumValues("supportedAttributeTypes", this.getSupportedAttributeTypes());
+        writer.writeCollectionOfPrimitiveValues("supportedAttributeTypes", this.getSupportedAttributeTypes());
     }
     /**
      * Sets the arity property value. Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
@@ -101,7 +102,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * @param value Value to set for the supportedAttributeTypes property.
      * @return a void
      */
-    public void setSupportedAttributeTypes(@javax.annotation.Nullable final java.util.List<AttributeType> value) {
+    public void setSupportedAttributeTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedAttributeTypes = value;
     }
 }

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class DirectorySetting extends Entity implements Parsable {
     /** Display name of this group of settings, which comes from the associated template. Read-only. */
     private String _displayName;

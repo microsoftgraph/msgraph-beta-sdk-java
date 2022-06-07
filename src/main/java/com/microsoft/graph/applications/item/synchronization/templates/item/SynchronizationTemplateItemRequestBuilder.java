@@ -105,6 +105,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SynchronizationTemplateItemRequestBuilderGetRequestConfiguration requestConfig = new SynchronizationTemplateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -105,6 +105,7 @@ public class ZebraFotaDeploymentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ZebraFotaDeploymentItemRequestBuilderGetRequestConfiguration requestConfig = new ZebraFotaDeploymentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration requestConfig = new AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

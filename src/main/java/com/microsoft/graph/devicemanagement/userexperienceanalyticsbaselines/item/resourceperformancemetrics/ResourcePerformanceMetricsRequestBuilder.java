@@ -71,6 +71,7 @@ public class ResourcePerformanceMetricsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ResourcePerformanceMetricsRequestBuilderGetRequestConfiguration requestConfig = new ResourcePerformanceMetricsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

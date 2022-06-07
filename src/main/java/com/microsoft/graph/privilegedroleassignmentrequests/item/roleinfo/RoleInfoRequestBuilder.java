@@ -130,6 +130,7 @@ public class RoleInfoRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleInfoRequestBuilderGetRequestConfiguration requestConfig = new RoleInfoRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

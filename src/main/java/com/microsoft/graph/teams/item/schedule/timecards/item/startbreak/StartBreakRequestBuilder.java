@@ -55,7 +55,7 @@ public class StartBreakRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StartBreakRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StartBreakPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class StartBreakRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StartBreakRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StartBreakRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StartBreakPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StartBreakRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final StartBreakRequestBuilderPostRequestConfiguration requestConfig = new StartBreakRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class StartBreakRequestBuilder {
      * @param body 
      * @return a CompletableFuture of timeCard
      */
-    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final StartBreakRequestBody body) {
+    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final StartBreakPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class StartBreakRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeCard
      */
-    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final StartBreakRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StartBreakRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final StartBreakPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StartBreakRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class StartBreakRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of timeCard
      */
-    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final StartBreakRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StartBreakRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final StartBreakPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StartBreakRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

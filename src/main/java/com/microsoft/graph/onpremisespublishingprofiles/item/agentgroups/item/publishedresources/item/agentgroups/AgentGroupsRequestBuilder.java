@@ -18,6 +18,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.OnPremisesAgentGroup;
 import microsoft.graph.models.OnPremisesAgentGroupCollectionResponse;
 import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.publishedresources.item.agentgroups.count.CountRequestBuilder;
+import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.publishedresources.item.agentgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the agentGroups property of the microsoft.graph.publishedResource entity. */
 public class AgentGroupsRequestBuilder {
     /** The count property */
@@ -27,6 +28,11 @@ public class AgentGroupsRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -78,6 +84,7 @@ public class AgentGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AgentGroupsRequestBuilderGetRequestConfiguration requestConfig = new AgentGroupsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +117,7 @@ public class AgentGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AgentGroupsRequestBuilderPostRequestConfiguration requestConfig = new AgentGroupsRequestBuilderPostRequestConfiguration();

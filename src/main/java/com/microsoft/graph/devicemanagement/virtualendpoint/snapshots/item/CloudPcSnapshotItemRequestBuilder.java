@@ -99,6 +99,7 @@ public class CloudPcSnapshotItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPcSnapshotItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPcSnapshotItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

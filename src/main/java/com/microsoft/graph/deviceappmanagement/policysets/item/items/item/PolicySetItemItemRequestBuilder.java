@@ -99,6 +99,7 @@ public class PolicySetItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PolicySetItemItemRequestBuilderGetRequestConfiguration requestConfig = new PolicySetItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

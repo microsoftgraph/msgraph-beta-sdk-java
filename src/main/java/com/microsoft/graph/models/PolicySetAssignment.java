@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for PolicySet Assignment. */
 public class PolicySetAssignment extends Entity implements Parsable {
     /** Last modified time of the PolicySetAssignment. */
     private OffsetDateTime _lastModifiedDateTime;

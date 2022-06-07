@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a customer of the business. */
 public class BookingCustomer extends BookingPerson implements Parsable {
     /** Addresses associated with the customer, including home, business and other addresses. */
     private java.util.List<PhysicalAddress> _addresses;

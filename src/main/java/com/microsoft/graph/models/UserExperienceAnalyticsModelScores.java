@@ -7,9 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics model scores entity consolidates the various endpoint analytics scores. */
 public class UserExperienceAnalyticsModelScores extends Entity implements Parsable {
     /** The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _appReliabilityScore;
+    /** The user experience analytics model battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
+    private Double _batteryHealthScore;
     /** The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _endpointAnalyticsScore;
     /** The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. */
@@ -50,6 +53,14 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         return this._appReliabilityScore;
     }
     /**
+     * Gets the batteryHealthScore property value. The user experience analytics model battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @return a double
+     */
+    @javax.annotation.Nullable
+    public Double getBatteryHealthScore() {
+        return this._batteryHealthScore;
+    }
+    /**
      * Gets the endpointAnalyticsScore property value. The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
@@ -66,6 +77,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         final UserExperienceAnalyticsModelScores currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("appReliabilityScore", (n) -> { currentObject.setAppReliabilityScore(n.getDoubleValue()); });
+            this.put("batteryHealthScore", (n) -> { currentObject.setBatteryHealthScore(n.getDoubleValue()); });
             this.put("endpointAnalyticsScore", (n) -> { currentObject.setEndpointAnalyticsScore(n.getDoubleValue()); });
             this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
@@ -132,6 +144,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("appReliabilityScore", this.getAppReliabilityScore());
+        writer.writeDoubleValue("batteryHealthScore", this.getBatteryHealthScore());
         writer.writeDoubleValue("endpointAnalyticsScore", this.getEndpointAnalyticsScore());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
         writer.writeStringValue("manufacturer", this.getManufacturer());
@@ -147,6 +160,14 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
      */
     public void setAppReliabilityScore(@javax.annotation.Nullable final Double value) {
         this._appReliabilityScore = value;
+    }
+    /**
+     * Sets the batteryHealthScore property value. The user experience analytics model battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @param value Value to set for the batteryHealthScore property.
+     * @return a void
+     */
+    public void setBatteryHealthScore(@javax.annotation.Nullable final Double value) {
+        this._batteryHealthScore = value;
     }
     /**
      * Sets the endpointAnalyticsScore property value. The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308

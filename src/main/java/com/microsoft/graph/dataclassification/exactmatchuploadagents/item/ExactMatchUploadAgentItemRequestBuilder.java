@@ -99,6 +99,7 @@ public class ExactMatchUploadAgentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExactMatchUploadAgentItemRequestBuilderGetRequestConfiguration requestConfig = new ExactMatchUploadAgentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

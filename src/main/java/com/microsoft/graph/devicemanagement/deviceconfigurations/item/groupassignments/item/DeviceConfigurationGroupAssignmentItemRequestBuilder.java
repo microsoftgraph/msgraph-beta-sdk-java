@@ -105,6 +105,7 @@ public class DeviceConfigurationGroupAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceConfigurationGroupAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceConfigurationGroupAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

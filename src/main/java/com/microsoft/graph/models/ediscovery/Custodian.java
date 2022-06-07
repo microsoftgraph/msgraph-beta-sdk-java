@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the compliance singleton. */
 public class Custodian extends DataSourceContainer implements Parsable {
     /** Date and time the custodian acknowledged a hold notification. */
     private OffsetDateTime _acknowledgedDateTime;

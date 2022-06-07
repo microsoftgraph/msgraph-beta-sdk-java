@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The base presentation value entity that stores the value for a single group policy presentation. */
 public class GroupPolicyPresentationValue extends Entity implements Parsable {
     /** The date and time the object was created. */
     private OffsetDateTime _createdDateTime;
@@ -32,6 +33,13 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static GroupPolicyPresentationValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.groupPolicyPresentationValue": return new GroupPolicyPresentationValue();
+            }
+        }
         return new GroupPolicyPresentationValue();
     }
     /**

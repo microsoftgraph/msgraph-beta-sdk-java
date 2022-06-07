@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents device registration records for Bring-Your-Own-Device(BYOD) Windows devices. */
 public class WindowsInformationProtectionDeviceRegistration extends Entity implements Parsable {
     /** Device Mac address. */
     private String _deviceMacAddress;

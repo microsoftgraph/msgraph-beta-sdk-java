@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for assignment of a WindowsDefenderApplicationControl supplemental policy to a group. */
 public class WindowsDefenderApplicationControlSupplementalPolicyAssignment extends Entity implements Parsable {
     /** The target group assignment defined by the admin. */
     private DeviceAndAppManagementAssignmentTarget _target;

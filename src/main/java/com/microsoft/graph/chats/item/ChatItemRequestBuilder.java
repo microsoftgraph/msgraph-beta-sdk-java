@@ -28,6 +28,8 @@ import microsoft.graph.chats.item.operations.item.TeamsAsyncOperationItemRequest
 import microsoft.graph.chats.item.operations.OperationsRequestBuilder;
 import microsoft.graph.chats.item.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
 import microsoft.graph.chats.item.permissiongrants.PermissionGrantsRequestBuilder;
+import microsoft.graph.chats.item.pinnedmessages.item.PinnedChatMessageInfoItemRequestBuilder;
+import microsoft.graph.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
 import microsoft.graph.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import microsoft.graph.chats.item.tabs.item.TeamsTabItemRequestBuilder;
 import microsoft.graph.chats.item.tabs.TabsRequestBuilder;
@@ -82,6 +84,11 @@ public class ChatItemRequestBuilder {
     @javax.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The pinnedMessages property */
+    @javax.annotation.Nonnull
+    public PinnedMessagesRequestBuilder pinnedMessages() {
+        return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
@@ -177,6 +184,7 @@ public class ChatItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChatItemRequestBuilderGetRequestConfiguration requestConfig = new ChatItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -434,6 +442,18 @@ public class ChatItemRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("resourceSpecificPermissionGrant%2Did", id);
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.chats.item.pinnedMessages.item collection
+     * @param id Unique identifier of the item
+     * @return a pinnedChatMessageInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PinnedChatMessageInfoItemRequestBuilder pinnedMessages(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("pinnedChatMessageInfo%2Did", id);
+        return new PinnedChatMessageInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.chats.item.tabs.item collection

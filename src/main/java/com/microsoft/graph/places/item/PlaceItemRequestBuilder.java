@@ -16,12 +16,18 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Place;
+import microsoft.graph.places.item.room.RoomRequestBuilder;
 /** Provides operations to manage the collection of place entities. */
 public class PlaceItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The room property */
+    @javax.annotation.Nonnull
+    public RoomRequestBuilder room() {
+        return new RoomRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
@@ -80,7 +86,7 @@ public class PlaceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +94,7 @@ public class PlaceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +105,7 @@ public class PlaceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlaceItemRequestBuilderGetRequestConfiguration requestConfig = new PlaceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -192,7 +199,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @return a CompletableFuture of place
      */
     public java.util.concurrent.CompletableFuture<Place> get() {
@@ -208,7 +215,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of place
      */
@@ -225,7 +232,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of place
@@ -312,7 +319,7 @@ public class PlaceItemRequestBuilder {
         public PlaceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get place */
+    /** Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.  */
     public class PlaceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

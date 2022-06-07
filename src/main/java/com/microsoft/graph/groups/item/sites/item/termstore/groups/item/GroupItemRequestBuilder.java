@@ -16,8 +16,8 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.groups.item.sites.item.termstore.groups.item.sets.item.SetItemRequestBuilder;
 import microsoft.graph.groups.item.sites.item.termstore.groups.item.sets.SetsRequestBuilder;
-import microsoft.graph.models.Group;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.models.termstore.Group;
 /** Provides operations to manage the groups property of the microsoft.graph.termStore.store entity. */
 public class GroupItemRequestBuilder {
     /** Path parameters for the request */
@@ -106,6 +106,7 @@ public class GroupItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupItemRequestBuilderGetRequestConfiguration requestConfig = new GroupItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

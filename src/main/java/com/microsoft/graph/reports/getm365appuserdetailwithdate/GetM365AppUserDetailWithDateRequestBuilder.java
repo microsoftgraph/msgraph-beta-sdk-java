@@ -35,7 +35,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getM365AppUserDetail(date={date})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", date);
+        urlTplParams.put("date", date);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -72,6 +72,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetM365AppUserDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetM365AppUserDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

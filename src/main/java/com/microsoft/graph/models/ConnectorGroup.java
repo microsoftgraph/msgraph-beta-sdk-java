@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to application. */
 public class ConnectorGroup extends Entity implements Parsable {
     /** Read-only. Nullable. */
     private java.util.List<Application> _applications;

@@ -99,6 +99,7 @@ public class DataSourceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DataSourceRequestBuilderGetRequestConfiguration requestConfig = new DataSourceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

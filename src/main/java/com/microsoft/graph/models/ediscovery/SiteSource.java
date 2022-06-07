@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Site;
+/** Provides operations to manage the compliance singleton. */
 public class SiteSource extends DataSource implements Parsable {
     /** The site property */
     private Site _site;

@@ -71,6 +71,7 @@ public class IntendedDeploymentProfileRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IntendedDeploymentProfileRequestBuilderGetRequestConfiguration requestConfig = new IntendedDeploymentProfileRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -68,6 +68,7 @@ public class FilterOperatorsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FilterOperatorsRequestBuilderGetRequestConfiguration requestConfig = new FilterOperatorsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

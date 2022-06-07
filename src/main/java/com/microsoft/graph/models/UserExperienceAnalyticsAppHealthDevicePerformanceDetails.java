@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device performance details. */
 public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity implements Parsable {
     /** The friendly name of the application for which the event occurred. */
     private String _appDisplayName;

@@ -99,6 +99,7 @@ public class UserRegistrationDetailsItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration requestConfig = new UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

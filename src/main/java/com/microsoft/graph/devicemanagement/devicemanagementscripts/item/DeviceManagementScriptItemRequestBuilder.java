@@ -151,6 +151,7 @@ public class DeviceManagementScriptItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementScriptItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementScriptItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

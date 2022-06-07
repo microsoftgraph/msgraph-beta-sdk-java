@@ -103,7 +103,7 @@ public class AdministrativeUnitItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete administrativeUnit
+     * Delete an administrativeUnit.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -111,7 +111,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete administrativeUnit
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get administrativeUnit
+     * Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -139,7 +139,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get administrativeUnit
+     * Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -150,6 +150,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdministrativeUnitItemRequestBuilderGetRequestConfiguration requestConfig = new AdministrativeUnitItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -160,7 +161,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update administrativeunit
+     * Update the properties of an administrativeUnit object.
      * @param body 
      * @return a RequestInformation
      */
@@ -169,7 +170,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update administrativeunit
+     * Update the properties of an administrativeUnit object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -192,7 +193,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete administrativeUnit
+     * Delete an administrativeUnit.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -208,7 +209,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Delete administrativeUnit
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -225,7 +226,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Delete administrativeUnit
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -255,7 +256,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get administrativeUnit
+     * Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance.
      * @return a CompletableFuture of administrativeUnit
      */
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
@@ -271,7 +272,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Get administrativeUnit
+     * Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
      */
@@ -288,7 +289,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Get administrativeUnit
+     * Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of administrativeUnit
@@ -318,7 +319,7 @@ public class AdministrativeUnitItemRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update administrativeunit
+     * Update the properties of an administrativeUnit object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -335,7 +336,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Update administrativeunit
+     * Update the properties of an administrativeUnit object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -353,7 +354,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Update administrativeunit
+     * Update the properties of an administrativeUnit object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -399,7 +400,7 @@ public class AdministrativeUnitItemRequestBuilder {
         public AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get administrativeUnit */
+    /** Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance. */
     public class AdministrativeUnitItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

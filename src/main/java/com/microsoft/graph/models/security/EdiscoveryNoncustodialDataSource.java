@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the security singleton. */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** The dataSource property */
     private DataSource _dataSource;

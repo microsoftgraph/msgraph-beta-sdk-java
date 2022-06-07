@@ -105,6 +105,7 @@ public class TrustFrameworkPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TrustFrameworkPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new TrustFrameworkPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -105,6 +105,7 @@ public class ReviewSetQueryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ReviewSetQueryItemRequestBuilderGetRequestConfiguration requestConfig = new ReviewSetQueryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

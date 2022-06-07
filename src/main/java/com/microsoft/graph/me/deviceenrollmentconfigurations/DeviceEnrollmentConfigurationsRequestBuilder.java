@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.deviceenrollmentconfigurations.count.CountRequestBuilder;
+import microsoft.graph.me.deviceenrollmentconfigurations.createenrollmentnotificationconfiguration.CreateEnrollmentNotificationConfigurationRequestBuilder;
 import microsoft.graph.me.deviceenrollmentconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
 import microsoft.graph.models.DeviceEnrollmentConfiguration;
 import microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
@@ -25,6 +26,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The createEnrollmentNotificationConfiguration property */
+    @javax.annotation.Nonnull
+    public CreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
+        return new CreateEnrollmentNotificationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /** The hasPayloadLinks property */
     @javax.annotation.Nonnull
@@ -84,6 +90,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +123,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration();

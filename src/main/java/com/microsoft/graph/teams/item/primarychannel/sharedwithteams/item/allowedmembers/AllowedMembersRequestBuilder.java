@@ -77,6 +77,7 @@ public class AllowedMembersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllowedMembersRequestBuilderGetRequestConfiguration requestConfig = new AllowedMembersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

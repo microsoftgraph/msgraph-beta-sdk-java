@@ -99,6 +99,7 @@ public class PaymentTermItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PaymentTermItemRequestBuilderGetRequestConfiguration requestConfig = new PaymentTermItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

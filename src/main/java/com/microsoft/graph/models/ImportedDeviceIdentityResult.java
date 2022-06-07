@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The importedDeviceIdentityResult resource represents the result of attempting to import a device identity. */
 public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity implements Parsable {
     /** Status of imported device identity */
     private Boolean _status;

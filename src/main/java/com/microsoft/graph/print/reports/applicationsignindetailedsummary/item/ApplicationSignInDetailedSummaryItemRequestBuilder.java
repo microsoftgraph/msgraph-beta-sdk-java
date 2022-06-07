@@ -99,6 +99,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApplicationSignInDetailedSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new ApplicationSignInDetailedSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

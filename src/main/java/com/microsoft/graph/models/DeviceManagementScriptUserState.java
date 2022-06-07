@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for user run state of the device management script. */
 public class DeviceManagementScriptUserState extends Entity implements Parsable {
     /** List of run states for this script across all devices of specific user. */
     private java.util.List<DeviceManagementScriptDeviceState> _deviceRunStates;

@@ -99,6 +99,7 @@ public class ProgramControlTypeItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProgramControlTypeItemRequestBuilderGetRequestConfiguration requestConfig = new ProgramControlTypeItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

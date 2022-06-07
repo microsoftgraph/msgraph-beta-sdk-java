@@ -85,6 +85,7 @@ public class TrustFrameworkRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TrustFrameworkRequestBuilderGetRequestConfiguration requestConfig = new TrustFrameworkRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

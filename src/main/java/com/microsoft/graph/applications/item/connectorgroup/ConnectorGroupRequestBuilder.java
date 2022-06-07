@@ -14,12 +14,18 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.applications.item.connectorgroup.ref.RefRequestBuilder;
 import microsoft.graph.models.ConnectorGroup;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the connectorGroup property of the microsoft.graph.application entity. */
 public class ConnectorGroupRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -71,6 +77,7 @@ public class ConnectorGroupRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConnectorGroupRequestBuilderGetRequestConfiguration requestConfig = new ConnectorGroupRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

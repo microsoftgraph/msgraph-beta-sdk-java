@@ -99,6 +99,7 @@ public class OfficeClientConfigurationAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OfficeClientConfigurationAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new OfficeClientConfigurationAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

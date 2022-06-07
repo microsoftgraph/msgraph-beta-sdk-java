@@ -110,7 +110,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a directory setting template
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get a directory setting template
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -129,6 +129,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectorySettingTemplateItemRequestBuilderGetRequestConfiguration requestConfig = new DirectorySettingTemplateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -222,7 +223,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get a directory setting template
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults.
      * @return a CompletableFuture of directorySettingTemplate
      */
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> get() {
@@ -238,7 +239,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get a directory setting template
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directorySettingTemplate
      */
@@ -255,7 +256,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get a directory setting template
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directorySettingTemplate
@@ -342,7 +343,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
         public DirectorySettingTemplateItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get a directory setting template */
+    /** A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults. */
     public class DirectorySettingTemplateItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

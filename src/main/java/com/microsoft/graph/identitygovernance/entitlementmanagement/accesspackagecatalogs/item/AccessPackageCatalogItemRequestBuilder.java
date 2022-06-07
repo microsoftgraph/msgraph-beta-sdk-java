@@ -163,7 +163,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,6 +182,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageCatalogItemRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageCatalogItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -287,7 +288,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @return a CompletableFuture of accessPackageCatalog
      */
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> get() {
@@ -303,7 +304,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCatalog
      */
@@ -320,7 +321,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }
     }
     /**
-     * Represents a group of access packages.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageCatalog
@@ -407,7 +408,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         public AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents a group of access packages. */
+    /** A container of access packages. */
     public class AccessPackageCatalogItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains the properties used to assign a windows feature update profile to a group. */
 public class WindowsFeatureUpdateProfileAssignment extends Entity implements Parsable {
     /** The assignment target that the feature update profile is assigned to. */
     private DeviceAndAppManagementAssignmentTarget _target;
