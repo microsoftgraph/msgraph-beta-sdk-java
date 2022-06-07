@@ -11,6 +11,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.49.0] - 2022-06-07
+
+### Added
+ 
+- AudioCodec, VideoCodec, NetworkTransportProtocol, TraceRouteHop models in the callRecords directory.
+- AzureAdJoinPolicy and AzureADRegistrationPolicy models. 
+- CrossCloudAzureActiveDirectoryTenant model.
+- DefaultMfaMethodType model.  
+- GroupWritebackConfiguration model. 
+- MessagePinned & MessageUnpinned models.
+- MultiFactorAuthConfiguration model. 
+- WindowsManagedAppClipboardSharingLevel & WindowsManagedAppDataTransferLevel models. 
+- WritebackConfiguration model. 
+- Attachment_v2 models and related requests.
+- DeletedTeam models and related requests. 
+- DeviceManagementReports models and related requests. 
+- DeviceRegistrationPolicy model and related requests. 
+- DomainPromote models and related requests. 
+- EducationAssignment models and related requests. 
+- EducationFeedback models and related requests. 
+- IosiPadOSWebClip model and related requests. 
+- ManagedDeviceRemoveDeviceFirmwareConfigurationInterfaceManagement models and related requests. 
+- PinnedChatMessageInfo model and related requests. 
+- TeamworkSendActivityNotificationToRecipients models and related requests. 
+- WindowsManagedAppProtection models and related requests.
+- WindowsWebApp model and related requests. 
+- OnPremisesAgentGroup requests. 
+- TeamworkSendActivityNotificationToRecipients requests.
+- TenantAdmin/models & TenantAdmin/requests directories. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests realted to the added entities have been modified to reflect addition of new classes and requests/request builders. 
+
 ## [0.48.0] - 2022-05-19
 
 ### Added
