@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Organization Activate Service Request Builder.
+ * @deprecated The activateService API will be deprecated and will stop returning data on Jun-30, 2022
  */
+@Deprecated
 public class OrganizationActivateServiceRequestBuilder extends BaseActionRequestBuilder<Organization> {
 
     /**

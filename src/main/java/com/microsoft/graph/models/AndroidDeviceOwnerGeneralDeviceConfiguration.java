@@ -1224,6 +1224,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerRequiredPasswordType workProfilePasswordRequiredType;
 
     /**
+     * The Work Profile Password Require Unlock.
+     * Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+     */
+    @SerializedName(value = "workProfilePasswordRequireUnlock", alternate = {"WorkProfilePasswordRequireUnlock"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerRequiredPasswordUnlock workProfilePasswordRequireUnlock;
+
+    /**
      * The Work Profile Password Sign In Failure Count Before Factory Reset.
      * Indicates the number of times a user can enter an incorrect work profile password before the device is wiped. Valid values 4 to 11
      */

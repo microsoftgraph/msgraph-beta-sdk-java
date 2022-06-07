@@ -81,7 +81,7 @@ public class ChannelReferenceRequest extends BaseReferenceRequest<Channel> {
     @Nonnull
     public java.util.concurrent.CompletableFuture<Channel> putAsync(@Nonnull final Channel srcChannel) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/joinedTeams/{id}/allChannels/" + srcChannel.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamwork/deletedTeams/{id}/channels/" + srcChannel.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -95,7 +95,7 @@ public class ChannelReferenceRequest extends BaseReferenceRequest<Channel> {
     @Nullable
     public Channel put(@Nonnull final Channel srcChannel) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/joinedTeams/{id}/allChannels/" + srcChannel.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamwork/deletedTeams/{id}/channels/" + srcChannel.id));
         return send(HttpMethod.PUT, payload);
     }
 }

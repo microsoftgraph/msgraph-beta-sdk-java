@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Admin;
+import com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder;
 import com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder;
 import java.util.Arrays;
@@ -58,6 +59,16 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
     }
 
 
+
+    /**
+     * Gets the request builder for Sharepoint
+     *
+     * @return the SharepointRequestBuilder instance
+     */
+    @Nonnull
+    public SharepointRequestBuilder sharepoint() {
+        return new SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for ServiceAnnouncement

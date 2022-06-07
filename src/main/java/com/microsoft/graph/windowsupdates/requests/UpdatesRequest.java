@@ -11,6 +11,8 @@ import com.microsoft.graph.windowsupdates.models.Updates;
 import com.microsoft.graph.windowsupdates.requests.CatalogRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.DeploymentCollectionRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.DeploymentRequestBuilder;
+import com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionRequestBuilder;
+import com.microsoft.graph.windowsupdates.requests.ResourceConnectionRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder;
 import java.util.Arrays;

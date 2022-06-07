@@ -79,6 +79,15 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 	@Nullable
     public String model;
 
+    /**
+     * The Model Battery Health Score.
+     * A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "modelBatteryHealthScore", alternate = {"ModelBatteryHealthScore"})
+    @Expose
+	@Nullable
+    public Integer modelBatteryHealthScore;
+
 
     /**
      * Sets the raw JSON object

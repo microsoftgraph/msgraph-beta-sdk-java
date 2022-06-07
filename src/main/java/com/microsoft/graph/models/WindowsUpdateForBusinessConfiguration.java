@@ -75,7 +75,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Deadline For Feature Updates In Days.
-     * Number of days before feature updates are installed automatically with valid range from 2 to 30 days
+     * Number of days before feature updates are installed automatically with valid range from 0 to 30 days
      */
     @SerializedName(value = "deadlineForFeatureUpdatesInDays", alternate = {"DeadlineForFeatureUpdatesInDays"})
     @Expose
@@ -84,7 +84,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Deadline For Quality Updates In Days.
-     * Number of days before quality updates are installed automatically with valid range from 2 to 30 days
+     * Number of days before quality updates are installed automatically with valid range from 0 to 30 days
      */
     @SerializedName(value = "deadlineForQualityUpdatesInDays", alternate = {"DeadlineForQualityUpdatesInDays"})
     @Expose

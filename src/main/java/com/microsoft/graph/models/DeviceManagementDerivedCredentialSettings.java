@@ -63,6 +63,15 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
 	@Nullable
     public EnumSet<DeviceManagementDerivedCredentialNotificationType> notificationType;
 
+    /**
+     * The Renewal Threshold Percentage.
+     * The nominal percentage of time before certificate renewal is initiated by the client.
+     */
+    @SerializedName(value = "renewalThresholdPercentage", alternate = {"RenewalThresholdPercentage"})
+    @Expose
+	@Nullable
+    public Integer renewalThresholdPercentage;
+
 
     /**
      * Sets the raw JSON object

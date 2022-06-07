@@ -94,6 +94,15 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
     public Boolean isPublished;
 
     /**
+     * The Language Tag.
+     * 
+     */
+    @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
+    @Expose
+	@Nullable
+    public String languageTag;
+
+    /**
      * The Phone.
      * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      */

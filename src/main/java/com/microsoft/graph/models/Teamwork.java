@@ -10,9 +10,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WorkforceIntegration;
+import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.TeamworkDevice;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
+import com.microsoft.graph.requests.DeletedTeamCollectionPage;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionPage;
 
 
@@ -40,6 +42,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     public WorkforceIntegrationCollectionPage workforceIntegrations;
 
     /**
+     * The Deleted Teams.
+     * 
+     */
+    @SerializedName(value = "deletedTeams", alternate = {"DeletedTeams"})
+    @Expose
+	@Nullable
+    public DeletedTeamCollectionPage deletedTeams;
+
+    /**
      * The Devices.
      * The Teams devices provisioned for the tenant.
      */
@@ -60,6 +71,10 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
         if (json.has("workforceIntegrations")) {
             workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), WorkforceIntegrationCollectionPage.class);
+        }
+
+        if (json.has("deletedTeams")) {
+            deletedTeams = serializer.deserializeObject(json.get("deletedTeams"), DeletedTeamCollectionPage.class);
         }
 
         if (json.has("devices")) {

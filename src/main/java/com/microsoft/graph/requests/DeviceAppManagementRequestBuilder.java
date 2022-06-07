@@ -54,6 +54,8 @@ import com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollection
 import com.microsoft.graph.requests.WindowsInformationProtectionPolicyRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionWipeActionRequestBuilder;
+import com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.WindowsManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementTaskRequestBuilder;
 import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyCollectionRequestBuilder;
@@ -585,6 +587,26 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
     @Nonnull
     public WindowsInformationProtectionWipeActionRequestBuilder windowsInformationProtectionWipeActions(@Nonnull final String id) {
         return new WindowsInformationProtectionWipeActionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionWipeActions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsManagedAppProtection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsManagedAppProtectionCollectionRequestBuilder windowsManagedAppProtections() {
+        return new WindowsManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsManagedAppProtections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsManagedAppProtection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsManagedAppProtectionRequestBuilder windowsManagedAppProtections(@Nonnull final String id) {
+        return new WindowsManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsManagedAppProtections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceAppManagementTask collection

@@ -8,6 +8,10 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TodoTask;
+import com.microsoft.graph.requests.Attachment_v2CollectionRequestBuilder;
+import com.microsoft.graph.requests.Attachment_v2RequestBuilder;
+import com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder;
+import com.microsoft.graph.requests.AttachmentSessionRequestBuilder;
 import com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChecklistItemRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
@@ -62,6 +66,46 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
     }
 
 
+    /**
+     *  Gets a request builder for the Attachment_v2 collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public Attachment_v2CollectionRequestBuilder attachments() {
+        return new Attachment_v2CollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Attachment_v2 item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public Attachment_v2RequestBuilder attachments(@Nonnull final String id) {
+        return new Attachment_v2RequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AttachmentSession collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AttachmentSessionCollectionRequestBuilder attachmentSessions() {
+        return new AttachmentSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttachmentSession item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AttachmentSessionRequestBuilder attachmentSessions(@Nonnull final String id) {
+        return new AttachmentSessionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the ChecklistItem collection
      *

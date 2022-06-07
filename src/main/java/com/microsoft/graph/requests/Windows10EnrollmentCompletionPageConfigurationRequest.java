@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Windows10EnrollmentCompletionPageConfiguration;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
+import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

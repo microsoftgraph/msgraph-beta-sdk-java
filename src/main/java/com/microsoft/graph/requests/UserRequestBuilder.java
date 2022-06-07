@@ -1764,7 +1764,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The activateServicePlan API will be deprecated and will stop returning data on Jun-30, 2022
      */
+    @Deprecated
     @Nonnull
     public UserActivateServicePlanRequestBuilder activateServicePlan(@Nonnull final UserActivateServicePlanParameterSet parameters) {
         return new UserActivateServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activateServicePlan"), getClient(), null, parameters);

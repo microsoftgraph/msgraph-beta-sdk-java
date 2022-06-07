@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.tenantadmin.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.windowsupdates.models.Windows;
 
@@ -38,6 +39,15 @@ public class Admin implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Sharepoint.
+     * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
+     */
+    @SerializedName(value = "sharepoint", alternate = {"Sharepoint"})
+    @Expose
+	@Nullable
+    public Sharepoint sharepoint;
 
     /**
      * The Service Announcement.

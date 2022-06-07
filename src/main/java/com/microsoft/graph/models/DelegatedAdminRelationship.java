@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DelegatedAdminAccessDetails;
 import com.microsoft.graph.models.DelegatedAdminRelationshipCustomerParticipant;
-import com.microsoft.graph.models.DelegatedAdminRelationshipParticipant;
 import com.microsoft.graph.models.DelegatedAdminRelationshipStatus;
 import com.microsoft.graph.models.DelegatedAdminAccessAssignment;
 import com.microsoft.graph.models.DelegatedAdminRelationshipOperation;
@@ -107,15 +106,6 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastModifiedDateTime;
-
-    /**
-     * The Partner.
-     * 
-     */
-    @SerializedName(value = "partner", alternate = {"Partner"})
-    @Expose
-	@Nullable
-    public DelegatedAdminRelationshipParticipant partner;
 
     /**
      * The Status.

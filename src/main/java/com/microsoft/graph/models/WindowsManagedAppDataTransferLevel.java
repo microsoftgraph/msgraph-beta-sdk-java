@@ -7,32 +7,20 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Delegated Admin Relationship Operation Status.
+ * The Enum Windows Managed App Data Transfer Level.
 */
-public enum DelegatedAdminRelationshipOperationStatus
+public enum WindowsManagedAppDataTransferLevel
 {
     /**
-    * not Started
+    * all Apps
     */
-    NOT_STARTED,
+    ALL_APPS,
     /**
-    * running
+    * none
     */
-    RUNNING,
+    NONE,
     /**
-    * complete
-    */
-    COMPLETE,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For DelegatedAdminRelationshipOperationStatus values that were not expected from the service
+    * For WindowsManagedAppDataTransferLevel values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

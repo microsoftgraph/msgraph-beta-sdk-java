@@ -11,6 +11,8 @@ import com.microsoft.graph.windowsupdates.models.Updates;
 import com.microsoft.graph.windowsupdates.requests.CatalogRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.DeploymentCollectionRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.DeploymentRequestBuilder;
+import com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionRequestBuilder;
+import com.microsoft.graph.windowsupdates.requests.ResourceConnectionRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder;
 import java.util.Arrays;
@@ -90,6 +92,26 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
     @Nonnull
     public DeploymentRequestBuilder deployments(@Nonnull final String id) {
         return new DeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("deployments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ResourceConnection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ResourceConnectionCollectionRequestBuilder resourceConnections() {
+        return new ResourceConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceConnections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceConnection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ResourceConnectionRequestBuilder resourceConnections(@Nonnull final String id) {
+        return new ResourceConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceConnections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UpdatableAsset collection
