@@ -36,6 +36,15 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
     public Double appReliabilityScore;
 
     /**
+     * The Battery Health Score.
+     * The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "batteryHealthScore", alternate = {"BatteryHealthScore"})
+    @Expose
+	@Nullable
+    public Double batteryHealthScore;
+
+    /**
      * The Device Name.
      * The user experience analytics device name.
      */

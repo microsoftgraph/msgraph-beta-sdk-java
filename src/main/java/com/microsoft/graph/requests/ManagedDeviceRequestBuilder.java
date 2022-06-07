@@ -486,6 +486,15 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceRemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
+        return new ManagedDeviceRemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeDeviceFirmwareConfigurationInterfaceManagement"), getClient(), null);
+    }
+
+    /**
      * Request remote assistance
      * @return the request builder
      */

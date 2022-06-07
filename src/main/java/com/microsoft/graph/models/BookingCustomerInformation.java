@@ -92,6 +92,15 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     public String phone;
 
     /**
+     * The Sms Notifications Enabled.
+     * 
+     */
+    @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean smsNotificationsEnabled;
+
+    /**
      * The Time Zone.
      * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      */

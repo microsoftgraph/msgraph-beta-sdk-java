@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-
+import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -20,6 +20,15 @@ import java.util.ArrayList;
  * The class for the Device Enrollment Configuration Create Enrollment Notification Configuration Parameter Set.
  */
 public class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet {
+    /**
+     * The device Enrollment Notification Configurations.
+     * 
+     */
+    @SerializedName(value = "deviceEnrollmentNotificationConfigurations", alternate = {"DeviceEnrollmentNotificationConfigurations"})
+    @Expose
+	@Nullable
+    public java.util.List<DeviceEnrollmentConfiguration> deviceEnrollmentNotificationConfigurations;
+
 
     /**
      * Instiaciates a new DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet
@@ -30,6 +39,7 @@ public class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurat
      * @param builder builder bearing the parameters to initialize from
      */
     protected DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet(@Nonnull final DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSetBuilder builder) {
+        this.deviceEnrollmentNotificationConfigurations = builder.deviceEnrollmentNotificationConfigurations;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +53,21 @@ public class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurat
      * Fluent builder for the DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet
      */
     public static final class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSetBuilder {
+        /**
+         * The deviceEnrollmentNotificationConfigurations parameter value
+         */
+        @Nullable
+        protected java.util.List<DeviceEnrollmentConfiguration> deviceEnrollmentNotificationConfigurations;
+        /**
+         * Sets the DeviceEnrollmentNotificationConfigurations
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSetBuilder withDeviceEnrollmentNotificationConfigurations(@Nullable final java.util.List<DeviceEnrollmentConfiguration> val) {
+            this.deviceEnrollmentNotificationConfigurations = val;
+            return this;
+        }
         /**
          * Instanciates a new DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSetBuilder
          */
@@ -64,6 +89,9 @@ public class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurat
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.deviceEnrollmentNotificationConfigurations != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deviceEnrollmentNotificationConfigurations", deviceEnrollmentNotificationConfigurations));
+        }
         return result;
     }
 }

@@ -14,10 +14,14 @@ import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.Importance;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus;
+import com.microsoft.graph.models.Attachment_v2;
+import com.microsoft.graph.models.AttachmentSession;
 import com.microsoft.graph.models.ChecklistItem;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.LinkedResource;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.Attachment_v2CollectionPage;
+import com.microsoft.graph.requests.AttachmentSessionCollectionPage;
 import com.microsoft.graph.requests.ChecklistItemCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.LinkedResourceCollectionPage;
@@ -57,7 +61,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -90,6 +94,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DateTimeTimeZone dueDateTime;
+
+    /**
+     * The Has Attachments.
+     * 
+     */
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
+    @Expose
+	@Nullable
+    public Boolean hasAttachments;
 
     /**
      * The Importance.
@@ -155,8 +168,26 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     public String title;
 
     /**
-     * The Checklist Items.
+     * The Attachments.
      * 
+     */
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
+    @Expose
+	@Nullable
+    public Attachment_v2CollectionPage attachments;
+
+    /**
+     * The Attachment Sessions.
+     * 
+     */
+    @SerializedName(value = "attachmentSessions", alternate = {"AttachmentSessions"})
+    @Expose
+	@Nullable
+    public AttachmentSessionCollectionPage attachmentSessions;
+
+    /**
+     * The Checklist Items.
+     * A collection of smaller subtasks linked to the more complex parent task.
      */
     @SerializedName(value = "checklistItems", alternate = {"ChecklistItems"})
     @Expose
@@ -190,6 +221,14 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attachments")) {
+            attachments = serializer.deserializeObject(json.get("attachments"), Attachment_v2CollectionPage.class);
+        }
+
+        if (json.has("attachmentSessions")) {
+            attachmentSessions = serializer.deserializeObject(json.get("attachmentSessions"), AttachmentSessionCollectionPage.class);
+        }
 
         if (json.has("checklistItems")) {
             checklistItems = serializer.deserializeObject(json.get("checklistItems"), ChecklistItemCollectionPage.class);

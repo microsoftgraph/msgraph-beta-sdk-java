@@ -33,6 +33,7 @@ import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.WindowsInformationProtectionDeviceRegistration;
 import com.microsoft.graph.models.WindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.WindowsInformationProtectionWipeAction;
+import com.microsoft.graph.models.WindowsManagedAppProtection;
 import com.microsoft.graph.models.DeviceAppManagementTask;
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
 import com.microsoft.graph.models.Entity;
@@ -57,6 +58,7 @@ import com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionPag
 import com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage;
 import com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionPage;
 import com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionPage;
+import com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.DeviceAppManagementTaskCollectionPage;
 import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyCollectionPage;
 
@@ -86,7 +88,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Microsoft Store For Business Language.
-     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is &amp;lt;languagecode2&amp;gt;-&amp;lt;country/regioncode2&amp;gt;, where &amp;lt;languagecode2&amp;gt; is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      */
     @SerializedName(value = "microsoftStoreForBusinessLanguage", alternate = {"MicrosoftStoreForBusinessLanguage"})
     @Expose
@@ -328,6 +330,15 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     public WindowsInformationProtectionWipeActionCollectionPage windowsInformationProtectionWipeActions;
 
     /**
+     * The Windows Managed App Protections.
+     * Windows managed app policies.
+     */
+    @SerializedName(value = "windowsManagedAppProtections", alternate = {"WindowsManagedAppProtections"})
+    @Expose
+	@Nullable
+    public WindowsManagedAppProtectionCollectionPage windowsManagedAppProtections;
+
+    /**
      * The Device App Management Tasks.
      * Device app management tasks.
      */
@@ -437,6 +448,10 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("windowsInformationProtectionWipeActions")) {
             windowsInformationProtectionWipeActions = serializer.deserializeObject(json.get("windowsInformationProtectionWipeActions"), WindowsInformationProtectionWipeActionCollectionPage.class);
+        }
+
+        if (json.has("windowsManagedAppProtections")) {
+            windowsManagedAppProtections = serializer.deserializeObject(json.get("windowsManagedAppProtections"), WindowsManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("deviceAppManagementTasks")) {

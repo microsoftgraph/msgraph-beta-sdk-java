@@ -79,8 +79,6 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * The Members.
      * Read-only. Nullable.
      */
-    @SerializedName(value = "members", alternate = {"Members"})
-    @Expose
 	@Nullable
     public ConnectorCollectionPage members;
 

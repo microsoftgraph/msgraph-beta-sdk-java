@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AssignedLabel;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.LicenseProcessingState;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
+import com.microsoft.graph.models.GroupWritebackConfiguration;
 import com.microsoft.graph.models.GroupAccessType;
 import com.microsoft.graph.models.MembershipRuleProcessingStatus;
 import com.microsoft.graph.models.AppRoleAssignment;
@@ -404,6 +405,15 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String visibility;
+
+    /**
+     * The Writeback Configuration.
+     * 
+     */
+    @SerializedName(value = "writebackConfiguration", alternate = {"WritebackConfiguration"})
+    @Expose
+	@Nullable
+    public GroupWritebackConfiguration writebackConfiguration;
 
     /**
      * The Access Type.

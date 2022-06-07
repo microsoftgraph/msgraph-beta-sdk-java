@@ -172,6 +172,7 @@ import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.TrustFrameworkRequestBuilder;
 import com.microsoft.graph.requests.DataClassificationServiceRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
@@ -2066,6 +2067,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(getServiceRoot() + "/informationProtection", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the DeviceRegistrationPolicy
+     */
+    @Nonnull
+    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new DeviceRegistrationPolicyRequestBuilder(getServiceRoot() + "/deviceRegistrationPolicy", this, null);
     }
 
     /**

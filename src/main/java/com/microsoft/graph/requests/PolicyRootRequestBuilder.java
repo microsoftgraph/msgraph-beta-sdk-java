@@ -11,6 +11,7 @@ import com.microsoft.graph.models.PolicyRoot;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.B2cAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionRequestBuilder;
@@ -123,6 +124,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public B2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
         return new B2cAuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("b2cAuthenticationMethodsPolicy"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DeviceRegistrationPolicy
+     *
+     * @return the DeviceRegistrationPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new DeviceRegistrationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRegistrationPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ActivityBasedTimeoutPolicy collection
