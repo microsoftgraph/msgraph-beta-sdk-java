@@ -69,6 +69,7 @@ public class ResetTenantOnboardingStatusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ResetTenantOnboardingStatusRequestBuilderPostRequestConfiguration requestConfig = new ResetTenantOnboardingStatusRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

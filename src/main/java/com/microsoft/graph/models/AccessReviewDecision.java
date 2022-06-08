@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class AccessReviewDecision extends Entity implements Parsable {
     /** The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable. */
     private String _accessRecommendation;

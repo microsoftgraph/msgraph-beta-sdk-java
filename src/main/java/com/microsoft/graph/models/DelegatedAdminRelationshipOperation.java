@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class DelegatedAdminRelationshipOperation extends Entity implements Parsable {
     /** The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -17,8 +18,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     private OffsetDateTime _lastModifiedDateTime;
     /** The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only. */
     private DelegatedAdminRelationshipOperationType _operationType;
-    /** The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy. */
-    private DelegatedAdminRelationshipOperationStatus _status;
+    /** The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy. */
+    private LongRunningOperationStatus _status;
     /**
      * Instantiates a new delegatedAdminRelationshipOperation and sets the default values.
      * @return a void
@@ -64,7 +65,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
             this.put("data", (n) -> { currentObject.setData(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(DelegatedAdminRelationshipOperationType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminRelationshipOperationStatus.class)); });
+            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
         }};
     }
     /**
@@ -84,11 +85,11 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         return this._operationType;
     }
     /**
-     * Gets the status property value. The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
-     * @return a delegatedAdminRelationshipOperationStatus
+     * Gets the status property value. The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
+     * @return a longRunningOperationStatus
      */
     @javax.annotation.Nullable
-    public DelegatedAdminRelationshipOperationStatus getStatus() {
+    public LongRunningOperationStatus getStatus() {
         return this._status;
     }
     /**
@@ -138,11 +139,11 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         this._operationType = value;
     }
     /**
-     * Sets the status property value. The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
+     * Sets the status property value. The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
      * @param value Value to set for the status property.
      * @return a void
      */
-    public void setStatus(@javax.annotation.Nullable final DelegatedAdminRelationshipOperationStatus value) {
+    public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
         this._status = value;
     }
 }

@@ -99,6 +99,7 @@ public class AccountItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccountItemRequestBuilderGetRequestConfiguration requestConfig = new AccountItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

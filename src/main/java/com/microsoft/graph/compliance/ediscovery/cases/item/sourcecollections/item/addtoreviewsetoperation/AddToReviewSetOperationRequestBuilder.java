@@ -71,6 +71,7 @@ public class AddToReviewSetOperationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AddToReviewSetOperationRequestBuilderGetRequestConfiguration requestConfig = new AddToReviewSetOperationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

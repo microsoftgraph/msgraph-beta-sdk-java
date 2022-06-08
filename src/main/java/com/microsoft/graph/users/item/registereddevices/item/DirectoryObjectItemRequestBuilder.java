@@ -16,8 +16,20 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.registereddevices.item.device.DeviceRequestBuilder;
+import microsoft.graph.users.item.registereddevices.item.endpoint.EndpointRequestBuilder;
 /** Provides operations to manage the registeredDevices property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
+    /** The device property */
+    @javax.annotation.Nonnull
+    public DeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -71,6 +83,7 @@ public class DirectoryObjectItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryObjectItemRequestBuilderGetRequestConfiguration requestConfig = new DirectoryObjectItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

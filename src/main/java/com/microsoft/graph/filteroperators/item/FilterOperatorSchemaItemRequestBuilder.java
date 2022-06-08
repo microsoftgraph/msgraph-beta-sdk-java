@@ -99,6 +99,7 @@ public class FilterOperatorSchemaItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FilterOperatorSchemaItemRequestBuilderGetRequestConfiguration requestConfig = new FilterOperatorSchemaItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

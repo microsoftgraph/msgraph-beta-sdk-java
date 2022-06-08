@@ -99,6 +99,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AggregatedPolicyComplianceItemRequestBuilderGetRequestConfiguration requestConfig = new AggregatedPolicyComplianceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

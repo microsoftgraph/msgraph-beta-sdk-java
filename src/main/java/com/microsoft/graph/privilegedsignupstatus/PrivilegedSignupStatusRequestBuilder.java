@@ -100,6 +100,7 @@ public class PrivilegedSignupStatusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedSignupStatusRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedSignupStatusRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -132,6 +133,7 @@ public class PrivilegedSignupStatusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PrivilegedSignupStatusRequestBuilderPostRequestConfiguration requestConfig = new PrivilegedSignupStatusRequestBuilderPostRequestConfiguration();

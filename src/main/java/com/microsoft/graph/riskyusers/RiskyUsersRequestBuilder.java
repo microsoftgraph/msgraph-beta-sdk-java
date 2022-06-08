@@ -71,7 +71,7 @@ public class RiskyUsersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List riskyUsers
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class RiskyUsersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List riskyUsers
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,6 +90,7 @@ public class RiskyUsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskyUsersRequestBuilderGetRequestConfiguration requestConfig = new RiskyUsersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -122,6 +123,7 @@ public class RiskyUsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RiskyUsersRequestBuilderPostRequestConfiguration requestConfig = new RiskyUsersRequestBuilderPostRequestConfiguration();
@@ -132,7 +134,7 @@ public class RiskyUsersRequestBuilder {
         return requestInfo;
     }
     /**
-     * List riskyUsers
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @return a CompletableFuture of RiskyUserCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskyUserCollectionResponse> get() {
@@ -148,7 +150,7 @@ public class RiskyUsersRequestBuilder {
         }
     }
     /**
-     * List riskyUsers
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyUserCollectionResponse
      */
@@ -165,7 +167,7 @@ public class RiskyUsersRequestBuilder {
         }
     }
     /**
-     * List riskyUsers
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RiskyUserCollectionResponse
@@ -237,7 +239,7 @@ public class RiskyUsersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List riskyUsers */
+    /** Retrieve the properties and relationships of a collection of **riskyUser** objects. */
     public class RiskyUsersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

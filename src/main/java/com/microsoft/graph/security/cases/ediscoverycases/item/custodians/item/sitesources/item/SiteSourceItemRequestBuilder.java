@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.SiteSource;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.models.security.SiteSource;
 import microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.item.site.SiteRequestBuilder;
 /** Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class SiteSourceItemRequestBuilder {
@@ -105,6 +105,7 @@ public class SiteSourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SiteSourceItemRequestBuilderGetRequestConfiguration requestConfig = new SiteSourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

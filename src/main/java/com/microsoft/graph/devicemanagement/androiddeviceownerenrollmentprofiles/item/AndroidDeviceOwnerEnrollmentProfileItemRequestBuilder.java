@@ -111,6 +111,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderGetRequestConfiguration requestConfig = new AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

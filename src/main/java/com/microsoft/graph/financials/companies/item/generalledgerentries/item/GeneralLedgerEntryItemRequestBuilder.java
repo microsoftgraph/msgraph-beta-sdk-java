@@ -105,6 +105,7 @@ public class GeneralLedgerEntryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GeneralLedgerEntryItemRequestBuilderGetRequestConfiguration requestConfig = new GeneralLedgerEntryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

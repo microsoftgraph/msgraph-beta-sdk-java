@@ -99,6 +99,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

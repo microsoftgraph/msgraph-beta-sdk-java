@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intune will provide customer the ability to run their Powershell Compliance scripts (detection) on the enrolled windows 10 Azure Active Directory joined devices. */
 public class DeviceComplianceScript extends Entity implements Parsable {
     /** The list of group assignments for the device compliance script */
     private java.util.List<DeviceHealthScriptAssignment> _assignments;

@@ -77,6 +77,7 @@ public class RosterPlansRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RosterPlansRequestBuilderGetRequestConfiguration requestConfig = new RosterPlansRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

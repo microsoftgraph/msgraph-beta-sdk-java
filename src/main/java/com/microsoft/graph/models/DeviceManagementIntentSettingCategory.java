@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity representing an intent setting category */
 public class DeviceManagementIntentSettingCategory extends DeviceManagementSettingCategory implements Parsable {
     /** The settings this category contains */
     private java.util.List<DeviceManagementSettingInstance> _settings;

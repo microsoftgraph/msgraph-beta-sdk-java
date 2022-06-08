@@ -11,6 +11,7 @@ import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
 import microsoft.graph.models.ResultInfo;
+/** Provides operations to manage the security singleton. */
 public class CaseOperation extends Entity implements Parsable {
     /** The action property */
     private CaseAction _action;
@@ -41,6 +42,13 @@ public class CaseOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static CaseOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.security.caseOperation": return new CaseOperation();
+            }
+        }
         return new CaseOperation();
     }
     /**

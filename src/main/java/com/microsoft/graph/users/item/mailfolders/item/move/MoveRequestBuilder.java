@@ -55,7 +55,7 @@ public class MoveRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MoveRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MovePostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class MoveRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MoveRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MoveRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MovePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MoveRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MoveRequestBuilderPostRequestConfiguration requestConfig = new MoveRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class MoveRequestBuilder {
      * @param body 
      * @return a CompletableFuture of mailFolder
      */
-    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MoveRequestBody body) {
+    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MovePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, MailFolder::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class MoveRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
      */
-    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MoveRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MoveRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MovePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MoveRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, MailFolder::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class MoveRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of mailFolder
      */
-    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MoveRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MoveRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MovePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<MoveRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

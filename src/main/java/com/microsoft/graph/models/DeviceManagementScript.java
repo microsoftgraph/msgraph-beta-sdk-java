@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intune will provide customer the ability to run their Powershell scripts on the enrolled windows 10 Azure Active Directory joined devices. The script can be run once or periodically. */
 public class DeviceManagementScript extends Entity implements Parsable {
     /** The list of group assignments for the device management script. */
     private java.util.List<DeviceManagementScriptAssignment> _assignments;

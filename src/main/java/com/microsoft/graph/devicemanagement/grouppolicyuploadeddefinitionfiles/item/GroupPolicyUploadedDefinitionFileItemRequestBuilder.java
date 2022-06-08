@@ -136,6 +136,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupPolicyUploadedDefinitionFileItemRequestBuilderGetRequestConfiguration requestConfig = new GroupPolicyUploadedDefinitionFileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

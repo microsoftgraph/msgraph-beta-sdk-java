@@ -105,6 +105,7 @@ public class CustomerPaymentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CustomerPaymentItemRequestBuilderGetRequestConfiguration requestConfig = new CustomerPaymentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserCredentialUsageDetailsItemRequestBuilderGetRequestConfiguration requestConfig = new UserCredentialUsageDetailsItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

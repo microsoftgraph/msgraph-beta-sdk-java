@@ -99,6 +99,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CredentialUserRegistrationsSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new CredentialUserRegistrationsSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

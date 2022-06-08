@@ -69,6 +69,7 @@ public class GetCloudPcLaunchInfoRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetCloudPcLaunchInfoRequestBuilderGetRequestConfiguration requestConfig = new GetCloudPcLaunchInfoRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class GetCloudPcLaunchInfoRequestBuilder {
     }
     /**
      * Invoke function getCloudPcLaunchInfo
-     * @return a CompletableFuture of cloudPcLaunchInfo
+     * @return a CompletableFuture of CloudPcLaunchInfo
      */
     public java.util.concurrent.CompletableFuture<CloudPcLaunchInfo> get() {
         try {
@@ -92,7 +93,7 @@ public class GetCloudPcLaunchInfoRequestBuilder {
     /**
      * Invoke function getCloudPcLaunchInfo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcLaunchInfo
+     * @return a CompletableFuture of CloudPcLaunchInfo
      */
     public java.util.concurrent.CompletableFuture<CloudPcLaunchInfo> get(@javax.annotation.Nullable final java.util.function.Consumer<GetCloudPcLaunchInfoRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class GetCloudPcLaunchInfoRequestBuilder {
      * Invoke function getCloudPcLaunchInfo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of cloudPcLaunchInfo
+     * @return a CompletableFuture of CloudPcLaunchInfo
      */
     public java.util.concurrent.CompletableFuture<CloudPcLaunchInfo> get(@javax.annotation.Nullable final java.util.function.Consumer<GetCloudPcLaunchInfoRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

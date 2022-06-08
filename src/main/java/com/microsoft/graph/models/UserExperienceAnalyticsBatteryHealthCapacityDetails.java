@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health capacity entity contains count of devices broken down into 3 categories - devices with capacity > 80%, devices with capacity 50-80% and devices with capacity < 50 %.This API provides the count of devices in these 3 categories.. */
 public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity implements Parsable {
     /** Number of active devices within the tenant. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;

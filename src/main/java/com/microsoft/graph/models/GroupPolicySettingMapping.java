@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Group Policy setting to MDM/Intune mapping. */
 public class GroupPolicySettingMapping extends Entity implements Parsable {
     /** Admx Group Policy Id */
     private String _admxSettingDefinitionId;

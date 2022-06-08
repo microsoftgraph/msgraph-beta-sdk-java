@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Specify access control level per privacy data category */
 public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsable {
     /** This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl. */
     private WindowsPrivacyDataAccessLevel _accessLevel;

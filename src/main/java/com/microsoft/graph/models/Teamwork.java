@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the teamwork singleton. */
 public class Teamwork extends Entity implements Parsable {
+    /** The deletedTeams property */
+    private java.util.List<DeletedTeam> _deletedTeams;
     /** The Teams devices provisioned for the tenant. */
     private java.util.List<TeamworkDevice> _devices;
     /** A workforce integration with shifts. */
@@ -31,6 +33,14 @@ public class Teamwork extends Entity implements Parsable {
         return new Teamwork();
     }
     /**
+     * Gets the deletedTeams property value. The deletedTeams property
+     * @return a deletedTeam
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeletedTeam> getDeletedTeams() {
+        return this._deletedTeams;
+    }
+    /**
      * Gets the devices property value. The Teams devices provisioned for the tenant.
      * @return a teamworkDevice
      */
@@ -46,6 +56,7 @@ public class Teamwork extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Teamwork currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("deletedTeams", (n) -> { currentObject.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
             this.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(TeamworkDevice::createFromDiscriminatorValue)); });
             this.put("workforceIntegrations", (n) -> { currentObject.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         }};
@@ -66,8 +77,17 @@ public class Teamwork extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
         writer.writeCollectionOfObjectValues("devices", this.getDevices());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
+    }
+    /**
+     * Sets the deletedTeams property value. The deletedTeams property
+     * @param value Value to set for the deletedTeams property.
+     * @return a void
+     */
+    public void setDeletedTeams(@javax.annotation.Nullable final java.util.List<DeletedTeam> value) {
+        this._deletedTeams = value;
     }
     /**
      * Sets the devices property value. The Teams devices provisioned for the tenant.

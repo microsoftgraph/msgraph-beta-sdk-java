@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Group Policy migration report. */
 public class GroupPolicyMigrationReport extends Entity implements Parsable {
     /** The date and time at which the GroupPolicyMigrationReport was created. */
     private OffsetDateTime _createdDateTime;

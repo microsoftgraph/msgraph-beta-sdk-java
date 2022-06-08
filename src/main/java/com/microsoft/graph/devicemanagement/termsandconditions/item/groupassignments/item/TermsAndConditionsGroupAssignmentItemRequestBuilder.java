@@ -105,6 +105,7 @@ public class TermsAndConditionsGroupAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TermsAndConditionsGroupAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new TermsAndConditionsGroupAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

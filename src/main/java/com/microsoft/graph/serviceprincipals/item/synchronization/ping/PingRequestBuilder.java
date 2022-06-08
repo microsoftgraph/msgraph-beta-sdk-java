@@ -68,6 +68,7 @@ public class PingRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PingRequestBuilderGetRequestConfiguration requestConfig = new PingRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

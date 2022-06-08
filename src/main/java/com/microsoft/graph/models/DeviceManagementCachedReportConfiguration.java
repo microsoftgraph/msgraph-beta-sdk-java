@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity representing the configuration of a cached report */
 public class DeviceManagementCachedReportConfiguration extends Entity implements Parsable {
     /** Time that the cached report expires */
     private OffsetDateTime _expirationDateTime;

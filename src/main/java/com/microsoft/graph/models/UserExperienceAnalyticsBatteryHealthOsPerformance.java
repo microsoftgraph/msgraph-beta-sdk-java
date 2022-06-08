@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health os performance entity contains battery related information for all operating system versions in their organization. */
 public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity implements Parsable {
     /** Number of active devices for that os version. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;

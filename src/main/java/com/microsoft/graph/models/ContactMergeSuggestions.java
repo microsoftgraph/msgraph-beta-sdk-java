@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ContactMergeSuggestions extends Entity implements Parsable {
     /** true if the duplicate contact merge suggestions feature is enabled for the user; false if the feature is disabled. Default value is true. */
     private Boolean _isEnabled;

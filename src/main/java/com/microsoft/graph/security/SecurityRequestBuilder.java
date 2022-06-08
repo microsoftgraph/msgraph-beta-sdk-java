@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.Security;
+import microsoft.graph.models.Security;
 import microsoft.graph.security.alerts.AlertsRequestBuilder;
 import microsoft.graph.security.alerts.item.AlertItemRequestBuilder;
 import microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
@@ -185,7 +185,7 @@ public class SecurityRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * security resource type
+     * Get security
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +193,7 @@ public class SecurityRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * security resource type
+     * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -204,6 +204,7 @@ public class SecurityRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SecurityRequestBuilderGetRequestConfiguration requestConfig = new SecurityRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -270,7 +271,7 @@ public class SecurityRequestBuilder {
         return new FileSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * security resource type
+     * Get security
      * @return a CompletableFuture of security
      */
     public java.util.concurrent.CompletableFuture<Security> get() {
@@ -286,7 +287,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * security resource type
+     * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of security
      */
@@ -303,7 +304,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * security resource type
+     * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of security
@@ -483,7 +484,7 @@ public class SecurityRequestBuilder {
         urlTplParams.put("userSecurityProfile%2Did", id);
         return new UserSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** security resource type */
+    /** Get security */
     public class SecurityRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

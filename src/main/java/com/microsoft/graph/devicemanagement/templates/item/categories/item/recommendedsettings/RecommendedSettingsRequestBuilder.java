@@ -78,6 +78,7 @@ public class RecommendedSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RecommendedSettingsRequestBuilderGetRequestConfiguration requestConfig = new RecommendedSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class RecommendedSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RecommendedSettingsRequestBuilderPostRequestConfiguration requestConfig = new RecommendedSettingsRequestBuilderPostRequestConfiguration();

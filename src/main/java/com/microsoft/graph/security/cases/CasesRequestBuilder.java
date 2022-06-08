@@ -106,6 +106,7 @@ public class CasesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CasesRequestBuilderGetRequestConfiguration requestConfig = new CasesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

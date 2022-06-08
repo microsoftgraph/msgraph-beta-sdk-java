@@ -105,6 +105,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceHealthScriptDeviceStateItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceHealthScriptDeviceStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

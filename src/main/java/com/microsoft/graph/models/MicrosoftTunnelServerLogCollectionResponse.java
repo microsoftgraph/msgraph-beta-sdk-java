@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that stores the server log collection status. */
 public class MicrosoftTunnelServerLogCollectionResponse extends Entity implements Parsable {
     /** The end time of the logs collected */
     private OffsetDateTime _endDateTime;

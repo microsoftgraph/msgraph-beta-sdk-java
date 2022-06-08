@@ -35,9 +35,9 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/drives/{drive%2Did}/list/items/{listItem%2Did}/microsoft.graph.getActivitiesByInterval(startDateTime='{startDateTime}',endDateTime='{endDateTime}',interval='{interval}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", endDateTime);
-        urlTplParams.put("", interval);
-        urlTplParams.put("", startDateTime);
+        urlTplParams.put("endDateTime", endDateTime);
+        urlTplParams.put("interval", interval);
+        urlTplParams.put("startDateTime", startDateTime);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -74,6 +74,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetRequestConfiguration requestConfig = new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

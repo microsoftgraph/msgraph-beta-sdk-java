@@ -68,6 +68,7 @@ public class GetAuditActivityTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetAuditActivityTypesRequestBuilderGetRequestConfiguration requestConfig = new GetAuditActivityTypesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

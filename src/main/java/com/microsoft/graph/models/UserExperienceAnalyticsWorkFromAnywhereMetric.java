@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics metric for work from anywhere report */
 public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Parsable {
     /** The work from anywhere metric devices. */
     private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> _metricDevices;

@@ -102,6 +102,7 @@ public class UpdatableAssetsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UpdatableAssetsRequestBuilderGetRequestConfiguration requestConfig = new UpdatableAssetsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -134,6 +135,7 @@ public class UpdatableAssetsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UpdatableAssetsRequestBuilderPostRequestConfiguration requestConfig = new UpdatableAssetsRequestBuilderPostRequestConfiguration();

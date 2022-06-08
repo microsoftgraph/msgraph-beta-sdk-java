@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Log Collection request entity. */
 public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /** The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18 */
     private Long _errorCode;

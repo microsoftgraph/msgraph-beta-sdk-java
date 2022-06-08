@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.CloudPcBulkRemoteActionResult;
 /** Provides operations to call the bulkReprovisionCloudPc method. */
 public class BulkReprovisionCloudPcRequestBuilder {
     /** Path parameters for the request */
@@ -54,7 +55,7 @@ public class BulkReprovisionCloudPcRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkReprovisionCloudPcRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +65,14 @@ public class BulkReprovisionCloudPcRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkReprovisionCloudPcRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration requestConfig = new BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration();
@@ -83,12 +85,12 @@ public class BulkReprovisionCloudPcRequestBuilder {
     /**
      * Invoke action bulkReprovisionCloudPc
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      */
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final BulkReprovisionCloudPcRequestBody body) {
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, null);
+            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -97,12 +99,12 @@ public class BulkReprovisionCloudPcRequestBuilder {
      * Invoke action bulkReprovisionCloudPc
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      */
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final BulkReprovisionCloudPcRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, null);
+            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -112,13 +114,13 @@ public class BulkReprovisionCloudPcRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      */
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final BulkReprovisionCloudPcRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkReprovisionCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, null);
+            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

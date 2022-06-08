@@ -90,6 +90,7 @@ public class CustodiansRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CustodiansRequestBuilderGetRequestConfiguration requestConfig = new CustodiansRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -122,6 +123,7 @@ public class CustodiansRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final CustodiansRequestBuilderPostRequestConfiguration requestConfig = new CustodiansRequestBuilderPostRequestConfiguration();

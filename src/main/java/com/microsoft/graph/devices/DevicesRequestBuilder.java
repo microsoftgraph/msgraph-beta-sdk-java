@@ -77,7 +77,7 @@ public class DevicesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List devices
+     * Retrieve a list of devices registered in the directory. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class DevicesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List devices
+     * Retrieve a list of devices registered in the directory. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -96,6 +96,7 @@ public class DevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DevicesRequestBuilderGetRequestConfiguration requestConfig = new DevicesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -106,7 +107,7 @@ public class DevicesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create device
+     * Create a new device.
      * @param body 
      * @return a RequestInformation
      */
@@ -115,7 +116,7 @@ public class DevicesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create device
+     * Create a new device.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -128,6 +129,7 @@ public class DevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DevicesRequestBuilderPostRequestConfiguration requestConfig = new DevicesRequestBuilderPostRequestConfiguration();
@@ -138,7 +140,7 @@ public class DevicesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List devices
+     * Retrieve a list of devices registered in the directory. 
      * @return a CompletableFuture of DeviceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get() {
@@ -154,7 +156,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * List devices
+     * Retrieve a list of devices registered in the directory. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceCollectionResponse
      */
@@ -171,7 +173,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * List devices
+     * Retrieve a list of devices registered in the directory. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DeviceCollectionResponse
@@ -189,7 +191,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Create device
+     * Create a new device.
      * @param body 
      * @return a CompletableFuture of device
      */
@@ -206,7 +208,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Create device
+     * Create a new device.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of device
@@ -224,7 +226,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Create device
+     * Create a new device.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -243,7 +245,7 @@ public class DevicesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List devices */
+    /** Retrieve a list of devices registered in the directory.  */
     public class DevicesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

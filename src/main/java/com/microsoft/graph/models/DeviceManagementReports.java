@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity that acts as a container for all reports functionality. */
 public class DeviceManagementReports extends Entity implements Parsable {
     /** Entity representing the configuration of a cached report */
     private java.util.List<DeviceManagementCachedReportConfiguration> _cachedReportConfigurations;

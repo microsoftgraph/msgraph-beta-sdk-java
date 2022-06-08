@@ -182,6 +182,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration requestConfig = new OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

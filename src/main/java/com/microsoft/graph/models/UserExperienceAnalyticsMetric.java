@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics metric contains the score and units of a metric of a user experience anlaytics category. */
 public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     /** The unit of the user experience analytics metric. */
     private String _unit;

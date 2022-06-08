@@ -70,7 +70,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete privilegedRoleAssignment
+     * Delete privilegedRoleAssignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -78,7 +78,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete privilegedRoleAssignment
+     * Delete privilegedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get privilegedRoleAssignment
+     * Retrieve the properties and relationships of privilegedRoleAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -106,7 +106,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get privilegedRoleAssignment
+     * Retrieve the properties and relationships of privilegedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -117,6 +117,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -159,7 +160,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete privilegedRoleAssignment
+     * Delete privilegedRoleAssignment.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -175,7 +176,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Delete privilegedRoleAssignment
+     * Delete privilegedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -192,7 +193,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Delete privilegedRoleAssignment
+     * Delete privilegedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -210,7 +211,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedRoleAssignment
+     * Retrieve the properties and relationships of privilegedRoleAssignment object.
      * @return a CompletableFuture of privilegedRoleAssignment
      */
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> get() {
@@ -226,7 +227,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedRoleAssignment
+     * Retrieve the properties and relationships of privilegedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedRoleAssignment
      */
@@ -243,7 +244,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Get privilegedRoleAssignment
+     * Retrieve the properties and relationships of privilegedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of privilegedRoleAssignment
@@ -330,7 +331,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         public PrivilegedRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get privilegedRoleAssignment */
+    /** Retrieve the properties and relationships of privilegedRoleAssignment object. */
     public class PrivilegedRoleAssignmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -99,6 +99,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getRelyingPartyDetailedSummary method. */
 public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /** Number of failed sign in on Active Directory Federation Service in the period specified. */
     private Long _failedSignInCount;

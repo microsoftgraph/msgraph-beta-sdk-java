@@ -105,6 +105,7 @@ public class CustomExtensionHandlerItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CustomExtensionHandlerItemRequestBuilderGetRequestConfiguration requestConfig = new CustomExtensionHandlerItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

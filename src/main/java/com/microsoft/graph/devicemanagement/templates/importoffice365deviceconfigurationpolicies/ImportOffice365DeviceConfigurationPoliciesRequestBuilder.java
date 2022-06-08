@@ -68,6 +68,7 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ImportOffice365DeviceConfigurationPoliciesRequestBuilderPostRequestConfiguration requestConfig = new ImportOffice365DeviceConfigurationPoliciesRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

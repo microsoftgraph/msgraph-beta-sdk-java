@@ -71,6 +71,7 @@ public class CustodianRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CustodianRequestBuilderGetRequestConfiguration requestConfig = new CustodianRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

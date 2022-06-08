@@ -124,6 +124,7 @@ public class NextVersionDefinitionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NextVersionDefinitionRequestBuilderGetRequestConfiguration requestConfig = new NextVersionDefinitionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

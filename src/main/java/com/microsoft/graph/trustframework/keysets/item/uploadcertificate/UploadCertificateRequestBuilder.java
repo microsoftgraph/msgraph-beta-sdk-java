@@ -55,7 +55,7 @@ public class UploadCertificateRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadCertificateRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadCertificatePostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class UploadCertificateRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadCertificateRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UploadCertificateRequestBuilderPostRequestConfiguration requestConfig = new UploadCertificateRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class UploadCertificateRequestBuilder {
     /**
      * Invoke action uploadCertificate
      * @param body 
-     * @return a CompletableFuture of trustFrameworkKey
+     * @return a CompletableFuture of TrustFrameworkKey
      */
-    public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadCertificateRequestBody body) {
+    public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadCertificatePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, TrustFrameworkKey::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class UploadCertificateRequestBuilder {
      * Invoke action uploadCertificate
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKey
+     * @return a CompletableFuture of TrustFrameworkKey
      */
-    public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadCertificateRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, TrustFrameworkKey::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class UploadCertificateRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of trustFrameworkKey
+     * @return a CompletableFuture of TrustFrameworkKey
      */
-    public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadCertificateRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadCertificateRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadCertificateRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

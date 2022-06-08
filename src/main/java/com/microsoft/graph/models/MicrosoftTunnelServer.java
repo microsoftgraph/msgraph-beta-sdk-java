@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a single Microsoft Tunnel server */
 public class MicrosoftTunnelServer extends Entity implements Parsable {
     /** The digest of the current agent image running on this server */
     private String _agentImageDigest;

@@ -68,6 +68,7 @@ public class ExportMobileConfigRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExportMobileConfigRequestBuilderGetRequestConfiguration requestConfig = new ExportMobileConfigRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

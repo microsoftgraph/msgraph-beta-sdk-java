@@ -7,8 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class EntitlementManagement extends Entity implements Parsable {
-    /** Approval stages for assignment requests. */
+    /** Approval stages for decisions associated with access package assignment requests. */
     private java.util.List<Approval> _accessPackageAssignmentApprovals;
     /** Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment. */
     private java.util.List<AccessPackageAssignmentPolicy> _accessPackageAssignmentPolicies;
@@ -16,9 +17,9 @@ public class EntitlementManagement extends Entity implements Parsable {
     private java.util.List<AccessPackageAssignmentRequest> _accessPackageAssignmentRequests;
     /** Represents the resource-specific role which a subject has been assigned through an access package assignment. */
     private java.util.List<AccessPackageAssignmentResourceRole> _accessPackageAssignmentResourceRoles;
-    /** Represents the grant of an access package to a subject (user or group). */
+    /** The assignment of an access package to a subject for a period of time. */
     private java.util.List<AccessPackageAssignment> _accessPackageAssignments;
-    /** Represents a group of access packages. */
+    /** A container of access packages. */
     private java.util.List<AccessPackageCatalog> _accessPackageCatalogs;
     /** A reference to the geolocation environment in which a resource is located. */
     private java.util.List<AccessPackageResourceEnvironment> _accessPackageResourceEnvironments;
@@ -52,7 +53,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return new EntitlementManagement();
     }
     /**
-     * Gets the accessPackageAssignmentApprovals property value. Approval stages for assignment requests.
+     * Gets the accessPackageAssignmentApprovals property value. Approval stages for decisions associated with access package assignment requests.
      * @return a approval
      */
     @javax.annotation.Nullable
@@ -84,7 +85,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this._accessPackageAssignmentResourceRoles;
     }
     /**
-     * Gets the accessPackageAssignments property value. Represents the grant of an access package to a subject (user or group).
+     * Gets the accessPackageAssignments property value. The assignment of an access package to a subject for a period of time.
      * @return a accessPackageAssignment
      */
     @javax.annotation.Nullable
@@ -92,7 +93,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this._accessPackageAssignments;
     }
     /**
-     * Gets the accessPackageCatalogs property value. Represents a group of access packages.
+     * Gets the accessPackageCatalogs property value. A container of access packages.
      * @return a accessPackageCatalog
      */
     @javax.annotation.Nullable
@@ -201,7 +202,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
-     * Sets the accessPackageAssignmentApprovals property value. Approval stages for assignment requests.
+     * Sets the accessPackageAssignmentApprovals property value. Approval stages for decisions associated with access package assignment requests.
      * @param value Value to set for the accessPackageAssignmentApprovals property.
      * @return a void
      */
@@ -233,7 +234,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this._accessPackageAssignmentResourceRoles = value;
     }
     /**
-     * Sets the accessPackageAssignments property value. Represents the grant of an access package to a subject (user or group).
+     * Sets the accessPackageAssignments property value. The assignment of an access package to a subject for a period of time.
      * @param value Value to set for the accessPackageAssignments property.
      * @return a void
      */
@@ -241,7 +242,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this._accessPackageAssignments = value;
     }
     /**
-     * Sets the accessPackageCatalogs property value. Represents a group of access packages.
+     * Sets the accessPackageCatalogs property value. A container of access packages.
      * @param value Value to set for the accessPackageCatalogs property.
      * @return a void
      */

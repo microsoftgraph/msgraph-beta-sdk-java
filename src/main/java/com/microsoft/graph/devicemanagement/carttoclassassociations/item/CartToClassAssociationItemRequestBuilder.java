@@ -99,6 +99,7 @@ public class CartToClassAssociationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CartToClassAssociationItemRequestBuilderGetRequestConfiguration requestConfig = new CartToClassAssociationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalConnection extends Entity implements Parsable {
     /** Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional. */
     private Configuration _configuration;
@@ -17,7 +18,7 @@ public class ExternalConnection extends Entity implements Parsable {
     private String _description;
     /** Read-only. Nullable. */
     private java.util.List<ExternalGroup> _groups;
-    /** The ingestedItemsCount property */
+    /** The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null. */
     private Long _ingestedItemsCount;
     /** Read-only. Nullable. */
     private java.util.List<ExternalItem> _items;
@@ -25,7 +26,7 @@ public class ExternalConnection extends Entity implements Parsable {
     private String _name;
     /** Read-only. Nullable. */
     private java.util.List<ConnectionOperation> _operations;
-    /** The quota property */
+    /** Read-only. Nullable. */
     private ConnectionQuota _quota;
     /** Read-only. Nullable. */
     private Schema _schema;
@@ -105,7 +106,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._groups;
     }
     /**
-     * Gets the ingestedItemsCount property value. The ingestedItemsCount property
+     * Gets the ingestedItemsCount property value. The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -137,7 +138,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the quota property value. The quota property
+     * Gets the quota property value. Read-only. Nullable.
      * @return a connectionQuota
      */
     @javax.annotation.Nullable
@@ -222,7 +223,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._groups = value;
     }
     /**
-     * Sets the ingestedItemsCount property value. The ingestedItemsCount property
+     * Sets the ingestedItemsCount property value. The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null.
      * @param value Value to set for the ingestedItemsCount property.
      * @return a void
      */
@@ -254,7 +255,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the quota property value. The quota property
+     * Sets the quota property value. Read-only. Nullable.
      * @param value Value to set for the quota property.
      * @return a void
      */

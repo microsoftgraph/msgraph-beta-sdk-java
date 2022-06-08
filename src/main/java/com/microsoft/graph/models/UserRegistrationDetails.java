@@ -7,7 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the print singleton. */
 public class UserRegistrationDetails extends Entity implements Parsable {
+    /** The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue. */
+    private DefaultMfaMethodType _defaultMfaMethod;
     /** Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq). */
     private Boolean _isMfaCapable;
     /** Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq). */
@@ -44,6 +47,14 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         return new UserRegistrationDetails();
     }
     /**
+     * Gets the defaultMfaMethod property value. The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
+     * @return a defaultMfaMethodType
+     */
+    @javax.annotation.Nullable
+    public DefaultMfaMethodType getDefaultMfaMethod() {
+        return this._defaultMfaMethod;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -51,6 +62,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationDetails currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("defaultMfaMethod", (n) -> { currentObject.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
             this.put("isMfaCapable", (n) -> { currentObject.setIsMfaCapable(n.getBooleanValue()); });
             this.put("isMfaRegistered", (n) -> { currentObject.setIsMfaRegistered(n.getBooleanValue()); });
             this.put("isPasswordlessCapable", (n) -> { currentObject.setIsPasswordlessCapable(n.getBooleanValue()); });
@@ -142,6 +154,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("defaultMfaMethod", this.getDefaultMfaMethod());
         writer.writeBooleanValue("isMfaCapable", this.getIsMfaCapable());
         writer.writeBooleanValue("isMfaRegistered", this.getIsMfaRegistered());
         writer.writeBooleanValue("isPasswordlessCapable", this.getIsPasswordlessCapable());
@@ -151,6 +164,14 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("methodsRegistered", this.getMethodsRegistered());
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
+    }
+    /**
+     * Sets the defaultMfaMethod property value. The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
+     * @param value Value to set for the defaultMfaMethod property.
+     * @return a void
+     */
+    public void setDefaultMfaMethod(@javax.annotation.Nullable final DefaultMfaMethodType value) {
+        this._defaultMfaMethod = value;
     }
     /**
      * Sets the isMfaCapable property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).

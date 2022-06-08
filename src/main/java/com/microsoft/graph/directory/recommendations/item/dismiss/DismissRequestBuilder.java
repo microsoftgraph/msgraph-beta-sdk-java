@@ -55,7 +55,7 @@ public class DismissRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DismissRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DismissPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class DismissRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DismissRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DismissRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DismissPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DismissRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DismissRequestBuilderPostRequestConfiguration requestConfig = new DismissRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class DismissRequestBuilder {
      * @param body 
      * @return a CompletableFuture of recommendation
      */
-    public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissRequestBody body) {
+    public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, Recommendation::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class DismissRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of recommendation
      */
-    public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DismissRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DismissRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, Recommendation::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class DismissRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of recommendation
      */
-    public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DismissRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DismissRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

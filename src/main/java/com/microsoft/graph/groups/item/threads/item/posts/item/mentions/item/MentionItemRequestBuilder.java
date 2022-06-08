@@ -99,6 +99,7 @@ public class MentionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MentionItemRequestBuilderGetRequestConfiguration requestConfig = new MentionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

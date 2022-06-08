@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Event representing a users device application install status. */
 public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /** Intune application identifier. */
     private String _applicationId;

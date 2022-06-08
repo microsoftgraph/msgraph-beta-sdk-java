@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The DepEnrollmentBaseProfile resource represents an Apple Device Enrollment Program (DEP) enrollment profile. This type of profile must be assigned to Apple DEP serial numbers before the corresponding devices can enroll via DEP. */
 public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsable {
     /** Indicates if Apple id setup pane is disabled */
     private Boolean _appleIdDisabled;
@@ -61,6 +62,13 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     @javax.annotation.Nonnull
     public static DepEnrollmentBaseProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.depEnrollmentBaseProfile": return new DepEnrollmentBaseProfile();
+            }
+        }
         return new DepEnrollmentBaseProfile();
     }
     /**

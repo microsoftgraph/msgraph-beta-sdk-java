@@ -167,6 +167,7 @@ public class InstanceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InstanceRequestBuilderGetRequestConfiguration requestConfig = new InstanceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

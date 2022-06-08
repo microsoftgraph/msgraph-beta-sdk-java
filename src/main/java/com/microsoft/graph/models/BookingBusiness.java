@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a Microsot Bookings Business. */
 public class BookingBusiness extends BookingNamedEntity implements Parsable {
     /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. */
     private PhysicalAddress _address;
@@ -28,6 +29,8 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
     private String _email;
     /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
     private Boolean _isPublished;
+    /** The languageTag property */
+    private String _languageTag;
     /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
     private String _phone;
     /** The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
@@ -147,6 +150,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
             this.put("defaultCurrencyIso", (n) -> { currentObject.setDefaultCurrencyIso(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("isPublished", (n) -> { currentObject.setIsPublished(n.getBooleanValue()); });
+            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
             this.put("publicUrl", (n) -> { currentObject.setPublicUrl(n.getStringValue()); });
             this.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
@@ -162,6 +166,14 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getIsPublished() {
         return this._isPublished;
+    }
+    /**
+     * Gets the languageTag property value. The languageTag property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getLanguageTag() {
+        return this._languageTag;
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -229,6 +241,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
         writer.writeStringValue("defaultCurrencyIso", this.getDefaultCurrencyIso());
         writer.writeStringValue("email", this.getEmail());
         writer.writeBooleanValue("isPublished", this.getIsPublished());
+        writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeStringValue("phone", this.getPhone());
         writer.writeStringValue("publicUrl", this.getPublicUrl());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
@@ -315,6 +328,14 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     public void setIsPublished(@javax.annotation.Nullable final Boolean value) {
         this._isPublished = value;
+    }
+    /**
+     * Sets the languageTag property value. The languageTag property
+     * @param value Value to set for the languageTag property.
+     * @return a void
+     */
+    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+        this._languageTag = value;
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.

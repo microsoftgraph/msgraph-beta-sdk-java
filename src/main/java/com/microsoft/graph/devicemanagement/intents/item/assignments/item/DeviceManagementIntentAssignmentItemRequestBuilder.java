@@ -99,6 +99,7 @@ public class DeviceManagementIntentAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementIntentAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementIntentAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

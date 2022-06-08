@@ -68,6 +68,7 @@ public class ApproveFotaAppsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApproveFotaAppsRequestBuilderPostRequestConfiguration requestConfig = new ApproveFotaAppsRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

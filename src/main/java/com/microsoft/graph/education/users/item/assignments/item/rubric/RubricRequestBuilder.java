@@ -14,12 +14,18 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.education.users.item.assignments.item.rubric.ref.RefRequestBuilder;
 import microsoft.graph.models.EducationRubric;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the rubric property of the microsoft.graph.educationAssignment entity. */
 public class RubricRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -99,6 +105,7 @@ public class RubricRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RubricRequestBuilderGetRequestConfiguration requestConfig = new RubricRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

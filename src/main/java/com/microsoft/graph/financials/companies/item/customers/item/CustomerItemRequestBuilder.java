@@ -130,6 +130,7 @@ public class CustomerItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CustomerItemRequestBuilderGetRequestConfiguration requestConfig = new CustomerItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

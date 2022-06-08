@@ -105,6 +105,7 @@ public class GroupPolicyPresentationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupPolicyPresentationItemRequestBuilderGetRequestConfiguration requestConfig = new GroupPolicyPresentationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

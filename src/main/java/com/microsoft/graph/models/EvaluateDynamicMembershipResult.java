@@ -18,7 +18,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     /** The value is true if the user or device is a member of the group. The value can also be true if a membership rule was provided and the user or device passes the rule evaluation; otherwise false. */
     private Boolean _membershipRuleEvaluationResult;
     /**
-     * Instantiates a new evaluateDynamicMembershipResult and sets the default values.
+     * Instantiates a new EvaluateDynamicMembershipResult and sets the default values.
      * @return a void
      */
     public EvaluateDynamicMembershipResult() {
@@ -27,7 +27,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateDynamicMembershipResult
+     * @return a EvaluateDynamicMembershipResult
      */
     @javax.annotation.Nonnull
     public static EvaluateDynamicMembershipResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

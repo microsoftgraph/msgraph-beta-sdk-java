@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class DelegatedAdminRelationship extends Entity implements Parsable {
     /** The access assignments associated with the delegated admin relationship. */
     private java.util.List<DelegatedAdminAccessAssignment> _accessAssignments;
@@ -30,8 +31,6 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The long running operations associated with the delegated admin relationship. */
     private java.util.List<DelegatedAdminRelationshipOperation> _operations;
-    /** The partner property */
-    private DelegatedAdminRelationshipParticipant _partner;
     /** The requests associated with the delegated admin relationship. */
     private java.util.List<DelegatedAdminRelationshipRequest> _requests;
     /** The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy. */
@@ -135,7 +134,6 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(DelegatedAdminRelationshipOperation::createFromDiscriminatorValue)); });
-            this.put("partner", (n) -> { currentObject.setPartner(n.getObjectValue(DelegatedAdminRelationshipParticipant::createFromDiscriminatorValue)); });
             this.put("requests", (n) -> { currentObject.setRequests(n.getCollectionOfObjectValues(DelegatedAdminRelationshipRequest::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminRelationshipStatus.class)); });
         }};
@@ -155,14 +153,6 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipOperation> getOperations() {
         return this._operations;
-    }
-    /**
-     * Gets the partner property value. The partner property
-     * @return a delegatedAdminRelationshipParticipant
-     */
-    @javax.annotation.Nullable
-    public DelegatedAdminRelationshipParticipant getPartner() {
-        return this._partner;
     }
     /**
      * Gets the requests property value. The requests associated with the delegated admin relationship.
@@ -198,7 +188,6 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
-        writer.writeObjectValue("partner", this.getPartner());
         writer.writeCollectionOfObjectValues("requests", this.getRequests());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -281,14 +270,6 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     public void setOperations(@javax.annotation.Nullable final java.util.List<DelegatedAdminRelationshipOperation> value) {
         this._operations = value;
-    }
-    /**
-     * Sets the partner property value. The partner property
-     * @param value Value to set for the partner property.
-     * @return a void
-     */
-    public void setPartner(@javax.annotation.Nullable final DelegatedAdminRelationshipParticipant value) {
-        this._partner = value;
     }
     /**
      * Sets the requests property value. The requests associated with the delegated admin relationship.

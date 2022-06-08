@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class CloudPcDevice extends Entity implements Parsable {
     /** The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only. */
     private String _cloudPcStatus;

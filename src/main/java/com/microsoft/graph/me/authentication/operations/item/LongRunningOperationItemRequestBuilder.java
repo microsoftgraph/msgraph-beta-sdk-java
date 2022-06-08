@@ -99,6 +99,7 @@ public class LongRunningOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LongRunningOperationItemRequestBuilderGetRequestConfiguration requestConfig = new LongRunningOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

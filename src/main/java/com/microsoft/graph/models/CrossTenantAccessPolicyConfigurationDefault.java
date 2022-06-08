@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
     /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
     private CrossTenantAccessPolicyB2BSetting _b2bCollaborationInbound;

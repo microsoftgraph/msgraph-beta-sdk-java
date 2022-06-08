@@ -80,7 +80,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +99,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration requestConfig = new FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -192,7 +193,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @return a CompletableFuture of federatedIdentityCredential
      */
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get() {
@@ -208,7 +209,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
      */
@@ -225,7 +226,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of federatedIdentityCredential
@@ -312,7 +313,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         public FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials). */
+    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
     public class FederatedIdentityCredentialItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

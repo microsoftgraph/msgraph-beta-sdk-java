@@ -150,7 +150,7 @@ public class DriveItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -158,7 +158,7 @@ public class DriveItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,6 +169,7 @@ public class DriveItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DriveItemRequestBuilderGetRequestConfiguration requestConfig = new DriveItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -274,7 +275,7 @@ public class DriveItemRequestBuilder {
         return new microsoft.graph.drives.item.following.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
      * @return a CompletableFuture of drive
      */
     public java.util.concurrent.CompletableFuture<Drive> get() {
@@ -290,7 +291,7 @@ public class DriveItemRequestBuilder {
         }
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of drive
      */
@@ -307,7 +308,7 @@ public class DriveItemRequestBuilder {
         }
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of drive
@@ -444,7 +445,7 @@ public class DriveItemRequestBuilder {
         public DriveItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Helpers (examples that aren't included in the docs) */
+    /** Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries. */
     public class DriveItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

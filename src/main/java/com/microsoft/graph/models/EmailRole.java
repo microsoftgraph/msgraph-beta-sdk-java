@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the alerts property of the microsoft.graph.security entity. */
+/** Provides operations to manage the security singleton. */
 public enum EmailRole implements ValuedEnum {
     Unknown("unknown"),
     Sender("sender"),

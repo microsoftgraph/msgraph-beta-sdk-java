@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of identityProvider entities. */
 public class IdentityProvider extends Entity implements Parsable {
     /** The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable. */
     private String _clientId;
@@ -31,6 +32,13 @@ public class IdentityProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static IdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.identityProvider": return new IdentityProvider();
+            }
+        }
         return new IdentityProvider();
     }
     /**

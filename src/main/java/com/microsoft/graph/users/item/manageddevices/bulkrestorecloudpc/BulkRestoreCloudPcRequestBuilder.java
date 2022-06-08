@@ -55,7 +55,7 @@ public class BulkRestoreCloudPcRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkRestoreCloudPcRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class BulkRestoreCloudPcRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkRestoreCloudPcRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final BulkRestoreCloudPcRequestBuilderPostRequestConfiguration requestConfig = new BulkRestoreCloudPcRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class BulkRestoreCloudPcRequestBuilder {
     /**
      * Invoke action bulkRestoreCloudPc
      * @param body 
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      */
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcRequestBody body) {
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class BulkRestoreCloudPcRequestBuilder {
      * Invoke action bulkRestoreCloudPc
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      */
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class BulkRestoreCloudPcRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      */
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

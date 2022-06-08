@@ -127,6 +127,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration requestConfig = new B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class GroupPolicyObjectFileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupPolicyObjectFileItemRequestBuilderGetRequestConfiguration requestConfig = new GroupPolicyObjectFileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

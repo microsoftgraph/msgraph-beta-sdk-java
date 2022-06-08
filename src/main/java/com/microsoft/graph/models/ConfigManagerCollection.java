@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A ConfigManager defined collection of devices or users. */
 public class ConfigManagerCollection extends Entity implements Parsable {
     /** The collection identifier in SCCM. */
     private String _collectionIdentifier;

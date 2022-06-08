@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Settings for Android For Work. */
 public class AndroidForWorkSettings extends Entity implements Parsable {
     /** Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding. */
     private AndroidForWorkBindStatus _bindStatus;

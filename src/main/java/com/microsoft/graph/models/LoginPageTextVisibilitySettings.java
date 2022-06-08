@@ -11,7 +11,7 @@ import java.util.Objects;
 public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The hideAccountResetCredentials property */
+    /** Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form. */
     private Boolean _hideAccountResetCredentials;
     /** Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form. */
     private Boolean _hideCannotAccessYourAccount;
@@ -65,7 +65,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         }};
     }
     /**
-     * Gets the hideAccountResetCredentials property value. The hideAccountResetCredentials property
+     * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this._additionalData = value;
     }
     /**
-     * Sets the hideAccountResetCredentials property value. The hideAccountResetCredentials property
+     * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @param value Value to set for the hideAccountResetCredentials property.
      * @return a void
      */

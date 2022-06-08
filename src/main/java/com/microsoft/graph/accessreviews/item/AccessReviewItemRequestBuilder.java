@@ -101,7 +101,7 @@ public class AccessReviewItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete accessReview
+     * In the Azure AD access reviews feature, delete an accessReview object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class AccessReviewItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete accessReview
+     * In the Azure AD access reviews feature, delete an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -129,7 +129,7 @@ public class AccessReviewItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get accessReview
+     * In the Azure AD access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -137,7 +137,7 @@ public class AccessReviewItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get accessReview
+     * In the Azure AD access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,6 +148,7 @@ public class AccessReviewItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessReviewItemRequestBuilderGetRequestConfiguration requestConfig = new AccessReviewItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -158,7 +159,7 @@ public class AccessReviewItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update accessReview
+     * In the Azure AD access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body 
      * @return a RequestInformation
      */
@@ -167,7 +168,7 @@ public class AccessReviewItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update accessReview
+     * In the Azure AD access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -202,7 +203,7 @@ public class AccessReviewItemRequestBuilder {
         return new microsoft.graph.accessreviews.item.decisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Delete accessReview
+     * In the Azure AD access reviews feature, delete an accessReview object.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -218,7 +219,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Delete accessReview
+     * In the Azure AD access reviews feature, delete an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -235,7 +236,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Delete accessReview
+     * In the Azure AD access reviews feature, delete an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -253,7 +254,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Get accessReview
+     * In the Azure AD access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @return a CompletableFuture of accessReview
      */
     public java.util.concurrent.CompletableFuture<AccessReview> get() {
@@ -269,7 +270,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Get accessReview
+     * In the Azure AD access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReview
      */
@@ -286,7 +287,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Get accessReview
+     * In the Azure AD access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessReview
@@ -328,7 +329,7 @@ public class AccessReviewItemRequestBuilder {
         return new microsoft.graph.accessreviews.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update accessReview
+     * In the Azure AD access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -345,7 +346,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Update accessReview
+     * In the Azure AD access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -363,7 +364,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Update accessReview
+     * In the Azure AD access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -409,7 +410,7 @@ public class AccessReviewItemRequestBuilder {
         public AccessReviewItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get accessReview */
+    /** In the Azure AD access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions. */
     public class AccessReviewItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

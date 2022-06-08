@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Management Configuration Policy */
 public class DeviceManagementConfigurationCategory extends Entity implements Parsable {
     /** Description of the category header */
     private String _categoryDescription;

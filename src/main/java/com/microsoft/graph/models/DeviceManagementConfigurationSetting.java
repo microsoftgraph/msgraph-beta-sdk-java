@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Setting instance within policy */
 public class DeviceManagementConfigurationSetting extends Entity implements Parsable {
     /** List of related Setting Definitions. This property is read-only. */
     private java.util.List<DeviceManagementConfigurationSettingDefinition> _settingDefinitions;

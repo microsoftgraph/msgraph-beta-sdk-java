@@ -137,6 +137,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceComplianceScriptItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceComplianceScriptItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

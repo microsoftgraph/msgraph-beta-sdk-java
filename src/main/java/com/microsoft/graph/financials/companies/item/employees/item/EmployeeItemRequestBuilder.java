@@ -106,6 +106,7 @@ public class EmployeeItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EmployeeItemRequestBuilderGetRequestConfiguration requestConfig = new EmployeeItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

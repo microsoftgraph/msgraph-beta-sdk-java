@@ -106,6 +106,7 @@ public class MacOSSoftwareUpdateCategorySummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MacOSSoftwareUpdateCategorySummaryItemRequestBuilderGetRequestConfiguration requestConfig = new MacOSSoftwareUpdateCategorySummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

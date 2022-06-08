@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents an Autopilot flow event. */
 public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /** Time spent in user ESP. */
     private Period _accountSetupDuration;

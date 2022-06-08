@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityContainer singleton. */
 public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable {
     /** Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only. */
     private String _description;

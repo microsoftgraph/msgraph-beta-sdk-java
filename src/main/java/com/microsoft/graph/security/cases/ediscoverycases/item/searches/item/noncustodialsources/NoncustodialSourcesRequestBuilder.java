@@ -77,6 +77,7 @@ public class NoncustodialSourcesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NoncustodialSourcesRequestBuilderGetRequestConfiguration requestConfig = new NoncustodialSourcesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

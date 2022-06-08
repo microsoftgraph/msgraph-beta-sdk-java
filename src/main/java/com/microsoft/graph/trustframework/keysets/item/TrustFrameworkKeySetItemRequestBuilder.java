@@ -124,6 +124,7 @@ public class TrustFrameworkKeySetItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TrustFrameworkKeySetItemRequestBuilderGetRequestConfiguration requestConfig = new TrustFrameworkKeySetItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

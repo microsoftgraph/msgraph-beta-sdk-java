@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of privilegedApproval entities. */
 public class PrivilegedRoleSettings extends Entity implements Parsable {
     /** true if the approval is required when activate the role. false if the approval is not required when activate the role. */
     private Boolean _approvalOnElevation;

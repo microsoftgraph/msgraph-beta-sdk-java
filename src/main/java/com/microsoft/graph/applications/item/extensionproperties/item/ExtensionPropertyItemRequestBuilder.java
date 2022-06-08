@@ -80,7 +80,7 @@ public class ExtensionPropertyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ExtensionPropertyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +99,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExtensionPropertyItemRequestBuilderGetRequestConfiguration requestConfig = new ExtensionPropertyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -192,7 +193,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a CompletableFuture of extensionProperty
      */
     public java.util.concurrent.CompletableFuture<ExtensionProperty> get() {
@@ -208,7 +209,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionProperty
      */
@@ -225,7 +226,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of extensionProperty
@@ -312,7 +313,7 @@ public class ExtensionPropertyItemRequestBuilder {
         public ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     public class ExtensionPropertyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

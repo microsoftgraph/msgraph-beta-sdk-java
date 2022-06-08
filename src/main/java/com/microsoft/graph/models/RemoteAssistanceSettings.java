@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Remote assistance settings for the account */
 public class RemoteAssistanceSettings extends Entity implements Parsable {
     /** Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false. */
     private Boolean _allowSessionsToUnenrolledDevices;

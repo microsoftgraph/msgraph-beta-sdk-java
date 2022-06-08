@@ -118,6 +118,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration requestConfig = new SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

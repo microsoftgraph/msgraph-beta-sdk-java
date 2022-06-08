@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
     /** The action to be performed on the delegated admin relationship. */
     private DelegatedAdminRelationshipRequestAction _action;
@@ -15,7 +16,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     private OffsetDateTime _createdDateTime;
     /** The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The status of the request. Read-only. The possible values are: created, pending, complete, failed, unknownFutureValue. */
+    /** The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue. */
     private DelegatedAdminRelationshipRequestStatus _status;
     /**
      * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.
@@ -73,7 +74,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the status property value. The status of the request. Read-only. The possible values are: created, pending, complete, failed, unknownFutureValue.
+     * Gets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
      * @return a delegatedAdminRelationshipRequestStatus
      */
     @javax.annotation.Nullable
@@ -118,7 +119,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the status property value. The status of the request. Read-only. The possible values are: created, pending, complete, failed, unknownFutureValue.
+     * Sets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */

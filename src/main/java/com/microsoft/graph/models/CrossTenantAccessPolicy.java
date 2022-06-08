@@ -7,7 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase implements Parsable {
+    /** Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn. */
+    private java.util.List<String> _allowedCloudEndpoints;
     /** Defines the default configuration for how your organization interacts with external Azure Active Directory organizations. */
     private CrossTenantAccessPolicyConfigurationDefault _default_escaped;
     /** Defines partner-specific configurations for external Azure Active Directory organizations. */
@@ -30,6 +33,14 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
         return new CrossTenantAccessPolicy();
     }
     /**
+     * Gets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getAllowedCloudEndpoints() {
+        return this._allowedCloudEndpoints;
+    }
+    /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @return a crossTenantAccessPolicyConfigurationDefault
      */
@@ -45,6 +56,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicy currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("allowedCloudEndpoints", (n) -> { currentObject.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("default", (n) -> { currentObject.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
             this.put("partners", (n) -> { currentObject.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
         }};
@@ -65,8 +77,17 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfPrimitiveValues("allowedCloudEndpoints", this.getAllowedCloudEndpoints());
         writer.writeObjectValue("default", this.getDefault());
         writer.writeCollectionOfObjectValues("partners", this.getPartners());
+    }
+    /**
+     * Sets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
+     * @param value Value to set for the allowedCloudEndpoints property.
+     * @return a void
+     */
+    public void setAllowedCloudEndpoints(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._allowedCloudEndpoints = value;
     }
     /**
      * Sets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.

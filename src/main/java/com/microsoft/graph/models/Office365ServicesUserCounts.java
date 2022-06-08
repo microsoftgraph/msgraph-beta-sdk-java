@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getOffice365ServicesUserCounts method. */
 public class Office365ServicesUserCounts extends Entity implements Parsable {
     /** The number of active users on Exchange. Any user who can read and send email is considered an active user. */
     private Long _exchangeActive;

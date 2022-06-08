@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A new entity to represent driver inventories. */
 public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     /** The number of devices for which this driver is applicable. */
     private Integer _applicableDeviceCount;

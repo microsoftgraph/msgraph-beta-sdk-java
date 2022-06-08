@@ -65,6 +65,7 @@ import microsoft.graph.datapolicyoperations.DataPolicyOperationsRequestBuilder;
 import microsoft.graph.datapolicyoperations.item.DataPolicyOperationItemRequestBuilder;
 import microsoft.graph.deviceappmanagement.DeviceAppManagementRequestBuilder;
 import microsoft.graph.devicemanagement.DeviceManagementRequestBuilder;
+import microsoft.graph.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
 import microsoft.graph.devices.DevicesRequestBuilder;
 import microsoft.graph.devices.item.DeviceItemRequestBuilder;
 import microsoft.graph.directory.DirectoryRequestBuilder;
@@ -180,6 +181,7 @@ import microsoft.graph.shares.item.SharedDriveItemItemRequestBuilder;
 import microsoft.graph.shares.SharesRequestBuilder;
 import microsoft.graph.sites.item.SiteItemRequestBuilder;
 import microsoft.graph.sites.SitesRequestBuilder;
+import microsoft.graph.storage.StorageRequestBuilder;
 import microsoft.graph.subscribedskus.item.SubscribedSkuItemRequestBuilder;
 import microsoft.graph.subscribedskus.SubscribedSkusRequestBuilder;
 import microsoft.graph.subscriptions.item.SubscriptionItemRequestBuilder;
@@ -362,6 +364,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The deviceRegistrationPolicy property */
+    @javax.annotation.Nonnull
+    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new DeviceRegistrationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /** The devices property */
     @javax.annotation.Nonnull
@@ -701,6 +708,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The storage property */
+    @javax.annotation.Nonnull
+    public StorageRequestBuilder storage() {
+        return new StorageRequestBuilder(pathParameters, requestAdapter);
     }
     /** The subscribedSkus property */
     @javax.annotation.Nonnull

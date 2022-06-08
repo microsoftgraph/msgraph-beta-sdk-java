@@ -111,6 +111,7 @@ public class PermissionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PermissionRequestBuilderGetRequestConfiguration requestConfig = new PermissionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

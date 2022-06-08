@@ -106,6 +106,7 @@ public class RiskyServicePrincipalItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration requestConfig = new RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

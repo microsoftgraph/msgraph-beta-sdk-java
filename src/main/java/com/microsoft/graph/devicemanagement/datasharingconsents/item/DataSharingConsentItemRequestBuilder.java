@@ -105,6 +105,7 @@ public class DataSharingConsentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DataSharingConsentItemRequestBuilderGetRequestConfiguration requestConfig = new DataSharingConsentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

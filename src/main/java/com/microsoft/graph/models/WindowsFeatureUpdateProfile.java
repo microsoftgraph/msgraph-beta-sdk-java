@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Feature Update Profile */
 public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /** The list of group assignments of the profile. */
     private java.util.List<WindowsFeatureUpdateProfileAssignment> _assignments;

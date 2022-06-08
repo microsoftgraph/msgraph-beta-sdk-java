@@ -99,6 +99,7 @@ public class ActivityStatisticsItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ActivityStatisticsItemRequestBuilderGetRequestConfiguration requestConfig = new ActivityStatisticsItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

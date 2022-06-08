@@ -78,6 +78,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MonthlyPrintUsageSummariesByPrinterRequestBuilderGetRequestConfiguration requestConfig = new MonthlyPrintUsageSummariesByPrinterRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MonthlyPrintUsageSummariesByPrinterRequestBuilderPostRequestConfiguration requestConfig = new MonthlyPrintUsageSummariesByPrinterRequestBuilderPostRequestConfiguration();

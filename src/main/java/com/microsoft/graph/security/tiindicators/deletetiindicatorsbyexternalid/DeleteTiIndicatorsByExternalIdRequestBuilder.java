@@ -54,7 +54,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration requestConfig = new DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
      * @param body 
      * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
      */
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdRequestBody body) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
      */
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
      */
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

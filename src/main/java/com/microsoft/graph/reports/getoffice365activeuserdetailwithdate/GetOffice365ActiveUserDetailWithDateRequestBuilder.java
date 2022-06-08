@@ -34,7 +34,7 @@ public class GetOffice365ActiveUserDetailWithDateRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getOffice365ActiveUserDetail(date={date})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", date);
+        urlTplParams.put("date", date);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -71,6 +71,7 @@ public class GetOffice365ActiveUserDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365ActiveUserDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365ActiveUserDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

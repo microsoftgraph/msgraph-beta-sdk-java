@@ -99,6 +99,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryRoleAccessReviewPolicyRequestBuilderGetRequestConfiguration requestConfig = new DirectoryRoleAccessReviewPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

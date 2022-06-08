@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics resource performance entity. */
 public class UserExperienceAnalyticsResourcePerformance extends Entity implements Parsable {
     /** AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100 */
     private Integer _averageSpikeTimeScore;

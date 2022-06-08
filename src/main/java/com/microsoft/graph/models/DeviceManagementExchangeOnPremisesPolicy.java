@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity which represents the Exchange OnPremises policy configured for a tenant. */
 public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements Parsable {
     /** The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization */
     private java.util.List<DeviceManagementExchangeAccessRule> _accessRules;

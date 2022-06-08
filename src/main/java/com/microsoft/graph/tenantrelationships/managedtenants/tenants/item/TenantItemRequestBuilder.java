@@ -111,6 +111,7 @@ public class TenantItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TenantItemRequestBuilderGetRequestConfiguration requestConfig = new TenantItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

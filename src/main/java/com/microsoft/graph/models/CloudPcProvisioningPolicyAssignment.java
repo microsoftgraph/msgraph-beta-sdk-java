@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable {
     /** The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget. */
     private CloudPcManagementAssignmentTarget _target;

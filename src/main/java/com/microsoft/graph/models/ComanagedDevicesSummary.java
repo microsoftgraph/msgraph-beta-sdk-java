@@ -31,7 +31,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     /** Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only. */
     private Integer _windowsUpdateForBusinessCount;
     /**
-     * Instantiates a new comanagedDevicesSummary and sets the default values.
+     * Instantiates a new ComanagedDevicesSummary and sets the default values.
      * @return a void
      */
     public ComanagedDevicesSummary() {
@@ -40,7 +40,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a comanagedDevicesSummary
+     * @return a ComanagedDevicesSummary
      */
     @javax.annotation.Nonnull
     public static ComanagedDevicesSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

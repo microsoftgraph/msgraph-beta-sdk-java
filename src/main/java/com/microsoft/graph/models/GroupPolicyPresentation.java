@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The base entity for the display presentation of any of the additional options in a group policy definition. */
 public class GroupPolicyPresentation extends Entity implements Parsable {
     /** The group policy definition associated with the presentation. */
     private GroupPolicyDefinition _definition;
@@ -30,6 +31,13 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static GroupPolicyPresentation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.groupPolicyPresentation": return new GroupPolicyPresentation();
+            }
+        }
         return new GroupPolicyPresentation();
     }
     /**

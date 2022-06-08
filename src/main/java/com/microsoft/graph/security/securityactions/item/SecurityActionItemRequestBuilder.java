@@ -105,6 +105,7 @@ public class SecurityActionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SecurityActionItemRequestBuilderGetRequestConfiguration requestConfig = new SecurityActionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

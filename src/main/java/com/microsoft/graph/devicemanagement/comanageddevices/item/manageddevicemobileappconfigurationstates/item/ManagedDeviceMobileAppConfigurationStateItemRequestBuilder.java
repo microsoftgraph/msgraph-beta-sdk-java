@@ -99,6 +99,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceMobileAppConfigurationStateItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceMobileAppConfigurationStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

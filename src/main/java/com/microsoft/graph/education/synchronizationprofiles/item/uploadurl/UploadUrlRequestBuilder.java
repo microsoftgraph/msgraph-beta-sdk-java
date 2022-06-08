@@ -68,6 +68,7 @@ public class UploadUrlRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UploadUrlRequestBuilderGetRequestConfiguration requestConfig = new UploadUrlRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

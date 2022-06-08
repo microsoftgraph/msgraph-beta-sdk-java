@@ -105,6 +105,7 @@ public class AccessPackageResourceScopeItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

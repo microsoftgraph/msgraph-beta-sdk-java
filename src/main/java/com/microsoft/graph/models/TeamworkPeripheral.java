@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the teamwork singleton. */
 public class TeamworkPeripheral extends Entity implements Parsable {
     /** Display name for the peripheral. */
     private String _displayName;

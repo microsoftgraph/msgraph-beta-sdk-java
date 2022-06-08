@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the searchEntity singleton. */
 public class SearchAnswer extends Entity implements Parsable {
     /** Search answer description shown on search results page. */
     private String _description;
@@ -35,6 +36,13 @@ public class SearchAnswer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static SearchAnswer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.search.searchAnswer": return new SearchAnswer();
+            }
+        }
         return new SearchAnswer();
     }
     /**

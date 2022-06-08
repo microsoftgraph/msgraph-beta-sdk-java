@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityProtectionRoot singleton. */
 public class RiskyServicePrincipal extends Entity implements Parsable {
     /** true if the service principal account is enabled; otherwise, false. */
     private Boolean _accountEnabled;
@@ -44,6 +45,13 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static RiskyServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.riskyServicePrincipal": return new RiskyServicePrincipal();
+            }
+        }
         return new RiskyServicePrincipal();
     }
     /**

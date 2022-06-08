@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to device. */
 public class PayloadResponse extends Entity implements Parsable {
     /**
      * Instantiates a new payloadResponse and sets the default values.

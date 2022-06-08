@@ -71,7 +71,7 @@ public class SitesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Search for sites
+     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class SitesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Search for sites
+     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,6 +90,7 @@ public class SitesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SitesRequestBuilderGetRequestConfiguration requestConfig = new SitesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -108,7 +109,7 @@ public class SitesRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Search for sites
+     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
      * @return a CompletableFuture of SiteCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get() {
@@ -124,7 +125,7 @@ public class SitesRequestBuilder {
         }
     }
     /**
-     * Search for sites
+     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SiteCollectionResponse
      */
@@ -141,7 +142,7 @@ public class SitesRequestBuilder {
         }
     }
     /**
-     * Search for sites
+     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SiteCollectionResponse
@@ -158,7 +159,7 @@ public class SitesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Search for sites */
+    /** Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results. */
     public class SitesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

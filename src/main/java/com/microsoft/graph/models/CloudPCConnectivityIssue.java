@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analyte connectivity issue entity. */
 public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /** The Intune DeviceId of the device the connection is associated with. */
     private String _deviceId;

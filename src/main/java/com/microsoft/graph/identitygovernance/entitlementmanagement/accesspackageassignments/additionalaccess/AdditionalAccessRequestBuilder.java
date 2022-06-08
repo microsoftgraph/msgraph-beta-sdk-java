@@ -68,6 +68,7 @@ public class AdditionalAccessRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdditionalAccessRequestBuilderGetRequestConfiguration requestConfig = new AdditionalAccessRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

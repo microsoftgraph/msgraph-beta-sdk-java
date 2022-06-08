@@ -99,6 +99,7 @@ public class ContactMergeSuggestionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContactMergeSuggestionsRequestBuilderGetRequestConfiguration requestConfig = new ContactMergeSuggestionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

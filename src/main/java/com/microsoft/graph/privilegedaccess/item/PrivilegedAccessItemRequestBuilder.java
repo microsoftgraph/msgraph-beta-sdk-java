@@ -134,6 +134,7 @@ public class PrivilegedAccessItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedAccessItemRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedAccessItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

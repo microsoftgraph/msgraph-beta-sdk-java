@@ -106,6 +106,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -59,7 +59,7 @@ public class NotesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class NotesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class NotesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NotesRequestBuilderGetRequestConfiguration requestConfig = new NotesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class NotesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final NotesRequestBuilderPostRequestConfiguration requestConfig = new NotesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class NotesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @return a CompletableFuture of AuthoredNoteCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AuthoredNoteCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class NotesRequestBuilder {
         }
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthoredNoteCollectionResponse
      */
@@ -153,7 +155,7 @@ public class NotesRequestBuilder {
         }
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AuthoredNoteCollectionResponse
@@ -225,7 +227,7 @@ public class NotesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List of notes associcated with the request. */
+    /** List of notes associated with the request. */
     public class NotesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

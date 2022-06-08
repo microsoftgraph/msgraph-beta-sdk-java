@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the cases property of the microsoft.graph.security entity. */
+/** Provides operations to manage the security singleton. */
 public class CasesRoot extends Entity implements Parsable {
     /** The ediscoveryCases property */
     private java.util.List<EdiscoveryCase> _ediscoveryCases;

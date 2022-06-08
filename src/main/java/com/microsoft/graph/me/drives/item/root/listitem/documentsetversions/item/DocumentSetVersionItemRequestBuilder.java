@@ -105,6 +105,7 @@ public class DocumentSetVersionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DocumentSetVersionItemRequestBuilderGetRequestConfiguration requestConfig = new DocumentSetVersionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

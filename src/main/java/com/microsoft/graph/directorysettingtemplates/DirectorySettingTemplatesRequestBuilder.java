@@ -77,7 +77,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List directorySettingTemplates
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List directorySettingTemplates
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -96,6 +96,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectorySettingTemplatesRequestBuilderGetRequestConfiguration requestConfig = new DirectorySettingTemplatesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -128,6 +129,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DirectorySettingTemplatesRequestBuilderPostRequestConfiguration requestConfig = new DirectorySettingTemplatesRequestBuilderPostRequestConfiguration();
@@ -138,7 +140,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List directorySettingTemplates
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects.
      * @return a CompletableFuture of DirectorySettingTemplateCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplateCollectionResponse> get() {
@@ -154,7 +156,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         }
     }
     /**
-     * List directorySettingTemplates
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectorySettingTemplateCollectionResponse
      */
@@ -171,7 +173,7 @@ public class DirectorySettingTemplatesRequestBuilder {
         }
     }
     /**
-     * List directorySettingTemplates
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectorySettingTemplateCollectionResponse
@@ -243,7 +245,7 @@ public class DirectorySettingTemplatesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List directorySettingTemplates */
+    /** Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects. */
     public class DirectorySettingTemplatesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -111,6 +111,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GovernanceRoleDefinitionItemRequestBuilderGetRequestConfiguration requestConfig = new GovernanceRoleDefinitionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -69,6 +69,7 @@ public class ReactivateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ReactivateRequestBuilderPostRequestConfiguration requestConfig = new ReactivateRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

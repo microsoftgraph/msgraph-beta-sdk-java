@@ -19,6 +19,7 @@ import microsoft.graph.domains.item.domainnamereferences.item.DirectoryObjectIte
 import microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
 import microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
 import microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
+import microsoft.graph.domains.item.promote.PromoteRequestBuilder;
 import microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
 import microsoft.graph.domains.item.sharedemaildomaininvitations.item.SharedEmailDomainInvitationItemRequestBuilder;
 import microsoft.graph.domains.item.sharedemaildomaininvitations.SharedEmailDomainInvitationsRequestBuilder;
@@ -45,6 +46,11 @@ public class DomainItemRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The promote property */
+    @javax.annotation.Nonnull
+    public PromoteRequestBuilder promote() {
+        return new PromoteRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** The serviceConfigurationRecords property */
@@ -97,7 +103,7 @@ public class DomainItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete domain
+     * Deletes a domain from a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +111,7 @@ public class DomainItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete domain
+     * Deletes a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +131,7 @@ public class DomainItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get domain
+     * Retrieve the properties and relationships of domain object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -133,7 +139,7 @@ public class DomainItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get domain
+     * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -144,6 +150,7 @@ public class DomainItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DomainItemRequestBuilderGetRequestConfiguration requestConfig = new DomainItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -154,7 +161,7 @@ public class DomainItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update domain
+     * Update the properties of domain object.
      * @param body 
      * @return a RequestInformation
      */
@@ -163,7 +170,7 @@ public class DomainItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update domain
+     * Update the properties of domain object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -186,7 +193,7 @@ public class DomainItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete domain
+     * Deletes a domain from a tenant.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -202,7 +209,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Delete domain
+     * Deletes a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -219,7 +226,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Delete domain
+     * Deletes a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -261,7 +268,7 @@ public class DomainItemRequestBuilder {
         return new InternalDomainFederationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get domain
+     * Retrieve the properties and relationships of domain object.
      * @return a CompletableFuture of domain
      */
     public java.util.concurrent.CompletableFuture<Domain> get() {
@@ -277,7 +284,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Get domain
+     * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
      */
@@ -294,7 +301,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Get domain
+     * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of domain
@@ -312,7 +319,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Update domain
+     * Update the properties of domain object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -329,7 +336,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Update domain
+     * Update the properties of domain object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -347,7 +354,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Update domain
+     * Update the properties of domain object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -417,7 +424,7 @@ public class DomainItemRequestBuilder {
         public DomainItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get domain */
+    /** Retrieve the properties and relationships of domain object. */
     public class DomainItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

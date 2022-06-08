@@ -99,6 +99,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContinuousAccessEvaluationPolicyRequestBuilderGetRequestConfiguration requestConfig = new ContinuousAccessEvaluationPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

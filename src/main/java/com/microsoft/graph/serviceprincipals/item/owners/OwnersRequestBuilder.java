@@ -17,6 +17,10 @@ import java.util.Objects;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.serviceprincipals.item.owners.count.CountRequestBuilder;
+import microsoft.graph.serviceprincipals.item.owners.endpoint.EndpointRequestBuilder;
+import microsoft.graph.serviceprincipals.item.owners.ref.RefRequestBuilder;
+import microsoft.graph.serviceprincipals.item.owners.serviceprincipal.ServicePrincipalRequestBuilder;
+import microsoft.graph.serviceprincipals.item.owners.user.UserRequestBuilder;
 /** Provides operations to manage the owners property of the microsoft.graph.servicePrincipal entity. */
 public class OwnersRequestBuilder {
     /** The count property */
@@ -24,12 +28,32 @@ public class OwnersRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new OwnersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -77,6 +101,7 @@ public class OwnersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OwnersRequestBuilderGetRequestConfiguration requestConfig = new OwnersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

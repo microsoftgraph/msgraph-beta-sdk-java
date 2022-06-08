@@ -33,7 +33,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getOffice365GroupsActivityDetail(period='{period}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", period);
+        urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365GroupsActivityDetailWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365GroupsActivityDetailWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

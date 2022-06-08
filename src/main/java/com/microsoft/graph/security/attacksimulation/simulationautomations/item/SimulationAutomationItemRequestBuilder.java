@@ -106,6 +106,7 @@ public class SimulationAutomationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SimulationAutomationItemRequestBuilderGetRequestConfiguration requestConfig = new SimulationAutomationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

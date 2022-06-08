@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents device state for an intent */
 public class DeviceManagementIntentDeviceState extends Entity implements Parsable {
     /** Device name that is being reported */
     private String _deviceDisplayName;

@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the compliance singleton. */
 public class DataSource extends Entity implements Parsable {
     /** The user who created the dataSource. */
     private IdentitySet _createdBy;
@@ -34,6 +35,13 @@ public class DataSource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static DataSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.ediscovery.dataSource": return new DataSource();
+            }
+        }
         return new DataSource();
     }
     /**

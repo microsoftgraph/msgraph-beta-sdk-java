@@ -99,6 +99,7 @@ public class UserExperienceAnalyticsOverviewRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

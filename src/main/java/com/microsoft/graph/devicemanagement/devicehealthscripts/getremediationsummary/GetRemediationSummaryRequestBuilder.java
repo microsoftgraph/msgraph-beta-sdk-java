@@ -69,6 +69,7 @@ public class GetRemediationSummaryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRemediationSummaryRequestBuilderGetRequestConfiguration requestConfig = new GetRemediationSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class GetRemediationSummaryRequestBuilder {
     }
     /**
      * Invoke function getRemediationSummary
-     * @return a CompletableFuture of deviceHealthScriptRemediationSummary
+     * @return a CompletableFuture of DeviceHealthScriptRemediationSummary
      */
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationSummary> get() {
         try {
@@ -92,7 +93,7 @@ public class GetRemediationSummaryRequestBuilder {
     /**
      * Invoke function getRemediationSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptRemediationSummary
+     * @return a CompletableFuture of DeviceHealthScriptRemediationSummary
      */
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRemediationSummaryRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class GetRemediationSummaryRequestBuilder {
      * Invoke function getRemediationSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceHealthScriptRemediationSummary
+     * @return a CompletableFuture of DeviceHealthScriptRemediationSummary
      */
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRemediationSummaryRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the classifyFile method. */
 public class ClassificationJobResponse extends JobResponseBase implements Parsable {
     /** The result property */
     private DetectedSensitiveContentWrapper _result;

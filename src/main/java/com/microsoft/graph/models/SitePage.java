@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class SitePage extends BaseItem implements Parsable {
     /** The content type of the page. */
     private ContentTypeInfo _contentType;

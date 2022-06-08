@@ -34,7 +34,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getOffice365GroupsActivityDetail(date={date})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", date);
+        urlTplParams.put("date", date);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -71,6 +71,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365GroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365GroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

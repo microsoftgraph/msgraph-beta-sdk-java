@@ -7,6 +7,7 @@ import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
@@ -33,7 +34,7 @@ public class GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuil
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getTeamsDeviceUsageDistributionTotalUserCounts(period='{period}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", period);
+        urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -80,12 +81,12 @@ public class GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuil
     }
     /**
      * Invoke function getTeamsDeviceUsageDistributionTotalUserCounts
-     * @return a CompletableFuture of getTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse> get() {
+    public java.util.concurrent.CompletableFuture<InputStream> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -93,12 +94,12 @@ public class GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuil
     /**
      * Invoke function getTeamsDeviceUsageDistributionTotalUserCounts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -107,12 +108,12 @@ public class GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuil
      * Invoke function getTeamsDeviceUsageDistributionTotalUserCounts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of getTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodResponse::createFromDiscriminatorValue, responseHandler, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

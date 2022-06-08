@@ -99,6 +99,7 @@ public class SecurityBaselineSettingStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SecurityBaselineSettingStateItemRequestBuilderGetRequestConfiguration requestConfig = new SecurityBaselineSettingStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

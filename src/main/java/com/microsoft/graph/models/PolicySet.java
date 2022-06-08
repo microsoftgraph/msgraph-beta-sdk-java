@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for PolicySet. */
 public class PolicySet extends Entity implements Parsable {
     /** Assignments of the PolicySet. */
     private java.util.List<PolicySetAssignment> _assignments;

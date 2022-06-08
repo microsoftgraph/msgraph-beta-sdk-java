@@ -35,8 +35,8 @@ public class UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesR
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/print/reports/authenticationMethods/microsoft.graph.usersRegisteredByFeature(includedUserTypes='{includedUserTypes}',includedUserRoles='{includedUserRoles}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", includedUserRoles);
-        urlTplParams.put("", includedUserTypes);
+        urlTplParams.put("includedUserRoles", includedUserRoles);
+        urlTplParams.put("includedUserTypes", includedUserTypes);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -73,6 +73,7 @@ public class UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesR
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilderGetRequestConfiguration requestConfig = new UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

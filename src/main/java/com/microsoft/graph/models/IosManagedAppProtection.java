@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an iOS device */
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** Semicolon seperated list of device models allowed, as a string, for the managed app to work. */
     private String _allowedIosDeviceModels;

@@ -33,7 +33,7 @@ public class GetAuditActivityTypesWithCategoryRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/auditEvents/microsoft.graph.getAuditActivityTypes(category='{category}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", category);
+        urlTplParams.put("category", category);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetAuditActivityTypesWithCategoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration requestConfig = new GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

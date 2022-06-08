@@ -99,6 +99,7 @@ public class MicrosoftTunnelHealthThresholdItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MicrosoftTunnelHealthThresholdItemRequestBuilderGetRequestConfiguration requestConfig = new MicrosoftTunnelHealthThresholdItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

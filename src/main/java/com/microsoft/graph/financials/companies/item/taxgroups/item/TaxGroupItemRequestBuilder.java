@@ -99,6 +99,7 @@ public class TaxGroupItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TaxGroupItemRequestBuilderGetRequestConfiguration requestConfig = new TaxGroupItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

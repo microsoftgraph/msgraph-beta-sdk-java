@@ -8,14 +8,19 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class TodoTask extends Entity implements Parsable {
+    /** The attachments property */
+    private java.util.List<Attachment_v2> _attachments;
+    /** The attachmentSessions property */
+    private java.util.List<AttachmentSession> _attachmentSessions;
     /** The task body that typically contains information about the task. */
     private ItemBody _body;
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
-    /** The categories property */
+    /** The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined. */
     private java.util.List<String> _categories;
-    /** The checklistItems property */
+    /** A collection of smaller subtasks linked to the more complex parent task. */
     private java.util.List<ChecklistItem> _checklistItems;
     /** The date in the specified time zone that the task was finished. */
     private DateTimeTimeZone _completedDateTime;
@@ -25,6 +30,8 @@ public class TodoTask extends Entity implements Parsable {
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task. Nullable. */
     private java.util.List<Extension> _extensions;
+    /** The hasAttachments property */
+    private Boolean _hasAttachments;
     /** The importance of the task. Possible values are: low, normal, high. */
     private Importance _importance;
     /** Set to true if an alert is set to remind the user of the task. */
@@ -59,6 +66,22 @@ public class TodoTask extends Entity implements Parsable {
         return new TodoTask();
     }
     /**
+     * Gets the attachments property value. The attachments property
+     * @return a attachment_v2
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Attachment_v2> getAttachments() {
+        return this._attachments;
+    }
+    /**
+     * Gets the attachmentSessions property value. The attachmentSessions property
+     * @return a attachmentSession
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AttachmentSession> getAttachmentSessions() {
+        return this._attachmentSessions;
+    }
+    /**
      * Gets the body property value. The task body that typically contains information about the task.
      * @return a itemBody
      */
@@ -75,7 +98,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._bodyLastModifiedDateTime;
     }
     /**
-     * Gets the categories property value. The categories property
+     * Gets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +106,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._categories;
     }
     /**
-     * Gets the checklistItems property value. The checklistItems property
+     * Gets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
      * @return a checklistItem
      */
     @javax.annotation.Nullable
@@ -130,6 +153,8 @@ public class TodoTask extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTask currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment_v2::createFromDiscriminatorValue)); });
+            this.put("attachmentSessions", (n) -> { currentObject.setAttachmentSessions(n.getCollectionOfObjectValues(AttachmentSession::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -138,6 +163,7 @@ public class TodoTask extends Entity implements Parsable {
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
             this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
             this.put("isReminderOn", (n) -> { currentObject.setIsReminderOn(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -147,6 +173,14 @@ public class TodoTask extends Entity implements Parsable {
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus.class)); });
             this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the hasAttachments property value. The hasAttachments property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getHasAttachments() {
+        return this._hasAttachments;
     }
     /**
      * Gets the importance property value. The importance of the task. Possible values are: low, normal, high.
@@ -220,6 +254,8 @@ public class TodoTask extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
+        writer.writeCollectionOfObjectValues("attachmentSessions", this.getAttachmentSessions());
         writer.writeObjectValue("body", this.getBody());
         writer.writeOffsetDateTimeValue("bodyLastModifiedDateTime", this.getBodyLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
@@ -228,6 +264,7 @@ public class TodoTask extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("dueDateTime", this.getDueDateTime());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
+        writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
         writer.writeEnumValue("importance", this.getImportance());
         writer.writeBooleanValue("isReminderOn", this.getIsReminderOn());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -236,6 +273,22 @@ public class TodoTask extends Entity implements Parsable {
         writer.writeObjectValue("reminderDateTime", this.getReminderDateTime());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("title", this.getTitle());
+    }
+    /**
+     * Sets the attachments property value. The attachments property
+     * @param value Value to set for the attachments property.
+     * @return a void
+     */
+    public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment_v2> value) {
+        this._attachments = value;
+    }
+    /**
+     * Sets the attachmentSessions property value. The attachmentSessions property
+     * @param value Value to set for the attachmentSessions property.
+     * @return a void
+     */
+    public void setAttachmentSessions(@javax.annotation.Nullable final java.util.List<AttachmentSession> value) {
+        this._attachmentSessions = value;
     }
     /**
      * Sets the body property value. The task body that typically contains information about the task.
@@ -254,7 +307,7 @@ public class TodoTask extends Entity implements Parsable {
         this._bodyLastModifiedDateTime = value;
     }
     /**
-     * Sets the categories property value. The categories property
+     * Sets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      * @param value Value to set for the categories property.
      * @return a void
      */
@@ -262,7 +315,7 @@ public class TodoTask extends Entity implements Parsable {
         this._categories = value;
     }
     /**
-     * Sets the checklistItems property value. The checklistItems property
+     * Sets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
      * @param value Value to set for the checklistItems property.
      * @return a void
      */
@@ -300,6 +353,14 @@ public class TodoTask extends Entity implements Parsable {
      */
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
+    }
+    /**
+     * Sets the hasAttachments property value. The hasAttachments property
+     * @param value Value to set for the hasAttachments property.
+     * @return a void
+     */
+    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+        this._hasAttachments = value;
     }
     /**
      * Sets the importance property value. The importance of the task. Possible values are: low, normal, high.

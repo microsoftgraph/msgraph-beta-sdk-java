@@ -132,6 +132,7 @@ public class ExternalConnectionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExternalConnectionItemRequestBuilderGetRequestConfiguration requestConfig = new ExternalConnectionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

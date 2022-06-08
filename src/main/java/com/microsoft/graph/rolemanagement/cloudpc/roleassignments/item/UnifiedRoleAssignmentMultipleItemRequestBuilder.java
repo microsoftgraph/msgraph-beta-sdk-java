@@ -136,6 +136,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleAssignmentMultipleItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleAssignmentMultipleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

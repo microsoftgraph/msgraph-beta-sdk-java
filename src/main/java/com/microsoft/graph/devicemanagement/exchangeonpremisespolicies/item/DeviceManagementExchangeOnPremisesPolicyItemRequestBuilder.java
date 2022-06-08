@@ -105,6 +105,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

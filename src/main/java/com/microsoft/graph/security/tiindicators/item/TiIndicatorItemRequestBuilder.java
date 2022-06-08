@@ -99,6 +99,7 @@ public class TiIndicatorItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TiIndicatorItemRequestBuilderGetRequestConfiguration requestConfig = new TiIndicatorItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

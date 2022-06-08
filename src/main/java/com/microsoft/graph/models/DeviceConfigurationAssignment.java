@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The device configuration assignment entity assigns an AAD group to a specific device configuration. */
 public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /** The admin intent to apply or remove the profile. Possible values are: apply, remove. */
     private DeviceConfigAssignmentIntent _intent;

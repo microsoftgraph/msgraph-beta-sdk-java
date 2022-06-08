@@ -106,6 +106,7 @@ public class TeamworkTagItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamworkTagItemRequestBuilderGetRequestConfiguration requestConfig = new TeamworkTagItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

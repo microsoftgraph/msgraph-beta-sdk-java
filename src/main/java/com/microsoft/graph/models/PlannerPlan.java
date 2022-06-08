@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class PlannerPlan extends PlannerDelta implements Parsable {
     /** Collection of buckets in the plan. Read-only. Nullable. */
     private java.util.List<PlannerBucket> _buckets;
@@ -21,7 +22,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** Additional details about the plan. Read-only. Nullable. */
     private PlannerPlanDetails _details;
-    /** ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated. */
+    /** The owner property */
     private String _owner;
     /** Collection of tasks in the plan. Read-only. Nullable. */
     private java.util.List<PlannerTask> _tasks;
@@ -112,7 +113,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         }};
     }
     /**
-     * Gets the owner property value. ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
+     * Gets the owner property value. The owner property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -202,7 +203,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         this._details = value;
     }
     /**
-     * Sets the owner property value. ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
+     * Sets the owner property value. The owner property
      * @param value Value to set for the owner property.
      * @return a void
      */

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents user state for an intent */
 public class DeviceManagementIntentUserState extends Entity implements Parsable {
     /** Count of Devices that belongs to a user for an intent */
     private Integer _deviceCount;

@@ -106,6 +106,7 @@ public class DimensionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DimensionItemRequestBuilderGetRequestConfiguration requestConfig = new DimensionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

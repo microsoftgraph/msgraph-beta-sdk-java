@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class ServicePrincipalCreationConditionSet extends Entity implements Parsable {
     /** The applicationIds property */
     private java.util.List<String> _applicationIds;

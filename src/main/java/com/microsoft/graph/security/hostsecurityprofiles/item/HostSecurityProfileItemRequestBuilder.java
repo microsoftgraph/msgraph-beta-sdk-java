@@ -99,6 +99,7 @@ public class HostSecurityProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final HostSecurityProfileItemRequestBuilderGetRequestConfiguration requestConfig = new HostSecurityProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

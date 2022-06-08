@@ -140,7 +140,7 @@ public class OrgContactItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get orgContact
+     * Get the properties and relationships of an organizational contact object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class OrgContactItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get orgContact
+     * Get the properties and relationships of an organizational contact object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -159,6 +159,7 @@ public class OrgContactItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OrgContactItemRequestBuilderGetRequestConfiguration requestConfig = new OrgContactItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -264,7 +265,7 @@ public class OrgContactItemRequestBuilder {
         return new microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get orgContact
+     * Get the properties and relationships of an organizational contact object.
      * @return a CompletableFuture of orgContact
      */
     public java.util.concurrent.CompletableFuture<OrgContact> get() {
@@ -280,7 +281,7 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Get orgContact
+     * Get the properties and relationships of an organizational contact object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of orgContact
      */
@@ -297,7 +298,7 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Get orgContact
+     * Get the properties and relationships of an organizational contact object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of orgContact
@@ -420,7 +421,7 @@ public class OrgContactItemRequestBuilder {
         public OrgContactItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get orgContact */
+    /** Get the properties and relationships of an organizational contact object. */
     public class OrgContactItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

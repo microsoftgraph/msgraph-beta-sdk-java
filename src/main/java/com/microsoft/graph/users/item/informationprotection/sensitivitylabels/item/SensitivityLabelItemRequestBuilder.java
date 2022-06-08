@@ -105,6 +105,7 @@ public class SensitivityLabelItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SensitivityLabelItemRequestBuilderGetRequestConfiguration requestConfig = new SensitivityLabelItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

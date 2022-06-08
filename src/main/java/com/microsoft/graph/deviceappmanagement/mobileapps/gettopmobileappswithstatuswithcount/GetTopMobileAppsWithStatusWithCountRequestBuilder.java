@@ -34,8 +34,8 @@ public class GetTopMobileAppsWithStatusWithCountRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceAppManagement/mobileApps/microsoft.graph.getTopMobileApps(status='{status}',count={count})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", count);
-        urlTplParams.put("", status);
+        urlTplParams.put("count", count);
+        urlTplParams.put("status", status);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -72,6 +72,7 @@ public class GetTopMobileAppsWithStatusWithCountRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetTopMobileAppsWithStatusWithCountRequestBuilderGetRequestConfiguration requestConfig = new GetTopMobileAppsWithStatusWithCountRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

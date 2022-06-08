@@ -55,7 +55,7 @@ public class ValidateComplianceScriptRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ValidateComplianceScriptRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ValidateComplianceScriptPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class ValidateComplianceScriptRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ValidateComplianceScriptRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateComplianceScriptRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ValidateComplianceScriptPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateComplianceScriptRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ValidateComplianceScriptRequestBuilderPostRequestConfiguration requestConfig = new ValidateComplianceScriptRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class ValidateComplianceScriptRequestBuilder {
     /**
      * Invoke action validateComplianceScript
      * @param body 
-     * @return a CompletableFuture of deviceComplianceScriptValidationResult
+     * @return a CompletableFuture of DeviceComplianceScriptValidationResult
      */
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScriptValidationResult> post(@javax.annotation.Nonnull final ValidateComplianceScriptRequestBody body) {
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScriptValidationResult> post(@javax.annotation.Nonnull final ValidateComplianceScriptPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, DeviceComplianceScriptValidationResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class ValidateComplianceScriptRequestBuilder {
      * Invoke action validateComplianceScript
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScriptValidationResult
+     * @return a CompletableFuture of DeviceComplianceScriptValidationResult
      */
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScriptValidationResult> post(@javax.annotation.Nonnull final ValidateComplianceScriptRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateComplianceScriptRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScriptValidationResult> post(@javax.annotation.Nonnull final ValidateComplianceScriptPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateComplianceScriptRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, DeviceComplianceScriptValidationResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class ValidateComplianceScriptRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceComplianceScriptValidationResult
+     * @return a CompletableFuture of DeviceComplianceScriptValidationResult
      */
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScriptValidationResult> post(@javax.annotation.Nonnull final ValidateComplianceScriptRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateComplianceScriptRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScriptValidationResult> post(@javax.annotation.Nonnull final ValidateComplianceScriptPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateComplianceScriptRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

@@ -99,6 +99,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

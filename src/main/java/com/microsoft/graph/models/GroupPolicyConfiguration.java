@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The group policy configuration entity contains the configured values for one or more group policy definitions. */
 public class GroupPolicyConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the configuration. */
     private java.util.List<GroupPolicyConfigurationAssignment> _assignments;

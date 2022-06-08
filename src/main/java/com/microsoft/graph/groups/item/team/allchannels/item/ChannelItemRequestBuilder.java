@@ -71,6 +71,7 @@ public class ChannelItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChannelItemRequestBuilderGetRequestConfiguration requestConfig = new ChannelItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

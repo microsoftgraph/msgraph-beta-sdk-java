@@ -99,6 +99,7 @@ public class MessageEventItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MessageEventItemRequestBuilderGetRequestConfiguration requestConfig = new MessageEventItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -54,7 +54,7 @@ public class SearchExistingIdentitiesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SearchExistingIdentitiesRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class SearchExistingIdentitiesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SearchExistingIdentitiesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SearchExistingIdentitiesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SearchExistingIdentitiesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SearchExistingIdentitiesRequestBuilderPostRequestConfiguration requestConfig = new SearchExistingIdentitiesRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class SearchExistingIdentitiesRequestBuilder {
      * @param body 
      * @return a CompletableFuture of searchExistingIdentitiesResponse
      */
-    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@javax.annotation.Nonnull final SearchExistingIdentitiesRequestBody body) {
+    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@javax.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, SearchExistingIdentitiesResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class SearchExistingIdentitiesRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of searchExistingIdentitiesResponse
      */
-    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@javax.annotation.Nonnull final SearchExistingIdentitiesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SearchExistingIdentitiesRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@javax.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SearchExistingIdentitiesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, SearchExistingIdentitiesResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class SearchExistingIdentitiesRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of searchExistingIdentitiesResponse
      */
-    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@javax.annotation.Nonnull final SearchExistingIdentitiesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SearchExistingIdentitiesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@javax.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SearchExistingIdentitiesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

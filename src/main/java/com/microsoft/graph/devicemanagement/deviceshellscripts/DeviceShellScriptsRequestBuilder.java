@@ -78,6 +78,7 @@ public class DeviceShellScriptsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceShellScriptsRequestBuilderGetRequestConfiguration requestConfig = new DeviceShellScriptsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class DeviceShellScriptsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeviceShellScriptsRequestBuilderPostRequestConfiguration requestConfig = new DeviceShellScriptsRequestBuilderPostRequestConfiguration();

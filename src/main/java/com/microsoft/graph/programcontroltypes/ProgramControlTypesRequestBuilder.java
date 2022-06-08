@@ -59,7 +59,7 @@ public class ProgramControlTypesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List programControlTypes
+     * In the Azure AD access reviews feature, list all the programControlType objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ProgramControlTypesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List programControlTypes
+     * In the Azure AD access reviews feature, list all the programControlType objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class ProgramControlTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProgramControlTypesRequestBuilderGetRequestConfiguration requestConfig = new ProgramControlTypesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ProgramControlTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ProgramControlTypesRequestBuilderPostRequestConfiguration requestConfig = new ProgramControlTypesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class ProgramControlTypesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List programControlTypes
+     * In the Azure AD access reviews feature, list all the programControlType objects.
      * @return a CompletableFuture of ProgramControlTypeCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ProgramControlTypeCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class ProgramControlTypesRequestBuilder {
         }
     }
     /**
-     * List programControlTypes
+     * In the Azure AD access reviews feature, list all the programControlType objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProgramControlTypeCollectionResponse
      */
@@ -153,7 +155,7 @@ public class ProgramControlTypesRequestBuilder {
         }
     }
     /**
-     * List programControlTypes
+     * In the Azure AD access reviews feature, list all the programControlType objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ProgramControlTypeCollectionResponse
@@ -225,7 +227,7 @@ public class ProgramControlTypesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List programControlTypes */
+    /** In the Azure AD access reviews feature, list all the programControlType objects. */
     public class ProgramControlTypesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

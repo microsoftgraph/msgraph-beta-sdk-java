@@ -99,6 +99,7 @@ public class HealthRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final HealthRequestBuilderGetRequestConfiguration requestConfig = new HealthRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

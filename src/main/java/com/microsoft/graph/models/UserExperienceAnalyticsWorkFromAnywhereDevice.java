@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics Device for work from anywhere report */
 public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implements Parsable {
     /** The user experience analytics work from anywhere intune device's autopilotProfileAssigned. */
     private Boolean _autoPilotProfileAssigned;

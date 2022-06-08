@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class LanguageProficiency extends ItemFacet implements Parsable {
     /** Contains the long-form name for the language. */
     private String _displayName;

@@ -141,6 +141,7 @@ public class SynchronizationJobItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SynchronizationJobItemRequestBuilderGetRequestConfiguration requestConfig = new SynchronizationJobItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

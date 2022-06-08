@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity used to retrieve information about Intune Certificate Connectors. */
 public class CertificateConnectorDetails extends Entity implements Parsable {
     /** Connector name (set during enrollment). */
     private String _connectorName;

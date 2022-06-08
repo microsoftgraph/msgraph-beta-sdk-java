@@ -77,6 +77,7 @@ public class PrincipalsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrincipalsRequestBuilderGetRequestConfiguration requestConfig = new PrincipalsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

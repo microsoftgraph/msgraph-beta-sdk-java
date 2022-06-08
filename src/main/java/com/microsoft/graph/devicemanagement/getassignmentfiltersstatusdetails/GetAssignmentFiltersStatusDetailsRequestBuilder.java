@@ -55,7 +55,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration requestConfig = new GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
     /**
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body 
-     * @return a CompletableFuture of assignmentFilterStatusDetails
+     * @return a CompletableFuture of AssignmentFilterStatusDetails
      */
-    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, AssignmentFilterStatusDetails::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterStatusDetails
+     * @return a CompletableFuture of AssignmentFilterStatusDetails
      */
-    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, AssignmentFilterStatusDetails::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of assignmentFilterStatusDetails
+     * @return a CompletableFuture of AssignmentFilterStatusDetails
      */
-    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

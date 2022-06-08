@@ -68,6 +68,7 @@ public class GetNonCompliantSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetNonCompliantSettingsRequestBuilderGetRequestConfiguration requestConfig = new GetNonCompliantSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

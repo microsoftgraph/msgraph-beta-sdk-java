@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics work from anywhere model performance. */
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity implements Parsable {
     /** The user experience work from anywhere's cloud identity score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _cloudIdentityScore;

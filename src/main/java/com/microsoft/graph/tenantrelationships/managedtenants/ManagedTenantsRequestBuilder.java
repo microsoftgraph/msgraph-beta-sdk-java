@@ -25,7 +25,7 @@ import microsoft.graph.tenantrelationships.managedtenants.cloudpcconnections.ite
 import microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.CloudPcDevicesRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.item.CloudPcDeviceItemRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.CloudPcsOverviewRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.item.CloudPcOverviewItemRequestBuilder;
+import microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.item.CloudPcOverviewTenantItemRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.ConditionalAccessPolicyCoveragesRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.item.ConditionalAccessPolicyCoverageItemRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.CredentialUserRegistrationsSummariesRequestBuilder;
@@ -50,7 +50,7 @@ import microsoft.graph.tenantrelationships.managedtenants.managementtemplatestep
 import microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.ManagementTemplateStepsRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.ManagementTemplateStepVersionItemRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.ManagementTemplateStepVersionsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.myroles.item.MyRoleItemRequestBuilder;
+import microsoft.graph.tenantrelationships.managedtenants.myroles.item.MyRoleTenantItemRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.myroles.MyRolesRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.tenantgroups.item.TenantGroupItemRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.tenantgroups.TenantGroupsRequestBuilder;
@@ -250,14 +250,14 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcsOverview.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcOverviewItemRequestBuilder
+     * @return a cloudPcOverviewTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CloudPcOverviewItemRequestBuilder cloudPcsOverview(@javax.annotation.Nonnull final String id) {
+    public CloudPcOverviewTenantItemRequestBuilder cloudPcsOverview(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcOverview%2DtenantId", id);
-        return new CloudPcOverviewItemRequestBuilder(urlTplParams, requestAdapter);
+        return new CloudPcOverviewTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.conditionalAccessPolicyCoverages.item collection
@@ -346,6 +346,7 @@ public class ManagedTenantsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedTenantsRequestBuilderGetRequestConfiguration requestConfig = new ManagedTenantsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -624,14 +625,14 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.myRoles.item collection
      * @param id Unique identifier of the item
-     * @return a myRoleItemRequestBuilder
+     * @return a myRoleTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public MyRoleItemRequestBuilder myRoles(@javax.annotation.Nonnull final String id) {
+    public MyRoleTenantItemRequestBuilder myRoles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("myRole%2DtenantId", id);
-        return new MyRoleItemRequestBuilder(urlTplParams, requestAdapter);
+        return new MyRoleTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships

@@ -99,6 +99,7 @@ public class AgedAccountsReceivableItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AgedAccountsReceivableItemRequestBuilderGetRequestConfiguration requestConfig = new AgedAccountsReceivableItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

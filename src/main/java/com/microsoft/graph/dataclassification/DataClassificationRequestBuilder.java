@@ -171,6 +171,7 @@ public class DataClassificationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DataClassificationRequestBuilderGetRequestConfiguration requestConfig = new DataClassificationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

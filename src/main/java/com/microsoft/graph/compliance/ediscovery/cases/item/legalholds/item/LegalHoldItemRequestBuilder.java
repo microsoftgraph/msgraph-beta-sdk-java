@@ -120,6 +120,7 @@ public class LegalHoldItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LegalHoldItemRequestBuilderGetRequestConfiguration requestConfig = new LegalHoldItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

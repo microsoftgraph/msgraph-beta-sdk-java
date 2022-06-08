@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Devices that are managed or pre-enrolled through Intune */
 public class ManagedDevice extends Entity implements Parsable {
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
     private Boolean _aadRegistered;
@@ -202,6 +203,13 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.managedDevice": return new ManagedDevice();
+            }
+        }
         return new ManagedDevice();
     }
     /**

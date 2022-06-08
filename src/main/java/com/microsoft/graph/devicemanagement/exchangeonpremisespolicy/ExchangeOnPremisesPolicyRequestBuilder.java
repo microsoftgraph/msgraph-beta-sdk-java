@@ -105,6 +105,7 @@ public class ExchangeOnPremisesPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExchangeOnPremisesPolicyRequestBuilderGetRequestConfiguration requestConfig = new ExchangeOnPremisesPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

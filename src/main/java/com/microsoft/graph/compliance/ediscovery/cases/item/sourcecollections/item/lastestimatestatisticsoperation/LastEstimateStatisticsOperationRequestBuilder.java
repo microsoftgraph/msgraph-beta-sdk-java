@@ -71,6 +71,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration requestConfig = new LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

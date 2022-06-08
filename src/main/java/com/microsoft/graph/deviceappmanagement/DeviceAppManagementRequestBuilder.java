@@ -62,6 +62,8 @@ import microsoft.graph.deviceappmanagement.windowsinformationprotectionpolicies.
 import microsoft.graph.deviceappmanagement.windowsinformationprotectionpolicies.WindowsInformationProtectionPoliciesRequestBuilder;
 import microsoft.graph.deviceappmanagement.windowsinformationprotectionwipeactions.item.WindowsInformationProtectionWipeActionItemRequestBuilder;
 import microsoft.graph.deviceappmanagement.windowsinformationprotectionwipeactions.WindowsInformationProtectionWipeActionsRequestBuilder;
+import microsoft.graph.deviceappmanagement.windowsmanagedappprotections.item.WindowsManagedAppProtectionItemRequestBuilder;
+import microsoft.graph.deviceappmanagement.windowsmanagedappprotections.WindowsManagedAppProtectionsRequestBuilder;
 import microsoft.graph.deviceappmanagement.windowsmanagementapp.WindowsManagementAppRequestBuilder;
 import microsoft.graph.models.DeviceAppManagement;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -198,6 +200,11 @@ public class DeviceAppManagementRequestBuilder {
     public WindowsInformationProtectionWipeActionsRequestBuilder windowsInformationProtectionWipeActions() {
         return new WindowsInformationProtectionWipeActionsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The windowsManagedAppProtections property */
+    @javax.annotation.Nonnull
+    public WindowsManagedAppProtectionsRequestBuilder windowsManagedAppProtections() {
+        return new WindowsManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The windowsManagementApp property */
     @javax.annotation.Nonnull
     public WindowsManagementAppRequestBuilder windowsManagementApp() {
@@ -262,6 +269,7 @@ public class DeviceAppManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceAppManagementRequestBuilderGetRequestConfiguration requestConfig = new DeviceAppManagementRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -672,6 +680,18 @@ public class DeviceAppManagementRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionWipeAction%2Did", id);
         return new WindowsInformationProtectionWipeActionItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsManagedAppProtections.item collection
+     * @param id Unique identifier of the item
+     * @return a windowsManagedAppProtectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WindowsManagedAppProtectionItemRequestBuilder windowsManagedAppProtections(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("windowsManagedAppProtection%2Did", id);
+        return new WindowsManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Get deviceAppManagement */
     public class DeviceAppManagementRequestBuilderGetQueryParameters {

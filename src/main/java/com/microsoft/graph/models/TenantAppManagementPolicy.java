@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /** Restrictions that apply as default to all application objects in the tenant. */
     private AppManagementConfiguration _applicationRestrictions;

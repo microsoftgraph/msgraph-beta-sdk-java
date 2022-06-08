@@ -112,6 +112,7 @@ public class AccessReviewStageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessReviewStageItemRequestBuilderGetRequestConfiguration requestConfig = new AccessReviewStageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

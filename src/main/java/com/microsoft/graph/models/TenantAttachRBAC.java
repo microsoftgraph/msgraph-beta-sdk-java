@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity that acts as a container for tenant attach enablement functionality. */
 public class TenantAttachRBAC extends Entity implements Parsable {
     /**
      * Instantiates a new tenantAttachRBAC and sets the default values.

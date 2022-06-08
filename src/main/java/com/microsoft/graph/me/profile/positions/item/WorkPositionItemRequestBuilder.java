@@ -99,6 +99,7 @@ public class WorkPositionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WorkPositionItemRequestBuilderGetRequestConfiguration requestConfig = new WorkPositionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

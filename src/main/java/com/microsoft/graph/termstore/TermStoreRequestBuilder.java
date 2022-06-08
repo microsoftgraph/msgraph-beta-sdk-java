@@ -66,7 +66,7 @@ public class TermStoreRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get store
+     * Read the properties and relationships of a store object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -74,7 +74,7 @@ public class TermStoreRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get store
+     * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,6 +85,7 @@ public class TermStoreRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TermStoreRequestBuilderGetRequestConfiguration requestConfig = new TermStoreRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -95,7 +96,7 @@ public class TermStoreRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update store
+     * Update the properties of a store object.
      * @param body 
      * @return a RequestInformation
      */
@@ -104,7 +105,7 @@ public class TermStoreRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update store
+     * Update the properties of a store object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -127,7 +128,7 @@ public class TermStoreRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get store
+     * Read the properties and relationships of a store object.
      * @return a CompletableFuture of store
      */
     public java.util.concurrent.CompletableFuture<Store> get() {
@@ -143,7 +144,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Get store
+     * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of store
      */
@@ -160,7 +161,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Get store
+     * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of store
@@ -190,7 +191,7 @@ public class TermStoreRequestBuilder {
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update store
+     * Update the properties of a store object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -207,7 +208,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Update store
+     * Update the properties of a store object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -225,7 +226,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Update store
+     * Update the properties of a store object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -256,7 +257,7 @@ public class TermStoreRequestBuilder {
         urlTplParams.put("set%2Did", id);
         return new SetItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Get store */
+    /** Read the properties and relationships of a store object. */
     public class TermStoreRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

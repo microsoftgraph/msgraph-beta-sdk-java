@@ -77,6 +77,7 @@ public class AllChannelsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllChannelsRequestBuilderGetRequestConfiguration requestConfig = new AllChannelsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

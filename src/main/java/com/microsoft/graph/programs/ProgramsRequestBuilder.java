@@ -59,7 +59,7 @@ public class ProgramsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List programs
+     * In the Azure AD access reviews feature, list all the program objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ProgramsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List programs
+     * In the Azure AD access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class ProgramsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProgramsRequestBuilderGetRequestConfiguration requestConfig = new ProgramsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -88,7 +89,7 @@ public class ProgramsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create program
+     * In the Azure AD access reviews feature, create a new program object.
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +98,7 @@ public class ProgramsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create program
+     * In the Azure AD access reviews feature, create a new program object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -110,6 +111,7 @@ public class ProgramsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ProgramsRequestBuilderPostRequestConfiguration requestConfig = new ProgramsRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class ProgramsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List programs
+     * In the Azure AD access reviews feature, list all the program objects.
      * @return a CompletableFuture of ProgramCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ProgramCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class ProgramsRequestBuilder {
         }
     }
     /**
-     * List programs
+     * In the Azure AD access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProgramCollectionResponse
      */
@@ -153,7 +155,7 @@ public class ProgramsRequestBuilder {
         }
     }
     /**
-     * List programs
+     * In the Azure AD access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ProgramCollectionResponse
@@ -171,7 +173,7 @@ public class ProgramsRequestBuilder {
         }
     }
     /**
-     * Create program
+     * In the Azure AD access reviews feature, create a new program object.
      * @param body 
      * @return a CompletableFuture of program
      */
@@ -188,7 +190,7 @@ public class ProgramsRequestBuilder {
         }
     }
     /**
-     * Create program
+     * In the Azure AD access reviews feature, create a new program object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of program
@@ -206,7 +208,7 @@ public class ProgramsRequestBuilder {
         }
     }
     /**
-     * Create program
+     * In the Azure AD access reviews feature, create a new program object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +227,7 @@ public class ProgramsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List programs */
+    /** In the Azure AD access reviews feature, list all the program objects. */
     public class ProgramsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

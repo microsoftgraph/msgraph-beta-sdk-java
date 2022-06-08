@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A pool represents a group of embedded SIM activation codes. */
 public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /** The total count of activation codes which belong to this pool. */
     private Integer _activationCodeCount;

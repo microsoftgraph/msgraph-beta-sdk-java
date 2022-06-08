@@ -68,6 +68,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration requestConfig = new GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class PersonAwardItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PersonAwardItemRequestBuilderGetRequestConfiguration requestConfig = new PersonAwardItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class DefaultMacOsEnrollmentProfileRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DefaultMacOsEnrollmentProfileRequestBuilderGetRequestConfiguration requestConfig = new DefaultMacOsEnrollmentProfileRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

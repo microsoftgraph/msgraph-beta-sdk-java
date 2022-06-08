@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ListItemVersion extends BaseItemVersion implements Parsable {
     /** A collection of the fields and values for this version of the list item. */
     private FieldValueSet _fields;
@@ -25,6 +26,13 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     @javax.annotation.Nonnull
     public static ListItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.listItemVersion": return new ListItemVersion();
+            }
+        }
         return new ListItemVersion();
     }
     /**

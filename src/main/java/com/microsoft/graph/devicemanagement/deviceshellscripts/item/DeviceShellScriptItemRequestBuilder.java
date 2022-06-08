@@ -151,6 +151,7 @@ public class DeviceShellScriptItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceShellScriptItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceShellScriptItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

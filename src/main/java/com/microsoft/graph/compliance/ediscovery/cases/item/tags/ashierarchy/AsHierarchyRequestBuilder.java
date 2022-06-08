@@ -68,6 +68,7 @@ public class AsHierarchyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AsHierarchyRequestBuilderGetRequestConfiguration requestConfig = new AsHierarchyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

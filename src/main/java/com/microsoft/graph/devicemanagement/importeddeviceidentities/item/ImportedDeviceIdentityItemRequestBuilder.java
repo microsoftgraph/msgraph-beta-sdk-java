@@ -99,6 +99,7 @@ public class ImportedDeviceIdentityItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ImportedDeviceIdentityItemRequestBuilderGetRequestConfiguration requestConfig = new ImportedDeviceIdentityItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health model performance entity contains battery related information for all unique device models in their organization. */
 public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity implements Parsable {
     /** Number of active devices for that model. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -20,6 +21,8 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     private String _manufacturer;
     /** The model name of the device. */
     private String _model;
+    /** A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
+    private Integer _modelBatteryHealthScore;
     /**
      * Instantiates a new userExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
      * @return a void
@@ -83,6 +86,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
             this.put("averageMaxCapacityPercentage", (n) -> { currentObject.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+            this.put("modelBatteryHealthScore", (n) -> { currentObject.setModelBatteryHealthScore(n.getIntegerValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return this._model;
     }
     /**
+     * Gets the modelBatteryHealthScore property value. A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getModelBatteryHealthScore() {
+        return this._modelBatteryHealthScore;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -115,6 +127,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         writer.writeIntegerValue("averageMaxCapacityPercentage", this.getAverageMaxCapacityPercentage());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("model", this.getModel());
+        writer.writeIntegerValue("modelBatteryHealthScore", this.getModelBatteryHealthScore());
     }
     /**
      * Sets the activeDevices property value. Number of active devices for that model. Valid values -2147483648 to 2147483647
@@ -163,5 +176,13 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      */
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
+    }
+    /**
+     * Sets the modelBatteryHealthScore property value. A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * @param value Value to set for the modelBatteryHealthScore property.
+     * @return a void
+     */
+    public void setModelBatteryHealthScore(@javax.annotation.Nullable final Integer value) {
+        this._modelBatteryHealthScore = value;
     }
 }

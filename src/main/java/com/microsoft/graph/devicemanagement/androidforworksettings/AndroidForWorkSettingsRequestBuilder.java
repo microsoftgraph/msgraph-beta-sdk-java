@@ -123,6 +123,7 @@ public class AndroidForWorkSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AndroidForWorkSettingsRequestBuilderGetRequestConfiguration requestConfig = new AndroidForWorkSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

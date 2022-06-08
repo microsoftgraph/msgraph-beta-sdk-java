@@ -99,6 +99,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration requestConfig = new SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

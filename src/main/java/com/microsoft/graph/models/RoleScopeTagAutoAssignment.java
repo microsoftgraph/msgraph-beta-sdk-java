@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains the properties for auto-assigning a Role Scope Tag to a group to be applied to Devices. */
 public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     /** The auto-assignment target for the specific Role Scope Tag. */
     private DeviceAndAppManagementAssignmentTarget _target;

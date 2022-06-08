@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents the health thresholds of a health metric. */
 public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
     /** The default threshold for being healthy */
     private Long _defaultHealthyThreshold;

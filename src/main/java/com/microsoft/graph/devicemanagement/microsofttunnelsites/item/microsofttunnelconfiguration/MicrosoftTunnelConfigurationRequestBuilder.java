@@ -99,6 +99,7 @@ public class MicrosoftTunnelConfigurationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MicrosoftTunnelConfigurationRequestBuilderGetRequestConfiguration requestConfig = new MicrosoftTunnelConfigurationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

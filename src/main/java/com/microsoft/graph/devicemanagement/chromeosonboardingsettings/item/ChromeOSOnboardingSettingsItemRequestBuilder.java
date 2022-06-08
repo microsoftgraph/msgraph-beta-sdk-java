@@ -99,6 +99,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChromeOSOnboardingSettingsItemRequestBuilderGetRequestConfiguration requestConfig = new ChromeOSOnboardingSettingsItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

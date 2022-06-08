@@ -99,6 +99,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DefaultUserRoleOverrideItemRequestBuilderGetRequestConfiguration requestConfig = new DefaultUserRoleOverrideItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

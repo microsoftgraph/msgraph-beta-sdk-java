@@ -37,10 +37,10 @@ public class ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterW
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.managedDeviceEnrollmentAbandonmentDetails(skip={skip},top={top},filter='{filter}',skipToken='{skipToken}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", filter);
-        urlTplParams.put("", skip);
-        urlTplParams.put("", skipToken);
-        urlTplParams.put("", top);
+        urlTplParams.put("filter", filter);
+        urlTplParams.put("skip", skip);
+        urlTplParams.put("skipToken", skipToken);
+        urlTplParams.put("top", top);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -77,6 +77,7 @@ public class ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterW
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -87,7 +88,7 @@ public class ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterW
     }
     /**
      * Metadata for Enrollment abandonment details report
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get() {
         try {
@@ -100,7 +101,7 @@ public class ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterW
     /**
      * Metadata for Enrollment abandonment details report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -114,7 +115,7 @@ public class ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterW
      * Metadata for Enrollment abandonment details report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

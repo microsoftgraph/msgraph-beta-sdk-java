@@ -99,6 +99,7 @@ public class UploadAgentRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UploadAgentRequestBuilderGetRequestConfiguration requestConfig = new UploadAgentRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

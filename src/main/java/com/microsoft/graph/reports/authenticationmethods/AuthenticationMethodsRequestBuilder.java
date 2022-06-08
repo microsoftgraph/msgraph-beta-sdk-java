@@ -110,6 +110,7 @@ public class AuthenticationMethodsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AuthenticationMethodsRequestBuilderGetRequestConfiguration requestConfig = new AuthenticationMethodsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

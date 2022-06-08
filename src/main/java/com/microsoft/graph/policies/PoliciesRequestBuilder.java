@@ -33,6 +33,7 @@ import microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPolic
 import microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
 import microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
 import microsoft.graph.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
+import microsoft.graph.policies.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
 import microsoft.graph.policies.directoryroleaccessreviewpolicy.DirectoryRoleAccessReviewPolicyRequestBuilder;
 import microsoft.graph.policies.externalidentitiespolicy.ExternalIdentitiesPolicyRequestBuilder;
 import microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
@@ -115,6 +116,11 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public DefaultAppManagementPolicyRequestBuilder defaultAppManagementPolicy() {
         return new DefaultAppManagementPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The deviceRegistrationPolicy property */
+    @javax.annotation.Nonnull
+    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new DeviceRegistrationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /** The directoryRoleAccessReviewPolicy property */
     @javax.annotation.Nonnull
@@ -294,6 +300,7 @@ public class PoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PoliciesRequestBuilderGetRequestConfiguration requestConfig = new PoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

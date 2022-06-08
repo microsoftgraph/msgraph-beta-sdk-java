@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class InformationProtectionPolicy extends Entity implements Parsable {
     /** The labels property */
     private java.util.List<InformationProtectionLabel> _labels;

@@ -59,7 +59,7 @@ public class BookingCurrenciesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List bookingCurrencies
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BookingCurrenciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List bookingCurrencies
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class BookingCurrenciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingCurrenciesRequestBuilderGetRequestConfiguration requestConfig = new BookingCurrenciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class BookingCurrenciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final BookingCurrenciesRequestBuilderPostRequestConfiguration requestConfig = new BookingCurrenciesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class BookingCurrenciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List bookingCurrencies
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @return a CompletableFuture of BookingCurrencyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BookingCurrencyCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class BookingCurrenciesRequestBuilder {
         }
     }
     /**
-     * List bookingCurrencies
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingCurrencyCollectionResponse
      */
@@ -153,7 +155,7 @@ public class BookingCurrenciesRequestBuilder {
         }
     }
     /**
-     * List bookingCurrencies
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BookingCurrencyCollectionResponse
@@ -225,7 +227,7 @@ public class BookingCurrenciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List bookingCurrencies */
+    /** Get a list of bookingCurrency objects available to a Microsoft Bookings business. */
     public class BookingCurrenciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

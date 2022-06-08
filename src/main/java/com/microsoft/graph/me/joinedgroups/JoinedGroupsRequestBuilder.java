@@ -14,17 +14,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.joinedgroups.count.CountRequestBuilder;
 import microsoft.graph.models.Group;
 import microsoft.graph.models.GroupCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the joinedGroups property of the microsoft.graph.user entity. */
 public class JoinedGroupsRequestBuilder {
-    /** The count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -78,6 +72,7 @@ public class JoinedGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final JoinedGroupsRequestBuilderGetRequestConfiguration requestConfig = new JoinedGroupsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +105,7 @@ public class JoinedGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final JoinedGroupsRequestBuilderPostRequestConfiguration requestConfig = new JoinedGroupsRequestBuilderPostRequestConfiguration();

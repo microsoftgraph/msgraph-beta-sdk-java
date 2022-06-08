@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class CloudPcConnection extends Entity implements Parsable {
     /** The display name of the cloud PC connection. Required. Read-only. */
     private String _displayName;

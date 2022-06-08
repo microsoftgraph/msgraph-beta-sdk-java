@@ -78,6 +78,7 @@ public class ContentSharingSessionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContentSharingSessionsRequestBuilderGetRequestConfiguration requestConfig = new ContentSharingSessionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ContentSharingSessionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ContentSharingSessionsRequestBuilderPostRequestConfiguration requestConfig = new ContentSharingSessionsRequestBuilderPostRequestConfiguration();

@@ -78,6 +78,7 @@ public class CartToClassAssociationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CartToClassAssociationsRequestBuilderGetRequestConfiguration requestConfig = new CartToClassAssociationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class CartToClassAssociationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final CartToClassAssociationsRequestBuilderPostRequestConfiguration requestConfig = new CartToClassAssociationsRequestBuilderPostRequestConfiguration();

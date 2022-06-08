@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class ConditionalAccessPolicyCoverage extends Entity implements Parsable {
     /** The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only. */
     private String _conditionalAccessPolicyState;

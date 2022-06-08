@@ -99,6 +99,7 @@ public class ProfileCardPropertyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProfileCardPropertyItemRequestBuilderGetRequestConfiguration requestConfig = new ProfileCardPropertyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

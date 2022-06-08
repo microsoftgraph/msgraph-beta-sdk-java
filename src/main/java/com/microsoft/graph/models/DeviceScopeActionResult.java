@@ -12,16 +12,16 @@ import java.util.Objects;
 public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The triggered action name. */
-    private DeviceScopeAction _deviceScopeAction;
+    /** The triggered action name. Possible values are: . */
+    private String _deviceScopeAction;
     /** The unique identifier of the device scope the action was triggered on. */
     private String _deviceScopeId;
     /** The message indicates the reason the device scope action failed to trigger. */
     private String _failedMessage;
-    /** Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger. */
+    /** Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger. Possible values are: failed, succeeded, unknownFutureValue. */
     private DeviceScopeActionStatus _status;
     /**
-     * Instantiates a new deviceScopeActionResult and sets the default values.
+     * Instantiates a new DeviceScopeActionResult and sets the default values.
      * @return a void
      */
     public DeviceScopeActionResult() {
@@ -30,7 +30,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceScopeActionResult
+     * @return a DeviceScopeActionResult
      */
     @javax.annotation.Nonnull
     public static DeviceScopeActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +46,11 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the deviceScopeAction property value. The triggered action name.
-     * @return a deviceScopeAction
+     * Gets the deviceScopeAction property value. The triggered action name. Possible values are: .
+     * @return a string
      */
     @javax.annotation.Nullable
-    public DeviceScopeAction getDeviceScopeAction() {
+    public String getDeviceScopeAction() {
         return this._deviceScopeAction;
     }
     /**
@@ -77,14 +77,14 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceScopeActionResult currentObject = this;
         return new HashMap<>(4) {{
-            this.put("deviceScopeAction", (n) -> { currentObject.setDeviceScopeAction(n.getObjectValue(DeviceScopeAction::createFromDiscriminatorValue)); });
+            this.put("deviceScopeAction", (n) -> { currentObject.setDeviceScopeAction(n.getStringValue()); });
             this.put("deviceScopeId", (n) -> { currentObject.setDeviceScopeId(n.getStringValue()); });
             this.put("failedMessage", (n) -> { currentObject.setFailedMessage(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceScopeActionStatus.class)); });
         }};
     }
     /**
-     * Gets the status property value. Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger.
+     * Gets the status property value. Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger. Possible values are: failed, succeeded, unknownFutureValue.
      * @return a deviceScopeActionStatus
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeObjectValue("deviceScopeAction", this.getDeviceScopeAction());
+        writer.writeStringValue("deviceScopeAction", this.getDeviceScopeAction());
         writer.writeStringValue("deviceScopeId", this.getDeviceScopeId());
         writer.writeStringValue("failedMessage", this.getFailedMessage());
         writer.writeEnumValue("status", this.getStatus());
@@ -113,11 +113,11 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the deviceScopeAction property value. The triggered action name.
+     * Sets the deviceScopeAction property value. The triggered action name. Possible values are: .
      * @param value Value to set for the deviceScopeAction property.
      * @return a void
      */
-    public void setDeviceScopeAction(@javax.annotation.Nullable final DeviceScopeAction value) {
+    public void setDeviceScopeAction(@javax.annotation.Nullable final String value) {
         this._deviceScopeAction = value;
     }
     /**
@@ -137,7 +137,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         this._failedMessage = value;
     }
     /**
-     * Sets the status property value. Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger.
+     * Sets the status property value. Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger. Possible values are: failed, succeeded, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */

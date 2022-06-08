@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class List extends BaseItem implements Parsable {
     /** The recent activities that took place within this list. */
     private java.util.List<ItemActivityOLD> _activities;

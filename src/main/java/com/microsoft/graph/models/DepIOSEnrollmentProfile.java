@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The DepIOSEnrollmentProfile resource represents an Apple Device Enrollment Program (DEP) enrollment profile specific to iOS configuration. This type of profile must be assigned to Apple DEP serial numbers before the corresponding devices can enroll via DEP. */
 public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements Parsable {
     /** Indicates if Apperance screen is disabled */
     private Boolean _appearanceScreenDisabled;

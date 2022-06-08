@@ -78,6 +78,7 @@ public class ManagedDeviceCompliancesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceCompliancesRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceCompliancesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ManagedDeviceCompliancesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ManagedDeviceCompliancesRequestBuilderPostRequestConfiguration requestConfig = new ManagedDeviceCompliancesRequestBuilderPostRequestConfiguration();

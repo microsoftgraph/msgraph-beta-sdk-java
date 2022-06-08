@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the security singleton. */
 public class Tag extends Entity implements Parsable {
     /** The createdBy property */
     private IdentitySet _createdBy;
@@ -34,6 +35,13 @@ public class Tag extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Tag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.security.tag": return new Tag();
+            }
+        }
         return new Tag();
     }
     /**

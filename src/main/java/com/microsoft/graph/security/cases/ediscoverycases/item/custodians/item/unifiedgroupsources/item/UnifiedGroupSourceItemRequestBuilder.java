@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.UnifiedGroupSource;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.models.security.UnifiedGroupSource;
 import microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.item.group.GroupRequestBuilder;
 /** Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class UnifiedGroupSourceItemRequestBuilder {
@@ -105,6 +105,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedGroupSourceItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedGroupSourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

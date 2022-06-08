@@ -111,6 +111,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagementTemplateStepDeploymentItemRequestBuilderGetRequestConfiguration requestConfig = new ManagementTemplateStepDeploymentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

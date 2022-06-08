@@ -132,6 +132,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration requestConfig = new DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

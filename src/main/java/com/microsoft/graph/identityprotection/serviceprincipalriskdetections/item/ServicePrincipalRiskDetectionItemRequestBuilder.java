@@ -99,6 +99,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration requestConfig = new ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

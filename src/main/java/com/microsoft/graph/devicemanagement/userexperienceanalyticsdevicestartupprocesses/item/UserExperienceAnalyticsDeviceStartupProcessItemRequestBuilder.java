@@ -99,6 +99,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

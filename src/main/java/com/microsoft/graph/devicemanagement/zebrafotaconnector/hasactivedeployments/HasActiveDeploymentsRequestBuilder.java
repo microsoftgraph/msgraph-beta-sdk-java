@@ -68,6 +68,7 @@ public class HasActiveDeploymentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final HasActiveDeploymentsRequestBuilderPostRequestConfiguration requestConfig = new HasActiveDeploymentsRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

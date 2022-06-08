@@ -99,6 +99,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagementActionTenantDeploymentStatusItemRequestBuilderGetRequestConfiguration requestConfig = new ManagementActionTenantDeploymentStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

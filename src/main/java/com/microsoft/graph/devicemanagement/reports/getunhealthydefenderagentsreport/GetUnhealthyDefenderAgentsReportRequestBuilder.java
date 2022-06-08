@@ -7,6 +7,7 @@ import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
@@ -54,7 +55,7 @@ public class GetUnhealthyDefenderAgentsReportRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +65,7 @@ public class GetUnhealthyDefenderAgentsReportRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -83,12 +84,12 @@ public class GetUnhealthyDefenderAgentsReportRequestBuilder {
     /**
      * Invoke action getUnhealthyDefenderAgentsReport
      * @param body 
-     * @return a CompletableFuture of getUnhealthyDefenderAgentsReportResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetUnhealthyDefenderAgentsReportResponse> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportRequestBody body) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, GetUnhealthyDefenderAgentsReportResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -97,12 +98,12 @@ public class GetUnhealthyDefenderAgentsReportRequestBuilder {
      * Invoke action getUnhealthyDefenderAgentsReport
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getUnhealthyDefenderAgentsReportResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetUnhealthyDefenderAgentsReportResponse> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetUnhealthyDefenderAgentsReportResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -112,13 +113,13 @@ public class GetUnhealthyDefenderAgentsReportRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of getUnhealthyDefenderAgentsReportResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetUnhealthyDefenderAgentsReportResponse> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetUnhealthyDefenderAgentsReportResponse::createFromDiscriminatorValue, responseHandler, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

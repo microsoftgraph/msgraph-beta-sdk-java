@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health device app impact entity contains battery usage related information at an app level for a given device. */
 public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity implements Parsable {
     /** User friendly display name for the app. Eg: Outlook */
     private String _appDisplayName;

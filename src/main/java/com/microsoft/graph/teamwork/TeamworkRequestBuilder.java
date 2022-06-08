@@ -16,12 +16,20 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Teamwork;
+import microsoft.graph.teamwork.deletedteams.DeletedTeamsRequestBuilder;
+import microsoft.graph.teamwork.deletedteams.item.DeletedTeamItemRequestBuilder;
 import microsoft.graph.teamwork.devices.DevicesRequestBuilder;
 import microsoft.graph.teamwork.devices.item.TeamworkDeviceItemRequestBuilder;
+import microsoft.graph.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
 import microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
 import microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 /** Provides operations to manage the teamwork singleton. */
 public class TeamworkRequestBuilder {
+    /** The deletedTeams property */
+    @javax.annotation.Nonnull
+    public DeletedTeamsRequestBuilder deletedTeams() {
+        return new DeletedTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The devices property */
     @javax.annotation.Nonnull
     public DevicesRequestBuilder devices() {
@@ -31,6 +39,11 @@ public class TeamworkRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The sendActivityNotificationToRecipients property */
+    @javax.annotation.Nonnull
+    public SendActivityNotificationToRecipientsRequestBuilder sendActivityNotificationToRecipients() {
+        return new SendActivityNotificationToRecipientsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /** The workforceIntegrations property */
@@ -85,6 +98,7 @@ public class TeamworkRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamworkRequestBuilderGetRequestConfiguration requestConfig = new TeamworkRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -125,6 +139,18 @@ public class TeamworkRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.teamwork.deletedTeams.item collection
+     * @param id Unique identifier of the item
+     * @return a deletedTeamItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeletedTeamItemRequestBuilder deletedTeams(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deletedTeam%2Did", id);
+        return new DeletedTeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.teamwork.devices.item collection

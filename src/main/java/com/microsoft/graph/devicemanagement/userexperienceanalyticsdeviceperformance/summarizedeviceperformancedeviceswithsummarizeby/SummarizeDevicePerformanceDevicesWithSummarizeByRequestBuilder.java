@@ -33,7 +33,7 @@ public class SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/userExperienceAnalyticsDevicePerformance/microsoft.graph.summarizeDevicePerformanceDevices(summarizeBy='{summarizeBy}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", summarizeBy);
+        urlTplParams.put("summarizeBy", summarizeBy);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilderGetRequestConfiguration requestConfig = new SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

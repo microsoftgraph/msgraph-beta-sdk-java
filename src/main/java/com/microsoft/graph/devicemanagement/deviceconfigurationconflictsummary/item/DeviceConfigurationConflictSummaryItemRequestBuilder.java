@@ -99,6 +99,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceConfigurationConflictSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceConfigurationConflictSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of mobilityManagementPolicy entities. */
 public class MobilityManagementPolicy extends Entity implements Parsable {
     /** Indicates the user scope of the mobility management policy. Possible values are: none, all, selected. */
     private PolicyScope _appliesTo;

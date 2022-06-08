@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.identity.b2cuserflows.item.identityproviders.count.CountRequestBuilder;
+import microsoft.graph.identity.b2cuserflows.item.identityproviders.ref.RefRequestBuilder;
 import microsoft.graph.models.IdentityProviderCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityProviders property of the microsoft.graph.b2cIdentityUserFlow entity. */
@@ -26,6 +27,11 @@ public class IdentityProvidersRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -77,6 +83,7 @@ public class IdentityProvidersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityProvidersRequestBuilderGetRequestConfiguration requestConfig = new IdentityProvidersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

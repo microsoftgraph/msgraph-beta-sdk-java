@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class PrintJob extends Entity implements Parsable {
     /** A group of settings that a printer should use to print a job. */
     private PrintJobConfiguration _configuration;

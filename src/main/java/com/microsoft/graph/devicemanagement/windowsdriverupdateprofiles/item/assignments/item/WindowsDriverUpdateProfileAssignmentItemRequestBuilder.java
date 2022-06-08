@@ -99,6 +99,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsDriverUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsDriverUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

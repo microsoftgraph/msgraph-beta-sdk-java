@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcUserSetting extends Entity implements Parsable {
     /** Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample. */
     private java.util.List<CloudPcUserSettingAssignment> _assignments;

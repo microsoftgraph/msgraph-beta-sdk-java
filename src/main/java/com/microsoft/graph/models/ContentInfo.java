@@ -15,7 +15,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     private ContentFormat _format;
     /** Identifier used for Azure Information Protection Analytics. */
     private String _identifier;
-    /** Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName. */
+    /** Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName. */
     private java.util.List<KeyValuePair> _metadata;
     /** Possible values are: rest, motion, use. */
     private ContentState _state;
@@ -75,7 +75,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         return this._identifier;
     }
     /**
-     * Gets the metadata property value. Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Gets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this._identifier = value;
     }
     /**
-     * Sets the metadata property value. Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Sets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
      * @param value Value to set for the metadata property.
      * @return a void
      */

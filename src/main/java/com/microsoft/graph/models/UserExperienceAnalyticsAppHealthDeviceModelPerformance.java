@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device model performance entity contains device model performance details. */
 public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity implements Parsable {
     /** The number of active devices for the model. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;

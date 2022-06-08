@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for a single Intune eBook category. */
 public class ManagedEBookCategory extends Entity implements Parsable {
     /** The name of the eBook category. */
     private String _displayName;

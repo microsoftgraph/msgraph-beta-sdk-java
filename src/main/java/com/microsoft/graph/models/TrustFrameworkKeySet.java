@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the trustFramework singleton. */
 public class TrustFrameworkKeySet extends Entity implements Parsable {
     /** A collection of the keys. */
     private java.util.List<TrustFrameworkKey> _keys;

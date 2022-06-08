@@ -79,6 +79,7 @@ public class DepOnboardingSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DepOnboardingSettingsRequestBuilderGetRequestConfiguration requestConfig = new DepOnboardingSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class DepOnboardingSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DepOnboardingSettingsRequestBuilderPostRequestConfiguration requestConfig = new DepOnboardingSettingsRequestBuilderPostRequestConfiguration();

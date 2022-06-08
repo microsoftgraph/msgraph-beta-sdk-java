@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class AccessReviewReviewerScope extends AccessReviewScope implements Parsable {
     /** The query specifying who will be the reviewer. See table for examples. */
     private String _query;

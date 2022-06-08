@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the admin singleton. */
 public class UpdatableAsset extends Entity implements Parsable {
     /**
      * Instantiates a new updatableAsset and sets the default values.
@@ -24,6 +25,13 @@ public class UpdatableAsset extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static UpdatableAsset createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.updatableAsset": return new UpdatableAsset();
+            }
+        }
         return new UpdatableAsset();
     }
     /**

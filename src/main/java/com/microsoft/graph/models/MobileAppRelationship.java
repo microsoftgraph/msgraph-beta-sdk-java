@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes a relationship between two mobile apps. */
 public class MobileAppRelationship extends Entity implements Parsable {
     /** The target mobile app's display name. */
     private String _targetDisplayName;
@@ -33,6 +34,13 @@ public class MobileAppRelationship extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static MobileAppRelationship createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.mobileAppRelationship": return new MobileAppRelationship();
+            }
+        }
         return new MobileAppRelationship();
     }
     /**

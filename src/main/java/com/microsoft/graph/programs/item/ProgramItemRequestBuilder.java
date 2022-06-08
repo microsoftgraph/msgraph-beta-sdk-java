@@ -71,7 +71,7 @@ public class ProgramItemRequestBuilder {
         return new ProgramControlItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Delete program
+     * In the Azure AD access reviews feature, delete a program object. Do not delete a program which still has `programControl` linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class ProgramItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete program
+     * In the Azure AD access reviews feature, delete a program object. Do not delete a program which still has `programControl` linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -118,6 +118,7 @@ public class ProgramItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProgramItemRequestBuilderGetRequestConfiguration requestConfig = new ProgramItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -128,7 +129,7 @@ public class ProgramItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update program
+     * In the Azure AD access reviews feature, update an existing program object.
      * @param body 
      * @return a RequestInformation
      */
@@ -137,7 +138,7 @@ public class ProgramItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update program
+     * In the Azure AD access reviews feature, update an existing program object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -160,7 +161,7 @@ public class ProgramItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete program
+     * In the Azure AD access reviews feature, delete a program object. Do not delete a program which still has `programControl` linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -176,7 +177,7 @@ public class ProgramItemRequestBuilder {
         }
     }
     /**
-     * Delete program
+     * In the Azure AD access reviews feature, delete a program object. Do not delete a program which still has `programControl` linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -193,7 +194,7 @@ public class ProgramItemRequestBuilder {
         }
     }
     /**
-     * Delete program
+     * In the Azure AD access reviews feature, delete a program object. Do not delete a program which still has `programControl` linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -262,7 +263,7 @@ public class ProgramItemRequestBuilder {
         }
     }
     /**
-     * Update program
+     * In the Azure AD access reviews feature, update an existing program object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -279,7 +280,7 @@ public class ProgramItemRequestBuilder {
         }
     }
     /**
-     * Update program
+     * In the Azure AD access reviews feature, update an existing program object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -297,7 +298,7 @@ public class ProgramItemRequestBuilder {
         }
     }
     /**
-     * Update program
+     * In the Azure AD access reviews feature, update an existing program object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

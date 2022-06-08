@@ -17,7 +17,6 @@ import java.util.Objects;
 import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assign.AssignRequestBuilder;
 import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments.AssignmentsRequestBuilder;
 import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments.item.EnrollmentConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.createenrollmentnotificationconfiguration.CreateEnrollmentNotificationConfigurationRequestBuilder;
 import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.setpriority.SetPriorityRequestBuilder;
 import microsoft.graph.models.DeviceEnrollmentConfiguration;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -32,11 +31,6 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The createEnrollmentNotificationConfiguration property */
-    @javax.annotation.Nonnull
-    public CreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
-        return new CreateEnrollmentNotificationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -136,6 +130,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

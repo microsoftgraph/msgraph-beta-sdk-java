@@ -146,6 +146,7 @@ public class MailFolderItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MailFolderItemRequestBuilderGetRequestConfiguration requestConfig = new MailFolderItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

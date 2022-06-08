@@ -52,7 +52,7 @@ public class DirectorySettingItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete directorySetting
+     * Delete a directory setting.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class DirectorySettingItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete directorySetting
+     * Delete a directory setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -80,7 +80,7 @@ public class DirectorySettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directorySetting
+     * Retrieve the properties of a specific directory setting object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class DirectorySettingItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get directorySetting
+     * Retrieve the properties of a specific directory setting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +99,7 @@ public class DirectorySettingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectorySettingItemRequestBuilderGetRequestConfiguration requestConfig = new DirectorySettingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -109,7 +110,7 @@ public class DirectorySettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update directorySetting
+     * Update the properties of a specific directory setting object.
      * @param body 
      * @return a RequestInformation
      */
@@ -118,7 +119,7 @@ public class DirectorySettingItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update directorySetting
+     * Update the properties of a specific directory setting object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -141,7 +142,7 @@ public class DirectorySettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete directorySetting
+     * Delete a directory setting.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -157,7 +158,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Delete directorySetting
+     * Delete a directory setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -174,7 +175,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Delete directorySetting
+     * Delete a directory setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -192,7 +193,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Get directorySetting
+     * Retrieve the properties of a specific directory setting object.
      * @return a CompletableFuture of directorySetting
      */
     public java.util.concurrent.CompletableFuture<DirectorySetting> get() {
@@ -208,7 +209,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Get directorySetting
+     * Retrieve the properties of a specific directory setting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directorySetting
      */
@@ -225,7 +226,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Get directorySetting
+     * Retrieve the properties of a specific directory setting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directorySetting
@@ -243,7 +244,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Update directorySetting
+     * Update the properties of a specific directory setting object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -260,7 +261,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Update directorySetting
+     * Update the properties of a specific directory setting object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -278,7 +279,7 @@ public class DirectorySettingItemRequestBuilder {
         }
     }
     /**
-     * Update directorySetting
+     * Update the properties of a specific directory setting object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -312,7 +313,7 @@ public class DirectorySettingItemRequestBuilder {
         public DirectorySettingItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get directorySetting */
+    /** Retrieve the properties of a specific directory setting object. */
     public class DirectorySettingItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -69,6 +69,7 @@ public class CloneRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloneRequestBuilderPostRequestConfiguration requestConfig = new CloneRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

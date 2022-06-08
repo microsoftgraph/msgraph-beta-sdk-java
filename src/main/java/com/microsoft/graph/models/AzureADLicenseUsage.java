@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getAzureADLicenseUsage method. */
 public class AzureADLicenseUsage extends Entity implements Parsable {
     /** The licenseInfoDetails property */
     private java.util.List<LicenseInfoDetail> _licenseInfoDetails;

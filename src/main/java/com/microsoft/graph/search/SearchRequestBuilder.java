@@ -122,6 +122,7 @@ public class SearchRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SearchRequestBuilderGetRequestConfiguration requestConfig = new SearchRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

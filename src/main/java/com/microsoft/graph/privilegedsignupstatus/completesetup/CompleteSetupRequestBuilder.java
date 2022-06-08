@@ -54,7 +54,7 @@ public class CompleteSetupRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CompleteSetupRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CompleteSetupPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class CompleteSetupRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CompleteSetupRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CompleteSetupRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CompleteSetupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CompleteSetupRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final CompleteSetupRequestBuilderPostRequestConfiguration requestConfig = new CompleteSetupRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class CompleteSetupRequestBuilder {
      * @param body 
      * @return a CompletableFuture of completeSetupResponse
      */
-    public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@javax.annotation.Nonnull final CompleteSetupRequestBody body) {
+    public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@javax.annotation.Nonnull final CompleteSetupPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, CompleteSetupResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class CompleteSetupRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of completeSetupResponse
      */
-    public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@javax.annotation.Nonnull final CompleteSetupRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CompleteSetupRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@javax.annotation.Nonnull final CompleteSetupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CompleteSetupRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, CompleteSetupResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class CompleteSetupRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of completeSetupResponse
      */
-    public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@javax.annotation.Nonnull final CompleteSetupRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CompleteSetupRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@javax.annotation.Nonnull final CompleteSetupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CompleteSetupRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

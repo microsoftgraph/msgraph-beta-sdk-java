@@ -18,6 +18,7 @@ import microsoft.graph.models.DeviceEnrollmentConfiguration;
 import microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.deviceenrollmentconfigurations.count.CountRequestBuilder;
+import microsoft.graph.users.item.deviceenrollmentconfigurations.createenrollmentnotificationconfiguration.CreateEnrollmentNotificationConfigurationRequestBuilder;
 import microsoft.graph.users.item.deviceenrollmentconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity. */
 public class DeviceEnrollmentConfigurationsRequestBuilder {
@@ -25,6 +26,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The createEnrollmentNotificationConfiguration property */
+    @javax.annotation.Nonnull
+    public CreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
+        return new CreateEnrollmentNotificationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /** The hasPayloadLinks property */
     @javax.annotation.Nonnull
@@ -84,6 +90,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +123,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration();

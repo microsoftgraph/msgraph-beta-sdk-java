@@ -34,7 +34,7 @@ public class GetByPathWithPathRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/sites/{site%2Did}/microsoft.graph.getByPath(path='{path}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", path);
+        urlTplParams.put("path", path);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -71,6 +71,7 @@ public class GetByPathWithPathRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetByPathWithPathRequestBuilderGetRequestConfiguration requestConfig = new GetByPathWithPathRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

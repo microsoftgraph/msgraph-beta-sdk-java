@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class Contact extends OutlookItem implements Parsable {
     /** The name of the contact's assistant. */
     private String _assistantName;

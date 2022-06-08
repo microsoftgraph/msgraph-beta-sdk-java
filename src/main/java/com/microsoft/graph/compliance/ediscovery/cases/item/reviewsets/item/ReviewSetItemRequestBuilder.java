@@ -118,6 +118,7 @@ public class ReviewSetItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ReviewSetItemRequestBuilderGetRequestConfiguration requestConfig = new ReviewSetItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -68,6 +68,7 @@ public class GetManagedAppBlockedUsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetManagedAppBlockedUsersRequestBuilderGetRequestConfiguration requestConfig = new GetManagedAppBlockedUsersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

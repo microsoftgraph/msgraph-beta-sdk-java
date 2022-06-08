@@ -143,6 +143,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

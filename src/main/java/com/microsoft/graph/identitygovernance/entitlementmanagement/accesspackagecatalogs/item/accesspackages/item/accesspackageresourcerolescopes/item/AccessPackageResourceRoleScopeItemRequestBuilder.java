@@ -111,6 +111,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

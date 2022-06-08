@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The security baseline compliance state of a setting for a device */
 public class SecurityBaselineSettingState extends Entity implements Parsable {
     /** The policies that contribute to this setting instance */
     private java.util.List<SecurityBaselineContributingPolicy> _contributingPolicies;

@@ -105,6 +105,7 @@ public class AppLogCollectionRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration requestConfig = new AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

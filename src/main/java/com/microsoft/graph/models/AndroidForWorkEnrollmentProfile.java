@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Enrollment Profile used to enroll COSU devices using Google's Cloud Management. */
 public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable {
     /** Tenant GUID the enrollment profile belongs to. */
     private String _accountId;

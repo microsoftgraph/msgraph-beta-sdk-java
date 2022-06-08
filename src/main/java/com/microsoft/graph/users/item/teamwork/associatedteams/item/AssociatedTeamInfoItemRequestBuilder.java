@@ -99,6 +99,7 @@ public class AssociatedTeamInfoItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AssociatedTeamInfoItemRequestBuilderGetRequestConfiguration requestConfig = new AssociatedTeamInfoItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -18,6 +18,7 @@ import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.count.CountRequestBuilder;
+import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.ref.RefRequestBuilder;
 /** Provides operations to manage the appliesTo property of the microsoft.graph.featureRolloutPolicy entity. */
 public class AppliesToRequestBuilder {
     /** The count property */
@@ -27,6 +28,11 @@ public class AppliesToRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -78,6 +84,7 @@ public class AppliesToRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppliesToRequestBuilderGetRequestConfiguration requestConfig = new AppliesToRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +117,7 @@ public class AppliesToRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AppliesToRequestBuilderPostRequestConfiguration requestConfig = new AppliesToRequestBuilderPostRequestConfiguration();

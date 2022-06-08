@@ -142,6 +142,7 @@ public class TeamworkDeviceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamworkDeviceItemRequestBuilderGetRequestConfiguration requestConfig = new TeamworkDeviceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

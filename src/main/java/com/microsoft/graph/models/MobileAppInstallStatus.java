@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for the installation state of a mobile app for a device. */
 public class MobileAppInstallStatus extends Entity implements Parsable {
     /** The navigation link to the mobile app. */
     private MobileApp _app;

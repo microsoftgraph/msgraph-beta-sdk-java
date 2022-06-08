@@ -90,6 +90,7 @@ public class NoncustodialDataSourcesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NoncustodialDataSourcesRequestBuilderGetRequestConfiguration requestConfig = new NoncustodialDataSourcesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -122,6 +123,7 @@ public class NoncustodialDataSourcesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final NoncustodialDataSourcesRequestBuilderPostRequestConfiguration requestConfig = new NoncustodialDataSourcesRequestBuilderPostRequestConfiguration();

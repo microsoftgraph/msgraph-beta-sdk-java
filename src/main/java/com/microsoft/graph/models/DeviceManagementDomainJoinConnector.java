@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A Domain Join Connector is a connector that is responsible to allocate (and delete) machine account blobs */
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
     /** The connector display name. */
     private String _displayName;

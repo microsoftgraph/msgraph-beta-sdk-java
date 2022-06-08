@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class OutlookTask extends OutlookItem implements Parsable {
     /** The name of the person who has been assigned the task in Outlook. Read-only. */
     private String _assignedTo;

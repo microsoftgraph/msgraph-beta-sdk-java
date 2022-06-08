@@ -99,6 +99,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementDerivedCredentialSettingsItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementDerivedCredentialSettingsItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

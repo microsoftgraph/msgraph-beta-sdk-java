@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device performance details. */
 public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity implements Parsable {
     /** The number of app crashes for the device. Valid values -2147483648 to 2147483647 */
     private Integer _appCrashCount;

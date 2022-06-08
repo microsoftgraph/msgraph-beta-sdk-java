@@ -99,6 +99,7 @@ public class EducationSynchronizationErrorItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EducationSynchronizationErrorItemRequestBuilderGetRequestConfiguration requestConfig = new EducationSynchronizationErrorItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

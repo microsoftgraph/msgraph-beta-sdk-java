@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the identityContainer singleton. */
+/** Provides operations to manage the policyRoot singleton. */
 public enum ContinuousAccessEvaluationMode implements ValuedEnum {
     StrictEnforcement("strictEnforcement"),
     Disabled("disabled"),

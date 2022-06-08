@@ -99,6 +99,7 @@ public class InformationProtectionLabelItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InformationProtectionLabelItemRequestBuilderGetRequestConfiguration requestConfig = new InformationProtectionLabelItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

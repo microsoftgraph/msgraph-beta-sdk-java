@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The entity describes all of the information about a single group policy. */
 public class GroupPolicyDefinition extends Entity implements Parsable {
     /** The group policy category associated with the definition. */
     private GroupPolicyCategory _category;

@@ -118,6 +118,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsRegressionSummaryRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsRegressionSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

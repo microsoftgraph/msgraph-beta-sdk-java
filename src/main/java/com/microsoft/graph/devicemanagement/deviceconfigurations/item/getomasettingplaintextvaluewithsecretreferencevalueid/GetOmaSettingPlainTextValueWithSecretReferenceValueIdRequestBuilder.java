@@ -33,7 +33,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/microsoft.graph.getOmaSettingPlainTextValue(secretReferenceValueId='{secretReferenceValueId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", secretReferenceValueId);
+        urlTplParams.put("secretReferenceValueId", secretReferenceValueId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilderGetRequestConfiguration requestConfig = new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

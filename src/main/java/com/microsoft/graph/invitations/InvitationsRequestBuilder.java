@@ -78,6 +78,7 @@ public class InvitationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InvitationsRequestBuilderGetRequestConfiguration requestConfig = new InvitationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -88,7 +89,7 @@ public class InvitationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +98,7 @@ public class InvitationsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -110,6 +111,7 @@ public class InvitationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final InvitationsRequestBuilderPostRequestConfiguration requestConfig = new InvitationsRequestBuilderPostRequestConfiguration();
@@ -171,7 +173,7 @@ public class InvitationsRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
      * @param body 
      * @return a CompletableFuture of invitation
      */
@@ -188,7 +190,7 @@ public class InvitationsRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of invitation
@@ -206,7 +208,7 @@ public class InvitationsRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

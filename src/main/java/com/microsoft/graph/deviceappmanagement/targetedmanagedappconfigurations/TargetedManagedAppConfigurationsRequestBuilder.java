@@ -84,6 +84,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TargetedManagedAppConfigurationsRequestBuilderGetRequestConfiguration requestConfig = new TargetedManagedAppConfigurationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration requestConfig = new TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration();

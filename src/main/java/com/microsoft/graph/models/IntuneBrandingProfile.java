@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains data which is used in customizing the tenant level appearance of the Company Portal applications as well as the end user web portal. */
 public class IntuneBrandingProfile extends Entity implements Parsable {
     /** The list of group assignments for the branding profile */
     private java.util.List<IntuneBrandingProfileAssignment> _assignments;

@@ -156,6 +156,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration requestConfig = new EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

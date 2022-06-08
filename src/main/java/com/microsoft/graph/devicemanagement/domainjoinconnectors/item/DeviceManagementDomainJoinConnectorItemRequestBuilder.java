@@ -99,6 +99,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementDomainJoinConnectorItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementDomainJoinConnectorItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

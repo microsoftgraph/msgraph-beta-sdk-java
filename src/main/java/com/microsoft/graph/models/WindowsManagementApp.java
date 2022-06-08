@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows management app entity. */
 public class WindowsManagementApp extends Entity implements Parsable {
     /** Windows management app available version. */
     private String _availableVersion;

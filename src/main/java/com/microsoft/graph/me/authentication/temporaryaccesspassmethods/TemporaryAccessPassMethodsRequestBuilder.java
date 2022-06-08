@@ -78,6 +78,7 @@ public class TemporaryAccessPassMethodsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TemporaryAccessPassMethodsRequestBuilderGetRequestConfiguration requestConfig = new TemporaryAccessPassMethodsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class TemporaryAccessPassMethodsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final TemporaryAccessPassMethodsRequestBuilderPostRequestConfiguration requestConfig = new TemporaryAccessPassMethodsRequestBuilderPostRequestConfiguration();

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties used to assign a device management script to a group. */
 public class DeviceManagementScriptGroupAssignment extends Entity implements Parsable {
     /** The Id of the Azure Active Directory group we are targeting the script to. */
     private String _targetGroupId;

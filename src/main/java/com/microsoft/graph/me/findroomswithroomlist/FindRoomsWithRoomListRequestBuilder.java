@@ -33,7 +33,7 @@ public class FindRoomsWithRoomListRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/microsoft.graph.findRooms(RoomList='{RoomList}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", roomList);
+        urlTplParams.put("RoomList", roomList);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class FindRoomsWithRoomListRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FindRoomsWithRoomListRequestBuilderGetRequestConfiguration requestConfig = new FindRoomsWithRoomListRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

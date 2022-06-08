@@ -17,7 +17,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
     /** Role Definition IDs for the specifc Role Definitions assigned to a user. This property is read-only. */
     private java.util.List<String> _roleDefinitionIds;
     /**
-     * Instantiates a new deviceAndAppManagementAssignedRoleDetails and sets the default values.
+     * Instantiates a new DeviceAndAppManagementAssignedRoleDetails and sets the default values.
      * @return a void
      */
     public DeviceAndAppManagementAssignedRoleDetails() {
@@ -26,7 +26,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementAssignedRoleDetails
+     * @return a DeviceAndAppManagementAssignedRoleDetails
      */
     @javax.annotation.Nonnull
     public static DeviceAndAppManagementAssignedRoleDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

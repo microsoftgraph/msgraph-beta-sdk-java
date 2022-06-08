@@ -33,7 +33,7 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.getRoleScopeTagsByIds(ids={ids})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", ids);
+        urlTplParams.put("ids", ids);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration requestConfig = new GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

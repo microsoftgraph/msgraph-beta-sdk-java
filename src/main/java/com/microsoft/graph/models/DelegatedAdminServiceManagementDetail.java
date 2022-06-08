@@ -7,9 +7,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the tenantRelationship singleton. */
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
-    /** The serviceId property */
-    private String _serviceId;
     /** The URL of the management portal for the managed service. Read-only. */
     private String _serviceManagementUrl;
     /** The name of a managed service. Read-only. */
@@ -39,18 +38,9 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminServiceManagementDetail currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
             this.put("serviceManagementUrl", (n) -> { currentObject.setServiceManagementUrl(n.getStringValue()); });
             this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the serviceId property value. The serviceId property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getServiceId() {
-        return this._serviceId;
     }
     /**
      * Gets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
@@ -76,17 +66,8 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("serviceId", this.getServiceId());
         writer.writeStringValue("serviceManagementUrl", this.getServiceManagementUrl());
         writer.writeStringValue("serviceName", this.getServiceName());
-    }
-    /**
-     * Sets the serviceId property value. The serviceId property
-     * @param value Value to set for the serviceId property.
-     * @return a void
-     */
-    public void setServiceId(@javax.annotation.Nullable final String value) {
-        this._serviceId = value;
     }
     /**
      * Sets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity representing a setting category */
 public class DeviceManagementSettingCategory extends Entity implements Parsable {
     /** The category name */
     private String _displayName;
@@ -29,6 +30,13 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public static DeviceManagementSettingCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementSettingCategory": return new DeviceManagementSettingCategory();
+            }
+        }
         return new DeviceManagementSettingCategory();
     }
     /**

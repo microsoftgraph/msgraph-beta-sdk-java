@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for the deployment state of a WindowsDefenderApplicationControl supplemental policy for a device. */
 public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extends Entity implements Parsable {
     /** The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound. */
     private WindowsDefenderApplicationControlSupplementalPolicyStatuses _deploymentStatus;

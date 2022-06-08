@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the admin singleton. */
 public class Windows extends Entity implements Parsable {
     /** Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only. */
     private Updates _updates;

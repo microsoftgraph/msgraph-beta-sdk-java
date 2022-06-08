@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.applications.item.appmanagementpolicies.count.CountRequestBuilder;
+import microsoft.graph.applications.item.appmanagementpolicies.ref.RefRequestBuilder;
 import microsoft.graph.models.AppManagementPolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appManagementPolicies property of the microsoft.graph.application entity. */
@@ -26,6 +27,11 @@ public class AppManagementPoliciesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -77,6 +83,7 @@ public class AppManagementPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppManagementPoliciesRequestBuilderGetRequestConfiguration requestConfig = new AppManagementPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

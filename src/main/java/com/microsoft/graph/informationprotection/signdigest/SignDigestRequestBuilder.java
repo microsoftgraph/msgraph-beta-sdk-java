@@ -55,7 +55,7 @@ public class SignDigestRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SignDigestRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SignDigestPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class SignDigestRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SignDigestRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SignDigestRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SignDigestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SignDigestRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SignDigestRequestBuilderPostRequestConfiguration requestConfig = new SignDigestRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class SignDigestRequestBuilder {
     /**
      * Invoke action signDigest
      * @param body 
-     * @return a CompletableFuture of signingResult
+     * @return a CompletableFuture of SigningResult
      */
-    public java.util.concurrent.CompletableFuture<SigningResult> post(@javax.annotation.Nonnull final SignDigestRequestBody body) {
+    public java.util.concurrent.CompletableFuture<SigningResult> post(@javax.annotation.Nonnull final SignDigestPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, SigningResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class SignDigestRequestBuilder {
      * Invoke action signDigest
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of signingResult
+     * @return a CompletableFuture of SigningResult
      */
-    public java.util.concurrent.CompletableFuture<SigningResult> post(@javax.annotation.Nonnull final SignDigestRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SignDigestRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SigningResult> post(@javax.annotation.Nonnull final SignDigestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SignDigestRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, SigningResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class SignDigestRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of signingResult
+     * @return a CompletableFuture of SigningResult
      */
-    public java.util.concurrent.CompletableFuture<SigningResult> post(@javax.annotation.Nonnull final SignDigestRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SignDigestRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<SigningResult> post(@javax.annotation.Nonnull final SignDigestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SignDigestRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

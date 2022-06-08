@@ -71,6 +71,7 @@ public class DefaultIosEnrollmentProfileRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DefaultIosEnrollmentProfileRequestBuilderGetRequestConfiguration requestConfig = new DefaultIosEnrollmentProfileRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

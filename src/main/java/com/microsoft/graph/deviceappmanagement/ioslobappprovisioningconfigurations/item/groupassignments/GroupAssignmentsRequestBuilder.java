@@ -78,6 +78,7 @@ public class GroupAssignmentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupAssignmentsRequestBuilderGetRequestConfiguration requestConfig = new GroupAssignmentsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class GroupAssignmentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final GroupAssignmentsRequestBuilderPostRequestConfiguration requestConfig = new GroupAssignmentsRequestBuilderPostRequestConfiguration();

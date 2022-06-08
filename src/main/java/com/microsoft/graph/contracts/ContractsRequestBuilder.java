@@ -77,7 +77,7 @@ public class ContractsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List contracts
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class ContractsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List contracts
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -96,6 +96,7 @@ public class ContractsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContractsRequestBuilderGetRequestConfiguration requestConfig = new ContractsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -128,6 +129,7 @@ public class ContractsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ContractsRequestBuilderPostRequestConfiguration requestConfig = new ContractsRequestBuilderPostRequestConfiguration();
@@ -138,7 +140,7 @@ public class ContractsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List contracts
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @return a CompletableFuture of ContractCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ContractCollectionResponse> get() {
@@ -154,7 +156,7 @@ public class ContractsRequestBuilder {
         }
     }
     /**
-     * List contracts
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ContractCollectionResponse
      */
@@ -171,7 +173,7 @@ public class ContractsRequestBuilder {
         }
     }
     /**
-     * List contracts
+     * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ContractCollectionResponse
@@ -243,7 +245,7 @@ public class ContractsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List contracts */
+    /** Retrieve a list of contract objects associated to a partner tenant. */
     public class ContractsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

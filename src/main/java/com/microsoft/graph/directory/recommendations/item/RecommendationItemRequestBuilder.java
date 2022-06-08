@@ -130,6 +130,7 @@ public class RecommendationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RecommendationItemRequestBuilderGetRequestConfiguration requestConfig = new RecommendationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

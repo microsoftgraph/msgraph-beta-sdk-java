@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /** The list of breaks associated with the timeCard. */
     private java.util.List<TimeCardBreak> _breaks;

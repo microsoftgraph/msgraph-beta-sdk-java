@@ -99,6 +99,7 @@ public class PersonAnnualEventItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PersonAnnualEventItemRequestBuilderGetRequestConfiguration requestConfig = new PersonAnnualEventItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

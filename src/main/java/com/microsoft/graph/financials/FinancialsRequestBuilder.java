@@ -90,6 +90,7 @@ public class FinancialsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FinancialsRequestBuilderGetRequestConfiguration requestConfig = new FinancialsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

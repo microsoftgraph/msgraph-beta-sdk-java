@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics baseline entity contains baseline values against which to compare the user experience analytics scores. */
 public class UserExperienceAnalyticsBaseline extends Entity implements Parsable {
     /** The user experience analytics app health metrics. */
     private UserExperienceAnalyticsCategory _appHealthMetrics;

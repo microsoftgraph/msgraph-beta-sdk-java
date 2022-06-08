@@ -33,7 +33,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/sites/{site%2Did}/microsoft.graph.getApplicableContentTypesForList(listId='{listId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", listId);
+        urlTplParams.put("listId", listId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration requestConfig = new GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

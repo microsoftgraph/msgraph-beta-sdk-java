@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the commsApplication singleton. */
 public class MeetingRegistrantBase extends Entity implements Parsable {
     /** A unique web URL for the registrant to join the meeting. Read-only. */
     private String _joinWebUrl;
@@ -25,6 +26,13 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static MeetingRegistrantBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.meetingRegistrantBase": return new MeetingRegistrantBase();
+            }
+        }
         return new MeetingRegistrantBase();
     }
     /**

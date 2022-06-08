@@ -68,6 +68,7 @@ public class ExportRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExportRequestBuilderGetRequestConfiguration requestConfig = new ExportRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

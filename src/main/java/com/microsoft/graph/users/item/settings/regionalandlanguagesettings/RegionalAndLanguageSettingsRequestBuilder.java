@@ -99,6 +99,7 @@ public class RegionalAndLanguageSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RegionalAndLanguageSettingsRequestBuilderGetRequestConfiguration requestConfig = new RegionalAndLanguageSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

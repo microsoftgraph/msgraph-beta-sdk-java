@@ -53,7 +53,7 @@ public class SubscribedSkusRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List subscribedSkus
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +61,7 @@ public class SubscribedSkusRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List subscribedSkus
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -72,6 +72,7 @@ public class SubscribedSkusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SubscribedSkusRequestBuilderGetRequestConfiguration requestConfig = new SubscribedSkusRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -104,6 +105,7 @@ public class SubscribedSkusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SubscribedSkusRequestBuilderPostRequestConfiguration requestConfig = new SubscribedSkusRequestBuilderPostRequestConfiguration();
@@ -114,7 +116,7 @@ public class SubscribedSkusRequestBuilder {
         return requestInfo;
     }
     /**
-     * List subscribedSkus
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
      * @return a CompletableFuture of SubscribedSkuCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SubscribedSkuCollectionResponse> get() {
@@ -130,7 +132,7 @@ public class SubscribedSkusRequestBuilder {
         }
     }
     /**
-     * List subscribedSkus
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SubscribedSkuCollectionResponse
      */
@@ -147,7 +149,7 @@ public class SubscribedSkusRequestBuilder {
         }
     }
     /**
-     * List subscribedSkus
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SubscribedSkuCollectionResponse
@@ -219,7 +221,7 @@ public class SubscribedSkusRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List subscribedSkus */
+    /** Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing. */
     public class SubscribedSkusRequestBuilderGetQueryParameters {
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")

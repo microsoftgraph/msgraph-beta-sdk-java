@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageAssignmentResourceRole extends Entity implements Parsable {
     /** The access package assignments resulting in this role assignment. Read-only. Nullable. */
     private java.util.List<AccessPackageAssignment> _accessPackageAssignments;

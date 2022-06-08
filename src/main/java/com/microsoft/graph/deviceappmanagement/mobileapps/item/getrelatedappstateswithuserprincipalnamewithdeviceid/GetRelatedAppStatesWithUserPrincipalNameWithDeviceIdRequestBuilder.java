@@ -34,8 +34,8 @@ public class GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilder 
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/microsoft.graph.getRelatedAppStates(userPrincipalName='{userPrincipalName}',deviceId='{deviceId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", deviceId);
-        urlTplParams.put("", userPrincipalName);
+        urlTplParams.put("deviceId", deviceId);
+        urlTplParams.put("userPrincipalName", userPrincipalName);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -72,6 +72,7 @@ public class GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilder 
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilderGetRequestConfiguration requestConfig = new GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -54,7 +54,7 @@ public class RenewGroupRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final RenewGroupRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final RenewGroupPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class RenewGroupRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final RenewGroupRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RenewGroupRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final RenewGroupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RenewGroupRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RenewGroupRequestBuilderPostRequestConfiguration requestConfig = new RenewGroupRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class RenewGroupRequestBuilder {
      * @param body 
      * @return a CompletableFuture of renewGroupResponse
      */
-    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@javax.annotation.Nonnull final RenewGroupRequestBody body) {
+    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@javax.annotation.Nonnull final RenewGroupPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, RenewGroupResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class RenewGroupRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of renewGroupResponse
      */
-    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@javax.annotation.Nonnull final RenewGroupRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RenewGroupRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@javax.annotation.Nonnull final RenewGroupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RenewGroupRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, RenewGroupResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class RenewGroupRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of renewGroupResponse
      */
-    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@javax.annotation.Nonnull final RenewGroupRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RenewGroupRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@javax.annotation.Nonnull final RenewGroupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RenewGroupRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

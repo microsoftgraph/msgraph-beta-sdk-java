@@ -71,6 +71,7 @@ public class AppHealthMetricsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppHealthMetricsRequestBuilderGetRequestConfiguration requestConfig = new AppHealthMetricsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

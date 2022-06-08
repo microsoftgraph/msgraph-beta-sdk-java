@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the auditLogRoot singleton. */
 public class AuditUserIdentity extends UserIdentity implements Parsable {
     /** For user sign ins, the identifier of the tenant that the user is a member of. */
     private String _homeTenantId;

@@ -71,6 +71,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration requestConfig = new EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

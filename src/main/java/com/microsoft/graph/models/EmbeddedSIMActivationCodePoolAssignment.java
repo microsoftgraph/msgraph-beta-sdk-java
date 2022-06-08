@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The embedded SIM activation code pool assignment entity assigns a specific embeddedSIMActivationCodePool to an AAD device group. */
 public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements Parsable {
     /** Base type for assignment targets. */
     private DeviceAndAppManagementAssignmentTarget _target;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the print singleton. */
 public class AuthenticationMethodsRoot extends Entity implements Parsable {
     /** Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication). */
     private java.util.List<UserRegistrationDetails> _userRegistrationDetails;

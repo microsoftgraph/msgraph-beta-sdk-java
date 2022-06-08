@@ -3,7 +3,7 @@ package microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cases property of the microsoft.graph.security entity. */
+/** Provides operations to manage the security singleton. */
 public enum SourceType implements ValuedEnum {
     Mailbox("mailbox"),
     Site("site"),

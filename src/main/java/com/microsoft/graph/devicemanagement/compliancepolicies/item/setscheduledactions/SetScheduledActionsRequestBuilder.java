@@ -54,7 +54,7 @@ public class SetScheduledActionsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SetScheduledActionsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SetScheduledActionsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class SetScheduledActionsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SetScheduledActionsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SetScheduledActionsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SetScheduledActionsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SetScheduledActionsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SetScheduledActionsRequestBuilderPostRequestConfiguration requestConfig = new SetScheduledActionsRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class SetScheduledActionsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of setScheduledActionsResponse
      */
-    public java.util.concurrent.CompletableFuture<SetScheduledActionsResponse> post(@javax.annotation.Nonnull final SetScheduledActionsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<SetScheduledActionsResponse> post(@javax.annotation.Nonnull final SetScheduledActionsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, SetScheduledActionsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class SetScheduledActionsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of setScheduledActionsResponse
      */
-    public java.util.concurrent.CompletableFuture<SetScheduledActionsResponse> post(@javax.annotation.Nonnull final SetScheduledActionsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SetScheduledActionsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SetScheduledActionsResponse> post(@javax.annotation.Nonnull final SetScheduledActionsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SetScheduledActionsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, SetScheduledActionsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class SetScheduledActionsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of setScheduledActionsResponse
      */
-    public java.util.concurrent.CompletableFuture<SetScheduledActionsResponse> post(@javax.annotation.Nonnull final SetScheduledActionsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SetScheduledActionsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<SetScheduledActionsResponse> post(@javax.annotation.Nonnull final SetScheduledActionsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SetScheduledActionsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

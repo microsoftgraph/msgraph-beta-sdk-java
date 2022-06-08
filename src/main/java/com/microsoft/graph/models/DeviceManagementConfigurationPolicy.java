@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Management Configuration Policy */
 public class DeviceManagementConfigurationPolicy extends Entity implements Parsable {
     /** Policy assignments */
     private java.util.List<DeviceManagementConfigurationPolicyAssignment> _assignments;

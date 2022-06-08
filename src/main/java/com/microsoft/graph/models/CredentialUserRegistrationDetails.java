@@ -7,9 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the print singleton. */
 public class CredentialUserRegistrationDetails extends Entity implements Parsable {
     /** Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue. */
-    private java.util.List<RegistrationAuthMethod> _authMethods;
+    private java.util.List<String> _authMethods;
     /** Indicates whether the user is ready to perform self-service password reset or MFA. */
     private Boolean _isCapable;
     /** Indicates whether the user enabled to perform self-service password reset. */
@@ -41,10 +42,10 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the authMethods property value. Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
-     * @return a registrationAuthMethod
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<RegistrationAuthMethod> getAuthMethods() {
+    public java.util.List<String> getAuthMethods() {
         return this._authMethods;
     }
     /**
@@ -55,7 +56,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CredentialUserRegistrationDetails currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authMethods", (n) -> { currentObject.setAuthMethods(n.getCollectionOfEnumValues(RegistrationAuthMethod.class)); });
+            this.put("authMethods", (n) -> { currentObject.setAuthMethods(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isCapable", (n) -> { currentObject.setIsCapable(n.getBooleanValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("isMfaRegistered", (n) -> { currentObject.setIsMfaRegistered(n.getBooleanValue()); });
@@ -120,7 +121,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfEnumValues("authMethods", this.getAuthMethods());
+        writer.writeCollectionOfPrimitiveValues("authMethods", this.getAuthMethods());
         writer.writeBooleanValue("isCapable", this.getIsCapable());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeBooleanValue("isMfaRegistered", this.getIsMfaRegistered());
@@ -133,7 +134,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
      * @param value Value to set for the authMethods property.
      * @return a void
      */
-    public void setAuthMethods(@javax.annotation.Nullable final java.util.List<RegistrationAuthMethod> value) {
+    public void setAuthMethods(@javax.annotation.Nullable final java.util.List<String> value) {
         this._authMethods = value;
     }
     /**

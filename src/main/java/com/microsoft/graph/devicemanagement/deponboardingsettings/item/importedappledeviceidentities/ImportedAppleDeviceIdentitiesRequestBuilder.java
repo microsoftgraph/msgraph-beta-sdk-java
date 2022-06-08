@@ -84,6 +84,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ImportedAppleDeviceIdentitiesRequestBuilderGetRequestConfiguration requestConfig = new ImportedAppleDeviceIdentitiesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ImportedAppleDeviceIdentitiesRequestBuilderPostRequestConfiguration requestConfig = new ImportedAppleDeviceIdentitiesRequestBuilderPostRequestConfiguration();

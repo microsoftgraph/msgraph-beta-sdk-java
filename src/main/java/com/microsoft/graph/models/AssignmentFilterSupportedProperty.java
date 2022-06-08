@@ -21,7 +21,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     /** Regex string to do validation on the property value. */
     private String _propertyRegexConstraint;
     /** List of all supported operators on this property. */
-    private java.util.List<AssignmentFilterOperator> _supportedOperators;
+    private java.util.List<String> _supportedOperators;
     /** List of all supported values for this propery, empty if everything is supported. */
     private java.util.List<String> _supportedValues;
     /**
@@ -69,7 +69,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
             this.put("isCollection", (n) -> { currentObject.setIsCollection(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("propertyRegexConstraint", (n) -> { currentObject.setPropertyRegexConstraint(n.getStringValue()); });
-            this.put("supportedOperators", (n) -> { currentObject.setSupportedOperators(n.getCollectionOfEnumValues(AssignmentFilterOperator.class)); });
+            this.put("supportedOperators", (n) -> { currentObject.setSupportedOperators(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("supportedValues", (n) -> { currentObject.setSupportedValues(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -99,10 +99,10 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the supportedOperators property value. List of all supported operators on this property.
-     * @return a assignmentFilterOperator
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<AssignmentFilterOperator> getSupportedOperators() {
+    public java.util.List<String> getSupportedOperators() {
         return this._supportedOperators;
     }
     /**
@@ -124,7 +124,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         writer.writeBooleanValue("isCollection", this.getIsCollection());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("propertyRegexConstraint", this.getPropertyRegexConstraint());
-        writer.writeCollectionOfEnumValues("supportedOperators", this.getSupportedOperators());
+        writer.writeCollectionOfPrimitiveValues("supportedOperators", this.getSupportedOperators());
         writer.writeCollectionOfPrimitiveValues("supportedValues", this.getSupportedValues());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -173,7 +173,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the supportedOperators property.
      * @return a void
      */
-    public void setSupportedOperators(@javax.annotation.Nullable final java.util.List<AssignmentFilterOperator> value) {
+    public void setSupportedOperators(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedOperators = value;
     }
     /**

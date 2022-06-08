@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Enterprise settings for an Android managed store account. */
 public class AndroidManagedStoreAccountEnterpriseSettings extends Entity implements Parsable {
     /** Company codes for AndroidManagedStoreAccountEnterpriseSettings */
     private Boolean _androidDeviceOwnerFullyManagedEnrollmentEnabled;

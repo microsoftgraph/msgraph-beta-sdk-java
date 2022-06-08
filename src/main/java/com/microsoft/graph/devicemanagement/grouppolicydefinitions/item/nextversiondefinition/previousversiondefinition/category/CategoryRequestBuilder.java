@@ -71,6 +71,7 @@ public class CategoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CategoryRequestBuilderGetRequestConfiguration requestConfig = new CategoryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

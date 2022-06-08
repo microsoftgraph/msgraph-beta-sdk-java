@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Autopilot Deployment Profile */
 public class WindowsAutopilotDeploymentProfile extends Entity implements Parsable {
     /** The list of assigned devices for the profile. */
     private java.util.List<WindowsAutopilotDeviceIdentity> _assignedDevices;
@@ -54,6 +55,13 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windowsAutopilotDeploymentProfile": return new WindowsAutopilotDeploymentProfile();
+            }
+        }
         return new WindowsAutopilotDeploymentProfile();
     }
     /**

@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.managedtenants.WindowsProtectionState;
 import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsProtectionState;
 /** Provides operations to manage the windowsProtectionStates property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class WindowsProtectionStateItemRequestBuilder {
     /** Path parameters for the request */
@@ -99,6 +99,7 @@ public class WindowsProtectionStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsProtectionStateItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsProtectionStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

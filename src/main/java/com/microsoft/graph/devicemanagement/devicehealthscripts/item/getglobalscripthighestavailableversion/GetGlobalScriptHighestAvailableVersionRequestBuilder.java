@@ -68,6 +68,7 @@ public class GetGlobalScriptHighestAvailableVersionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetGlobalScriptHighestAvailableVersionRequestBuilderPostRequestConfiguration requestConfig = new GetGlobalScriptHighestAvailableVersionRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

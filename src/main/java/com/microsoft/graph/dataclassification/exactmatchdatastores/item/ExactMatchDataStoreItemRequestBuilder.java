@@ -112,6 +112,7 @@ public class ExactMatchDataStoreItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExactMatchDataStoreItemRequestBuilderGetRequestConfiguration requestConfig = new ExactMatchDataStoreItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

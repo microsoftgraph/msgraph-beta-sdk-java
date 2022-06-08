@@ -78,6 +78,7 @@ public class RemoteActionAuditsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RemoteActionAuditsRequestBuilderGetRequestConfiguration requestConfig = new RemoteActionAuditsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class RemoteActionAuditsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RemoteActionAuditsRequestBuilderPostRequestConfiguration requestConfig = new RemoteActionAuditsRequestBuilderPostRequestConfiguration();

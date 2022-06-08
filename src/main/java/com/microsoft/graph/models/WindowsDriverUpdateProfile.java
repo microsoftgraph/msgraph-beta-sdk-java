@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Driver Update Profile */
 public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /** Driver update profile approval type. For example, manual or automatic approval. Possible values are: manual, automatic. */
     private DriverUpdateProfileApprovalType _approvalType;

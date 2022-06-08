@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Graph model for a reusable setting */
 public class DeviceManagementReusablePolicySetting extends Entity implements Parsable {
     /** reusable setting creation date and time. This property is read-only. */
     private OffsetDateTime _createdDateTime;

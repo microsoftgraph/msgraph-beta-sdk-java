@@ -124,6 +124,7 @@ public class SalesOrderItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SalesOrderItemRequestBuilderGetRequestConfiguration requestConfig = new SalesOrderItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

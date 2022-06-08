@@ -200,6 +200,7 @@ public class VirtualEndpointRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final VirtualEndpointRequestBuilderGetRequestConfiguration requestConfig = new VirtualEndpointRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

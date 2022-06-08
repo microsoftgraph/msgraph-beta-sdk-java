@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the teamwork singleton. */
 public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     /** The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices. */
     private TeamworkCameraConfiguration _cameraConfiguration;

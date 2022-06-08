@@ -78,7 +78,7 @@ public class ApplicationsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List applications
+     * Get the list of applications in this organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class ApplicationsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List applications
+     * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,6 +97,7 @@ public class ApplicationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApplicationsRequestBuilderGetRequestConfiguration requestConfig = new ApplicationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -107,7 +108,7 @@ public class ApplicationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create application
+     * Create a new application object.
      * @param body 
      * @return a RequestInformation
      */
@@ -116,7 +117,7 @@ public class ApplicationsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create application
+     * Create a new application object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -129,6 +130,7 @@ public class ApplicationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ApplicationsRequestBuilderPostRequestConfiguration requestConfig = new ApplicationsRequestBuilderPostRequestConfiguration();
@@ -147,7 +149,7 @@ public class ApplicationsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * List applications
+     * Get the list of applications in this organization.
      * @return a CompletableFuture of ApplicationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ApplicationCollectionResponse> get() {
@@ -163,7 +165,7 @@ public class ApplicationsRequestBuilder {
         }
     }
     /**
-     * List applications
+     * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ApplicationCollectionResponse
      */
@@ -180,7 +182,7 @@ public class ApplicationsRequestBuilder {
         }
     }
     /**
-     * List applications
+     * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ApplicationCollectionResponse
@@ -198,7 +200,7 @@ public class ApplicationsRequestBuilder {
         }
     }
     /**
-     * Create application
+     * Create a new application object.
      * @param body 
      * @return a CompletableFuture of application
      */
@@ -215,7 +217,7 @@ public class ApplicationsRequestBuilder {
         }
     }
     /**
-     * Create application
+     * Create a new application object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of application
@@ -233,7 +235,7 @@ public class ApplicationsRequestBuilder {
         }
     }
     /**
-     * Create application
+     * Create a new application object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -252,7 +254,7 @@ public class ApplicationsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List applications */
+    /** Get the list of applications in this organization. */
     public class ApplicationsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

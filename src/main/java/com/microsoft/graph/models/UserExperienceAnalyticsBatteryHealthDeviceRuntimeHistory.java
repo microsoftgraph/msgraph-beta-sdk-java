@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health runtime history entity contains the trend of runtime of a device over a period of 30 days */
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity implements Parsable {
     /** The unique identifier of the device, Intune DeviceID or SCCM device id. */
     private String _deviceId;

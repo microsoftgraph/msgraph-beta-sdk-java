@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Role Scope Tag */
 public class RoleScopeTag extends Entity implements Parsable {
     /** The list of assignments for this Role Scope Tag. */
     private java.util.List<RoleScopeTagAutoAssignment> _assignments;

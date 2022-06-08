@@ -69,6 +69,7 @@ public class ExtractSensitivityLabelsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExtractSensitivityLabelsRequestBuilderPostRequestConfiguration requestConfig = new ExtractSensitivityLabelsRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class ExtractSensitivityLabelsRequestBuilder {
     }
     /**
      * Invoke action extractSensitivityLabels
-     * @return a CompletableFuture of extractSensitivityLabelsResult
+     * @return a CompletableFuture of ExtractSensitivityLabelsResult
      */
     public java.util.concurrent.CompletableFuture<ExtractSensitivityLabelsResult> post() {
         try {
@@ -92,7 +93,7 @@ public class ExtractSensitivityLabelsRequestBuilder {
     /**
      * Invoke action extractSensitivityLabels
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extractSensitivityLabelsResult
+     * @return a CompletableFuture of ExtractSensitivityLabelsResult
      */
     public java.util.concurrent.CompletableFuture<ExtractSensitivityLabelsResult> post(@javax.annotation.Nullable final java.util.function.Consumer<ExtractSensitivityLabelsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class ExtractSensitivityLabelsRequestBuilder {
      * Invoke action extractSensitivityLabels
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of extractSensitivityLabelsResult
+     * @return a CompletableFuture of ExtractSensitivityLabelsResult
      */
     public java.util.concurrent.CompletableFuture<ExtractSensitivityLabelsResult> post(@javax.annotation.Nullable final java.util.function.Consumer<ExtractSensitivityLabelsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

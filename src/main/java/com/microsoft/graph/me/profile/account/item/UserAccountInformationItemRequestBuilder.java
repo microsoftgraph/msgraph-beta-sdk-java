@@ -99,6 +99,7 @@ public class UserAccountInformationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserAccountInformationItemRequestBuilderGetRequestConfiguration requestConfig = new UserAccountInformationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

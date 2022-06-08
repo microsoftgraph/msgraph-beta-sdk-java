@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
+import microsoft.graph.models.managedtenants.DeviceCompliancePolicySettingStateSummary;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
@@ -99,6 +99,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

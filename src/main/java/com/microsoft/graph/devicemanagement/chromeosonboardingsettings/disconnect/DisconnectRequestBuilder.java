@@ -5,15 +5,11 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.ResponseHandler;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import com.microsoft.kiota.serialization.ParseNode;
-import com.microsoft.kiota.serialization.SerializationWriter;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -73,6 +69,7 @@ public class DisconnectRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DisconnectRequestBuilderPostRequestConfiguration requestConfig = new DisconnectRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -83,12 +80,12 @@ public class DisconnectRequestBuilder {
     }
     /**
      * Invoke action disconnect
-     * @return a CompletableFuture of disconnectResponse
+     * @return a CompletableFuture of ChromeOSOnboardingStatus
      */
-    public java.util.concurrent.CompletableFuture<DisconnectResponse> post() {
+    public java.util.concurrent.CompletableFuture<ChromeOSOnboardingStatus> post() {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, DisconnectResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -96,12 +93,12 @@ public class DisconnectRequestBuilder {
     /**
      * Invoke action disconnect
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of disconnectResponse
+     * @return a CompletableFuture of ChromeOSOnboardingStatus
      */
-    public java.util.concurrent.CompletableFuture<DisconnectResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<DisconnectRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ChromeOSOnboardingStatus> post(@javax.annotation.Nullable final java.util.function.Consumer<DisconnectRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DisconnectResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -110,12 +107,12 @@ public class DisconnectRequestBuilder {
      * Invoke action disconnect
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of disconnectResponse
+     * @return a CompletableFuture of ChromeOSOnboardingStatus
      */
-    public java.util.concurrent.CompletableFuture<DisconnectResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<DisconnectRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<ChromeOSOnboardingStatus> post(@javax.annotation.Nullable final java.util.function.Consumer<DisconnectRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DisconnectResponse::createFromDiscriminatorValue, responseHandler, null);
+            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -133,78 +130,6 @@ public class DisconnectRequestBuilder {
          * @return a void
          */
         public DisconnectRequestBuilderPostRequestConfiguration() {
-        }
-    }
-    /** Union type wrapper for classes chromeOSOnboardingStatus */
-    public class DisconnectResponse implements AdditionalDataHolder, Parsable {
-        /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-        private Map<String, Object> _additionalData;
-        /** Union type representation for type chromeOSOnboardingStatus */
-        private ChromeOSOnboardingStatus _chromeOSOnboardingStatus;
-        /**
-         * Instantiates a new disconnectResponse and sets the default values.
-         * @return a void
-         */
-        public DisconnectResponse() {
-            this.setAdditionalData(new HashMap<>());
-        }
-        @javax.annotation.Nonnull
-        public static DisconnectResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
-            Objects.requireNonNull(parseNode);
-            return new DisconnectResponse();
-        }
-        /**
-         * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-         * @return a Map<String, Object>
-         */
-        @javax.annotation.Nonnull
-        public Map<String, Object> getAdditionalData() {
-            return this._additionalData;
-        }
-        /**
-         * Gets the chromeOSOnboardingStatus property value. Union type representation for type chromeOSOnboardingStatus
-         * @return a chromeOSOnboardingStatus
-         */
-        @javax.annotation.Nullable
-        public ChromeOSOnboardingStatus getChromeOSOnboardingStatus() {
-            return this._chromeOSOnboardingStatus;
-        }
-        /**
-         * The deserialization information for the current model
-         * @return a Map<String, Consumer<ParseNode>>
-         */
-        @javax.annotation.Nonnull
-        public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-            final DisconnectResponse currentObject = this;
-            return new HashMap<>(1) {{
-                this.put("chromeOSOnboardingStatus", (n) -> { currentObject.setChromeOSOnboardingStatus(n.getEnumValue(ChromeOSOnboardingStatus.class)); });
-            }};
-        }
-        /**
-         * Serializes information the current object
-         * @param writer Serialization writer to use to serialize this model
-         * @return a void
-         */
-        public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
-            Objects.requireNonNull(writer);
-            writer.writeEnumValue("chromeOSOnboardingStatus", this.getChromeOSOnboardingStatus());
-            writer.writeAdditionalData(this.getAdditionalData());
-        }
-        /**
-         * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-         * @param value Value to set for the AdditionalData property.
-         * @return a void
-         */
-        public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-            this._additionalData = value;
-        }
-        /**
-         * Sets the chromeOSOnboardingStatus property value. Union type representation for type chromeOSOnboardingStatus
-         * @param value Value to set for the chromeOSOnboardingStatus property.
-         * @return a void
-         */
-        public void setChromeOSOnboardingStatus(@javax.annotation.Nullable final ChromeOSOnboardingStatus value) {
-            this._chromeOSOnboardingStatus = value;
         }
     }
 }

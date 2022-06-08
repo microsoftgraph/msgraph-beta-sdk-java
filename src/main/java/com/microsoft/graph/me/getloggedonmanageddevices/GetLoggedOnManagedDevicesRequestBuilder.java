@@ -68,6 +68,7 @@ public class GetLoggedOnManagedDevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetLoggedOnManagedDevicesRequestBuilderGetRequestConfiguration requestConfig = new GetLoggedOnManagedDevicesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -55,7 +55,7 @@ public class TriggerDeviceScopeActionRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final TriggerDeviceScopeActionRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class TriggerDeviceScopeActionRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final TriggerDeviceScopeActionRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration requestConfig = new TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class TriggerDeviceScopeActionRequestBuilder {
     /**
      * Invoke action triggerDeviceScopeAction
      * @param body 
-     * @return a CompletableFuture of deviceScopeActionResult
+     * @return a CompletableFuture of DeviceScopeActionResult
      */
-    public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionRequestBody body) {
+    public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, DeviceScopeActionResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class TriggerDeviceScopeActionRequestBuilder {
      * Invoke action triggerDeviceScopeAction
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceScopeActionResult
+     * @return a CompletableFuture of DeviceScopeActionResult
      */
-    public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, DeviceScopeActionResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class TriggerDeviceScopeActionRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceScopeActionResult
+     * @return a CompletableFuture of DeviceScopeActionResult
      */
-    public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

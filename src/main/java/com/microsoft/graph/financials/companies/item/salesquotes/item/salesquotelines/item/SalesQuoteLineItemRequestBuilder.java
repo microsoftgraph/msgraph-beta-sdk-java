@@ -111,6 +111,7 @@ public class SalesQuoteLineItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SalesQuoteLineItemRequestBuilderGetRequestConfiguration requestConfig = new SalesQuoteLineItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -106,6 +106,7 @@ public class MobilityManagementPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobilityManagementPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new MobilityManagementPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A termsAndConditionsGroupAssignment entity represents the assignment of a given Terms and Conditions (T&C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune. */
 public class TermsAndConditionsGroupAssignment extends Entity implements Parsable {
     /** Unique identifier of a group that the T&C policy is assigned to. */
     private String _targetGroupId;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     /** A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship. */
     private java.util.List<CloudPcProvisioningPolicyAssignment> _assignments;

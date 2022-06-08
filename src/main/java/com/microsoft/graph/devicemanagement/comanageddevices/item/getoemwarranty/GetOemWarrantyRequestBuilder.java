@@ -69,6 +69,7 @@ public class GetOemWarrantyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOemWarrantyRequestBuilderGetRequestConfiguration requestConfig = new GetOemWarrantyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class GetOemWarrantyRequestBuilder {
     }
     /**
      * Invoke function getOemWarranty
-     * @return a CompletableFuture of oemWarranty
+     * @return a CompletableFuture of OemWarranty
      */
     public java.util.concurrent.CompletableFuture<OemWarranty> get() {
         try {
@@ -92,7 +93,7 @@ public class GetOemWarrantyRequestBuilder {
     /**
      * Invoke function getOemWarranty
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of oemWarranty
+     * @return a CompletableFuture of OemWarranty
      */
     public java.util.concurrent.CompletableFuture<OemWarranty> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOemWarrantyRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class GetOemWarrantyRequestBuilder {
      * Invoke function getOemWarranty
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of oemWarranty
+     * @return a CompletableFuture of OemWarranty
      */
     public java.util.concurrent.CompletableFuture<OemWarranty> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOemWarrantyRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

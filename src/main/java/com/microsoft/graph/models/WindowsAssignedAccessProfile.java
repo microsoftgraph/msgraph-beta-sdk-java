@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Assigned Access profile for Windows. */
 public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     /** These are the only Windows Store Apps that will be available to launch from the Start menu. */
     private java.util.List<String> _appUserModelIds;

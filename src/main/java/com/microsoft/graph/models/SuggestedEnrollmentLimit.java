@@ -15,7 +15,7 @@ public class SuggestedEnrollmentLimit implements AdditionalDataHolder, Parsable 
     /** The suggested enrollment limit within a day */
     private Integer _suggestedDailyLimit;
     /**
-     * Instantiates a new suggestedEnrollmentLimit and sets the default values.
+     * Instantiates a new SuggestedEnrollmentLimit and sets the default values.
      * @return a void
      */
     public SuggestedEnrollmentLimit() {
@@ -24,7 +24,7 @@ public class SuggestedEnrollmentLimit implements AdditionalDataHolder, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a suggestedEnrollmentLimit
+     * @return a SuggestedEnrollmentLimit
      */
     @javax.annotation.Nonnull
     public static SuggestedEnrollmentLimit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

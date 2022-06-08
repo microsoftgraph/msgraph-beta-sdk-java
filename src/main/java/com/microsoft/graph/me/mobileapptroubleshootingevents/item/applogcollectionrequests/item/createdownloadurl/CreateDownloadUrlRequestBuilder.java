@@ -69,6 +69,7 @@ public class CreateDownloadUrlRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CreateDownloadUrlRequestBuilderPostRequestConfiguration requestConfig = new CreateDownloadUrlRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class CreateDownloadUrlRequestBuilder {
     }
     /**
      * Invoke action createDownloadUrl
-     * @return a CompletableFuture of appLogCollectionDownloadDetails
+     * @return a CompletableFuture of AppLogCollectionDownloadDetails
      */
     public java.util.concurrent.CompletableFuture<AppLogCollectionDownloadDetails> post() {
         try {
@@ -92,7 +93,7 @@ public class CreateDownloadUrlRequestBuilder {
     /**
      * Invoke action createDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionDownloadDetails
+     * @return a CompletableFuture of AppLogCollectionDownloadDetails
      */
     public java.util.concurrent.CompletableFuture<AppLogCollectionDownloadDetails> post(@javax.annotation.Nullable final java.util.function.Consumer<CreateDownloadUrlRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class CreateDownloadUrlRequestBuilder {
      * Invoke action createDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of appLogCollectionDownloadDetails
+     * @return a CompletableFuture of AppLogCollectionDownloadDetails
      */
     public java.util.concurrent.CompletableFuture<AppLogCollectionDownloadDetails> post(@javax.annotation.Nullable final java.util.function.Consumer<CreateDownloadUrlRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

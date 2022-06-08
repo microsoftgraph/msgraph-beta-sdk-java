@@ -99,6 +99,7 @@ public class EducationalActivityItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EducationalActivityItemRequestBuilderGetRequestConfiguration requestConfig = new EducationalActivityItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

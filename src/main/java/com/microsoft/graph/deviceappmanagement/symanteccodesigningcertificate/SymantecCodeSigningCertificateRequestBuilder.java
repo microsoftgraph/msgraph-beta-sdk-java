@@ -99,6 +99,7 @@ public class SymantecCodeSigningCertificateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SymantecCodeSigningCertificateRequestBuilderGetRequestConfiguration requestConfig = new SymantecCodeSigningCertificateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

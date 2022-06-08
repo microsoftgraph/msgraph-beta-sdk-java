@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Group Policy Object file uploaded by admin. */
 public class GroupPolicyObjectFile extends Entity implements Parsable {
     /** The Group Policy Object file content. */
     private String _content;

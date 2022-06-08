@@ -99,6 +99,7 @@ public class LanguageProficiencyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LanguageProficiencyItemRequestBuilderGetRequestConfiguration requestConfig = new LanguageProficiencyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

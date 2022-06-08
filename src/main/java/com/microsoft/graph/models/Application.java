@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to application. */
 public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for an application that implements a web API. */
     private ApiApplication _api;
@@ -33,9 +34,9 @@ public class Application extends DirectoryObject implements Parsable {
     private String _disabledByMicrosoftStatus;
     /** The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
-    /** Read-only. Nullable. */
+    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<ExtensionProperty> _extensionProperties;
-    /** Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials). */
+    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
     private String _groupMembershipClaims;
@@ -209,7 +210,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the extensionProperties property value. Read-only. Nullable.
+     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a extensionProperty
      */
     @javax.annotation.Nullable
@@ -217,7 +218,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._extensionProperties;
     }
     /**
-     * Gets the federatedIdentityCredentials property value. Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @return a federatedIdentityCredential
      */
     @javax.annotation.Nullable
@@ -658,7 +659,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the extensionProperties property value. Read-only. Nullable.
+     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param value Value to set for the extensionProperties property.
      * @return a void
      */
@@ -666,7 +667,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._extensionProperties = value;
     }
     /**
-     * Sets the federatedIdentityCredentials property value. Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */

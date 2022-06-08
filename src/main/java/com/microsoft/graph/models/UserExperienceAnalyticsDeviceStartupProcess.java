@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup process details. */
 public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implements Parsable {
     /** The user experience analytics device id. */
     private String _managedDeviceId;

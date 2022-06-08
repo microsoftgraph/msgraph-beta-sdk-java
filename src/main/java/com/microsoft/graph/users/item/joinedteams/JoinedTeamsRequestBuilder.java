@@ -77,6 +77,7 @@ public class JoinedTeamsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final JoinedTeamsRequestBuilderGetRequestConfiguration requestConfig = new JoinedTeamsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class JobResponseBaseItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final JobResponseBaseItemRequestBuilderGetRequestConfiguration requestConfig = new JobResponseBaseItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -77,6 +77,7 @@ public class ManagementTemplateCollectionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagementTemplateCollectionsRequestBuilderGetRequestConfiguration requestConfig = new ManagementTemplateCollectionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

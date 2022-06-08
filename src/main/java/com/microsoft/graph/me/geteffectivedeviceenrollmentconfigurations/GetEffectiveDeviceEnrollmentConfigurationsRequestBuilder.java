@@ -68,6 +68,7 @@ public class GetEffectiveDeviceEnrollmentConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetEffectiveDeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration requestConfig = new GetEffectiveDeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

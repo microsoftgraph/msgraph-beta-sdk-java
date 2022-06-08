@@ -149,6 +149,7 @@ public class PlannerRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlannerRequestBuilderGetRequestConfiguration requestConfig = new PlannerRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

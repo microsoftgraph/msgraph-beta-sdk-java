@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The definition value entity stores the value for a single group policy definition. */
 public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     /** Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference. */
     private GroupPolicyConfigurationType _configurationType;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class PlannerDelta extends Entity implements Parsable {
     /**
      * Instantiates a new plannerDelta and sets the default values.
@@ -23,6 +24,13 @@ public class PlannerDelta extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static PlannerDelta createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.plannerDelta": return new PlannerDelta();
+            }
+        }
         return new PlannerDelta();
     }
     /**

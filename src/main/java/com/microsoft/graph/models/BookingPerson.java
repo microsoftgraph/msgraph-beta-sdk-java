@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a booking customer or staff member. */
 public class BookingPerson extends BookingNamedEntity implements Parsable {
     /** The email address of the person. */
     private String _emailAddress;
@@ -25,6 +26,13 @@ public class BookingPerson extends BookingNamedEntity implements Parsable {
     @javax.annotation.Nonnull
     public static BookingPerson createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.bookingPerson": return new BookingPerson();
+            }
+        }
         return new BookingPerson();
     }
     /**

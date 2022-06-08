@@ -99,6 +99,7 @@ public class EmbeddedSIMDeviceStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EmbeddedSIMDeviceStateItemRequestBuilderGetRequestConfiguration requestConfig = new EmbeddedSIMDeviceStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

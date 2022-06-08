@@ -99,6 +99,7 @@ public class DimensionValueItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DimensionValueItemRequestBuilderGetRequestConfiguration requestConfig = new DimensionValueItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

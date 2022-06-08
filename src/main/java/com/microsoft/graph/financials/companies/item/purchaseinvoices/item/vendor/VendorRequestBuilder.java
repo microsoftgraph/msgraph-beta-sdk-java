@@ -124,6 +124,7 @@ public class VendorRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final VendorRequestBuilderGetRequestConfiguration requestConfig = new VendorRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

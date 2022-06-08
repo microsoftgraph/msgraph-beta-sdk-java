@@ -105,6 +105,7 @@ public class HostedContentRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final HostedContentRequestBuilderGetRequestConfiguration requestConfig = new HostedContentRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

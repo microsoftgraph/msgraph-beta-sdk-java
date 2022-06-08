@@ -99,6 +99,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ComanagementEligibleDeviceItemRequestBuilderGetRequestConfiguration requestConfig = new ComanagementEligibleDeviceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

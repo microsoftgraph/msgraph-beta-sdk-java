@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that describes tenant level settings for derived credentials */
 public class DeviceManagementDerivedCredentialSettings extends Entity implements Parsable {
     /** The display name for the profile. */
     private String _displayName;
@@ -16,6 +17,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
     private DeviceManagementDerivedCredentialIssuer _issuer;
     /** The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device. */
     private DeviceManagementDerivedCredentialNotificationType _notificationType;
+    /** The nominal percentage of time before certificate renewal is initiated by the client. */
+    private Integer _renewalThresholdPercentage;
     /**
      * Instantiates a new deviceManagementDerivedCredentialSettings and sets the default values.
      * @return a void
@@ -53,6 +56,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
             this.put("helpUrl", (n) -> { currentObject.setHelpUrl(n.getStringValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });
             this.put("notificationType", (n) -> { currentObject.setNotificationType(n.getEnumValue(DeviceManagementDerivedCredentialNotificationType.class)); });
+            this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         return this._notificationType;
     }
     /**
+     * Gets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getRenewalThresholdPercentage() {
+        return this._renewalThresholdPercentage;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -91,6 +103,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         writer.writeStringValue("helpUrl", this.getHelpUrl());
         writer.writeEnumValue("issuer", this.getIssuer());
         writer.writeEnumValue("notificationType", this.getNotificationType());
+        writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
     }
     /**
      * Sets the displayName property value. The display name for the profile.
@@ -123,5 +136,13 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      */
     public void setNotificationType(@javax.annotation.Nullable final DeviceManagementDerivedCredentialNotificationType value) {
         this._notificationType = value;
+    }
+    /**
+     * Sets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
+     * @param value Value to set for the renewalThresholdPercentage property.
+     * @return a void
+     */
+    public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
+        this._renewalThresholdPercentage = value;
     }
 }

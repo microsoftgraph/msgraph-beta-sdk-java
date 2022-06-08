@@ -136,6 +136,7 @@ public class OfficeClientConfigurationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OfficeClientConfigurationItemRequestBuilderGetRequestConfiguration requestConfig = new OfficeClientConfigurationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

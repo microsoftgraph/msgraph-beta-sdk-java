@@ -78,6 +78,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration requestConfig = new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration();

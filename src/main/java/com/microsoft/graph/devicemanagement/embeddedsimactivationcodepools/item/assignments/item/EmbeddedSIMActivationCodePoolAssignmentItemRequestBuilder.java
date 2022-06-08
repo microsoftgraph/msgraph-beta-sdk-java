@@ -99,6 +99,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

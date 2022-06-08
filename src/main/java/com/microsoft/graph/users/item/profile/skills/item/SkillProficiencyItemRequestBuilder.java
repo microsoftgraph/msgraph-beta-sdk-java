@@ -99,6 +99,7 @@ public class SkillProficiencyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SkillProficiencyItemRequestBuilderGetRequestConfiguration requestConfig = new SkillProficiencyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

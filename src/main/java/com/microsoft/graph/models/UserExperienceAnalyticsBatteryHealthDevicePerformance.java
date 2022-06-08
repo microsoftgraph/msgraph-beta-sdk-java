@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health device performance entity contains device level battery information. */
 public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity implements Parsable {
     /** Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647 */
     private Integer _batteryAgeInDays;

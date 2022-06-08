@@ -69,6 +69,7 @@ public class DiscoverRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DiscoverRequestBuilderPostRequestConfiguration requestConfig = new DiscoverRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration requestConfig = new EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

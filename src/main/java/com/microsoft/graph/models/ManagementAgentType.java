@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the compliance singleton. */
+/** Casts the previous resource to group. */
 public enum ManagementAgentType implements ValuedEnum {
     /** The device is managed by Exchange server. */
     Eas("eas"),

@@ -105,6 +105,7 @@ public class CompanyInformationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CompanyInformationItemRequestBuilderGetRequestConfiguration requestConfig = new CompanyInformationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

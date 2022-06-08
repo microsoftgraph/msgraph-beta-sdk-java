@@ -90,6 +90,7 @@ public class SignInsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SignInsRequestBuilderGetRequestConfiguration requestConfig = new SignInsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -122,6 +123,7 @@ public class SignInsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SignInsRequestBuilderPostRequestConfiguration requestConfig = new SignInsRequestBuilderPostRequestConfiguration();

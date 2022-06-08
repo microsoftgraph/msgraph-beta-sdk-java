@@ -145,6 +145,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IosLobAppProvisioningConfigurationItemRequestBuilderGetRequestConfiguration requestConfig = new IosLobAppProvisioningConfigurationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

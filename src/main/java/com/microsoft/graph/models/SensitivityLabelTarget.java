@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the dataClassificationService singleton. */
+/** Casts the previous resource to group. */
 public enum SensitivityLabelTarget implements ValuedEnum {
     Email("email"),
     Site("site"),

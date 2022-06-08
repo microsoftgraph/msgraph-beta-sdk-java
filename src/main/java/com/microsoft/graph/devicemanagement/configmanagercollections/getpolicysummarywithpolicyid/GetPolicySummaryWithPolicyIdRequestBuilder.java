@@ -34,7 +34,7 @@ public class GetPolicySummaryWithPolicyIdRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/configManagerCollections/microsoft.graph.getPolicySummary(policyId='{policyId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", policyId);
+        urlTplParams.put("policyId", policyId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -71,6 +71,7 @@ public class GetPolicySummaryWithPolicyIdRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetPolicySummaryWithPolicyIdRequestBuilderGetRequestConfiguration requestConfig = new GetPolicySummaryWithPolicyIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -81,7 +82,7 @@ public class GetPolicySummaryWithPolicyIdRequestBuilder {
     }
     /**
      * Invoke function getPolicySummary
-     * @return a CompletableFuture of configManagerPolicySummary
+     * @return a CompletableFuture of ConfigManagerPolicySummary
      */
     public java.util.concurrent.CompletableFuture<ConfigManagerPolicySummary> get() {
         try {
@@ -94,7 +95,7 @@ public class GetPolicySummaryWithPolicyIdRequestBuilder {
     /**
      * Invoke function getPolicySummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of configManagerPolicySummary
+     * @return a CompletableFuture of ConfigManagerPolicySummary
      */
     public java.util.concurrent.CompletableFuture<ConfigManagerPolicySummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetPolicySummaryWithPolicyIdRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -108,7 +109,7 @@ public class GetPolicySummaryWithPolicyIdRequestBuilder {
      * Invoke function getPolicySummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of configManagerPolicySummary
+     * @return a CompletableFuture of ConfigManagerPolicySummary
      */
     public java.util.concurrent.CompletableFuture<ConfigManagerPolicySummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetPolicySummaryWithPolicyIdRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

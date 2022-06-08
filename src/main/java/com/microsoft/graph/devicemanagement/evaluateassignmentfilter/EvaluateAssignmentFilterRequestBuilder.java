@@ -7,6 +7,7 @@ import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
@@ -54,7 +55,7 @@ public class EvaluateAssignmentFilterRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateAssignmentFilterRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateAssignmentFilterPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +65,7 @@ public class EvaluateAssignmentFilterRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateAssignmentFilterRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateAssignmentFilterRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateAssignmentFilterPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateAssignmentFilterRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -83,12 +84,12 @@ public class EvaluateAssignmentFilterRequestBuilder {
     /**
      * Invoke action evaluateAssignmentFilter
      * @param body 
-     * @return a CompletableFuture of evaluateAssignmentFilterResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<EvaluateAssignmentFilterResponse> post(@javax.annotation.Nonnull final EvaluateAssignmentFilterRequestBody body) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final EvaluateAssignmentFilterPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, EvaluateAssignmentFilterResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -97,12 +98,12 @@ public class EvaluateAssignmentFilterRequestBuilder {
      * Invoke action evaluateAssignmentFilter
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateAssignmentFilterResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<EvaluateAssignmentFilterResponse> post(@javax.annotation.Nonnull final EvaluateAssignmentFilterRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateAssignmentFilterRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final EvaluateAssignmentFilterPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateAssignmentFilterRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, EvaluateAssignmentFilterResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -112,13 +113,13 @@ public class EvaluateAssignmentFilterRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of evaluateAssignmentFilterResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<EvaluateAssignmentFilterResponse> post(@javax.annotation.Nonnull final EvaluateAssignmentFilterRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateAssignmentFilterRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final EvaluateAssignmentFilterPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateAssignmentFilterRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, EvaluateAssignmentFilterResponse::createFromDiscriminatorValue, responseHandler, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents wipe requests issued by tenant admin for Bring-Your-Own-Device(BYOD) Windows devices. */
 public class WindowsInformationProtectionWipeAction extends Entity implements Parsable {
     /** Last checkin time of the device that was targeted by this wipe action. */
     private OffsetDateTime _lastCheckInDateTime;

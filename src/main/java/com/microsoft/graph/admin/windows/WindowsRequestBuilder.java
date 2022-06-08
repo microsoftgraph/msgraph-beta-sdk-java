@@ -105,6 +105,7 @@ public class WindowsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsRequestBuilderGetRequestConfiguration requestConfig = new WindowsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

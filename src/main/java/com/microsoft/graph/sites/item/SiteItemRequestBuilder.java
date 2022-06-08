@@ -170,7 +170,7 @@ public class SiteItemRequestBuilder {
         return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get a site resource
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -178,7 +178,7 @@ public class SiteItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get a site resource
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,6 +189,7 @@ public class SiteItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SiteItemRequestBuilderGetRequestConfiguration requestConfig = new SiteItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -255,7 +256,7 @@ public class SiteItemRequestBuilder {
         return new microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get a site resource
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @return a CompletableFuture of site
      */
     public java.util.concurrent.CompletableFuture<Site> get() {
@@ -271,7 +272,7 @@ public class SiteItemRequestBuilder {
         }
     }
     /**
-     * Get a site resource
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of site
      */
@@ -288,7 +289,7 @@ public class SiteItemRequestBuilder {
         }
     }
     /**
-     * Get a site resource
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of site
@@ -466,7 +467,7 @@ public class SiteItemRequestBuilder {
         urlTplParams.put("site%2Did1", id);
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Get a site resource */
+    /** Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint. */
     public class SiteItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

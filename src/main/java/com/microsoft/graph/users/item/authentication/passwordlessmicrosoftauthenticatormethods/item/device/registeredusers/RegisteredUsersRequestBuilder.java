@@ -17,6 +17,9 @@ import java.util.Objects;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.count.CountRequestBuilder;
+import microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.endpoint.EndpointRequestBuilder;
+import microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.serviceprincipal.ServicePrincipalRequestBuilder;
+import microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.user.UserRequestBuilder;
 /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
 public class RegisteredUsersRequestBuilder {
     /** The count property */
@@ -24,12 +27,27 @@ public class RegisteredUsersRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new RegisteredUsersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -77,6 +95,7 @@ public class RegisteredUsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RegisteredUsersRequestBuilderGetRequestConfiguration requestConfig = new RegisteredUsersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

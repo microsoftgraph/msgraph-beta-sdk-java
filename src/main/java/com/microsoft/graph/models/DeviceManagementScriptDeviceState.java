@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for device run state of the device management script. */
 public class DeviceManagementScriptDeviceState extends Entity implements Parsable {
     /** Error code corresponding to erroneous execution of the device management script. */
     private Integer _errorCode;

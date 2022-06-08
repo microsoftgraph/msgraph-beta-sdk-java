@@ -99,6 +99,7 @@ public class TeamworkDeviceOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamworkDeviceOperationItemRequestBuilderGetRequestConfiguration requestConfig = new TeamworkDeviceOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

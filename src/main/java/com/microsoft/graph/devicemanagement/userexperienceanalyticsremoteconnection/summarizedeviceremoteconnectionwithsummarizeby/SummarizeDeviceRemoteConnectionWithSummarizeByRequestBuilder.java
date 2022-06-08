@@ -33,7 +33,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/microsoft.graph.summarizeDeviceRemoteConnection(summarizeBy='{summarizeBy}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", summarizeBy);
+        urlTplParams.put("summarizeBy", summarizeBy);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilderGetRequestConfiguration requestConfig = new SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

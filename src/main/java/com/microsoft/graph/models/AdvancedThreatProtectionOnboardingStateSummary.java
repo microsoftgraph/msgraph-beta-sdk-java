@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows defender advanced threat protection onboarding state summary across the account. */
 public class AdvancedThreatProtectionOnboardingStateSummary extends Entity implements Parsable {
     /** Not yet documented */
     private java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> _advancedThreatProtectionOnboardingDeviceSettingStates;

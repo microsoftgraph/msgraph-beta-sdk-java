@@ -77,6 +77,7 @@ public class DirectoryScopesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryScopesRequestBuilderGetRequestConfiguration requestConfig = new DirectoryScopesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class ItemPatentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ItemPatentItemRequestBuilderGetRequestConfiguration requestConfig = new ItemPatentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

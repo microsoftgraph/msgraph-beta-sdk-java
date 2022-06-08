@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Scheduled Action for Rule */
 public class DeviceManagementComplianceScheduledActionForRule extends Entity implements Parsable {
     /** Name of the rule which this scheduled action applies to. */
     private String _ruleName;

@@ -59,7 +59,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List businessFlowTemplates
+     * In the Azure AD access reviews feature, list all the businessFlowTemplate objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List businessFlowTemplates
+     * In the Azure AD access reviews feature, list all the businessFlowTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BusinessFlowTemplatesRequestBuilderGetRequestConfiguration requestConfig = new BusinessFlowTemplatesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final BusinessFlowTemplatesRequestBuilderPostRequestConfiguration requestConfig = new BusinessFlowTemplatesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List businessFlowTemplates
+     * In the Azure AD access reviews feature, list all the businessFlowTemplate objects.
      * @return a CompletableFuture of BusinessFlowTemplateCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BusinessFlowTemplateCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         }
     }
     /**
-     * List businessFlowTemplates
+     * In the Azure AD access reviews feature, list all the businessFlowTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BusinessFlowTemplateCollectionResponse
      */
@@ -153,7 +155,7 @@ public class BusinessFlowTemplatesRequestBuilder {
         }
     }
     /**
-     * List businessFlowTemplates
+     * In the Azure AD access reviews feature, list all the businessFlowTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BusinessFlowTemplateCollectionResponse
@@ -225,7 +227,7 @@ public class BusinessFlowTemplatesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List businessFlowTemplates */
+    /** In the Azure AD access reviews feature, list all the businessFlowTemplate objects. */
     public class BusinessFlowTemplatesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

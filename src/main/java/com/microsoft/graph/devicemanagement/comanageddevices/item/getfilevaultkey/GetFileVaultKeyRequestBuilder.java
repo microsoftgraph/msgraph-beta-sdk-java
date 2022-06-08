@@ -68,6 +68,7 @@ public class GetFileVaultKeyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetFileVaultKeyRequestBuilderGetRequestConfiguration requestConfig = new GetFileVaultKeyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

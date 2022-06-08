@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getOffice365GroupsActivityFileCounts method. */
 public class Office365GroupsActivityFileCounts extends Entity implements Parsable {
     /** The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library. */
     private Long _active;

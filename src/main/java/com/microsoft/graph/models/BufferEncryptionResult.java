@@ -16,7 +16,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     /** The publishingLicense property */
     private byte[] _publishingLicense;
     /**
-     * Instantiates a new bufferEncryptionResult and sets the default values.
+     * Instantiates a new BufferEncryptionResult and sets the default values.
      * @return a void
      */
     public BufferEncryptionResult() {
@@ -25,7 +25,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bufferEncryptionResult
+     * @return a BufferEncryptionResult
      */
     @javax.annotation.Nonnull
     public static BufferEncryptionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -99,6 +99,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EnterpriseCodeSigningCertificateItemRequestBuilderGetRequestConfiguration requestConfig = new EnterpriseCodeSigningCertificateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

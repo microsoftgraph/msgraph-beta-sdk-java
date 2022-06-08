@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class Drive extends BaseItem implements Parsable {
     /** The list of recent activities that took place under this drive. */
     private java.util.List<ItemActivityOLD> _activities;

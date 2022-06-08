@@ -33,7 +33,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getRelyingPartyDetailedSummary(period='{period}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", period);
+        urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

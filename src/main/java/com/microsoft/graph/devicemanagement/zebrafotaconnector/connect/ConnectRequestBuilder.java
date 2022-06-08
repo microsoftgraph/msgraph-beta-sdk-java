@@ -68,6 +68,7 @@ public class ConnectRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConnectRequestBuilderPostRequestConfiguration requestConfig = new ConnectRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class GroupPolicyCategoryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupPolicyCategoryItemRequestBuilderGetRequestConfiguration requestConfig = new GroupPolicyCategoryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

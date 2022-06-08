@@ -99,6 +99,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuil
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetRequestConfiguration requestConfig = new AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

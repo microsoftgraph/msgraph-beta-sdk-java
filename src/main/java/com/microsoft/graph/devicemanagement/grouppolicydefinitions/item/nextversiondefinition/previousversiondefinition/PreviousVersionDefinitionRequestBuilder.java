@@ -118,6 +118,7 @@ public class PreviousVersionDefinitionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PreviousVersionDefinitionRequestBuilderGetRequestConfiguration requestConfig = new PreviousVersionDefinitionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Unsupported Group Policy Extension. */
 public class UnsupportedGroupPolicyExtension extends Entity implements Parsable {
     /** ExtensionType of the unsupported extension. */
     private String _extensionType;

@@ -99,6 +99,7 @@ public class AccessPackageResourceRoleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageResourceRoleItemRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageResourceRoleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class AccessReviewDecisionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessReviewDecisionItemRequestBuilderGetRequestConfiguration requestConfig = new AccessReviewDecisionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

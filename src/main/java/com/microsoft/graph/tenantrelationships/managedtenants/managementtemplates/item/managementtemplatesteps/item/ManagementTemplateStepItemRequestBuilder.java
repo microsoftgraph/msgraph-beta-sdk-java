@@ -71,6 +71,7 @@ public class ManagementTemplateStepItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagementTemplateStepItemRequestBuilderGetRequestConfiguration requestConfig = new ManagementTemplateStepItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

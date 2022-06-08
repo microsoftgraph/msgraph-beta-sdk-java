@@ -33,7 +33,7 @@ public class GetAzureADLicenseUsageWithPeriodRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getAzureADLicenseUsage(period='{period}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", period);
+        urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetAzureADLicenseUsageWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetAzureADLicenseUsageWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetAzureADLicenseUsageWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

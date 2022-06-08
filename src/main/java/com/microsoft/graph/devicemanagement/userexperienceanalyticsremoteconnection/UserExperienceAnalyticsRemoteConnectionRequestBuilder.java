@@ -79,6 +79,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsRemoteConnectionRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsRemoteConnectionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UserExperienceAnalyticsRemoteConnectionRequestBuilderPostRequestConfiguration requestConfig = new UserExperienceAnalyticsRemoteConnectionRequestBuilderPostRequestConfiguration();

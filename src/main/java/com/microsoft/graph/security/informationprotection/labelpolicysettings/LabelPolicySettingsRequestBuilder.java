@@ -99,6 +99,7 @@ public class LabelPolicySettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LabelPolicySettingsRequestBuilderGetRequestConfiguration requestConfig = new LabelPolicySettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

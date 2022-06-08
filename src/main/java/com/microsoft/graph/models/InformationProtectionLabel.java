@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class InformationProtectionLabel extends Entity implements Parsable {
     /** The color that the UI should display for the label, if configured. */
     private String _color;

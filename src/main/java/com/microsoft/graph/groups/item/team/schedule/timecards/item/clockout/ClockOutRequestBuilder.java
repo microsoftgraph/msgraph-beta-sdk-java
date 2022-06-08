@@ -55,7 +55,7 @@ public class ClockOutRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClockOutRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClockOutPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class ClockOutRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClockOutRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClockOutRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClockOutPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClockOutRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ClockOutRequestBuilderPostRequestConfiguration requestConfig = new ClockOutRequestBuilderPostRequestConfiguration();
@@ -86,7 +87,7 @@ public class ClockOutRequestBuilder {
      * @param body 
      * @return a CompletableFuture of timeCard
      */
-    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final ClockOutRequestBody body) {
+    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final ClockOutPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, null, null);
@@ -100,7 +101,7 @@ public class ClockOutRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeCard
      */
-    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final ClockOutRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClockOutRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final ClockOutPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClockOutRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, null, null);
@@ -115,7 +116,7 @@ public class ClockOutRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of timeCard
      */
-    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final ClockOutRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClockOutRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<TimeCard> post(@javax.annotation.Nonnull final ClockOutPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClockOutRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

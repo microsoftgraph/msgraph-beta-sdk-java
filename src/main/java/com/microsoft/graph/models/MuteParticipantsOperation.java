@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the muteAll method. */
 public class MuteParticipantsOperation extends CommsOperation implements Parsable {
     /** The participants property */
     private java.util.List<String> _participants;

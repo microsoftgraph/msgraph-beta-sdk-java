@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An assignment of a Windows Autopilot deployment profile to an AAD group. */
 public class WindowsAutopilotDeploymentProfileAssignment extends Entity implements Parsable {
     /** Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets. */
     private DeviceAndAppManagementAssignmentSource _source;

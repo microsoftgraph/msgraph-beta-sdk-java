@@ -59,7 +59,7 @@ public class BookingBusinessesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List bookingBusinesses
+     * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an example below.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BookingBusinessesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List bookingBusinesses
+     * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an example below.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class BookingBusinessesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingBusinessesRequestBuilderGetRequestConfiguration requestConfig = new BookingBusinessesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -88,7 +89,7 @@ public class BookingBusinessesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create bookingBusiness
+     * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the **bookingBusiness**.
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +98,7 @@ public class BookingBusinessesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create bookingBusiness
+     * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the **bookingBusiness**.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -110,6 +111,7 @@ public class BookingBusinessesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final BookingBusinessesRequestBuilderPostRequestConfiguration requestConfig = new BookingBusinessesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class BookingBusinessesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List bookingBusinesses
+     * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an example below.
      * @return a CompletableFuture of BookingBusinessCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BookingBusinessCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class BookingBusinessesRequestBuilder {
         }
     }
     /**
-     * List bookingBusinesses
+     * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an example below.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingBusinessCollectionResponse
      */
@@ -153,7 +155,7 @@ public class BookingBusinessesRequestBuilder {
         }
     }
     /**
-     * List bookingBusinesses
+     * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an example below.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BookingBusinessCollectionResponse
@@ -171,7 +173,7 @@ public class BookingBusinessesRequestBuilder {
         }
     }
     /**
-     * Create bookingBusiness
+     * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the **bookingBusiness**.
      * @param body 
      * @return a CompletableFuture of bookingBusiness
      */
@@ -188,7 +190,7 @@ public class BookingBusinessesRequestBuilder {
         }
     }
     /**
-     * Create bookingBusiness
+     * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the **bookingBusiness**.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingBusiness
@@ -206,7 +208,7 @@ public class BookingBusinessesRequestBuilder {
         }
     }
     /**
-     * Create bookingBusiness
+     * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the **bookingBusiness**.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +227,7 @@ public class BookingBusinessesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List bookingBusinesses */
+    /** Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an example below. */
     public class BookingBusinessesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

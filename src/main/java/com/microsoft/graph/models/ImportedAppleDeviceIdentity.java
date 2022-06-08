@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The importedAppleDeviceIdentity resource represents the imported device identity of an Apple device . */
 public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     /** Created Date Time of the device */
     private OffsetDateTime _createdDateTime;
@@ -46,6 +47,13 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ImportedAppleDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.importedAppleDeviceIdentity": return new ImportedAppleDeviceIdentity();
+            }
+        }
         return new ImportedAppleDeviceIdentity();
     }
     /**

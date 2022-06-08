@@ -17,6 +17,7 @@ import java.util.Objects;
 import microsoft.graph.models.GroupCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.count.CountRequestBuilder;
+import microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the includedGroups property of the microsoft.graph.mobilityManagementPolicy entity. */
 public class IncludedGroupsRequestBuilder {
     /** The count property */
@@ -26,6 +27,11 @@ public class IncludedGroupsRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -77,6 +83,7 @@ public class IncludedGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IncludedGroupsRequestBuilderGetRequestConfiguration requestConfig = new IncludedGroupsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

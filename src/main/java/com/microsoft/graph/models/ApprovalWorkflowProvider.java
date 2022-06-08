@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
 public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /** The businessFlows property */
     private java.util.List<BusinessFlow> _businessFlows;

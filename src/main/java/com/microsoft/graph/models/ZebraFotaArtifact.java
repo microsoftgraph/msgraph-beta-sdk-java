@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes a single artifact for a specific device model. */
 public class ZebraFotaArtifact extends Entity implements Parsable {
     /** The version of the Board Support Package. */
     private String _boardSupportPackageVersion;

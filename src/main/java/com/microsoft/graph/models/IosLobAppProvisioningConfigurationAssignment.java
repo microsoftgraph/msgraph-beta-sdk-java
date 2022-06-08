@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for Group Assignment of an iOS LOB App Provisioning and Configuration. */
 public class IosLobAppProvisioningConfigurationAssignment extends Entity implements Parsable {
     /** The target group assignment defined by the admin. */
     private DeviceAndAppManagementAssignmentTarget _target;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains the properties used to assign a windows driver update profile to a group. */
 public class WindowsDriverUpdateProfileAssignment extends Entity implements Parsable {
     /** Base type for assignment targets. */
     private DeviceAndAppManagementAssignmentTarget _target;

@@ -124,6 +124,7 @@ public class RoleScopeTagItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleScopeTagItemRequestBuilderGetRequestConfiguration requestConfig = new RoleScopeTagItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -78,6 +78,7 @@ public class OnPremisesPublishingProfilesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnPremisesPublishingProfilesRequestBuilderGetRequestConfiguration requestConfig = new OnPremisesPublishingProfilesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class OnPremisesPublishingProfilesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final OnPremisesPublishingProfilesRequestBuilderPostRequestConfiguration requestConfig = new OnPremisesPublishingProfilesRequestBuilderPostRequestConfiguration();

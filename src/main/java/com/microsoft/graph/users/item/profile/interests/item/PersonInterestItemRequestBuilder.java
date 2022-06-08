@@ -99,6 +99,7 @@ public class PersonInterestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PersonInterestItemRequestBuilderGetRequestConfiguration requestConfig = new PersonInterestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

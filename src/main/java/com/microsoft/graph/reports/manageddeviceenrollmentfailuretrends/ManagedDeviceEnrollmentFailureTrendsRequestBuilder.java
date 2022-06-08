@@ -69,6 +69,7 @@ public class ManagedDeviceEnrollmentFailureTrendsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceEnrollmentFailureTrendsRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceEnrollmentFailureTrendsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -79,7 +80,7 @@ public class ManagedDeviceEnrollmentFailureTrendsRequestBuilder {
     }
     /**
      * Metadata for the enrollment failure trends report
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get() {
         try {
@@ -92,7 +93,7 @@ public class ManagedDeviceEnrollmentFailureTrendsRequestBuilder {
     /**
      * Metadata for the enrollment failure trends report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceEnrollmentFailureTrendsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +107,7 @@ public class ManagedDeviceEnrollmentFailureTrendsRequestBuilder {
      * Metadata for the enrollment failure trends report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceEnrollmentFailureTrendsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

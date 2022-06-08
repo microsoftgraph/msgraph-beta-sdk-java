@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains the properties used to assign a windows quality update profile to a group. */
 public class WindowsQualityUpdateProfileAssignment extends Entity implements Parsable {
     /** The assignment target that the quality update profile is assigned to. */
     private DeviceAndAppManagementAssignmentTarget _target;

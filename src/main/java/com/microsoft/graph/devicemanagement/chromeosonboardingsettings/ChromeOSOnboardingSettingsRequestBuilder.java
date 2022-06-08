@@ -90,6 +90,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChromeOSOnboardingSettingsRequestBuilderGetRequestConfiguration requestConfig = new ChromeOSOnboardingSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -122,6 +123,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ChromeOSOnboardingSettingsRequestBuilderPostRequestConfiguration requestConfig = new ChromeOSOnboardingSettingsRequestBuilderPostRequestConfiguration();

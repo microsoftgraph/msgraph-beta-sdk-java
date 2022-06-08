@@ -33,7 +33,7 @@ public class ScopedForResourceWithResourceRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.scopedForResource(resource='{resource}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", resource);
+        urlTplParams.put("resource", resource);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class ScopedForResourceWithResourceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ScopedForResourceWithResourceRequestBuilderGetRequestConfiguration requestConfig = new ScopedForResourceWithResourceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

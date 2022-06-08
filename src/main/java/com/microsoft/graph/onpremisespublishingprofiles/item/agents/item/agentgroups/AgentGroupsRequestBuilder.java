@@ -15,9 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnPremisesAgentGroup;
 import microsoft.graph.models.OnPremisesAgentGroupCollectionResponse;
 import microsoft.graph.onpremisespublishingprofiles.item.agents.item.agentgroups.count.CountRequestBuilder;
+import microsoft.graph.onpremisespublishingprofiles.item.agents.item.agentgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the agentGroups property of the microsoft.graph.onPremisesAgent entity. */
 public class AgentGroupsRequestBuilder {
     /** The count property */
@@ -27,6 +27,11 @@ public class AgentGroupsRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
@@ -78,42 +83,11 @@ public class AgentGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AgentGroupsRequestBuilderGetRequestConfiguration requestConfig = new AgentGroupsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final OnPremisesAgentGroup body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final OnPremisesAgentGroup body, @javax.annotation.Nullable final java.util.function.Consumer<AgentGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final AgentGroupsRequestBuilderPostRequestConfiguration requestConfig = new AgentGroupsRequestBuilderPostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
@@ -170,61 +144,6 @@ public class AgentGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
-     * @param body 
-     * @return a CompletableFuture of onPremisesAgentGroup
-     */
-    public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OnPremisesAgentGroup::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgentGroup
-     */
-    public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body, @javax.annotation.Nullable final java.util.function.Consumer<AgentGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OnPremisesAgentGroup::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of onPremisesAgentGroup
-     */
-    public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body, @javax.annotation.Nullable final java.util.function.Consumer<AgentGroupsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OnPremisesAgentGroup::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
     /** List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable. */
     public class AgentGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
@@ -276,21 +195,6 @@ public class AgentGroupsRequestBuilder {
          * @return a void
          */
         public AgentGroupsRequestBuilderGetRequestConfiguration() {
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class AgentGroupsRequestBuilderPostRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new agentGroupsRequestBuilderPostRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public AgentGroupsRequestBuilderPostRequestConfiguration() {
         }
     }
 }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the getOffice365GroupsActivityCounts method. */
 public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /** The number of emails received by Group mailboxes. */
     private Long _exchangeEmailsReceived;

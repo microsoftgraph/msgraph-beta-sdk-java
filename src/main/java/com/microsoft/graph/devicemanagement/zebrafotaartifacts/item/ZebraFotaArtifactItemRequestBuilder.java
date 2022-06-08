@@ -99,6 +99,7 @@ public class ZebraFotaArtifactItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ZebraFotaArtifactItemRequestBuilderGetRequestConfiguration requestConfig = new ZebraFotaArtifactItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

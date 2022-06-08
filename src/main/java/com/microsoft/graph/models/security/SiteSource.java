@@ -7,8 +7,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.DataSource;
 import microsoft.graph.models.Site;
+/** Provides operations to manage the security singleton. */
 public class SiteSource extends DataSource implements Parsable {
     /** The site property */
     private Site _site;

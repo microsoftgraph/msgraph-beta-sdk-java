@@ -33,7 +33,7 @@ public class GetLicensesForAppWithBundleIdRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceAppManagement/vppTokens/microsoft.graph.getLicensesForApp(bundleId='{bundleId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", bundleId);
+        urlTplParams.put("bundleId", bundleId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -70,6 +70,7 @@ public class GetLicensesForAppWithBundleIdRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetLicensesForAppWithBundleIdRequestBuilderGetRequestConfiguration requestConfig = new GetLicensesForAppWithBundleIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

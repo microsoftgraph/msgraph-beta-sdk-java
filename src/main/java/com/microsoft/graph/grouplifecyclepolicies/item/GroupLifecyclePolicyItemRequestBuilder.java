@@ -64,7 +64,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete groupLifecyclePolicy
+     * Delete a groupLifecyclePolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -72,7 +72,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete groupLifecyclePolicy
+     * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -92,7 +92,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get groupLifecyclePolicy
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get groupLifecyclePolicy
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,6 +111,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupLifecyclePolicyItemRequestBuilderGetRequestConfiguration requestConfig = new GroupLifecyclePolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -121,7 +122,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update groupLifecyclePolicy
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body 
      * @return a RequestInformation
      */
@@ -130,7 +131,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update groupLifecyclePolicy
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -153,7 +154,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete groupLifecyclePolicy
+     * Delete a groupLifecyclePolicy.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -169,7 +170,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Delete groupLifecyclePolicy
+     * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -186,7 +187,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Delete groupLifecyclePolicy
+     * Delete a groupLifecyclePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -204,7 +205,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Get groupLifecyclePolicy
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @return a CompletableFuture of groupLifecyclePolicy
      */
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> get() {
@@ -220,7 +221,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Get groupLifecyclePolicy
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupLifecyclePolicy
      */
@@ -237,7 +238,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Get groupLifecyclePolicy
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of groupLifecyclePolicy
@@ -255,7 +256,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Update groupLifecyclePolicy
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -272,7 +273,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Update groupLifecyclePolicy
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -290,7 +291,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         }
     }
     /**
-     * Update groupLifecyclePolicy
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -324,7 +325,7 @@ public class GroupLifecyclePolicyItemRequestBuilder {
         public GroupLifecyclePolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get groupLifecyclePolicy */
+    /** Retrieve the properties and relationships of a groupLifecyclePolicies object. */
     public class GroupLifecyclePolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

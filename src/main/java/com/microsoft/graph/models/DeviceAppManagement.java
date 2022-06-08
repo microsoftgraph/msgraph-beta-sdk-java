@@ -36,7 +36,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     private java.util.List<ManagedEBook> _managedEBooks;
     /** Windows information protection for apps running on devices which are MDM enrolled. */
     private java.util.List<MdmWindowsInformationProtectionPolicy> _mdmWindowsInformationProtectionPolicies;
-    /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
+    /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
     private String _microsoftStoreForBusinessLanguage;
     /** The last time an application sync from the Microsoft Store for Business was completed. */
     private OffsetDateTime _microsoftStoreForBusinessLastCompletedApplicationSyncTime;
@@ -68,6 +68,8 @@ public class DeviceAppManagement extends Entity implements Parsable {
     private java.util.List<WindowsInformationProtectionPolicy> _windowsInformationProtectionPolicies;
     /** Windows information protection wipe actions. */
     private java.util.List<WindowsInformationProtectionWipeAction> _windowsInformationProtectionWipeActions;
+    /** Windows managed app policies. */
+    private java.util.List<WindowsManagedAppProtection> _windowsManagedAppProtections;
     /** Windows management app. */
     private WindowsManagementApp _windowsManagementApp;
     /**
@@ -156,6 +158,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
             this.put("windowsInformationProtectionDeviceRegistrations", (n) -> { currentObject.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
             this.put("windowsInformationProtectionPolicies", (n) -> { currentObject.setWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(WindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
             this.put("windowsInformationProtectionWipeActions", (n) -> { currentObject.setWindowsInformationProtectionWipeActions(n.getCollectionOfObjectValues(WindowsInformationProtectionWipeAction::createFromDiscriminatorValue)); });
+            this.put("windowsManagedAppProtections", (n) -> { currentObject.setWindowsManagedAppProtections(n.getCollectionOfObjectValues(WindowsManagedAppProtection::createFromDiscriminatorValue)); });
             this.put("windowsManagementApp", (n) -> { currentObject.setWindowsManagementApp(n.getObjectValue(WindowsManagementApp::createFromDiscriminatorValue)); });
         }};
     }
@@ -232,7 +235,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this._mdmWindowsInformationProtectionPolicies;
     }
     /**
-     * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -360,6 +363,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this._windowsInformationProtectionWipeActions;
     }
     /**
+     * Gets the windowsManagedAppProtections property value. Windows managed app policies.
+     * @return a windowsManagedAppProtection
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsManagedAppProtection> getWindowsManagedAppProtections() {
+        return this._windowsManagedAppProtections;
+    }
+    /**
      * Gets the windowsManagementApp property value. Windows management app.
      * @return a windowsManagementApp
      */
@@ -404,6 +415,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("windowsInformationProtectionDeviceRegistrations", this.getWindowsInformationProtectionDeviceRegistrations());
         writer.writeCollectionOfObjectValues("windowsInformationProtectionPolicies", this.getWindowsInformationProtectionPolicies());
         writer.writeCollectionOfObjectValues("windowsInformationProtectionWipeActions", this.getWindowsInformationProtectionWipeActions());
+        writer.writeCollectionOfObjectValues("windowsManagedAppProtections", this.getWindowsManagedAppProtections());
         writer.writeObjectValue("windowsManagementApp", this.getWindowsManagementApp());
     }
     /**
@@ -511,7 +523,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         this._mdmWindowsInformationProtectionPolicies = value;
     }
     /**
-     * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      * @param value Value to set for the microsoftStoreForBusinessLanguage property.
      * @return a void
      */
@@ -637,6 +649,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public void setWindowsInformationProtectionWipeActions(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionWipeAction> value) {
         this._windowsInformationProtectionWipeActions = value;
+    }
+    /**
+     * Sets the windowsManagedAppProtections property value. Windows managed app policies.
+     * @param value Value to set for the windowsManagedAppProtections property.
+     * @return a void
+     */
+    public void setWindowsManagedAppProtections(@javax.annotation.Nullable final java.util.List<WindowsManagedAppProtection> value) {
+        this._windowsManagedAppProtections = value;
     }
     /**
      * Sets the windowsManagementApp property value. Windows management app.

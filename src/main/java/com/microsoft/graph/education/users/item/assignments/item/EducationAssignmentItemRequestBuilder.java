@@ -20,6 +20,7 @@ import microsoft.graph.education.users.item.assignments.item.publish.PublishRequ
 import microsoft.graph.education.users.item.assignments.item.resources.item.EducationAssignmentResourceItemRequestBuilder;
 import microsoft.graph.education.users.item.assignments.item.resources.ResourcesRequestBuilder;
 import microsoft.graph.education.users.item.assignments.item.rubric.RubricRequestBuilder;
+import microsoft.graph.education.users.item.assignments.item.setupfeedbackresourcesfolder.SetUpFeedbackResourcesFolderRequestBuilder;
 import microsoft.graph.education.users.item.assignments.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
 import microsoft.graph.education.users.item.assignments.item.submissions.item.EducationSubmissionItemRequestBuilder;
 import microsoft.graph.education.users.item.assignments.item.submissions.SubmissionsRequestBuilder;
@@ -50,6 +51,11 @@ public class EducationAssignmentItemRequestBuilder {
     @javax.annotation.Nonnull
     public RubricRequestBuilder rubric() {
         return new RubricRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The setUpFeedbackResourcesFolder property */
+    @javax.annotation.Nonnull
+    public SetUpFeedbackResourcesFolderRequestBuilder setUpFeedbackResourcesFolder() {
+        return new SetUpFeedbackResourcesFolderRequestBuilder(pathParameters, requestAdapter);
     }
     /** The setUpResourcesFolder property */
     @javax.annotation.Nonnull
@@ -150,6 +156,7 @@ public class EducationAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EducationAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new EducationAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

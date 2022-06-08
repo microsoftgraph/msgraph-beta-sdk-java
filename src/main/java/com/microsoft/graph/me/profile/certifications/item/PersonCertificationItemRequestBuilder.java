@@ -99,6 +99,7 @@ public class PersonCertificationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PersonCertificationItemRequestBuilderGetRequestConfiguration requestConfig = new PersonCertificationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

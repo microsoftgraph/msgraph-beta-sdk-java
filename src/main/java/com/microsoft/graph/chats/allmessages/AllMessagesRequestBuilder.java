@@ -68,6 +68,7 @@ public class AllMessagesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllMessagesRequestBuilderGetRequestConfiguration requestConfig = new AllMessagesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

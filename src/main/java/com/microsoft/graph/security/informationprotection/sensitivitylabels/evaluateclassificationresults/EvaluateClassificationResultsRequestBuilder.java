@@ -54,7 +54,7 @@ public class EvaluateClassificationResultsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateClassificationResultsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,13 +64,14 @@ public class EvaluateClassificationResultsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateClassificationResultsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateClassificationResultsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateClassificationResultsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final EvaluateClassificationResultsRequestBuilderPostRequestConfiguration requestConfig = new EvaluateClassificationResultsRequestBuilderPostRequestConfiguration();
@@ -85,7 +86,7 @@ public class EvaluateClassificationResultsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of evaluateClassificationResultsResponse
      */
-    public java.util.concurrent.CompletableFuture<EvaluateClassificationResultsResponse> post(@javax.annotation.Nonnull final EvaluateClassificationResultsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<EvaluateClassificationResultsResponse> post(@javax.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, EvaluateClassificationResultsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +100,7 @@ public class EvaluateClassificationResultsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of evaluateClassificationResultsResponse
      */
-    public java.util.concurrent.CompletableFuture<EvaluateClassificationResultsResponse> post(@javax.annotation.Nonnull final EvaluateClassificationResultsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateClassificationResultsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<EvaluateClassificationResultsResponse> post(@javax.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateClassificationResultsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, EvaluateClassificationResultsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +115,7 @@ public class EvaluateClassificationResultsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of evaluateClassificationResultsResponse
      */
-    public java.util.concurrent.CompletableFuture<EvaluateClassificationResultsResponse> post(@javax.annotation.Nonnull final EvaluateClassificationResultsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateClassificationResultsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<EvaluateClassificationResultsResponse> post(@javax.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateClassificationResultsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

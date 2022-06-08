@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to group. */
 public class ChangeTrackedEntity extends Entity implements Parsable {
     /** The createdBy property */
     private IdentitySet _createdBy;
@@ -32,6 +33,13 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ChangeTrackedEntity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.changeTrackedEntity": return new ChangeTrackedEntity();
+            }
+        }
         return new ChangeTrackedEntity();
     }
     /**

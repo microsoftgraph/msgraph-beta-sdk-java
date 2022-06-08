@@ -78,6 +78,7 @@ public class ConfigurationPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConfigurationPoliciesRequestBuilderGetRequestConfiguration requestConfig = new ConfigurationPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ConfigurationPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ConfigurationPoliciesRequestBuilderPostRequestConfiguration requestConfig = new ConfigurationPoliciesRequestBuilderPostRequestConfiguration();

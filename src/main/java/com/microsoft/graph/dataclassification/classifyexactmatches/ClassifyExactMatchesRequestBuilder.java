@@ -55,7 +55,7 @@ public class ClassifyExactMatchesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClassifyExactMatchesRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,13 +65,14 @@ public class ClassifyExactMatchesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClassifyExactMatchesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ClassifyExactMatchesRequestBuilderPostRequestConfiguration requestConfig = new ClassifyExactMatchesRequestBuilderPostRequestConfiguration();
@@ -84,9 +85,9 @@ public class ClassifyExactMatchesRequestBuilder {
     /**
      * Invoke action classifyExactMatches
      * @param body 
-     * @return a CompletableFuture of exactMatchClassificationResult
+     * @return a CompletableFuture of ExactMatchClassificationResult
      */
-    public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesRequestBody body) {
+    public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, ExactMatchClassificationResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +99,9 @@ public class ClassifyExactMatchesRequestBuilder {
      * Invoke action classifyExactMatches
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchClassificationResult
+     * @return a CompletableFuture of ExactMatchClassificationResult
      */
-    public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, ExactMatchClassificationResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +114,9 @@ public class ClassifyExactMatchesRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of exactMatchClassificationResult
+     * @return a CompletableFuture of ExactMatchClassificationResult
      */
-    public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

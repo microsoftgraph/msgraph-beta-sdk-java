@@ -60,7 +60,7 @@ public class PrivilegedApprovalRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List privilegedApproval
+     * Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class PrivilegedApprovalRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List privilegedApproval
+     * Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -79,6 +79,7 @@ public class PrivilegedApprovalRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivilegedApprovalRequestBuilderGetRequestConfiguration requestConfig = new PrivilegedApprovalRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -89,7 +90,7 @@ public class PrivilegedApprovalRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create privilegedApproval
+     * Use this API to create a new privilegedApproval.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +99,7 @@ public class PrivilegedApprovalRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create privilegedApproval
+     * Use this API to create a new privilegedApproval.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -111,6 +112,7 @@ public class PrivilegedApprovalRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PrivilegedApprovalRequestBuilderPostRequestConfiguration requestConfig = new PrivilegedApprovalRequestBuilderPostRequestConfiguration();
@@ -121,7 +123,7 @@ public class PrivilegedApprovalRequestBuilder {
         return requestInfo;
     }
     /**
-     * List privilegedApproval
+     * Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @return a CompletableFuture of PrivilegedApprovalCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PrivilegedApprovalCollectionResponse> get() {
@@ -137,7 +139,7 @@ public class PrivilegedApprovalRequestBuilder {
         }
     }
     /**
-     * List privilegedApproval
+     * Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrivilegedApprovalCollectionResponse
      */
@@ -154,7 +156,7 @@ public class PrivilegedApprovalRequestBuilder {
         }
     }
     /**
-     * List privilegedApproval
+     * Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PrivilegedApprovalCollectionResponse
@@ -180,7 +182,7 @@ public class PrivilegedApprovalRequestBuilder {
         return new MyRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Create privilegedApproval
+     * Use this API to create a new privilegedApproval.
      * @param body 
      * @return a CompletableFuture of privilegedApproval
      */
@@ -197,7 +199,7 @@ public class PrivilegedApprovalRequestBuilder {
         }
     }
     /**
-     * Create privilegedApproval
+     * Use this API to create a new privilegedApproval.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedApproval
@@ -215,7 +217,7 @@ public class PrivilegedApprovalRequestBuilder {
         }
     }
     /**
-     * Create privilegedApproval
+     * Use this API to create a new privilegedApproval.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -234,7 +236,7 @@ public class PrivilegedApprovalRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List privilegedApproval */
+    /** Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs. */
     public class PrivilegedApprovalRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

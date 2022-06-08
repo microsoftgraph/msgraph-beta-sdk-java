@@ -105,6 +105,7 @@ public class SitePageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SitePageItemRequestBuilderGetRequestConfiguration requestConfig = new SitePageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

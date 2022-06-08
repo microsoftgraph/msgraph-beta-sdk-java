@@ -111,6 +111,7 @@ public class SalesCreditMemoLineItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SalesCreditMemoLineItemRequestBuilderGetRequestConfiguration requestConfig = new SalesCreditMemoLineItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

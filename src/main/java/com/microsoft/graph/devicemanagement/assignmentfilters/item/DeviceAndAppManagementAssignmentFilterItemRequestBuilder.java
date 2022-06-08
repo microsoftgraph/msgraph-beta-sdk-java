@@ -100,6 +100,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceAndAppManagementAssignmentFilterItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceAndAppManagementAssignmentFilterItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

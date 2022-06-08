@@ -111,6 +111,7 @@ public class OemWarrantyInformationOnboardingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OemWarrantyInformationOnboardingItemRequestBuilderGetRequestConfiguration requestConfig = new OemWarrantyInformationOnboardingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

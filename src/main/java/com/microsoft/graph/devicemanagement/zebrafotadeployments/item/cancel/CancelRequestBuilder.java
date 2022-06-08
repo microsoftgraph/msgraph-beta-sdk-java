@@ -68,6 +68,7 @@ public class CancelRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CancelRequestBuilderPostRequestConfiguration requestConfig = new CancelRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

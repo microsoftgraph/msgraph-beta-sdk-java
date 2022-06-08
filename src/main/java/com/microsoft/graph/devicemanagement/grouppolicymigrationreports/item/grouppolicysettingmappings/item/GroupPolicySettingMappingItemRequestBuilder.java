@@ -99,6 +99,7 @@ public class GroupPolicySettingMappingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupPolicySettingMappingItemRequestBuilderGetRequestConfiguration requestConfig = new GroupPolicySettingMappingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

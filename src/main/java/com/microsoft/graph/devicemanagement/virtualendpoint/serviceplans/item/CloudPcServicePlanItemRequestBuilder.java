@@ -99,6 +99,7 @@ public class CloudPcServicePlanItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CloudPcServicePlanItemRequestBuilderGetRequestConfiguration requestConfig = new CloudPcServicePlanItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

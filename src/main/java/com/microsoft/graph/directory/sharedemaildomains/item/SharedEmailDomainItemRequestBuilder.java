@@ -99,6 +99,7 @@ public class SharedEmailDomainItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SharedEmailDomainItemRequestBuilderGetRequestConfiguration requestConfig = new SharedEmailDomainItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

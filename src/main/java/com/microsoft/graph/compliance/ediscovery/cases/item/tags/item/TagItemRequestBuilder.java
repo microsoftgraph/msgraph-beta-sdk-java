@@ -123,6 +123,7 @@ public class TagItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TagItemRequestBuilderGetRequestConfiguration requestConfig = new TagItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

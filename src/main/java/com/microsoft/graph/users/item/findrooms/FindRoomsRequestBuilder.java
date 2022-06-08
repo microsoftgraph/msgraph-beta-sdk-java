@@ -68,6 +68,7 @@ public class FindRoomsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FindRoomsRequestBuilderGetRequestConfiguration requestConfig = new FindRoomsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

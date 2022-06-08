@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Scheduled Action for Rule */
 public class DeviceManagementComplianceActionItem extends Entity implements Parsable {
     /** What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock. */
     private DeviceManagementComplianceActionType _actionType;

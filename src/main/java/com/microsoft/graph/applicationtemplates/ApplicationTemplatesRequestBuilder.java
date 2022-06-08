@@ -59,7 +59,7 @@ public class ApplicationTemplatesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List applicationTemplates
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ApplicationTemplatesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List applicationTemplates
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class ApplicationTemplatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApplicationTemplatesRequestBuilderGetRequestConfiguration requestConfig = new ApplicationTemplatesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ApplicationTemplatesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ApplicationTemplatesRequestBuilderPostRequestConfiguration requestConfig = new ApplicationTemplatesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class ApplicationTemplatesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List applicationTemplates
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @return a CompletableFuture of ApplicationTemplateCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ApplicationTemplateCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class ApplicationTemplatesRequestBuilder {
         }
     }
     /**
-     * List applicationTemplates
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ApplicationTemplateCollectionResponse
      */
@@ -153,7 +155,7 @@ public class ApplicationTemplatesRequestBuilder {
         }
     }
     /**
-     * List applicationTemplates
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ApplicationTemplateCollectionResponse
@@ -225,7 +227,7 @@ public class ApplicationTemplatesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List applicationTemplates */
+    /** Retrieve a list of applicationTemplate objects from the Azure AD application gallery. */
     public class ApplicationTemplatesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

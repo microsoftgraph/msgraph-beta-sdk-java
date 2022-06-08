@@ -71,6 +71,7 @@ public class AppRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppRequestBuilderGetRequestConfiguration requestConfig = new AppRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

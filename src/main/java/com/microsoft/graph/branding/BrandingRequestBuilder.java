@@ -102,6 +102,7 @@ public class BrandingRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BrandingRequestBuilderGetRequestConfiguration requestConfig = new BrandingRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

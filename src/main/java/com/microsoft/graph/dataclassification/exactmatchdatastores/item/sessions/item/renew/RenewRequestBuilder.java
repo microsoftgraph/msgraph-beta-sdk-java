@@ -69,6 +69,7 @@ public class RenewRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RenewRequestBuilderPostRequestConfiguration requestConfig = new RenewRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
