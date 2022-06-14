@@ -39,7 +39,7 @@ public class OcrSettings implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether or not OCR is enabled for the case.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -48,7 +48,7 @@ public class OcrSettings implements IJsonBackedObject {
 
     /**
      * The Max Image Size.
-     * 
+     * Maximum image size that will be processed in KB).
      */
     @SerializedName(value = "maxImageSize", alternate = {"MaxImageSize"})
     @Expose
@@ -57,7 +57,7 @@ public class OcrSettings implements IJsonBackedObject {
 
     /**
      * The Timeout.
-     * 
+     * The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time.
      */
     @SerializedName(value = "timeout", alternate = {"Timeout"})
     @Expose

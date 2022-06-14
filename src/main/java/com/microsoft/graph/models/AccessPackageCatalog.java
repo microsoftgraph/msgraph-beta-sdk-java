@@ -128,7 +128,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resources.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResources", alternate = {"AccessPackageResources"})
     @Expose
@@ -137,7 +137,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resource Scopes.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose

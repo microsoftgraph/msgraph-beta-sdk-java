@@ -32,7 +32,7 @@ public class EdiscoveryReviewSet extends DataSet implements IJsonBackedObject {
 
     /**
      * The Files.
-     * 
+     * Represents files within the review set.
      */
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose
@@ -41,7 +41,7 @@ public class EdiscoveryReviewSet extends DataSet implements IJsonBackedObject {
 
     /**
      * The Queries.
-     * 
+     * Represents queries within the review set.
      */
     @SerializedName(value = "queries", alternate = {"Queries"})
     @Expose

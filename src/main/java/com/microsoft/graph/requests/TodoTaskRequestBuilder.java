@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TodoTask;
-import com.microsoft.graph.requests.Attachment_v2CollectionRequestBuilder;
-import com.microsoft.graph.requests.Attachment_v2RequestBuilder;
+import com.microsoft.graph.requests.AttachmentBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.AttachmentBaseRequestBuilder;
 import com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder;
 import com.microsoft.graph.requests.AttachmentSessionRequestBuilder;
 import com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder;
@@ -67,24 +67,24 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
 
 
     /**
-     *  Gets a request builder for the Attachment_v2 collection
+     *  Gets a request builder for the AttachmentBase collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public Attachment_v2CollectionRequestBuilder attachments() {
-        return new Attachment_v2CollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    public AttachmentBaseCollectionRequestBuilder attachments() {
+        return new AttachmentBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the Attachment_v2 item
+     * Gets a request builder for the AttachmentBase item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public Attachment_v2RequestBuilder attachments(@Nonnull final String id) {
-        return new Attachment_v2RequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    public AttachmentBaseRequestBuilder attachments(@Nonnull final String id) {
+        return new AttachmentBaseRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AttachmentSession collection

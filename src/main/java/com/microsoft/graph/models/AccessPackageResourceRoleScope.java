@@ -29,7 +29,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Created By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -47,7 +47,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Modified By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -74,7 +74,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Access Package Resource Scope.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceScope", alternate = {"AccessPackageResourceScope"})
     @Expose

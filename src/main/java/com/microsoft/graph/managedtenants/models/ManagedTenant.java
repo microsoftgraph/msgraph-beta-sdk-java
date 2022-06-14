@@ -231,7 +231,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The My Roles.
-     * 
+     * The collection of role assignments to a signed-in user for a managed tenant.
      */
     @SerializedName(value = "myRoles", alternate = {"MyRoles"})
     @Expose

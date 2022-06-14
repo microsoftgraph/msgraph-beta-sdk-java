@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WorkforceIntegration;
 import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.TeamworkDevice;
+import com.microsoft.graph.models.TeamsAppSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
 import com.microsoft.graph.requests.DeletedTeamCollectionPage;
@@ -58,6 +59,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TeamworkDeviceCollectionPage devices;
+
+    /**
+     * The Teams App Settings.
+     * 
+     */
+    @SerializedName(value = "teamsAppSettings", alternate = {"TeamsAppSettings"})
+    @Expose
+	@Nullable
+    public TeamsAppSettings teamsAppSettings;
 
 
     /**

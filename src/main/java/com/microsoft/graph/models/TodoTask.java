@@ -14,13 +14,13 @@ import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.Importance;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus;
-import com.microsoft.graph.models.Attachment_v2;
+import com.microsoft.graph.models.AttachmentBase;
 import com.microsoft.graph.models.AttachmentSession;
 import com.microsoft.graph.models.ChecklistItem;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.LinkedResource;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.Attachment_v2CollectionPage;
+import com.microsoft.graph.requests.AttachmentBaseCollectionPage;
 import com.microsoft.graph.requests.AttachmentSessionCollectionPage;
 import com.microsoft.graph.requests.ChecklistItemCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -174,7 +174,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
 	@Nullable
-    public Attachment_v2CollectionPage attachments;
+    public AttachmentBaseCollectionPage attachments;
 
     /**
      * The Attachment Sessions.
@@ -223,7 +223,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments"), Attachment_v2CollectionPage.class);
+            attachments = serializer.deserializeObject(json.get("attachments"), AttachmentBaseCollectionPage.class);
         }
 
         if (json.has("attachmentSessions")) {

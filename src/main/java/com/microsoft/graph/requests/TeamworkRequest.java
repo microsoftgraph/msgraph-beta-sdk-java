@@ -18,6 +18,7 @@ import com.microsoft.graph.requests.DeletedTeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeletedTeamRequestBuilder;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamworkDeviceRequestBuilder;
+import com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

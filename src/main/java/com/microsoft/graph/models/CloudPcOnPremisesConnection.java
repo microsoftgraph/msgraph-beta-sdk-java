@@ -57,6 +57,15 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
     public String adDomainUsername;
 
     /**
+     * The Alternate Resource Url.
+     * 
+     */
+    @SerializedName(value = "alternateResourceUrl", alternate = {"AlternateResourceUrl"})
+    @Expose
+	@Nullable
+    public String alternateResourceUrl;
+
+    /**
      * The Display Name.
      * The display name for the Azure network connection.
      */
