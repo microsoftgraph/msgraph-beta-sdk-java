@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityProtectionRoot singleton. */
 public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable {
     /** The activity related to service principal risk level change. */
     private RiskServicePrincipalActivity _activity;
@@ -16,7 +15,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /** The identifier of the service principal. */
     private String _servicePrincipalId;
     /**
-     * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
+     * Instantiates a new RiskyServicePrincipalHistoryItem and sets the default values.
      * @return a void
      */
     public RiskyServicePrincipalHistoryItem() {
@@ -25,7 +24,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyServicePrincipalHistoryItem
+     * @return a RiskyServicePrincipalHistoryItem
      */
     @javax.annotation.Nonnull
     public static RiskyServicePrincipalHistoryItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

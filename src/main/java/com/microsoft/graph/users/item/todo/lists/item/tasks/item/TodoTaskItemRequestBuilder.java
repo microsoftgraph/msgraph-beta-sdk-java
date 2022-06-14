@@ -17,7 +17,7 @@ import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.TodoTask;
 import microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.AttachmentsRequestBuilder;
-import microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.item.Attachment_v2ItemRequestBuilder;
+import microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.item.AttachmentBaseItemRequestBuilder;
 import microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.AttachmentSessionsRequestBuilder;
 import microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.item.AttachmentSessionItemRequestBuilder;
 import microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.ChecklistItemsRequestBuilder;
@@ -62,14 +62,14 @@ public class TodoTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.tasks.item.attachments.item collection
      * @param id Unique identifier of the item
-     * @return a attachment_v2ItemRequestBuilder
+     * @return a attachmentBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public Attachment_v2ItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
+    public AttachmentBaseItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachment_v2%2Did", id);
-        return new Attachment_v2ItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("attachmentBase%2Did", id);
+        return new AttachmentBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.tasks.item.attachmentSessions.item collection

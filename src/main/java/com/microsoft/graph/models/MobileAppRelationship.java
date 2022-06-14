@@ -38,7 +38,8 @@ public class MobileAppRelationship extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.mobileAppRelationship": return new MobileAppRelationship();
+                case "#microsoft.graph.mobileAppDependency": return new MobileAppDependency();
+                case "#microsoft.graph.mobileAppSupersedence": return new MobileAppSupersedence();
             }
         }
         return new MobileAppRelationship();

@@ -52,7 +52,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get noncustodialSources from security
+     * noncustodialDataSource sources that are included in the eDiscovery search
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get noncustodialSources from security
+     * noncustodialDataSource sources that are included in the eDiscovery search
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get noncustodialSources from security
+     * noncustodialDataSource sources that are included in the eDiscovery search
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> get() {
@@ -98,7 +98,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         }
     }
     /**
-     * Get noncustodialSources from security
+     * noncustodialDataSource sources that are included in the eDiscovery search
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
      */
@@ -115,7 +115,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         }
     }
     /**
-     * Get noncustodialSources from security
+     * noncustodialDataSource sources that are included in the eDiscovery search
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
@@ -132,7 +132,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get noncustodialSources from security */
+    /** noncustodialDataSource sources that are included in the eDiscovery search */
     public class EdiscoveryNoncustodialDataSourceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

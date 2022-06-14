@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageResourceRequest extends Entity implements Parsable {
-    /** Nullable. */
+    /** The accessPackageResource property */
     private AccessPackageResource _accessPackageResource;
     /** The unique ID of the access package catalog. */
     private String _catalogId;
@@ -26,7 +26,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     private AccessPackageSubject _requestor;
     /** The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only. */
     private String _requestState;
-    /** Read-only. */
+    /** The requestStatus property */
     private String _requestStatus;
     /** Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource. */
     private String _requestType;
@@ -48,7 +48,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return new AccessPackageResourceRequest();
     }
     /**
-     * Gets the accessPackageResource property value. Nullable.
+     * Gets the accessPackageResource property value. The accessPackageResource property
      * @return a accessPackageResource
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this._requestState;
     }
     /**
-     * Gets the requestStatus property value. Read-only.
+     * Gets the requestStatus property value. The requestStatus property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         writer.writeStringValue("requestType", this.getRequestType());
     }
     /**
-     * Sets the accessPackageResource property value. Nullable.
+     * Sets the accessPackageResource property value. The accessPackageResource property
      * @param value Value to set for the accessPackageResource property.
      * @return a void
      */
@@ -231,7 +231,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this._requestState = value;
     }
     /**
-     * Sets the requestStatus property value. Read-only.
+     * Sets the requestStatus property value. The requestStatus property
      * @param value Value to set for the requestStatus property.
      * @return a void
      */

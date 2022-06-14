@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the authenticationMethodsPolicy singleton. */
+/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
 public class AuthenticationMethodConfiguration extends Entity implements Parsable {
     /** The state of the policy. Possible values are: enabled, disabled. */
     private AuthenticationMethodState _state;
@@ -30,7 +30,12 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.authenticationMethodConfiguration": return new AuthenticationMethodConfiguration();
+                case "#microsoft.graph.emailAuthenticationMethodConfiguration": return new EmailAuthenticationMethodConfiguration();
+                case "#microsoft.graph.fido2AuthenticationMethodConfiguration": return new Fido2AuthenticationMethodConfiguration();
+                case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
+                case "#microsoft.graph.smsAuthenticationMethodConfiguration": return new SmsAuthenticationMethodConfiguration();
+                case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
+                case "#microsoft.graph.x509CertificateAuthenticationMethodConfiguration": return new X509CertificateAuthenticationMethodConfiguration();
             }
         }
         return new AuthenticationMethodConfiguration();

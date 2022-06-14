@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class EdiscoveryFile extends File implements Parsable {
-    /** The custodian property */
+    /** Custodians associated with the file. */
     private EdiscoveryCustodian _custodian;
-    /** The tags property */
+    /** Tags associated with the file. */
     private java.util.List<EdiscoveryReviewTag> _tags;
     /**
-     * Instantiates a new ediscoveryFile and sets the default values.
+     * Instantiates a new EdiscoveryFile and sets the default values.
      * @return a void
      */
     public EdiscoveryFile() {
@@ -23,7 +22,7 @@ public class EdiscoveryFile extends File implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryFile
+     * @return a EdiscoveryFile
      */
     @javax.annotation.Nonnull
     public static EdiscoveryFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +30,7 @@ public class EdiscoveryFile extends File implements Parsable {
         return new EdiscoveryFile();
     }
     /**
-     * Gets the custodian property value. The custodian property
+     * Gets the custodian property value. Custodians associated with the file.
      * @return a ediscoveryCustodian
      */
     @javax.annotation.Nullable
@@ -51,7 +50,7 @@ public class EdiscoveryFile extends File implements Parsable {
         }};
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Tags associated with the file.
      * @return a ediscoveryReviewTag
      */
     @javax.annotation.Nullable
@@ -70,7 +69,7 @@ public class EdiscoveryFile extends File implements Parsable {
         writer.writeCollectionOfObjectValues("tags", this.getTags());
     }
     /**
-     * Sets the custodian property value. The custodian property
+     * Sets the custodian property value. Custodians associated with the file.
      * @param value Value to set for the custodian property.
      * @return a void
      */
@@ -78,7 +77,7 @@ public class EdiscoveryFile extends File implements Parsable {
         this._custodian = value;
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Tags associated with the file.
      * @param value Value to set for the tags property.
      * @return a void
      */

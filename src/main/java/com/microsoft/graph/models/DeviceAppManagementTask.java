@@ -49,7 +49,9 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceAppManagementTask": return new DeviceAppManagementTask();
+                case "#microsoft.graph.appVulnerabilityTask": return new AppVulnerabilityTask();
+                case "#microsoft.graph.securityConfigurationTask": return new SecurityConfigurationTask();
+                case "#microsoft.graph.unmanagedDeviceDiscoveryTask": return new UnmanagedDeviceDiscoveryTask();
             }
         }
         return new DeviceAppManagementTask();

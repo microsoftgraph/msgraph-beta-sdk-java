@@ -16,14 +16,8 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.security.CaseOperation;
-import microsoft.graph.security.cases.ediscoverycases.item.operations.item.ediscoveryexportoperation.EdiscoveryExportOperationRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity. */
 public class CaseOperationItemRequestBuilder {
-    /** The ediscoveryExportOperation property */
-    @javax.annotation.Nonnull
-    public EdiscoveryExportOperationRequestBuilder ediscoveryExportOperation() {
-        return new EdiscoveryExportOperationRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -86,7 +80,7 @@ public class CaseOperationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +88,7 @@ public class CaseOperationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +193,7 @@ public class CaseOperationItemRequestBuilder {
         }
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @return a CompletableFuture of caseOperation
      */
     public java.util.concurrent.CompletableFuture<CaseOperation> get() {
@@ -215,7 +209,7 @@ public class CaseOperationItemRequestBuilder {
         }
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of caseOperation
      */
@@ -232,7 +226,7 @@ public class CaseOperationItemRequestBuilder {
         }
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of caseOperation
@@ -319,7 +313,7 @@ public class CaseOperationItemRequestBuilder {
         public CaseOperationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get operations from security */
+    /** Returns a list of case caseOperation objects for this case. */
     public class CaseOperationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

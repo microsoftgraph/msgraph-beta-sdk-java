@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class TeamInfo extends Entity implements Parsable {
     /** The name of the team. */
     private String _displayName;
@@ -34,7 +34,8 @@ public class TeamInfo extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.teamInfo": return new TeamInfo();
+                case "#microsoft.graph.associatedTeamInfo": return new AssociatedTeamInfo();
+                case "#microsoft.graph.sharedWithChannelTeamInfo": return new SharedWithChannelTeamInfo();
             }
         }
         return new TeamInfo();

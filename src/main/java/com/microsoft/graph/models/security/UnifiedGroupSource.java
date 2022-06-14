@@ -8,14 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Group;
-/** Provides operations to manage the security singleton. */
 public class UnifiedGroupSource extends DataSource implements Parsable {
     /** The group property */
     private Group _group;
-    /** The includedSources property */
+    /** Specifies which sources are included in this group. Possible values are: mailbox, site. */
     private SourceType _includedSources;
     /**
-     * Instantiates a new unifiedGroupSource and sets the default values.
+     * Instantiates a new UnifiedGroupSource and sets the default values.
      * @return a void
      */
     public UnifiedGroupSource() {
@@ -24,7 +23,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedGroupSource
+     * @return a UnifiedGroupSource
      */
     @javax.annotation.Nonnull
     public static UnifiedGroupSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +51,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
         return this._group;
     }
     /**
-     * Gets the includedSources property value. The includedSources property
+     * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @return a sourceType
      */
     @javax.annotation.Nullable
@@ -79,7 +78,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
         this._group = value;
     }
     /**
-     * Sets the includedSources property value. The includedSources property
+     * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      * @return a void
      */

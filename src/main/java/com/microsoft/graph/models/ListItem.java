@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ListItem extends BaseItem implements Parsable {
     /** The list of recent activities that took place on this item. */
     private java.util.List<ItemActivityOLD> _activities;

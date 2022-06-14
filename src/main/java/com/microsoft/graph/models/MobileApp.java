@@ -79,7 +79,25 @@ public class MobileApp extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.mobileApp": return new MobileApp();
+                case "#microsoft.graph.androidForWorkApp": return new AndroidForWorkApp();
+                case "#microsoft.graph.androidManagedStoreApp": return new AndroidManagedStoreApp();
+                case "#microsoft.graph.androidStoreApp": return new AndroidStoreApp();
+                case "#microsoft.graph.iosiPadOSWebClip": return new IosiPadOSWebClip();
+                case "#microsoft.graph.iosStoreApp": return new IosStoreApp();
+                case "#microsoft.graph.iosVppApp": return new IosVppApp();
+                case "#microsoft.graph.macOSMdatpApp": return new MacOSMdatpApp();
+                case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
+                case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
+                case "#microsoft.graph.macOsVppApp": return new MacOsVppApp();
+                case "#microsoft.graph.managedApp": return new ManagedApp();
+                case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
+                case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
+                case "#microsoft.graph.officeSuiteApp": return new OfficeSuiteApp();
+                case "#microsoft.graph.webApp": return new WebApp();
+                case "#microsoft.graph.windowsMicrosoftEdgeApp": return new WindowsMicrosoftEdgeApp();
+                case "#microsoft.graph.windowsPhone81StoreApp": return new WindowsPhone81StoreApp();
+                case "#microsoft.graph.windowsStoreApp": return new WindowsStoreApp();
+                case "#microsoft.graph.windowsWebApp": return new WindowsWebApp();
             }
         }
         return new MobileApp();

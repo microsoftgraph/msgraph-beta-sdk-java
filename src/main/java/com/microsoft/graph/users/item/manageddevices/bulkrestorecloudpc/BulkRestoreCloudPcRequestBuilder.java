@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.CloudPcBulkRemoteActionResult;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the bulkRestoreCloudPc method. */
 public class BulkRestoreCloudPcRequestBuilder {
     /** Path parameters for the request */
@@ -90,7 +91,11 @@ public class BulkRestoreCloudPcRequestBuilder {
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -104,7 +109,11 @@ public class BulkRestoreCloudPcRequestBuilder {
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -120,7 +129,11 @@ public class BulkRestoreCloudPcRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

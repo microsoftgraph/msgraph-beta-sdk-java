@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.VerificationResult;
 /** Provides operations to call the verifySignature method. */
 public class VerifySignatureRequestBuilder {
@@ -90,7 +91,11 @@ public class VerifySignatureRequestBuilder {
     public java.util.concurrent.CompletableFuture<VerificationResult> post(@javax.annotation.Nonnull final VerifySignaturePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, VerificationResult::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, VerificationResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -104,7 +109,11 @@ public class VerifySignatureRequestBuilder {
     public java.util.concurrent.CompletableFuture<VerificationResult> post(@javax.annotation.Nonnull final VerifySignaturePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<VerifySignatureRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, VerificationResult::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, VerificationResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -120,7 +129,11 @@ public class VerifySignatureRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, VerificationResult::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, VerificationResult::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

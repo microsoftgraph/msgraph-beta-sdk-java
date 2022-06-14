@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The entity represents an ADMX (Administrative Template) XML file uploaded by Administrator. The ADMX file contains a collection of group policy definitions and their locations by category path. The group policy definition file also contains the languages supported as determined by the language dependent ADML (Administrative Template) language files. */
 public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile implements Parsable {
     /** The contents of the uploaded ADMX file. */
     private byte[] _content;
@@ -23,7 +22,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     /** The uploaded time of the uploaded ADMX file. */
     private OffsetDateTime _uploadDateTime;
     /**
-     * Instantiates a new groupPolicyUploadedDefinitionFile and sets the default values.
+     * Instantiates a new GroupPolicyUploadedDefinitionFile and sets the default values.
      * @return a void
      */
     public GroupPolicyUploadedDefinitionFile() {
@@ -32,7 +31,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyUploadedDefinitionFile
+     * @return a GroupPolicyUploadedDefinitionFile
      */
     @javax.annotation.Nonnull
     public static GroupPolicyUploadedDefinitionFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

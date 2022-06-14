@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class PrinterShare extends PrinterBase implements Parsable {
     /** If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties. */
     private Boolean _allowAllUsers;
@@ -23,7 +22,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     /** The viewPoint property */
     private PrinterShareViewpoint _viewPoint;
     /**
-     * Instantiates a new printerShare and sets the default values.
+     * Instantiates a new PrinterShare and sets the default values.
      * @return a void
      */
     public PrinterShare() {
@@ -32,7 +31,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerShare
+     * @return a PrinterShare
      */
     @javax.annotation.Nonnull
     public static PrinterShare createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

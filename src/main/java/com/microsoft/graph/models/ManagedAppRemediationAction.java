@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceAppManagement singleton. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public enum ManagedAppRemediationAction implements ValuedEnum {
     /** app and the corresponding company data to be blocked */
     Block("block"),

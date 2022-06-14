@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class PolicyBase extends DirectoryObject implements Parsable {
     /** Description for this policy. Required. */
     private String _description;
@@ -32,7 +32,15 @@ public class PolicyBase extends DirectoryObject implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.policyBase": return new PolicyBase();
+                case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
+                case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+                case "#microsoft.graph.externalIdentitiesPolicy": return new ExternalIdentitiesPolicy();
+                case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
+                case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
+                case "#microsoft.graph.servicePrincipalCreationPolicy": return new ServicePrincipalCreationPolicy();
+                case "#microsoft.graph.stsPolicy": return new StsPolicy();
+                case "#microsoft.graph.tenantAppManagementPolicy": return new TenantAppManagementPolicy();
+                case "#microsoft.graph.tenantRelationshipAccessPolicyBase": return new TenantRelationshipAccessPolicyBase();
             }
         }
         return new PolicyBase();

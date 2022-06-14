@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ThreatAssessmentRequest extends Entity implements Parsable {
     /** The threat category. Possible values are: spam, phishing, malware. */
     private ThreatCategory _category;
@@ -45,7 +45,10 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.threatAssessmentRequest": return new ThreatAssessmentRequest();
+                case "#microsoft.graph.emailFileAssessmentRequest": return new EmailFileAssessmentRequest();
+                case "#microsoft.graph.fileAssessmentRequest": return new FileAssessmentRequest();
+                case "#microsoft.graph.mailAssessmentRequest": return new MailAssessmentRequest();
+                case "#microsoft.graph.urlAssessmentRequest": return new UrlAssessmentRequest();
             }
         }
         return new ThreatAssessmentRequest();

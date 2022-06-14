@@ -29,7 +29,8 @@ public class UpdatableAsset extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.windowsUpdates.updatableAsset": return new UpdatableAsset();
+                case "#microsoft.graph.windowsUpdates.azureADDevice": return new AzureADDevice();
+                case "#microsoft.graph.windowsUpdates.updatableAssetGroup": return new UpdatableAssetGroup();
             }
         }
         return new UpdatableAsset();

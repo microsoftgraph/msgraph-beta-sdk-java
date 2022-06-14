@@ -17,12 +17,16 @@ import java.util.Objects;
 import microsoft.graph.me.informationprotection.bitlocker.BitlockerRequestBuilder;
 import microsoft.graph.me.informationprotection.datalosspreventionpolicies.DataLossPreventionPoliciesRequestBuilder;
 import microsoft.graph.me.informationprotection.datalosspreventionpolicies.item.DataLossPreventionPolicyItemRequestBuilder;
+import microsoft.graph.me.informationprotection.decryptbuffer.DecryptBufferRequestBuilder;
+import microsoft.graph.me.informationprotection.encryptbuffer.EncryptBufferRequestBuilder;
 import microsoft.graph.me.informationprotection.policy.PolicyRequestBuilder;
 import microsoft.graph.me.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
 import microsoft.graph.me.informationprotection.sensitivitylabels.SensitivityLabelsRequestBuilder;
 import microsoft.graph.me.informationprotection.sensitivitypolicysettings.SensitivityPolicySettingsRequestBuilder;
+import microsoft.graph.me.informationprotection.signdigest.SignDigestRequestBuilder;
 import microsoft.graph.me.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
 import microsoft.graph.me.informationprotection.threatassessmentrequests.ThreatAssessmentRequestsRequestBuilder;
+import microsoft.graph.me.informationprotection.verifysignature.VerifySignatureRequestBuilder;
 import microsoft.graph.models.InformationProtection;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the informationProtection property of the microsoft.graph.user entity. */
@@ -36,6 +40,16 @@ public class InformationProtectionRequestBuilder {
     @javax.annotation.Nonnull
     public DataLossPreventionPoliciesRequestBuilder dataLossPreventionPolicies() {
         return new DataLossPreventionPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The decryptBuffer property */
+    @javax.annotation.Nonnull
+    public DecryptBufferRequestBuilder decryptBuffer() {
+        return new DecryptBufferRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The encryptBuffer property */
+    @javax.annotation.Nonnull
+    public EncryptBufferRequestBuilder encryptBuffer() {
+        return new EncryptBufferRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -56,6 +70,11 @@ public class InformationProtectionRequestBuilder {
     public SensitivityPolicySettingsRequestBuilder sensitivityPolicySettings() {
         return new SensitivityPolicySettingsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The signDigest property */
+    @javax.annotation.Nonnull
+    public SignDigestRequestBuilder signDigest() {
+        return new SignDigestRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The threatAssessmentRequests property */
     @javax.annotation.Nonnull
     public ThreatAssessmentRequestsRequestBuilder threatAssessmentRequests() {
@@ -63,6 +82,11 @@ public class InformationProtectionRequestBuilder {
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The verifySignature property */
+    @javax.annotation.Nonnull
+    public VerifySignatureRequestBuilder verifySignature() {
+        return new VerifySignatureRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new InformationProtectionRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -11,9 +11,9 @@ import java.util.Objects;
 public class AccessPackageAssignmentResourceRole extends Entity implements Parsable {
     /** The access package assignments resulting in this role assignment. Read-only. Nullable. */
     private java.util.List<AccessPackageAssignment> _accessPackageAssignments;
-    /** Read-only. Nullable. */
+    /** The accessPackageResourceRole property */
     private AccessPackageResourceRole _accessPackageResourceRole;
-    /** Read-only. Nullable. */
+    /** The accessPackageResourceScope property */
     private AccessPackageResourceScope _accessPackageResourceScope;
     /** Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters. */
     private AccessPackageSubject _accessPackageSubject;
@@ -49,7 +49,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         return this._accessPackageAssignments;
     }
     /**
-     * Gets the accessPackageResourceRole property value. Read-only. Nullable.
+     * Gets the accessPackageResourceRole property value. The accessPackageResourceRole property
      * @return a accessPackageResourceRole
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         return this._accessPackageResourceRole;
     }
     /**
-     * Gets the accessPackageResourceScope property value. Read-only. Nullable.
+     * Gets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @return a accessPackageResourceScope
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         this._accessPackageAssignments = value;
     }
     /**
-     * Sets the accessPackageResourceRole property value. Read-only. Nullable.
+     * Sets the accessPackageResourceRole property value. The accessPackageResourceRole property
      * @param value Value to set for the accessPackageResourceRole property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         this._accessPackageResourceRole = value;
     }
     /**
-     * Sets the accessPackageResourceScope property value. Read-only. Nullable.
+     * Sets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @param value Value to set for the accessPackageResourceScope property.
      * @return a void
      */

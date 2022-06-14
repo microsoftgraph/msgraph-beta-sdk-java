@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class MailFolder extends Entity implements Parsable {
     /** The number of immediate child mailFolders in the current mailFolder. */
     private Integer _childFolderCount;
@@ -54,7 +54,7 @@ public class MailFolder extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.mailFolder": return new MailFolder();
+                case "#microsoft.graph.mailSearchFolder": return new MailSearchFolder();
             }
         }
         return new MailFolder();

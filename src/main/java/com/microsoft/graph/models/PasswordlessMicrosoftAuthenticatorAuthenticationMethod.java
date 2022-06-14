@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
@@ -19,7 +18,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /** The display name of the mobile device as given by the user. */
     private String _displayName;
     /**
-     * Instantiates a new passwordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new PasswordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
@@ -28,7 +27,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @return a PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static PasswordlessMicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

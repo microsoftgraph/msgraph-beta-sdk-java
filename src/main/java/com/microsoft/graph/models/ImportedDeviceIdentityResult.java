@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The importedDeviceIdentityResult resource represents the result of attempting to import a device identity. */
 public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity implements Parsable {
     /** Status of imported device identity */
     private Boolean _status;
     /**
-     * Instantiates a new importedDeviceIdentityResult and sets the default values.
+     * Instantiates a new ImportedDeviceIdentityResult and sets the default values.
      * @return a void
      */
     public ImportedDeviceIdentityResult() {
@@ -21,7 +20,7 @@ public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedDeviceIdentityResult
+     * @return a ImportedDeviceIdentityResult
      */
     @javax.annotation.Nonnull
     public static ImportedDeviceIdentityResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -39,7 +39,9 @@ public class DataSource extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.ediscovery.dataSource": return new DataSource();
+                case "#microsoft.graph.ediscovery.siteSource": return new SiteSource();
+                case "#microsoft.graph.ediscovery.unifiedGroupSource": return new UnifiedGroupSource();
+                case "#microsoft.graph.ediscovery.userSource": return new UserSource();
             }
         }
         return new DataSource();

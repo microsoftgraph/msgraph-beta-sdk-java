@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.GovernanceRoleAssignmentRequest;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the updateRequest method. */
 public class UpdateRequestRequestBuilder {
     /** Path parameters for the request */
@@ -90,7 +91,11 @@ public class UpdateRequestRequestBuilder {
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -104,7 +109,11 @@ public class UpdateRequestRequestBuilder {
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@javax.annotation.Nonnull final UpdateRequestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRequestRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -120,7 +129,11 @@ public class UpdateRequestRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

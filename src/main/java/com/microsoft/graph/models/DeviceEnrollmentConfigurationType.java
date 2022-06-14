@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public enum DeviceEnrollmentConfigurationType implements ValuedEnum {
     /** Default. Set to unknown if the configuration type cannot be determined. */
     Unknown("unknown"),

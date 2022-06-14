@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
 public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsable {
     /** The excludes property */
     private java.util.List<ServicePrincipalCreationConditionSet> _excludes;
@@ -16,7 +15,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     /** The isBuiltIn property */
     private Boolean _isBuiltIn;
     /**
-     * Instantiates a new servicePrincipalCreationPolicy and sets the default values.
+     * Instantiates a new ServicePrincipalCreationPolicy and sets the default values.
      * @return a void
      */
     public ServicePrincipalCreationPolicy() {
@@ -25,7 +24,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalCreationPolicy
+     * @return a ServicePrincipalCreationPolicy
      */
     @javax.annotation.Nonnull
     public static ServicePrincipalCreationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

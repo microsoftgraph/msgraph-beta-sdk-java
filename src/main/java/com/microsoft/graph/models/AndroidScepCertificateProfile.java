@@ -1,0 +1,187 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase implements Parsable {
+    /** SCEP Hash Algorithm. Possible values are: sha1, sha2. */
+    private HashAlgorithms _hashAlgorithm;
+    /** SCEP Key Size. Possible values are: size1024, size2048, size4096. */
+    private KeySize _keySize;
+    /** SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature. */
+    private KeyUsages _keyUsage;
+    /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
+    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
+    /** SCEP Server Url(s) */
+    private java.util.List<String> _scepServerUrls;
+    /** Custom String that defines the AAD Attribute. */
+    private String _subjectAlternativeNameFormatString;
+    /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
+    private String _subjectNameFormatString;
+    /**
+     * Instantiates a new AndroidScepCertificateProfile and sets the default values.
+     * @return a void
+     */
+    public AndroidScepCertificateProfile() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a AndroidScepCertificateProfile
+     */
+    @javax.annotation.Nonnull
+    public static AndroidScepCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new AndroidScepCertificateProfile();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final AndroidScepCertificateProfile currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
+            this.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });
+            this.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+            this.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * @return a hashAlgorithms
+     */
+    @javax.annotation.Nullable
+    public HashAlgorithms getHashAlgorithm() {
+        return this._hashAlgorithm;
+    }
+    /**
+     * Gets the keySize property value. SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * @return a keySize
+     */
+    @javax.annotation.Nullable
+    public KeySize getKeySize() {
+        return this._keySize;
+    }
+    /**
+     * Gets the keyUsage property value. SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * @return a keyUsages
+     */
+    @javax.annotation.Nullable
+    public KeyUsages getKeyUsage() {
+        return this._keyUsage;
+    }
+    /**
+     * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
+     * @return a managedDeviceCertificateState
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
+        return this._managedDeviceCertificateStates;
+    }
+    /**
+     * Gets the scepServerUrls property value. SCEP Server Url(s)
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getScepServerUrls() {
+        return this._scepServerUrls;
+    }
+    /**
+     * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSubjectAlternativeNameFormatString() {
+        return this._subjectAlternativeNameFormatString;
+    }
+    /**
+     * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSubjectNameFormatString() {
+        return this._subjectNameFormatString;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeEnumValue("keySize", this.getKeySize());
+        writer.writeEnumValue("keyUsage", this.getKeyUsage());
+        writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
+        writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
+        writer.writeStringValue("subjectAlternativeNameFormatString", this.getSubjectAlternativeNameFormatString());
+        writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
+    }
+    /**
+     * Sets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * @param value Value to set for the hashAlgorithm property.
+     * @return a void
+     */
+    public void setHashAlgorithm(@javax.annotation.Nullable final HashAlgorithms value) {
+        this._hashAlgorithm = value;
+    }
+    /**
+     * Sets the keySize property value. SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * @param value Value to set for the keySize property.
+     * @return a void
+     */
+    public void setKeySize(@javax.annotation.Nullable final KeySize value) {
+        this._keySize = value;
+    }
+    /**
+     * Sets the keyUsage property value. SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * @param value Value to set for the keyUsage property.
+     * @return a void
+     */
+    public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
+        this._keyUsage = value;
+    }
+    /**
+     * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
+     * @param value Value to set for the managedDeviceCertificateStates property.
+     * @return a void
+     */
+    public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
+        this._managedDeviceCertificateStates = value;
+    }
+    /**
+     * Sets the scepServerUrls property value. SCEP Server Url(s)
+     * @param value Value to set for the scepServerUrls property.
+     * @return a void
+     */
+    public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._scepServerUrls = value;
+    }
+    /**
+     * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
+     * @param value Value to set for the subjectAlternativeNameFormatString property.
+     * @return a void
+     */
+    public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
+        this._subjectAlternativeNameFormatString = value;
+    }
+    /**
+     * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     * @param value Value to set for the subjectNameFormatString property.
+     * @return a void
+     */
+    public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
+        this._subjectNameFormatString = value;
+    }
+}

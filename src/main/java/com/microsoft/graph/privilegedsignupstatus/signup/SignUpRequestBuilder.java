@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.PrivilegedSignupStatus;
 /** Provides operations to call the signUp method. */
 public class SignUpRequestBuilder {
@@ -85,7 +86,11 @@ public class SignUpRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> post() {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, PrivilegedSignupStatus::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, PrivilegedSignupStatus::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -98,7 +103,11 @@ public class SignUpRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> post(@javax.annotation.Nullable final java.util.function.Consumer<SignUpRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, PrivilegedSignupStatus::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, PrivilegedSignupStatus::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -112,7 +121,11 @@ public class SignUpRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> post(@javax.annotation.Nullable final java.util.function.Consumer<SignUpRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, PrivilegedSignupStatus::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, PrivilegedSignupStatus::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

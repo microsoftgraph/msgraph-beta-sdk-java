@@ -40,7 +40,9 @@ public class SearchAnswer extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.search.searchAnswer": return new SearchAnswer();
+                case "#microsoft.graph.search.acronym": return new Acronym();
+                case "#microsoft.graph.search.bookmark": return new Bookmark();
+                case "#microsoft.graph.search.qna": return new Qna();
             }
         }
         return new SearchAnswer();

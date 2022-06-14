@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageResourceRole extends Entity implements Parsable {
-    /** Read-only. Nullable. */
+    /** The accessPackageResource property */
     private AccessPackageResource _accessPackageResource;
     /** A description for the resource role. */
     private String _description;
@@ -37,7 +37,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         return new AccessPackageResourceRole();
     }
     /**
-     * Gets the accessPackageResource property value. Read-only. Nullable.
+     * Gets the accessPackageResource property value. The accessPackageResource property
      * @return a accessPackageResource
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         writer.writeStringValue("originSystem", this.getOriginSystem());
     }
     /**
-     * Sets the accessPackageResource property value. Read-only. Nullable.
+     * Sets the accessPackageResource property value. The accessPackageResource property
      * @param value Value to set for the accessPackageResource property.
      * @return a void
      */

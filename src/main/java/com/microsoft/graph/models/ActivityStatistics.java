@@ -40,7 +40,11 @@ public class ActivityStatistics extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.activityStatistics": return new ActivityStatistics();
+                case "#microsoft.graph.callActivityStatistics": return new CallActivityStatistics();
+                case "#microsoft.graph.chatActivityStatistics": return new ChatActivityStatistics();
+                case "#microsoft.graph.emailActivityStatistics": return new EmailActivityStatistics();
+                case "#microsoft.graph.focusActivityStatistics": return new FocusActivityStatistics();
+                case "#microsoft.graph.meetingActivityStatistics": return new MeetingActivityStatistics();
             }
         }
         return new ActivityStatistics();

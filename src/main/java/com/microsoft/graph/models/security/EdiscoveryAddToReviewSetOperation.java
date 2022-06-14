@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable {
-    /** The reviewSet property */
+    /** eDiscovery review set to which items matching source collection query gets added. */
     private EdiscoveryReviewSet _reviewSet;
-    /** The search property */
+    /** eDiscovery search that gets added to review set. */
     private EdiscoverySearch _search;
     /**
-     * Instantiates a new ediscoveryAddToReviewSetOperation and sets the default values.
+     * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
      * @return a void
      */
     public EdiscoveryAddToReviewSetOperation() {
@@ -23,7 +22,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryAddToReviewSetOperation
+     * @return a EdiscoveryAddToReviewSetOperation
      */
     @javax.annotation.Nonnull
     public static EdiscoveryAddToReviewSetOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +42,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         }};
     }
     /**
-     * Gets the reviewSet property value. The reviewSet property
+     * Gets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
      * @return a ediscoveryReviewSet
      */
     @javax.annotation.Nullable
@@ -51,7 +50,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         return this._reviewSet;
     }
     /**
-     * Gets the search property value. The search property
+     * Gets the search property value. eDiscovery search that gets added to review set.
      * @return a ediscoverySearch
      */
     @javax.annotation.Nullable
@@ -70,7 +69,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         writer.writeObjectValue("search", this.getSearch());
     }
     /**
-     * Sets the reviewSet property value. The reviewSet property
+     * Sets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
@@ -78,7 +77,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         this._reviewSet = value;
     }
     /**
-     * Sets the search property value. The search property
+     * Sets the search property value. eDiscovery search that gets added to review set.
      * @param value Value to set for the search property.
      * @return a void
      */

@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.ChromeOSOnboardingStatus;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the connect method. */
 public class ConnectRequestBuilder {
     /** Path parameters for the request */
@@ -90,7 +91,11 @@ public class ConnectRequestBuilder {
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingStatus> post(@javax.annotation.Nonnull final ConnectPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -104,7 +109,11 @@ public class ConnectRequestBuilder {
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingStatus> post(@javax.annotation.Nonnull final ConnectPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ConnectRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -120,7 +129,11 @@ public class ConnectRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, ChromeOSOnboardingStatus.class, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

@@ -52,7 +52,7 @@ public class LastIndexOperationRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get lastIndexOperation from security
+     * Operation entity that represents the latest indexing for the non-custodial data source.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class LastIndexOperationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get lastIndexOperation from security
+     * Operation entity that represents the latest indexing for the non-custodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class LastIndexOperationRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get lastIndexOperation from security
+     * Operation entity that represents the latest indexing for the non-custodial data source.
      * @return a CompletableFuture of ediscoveryIndexOperation
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get() {
@@ -98,7 +98,7 @@ public class LastIndexOperationRequestBuilder {
         }
     }
     /**
-     * Get lastIndexOperation from security
+     * Operation entity that represents the latest indexing for the non-custodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryIndexOperation
      */
@@ -115,7 +115,7 @@ public class LastIndexOperationRequestBuilder {
         }
     }
     /**
-     * Get lastIndexOperation from security
+     * Operation entity that represents the latest indexing for the non-custodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryIndexOperation
@@ -132,7 +132,7 @@ public class LastIndexOperationRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get lastIndexOperation from security */
+    /** Operation entity that represents the latest indexing for the non-custodial data source. */
     public class LastIndexOperationRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

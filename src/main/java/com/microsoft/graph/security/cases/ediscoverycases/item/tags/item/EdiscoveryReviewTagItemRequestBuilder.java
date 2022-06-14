@@ -104,7 +104,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -112,7 +112,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         }
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @return a CompletableFuture of ediscoveryReviewTag
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> get() {
@@ -233,7 +233,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         }
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewTag
      */
@@ -250,7 +250,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         }
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryReviewTag
@@ -337,7 +337,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         public EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get tags from security */
+    /** Returns a list of ediscoveryReviewTag objects associated to this case. */
     public class EdiscoveryReviewTagItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

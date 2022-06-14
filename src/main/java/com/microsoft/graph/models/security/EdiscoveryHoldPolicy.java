@@ -7,20 +7,19 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
-    /** The contentQuery property */
+    /** KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank. */
     private String _contentQuery;
-    /** The errors property */
+    /** Lists any errors that happened while placing the hold. */
     private java.util.List<String> _errors;
-    /** The isEnabled property */
+    /** Indicates whether the hold is enabled and actively holding content. */
     private Boolean _isEnabled;
     /** The siteSources property */
     private java.util.List<SiteSource> _siteSources;
     /** The userSources property */
     private java.util.List<UserSource> _userSources;
     /**
-     * Instantiates a new ediscoveryHoldPolicy and sets the default values.
+     * Instantiates a new EdiscoveryHoldPolicy and sets the default values.
      * @return a void
      */
     public EdiscoveryHoldPolicy() {
@@ -29,7 +28,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryHoldPolicy
+     * @return a EdiscoveryHoldPolicy
      */
     @javax.annotation.Nonnull
     public static EdiscoveryHoldPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +36,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         return new EdiscoveryHoldPolicy();
     }
     /**
-     * Gets the contentQuery property value. The contentQuery property
+     * Gets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -45,7 +44,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         return this._contentQuery;
     }
     /**
-     * Gets the errors property value. The errors property
+     * Gets the errors property value. Lists any errors that happened while placing the hold.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -68,7 +67,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         }};
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -106,7 +105,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         writer.writeCollectionOfObjectValues("userSources", this.getUserSources());
     }
     /**
-     * Sets the contentQuery property value. The contentQuery property
+     * Sets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
@@ -114,7 +113,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         this._contentQuery = value;
     }
     /**
-     * Sets the errors property value. The errors property
+     * Sets the errors property value. Lists any errors that happened while placing the hold.
      * @param value Value to set for the errors property.
      * @return a void
      */
@@ -122,7 +121,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         this._errors = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */

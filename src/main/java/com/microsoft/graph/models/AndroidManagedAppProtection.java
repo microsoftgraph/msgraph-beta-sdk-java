@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an Android device */
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. */
     private String _allowedAndroidDeviceManufacturers;
@@ -92,7 +91,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /** Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped */
     private Integer _wipeAfterCompanyPortalUpdateDeferralInDays;
     /**
-     * Instantiates a new androidManagedAppProtection and sets the default values.
+     * Instantiates a new AndroidManagedAppProtection and sets the default values.
      * @return a void
      */
     public AndroidManagedAppProtection() {
@@ -101,7 +100,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedAppProtection
+     * @return a AndroidManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static AndroidManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

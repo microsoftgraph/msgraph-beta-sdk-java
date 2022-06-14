@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class PersonAnnualEvent extends ItemFacet implements Parsable {
     /** The date property */
     private LocalDate _date;
@@ -17,7 +16,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
     /** The type property */
     private PersonAnnualEventType _type;
     /**
-     * Instantiates a new personAnnualEvent and sets the default values.
+     * Instantiates a new PersonAnnualEvent and sets the default values.
      * @return a void
      */
     public PersonAnnualEvent() {
@@ -26,7 +25,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personAnnualEvent
+     * @return a PersonAnnualEvent
      */
     @javax.annotation.Nonnull
     public static PersonAnnualEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -14,13 +14,18 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import microsoft.graph.me.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import microsoft.graph.me.devices.item.commands.CommandsRequestBuilder;
 import microsoft.graph.me.devices.item.commands.item.CommandItemRequestBuilder;
 import microsoft.graph.me.devices.item.extensions.ExtensionsRequestBuilder;
 import microsoft.graph.me.devices.item.extensions.item.ExtensionItemRequestBuilder;
+import microsoft.graph.me.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import microsoft.graph.me.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import microsoft.graph.me.devices.item.memberof.MemberOfRequestBuilder;
 import microsoft.graph.me.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
 import microsoft.graph.me.devices.item.registeredusers.RegisteredUsersRequestBuilder;
+import microsoft.graph.me.devices.item.restore.RestoreRequestBuilder;
 import microsoft.graph.me.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 import microsoft.graph.me.devices.item.usagerights.item.UsageRightItemRequestBuilder;
 import microsoft.graph.me.devices.item.usagerights.UsageRightsRequestBuilder;
@@ -28,6 +33,16 @@ import microsoft.graph.models.Device;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the devices property of the microsoft.graph.user entity. */
 public class DeviceItemRequestBuilder {
+    /** The checkMemberGroups property */
+    @javax.annotation.Nonnull
+    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
+        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The checkMemberObjects property */
+    @javax.annotation.Nonnull
+    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
+        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The commands property */
     @javax.annotation.Nonnull
     public CommandsRequestBuilder commands() {
@@ -37,6 +52,16 @@ public class DeviceItemRequestBuilder {
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberGroups property */
+    @javax.annotation.Nonnull
+    public GetMemberGroupsRequestBuilder getMemberGroups() {
+        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberObjects property */
+    @javax.annotation.Nonnull
+    public GetMemberObjectsRequestBuilder getMemberObjects() {
+        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The memberOf property */
     @javax.annotation.Nonnull
@@ -57,6 +82,11 @@ public class DeviceItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The transitiveMemberOf property */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {

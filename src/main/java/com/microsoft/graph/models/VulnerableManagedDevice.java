@@ -1,0 +1,109 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/** This entity represents a device associated with a task. */
+public class VulnerableManagedDevice extends Entity implements Parsable {
+    /** The device name. */
+    private String _displayName;
+    /** The last sync date. */
+    private OffsetDateTime _lastSyncDateTime;
+    /** The Intune managed device ID. */
+    private String _managedDeviceId;
+    /**
+     * Instantiates a new vulnerableManagedDevice and sets the default values.
+     * @return a void
+     */
+    public VulnerableManagedDevice() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a vulnerableManagedDevice
+     */
+    @javax.annotation.Nonnull
+    public static VulnerableManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new VulnerableManagedDevice();
+    }
+    /**
+     * Gets the displayName property value. The device name.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDisplayName() {
+        return this._displayName;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final VulnerableManagedDevice currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the lastSyncDateTime property value. The last sync date.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getLastSyncDateTime() {
+        return this._lastSyncDateTime;
+    }
+    /**
+     * Gets the managedDeviceId property value. The Intune managed device ID.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getManagedDeviceId() {
+        return this._managedDeviceId;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
+        writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
+    }
+    /**
+     * Sets the displayName property value. The device name.
+     * @param value Value to set for the displayName property.
+     * @return a void
+     */
+    public void setDisplayName(@javax.annotation.Nullable final String value) {
+        this._displayName = value;
+    }
+    /**
+     * Sets the lastSyncDateTime property value. The last sync date.
+     * @param value Value to set for the lastSyncDateTime property.
+     * @return a void
+     */
+    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this._lastSyncDateTime = value;
+    }
+    /**
+     * Sets the managedDeviceId property value. The Intune managed device ID.
+     * @param value Value to set for the managedDeviceId property.
+     * @return a void
+     */
+    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+        this._managedDeviceId = value;
+    }
+}

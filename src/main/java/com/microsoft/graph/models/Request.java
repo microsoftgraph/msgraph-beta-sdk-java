@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class Request extends Entity implements Parsable {
     /** The identifier of the approval of the request. */
     private String _approvalId;
@@ -41,7 +41,9 @@ public class Request extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.request": return new Request();
+                case "#microsoft.graph.unifiedRoleAssignmentScheduleRequest": return new UnifiedRoleAssignmentScheduleRequest();
+                case "#microsoft.graph.unifiedRoleEligibilityScheduleRequest": return new UnifiedRoleEligibilityScheduleRequest();
+                case "#microsoft.graph.userConsentRequest": return new UserConsentRequest();
             }
         }
         return new Request();

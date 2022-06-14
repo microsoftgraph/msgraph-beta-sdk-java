@@ -10,11 +10,11 @@ import java.util.Objects;
 import microsoft.graph.models.Entity;
 /** Provides operations to manage the security singleton. */
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
-    /** The ocr property */
+    /** The OCR (Optical Character Recognition) settings for the case. */
     private OcrSettings _ocr;
-    /** The redundancyDetection property */
+    /** The redundancy (near duplicate and email threading) detection settings for the case. */
     private RedundancyDetectionSettings _redundancyDetection;
-    /** The topicModeling property */
+    /** The Topic Modeling (Themes) settings for the case. */
     private TopicModelingSettings _topicModeling;
     /**
      * Instantiates a new ediscoveryCaseSettings and sets the default values.
@@ -47,7 +47,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the ocr property value. The ocr property
+     * Gets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
      * @return a ocrSettings
      */
     @javax.annotation.Nullable
@@ -55,7 +55,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         return this._ocr;
     }
     /**
-     * Gets the redundancyDetection property value. The redundancyDetection property
+     * Gets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
      * @return a redundancyDetectionSettings
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         return this._redundancyDetection;
     }
     /**
-     * Gets the topicModeling property value. The topicModeling property
+     * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @return a topicModelingSettings
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         writer.writeObjectValue("topicModeling", this.getTopicModeling());
     }
     /**
-     * Sets the ocr property value. The ocr property
+     * Sets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
      * @param value Value to set for the ocr property.
      * @return a void
      */
@@ -91,7 +91,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         this._ocr = value;
     }
     /**
-     * Sets the redundancyDetection property value. The redundancyDetection property
+     * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
      * @param value Value to set for the redundancyDetection property.
      * @return a void
      */
@@ -99,7 +99,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         this._redundancyDetection = value;
     }
     /**
-     * Sets the topicModeling property value. The topicModeling property
+     * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @param value Value to set for the topicModeling property.
      * @return a void
      */

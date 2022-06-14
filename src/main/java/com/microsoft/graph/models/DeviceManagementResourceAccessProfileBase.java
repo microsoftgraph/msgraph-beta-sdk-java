@@ -43,7 +43,10 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementResourceAccessProfileBase": return new DeviceManagementResourceAccessProfileBase();
+                case "#microsoft.graph.windows10XCertificateProfile": return new Windows10XCertificateProfile();
+                case "#microsoft.graph.windows10XTrustedRootCertificate": return new Windows10XTrustedRootCertificate();
+                case "#microsoft.graph.windows10XVpnConfiguration": return new Windows10XVpnConfiguration();
+                case "#microsoft.graph.windows10XWifiConfiguration": return new Windows10XWifiConfiguration();
             }
         }
         return new DeviceManagementResourceAccessProfileBase();

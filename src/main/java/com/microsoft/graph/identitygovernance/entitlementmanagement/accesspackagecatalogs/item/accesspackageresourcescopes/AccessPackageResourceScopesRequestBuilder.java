@@ -59,7 +59,7 @@ public class AccessPackageResourceScopesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only.
+     * Get accessPackageResourceScopes from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AccessPackageResourceScopesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only.
+     * Get accessPackageResourceScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class AccessPackageResourceScopesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only.
+     * Get accessPackageResourceScopes from identityGovernance
      * @return a CompletableFuture of AccessPackageResourceScopeCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScopeCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class AccessPackageResourceScopesRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get accessPackageResourceScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageResourceScopeCollectionResponse
      */
@@ -155,7 +155,7 @@ public class AccessPackageResourceScopesRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get accessPackageResourceScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageResourceScopeCollectionResponse
@@ -227,7 +227,7 @@ public class AccessPackageResourceScopesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. */
+    /** Get accessPackageResourceScopes from identityGovernance */
     public class AccessPackageResourceScopesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

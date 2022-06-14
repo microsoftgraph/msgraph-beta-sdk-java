@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The DepIOSEnrollmentProfile resource represents an Apple Device Enrollment Program (DEP) enrollment profile specific to iOS configuration. This type of profile must be assigned to Apple DEP serial numbers before the corresponding devices can enroll via DEP. */
 public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements Parsable {
     /** Indicates if Apperance screen is disabled */
     private Boolean _appearanceScreenDisabled;
@@ -68,7 +67,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     /** Indicates if zoom setup pane is disabled */
     private Boolean _zoomDisabled;
     /**
-     * Instantiates a new depIOSEnrollmentProfile and sets the default values.
+     * Instantiates a new DepIOSEnrollmentProfile and sets the default values.
      * @return a void
      */
     public DepIOSEnrollmentProfile() {
@@ -77,7 +76,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depIOSEnrollmentProfile
+     * @return a DepIOSEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static DepIOSEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

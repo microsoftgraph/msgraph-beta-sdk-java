@@ -32,7 +32,8 @@ public class IdentityUserFlow extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.identityUserFlow": return new IdentityUserFlow();
+                case "#microsoft.graph.b2cIdentityUserFlow": return new B2cIdentityUserFlow();
+                case "#microsoft.graph.b2xIdentityUserFlow": return new B2xIdentityUserFlow();
             }
         }
         return new IdentityUserFlow();

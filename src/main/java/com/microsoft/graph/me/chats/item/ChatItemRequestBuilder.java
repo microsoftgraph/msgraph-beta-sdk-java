@@ -14,9 +14,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.chats.item.hideforuser.HideForUserRequestBuilder;
 import microsoft.graph.me.chats.item.installedapps.InstalledAppsRequestBuilder;
 import microsoft.graph.me.chats.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import microsoft.graph.me.chats.item.lastmessagepreview.LastMessagePreviewRequestBuilder;
+import microsoft.graph.me.chats.item.markchatreadforuser.MarkChatReadForUserRequestBuilder;
+import microsoft.graph.me.chats.item.markchatunreadforuser.MarkChatUnreadForUserRequestBuilder;
 import microsoft.graph.me.chats.item.members.item.ConversationMemberItemRequestBuilder;
 import microsoft.graph.me.chats.item.members.MembersRequestBuilder;
 import microsoft.graph.me.chats.item.messages.item.ChatMessageItemRequestBuilder;
@@ -27,12 +30,19 @@ import microsoft.graph.me.chats.item.permissiongrants.item.ResourceSpecificPermi
 import microsoft.graph.me.chats.item.permissiongrants.PermissionGrantsRequestBuilder;
 import microsoft.graph.me.chats.item.pinnedmessages.item.PinnedChatMessageInfoItemRequestBuilder;
 import microsoft.graph.me.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
+import microsoft.graph.me.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import microsoft.graph.me.chats.item.tabs.item.TeamsTabItemRequestBuilder;
 import microsoft.graph.me.chats.item.tabs.TabsRequestBuilder;
+import microsoft.graph.me.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import microsoft.graph.models.Chat;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the chats property of the microsoft.graph.user entity. */
 public class ChatItemRequestBuilder {
+    /** The hideForUser property */
+    @javax.annotation.Nonnull
+    public HideForUserRequestBuilder hideForUser() {
+        return new HideForUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The installedApps property */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
@@ -42,6 +52,16 @@ public class ChatItemRequestBuilder {
     @javax.annotation.Nonnull
     public LastMessagePreviewRequestBuilder lastMessagePreview() {
         return new LastMessagePreviewRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The markChatReadForUser property */
+    @javax.annotation.Nonnull
+    public MarkChatReadForUserRequestBuilder markChatReadForUser() {
+        return new MarkChatReadForUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The markChatUnreadForUser property */
+    @javax.annotation.Nonnull
+    public MarkChatUnreadForUserRequestBuilder markChatUnreadForUser() {
+        return new MarkChatUnreadForUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** The members property */
     @javax.annotation.Nonnull
@@ -72,10 +92,20 @@ public class ChatItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The sendActivityNotification property */
+    @javax.annotation.Nonnull
+    public SendActivityNotificationRequestBuilder sendActivityNotification() {
+        return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The tabs property */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The unhideForUser property */
+    @javax.annotation.Nonnull
+    public UnhideForUserRequestBuilder unhideForUser() {
+        return new UnhideForUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;

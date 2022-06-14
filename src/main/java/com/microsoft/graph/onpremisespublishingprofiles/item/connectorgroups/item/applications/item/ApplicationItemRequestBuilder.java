@@ -58,7 +58,7 @@ public class ApplicationItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get applications from onPremisesPublishingProfiles
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class ApplicationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get applications from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class ApplicationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get applications from onPremisesPublishingProfiles
      * @return a CompletableFuture of application
      */
     public java.util.concurrent.CompletableFuture<Application> get() {
@@ -104,7 +104,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get applications from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of application
      */
@@ -121,7 +121,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get applications from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of application
@@ -138,7 +138,7 @@ public class ApplicationItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get applications from onPremisesPublishingProfiles */
     public class ApplicationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

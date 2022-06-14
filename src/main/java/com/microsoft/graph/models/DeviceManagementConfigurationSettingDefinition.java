@@ -64,7 +64,10 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementConfigurationSettingDefinition": return new DeviceManagementConfigurationSettingDefinition();
+                case "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition": return new DeviceManagementConfigurationChoiceSettingDefinition();
+                case "#microsoft.graph.deviceManagementConfigurationRedirectSettingDefinition": return new DeviceManagementConfigurationRedirectSettingDefinition();
+                case "#microsoft.graph.deviceManagementConfigurationSettingGroupDefinition": return new DeviceManagementConfigurationSettingGroupDefinition();
+                case "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition": return new DeviceManagementConfigurationSimpleSettingDefinition();
             }
         }
         return new DeviceManagementConfigurationSettingDefinition();

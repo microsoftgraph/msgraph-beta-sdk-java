@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class Authentication extends Entity implements Parsable {
     /** Represents the email addresses registered to a user for authentication. */
     private java.util.List<EmailAuthenticationMethod> _emailMethods;

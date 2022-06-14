@@ -135,7 +135,7 @@ public class EdiscoverySearchItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -143,7 +143,7 @@ public class EdiscoverySearchItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +260,7 @@ public class EdiscoverySearchItemRequestBuilder {
         }
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @return a CompletableFuture of ediscoverySearch
      */
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> get() {
@@ -276,7 +276,7 @@ public class EdiscoverySearchItemRequestBuilder {
         }
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoverySearch
      */
@@ -293,7 +293,7 @@ public class EdiscoverySearchItemRequestBuilder {
         }
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoverySearch
@@ -392,7 +392,7 @@ public class EdiscoverySearchItemRequestBuilder {
         public EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get searches from security */
+    /** Returns a list of eDiscoverySearch objects associated with this case. */
     public class EdiscoverySearchItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

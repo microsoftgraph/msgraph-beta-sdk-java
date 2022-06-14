@@ -43,7 +43,9 @@ public class JobResponseBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.jobResponseBase": return new JobResponseBase();
+                case "#microsoft.graph.classificationJobResponse": return new ClassificationJobResponse();
+                case "#microsoft.graph.dlpEvaluatePoliciesJobResponse": return new DlpEvaluatePoliciesJobResponse();
+                case "#microsoft.graph.evaluateLabelJobResponse": return new EvaluateLabelJobResponse();
             }
         }
         return new JobResponseBase();

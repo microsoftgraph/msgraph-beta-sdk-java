@@ -45,7 +45,8 @@ public class Search extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.search": return new Search();
+                case "#microsoft.graph.security.ediscoveryReviewSetQuery": return new EdiscoveryReviewSetQuery();
+                case "#microsoft.graph.security.ediscoverySearch": return new EdiscoverySearch();
             }
         }
         return new Search();

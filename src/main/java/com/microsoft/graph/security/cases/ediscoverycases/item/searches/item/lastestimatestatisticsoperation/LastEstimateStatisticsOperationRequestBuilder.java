@@ -52,7 +52,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get lastEstimateStatisticsOperation from security
+     * The last estimate operation associated with the eDiscovery search.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get lastEstimateStatisticsOperation from security
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get lastEstimateStatisticsOperation from security
+     * The last estimate operation associated with the eDiscovery search.
      * @return a CompletableFuture of ediscoveryEstimateOperation
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryEstimateOperation> get() {
@@ -98,7 +98,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         }
     }
     /**
-     * Get lastEstimateStatisticsOperation from security
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryEstimateOperation
      */
@@ -115,7 +115,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         }
     }
     /**
-     * Get lastEstimateStatisticsOperation from security
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryEstimateOperation
@@ -132,7 +132,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get lastEstimateStatisticsOperation from security */
+    /** The last estimate operation associated with the eDiscovery search. */
     public class LastEstimateStatisticsOperationRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

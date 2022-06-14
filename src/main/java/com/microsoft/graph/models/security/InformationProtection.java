@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class InformationProtection extends Entity implements Parsable {
     /** The labelPolicySettings property */
     private InformationProtectionPolicySetting _labelPolicySettings;

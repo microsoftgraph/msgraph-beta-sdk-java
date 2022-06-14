@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ApprovalStep extends Entity implements Parsable {
     /** Indicates whether the step is assigned to the calling user to review. Read-only. */
     private Boolean _assignedToMe;

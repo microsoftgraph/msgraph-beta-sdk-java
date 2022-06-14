@@ -14,16 +14,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.operations.item.caseexportoperation.CaseExportOperationRequestBuilder;
 import microsoft.graph.models.ediscovery.CaseOperation;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the operations property of the microsoft.graph.ediscovery.case entity. */
 public class CaseOperationItemRequestBuilder {
-    /** The caseExportOperation property */
-    @javax.annotation.Nonnull
-    public CaseExportOperationRequestBuilder caseExportOperation() {
-        return new CaseExportOperationRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */

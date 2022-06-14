@@ -53,7 +53,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementTemplate": return new DeviceManagementTemplate();
+                case "#microsoft.graph.securityBaselineTemplate": return new SecurityBaselineTemplate();
             }
         }
         return new DeviceManagementTemplate();

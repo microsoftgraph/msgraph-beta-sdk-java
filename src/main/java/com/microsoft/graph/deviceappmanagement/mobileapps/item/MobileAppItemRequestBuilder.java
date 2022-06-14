@@ -23,7 +23,6 @@ import microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.Device
 import microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item.MobileAppInstallStatusItemRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.getrelatedappstateswithuserprincipalnamewithdeviceid.GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.installsummary.InstallSummaryRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.iosvppapp.IosVppAppRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.relationships.item.MobileAppRelationshipItemRequestBuilder;
@@ -59,11 +58,6 @@ public class MobileAppItemRequestBuilder {
     @javax.annotation.Nonnull
     public InstallSummaryRequestBuilder installSummary() {
         return new InstallSummaryRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The iosVppApp property */
-    @javax.annotation.Nonnull
-    public IosVppAppRequestBuilder iosVppApp() {
-        return new IosVppAppRequestBuilder(pathParameters, requestAdapter);
     }
     /** The managedMobileLobApp property */
     @javax.annotation.Nonnull

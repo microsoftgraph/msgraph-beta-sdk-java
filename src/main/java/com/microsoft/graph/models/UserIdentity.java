@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class UserIdentity extends Identity implements Parsable {
     /** Indicates the client IP address used by user performing the activity (audit log only). */
     private String _ipAddress;

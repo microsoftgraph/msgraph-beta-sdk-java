@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getNonCompliantSettings method. */
 public class GetNonCompliantSettingsRequestBuilder {
     /** Path parameters for the request */
@@ -84,7 +85,11 @@ public class GetNonCompliantSettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetNonCompliantSettingsResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, GetNonCompliantSettingsResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetNonCompliantSettingsResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -97,7 +102,11 @@ public class GetNonCompliantSettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetNonCompliantSettingsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetNonCompliantSettingsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetNonCompliantSettingsResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetNonCompliantSettingsResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -111,7 +120,11 @@ public class GetNonCompliantSettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetNonCompliantSettingsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetNonCompliantSettingsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetNonCompliantSettingsResponse::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetNonCompliantSettingsResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

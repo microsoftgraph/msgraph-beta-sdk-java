@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The DepEnrollmentBaseProfile resource represents an Apple Device Enrollment Program (DEP) enrollment profile. This type of profile must be assigned to Apple DEP serial numbers before the corresponding devices can enroll via DEP. */
 public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsable {
     /** Indicates if Apple id setup pane is disabled */
     private Boolean _appleIdDisabled;
@@ -48,7 +47,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     /** Indicates if touch id setup pane is disabled */
     private Boolean _touchIdDisabled;
     /**
-     * Instantiates a new depEnrollmentBaseProfile and sets the default values.
+     * Instantiates a new DepEnrollmentBaseProfile and sets the default values.
      * @return a void
      */
     public DepEnrollmentBaseProfile() {
@@ -57,7 +56,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depEnrollmentBaseProfile
+     * @return a DepEnrollmentBaseProfile
      */
     @javax.annotation.Nonnull
     public static DepEnrollmentBaseProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +65,8 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.depEnrollmentBaseProfile": return new DepEnrollmentBaseProfile();
+                case "#microsoft.graph.depIOSEnrollmentProfile": return new DepIOSEnrollmentProfile();
+                case "#microsoft.graph.depMacOSEnrollmentProfile": return new DepMacOSEnrollmentProfile();
             }
         }
         return new DepEnrollmentBaseProfile();

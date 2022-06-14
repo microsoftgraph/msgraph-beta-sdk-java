@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ChatMessageInfo extends Entity implements Parsable {
     /** Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments. */
     private ItemBody _body;

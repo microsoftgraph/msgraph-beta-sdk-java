@@ -18,6 +18,8 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.PrivilegedRole;
 import microsoft.graph.privilegedapproval.item.roleinfo.assignments.AssignmentsRequestBuilder;
 import microsoft.graph.privilegedapproval.item.roleinfo.assignments.item.PrivilegedRoleAssignmentItemRequestBuilder;
+import microsoft.graph.privilegedapproval.item.roleinfo.selfactivate.SelfActivateRequestBuilder;
+import microsoft.graph.privilegedapproval.item.roleinfo.selfdeactivate.SelfDeactivateRequestBuilder;
 import microsoft.graph.privilegedapproval.item.roleinfo.settings.SettingsRequestBuilder;
 import microsoft.graph.privilegedapproval.item.roleinfo.summary.SummaryRequestBuilder;
 /** Provides operations to manage the roleInfo property of the microsoft.graph.privilegedApproval entity. */
@@ -31,6 +33,16 @@ public class RoleInfoRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The selfActivate property */
+    @javax.annotation.Nonnull
+    public SelfActivateRequestBuilder selfActivate() {
+        return new SelfActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The selfDeactivate property */
+    @javax.annotation.Nonnull
+    public SelfDeactivateRequestBuilder selfDeactivate() {
+        return new SelfDeactivateRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The settings property */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -111,7 +123,7 @@ public class RoleInfoRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get roleInfo from privilegedApproval
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -119,7 +131,7 @@ public class RoleInfoRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get roleInfo from privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -224,7 +236,7 @@ public class RoleInfoRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get roleInfo from privilegedApproval
      * @return a CompletableFuture of privilegedRole
      */
     public java.util.concurrent.CompletableFuture<PrivilegedRole> get() {
@@ -240,7 +252,7 @@ public class RoleInfoRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get roleInfo from privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedRole
      */
@@ -257,7 +269,7 @@ public class RoleInfoRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get roleInfo from privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of privilegedRole
@@ -344,7 +356,7 @@ public class RoleInfoRequestBuilder {
         public RoleInfoRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get roleInfo from privilegedApproval */
     public class RoleInfoRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

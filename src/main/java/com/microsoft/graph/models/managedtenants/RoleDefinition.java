@@ -11,11 +11,11 @@ import java.util.Objects;
 public class RoleDefinition implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The description property */
+    /** The description for the role. */
     private String _description;
-    /** The displayName property */
+    /** The display name for the role assignment. */
     private String _displayName;
-    /** The templateId property */
+    /** The unique identifier for the template. */
     private String _templateId;
     /**
      * Instantiates a new roleDefinition and sets the default values.
@@ -43,7 +43,7 @@ public class RoleDefinition implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description for the role.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class RoleDefinition implements AdditionalDataHolder, Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name for the role assignment.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class RoleDefinition implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. The unique identifier for the template.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class RoleDefinition implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description for the role.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -108,7 +108,7 @@ public class RoleDefinition implements AdditionalDataHolder, Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the role assignment.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -116,7 +116,7 @@ public class RoleDefinition implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. The unique identifier for the template.
      * @param value Value to set for the templateId property.
      * @return a void
      */

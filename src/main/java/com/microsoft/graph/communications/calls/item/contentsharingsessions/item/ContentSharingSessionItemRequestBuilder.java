@@ -80,7 +80,7 @@ public class ContentSharingSessionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get contentSharingSessions from communications
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ContentSharingSessionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get contentSharingSessions from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ContentSharingSessionItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get contentSharingSessions from communications
      * @return a CompletableFuture of contentSharingSession
      */
     public java.util.concurrent.CompletableFuture<ContentSharingSession> get() {
@@ -209,7 +209,7 @@ public class ContentSharingSessionItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get contentSharingSessions from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentSharingSession
      */
@@ -226,7 +226,7 @@ public class ContentSharingSessionItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get contentSharingSessions from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of contentSharingSession
@@ -313,7 +313,7 @@ public class ContentSharingSessionItemRequestBuilder {
         public ContentSharingSessionItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get contentSharingSessions from communications */
     public class ContentSharingSessionItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Event representing a users device application install status. */
 public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /** Intune application identifier. */
     private String _applicationId;
@@ -20,7 +19,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     /** Identifier for the user that tried to enroll the device. */
     private String _userId;
     /**
-     * Instantiates a new mobileAppTroubleshootingEvent and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingEvent and sets the default values.
      * @return a void
      */
     public MobileAppTroubleshootingEvent() {
@@ -29,7 +28,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppTroubleshootingEvent
+     * @return a MobileAppTroubleshootingEvent
      */
     @javax.annotation.Nonnull
     public static MobileAppTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

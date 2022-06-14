@@ -11,17 +11,17 @@ import java.util.Objects;
 import microsoft.graph.models.Entity;
 /** Provides operations to manage the security singleton. */
 public class DataSourceContainer extends Entity implements Parsable {
-    /** The createdDateTime property */
+    /** Created date and time of the dataSourceContainer entity. */
     private OffsetDateTime _createdDateTime;
-    /** The displayName property */
+    /** Display name of the dataSourceContainer entity. */
     private String _displayName;
-    /** The holdStatus property */
+    /** The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial */
     private DataSourceHoldStatus _holdStatus;
-    /** The lastModifiedDateTime property */
+    /** Last modified date and time of the dataSourceContainer. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The releasedDateTime property */
+    /** Date and time that the dataSourceContainer was released from the case. */
     private OffsetDateTime _releasedDateTime;
-    /** The status property */
+    /** Latest status of the dataSourceContainer. Possible values are: Active, Released. */
     private DataSourceContainerStatus _status;
     /**
      * Instantiates a new dataSourceContainer and sets the default values.
@@ -42,13 +42,14 @@ public class DataSourceContainer extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.dataSourceContainer": return new DataSourceContainer();
+                case "#microsoft.graph.security.ediscoveryCustodian": return new EdiscoveryCustodian();
+                case "#microsoft.graph.security.ediscoveryNoncustodialDataSource": return new EdiscoveryNoncustodialDataSource();
             }
         }
         return new DataSourceContainer();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Created date and time of the dataSourceContainer entity.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -56,7 +57,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the dataSourceContainer entity.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -80,7 +81,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the holdStatus property value. The holdStatus property
+     * Gets the holdStatus property value. The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
      * @return a dataSourceHoldStatus
      */
     @javax.annotation.Nullable
@@ -88,7 +89,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         return this._holdStatus;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Last modified date and time of the dataSourceContainer.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -96,7 +97,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the releasedDateTime property value. The releasedDateTime property
+     * Gets the releasedDateTime property value. Date and time that the dataSourceContainer was released from the case.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -104,7 +105,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         return this._releasedDateTime;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
      * @return a dataSourceContainerStatus
      */
     @javax.annotation.Nullable
@@ -127,7 +128,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Created date and time of the dataSourceContainer entity.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -135,7 +136,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the dataSourceContainer entity.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -143,7 +144,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the holdStatus property value. The holdStatus property
+     * Sets the holdStatus property value. The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      * @return a void
      */
@@ -151,7 +152,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this._holdStatus = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Last modified date and time of the dataSourceContainer.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -159,7 +160,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the releasedDateTime property value. The releasedDateTime property
+     * Sets the releasedDateTime property value. Date and time that the dataSourceContainer was released from the case.
      * @param value Value to set for the releasedDateTime property.
      * @return a void
      */
@@ -167,7 +168,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this._releasedDateTime = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
      * @param value Value to set for the status property.
      * @return a void
      */

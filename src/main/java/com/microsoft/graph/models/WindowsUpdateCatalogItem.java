@@ -35,7 +35,8 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.windowsUpdateCatalogItem": return new WindowsUpdateCatalogItem();
+                case "#microsoft.graph.windowsFeatureUpdateCatalogItem": return new WindowsFeatureUpdateCatalogItem();
+                case "#microsoft.graph.windowsQualityUpdateCatalogItem": return new WindowsQualityUpdateCatalogItem();
             }
         }
         return new WindowsUpdateCatalogItem();

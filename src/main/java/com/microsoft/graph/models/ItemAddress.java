@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class ItemAddress extends ItemFacet implements Parsable {
     /** The detail property */
     private PhysicalAddress _detail;
@@ -16,7 +15,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     /** The geocoordinates of the address. */
     private GeoCoordinates _geoCoordinates;
     /**
-     * Instantiates a new itemAddress and sets the default values.
+     * Instantiates a new ItemAddress and sets the default values.
      * @return a void
      */
     public ItemAddress() {
@@ -25,7 +24,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemAddress
+     * @return a ItemAddress
      */
     @javax.annotation.Nonnull
     public static ItemAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

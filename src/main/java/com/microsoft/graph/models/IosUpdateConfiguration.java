@@ -1,0 +1,228 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.LocalTime;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class IosUpdateConfiguration extends DeviceConfiguration implements Parsable {
+    /** Active Hours End (active hours mean the time window when updates install should not happen) */
+    private LocalTime _activeHoursEnd;
+    /** Active Hours Start (active hours mean the time window when updates install should not happen) */
+    private LocalTime _activeHoursStart;
+    /** If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements. */
+    private java.util.List<CustomUpdateTimeWindow> _customUpdateTimeWindows;
+    /** If left unspecified, devices will update to the latest version of the OS. */
+    private String _desiredOsVersion;
+    /** Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive */
+    private Integer _enforcedSoftwareUpdateDelayInDays;
+    /** Is setting enabled in UI */
+    private Boolean _isEnabled;
+    /** Days in week for which active hours are configured. This collection can contain a maximum of 7 elements. */
+    private java.util.List<String> _scheduledInstallDays;
+    /** Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows. */
+    private IosSoftwareUpdateScheduleType _updateScheduleType;
+    /** UTC Time Offset indicated in minutes */
+    private Integer _utcTimeOffsetInMinutes;
+    /**
+     * Instantiates a new IosUpdateConfiguration and sets the default values.
+     * @return a void
+     */
+    public IosUpdateConfiguration() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a IosUpdateConfiguration
+     */
+    @javax.annotation.Nonnull
+    public static IosUpdateConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new IosUpdateConfiguration();
+    }
+    /**
+     * Gets the activeHoursEnd property value. Active Hours End (active hours mean the time window when updates install should not happen)
+     * @return a LocalTime
+     */
+    @javax.annotation.Nullable
+    public LocalTime getActiveHoursEnd() {
+        return this._activeHoursEnd;
+    }
+    /**
+     * Gets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
+     * @return a LocalTime
+     */
+    @javax.annotation.Nullable
+    public LocalTime getActiveHoursStart() {
+        return this._activeHoursStart;
+    }
+    /**
+     * Gets the customUpdateTimeWindows property value. If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
+     * @return a customUpdateTimeWindow
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CustomUpdateTimeWindow> getCustomUpdateTimeWindows() {
+        return this._customUpdateTimeWindows;
+    }
+    /**
+     * Gets the desiredOsVersion property value. If left unspecified, devices will update to the latest version of the OS.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDesiredOsVersion() {
+        return this._desiredOsVersion;
+    }
+    /**
+     * Gets the enforcedSoftwareUpdateDelayInDays property value. Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getEnforcedSoftwareUpdateDelayInDays() {
+        return this._enforcedSoftwareUpdateDelayInDays;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final IosUpdateConfiguration currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
+            this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
+            this.put("customUpdateTimeWindows", (n) -> { currentObject.setCustomUpdateTimeWindows(n.getCollectionOfObjectValues(CustomUpdateTimeWindow::createFromDiscriminatorValue)); });
+            this.put("desiredOsVersion", (n) -> { currentObject.setDesiredOsVersion(n.getStringValue()); });
+            this.put("enforcedSoftwareUpdateDelayInDays", (n) -> { currentObject.setEnforcedSoftwareUpdateDelayInDays(n.getIntegerValue()); });
+            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("scheduledInstallDays", (n) -> { currentObject.setScheduledInstallDays(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("updateScheduleType", (n) -> { currentObject.setUpdateScheduleType(n.getEnumValue(IosSoftwareUpdateScheduleType.class)); });
+            this.put("utcTimeOffsetInMinutes", (n) -> { currentObject.setUtcTimeOffsetInMinutes(n.getIntegerValue()); });
+        }};
+    }
+    /**
+     * Gets the isEnabled property value. Is setting enabled in UI
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this._isEnabled;
+    }
+    /**
+     * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getScheduledInstallDays() {
+        return this._scheduledInstallDays;
+    }
+    /**
+     * Gets the updateScheduleType property value. Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+     * @return a iosSoftwareUpdateScheduleType
+     */
+    @javax.annotation.Nullable
+    public IosSoftwareUpdateScheduleType getUpdateScheduleType() {
+        return this._updateScheduleType;
+    }
+    /**
+     * Gets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getUtcTimeOffsetInMinutes() {
+        return this._utcTimeOffsetInMinutes;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeLocalTimeValue("activeHoursEnd", this.getActiveHoursEnd());
+        writer.writeLocalTimeValue("activeHoursStart", this.getActiveHoursStart());
+        writer.writeCollectionOfObjectValues("customUpdateTimeWindows", this.getCustomUpdateTimeWindows());
+        writer.writeStringValue("desiredOsVersion", this.getDesiredOsVersion());
+        writer.writeIntegerValue("enforcedSoftwareUpdateDelayInDays", this.getEnforcedSoftwareUpdateDelayInDays());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeCollectionOfPrimitiveValues("scheduledInstallDays", this.getScheduledInstallDays());
+        writer.writeEnumValue("updateScheduleType", this.getUpdateScheduleType());
+        writer.writeIntegerValue("utcTimeOffsetInMinutes", this.getUtcTimeOffsetInMinutes());
+    }
+    /**
+     * Sets the activeHoursEnd property value. Active Hours End (active hours mean the time window when updates install should not happen)
+     * @param value Value to set for the activeHoursEnd property.
+     * @return a void
+     */
+    public void setActiveHoursEnd(@javax.annotation.Nullable final LocalTime value) {
+        this._activeHoursEnd = value;
+    }
+    /**
+     * Sets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
+     * @param value Value to set for the activeHoursStart property.
+     * @return a void
+     */
+    public void setActiveHoursStart(@javax.annotation.Nullable final LocalTime value) {
+        this._activeHoursStart = value;
+    }
+    /**
+     * Sets the customUpdateTimeWindows property value. If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
+     * @param value Value to set for the customUpdateTimeWindows property.
+     * @return a void
+     */
+    public void setCustomUpdateTimeWindows(@javax.annotation.Nullable final java.util.List<CustomUpdateTimeWindow> value) {
+        this._customUpdateTimeWindows = value;
+    }
+    /**
+     * Sets the desiredOsVersion property value. If left unspecified, devices will update to the latest version of the OS.
+     * @param value Value to set for the desiredOsVersion property.
+     * @return a void
+     */
+    public void setDesiredOsVersion(@javax.annotation.Nullable final String value) {
+        this._desiredOsVersion = value;
+    }
+    /**
+     * Sets the enforcedSoftwareUpdateDelayInDays property value. Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
+     * @param value Value to set for the enforcedSoftwareUpdateDelayInDays property.
+     * @return a void
+     */
+    public void setEnforcedSoftwareUpdateDelayInDays(@javax.annotation.Nullable final Integer value) {
+        this._enforcedSoftwareUpdateDelayInDays = value;
+    }
+    /**
+     * Sets the isEnabled property value. Is setting enabled in UI
+     * @param value Value to set for the isEnabled property.
+     * @return a void
+     */
+    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isEnabled = value;
+    }
+    /**
+     * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
+     * @param value Value to set for the scheduledInstallDays property.
+     * @return a void
+     */
+    public void setScheduledInstallDays(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._scheduledInstallDays = value;
+    }
+    /**
+     * Sets the updateScheduleType property value. Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+     * @param value Value to set for the updateScheduleType property.
+     * @return a void
+     */
+    public void setUpdateScheduleType(@javax.annotation.Nullable final IosSoftwareUpdateScheduleType value) {
+        this._updateScheduleType = value;
+    }
+    /**
+     * Sets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
+     * @param value Value to set for the utcTimeOffsetInMinutes property.
+     * @return a void
+     */
+    public void setUtcTimeOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
+        this._utcTimeOffsetInMinutes = value;
+    }
+}

@@ -32,7 +32,12 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementSettingInstance": return new DeviceManagementSettingInstance();
+                case "#microsoft.graph.deviceManagementAbstractComplexSettingInstance": return new DeviceManagementAbstractComplexSettingInstance();
+                case "#microsoft.graph.deviceManagementBooleanSettingInstance": return new DeviceManagementBooleanSettingInstance();
+                case "#microsoft.graph.deviceManagementCollectionSettingInstance": return new DeviceManagementCollectionSettingInstance();
+                case "#microsoft.graph.deviceManagementComplexSettingInstance": return new DeviceManagementComplexSettingInstance();
+                case "#microsoft.graph.deviceManagementIntegerSettingInstance": return new DeviceManagementIntegerSettingInstance();
+                case "#microsoft.graph.deviceManagementStringSettingInstance": return new DeviceManagementStringSettingInstance();
             }
         }
         return new DeviceManagementSettingInstance();

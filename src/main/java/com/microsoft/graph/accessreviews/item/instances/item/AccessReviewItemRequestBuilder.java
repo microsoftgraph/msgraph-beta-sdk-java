@@ -14,14 +14,23 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.accessreviews.item.instances.item.applydecisions.ApplyDecisionsRequestBuilder;
 import microsoft.graph.accessreviews.item.instances.item.decisions.DecisionsRequestBuilder;
 import microsoft.graph.accessreviews.item.instances.item.mydecisions.MyDecisionsRequestBuilder;
+import microsoft.graph.accessreviews.item.instances.item.resetdecisions.ResetDecisionsRequestBuilder;
 import microsoft.graph.accessreviews.item.instances.item.reviewers.item.AccessReviewReviewerItemRequestBuilder;
 import microsoft.graph.accessreviews.item.instances.item.reviewers.ReviewersRequestBuilder;
+import microsoft.graph.accessreviews.item.instances.item.sendreminder.SendReminderRequestBuilder;
+import microsoft.graph.accessreviews.item.instances.item.stop.StopRequestBuilder;
 import microsoft.graph.models.AccessReview;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the instances property of the microsoft.graph.accessReview entity. */
 public class AccessReviewItemRequestBuilder {
+    /** The applyDecisions property */
+    @javax.annotation.Nonnull
+    public ApplyDecisionsRequestBuilder applyDecisions() {
+        return new ApplyDecisionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The decisions property */
     @javax.annotation.Nonnull
     public DecisionsRequestBuilder decisions() {
@@ -36,10 +45,25 @@ public class AccessReviewItemRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The resetDecisions property */
+    @javax.annotation.Nonnull
+    public ResetDecisionsRequestBuilder resetDecisions() {
+        return new ResetDecisionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The reviewers property */
     @javax.annotation.Nonnull
     public ReviewersRequestBuilder reviewers() {
         return new ReviewersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The sendReminder property */
+    @javax.annotation.Nonnull
+    public SendReminderRequestBuilder sendReminder() {
+        return new SendReminderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The stop property */
+    @javax.annotation.Nonnull
+    public StopRequestBuilder stop() {
+        return new StopRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;

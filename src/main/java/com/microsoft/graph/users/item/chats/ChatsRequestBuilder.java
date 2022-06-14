@@ -17,7 +17,9 @@ import java.util.Objects;
 import microsoft.graph.models.Chat;
 import microsoft.graph.models.ChatCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.chats.allmessages.AllMessagesRequestBuilder;
 import microsoft.graph.users.item.chats.count.CountRequestBuilder;
+import microsoft.graph.users.item.chats.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the chats property of the microsoft.graph.user entity. */
 public class ChatsRequestBuilder {
     /** The count property */
@@ -31,6 +33,14 @@ public class ChatsRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Provides operations to call the allMessages method.
+     * @return a allMessagesRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AllMessagesRequestBuilder allMessages() {
+        return new AllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ChatsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -171,6 +181,14 @@ public class ChatsRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getAllMessages method.
+     * @return a getAllMessagesRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetAllMessagesRequestBuilder getAllMessages() {
+        return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Create new navigation property to chats for users

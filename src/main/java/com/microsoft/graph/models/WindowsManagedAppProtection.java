@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on a Windows device */
 public class WindowsManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Indicates the sources from which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none. */
     private WindowsManagedAppDataTransferLevel _allowedInboundDataTransferSources;
@@ -59,7 +58,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     /** When TRUE, indicates that printing is blocked from managed apps. When FALSE, indicates that printing is allowed from managed apps. Default value is FALSE. */
     private Boolean _printBlocked;
     /**
-     * Instantiates a new windowsManagedAppProtection and sets the default values.
+     * Instantiates a new WindowsManagedAppProtection and sets the default values.
      * @return a void
      */
     public WindowsManagedAppProtection() {
@@ -68,7 +67,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagedAppProtection
+     * @return a WindowsManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static WindowsManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

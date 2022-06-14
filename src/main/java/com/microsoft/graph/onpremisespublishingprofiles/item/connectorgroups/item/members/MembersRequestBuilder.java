@@ -64,7 +64,7 @@ public class MembersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get members from onPremisesPublishingProfiles
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -72,7 +72,7 @@ public class MembersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get members from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -94,7 +94,7 @@ public class MembersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get members from onPremisesPublishingProfiles
      * @return a CompletableFuture of ConnectorCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ConnectorCollectionResponse> get() {
@@ -110,7 +110,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get members from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConnectorCollectionResponse
      */
@@ -127,7 +127,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get members from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ConnectorCollectionResponse
@@ -144,7 +144,7 @@ public class MembersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get members from onPremisesPublishingProfiles */
     public class MembersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

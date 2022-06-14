@@ -49,7 +49,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.riskyServicePrincipal": return new RiskyServicePrincipal();
+                case "#microsoft.graph.riskyServicePrincipalHistoryItem": return new RiskyServicePrincipalHistoryItem();
             }
         }
         return new RiskyServicePrincipal();

@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.EvaluateDynamicMembershipResult;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the evaluateDynamicMembership method. */
 public class EvaluateDynamicMembershipRequestBuilder {
     /** Path parameters for the request */
@@ -90,7 +91,11 @@ public class EvaluateDynamicMembershipRequestBuilder {
     public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -104,7 +109,11 @@ public class EvaluateDynamicMembershipRequestBuilder {
     public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@javax.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateDynamicMembershipRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -120,7 +129,11 @@ public class EvaluateDynamicMembershipRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

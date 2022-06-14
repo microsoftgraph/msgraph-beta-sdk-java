@@ -8,22 +8,21 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class EdiscoveryCustodian extends DataSourceContainer implements Parsable {
-    /** The acknowledgedDateTime property */
+    /** Date and time the custodian acknowledged a hold notification. */
     private OffsetDateTime _acknowledgedDateTime;
-    /** The email property */
+    /** Email address of the custodian. */
     private String _email;
-    /** The lastIndexOperation property */
+    /** Operation entity that represents the latest indexing for the custodian. */
     private EdiscoveryIndexOperation _lastIndexOperation;
-    /** The siteSources property */
+    /** Data source entity for SharePoint sites associated with the custodian. */
     private java.util.List<SiteSource> _siteSources;
-    /** The unifiedGroupSources property */
+    /** Data source entity for groups associated with the custodian. */
     private java.util.List<UnifiedGroupSource> _unifiedGroupSources;
-    /** The userSources property */
+    /** Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site. */
     private java.util.List<UserSource> _userSources;
     /**
-     * Instantiates a new ediscoveryCustodian and sets the default values.
+     * Instantiates a new EdiscoveryCustodian and sets the default values.
      * @return a void
      */
     public EdiscoveryCustodian() {
@@ -32,7 +31,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryCustodian
+     * @return a EdiscoveryCustodian
      */
     @javax.annotation.Nonnull
     public static EdiscoveryCustodian createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +39,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return new EdiscoveryCustodian();
     }
     /**
-     * Gets the acknowledgedDateTime property value. The acknowledgedDateTime property
+     * Gets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -48,7 +47,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return this._acknowledgedDateTime;
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. Email address of the custodian.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         }};
     }
     /**
-     * Gets the lastIndexOperation property value. The lastIndexOperation property
+     * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
      * @return a ediscoveryIndexOperation
      */
     @javax.annotation.Nullable
@@ -80,7 +79,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return this._lastIndexOperation;
     }
     /**
-     * Gets the siteSources property value. The siteSources property
+     * Gets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
      * @return a siteSource
      */
     @javax.annotation.Nullable
@@ -88,7 +87,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return this._siteSources;
     }
     /**
-     * Gets the unifiedGroupSources property value. The unifiedGroupSources property
+     * Gets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
      * @return a unifiedGroupSource
      */
     @javax.annotation.Nullable
@@ -96,7 +95,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return this._unifiedGroupSources;
     }
     /**
-     * Gets the userSources property value. The userSources property
+     * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a userSource
      */
     @javax.annotation.Nullable
@@ -119,7 +118,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         writer.writeCollectionOfObjectValues("userSources", this.getUserSources());
     }
     /**
-     * Sets the acknowledgedDateTime property value. The acknowledgedDateTime property
+     * Sets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
      * @param value Value to set for the acknowledgedDateTime property.
      * @return a void
      */
@@ -127,7 +126,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this._acknowledgedDateTime = value;
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. Email address of the custodian.
      * @param value Value to set for the email property.
      * @return a void
      */
@@ -135,7 +134,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this._email = value;
     }
     /**
-     * Sets the lastIndexOperation property value. The lastIndexOperation property
+     * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
      * @param value Value to set for the lastIndexOperation property.
      * @return a void
      */
@@ -143,7 +142,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this._lastIndexOperation = value;
     }
     /**
-     * Sets the siteSources property value. The siteSources property
+     * Sets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
      * @param value Value to set for the siteSources property.
      * @return a void
      */
@@ -151,7 +150,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this._siteSources = value;
     }
     /**
-     * Sets the unifiedGroupSources property value. The unifiedGroupSources property
+     * Sets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
      * @param value Value to set for the unifiedGroupSources property.
      * @return a void
      */
@@ -159,7 +158,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this._unifiedGroupSources = value;
     }
     /**
-     * Sets the userSources property value. The userSources property
+     * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param value Value to set for the userSources property.
      * @return a void
      */

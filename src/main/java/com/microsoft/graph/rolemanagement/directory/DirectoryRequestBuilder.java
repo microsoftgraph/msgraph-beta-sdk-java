@@ -157,7 +157,7 @@ public class DirectoryRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get directory from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -165,7 +165,7 @@ public class DirectoryRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get directory from roleManagement
      * @return a CompletableFuture of rbacApplication
      */
     public java.util.concurrent.CompletableFuture<RbacApplication> get() {
@@ -286,7 +286,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of rbacApplication
      */
@@ -303,7 +303,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of rbacApplication
@@ -538,7 +538,7 @@ public class DirectoryRequestBuilder {
         public DirectoryRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get directory from roleManagement */
     public class DirectoryRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

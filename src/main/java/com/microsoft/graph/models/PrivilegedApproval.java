@@ -27,7 +27,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     private String _requestorReason;
     /** The roleId property */
     private String _roleId;
-    /** Read-only. Nullable. */
+    /** The roleInfo property */
     private PrivilegedRole _roleInfo;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _startDateTime;
@@ -136,7 +136,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
         return this._roleId;
     }
     /**
-     * Gets the roleInfo property value. Read-only. Nullable.
+     * Gets the roleInfo property value. The roleInfo property
      * @return a privilegedRole
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
         this._roleId = value;
     }
     /**
-     * Sets the roleInfo property value. Read-only. Nullable.
+     * Sets the roleInfo property value. The roleInfo property
      * @param value Value to set for the roleInfo property.
      * @return a void
      */

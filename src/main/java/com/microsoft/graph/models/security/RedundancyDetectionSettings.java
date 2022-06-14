@@ -11,13 +11,13 @@ import java.util.Objects;
 public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The isEnabled property */
+    /** Indicates whether email threading and near duplicate detection are enabled. */
     private Boolean _isEnabled;
-    /** The maxWords property */
+    /** Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words. */
     private Integer _maxWords;
-    /** The minWords property */
+    /** Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words. */
     private Integer _minWords;
-    /** The similarityThreshold property */
+    /** Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold. */
     private Integer _similarityThreshold;
     /**
      * Instantiates a new redundancyDetectionSettings and sets the default values.
@@ -59,7 +59,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         }};
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         return this._isEnabled;
     }
     /**
-     * Gets the maxWords property value. The maxWords property
+     * Gets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         return this._maxWords;
     }
     /**
-     * Gets the minWords property value. The minWords property
+     * Gets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         return this._minWords;
     }
     /**
-     * Gets the similarityThreshold property value. The similarityThreshold property
+     * Gets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         this._additionalData = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
@@ -120,7 +120,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         this._isEnabled = value;
     }
     /**
-     * Sets the maxWords property value. The maxWords property
+     * Sets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @param value Value to set for the maxWords property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         this._maxWords = value;
     }
     /**
-     * Sets the minWords property value. The minWords property
+     * Sets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @param value Value to set for the minWords property.
      * @return a void
      */
@@ -136,7 +136,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         this._minWords = value;
     }
     /**
-     * Sets the similarityThreshold property value. The similarityThreshold property
+     * Sets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
      * @param value Value to set for the similarityThreshold property.
      * @return a void
      */

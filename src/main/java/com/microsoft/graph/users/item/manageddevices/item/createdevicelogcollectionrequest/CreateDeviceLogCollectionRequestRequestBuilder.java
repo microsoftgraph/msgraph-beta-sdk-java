@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.DeviceLogCollectionResponse;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the createDeviceLogCollectionRequest method. */
 public class CreateDeviceLogCollectionRequestRequestBuilder {
     /** Path parameters for the request */
@@ -90,7 +91,11 @@ public class CreateDeviceLogCollectionRequestRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeviceLogCollectionResponse> post(@javax.annotation.Nonnull final CreateDeviceLogCollectionRequestPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceLogCollectionResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLogCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -104,7 +109,11 @@ public class CreateDeviceLogCollectionRequestRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeviceLogCollectionResponse> post(@javax.annotation.Nonnull final CreateDeviceLogCollectionRequestPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateDeviceLogCollectionRequestRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceLogCollectionResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLogCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -120,7 +129,11 @@ public class CreateDeviceLogCollectionRequestRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceLogCollectionResponse::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLogCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

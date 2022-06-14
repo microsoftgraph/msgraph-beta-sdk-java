@@ -37,7 +37,12 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.groupPolicyPresentationValue": return new GroupPolicyPresentationValue();
+                case "#microsoft.graph.groupPolicyPresentationValueBoolean": return new GroupPolicyPresentationValueBoolean();
+                case "#microsoft.graph.groupPolicyPresentationValueDecimal": return new GroupPolicyPresentationValueDecimal();
+                case "#microsoft.graph.groupPolicyPresentationValueList": return new GroupPolicyPresentationValueList();
+                case "#microsoft.graph.groupPolicyPresentationValueLongDecimal": return new GroupPolicyPresentationValueLongDecimal();
+                case "#microsoft.graph.groupPolicyPresentationValueMultiText": return new GroupPolicyPresentationValueMultiText();
+                case "#microsoft.graph.groupPolicyPresentationValueText": return new GroupPolicyPresentationValueText();
             }
         }
         return new GroupPolicyPresentationValue();

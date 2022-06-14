@@ -18,6 +18,7 @@ import microsoft.graph.models.GovernanceResource;
 import microsoft.graph.models.GovernanceResourceCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.privilegedaccess.item.resources.count.CountRequestBuilder;
+import microsoft.graph.privilegedaccess.item.resources.register.RegisterRequestBuilder;
 /** Provides operations to manage the resources property of the microsoft.graph.privilegedAccess entity. */
 public class ResourcesRequestBuilder {
     /** The count property */
@@ -27,6 +28,11 @@ public class ResourcesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The register property */
+    @javax.annotation.Nonnull
+    public RegisterRequestBuilder register() {
+        return new RegisterRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

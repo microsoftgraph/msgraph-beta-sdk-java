@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
     /** If present, represents a conversation (for example, team or channel) @mentioned in a message. */
     private TeamworkConversationIdentity _conversation;

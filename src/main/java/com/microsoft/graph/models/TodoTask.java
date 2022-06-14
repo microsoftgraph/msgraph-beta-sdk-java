@@ -8,10 +8,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class TodoTask extends Entity implements Parsable {
     /** The attachments property */
-    private java.util.List<Attachment_v2> _attachments;
+    private java.util.List<AttachmentBase> _attachments;
     /** The attachmentSessions property */
     private java.util.List<AttachmentSession> _attachmentSessions;
     /** The task body that typically contains information about the task. */
@@ -67,10 +67,10 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the attachments property value. The attachments property
-     * @return a attachment_v2
+     * @return a attachmentBase
      */
     @javax.annotation.Nullable
-    public java.util.List<Attachment_v2> getAttachments() {
+    public java.util.List<AttachmentBase> getAttachments() {
         return this._attachments;
     }
     /**
@@ -153,7 +153,7 @@ public class TodoTask extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTask currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment_v2::createFromDiscriminatorValue)); });
+            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(AttachmentBase::createFromDiscriminatorValue)); });
             this.put("attachmentSessions", (n) -> { currentObject.setAttachmentSessions(n.getCollectionOfObjectValues(AttachmentSession::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -279,7 +279,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
-    public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment_v2> value) {
+    public void setAttachments(@javax.annotation.Nullable final java.util.List<AttachmentBase> value) {
         this._attachments = value;
     }
     /**

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class TeamworkTag extends Entity implements Parsable {
     /** Tag description as it will appear to the user in Microsoft Teams. */
     private String _description;

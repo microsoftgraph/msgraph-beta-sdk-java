@@ -34,7 +34,8 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementSettingCategory": return new DeviceManagementSettingCategory();
+                case "#microsoft.graph.deviceManagementIntentSettingCategory": return new DeviceManagementIntentSettingCategory();
+                case "#microsoft.graph.deviceManagementTemplateSettingCategory": return new DeviceManagementTemplateSettingCategory();
             }
         }
         return new DeviceManagementSettingCategory();

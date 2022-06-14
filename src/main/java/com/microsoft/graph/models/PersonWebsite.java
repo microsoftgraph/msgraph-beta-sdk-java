@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class PersonWebsite extends ItemFacet implements Parsable {
     /** Contains categories a user has associated with the website (for example, personal, recipes). */
     private java.util.List<String> _categories;
@@ -20,7 +19,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     /** Contains a link to the website itself. */
     private String _webUrl;
     /**
-     * Instantiates a new personWebsite and sets the default values.
+     * Instantiates a new PersonWebsite and sets the default values.
      * @return a void
      */
     public PersonWebsite() {
@@ -29,7 +28,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personWebsite
+     * @return a PersonWebsite
      */
     @javax.annotation.Nonnull
     public static PersonWebsite createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -28,7 +28,8 @@ public class Extension extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.extension": return new Extension();
+                case "#microsoft.graph.openTypeExtension": return new OpenTypeExtension();
+                case "#microsoft.graph.personExtension": return new PersonExtension();
             }
         }
         return new Extension();

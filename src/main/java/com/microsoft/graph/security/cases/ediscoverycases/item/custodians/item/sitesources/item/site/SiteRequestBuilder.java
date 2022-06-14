@@ -52,7 +52,7 @@ public class SiteRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get site from security
+     * The SharePoint site associated with the siteSource.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class SiteRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get site from security
+     * The SharePoint site associated with the siteSource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class SiteRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get site from security
+     * The SharePoint site associated with the siteSource.
      * @return a CompletableFuture of site
      */
     public java.util.concurrent.CompletableFuture<Site> get() {
@@ -98,7 +98,7 @@ public class SiteRequestBuilder {
         }
     }
     /**
-     * Get site from security
+     * The SharePoint site associated with the siteSource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of site
      */
@@ -115,7 +115,7 @@ public class SiteRequestBuilder {
         }
     }
     /**
-     * Get site from security
+     * The SharePoint site associated with the siteSource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of site
@@ -132,7 +132,7 @@ public class SiteRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get site from security */
+    /** The SharePoint site associated with the siteSource. */
     public class SiteRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

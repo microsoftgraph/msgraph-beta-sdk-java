@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
 public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Parsable {
     /** The definition property */
     private java.util.List<String> _definition;
     /**
-     * Instantiates a new tenantRelationshipAccessPolicyBase and sets the default values.
+     * Instantiates a new TenantRelationshipAccessPolicyBase and sets the default values.
      * @return a void
      */
     public TenantRelationshipAccessPolicyBase() {
@@ -21,7 +20,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantRelationshipAccessPolicyBase
+     * @return a TenantRelationshipAccessPolicyBase
      */
     @javax.annotation.Nonnull
     public static TenantRelationshipAccessPolicyBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +29,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.tenantRelationshipAccessPolicyBase": return new TenantRelationshipAccessPolicyBase();
+                case "#microsoft.graph.crossTenantAccessPolicy": return new CrossTenantAccessPolicy();
             }
         }
         return new TenantRelationshipAccessPolicyBase();

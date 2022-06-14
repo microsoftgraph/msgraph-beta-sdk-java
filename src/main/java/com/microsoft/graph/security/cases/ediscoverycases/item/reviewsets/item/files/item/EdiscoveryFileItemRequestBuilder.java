@@ -105,7 +105,7 @@ public class EdiscoveryFileItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get files from security
+     * Represents files within the review set.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -113,7 +113,7 @@ public class EdiscoveryFileItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get files from security
+     * Represents files within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -218,7 +218,7 @@ public class EdiscoveryFileItemRequestBuilder {
         }
     }
     /**
-     * Get files from security
+     * Represents files within the review set.
      * @return a CompletableFuture of ediscoveryFile
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryFile> get() {
@@ -234,7 +234,7 @@ public class EdiscoveryFileItemRequestBuilder {
         }
     }
     /**
-     * Get files from security
+     * Represents files within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryFile
      */
@@ -251,7 +251,7 @@ public class EdiscoveryFileItemRequestBuilder {
         }
     }
     /**
-     * Get files from security
+     * Represents files within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryFile
@@ -350,7 +350,7 @@ public class EdiscoveryFileItemRequestBuilder {
         public EdiscoveryFileItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get files from security */
+    /** Represents files within the review set. */
     public class EdiscoveryFileItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

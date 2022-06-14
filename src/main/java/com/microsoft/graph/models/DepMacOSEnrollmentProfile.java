@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The DepMacOSEnrollmentProfile resource represents an Apple Device Enrollment Program (DEP) enrollment profile specific to macOS configuration. This type of profile must be assigned to Apple DEP serial numbers before the corresponding devices can enroll via DEP. */
 public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implements Parsable {
     /** Indicates if Accessibility screen is disabled */
     private Boolean _accessibilityScreenDisabled;
@@ -28,7 +27,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     /** Indicates if zoom setup pane is disabled */
     private Boolean _zoomDisabled;
     /**
-     * Instantiates a new depMacOSEnrollmentProfile and sets the default values.
+     * Instantiates a new DepMacOSEnrollmentProfile and sets the default values.
      * @return a void
      */
     public DepMacOSEnrollmentProfile() {
@@ -37,7 +36,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depMacOSEnrollmentProfile
+     * @return a DepMacOSEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static DepMacOSEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

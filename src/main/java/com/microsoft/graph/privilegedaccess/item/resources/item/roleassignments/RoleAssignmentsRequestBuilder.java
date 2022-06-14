@@ -18,6 +18,7 @@ import microsoft.graph.models.GovernanceRoleAssignment;
 import microsoft.graph.models.GovernanceRoleAssignmentCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.privilegedaccess.item.resources.item.roleassignments.count.CountRequestBuilder;
+import microsoft.graph.privilegedaccess.item.resources.item.roleassignments.export.ExportRequestBuilder;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.governanceResource entity. */
 public class RoleAssignmentsRequestBuilder {
     /** The count property */
@@ -120,6 +121,14 @@ public class RoleAssignmentsRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Provides operations to call the export method.
+     * @return a exportRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ExportRequestBuilder export() {
+        return new ExportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * The collection of role assignments for the resource.

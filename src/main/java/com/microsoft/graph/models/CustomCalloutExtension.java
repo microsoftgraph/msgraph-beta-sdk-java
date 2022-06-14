@@ -38,7 +38,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.customCalloutExtension": return new CustomCalloutExtension();
+                case "#microsoft.graph.customAccessPackageWorkflowExtension": return new CustomAccessPackageWorkflowExtension();
             }
         }
         return new CustomCalloutExtension();
