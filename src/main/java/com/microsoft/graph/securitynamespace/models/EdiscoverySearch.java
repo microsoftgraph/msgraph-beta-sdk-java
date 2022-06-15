@@ -35,7 +35,7 @@ public class EdiscoverySearch extends Search implements IJsonBackedObject {
 
     /**
      * The Data Source Scopes.
-     * 
+     * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      */
     @SerializedName(value = "dataSourceScopes", alternate = {"DataSourceScopes"})
     @Expose
@@ -44,7 +44,7 @@ public class EdiscoverySearch extends Search implements IJsonBackedObject {
 
     /**
      * The Additional Sources.
-     * 
+     * Adds an additional source to the eDiscovery search.
      */
     @SerializedName(value = "additionalSources", alternate = {"AdditionalSources"})
     @Expose
@@ -53,7 +53,7 @@ public class EdiscoverySearch extends Search implements IJsonBackedObject {
 
     /**
      * The Add To Review Set Operation.
-     * 
+     * Adds the results of the eDiscovery search to the specified reviewSet.
      */
     @SerializedName(value = "addToReviewSetOperation", alternate = {"AddToReviewSetOperation"})
     @Expose
@@ -62,14 +62,14 @@ public class EdiscoverySearch extends Search implements IJsonBackedObject {
 
     /**
      * The Custodian Sources.
-     * 
+     * Custodian sources that are included in the eDiscovery search.
      */
 	@Nullable
     public DataSourceCollectionPage custodianSources;
 
     /**
      * The Last Estimate Statistics Operation.
-     * 
+     * The last estimate operation associated with the eDiscovery search.
      */
     @SerializedName(value = "lastEstimateStatisticsOperation", alternate = {"LastEstimateStatisticsOperation"})
     @Expose
@@ -78,7 +78,7 @@ public class EdiscoverySearch extends Search implements IJsonBackedObject {
 
     /**
      * The Noncustodial Sources.
-     * 
+     * noncustodialDataSource sources that are included in the eDiscovery search
      */
 	@Nullable
     public EdiscoveryNoncustodialDataSourceCollectionPage noncustodialSources;

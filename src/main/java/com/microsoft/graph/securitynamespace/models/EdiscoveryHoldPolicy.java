@@ -32,7 +32,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
     /**
      * The Content Query.
-     * 
+     * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
      */
     @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
     @Expose
@@ -41,7 +41,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
     /**
      * The Errors.
-     * 
+     * Lists any errors that happened while placing the hold.
      */
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
@@ -50,7 +50,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether the hold is enabled and actively holding content.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

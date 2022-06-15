@@ -104,7 +104,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The External Sponsors.
-     * Nullable.
+     * 
      */
     @SerializedName(value = "externalSponsors", alternate = {"ExternalSponsors"})
     @Expose
@@ -113,7 +113,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Internal Sponsors.
-     * Nullable.
+     * 
      */
     @SerializedName(value = "internalSponsors", alternate = {"InternalSponsors"})
     @Expose

@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.50.0] - 2022-06-15
+
+### Added
+ 
+- TeamsAppSettings model and requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests with Attachment_v2 prefix changed to use AttachmentBase prefix. 
+- Models and requests with FileAttachment_v2 prefix changed to use TaskFileAttachment prefix. 
+
 ## [0.49.0] - 2022-06-07
 
 ### Added

@@ -70,14 +70,14 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * Read-only. Nullable.
+     * 
      */
 	@Nullable
     public ApplicationCollectionPage applications;
 
     /**
      * The Members.
-     * Read-only. Nullable.
+     * 
      */
 	@Nullable
     public ConnectorCollectionPage members;

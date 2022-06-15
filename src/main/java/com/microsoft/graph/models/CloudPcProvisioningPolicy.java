@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcDomainJoinConfiguration;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyImageType;
+import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.MicrosoftManagedDesktop;
 import com.microsoft.graph.models.CloudPcWindowsSettings;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
@@ -31,6 +32,24 @@ import javax.annotation.Nonnull;
  */
 public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Alternate Resource Url.
+     * 
+     */
+    @SerializedName(value = "alternateResourceUrl", alternate = {"AlternateResourceUrl"})
+    @Expose
+	@Nullable
+    public String alternateResourceUrl;
+
+    /**
+     * The Cloud Pc Group Display Name.
+     * 
+     */
+    @SerializedName(value = "cloudPcGroupDisplayName", alternate = {"CloudPcGroupDisplayName"})
+    @Expose
+	@Nullable
+    public String cloudPcGroupDisplayName;
 
     /**
      * The Description.
@@ -60,6 +79,15 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     public CloudPcDomainJoinConfiguration domainJoinConfiguration;
 
     /**
+     * The Grace Period In Hours.
+     * 
+     */
+    @SerializedName(value = "gracePeriodInHours", alternate = {"GracePeriodInHours"})
+    @Expose
+	@Nullable
+    public Integer gracePeriodInHours;
+
+    /**
      * The Image Display Name.
      * The display name for the OS image you’re provisioning.
      */
@@ -85,6 +113,24 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public CloudPcProvisioningPolicyImageType imageType;
+
+    /**
+     * The Local Admin Enabled.
+     * 
+     */
+    @SerializedName(value = "localAdminEnabled", alternate = {"LocalAdminEnabled"})
+    @Expose
+	@Nullable
+    public Boolean localAdminEnabled;
+
+    /**
+     * The Managed By.
+     * 
+     */
+    @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
+    @Expose
+	@Nullable
+    public EnumSet<CloudPcManagementService> managedBy;
 
     /**
      * The Microsoft Managed Desktop.

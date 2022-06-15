@@ -725,7 +725,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Onenote.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
