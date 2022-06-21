@@ -23,7 +23,7 @@ apply plugin: "com.android.library"
 apply plugin: "com.github.ben-manes.versions"
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
 
     dexOptions {
        javaMaxHeapSize "3g"
@@ -33,7 +33,7 @@ android {
         versionCode 1
         versionName "1.0"
         minSdkVersion 26
-        targetSdkVersion 32
+        targetSdkVersion 33
     }
 
     buildTypes {
