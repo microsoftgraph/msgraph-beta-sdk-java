@@ -17,9 +17,9 @@ import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevices
 import com.microsoft.graph.models.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.models.RoleScopeTag;
+import com.microsoft.graph.requests.VirtualEndpointRequestBuilder;
 import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileRequestBuilder;
-import com.microsoft.graph.requests.VirtualEndpointRequestBuilder;
 import com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaCollectionRequestBuilder;
 import com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaRequestBuilder;
 import com.microsoft.graph.requests.AndroidForWorkEnrollmentProfileCollectionRequestBuilder;

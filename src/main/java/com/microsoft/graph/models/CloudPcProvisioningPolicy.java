@@ -35,7 +35,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Alternate Resource Url.
-     * 
+     * The URL of the alternate resource that links to this provisioning policy. Read-only.
      */
     @SerializedName(value = "alternateResourceUrl", alternate = {"AlternateResourceUrl"})
     @Expose
@@ -44,7 +44,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Cloud Pc Group Display Name.
-     * 
+     * The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      */
     @SerializedName(value = "cloudPcGroupDisplayName", alternate = {"CloudPcGroupDisplayName"})
     @Expose
@@ -80,7 +80,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Grace Period In Hours.
-     * 
+     * The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
      */
     @SerializedName(value = "gracePeriodInHours", alternate = {"GracePeriodInHours"})
     @Expose
@@ -116,7 +116,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Local Admin Enabled.
-     * 
+     * Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
      */
     @SerializedName(value = "localAdminEnabled", alternate = {"LocalAdminEnabled"})
     @Expose
@@ -125,7 +125,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Managed By.
-     * 
+     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
     @Expose

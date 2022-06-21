@@ -93,7 +93,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
 
     /**
      * The Sms Notifications Enabled.
-     * 
+     * Indicates if the SMS notifications will be sent to the customer for the appointment
      */
     @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
     @Expose

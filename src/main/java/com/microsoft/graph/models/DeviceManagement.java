@@ -18,8 +18,8 @@ import com.microsoft.graph.models.DeviceManagementSubscriptions;
 import com.microsoft.graph.models.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.WindowsMalwareOverview;
-import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
 import com.microsoft.graph.models.VirtualEndpoint;
+import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
 import com.microsoft.graph.models.AndroidForWorkAppConfigurationSchema;
 import com.microsoft.graph.models.AndroidForWorkEnrollmentProfile;
 import com.microsoft.graph.models.AndroidForWorkSettings;
@@ -453,15 +453,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
-     * The Android Device Owner Enrollment Profiles.
-     * Android device owner enrollment profile entities.
-     */
-    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
-    @Expose
-	@Nullable
-    public AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
-
-    /**
      * The Virtual Endpoint.
      * 
      */
@@ -469,6 +460,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public VirtualEndpoint virtualEndpoint;
+
+    /**
+     * The Android Device Owner Enrollment Profiles.
+     * Android device owner enrollment profile entities.
+     */
+    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
 
     /**
      * The Android For Work App Configuration Schemas.
