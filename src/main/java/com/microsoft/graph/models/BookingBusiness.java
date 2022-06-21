@@ -95,7 +95,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Language Tag.
-     * 
+     * The language of the self service booking page
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose

@@ -17,9 +17,9 @@ import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevices
 import com.microsoft.graph.models.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.models.RoleScopeTag;
+import com.microsoft.graph.requests.VirtualEndpointRequestBuilder;
 import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileRequestBuilder;
-import com.microsoft.graph.requests.VirtualEndpointRequestBuilder;
 import com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaCollectionRequestBuilder;
 import com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaRequestBuilder;
 import com.microsoft.graph.requests.AndroidForWorkEnrollmentProfileCollectionRequestBuilder;
@@ -347,6 +347,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     }
 
 
+
+    /**
+     * Gets the request builder for VirtualEndpoint
+     *
+     * @return the VirtualEndpointRequestBuilder instance
+     */
+    @Nonnull
+    public VirtualEndpointRequestBuilder virtualEndpoint() {
+        return new VirtualEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEndpoint"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the AndroidDeviceOwnerEnrollmentProfile collection
      *
@@ -366,16 +376,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public AndroidDeviceOwnerEnrollmentProfileRequestBuilder androidDeviceOwnerEnrollmentProfiles(@Nonnull final String id) {
         return new AndroidDeviceOwnerEnrollmentProfileRequestBuilder(getRequestUrlWithAdditionalSegment("androidDeviceOwnerEnrollmentProfiles") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for VirtualEndpoint
-     *
-     * @return the VirtualEndpointRequestBuilder instance
-     */
-    @Nonnull
-    public VirtualEndpointRequestBuilder virtualEndpoint() {
-        return new VirtualEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEndpoint"), getClient(), null);
     }
     /**
      *  Gets a request builder for the AndroidForWorkAppConfigurationSchema collection

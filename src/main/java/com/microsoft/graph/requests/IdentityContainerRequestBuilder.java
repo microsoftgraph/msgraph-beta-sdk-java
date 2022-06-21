@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityContainer;
-import com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder;
 import com.microsoft.graph.requests.B2cIdentityUserFlowCollectionRequestBuilder;
@@ -21,6 +20,7 @@ import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBu
 import com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.ContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -70,16 +70,6 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     }
 
 
-
-    /**
-     * Gets the request builder for ConditionalAccessRoot
-     *
-     * @return the ConditionalAccessRootRequestBuilder instance
-     */
-    @Nonnull
-    public ConditionalAccessRootRequestBuilder conditionalAccess() {
-        return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the IdentityApiConnector collection
      *
@@ -199,6 +189,16 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     @Nonnull
     public IdentityUserFlowRequestBuilder userFlows(@Nonnull final String id) {
         return new IdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ConditionalAccessRoot
+     *
+     * @return the ConditionalAccessRootRequestBuilder instance
+     */
+    @Nonnull
+    public ConditionalAccessRootRequestBuilder conditionalAccess() {
+        return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
     }
 
     /**

@@ -36,13 +36,13 @@ public class AttachmentSession extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime expirationDateTime;
 
     /**
-     * The Next Expected Range.
+     * The Next Expected Ranges.
      * 
      */
-    @SerializedName(value = "nextExpectedRange", alternate = {"NextExpectedRange"})
+    @SerializedName(value = "nextExpectedRanges", alternate = {"NextExpectedRanges"})
     @Expose
 	@Nullable
-    public java.util.List<String> nextExpectedRange;
+    public java.util.List<String> nextExpectedRanges;
 
 
     /**

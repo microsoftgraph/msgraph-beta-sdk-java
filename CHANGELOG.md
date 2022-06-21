@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.51.0] - 2022-06-21
+
+### Added
+ 
+- AuthorizationInfo model
+- CustomExtension models
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+
 ## [0.50.0] - 2022-06-15
 
 ### Added

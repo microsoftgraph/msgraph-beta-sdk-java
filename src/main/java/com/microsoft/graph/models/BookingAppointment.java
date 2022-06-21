@@ -43,7 +43,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Anonymous Join Web Url.
-     * 
+     * Url of meeting to join anonymously.
      */
     @SerializedName(value = "anonymousJoinWebUrl", alternate = {"AnonymousJoinWebUrl"})
     @Expose

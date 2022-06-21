@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SignInActivity;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
+import com.microsoft.graph.models.AuthorizationInfo;
 import com.microsoft.graph.models.CustomSecurityAttributeValue;
 import com.microsoft.graph.models.DeviceKey;
 import com.microsoft.graph.models.EmployeeOrgData;
@@ -172,6 +173,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AssignedPlan> assignedPlans;
+
+    /**
+     * The Authorization Info.
+     * 
+     */
+    @SerializedName(value = "authorizationInfo", alternate = {"AuthorizationInfo"})
+    @Expose
+	@Nullable
+    public AuthorizationInfo authorizationInfo;
 
     /**
      * The Business Phones.
@@ -631,6 +641,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime refreshTokensValidFromDateTime;
+
+    /**
+     * The Security Identifier.
+     * 
+     */
+    @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
+    @Expose
+	@Nullable
+    public String securityIdentifier;
 
     /**
      * The Show In Address List.
