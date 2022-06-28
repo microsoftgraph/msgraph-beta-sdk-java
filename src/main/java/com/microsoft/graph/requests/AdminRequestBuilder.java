@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Admin;
 import com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder;
 import com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder;
+import com.microsoft.graph.requests.AdminReportSettingsRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -78,6 +79,16 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
     @Nonnull
     public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AdminReportSettings
+     *
+     * @return the AdminReportSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public AdminReportSettingsRequestBuilder reportSettings() {
+        return new AdminReportSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("reportSettings"), getClient(), null);
     }
 
     /**

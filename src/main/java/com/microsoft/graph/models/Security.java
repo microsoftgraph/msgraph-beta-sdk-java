@@ -14,6 +14,9 @@ import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.security.models.InformationProtection;
 import com.microsoft.graph.models.AttackSimulationRoot;
+import com.microsoft.graph.security.models.LabelsRoot;
+import com.microsoft.graph.security.models.TriggersRoot;
+import com.microsoft.graph.security.models.TriggerTypesRoot;
 import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.CloudAppSecurityProfile;
 import com.microsoft.graph.models.DomainSecurityProfile;
@@ -100,6 +103,33 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AttackSimulationRoot attackSimulation;
+
+    /**
+     * The Labels.
+     * 
+     */
+    @SerializedName(value = "labels", alternate = {"Labels"})
+    @Expose
+	@Nullable
+    public LabelsRoot labels;
+
+    /**
+     * The Triggers.
+     * 
+     */
+    @SerializedName(value = "triggers", alternate = {"Triggers"})
+    @Expose
+	@Nullable
+    public TriggersRoot triggers;
+
+    /**
+     * The Trigger Types.
+     * 
+     */
+    @SerializedName(value = "triggerTypes", alternate = {"TriggerTypes"})
+    @Expose
+	@Nullable
+    public TriggerTypesRoot triggerTypes;
 
     /**
      * The Alerts.

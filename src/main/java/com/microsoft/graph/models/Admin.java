@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.tenantadmin.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
+import com.microsoft.graph.models.AdminReportSettings;
 import com.microsoft.graph.windowsupdates.models.Windows;
 
 
@@ -57,6 +58,15 @@ public class Admin implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ServiceAnnouncement serviceAnnouncement;
+
+    /**
+     * The Report Settings.
+     * 
+     */
+    @SerializedName(value = "reportSettings", alternate = {"ReportSettings"})
+    @Expose
+	@Nullable
+    public AdminReportSettings reportSettings;
 
     /**
      * The Windows.

@@ -24,7 +24,9 @@ import com.microsoft.graph.http.BaseFunctionCollectionRequest;
 
 /**
  * The class for the Report Root Get Attack Simulation Repeat Offenders Collection Request.
+ * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
  */
+@Deprecated
 public class ReportRootGetAttackSimulationRepeatOffendersCollectionRequest extends BaseFunctionCollectionRequest<AttackSimulationRepeatOffender, ReportRootGetAttackSimulationRepeatOffendersCollectionResponse, ReportRootGetAttackSimulationRepeatOffendersCollectionPage> {
 
 

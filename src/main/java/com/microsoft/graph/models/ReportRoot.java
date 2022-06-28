@@ -15,6 +15,7 @@ import com.microsoft.graph.models.CredentialUserRegistrationDetails;
 import com.microsoft.graph.models.UserCredentialUsageDetails;
 import com.microsoft.graph.models.PrintUsageByPrinter;
 import com.microsoft.graph.models.PrintUsageByUser;
+import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage;
 import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage;
@@ -144,6 +145,15 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PrintUsageByUserCollectionPage monthlyPrintUsageSummariesByUser;
+
+    /**
+     * The Security.
+     * 
+     */
+    @SerializedName(value = "security", alternate = {"Security"})
+    @Expose
+	@Nullable
+    public SecurityReportsRoot security;
 
 
     /**
