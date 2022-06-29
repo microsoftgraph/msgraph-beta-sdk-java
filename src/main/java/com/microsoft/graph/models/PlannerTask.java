@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class PlannerTask extends PlannerDelta implements Parsable {
     /** Number of checklist items with value set to false, representing incomplete items. */
     private Integer _activeChecklistItemCount;

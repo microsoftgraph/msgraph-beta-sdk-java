@@ -59,7 +59,7 @@ public class QueriesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class QueriesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class QueriesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @return a CompletableFuture of ReviewSetQueryCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ReviewSetQueryCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class QueriesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ReviewSetQueryCollectionResponse
      */
@@ -155,7 +155,7 @@ public class QueriesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ReviewSetQueryCollectionResponse
@@ -227,7 +227,7 @@ public class QueriesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get queries from compliance */
     public class QueriesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

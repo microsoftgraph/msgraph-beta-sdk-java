@@ -11,13 +11,13 @@ import java.util.Objects;
 public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The dynamicallyAdjustTopicCount property */
+    /** To learn more, see Adjust maximum number of themes dynamically. */
     private Boolean _dynamicallyAdjustTopicCount;
-    /** The ignoreNumbers property */
+    /** To learn more, see Include numbers in themes. */
     private Boolean _ignoreNumbers;
-    /** The isEnabled property */
+    /** Indicates whether themes is enabled for the case. */
     private Boolean _isEnabled;
-    /** The topicCount property */
+    /** To learn more, see Maximum number of themes. */
     private Integer _topicCount;
     /**
      * Instantiates a new topicModelingSettings and sets the default values.
@@ -45,7 +45,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the dynamicallyAdjustTopicCount property value. The dynamicallyAdjustTopicCount property
+     * Gets the dynamicallyAdjustTopicCount property value. To learn more, see Adjust maximum number of themes dynamically.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the ignoreNumbers property value. The ignoreNumbers property
+     * Gets the ignoreNumbers property value. To learn more, see Include numbers in themes.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._ignoreNumbers;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether themes is enabled for the case.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._isEnabled;
     }
     /**
-     * Gets the topicCount property value. The topicCount property
+     * Gets the topicCount property value. To learn more, see Maximum number of themes.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the dynamicallyAdjustTopicCount property value. The dynamicallyAdjustTopicCount property
+     * Sets the dynamicallyAdjustTopicCount property value. To learn more, see Adjust maximum number of themes dynamically.
      * @param value Value to set for the dynamicallyAdjustTopicCount property.
      * @return a void
      */
@@ -120,7 +120,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._dynamicallyAdjustTopicCount = value;
     }
     /**
-     * Sets the ignoreNumbers property value. The ignoreNumbers property
+     * Sets the ignoreNumbers property value. To learn more, see Include numbers in themes.
      * @param value Value to set for the ignoreNumbers property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._ignoreNumbers = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether themes is enabled for the case.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
@@ -136,7 +136,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._isEnabled = value;
     }
     /**
-     * Sets the topicCount property value. The topicCount property
+     * Sets the topicCount property value. To learn more, see Maximum number of themes.
      * @param value Value to set for the topicCount property.
      * @return a void
      */

@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class EdiscoveryReviewSet extends DataSet implements Parsable {
-    /** The files property */
+    /** Represents files within the review set. */
     private java.util.List<EdiscoveryFile> _files;
-    /** The queries property */
+    /** Represents queries within the review set. */
     private java.util.List<EdiscoveryReviewSetQuery> _queries;
     /**
-     * Instantiates a new ediscoveryReviewSet and sets the default values.
+     * Instantiates a new EdiscoveryReviewSet and sets the default values.
      * @return a void
      */
     public EdiscoveryReviewSet() {
@@ -23,7 +22,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryReviewSet
+     * @return a EdiscoveryReviewSet
      */
     @javax.annotation.Nonnull
     public static EdiscoveryReviewSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +42,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
         }};
     }
     /**
-     * Gets the files property value. The files property
+     * Gets the files property value. Represents files within the review set.
      * @return a ediscoveryFile
      */
     @javax.annotation.Nullable
@@ -51,7 +50,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
         return this._files;
     }
     /**
-     * Gets the queries property value. The queries property
+     * Gets the queries property value. Represents queries within the review set.
      * @return a ediscoveryReviewSetQuery
      */
     @javax.annotation.Nullable
@@ -70,7 +69,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
         writer.writeCollectionOfObjectValues("queries", this.getQueries());
     }
     /**
-     * Sets the files property value. The files property
+     * Sets the files property value. Represents files within the review set.
      * @param value Value to set for the files property.
      * @return a void
      */
@@ -78,7 +77,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
         this._files = value;
     }
     /**
-     * Sets the queries property value. The queries property
+     * Sets the queries property value. Represents queries within the review set.
      * @param value Value to set for the queries property.
      * @return a void
      */

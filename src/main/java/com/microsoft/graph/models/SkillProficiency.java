@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class SkillProficiency extends ItemFacet implements Parsable {
     /** Contains categories a user has associated with the skill (for example, personal, professional, hobby). */
     private java.util.List<String> _categories;
@@ -22,7 +21,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     /** Contains a link to an information source about the skill. */
     private String _webUrl;
     /**
-     * Instantiates a new skillProficiency and sets the default values.
+     * Instantiates a new SkillProficiency and sets the default values.
      * @return a void
      */
     public SkillProficiency() {
@@ -31,7 +30,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a skillProficiency
+     * @return a SkillProficiency
      */
     @javax.annotation.Nonnull
     public static SkillProficiency createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

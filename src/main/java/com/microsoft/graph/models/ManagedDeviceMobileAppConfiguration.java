@@ -53,7 +53,9 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedDeviceMobileAppConfiguration": return new ManagedDeviceMobileAppConfiguration();
+                case "#microsoft.graph.androidForWorkMobileAppConfiguration": return new AndroidForWorkMobileAppConfiguration();
+                case "#microsoft.graph.androidManagedStoreAppConfiguration": return new AndroidManagedStoreAppConfiguration();
+                case "#microsoft.graph.iosMobileAppConfiguration": return new IosMobileAppConfiguration();
             }
         }
         return new ManagedDeviceMobileAppConfiguration();

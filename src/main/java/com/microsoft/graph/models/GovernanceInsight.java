@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class GovernanceInsight extends Entity implements Parsable {
     /** Indicates when the insight was created. */
     private OffsetDateTime _insightCreatedDateTime;
@@ -31,7 +31,7 @@ public class GovernanceInsight extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.governanceInsight": return new GovernanceInsight();
+                case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             }
         }
         return new GovernanceInsight();

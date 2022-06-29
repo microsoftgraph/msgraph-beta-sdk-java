@@ -7,16 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class UserSource extends DataSource implements Parsable {
-    /** The email property */
+    /** Email address of the user's mailbox. */
     private String _email;
-    /** The includedSources property */
+    /** Specifies which sources are included in this group. Possible values are: mailbox, site. */
     private SourceType _includedSources;
-    /** The siteWebUrl property */
+    /** The URL of the user's OneDrive for Business site. Read-only. */
     private String _siteWebUrl;
     /**
-     * Instantiates a new userSource and sets the default values.
+     * Instantiates a new UserSource and sets the default values.
      * @return a void
      */
     public UserSource() {
@@ -25,7 +24,7 @@ public class UserSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSource
+     * @return a UserSource
      */
     @javax.annotation.Nonnull
     public static UserSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +32,7 @@ public class UserSource extends DataSource implements Parsable {
         return new UserSource();
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. Email address of the user's mailbox.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +53,7 @@ public class UserSource extends DataSource implements Parsable {
         }};
     }
     /**
-     * Gets the includedSources property value. The includedSources property
+     * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @return a sourceType
      */
     @javax.annotation.Nullable
@@ -62,7 +61,7 @@ public class UserSource extends DataSource implements Parsable {
         return this._includedSources;
     }
     /**
-     * Gets the siteWebUrl property value. The siteWebUrl property
+     * Gets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +81,7 @@ public class UserSource extends DataSource implements Parsable {
         writer.writeStringValue("siteWebUrl", this.getSiteWebUrl());
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. Email address of the user's mailbox.
      * @param value Value to set for the email property.
      * @return a void
      */
@@ -90,7 +89,7 @@ public class UserSource extends DataSource implements Parsable {
         this._email = value;
     }
     /**
-     * Sets the includedSources property value. The includedSources property
+     * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      * @return a void
      */
@@ -98,7 +97,7 @@ public class UserSource extends DataSource implements Parsable {
         this._includedSources = value;
     }
     /**
-     * Sets the siteWebUrl property value. The siteWebUrl property
+     * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @param value Value to set for the siteWebUrl property.
      * @return a void
      */

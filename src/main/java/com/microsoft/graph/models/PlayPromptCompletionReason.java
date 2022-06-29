@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the playPrompt method. */
+/** Provides operations to manage the commsApplication singleton. */
 public enum PlayPromptCompletionReason implements ValuedEnum {
     Unknown("unknown"),
     CompletedSuccessfully("completedSuccessfully"),

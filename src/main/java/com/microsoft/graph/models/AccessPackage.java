@@ -12,9 +12,9 @@ import java.util.Objects;
 public class AccessPackage extends Entity implements Parsable {
     /** Read-only. Nullable. Supports $expand. */
     private java.util.List<AccessPackageAssignmentPolicy> _accessPackageAssignmentPolicies;
-    /** Read-only. Nullable. */
+    /** The accessPackageCatalog property */
     private AccessPackageCatalog _accessPackageCatalog;
-    /** Nullable. */
+    /** The accessPackageResourceRoleScopes property */
     private java.util.List<AccessPackageResourceRoleScope> _accessPackageResourceRoleScopes;
     /** The access packages that are incompatible with this package. Read-only. */
     private java.util.List<AccessPackage> _accessPackagesIncompatibleWith;
@@ -66,7 +66,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this._accessPackageAssignmentPolicies;
     }
     /**
-     * Gets the accessPackageCatalog property value. Read-only. Nullable.
+     * Gets the accessPackageCatalog property value. The accessPackageCatalog property
      * @return a accessPackageCatalog
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this._accessPackageCatalog;
     }
     /**
-     * Gets the accessPackageResourceRoleScopes property value. Nullable.
+     * Gets the accessPackageResourceRoleScopes property value. The accessPackageResourceRoleScopes property
      * @return a accessPackageResourceRoleScope
      */
     @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class AccessPackage extends Entity implements Parsable {
         this._accessPackageAssignmentPolicies = value;
     }
     /**
-     * Sets the accessPackageCatalog property value. Read-only. Nullable.
+     * Sets the accessPackageCatalog property value. The accessPackageCatalog property
      * @param value Value to set for the accessPackageCatalog property.
      * @return a void
      */
@@ -243,7 +243,7 @@ public class AccessPackage extends Entity implements Parsable {
         this._accessPackageCatalog = value;
     }
     /**
-     * Sets the accessPackageResourceRoleScopes property value. Nullable.
+     * Sets the accessPackageResourceRoleScopes property value. The accessPackageResourceRoleScopes property
      * @param value Value to set for the accessPackageResourceRoleScopes property.
      * @return a void
      */

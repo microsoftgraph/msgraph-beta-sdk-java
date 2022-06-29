@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class PrinterBase extends Entity implements Parsable {
     /** The capabilities of the printer/printerShare. */
     private PrinterCapabilities _capabilities;
@@ -48,7 +48,8 @@ public class PrinterBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.printerBase": return new PrinterBase();
+                case "#microsoft.graph.printer": return new Printer();
+                case "#microsoft.graph.printerShare": return new PrinterShare();
             }
         }
         return new PrinterBase();

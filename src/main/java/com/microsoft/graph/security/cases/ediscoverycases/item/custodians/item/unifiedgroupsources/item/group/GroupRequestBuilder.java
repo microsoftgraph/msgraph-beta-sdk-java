@@ -52,7 +52,7 @@ public class GroupRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get group from security
+     * Represent a group.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class GroupRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get group from security
+     * Represent a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class GroupRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get group from security
+     * Represent a group.
      * @return a CompletableFuture of group
      */
     public java.util.concurrent.CompletableFuture<Group> get() {
@@ -98,7 +98,7 @@ public class GroupRequestBuilder {
         }
     }
     /**
-     * Get group from security
+     * Represent a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
      */
@@ -115,7 +115,7 @@ public class GroupRequestBuilder {
         }
     }
     /**
-     * Get group from security
+     * Represent a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of group
@@ -132,7 +132,7 @@ public class GroupRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get group from security */
+    /** Represent a group. */
     public class GroupRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

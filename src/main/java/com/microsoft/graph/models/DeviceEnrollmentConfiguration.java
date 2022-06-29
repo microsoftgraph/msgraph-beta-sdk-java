@@ -47,7 +47,13 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceEnrollmentConfiguration": return new DeviceEnrollmentConfiguration();
+                case "#microsoft.graph.deviceComanagementAuthorityConfiguration": return new DeviceComanagementAuthorityConfiguration();
+                case "#microsoft.graph.deviceEnrollmentLimitConfiguration": return new DeviceEnrollmentLimitConfiguration();
+                case "#microsoft.graph.deviceEnrollmentNotificationConfiguration": return new DeviceEnrollmentNotificationConfiguration();
+                case "#microsoft.graph.deviceEnrollmentPlatformRestrictionConfiguration": return new DeviceEnrollmentPlatformRestrictionConfiguration();
+                case "#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration": return new DeviceEnrollmentPlatformRestrictionsConfiguration();
+                case "#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration": return new DeviceEnrollmentWindowsHelloForBusinessConfiguration();
+                case "#microsoft.graph.windows10EnrollmentCompletionPageConfiguration": return new Windows10EnrollmentCompletionPageConfiguration();
             }
         }
         return new DeviceEnrollmentConfiguration();

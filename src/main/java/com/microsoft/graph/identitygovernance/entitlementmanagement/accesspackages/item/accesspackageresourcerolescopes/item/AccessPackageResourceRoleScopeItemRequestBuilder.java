@@ -92,7 +92,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> get() {
@@ -221,7 +221,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
@@ -238,7 +238,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageResourceRoleScope
@@ -325,7 +325,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         public AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Nullable. */
+    /** Get accessPackageResourceRoleScopes from identityGovernance */
     public class AccessPackageResourceRoleScopeItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

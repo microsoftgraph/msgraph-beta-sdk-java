@@ -45,7 +45,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.importedDeviceIdentity": return new ImportedDeviceIdentity();
+                case "#microsoft.graph.importedDeviceIdentityResult": return new ImportedDeviceIdentityResult();
             }
         }
         return new ImportedDeviceIdentity();

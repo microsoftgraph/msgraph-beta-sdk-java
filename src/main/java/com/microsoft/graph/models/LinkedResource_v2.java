@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class LinkedResource_v2 extends Entity implements Parsable {
     /** Field indicating the app name of the source that is sending the linkedResource. */
     private String _applicationName;

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the evaluate method. */
+/** Provides operations to manage the dataClassificationService singleton. */
 public enum DlpAction implements ValuedEnum {
     NotifyUser("notifyUser"),
     BlockAccess("blockAccess"),

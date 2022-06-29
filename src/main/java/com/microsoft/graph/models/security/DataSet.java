@@ -37,7 +37,7 @@ public class DataSet extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.dataSet": return new DataSet();
+                case "#microsoft.graph.security.ediscoveryReviewSet": return new EdiscoveryReviewSet();
             }
         }
         return new DataSet();

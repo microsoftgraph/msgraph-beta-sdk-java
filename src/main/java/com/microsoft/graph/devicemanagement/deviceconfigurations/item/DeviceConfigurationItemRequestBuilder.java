@@ -30,7 +30,6 @@ import microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.i
 import microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.UserStatusesRequestBuilder;
 import microsoft.graph.devicemanagement.deviceconfigurations.item.userstatusoverview.UserStatusOverviewRequestBuilder;
 import microsoft.graph.devicemanagement.deviceconfigurations.item.windowsprivacyaccesscontrols.WindowsPrivacyAccessControlsRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.windowsupdateforbusinessconfiguration.WindowsUpdateForBusinessConfigurationRequestBuilder;
 import microsoft.graph.models.DeviceConfiguration;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity. */
@@ -90,11 +89,6 @@ public class DeviceConfigurationItemRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsPrivacyAccessControlsRequestBuilder windowsPrivacyAccessControls() {
         return new WindowsPrivacyAccessControlsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The windowsUpdateForBusinessConfiguration property */
-    @javax.annotation.Nonnull
-    public WindowsUpdateForBusinessConfigurationRequestBuilder windowsUpdateForBusinessConfiguration() {
-        return new WindowsUpdateForBusinessConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.assignments.item collection

@@ -12,13 +12,13 @@ import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
 /** Provides operations to manage the security singleton. */
 public class DataSource extends Entity implements Parsable {
-    /** The createdBy property */
+    /** The user who created the dataSource. */
     private IdentitySet _createdBy;
-    /** The createdDateTime property */
+    /** The date and time the dataSource was created. */
     private OffsetDateTime _createdDateTime;
-    /** The displayName property */
+    /** The display name of the dataSource. This will be the name of the SharePoint site. */
     private String _displayName;
-    /** The holdStatus property */
+    /** The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial */
     private DataSourceHoldStatus _holdStatus;
     /**
      * Instantiates a new dataSource and sets the default values.
@@ -39,13 +39,15 @@ public class DataSource extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.dataSource": return new DataSource();
+                case "#microsoft.graph.security.siteSource": return new SiteSource();
+                case "#microsoft.graph.security.unifiedGroupSource": return new UnifiedGroupSource();
+                case "#microsoft.graph.security.userSource": return new UserSource();
             }
         }
         return new DataSource();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The user who created the dataSource.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -53,7 +55,7 @@ public class DataSource extends Entity implements Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time the dataSource was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -61,7 +63,7 @@ public class DataSource extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +85,7 @@ public class DataSource extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the holdStatus property value. The holdStatus property
+     * Gets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
      * @return a dataSourceHoldStatus
      */
     @javax.annotation.Nullable
@@ -104,7 +106,7 @@ public class DataSource extends Entity implements Parsable {
         writer.writeEnumValue("holdStatus", this.getHoldStatus());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The user who created the dataSource.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -112,7 +114,7 @@ public class DataSource extends Entity implements Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time the dataSource was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -120,7 +122,7 @@ public class DataSource extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -128,7 +130,7 @@ public class DataSource extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the holdStatus property value. The holdStatus property
+     * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      * @return a void
      */

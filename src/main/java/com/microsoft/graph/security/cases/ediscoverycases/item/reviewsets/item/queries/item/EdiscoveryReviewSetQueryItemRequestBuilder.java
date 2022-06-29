@@ -93,7 +93,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get queries from security
+     * Represents queries within the review set.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -101,7 +101,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get queries from security
+     * Represents queries within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +206,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         }
     }
     /**
-     * Get queries from security
+     * Represents queries within the review set.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> get() {
@@ -222,7 +222,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         }
     }
     /**
-     * Get queries from security
+     * Represents queries within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
      */
@@ -239,7 +239,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         }
     }
     /**
-     * Get queries from security
+     * Represents queries within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryReviewSetQuery
@@ -334,7 +334,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         public EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get queries from security */
+    /** Represents queries within the review set. */
     public class EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

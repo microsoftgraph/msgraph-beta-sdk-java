@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ConversationMember extends Entity implements Parsable {
     /** The display name of the user. */
     private String _displayName;
@@ -35,7 +35,11 @@ public class ConversationMember extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.conversationMember": return new ConversationMember();
+                case "#microsoft.graph.aadUserConversationMember": return new AadUserConversationMember();
+                case "#microsoft.graph.anonymousGuestConversationMember": return new AnonymousGuestConversationMember();
+                case "#microsoft.graph.microsoftAccountUserConversationMember": return new MicrosoftAccountUserConversationMember();
+                case "#microsoft.graph.skypeForBusinessUserConversationMember": return new SkypeForBusinessUserConversationMember();
+                case "#microsoft.graph.skypeUserConversationMember": return new SkypeUserConversationMember();
             }
         }
         return new ConversationMember();

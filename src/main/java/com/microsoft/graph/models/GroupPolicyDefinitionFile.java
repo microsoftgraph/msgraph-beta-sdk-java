@@ -49,7 +49,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.groupPolicyDefinitionFile": return new GroupPolicyDefinitionFile();
+                case "#microsoft.graph.groupPolicyUploadedDefinitionFile": return new GroupPolicyUploadedDefinitionFile();
             }
         }
         return new GroupPolicyDefinitionFile();

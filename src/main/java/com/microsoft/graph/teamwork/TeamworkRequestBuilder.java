@@ -21,6 +21,7 @@ import microsoft.graph.teamwork.deletedteams.item.DeletedTeamItemRequestBuilder;
 import microsoft.graph.teamwork.devices.DevicesRequestBuilder;
 import microsoft.graph.teamwork.devices.item.TeamworkDeviceItemRequestBuilder;
 import microsoft.graph.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
+import microsoft.graph.teamwork.teamsappsettings.TeamsAppSettingsRequestBuilder;
 import microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
 import microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 /** Provides operations to manage the teamwork singleton. */
@@ -43,6 +44,11 @@ public class TeamworkRequestBuilder {
     @javax.annotation.Nonnull
     public SendActivityNotificationToRecipientsRequestBuilder sendActivityNotificationToRecipients() {
         return new SendActivityNotificationToRecipientsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The teamsAppSettings property */
+    @javax.annotation.Nonnull
+    public TeamsAppSettingsRequestBuilder teamsAppSettings() {
+        return new TeamsAppSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;

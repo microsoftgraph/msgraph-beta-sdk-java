@@ -17,14 +17,39 @@ import java.util.Objects;
 import microsoft.graph.models.Group;
 import microsoft.graph.models.GroupCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.joinedgroups.delta.DeltaRequestBuilder;
+import microsoft.graph.users.item.joinedgroups.evaluatedynamicmembership.EvaluateDynamicMembershipRequestBuilder;
+import microsoft.graph.users.item.joinedgroups.getbyids.GetByIdsRequestBuilder;
+import microsoft.graph.users.item.joinedgroups.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import microsoft.graph.users.item.joinedgroups.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the joinedGroups property of the microsoft.graph.user entity. */
 public class JoinedGroupsRequestBuilder {
+    /** The evaluateDynamicMembership property */
+    @javax.annotation.Nonnull
+    public EvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership() {
+        return new EvaluateDynamicMembershipRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getByIds property */
+    @javax.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getUserOwnedObjects property */
+    @javax.annotation.Nonnull
+    public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
+        return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The validateProperties property */
+    @javax.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new JoinedGroupsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -53,7 +78,7 @@ public class JoinedGroupsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get joinedGroups from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +86,7 @@ public class JoinedGroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get joinedGroups from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -116,7 +141,15 @@ public class JoinedGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Provides operations to call the delta method.
+     * @return a deltaRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Get joinedGroups from users
      * @return a CompletableFuture of GroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get() {
@@ -132,7 +165,7 @@ public class JoinedGroupsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get joinedGroups from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupCollectionResponse
      */
@@ -149,7 +182,7 @@ public class JoinedGroupsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get joinedGroups from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of GroupCollectionResponse
@@ -221,7 +254,7 @@ public class JoinedGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get joinedGroups from users */
     public class JoinedGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

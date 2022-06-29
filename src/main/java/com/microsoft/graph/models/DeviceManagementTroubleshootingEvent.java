@@ -39,7 +39,9 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementTroubleshootingEvent": return new DeviceManagementTroubleshootingEvent();
+                case "#microsoft.graph.appleVppTokenTroubleshootingEvent": return new AppleVppTokenTroubleshootingEvent();
+                case "#microsoft.graph.enrollmentTroubleshootingEvent": return new EnrollmentTroubleshootingEvent();
+                case "#microsoft.graph.mobileAppTroubleshootingEvent": return new MobileAppTroubleshootingEvent();
             }
         }
         return new DeviceManagementTroubleshootingEvent();

@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getRoleScopeTagsByIds method. */
 public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
     /** Path parameters for the request */
@@ -86,7 +87,11 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -99,7 +104,11 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -113,7 +122,11 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

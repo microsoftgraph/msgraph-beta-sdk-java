@@ -86,7 +86,7 @@ public class ReviewSetQueryItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ReviewSetQueryItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class ReviewSetQueryItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @return a CompletableFuture of reviewSetQuery
      */
     public java.util.concurrent.CompletableFuture<ReviewSetQuery> get() {
@@ -215,7 +215,7 @@ public class ReviewSetQueryItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of reviewSetQuery
      */
@@ -232,7 +232,7 @@ public class ReviewSetQueryItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get queries from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of reviewSetQuery
@@ -319,7 +319,7 @@ public class ReviewSetQueryItemRequestBuilder {
         public ReviewSetQueryItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get queries from compliance */
     public class ReviewSetQueryItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /** The list of breaks associated with the timeCard. */
     private java.util.List<TimeCardBreak> _breaks;
@@ -26,7 +25,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /** User ID to which  the timeCard belongs. */
     private String _userId;
     /**
-     * Instantiates a new timeCard and sets the default values.
+     * Instantiates a new TimeCard and sets the default values.
      * @return a void
      */
     public TimeCard() {
@@ -35,7 +34,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeCard
+     * @return a TimeCard
      */
     @javax.annotation.Nonnull
     public static TimeCard createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

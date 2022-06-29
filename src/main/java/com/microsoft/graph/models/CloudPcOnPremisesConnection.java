@@ -15,6 +15,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     private String _adDomainPassword;
     /** The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional. */
     private String _adDomainUsername;
+    /** The alternateResourceUrl property */
+    private String _alternateResourceUrl;
     /** The display name for the Azure network connection. */
     private String _displayName;
     /** The status of the most recent health check done on the Azure network connection. For example, if status is 'passed', the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only. */
@@ -81,6 +83,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._adDomainUsername;
     }
     /**
+     * Gets the alternateResourceUrl property value. The alternateResourceUrl property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAlternateResourceUrl() {
+        return this._alternateResourceUrl;
+    }
+    /**
      * Gets the displayName property value. The display name for the Azure network connection.
      * @return a string
      */
@@ -99,6 +109,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
             this.put("adDomainName", (n) -> { currentObject.setAdDomainName(n.getStringValue()); });
             this.put("adDomainPassword", (n) -> { currentObject.setAdDomainPassword(n.getStringValue()); });
             this.put("adDomainUsername", (n) -> { currentObject.setAdDomainUsername(n.getStringValue()); });
+            this.put("alternateResourceUrl", (n) -> { currentObject.setAlternateResourceUrl(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("healthCheckStatus", (n) -> { currentObject.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
             this.put("healthCheckStatusDetails", (n) -> { currentObject.setHealthCheckStatusDetails(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetails::createFromDiscriminatorValue)); });
@@ -212,6 +223,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("adDomainName", this.getAdDomainName());
         writer.writeStringValue("adDomainPassword", this.getAdDomainPassword());
         writer.writeStringValue("adDomainUsername", this.getAdDomainUsername());
+        writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeObjectValue("healthCheckStatusDetails", this.getHealthCheckStatusDetails());
@@ -248,6 +260,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     public void setAdDomainUsername(@javax.annotation.Nullable final String value) {
         this._adDomainUsername = value;
+    }
+    /**
+     * Sets the alternateResourceUrl property value. The alternateResourceUrl property
+     * @param value Value to set for the alternateResourceUrl property.
+     * @return a void
+     */
+    public void setAlternateResourceUrl(@javax.annotation.Nullable final String value) {
+        this._alternateResourceUrl = value;
     }
     /**
      * Sets the displayName property value. The display name for the Azure network connection.

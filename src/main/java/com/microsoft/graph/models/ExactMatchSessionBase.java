@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the dataClassificationService singleton. */
 public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable {
     /** The dataStoreId property */
     private String _dataStoreId;
@@ -27,7 +26,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     /** The uploadCompletionDateTime property */
     private OffsetDateTime _uploadCompletionDateTime;
     /**
-     * Instantiates a new exactMatchSessionBase and sets the default values.
+     * Instantiates a new ExactMatchSessionBase and sets the default values.
      * @return a void
      */
     public ExactMatchSessionBase() {
@@ -36,7 +35,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchSessionBase
+     * @return a ExactMatchSessionBase
      */
     @javax.annotation.Nonnull
     public static ExactMatchSessionBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +44,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.exactMatchSessionBase": return new ExactMatchSessionBase();
+                case "#microsoft.graph.exactMatchSession": return new ExactMatchSession();
             }
         }
         return new ExactMatchSessionBase();

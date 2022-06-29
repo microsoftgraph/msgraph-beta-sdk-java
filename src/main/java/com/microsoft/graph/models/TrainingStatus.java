@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the security singleton. */
+/** Provides operations to call the getAttackSimulationTrainingUserCoverage method. */
 public enum TrainingStatus implements ValuedEnum {
     Unknown("unknown"),
     Assigned("assigned"),

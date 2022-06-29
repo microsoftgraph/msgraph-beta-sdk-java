@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class Todo extends Entity implements Parsable {
     /** The task lists in the users mailbox. */
     private java.util.List<TodoTaskList> _lists;

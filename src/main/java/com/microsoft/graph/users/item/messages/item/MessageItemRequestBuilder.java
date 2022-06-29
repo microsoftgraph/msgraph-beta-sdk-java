@@ -18,12 +18,10 @@ import microsoft.graph.models.Message;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.messages.item.attachments.AttachmentsRequestBuilder;
 import microsoft.graph.users.item.messages.item.attachments.item.AttachmentItemRequestBuilder;
-import microsoft.graph.users.item.messages.item.calendarsharingmessage.CalendarSharingMessageRequestBuilder;
 import microsoft.graph.users.item.messages.item.copy.CopyRequestBuilder;
 import microsoft.graph.users.item.messages.item.createforward.CreateForwardRequestBuilder;
 import microsoft.graph.users.item.messages.item.createreply.CreateReplyRequestBuilder;
 import microsoft.graph.users.item.messages.item.createreplyall.CreateReplyAllRequestBuilder;
-import microsoft.graph.users.item.messages.item.eventmessagerequest.EventMessageRequestRequestBuilder;
 import microsoft.graph.users.item.messages.item.extensions.ExtensionsRequestBuilder;
 import microsoft.graph.users.item.messages.item.extensions.item.ExtensionItemRequestBuilder;
 import microsoft.graph.users.item.messages.item.forward.ForwardRequestBuilder;
@@ -45,11 +43,6 @@ public class MessageItemRequestBuilder {
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The calendarSharingMessage property */
-    @javax.annotation.Nonnull
-    public CalendarSharingMessageRequestBuilder calendarSharingMessage() {
-        return new CalendarSharingMessageRequestBuilder(pathParameters, requestAdapter);
     }
     /** The Content property */
     @javax.annotation.Nonnull
@@ -75,11 +68,6 @@ public class MessageItemRequestBuilder {
     @javax.annotation.Nonnull
     public CreateReplyAllRequestBuilder createReplyAll() {
         return new CreateReplyAllRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The eventMessageRequest property */
-    @javax.annotation.Nonnull
-    public EventMessageRequestRequestBuilder eventMessageRequest() {
-        return new EventMessageRequestRequestBuilder(pathParameters, requestAdapter);
     }
     /** The extensions property */
     @javax.annotation.Nonnull

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class PersonCertification extends ItemFacet implements Parsable {
     /** The referenceable identifier for the certification. */
     private String _certificationId;
@@ -31,7 +30,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     /** URL referencing the certification. */
     private String _webUrl;
     /**
-     * Instantiates a new personCertification and sets the default values.
+     * Instantiates a new PersonCertification and sets the default values.
      * @return a void
      */
     public PersonCertification() {
@@ -40,7 +39,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personCertification
+     * @return a PersonCertification
      */
     @javax.annotation.Nonnull
     public static PersonCertification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -45,7 +45,7 @@ public class PolicyBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.policyBase": return new PolicyBase();
+                case "#microsoft.graph.security.ediscoveryHoldPolicy": return new EdiscoveryHoldPolicy();
             }
         }
         return new PolicyBase();

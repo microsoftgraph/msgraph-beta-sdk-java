@@ -40,7 +40,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.enrollmentProfile": return new EnrollmentProfile();
+                case "#microsoft.graph.depEnrollmentBaseProfile": return new DepEnrollmentBaseProfile();
+                case "#microsoft.graph.depEnrollmentProfile": return new DepEnrollmentProfile();
             }
         }
         return new EnrollmentProfile();

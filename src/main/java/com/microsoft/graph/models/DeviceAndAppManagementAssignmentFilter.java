@@ -43,7 +43,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceAndAppManagementAssignmentFilter": return new DeviceAndAppManagementAssignmentFilter();
+                case "#microsoft.graph.payloadCompatibleAssignmentFilter": return new PayloadCompatibleAssignmentFilter();
             }
         }
         return new DeviceAndAppManagementAssignmentFilter();

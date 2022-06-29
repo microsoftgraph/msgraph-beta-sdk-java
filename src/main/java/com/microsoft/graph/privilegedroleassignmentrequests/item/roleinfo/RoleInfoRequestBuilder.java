@@ -18,6 +18,8 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.PrivilegedRole;
 import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.assignments.AssignmentsRequestBuilder;
 import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.assignments.item.PrivilegedRoleAssignmentItemRequestBuilder;
+import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.selfactivate.SelfActivateRequestBuilder;
+import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.selfdeactivate.SelfDeactivateRequestBuilder;
 import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.settings.SettingsRequestBuilder;
 import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.summary.SummaryRequestBuilder;
 /** Provides operations to manage the roleInfo property of the microsoft.graph.privilegedRoleAssignmentRequest entity. */
@@ -31,6 +33,16 @@ public class RoleInfoRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The selfActivate property */
+    @javax.annotation.Nonnull
+    public SelfActivateRequestBuilder selfActivate() {
+        return new SelfActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The selfDeactivate property */
+    @javax.annotation.Nonnull
+    public SelfDeactivateRequestBuilder selfDeactivate() {
+        return new SelfDeactivateRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The settings property */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {

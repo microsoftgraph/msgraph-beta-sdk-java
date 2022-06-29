@@ -43,7 +43,7 @@ public class Case_escaped extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.case": return new Case_escaped();
+                case "#microsoft.graph.security.ediscoveryCase": return new EdiscoveryCase();
             }
         }
         return new Case_escaped();

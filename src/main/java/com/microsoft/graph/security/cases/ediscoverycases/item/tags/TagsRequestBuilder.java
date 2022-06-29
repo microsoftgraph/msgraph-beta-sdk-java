@@ -68,7 +68,7 @@ public class TagsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -76,7 +76,7 @@ public class TagsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class TagsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class TagsRequestBuilder {
         }
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      */
@@ -164,7 +164,7 @@ public class TagsRequestBuilder {
         }
     }
     /**
-     * Get tags from security
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
@@ -236,7 +236,7 @@ public class TagsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get tags from security */
+    /** Returns a list of ediscoveryReviewTag objects associated to this case. */
     public class TagsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

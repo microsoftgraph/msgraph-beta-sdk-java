@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class BaseTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;
@@ -34,7 +34,8 @@ public class BaseTaskList extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.baseTaskList": return new BaseTaskList();
+                case "#microsoft.graph.taskList": return new TaskList();
+                case "#microsoft.graph.wellKnownTaskList": return new WellKnownTaskList();
             }
         }
         return new BaseTaskList();

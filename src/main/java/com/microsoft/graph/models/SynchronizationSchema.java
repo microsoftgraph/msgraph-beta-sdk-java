@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class SynchronizationSchema extends Entity implements Parsable {
     /** Contains the collection of directories and all of their objects. */
     private java.util.List<DirectoryDefinition> _directories;

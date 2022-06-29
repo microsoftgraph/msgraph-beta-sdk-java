@@ -16,72 +16,12 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.ServicePrincipal;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.addtokensigningcertificate.AddTokenSigningCertificateRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.createpasswordsinglesignoncredentials.CreatePasswordSingleSignOnCredentialsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.deletepasswordsinglesignoncredentials.DeletePasswordSingleSignOnCredentialsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.restore.RestoreRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.updatepasswordsinglesignoncredentials.UpdatePasswordSingleSignOnCredentialsRequestBuilder;
 /** Casts the previous resource to servicePrincipal. */
 public class ServicePrincipalRequestBuilder {
-    /** The addTokenSigningCertificate property */
-    @javax.annotation.Nonnull
-    public AddTokenSigningCertificateRequestBuilder addTokenSigningCertificate() {
-        return new AddTokenSigningCertificateRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberGroups property */
-    @javax.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberObjects property */
-    @javax.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The createPasswordSingleSignOnCredentials property */
-    @javax.annotation.Nonnull
-    public CreatePasswordSingleSignOnCredentialsRequestBuilder createPasswordSingleSignOnCredentials() {
-        return new CreatePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The deletePasswordSingleSignOnCredentials property */
-    @javax.annotation.Nonnull
-    public DeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials() {
-        return new DeletePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberGroups property */
-    @javax.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberObjects property */
-    @javax.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getPasswordSingleSignOnCredentials property */
-    @javax.annotation.Nonnull
-    public GetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials() {
-        return new GetPasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
-    /** The restore property */
-    @javax.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The updatePasswordSingleSignOnCredentials property */
-    @javax.annotation.Nonnull
-    public UpdatePasswordSingleSignOnCredentialsRequestBuilder updatePasswordSingleSignOnCredentials() {
-        return new UpdatePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

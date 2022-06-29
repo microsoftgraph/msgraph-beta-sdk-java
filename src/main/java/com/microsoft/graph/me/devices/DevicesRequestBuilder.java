@@ -15,6 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.devices.count.CountRequestBuilder;
+import microsoft.graph.me.devices.getbyids.GetByIdsRequestBuilder;
+import microsoft.graph.me.devices.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import microsoft.graph.me.devices.validateproperties.ValidatePropertiesRequestBuilder;
 import microsoft.graph.models.Device;
 import microsoft.graph.models.DeviceCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -25,12 +28,27 @@ public class DevicesRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The getByIds property */
+    @javax.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getUserOwnedObjects property */
+    @javax.annotation.Nonnull
+    public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
+        return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The validateProperties property */
+    @javax.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DevicesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

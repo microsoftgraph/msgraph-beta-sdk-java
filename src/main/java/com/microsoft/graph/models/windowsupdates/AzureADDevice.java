@@ -1,0 +1,87 @@
+package microsoft.graph.models.windowsupdates;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class AzureADDevice extends UpdatableAsset implements Parsable {
+    /** Specifies areas of the service in which the device is enrolled. Read-only. Returned by default. */
+    private java.util.List<UpdatableAssetEnrollment> _enrollments;
+    /** Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default. */
+    private java.util.List<UpdatableAssetError> _errors;
+    /**
+     * Instantiates a new AzureADDevice and sets the default values.
+     * @return a void
+     */
+    public AzureADDevice() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a AzureADDevice
+     */
+    @javax.annotation.Nonnull
+    public static AzureADDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new AzureADDevice();
+    }
+    /**
+     * Gets the enrollments property value. Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
+     * @return a updatableAssetEnrollment
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UpdatableAssetEnrollment> getEnrollments() {
+        return this._enrollments;
+    }
+    /**
+     * Gets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
+     * @return a updatableAssetError
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UpdatableAssetError> getErrors() {
+        return this._errors;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final AzureADDevice currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("enrollments", (n) -> { currentObject.setEnrollments(n.getCollectionOfObjectValues(UpdatableAssetEnrollment::createFromDiscriminatorValue)); });
+            this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(UpdatableAssetError::createFromDiscriminatorValue)); });
+        }};
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeCollectionOfObjectValues("enrollments", this.getEnrollments());
+        writer.writeCollectionOfObjectValues("errors", this.getErrors());
+    }
+    /**
+     * Sets the enrollments property value. Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
+     * @param value Value to set for the enrollments property.
+     * @return a void
+     */
+    public void setEnrollments(@javax.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
+        this._enrollments = value;
+    }
+    /**
+     * Sets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
+     * @param value Value to set for the errors property.
+     * @return a void
+     */
+    public void setErrors(@javax.annotation.Nullable final java.util.List<UpdatableAssetError> value) {
+        this._errors = value;
+    }
+}

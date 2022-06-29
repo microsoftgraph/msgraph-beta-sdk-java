@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the searchEntity singleton. */
 public class Acronym extends SearchAnswer implements Parsable {
     /** What the acronym stands for. */
     private String _standsFor;
     /** State of the acronym. Possible values are: published, draft, excluded, or unknownFutureValue. */
     private AnswerState _state;
     /**
-     * Instantiates a new acronym and sets the default values.
+     * Instantiates a new Acronym and sets the default values.
      * @return a void
      */
     public Acronym() {
@@ -23,7 +22,7 @@ public class Acronym extends SearchAnswer implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a acronym
+     * @return a Acronym
      */
     @javax.annotation.Nonnull
     public static Acronym createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

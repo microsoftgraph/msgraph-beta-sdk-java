@@ -36,7 +36,7 @@ public class CatalogEntry extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.windowsUpdates.catalogEntry": return new CatalogEntry();
+                case "#microsoft.graph.windowsUpdates.softwareUpdateCatalogEntry": return new SoftwareUpdateCatalogEntry();
             }
         }
         return new CatalogEntry();

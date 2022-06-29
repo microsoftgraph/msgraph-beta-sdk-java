@@ -59,7 +59,7 @@ public class ReviewSetsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ReviewSetsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ReviewSetsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a CompletableFuture of EdiscoveryReviewSetCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ReviewSetsRequestBuilder {
         }
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryReviewSetCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ReviewSetsRequestBuilder {
         }
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EdiscoveryReviewSetCollectionResponse
@@ -227,7 +227,7 @@ public class ReviewSetsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get reviewSets from security */
+    /** Returns a list of eDiscoveryReviewSet objects in the case. */
     public class ReviewSetsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

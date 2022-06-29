@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ItemFacet extends Entity implements Parsable {
     /** The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue. */
     private AllowedAudiences _allowedAudiences;
@@ -45,7 +45,26 @@ public class ItemFacet extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.itemFacet": return new ItemFacet();
+                case "#microsoft.graph.educationalActivity": return new EducationalActivity();
+                case "#microsoft.graph.itemAddress": return new ItemAddress();
+                case "#microsoft.graph.itemEmail": return new ItemEmail();
+                case "#microsoft.graph.itemPatent": return new ItemPatent();
+                case "#microsoft.graph.itemPhone": return new ItemPhone();
+                case "#microsoft.graph.itemPublication": return new ItemPublication();
+                case "#microsoft.graph.languageProficiency": return new LanguageProficiency();
+                case "#microsoft.graph.personAnnotation": return new PersonAnnotation();
+                case "#microsoft.graph.personAnnualEvent": return new PersonAnnualEvent();
+                case "#microsoft.graph.personAward": return new PersonAward();
+                case "#microsoft.graph.personCertification": return new PersonCertification();
+                case "#microsoft.graph.personInterest": return new PersonInterest();
+                case "#microsoft.graph.personName": return new PersonName();
+                case "#microsoft.graph.personResponsibility": return new PersonResponsibility();
+                case "#microsoft.graph.personWebsite": return new PersonWebsite();
+                case "#microsoft.graph.projectParticipation": return new ProjectParticipation();
+                case "#microsoft.graph.skillProficiency": return new SkillProficiency();
+                case "#microsoft.graph.userAccountInformation": return new UserAccountInformation();
+                case "#microsoft.graph.webAccount": return new WebAccount();
+                case "#microsoft.graph.workPosition": return new WorkPosition();
             }
         }
         return new ItemFacet();

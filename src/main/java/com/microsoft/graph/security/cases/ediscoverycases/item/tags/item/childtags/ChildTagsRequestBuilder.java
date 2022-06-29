@@ -58,7 +58,7 @@ public class ChildTagsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get childTags from security
+     * Returns the tags that are a child of a tag.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class ChildTagsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get childTags from security
+     * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class ChildTagsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get childTags from security
+     * Returns the tags that are a child of a tag.
      * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get() {
@@ -104,7 +104,7 @@ public class ChildTagsRequestBuilder {
         }
     }
     /**
-     * Get childTags from security
+     * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      */
@@ -121,7 +121,7 @@ public class ChildTagsRequestBuilder {
         }
     }
     /**
-     * Get childTags from security
+     * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
@@ -138,7 +138,7 @@ public class ChildTagsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get childTags from security */
+    /** Returns the tags that are a child of a tag. */
     public class ChildTagsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

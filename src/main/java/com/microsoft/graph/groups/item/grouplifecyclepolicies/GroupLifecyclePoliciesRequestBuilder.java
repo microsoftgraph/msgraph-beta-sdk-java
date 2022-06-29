@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.groups.item.grouplifecyclepolicies.count.CountRequestBuilder;
+import microsoft.graph.groups.item.grouplifecyclepolicies.renewgroup.RenewGroupRequestBuilder;
 import microsoft.graph.models.GroupLifecyclePolicy;
 import microsoft.graph.models.GroupLifecyclePolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,11 @@ public class GroupLifecyclePoliciesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The renewGroup property */
+    @javax.annotation.Nonnull
+    public RenewGroupRequestBuilder renewGroup() {
+        return new RenewGroupRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

@@ -55,7 +55,18 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceCompliancePolicy": return new DeviceCompliancePolicy();
+                case "#microsoft.graph.androidCompliancePolicy": return new AndroidCompliancePolicy();
+                case "#microsoft.graph.androidDeviceOwnerCompliancePolicy": return new AndroidDeviceOwnerCompliancePolicy();
+                case "#microsoft.graph.androidForWorkCompliancePolicy": return new AndroidForWorkCompliancePolicy();
+                case "#microsoft.graph.androidWorkProfileCompliancePolicy": return new AndroidWorkProfileCompliancePolicy();
+                case "#microsoft.graph.aospDeviceOwnerCompliancePolicy": return new AospDeviceOwnerCompliancePolicy();
+                case "#microsoft.graph.defaultDeviceCompliancePolicy": return new DefaultDeviceCompliancePolicy();
+                case "#microsoft.graph.iosCompliancePolicy": return new IosCompliancePolicy();
+                case "#microsoft.graph.macOSCompliancePolicy": return new MacOSCompliancePolicy();
+                case "#microsoft.graph.windows10CompliancePolicy": return new Windows10CompliancePolicy();
+                case "#microsoft.graph.windows10MobileCompliancePolicy": return new Windows10MobileCompliancePolicy();
+                case "#microsoft.graph.windows81CompliancePolicy": return new Windows81CompliancePolicy();
+                case "#microsoft.graph.windowsPhone81CompliancePolicy": return new WindowsPhone81CompliancePolicy();
             }
         }
         return new DeviceCompliancePolicy();

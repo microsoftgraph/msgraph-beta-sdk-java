@@ -1,0 +1,39 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+/** Provides operations to manage the collection of administrativeUnit entities. */
+public enum EnrollmentNotificationBrandingOptions implements ValuedEnum {
+    /** No Branding. */
+    None("none"),
+    /** Include Company Logo. */
+    IncludeCompanyLogo("includeCompanyLogo"),
+    /** Include Company Name. */
+    IncludeCompanyName("includeCompanyName"),
+    /** Include Contact Info. */
+    IncludeContactInformation("includeContactInformation"),
+    /** Include Company Portal Link. */
+    IncludeCompanyPortalLink("includeCompanyPortalLink"),
+    /** Include Device Details. */
+    IncludeDeviceDetails("includeDeviceDetails");
+    public final String value;
+    EnrollmentNotificationBrandingOptions(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static EnrollmentNotificationBrandingOptions forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "includeCompanyLogo": return IncludeCompanyLogo;
+            case "includeCompanyName": return IncludeCompanyName;
+            case "includeContactInformation": return IncludeContactInformation;
+            case "includeCompanyPortalLink": return IncludeCompanyPortalLink;
+            case "includeDeviceDetails": return IncludeDeviceDetails;
+            default: return null;
+        }
+    }
+}

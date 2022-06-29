@@ -8,12 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Site;
-/** Provides operations to manage the security singleton. */
 public class SiteSource extends DataSource implements Parsable {
     /** The site property */
     private Site _site;
     /**
-     * Instantiates a new siteSource and sets the default values.
+     * Instantiates a new SiteSource and sets the default values.
      * @return a void
      */
     public SiteSource() {
@@ -22,7 +21,7 @@ public class SiteSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a siteSource
+     * @return a SiteSource
      */
     @javax.annotation.Nonnull
     public static SiteSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

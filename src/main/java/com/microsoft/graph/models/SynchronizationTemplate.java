@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class SynchronizationTemplate extends Entity implements Parsable {
     /** Identifier of the application this template belongs to. */
     private String _applicationId;

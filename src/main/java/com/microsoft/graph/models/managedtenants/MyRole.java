@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MyRole implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The assignments property */
+    /** A collection of role assignments for the managed tenant. */
     private java.util.List<RoleAssignment> _assignments;
-    /** The tenantId property */
+    /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
     private String _tenantId;
     /**
      * Instantiates a new myRole and sets the default values.
@@ -41,7 +41,7 @@ public class MyRole implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the assignments property value. The assignments property
+     * Gets the assignments property value. A collection of role assignments for the managed tenant.
      * @return a roleAssignment
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MyRole implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MyRole implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the assignments property value. The assignments property
+     * Sets the assignments property value. A collection of role assignments for the managed tenant.
      * @param value Value to set for the assignments property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MyRole implements AdditionalDataHolder, Parsable {
         this._assignments = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */

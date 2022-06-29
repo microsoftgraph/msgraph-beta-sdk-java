@@ -1,0 +1,87 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
+    /** The channel to install on target devices. Possible values are: dev, beta, stable. */
+    private MicrosoftEdgeChannel _channel;
+    /** The language locale to use when the Edge app displays text to the user. */
+    private String _displayLanguageLocale;
+    /**
+     * Instantiates a new WindowsMicrosoftEdgeApp and sets the default values.
+     * @return a void
+     */
+    public WindowsMicrosoftEdgeApp() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a WindowsMicrosoftEdgeApp
+     */
+    @javax.annotation.Nonnull
+    public static WindowsMicrosoftEdgeApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new WindowsMicrosoftEdgeApp();
+    }
+    /**
+     * Gets the channel property value. The channel to install on target devices. Possible values are: dev, beta, stable.
+     * @return a microsoftEdgeChannel
+     */
+    @javax.annotation.Nullable
+    public MicrosoftEdgeChannel getChannel() {
+        return this._channel;
+    }
+    /**
+     * Gets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDisplayLanguageLocale() {
+        return this._displayLanguageLocale;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final WindowsMicrosoftEdgeApp currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("channel", (n) -> { currentObject.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
+            this.put("displayLanguageLocale", (n) -> { currentObject.setDisplayLanguageLocale(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeEnumValue("channel", this.getChannel());
+        writer.writeStringValue("displayLanguageLocale", this.getDisplayLanguageLocale());
+    }
+    /**
+     * Sets the channel property value. The channel to install on target devices. Possible values are: dev, beta, stable.
+     * @param value Value to set for the channel property.
+     * @return a void
+     */
+    public void setChannel(@javax.annotation.Nullable final MicrosoftEdgeChannel value) {
+        this._channel = value;
+    }
+    /**
+     * Sets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
+     * @param value Value to set for the displayLanguageLocale property.
+     * @return a void
+     */
+    public void setDisplayLanguageLocale(@javax.annotation.Nullable final String value) {
+        this._displayLanguageLocale = value;
+    }
+}

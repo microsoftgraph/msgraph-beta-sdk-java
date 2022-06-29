@@ -59,7 +59,7 @@ public class OperationsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class OperationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @return a CompletableFuture of CaseOperationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CaseOperationCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class OperationsRequestBuilder {
         }
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CaseOperationCollectionResponse
      */
@@ -155,7 +155,7 @@ public class OperationsRequestBuilder {
         }
     }
     /**
-     * Get operations from security
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of CaseOperationCollectionResponse
@@ -227,7 +227,7 @@ public class OperationsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get operations from security */
+    /** Returns a list of case caseOperation objects for this case. */
     public class OperationsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

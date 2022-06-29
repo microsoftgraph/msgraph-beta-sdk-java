@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class SynchronizationJob extends Entity implements Parsable {
     /** Schedule used to run the job. Read-only. */
     private SynchronizationSchedule _schedule;

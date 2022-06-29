@@ -44,7 +44,8 @@ public class DataSourceContainer extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.ediscovery.dataSourceContainer": return new DataSourceContainer();
+                case "#microsoft.graph.ediscovery.custodian": return new Custodian();
+                case "#microsoft.graph.ediscovery.noncustodialDataSource": return new NoncustodialDataSource();
             }
         }
         return new DataSourceContainer();

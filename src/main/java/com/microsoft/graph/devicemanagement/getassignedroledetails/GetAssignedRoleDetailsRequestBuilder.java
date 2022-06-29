@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.DeviceAndAppManagementAssignedRoleDetails;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getAssignedRoleDetails method. */
 public class GetAssignedRoleDetailsRequestBuilder {
     /** Path parameters for the request */
@@ -85,7 +86,11 @@ public class GetAssignedRoleDetailsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignedRoleDetails> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignedRoleDetails::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignedRoleDetails::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -98,7 +103,11 @@ public class GetAssignedRoleDetailsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignedRoleDetails> get(@javax.annotation.Nullable final java.util.function.Consumer<GetAssignedRoleDetailsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignedRoleDetails::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignedRoleDetails::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -112,7 +121,11 @@ public class GetAssignedRoleDetailsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignedRoleDetails> get(@javax.annotation.Nullable final java.util.function.Consumer<GetAssignedRoleDetailsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignedRoleDetails::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignedRoleDetails::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

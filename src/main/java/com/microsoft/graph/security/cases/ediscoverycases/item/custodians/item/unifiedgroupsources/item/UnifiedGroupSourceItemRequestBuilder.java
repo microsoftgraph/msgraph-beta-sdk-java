@@ -86,7 +86,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         }
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @return a CompletableFuture of unifiedGroupSource
      */
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> get() {
@@ -215,7 +215,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         }
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedGroupSource
      */
@@ -232,7 +232,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         }
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedGroupSource
@@ -319,7 +319,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         public UnifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get unifiedGroupSources from security */
+    /** Data source entity for groups associated with the custodian. */
     public class UnifiedGroupSourceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

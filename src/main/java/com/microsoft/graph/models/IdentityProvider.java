@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of identityProvider entities. */
+/** Provides operations to manage the identityContainer singleton. */
 public class IdentityProvider extends Entity implements Parsable {
     /** The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable. */
     private String _clientId;
@@ -36,7 +36,7 @@ public class IdentityProvider extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.identityProvider": return new IdentityProvider();
+                case "#microsoft.graph.openIdConnectProvider": return new OpenIdConnectProvider();
             }
         }
         return new IdentityProvider();

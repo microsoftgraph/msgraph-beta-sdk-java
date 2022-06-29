@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The email address registered to this user. */
     private String _emailAddress;
     /**
-     * Instantiates a new emailAuthenticationMethod and sets the default values.
+     * Instantiates a new EmailAuthenticationMethod and sets the default values.
      * @return a void
      */
     public EmailAuthenticationMethod() {
@@ -21,7 +20,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailAuthenticationMethod
+     * @return a EmailAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static EmailAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

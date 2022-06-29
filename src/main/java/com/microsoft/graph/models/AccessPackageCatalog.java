@@ -12,9 +12,9 @@ import java.util.Objects;
 public class AccessPackageCatalog extends Entity implements Parsable {
     /** The roles in each resource in a catalog. Read-only. */
     private java.util.List<AccessPackageResourceRole> _accessPackageResourceRoles;
-    /** Read-only. Nullable. */
+    /** The accessPackageResources property */
     private java.util.List<AccessPackageResource> _accessPackageResources;
-    /** Read-only. */
+    /** The accessPackageResourceScopes property */
     private java.util.List<AccessPackageResourceScope> _accessPackageResourceScopes;
     /** The access packages in this catalog. Read-only. Nullable. Supports $expand. */
     private java.util.List<AccessPackage> _accessPackages;
@@ -64,7 +64,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return this._accessPackageResourceRoles;
     }
     /**
-     * Gets the accessPackageResources property value. Read-only. Nullable.
+     * Gets the accessPackageResources property value. The accessPackageResources property
      * @return a accessPackageResource
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return this._accessPackageResources;
     }
     /**
-     * Gets the accessPackageResourceScopes property value. Read-only.
+     * Gets the accessPackageResourceScopes property value. The accessPackageResourceScopes property
      * @return a accessPackageResourceScope
      */
     @javax.annotation.Nullable
@@ -223,7 +223,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         this._accessPackageResourceRoles = value;
     }
     /**
-     * Sets the accessPackageResources property value. Read-only. Nullable.
+     * Sets the accessPackageResources property value. The accessPackageResources property
      * @param value Value to set for the accessPackageResources property.
      * @return a void
      */
@@ -231,7 +231,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         this._accessPackageResources = value;
     }
     /**
-     * Sets the accessPackageResourceScopes property value. Read-only.
+     * Sets the accessPackageResourceScopes property value. The accessPackageResourceScopes property
      * @param value Value to set for the accessPackageResourceScopes property.
      * @return a void
      */

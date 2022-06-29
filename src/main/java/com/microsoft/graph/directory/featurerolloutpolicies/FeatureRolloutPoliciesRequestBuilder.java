@@ -59,7 +59,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Nullable.
+     * Get featureRolloutPolicies from directory
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Nullable.
+     * Get featureRolloutPolicies from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Nullable.
+     * Get featureRolloutPolicies from directory
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicyCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get featureRolloutPolicies from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
      */
@@ -155,7 +155,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get featureRolloutPolicies from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
@@ -227,7 +227,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Nullable. */
+    /** Get featureRolloutPolicies from directory */
     public class FeatureRolloutPoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

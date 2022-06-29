@@ -1,0 +1,207 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class OpenIdConnectIdentityProvider extends IdentityProviderBase implements Parsable {
+    /** After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. Required. */
+    private ClaimsMapping _claimsMapping;
+    /** The client identifier for the application obtained when registering the application with the identity provider. Required. */
+    private String _clientId;
+    /** The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****. */
+    private String _clientSecret;
+    /** The domain hint can be used to skip directly to the sign-in page of the specified identity provider, instead of having the user make a selection among the list of available identity providers. */
+    private String _domainHint;
+    /** The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required. */
+    private String _metadataUrl;
+    /** The response mode defines the method used to send data back from the custom identity provider to Azure AD B2C. Possible values: form_post, query. Required. */
+    private OpenIdConnectResponseMode _responseMode;
+    /** The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required. */
+    private OpenIdConnectResponseTypes _responseType;
+    /** Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required. */
+    private String _scope;
+    /**
+     * Instantiates a new OpenIdConnectIdentityProvider and sets the default values.
+     * @return a void
+     */
+    public OpenIdConnectIdentityProvider() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a OpenIdConnectIdentityProvider
+     */
+    @javax.annotation.Nonnull
+    public static OpenIdConnectIdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new OpenIdConnectIdentityProvider();
+    }
+    /**
+     * Gets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. Required.
+     * @return a claimsMapping
+     */
+    @javax.annotation.Nullable
+    public ClaimsMapping getClaimsMapping() {
+        return this._claimsMapping;
+    }
+    /**
+     * Gets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getClientId() {
+        return this._clientId;
+    }
+    /**
+     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getClientSecret() {
+        return this._clientSecret;
+    }
+    /**
+     * Gets the domainHint property value. The domain hint can be used to skip directly to the sign-in page of the specified identity provider, instead of having the user make a selection among the list of available identity providers.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDomainHint() {
+        return this._domainHint;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final OpenIdConnectIdentityProvider currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("claimsMapping", (n) -> { currentObject.setClaimsMapping(n.getObjectValue(ClaimsMapping::createFromDiscriminatorValue)); });
+            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
+            this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
+            this.put("domainHint", (n) -> { currentObject.setDomainHint(n.getStringValue()); });
+            this.put("metadataUrl", (n) -> { currentObject.setMetadataUrl(n.getStringValue()); });
+            this.put("responseMode", (n) -> { currentObject.setResponseMode(n.getEnumValue(OpenIdConnectResponseMode.class)); });
+            this.put("responseType", (n) -> { currentObject.setResponseType(n.getEnumValue(OpenIdConnectResponseTypes.class)); });
+            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getMetadataUrl() {
+        return this._metadataUrl;
+    }
+    /**
+     * Gets the responseMode property value. The response mode defines the method used to send data back from the custom identity provider to Azure AD B2C. Possible values: form_post, query. Required.
+     * @return a openIdConnectResponseMode
+     */
+    @javax.annotation.Nullable
+    public OpenIdConnectResponseMode getResponseMode() {
+        return this._responseMode;
+    }
+    /**
+     * Gets the responseType property value. The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required.
+     * @return a openIdConnectResponseTypes
+     */
+    @javax.annotation.Nullable
+    public OpenIdConnectResponseTypes getResponseType() {
+        return this._responseType;
+    }
+    /**
+     * Gets the scope property value. Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getScope() {
+        return this._scope;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("claimsMapping", this.getClaimsMapping());
+        writer.writeStringValue("clientId", this.getClientId());
+        writer.writeStringValue("clientSecret", this.getClientSecret());
+        writer.writeStringValue("domainHint", this.getDomainHint());
+        writer.writeStringValue("metadataUrl", this.getMetadataUrl());
+        writer.writeEnumValue("responseMode", this.getResponseMode());
+        writer.writeEnumValue("responseType", this.getResponseType());
+        writer.writeStringValue("scope", this.getScope());
+    }
+    /**
+     * Sets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. Required.
+     * @param value Value to set for the claimsMapping property.
+     * @return a void
+     */
+    public void setClaimsMapping(@javax.annotation.Nullable final ClaimsMapping value) {
+        this._claimsMapping = value;
+    }
+    /**
+     * Sets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * @param value Value to set for the clientId property.
+     * @return a void
+     */
+    public void setClientId(@javax.annotation.Nullable final String value) {
+        this._clientId = value;
+    }
+    /**
+     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+     * @param value Value to set for the clientSecret property.
+     * @return a void
+     */
+    public void setClientSecret(@javax.annotation.Nullable final String value) {
+        this._clientSecret = value;
+    }
+    /**
+     * Sets the domainHint property value. The domain hint can be used to skip directly to the sign-in page of the specified identity provider, instead of having the user make a selection among the list of available identity providers.
+     * @param value Value to set for the domainHint property.
+     * @return a void
+     */
+    public void setDomainHint(@javax.annotation.Nullable final String value) {
+        this._domainHint = value;
+    }
+    /**
+     * Sets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
+     * @param value Value to set for the metadataUrl property.
+     * @return a void
+     */
+    public void setMetadataUrl(@javax.annotation.Nullable final String value) {
+        this._metadataUrl = value;
+    }
+    /**
+     * Sets the responseMode property value. The response mode defines the method used to send data back from the custom identity provider to Azure AD B2C. Possible values: form_post, query. Required.
+     * @param value Value to set for the responseMode property.
+     * @return a void
+     */
+    public void setResponseMode(@javax.annotation.Nullable final OpenIdConnectResponseMode value) {
+        this._responseMode = value;
+    }
+    /**
+     * Sets the responseType property value. The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required.
+     * @param value Value to set for the responseType property.
+     * @return a void
+     */
+    public void setResponseType(@javax.annotation.Nullable final OpenIdConnectResponseTypes value) {
+        this._responseType = value;
+    }
+    /**
+     * Sets the scope property value. Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required.
+     * @param value Value to set for the scope property.
+     * @return a void
+     */
+    public void setScope(@javax.annotation.Nullable final String value) {
+        this._scope = value;
+    }
+}

@@ -59,7 +59,7 @@ public class AccessPackageResourceRoleScopesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AccessPackageResourceRoleScopesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class AccessPackageResourceRoleScopesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScopeCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class AccessPackageResourceRoleScopesRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
      */
@@ -155,7 +155,7 @@ public class AccessPackageResourceRoleScopesRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
@@ -227,7 +227,7 @@ public class AccessPackageResourceRoleScopesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Nullable. */
+    /** Get accessPackageResourceRoleScopes from identityGovernance */
     public class AccessPackageResourceRoleScopesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

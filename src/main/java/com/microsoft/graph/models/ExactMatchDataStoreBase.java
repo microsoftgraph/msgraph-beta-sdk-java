@@ -37,7 +37,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.exactMatchDataStoreBase": return new ExactMatchDataStoreBase();
+                case "#microsoft.graph.exactMatchDataStore": return new ExactMatchDataStore();
             }
         }
         return new ExactMatchDataStoreBase();

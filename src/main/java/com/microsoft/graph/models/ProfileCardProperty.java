@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of organization entities. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ProfileCardProperty extends Entity implements Parsable {
     /** Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant. */
     private java.util.List<ProfileCardAnnotation> _annotations;

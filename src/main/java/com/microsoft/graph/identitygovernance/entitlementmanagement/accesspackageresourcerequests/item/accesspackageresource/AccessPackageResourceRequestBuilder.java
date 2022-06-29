@@ -52,7 +52,7 @@ public class AccessPackageResourceRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Nullable.
+     * Get accessPackageResource from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class AccessPackageResourceRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Nullable.
+     * Get accessPackageResource from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class AccessPackageResourceRequestBuilder {
         return requestInfo;
     }
     /**
-     * Nullable.
+     * Get accessPackageResource from identityGovernance
      * @return a CompletableFuture of accessPackageResource
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResource> get() {
@@ -98,7 +98,7 @@ public class AccessPackageResourceRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResource from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResource
      */
@@ -115,7 +115,7 @@ public class AccessPackageResourceRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get accessPackageResource from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageResource
@@ -132,7 +132,7 @@ public class AccessPackageResourceRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Nullable. */
+    /** Get accessPackageResource from identityGovernance */
     public class AccessPackageResourceRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -3,7 +3,7 @@ package microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the export method. */
+/** Provides operations to manage the compliance singleton. */
 public enum ExportOptions implements ValuedEnum {
     OriginalFiles("originalFiles"),
     Text("text"),

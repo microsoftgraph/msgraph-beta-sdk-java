@@ -17,7 +17,7 @@ public class Directory extends Entity implements Parsable {
     private java.util.List<CustomSecurityAttributeDefinition> _customSecurityAttributeDefinitions;
     /** Recently deleted items. Read-only. Nullable. */
     private java.util.List<DirectoryObject> _deletedItems;
-    /** Nullable. */
+    /** The featureRolloutPolicies property */
     private java.util.List<FeatureRolloutPolicy> _featureRolloutPolicies;
     /** Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol. */
     private java.util.List<IdentityProviderBase> _federationConfigurations;
@@ -81,7 +81,7 @@ public class Directory extends Entity implements Parsable {
         return this._deletedItems;
     }
     /**
-     * Gets the featureRolloutPolicies property value. Nullable.
+     * Gets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @return a featureRolloutPolicy
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class Directory extends Entity implements Parsable {
         this._deletedItems = value;
     }
     /**
-     * Sets the featureRolloutPolicies property value. Nullable.
+     * Sets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @param value Value to set for the featureRolloutPolicies property.
      * @return a void
      */

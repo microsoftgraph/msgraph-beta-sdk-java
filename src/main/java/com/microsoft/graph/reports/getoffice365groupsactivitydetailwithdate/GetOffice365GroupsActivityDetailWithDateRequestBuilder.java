@@ -14,6 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getOffice365GroupsActivityDetail method. */
 public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
     /** Path parameters for the request */
@@ -87,7 +88,11 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityDetailWithDateResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityDetailWithDateResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityDetailWithDateResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -100,7 +105,11 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityDetailWithDateResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOffice365GroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityDetailWithDateResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityDetailWithDateResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -114,7 +123,11 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityDetailWithDateResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOffice365GroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityDetailWithDateResponse::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityDetailWithDateResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

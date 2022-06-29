@@ -13,6 +13,8 @@ public class Teamwork extends Entity implements Parsable {
     private java.util.List<DeletedTeam> _deletedTeams;
     /** The Teams devices provisioned for the tenant. */
     private java.util.List<TeamworkDevice> _devices;
+    /** The teamsAppSettings property */
+    private TeamsAppSettings _teamsAppSettings;
     /** A workforce integration with shifts. */
     private java.util.List<WorkforceIntegration> _workforceIntegrations;
     /**
@@ -58,8 +60,17 @@ public class Teamwork extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("deletedTeams", (n) -> { currentObject.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
             this.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(TeamworkDevice::createFromDiscriminatorValue)); });
+            this.put("teamsAppSettings", (n) -> { currentObject.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
             this.put("workforceIntegrations", (n) -> { currentObject.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the teamsAppSettings property value. The teamsAppSettings property
+     * @return a teamsAppSettings
+     */
+    @javax.annotation.Nullable
+    public TeamsAppSettings getTeamsAppSettings() {
+        return this._teamsAppSettings;
     }
     /**
      * Gets the workforceIntegrations property value. A workforce integration with shifts.
@@ -79,6 +90,7 @@ public class Teamwork extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
         writer.writeCollectionOfObjectValues("devices", this.getDevices());
+        writer.writeObjectValue("teamsAppSettings", this.getTeamsAppSettings());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
     /**
@@ -96,6 +108,14 @@ public class Teamwork extends Entity implements Parsable {
      */
     public void setDevices(@javax.annotation.Nullable final java.util.List<TeamworkDevice> value) {
         this._devices = value;
+    }
+    /**
+     * Sets the teamsAppSettings property value. The teamsAppSettings property
+     * @param value Value to set for the teamsAppSettings property.
+     * @return a void
+     */
+    public void setTeamsAppSettings(@javax.annotation.Nullable final TeamsAppSettings value) {
+        this._teamsAppSettings = value;
     }
     /**
      * Sets the workforceIntegrations property value. A workforce integration with shifts.

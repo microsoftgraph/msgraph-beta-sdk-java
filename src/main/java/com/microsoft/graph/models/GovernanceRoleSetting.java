@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of governanceResource entities. */
+/** Provides operations to manage the collection of governanceRoleAssignment entities. */
 public class GovernanceRoleSetting extends Entity implements Parsable {
     /** The rule settings that are evaluated when an administrator tries to add an eligible role assignment. */
     private java.util.List<GovernanceRuleSetting> _adminEligibleSettings;

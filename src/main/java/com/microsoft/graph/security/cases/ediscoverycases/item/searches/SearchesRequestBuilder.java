@@ -59,7 +59,7 @@ public class SearchesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SearchesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class SearchesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @return a CompletableFuture of EdiscoverySearchCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EdiscoverySearchCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class SearchesRequestBuilder {
         }
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoverySearchCollectionResponse
      */
@@ -155,7 +155,7 @@ public class SearchesRequestBuilder {
         }
     }
     /**
-     * Get searches from security
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EdiscoverySearchCollectionResponse
@@ -227,7 +227,7 @@ public class SearchesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get searches from security */
+    /** Returns a list of eDiscoverySearch objects associated with this case. */
     public class SearchesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

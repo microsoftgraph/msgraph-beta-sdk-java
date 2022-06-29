@@ -16,19 +16,19 @@ public class ExternalConnection extends Entity implements Parsable {
     private String _connectorId;
     /** Description of the connection displayed in the Microsoft 365 admin center. Optional. */
     private String _description;
-    /** Read-only. Nullable. */
+    /** The groups property */
     private java.util.List<ExternalGroup> _groups;
     /** The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null. */
     private Long _ingestedItemsCount;
-    /** Read-only. Nullable. */
+    /** The items property */
     private java.util.List<ExternalItem> _items;
     /** The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required. */
     private String _name;
-    /** Read-only. Nullable. */
+    /** The operations property */
     private java.util.List<ConnectionOperation> _operations;
-    /** Read-only. Nullable. */
+    /** The quota property */
     private ConnectionQuota _quota;
-    /** Read-only. Nullable. */
+    /** The schema property */
     private Schema _schema;
     /** The settings configuring the search experience for content in this connection, such as the display templates for search results. */
     private SearchSettings _searchSettings;
@@ -98,7 +98,7 @@ public class ExternalConnection extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the groups property value. Read-only. Nullable.
+     * Gets the groups property value. The groups property
      * @return a externalGroup
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._ingestedItemsCount;
     }
     /**
-     * Gets the items property value. Read-only. Nullable.
+     * Gets the items property value. The items property
      * @return a externalItem
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the operations property value. Read-only. Nullable.
+     * Gets the operations property value. The operations property
      * @return a connectionOperation
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the quota property value. Read-only. Nullable.
+     * Gets the quota property value. The quota property
      * @return a connectionQuota
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._quota;
     }
     /**
-     * Gets the schema property value. Read-only. Nullable.
+     * Gets the schema property value. The schema property
      * @return a schema
      */
     @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the groups property value. Read-only. Nullable.
+     * Sets the groups property value. The groups property
      * @param value Value to set for the groups property.
      * @return a void
      */
@@ -231,7 +231,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._ingestedItemsCount = value;
     }
     /**
-     * Sets the items property value. Read-only. Nullable.
+     * Sets the items property value. The items property
      * @param value Value to set for the items property.
      * @return a void
      */
@@ -247,7 +247,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the operations property value. Read-only. Nullable.
+     * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      * @return a void
      */
@@ -255,7 +255,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the quota property value. Read-only. Nullable.
+     * Sets the quota property value. The quota property
      * @param value Value to set for the quota property.
      * @return a void
      */
@@ -263,7 +263,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._quota = value;
     }
     /**
-     * Sets the schema property value. Read-only. Nullable.
+     * Sets the schema property value. The schema property
      * @param value Value to set for the schema property.
      * @return a void
      */

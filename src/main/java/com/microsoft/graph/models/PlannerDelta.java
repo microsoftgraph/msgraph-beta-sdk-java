@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class PlannerDelta extends Entity implements Parsable {
     /**
      * Instantiates a new plannerDelta and sets the default values.
@@ -28,7 +28,15 @@ public class PlannerDelta extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.plannerDelta": return new PlannerDelta();
+                case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
+                case "#microsoft.graph.plannerBucket": return new PlannerBucket();
+                case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
+                case "#microsoft.graph.plannerPlan": return new PlannerPlan();
+                case "#microsoft.graph.plannerPlanDetails": return new PlannerPlanDetails();
+                case "#microsoft.graph.plannerProgressTaskBoardTaskFormat": return new PlannerProgressTaskBoardTaskFormat();
+                case "#microsoft.graph.plannerTask": return new PlannerTask();
+                case "#microsoft.graph.plannerTaskDetails": return new PlannerTaskDetails();
+                case "#microsoft.graph.plannerUser": return new PlannerUser();
             }
         }
         return new PlannerDelta();

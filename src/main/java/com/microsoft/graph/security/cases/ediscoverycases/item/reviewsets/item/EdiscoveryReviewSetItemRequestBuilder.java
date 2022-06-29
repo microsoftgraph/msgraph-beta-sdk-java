@@ -106,7 +106,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -114,7 +114,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -231,7 +231,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         return new EdiscoveryFileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a CompletableFuture of ediscoveryReviewSet
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSet> get() {
@@ -247,7 +247,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         }
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSet
      */
@@ -264,7 +264,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         }
     }
     /**
-     * Get reviewSets from security
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryReviewSet
@@ -363,7 +363,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         public EdiscoveryReviewSetItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get reviewSets from security */
+    /** Returns a list of eDiscoveryReviewSet objects in the case. */
     public class EdiscoveryReviewSetItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

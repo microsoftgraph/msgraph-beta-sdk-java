@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
 public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for an application that implements a web API. */
     private ApiApplication _api;
@@ -24,7 +23,7 @@ public class Application extends DirectoryObject implements Parsable {
     private ConnectorGroup _connectorGroup;
     /** The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
     private OffsetDateTime _createdDateTime;
-    /** Read-only. */
+    /** The createdOnBehalfOf property */
     private DirectoryObject _createdOnBehalfOf;
     /** The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application. */
     private String _defaultRedirectUri;
@@ -72,6 +71,8 @@ public class Application extends DirectoryObject implements Parsable {
     private String _publisherDomain;
     /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le). */
     private java.util.List<RequiredResourceAccess> _requiredResourceAccess;
+    /** The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable. */
+    private String _samlMetadataUrl;
     /** References application or service contact information from a Service or Asset Management database. Nullable. */
     private String _serviceManagementReference;
     /** Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not). */
@@ -97,7 +98,7 @@ public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store. */
     private WindowsApplication _windows;
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
      * @return a void
      */
     public Application() {
@@ -106,7 +107,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a application
+     * @return a Application
      */
     @javax.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -170,7 +171,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the createdOnBehalfOf property value. Read-only.
+     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -264,6 +265,7 @@ public class Application extends DirectoryObject implements Parsable {
             this.put("publicClient", (n) -> { currentObject.setPublicClient(n.getObjectValue(PublicClientApplication::createFromDiscriminatorValue)); });
             this.put("publisherDomain", (n) -> { currentObject.setPublisherDomain(n.getStringValue()); });
             this.put("requiredResourceAccess", (n) -> { currentObject.setRequiredResourceAccess(n.getCollectionOfObjectValues(RequiredResourceAccess::createFromDiscriminatorValue)); });
+            this.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
             this.put("serviceManagementReference", (n) -> { currentObject.setServiceManagementReference(n.getStringValue()); });
             this.put("signInAudience", (n) -> { currentObject.setSignInAudience(n.getStringValue()); });
             this.put("spa", (n) -> { currentObject.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
@@ -415,6 +417,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this._requiredResourceAccess;
     }
     /**
+     * Gets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSamlMetadataUrl() {
+        return this._samlMetadataUrl;
+    }
+    /**
      * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
      * @return a string
      */
@@ -549,6 +559,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeObjectValue("publicClient", this.getPublicClient());
         writer.writeStringValue("publisherDomain", this.getPublisherDomain());
         writer.writeCollectionOfObjectValues("requiredResourceAccess", this.getRequiredResourceAccess());
+        writer.writeStringValue("samlMetadataUrl", this.getSamlMetadataUrl());
         writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeObjectValue("spa", this.getSpa());
@@ -619,7 +630,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the createdOnBehalfOf property value. Read-only.
+     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
@@ -809,6 +820,14 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setRequiredResourceAccess(@javax.annotation.Nullable final java.util.List<RequiredResourceAccess> value) {
         this._requiredResourceAccess = value;
+    }
+    /**
+     * Sets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
+     * @param value Value to set for the samlMetadataUrl property.
+     * @return a void
+     */
+    public void setSamlMetadataUrl(@javax.annotation.Nullable final String value) {
+        this._samlMetadataUrl = value;
     }
     /**
      * Sets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.

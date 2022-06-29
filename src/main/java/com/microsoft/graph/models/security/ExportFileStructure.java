@@ -3,7 +3,7 @@ package microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the export method. */
+/** Provides operations to manage the security singleton. */
 public enum ExportFileStructure implements ValuedEnum {
     None("none"),
     Directory("directory"),

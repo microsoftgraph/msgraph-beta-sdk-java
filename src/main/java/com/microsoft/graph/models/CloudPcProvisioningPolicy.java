@@ -9,20 +9,30 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcProvisioningPolicy extends Entity implements Parsable {
+    /** The alternateResourceUrl property */
+    private String _alternateResourceUrl;
     /** A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship. */
     private java.util.List<CloudPcProvisioningPolicyAssignment> _assignments;
+    /** The cloudPcGroupDisplayName property */
+    private String _cloudPcGroupDisplayName;
     /** The provisioning policy description. */
     private String _description;
     /** The display name for the provisioning policy. */
     private String _displayName;
     /** Specifies how Cloud PCs will join Azure Active Directory. */
     private CloudPcDomainJoinConfiguration _domainJoinConfiguration;
+    /** The gracePeriodInHours property */
+    private Integer _gracePeriodInHours;
     /** The display name for the OS image you’re provisioning. */
     private String _imageDisplayName;
     /** The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os. */
     private String _imageId;
     /** The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom. */
     private CloudPcProvisioningPolicyImageType _imageType;
+    /** The localAdminEnabled property */
+    private Boolean _localAdminEnabled;
+    /** The managedBy property */
+    private CloudPcManagementService _managedBy;
     /** The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it. */
     private MicrosoftManagedDesktop _microsoftManagedDesktop;
     /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service. */
@@ -47,12 +57,28 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return new CloudPcProvisioningPolicy();
     }
     /**
+     * Gets the alternateResourceUrl property value. The alternateResourceUrl property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAlternateResourceUrl() {
+        return this._alternateResourceUrl;
+    }
+    /**
      * Gets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
      * @return a cloudPcProvisioningPolicyAssignment
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicyAssignment> getAssignments() {
         return this._assignments;
+    }
+    /**
+     * Gets the cloudPcGroupDisplayName property value. The cloudPcGroupDisplayName property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getCloudPcGroupDisplayName() {
+        return this._cloudPcGroupDisplayName;
     }
     /**
      * Gets the description property value. The provisioning policy description.
@@ -86,17 +112,30 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcProvisioningPolicy currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("alternateResourceUrl", (n) -> { currentObject.setAlternateResourceUrl(n.getStringValue()); });
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
+            this.put("cloudPcGroupDisplayName", (n) -> { currentObject.setCloudPcGroupDisplayName(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
+            this.put("gracePeriodInHours", (n) -> { currentObject.setGracePeriodInHours(n.getIntegerValue()); });
             this.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
             this.put("imageId", (n) -> { currentObject.setImageId(n.getStringValue()); });
             this.put("imageType", (n) -> { currentObject.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType.class)); });
+            this.put("localAdminEnabled", (n) -> { currentObject.setLocalAdminEnabled(n.getBooleanValue()); });
+            this.put("managedBy", (n) -> { currentObject.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
             this.put("microsoftManagedDesktop", (n) -> { currentObject.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
             this.put("onPremisesConnectionId", (n) -> { currentObject.setOnPremisesConnectionId(n.getStringValue()); });
             this.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the gracePeriodInHours property value. The gracePeriodInHours property
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getGracePeriodInHours() {
+        return this._gracePeriodInHours;
     }
     /**
      * Gets the imageDisplayName property value. The display name for the OS image you’re provisioning.
@@ -121,6 +160,22 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CloudPcProvisioningPolicyImageType getImageType() {
         return this._imageType;
+    }
+    /**
+     * Gets the localAdminEnabled property value. The localAdminEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getLocalAdminEnabled() {
+        return this._localAdminEnabled;
+    }
+    /**
+     * Gets the managedBy property value. The managedBy property
+     * @return a cloudPcManagementService
+     */
+    @javax.annotation.Nullable
+    public CloudPcManagementService getManagedBy() {
+        return this._managedBy;
     }
     /**
      * Gets the microsoftManagedDesktop property value. The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
@@ -154,16 +209,29 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
+        writer.writeStringValue("cloudPcGroupDisplayName", this.getCloudPcGroupDisplayName());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("domainJoinConfiguration", this.getDomainJoinConfiguration());
+        writer.writeIntegerValue("gracePeriodInHours", this.getGracePeriodInHours());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
         writer.writeStringValue("imageId", this.getImageId());
         writer.writeEnumValue("imageType", this.getImageType());
+        writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
+        writer.writeEnumValue("managedBy", this.getManagedBy());
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
+    }
+    /**
+     * Sets the alternateResourceUrl property value. The alternateResourceUrl property
+     * @param value Value to set for the alternateResourceUrl property.
+     * @return a void
+     */
+    public void setAlternateResourceUrl(@javax.annotation.Nullable final String value) {
+        this._alternateResourceUrl = value;
     }
     /**
      * Sets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
@@ -172,6 +240,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setAssignments(@javax.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
         this._assignments = value;
+    }
+    /**
+     * Sets the cloudPcGroupDisplayName property value. The cloudPcGroupDisplayName property
+     * @param value Value to set for the cloudPcGroupDisplayName property.
+     * @return a void
+     */
+    public void setCloudPcGroupDisplayName(@javax.annotation.Nullable final String value) {
+        this._cloudPcGroupDisplayName = value;
     }
     /**
      * Sets the description property value. The provisioning policy description.
@@ -198,6 +274,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._domainJoinConfiguration = value;
     }
     /**
+     * Sets the gracePeriodInHours property value. The gracePeriodInHours property
+     * @param value Value to set for the gracePeriodInHours property.
+     * @return a void
+     */
+    public void setGracePeriodInHours(@javax.annotation.Nullable final Integer value) {
+        this._gracePeriodInHours = value;
+    }
+    /**
      * Sets the imageDisplayName property value. The display name for the OS image you’re provisioning.
      * @param value Value to set for the imageDisplayName property.
      * @return a void
@@ -220,6 +304,22 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setImageType(@javax.annotation.Nullable final CloudPcProvisioningPolicyImageType value) {
         this._imageType = value;
+    }
+    /**
+     * Sets the localAdminEnabled property value. The localAdminEnabled property
+     * @param value Value to set for the localAdminEnabled property.
+     * @return a void
+     */
+    public void setLocalAdminEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._localAdminEnabled = value;
+    }
+    /**
+     * Sets the managedBy property value. The managedBy property
+     * @param value Value to set for the managedBy property.
+     * @return a void
+     */
+    public void setManagedBy(@javax.annotation.Nullable final CloudPcManagementService value) {
+        this._managedBy = value;
     }
     /**
      * Sets the microsoftManagedDesktop property value. The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.

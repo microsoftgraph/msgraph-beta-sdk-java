@@ -14,13 +14,18 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.commands.CommandsRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.commands.item.CommandItemRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.extensions.ExtensionsRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.extensions.item.ExtensionItemRequestBuilder;
+import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
+import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.memberof.MemberOfRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
+import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.restore.RestoreRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.transitivememberof.TransitiveMemberOfRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.usagerights.item.UsageRightItemRequestBuilder;
 import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.usagerights.UsageRightsRequestBuilder;
@@ -28,6 +33,16 @@ import microsoft.graph.models.Device;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the device property of the microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod entity. */
 public class DeviceRequestBuilder {
+    /** The checkMemberGroups property */
+    @javax.annotation.Nonnull
+    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
+        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The checkMemberObjects property */
+    @javax.annotation.Nonnull
+    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
+        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The commands property */
     @javax.annotation.Nonnull
     public CommandsRequestBuilder commands() {
@@ -37,6 +52,16 @@ public class DeviceRequestBuilder {
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberGroups property */
+    @javax.annotation.Nonnull
+    public GetMemberGroupsRequestBuilder getMemberGroups() {
+        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberObjects property */
+    @javax.annotation.Nonnull
+    public GetMemberObjectsRequestBuilder getMemberObjects() {
+        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The memberOf property */
     @javax.annotation.Nonnull
@@ -57,6 +82,11 @@ public class DeviceRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The transitiveMemberOf property */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {

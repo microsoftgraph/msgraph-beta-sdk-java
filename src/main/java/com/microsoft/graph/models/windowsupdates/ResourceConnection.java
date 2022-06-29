@@ -31,7 +31,7 @@ public class ResourceConnection extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.windowsUpdates.resourceConnection": return new ResourceConnection();
+                case "#microsoft.graph.windowsUpdates.operationalInsightsConnection": return new OperationalInsightsConnection();
             }
         }
         return new ResourceConnection();

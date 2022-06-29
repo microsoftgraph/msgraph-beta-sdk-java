@@ -14,16 +14,28 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.identityprotection.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
 import microsoft.graph.identityprotection.riskyusers.count.CountRequestBuilder;
+import microsoft.graph.identityprotection.riskyusers.dismiss.DismissRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.RiskyUser;
 import microsoft.graph.models.RiskyUserCollectionResponse;
 /** Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskyUsersRequestBuilder {
+    /** The confirmCompromised property */
+    @javax.annotation.Nonnull
+    public ConfirmCompromisedRequestBuilder confirmCompromised() {
+        return new ConfirmCompromisedRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The dismiss property */
+    @javax.annotation.Nonnull
+    public DismissRequestBuilder dismiss() {
+        return new DismissRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;

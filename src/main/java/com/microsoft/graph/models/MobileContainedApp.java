@@ -28,7 +28,8 @@ public class MobileContainedApp extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.mobileContainedApp": return new MobileContainedApp();
+                case "#microsoft.graph.microsoftStoreForBusinessContainedApp": return new MicrosoftStoreForBusinessContainedApp();
+                case "#microsoft.graph.windowsUniversalAppXContainedApp": return new WindowsUniversalAppXContainedApp();
             }
         }
         return new MobileContainedApp();

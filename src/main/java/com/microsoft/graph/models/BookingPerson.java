@@ -30,7 +30,8 @@ public class BookingPerson extends BookingNamedEntity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.bookingPerson": return new BookingPerson();
+                case "#microsoft.graph.bookingCustomer": return new BookingCustomer();
+                case "#microsoft.graph.bookingStaffMember": return new BookingStaffMember();
             }
         }
         return new BookingPerson();

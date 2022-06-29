@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of organization entities. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class InsightsSettings extends Entity implements Parsable {
     /** The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional. */
     private String _disabledForGroup;

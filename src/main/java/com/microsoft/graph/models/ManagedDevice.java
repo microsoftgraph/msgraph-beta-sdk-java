@@ -207,7 +207,7 @@ public class ManagedDevice extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedDevice": return new ManagedDevice();
+                case "#microsoft.graph.windowsManagedDevice": return new WindowsManagedDevice();
             }
         }
         return new ManagedDevice();

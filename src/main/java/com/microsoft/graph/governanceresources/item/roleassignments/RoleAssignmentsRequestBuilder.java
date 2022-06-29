@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.governanceresources.item.roleassignments.count.CountRequestBuilder;
+import microsoft.graph.governanceresources.item.roleassignments.export.ExportRequestBuilder;
 import microsoft.graph.models.GovernanceRoleAssignment;
 import microsoft.graph.models.GovernanceRoleAssignmentCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -120,6 +121,14 @@ public class RoleAssignmentsRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Provides operations to call the export method.
+     * @return a exportRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ExportRequestBuilder export() {
+        return new ExportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * The collection of role assignments for the resource.

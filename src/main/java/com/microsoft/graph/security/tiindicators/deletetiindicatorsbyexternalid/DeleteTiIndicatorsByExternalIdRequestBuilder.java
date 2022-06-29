@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the deleteTiIndicatorsByExternalId method. */
 public class DeleteTiIndicatorsByExternalIdRequestBuilder {
     /** Path parameters for the request */
@@ -89,7 +90,11 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -103,7 +108,11 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
     public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@javax.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DeleteTiIndicatorsByExternalIdRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, null, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -119,7 +128,11 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, responseHandler, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+                put("4XX", ODataError::createFromDiscriminatorValue);
+                put("5XX", ODataError::createFromDiscriminatorValue);
+            }};
+            return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

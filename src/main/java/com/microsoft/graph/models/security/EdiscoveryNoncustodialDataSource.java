@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the security singleton. */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
-    /** The dataSource property */
+    /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;
-    /** The lastIndexOperation property */
+    /** Operation entity that represents the latest indexing for the non-custodial data source. */
     private EdiscoveryIndexOperation _lastIndexOperation;
     /**
      * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
@@ -31,7 +31,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         return new EdiscoveryNoncustodialDataSource();
     }
     /**
-     * Gets the dataSource property value. The dataSource property
+     * Gets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
      * @return a dataSource
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         }};
     }
     /**
-     * Gets the lastIndexOperation property value. The lastIndexOperation property
+     * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
      * @return a ediscoveryIndexOperation
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         writer.writeObjectValue("lastIndexOperation", this.getLastIndexOperation());
     }
     /**
-     * Sets the dataSource property value. The dataSource property
+     * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
      * @param value Value to set for the dataSource property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         this._dataSource = value;
     }
     /**
-     * Sets the lastIndexOperation property value. The lastIndexOperation property
+     * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
      * @param value Value to set for the lastIndexOperation property.
      * @return a void
      */

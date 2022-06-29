@@ -9,19 +9,19 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the security singleton. */
 public class EdiscoveryEstimateOperation extends CaseOperation implements Parsable {
-    /** The indexedItemCount property */
+    /** The estimated count of items for the search that matched the content query. */
     private Long _indexedItemCount;
-    /** The indexedItemsSize property */
+    /** The estimated size of items for the search that matched the content query. */
     private Long _indexedItemsSize;
-    /** The mailboxCount property */
+    /** The number of mailboxes that had search hits. */
     private Integer _mailboxCount;
-    /** The search property */
+    /** eDiscovery search. */
     private EdiscoverySearch _search;
-    /** The siteCount property */
+    /** The number of mailboxes that had search hits. */
     private Integer _siteCount;
-    /** The unindexedItemCount property */
+    /** The estimated count of unindexed items for the collection. */
     private Long _unindexedItemCount;
-    /** The unindexedItemsSize property */
+    /** The estimated size of unindexed items for the collection. */
     private Long _unindexedItemsSize;
     /**
      * Instantiates a new ediscoveryEstimateOperation and sets the default values.
@@ -58,7 +58,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         }};
     }
     /**
-     * Gets the indexedItemCount property value. The indexedItemCount property
+     * Gets the indexedItemCount property value. The estimated count of items for the search that matched the content query.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this._indexedItemCount;
     }
     /**
-     * Gets the indexedItemsSize property value. The indexedItemsSize property
+     * Gets the indexedItemsSize property value. The estimated size of items for the search that matched the content query.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this._indexedItemsSize;
     }
     /**
-     * Gets the mailboxCount property value. The mailboxCount property
+     * Gets the mailboxCount property value. The number of mailboxes that had search hits.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this._mailboxCount;
     }
     /**
-     * Gets the search property value. The search property
+     * Gets the search property value. eDiscovery search.
      * @return a ediscoverySearch
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this._search;
     }
     /**
-     * Gets the siteCount property value. The siteCount property
+     * Gets the siteCount property value. The number of mailboxes that had search hits.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this._siteCount;
     }
     /**
-     * Gets the unindexedItemCount property value. The unindexedItemCount property
+     * Gets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this._unindexedItemCount;
     }
     /**
-     * Gets the unindexedItemsSize property value. The unindexedItemsSize property
+     * Gets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         writer.writeLongValue("unindexedItemsSize", this.getUnindexedItemsSize());
     }
     /**
-     * Sets the indexedItemCount property value. The indexedItemCount property
+     * Sets the indexedItemCount property value. The estimated count of items for the search that matched the content query.
      * @param value Value to set for the indexedItemCount property.
      * @return a void
      */
@@ -138,7 +138,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this._indexedItemCount = value;
     }
     /**
-     * Sets the indexedItemsSize property value. The indexedItemsSize property
+     * Sets the indexedItemsSize property value. The estimated size of items for the search that matched the content query.
      * @param value Value to set for the indexedItemsSize property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this._indexedItemsSize = value;
     }
     /**
-     * Sets the mailboxCount property value. The mailboxCount property
+     * Sets the mailboxCount property value. The number of mailboxes that had search hits.
      * @param value Value to set for the mailboxCount property.
      * @return a void
      */
@@ -154,7 +154,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this._mailboxCount = value;
     }
     /**
-     * Sets the search property value. The search property
+     * Sets the search property value. eDiscovery search.
      * @param value Value to set for the search property.
      * @return a void
      */
@@ -162,7 +162,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this._search = value;
     }
     /**
-     * Sets the siteCount property value. The siteCount property
+     * Sets the siteCount property value. The number of mailboxes that had search hits.
      * @param value Value to set for the siteCount property.
      * @return a void
      */
@@ -170,7 +170,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this._siteCount = value;
     }
     /**
-     * Sets the unindexedItemCount property value. The unindexedItemCount property
+     * Sets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
      * @param value Value to set for the unindexedItemCount property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this._unindexedItemCount = value;
     }
     /**
-     * Sets the unindexedItemsSize property value. The unindexedItemsSize property
+     * Sets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
      * @param value Value to set for the unindexedItemsSize property.
      * @return a void
      */

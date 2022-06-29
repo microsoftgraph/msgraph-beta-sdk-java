@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Policy used to configure detailed management settings targeted to specific security groups */
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /** Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps. */
     private TargetedManagedAppGroupType _appGroupType;
@@ -18,7 +17,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /** The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise. */
     private AppManagementLevel _targetedAppManagementLevels;
     /**
-     * Instantiates a new targetedManagedAppProtection and sets the default values.
+     * Instantiates a new TargetedManagedAppProtection and sets the default values.
      * @return a void
      */
     public TargetedManagedAppProtection() {
@@ -27,7 +26,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetedManagedAppProtection
+     * @return a TargetedManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static TargetedManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +35,8 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
+                case "#microsoft.graph.androidManagedAppProtection": return new AndroidManagedAppProtection();
+                case "#microsoft.graph.iosManagedAppProtection": return new IosManagedAppProtection();
             }
         }
         return new TargetedManagedAppProtection();

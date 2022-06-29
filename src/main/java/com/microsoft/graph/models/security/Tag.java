@@ -39,7 +39,7 @@ public class Tag extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.tag": return new Tag();
+                case "#microsoft.graph.security.ediscoveryReviewTag": return new EdiscoveryReviewTag();
             }
         }
         return new Tag();

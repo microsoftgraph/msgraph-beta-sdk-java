@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     /** Represents the fill format of the current chart data label. Read-only. */
     private WorkbookChartFill _fill;

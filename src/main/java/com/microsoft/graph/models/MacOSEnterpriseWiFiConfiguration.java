@@ -1,0 +1,227 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration implements Parsable {
+    /** Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential. */
+    private WiFiAuthenticationMethod _authenticationMethod;
+    /** EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously. */
+    private EapFastConfiguration _eapFastConfiguration;
+    /** Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. */
+    private EapType _eapType;
+    /** Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). */
+    private MacOSCertificateProfileBase _identityCertificateForClientAuthentication;
+    /** Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. */
+    private NonEapAuthenticationMethodForEapTtlsType _innerAuthenticationProtocolForEapTtls;
+    /** Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'. */
+    private String _outerIdentityPrivacyTemporaryValue;
+    /** Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. */
+    private MacOSTrustedRootCertificate _rootCertificateForServerValidation;
+    /** Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements. */
+    private java.util.List<MacOSTrustedRootCertificate> _rootCertificatesForServerValidation;
+    /** Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network. */
+    private java.util.List<String> _trustedServerCertificateNames;
+    /**
+     * Instantiates a new MacOSEnterpriseWiFiConfiguration and sets the default values.
+     * @return a void
+     */
+    public MacOSEnterpriseWiFiConfiguration() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a MacOSEnterpriseWiFiConfiguration
+     */
+    @javax.annotation.Nonnull
+    public static MacOSEnterpriseWiFiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new MacOSEnterpriseWiFiConfiguration();
+    }
+    /**
+     * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * @return a wiFiAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public WiFiAuthenticationMethod getAuthenticationMethod() {
+        return this._authenticationMethod;
+    }
+    /**
+     * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * @return a eapFastConfiguration
+     */
+    @javax.annotation.Nullable
+    public EapFastConfiguration getEapFastConfiguration() {
+        return this._eapFastConfiguration;
+    }
+    /**
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * @return a eapType
+     */
+    @javax.annotation.Nullable
+    public EapType getEapType() {
+        return this._eapType;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final MacOSEnterpriseWiFiConfiguration currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
+            this.put("eapFastConfiguration", (n) -> { currentObject.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration.class)); });
+            this.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(EapType.class)); });
+            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
+            this.put("innerAuthenticationProtocolForEapTtls", (n) -> { currentObject.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
+            this.put("outerIdentityPrivacyTemporaryValue", (n) -> { currentObject.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
+            this.put("rootCertificateForServerValidation", (n) -> { currentObject.setRootCertificateForServerValidation(n.getObjectValue(MacOSTrustedRootCertificate::createFromDiscriminatorValue)); });
+            this.put("rootCertificatesForServerValidation", (n) -> { currentObject.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(MacOSTrustedRootCertificate::createFromDiscriminatorValue)); });
+            this.put("trustedServerCertificateNames", (n) -> { currentObject.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        }};
+    }
+    /**
+     * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
+     * @return a macOSCertificateProfileBase
+     */
+    @javax.annotation.Nullable
+    public MacOSCertificateProfileBase getIdentityCertificateForClientAuthentication() {
+        return this._identityCertificateForClientAuthentication;
+    }
+    /**
+     * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * @return a nonEapAuthenticationMethodForEapTtlsType
+     */
+    @javax.annotation.Nullable
+    public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
+        return this._innerAuthenticationProtocolForEapTtls;
+    }
+    /**
+     * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOuterIdentityPrivacyTemporaryValue() {
+        return this._outerIdentityPrivacyTemporaryValue;
+    }
+    /**
+     * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
+     * @return a macOSTrustedRootCertificate
+     */
+    @javax.annotation.Nullable
+    public MacOSTrustedRootCertificate getRootCertificateForServerValidation() {
+        return this._rootCertificateForServerValidation;
+    }
+    /**
+     * Gets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
+     * @return a macOSTrustedRootCertificate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MacOSTrustedRootCertificate> getRootCertificatesForServerValidation() {
+        return this._rootCertificatesForServerValidation;
+    }
+    /**
+     * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getTrustedServerCertificateNames() {
+        return this._trustedServerCertificateNames;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
+        writer.writeEnumValue("eapFastConfiguration", this.getEapFastConfiguration());
+        writer.writeEnumValue("eapType", this.getEapType());
+        writer.writeObjectValue("identityCertificateForClientAuthentication", this.getIdentityCertificateForClientAuthentication());
+        writer.writeEnumValue("innerAuthenticationProtocolForEapTtls", this.getInnerAuthenticationProtocolForEapTtls());
+        writer.writeStringValue("outerIdentityPrivacyTemporaryValue", this.getOuterIdentityPrivacyTemporaryValue());
+        writer.writeObjectValue("rootCertificateForServerValidation", this.getRootCertificateForServerValidation());
+        writer.writeCollectionOfObjectValues("rootCertificatesForServerValidation", this.getRootCertificatesForServerValidation());
+        writer.writeCollectionOfPrimitiveValues("trustedServerCertificateNames", this.getTrustedServerCertificateNames());
+    }
+    /**
+     * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * @param value Value to set for the authenticationMethod property.
+     * @return a void
+     */
+    public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
+        this._authenticationMethod = value;
+    }
+    /**
+     * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * @param value Value to set for the eapFastConfiguration property.
+     * @return a void
+     */
+    public void setEapFastConfiguration(@javax.annotation.Nullable final EapFastConfiguration value) {
+        this._eapFastConfiguration = value;
+    }
+    /**
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * @param value Value to set for the eapType property.
+     * @return a void
+     */
+    public void setEapType(@javax.annotation.Nullable final EapType value) {
+        this._eapType = value;
+    }
+    /**
+     * Sets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
+     * @param value Value to set for the identityCertificateForClientAuthentication property.
+     * @return a void
+     */
+    public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final MacOSCertificateProfileBase value) {
+        this._identityCertificateForClientAuthentication = value;
+    }
+    /**
+     * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
+     * @return a void
+     */
+    public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+        this._innerAuthenticationProtocolForEapTtls = value;
+    }
+    /**
+     * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
+     * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
+     * @return a void
+     */
+    public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
+        this._outerIdentityPrivacyTemporaryValue = value;
+    }
+    /**
+     * Sets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
+     * @param value Value to set for the rootCertificateForServerValidation property.
+     * @return a void
+     */
+    public void setRootCertificateForServerValidation(@javax.annotation.Nullable final MacOSTrustedRootCertificate value) {
+        this._rootCertificateForServerValidation = value;
+    }
+    /**
+     * Sets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
+     * @param value Value to set for the rootCertificatesForServerValidation property.
+     * @return a void
+     */
+    public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<MacOSTrustedRootCertificate> value) {
+        this._rootCertificatesForServerValidation = value;
+    }
+    /**
+     * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+     * @param value Value to set for the trustedServerCertificateNames property.
+     * @return a void
+     */
+    public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._trustedServerCertificateNames = value;
+    }
+}

@@ -59,7 +59,8 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.windowsAutopilotDeploymentProfile": return new WindowsAutopilotDeploymentProfile();
+                case "#microsoft.graph.activeDirectoryWindowsAutopilotDeploymentProfile": return new ActiveDirectoryWindowsAutopilotDeploymentProfile();
+                case "#microsoft.graph.azureADWindowsAutopilotDeploymentProfile": return new AzureADWindowsAutopilotDeploymentProfile();
             }
         }
         return new WindowsAutopilotDeploymentProfile();

@@ -11,9 +11,9 @@ import java.util.Objects;
 public class RoleAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The assignmentType property */
+    /** The type of the admin relationship(s) associated with the role assignment. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. */
     private DelegatedPrivilegeStatus _assignmentType;
-    /** The roles property */
+    /** The collection of roles assigned. */
     private java.util.List<RoleDefinition> _roles;
     /**
      * Instantiates a new roleAssignment and sets the default values.
@@ -41,7 +41,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the assignmentType property value. The assignmentType property
+     * Gets the assignmentType property value. The type of the admin relationship(s) associated with the role assignment. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges.
      * @return a delegatedPrivilegeStatus
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the roles property value. The roles property
+     * Gets the roles property value. The collection of roles assigned.
      * @return a roleDefinition
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the assignmentType property value. The assignmentType property
+     * Sets the assignmentType property value. The type of the admin relationship(s) associated with the role assignment. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges.
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
         this._assignmentType = value;
     }
     /**
-     * Sets the roles property value. The roles property
+     * Sets the roles property value. The collection of roles assigned.
      * @param value Value to set for the roles property.
      * @return a void
      */

@@ -46,7 +46,13 @@ public class CaseOperation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.ediscovery.caseOperation": return new CaseOperation();
+                case "#microsoft.graph.ediscovery.addToReviewSetOperation": return new AddToReviewSetOperation();
+                case "#microsoft.graph.ediscovery.caseExportOperation": return new CaseExportOperation();
+                case "#microsoft.graph.ediscovery.caseHoldOperation": return new CaseHoldOperation();
+                case "#microsoft.graph.ediscovery.caseIndexOperation": return new CaseIndexOperation();
+                case "#microsoft.graph.ediscovery.estimateStatisticsOperation": return new EstimateStatisticsOperation();
+                case "#microsoft.graph.ediscovery.purgeDataOperation": return new PurgeDataOperation();
+                case "#microsoft.graph.ediscovery.tagOperation": return new TagOperation();
             }
         }
         return new CaseOperation();

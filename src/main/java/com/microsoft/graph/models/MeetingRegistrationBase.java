@@ -32,7 +32,8 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.meetingRegistrationBase": return new MeetingRegistrationBase();
+                case "#microsoft.graph.externalMeetingRegistration": return new ExternalMeetingRegistration();
+                case "#microsoft.graph.meetingRegistration": return new MeetingRegistration();
             }
         }
         return new MeetingRegistrationBase();

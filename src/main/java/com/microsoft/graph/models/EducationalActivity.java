@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class EducationalActivity extends ItemFacet implements Parsable {
     /** The month and year the user graduated or completed the activity. */
     private LocalDate _completionMonthYear;
@@ -21,7 +20,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     /** The month and year the user commenced the activity referenced. */
     private LocalDate _startMonthYear;
     /**
-     * Instantiates a new educationalActivity and sets the default values.
+     * Instantiates a new EducationalActivity and sets the default values.
      * @return a void
      */
     public EducationalActivity() {
@@ -30,7 +29,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationalActivity
+     * @return a EducationalActivity
      */
     @javax.annotation.Nonnull
     public static EducationalActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

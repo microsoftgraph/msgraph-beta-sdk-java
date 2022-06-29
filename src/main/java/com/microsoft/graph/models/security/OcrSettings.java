@@ -12,11 +12,11 @@ import java.util.Objects;
 public class OcrSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The isEnabled property */
+    /** Indicates whether or not OCR is enabled for the case. */
     private Boolean _isEnabled;
-    /** The maxImageSize property */
+    /** Maximum image size that will be processed in KB). */
     private Integer _maxImageSize;
-    /** The timeout property */
+    /** The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time. */
     private Period _timeout;
     /**
      * Instantiates a new ocrSettings and sets the default values.
@@ -57,7 +57,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether or not OCR is enabled for the case.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         return this._isEnabled;
     }
     /**
-     * Gets the maxImageSize property value. The maxImageSize property
+     * Gets the maxImageSize property value. Maximum image size that will be processed in KB).
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         return this._maxImageSize;
     }
     /**
-     * Gets the timeout property value. The timeout property
+     * Gets the timeout property value. The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether or not OCR is enabled for the case.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         this._isEnabled = value;
     }
     /**
-     * Sets the maxImageSize property value. The maxImageSize property
+     * Sets the maxImageSize property value. Maximum image size that will be processed in KB).
      * @param value Value to set for the maxImageSize property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         this._maxImageSize = value;
     }
     /**
-     * Sets the timeout property value. The timeout property
+     * Sets the timeout property value. The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time.
      * @param value Value to set for the timeout property.
      * @return a void
      */

@@ -44,7 +44,8 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.officeClientConfiguration": return new OfficeClientConfiguration();
+                case "#microsoft.graph.windowsOfficeClientConfiguration": return new WindowsOfficeClientConfiguration();
+                case "#microsoft.graph.windowsOfficeClientSecurityConfiguration": return new WindowsOfficeClientSecurityConfiguration();
             }
         }
         return new OfficeClientConfiguration();

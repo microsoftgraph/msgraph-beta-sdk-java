@@ -54,7 +54,7 @@ public class File extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.file": return new File();
+                case "#microsoft.graph.security.ediscoveryFile": return new EdiscoveryFile();
             }
         }
         return new File();

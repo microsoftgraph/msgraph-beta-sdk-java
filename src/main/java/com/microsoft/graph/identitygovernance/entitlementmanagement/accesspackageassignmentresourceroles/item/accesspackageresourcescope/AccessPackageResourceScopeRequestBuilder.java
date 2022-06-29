@@ -86,7 +86,7 @@ public class AccessPackageResourceScopeRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get accessPackageResourceScope from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class AccessPackageResourceScopeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get accessPackageResourceScope from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class AccessPackageResourceScopeRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get accessPackageResourceScope from identityGovernance
      * @return a CompletableFuture of accessPackageResourceScope
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> get() {
@@ -215,7 +215,7 @@ public class AccessPackageResourceScopeRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get accessPackageResourceScope from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceScope
      */
@@ -232,7 +232,7 @@ public class AccessPackageResourceScopeRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get accessPackageResourceScope from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageResourceScope
@@ -319,7 +319,7 @@ public class AccessPackageResourceScopeRequestBuilder {
         public AccessPackageResourceScopeRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get accessPackageResourceScope from identityGovernance */
     public class AccessPackageResourceScopeRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

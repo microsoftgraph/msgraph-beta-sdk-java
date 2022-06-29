@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class DirectoryDefinition extends Entity implements Parsable {
     /** Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue. */
     private DirectoryDefinitionDiscoverabilities _discoverabilities;

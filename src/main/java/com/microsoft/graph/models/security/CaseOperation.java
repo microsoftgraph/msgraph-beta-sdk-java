@@ -13,19 +13,19 @@ import microsoft.graph.models.IdentitySet;
 import microsoft.graph.models.ResultInfo;
 /** Provides operations to manage the security singleton. */
 public class CaseOperation extends Entity implements Parsable {
-    /** The action property */
+    /** The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData */
     private CaseAction _action;
-    /** The completedDateTime property */
+    /** The date and time the operation was completed. */
     private OffsetDateTime _completedDateTime;
-    /** The createdBy property */
+    /** The user that created the operation. */
     private IdentitySet _createdBy;
-    /** The createdDateTime property */
+    /** The date and time the operation was created. */
     private OffsetDateTime _createdDateTime;
-    /** The percentProgress property */
+    /** The progress of the operation. */
     private Integer _percentProgress;
-    /** The resultInfo property */
+    /** Contains success and failure-specific result information. */
     private ResultInfo _resultInfo;
-    /** The status property */
+    /** The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed. */
     private CaseOperationStatus _status;
     /**
      * Instantiates a new caseOperation and sets the default values.
@@ -46,13 +46,19 @@ public class CaseOperation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.caseOperation": return new CaseOperation();
+                case "#microsoft.graph.security.ediscoveryAddToReviewSetOperation": return new EdiscoveryAddToReviewSetOperation();
+                case "#microsoft.graph.security.ediscoveryEstimateOperation": return new EdiscoveryEstimateOperation();
+                case "#microsoft.graph.security.ediscoveryExportOperation": return new EdiscoveryExportOperation();
+                case "#microsoft.graph.security.ediscoveryHoldOperation": return new EdiscoveryHoldOperation();
+                case "#microsoft.graph.security.ediscoveryIndexOperation": return new EdiscoveryIndexOperation();
+                case "#microsoft.graph.security.ediscoveryPurgeDataOperation": return new EdiscoveryPurgeDataOperation();
+                case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
             }
         }
         return new CaseOperation();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @return a caseAction
      */
     @javax.annotation.Nullable
@@ -60,7 +66,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this._action;
     }
     /**
-     * Gets the completedDateTime property value. The completedDateTime property
+     * Gets the completedDateTime property value. The date and time the operation was completed.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -68,7 +74,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this._completedDateTime;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The user that created the operation.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -76,7 +82,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time the operation was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -101,7 +107,7 @@ public class CaseOperation extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the percentProgress property value. The percentProgress property
+     * Gets the percentProgress property value. The progress of the operation.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -109,7 +115,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this._percentProgress;
     }
     /**
-     * Gets the resultInfo property value. The resultInfo property
+     * Gets the resultInfo property value. Contains success and failure-specific result information.
      * @return a resultInfo
      */
     @javax.annotation.Nullable
@@ -117,7 +123,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this._resultInfo;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
      * @return a caseOperationStatus
      */
     @javax.annotation.Nullable
@@ -141,7 +147,7 @@ public class CaseOperation extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @param value Value to set for the action property.
      * @return a void
      */
@@ -149,7 +155,7 @@ public class CaseOperation extends Entity implements Parsable {
         this._action = value;
     }
     /**
-     * Sets the completedDateTime property value. The completedDateTime property
+     * Sets the completedDateTime property value. The date and time the operation was completed.
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
@@ -157,7 +163,7 @@ public class CaseOperation extends Entity implements Parsable {
         this._completedDateTime = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The user that created the operation.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -165,7 +171,7 @@ public class CaseOperation extends Entity implements Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time the operation was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -173,7 +179,7 @@ public class CaseOperation extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the percentProgress property value. The percentProgress property
+     * Sets the percentProgress property value. The progress of the operation.
      * @param value Value to set for the percentProgress property.
      * @return a void
      */
@@ -181,7 +187,7 @@ public class CaseOperation extends Entity implements Parsable {
         this._percentProgress = value;
     }
     /**
-     * Sets the resultInfo property value. The resultInfo property
+     * Sets the resultInfo property value. Contains success and failure-specific result information.
      * @param value Value to set for the resultInfo property.
      * @return a void
      */
@@ -189,7 +195,7 @@ public class CaseOperation extends Entity implements Parsable {
         this._resultInfo = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
      * @param value Value to set for the status property.
      * @return a void
      */

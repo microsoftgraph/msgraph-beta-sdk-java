@@ -145,7 +145,7 @@ public class PostItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -153,7 +153,7 @@ public class PostItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class PostItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @return a CompletableFuture of post
      */
     public java.util.concurrent.CompletableFuture<Post> get() {
@@ -286,7 +286,7 @@ public class PostItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of post
      */
@@ -303,7 +303,7 @@ public class PostItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of post
@@ -426,7 +426,7 @@ public class PostItemRequestBuilder {
         public PostItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get posts from groups */
     public class PostItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

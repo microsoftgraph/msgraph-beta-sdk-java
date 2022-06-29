@@ -59,7 +59,7 @@ public class AdditionalSourcesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get additionalSources from security
+     * Adds an additional source to the eDiscovery search.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AdditionalSourcesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get additionalSources from security
+     * Adds an additional source to the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class AdditionalSourcesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get additionalSources from security
+     * Adds an additional source to the eDiscovery search.
      * @return a CompletableFuture of DataSourceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class AdditionalSourcesRequestBuilder {
         }
     }
     /**
-     * Get additionalSources from security
+     * Adds an additional source to the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DataSourceCollectionResponse
      */
@@ -155,7 +155,7 @@ public class AdditionalSourcesRequestBuilder {
         }
     }
     /**
-     * Get additionalSources from security
+     * Adds an additional source to the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DataSourceCollectionResponse
@@ -227,7 +227,7 @@ public class AdditionalSourcesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get additionalSources from security */
+    /** Adds an additional source to the eDiscovery search. */
     public class AdditionalSourcesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

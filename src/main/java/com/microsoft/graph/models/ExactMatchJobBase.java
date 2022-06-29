@@ -39,7 +39,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.exactMatchJobBase": return new ExactMatchJobBase();
+                case "#microsoft.graph.exactMatchLookupJob": return new ExactMatchLookupJob();
+                case "#microsoft.graph.exactMatchSessionBase": return new ExactMatchSessionBase();
             }
         }
         return new ExactMatchJobBase();

@@ -1,0 +1,67 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class Windows10PFXImportCertificateProfile extends DeviceConfiguration implements Parsable {
+    /** Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp. */
+    private KeyStorageProviderOption _keyStorageProvider;
+    /**
+     * Instantiates a new Windows10PFXImportCertificateProfile and sets the default values.
+     * @return a void
+     */
+    public Windows10PFXImportCertificateProfile() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a Windows10PFXImportCertificateProfile
+     */
+    @javax.annotation.Nonnull
+    public static Windows10PFXImportCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new Windows10PFXImportCertificateProfile();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final Windows10PFXImportCertificateProfile currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
+        }};
+    }
+    /**
+     * Gets the keyStorageProvider property value. Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * @return a keyStorageProviderOption
+     */
+    @javax.annotation.Nullable
+    public KeyStorageProviderOption getKeyStorageProvider() {
+        return this._keyStorageProvider;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeEnumValue("keyStorageProvider", this.getKeyStorageProvider());
+    }
+    /**
+     * Sets the keyStorageProvider property value. Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * @param value Value to set for the keyStorageProvider property.
+     * @return a void
+     */
+    public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
+        this._keyStorageProvider = value;
+    }
+}

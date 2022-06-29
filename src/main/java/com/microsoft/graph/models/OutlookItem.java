@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class OutlookItem extends Entity implements Parsable {
     /** The categories associated with the item */
     private java.util.List<String> _categories;
@@ -37,7 +37,12 @@ public class OutlookItem extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.outlookItem": return new OutlookItem();
+                case "#microsoft.graph.contact": return new Contact();
+                case "#microsoft.graph.event": return new Event();
+                case "#microsoft.graph.message": return new Message();
+                case "#microsoft.graph.note": return new Note();
+                case "#microsoft.graph.outlookTask": return new OutlookTask();
+                case "#microsoft.graph.post": return new Post();
             }
         }
         return new OutlookItem();

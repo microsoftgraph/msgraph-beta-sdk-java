@@ -52,7 +52,7 @@ public class ParentRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get parent from security
+     * Returns the parent tag of the specified tag.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ParentRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get parent from security
+     * Returns the parent tag of the specified tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class ParentRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get parent from security
+     * Returns the parent tag of the specified tag.
      * @return a CompletableFuture of ediscoveryReviewTag
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> get() {
@@ -98,7 +98,7 @@ public class ParentRequestBuilder {
         }
     }
     /**
-     * Get parent from security
+     * Returns the parent tag of the specified tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewTag
      */
@@ -115,7 +115,7 @@ public class ParentRequestBuilder {
         }
     }
     /**
-     * Get parent from security
+     * Returns the parent tag of the specified tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryReviewTag
@@ -132,7 +132,7 @@ public class ParentRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get parent from security */
+    /** Returns the parent tag of the specified tag. */
     public class ParentRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

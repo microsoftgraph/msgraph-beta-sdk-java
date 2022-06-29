@@ -94,7 +94,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -102,7 +102,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         }
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @return a CompletableFuture of ediscoveryHoldPolicy
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryHoldPolicy> get() {
@@ -223,7 +223,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         }
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryHoldPolicy
      */
@@ -240,7 +240,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         }
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryHoldPolicy
@@ -351,7 +351,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         public EdiscoveryHoldPolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get legalHolds from security */
+    /** Returns a list of case eDiscoveryHoldPolicy objects for this case. */
     public class EdiscoveryHoldPolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

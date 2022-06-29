@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class TeamworkConversationIdentity extends Identity implements Parsable {
     /** Type of conversation. Possible values are: team, channel, and chat. */
     private TeamworkConversationIdentityType _conversationIdentityType;

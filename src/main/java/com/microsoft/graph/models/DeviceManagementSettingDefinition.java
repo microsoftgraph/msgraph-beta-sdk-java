@@ -50,7 +50,9 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementSettingDefinition": return new DeviceManagementSettingDefinition();
+                case "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition": return new DeviceManagementAbstractComplexSettingDefinition();
+                case "#microsoft.graph.deviceManagementCollectionSettingDefinition": return new DeviceManagementCollectionSettingDefinition();
+                case "#microsoft.graph.deviceManagementComplexSettingDefinition": return new DeviceManagementComplexSettingDefinition();
             }
         }
         return new DeviceManagementSettingDefinition();

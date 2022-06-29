@@ -14,20 +14,45 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.directory.administrativeunits.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import microsoft.graph.directory.administrativeunits.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import microsoft.graph.directory.administrativeunits.item.extensions.ExtensionsRequestBuilder;
 import microsoft.graph.directory.administrativeunits.item.extensions.item.ExtensionItemRequestBuilder;
+import microsoft.graph.directory.administrativeunits.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import microsoft.graph.directory.administrativeunits.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import microsoft.graph.directory.administrativeunits.item.members.item.DirectoryObjectItemRequestBuilder;
 import microsoft.graph.directory.administrativeunits.item.members.MembersRequestBuilder;
+import microsoft.graph.directory.administrativeunits.item.restore.RestoreRequestBuilder;
 import microsoft.graph.directory.administrativeunits.item.scopedrolemembers.item.ScopedRoleMembershipItemRequestBuilder;
 import microsoft.graph.directory.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
 import microsoft.graph.models.AdministrativeUnit;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity. */
 public class AdministrativeUnitItemRequestBuilder {
+    /** The checkMemberGroups property */
+    @javax.annotation.Nonnull
+    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
+        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The checkMemberObjects property */
+    @javax.annotation.Nonnull
+    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
+        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The extensions property */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberGroups property */
+    @javax.annotation.Nonnull
+    public GetMemberGroupsRequestBuilder getMemberGroups() {
+        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberObjects property */
+    @javax.annotation.Nonnull
+    public GetMemberObjectsRequestBuilder getMemberObjects() {
+        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The members property */
     @javax.annotation.Nonnull
@@ -38,6 +63,11 @@ public class AdministrativeUnitItemRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The scopedRoleMembers property */
     @javax.annotation.Nonnull
     public ScopedRoleMembersRequestBuilder scopedRoleMembers() {

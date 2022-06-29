@@ -16,11 +16,18 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.GovernanceRoleAssignmentRequest;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.cancel.CancelRequestBuilder;
 import microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.resource.ResourceRequestBuilder;
 import microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.roledefinition.RoleDefinitionRequestBuilder;
 import microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.subject.SubjectRequestBuilder;
+import microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.updaterequest.UpdateRequestRequestBuilder;
 /** Provides operations to manage the roleAssignmentRequests property of the microsoft.graph.privilegedAccess entity. */
 public class GovernanceRoleAssignmentRequestItemRequestBuilder {
+    /** The cancel property */
+    @javax.annotation.Nonnull
+    public CancelRequestBuilder cancel() {
+        return new CancelRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -39,6 +46,11 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder {
     @javax.annotation.Nonnull
     public SubjectRequestBuilder subject() {
         return new SubjectRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The updateRequest property */
+    @javax.annotation.Nonnull
+    public UpdateRequestRequestBuilder updateRequest() {
+        return new UpdateRequestRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;

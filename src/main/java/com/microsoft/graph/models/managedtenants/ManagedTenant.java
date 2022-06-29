@@ -44,7 +44,7 @@ public class ManagedTenant extends Entity implements Parsable {
     private java.util.List<ManagementTemplateStep> _managementTemplateSteps;
     /** The managementTemplateStepVersions property */
     private java.util.List<ManagementTemplateStepVersion> _managementTemplateStepVersions;
-    /** The myRoles property */
+    /** The collection of role assignments to a signed-in user for a managed tenant. */
     private java.util.List<MyRole> _myRoles;
     /** The collection of a logical grouping of managed tenants used by the multi-tenant management platform. */
     private java.util.List<TenantGroup> _tenantGroups;
@@ -249,7 +249,7 @@ public class ManagedTenant extends Entity implements Parsable {
         return this._managementTemplateStepVersions;
     }
     /**
-     * Gets the myRoles property value. The myRoles property
+     * Gets the myRoles property value. The collection of role assignments to a signed-in user for a managed tenant.
      * @return a myRole
      */
     @javax.annotation.Nullable
@@ -483,7 +483,7 @@ public class ManagedTenant extends Entity implements Parsable {
         this._managementTemplateStepVersions = value;
     }
     /**
-     * Sets the myRoles property value. The myRoles property
+     * Sets the myRoles property value. The collection of role assignments to a signed-in user for a managed tenant.
      * @param value Value to set for the myRoles property.
      * @return a void
      */

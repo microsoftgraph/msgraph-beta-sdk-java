@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of organization entities. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class MicrosoftApplicationDataAccessSettings extends Entity implements Parsable {
     /** The ID of an Azure Active Directory (Azure AD) security group for which the members are allowed to access Microsoft 365 data using only Microsoft 365 apps, but not other Microsoft apps such as Edge.  This is only applicable if isEnabledForAllMicrosoftApplications is set to true. */
     private String _disabledForGroup;

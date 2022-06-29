@@ -80,7 +80,7 @@ public class MyRoleTenantItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class MyRoleTenantItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class MyRoleTenantItemRequestBuilder {
         }
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @return a CompletableFuture of MyRole
      */
     public java.util.concurrent.CompletableFuture<MyRole> get() {
@@ -209,7 +209,7 @@ public class MyRoleTenantItemRequestBuilder {
         }
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MyRole
      */
@@ -226,7 +226,7 @@ public class MyRoleTenantItemRequestBuilder {
         }
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of MyRole
@@ -313,7 +313,7 @@ public class MyRoleTenantItemRequestBuilder {
         public MyRoleTenantItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get myRoles from tenantRelationships */
+    /** The collection of role assignments to a signed-in user for a managed tenant. */
     public class MyRoleTenantItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -59,7 +59,7 @@ public class UnifiedGroupSourcesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UnifiedGroupSourcesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class UnifiedGroupSourcesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedGroupSourceCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class UnifiedGroupSourcesRequestBuilder {
         }
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      */
@@ -155,7 +155,7 @@ public class UnifiedGroupSourcesRequestBuilder {
         }
     }
     /**
-     * Get unifiedGroupSources from security
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
@@ -227,7 +227,7 @@ public class UnifiedGroupSourcesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get unifiedGroupSources from security */
+    /** Data source entity for groups associated with the custodian. */
     public class UnifiedGroupSourcesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

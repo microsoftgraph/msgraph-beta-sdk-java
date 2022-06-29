@@ -20,7 +20,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     private AssignmentReviewSettings _accessReviewSettings;
     /** Indicates whether a user can extend the access package assignment duration after approval. */
     private Boolean _canExtend;
-    /** Read-only. */
+    /** The createdBy property */
     private String _createdBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
@@ -34,7 +34,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     private Integer _durationInDays;
     /** The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _expirationDateTime;
-    /** Read-only. */
+    /** The modifiedBy property */
     private String _modifiedBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _modifiedDateTime;
@@ -102,7 +102,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this._canExtend;
     }
     /**
-     * Gets the createdBy property value. Read-only.
+     * Gets the createdBy property value. The createdBy property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the modifiedBy property value. Read-only.
+     * Gets the modifiedBy property value. The modifiedBy property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this._canExtend = value;
     }
     /**
-     * Sets the createdBy property value. Read-only.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -347,7 +347,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the modifiedBy property value. Read-only.
+     * Sets the modifiedBy property value. The modifiedBy property
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */

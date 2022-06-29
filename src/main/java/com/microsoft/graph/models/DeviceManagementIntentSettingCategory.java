@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity representing an intent setting category */
 public class DeviceManagementIntentSettingCategory extends DeviceManagementSettingCategory implements Parsable {
     /** The settings this category contains */
     private java.util.List<DeviceManagementSettingInstance> _settings;
     /**
-     * Instantiates a new deviceManagementIntentSettingCategory and sets the default values.
+     * Instantiates a new DeviceManagementIntentSettingCategory and sets the default values.
      * @return a void
      */
     public DeviceManagementIntentSettingCategory() {
@@ -21,7 +20,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentSettingCategory
+     * @return a DeviceManagementIntentSettingCategory
      */
     @javax.annotation.Nonnull
     public static DeviceManagementIntentSettingCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

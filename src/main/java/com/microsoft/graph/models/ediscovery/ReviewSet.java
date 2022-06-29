@@ -18,7 +18,7 @@ public class ReviewSet extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The review set name. The name is unique with a maximum limit of 64 characters. */
     private String _displayName;
-    /** Read-only. Nullable. */
+    /** The queries property */
     private java.util.List<ReviewSetQuery> _queries;
     /**
      * Instantiates a new reviewSet and sets the default values.
@@ -76,7 +76,7 @@ public class ReviewSet extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the queries property value. Read-only. Nullable.
+     * Gets the queries property value. The queries property
      * @return a reviewSetQuery
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class ReviewSet extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the queries property value. Read-only. Nullable.
+     * Sets the queries property value. The queries property
      * @param value Value to set for the queries property.
      * @return a void
      */

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
 public class PersonName extends ItemFacet implements Parsable {
     /** Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device. */
     private String _displayName;
@@ -32,7 +31,7 @@ public class PersonName extends ItemFacet implements Parsable {
     /** Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.) */
     private String _title;
     /**
-     * Instantiates a new personName and sets the default values.
+     * Instantiates a new PersonName and sets the default values.
      * @return a void
      */
     public PersonName() {
@@ -41,7 +40,7 @@ public class PersonName extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personName
+     * @return a PersonName
      */
     @javax.annotation.Nonnull
     public static PersonName createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

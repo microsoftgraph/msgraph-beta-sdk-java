@@ -12,13 +12,13 @@ import java.util.Objects;
 public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /** Read-only. Nullable. Supports $expand. */
     private AccessPackageResourceRole _accessPackageResourceRole;
-    /** Read-only. Nullable. */
+    /** The accessPackageResourceScope property */
     private AccessPackageResourceScope _accessPackageResourceScope;
-    /** Read-only. */
+    /** The createdBy property */
     private String _createdBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
-    /** Read-only. */
+    /** The modifiedBy property */
     private String _modifiedBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _modifiedDateTime;
@@ -48,7 +48,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         return this._accessPackageResourceRole;
     }
     /**
-     * Gets the accessPackageResourceScope property value. Read-only. Nullable.
+     * Gets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @return a accessPackageResourceScope
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         return this._accessPackageResourceScope;
     }
     /**
-     * Gets the createdBy property value. Read-only.
+     * Gets the createdBy property value. The createdBy property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the modifiedBy property value. Read-only.
+     * Gets the modifiedBy property value. The modifiedBy property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         this._accessPackageResourceRole = value;
     }
     /**
-     * Sets the accessPackageResourceScope property value. Read-only. Nullable.
+     * Sets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @param value Value to set for the accessPackageResourceScope property.
      * @return a void
      */
@@ -135,7 +135,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         this._accessPackageResourceScope = value;
     }
     /**
-     * Sets the createdBy property value. Read-only.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the modifiedBy property value. Read-only.
+     * Sets the modifiedBy property value. The modifiedBy property
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */

@@ -59,7 +59,7 @@ public class MyRolesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MyRolesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class MyRolesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @return a CompletableFuture of MyRoleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<MyRoleCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class MyRolesRequestBuilder {
         }
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MyRoleCollectionResponse
      */
@@ -155,7 +155,7 @@ public class MyRolesRequestBuilder {
         }
     }
     /**
-     * Get myRoles from tenantRelationships
+     * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of MyRoleCollectionResponse
@@ -227,7 +227,7 @@ public class MyRolesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get myRoles from tenantRelationships */
+    /** The collection of role assignments to a signed-in user for a managed tenant. */
     public class MyRolesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

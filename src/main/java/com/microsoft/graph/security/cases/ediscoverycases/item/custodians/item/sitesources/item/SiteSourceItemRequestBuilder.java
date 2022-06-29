@@ -86,7 +86,7 @@ public class SiteSourceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get siteSources from security
+     * Data source entity for SharePoint sites associated with the custodian.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SiteSourceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get siteSources from security
+     * Data source entity for SharePoint sites associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class SiteSourceItemRequestBuilder {
         }
     }
     /**
-     * Get siteSources from security
+     * Data source entity for SharePoint sites associated with the custodian.
      * @return a CompletableFuture of siteSource
      */
     public java.util.concurrent.CompletableFuture<SiteSource> get() {
@@ -215,7 +215,7 @@ public class SiteSourceItemRequestBuilder {
         }
     }
     /**
-     * Get siteSources from security
+     * Data source entity for SharePoint sites associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of siteSource
      */
@@ -232,7 +232,7 @@ public class SiteSourceItemRequestBuilder {
         }
     }
     /**
-     * Get siteSources from security
+     * Data source entity for SharePoint sites associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of siteSource
@@ -319,7 +319,7 @@ public class SiteSourceItemRequestBuilder {
         public SiteSourceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get siteSources from security */
+    /** Data source entity for SharePoint sites associated with the custodian. */
     public class SiteSourceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -7,15 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ConnectorGroup extends Entity implements Parsable {
-    /** Read-only. Nullable. */
+    /** The applications property */
     private java.util.List<Application> _applications;
     /** Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only. */
     private ConnectorGroupType _connectorGroupType;
     /** Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only. */
     private Boolean _isDefault;
-    /** Read-only. Nullable. */
+    /** The members property */
     private java.util.List<Connector> _members;
     /** The name associated with the connectorGroup. */
     private String _name;
@@ -39,7 +39,7 @@ public class ConnectorGroup extends Entity implements Parsable {
         return new ConnectorGroup();
     }
     /**
-     * Gets the applications property value. Read-only. Nullable.
+     * Gets the applications property value. The applications property
      * @return a application
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class ConnectorGroup extends Entity implements Parsable {
         return this._isDefault;
     }
     /**
-     * Gets the members property value. Read-only. Nullable.
+     * Gets the members property value. The members property
      * @return a connector
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class ConnectorGroup extends Entity implements Parsable {
         writer.writeEnumValue("region", this.getRegion());
     }
     /**
-     * Sets the applications property value. Read-only. Nullable.
+     * Sets the applications property value. The applications property
      * @param value Value to set for the applications property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class ConnectorGroup extends Entity implements Parsable {
         this._isDefault = value;
     }
     /**
-     * Sets the members property value. Read-only. Nullable.
+     * Sets the members property value. The members property
      * @param value Value to set for the members property.
      * @return a void
      */

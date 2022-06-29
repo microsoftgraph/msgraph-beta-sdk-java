@@ -71,7 +71,7 @@ public class CustodiansRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get custodians from security
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class CustodiansRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get custodians from security
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class CustodiansRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get custodians from security
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodianCollectionResponse> get() {
@@ -150,7 +150,7 @@ public class CustodiansRequestBuilder {
         }
     }
     /**
-     * Get custodians from security
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
      */
@@ -167,7 +167,7 @@ public class CustodiansRequestBuilder {
         }
     }
     /**
-     * Get custodians from security
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
@@ -239,7 +239,7 @@ public class CustodiansRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get custodians from security */
+    /** Returns a list of case ediscoveryCustodian objects for this case. */
     public class CustodiansRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to group. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class BitlockerRecoveryKey extends Entity implements Parsable {
     /** The date and time when the key was originally backed up to Azure Active Directory. */
     private OffsetDateTime _createdDateTime;

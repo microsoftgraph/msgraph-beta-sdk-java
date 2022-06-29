@@ -59,7 +59,7 @@ public class LegalHoldsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class LegalHoldsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class LegalHoldsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @return a CompletableFuture of EdiscoveryHoldPolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryHoldPolicyCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class LegalHoldsRequestBuilder {
         }
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryHoldPolicyCollectionResponse
      */
@@ -155,7 +155,7 @@ public class LegalHoldsRequestBuilder {
         }
     }
     /**
-     * Get legalHolds from security
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EdiscoveryHoldPolicyCollectionResponse
@@ -227,7 +227,7 @@ public class LegalHoldsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get legalHolds from security */
+    /** Returns a list of case eDiscoveryHoldPolicy objects for this case. */
     public class LegalHoldsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

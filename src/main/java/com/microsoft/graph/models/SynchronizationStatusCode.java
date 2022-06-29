@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Casts the previous resource to application. */
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public enum SynchronizationStatusCode implements ValuedEnum {
     NotConfigured("NotConfigured"),
     NotRun("NotRun"),
