@@ -13,6 +13,9 @@ import com.microsoft.graph.requests.SubjectRightsRequestRequestBuilder;
 import com.microsoft.graph.security.requests.CasesRootRequestBuilder;
 import com.microsoft.graph.security.requests.InformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.AttackSimulationRootRequestBuilder;
+import com.microsoft.graph.security.requests.LabelsRootRequestBuilder;
+import com.microsoft.graph.security.requests.TriggersRootRequestBuilder;
+import com.microsoft.graph.security.requests.TriggerTypesRootRequestBuilder;
 import com.microsoft.graph.requests.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.AlertRequestBuilder;
 import com.microsoft.graph.requests.CloudAppSecurityProfileCollectionRequestBuilder;
@@ -134,6 +137,36 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
     @Nonnull
     public AttackSimulationRootRequestBuilder attackSimulation() {
         return new AttackSimulationRootRequestBuilder(getRequestUrlWithAdditionalSegment("attackSimulation"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for LabelsRoot
+     *
+     * @return the LabelsRootRequestBuilder instance
+     */
+    @Nonnull
+    public LabelsRootRequestBuilder labels() {
+        return new LabelsRootRequestBuilder(getRequestUrlWithAdditionalSegment("labels"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TriggersRoot
+     *
+     * @return the TriggersRootRequestBuilder instance
+     */
+    @Nonnull
+    public TriggersRootRequestBuilder triggers() {
+        return new TriggersRootRequestBuilder(getRequestUrlWithAdditionalSegment("triggers"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TriggerTypesRoot
+     *
+     * @return the TriggerTypesRootRequestBuilder instance
+     */
+    @Nonnull
+    public TriggerTypesRootRequestBuilder triggerTypes() {
+        return new TriggerTypesRootRequestBuilder(getRequestUrlWithAdditionalSegment("triggerTypes"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Alert collection

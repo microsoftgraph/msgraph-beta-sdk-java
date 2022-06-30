@@ -40,7 +40,7 @@ public class DecisionItemPrincipalResourceMembership implements IJsonBackedObjec
 
     /**
      * The Membership Type.
-     * 
+     * Type of membership that the principal has to the resource. Multi-valued. The possible values are: direct, indirect, unknownFutureValue.
      */
     @SerializedName(value = "membershipType", alternate = {"MembershipType"})
     @Expose

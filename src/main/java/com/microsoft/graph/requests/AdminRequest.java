@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Admin;
 import com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder;
 import com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder;
+import com.microsoft.graph.requests.AdminReportSettingsRequestBuilder;
 import com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

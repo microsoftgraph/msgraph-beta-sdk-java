@@ -44,6 +44,7 @@ import com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.PrintUsageByUserRequestBuilder;
+import com.microsoft.graph.requests.SecurityReportsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
