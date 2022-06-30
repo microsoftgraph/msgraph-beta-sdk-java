@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.52.0] - 2022-06-29
+
+### Added
+ 
+- AzureCommunicationServicesUserIdentity model.
+- CommunicationsIdentitiy models. 
+- SecurityReportsRoot models and related requests. 
+- AdminReportSettings model and related requests. 
+- New models and related requests added to the graph.security namespace.
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Adjusted references in models related to the newly added requests and models, ie. ReportRoot, Security, Admin models etc. 
+
 ## [0.51.0] - 2022-06-21
 
 ### Added
