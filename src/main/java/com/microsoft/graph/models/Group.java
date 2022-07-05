@@ -408,7 +408,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Writeback Configuration.
-     * 
+     * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Azure AD Connect sync client.
      */
     @SerializedName(value = "writebackConfiguration", alternate = {"WritebackConfiguration"})
     @Expose

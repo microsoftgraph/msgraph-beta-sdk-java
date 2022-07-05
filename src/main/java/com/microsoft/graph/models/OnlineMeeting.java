@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
 import com.microsoft.graph.models.MeetingChatMode;
+import com.microsoft.graph.models.OnlineMeetingRole;
 import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
 import com.microsoft.graph.models.MeetingCapabilities;
@@ -83,6 +84,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean allowTeamworkReactions;
+
+    /**
+     * The Anonymize Identity For Roles.
+     * 
+     */
+    @SerializedName(value = "anonymizeIdentityForRoles", alternate = {"AnonymizeIdentityForRoles"})
+    @Expose
+	@Nullable
+    public java.util.List<OnlineMeetingRole> anonymizeIdentityForRoles;
 
     /**
      * The Audio Conferencing.

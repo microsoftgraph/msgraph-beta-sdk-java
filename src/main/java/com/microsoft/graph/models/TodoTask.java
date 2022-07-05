@@ -150,6 +150,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     public DateTimeTimeZone reminderDateTime;
 
     /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone startDateTime;
+
+    /**
      * The Status.
      * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      */
