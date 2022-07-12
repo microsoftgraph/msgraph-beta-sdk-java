@@ -13,7 +13,7 @@ import java.util.Objects;
 public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
     /** Action name */
     private String _actionName;
-    /** State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported. */
+    /** The actionState property */
     private ActionState _actionState;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -21,12 +21,15 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastUpdatedDateTime;
     /** Time the action was initiated */
     private OffsetDateTime _startDateTime;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new vppTokenActionResult and sets the default values.
      * @return a void
      */
     public VppTokenActionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.vppTokenActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,6 +39,13 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static VppTokenActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.vppTokenRevokeLicensesActionResult": return new VppTokenRevokeLicensesActionResult();
+            }
+        }
         return new VppTokenActionResult();
     }
     /**
@@ -47,7 +57,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
         return this._actionName;
     }
     /**
-     * Gets the actionState property value. State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Gets the actionState property value. The actionState property
      * @return a actionState
      */
     @javax.annotation.Nullable
@@ -69,11 +79,12 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppTokenActionResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -83,6 +94,14 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this._lastUpdatedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
@@ -103,6 +122,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("actionState", this.getActionState());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -114,7 +134,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
         this._actionName = value;
     }
     /**
-     * Sets the actionState property value. State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Sets the actionState property value. The actionState property
      * @param value Value to set for the actionState property.
      * @return a void
      */
@@ -136,6 +156,14 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      */
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated

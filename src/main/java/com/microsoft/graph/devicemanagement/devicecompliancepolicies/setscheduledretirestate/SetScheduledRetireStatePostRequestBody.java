@@ -15,7 +15,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     private Map<String, Object> _additionalData;
     /** The managedDeviceIds property */
     private java.util.List<String> _managedDeviceIds;
-    /** The state property */
+    /** Cancel or confirm scheduled retire  */
     private ScheduledRetireState _state;
     /**
      * Instantiates a new setScheduledRetireStatePostRequestBody and sets the default values.
@@ -63,7 +63,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
         return this._managedDeviceIds;
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. Cancel or confirm scheduled retire 
      * @return a scheduledRetireState
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
         this._managedDeviceIds = value;
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. Cancel or confirm scheduled retire 
      * @param value Value to set for the state property.
      * @return a void
      */

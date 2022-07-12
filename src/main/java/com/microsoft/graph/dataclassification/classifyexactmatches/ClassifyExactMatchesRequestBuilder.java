@@ -86,7 +86,7 @@ public class ClassifyExactMatchesRequestBuilder {
     /**
      * Invoke action classifyExactMatches
      * @param body 
-     * @return a CompletableFuture of ExactMatchClassificationResult
+     * @return a CompletableFuture of exactMatchClassificationResult
      */
     public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ClassifyExactMatchesRequestBuilder {
      * Invoke action classifyExactMatches
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExactMatchClassificationResult
+     * @return a CompletableFuture of exactMatchClassificationResult
      */
     public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ClassifyExactMatchesRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of ExactMatchClassificationResult
+     * @return a CompletableFuture of exactMatchClassificationResult
      */
     public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@javax.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ClassifyExactMatchesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

@@ -10,11 +10,11 @@ import java.util.Objects;
 public class AppleVpnConfiguration extends DeviceConfiguration implements Parsable {
     /** Associated Domains */
     private java.util.List<String> _associatedDomains;
-    /** Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD. */
+    /** VPN Authentication Method. */
     private VpnAuthenticationMethod _authenticationMethod;
     /** Connection name displayed to the user. */
     private String _connectionName;
-    /** Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect. */
+    /** Apple VPN connection type. */
     private AppleVpnConnectionType _connectionType;
     /** Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements. */
     private java.util.List<KeyValue> _customData;
@@ -58,6 +58,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      */
     public AppleVpnConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.appleVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,7 +87,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         return this._associatedDomains;
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Gets the authenticationMethod property value. VPN Authentication Method.
      * @return a vpnAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -102,7 +103,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         return this._connectionName;
     }
     /**
-     * Gets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Gets the connectionType property value. Apple VPN connection type.
      * @return a appleVpnConnectionType
      */
     @javax.annotation.Nullable
@@ -325,7 +326,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         this._associatedDomains = value;
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
@@ -341,7 +342,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         this._connectionName = value;
     }
     /**
-     * Sets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Sets the connectionType property value. Apple VPN connection type.
      * @param value Value to set for the connectionType property.
      * @return a void
      */

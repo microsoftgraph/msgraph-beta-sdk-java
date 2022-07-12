@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the dataClassificationService singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SensitiveType extends Entity implements Parsable {
     /** The classificationMethod property */
     private ClassificationMethod _classificationMethod;

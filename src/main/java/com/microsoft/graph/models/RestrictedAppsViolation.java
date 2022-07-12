@@ -17,11 +17,11 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     private String _deviceName;
     /** Managed device unique identifier, must be Guid */
     private String _managedDeviceId;
-    /** Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all. */
+    /** Supported platform types for policies. */
     private PolicyPlatformType _platformType;
     /** List of violated restricted apps */
     private java.util.List<ManagedDeviceReportedApp> _restrictedApps;
-    /** Restricted apps state. Possible values are: prohibitedApps, notApprovedApps. */
+    /** Restricted apps state */
     private RestrictedAppsState _restrictedAppsState;
     /** User unique identifier, must be Guid */
     private String _userId;
@@ -96,7 +96,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
         return this._managedDeviceId;
     }
     /**
-     * Gets the platformType property value. Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
+     * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
         return this._restrictedApps;
     }
     /**
-     * Gets the restrictedAppsState property value. Restricted apps state. Possible values are: prohibitedApps, notApprovedApps.
+     * Gets the restrictedAppsState property value. Restricted apps state
      * @return a restrictedAppsState
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
         this._managedDeviceId = value;
     }
     /**
-     * Sets the platformType property value. Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
+     * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
         this._restrictedApps = value;
     }
     /**
-     * Sets the restrictedAppsState property value. Restricted apps state. Possible values are: prohibitedApps, notApprovedApps.
+     * Sets the restrictedAppsState property value. Restricted apps state
      * @param value Value to set for the restrictedAppsState property.
      * @return a void
      */

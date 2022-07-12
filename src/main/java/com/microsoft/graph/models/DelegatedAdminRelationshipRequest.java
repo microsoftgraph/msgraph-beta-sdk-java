@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
-    /** The action to be performed on the delegated admin relationship. */
+    /** The action property */
     private DelegatedAdminRelationshipRequestAction _action;
     /** The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -36,7 +36,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
         return new DelegatedAdminRelationshipRequest();
     }
     /**
-     * Gets the action property value. The action to be performed on the delegated admin relationship.
+     * Gets the action property value. The action property
      * @return a delegatedAdminRelationshipRequestAction
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the action property value. The action to be performed on the delegated admin relationship.
+     * Sets the action property value. The action property
      * @param value Value to set for the action property.
      * @return a void
      */

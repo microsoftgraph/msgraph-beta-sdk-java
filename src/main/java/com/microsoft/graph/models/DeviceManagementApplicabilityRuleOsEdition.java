@@ -15,7 +15,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
     private String _name;
     /** Applicability rule OS edition type. */
     private java.util.List<String> _osEditionTypes;
-    /** Applicability Rule type. Possible values are: include, exclude. */
+    /** Supported Applicability rule types for Device Configuration */
     private DeviceManagementApplicabilityRuleType _ruleType;
     /**
      * Instantiates a new deviceManagementApplicabilityRuleOsEdition and sets the default values.
@@ -72,7 +72,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
         return this._osEditionTypes;
     }
     /**
-     * Gets the ruleType property value. Applicability Rule type. Possible values are: include, exclude.
+     * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @return a deviceManagementApplicabilityRuleType
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
         this._osEditionTypes = value;
     }
     /**
-     * Sets the ruleType property value. Applicability Rule type. Possible values are: include, exclude.
+     * Sets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @param value Value to set for the ruleType property.
      * @return a void
      */

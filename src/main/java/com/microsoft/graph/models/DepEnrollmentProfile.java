@@ -22,7 +22,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     private Boolean _isDefault;
     /** Indicates if the profile is mandatory */
     private Boolean _isMandatory;
-    /** Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate. */
+    /** The iTunesPairingMode property */
     private ITunesPairingMode _iTunesPairingMode;
     /** Indicates if Location service setup pane is disabled */
     private Boolean _locationDisabled;
@@ -164,7 +164,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
         return this._isMandatory;
     }
     /**
-     * Gets the iTunesPairingMode property value. Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+     * Gets the iTunesPairingMode property value. The iTunesPairingMode property
      * @return a iTunesPairingMode
      */
     @javax.annotation.Nullable
@@ -389,7 +389,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
         this._isMandatory = value;
     }
     /**
-     * Sets the iTunesPairingMode property value. Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+     * Sets the iTunesPairingMode property value. The iTunesPairingMode property
      * @param value Value to set for the iTunesPairingMode property.
      * @return a void
      */

@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsManagedAppProtection extends ManagedAppPolicy implements Parsable {
-    /** Indicates the sources from which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none. */
+    /** Data can be transferred from/to these classes of apps */
     private WindowsManagedAppDataTransferLevel _allowedInboundDataTransferSources;
-    /** Indicates the level to which the clipboard may be shared across org & non-org resources. Some possible values are anyDestinationAnySource or none. Possible values are: anyDestinationAnySource, none. */
+    /** Represents the level to which the device's clipboard may be shared between apps */
     private WindowsManagedAppClipboardSharingLevel _allowedOutboundClipboardSharingLevel;
-    /** Indicates the destinations to which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none. */
+    /** Data can be transferred from/to these classes of apps */
     private WindowsManagedAppDataTransferLevel _allowedOutboundDataTransferDestinations;
     /** If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn. */
     private ManagedAppRemediationAction _appActionIfUnableToAuthenticateUser;
@@ -25,7 +25,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     private Integer _deployedAppCount;
     /** When TRUE, indicates that the policy is deployed to some inclusion groups. When FALSE, indicates that the policy is not deployed to any inclusion groups. Default value is FALSE. */
     private Boolean _isAssigned;
-    /** Maximum allowed device threat level, as reported by the Mobile Threat Defense app. Possible values are: notConfigured, secured, low, medium, high. */
+    /** The maxium threat level allowed for an app to be compliant. */
     private ManagedAppDeviceThreatLevel _maximumAllowedDeviceThreatLevel;
     /** Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'. */
     private String _maximumRequiredOsVersion;
@@ -49,7 +49,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     private String _minimumWipeOsVersion;
     /** Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'. */
     private String _minimumWipeSdkVersion;
-    /** Determines what action to take if the mobile threat defense threat threshold isn't met. Some possible values are block or wipe. Warn isn't a supported value for this property. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _mobileThreatDefenseRemediationAction;
     /** The period after which access is checked when the device is not connected to the internet. For example, PT5M indicates that the interval is 5 minutes in duration. A timespan value of PT0S indicates that access will be blocked immediately when the device is not connected to the internet. */
     private Period _periodOfflineBeforeAccessCheck;
@@ -75,7 +75,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return new WindowsManagedAppProtection();
     }
     /**
-     * Gets the allowedInboundDataTransferSources property value. Indicates the sources from which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none.
+     * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @return a windowsManagedAppDataTransferLevel
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this._allowedInboundDataTransferSources;
     }
     /**
-     * Gets the allowedOutboundClipboardSharingLevel property value. Indicates the level to which the clipboard may be shared across org & non-org resources. Some possible values are anyDestinationAnySource or none. Possible values are: anyDestinationAnySource, none.
+     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @return a windowsManagedAppClipboardSharingLevel
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this._allowedOutboundClipboardSharingLevel;
     }
     /**
-     * Gets the allowedOutboundDataTransferDestinations property value. Indicates the destinations to which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none.
+     * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @return a windowsManagedAppDataTransferLevel
      */
     @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this._isAssigned;
     }
     /**
-     * Gets the maximumAllowedDeviceThreatLevel property value. Maximum allowed device threat level, as reported by the Mobile Threat Defense app. Possible values are: notConfigured, secured, low, medium, high.
+     * Gets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
      * @return a managedAppDeviceThreatLevel
      */
     @javax.annotation.Nullable
@@ -269,7 +269,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this._minimumWipeSdkVersion;
     }
     /**
-     * Gets the mobileThreatDefenseRemediationAction property value. Determines what action to take if the mobile threat defense threat threshold isn't met. Some possible values are block or wipe. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+     * Gets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -334,7 +334,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         writer.writeBooleanValue("printBlocked", this.getPrintBlocked());
     }
     /**
-     * Sets the allowedInboundDataTransferSources property value. Indicates the sources from which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none.
+     * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedInboundDataTransferSources property.
      * @return a void
      */
@@ -342,7 +342,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         this._allowedInboundDataTransferSources = value;
     }
     /**
-     * Sets the allowedOutboundClipboardSharingLevel property value. Indicates the level to which the clipboard may be shared across org & non-org resources. Some possible values are anyDestinationAnySource or none. Possible values are: anyDestinationAnySource, none.
+     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      * @return a void
      */
@@ -350,7 +350,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         this._allowedOutboundClipboardSharingLevel = value;
     }
     /**
-     * Sets the allowedOutboundDataTransferDestinations property value. Indicates the destinations to which data is allowed to be transferred. Some possible values are allApps or none. Possible values are: allApps, none.
+     * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      * @return a void
      */
@@ -398,7 +398,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         this._isAssigned = value;
     }
     /**
-     * Sets the maximumAllowedDeviceThreatLevel property value. Maximum allowed device threat level, as reported by the Mobile Threat Defense app. Possible values are: notConfigured, secured, low, medium, high.
+     * Sets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
      * @param value Value to set for the maximumAllowedDeviceThreatLevel property.
      * @return a void
      */
@@ -494,7 +494,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         this._minimumWipeSdkVersion = value;
     }
     /**
-     * Sets the mobileThreatDefenseRemediationAction property value. Determines what action to take if the mobile threat defense threat threshold isn't met. Some possible values are block or wipe. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+     * Sets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the mobileThreatDefenseRemediationAction property.
      * @return a void
      */

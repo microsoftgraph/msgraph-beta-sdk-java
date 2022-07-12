@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the compliance singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DataSource extends Entity implements Parsable {
     /** The user who created the dataSource. */
     private IdentitySet _createdBy;
@@ -26,6 +26,7 @@ public class DataSource extends Entity implements Parsable {
      */
     public DataSource() {
         super();
+        this.setOdatatype("#microsoft.graph.ediscovery.dataSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

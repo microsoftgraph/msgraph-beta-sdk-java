@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates whether the label assignment is done automatically, as a standard, or a privileged operation. The possible values are: standard, privileged, auto, unknownFutureValue. */
+    /** The assignmentMethod property */
     private SensitivityLabelAssignmentMethod _assignmentMethod;
     /** The unique identifier for the sensitivity label assigned to the file. */
     private String _sensitivityLabelId;
@@ -43,7 +43,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
         return this._additionalData;
     }
     /**
-     * Gets the assignmentMethod property value. Indicates whether the label assignment is done automatically, as a standard, or a privileged operation. The possible values are: standard, privileged, auto, unknownFutureValue.
+     * Gets the assignmentMethod property value. The assignmentMethod property
      * @return a sensitivityLabelAssignmentMethod
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
         this._additionalData = value;
     }
     /**
-     * Sets the assignmentMethod property value. Indicates whether the label assignment is done automatically, as a standard, or a privileged operation. The possible values are: standard, privileged, auto, unknownFutureValue.
+     * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      * @return a void
      */

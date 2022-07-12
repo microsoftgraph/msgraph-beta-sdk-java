@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics battery health runtime entity contains count of devices broken down into 3 categories - devices with runtime > 5 hours, devices with runtime 3-5 hours and devices with runtime < 3 hours.This API provides the count of devices in these 3 categories. */
 public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity implements Parsable {
     /** Number of active devices within the tenant. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -21,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     /** Recorded date time of this runtime details instance. */
     private OffsetDateTime _lastRefreshedDateTime;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthRuntimeDetails() {
@@ -30,7 +29,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthRuntimeDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

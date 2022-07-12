@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the roleManagement singleton. */
 public class RbacApplicationMultiple extends Entity implements Parsable {
     /** The resourceNamespaces property */
     private java.util.List<UnifiedRbacResourceNamespace> _resourceNamespaces;
@@ -16,7 +15,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     /** The roleDefinitions property */
     private java.util.List<UnifiedRoleDefinition> _roleDefinitions;
     /**
-     * Instantiates a new rbacApplicationMultiple and sets the default values.
+     * Instantiates a new RbacApplicationMultiple and sets the default values.
      * @return a void
      */
     public RbacApplicationMultiple() {
@@ -25,7 +24,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rbacApplicationMultiple
+     * @return a RbacApplicationMultiple
      */
     @javax.annotation.Nonnull
     public static RbacApplicationMultiple createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

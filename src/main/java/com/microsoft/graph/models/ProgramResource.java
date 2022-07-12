@@ -7,12 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of programControl entities. */
 public class ProgramResource extends Identity implements Parsable {
-    /** Type of the resource, indicating whether it is a group or an app. */
-    private String _type;
     /**
-     * Instantiates a new programResource and sets the default values.
+     * Instantiates a new ProgramResource and sets the default values.
      * @return a void
      */
     public ProgramResource() {
@@ -21,7 +18,7 @@ public class ProgramResource extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a programResource
+     * @return a ProgramResource
      */
     @javax.annotation.Nonnull
     public static ProgramResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,16 +33,7 @@ public class ProgramResource extends Identity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProgramResource currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the type property value. Type of the resource, indicating whether it is a group or an app.
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
     }
     /**
      * Serializes information the current object
@@ -55,14 +43,5 @@ public class ProgramResource extends Identity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("type", this.getType());
-    }
-    /**
-     * Sets the type property value. Type of the resource, indicating whether it is a group or an app.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

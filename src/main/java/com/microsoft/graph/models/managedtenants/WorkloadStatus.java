@@ -18,7 +18,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _offboardedDateTime;
     /** The date and time the workload was onboarded. Optional. Read-only. */
     private OffsetDateTime _onboardedDateTime;
-    /** The onboarding status for the workload. Possible values are: notOnboarded, onboarded, unknownFutureValue. Optional. Read-only. */
+    /** The onboardingStatus property */
     private WorkloadOnboardingStatus _onboardingStatus;
     /**
      * Instantiates a new workloadStatus and sets the default values.
@@ -84,7 +84,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
         return this._onboardedDateTime;
     }
     /**
-     * Gets the onboardingStatus property value. The onboarding status for the workload. Possible values are: notOnboarded, onboarded, unknownFutureValue. Optional. Read-only.
+     * Gets the onboardingStatus property value. The onboardingStatus property
      * @return a workloadOnboardingStatus
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
         this._onboardedDateTime = value;
     }
     /**
-     * Sets the onboardingStatus property value. The onboarding status for the workload. Possible values are: notOnboarded, onboarded, unknownFutureValue. Optional. Read-only.
+     * Sets the onboardingStatus property value. The onboardingStatus property
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */

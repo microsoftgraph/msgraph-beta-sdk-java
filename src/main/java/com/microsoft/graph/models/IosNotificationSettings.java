@@ -12,7 +12,7 @@ import java.util.Objects;
 public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none. */
+    /** Notification Settings Alert Type. */
     private IosNotificationAlertType _alertType;
     /** Application name to be associated with the bundleID. */
     private String _appName;
@@ -22,7 +22,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     private String _bundleID;
     /** Indicates whether notifications are allowed for this app. */
     private Boolean _enabled;
-    /** Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow. */
+    /** Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings. */
     private IosNotificationPreviewVisibility _previewVisibility;
     /** Publisher to be associated with the bundleID. */
     private String _publisher;
@@ -58,7 +58,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the alertType property value. Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * Gets the alertType property value. Notification Settings Alert Type.
      * @return a iosNotificationAlertType
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the previewVisibility property value. Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
+     * Gets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
      * @return a iosNotificationPreviewVisibility
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the alertType property value. Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * Sets the alertType property value. Notification Settings Alert Type.
      * @param value Value to set for the alertType property.
      * @return a void
      */
@@ -225,7 +225,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         this._enabled = value;
     }
     /**
-     * Sets the previewVisibility property value. Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
+     * Sets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
      * @param value Value to set for the previewVisibility property.
      * @return a void
      */

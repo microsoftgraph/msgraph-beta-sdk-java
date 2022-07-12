@@ -7,19 +7,18 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Encryption report per device */
 public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /** Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError. */
     private AdvancedBitLockerState _advancedBitLockerStates;
     /** Device name */
     private String _deviceName;
-    /** Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown. */
+    /** Device type. */
     private DeviceTypes _deviceType;
-    /** Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The encryptionPolicySettingState property */
     private ComplianceStatus _encryptionPolicySettingState;
-    /** Encryption readiness state. Possible values are: notReady, ready. */
+    /** Encryption readiness state */
     private EncryptionReadinessState _encryptionReadinessState;
-    /** Device encryption state. Possible values are: notEncrypted, encrypted. */
+    /** Encryption state */
     private EncryptionState _encryptionState;
     /** FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled. */
     private FileVaultState _fileVaultStates;
@@ -32,7 +31,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /** User name */
     private String _userPrincipalName;
     /**
-     * Instantiates a new managedDeviceEncryptionState and sets the default values.
+     * Instantiates a new ManagedDeviceEncryptionState and sets the default values.
      * @return a void
      */
     public ManagedDeviceEncryptionState() {
@@ -41,7 +40,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceEncryptionState
+     * @return a ManagedDeviceEncryptionState
      */
     @javax.annotation.Nonnull
     public static ManagedDeviceEncryptionState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +64,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         return this._deviceName;
     }
     /**
-     * Gets the deviceType property value. Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
+     * Gets the deviceType property value. Device type.
      * @return a deviceTypes
      */
     @javax.annotation.Nullable
@@ -73,7 +72,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         return this._deviceType;
     }
     /**
-     * Gets the encryptionPolicySettingState property value. Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the encryptionPolicySettingState property value. The encryptionPolicySettingState property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -81,7 +80,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         return this._encryptionPolicySettingState;
     }
     /**
-     * Gets the encryptionReadinessState property value. Encryption readiness state. Possible values are: notReady, ready.
+     * Gets the encryptionReadinessState property value. Encryption readiness state
      * @return a encryptionReadinessState
      */
     @javax.annotation.Nullable
@@ -89,7 +88,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         return this._encryptionReadinessState;
     }
     /**
-     * Gets the encryptionState property value. Device encryption state. Possible values are: notEncrypted, encrypted.
+     * Gets the encryptionState property value. Encryption state
      * @return a encryptionState
      */
     @javax.annotation.Nullable
@@ -194,7 +193,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         this._deviceName = value;
     }
     /**
-     * Sets the deviceType property value. Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
+     * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
@@ -202,7 +201,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         this._deviceType = value;
     }
     /**
-     * Sets the encryptionPolicySettingState property value. Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the encryptionPolicySettingState property value. The encryptionPolicySettingState property
      * @param value Value to set for the encryptionPolicySettingState property.
      * @return a void
      */
@@ -210,7 +209,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         this._encryptionPolicySettingState = value;
     }
     /**
-     * Sets the encryptionReadinessState property value. Encryption readiness state. Possible values are: notReady, ready.
+     * Sets the encryptionReadinessState property value. Encryption readiness state
      * @param value Value to set for the encryptionReadinessState property.
      * @return a void
      */
@@ -218,7 +217,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         this._encryptionReadinessState = value;
     }
     /**
-     * Sets the encryptionState property value. Device encryption state. Possible values are: notEncrypted, encrypted.
+     * Sets the encryptionState property value. Encryption state
      * @param value Value to set for the encryptionState property.
      * @return a void
      */

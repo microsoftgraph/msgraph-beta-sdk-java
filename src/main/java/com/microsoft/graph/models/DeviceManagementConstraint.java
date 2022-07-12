@@ -12,12 +12,15 @@ import java.util.Objects;
 public class DeviceManagementConstraint implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new deviceManagementConstraint and sets the default values.
      * @return a void
      */
     public DeviceManagementConstraint() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.deviceManagementConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -27,6 +30,27 @@ public class DeviceManagementConstraint implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public static DeviceManagementConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementEnumConstraint": return new DeviceManagementEnumConstraint();
+                case "#microsoft.graph.deviceManagementIntentSettingSecretConstraint": return new DeviceManagementIntentSettingSecretConstraint();
+                case "#microsoft.graph.deviceManagementSettingAbstractImplementationConstraint": return new DeviceManagementSettingAbstractImplementationConstraint();
+                case "#microsoft.graph.deviceManagementSettingAppConstraint": return new DeviceManagementSettingAppConstraint();
+                case "#microsoft.graph.deviceManagementSettingBooleanConstraint": return new DeviceManagementSettingBooleanConstraint();
+                case "#microsoft.graph.deviceManagementSettingCollectionConstraint": return new DeviceManagementSettingCollectionConstraint();
+                case "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint": return new DeviceManagementSettingEnrollmentTypeConstraint();
+                case "#microsoft.graph.deviceManagementSettingFileConstraint": return new DeviceManagementSettingFileConstraint();
+                case "#microsoft.graph.deviceManagementSettingIntegerConstraint": return new DeviceManagementSettingIntegerConstraint();
+                case "#microsoft.graph.deviceManagementSettingProfileConstraint": return new DeviceManagementSettingProfileConstraint();
+                case "#microsoft.graph.deviceManagementSettingRegexConstraint": return new DeviceManagementSettingRegexConstraint();
+                case "#microsoft.graph.deviceManagementSettingRequiredConstraint": return new DeviceManagementSettingRequiredConstraint();
+                case "#microsoft.graph.deviceManagementSettingSddlConstraint": return new DeviceManagementSettingSddlConstraint();
+                case "#microsoft.graph.deviceManagementSettingStringLengthConstraint": return new DeviceManagementSettingStringLengthConstraint();
+                case "#microsoft.graph.deviceManagementSettingXmlConstraint": return new DeviceManagementSettingXmlConstraint();
+            }
+        }
         return new DeviceManagementConstraint();
     }
     /**
@@ -44,8 +68,17 @@ public class DeviceManagementConstraint implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConstraint currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -54,6 +87,7 @@ public class DeviceManagementConstraint implements AdditionalDataHolder, Parsabl
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -63,5 +97,13 @@ public class DeviceManagementConstraint implements AdditionalDataHolder, Parsabl
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

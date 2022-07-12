@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Policy status detail item contained by an autopilot event. */
 public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implements Parsable {
-    /** The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error. */
+    /** The complianceStatus property */
     private DeviceManagementAutopilotPolicyComplianceStatus _complianceStatus;
     /** The friendly name of the policy. */
     private String _displayName;
@@ -18,7 +18,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     private Integer _errorCode;
     /** Timestamp of the reported policy status */
     private OffsetDateTime _lastReportedDateTime;
-    /** The type of policy. Possible values are: unknown, application, appModel, configurationPolicy. */
+    /** The policyType property */
     private DeviceManagementAutopilotPolicyType _policyType;
     /** Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session */
     private Boolean _trackedOnEnrollmentStatus;
@@ -40,7 +40,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
         return new DeviceManagementAutopilotPolicyStatusDetail();
     }
     /**
-     * Gets the complianceStatus property value. The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error.
+     * Gets the complianceStatus property value. The complianceStatus property
      * @return a deviceManagementAutopilotPolicyComplianceStatus
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
         return this._lastReportedDateTime;
     }
     /**
-     * Gets the policyType property value. The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
+     * Gets the policyType property value. The policyType property
      * @return a deviceManagementAutopilotPolicyType
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
         writer.writeBooleanValue("trackedOnEnrollmentStatus", this.getTrackedOnEnrollmentStatus());
     }
     /**
-     * Sets the complianceStatus property value. The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error.
+     * Sets the complianceStatus property value. The complianceStatus property
      * @param value Value to set for the complianceStatus property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
         this._lastReportedDateTime = value;
     }
     /**
-     * Sets the policyType property value. The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
+     * Sets the policyType property value. The policyType property
      * @param value Value to set for the policyType property.
      * @return a void
      */

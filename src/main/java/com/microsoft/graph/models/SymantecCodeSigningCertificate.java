@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceAppManagement singleton. */
 public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     /** The Windows Symantec Code-Signing Certificate in the raw data format. */
     private byte[] _content;
@@ -20,7 +19,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     private String _issuerName;
     /** The Password required for .pfx file. */
     private String _password;
-    /** The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned. */
+    /** The status property */
     private CertificateStatus _status;
     /** The Subject value for the cert. */
     private String _subject;
@@ -105,7 +104,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
         return this._password;
     }
     /**
-     * Gets the status property value. The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+     * Gets the status property value. The status property
      * @return a certificateStatus
      */
     @javax.annotation.Nullable
@@ -195,7 +194,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
         this._password = value;
     }
     /**
-     * Sets the status property value. The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

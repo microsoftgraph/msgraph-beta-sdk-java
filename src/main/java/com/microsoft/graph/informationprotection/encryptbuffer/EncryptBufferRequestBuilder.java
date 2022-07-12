@@ -86,7 +86,7 @@ public class EncryptBufferRequestBuilder {
     /**
      * Invoke action encryptBuffer
      * @param body 
-     * @return a CompletableFuture of BufferEncryptionResult
+     * @return a CompletableFuture of bufferEncryptionResult
      */
     public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class EncryptBufferRequestBuilder {
      * Invoke action encryptBuffer
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BufferEncryptionResult
+     * @return a CompletableFuture of bufferEncryptionResult
      */
     public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class EncryptBufferRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of BufferEncryptionResult
+     * @return a CompletableFuture of bufferEncryptionResult
      */
     public java.util.concurrent.CompletableFuture<BufferEncryptionResult> post(@javax.annotation.Nonnull final EncryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EncryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Parameter for action triggerConfigurationManagerAction */
 public class ConfigurationManagerAction implements AdditionalDataHolder, Parsable {
-    /** The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation, quickScan, fullScan, windowsDefenderUpdateSignatures. */
+    /** Action type on Configuration Manager client */
     private ConfigurationManagerActionType _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -32,7 +32,7 @@ public class ConfigurationManagerAction implements AdditionalDataHolder, Parsabl
         return new ConfigurationManagerAction();
     }
     /**
-     * Gets the action property value. The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation, quickScan, fullScan, windowsDefenderUpdateSignatures.
+     * Gets the action property value. Action type on Configuration Manager client
      * @return a configurationManagerActionType
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class ConfigurationManagerAction implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation, quickScan, fullScan, windowsDefenderUpdateSignatures.
+     * Sets the action property value. Action type on Configuration Manager client
      * @param value Value to set for the action property.
      * @return a void
      */

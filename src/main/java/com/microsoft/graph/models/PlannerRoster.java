@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the planner singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerRoster extends Entity implements Parsable {
     /** Retrieves the members of the plannerRoster. */
     private java.util.List<PlannerRosterMember> _members;

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the teamwork singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum TeamworkSoftwareFreshness implements ValuedEnum {
     Unknown("unknown"),
     Latest("latest"),

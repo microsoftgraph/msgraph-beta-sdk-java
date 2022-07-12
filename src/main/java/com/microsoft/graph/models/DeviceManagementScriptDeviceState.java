@@ -20,7 +20,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     private ManagedDevice _managedDevice;
     /** Details of execution output. */
     private String _resultMessage;
-    /** State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable. */
+    /** Indicates the type of execution status of the device management script. */
     private RunState _runState;
     /**
      * Instantiates a new deviceManagementScriptDeviceState and sets the default values.
@@ -96,7 +96,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
         return this._resultMessage;
     }
     /**
-     * Gets the runState property value. State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Gets the runState property value. Indicates the type of execution status of the device management script.
      * @return a runState
      */
     @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
         this._resultMessage = value;
     }
     /**
-     * Sets the runState property value. State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Sets the runState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the runState property.
      * @return a void
      */

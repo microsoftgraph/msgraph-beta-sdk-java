@@ -7,18 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getCredentialUsageSummary method. */
 public class CredentialUsageSummary extends Entity implements Parsable {
-    /** Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword, unknownFutureValue. */
+    /** The authMethod property */
     private UsageAuthMethod _authMethod;
     /** Provides the count of failed resets or registration data. */
     private Long _failureActivityCount;
-    /** Defines the feature to report. Possible values are: registration, reset, unknownFutureValue. */
+    /** The feature property */
     private FeatureType _feature;
     /** Provides the count of successful registrations or resets. */
     private Long _successfulActivityCount;
     /**
-     * Instantiates a new credentialUsageSummary and sets the default values.
+     * Instantiates a new CredentialUsageSummary and sets the default values.
      * @return a void
      */
     public CredentialUsageSummary() {
@@ -27,7 +26,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUsageSummary
+     * @return a CredentialUsageSummary
      */
     @javax.annotation.Nonnull
     public static CredentialUsageSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +34,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
         return new CredentialUsageSummary();
     }
     /**
-     * Gets the authMethod property value. Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword, unknownFutureValue.
+     * Gets the authMethod property value. The authMethod property
      * @return a usageAuthMethod
      */
     @javax.annotation.Nullable
@@ -51,7 +50,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
         return this._failureActivityCount;
     }
     /**
-     * Gets the feature property value. Defines the feature to report. Possible values are: registration, reset, unknownFutureValue.
+     * Gets the feature property value. The feature property
      * @return a featureType
      */
     @javax.annotation.Nullable
@@ -94,7 +93,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
         writer.writeLongValue("successfulActivityCount", this.getSuccessfulActivityCount());
     }
     /**
-     * Sets the authMethod property value. Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword, unknownFutureValue.
+     * Sets the authMethod property value. The authMethod property
      * @param value Value to set for the authMethod property.
      * @return a void
      */
@@ -110,7 +109,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
         this._failureActivityCount = value;
     }
     /**
-     * Sets the feature property value. Defines the feature to report. Possible values are: registration, reset, unknownFutureValue.
+     * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      * @return a void
      */

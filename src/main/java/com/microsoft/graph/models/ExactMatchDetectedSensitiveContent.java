@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the classifyExactMatches method. */
 public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContentBase implements Parsable {
     /** The matches property */
     private java.util.List<SensitiveContentLocation> _matches;
     /**
-     * Instantiates a new exactMatchDetectedSensitiveContent and sets the default values.
+     * Instantiates a new ExactMatchDetectedSensitiveContent and sets the default values.
      * @return a void
      */
     public ExactMatchDetectedSensitiveContent() {
@@ -21,7 +20,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchDetectedSensitiveContent
+     * @return a ExactMatchDetectedSensitiveContent
      */
     @javax.annotation.Nonnull
     public static ExactMatchDetectedSensitiveContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

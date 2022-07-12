@@ -10,11 +10,11 @@ import java.util.Objects;
 public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfigurationBase implements Parsable {
     /** Account name. */
     private String _accountName;
-    /** Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited. */
+    /** Possible values for email sync duration. */
     private EmailSyncDuration _durationOfEmailToSync;
-    /** Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
+    /** Possible values for username source or email source. */
     private UserEmailSource _emailAddressSource;
-    /** Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage. */
+    /** Possible values for email sync schedule. */
     private EmailSyncSchedule _emailSyncSchedule;
     /** Exchange location that (URL) that the native mail app connects to. */
     private String _hostName;
@@ -52,7 +52,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
         return this._accountName;
     }
     /**
-     * Gets the durationOfEmailToSync property value. Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
         return this._durationOfEmailToSync;
     }
     /**
-     * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
         return this._emailAddressSource;
     }
     /**
-     * Gets the emailSyncSchedule property value. Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @return a emailSyncSchedule
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
         this._accountName = value;
     }
     /**
-     * Sets the durationOfEmailToSync property value. Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
         this._durationOfEmailToSync = value;
     }
     /**
-     * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
         this._emailAddressSource = value;
     }
     /**
-     * Sets the emailSyncSchedule property value. Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Sets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */

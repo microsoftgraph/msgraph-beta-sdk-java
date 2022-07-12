@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of governanceRoleAssignment entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class GovernanceRoleAssignment extends Entity implements Parsable {
     /** The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users. */
     private String _assignmentState;

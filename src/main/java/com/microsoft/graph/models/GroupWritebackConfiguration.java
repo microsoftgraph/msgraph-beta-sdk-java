@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class GroupWritebackConfiguration extends WritebackConfiguration implements Parsable {
-    /** The onPremisesGroupType property */
+    /** Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default */
     private String _onPremisesGroupType;
     /**
-     * Instantiates a new groupWritebackConfiguration and sets the default values.
+     * Instantiates a new GroupWritebackConfiguration and sets the default values.
      * @return a void
      */
     public GroupWritebackConfiguration() {
@@ -21,7 +20,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupWritebackConfiguration
+     * @return a GroupWritebackConfiguration
      */
     @javax.annotation.Nonnull
     public static GroupWritebackConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +39,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
         }};
     }
     /**
-     * Gets the onPremisesGroupType property value. The onPremisesGroupType property
+     * Gets the onPremisesGroupType property value. Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +57,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
         writer.writeStringValue("onPremisesGroupType", this.getOnPremisesGroupType());
     }
     /**
-     * Sets the onPremisesGroupType property value. The onPremisesGroupType property
+     * Sets the onPremisesGroupType property value. Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default
      * @param value Value to set for the onPremisesGroupType property.
      * @return a void
      */

@@ -16,8 +16,8 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Security;
+import microsoft.graph.security.alerts_v2.Alerts_v2RequestBuilder;
 import microsoft.graph.security.alerts.AlertsRequestBuilder;
-import microsoft.graph.security.alerts.item.AlertItemRequestBuilder;
 import microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import microsoft.graph.security.cases.CasesRequestBuilder;
 import microsoft.graph.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
@@ -28,11 +28,15 @@ import microsoft.graph.security.filesecurityprofiles.FileSecurityProfilesRequest
 import microsoft.graph.security.filesecurityprofiles.item.FileSecurityProfileItemRequestBuilder;
 import microsoft.graph.security.hostsecurityprofiles.HostSecurityProfilesRequestBuilder;
 import microsoft.graph.security.hostsecurityprofiles.item.HostSecurityProfileItemRequestBuilder;
+import microsoft.graph.security.incidents.IncidentsRequestBuilder;
+import microsoft.graph.security.incidents.item.IncidentItemRequestBuilder;
 import microsoft.graph.security.informationprotection.InformationProtectionRequestBuilder;
 import microsoft.graph.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import microsoft.graph.security.ipsecurityprofiles.item.IpSecurityProfileItemRequestBuilder;
+import microsoft.graph.security.labels.LabelsRequestBuilder;
 import microsoft.graph.security.providertenantsettings.item.ProviderTenantSettingItemRequestBuilder;
 import microsoft.graph.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
+import microsoft.graph.security.runhuntingquery.RunHuntingQueryRequestBuilder;
 import microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
 import microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
@@ -43,6 +47,8 @@ import microsoft.graph.security.subjectrightsrequests.item.SubjectRightsRequestI
 import microsoft.graph.security.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
 import microsoft.graph.security.tiindicators.item.TiIndicatorItemRequestBuilder;
 import microsoft.graph.security.tiindicators.TiIndicatorsRequestBuilder;
+import microsoft.graph.security.triggers.TriggersRequestBuilder;
+import microsoft.graph.security.triggertypes.TriggerTypesRequestBuilder;
 import microsoft.graph.security.usersecurityprofiles.item.UserSecurityProfileItemRequestBuilder;
 import microsoft.graph.security.usersecurityprofiles.UserSecurityProfilesRequestBuilder;
 /** Provides operations to manage the security singleton. */
@@ -51,6 +57,11 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The alerts_v2 property */
+    @javax.annotation.Nonnull
+    public Alerts_v2RequestBuilder alerts_v2() {
+        return new Alerts_v2RequestBuilder(pathParameters, requestAdapter);
     }
     /** The attackSimulation property */
     @javax.annotation.Nonnull
@@ -82,6 +93,11 @@ public class SecurityRequestBuilder {
     public HostSecurityProfilesRequestBuilder hostSecurityProfiles() {
         return new HostSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The incidents property */
+    @javax.annotation.Nonnull
+    public IncidentsRequestBuilder incidents() {
+        return new IncidentsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The informationProtection property */
     @javax.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
@@ -92,6 +108,11 @@ public class SecurityRequestBuilder {
     public IpSecurityProfilesRequestBuilder ipSecurityProfiles() {
         return new IpSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The labels property */
+    @javax.annotation.Nonnull
+    public LabelsRequestBuilder labels() {
+        return new LabelsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The providerTenantSettings property */
@@ -101,6 +122,11 @@ public class SecurityRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The runHuntingQuery property */
+    @javax.annotation.Nonnull
+    public RunHuntingQueryRequestBuilder runHuntingQuery() {
+        return new RunHuntingQueryRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The secureScoreControlProfiles property */
     @javax.annotation.Nonnull
     public SecureScoreControlProfilesRequestBuilder secureScoreControlProfiles() {
@@ -126,6 +152,16 @@ public class SecurityRequestBuilder {
     public TiIndicatorsRequestBuilder tiIndicators() {
         return new TiIndicatorsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The triggers property */
+    @javax.annotation.Nonnull
+    public TriggersRequestBuilder triggers() {
+        return new TriggersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The triggerTypes property */
+    @javax.annotation.Nonnull
+    public TriggerTypesRequestBuilder triggerTypes() {
+        return new TriggerTypesRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /** The userSecurityProfiles property */
@@ -139,11 +175,23 @@ public class SecurityRequestBuilder {
      * @return a alertItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
+    public microsoft.graph.security.alerts.item.AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("alert%2Did", id);
-        return new AlertItemRequestBuilder(urlTplParams, requestAdapter);
+        return new microsoft.graph.security.alerts.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.security.alerts_v2.item collection
+     * @param id Unique identifier of the item
+     * @return a alertItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder alerts_v2(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("alert%2Did", id);
+        return new microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.security.cloudAppSecurityProfiles.item collection
@@ -332,6 +380,18 @@ public class SecurityRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("hostSecurityProfile%2Did", id);
         return new HostSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.security.incidents.item collection
+     * @param id Unique identifier of the item
+     * @return a incidentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IncidentItemRequestBuilder incidents(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("incident%2Did", id);
+        return new IncidentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.security.ipSecurityProfiles.item collection

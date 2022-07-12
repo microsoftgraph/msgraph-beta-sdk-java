@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Zebra FOTA connector entity that represents the tenant's authorization status for Intune to call Zebra Update Services. */
 public class ZebraFotaConnector extends Entity implements Parsable {
     /** Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations. */
     private String _enrollmentAuthorizationUrl;
@@ -18,10 +17,10 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     private Boolean _fotaAppsApproved;
     /** Date and time when the account was last synched with Zebra */
     private OffsetDateTime _lastSyncDateTime;
-    /** The Zebra connector state. Possible values are: none, connected, disconnected, unknownFutureValue. */
+    /** Represents various states for Zebra FOTA connector. */
     private ZebraFotaConnectorState _state;
     /**
-     * Instantiates a new zebraFotaConnector and sets the default values.
+     * Instantiates a new ZebraFotaConnector and sets the default values.
      * @return a void
      */
     public ZebraFotaConnector() {
@@ -30,7 +29,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaConnector
+     * @return a ZebraFotaConnector
      */
     @javax.annotation.Nonnull
     public static ZebraFotaConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +84,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
         return this._lastSyncDateTime;
     }
     /**
-     * Gets the state property value. The Zebra connector state. Possible values are: none, connected, disconnected, unknownFutureValue.
+     * Gets the state property value. Represents various states for Zebra FOTA connector.
      * @return a zebraFotaConnectorState
      */
     @javax.annotation.Nullable
@@ -139,7 +138,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
         this._lastSyncDateTime = value;
     }
     /**
-     * Sets the state property value. The Zebra connector state. Possible values are: none, connected, disconnected, unknownFutureValue.
+     * Sets the state property value. Represents various states for Zebra FOTA connector.
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -14,7 +14,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     private GroupPolicyCategory _category;
     /** The localized full category path for the policy. */
     private String _categoryPath;
-    /** Identifies the type of groups the policy can be applied to. Possible values are: user, machine. */
+    /** Group Policy Definition Class Type. */
     private GroupPolicyDefinitionClassType _classType;
     /** The group policy file associated with the definition. */
     private GroupPolicyDefinitionFile _definitionFile;
@@ -34,7 +34,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     private String _minUserCspVersion;
     /** Definition of the next version of this definition */
     private GroupPolicyDefinition _nextVersionDefinition;
-    /** Specifies the type of group policy. Possible values are: admxBacked, admxIngested. */
+    /** Type of Group Policy File or Definition. */
     private GroupPolicyType _policyType;
     /** The group policy presentations associated with the definition. */
     private java.util.List<GroupPolicyPresentation> _presentations;
@@ -78,7 +78,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
         return this._categoryPath;
     }
     /**
-     * Gets the classType property value. Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
+     * Gets the classType property value. Group Policy Definition Class Type.
      * @return a groupPolicyDefinitionClassType
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
         return this._nextVersionDefinition;
     }
     /**
-     * Gets the policyType property value. Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+     * Gets the policyType property value. Type of Group Policy File or Definition.
      * @return a groupPolicyType
      */
     @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
         this._categoryPath = value;
     }
     /**
-     * Sets the classType property value. Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
+     * Sets the classType property value. Group Policy Definition Class Type.
      * @param value Value to set for the classType property.
      * @return a void
      */
@@ -347,7 +347,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
         this._nextVersionDefinition = value;
     }
     /**
-     * Sets the policyType property value. Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+     * Sets the policyType property value. Type of Group Policy File or Definition.
      * @param value Value to set for the policyType property.
      * @return a void
      */

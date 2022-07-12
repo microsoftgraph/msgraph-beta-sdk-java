@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Recurrence schedule. Possible values are: none, daily, weekly, monthly. */
+    /** Possible values for App update on Windows10 recurrence. */
     private Windows10AppsUpdateRecurrence _recurrence;
     /** If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence. */
     private Boolean _runImmediatelyIfAfterStartDateTime;
@@ -58,7 +58,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
         }};
     }
     /**
-     * Gets the recurrence property value. Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+     * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @return a windows10AppsUpdateRecurrence
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
         this._additionalData = value;
     }
     /**
-     * Sets the recurrence property value. Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+     * Sets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @param value Value to set for the recurrence property.
      * @return a void
      */

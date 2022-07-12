@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignmentFilter implements Parsable {
-    /** PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions. */
+    /** Represents the payload type AssignmentFilter is being assigned to. */
     private AssignmentFilterPayloadType _payloadType;
     /**
      * Instantiates a new PayloadCompatibleAssignmentFilter and sets the default values.
@@ -39,7 +39,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
         }};
     }
     /**
-     * Gets the payloadType property value. PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions.
+     * Gets the payloadType property value. Represents the payload type AssignmentFilter is being assigned to.
      * @return a assignmentFilterPayloadType
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
         writer.writeEnumValue("payloadType", this.getPayloadType());
     }
     /**
-     * Sets the payloadType property value. PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions.
+     * Sets the payloadType property value. Represents the payload type AssignmentFilter is being assigned to.
      * @param value Value to set for the payloadType property.
      * @return a void
      */

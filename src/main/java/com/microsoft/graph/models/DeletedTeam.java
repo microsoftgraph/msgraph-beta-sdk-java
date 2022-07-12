@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the teamwork singleton. */
 public class DeletedTeam extends Entity implements Parsable {
-    /** The channels property */
+    /** The channels those are either shared with this deleted team or created in this deleted team. */
     private java.util.List<Channel> _channels;
     /**
-     * Instantiates a new deletedTeam and sets the default values.
+     * Instantiates a new DeletedTeam and sets the default values.
      * @return a void
      */
     public DeletedTeam() {
@@ -21,7 +20,7 @@ public class DeletedTeam extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deletedTeam
+     * @return a DeletedTeam
      */
     @javax.annotation.Nonnull
     public static DeletedTeam createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +28,7 @@ public class DeletedTeam extends Entity implements Parsable {
         return new DeletedTeam();
     }
     /**
-     * Gets the channels property value. The channels property
+     * Gets the channels property value. The channels those are either shared with this deleted team or created in this deleted team.
      * @return a channel
      */
     @javax.annotation.Nullable
@@ -58,7 +57,7 @@ public class DeletedTeam extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("channels", this.getChannels());
     }
     /**
-     * Sets the channels property value. The channels property
+     * Sets the channels property value. The channels those are either shared with this deleted team or created in this deleted team.
      * @param value Value to set for the channels property.
      * @return a void
      */

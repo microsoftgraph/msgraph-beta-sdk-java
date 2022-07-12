@@ -12,9 +12,9 @@ import java.util.Objects;
 public class GroupPolicyOperation extends Entity implements Parsable {
     /** The date and time the entity was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The group policy operation status. Possible values are: unknown, inProgress, success, failed. */
+    /** Type of Group Policy operation status. */
     private GroupPolicyOperationStatus _operationStatus;
-    /** The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove. */
+    /** Type of Group Policy operation. */
     private GroupPolicyOperationType _operationType;
     /** The group policy operation status detail. */
     private String _statusDetails;
@@ -58,7 +58,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the operationStatus property value. The group policy operation status. Possible values are: unknown, inProgress, success, failed.
+     * Gets the operationStatus property value. Type of Group Policy operation status.
      * @return a groupPolicyOperationStatus
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
         return this._operationStatus;
     }
     /**
-     * Gets the operationType property value. The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
+     * Gets the operationType property value. Type of Group Policy operation.
      * @return a groupPolicyOperationType
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the operationStatus property value. The group policy operation status. Possible values are: unknown, inProgress, success, failed.
+     * Sets the operationStatus property value. Type of Group Policy operation status.
      * @param value Value to set for the operationStatus property.
      * @return a void
      */
@@ -111,7 +111,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
         this._operationStatus = value;
     }
     /**
-     * Sets the operationType property value. The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
+     * Sets the operationType property value. Type of Group Policy operation.
      * @param value Value to set for the operationType property.
      * @return a void
      */

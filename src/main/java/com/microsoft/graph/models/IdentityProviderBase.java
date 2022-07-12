@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the directory singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class IdentityProviderBase extends Entity implements Parsable {
     /** The display name of the identity provider. */
     private String _displayName;
@@ -17,6 +17,7 @@ public class IdentityProviderBase extends Entity implements Parsable {
      */
     public IdentityProviderBase() {
         super();
+        this.setOdatatype("#microsoft.graph.identityProviderBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -86,7 +86,7 @@ public class BulkRestoreCloudPcRequestBuilder {
     /**
      * Invoke action bulkRestoreCloudPc
      * @param body 
-     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
      */
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class BulkRestoreCloudPcRequestBuilder {
      * Invoke action bulkRestoreCloudPc
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
      */
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class BulkRestoreCloudPcRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
      */
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<BulkRestoreCloudPcRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

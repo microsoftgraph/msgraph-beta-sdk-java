@@ -86,7 +86,7 @@ public class ExecuteActionRequestBuilder {
     /**
      * Invoke action executeAction
      * @param body 
-     * @return a CompletableFuture of BulkDriverActionResult
+     * @return a CompletableFuture of bulkDriverActionResult
      */
     public java.util.concurrent.CompletableFuture<BulkDriverActionResult> post(@javax.annotation.Nonnull final ExecuteActionPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ExecuteActionRequestBuilder {
      * Invoke action executeAction
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BulkDriverActionResult
+     * @return a CompletableFuture of bulkDriverActionResult
      */
     public java.util.concurrent.CompletableFuture<BulkDriverActionResult> post(@javax.annotation.Nonnull final ExecuteActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExecuteActionRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ExecuteActionRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of BulkDriverActionResult
+     * @return a CompletableFuture of bulkDriverActionResult
      */
     public java.util.concurrent.CompletableFuture<BulkDriverActionResult> post(@javax.annotation.Nonnull final ExecuteActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExecuteActionRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

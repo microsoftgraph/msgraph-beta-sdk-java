@@ -30,6 +30,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      */
     public IosVpnConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.iosVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

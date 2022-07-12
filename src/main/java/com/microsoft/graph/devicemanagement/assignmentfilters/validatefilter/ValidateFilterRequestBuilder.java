@@ -86,7 +86,7 @@ public class ValidateFilterRequestBuilder {
     /**
      * Invoke action validateFilter
      * @param body 
-     * @return a CompletableFuture of AssignmentFilterValidationResult
+     * @return a CompletableFuture of assignmentFilterValidationResult
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterValidationResult> post(@javax.annotation.Nonnull final ValidateFilterPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ValidateFilterRequestBuilder {
      * Invoke action validateFilter
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AssignmentFilterValidationResult
+     * @return a CompletableFuture of assignmentFilterValidationResult
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterValidationResult> post(@javax.annotation.Nonnull final ValidateFilterPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateFilterRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ValidateFilterRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of AssignmentFilterValidationResult
+     * @return a CompletableFuture of assignmentFilterValidationResult
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterValidationResult> post(@javax.annotation.Nonnull final ValidateFilterPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ValidateFilterRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class VirtualEndpoint extends Entity implements Parsable {
     /** Cloud PC audit event. */
     private java.util.List<CloudPcAuditEvent> _auditEvents;
@@ -15,6 +14,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
     private java.util.List<CloudPC> _cloudPCs;
     /** The image resource on Cloud PC. */
     private java.util.List<CloudPcDeviceImage> _deviceImages;
+    /** The externalPartnerSettings property */
+    private java.util.List<CloudPcExternalPartnerSetting> _externalPartnerSettings;
     /** The gallery image resource on Cloud PC. */
     private java.util.List<CloudPcGalleryImage> _galleryImages;
     /** A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs. */
@@ -32,7 +33,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     /** Cloud PC user settings. */
     private java.util.List<CloudPcUserSetting> _userSettings;
     /**
-     * Instantiates a new virtualEndpoint and sets the default values.
+     * Instantiates a new VirtualEndpoint and sets the default values.
      * @return a void
      */
     public VirtualEndpoint() {
@@ -41,7 +42,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEndpoint
+     * @return a VirtualEndpoint
      */
     @javax.annotation.Nonnull
     public static VirtualEndpoint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -73,6 +74,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this._deviceImages;
     }
     /**
+     * Gets the externalPartnerSettings property value. The externalPartnerSettings property
+     * @return a cloudPcExternalPartnerSetting
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CloudPcExternalPartnerSetting> getExternalPartnerSettings() {
+        return this._externalPartnerSettings;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -83,6 +92,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
             this.put("auditEvents", (n) -> { currentObject.setAuditEvents(n.getCollectionOfObjectValues(CloudPcAuditEvent::createFromDiscriminatorValue)); });
             this.put("cloudPCs", (n) -> { currentObject.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
             this.put("deviceImages", (n) -> { currentObject.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
+            this.put("externalPartnerSettings", (n) -> { currentObject.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
             this.put("galleryImages", (n) -> { currentObject.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
             this.put("onPremisesConnections", (n) -> { currentObject.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
             this.put("organizationSettings", (n) -> { currentObject.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
@@ -168,6 +178,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
+        writer.writeCollectionOfObjectValues("externalPartnerSettings", this.getExternalPartnerSettings());
         writer.writeCollectionOfObjectValues("galleryImages", this.getGalleryImages());
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeObjectValue("organizationSettings", this.getOrganizationSettings());
@@ -200,6 +211,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setDeviceImages(@javax.annotation.Nullable final java.util.List<CloudPcDeviceImage> value) {
         this._deviceImages = value;
+    }
+    /**
+     * Sets the externalPartnerSettings property value. The externalPartnerSettings property
+     * @param value Value to set for the externalPartnerSettings property.
+     * @return a void
+     */
+    public void setExternalPartnerSettings(@javax.annotation.Nullable final java.util.List<CloudPcExternalPartnerSetting> value) {
+        this._externalPartnerSettings = value;
     }
     /**
      * Sets the galleryImages property value. The gallery image resource on Cloud PC.

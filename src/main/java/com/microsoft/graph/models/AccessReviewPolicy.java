@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewPolicy extends Entity implements Parsable {
     /** Description for this policy. Read-only. */
     private String _description;
@@ -16,7 +15,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
     /** If true, group owners can create and manage access reviews on groups they own. */
     private Boolean _isGroupOwnerManagementEnabled;
     /**
-     * Instantiates a new accessReviewPolicy and sets the default values.
+     * Instantiates a new AccessReviewPolicy and sets the default values.
      * @return a void
      */
     public AccessReviewPolicy() {
@@ -25,7 +24,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewPolicy
+     * @return a AccessReviewPolicy
      */
     @javax.annotation.Nonnull
     public static AccessReviewPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

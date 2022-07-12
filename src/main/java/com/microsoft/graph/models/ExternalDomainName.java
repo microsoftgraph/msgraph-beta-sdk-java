@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the directory singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ExternalDomainName extends Entity implements Parsable {
     /**
      * Instantiates a new externalDomainName and sets the default values.

@@ -8,18 +8,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A Domain Join Connector is a connector that is responsible to allocate (and delete) machine account blobs */
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
     /** The connector display name. */
     private String _displayName;
     /** Last time connector contacted Intune. */
     private OffsetDateTime _lastConnectionDateTime;
-    /** The connector state. Possible values are: active, error, inactive. */
+    /** The ODJ request states. */
     private DeviceManagementDomainJoinConnectorState _state;
     /** The version of the connector. */
     private String _version;
     /**
-     * Instantiates a new deviceManagementDomainJoinConnector and sets the default values.
+     * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
      * @return a void
      */
     public DeviceManagementDomainJoinConnector() {
@@ -28,7 +27,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementDomainJoinConnector
+     * @return a DeviceManagementDomainJoinConnector
      */
     @javax.annotation.Nonnull
     public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +65,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
         return this._lastConnectionDateTime;
     }
     /**
-     * Gets the state property value. The connector state. Possible values are: active, error, inactive.
+     * Gets the state property value. The ODJ request states.
      * @return a deviceManagementDomainJoinConnectorState
      */
     @javax.annotation.Nullable
@@ -111,7 +110,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
         this._lastConnectionDateTime = value;
     }
     /**
-     * Sets the state property value. The connector state. Possible values are: active, error, inactive.
+     * Sets the state property value. The ODJ request states.
      * @param value Value to set for the state property.
      * @return a void
      */

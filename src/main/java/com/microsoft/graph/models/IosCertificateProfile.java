@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Configuration. */
 public class IosCertificateProfile extends DeviceConfiguration implements Parsable {
     /**
      * Instantiates a new iosCertificateProfile and sets the default values.
@@ -15,6 +14,7 @@ public class IosCertificateProfile extends DeviceConfiguration implements Parsab
      */
     public IosCertificateProfile() {
         super();
+        this.setOdatatype("#microsoft.graph.iosCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

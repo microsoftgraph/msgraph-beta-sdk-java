@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics device performance entity contains device boot performance details. */
 public class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable {
     /** Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999 */
     private Double _averageBlueScreens;
@@ -25,13 +24,13 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     private Long _deviceCount;
     /** The user experience analytics device name. */
     private String _deviceName;
-    /** The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue. */
+    /** The diskType property */
     private DiskType _diskType;
     /** The user experience analytics device group policy boot time in milliseconds. */
     private Integer _groupPolicyBootTimeInMs;
     /** The user experience analytics device group policy login time in milliseconds. */
     private Integer _groupPolicyLoginTimeInMs;
-    /** The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. */
+    /** The healthStatus property */
     private UserExperienceAnalyticsHealthState _healthStatus;
     /** The user experience analytics device login score. */
     private Integer _loginScore;
@@ -50,7 +49,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     /** The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _startupPerformanceScore;
     /**
-     * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDevicePerformance() {
@@ -59,7 +58,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDevicePerformance
+     * @return a UserExperienceAnalyticsDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -131,7 +130,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
         return this._deviceName;
     }
     /**
-     * Gets the diskType property value. The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue.
+     * Gets the diskType property value. The diskType property
      * @return a diskType
      */
     @javax.annotation.Nullable
@@ -185,7 +184,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
         return this._groupPolicyLoginTimeInMs;
     }
     /**
-     * Gets the healthStatus property value. The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
@@ -350,7 +349,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
         this._deviceName = value;
     }
     /**
-     * Sets the diskType property value. The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue.
+     * Sets the diskType property value. The diskType property
      * @param value Value to set for the diskType property.
      * @return a void
      */
@@ -374,7 +373,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
         this._groupPolicyLoginTimeInMs = value;
     }
     /**
-     * Sets the healthStatus property value. The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */

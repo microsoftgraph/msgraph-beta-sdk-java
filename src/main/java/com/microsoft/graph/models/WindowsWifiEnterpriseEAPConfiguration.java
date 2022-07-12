@@ -22,7 +22,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     private Boolean _disableUserPromptForServerValidation;
     /** Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600. */
     private Integer _eapolStartPeriodInSeconds;
-    /** Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. */
+    /** Extensible Authentication Protocol (EAP) configuration types. */
     private EapType _eapType;
     /** Specify whether the wifi connection should enable pairwise master key caching. */
     private Boolean _enablePairwiseMasterKeyCaching;
@@ -136,7 +136,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this._eapolStartPeriodInSeconds;
     }
     /**
-     * Gets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
     @javax.annotation.Nullable
@@ -425,7 +425,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this._eapolStartPeriodInSeconds = value;
     }
     /**
-     * Sets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
      * @return a void
      */

@@ -86,7 +86,7 @@ public class VerifySignatureRequestBuilder {
     /**
      * Invoke action verifySignature
      * @param body 
-     * @return a CompletableFuture of VerificationResult
+     * @return a CompletableFuture of verificationResult
      */
     public java.util.concurrent.CompletableFuture<VerificationResult> post(@javax.annotation.Nonnull final VerifySignaturePostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class VerifySignatureRequestBuilder {
      * Invoke action verifySignature
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of VerificationResult
+     * @return a CompletableFuture of verificationResult
      */
     public java.util.concurrent.CompletableFuture<VerificationResult> post(@javax.annotation.Nonnull final VerifySignaturePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<VerifySignatureRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class VerifySignatureRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of VerificationResult
+     * @return a CompletableFuture of verificationResult
      */
     public java.util.concurrent.CompletableFuture<VerificationResult> post(@javax.annotation.Nonnull final VerifySignaturePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<VerifySignatureRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

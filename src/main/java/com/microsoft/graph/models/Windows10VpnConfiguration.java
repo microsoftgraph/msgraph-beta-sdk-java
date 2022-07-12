@@ -10,9 +10,9 @@ import java.util.Objects;
 public class Windows10VpnConfiguration extends WindowsVpnConfiguration implements Parsable {
     /** Associated Apps. This collection can contain a maximum of 10000 elements. */
     private java.util.List<Windows10AssociatedApps> _associatedApps;
-    /** Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential. */
+    /** Windows 10 VPN connection types. */
     private Windows10VpnAuthenticationMethod _authenticationMethod;
-    /** Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel. */
+    /** VPN connection types. */
     private Windows10VpnConnectionType _connectionType;
     /** Cryptography Suite security settings for IKEv2 VPN in Windows10 and above */
     private CryptographySuite _cryptographySuite;
@@ -84,7 +84,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         return this._associatedApps;
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential.
+     * Gets the authenticationMethod property value. Windows 10 VPN connection types.
      * @return a windows10VpnAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         return this._authenticationMethod;
     }
     /**
-     * Gets the connectionType property value. Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel.
+     * Gets the connectionType property value. VPN connection types.
      * @return a windows10VpnConnectionType
      */
     @javax.annotation.Nullable
@@ -353,7 +353,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         this._associatedApps = value;
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential.
+     * Sets the authenticationMethod property value. Windows 10 VPN connection types.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
@@ -361,7 +361,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         this._authenticationMethod = value;
     }
     /**
-     * Sets the connectionType property value. Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel.
+     * Sets the connectionType property value. VPN connection types.
      * @param value Value to set for the connectionType property.
      * @return a void
      */

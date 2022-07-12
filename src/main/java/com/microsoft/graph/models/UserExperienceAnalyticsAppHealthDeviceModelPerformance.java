@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics device model performance entity contains device model performance details. */
 public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity implements Parsable {
     /** The number of active devices for the model. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;
@@ -15,7 +14,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     private String _deviceManufacturer;
     /** The model name of the device. */
     private String _deviceModel;
-    /** The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. */
+    /** The healthStatus property */
     private UserExperienceAnalyticsHealthState _healthStatus;
     /** The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647 */
     private Integer _meanTimeToFailureInMinutes;
@@ -24,7 +23,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     /** The overall app health status of the device model. */
     private String _modelAppHealthStatus;
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthDeviceModelPerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthDeviceModelPerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsAppHealthDeviceModelPerformance() {
@@ -33,7 +32,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthDeviceModelPerformance
+     * @return a UserExperienceAnalyticsAppHealthDeviceModelPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDeviceModelPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
         }};
     }
     /**
-     * Gets the healthStatus property value. The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
@@ -154,7 +153,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
         this._deviceModel = value;
     }
     /**
-     * Sets the healthStatus property value. The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */

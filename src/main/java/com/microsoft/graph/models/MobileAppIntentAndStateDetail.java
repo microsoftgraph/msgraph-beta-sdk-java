@@ -18,9 +18,9 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
     private String _displayName;
     /** Human readable version of the application */
     private String _displayVersion;
-    /** The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable. */
+    /** A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins. */
     private ResultantAppState _installState;
-    /** Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude. */
+    /** Indicates the status of the mobile app on the device. */
     private MobileAppIntent _mobileAppIntent;
     /** The supported platforms for the app. */
     private java.util.List<MobileAppSupportedDeviceType> _supportedDeviceTypes;
@@ -90,7 +90,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
         }};
     }
     /**
-     * Gets the installState property value. The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+     * Gets the installState property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
      * @return a resultantAppState
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
         return this._installState;
     }
     /**
-     * Gets the mobileAppIntent property value. Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
+     * Gets the mobileAppIntent property value. Indicates the status of the mobile app on the device.
      * @return a mobileAppIntent
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
         this._displayVersion = value;
     }
     /**
-     * Sets the installState property value. The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+     * Sets the installState property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
      * @param value Value to set for the installState property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
         this._installState = value;
     }
     /**
-     * Sets the mobileAppIntent property value. Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
+     * Sets the mobileAppIntent property value. Indicates the status of the mobile app on the device.
      * @param value Value to set for the mobileAppIntent property.
      * @return a void
      */

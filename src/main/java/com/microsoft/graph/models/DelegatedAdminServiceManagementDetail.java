@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /** The URL of the management portal for the managed service. Read-only. */
     private String _serviceManagementUrl;

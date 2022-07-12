@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the classifyText method. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum MlClassificationMatchTolerance implements ValuedEnum {
     Exact("exact"),
     Near("near");

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the educationRoot singleton. */
 public class EducationSynchronizationProfileStatus extends Entity implements Parsable {
     /** Number of errors during synchronization. */
     private Long _errorCount;

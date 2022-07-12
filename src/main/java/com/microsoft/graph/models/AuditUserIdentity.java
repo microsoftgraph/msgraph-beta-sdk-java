@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the auditLogRoot singleton. */
 public class AuditUserIdentity extends UserIdentity implements Parsable {
     /** For user sign ins, the identifier of the tenant that the user is a member of. */
     private String _homeTenantId;
     /** For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content. */
     private String _homeTenantName;
     /**
-     * Instantiates a new auditUserIdentity and sets the default values.
+     * Instantiates a new AuditUserIdentity and sets the default values.
      * @return a void
      */
     public AuditUserIdentity() {
@@ -23,7 +22,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditUserIdentity
+     * @return a AuditUserIdentity
      */
     @javax.annotation.Nonnull
     public static AuditUserIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

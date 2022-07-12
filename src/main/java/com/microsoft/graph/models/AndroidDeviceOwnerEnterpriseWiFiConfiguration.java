@@ -12,7 +12,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
     private WiFiAuthenticationMethod _authenticationMethod;
     /** Tenant level settings for the Derived Credentials to be used for authentication. */
     private DeviceManagementDerivedCredentialSettings _derivedCredentialSettings;
-    /** Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap. */
+    /** Extensible Authentication Protocol (EAP) Configuration Types. */
     private AndroidEapType _eapType;
     /** Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection. */
     private AndroidDeviceOwnerCertificateProfileBase _identityCertificateForClientAuthentication;
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
         return this._derivedCredentialSettings;
     }
     /**
-     * Gets the eapType property value. Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
      * @return a androidEapType
      */
     @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
         this._derivedCredentialSettings = value;
     }
     /**
-     * Sets the eapType property value. Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
      * @param value Value to set for the eapType property.
      * @return a void
      */

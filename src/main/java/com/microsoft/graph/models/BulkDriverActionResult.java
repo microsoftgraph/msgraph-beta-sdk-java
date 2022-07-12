@@ -19,7 +19,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     /** List of driver Ids where the action is successful. */
     private java.util.List<String> _successfulDriverIds;
     /**
-     * Instantiates a new BulkDriverActionResult and sets the default values.
+     * Instantiates a new bulkDriverActionResult and sets the default values.
      * @return a void
      */
     public BulkDriverActionResult() {
@@ -28,7 +28,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BulkDriverActionResult
+     * @return a bulkDriverActionResult
      */
     @javax.annotation.Nonnull
     public static BulkDriverActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

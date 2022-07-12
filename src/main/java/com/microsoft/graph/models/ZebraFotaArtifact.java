@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Describes a single artifact for a specific device model. */
 public class ZebraFotaArtifact extends Entity implements Parsable {
     /** The version of the Board Support Package. */
     private String _boardSupportPackageVersion;
@@ -20,7 +19,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     /** Artifact release notes URL. */
     private String _releaseNotesUrl;
     /**
-     * Instantiates a new zebraFotaArtifact and sets the default values.
+     * Instantiates a new ZebraFotaArtifact and sets the default values.
      * @return a void
      */
     public ZebraFotaArtifact() {
@@ -29,7 +28,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaArtifact
+     * @return a ZebraFotaArtifact
      */
     @javax.annotation.Nonnull
     public static ZebraFotaArtifact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

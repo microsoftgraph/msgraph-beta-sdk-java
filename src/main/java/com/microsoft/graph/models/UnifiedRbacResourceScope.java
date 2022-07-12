@@ -7,14 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRbacResourceScope extends Entity implements Parsable {
     /** The displayName property */
     private String _displayName;
     /** The scope property */
     private String _scope;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new unifiedRbacResourceScope and sets the default values.
      * @return a void
@@ -50,7 +47,6 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -62,14 +58,6 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
         return this._scope;
     }
     /**
-     * Gets the type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -79,7 +67,6 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("scope", this.getScope());
-        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the displayName property value. The displayName property
@@ -96,13 +83,5 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      */
     public void setScope(@javax.annotation.Nullable final String value) {
         this._scope = value;
-    }
-    /**
-     * Sets the type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

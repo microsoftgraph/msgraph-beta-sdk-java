@@ -16,7 +16,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
     private String _certFileName;
     /** PKCS Certificate Template Name. */
     private String _certificateTemplateName;
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period. */
     private Integer _certificateValidityPeriodValue;
@@ -70,7 +70,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
         return this._certificateTemplateName;
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -177,7 +177,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
         this._certificateTemplateName = value;
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */

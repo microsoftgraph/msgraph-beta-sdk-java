@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceAppManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class EnterpriseCodeSigningCertificate extends Entity implements Parsable {
     /** The Windows Enterprise Code-Signing Certificate in the raw data format. */
     private byte[] _content;
@@ -18,7 +18,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     private String _issuer;
     /** The Issuer Name for the cert. */
     private String _issuerName;
-    /** The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned. */
+    /** The status property */
     private CertificateStatus _status;
     /** The Subject Value for the cert. */
     private String _subject;
@@ -94,7 +94,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
         return this._issuerName;
     }
     /**
-     * Gets the status property value. The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+     * Gets the status property value. The status property
      * @return a certificateStatus
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
         this._issuerName = value;
     }
     /**
-     * Sets the status property value. The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

@@ -16,7 +16,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     private String _networkName;
     /** This is the name of the Wi-Fi network that is broadcast to all devices. */
     private String _ssid;
-    /** Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise. */
+    /** Wi-Fi Security Types for Android. */
     private AndroidWiFiSecurityType _wiFiSecurityType;
     /**
      * Instantiates a new AndroidWorkProfileWiFiConfiguration and sets the default values.
@@ -24,6 +24,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      */
     public AndroidWorkProfileWiFiConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.androidWorkProfileWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,7 +91,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         return this._ssid;
     }
     /**
-     * Gets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
+     * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
      * @return a androidWiFiSecurityType
      */
     @javax.annotation.Nullable
@@ -144,7 +145,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         this._ssid = value;
     }
     /**
-     * Sets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
+     * Sets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */

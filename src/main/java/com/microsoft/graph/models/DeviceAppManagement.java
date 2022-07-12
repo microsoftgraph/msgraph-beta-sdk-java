@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Singleton entity that acts as a container for all device app management functionality. */
 public class DeviceAppManagement extends Entity implements Parsable {
     /** Android managed app policies. */
     private java.util.List<AndroidManagedAppProtection> _androidManagedAppProtections;
@@ -36,13 +35,13 @@ public class DeviceAppManagement extends Entity implements Parsable {
     private java.util.List<ManagedEBook> _managedEBooks;
     /** Windows information protection for apps running on devices which are MDM enrolled. */
     private java.util.List<MdmWindowsInformationProtectionPolicy> _mdmWindowsInformationProtectionPolicies;
-    /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
+    /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
     private String _microsoftStoreForBusinessLanguage;
     /** The last time an application sync from the Microsoft Store for Business was completed. */
     private OffsetDateTime _microsoftStoreForBusinessLastCompletedApplicationSyncTime;
     /** The last time the apps from the Microsoft Store for Business were synced successfully for the account. */
     private OffsetDateTime _microsoftStoreForBusinessLastSuccessfulSyncDateTime;
-    /** The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore. */
+    /** Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console. */
     private MicrosoftStoreForBusinessPortalSelectionOptions _microsoftStoreForBusinessPortalSelection;
     /** The mobile app categories. */
     private java.util.List<MobileAppCategory> _mobileAppCategories;
@@ -73,7 +72,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     /** Windows management app. */
     private WindowsManagementApp _windowsManagementApp;
     /**
-     * Instantiates a new deviceAppManagement and sets the default values.
+     * Instantiates a new DeviceAppManagement and sets the default values.
      * @return a void
      */
     public DeviceAppManagement() {
@@ -82,7 +81,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAppManagement
+     * @return a DeviceAppManagement
      */
     @javax.annotation.Nonnull
     public static DeviceAppManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -235,7 +234,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this._mdmWindowsInformationProtectionPolicies;
     }
     /**
-     * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -259,7 +258,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this._microsoftStoreForBusinessLastSuccessfulSyncDateTime;
     }
     /**
-     * Gets the microsoftStoreForBusinessPortalSelection property value. The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore.
+     * Gets the microsoftStoreForBusinessPortalSelection property value. Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
      * @return a microsoftStoreForBusinessPortalSelectionOptions
      */
     @javax.annotation.Nullable
@@ -523,7 +522,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         this._mdmWindowsInformationProtectionPolicies = value;
     }
     /**
-     * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      * @param value Value to set for the microsoftStoreForBusinessLanguage property.
      * @return a void
      */
@@ -547,7 +546,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         this._microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
     }
     /**
-     * Sets the microsoftStoreForBusinessPortalSelection property value. The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore.
+     * Sets the microsoftStoreForBusinessPortalSelection property value. Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
      * @param value Value to set for the microsoftStoreForBusinessPortalSelection property.
      * @return a void
      */

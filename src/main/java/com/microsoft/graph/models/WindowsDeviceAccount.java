@@ -13,12 +13,15 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Not yet documented */
     private String _password;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new windowsDeviceAccount and sets the default values.
      * @return a void
      */
     public WindowsDeviceAccount() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.windowsDeviceAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +31,14 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static WindowsDeviceAccount createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windowsDeviceADAccount": return new WindowsDeviceADAccount();
+                case "#microsoft.graph.windowsDeviceAzureADAccount": return new WindowsDeviceAzureADAccount();
+            }
+        }
         return new WindowsDeviceAccount();
     }
     /**
@@ -45,9 +56,18 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDeviceAccount currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the password property value. Not yet documented
@@ -65,6 +85,7 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("password", this.getPassword());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -74,6 +95,14 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the password property value. Not yet documented

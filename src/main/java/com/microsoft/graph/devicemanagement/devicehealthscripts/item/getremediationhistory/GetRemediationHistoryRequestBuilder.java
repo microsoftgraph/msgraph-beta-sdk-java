@@ -81,7 +81,7 @@ public class GetRemediationHistoryRequestBuilder {
     }
     /**
      * Function to get the number of remediations by a device health scripts
-     * @return a CompletableFuture of DeviceHealthScriptRemediationHistory
+     * @return a CompletableFuture of deviceHealthScriptRemediationHistory
      */
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationHistory> get() {
         try {
@@ -98,7 +98,7 @@ public class GetRemediationHistoryRequestBuilder {
     /**
      * Function to get the number of remediations by a device health scripts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceHealthScriptRemediationHistory
+     * @return a CompletableFuture of deviceHealthScriptRemediationHistory
      */
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationHistory> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRemediationHistoryRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class GetRemediationHistoryRequestBuilder {
      * Function to get the number of remediations by a device health scripts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of DeviceHealthScriptRemediationHistory
+     * @return a CompletableFuture of deviceHealthScriptRemediationHistory
      */
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationHistory> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRemediationHistoryRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

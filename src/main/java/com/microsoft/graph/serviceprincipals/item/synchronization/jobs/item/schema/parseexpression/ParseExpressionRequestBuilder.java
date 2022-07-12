@@ -86,7 +86,7 @@ public class ParseExpressionRequestBuilder {
     /**
      * Invoke action parseExpression
      * @param body 
-     * @return a CompletableFuture of ParseExpressionResponse
+     * @return a CompletableFuture of parseExpressionResponse
      */
     public java.util.concurrent.CompletableFuture<ParseExpressionResponse> post(@javax.annotation.Nonnull final ParseExpressionPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ParseExpressionRequestBuilder {
      * Invoke action parseExpression
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ParseExpressionResponse
+     * @return a CompletableFuture of parseExpressionResponse
      */
     public java.util.concurrent.CompletableFuture<ParseExpressionResponse> post(@javax.annotation.Nonnull final ParseExpressionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ParseExpressionRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ParseExpressionRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of ParseExpressionResponse
+     * @return a CompletableFuture of parseExpressionResponse
      */
     public java.util.concurrent.CompletableFuture<ParseExpressionResponse> post(@javax.annotation.Nonnull final ParseExpressionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ParseExpressionRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

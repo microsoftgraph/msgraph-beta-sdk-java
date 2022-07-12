@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
 public class AttackSimulationRoot extends Entity implements Parsable {
     /** Represents simulation automations created to run on a tenant. */
     private java.util.List<SimulationAutomation> _simulationAutomations;

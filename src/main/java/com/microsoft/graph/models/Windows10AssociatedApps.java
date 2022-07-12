@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Application type. Possible values are: desktop, universal. */
+    /** Windows 10 Application type. */
     private Windows10AppType _appType;
     /** Identifier. */
     private String _identifier;
@@ -42,7 +42,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the appType property value. Application type. Possible values are: desktop, universal.
+     * Gets the appType property value. Windows 10 Application type.
      * @return a windows10AppType
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the appType property value. Application type. Possible values are: desktop, universal.
+     * Sets the appType property value. Windows 10 Application type.
      * @param value Value to set for the appType property.
      * @return a void
      */

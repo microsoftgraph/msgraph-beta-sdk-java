@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only. */
+    /** The category property */
     private ManagementCategory _category;
     /** The display name for the management template. Required. Read-only. */
     private String _displayName;
@@ -45,7 +45,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         return this._additionalData;
     }
     /**
-     * Gets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
+     * Gets the category property value. The category property
      * @return a managementCategory
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         this._additionalData = value;
     }
     /**
-     * Sets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
+     * Sets the category property value. The category property
      * @param value Value to set for the category property.
      * @return a void
      */

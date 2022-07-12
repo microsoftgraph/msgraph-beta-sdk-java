@@ -26,7 +26,9 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _azureADDeviceId;
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
     private Boolean _azureADRegistered;
-    /** Chassis type of the device. This property is read-only. Possible values are: unknown, desktop, laptop, worksWorkstation, enterpriseServer, phone, tablet, mobileOther, mobileUnknown. */
+    /** Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only. */
+    private Boolean _bootstrapTokenEscrowed;
+    /** Chassis type. */
     private ChassisType _chassisType;
     /** List of properties of the ChromeOS Device. */
     private java.util.List<ChromeOSDeviceProperty> _chromeOSDeviceInfo;
@@ -34,7 +36,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private java.util.List<CloudPcRemoteActionResult> _cloudPcRemoteActionResults;
     /** The DateTime when device compliance grace period expires. This property is read-only. */
     private OffsetDateTime _complianceGracePeriodExpirationDateTime;
-    /** Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. */
+    /** Compliance state. */
     private ComplianceState _complianceState;
     /** ConfigrMgr client enabled features. This property is read-only. */
     private ConfigurationManagerClientEnabledFeatures _configurationManagerClientEnabledFeatures;
@@ -54,15 +56,17 @@ public class ManagedDevice extends Entity implements Parsable {
     private java.util.List<DeviceCompliancePolicyState> _deviceCompliancePolicyStates;
     /** Device configuration states for this device. */
     private java.util.List<DeviceConfigurationState> _deviceConfigurationStates;
-    /** Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile. */
+    /** Possible ways of adding a mobile device to management. */
     private DeviceEnrollmentType _deviceEnrollmentType;
+    /** Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE. */
+    private Boolean _deviceFirmwareConfigurationInterfaceManaged;
     /** The device health attestation state. This property is read-only. */
     private DeviceHealthAttestationState _deviceHealthAttestationState;
     /** Name of the device. This property is read-only. */
     private String _deviceName;
-    /** Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown. */
+    /** Device registration status. */
     private DeviceRegistrationState _deviceRegistrationState;
-    /** Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC. */
+    /** Device type. */
     private DeviceType _deviceType;
     /** Whether the device is Exchange ActiveSync activated. This property is read-only. */
     private Boolean _easActivated;
@@ -78,9 +82,9 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _enrollmentProfileName;
     /** Ethernet MAC. This property is read-only. */
     private String _ethernetMacAddress;
-    /** The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined. */
+    /** Device Exchange Access State. */
     private DeviceManagementExchangeAccessState _exchangeAccessState;
-    /** The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp. */
+    /** Device Exchange Access State Reason. */
     private DeviceManagementExchangeAccessStateReason _exchangeAccessStateReason;
     /** Last time the device contacted Exchange. This property is read-only. */
     private OffsetDateTime _exchangeLastSuccessfulSyncDateTime;
@@ -98,27 +102,27 @@ public class ManagedDevice extends Entity implements Parsable {
     private Boolean _isSupervised;
     /** whether the device is jail broken or rooted. This property is read-only. */
     private String _jailBroken;
-    /** Device join type. Possible values are: unknown, azureADJoined, azureADRegistered, hybridAzureADJoined. */
+    /** Device enrollment join type. */
     private JoinType _joinType;
     /** The date and time that the device last completed a successful sync with Intune. This property is read-only. */
     private OffsetDateTime _lastSyncDateTime;
     /** List of log collection requests */
     private java.util.List<DeviceLogCollectionResponse> _logCollectionRequests;
-    /** Indicates if Lost mode is enabled or disabled. This property is read-only. Possible values are: disabled, enabled. */
+    /** State of lost mode, indicating if lost mode is enabled or disabled */
     private LostModeState _lostModeState;
     /** Managed device mobile app configuration states for this device. */
     private java.util.List<ManagedDeviceMobileAppConfigurationState> _managedDeviceMobileAppConfigurationStates;
     /** Automatically generated name to identify a device. Can be overwritten to a user friendly name. */
     private String _managedDeviceName;
-    /** Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal. */
+    /** Owner type of device. */
     private ManagedDeviceOwnerType _managedDeviceOwnerType;
-    /** Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp. */
+    /** Management agent type. */
     private ManagementAgentType _managementAgent;
     /** Reports device management certificate expiration date. This property is read-only. */
     private OffsetDateTime _managementCertificateExpirationDate;
-    /** Device management features. Possible values are: none, microsoftManagedDesktop. */
+    /** Device management features. */
     private ManagedDeviceManagementFeatures _managementFeatures;
-    /** Management state of the device. This property is read-only. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered. */
+    /** Management state of device in Microsoft Intune. */
     private ManagementState _managementState;
     /** Manufacturer of the device. This property is read-only. */
     private String _manufacturer;
@@ -132,9 +136,9 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _operatingSystem;
     /** Operating system version of the device. This property is read-only. */
     private String _osVersion;
-    /** Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal. */
+    /** Owner type of device. */
     private OwnerType _ownerType;
-    /** Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured. */
+    /** Available health states for the Device Health API */
     private ManagedDevicePartnerReportedHealthState _partnerReportedThreatState;
     /** Phone number of the device. This property is read-only. */
     private String _phoneNumber;
@@ -142,7 +146,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private Long _physicalMemoryInBytes;
     /** Reports the DateTime the preferMdmOverGroupPolicy setting was set.  When set, the Intune MDM settings will override Group Policy settings if there is a conflict. Read Only. This property is read-only. */
     private OffsetDateTime _preferMdmOverGroupPolicyAppliedDateTime;
-    /** Processor architecture. This property is read-only. Possible values are: unknown, x86, x64, arm, arM64. */
+    /** Processor architecture */
     private ManagedDeviceArchitecture _processorArchitecture;
     /** An error string that identifies issues when creating Remote Assistance session objects. This property is read-only. */
     private String _remoteAssistanceSessionErrorDetails;
@@ -194,6 +198,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     public ManagedDevice() {
         super();
+        this.setOdatatype("#microsoft.graph.managedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -277,7 +282,15 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._azureADRegistered;
     }
     /**
-     * Gets the chassisType property value. Chassis type of the device. This property is read-only. Possible values are: unknown, desktop, laptop, worksWorkstation, enterpriseServer, phone, tablet, mobileOther, mobileUnknown.
+     * Gets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getBootstrapTokenEscrowed() {
+        return this._bootstrapTokenEscrowed;
+    }
+    /**
+     * Gets the chassisType property value. Chassis type.
      * @return a chassisType
      */
     @javax.annotation.Nullable
@@ -309,7 +322,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._complianceGracePeriodExpirationDateTime;
     }
     /**
-     * Gets the complianceState property value. Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+     * Gets the complianceState property value. Compliance state.
      * @return a complianceState
      */
     @javax.annotation.Nullable
@@ -389,12 +402,20 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._deviceConfigurationStates;
     }
     /**
-     * Gets the deviceEnrollmentType property value. Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+     * Gets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
      * @return a deviceEnrollmentType
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentType getDeviceEnrollmentType() {
         return this._deviceEnrollmentType;
+    }
+    /**
+     * Gets the deviceFirmwareConfigurationInterfaceManaged property value. Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getDeviceFirmwareConfigurationInterfaceManaged() {
+        return this._deviceFirmwareConfigurationInterfaceManaged;
     }
     /**
      * Gets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
@@ -413,7 +434,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._deviceName;
     }
     /**
-     * Gets the deviceRegistrationState property value. Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     * Gets the deviceRegistrationState property value. Device registration status.
      * @return a deviceRegistrationState
      */
     @javax.annotation.Nullable
@@ -421,7 +442,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._deviceRegistrationState;
     }
     /**
-     * Gets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Gets the deviceType property value. Device type.
      * @return a deviceType
      */
     @javax.annotation.Nullable
@@ -485,7 +506,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._ethernetMacAddress;
     }
     /**
-     * Gets the exchangeAccessState property value. The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
+     * Gets the exchangeAccessState property value. Device Exchange Access State.
      * @return a deviceManagementExchangeAccessState
      */
     @javax.annotation.Nullable
@@ -493,7 +514,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._exchangeAccessState;
     }
     /**
-     * Gets the exchangeAccessStateReason property value. The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
+     * Gets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
      * @return a deviceManagementExchangeAccessStateReason
      */
     @javax.annotation.Nullable
@@ -524,6 +545,7 @@ public class ManagedDevice extends Entity implements Parsable {
             this.put("azureActiveDirectoryDeviceId", (n) -> { currentObject.setAzureActiveDirectoryDeviceId(n.getStringValue()); });
             this.put("azureADDeviceId", (n) -> { currentObject.setAzureADDeviceId(n.getStringValue()); });
             this.put("azureADRegistered", (n) -> { currentObject.setAzureADRegistered(n.getBooleanValue()); });
+            this.put("bootstrapTokenEscrowed", (n) -> { currentObject.setBootstrapTokenEscrowed(n.getBooleanValue()); });
             this.put("chassisType", (n) -> { currentObject.setChassisType(n.getEnumValue(ChassisType.class)); });
             this.put("chromeOSDeviceInfo", (n) -> { currentObject.setChromeOSDeviceInfo(n.getCollectionOfObjectValues(ChromeOSDeviceProperty::createFromDiscriminatorValue)); });
             this.put("cloudPcRemoteActionResults", (n) -> { currentObject.setCloudPcRemoteActionResults(n.getCollectionOfObjectValues(CloudPcRemoteActionResult::createFromDiscriminatorValue)); });
@@ -539,6 +561,7 @@ public class ManagedDevice extends Entity implements Parsable {
             this.put("deviceCompliancePolicyStates", (n) -> { currentObject.setDeviceCompliancePolicyStates(n.getCollectionOfObjectValues(DeviceCompliancePolicyState::createFromDiscriminatorValue)); });
             this.put("deviceConfigurationStates", (n) -> { currentObject.setDeviceConfigurationStates(n.getCollectionOfObjectValues(DeviceConfigurationState::createFromDiscriminatorValue)); });
             this.put("deviceEnrollmentType", (n) -> { currentObject.setDeviceEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
+            this.put("deviceFirmwareConfigurationInterfaceManaged", (n) -> { currentObject.setDeviceFirmwareConfigurationInterfaceManaged(n.getBooleanValue()); });
             this.put("deviceHealthAttestationState", (n) -> { currentObject.setDeviceHealthAttestationState(n.getObjectValue(DeviceHealthAttestationState::createFromDiscriminatorValue)); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceRegistrationState", (n) -> { currentObject.setDeviceRegistrationState(n.getEnumValue(DeviceRegistrationState.class)); });
@@ -664,7 +687,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._jailBroken;
     }
     /**
-     * Gets the joinType property value. Device join type. Possible values are: unknown, azureADJoined, azureADRegistered, hybridAzureADJoined.
+     * Gets the joinType property value. Device enrollment join type.
      * @return a joinType
      */
     @javax.annotation.Nullable
@@ -688,7 +711,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._logCollectionRequests;
     }
     /**
-     * Gets the lostModeState property value. Indicates if Lost mode is enabled or disabled. This property is read-only. Possible values are: disabled, enabled.
+     * Gets the lostModeState property value. State of lost mode, indicating if lost mode is enabled or disabled
      * @return a lostModeState
      */
     @javax.annotation.Nullable
@@ -712,7 +735,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._managedDeviceName;
     }
     /**
-     * Gets the managedDeviceOwnerType property value. Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     * Gets the managedDeviceOwnerType property value. Owner type of device.
      * @return a managedDeviceOwnerType
      */
     @javax.annotation.Nullable
@@ -720,7 +743,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._managedDeviceOwnerType;
     }
     /**
-     * Gets the managementAgent property value. Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
+     * Gets the managementAgent property value. Management agent type.
      * @return a managementAgentType
      */
     @javax.annotation.Nullable
@@ -736,7 +759,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._managementCertificateExpirationDate;
     }
     /**
-     * Gets the managementFeatures property value. Device management features. Possible values are: none, microsoftManagedDesktop.
+     * Gets the managementFeatures property value. Device management features.
      * @return a managedDeviceManagementFeatures
      */
     @javax.annotation.Nullable
@@ -744,7 +767,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._managementFeatures;
     }
     /**
-     * Gets the managementState property value. Management state of the device. This property is read-only. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+     * Gets the managementState property value. Management state of device in Microsoft Intune.
      * @return a managementState
      */
     @javax.annotation.Nullable
@@ -800,7 +823,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._osVersion;
     }
     /**
-     * Gets the ownerType property value. Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     * Gets the ownerType property value. Owner type of device.
      * @return a ownerType
      */
     @javax.annotation.Nullable
@@ -808,7 +831,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._ownerType;
     }
     /**
-     * Gets the partnerReportedThreatState property value. Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
+     * Gets the partnerReportedThreatState property value. Available health states for the Device Health API
      * @return a managedDevicePartnerReportedHealthState
      */
     @javax.annotation.Nullable
@@ -840,7 +863,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._preferMdmOverGroupPolicyAppliedDateTime;
     }
     /**
-     * Gets the processorArchitecture property value. Processor architecture. This property is read-only. Possible values are: unknown, x86, x64, arm, arM64.
+     * Gets the processorArchitecture property value. Processor architecture
      * @return a managedDeviceArchitecture
      */
     @javax.annotation.Nullable
@@ -1039,6 +1062,7 @@ public class ManagedDevice extends Entity implements Parsable {
         writer.writeStringValue("azureActiveDirectoryDeviceId", this.getAzureActiveDirectoryDeviceId());
         writer.writeStringValue("azureADDeviceId", this.getAzureADDeviceId());
         writer.writeBooleanValue("azureADRegistered", this.getAzureADRegistered());
+        writer.writeBooleanValue("bootstrapTokenEscrowed", this.getBootstrapTokenEscrowed());
         writer.writeEnumValue("chassisType", this.getChassisType());
         writer.writeCollectionOfObjectValues("chromeOSDeviceInfo", this.getChromeOSDeviceInfo());
         writer.writeCollectionOfObjectValues("cloudPcRemoteActionResults", this.getCloudPcRemoteActionResults());
@@ -1054,6 +1078,7 @@ public class ManagedDevice extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceCompliancePolicyStates", this.getDeviceCompliancePolicyStates());
         writer.writeCollectionOfObjectValues("deviceConfigurationStates", this.getDeviceConfigurationStates());
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
+        writer.writeBooleanValue("deviceFirmwareConfigurationInterfaceManaged", this.getDeviceFirmwareConfigurationInterfaceManaged());
         writer.writeObjectValue("deviceHealthAttestationState", this.getDeviceHealthAttestationState());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
@@ -1186,7 +1211,15 @@ public class ManagedDevice extends Entity implements Parsable {
         this._azureADRegistered = value;
     }
     /**
-     * Sets the chassisType property value. Chassis type of the device. This property is read-only. Possible values are: unknown, desktop, laptop, worksWorkstation, enterpriseServer, phone, tablet, mobileOther, mobileUnknown.
+     * Sets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
+     * @param value Value to set for the bootstrapTokenEscrowed property.
+     * @return a void
+     */
+    public void setBootstrapTokenEscrowed(@javax.annotation.Nullable final Boolean value) {
+        this._bootstrapTokenEscrowed = value;
+    }
+    /**
+     * Sets the chassisType property value. Chassis type.
      * @param value Value to set for the chassisType property.
      * @return a void
      */
@@ -1218,7 +1251,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._complianceGracePeriodExpirationDateTime = value;
     }
     /**
-     * Sets the complianceState property value. Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+     * Sets the complianceState property value. Compliance state.
      * @param value Value to set for the complianceState property.
      * @return a void
      */
@@ -1298,12 +1331,20 @@ public class ManagedDevice extends Entity implements Parsable {
         this._deviceConfigurationStates = value;
     }
     /**
-     * Sets the deviceEnrollmentType property value. Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+     * Sets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the deviceEnrollmentType property.
      * @return a void
      */
     public void setDeviceEnrollmentType(@javax.annotation.Nullable final DeviceEnrollmentType value) {
         this._deviceEnrollmentType = value;
+    }
+    /**
+     * Sets the deviceFirmwareConfigurationInterfaceManaged property value. Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE.
+     * @param value Value to set for the deviceFirmwareConfigurationInterfaceManaged property.
+     * @return a void
+     */
+    public void setDeviceFirmwareConfigurationInterfaceManaged(@javax.annotation.Nullable final Boolean value) {
+        this._deviceFirmwareConfigurationInterfaceManaged = value;
     }
     /**
      * Sets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
@@ -1322,7 +1363,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._deviceName = value;
     }
     /**
-     * Sets the deviceRegistrationState property value. Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     * Sets the deviceRegistrationState property value. Device registration status.
      * @param value Value to set for the deviceRegistrationState property.
      * @return a void
      */
@@ -1330,7 +1371,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._deviceRegistrationState = value;
     }
     /**
-     * Sets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
@@ -1394,7 +1435,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._ethernetMacAddress = value;
     }
     /**
-     * Sets the exchangeAccessState property value. The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
+     * Sets the exchangeAccessState property value. Device Exchange Access State.
      * @param value Value to set for the exchangeAccessState property.
      * @return a void
      */
@@ -1402,7 +1443,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._exchangeAccessState = value;
     }
     /**
-     * Sets the exchangeAccessStateReason property value. The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
+     * Sets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
      * @param value Value to set for the exchangeAccessStateReason property.
      * @return a void
      */
@@ -1474,7 +1515,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._jailBroken = value;
     }
     /**
-     * Sets the joinType property value. Device join type. Possible values are: unknown, azureADJoined, azureADRegistered, hybridAzureADJoined.
+     * Sets the joinType property value. Device enrollment join type.
      * @param value Value to set for the joinType property.
      * @return a void
      */
@@ -1498,7 +1539,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._logCollectionRequests = value;
     }
     /**
-     * Sets the lostModeState property value. Indicates if Lost mode is enabled or disabled. This property is read-only. Possible values are: disabled, enabled.
+     * Sets the lostModeState property value. State of lost mode, indicating if lost mode is enabled or disabled
      * @param value Value to set for the lostModeState property.
      * @return a void
      */
@@ -1522,7 +1563,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._managedDeviceName = value;
     }
     /**
-     * Sets the managedDeviceOwnerType property value. Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     * Sets the managedDeviceOwnerType property value. Owner type of device.
      * @param value Value to set for the managedDeviceOwnerType property.
      * @return a void
      */
@@ -1530,7 +1571,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._managedDeviceOwnerType = value;
     }
     /**
-     * Sets the managementAgent property value. Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
+     * Sets the managementAgent property value. Management agent type.
      * @param value Value to set for the managementAgent property.
      * @return a void
      */
@@ -1546,7 +1587,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._managementCertificateExpirationDate = value;
     }
     /**
-     * Sets the managementFeatures property value. Device management features. Possible values are: none, microsoftManagedDesktop.
+     * Sets the managementFeatures property value. Device management features.
      * @param value Value to set for the managementFeatures property.
      * @return a void
      */
@@ -1554,7 +1595,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._managementFeatures = value;
     }
     /**
-     * Sets the managementState property value. Management state of the device. This property is read-only. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+     * Sets the managementState property value. Management state of device in Microsoft Intune.
      * @param value Value to set for the managementState property.
      * @return a void
      */
@@ -1610,7 +1651,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._osVersion = value;
     }
     /**
-     * Sets the ownerType property value. Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */
@@ -1618,7 +1659,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._ownerType = value;
     }
     /**
-     * Sets the partnerReportedThreatState property value. Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
+     * Sets the partnerReportedThreatState property value. Available health states for the Device Health API
      * @param value Value to set for the partnerReportedThreatState property.
      * @return a void
      */
@@ -1650,7 +1691,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._preferMdmOverGroupPolicyAppliedDateTime = value;
     }
     /**
-     * Sets the processorArchitecture property value. Processor architecture. This property is read-only. Possible values are: unknown, x86, x64, arm, arM64.
+     * Sets the processorArchitecture property value. Processor architecture
      * @param value Value to set for the processorArchitecture property.
      * @return a void
      */

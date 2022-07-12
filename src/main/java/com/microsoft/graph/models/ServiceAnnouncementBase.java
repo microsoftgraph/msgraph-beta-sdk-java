@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /** Additional details about service event. This property doesn't support filters. */
     private java.util.List<KeyValuePair> _details;
@@ -26,6 +26,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     public ServiceAnnouncementBase() {
         super();
+        this.setOdatatype("#microsoft.graph.serviceAnnouncementBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

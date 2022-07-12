@@ -52,7 +52,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _appStoreRequirePassword;
     /** List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements. */
     private java.util.List<AppListItem> _appsVisibilityList;
-    /** Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant. */
+    /** Possible values of the compliance app list. */
     private AppListType _appsVisibilityListType;
     /** Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices. */
     private Boolean _autoFillForceAuthentication;
@@ -90,7 +90,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _classroomForceRequestPermissionToLeaveClasses;
     /** Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only. */
     private Boolean _classroomForceUnpromptedAppAndDeviceLock;
-    /** List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant. */
+    /** Possible values of the compliance app list. */
     private AppListType _compliantAppListType;
     /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
     private java.util.List<AppListItem> _compliantAppsList;
@@ -220,7 +220,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _kioskModeAllowZoomSettings;
     /** URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known. */
     private String _kioskModeAppStoreUrl;
-    /** Type of app to run in kiosk mode. Possible values are: notConfigured, appStoreApp, managedApp, builtInApp. */
+    /** App source options for iOS kiosk mode. */
     private IosKioskModeAppType _kioskModeAppType;
     /** Indicates whether or not to block device auto lock while in kiosk mode. */
     private Boolean _kioskModeBlockAutoLock;
@@ -260,7 +260,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _lockScreenBlockTodayView;
     /** Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps. */
     private Boolean _managedPasteboardRequired;
-    /** Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17. */
+    /** Apps rating as in media content */
     private RatingAppsType _mediaContentRatingApps;
     /** Media content rating settings for Australia */
     private MediaContentRatingAustralia _mediaContentRatingAustralia;
@@ -314,7 +314,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Integer _passcodePreviousPasscodeBlockCount;
     /** Indicates whether or not to require a passcode. */
     private Boolean _passcodeRequired;
-    /** Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passcodeRequiredType;
     /** Number of sign in failures allowed before wiping the device. Valid values 2 to 11 */
     private Integer _passcodeSignInFailureCountBeforeWipe;
@@ -340,7 +340,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _safariBlockJavaScript;
     /** Indicates whether or not to block popups in Safari. */
     private Boolean _safariBlockPopups;
-    /** Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways. */
+    /** Web Browser Cookie Settings. */
     private WebBrowserCookieSettings _safariCookieSettings;
     /** URLs matching the patterns listed here will be considered managed. */
     private java.util.List<String> _safariManagedDomains;
@@ -576,7 +576,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._appsVisibilityList;
     }
     /**
-     * Gets the appsVisibilityListType property value. Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
     @javax.annotation.Nullable
@@ -728,7 +728,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._classroomForceUnpromptedAppAndDeviceLock;
     }
     /**
-     * Gets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
     @javax.annotation.Nullable
@@ -1445,7 +1445,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._kioskModeAppStoreUrl;
     }
     /**
-     * Gets the kioskModeAppType property value. Type of app to run in kiosk mode. Possible values are: notConfigured, appStoreApp, managedApp, builtInApp.
+     * Gets the kioskModeAppType property value. App source options for iOS kiosk mode.
      * @return a iosKioskModeAppType
      */
     @javax.annotation.Nullable
@@ -1605,7 +1605,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._managedPasteboardRequired;
     }
     /**
-     * Gets the mediaContentRatingApps property value. Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * Gets the mediaContentRatingApps property value. Apps rating as in media content
      * @return a ratingAppsType
      */
     @javax.annotation.Nullable
@@ -1821,7 +1821,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._passcodeRequired;
     }
     /**
-     * Gets the passcodeRequiredType property value. Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passcodeRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -1925,7 +1925,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._safariBlockPopups;
     }
     /**
-     * Gets the safariCookieSettings property value. Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
      * @return a webBrowserCookieSettings
      */
     @javax.annotation.Nullable
@@ -2465,7 +2465,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._appsVisibilityList = value;
     }
     /**
-     * Sets the appsVisibilityListType property value. Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the appsVisibilityListType property value. Possible values of the compliance app list.
      * @param value Value to set for the appsVisibilityListType property.
      * @return a void
      */
@@ -2617,7 +2617,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._classroomForceUnpromptedAppAndDeviceLock = value;
     }
     /**
-     * Sets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
@@ -3137,7 +3137,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._kioskModeAppStoreUrl = value;
     }
     /**
-     * Sets the kioskModeAppType property value. Type of app to run in kiosk mode. Possible values are: notConfigured, appStoreApp, managedApp, builtInApp.
+     * Sets the kioskModeAppType property value. App source options for iOS kiosk mode.
      * @param value Value to set for the kioskModeAppType property.
      * @return a void
      */
@@ -3297,7 +3297,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._managedPasteboardRequired = value;
     }
     /**
-     * Sets the mediaContentRatingApps property value. Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * Sets the mediaContentRatingApps property value. Apps rating as in media content
      * @param value Value to set for the mediaContentRatingApps property.
      * @return a void
      */
@@ -3513,7 +3513,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._passcodeRequired = value;
     }
     /**
-     * Sets the passcodeRequiredType property value. Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passcodeRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passcodeRequiredType property.
      * @return a void
      */
@@ -3617,7 +3617,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._safariBlockPopups = value;
     }
     /**
-     * Sets the safariCookieSettings property value. Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Sets the safariCookieSettings property value. Web Browser Cookie Settings.
      * @param value Value to set for the safariCookieSettings property.
      * @return a void
      */

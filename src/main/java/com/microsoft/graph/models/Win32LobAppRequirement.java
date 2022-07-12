@@ -14,14 +14,17 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The detection value */
     private String _detectionValue;
-    /** The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual. */
+    /** Contains properties for detection operator. */
     private Win32LobAppDetectionOperator _operator;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new win32LobAppRequirement and sets the default values.
      * @return a void
      */
     public Win32LobAppRequirement() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.win32LobAppRequirement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,6 +34,15 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static Win32LobAppRequirement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.win32LobAppFileSystemRequirement": return new Win32LobAppFileSystemRequirement();
+                case "#microsoft.graph.win32LobAppPowerShellScriptRequirement": return new Win32LobAppPowerShellScriptRequirement();
+                case "#microsoft.graph.win32LobAppRegistryRequirement": return new Win32LobAppRegistryRequirement();
+            }
+        }
         return new Win32LobAppRequirement();
     }
     /**
@@ -56,13 +68,22 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRequirement currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("detectionValue", (n) -> { currentObject.setDetectionValue(n.getStringValue()); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the operator property value. The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
+    }
+    /**
+     * Gets the operator property value. Contains properties for detection operator.
      * @return a win32LobAppDetectionOperator
      */
     @javax.annotation.Nullable
@@ -78,6 +99,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("detectionValue", this.getDetectionValue());
         writer.writeEnumValue("operator", this.getOperator());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -97,7 +119,15 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         this._detectionValue = value;
     }
     /**
-     * Sets the operator property value. The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
+    }
+    /**
+     * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
      * @return a void
      */

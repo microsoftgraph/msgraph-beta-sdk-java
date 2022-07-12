@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Connector extends Entity implements Parsable {
     /** The external IP address as detected by the the connector server. Read-only. */
     private String _externalIp;
@@ -15,7 +15,7 @@ public class Connector extends Entity implements Parsable {
     private String _machineName;
     /** The connectorGroup that the connector is a member of. Read-only. */
     private java.util.List<ConnectorGroup> _memberOf;
-    /** Indicates the status of the connector. Possible values are: active, inactive. Read-only. */
+    /** The status property */
     private ConnectorStatus _status;
     /**
      * Instantiates a new connector and sets the default values.
@@ -73,7 +73,7 @@ public class Connector extends Entity implements Parsable {
         return this._memberOf;
     }
     /**
-     * Gets the status property value. Indicates the status of the connector. Possible values are: active, inactive. Read-only.
+     * Gets the status property value. The status property
      * @return a connectorStatus
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class Connector extends Entity implements Parsable {
         this._memberOf = value;
     }
     /**
-     * Sets the status property value. Indicates the status of the connector. Possible values are: active, inactive. Read-only.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

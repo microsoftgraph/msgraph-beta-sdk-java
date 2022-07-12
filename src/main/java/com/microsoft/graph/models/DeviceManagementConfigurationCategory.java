@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Management Configuration Policy */
 public class DeviceManagementConfigurationCategory extends Entity implements Parsable {
     /** Description of the category header */
     private String _categoryDescription;
@@ -23,16 +22,16 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     private String _name;
     /** Parent id of the category. */
     private String _parentCategoryId;
-    /** Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue. */
+    /** Supported platform types. */
     private DeviceManagementConfigurationPlatforms _platforms;
     /** Root id of the category. */
     private String _rootCategoryId;
-    /** Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration, compliance. */
+    /** Supported setting types */
     private DeviceManagementConfigurationSettingUsage _settingUsage;
-    /** Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue. */
+    /** Describes which technology this setting can be deployed with */
     private DeviceManagementConfigurationTechnologies _technologies;
     /**
-     * Instantiates a new deviceManagementConfigurationCategory and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationCategory and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationCategory() {
@@ -41,7 +40,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationCategory
+     * @return a DeviceManagementConfigurationCategory
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -126,7 +125,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         return this._parentCategoryId;
     }
     /**
-     * Gets the platforms property value. Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Gets the platforms property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
     @javax.annotation.Nullable
@@ -142,7 +141,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         return this._rootCategoryId;
     }
     /**
-     * Gets the settingUsage property value. Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration, compliance.
+     * Gets the settingUsage property value. Supported setting types
      * @return a deviceManagementConfigurationSettingUsage
      */
     @javax.annotation.Nullable
@@ -150,7 +149,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         return this._settingUsage;
     }
     /**
-     * Gets the technologies property value. Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
     @javax.annotation.Nullable
@@ -234,7 +233,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         this._parentCategoryId = value;
     }
     /**
-     * Sets the platforms property value. Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      * @return a void
      */
@@ -250,7 +249,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         this._rootCategoryId = value;
     }
     /**
-     * Sets the settingUsage property value. Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration, compliance.
+     * Sets the settingUsage property value. Supported setting types
      * @param value Value to set for the settingUsage property.
      * @return a void
      */
@@ -258,7 +257,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         this._settingUsage = value;
     }
     /**
-     * Sets the technologies property value. Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      * @return a void
      */

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UserRegistrationDetails extends Entity implements Parsable {
     /** The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue. */
     private DefaultMfaMethodType _defaultMfaMethod;

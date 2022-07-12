@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsCertificateProfileBase extends DeviceConfiguration implements Parsable {
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period */
     private Integer _certificateValidityPeriodValue;
-    /** Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp. */
+    /** Key Storage Provider (KSP) Import Options. */
     private KeyStorageProviderOption _keyStorageProvider;
     /** Certificate renewal threshold percentage. Valid values 1 to 99 */
     private Integer _renewalThresholdPercentage;
     /** Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
     private SubjectAlternativeNameType _subjectAlternativeNameType;
-    /** Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId. */
+    /** Subject Name Format Options. */
     private SubjectNameFormat _subjectNameFormat;
     /**
      * Instantiates a new WindowsCertificateProfileBase and sets the default values.
@@ -26,6 +26,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      */
     public WindowsCertificateProfileBase() {
         super();
+        this.setOdatatype("#microsoft.graph.windowsCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +49,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         return new WindowsCertificateProfileBase();
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -80,7 +81,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         }};
     }
     /**
-     * Gets the keyStorageProvider property value. Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @return a keyStorageProviderOption
      */
     @javax.annotation.Nullable
@@ -104,7 +105,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         return this._subjectAlternativeNameType;
     }
     /**
-     * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Gets the subjectNameFormat property value. Subject Name Format Options.
      * @return a subjectNameFormat
      */
     @javax.annotation.Nullable
@@ -127,7 +128,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
@@ -143,7 +144,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         this._certificateValidityPeriodValue = value;
     }
     /**
-     * Sets the keyStorageProvider property value. Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Sets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
@@ -167,7 +168,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         this._subjectAlternativeNameType = value;
     }
     /**
-     * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Sets the subjectNameFormat property value. Subject Name Format Options.
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */

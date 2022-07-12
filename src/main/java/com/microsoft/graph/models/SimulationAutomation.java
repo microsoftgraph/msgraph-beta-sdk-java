@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SimulationAutomation extends Entity implements Parsable {
     /** Identity of the user who created the attack simulation automation. */
     private EmailIdentity _createdBy;

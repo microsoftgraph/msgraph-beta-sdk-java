@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class Tasks extends Entity implements Parsable {
     /** All tasks in the users mailbox. */
     private java.util.List<BaseTask> _alltasks;
     /** The task lists in the users mailbox. */
     private java.util.List<BaseTaskList> _lists;
     /**
-     * Instantiates a new tasks and sets the default values.
+     * Instantiates a new Tasks and sets the default values.
      * @return a void
      */
     public Tasks() {
@@ -23,7 +22,7 @@ public class Tasks extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tasks
+     * @return a Tasks
      */
     @javax.annotation.Nonnull
     public static Tasks createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

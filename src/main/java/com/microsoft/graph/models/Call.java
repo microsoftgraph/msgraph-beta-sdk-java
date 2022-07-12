@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Call extends Entity implements Parsable {
     /** The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only. */
     private java.util.List<String> _activeModalities;

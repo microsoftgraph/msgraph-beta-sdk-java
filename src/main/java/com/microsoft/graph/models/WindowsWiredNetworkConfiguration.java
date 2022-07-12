@@ -24,7 +24,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     private Boolean _disableUserPromptForServerValidation;
     /** Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600. */
     private Integer _eapolStartPeriodInSeconds;
-    /** Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. */
+    /** Extensible Authentication Protocol (EAP) configuration types. */
     private EapType _eapType;
     /** When TRUE, the automatic configuration service for wired networks requires the use of 802.1X for port authentication. When FALSE, 802.1X is not required. Default value is FALSE. */
     private Boolean _enforce8021X;
@@ -138,7 +138,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this._eapolStartPeriodInSeconds;
     }
     /**
-     * Gets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
     @javax.annotation.Nullable
@@ -397,7 +397,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this._eapolStartPeriodInSeconds = value;
     }
     /**
-     * Sets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
      * @return a void
      */

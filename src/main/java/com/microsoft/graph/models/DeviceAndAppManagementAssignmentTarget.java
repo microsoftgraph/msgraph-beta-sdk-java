@@ -14,14 +14,17 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     private Map<String, Object> _additionalData;
     /** The Id of the filter for the target assignment. */
     private String _deviceAndAppManagementAssignmentFilterId;
-    /** The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include, exclude. */
+    /** Represents type of the assignment filter. */
     private DeviceAndAppManagementAssignmentFilterType _deviceAndAppManagementAssignmentFilterType;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new deviceAndAppManagementAssignmentTarget and sets the default values.
      * @return a void
      */
     public DeviceAndAppManagementAssignmentTarget() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.deviceAndAppManagementAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,6 +34,16 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     @javax.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.allDevicesAssignmentTarget": return new AllDevicesAssignmentTarget();
+                case "#microsoft.graph.allLicensedUsersAssignmentTarget": return new AllLicensedUsersAssignmentTarget();
+                case "#microsoft.graph.configurationManagerCollectionAssignmentTarget": return new ConfigurationManagerCollectionAssignmentTarget();
+                case "#microsoft.graph.groupAssignmentTarget": return new GroupAssignmentTarget();
+            }
+        }
         return new DeviceAndAppManagementAssignmentTarget();
     }
     /**
@@ -50,7 +63,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         return this._deviceAndAppManagementAssignmentFilterId;
     }
     /**
-     * Gets the deviceAndAppManagementAssignmentFilterType property value. The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include, exclude.
+     * Gets the deviceAndAppManagementAssignmentFilterType property value. Represents type of the assignment filter.
      * @return a deviceAndAppManagementAssignmentFilterType
      */
     @javax.annotation.Nullable
@@ -64,10 +77,19 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementAssignmentTarget currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("deviceAndAppManagementAssignmentFilterId", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterId(n.getStringValue()); });
             this.put("deviceAndAppManagementAssignmentFilterType", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -78,6 +100,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceAndAppManagementAssignmentFilterId", this.getDeviceAndAppManagementAssignmentFilterId());
         writer.writeEnumValue("deviceAndAppManagementAssignmentFilterType", this.getDeviceAndAppManagementAssignmentFilterType());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -97,11 +120,19 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         this._deviceAndAppManagementAssignmentFilterId = value;
     }
     /**
-     * Sets the deviceAndAppManagementAssignmentFilterType property value. The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include, exclude.
+     * Sets the deviceAndAppManagementAssignmentFilterType property value. Represents type of the assignment filter.
      * @param value Value to set for the deviceAndAppManagementAssignmentFilterType property.
      * @return a void
      */
     public void setDeviceAndAppManagementAssignmentFilterType(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
         this._deviceAndAppManagementAssignmentFilterType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

@@ -86,7 +86,7 @@ public class ExtractContentLabelRequestBuilder {
     /**
      * Invoke action extractContentLabel
      * @param body 
-     * @return a CompletableFuture of ContentLabel
+     * @return a CompletableFuture of contentLabel
      */
     public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ExtractContentLabelRequestBuilder {
      * Invoke action extractContentLabel
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContentLabel
+     * @return a CompletableFuture of contentLabel
      */
     public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ExtractContentLabelRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of ContentLabel
+     * @return a CompletableFuture of contentLabel
      */
     public java.util.concurrent.CompletableFuture<ContentLabel> post(@javax.annotation.Nonnull final ExtractContentLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractContentLabelRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

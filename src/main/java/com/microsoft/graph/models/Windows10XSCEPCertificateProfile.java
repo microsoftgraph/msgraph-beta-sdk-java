@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile implements Parsable {
-    /** Target store certificate. Possible values are: user, machine. */
+    /** CertificateStore types */
     private CertificateStore _certificateStore;
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period */
     private Integer _certificateValidityPeriodValue;
@@ -18,11 +18,11 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     private java.util.List<ExtendedKeyUsage> _extendedKeyUsages;
     /** SCEP Hash Algorithm. */
     private java.util.List<String> _hashAlgorithm;
-    /** SCEP Key Size. Possible values are: size1024, size2048, size4096. */
+    /** Key Size Options. */
     private KeySize _keySize;
-    /** Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp. */
+    /** Key Storage Provider (KSP) Import Options. */
     private KeyStorageProviderOption _keyStorageProvider;
-    /** SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature. */
+    /** Key Usage Options. */
     private KeyUsages _keyUsage;
     /** Certificate renewal threshold percentage */
     private Integer _renewalThresholdPercentage;
@@ -52,7 +52,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         return new Windows10XSCEPCertificateProfile();
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Gets the certificateStore property value. CertificateStore types
      * @return a certificateStore
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         return this._certificateStore;
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         return this._hashAlgorithm;
     }
     /**
-     * Gets the keySize property value. SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * Gets the keySize property value. Key Size Options.
      * @return a keySize
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         return this._keySize;
     }
     /**
-     * Gets the keyStorageProvider property value. Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @return a keyStorageProviderOption
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         return this._keyStorageProvider;
     }
     /**
-     * Gets the keyUsage property value. SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * Gets the keyUsage property value. Key Usage Options.
      * @return a keyUsages
      */
     @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Sets the certificateStore property value. CertificateStore types
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
@@ -209,7 +209,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         this._certificateStore = value;
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
@@ -241,7 +241,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         this._hashAlgorithm = value;
     }
     /**
-     * Sets the keySize property value. SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      * @return a void
      */
@@ -249,7 +249,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         this._keySize = value;
     }
     /**
-     * Sets the keyStorageProvider property value. Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Sets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
@@ -257,7 +257,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         this._keyStorageProvider = value;
     }
     /**
-     * Sets the keyUsage property value. SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      * @return a void
      */

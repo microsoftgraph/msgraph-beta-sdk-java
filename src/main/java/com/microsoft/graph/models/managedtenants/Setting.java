@@ -19,7 +19,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
     private Boolean _overwriteAllowed;
     /** The settingId property */
     private String _settingId;
-    /** The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only. */
+    /** The valueType property */
     private ManagementParameterValueType _valueType;
     /**
      * Instantiates a new setting and sets the default values.
@@ -94,7 +94,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
         return this._settingId;
     }
     /**
-     * Gets the valueType property value. The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
+     * Gets the valueType property value. The valueType property
      * @return a managementParameterValueType
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
         this._settingId = value;
     }
     /**
-     * Sets the valueType property value. The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
+     * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      * @return a void
      */

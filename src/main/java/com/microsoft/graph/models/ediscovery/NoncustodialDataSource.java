@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class NoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** Indicates if hold is applied to non-custodial data source (such as mailbox or site). */
     private Boolean _applyHoldToSource;
     /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;
     /**
-     * Instantiates a new NoncustodialDataSource and sets the default values.
+     * Instantiates a new noncustodialDataSource and sets the default values.
      * @return a void
      */
     public NoncustodialDataSource() {
@@ -22,7 +23,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NoncustodialDataSource
+     * @return a noncustodialDataSource
      */
     @javax.annotation.Nonnull
     public static NoncustodialDataSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

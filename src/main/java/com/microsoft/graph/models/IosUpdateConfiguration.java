@@ -23,7 +23,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     private Boolean _isEnabled;
     /** Days in week for which active hours are configured. This collection can contain a maximum of 7 elements. */
     private java.util.List<String> _scheduledInstallDays;
-    /** Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows. */
+    /** Update schedule type for iOS software updates. */
     private IosSoftwareUpdateScheduleType _updateScheduleType;
     /** UTC Time Offset indicated in minutes */
     private Integer _utcTimeOffsetInMinutes;
@@ -120,7 +120,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
         return this._scheduledInstallDays;
     }
     /**
-     * Gets the updateScheduleType property value. Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+     * Gets the updateScheduleType property value. Update schedule type for iOS software updates.
      * @return a iosSoftwareUpdateScheduleType
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
         this._scheduledInstallDays = value;
     }
     /**
-     * Sets the updateScheduleType property value. Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+     * Sets the updateScheduleType property value. Update schedule type for iOS software updates.
      * @param value Value to set for the updateScheduleType property.
      * @return a void
      */

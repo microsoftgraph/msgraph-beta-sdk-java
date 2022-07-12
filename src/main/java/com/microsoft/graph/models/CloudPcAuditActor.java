@@ -23,7 +23,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     private String _remoteUserId;
     /** Service Principal Name (SPN). */
     private String _servicePrincipalName;
-    /** The actor type. Possible values include ItPro, Application, Partner and Unknown. */
+    /** The type property */
     private CloudPcAuditActorType _type;
     /** Azure AD user ID. */
     private String _userId;
@@ -128,7 +128,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         return this._servicePrincipalName;
     }
     /**
-     * Gets the type property value. The actor type. Possible values include ItPro, Application, Partner and Unknown.
+     * Gets the type property value. The type property
      * @return a cloudPcAuditActorType
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         this._servicePrincipalName = value;
     }
     /**
-     * Sets the type property value. The actor type. Possible values include ItPro, Application, Partner and Unknown.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

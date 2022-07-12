@@ -29,12 +29,15 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     private AccessReviewRecurrenceSettings _recurrenceSettings;
     /** Indicates whether sending reminder emails to reviewers is enabled. */
     private Boolean _remindersEnabled;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new accessReviewSettings and sets the default values.
      * @return a void
      */
     public AccessReviewSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.accessReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,6 +47,13 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static AccessReviewSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.businessFlowSettings": return new BusinessFlowSettings();
+            }
+        }
         return new AccessReviewSettings();
     }
     /**
@@ -101,7 +111,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("accessRecommendationsEnabled", (n) -> { currentObject.setAccessRecommendationsEnabled(n.getBooleanValue()); });
             this.put("activityDurationInDays", (n) -> { currentObject.setActivityDurationInDays(n.getIntegerValue()); });
             this.put("autoApplyReviewResultsEnabled", (n) -> { currentObject.setAutoApplyReviewResultsEnabled(n.getBooleanValue()); });
@@ -111,6 +121,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
             this.put("mailNotificationsEnabled", (n) -> { currentObject.setMailNotificationsEnabled(n.getBooleanValue()); });
             this.put("recurrenceSettings", (n) -> { currentObject.setRecurrenceSettings(n.getObjectValue(AccessReviewRecurrenceSettings::createFromDiscriminatorValue)); });
             this.put("remindersEnabled", (n) -> { currentObject.setRemindersEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -128,6 +139,14 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getMailNotificationsEnabled() {
         return this._mailNotificationsEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the recurrenceSettings property value. Detailed settings for recurrence.
@@ -161,6 +180,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("mailNotificationsEnabled", this.getMailNotificationsEnabled());
         writer.writeObjectValue("recurrenceSettings", this.getRecurrenceSettings());
         writer.writeBooleanValue("remindersEnabled", this.getRemindersEnabled());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -226,6 +246,14 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      */
     public void setMailNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailNotificationsEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the recurrenceSettings property value. Detailed settings for recurrence.

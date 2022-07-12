@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics baseline entity contains baseline values against which to compare the user experience analytics scores. */
 public class UserExperienceAnalyticsBaseline extends Entity implements Parsable {
     /** The user experience analytics app health metrics. */
     private UserExperienceAnalyticsCategory _appHealthMetrics;
@@ -31,7 +30,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /** The user experience analytics work from anywhere metrics. */
     private UserExperienceAnalyticsCategory _workFromAnywhereMetrics;
     /**
-     * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBaseline and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBaseline() {
@@ -40,7 +39,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBaseline
+     * @return a UserExperienceAnalyticsBaseline
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBaseline createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

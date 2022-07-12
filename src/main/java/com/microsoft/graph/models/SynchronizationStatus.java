@@ -12,7 +12,7 @@ import java.util.Objects;
 public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** High-level status code of the synchronization job. Possible values are: NotConfigured, NotRun, Active, Paused, Quarantine. */
+    /** The code property */
     private SynchronizationStatusCode _code;
     /** Number of consecutive times this job failed. */
     private Long _countSuccessiveCompleteFailures;
@@ -62,7 +62,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the code property value. High-level status code of the synchronization job. Possible values are: NotConfigured, NotRun, Active, Paused, Quarantine.
+     * Gets the code property value. The code property
      * @return a synchronizationStatusCode
      */
     @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the code property value. High-level status code of the synchronization job. Possible values are: NotConfigured, NotRun, Active, Paused, Quarantine.
+     * Sets the code property value. The code property
      * @param value Value to set for the code property.
      * @return a void
      */

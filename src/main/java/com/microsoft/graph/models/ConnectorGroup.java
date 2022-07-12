@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ConnectorGroup extends Entity implements Parsable {
     /** The applications property */
     private java.util.List<Application> _applications;
-    /** Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only. */
+    /** The connectorGroupType property */
     private ConnectorGroupType _connectorGroupType;
     /** Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only. */
     private Boolean _isDefault;
@@ -47,7 +46,7 @@ public class ConnectorGroup extends Entity implements Parsable {
         return this._applications;
     }
     /**
-     * Gets the connectorGroupType property value. Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only.
+     * Gets the connectorGroupType property value. The connectorGroupType property
      * @return a connectorGroupType
      */
     @javax.annotation.Nullable
@@ -126,7 +125,7 @@ public class ConnectorGroup extends Entity implements Parsable {
         this._applications = value;
     }
     /**
-     * Sets the connectorGroupType property value. Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only.
+     * Sets the connectorGroupType property value. The connectorGroupType property
      * @param value Value to set for the connectorGroupType property.
      * @return a void
      */

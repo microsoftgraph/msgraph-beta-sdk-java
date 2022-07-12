@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getCredentialUserRegistrationCount method. */
 public class CredentialUserRegistrationCount extends Entity implements Parsable {
     /** Provides the total user count in the tenant. */
     private Long _totalUserCount;
     /** A collection of registration count and status information for users in your tenant. */
     private java.util.List<UserRegistrationCount> _userRegistrationCounts;
     /**
-     * Instantiates a new credentialUserRegistrationCount and sets the default values.
+     * Instantiates a new CredentialUserRegistrationCount and sets the default values.
      * @return a void
      */
     public CredentialUserRegistrationCount() {
@@ -23,7 +22,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationCount
+     * @return a CredentialUserRegistrationCount
      */
     @javax.annotation.Nonnull
     public static CredentialUserRegistrationCount createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

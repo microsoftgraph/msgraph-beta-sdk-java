@@ -3,7 +3,7 @@ package microsoft.graph.models.managedtenants;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum WorkloadActionStatus implements ValuedEnum {
     ToAddress("toAddress"),
     Completed("completed"),

@@ -12,11 +12,11 @@ import java.util.Objects;
 public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable {
     /** Allow eligible Windows 10 devices to upgrade to the latest version of Windows 11. */
     private Boolean _allowWindows11Upgrade;
-    /** Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault. */
+    /** Possible values for automatic update mode. */
     private AutomaticUpdateMode _automaticUpdateMode;
-    /** Specify the method by which the auto-restart required notification is dismissed. Possible values are: notConfigured, automatic, user. */
+    /** Auto restart required notification dismissal method */
     private AutoRestartNotificationDismissalMethod _autoRestartNotificationDismissal;
-    /** Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease. */
+    /** Which branch devices will receive their updates from */
     private WindowsUpdateType _businessReadyUpdatesOnly;
     /** Number of days before feature updates are installed automatically with valid range from 0 to 30 days */
     private Integer _deadlineForFeatureUpdatesInDays;
@@ -24,7 +24,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     private Integer _deadlineForQualityUpdatesInDays;
     /** Number of days after deadline  until restarts occur automatically with valid range from 0 to 7 days */
     private Integer _deadlineGracePeriodInDays;
-    /** Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode. */
+    /** Delivery optimization mode for peer distribution */
     private WindowsDeliveryOptimizationMode _deliveryOptimizationMode;
     /** Windows update for business configuration device states. This collection can contain a maximum of 500 elements. */
     private java.util.List<WindowsUpdateState> _deviceUpdateStates;
@@ -56,7 +56,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     private Boolean _microsoftUpdateServiceAllowed;
     /** Specifies if the device should wait until deadline for rebooting outside of active hours */
     private Boolean _postponeRebootUntilAfterDeadline;
-    /** The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed. */
+    /** Possible values for pre-release features. */
     private PrereleaseFeatures _prereleaseFeatures;
     /** Defer Quality Updates by these many days */
     private Integer _qualityUpdatesDeferralPeriodInDays;
@@ -76,13 +76,13 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     private Integer _scheduleRestartWarningInHours;
     /** Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. */
     private Boolean _skipChecksBeforeRestart;
-    /** Specifies what Windows Update notifications users see. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications. */
+    /** Windows Update Notification Display Options */
     private WindowsUpdateNotificationDisplayOption _updateNotificationLevel;
     /** Scheduled the update installation on the weeks of the month. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek. */
     private WindowsUpdateForBusinessUpdateWeeks _updateWeeks;
-    /** Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _userPauseAccess;
-    /** Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _userWindowsUpdateScanAccess;
     /**
      * Instantiates a new WindowsUpdateForBusinessConfiguration and sets the default values.
@@ -110,7 +110,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._allowWindows11Upgrade;
     }
     /**
-     * Gets the automaticUpdateMode property value. Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * Gets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @return a automaticUpdateMode
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._automaticUpdateMode;
     }
     /**
-     * Gets the autoRestartNotificationDismissal property value. Specify the method by which the auto-restart required notification is dismissed. Possible values are: notConfigured, automatic, user.
+     * Gets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
      * @return a autoRestartNotificationDismissalMethod
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._autoRestartNotificationDismissal;
     }
     /**
-     * Gets the businessReadyUpdatesOnly property value. Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Gets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @return a windowsUpdateType
      */
     @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._deadlineGracePeriodInDays;
     }
     /**
-     * Gets the deliveryOptimizationMode property value. Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @return a windowsDeliveryOptimizationMode
      */
     @javax.annotation.Nullable
@@ -333,7 +333,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._postponeRebootUntilAfterDeadline;
     }
     /**
-     * Gets the prereleaseFeatures property value. The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * Gets the prereleaseFeatures property value. Possible values for pre-release features.
      * @return a prereleaseFeatures
      */
     @javax.annotation.Nullable
@@ -413,7 +413,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._skipChecksBeforeRestart;
     }
     /**
-     * Gets the updateNotificationLevel property value. Specifies what Windows Update notifications users see. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications.
+     * Gets the updateNotificationLevel property value. Windows Update Notification Display Options
      * @return a windowsUpdateNotificationDisplayOption
      */
     @javax.annotation.Nullable
@@ -429,7 +429,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._updateWeeks;
     }
     /**
-     * Gets the userPauseAccess property value. Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
+     * Gets the userPauseAccess property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -437,7 +437,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._userPauseAccess;
     }
     /**
-     * Gets the userWindowsUpdateScanAccess property value. Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
+     * Gets the userWindowsUpdateScanAccess property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -499,7 +499,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._allowWindows11Upgrade = value;
     }
     /**
-     * Sets the automaticUpdateMode property value. Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * Sets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @param value Value to set for the automaticUpdateMode property.
      * @return a void
      */
@@ -507,7 +507,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._automaticUpdateMode = value;
     }
     /**
-     * Sets the autoRestartNotificationDismissal property value. Specify the method by which the auto-restart required notification is dismissed. Possible values are: notConfigured, automatic, user.
+     * Sets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
      * @param value Value to set for the autoRestartNotificationDismissal property.
      * @return a void
      */
@@ -515,7 +515,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._autoRestartNotificationDismissal = value;
     }
     /**
-     * Sets the businessReadyUpdatesOnly property value. Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Sets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @param value Value to set for the businessReadyUpdatesOnly property.
      * @return a void
      */
@@ -547,7 +547,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._deadlineGracePeriodInDays = value;
     }
     /**
-     * Sets the deliveryOptimizationMode property value. Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @param value Value to set for the deliveryOptimizationMode property.
      * @return a void
      */
@@ -675,7 +675,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._postponeRebootUntilAfterDeadline = value;
     }
     /**
-     * Sets the prereleaseFeatures property value. The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * Sets the prereleaseFeatures property value. Possible values for pre-release features.
      * @param value Value to set for the prereleaseFeatures property.
      * @return a void
      */
@@ -755,7 +755,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._skipChecksBeforeRestart = value;
     }
     /**
-     * Sets the updateNotificationLevel property value. Specifies what Windows Update notifications users see. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications.
+     * Sets the updateNotificationLevel property value. Windows Update Notification Display Options
      * @param value Value to set for the updateNotificationLevel property.
      * @return a void
      */
@@ -771,7 +771,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._updateWeeks = value;
     }
     /**
-     * Sets the userPauseAccess property value. Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
+     * Sets the userPauseAccess property value. Possible values of a property
      * @param value Value to set for the userPauseAccess property.
      * @return a void
      */
@@ -779,7 +779,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._userPauseAccess = value;
     }
     /**
-     * Sets the userWindowsUpdateScanAccess property value. Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
+     * Sets the userWindowsUpdateScanAccess property value. Possible values of a property
      * @param value Value to set for the userWindowsUpdateScanAccess property.
      * @return a void
      */

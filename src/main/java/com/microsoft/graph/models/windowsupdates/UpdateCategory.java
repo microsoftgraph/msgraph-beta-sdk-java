@@ -3,7 +3,7 @@ package microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the enrollAssets method. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum UpdateCategory implements ValuedEnum {
     Feature("feature"),
     Quality("quality"),

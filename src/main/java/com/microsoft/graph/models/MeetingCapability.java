@@ -15,7 +15,7 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
     private Boolean _allowAnonymousUsersToDialOut;
     /** Indicates whether anonymous users are allowed to start a meeting. */
     private Boolean _allowAnonymousUsersToStartMeeting;
-    /** Possible values are: everyoneInCompany, everyone. */
+    /** The autoAdmittedUsers property */
     private AutoAdmittedUsersType _autoAdmittedUsers;
     /**
      * Instantiates a new meetingCapability and sets the default values.
@@ -59,7 +59,7 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
         return this._allowAnonymousUsersToStartMeeting;
     }
     /**
-     * Gets the autoAdmittedUsers property value. Possible values are: everyoneInCompany, everyone.
+     * Gets the autoAdmittedUsers property value. The autoAdmittedUsers property
      * @return a autoAdmittedUsersType
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
         this._allowAnonymousUsersToStartMeeting = value;
     }
     /**
-     * Sets the autoAdmittedUsers property value. Possible values are: everyoneInCompany, everyone.
+     * Sets the autoAdmittedUsers property value. The autoAdmittedUsers property
      * @param value Value to set for the autoAdmittedUsers property.
      * @return a void
      */

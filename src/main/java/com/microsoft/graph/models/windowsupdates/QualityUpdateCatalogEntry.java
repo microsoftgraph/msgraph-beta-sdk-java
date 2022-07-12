@@ -10,7 +10,7 @@ import java.util.Objects;
 public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /** Indicates whether the content can be deployed as an expedited quality update. Read-only. */
     private Boolean _isExpeditable;
-    /** The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only. */
+    /** The qualityUpdateClassification property */
     private QualityUpdateClassification _qualityUpdateClassification;
     /**
      * Instantiates a new QualityUpdateCatalogEntry and sets the default values.
@@ -50,7 +50,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return this._isExpeditable;
     }
     /**
-     * Gets the qualityUpdateClassification property value. The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only.
+     * Gets the qualityUpdateClassification property value. The qualityUpdateClassification property
      * @return a qualityUpdateClassification
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         this._isExpeditable = value;
     }
     /**
-     * Sets the qualityUpdateClassification property value. The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only.
+     * Sets the qualityUpdateClassification property value. The qualityUpdateClassification property
      * @param value Value to set for the qualityUpdateClassification property.
      * @return a void
      */

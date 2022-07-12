@@ -12,15 +12,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     private String _allowedAndroidDeviceManufacturers;
     /** List of device models allowed, as a string, for the managed app to work. */
     private java.util.List<String> _allowedAndroidDeviceModels;
-    /** Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfAndroidDeviceManufacturerNotAllowed;
-    /** Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfAndroidDeviceModelNotAllowed;
-    /** Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfAndroidSafetyNetAppsVerificationFailed;
-    /** Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfAndroidSafetyNetDeviceAttestationFailed;
-    /** Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on android device but is not set. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfDeviceLockNotSet;
     /** If the device does not have a passcode of high complexity or higher, trigger the stored action. */
     private ManagedAppRemediationAction _appActionIfDevicePasscodeComplexityLessThanHigh;
@@ -76,11 +76,11 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     private String _minimumWipePatchVersion;
     /** Require user to apply Class 3 Biometrics on their Android device. */
     private Boolean _requireClass3Biometrics;
-    /** Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled. */
+    /** An admin enforced Android SafetyNet Device Attestation requirement on a managed app. */
     private AndroidManagedAppSafetyNetAppsVerificationType _requiredAndroidSafetyNetAppsVerificationType;
-    /** Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification. */
+    /** An admin enforced Android SafetyNet Device Attestation requirement on a managed app. */
     private AndroidManagedAppSafetyNetDeviceAttestationType _requiredAndroidSafetyNetDeviceAttestationType;
-    /** Defines the Android SafetyNet evaluation type requirement for a managed app to work. */
+    /** An admin enforced Android SafetyNet evaluation type requirement on a managed app. */
     private AndroidManagedAppSafetyNetEvaluationType _requiredAndroidSafetyNetEvaluationType;
     /** A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device. */
     private Boolean _requirePinAfterBiometricChange;
@@ -124,7 +124,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._allowedAndroidDeviceModels;
     }
     /**
-     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed property value. Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
+     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._appActionIfAndroidDeviceManufacturerNotAllowed;
     }
     /**
-     * Gets the appActionIfAndroidDeviceModelNotAllowed property value. Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
+     * Gets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._appActionIfAndroidDeviceModelNotAllowed;
     }
     /**
-     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
+     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._appActionIfAndroidSafetyNetAppsVerificationFailed;
     }
     /**
-     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
+     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._appActionIfAndroidSafetyNetDeviceAttestationFailed;
     }
     /**
-     * Gets the appActionIfDeviceLockNotSet property value. Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on android device but is not set.
+     * Gets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -431,7 +431,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._requireClass3Biometrics;
     }
     /**
-     * Gets the requiredAndroidSafetyNetAppsVerificationType property value. Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
+     * Gets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @return a androidManagedAppSafetyNetAppsVerificationType
      */
     @javax.annotation.Nullable
@@ -439,7 +439,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._requiredAndroidSafetyNetAppsVerificationType;
     }
     /**
-     * Gets the requiredAndroidSafetyNetDeviceAttestationType property value. Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
+     * Gets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @return a androidManagedAppSafetyNetDeviceAttestationType
      */
     @javax.annotation.Nullable
@@ -447,7 +447,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._requiredAndroidSafetyNetDeviceAttestationType;
     }
     /**
-     * Gets the requiredAndroidSafetyNetEvaluationType property value. Defines the Android SafetyNet evaluation type requirement for a managed app to work.
+     * Gets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
      * @return a androidManagedAppSafetyNetEvaluationType
      */
     @javax.annotation.Nullable
@@ -553,7 +553,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._allowedAndroidDeviceModels = value;
     }
     /**
-     * Sets the appActionIfAndroidDeviceManufacturerNotAllowed property value. Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
+     * Sets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidDeviceManufacturerNotAllowed property.
      * @return a void
      */
@@ -561,7 +561,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._appActionIfAndroidDeviceManufacturerNotAllowed = value;
     }
     /**
-     * Sets the appActionIfAndroidDeviceModelNotAllowed property value. Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
+     * Sets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidDeviceModelNotAllowed property.
      * @return a void
      */
@@ -569,7 +569,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._appActionIfAndroidDeviceModelNotAllowed = value;
     }
     /**
-     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
+     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidSafetyNetAppsVerificationFailed property.
      * @return a void
      */
@@ -577,7 +577,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._appActionIfAndroidSafetyNetAppsVerificationFailed = value;
     }
     /**
-     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
+     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidSafetyNetDeviceAttestationFailed property.
      * @return a void
      */
@@ -585,7 +585,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._appActionIfAndroidSafetyNetDeviceAttestationFailed = value;
     }
     /**
-     * Sets the appActionIfDeviceLockNotSet property value. Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on android device but is not set.
+     * Sets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfDeviceLockNotSet property.
      * @return a void
      */
@@ -809,7 +809,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._requireClass3Biometrics = value;
     }
     /**
-     * Sets the requiredAndroidSafetyNetAppsVerificationType property value. Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
+     * Sets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetAppsVerificationType property.
      * @return a void
      */
@@ -817,7 +817,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._requiredAndroidSafetyNetAppsVerificationType = value;
     }
     /**
-     * Sets the requiredAndroidSafetyNetDeviceAttestationType property value. Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
+     * Sets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetDeviceAttestationType property.
      * @return a void
      */
@@ -825,7 +825,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._requiredAndroidSafetyNetDeviceAttestationType = value;
     }
     /**
-     * Sets the requiredAndroidSafetyNetEvaluationType property value. Defines the Android SafetyNet evaluation type requirement for a managed app to work.
+     * Sets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetEvaluationType property.
      * @return a void
      */

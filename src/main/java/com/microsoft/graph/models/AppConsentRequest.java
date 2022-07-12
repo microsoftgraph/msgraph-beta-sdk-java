@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AppConsentRequest extends Entity implements Parsable {
     /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
     private String _appDisplayName;

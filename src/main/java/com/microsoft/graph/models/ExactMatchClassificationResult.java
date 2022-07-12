@@ -16,7 +16,7 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
     /** The errors property */
     private java.util.List<ClassificationError> _errors;
     /**
-     * Instantiates a new ExactMatchClassificationResult and sets the default values.
+     * Instantiates a new exactMatchClassificationResult and sets the default values.
      * @return a void
      */
     public ExactMatchClassificationResult() {
@@ -25,7 +25,7 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExactMatchClassificationResult
+     * @return a exactMatchClassificationResult
      */
     @javax.annotation.Nonnull
     public static ExactMatchClassificationResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

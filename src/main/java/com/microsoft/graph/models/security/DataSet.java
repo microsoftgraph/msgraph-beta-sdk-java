@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the security singleton. */
 public class DataSet extends Entity implements Parsable {
     /** The createdBy property */
     private IdentitySet _createdBy;
@@ -24,6 +23,7 @@ public class DataSet extends Entity implements Parsable {
      */
     public DataSet() {
         super();
+        this.setOdatatype("#microsoft.graph.security.dataSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

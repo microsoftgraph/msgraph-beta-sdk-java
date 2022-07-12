@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Enrollment Profile used to enroll Android Enterprise devices using Google's Cloud Management. */
 public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsable {
     /** Tenant GUID the enrollment profile belongs to. */
     private String _accountId;
@@ -20,9 +19,9 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     private String _displayName;
     /** Total number of Android devices that have enrolled using this enrollment profile. */
     private Integer _enrolledDeviceCount;
-    /** The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice. */
+    /** The enrollment mode for an enrollment profile. */
     private AndroidDeviceOwnerEnrollmentMode _enrollmentMode;
-    /** The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode. */
+    /** The enrollment token type for an enrollment profile. */
     private AndroidDeviceOwnerEnrollmentTokenType _enrollmentTokenType;
     /** Total number of AOSP devices that have enrolled using the current token. */
     private Integer _enrollmentTokenUsageCount;
@@ -44,12 +43,12 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     private Boolean _wifiHidden;
     /** String that contains the wi-fi login password */
     private String _wifiPassword;
-    /** String that contains the wi-fi security type. Possible values are: none, wpa, wep. */
+    /** This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios. */
     private AospWifiSecurityType _wifiSecurityType;
     /** String that contains the wi-fi login ssid */
     private String _wifiSsid;
     /**
-     * Instantiates a new androidDeviceOwnerEnrollmentProfile and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerEnrollmentProfile and sets the default values.
      * @return a void
      */
     public AndroidDeviceOwnerEnrollmentProfile() {
@@ -58,7 +57,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerEnrollmentProfile
+     * @return a AndroidDeviceOwnerEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AndroidDeviceOwnerEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -106,7 +105,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         return this._enrolledDeviceCount;
     }
     /**
-     * Gets the enrollmentMode property value. The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.
+     * Gets the enrollmentMode property value. The enrollment mode for an enrollment profile.
      * @return a androidDeviceOwnerEnrollmentMode
      */
     @javax.annotation.Nullable
@@ -114,7 +113,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         return this._enrollmentMode;
     }
     /**
-     * Gets the enrollmentTokenType property value. The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
+     * Gets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
      * @return a androidDeviceOwnerEnrollmentTokenType
      */
     @javax.annotation.Nullable
@@ -231,7 +230,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         return this._wifiPassword;
     }
     /**
-     * Gets the wifiSecurityType property value. String that contains the wi-fi security type. Possible values are: none, wpa, wep.
+     * Gets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
      * @return a aospWifiSecurityType
      */
     @javax.annotation.Nullable
@@ -315,7 +314,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         this._enrolledDeviceCount = value;
     }
     /**
-     * Sets the enrollmentMode property value. The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.
+     * Sets the enrollmentMode property value. The enrollment mode for an enrollment profile.
      * @param value Value to set for the enrollmentMode property.
      * @return a void
      */
@@ -323,7 +322,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         this._enrollmentMode = value;
     }
     /**
-     * Sets the enrollmentTokenType property value. The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
+     * Sets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
      * @param value Value to set for the enrollmentTokenType property.
      * @return a void
      */
@@ -411,7 +410,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         this._wifiPassword = value;
     }
     /**
-     * Sets the wifiSecurityType property value. String that contains the wi-fi security type. Possible values are: none, wpa, wep.
+     * Sets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
      * @param value Value to set for the wifiSecurityType property.
      * @return a void
      */

@@ -9,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the financials singleton. */
 public class PaymentTerm extends Entity implements Parsable {
     /** The calculateDiscountOnCreditMemos property */
     private Boolean _calculateDiscountOnCreditMemos;

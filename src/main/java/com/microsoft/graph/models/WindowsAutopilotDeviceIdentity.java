@@ -20,9 +20,9 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     private WindowsAutopilotDeploymentProfile _deploymentProfile;
     /** Profile set time of the Windows autopilot device. */
     private OffsetDateTime _deploymentProfileAssignedDateTime;
-    /** Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue. */
+    /** The deploymentProfileAssignmentDetailedStatus property */
     private WindowsAutopilotProfileAssignmentDetailedStatus _deploymentProfileAssignmentDetailedStatus;
-    /** Profile assignment status of the Windows autopilot device. Possible values are: unknown, assignedInSync, assignedOutOfSync, assignedUnkownSyncState, notAssigned, pending, failed. */
+    /** The deploymentProfileAssignmentStatus property */
     private WindowsAutopilotProfileAssignmentStatus _deploymentProfileAssignmentStatus;
     /** Surface Hub Device Account Password */
     private String _deviceAccountPassword;
@@ -32,7 +32,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     private String _deviceFriendlyName;
     /** Display Name */
     private String _displayName;
-    /** Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked. */
+    /** The enrollmentState property */
     private EnrollmentState _enrollmentState;
     /** Group Tag of the Windows autopilot device. */
     private String _groupTag;
@@ -50,7 +50,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     private String _productKey;
     /** Purchase Order Identifier of the Windows autopilot device. */
     private String _purchaseOrderIdentifier;
-    /** Device Remediation State. Possible values are: unknown, noRemediationRequired, automaticRemediationRequired, manualRemediationRequired, unknownFutureValue. */
+    /** Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device. */
     private WindowsAutopilotDeviceRemediationState _remediationState;
     /** RemediationState set time of Autopilot device. */
     private OffsetDateTime _remediationStateLastModifiedDateTime;
@@ -122,7 +122,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         return this._deploymentProfileAssignedDateTime;
     }
     /**
-     * Gets the deploymentProfileAssignmentDetailedStatus property value. Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue.
+     * Gets the deploymentProfileAssignmentDetailedStatus property value. The deploymentProfileAssignmentDetailedStatus property
      * @return a windowsAutopilotProfileAssignmentDetailedStatus
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         return this._deploymentProfileAssignmentDetailedStatus;
     }
     /**
-     * Gets the deploymentProfileAssignmentStatus property value. Profile assignment status of the Windows autopilot device. Possible values are: unknown, assignedInSync, assignedOutOfSync, assignedUnkownSyncState, notAssigned, pending, failed.
+     * Gets the deploymentProfileAssignmentStatus property value. The deploymentProfileAssignmentStatus property
      * @return a windowsAutopilotProfileAssignmentStatus
      */
     @javax.annotation.Nullable
@@ -170,7 +170,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the enrollmentState property value. Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
     @javax.annotation.Nullable
@@ -279,7 +279,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         return this._purchaseOrderIdentifier;
     }
     /**
-     * Gets the remediationState property value. Device Remediation State. Possible values are: unknown, noRemediationRequired, automaticRemediationRequired, manualRemediationRequired, unknownFutureValue.
+     * Gets the remediationState property value. Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
      * @return a windowsAutopilotDeviceRemediationState
      */
     @javax.annotation.Nullable
@@ -411,7 +411,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         this._deploymentProfileAssignedDateTime = value;
     }
     /**
-     * Sets the deploymentProfileAssignmentDetailedStatus property value. Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue.
+     * Sets the deploymentProfileAssignmentDetailedStatus property value. The deploymentProfileAssignmentDetailedStatus property
      * @param value Value to set for the deploymentProfileAssignmentDetailedStatus property.
      * @return a void
      */
@@ -419,7 +419,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         this._deploymentProfileAssignmentDetailedStatus = value;
     }
     /**
-     * Sets the deploymentProfileAssignmentStatus property value. Profile assignment status of the Windows autopilot device. Possible values are: unknown, assignedInSync, assignedOutOfSync, assignedUnkownSyncState, notAssigned, pending, failed.
+     * Sets the deploymentProfileAssignmentStatus property value. The deploymentProfileAssignmentStatus property
      * @param value Value to set for the deploymentProfileAssignmentStatus property.
      * @return a void
      */
@@ -459,7 +459,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the enrollmentState property value. Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
@@ -531,7 +531,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         this._purchaseOrderIdentifier = value;
     }
     /**
-     * Sets the remediationState property value. Device Remediation State. Possible values are: unknown, noRemediationRequired, automaticRemediationRequired, manualRemediationRequired, unknownFutureValue.
+     * Sets the remediationState property value. Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
      * @param value Value to set for the remediationState property.
      * @return a void
      */

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the teamwork singleton. */
 public class TeamworkDevice extends Entity implements Parsable {
     /** The activity properties that change based on the device usage. */
     private TeamworkDeviceActivity _activity;
@@ -24,7 +23,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The signed-in user on the device. */
     private TeamworkUserIdentity _currentUser;
-    /** The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue. */
+    /** The deviceType property */
     private TeamworkDeviceType _deviceType;
     /** The hardwareDetail property */
     private TeamworkHardwareDetail _hardwareDetail;
@@ -41,7 +40,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     /** The async operations on the device. */
     private java.util.List<TeamworkDeviceOperation> _operations;
     /**
-     * Instantiates a new teamworkDevice and sets the default values.
+     * Instantiates a new TeamworkDevice and sets the default values.
      * @return a void
      */
     public TeamworkDevice() {
@@ -50,7 +49,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDevice
+     * @return a TeamworkDevice
      */
     @javax.annotation.Nonnull
     public static TeamworkDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -114,7 +113,7 @@ public class TeamworkDevice extends Entity implements Parsable {
         return this._currentUser;
     }
     /**
-     * Gets the deviceType property value. The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
+     * Gets the deviceType property value. The deviceType property
      * @return a teamworkDeviceType
      */
     @javax.annotation.Nullable
@@ -283,7 +282,7 @@ public class TeamworkDevice extends Entity implements Parsable {
         this._currentUser = value;
     }
     /**
-     * Sets the deviceType property value. The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
+     * Sets the deviceType property value. The deviceType property
      * @param value Value to set for the deviceType property.
      * @return a void
      */

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics device scope entity contains device scope configuration values use to apply filtering on the endpoint analytics reports. */
 public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsable {
     /** Indicates the creation date and time for the custom device scope. */
     private OffsetDateTime _createdDateTime;
@@ -20,20 +19,20 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     private Boolean _isBuiltIn;
     /** Indicates the last updated date and time for the custom device scope. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals. Possible values are: none, equals, unknownFutureValue. */
+    /** Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals. */
     private DeviceScopeOperator _operator;
     /** The unique identifier of the person (admin) who created the device scope configuration. */
     private String _ownerId;
-    /** Device scope configuration parameter. It will be extended in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag. Possible values are: none, scopeTag, unknownFutureValue. */
+    /** Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag. */
     private DeviceScopeParameter _parameter;
-    /** Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none. Possible values are: none, computing, insufficientData, completed, unknownFutureValue. */
+    /** Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none. */
     private DeviceScopeStatus _status;
     /** The device scope configuration query clause value. */
     private String _value;
     /** The unique identifier for a user device scope tag Id used for the creation of device scope configuration. */
     private String _valueObjectId;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceScope and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceScope and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceScope() {
@@ -42,7 +41,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceScope
+     * @return a UserExperienceAnalyticsDeviceScope
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -111,7 +110,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals. Possible values are: none, equals, unknownFutureValue.
+     * Gets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
      * @return a deviceScopeOperator
      */
     @javax.annotation.Nullable
@@ -127,7 +126,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
         return this._ownerId;
     }
     /**
-     * Gets the parameter property value. Device scope configuration parameter. It will be extended in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag. Possible values are: none, scopeTag, unknownFutureValue.
+     * Gets the parameter property value. Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
      * @return a deviceScopeParameter
      */
     @javax.annotation.Nullable
@@ -135,7 +134,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
         return this._parameter;
     }
     /**
-     * Gets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none. Possible values are: none, computing, insufficientData, completed, unknownFutureValue.
+     * Gets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
      * @return a deviceScopeStatus
      */
     @javax.annotation.Nullable
@@ -219,7 +218,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals. Possible values are: none, equals, unknownFutureValue.
+     * Sets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
      * @param value Value to set for the operator property.
      * @return a void
      */
@@ -235,7 +234,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
         this._ownerId = value;
     }
     /**
-     * Sets the parameter property value. Device scope configuration parameter. It will be extended in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag. Possible values are: none, scopeTag, unknownFutureValue.
+     * Sets the parameter property value. Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
      * @param value Value to set for the parameter property.
      * @return a void
      */
@@ -243,7 +242,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
         this._parameter = value;
     }
     /**
-     * Sets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none. Possible values are: none, computing, insufficientData, completed, unknownFutureValue.
+     * Sets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
      * @param value Value to set for the status property.
      * @return a void
      */

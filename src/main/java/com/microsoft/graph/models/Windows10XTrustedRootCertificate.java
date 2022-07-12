@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessProfileBase implements Parsable {
     /** File name to display in UI. */
     private String _certFileName;
-    /** Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate. */
+    /** Possible values for the Certificate Destination Store. */
     private CertificateDestinationStore _destinationStore;
     /** Trusted Root Certificate */
     private byte[] _trustedRootCertificate;
@@ -40,7 +40,7 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
         return this._certFileName;
     }
     /**
-     * Gets the destinationStore property value. Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
+     * Gets the destinationStore property value. Possible values for the Certificate Destination Store.
      * @return a certificateDestinationStore
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
         this._certFileName = value;
     }
     /**
-     * Sets the destinationStore property value. Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
+     * Sets the destinationStore property value. Possible values for the Certificate Destination Store.
      * @param value Value to set for the destinationStore property.
      * @return a void
      */

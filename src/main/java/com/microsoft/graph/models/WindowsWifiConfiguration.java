@@ -40,6 +40,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      */
     public WindowsWifiConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.windowsWifiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

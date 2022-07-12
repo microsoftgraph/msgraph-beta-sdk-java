@@ -12,11 +12,11 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     private Boolean _alwaysOn;
     /** If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected. */
     private Boolean _alwaysOnLockdown;
-    /** Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD. */
+    /** VPN Authentication Method. */
     private VpnAuthenticationMethod _authenticationMethod;
     /** Connection name displayed to the user. */
     private String _connectionName;
-    /** Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect. */
+    /** Android Work Profile VPN connection type. */
     private AndroidWorkProfileVpnConnectionType _connectionType;
     /** Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements. */
     private java.util.List<KeyValue> _customData;
@@ -74,7 +74,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
         return this._alwaysOnLockdown;
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Gets the authenticationMethod property value. VPN Authentication Method.
      * @return a vpnAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
         return this._connectionName;
     }
     /**
-     * Gets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Gets the connectionType property value. Android Work Profile VPN connection type.
      * @return a androidWorkProfileVpnConnectionType
      */
     @javax.annotation.Nullable
@@ -253,7 +253,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
         this._alwaysOnLockdown = value;
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
@@ -269,7 +269,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
         this._connectionName = value;
     }
     /**
-     * Sets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Sets the connectionType property value. Android Work Profile VPN connection type.
      * @param value Value to set for the connectionType property.
      * @return a void
      */

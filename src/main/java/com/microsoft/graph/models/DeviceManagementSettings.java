@@ -13,7 +13,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     private Map<String, Object> _additionalData;
     /** The property to determine if Android device administrator enrollment is enabled for this account. */
     private Boolean _androidDeviceAdministratorEnrollmentEnabled;
-    /** The Derived Credential Provider to use for this account. Possible values are: notConfigured, entrustDataCard, purebred, xTec, intercede. */
+    /** Provider type for Derived Credentials. */
     private DerivedCredentialProviderType _derivedCredentialProvider;
     /** The Derived Credential Provider self-service URI. */
     private String _derivedCredentialUrl;
@@ -71,7 +71,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
         return this._androidDeviceAdministratorEnrollmentEnabled;
     }
     /**
-     * Gets the derivedCredentialProvider property value. The Derived Credential Provider to use for this account. Possible values are: notConfigured, entrustDataCard, purebred, xTec, intercede.
+     * Gets the derivedCredentialProvider property value. Provider type for Derived Credentials.
      * @return a derivedCredentialProviderType
      */
     @javax.annotation.Nullable
@@ -228,7 +228,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
         this._androidDeviceAdministratorEnrollmentEnabled = value;
     }
     /**
-     * Sets the derivedCredentialProvider property value. The Derived Credential Provider to use for this account. Possible values are: notConfigured, entrustDataCard, purebred, xTec, intercede.
+     * Sets the derivedCredentialProvider property value. Provider type for Derived Credentials.
      * @param value Value to set for the derivedCredentialProvider property.
      * @return a void
      */

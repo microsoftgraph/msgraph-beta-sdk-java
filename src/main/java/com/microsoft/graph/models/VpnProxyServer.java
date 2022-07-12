@@ -18,12 +18,15 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
     private String _automaticConfigurationScriptUrl;
     /** Port. Valid values 0 to 65535 */
     private Integer _port;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new vpnProxyServer and sets the default values.
      * @return a void
      */
     public VpnProxyServer() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.vpnProxyServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,6 +36,14 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static VpnProxyServer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windows10VpnProxyServer": return new Windows10VpnProxyServer();
+                case "#microsoft.graph.windows81VpnProxyServer": return new Windows81VpnProxyServer();
+            }
+        }
         return new VpnProxyServer();
     }
     /**
@@ -66,11 +77,20 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnProxyServer currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("automaticConfigurationScriptUrl", (n) -> { currentObject.setAutomaticConfigurationScriptUrl(n.getStringValue()); });
             this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the port property value. Port. Valid values 0 to 65535
@@ -90,6 +110,7 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("address", this.getAddress());
         writer.writeStringValue("automaticConfigurationScriptUrl", this.getAutomaticConfigurationScriptUrl());
         writer.writeIntegerValue("port", this.getPort());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -115,6 +136,14 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
      */
     public void setAutomaticConfigurationScriptUrl(@javax.annotation.Nullable final String value) {
         this._automaticConfigurationScriptUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the port property value. Port. Valid values 0 to 65535

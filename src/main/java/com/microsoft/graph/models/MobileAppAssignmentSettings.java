@@ -12,12 +12,15 @@ import java.util.Objects;
 public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new mobileAppAssignmentSettings and sets the default values.
      * @return a void
      */
     public MobileAppAssignmentSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.mobileAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -27,6 +30,22 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public static MobileAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.androidManagedStoreAppAssignmentSettings": return new AndroidManagedStoreAppAssignmentSettings();
+                case "#microsoft.graph.iosLobAppAssignmentSettings": return new IosLobAppAssignmentSettings();
+                case "#microsoft.graph.iosStoreAppAssignmentSettings": return new IosStoreAppAssignmentSettings();
+                case "#microsoft.graph.iosVppAppAssignmentSettings": return new IosVppAppAssignmentSettings();
+                case "#microsoft.graph.macOsLobAppAssignmentSettings": return new MacOsLobAppAssignmentSettings();
+                case "#microsoft.graph.macOsVppAppAssignmentSettings": return new MacOsVppAppAssignmentSettings();
+                case "#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings": return new MicrosoftStoreForBusinessAppAssignmentSettings();
+                case "#microsoft.graph.win32LobAppAssignmentSettings": return new Win32LobAppAssignmentSettings();
+                case "#microsoft.graph.windowsAppXAppAssignmentSettings": return new WindowsAppXAppAssignmentSettings();
+                case "#microsoft.graph.windowsUniversalAppXAppAssignmentSettings": return new WindowsUniversalAppXAppAssignmentSettings();
+            }
+        }
         return new MobileAppAssignmentSettings();
     }
     /**
@@ -44,8 +63,17 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppAssignmentSettings currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -54,6 +82,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -63,5 +92,13 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class CustomCalloutExtension extends Entity implements Parsable {
     /** Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow. */
     private CustomExtensionAuthenticationConfiguration _authenticationConfiguration;
@@ -20,16 +19,17 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     /** The type and details for configuring the endpoint to call the logic app's workflow. */
     private CustomExtensionEndpointConfiguration _endpointConfiguration;
     /**
-     * Instantiates a new customCalloutExtension and sets the default values.
+     * Instantiates a new CustomCalloutExtension and sets the default values.
      * @return a void
      */
     public CustomCalloutExtension() {
         super();
+        this.setOdatatype("#microsoft.graph.customCalloutExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customCalloutExtension
+     * @return a CustomCalloutExtension
      */
     @javax.annotation.Nonnull
     public static CustomCalloutExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

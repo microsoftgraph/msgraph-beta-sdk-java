@@ -17,12 +17,15 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     private OffsetDateTime _occurrenceDateTime;
     /** Object containing detailed information about the error and its remediation. */
     private DeviceManagementTroubleshootingErrorDetails _troubleshootingErrorDetails;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new mobileAppTroubleshootingHistoryItem and sets the default values.
      * @return a void
      */
     public MobileAppTroubleshootingHistoryItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.mobileAppTroubleshootingHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,6 +35,17 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public static MobileAppTroubleshootingHistoryItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.mobileAppTroubleshootingAppPolicyCreationHistory": return new MobileAppTroubleshootingAppPolicyCreationHistory();
+                case "#microsoft.graph.mobileAppTroubleshootingAppStateHistory": return new MobileAppTroubleshootingAppStateHistory();
+                case "#microsoft.graph.mobileAppTroubleshootingAppTargetHistory": return new MobileAppTroubleshootingAppTargetHistory();
+                case "#microsoft.graph.mobileAppTroubleshootingAppUpdateHistory": return new MobileAppTroubleshootingAppUpdateHistory();
+                case "#microsoft.graph.mobileAppTroubleshootingDeviceCheckinHistory": return new MobileAppTroubleshootingDeviceCheckinHistory();
+            }
+        }
         return new MobileAppTroubleshootingHistoryItem();
     }
     /**
@@ -49,9 +63,10 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppTroubleshootingHistoryItem currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("occurrenceDateTime", (n) -> { currentObject.setOccurrenceDateTime(n.getOffsetDateTimeValue()); });
             this.put("troubleshootingErrorDetails", (n) -> { currentObject.setTroubleshootingErrorDetails(n.getObjectValue(DeviceManagementTroubleshootingErrorDetails::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -61,6 +76,14 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     @javax.annotation.Nullable
     public OffsetDateTime getOccurrenceDateTime() {
         return this._occurrenceDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.
@@ -79,6 +102,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("occurrenceDateTime", this.getOccurrenceDateTime());
         writer.writeObjectValue("troubleshootingErrorDetails", this.getTroubleshootingErrorDetails());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -96,6 +120,14 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      */
     public void setOccurrenceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._occurrenceDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.

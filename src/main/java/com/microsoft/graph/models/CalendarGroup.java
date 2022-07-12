@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CalendarGroup extends Entity implements Parsable {
     /** The calendars in the calendar group. Navigation property. Read-only. Nullable. */
     private java.util.List<Calendar> _calendars;

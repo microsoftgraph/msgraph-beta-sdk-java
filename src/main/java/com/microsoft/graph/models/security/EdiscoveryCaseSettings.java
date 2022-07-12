@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the security singleton. */
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /** The OCR (Optical Character Recognition) settings for the case. */
     private OcrSettings _ocr;

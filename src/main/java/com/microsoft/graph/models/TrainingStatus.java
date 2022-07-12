@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getAttackSimulationTrainingUserCoverage method. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum TrainingStatus implements ValuedEnum {
     Unknown("unknown"),
     Assigned("assigned"),

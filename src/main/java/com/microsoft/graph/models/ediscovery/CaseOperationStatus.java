@@ -3,7 +3,7 @@ package microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the compliance singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum CaseOperationStatus implements ValuedEnum {
     NotStarted("notStarted"),
     SubmissionFailed("submissionFailed"),

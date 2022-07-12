@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Scheduled Action for Rule */
 public class DeviceManagementComplianceActionItem extends Entity implements Parsable {
-    /** What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock. */
+    /** Scheduled Action Type Enum */
     private DeviceManagementComplianceActionType _actionType;
     /** Number of hours to wait till the action will be enforced. Valid values 0 to 8760 */
     private Integer _gracePeriodHours;
@@ -35,7 +35,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
         return new DeviceManagementComplianceActionItem();
     }
     /**
-     * Gets the actionType property value. What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock.
+     * Gets the actionType property value. Scheduled Action Type Enum
      * @return a deviceManagementComplianceActionType
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
         writer.writeStringValue("notificationTemplateId", this.getNotificationTemplateId());
     }
     /**
-     * Sets the actionType property value. What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock.
+     * Sets the actionType property value. Scheduled Action Type Enum
      * @param value Value to set for the actionType property.
      * @return a void
      */

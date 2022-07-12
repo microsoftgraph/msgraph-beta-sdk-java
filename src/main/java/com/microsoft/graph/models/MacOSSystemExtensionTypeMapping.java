@@ -12,7 +12,7 @@ import java.util.Objects;
 public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed. */
+    /** Flag enum representing the allowed macOS system extension types. */
     private MacOSSystemExtensionType _allowedTypes;
     /** Gets or sets the team identifier used to sign the system extension. */
     private String _teamIdentifier;
@@ -42,7 +42,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
         return this._additionalData;
     }
     /**
-     * Gets the allowedTypes property value. Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed.
+     * Gets the allowedTypes property value. Flag enum representing the allowed macOS system extension types.
      * @return a macOSSystemExtensionType
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
         this._additionalData = value;
     }
     /**
-     * Sets the allowedTypes property value. Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed.
+     * Sets the allowedTypes property value. Flag enum representing the allowed macOS system extension types.
      * @param value Value to set for the allowedTypes property.
      * @return a void
      */

@@ -18,9 +18,9 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
     private String _domainHint;
     /** The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required. */
     private String _metadataUrl;
-    /** The response mode defines the method used to send data back from the custom identity provider to Azure AD B2C. Possible values: form_post, query. Required. */
+    /** The responseMode property */
     private OpenIdConnectResponseMode _responseMode;
-    /** The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required. */
+    /** The responseType property */
     private OpenIdConnectResponseTypes _responseType;
     /** Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required. */
     private String _scope;
@@ -100,7 +100,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         return this._metadataUrl;
     }
     /**
-     * Gets the responseMode property value. The response mode defines the method used to send data back from the custom identity provider to Azure AD B2C. Possible values: form_post, query. Required.
+     * Gets the responseMode property value. The responseMode property
      * @return a openIdConnectResponseMode
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         return this._responseMode;
     }
     /**
-     * Gets the responseType property value. The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required.
+     * Gets the responseType property value. The responseType property
      * @return a openIdConnectResponseTypes
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         this._metadataUrl = value;
     }
     /**
-     * Sets the responseMode property value. The response mode defines the method used to send data back from the custom identity provider to Azure AD B2C. Possible values: form_post, query. Required.
+     * Sets the responseMode property value. The responseMode property
      * @param value Value to set for the responseMode property.
      * @return a void
      */
@@ -189,7 +189,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         this._responseMode = value;
     }
     /**
-     * Sets the responseType property value. The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required.
+     * Sets the responseType property value. The responseType property
      * @param value Value to set for the responseType property.
      * @return a void
      */

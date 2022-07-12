@@ -20,7 +20,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     private OffsetDateTime _lastReportedDateTime;
     /** Platform of the device that is being reported */
     private Integer _platform;
-    /** Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The status property */
     private ComplianceStatus _status;
     /** The User Name that is being reported */
     private String _userName;
@@ -102,7 +102,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
         return this._platform;
     }
     /**
-     * Gets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the status property value. The status property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
         this._platform = value;
     }
     /**
-     * Sets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

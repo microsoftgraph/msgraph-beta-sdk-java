@@ -18,7 +18,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     private String _assessmentAppUserModelId;
     /** The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username). */
     private String _configurationAccount;
-    /** The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount. */
+    /** Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount. */
     private SecureAssessmentAccountType _configurationAccountType;
     /** Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/). */
     private String _launchUri;
@@ -82,7 +82,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
         return this._configurationAccount;
     }
     /**
-     * Gets the configurationAccountType property value. The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
+     * Gets the configurationAccountType property value. Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
      * @return a secureAssessmentAccountType
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
         this._configurationAccount = value;
     }
     /**
-     * Sets the configurationAccountType property value. The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
+     * Sets the configurationAccountType property value. Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
      * @param value Value to set for the configurationAccountType property.
      * @return a void
      */

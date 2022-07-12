@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertificateProfileBase implements Parsable {
-    /** Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi. */
+    /** PFX Import Options. */
     private IntendedPurpose _intendedPurpose;
     /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
     private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
@@ -42,7 +42,7 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
         }};
     }
     /**
-     * Gets the intendedPurpose property value. Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+     * Gets the intendedPurpose property value. PFX Import Options.
      * @return a intendedPurpose
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
     }
     /**
-     * Sets the intendedPurpose property value. Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+     * Sets the intendedPurpose property value. PFX Import Options.
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */

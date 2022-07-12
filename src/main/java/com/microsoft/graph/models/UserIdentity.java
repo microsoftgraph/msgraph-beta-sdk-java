@@ -7,27 +7,34 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class UserIdentity extends Identity implements Parsable {
     /** Indicates the client IP address used by user performing the activity (audit log only). */
     private String _ipAddress;
     /** The userPrincipalName attribute of the user. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new userIdentity and sets the default values.
+     * Instantiates a new UserIdentity and sets the default values.
      * @return a void
      */
     public UserIdentity() {
         super();
+        this.setOdatatype("#microsoft.graph.userIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @javax.annotation.Nonnull
     public static UserIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.auditUserIdentity": return new AuditUserIdentity();
+            }
+        }
         return new UserIdentity();
     }
     /**

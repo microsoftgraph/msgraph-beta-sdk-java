@@ -14,7 +14,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
     private Map<String, Object> _additionalData;
     /** Name of the device class which will be impacted by this rule. */
     private String _name;
-    /** Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model. */
+    /** Criteria which defines the type of device this access rule will apply to */
     private DeviceManagementExchangeAccessRuleType _type;
     /**
      * Instantiates a new deviceManagementExchangeDeviceClass and sets the default values.
@@ -62,7 +62,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
         return this._name;
     }
     /**
-     * Gets the type property value. Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
+     * Gets the type property value. Criteria which defines the type of device this access rule will apply to
      * @return a deviceManagementExchangeAccessRuleType
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
         this._name = value;
     }
     /**
-     * Sets the type property value. Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
+     * Sets the type property value. Criteria which defines the type of device this access rule will apply to
      * @param value Value to set for the type property.
      * @return a void
      */

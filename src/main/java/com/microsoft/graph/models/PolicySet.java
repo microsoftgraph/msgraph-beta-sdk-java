@@ -18,7 +18,7 @@ public class PolicySet extends Entity implements Parsable {
     private String _description;
     /** DisplayName of the PolicySet. */
     private String _displayName;
-    /** Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted. */
+    /** The errorCode property */
     private ErrorCode _errorCode;
     /** Tags of the guided deployment */
     private java.util.List<String> _guidedDeploymentTags;
@@ -28,7 +28,7 @@ public class PolicySet extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** RoleScopeTags of the PolicySet */
     private java.util.List<String> _roleScopeTags;
-    /** Validation/assignment status of the PolicySet. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned. */
+    /** The enum to specify the status of PolicySet. */
     private PolicySetStatus _status;
     /**
      * Instantiates a new policySet and sets the default values.
@@ -80,7 +80,7 @@ public class PolicySet extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the errorCode property value. Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
+     * Gets the errorCode property value. The errorCode property
      * @return a errorCode
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class PolicySet extends Entity implements Parsable {
         return this._roleScopeTags;
     }
     /**
-     * Gets the status property value. Validation/assignment status of the PolicySet. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
+     * Gets the status property value. The enum to specify the status of PolicySet.
      * @return a policySetStatus
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class PolicySet extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the errorCode property value. Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
+     * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
      * @return a void
      */
@@ -239,7 +239,7 @@ public class PolicySet extends Entity implements Parsable {
         this._roleScopeTags = value;
     }
     /**
-     * Sets the status property value. Validation/assignment status of the PolicySet. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
+     * Sets the status property value. The enum to specify the status of PolicySet.
      * @param value Value to set for the status property.
      * @return a void
      */

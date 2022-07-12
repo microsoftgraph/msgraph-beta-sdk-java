@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
-    /** Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps. */
+    /** Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps */
     private TargetedManagedAppGroupType _appGroupType;
     /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
     private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
     /** Indicates if the policy is deployed to any inclusion groups or not. */
     private Boolean _isAssigned;
-    /** The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise. */
+    /** Management levels for apps */
     private AppManagementLevel _targetedAppManagementLevels;
     /**
      * Instantiates a new TargetedManagedAppProtection and sets the default values.
@@ -22,6 +22,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     public TargetedManagedAppProtection() {
         super();
+        this.setOdatatype("#microsoft.graph.targetedManagedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +43,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         return new TargetedManagedAppProtection();
     }
     /**
-     * Gets the appGroupType property value. Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps.
+     * Gets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
      * @return a targetedManagedAppGroupType
      */
     @javax.annotation.Nullable
@@ -80,7 +81,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         return this._isAssigned;
     }
     /**
-     * Gets the targetedAppManagementLevels property value. The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise.
+     * Gets the targetedAppManagementLevels property value. Management levels for apps
      * @return a appManagementLevel
      */
     @javax.annotation.Nullable
@@ -101,7 +102,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         writer.writeEnumValue("targetedAppManagementLevels", this.getTargetedAppManagementLevels());
     }
     /**
-     * Sets the appGroupType property value. Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps.
+     * Sets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
      * @param value Value to set for the appGroupType property.
      * @return a void
      */
@@ -125,7 +126,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         this._isAssigned = value;
     }
     /**
-     * Sets the targetedAppManagementLevels property value. The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise.
+     * Sets the targetedAppManagementLevels property value. Management levels for apps
      * @param value Value to set for the targetedAppManagementLevels property.
      * @return a void
      */

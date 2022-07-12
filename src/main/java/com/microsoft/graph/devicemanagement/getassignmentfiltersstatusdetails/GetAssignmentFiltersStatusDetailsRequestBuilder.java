@@ -86,7 +86,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
     /**
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body 
-     * @return a CompletableFuture of AssignmentFilterStatusDetails
+     * @return a CompletableFuture of assignmentFilterStatusDetails
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AssignmentFilterStatusDetails
+     * @return a CompletableFuture of assignmentFilterStatusDetails
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of AssignmentFilterStatusDetails
+     * @return a CompletableFuture of assignmentFilterStatusDetails
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@javax.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAssignmentFiltersStatusDetailsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

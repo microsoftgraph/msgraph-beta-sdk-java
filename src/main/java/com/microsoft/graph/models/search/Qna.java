@@ -23,7 +23,7 @@ public class Qna extends SearchAnswer implements Parsable {
     private java.util.List<String> _languageTags;
     /** List of devices and operating systems able to view this qna. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP. */
     private java.util.List<String> _platforms;
-    /** State of the qna. Possible values are: published, draft, excluded, or unknownFutureValue. */
+    /** The state property */
     private AnswerState _state;
     /** Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations. */
     private java.util.List<AnswerVariant> _targetedVariations;
@@ -120,7 +120,7 @@ public class Qna extends SearchAnswer implements Parsable {
         return this._platforms;
     }
     /**
-     * Gets the state property value. State of the qna. Possible values are: published, draft, excluded, or unknownFutureValue.
+     * Gets the state property value. The state property
      * @return a answerState
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class Qna extends SearchAnswer implements Parsable {
         this._platforms = value;
     }
     /**
-     * Sets the state property value. State of the qna. Possible values are: published, draft, excluded, or unknownFutureValue.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -12,7 +12,7 @@ import java.util.Objects;
 public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden. */
+    /** Data type for a configuration item inside an Android for Work application's custom configuration schema */
     private AndroidForWorkAppConfigurationSchemaItemDataType _dataType;
     /** Default value for boolean type items, if specified by the app developer */
     private Boolean _defaultBoolValue;
@@ -56,7 +56,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
         return this._additionalData;
     }
     /**
-     * Gets the dataType property value. The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
+     * Gets the dataType property value. Data type for a configuration item inside an Android for Work application's custom configuration schema
      * @return a androidForWorkAppConfigurationSchemaItemDataType
      */
     @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
         this._additionalData = value;
     }
     /**
-     * Sets the dataType property value. The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
+     * Sets the dataType property value. Data type for a configuration item inside an Android for Work application's custom configuration schema
      * @param value Value to set for the dataType property.
      * @return a void
      */

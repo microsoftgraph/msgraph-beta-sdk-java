@@ -18,7 +18,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     private OffsetDateTime _lastCheckinDateTime;
     /** The digest of the current server image running on this server */
     private String _serverImageDigest;
-    /** The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed. */
+    /** Enum of possible MicrosoftTunnelServer health status types */
     private MicrosoftTunnelServerHealthStatus _tunnelServerHealthStatus;
     /**
      * Instantiates a new microsoftTunnelServer and sets the default values.
@@ -85,7 +85,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return this._serverImageDigest;
     }
     /**
-     * Gets the tunnelServerHealthStatus property value. The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
+     * Gets the tunnelServerHealthStatus property value. Enum of possible MicrosoftTunnelServer health status types
      * @return a microsoftTunnelServerHealthStatus
      */
     @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         this._serverImageDigest = value;
     }
     /**
-     * Sets the tunnelServerHealthStatus property value. The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
+     * Sets the tunnelServerHealthStatus property value. Enum of possible MicrosoftTunnelServer health status types
      * @param value Value to set for the tunnelServerHealthStatus property.
      * @return a void
      */

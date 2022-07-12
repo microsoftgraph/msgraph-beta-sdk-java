@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class InformationProtectionPolicySetting extends Entity implements Parsable {
     /** The defaultLabelId property */
     private String _defaultLabelId;

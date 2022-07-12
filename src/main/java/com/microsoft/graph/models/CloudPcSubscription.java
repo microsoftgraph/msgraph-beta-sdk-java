@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getSubscriptions method. */
 public class CloudPcSubscription extends Entity implements Parsable {
     /** The ID of the subscription. */
     private String _subscriptionId;

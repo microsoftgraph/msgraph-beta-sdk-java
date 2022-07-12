@@ -15,7 +15,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     private java.util.List<AttributeMapping> _attributeMappings;
     /** When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped. */
     private Boolean _enabled;
-    /** Which flow types are enabled for this object mapping. Add creates new objects in the target directory, Update modifies existing objects, and Delete deprovisions existing users. The default is Add, Update, Delete. */
+    /** The flowTypes property */
     private ObjectFlowTypes _flowTypes;
     /** Additional extension properties. Unless mentioned explicitly, metadata values should not be changed. */
     private java.util.List<MetadataEntry> _metadata;
@@ -87,7 +87,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the flowTypes property value. Which flow types are enabled for this object mapping. Add creates new objects in the target directory, Update modifies existing objects, and Delete deprovisions existing users. The default is Add, Update, Delete.
+     * Gets the flowTypes property value. The flowTypes property
      * @return a objectFlowTypes
      */
     @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this._enabled = value;
     }
     /**
-     * Sets the flowTypes property value. Which flow types are enabled for this object mapping. Add creates new objects in the target directory, Update modifies existing objects, and Delete deprovisions existing users. The default is Add, Update, Delete.
+     * Sets the flowTypes property value. The flowTypes property
      * @param value Value to set for the flowTypes property.
      * @return a void
      */

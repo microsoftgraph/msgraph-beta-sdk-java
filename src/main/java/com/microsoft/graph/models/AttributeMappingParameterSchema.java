@@ -17,7 +17,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     private String _name;
     /** true if the parameter is required; otherwise false. */
     private Boolean _required;
-    /** Possible values are: Boolean, Binary, Reference, Integer, String. Default is String. */
+    /** The type property */
     private AttributeType _type;
     /**
      * Instantiates a new attributeMappingParameterSchema and sets the default values.
@@ -83,7 +83,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         return this._required;
     }
     /**
-     * Gets the type property value. Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
+     * Gets the type property value. The type property
      * @return a attributeType
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         this._required = value;
     }
     /**
-     * Sets the type property value. Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

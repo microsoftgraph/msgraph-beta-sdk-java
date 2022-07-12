@@ -11,11 +11,11 @@ import java.util.Objects;
 public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The isPasscodeRequired property */
+    /** Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional. */
     private Boolean _isPasscodeRequired;
-    /** The joinMeetingId property */
+    /** The meeting ID to be used to join a meeting. Optional. Read-only. */
     private String _joinMeetingId;
-    /** The passcode property */
+    /** The passcode to join a meeting.  Optional. Read-only. */
     private String _passcode;
     /**
      * Instantiates a new joinMeetingIdSettings and sets the default values.
@@ -56,7 +56,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the isPasscodeRequired property value. The isPasscodeRequired property
+     * Gets the isPasscodeRequired property value. Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         return this._isPasscodeRequired;
     }
     /**
-     * Gets the joinMeetingId property value. The joinMeetingId property
+     * Gets the joinMeetingId property value. The meeting ID to be used to join a meeting. Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         return this._joinMeetingId;
     }
     /**
-     * Gets the passcode property value. The passcode property
+     * Gets the passcode property value. The passcode to join a meeting.  Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the isPasscodeRequired property value. The isPasscodeRequired property
+     * Sets the isPasscodeRequired property value. Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
      * @param value Value to set for the isPasscodeRequired property.
      * @return a void
      */
@@ -108,7 +108,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         this._isPasscodeRequired = value;
     }
     /**
-     * Sets the joinMeetingId property value. The joinMeetingId property
+     * Sets the joinMeetingId property value. The meeting ID to be used to join a meeting. Optional. Read-only.
      * @param value Value to set for the joinMeetingId property.
      * @return a void
      */
@@ -116,7 +116,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         this._joinMeetingId = value;
     }
     /**
-     * Sets the passcode property value. The passcode property
+     * Sets the passcode property value. The passcode to join a meeting.  Optional. Read-only.
      * @param value Value to set for the passcode property.
      * @return a void
      */

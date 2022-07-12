@@ -34,7 +34,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     private IosCertificateProfileBase _singleSignOnExtensionPkinitCertificate;
     /** The Kerberos login settings that enable apps on receiving devices to authenticate smoothly. */
     private IosSingleSignOnSettings _singleSignOnSettings;
-    /** A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens. */
+    /** An enum type for wallpaper display location specifier. */
     private IosWallpaperDisplayLocation _wallpaperDisplayLocation;
     /** A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version. */
     private MimeContent _wallpaperImage;
@@ -185,7 +185,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
         return this._singleSignOnSettings;
     }
     /**
-     * Gets the wallpaperDisplayLocation property value. A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
+     * Gets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
      * @return a iosWallpaperDisplayLocation
      */
     @javax.annotation.Nullable
@@ -329,7 +329,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
         this._singleSignOnSettings = value;
     }
     /**
-     * Sets the wallpaperDisplayLocation property value. A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
+     * Sets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
      * @param value Value to set for the wallpaperDisplayLocation property.
      * @return a void
      */

@@ -26,7 +26,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
     private Integer _natKeepAliveIntervalInSeconds;
     /** Enable hardware offloading of NAT keepalive signals when the device is asleep */
     private Boolean _natKeepAliveOffloadEnable;
-    /** Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi. */
+    /** The type of tunnels that will be present to the VPN client for configuration */
     private VpnTunnelConfigurationType _tunnelConfiguration;
     /** Allow the user to toggle the VPN configuration using the UI */
     private Boolean _userToggleEnabled;
@@ -134,7 +134,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
         return this._natKeepAliveOffloadEnable;
     }
     /**
-     * Gets the tunnelConfiguration property value. Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi.
+     * Gets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration
      * @return a vpnTunnelConfigurationType
      */
     @javax.annotation.Nullable
@@ -241,7 +241,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
         this._natKeepAliveOffloadEnable = value;
     }
     /**
-     * Sets the tunnelConfiguration property value. Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi.
+     * Sets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration
      * @param value Value to set for the tunnelConfiguration property.
      * @return a void
      */

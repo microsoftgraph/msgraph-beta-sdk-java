@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Mapping between an Android app permission and the action Android should take when that permission is requested. */
 public class AndroidPermissionAction implements AdditionalDataHolder, Parsable {
-    /** Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny. */
+    /** Android action taken when an app requests a dangerous permission. */
     private AndroidPermissionActionType _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -34,7 +34,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, Parsable {
         return new AndroidPermissionAction();
     }
     /**
-     * Gets the action property value. Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
+     * Gets the action property value. Android action taken when an app requests a dangerous permission.
      * @return a androidPermissionActionType
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
+     * Sets the action property value. Android action taken when an app requests a dangerous permission.
      * @param value Value to set for the action property.
      * @return a void
      */

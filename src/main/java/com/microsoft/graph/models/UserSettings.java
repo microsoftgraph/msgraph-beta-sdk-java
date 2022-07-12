@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class UserSettings extends Entity implements Parsable {
     /** The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list. */
     private ContactMergeSuggestions _contactMergeSuggestions;

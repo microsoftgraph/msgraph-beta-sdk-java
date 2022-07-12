@@ -1,0 +1,87 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends EducationSynchronizationConnectionSettings implements Parsable {
+    /** The scope of the access request (see RFC6749). */
+    private String _scope;
+    /** The URL to get access tokens for the data provider. */
+    private String _tokenUrl;
+    /**
+     * Instantiates a new EducationSynchronizationOAuth2ClientCredentialsConnectionSettings and sets the default values.
+     * @return a void
+     */
+    public EducationSynchronizationOAuth2ClientCredentialsConnectionSettings() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a EducationSynchronizationOAuth2ClientCredentialsConnectionSettings
+     */
+    @javax.annotation.Nonnull
+    public static EducationSynchronizationOAuth2ClientCredentialsConnectionSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new EducationSynchronizationOAuth2ClientCredentialsConnectionSettings();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final EducationSynchronizationOAuth2ClientCredentialsConnectionSettings currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
+            this.put("tokenUrl", (n) -> { currentObject.setTokenUrl(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the scope property value. The scope of the access request (see RFC6749).
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getScope() {
+        return this._scope;
+    }
+    /**
+     * Gets the tokenUrl property value. The URL to get access tokens for the data provider.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getTokenUrl() {
+        return this._tokenUrl;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("scope", this.getScope());
+        writer.writeStringValue("tokenUrl", this.getTokenUrl());
+    }
+    /**
+     * Sets the scope property value. The scope of the access request (see RFC6749).
+     * @param value Value to set for the scope property.
+     * @return a void
+     */
+    public void setScope(@javax.annotation.Nullable final String value) {
+        this._scope = value;
+    }
+    /**
+     * Sets the tokenUrl property value. The URL to get access tokens for the data provider.
+     * @param value Value to set for the tokenUrl property.
+     * @return a void
+     */
+    public void setTokenUrl(@javax.annotation.Nullable final String value) {
+        this._tokenUrl = value;
+    }
+}

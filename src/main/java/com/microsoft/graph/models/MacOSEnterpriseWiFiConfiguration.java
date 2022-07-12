@@ -12,7 +12,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     private WiFiAuthenticationMethod _authenticationMethod;
     /** EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously. */
     private EapFastConfiguration _eapFastConfiguration;
-    /** Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. */
+    /** Extensible Authentication Protocol (EAP) configuration types. */
     private EapType _eapType;
     /** Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). */
     private MacOSCertificateProfileBase _identityCertificateForClientAuthentication;
@@ -60,7 +60,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
         return this._eapFastConfiguration;
     }
     /**
-     * Gets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
     @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
         this._eapFastConfiguration = value;
     }
     /**
-     * Sets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
      * @return a void
      */

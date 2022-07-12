@@ -15,7 +15,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     private ParticipantInfo _initiatedBy;
     /** The identities of recording initiator. */
     private IdentitySet _initiator;
-    /** Possible values are: unknown, notRecording, recording, or failed. */
+    /** The recordingStatus property */
     private RecordingStatus _recordingStatus;
     /**
      * Instantiates a new recordingInfo and sets the default values.
@@ -72,7 +72,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         return this._initiator;
     }
     /**
-     * Gets the recordingStatus property value. Possible values are: unknown, notRecording, recording, or failed.
+     * Gets the recordingStatus property value. The recordingStatus property
      * @return a recordingStatus
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         this._initiator = value;
     }
     /**
-     * Sets the recordingStatus property value. Possible values are: unknown, notRecording, recording, or failed.
+     * Sets the recordingStatus property value. The recordingStatus property
      * @param value Value to set for the recordingStatus property.
      * @return a void
      */

@@ -16,7 +16,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     private String _deviceId;
     /** Last modified date time of an intent report */
     private OffsetDateTime _lastReportedDateTime;
-    /** Device state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The state property */
     private ComplianceStatus _state;
     /** The user name that is being reported on a device */
     private String _userName;
@@ -80,7 +80,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
         return this._lastReportedDateTime;
     }
     /**
-     * Gets the state property value. Device state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the state property value. The state property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
         this._lastReportedDateTime = value;
     }
     /**
-     * Sets the state property value. Device state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

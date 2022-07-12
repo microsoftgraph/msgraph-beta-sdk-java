@@ -9,11 +9,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents an Autopilot flow event. */
 public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /** Time spent in user ESP. */
     private Period _accountSetupDuration;
-    /** Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled. */
+    /** The accountSetupStatus property */
     private WindowsAutopilotDeploymentState _accountSetupStatus;
     /** Autopilot deployment duration including enrollment. */
     private Period _deploymentDuration;
@@ -21,7 +20,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     private OffsetDateTime _deploymentEndDateTime;
     /** Deployment start time. */
     private OffsetDateTime _deploymentStartDateTime;
-    /** Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled. */
+    /** The deploymentState property */
     private WindowsAutopilotDeploymentState _deploymentState;
     /** Total deployment duration from enrollment to Desktop screen. */
     private Period _deploymentTotalDuration;
@@ -35,15 +34,15 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     private String _deviceSerialNumber;
     /** Time spent in device ESP. */
     private Period _deviceSetupDuration;
-    /** Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled. */
+    /** The deviceSetupStatus property */
     private WindowsAutopilotDeploymentState _deviceSetupStatus;
     /** Enrollment failure details. */
     private String _enrollmentFailureDetails;
     /** Device enrollment start date. */
     private OffsetDateTime _enrollmentStartDateTime;
-    /** Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked. */
+    /** The enrollmentState property */
     private EnrollmentState _enrollmentState;
-    /** Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile. */
+    /** The enrollmentType property */
     private WindowsAutopilotEnrollmentType _enrollmentType;
     /** Time when the event occurred . */
     private OffsetDateTime _eventDateTime;
@@ -66,7 +65,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /** Autopilot profile name. */
     private String _windowsAutopilotDeploymentProfileDisplayName;
     /**
-     * Instantiates a new deviceManagementAutopilotEvent and sets the default values.
+     * Instantiates a new DeviceManagementAutopilotEvent and sets the default values.
      * @return a void
      */
     public DeviceManagementAutopilotEvent() {
@@ -75,7 +74,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementAutopilotEvent
+     * @return a DeviceManagementAutopilotEvent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementAutopilotEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +90,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this._accountSetupDuration;
     }
     /**
-     * Gets the accountSetupStatus property value. Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Gets the accountSetupStatus property value. The accountSetupStatus property
      * @return a windowsAutopilotDeploymentState
      */
     @javax.annotation.Nullable
@@ -123,7 +122,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this._deploymentStartDateTime;
     }
     /**
-     * Gets the deploymentState property value. Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Gets the deploymentState property value. The deploymentState property
      * @return a windowsAutopilotDeploymentState
      */
     @javax.annotation.Nullable
@@ -179,7 +178,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this._deviceSetupDuration;
     }
     /**
-     * Gets the deviceSetupStatus property value. Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Gets the deviceSetupStatus property value. The deviceSetupStatus property
      * @return a windowsAutopilotDeploymentState
      */
     @javax.annotation.Nullable
@@ -203,7 +202,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this._enrollmentStartDateTime;
     }
     /**
-     * Gets the enrollmentState property value. Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
     @javax.annotation.Nullable
@@ -211,7 +210,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this._enrollmentState;
     }
     /**
-     * Gets the enrollmentType property value. Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
+     * Gets the enrollmentType property value. The enrollmentType property
      * @return a windowsAutopilotEnrollmentType
      */
     @javax.annotation.Nullable
@@ -380,7 +379,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         this._accountSetupDuration = value;
     }
     /**
-     * Sets the accountSetupStatus property value. Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Sets the accountSetupStatus property value. The accountSetupStatus property
      * @param value Value to set for the accountSetupStatus property.
      * @return a void
      */
@@ -412,7 +411,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         this._deploymentStartDateTime = value;
     }
     /**
-     * Sets the deploymentState property value. Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Sets the deploymentState property value. The deploymentState property
      * @param value Value to set for the deploymentState property.
      * @return a void
      */
@@ -468,7 +467,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         this._deviceSetupDuration = value;
     }
     /**
-     * Sets the deviceSetupStatus property value. Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Sets the deviceSetupStatus property value. The deviceSetupStatus property
      * @param value Value to set for the deviceSetupStatus property.
      * @return a void
      */
@@ -492,7 +491,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         this._enrollmentStartDateTime = value;
     }
     /**
-     * Sets the enrollmentState property value. Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
@@ -500,7 +499,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         this._enrollmentState = value;
     }
     /**
-     * Sets the enrollmentType property value. Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
+     * Sets the enrollmentType property value. The enrollmentType property
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */

@@ -19,7 +19,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     private String _jsonAllowedValues;
     /** The default value for the template parameter represented by a serialized string of JSON. Required. Read-only. */
     private String _jsonDefaultValue;
-    /** The data type for the template parameter.. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only. */
+    /** The valueType property */
     private ManagementParameterValueType _valueType;
     /**
      * Instantiates a new templateParameter and sets the default values.
@@ -94,7 +94,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         return this._jsonDefaultValue;
     }
     /**
-     * Gets the valueType property value. The data type for the template parameter.. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
+     * Gets the valueType property value. The valueType property
      * @return a managementParameterValueType
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         this._jsonDefaultValue = value;
     }
     /**
-     * Sets the valueType property value. The data type for the template parameter.. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
+     * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      * @return a void
      */

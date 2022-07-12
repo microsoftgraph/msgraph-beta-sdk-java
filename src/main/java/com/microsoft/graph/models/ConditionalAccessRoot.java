@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
 public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified authentication context class references. */
     private java.util.List<AuthenticationContextClassReference> _authenticationContextClassReferences;
@@ -16,7 +15,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access policies. */
     private java.util.List<ConditionalAccessPolicy> _policies;
     /**
-     * Instantiates a new conditionalAccessRoot and sets the default values.
+     * Instantiates a new ConditionalAccessRoot and sets the default values.
      * @return a void
      */
     public ConditionalAccessRoot() {
@@ -25,7 +24,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessRoot
+     * @return a ConditionalAccessRoot
      */
     @javax.annotation.Nonnull
     public static ConditionalAccessRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

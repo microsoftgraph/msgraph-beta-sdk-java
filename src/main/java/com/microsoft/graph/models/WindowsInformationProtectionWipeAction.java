@@ -12,7 +12,7 @@ import java.util.Objects;
 public class WindowsInformationProtectionWipeAction extends Entity implements Parsable {
     /** Last checkin time of the device that was targeted by this wipe action. */
     private OffsetDateTime _lastCheckInDateTime;
-    /** Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported. */
+    /** The status property */
     private ActionState _status;
     /** Targeted device Mac address. */
     private String _targetedDeviceMacAddress;
@@ -64,7 +64,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
         return this._lastCheckInDateTime;
     }
     /**
-     * Gets the status property value. Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Gets the status property value. The status property
      * @return a actionState
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
         this._lastCheckInDateTime = value;
     }
     /**
-     * Sets the status property value. Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

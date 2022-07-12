@@ -14,9 +14,9 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The description of the device */
     private String _description;
-    /** Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram. */
+    /** The discoverySource property */
     private DiscoverySource _discoverySource;
-    /** The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked. */
+    /** The enrollmentState property */
     private EnrollmentState _enrollmentState;
     /** Indicates if the device is deleted from Apple Business Manager */
     private Boolean _isDeleted;
@@ -24,7 +24,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     private Boolean _isSupervised;
     /** Last Contacted Date Time of the device */
     private OffsetDateTime _lastContactedDateTime;
-    /** The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS. */
+    /** The platform property */
     private Platform _platform;
     /** The time enrollment profile was assigned to the device */
     private OffsetDateTime _requestedEnrollmentProfileAssignmentDateTime;
@@ -38,6 +38,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      */
     public ImportedAppleDeviceIdentity() {
         super();
+        this.setOdatatype("#microsoft.graph.importedAppleDeviceIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,7 +74,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the discoverySource property value. Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
+     * Gets the discoverySource property value. The discoverySource property
      * @return a discoverySource
      */
     @javax.annotation.Nullable
@@ -81,7 +82,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         return this._discoverySource;
     }
     /**
-     * Gets the enrollmentState property value. The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
     @javax.annotation.Nullable
@@ -134,7 +135,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         return this._lastContactedDateTime;
     }
     /**
-     * Gets the platform property value. The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
+     * Gets the platform property value. The platform property
      * @return a platform
      */
     @javax.annotation.Nullable
@@ -202,7 +203,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the discoverySource property value. Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
+     * Sets the discoverySource property value. The discoverySource property
      * @param value Value to set for the discoverySource property.
      * @return a void
      */
@@ -210,7 +211,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         this._discoverySource = value;
     }
     /**
-     * Sets the enrollmentState property value. The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
@@ -242,7 +243,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         this._lastContactedDateTime = value;
     }
     /**
-     * Sets the platform property value. The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
+     * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      * @return a void
      */

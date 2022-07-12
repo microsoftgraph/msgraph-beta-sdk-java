@@ -1,0 +1,25 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+/** Provides operations to call the evaluateApplication method. */
+public enum WatermarkLayout implements ValuedEnum {
+    Horizontal("horizontal"),
+    Diagonal("diagonal");
+    public final String value;
+    WatermarkLayout(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WatermarkLayout forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "horizontal": return Horizontal;
+            case "diagonal": return Diagonal;
+            default: return null;
+        }
+    }
+}

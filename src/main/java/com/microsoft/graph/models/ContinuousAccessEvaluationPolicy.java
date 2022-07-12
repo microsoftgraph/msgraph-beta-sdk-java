@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
 public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable {
     /** Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only. */
     private String _description;
@@ -22,7 +21,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     /** The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only. */
     private java.util.List<String> _users;
     /**
-     * Instantiates a new continuousAccessEvaluationPolicy and sets the default values.
+     * Instantiates a new ContinuousAccessEvaluationPolicy and sets the default values.
      * @return a void
      */
     public ContinuousAccessEvaluationPolicy() {
@@ -31,7 +30,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      */
     @javax.annotation.Nonnull
     public static ContinuousAccessEvaluationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

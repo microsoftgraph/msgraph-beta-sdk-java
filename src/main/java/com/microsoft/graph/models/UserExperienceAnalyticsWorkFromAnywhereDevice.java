@@ -31,7 +31,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     private String _deviceId;
     /** The work from anywhere device's name. */
     private String _deviceName;
-    /** The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. */
+    /** The healthStatus property */
     private UserExperienceAnalyticsHealthState _healthStatus;
     /** The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled. */
     private Boolean _isCloudManagedGatewayEnabled;
@@ -71,7 +71,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     private Boolean _tenantAttached;
     /** The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. */
     private Boolean _tpmCheckFailed;
-    /** The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. */
+    /** Work From Anywhere windows device upgrade eligibility status */
     private OperatingSystemUpgradeEligibility _upgradeEligibility;
     /** The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _windowsScore;
@@ -227,7 +227,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         }};
     }
     /**
-     * Gets the healthStatus property value. The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
@@ -387,7 +387,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this._tpmCheckFailed;
     }
     /**
-     * Gets the upgradeEligibility property value. The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
+     * Gets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status
      * @return a operatingSystemUpgradeEligibility
      */
     @javax.annotation.Nullable
@@ -542,7 +542,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this._deviceName = value;
     }
     /**
-     * Sets the healthStatus property value. The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
@@ -702,7 +702,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this._tpmCheckFailed = value;
     }
     /**
-     * Sets the upgradeEligibility property value. The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
+     * Sets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status
      * @param value Value to set for the upgradeEligibility property.
      * @return a void
      */

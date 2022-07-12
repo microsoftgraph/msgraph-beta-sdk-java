@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DeviceComplianceUserStatus extends Entity implements Parsable {
     /** Devices count for that user. */
     private Integer _devicesCount;
     /** Last modified date time of the policy report. */
     private OffsetDateTime _lastReportedDateTime;
-    /** Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The status property */
     private ComplianceStatus _status;
     /** User name of the DevicePolicyStatus. */
     private String _userDisplayName;
@@ -69,7 +69,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
         return this._lastReportedDateTime;
     }
     /**
-     * Gets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the status property value. The status property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
         this._lastReportedDateTime = value;
     }
     /**
-     * Sets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

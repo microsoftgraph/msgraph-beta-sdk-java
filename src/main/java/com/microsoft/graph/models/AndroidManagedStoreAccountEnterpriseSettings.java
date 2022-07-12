@@ -8,21 +8,20 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Enterprise settings for an Android managed store account. */
 public class AndroidManagedStoreAccountEnterpriseSettings extends Entity implements Parsable {
     /** Company codes for AndroidManagedStoreAccountEnterpriseSettings */
     private Boolean _androidDeviceOwnerFullyManagedEnrollmentEnabled;
-    /** Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding. */
+    /** Bind status of the tenant with the Google EMM API */
     private AndroidManagedStoreAccountBindStatus _bindStatus;
     /** Company codes for AndroidManagedStoreAccountEnterpriseSettings */
     private java.util.List<AndroidEnrollmentCompanyCode> _companyCodes;
     /** Indicates if this account is flighting for Android Device Owner Management with CloudDPC. */
     private Boolean _deviceOwnerManagementEnabled;
-    /** Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions. */
+    /** Android for Work device management targeting type for the account */
     private AndroidManagedStoreAccountEnrollmentTarget _enrollmentTarget;
     /** Last completion time for app sync */
     private OffsetDateTime _lastAppSyncDateTime;
-    /** Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none. */
+    /** Sync status of the tenant with the Google EMM API */
     private AndroidManagedStoreAccountAppSyncStatus _lastAppSyncStatus;
     /** Last modification time for Android enterprise settings */
     private OffsetDateTime _lastModifiedDateTime;
@@ -35,7 +34,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
     private java.util.List<String> _targetGroupIds;
     /**
-     * Instantiates a new androidManagedStoreAccountEnterpriseSettings and sets the default values.
+     * Instantiates a new AndroidManagedStoreAccountEnterpriseSettings and sets the default values.
      * @return a void
      */
     public AndroidManagedStoreAccountEnterpriseSettings() {
@@ -44,7 +43,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAccountEnterpriseSettings
+     * @return a AndroidManagedStoreAccountEnterpriseSettings
      */
     @javax.annotation.Nonnull
     public static AndroidManagedStoreAccountEnterpriseSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +59,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         return this._androidDeviceOwnerFullyManagedEnrollmentEnabled;
     }
     /**
-     * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+     * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API
      * @return a androidManagedStoreAccountBindStatus
      */
     @javax.annotation.Nullable
@@ -84,7 +83,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         return this._deviceOwnerManagementEnabled;
     }
     /**
-     * Gets the enrollmentTarget property value. Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+     * Gets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @return a androidManagedStoreAccountEnrollmentTarget
      */
     @javax.annotation.Nullable
@@ -122,7 +121,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         return this._lastAppSyncDateTime;
     }
     /**
-     * Gets the lastAppSyncStatus property value. Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+     * Gets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @return a androidManagedStoreAccountAppSyncStatus
      */
     @javax.annotation.Nullable
@@ -199,7 +198,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         this._androidDeviceOwnerFullyManagedEnrollmentEnabled = value;
     }
     /**
-     * Sets the bindStatus property value. Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+     * Sets the bindStatus property value. Bind status of the tenant with the Google EMM API
      * @param value Value to set for the bindStatus property.
      * @return a void
      */
@@ -223,7 +222,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         this._deviceOwnerManagementEnabled = value;
     }
     /**
-     * Sets the enrollmentTarget property value. Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+     * Sets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @param value Value to set for the enrollmentTarget property.
      * @return a void
      */
@@ -239,7 +238,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         this._lastAppSyncDateTime = value;
     }
     /**
-     * Sets the lastAppSyncStatus property value. Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+     * Sets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @param value Value to set for the lastAppSyncStatus property.
      * @return a void
      */

@@ -19,6 +19,8 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
     private String _id;
     /** The recommendedConfidence property */
     private Integer _recommendedConfidence;
+    /** The type property */
+    private String _type;
     /** The uniqueCount property */
     private Integer _uniqueCount;
     /**
@@ -27,6 +29,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      */
     public DetectedSensitiveContentBase() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.detectedSensitiveContentBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,6 +39,14 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public static DetectedSensitiveContentBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.detectedSensitiveContent": return new DetectedSensitiveContent();
+                case "#microsoft.graph.exactMatchDetectedSensitiveContent": return new ExactMatchDetectedSensitiveContent();
+            }
+        }
         return new DetectedSensitiveContentBase();
     }
     /**
@@ -69,11 +80,12 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedSensitiveContentBase currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("recommendedConfidence", (n) -> { currentObject.setRecommendedConfidence(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
             this.put("uniqueCount", (n) -> { currentObject.setUniqueCount(n.getIntegerValue()); });
         }};
     }
@@ -84,6 +96,14 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the recommendedConfidence property value. The recommendedConfidence property
@@ -112,6 +132,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeIntegerValue("recommendedConfidence", this.getRecommendedConfidence());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeIntegerValue("uniqueCount", this.getUniqueCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -146,6 +167,14 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the recommendedConfidence property value. The recommendedConfidence property

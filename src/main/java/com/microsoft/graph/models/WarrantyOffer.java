@@ -19,7 +19,7 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _endDateTime;
     /** Warranty offer start date */
     private OffsetDateTime _startDateTime;
-    /** Warranty offer type. Possible values are: unknown, manufacturer, contractual, unknownFutureValue. */
+    /** Models and Manufactures meatadata for managed devices in the account */
     private WarrantyType _type;
     /**
      * Instantiates a new warrantyOffer and sets the default values.
@@ -85,7 +85,7 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the type property value. Warranty offer type. Possible values are: unknown, manufacturer, contractual, unknownFutureValue.
+     * Gets the type property value. Models and Manufactures meatadata for managed devices in the account
      * @return a warrantyType
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
         this._startDateTime = value;
     }
     /**
-     * Sets the type property value. Warranty offer type. Possible values are: unknown, manufacturer, contractual, unknownFutureValue.
+     * Sets the type property value. Models and Manufactures meatadata for managed devices in the account
      * @param value Value to set for the type property.
      * @return a void
      */

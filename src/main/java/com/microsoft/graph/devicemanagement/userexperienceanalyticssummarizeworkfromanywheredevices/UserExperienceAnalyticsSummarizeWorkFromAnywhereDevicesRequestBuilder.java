@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuild
     }
     /**
      * Invoke function userExperienceAnalyticsSummarizeWorkFromAnywhereDevices
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevicesSummary
+     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDevicesSummary
      */
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevicesSummary> get() {
         try {
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuild
     /**
      * Invoke function userExperienceAnalyticsSummarizeWorkFromAnywhereDevices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevicesSummary
+     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDevicesSummary
      */
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevicesSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuild
      * Invoke function userExperienceAnalyticsSummarizeWorkFromAnywhereDevices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevicesSummary
+     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDevicesSummary
      */
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevicesSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

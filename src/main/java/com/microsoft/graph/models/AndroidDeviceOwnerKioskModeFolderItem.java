@@ -7,23 +7,31 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents an item that can be added to Android Device Owner folder (application or weblink) */
 public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKioskModeHomeScreenItem implements Parsable {
     /**
-     * Instantiates a new androidDeviceOwnerKioskModeFolderItem and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerKioskModeFolderItem and sets the default values.
      * @return a void
      */
     public AndroidDeviceOwnerKioskModeFolderItem() {
         super();
+        this.setOdatatype("#microsoft.graph.androidDeviceOwnerKioskModeFolderItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerKioskModeFolderItem
+     * @return a AndroidDeviceOwnerKioskModeFolderItem
      */
     @javax.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeFolderItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.androidDeviceOwnerKioskModeApp": return new AndroidDeviceOwnerKioskModeApp();
+                case "#microsoft.graph.androidDeviceOwnerKioskModeWeblink": return new AndroidDeviceOwnerKioskModeWeblink();
+            }
+        }
         return new AndroidDeviceOwnerKioskModeFolderItem();
     }
     /**

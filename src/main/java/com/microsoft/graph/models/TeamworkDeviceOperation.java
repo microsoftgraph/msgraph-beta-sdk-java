@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the teamwork singleton. */
 public class TeamworkDeviceOperation extends Entity implements Parsable {
     /** Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled). */
     private OffsetDateTime _completedDateTime;
@@ -22,14 +21,14 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     private IdentitySet _lastActionBy;
     /** The UTC date and time when the device operation was last modified. */
     private OffsetDateTime _lastActionDateTime;
-    /** Type of async operation on a device. The possible values are: deviceRestart, configUpdate, deviceDiagnostics, softwareUpdate, deviceManagementAgentConfigUpdate, remoteLogin, remoteLogout, unknownFutureValue. */
+    /** The operationType property */
     private TeamworkDeviceOperationType _operationType;
     /** Time at which the operation was started. */
     private OffsetDateTime _startedDateTime;
     /** The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed. */
     private String _status;
     /**
-     * Instantiates a new teamworkDeviceOperation and sets the default values.
+     * Instantiates a new TeamworkDeviceOperation and sets the default values.
      * @return a void
      */
     public TeamworkDeviceOperation() {
@@ -38,7 +37,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceOperation
+     * @return a TeamworkDeviceOperation
      */
     @javax.annotation.Nonnull
     public static TeamworkDeviceOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -113,7 +112,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
         return this._lastActionDateTime;
     }
     /**
-     * Gets the operationType property value. Type of async operation on a device. The possible values are: deviceRestart, configUpdate, deviceDiagnostics, softwareUpdate, deviceManagementAgentConfigUpdate, remoteLogin, remoteLogout, unknownFutureValue.
+     * Gets the operationType property value. The operationType property
      * @return a teamworkDeviceOperationType
      */
     @javax.annotation.Nullable
@@ -203,7 +202,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
         this._lastActionDateTime = value;
     }
     /**
-     * Sets the operationType property value. Type of async operation on a device. The possible values are: deviceRestart, configUpdate, deviceDiagnostics, softwareUpdate, deviceManagementAgentConfigUpdate, remoteLogin, remoteLogout, unknownFutureValue.
+     * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      * @return a void
      */

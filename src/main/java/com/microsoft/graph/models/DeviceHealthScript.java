@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Intune will provide customer the ability to run their Powershell Health scripts (remediation + detection) on the enrolled windows 10 Azure Active Directory joined devices. */
 public class DeviceHealthScript extends Entity implements Parsable {
     /** The list of group assignments for the device health script */
     private java.util.List<DeviceHealthScriptAssignment> _assignments;
@@ -42,14 +41,14 @@ public class DeviceHealthScript extends Entity implements Parsable {
     private java.util.List<String> _roleScopeTagIds;
     /** Indicate whether PowerShell script(s) should run as 32-bit */
     private Boolean _runAs32Bit;
-    /** Indicates the type of execution context. Possible values are: system, user. */
+    /** Indicates the type of execution context the app runs in. */
     private RunAsAccountType _runAsAccount;
     /** High level run summary for device health script. */
     private DeviceHealthScriptRunSummary _runSummary;
     /** Version of the device health script */
     private String _version;
     /**
-     * Instantiates a new deviceHealthScript and sets the default values.
+     * Instantiates a new DeviceHealthScript and sets the default values.
      * @return a void
      */
     public DeviceHealthScript() {
@@ -58,7 +57,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScript
+     * @return a DeviceHealthScript
      */
     @javax.annotation.Nonnull
     public static DeviceHealthScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -223,7 +222,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
         return this._runAs32Bit;
     }
     /**
-     * Gets the runAsAccount property value. Indicates the type of execution context. Possible values are: system, user.
+     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return a runAsAccountType
      */
     @javax.annotation.Nullable
@@ -403,7 +402,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
         this._runAs32Bit = value;
     }
     /**
-     * Sets the runAsAccount property value. Indicates the type of execution context. Possible values are: system, user.
+     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */

@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** The definition value entity stores the value for a single group policy definition. */
 public class GroupPolicyDefinitionValue extends Entity implements Parsable {
-    /** Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference. */
+    /** Group Policy Configuration Type */
     private GroupPolicyConfigurationType _configurationType;
     /** The date and time the object was created. */
     private OffsetDateTime _createdDateTime;
@@ -40,7 +40,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
         return new GroupPolicyDefinitionValue();
     }
     /**
-     * Gets the configurationType property value. Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
+     * Gets the configurationType property value. Group Policy Configuration Type
      * @return a groupPolicyConfigurationType
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("presentationValues", this.getPresentationValues());
     }
     /**
-     * Sets the configurationType property value. Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
+     * Sets the configurationType property value. Group Policy Configuration Type
      * @param value Value to set for the configurationType property.
      * @return a void
      */

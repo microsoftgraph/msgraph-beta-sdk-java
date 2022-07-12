@@ -11,9 +11,9 @@ import java.util.Objects;
 public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The enrollment type. Possible values are: unknown, device, user. */
+    /** The enrollmentType property */
     private AppleUserInitiatedEnrollmentType _enrollmentType;
-    /** The owner type. Possible values are: unknown, company, personal. */
+    /** Owner type of device. */
     private ManagedDeviceOwnerType _ownerType;
     /**
      * Instantiates a new appleOwnerTypeEnrollmentType and sets the default values.
@@ -41,7 +41,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the enrollmentType property value. The enrollment type. Possible values are: unknown, device, user.
+     * Gets the enrollmentType property value. The enrollmentType property
      * @return a appleUserInitiatedEnrollmentType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
         }};
     }
     /**
-     * Gets the ownerType property value. The owner type. Possible values are: unknown, company, personal.
+     * Gets the ownerType property value. Owner type of device.
      * @return a managedDeviceOwnerType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the enrollmentType property value. The enrollment type. Possible values are: unknown, device, user.
+     * Sets the enrollmentType property value. The enrollmentType property
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
         this._enrollmentType = value;
     }
     /**
-     * Sets the ownerType property value. The owner type. Possible values are: unknown, company, personal.
+     * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */

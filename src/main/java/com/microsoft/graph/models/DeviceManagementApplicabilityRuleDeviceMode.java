@@ -11,11 +11,11 @@ import java.util.Objects;
 public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration. */
+    /** Windows 10 Device Mode type. */
     private Windows10DeviceModeType _deviceMode;
     /** Name for object. */
     private String _name;
-    /** Applicability Rule type. Possible values are: include, exclude. */
+    /** Supported Applicability rule types for Device Configuration */
     private DeviceManagementApplicabilityRuleType _ruleType;
     /**
      * Instantiates a new deviceManagementApplicabilityRuleDeviceMode and sets the default values.
@@ -43,7 +43,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         return this._additionalData;
     }
     /**
-     * Gets the deviceMode property value. Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
+     * Gets the deviceMode property value. Windows 10 Device Mode type.
      * @return a windows10DeviceModeType
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         return this._name;
     }
     /**
-     * Gets the ruleType property value. Applicability Rule type. Possible values are: include, exclude.
+     * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @return a deviceManagementApplicabilityRuleType
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         this._additionalData = value;
     }
     /**
-     * Sets the deviceMode property value. Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
+     * Sets the deviceMode property value. Windows 10 Device Mode type.
      * @param value Value to set for the deviceMode property.
      * @return a void
      */
@@ -116,7 +116,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         this._name = value;
     }
     /**
-     * Sets the ruleType property value. Applicability Rule type. Possible values are: include, exclude.
+     * Sets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @param value Value to set for the ruleType property.
      * @return a void
      */

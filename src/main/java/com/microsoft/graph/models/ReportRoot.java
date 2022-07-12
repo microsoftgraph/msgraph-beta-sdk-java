@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
 public class ReportRoot extends Entity implements Parsable {
     /** Represents a detailed summary of an application sign-in. */
     private java.util.List<ApplicationSignInDetailedSummary> _applicationSignInDetailedSummary;
@@ -31,10 +30,12 @@ public class ReportRoot extends Entity implements Parsable {
     private java.util.List<PrintUsageByPrinter> _monthlyPrintUsageSummariesByPrinter;
     /** The monthlyPrintUsageSummariesByUser property */
     private java.util.List<PrintUsageByUser> _monthlyPrintUsageSummariesByUser;
+    /** The security property */
+    private SecurityReportsRoot _security;
     /** Represents the self-service password reset (SSPR) usage for a given tenant. */
     private java.util.List<UserCredentialUsageDetails> _userCredentialUsageDetails;
     /**
-     * Instantiates a new reportRoot and sets the default values.
+     * Instantiates a new ReportRoot and sets the default values.
      * @return a void
      */
     public ReportRoot() {
@@ -43,7 +44,7 @@ public class ReportRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a reportRoot
+     * @return a ReportRoot
      */
     @javax.annotation.Nonnull
     public static ReportRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -125,6 +126,7 @@ public class ReportRoot extends Entity implements Parsable {
             this.put("monthlyPrintUsageByUser", (n) -> { currentObject.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
             this.put("monthlyPrintUsageSummariesByPrinter", (n) -> { currentObject.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
             this.put("monthlyPrintUsageSummariesByUser", (n) -> { currentObject.setMonthlyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+            this.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(SecurityReportsRoot::createFromDiscriminatorValue)); });
             this.put("userCredentialUsageDetails", (n) -> { currentObject.setUserCredentialUsageDetails(n.getCollectionOfObjectValues(UserCredentialUsageDetails::createFromDiscriminatorValue)); });
         }};
     }
@@ -161,6 +163,14 @@ public class ReportRoot extends Entity implements Parsable {
         return this._monthlyPrintUsageSummariesByUser;
     }
     /**
+     * Gets the security property value. The security property
+     * @return a securityReportsRoot
+     */
+    @javax.annotation.Nullable
+    public SecurityReportsRoot getSecurity() {
+        return this._security;
+    }
+    /**
      * Gets the userCredentialUsageDetails property value. Represents the self-service password reset (SSPR) usage for a given tenant.
      * @return a userCredentialUsageDetails
      */
@@ -187,6 +197,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByPrinter", this.getMonthlyPrintUsageSummariesByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByUser", this.getMonthlyPrintUsageSummariesByUser());
+        writer.writeObjectValue("security", this.getSecurity());
         writer.writeCollectionOfObjectValues("userCredentialUsageDetails", this.getUserCredentialUsageDetails());
     }
     /**
@@ -276,6 +287,14 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setMonthlyPrintUsageSummariesByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._monthlyPrintUsageSummariesByUser = value;
+    }
+    /**
+     * Sets the security property value. The security property
+     * @param value Value to set for the security property.
+     * @return a void
+     */
+    public void setSecurity(@javax.annotation.Nullable final SecurityReportsRoot value) {
+        this._security = value;
     }
     /**
      * Sets the userCredentialUsageDetails property value. Represents the self-service password reset (SSPR) usage for a given tenant.

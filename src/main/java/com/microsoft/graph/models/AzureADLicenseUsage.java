@@ -8,14 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getAzureADLicenseUsage method. */
 public class AzureADLicenseUsage extends Entity implements Parsable {
     /** The licenseInfoDetails property */
     private java.util.List<LicenseInfoDetail> _licenseInfoDetails;
     /** The snapshotDateTime property */
     private OffsetDateTime _snapshotDateTime;
     /**
-     * Instantiates a new azureADLicenseUsage and sets the default values.
+     * Instantiates a new AzureADLicenseUsage and sets the default values.
      * @return a void
      */
     public AzureADLicenseUsage() {
@@ -24,7 +23,7 @@ public class AzureADLicenseUsage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureADLicenseUsage
+     * @return a AzureADLicenseUsage
      */
     @javax.annotation.Nonnull
     public static AzureADLicenseUsage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

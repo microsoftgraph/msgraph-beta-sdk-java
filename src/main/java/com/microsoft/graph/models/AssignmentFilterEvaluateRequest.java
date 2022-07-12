@@ -14,10 +14,12 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** Order the devices should be sorted in. Default is ascending on device name. */
     private java.util.List<String> _orderBy;
-    /** Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown. */
+    /** Supported platform types. */
     private DevicePlatformType _platform;
     /** Rule definition of the Assignment Filter. */
     private String _rule;
+    /** Search keyword applied to scope found devices. */
+    private String _search;
     /** Number of records to skip. Default value is 0 */
     private Integer _skip;
     /** Limit of records per request. Default value is 100, if provided less than 0 or greater than 100 */
@@ -54,10 +56,11 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluateRequest currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
             this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
+            this.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
             this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
             this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
         }};
@@ -71,7 +74,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         return this._orderBy;
     }
     /**
-     * Gets the platform property value. Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Gets the platform property value. Supported platform types.
      * @return a devicePlatformType
      */
     @javax.annotation.Nullable
@@ -85,6 +88,14 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public String getRule() {
         return this._rule;
+    }
+    /**
+     * Gets the search property value. Search keyword applied to scope found devices.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSearch() {
+        return this._search;
     }
     /**
      * Gets the skip property value. Number of records to skip. Default value is 0
@@ -112,6 +123,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
         writer.writeEnumValue("platform", this.getPlatform());
         writer.writeStringValue("rule", this.getRule());
+        writer.writeStringValue("search", this.getSearch());
         writer.writeIntegerValue("skip", this.getSkip());
         writer.writeIntegerValue("top", this.getTop());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -133,7 +145,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         this._orderBy = value;
     }
     /**
-     * Sets the platform property value. Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */
@@ -147,6 +159,14 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      */
     public void setRule(@javax.annotation.Nullable final String value) {
         this._rule = value;
+    }
+    /**
+     * Sets the search property value. Search keyword applied to scope found devices.
+     * @param value Value to set for the search property.
+     * @return a void
+     */
+    public void setSearch(@javax.annotation.Nullable final String value) {
+        this._search = value;
     }
     /**
      * Sets the skip property value. Number of records to skip. Default value is 0

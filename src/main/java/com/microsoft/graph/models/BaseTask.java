@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class BaseTask extends Entity implements Parsable {
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
@@ -24,7 +24,7 @@ public class BaseTask extends Entity implements Parsable {
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task . */
     private java.util.List<Extension> _extensions;
-    /** The importance of the task. Possible values are: low, normal, high.  The possible values are: low, normal, high. */
+    /** The importance property */
     private Importance _importance;
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _lastModifiedDateTime;
@@ -36,7 +36,7 @@ public class BaseTask extends Entity implements Parsable {
     private PatternedRecurrence _recurrence;
     /** The date in the specified time zone when the task is to begin. */
     private DateTimeTimeZone _startDateTime;
-    /** Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed,unknownFutureValue. */
+    /** The status property */
     private TaskStatus_v2 _status;
     /** The task body in text format that typically contains information about the task. */
     private String _textBody;
@@ -48,6 +48,7 @@ public class BaseTask extends Entity implements Parsable {
      */
     public BaseTask() {
         super();
+        this.setOdatatype("#microsoft.graph.baseTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -149,7 +150,7 @@ public class BaseTask extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the importance property value. The importance of the task. Possible values are: low, normal, high.  The possible values are: low, normal, high.
+     * Gets the importance property value. The importance property
      * @return a importance
      */
     @javax.annotation.Nullable
@@ -197,7 +198,7 @@ public class BaseTask extends Entity implements Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed,unknownFutureValue.
+     * Gets the status property value. The status property
      * @return a taskStatus_v2
      */
     @javax.annotation.Nullable
@@ -302,7 +303,7 @@ public class BaseTask extends Entity implements Parsable {
         this._extensions = value;
     }
     /**
-     * Sets the importance property value. The importance of the task. Possible values are: low, normal, high.  The possible values are: low, normal, high.
+     * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      * @return a void
      */
@@ -350,7 +351,7 @@ public class BaseTask extends Entity implements Parsable {
         this._startDateTime = value;
     }
     /**
-     * Sets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed,unknownFutureValue.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

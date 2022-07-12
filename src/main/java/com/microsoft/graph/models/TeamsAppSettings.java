@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the teamwork singleton. */
 public class TeamsAppSettings extends Entity implements Parsable {
-    /** The isChatResourceSpecificConsentEnabled property */
+    /** Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked. */
     private Boolean _isChatResourceSpecificConsentEnabled;
     /**
-     * Instantiates a new teamsAppSettings and sets the default values.
+     * Instantiates a new TeamsAppSettings and sets the default values.
      * @return a void
      */
     public TeamsAppSettings() {
@@ -21,7 +20,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsAppSettings
+     * @return a TeamsAppSettings
      */
     @javax.annotation.Nonnull
     public static TeamsAppSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +39,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the isChatResourceSpecificConsentEnabled property value. The isChatResourceSpecificConsentEnabled property
+     * Gets the isChatResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -58,7 +57,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
         writer.writeBooleanValue("isChatResourceSpecificConsentEnabled", this.getIsChatResourceSpecificConsentEnabled());
     }
     /**
-     * Sets the isChatResourceSpecificConsentEnabled property value. The isChatResourceSpecificConsentEnabled property
+     * Sets the isChatResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
      * @param value Value to set for the isChatResourceSpecificConsentEnabled property.
      * @return a void
      */

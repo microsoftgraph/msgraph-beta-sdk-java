@@ -15,7 +15,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     private String _securityBaselineTemplateId;
     /** The security baseline state for different settings for a device */
     private java.util.List<SecurityBaselineSettingState> _settingStates;
-    /** Security baseline compliance state */
+    /** Security Baseline Compliance State */
     private SecurityBaselineComplianceState _state;
     /** User Principal Name */
     private String _userPrincipalName;
@@ -76,7 +76,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
         return this._settingStates;
     }
     /**
-     * Gets the state property value. Security baseline compliance state
+     * Gets the state property value. Security Baseline Compliance State
      * @return a securityBaselineComplianceState
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
         this._settingStates = value;
     }
     /**
-     * Sets the state property value. Security baseline compliance state
+     * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      * @return a void
      */

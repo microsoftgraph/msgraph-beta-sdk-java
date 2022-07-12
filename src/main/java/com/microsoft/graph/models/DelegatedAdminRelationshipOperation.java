@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DelegatedAdminRelationshipOperation extends Entity implements Parsable {
     /** The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -16,9 +16,9 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     private String _data;
     /** The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only. */
+    /** The operationType property */
     private DelegatedAdminRelationshipOperationType _operationType;
-    /** The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy. */
+    /** The status property */
     private LongRunningOperationStatus _status;
     /**
      * Instantiates a new delegatedAdminRelationshipOperation and sets the default values.
@@ -77,7 +77,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the operationType property value. The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only.
+     * Gets the operationType property value. The operationType property
      * @return a delegatedAdminRelationshipOperationType
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         return this._operationType;
     }
     /**
-     * Gets the status property value. The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
+     * Gets the status property value. The status property
      * @return a longRunningOperationStatus
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the operationType property value. The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only.
+     * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
         this._operationType = value;
     }
     /**
-     * Sets the status property value. The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

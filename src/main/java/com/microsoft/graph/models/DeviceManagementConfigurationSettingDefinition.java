@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DeviceManagementConfigurationSettingDefinition extends Entity implements Parsable {
-    /** Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute. */
+    /** The accessTypes property */
     private DeviceManagementConfigurationSettingAccessTypes _accessTypes;
     /** Details which device setting is applicable on */
     private DeviceManagementConfigurationSettingApplicability _applicability;
@@ -37,13 +37,13 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     private java.util.List<DeviceManagementConfigurationReferredSettingInformation> _referredSettingInformationList;
     /** Root setting definition if the setting is a child setting. */
     private String _rootDefinitionId;
-    /** Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance. */
+    /** Supported setting types */
     private DeviceManagementConfigurationSettingUsage _settingUsage;
-    /** Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane. */
+    /** Setting control type representation in the UX */
     private DeviceManagementConfigurationControlType _uxBehavior;
     /** Item Version */
     private String _version;
-    /** Setting visibility scope to UX. Possible values are: none, settingsCatalog, template. */
+    /** Supported setting types */
     private DeviceManagementConfigurationSettingVisibility _visibility;
     /**
      * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
@@ -51,6 +51,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     public DeviceManagementConfigurationSettingDefinition() {
         super();
+        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,7 +74,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return new DeviceManagementConfigurationSettingDefinition();
     }
     /**
-     * Gets the accessTypes property value. Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
+     * Gets the accessTypes property value. The accessTypes property
      * @return a deviceManagementConfigurationSettingAccessTypes
      */
     @javax.annotation.Nullable
@@ -213,7 +214,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this._rootDefinitionId;
     }
     /**
-     * Gets the settingUsage property value. Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
+     * Gets the settingUsage property value. Supported setting types
      * @return a deviceManagementConfigurationSettingUsage
      */
     @javax.annotation.Nullable
@@ -221,7 +222,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this._settingUsage;
     }
     /**
-     * Gets the uxBehavior property value. Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
+     * Gets the uxBehavior property value. Setting control type representation in the UX
      * @return a deviceManagementConfigurationControlType
      */
     @javax.annotation.Nullable
@@ -237,7 +238,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this._version;
     }
     /**
-     * Gets the visibility property value. Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
+     * Gets the visibility property value. Supported setting types
      * @return a deviceManagementConfigurationSettingVisibility
      */
     @javax.annotation.Nullable
@@ -272,7 +273,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         writer.writeEnumValue("visibility", this.getVisibility());
     }
     /**
-     * Sets the accessTypes property value. Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
+     * Sets the accessTypes property value. The accessTypes property
      * @param value Value to set for the accessTypes property.
      * @return a void
      */
@@ -384,7 +385,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this._rootDefinitionId = value;
     }
     /**
-     * Sets the settingUsage property value. Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
+     * Sets the settingUsage property value. Supported setting types
      * @param value Value to set for the settingUsage property.
      * @return a void
      */
@@ -392,7 +393,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this._settingUsage = value;
     }
     /**
-     * Sets the uxBehavior property value. Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
+     * Sets the uxBehavior property value. Setting control type representation in the UX
      * @param value Value to set for the uxBehavior property.
      * @return a void
      */
@@ -408,7 +409,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this._version = value;
     }
     /**
-     * Sets the visibility property value. Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
+     * Sets the visibility property value. Supported setting types
      * @param value Value to set for the visibility property.
      * @return a void
      */

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the searchEntity singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SearchAnswer extends Entity implements Parsable {
     /** Search answer description shown on search results page. */
     private String _description;
@@ -27,6 +27,7 @@ public class SearchAnswer extends Entity implements Parsable {
      */
     public SearchAnswer() {
         super();
+        this.setOdatatype("#microsoft.graph.search.searchAnswer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

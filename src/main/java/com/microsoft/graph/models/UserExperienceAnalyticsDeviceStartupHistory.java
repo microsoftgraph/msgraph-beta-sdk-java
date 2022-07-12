@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics device startup history entity contains device boot performance history details. */
 public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Parsable {
     /** The user experience analytics device core boot time in milliseconds. */
     private Integer _coreBootTimeInMs;
@@ -30,7 +29,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     private String _operatingSystemVersion;
     /** The user experience analytics responsive desktop time in milliseconds. */
     private Integer _responsiveDesktopTimeInMs;
-    /** OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update. */
+    /** Operating System restart category */
     private UserExperienceAnalyticsOperatingSystemRestartCategory _restartCategory;
     /** OS restart fault bucket. The fault bucket is used to find additional information about a system crash. */
     private String _restartFaultBucket;
@@ -43,7 +42,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /** The user experience analytics device total login time in milliseconds. */
     private Integer _totalLoginTimeInMs;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceStartupHistory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceStartupHistory and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceStartupHistory() {
@@ -52,7 +51,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceStartupHistory
+     * @return a UserExperienceAnalyticsDeviceStartupHistory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -166,7 +165,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         return this._responsiveDesktopTimeInMs;
     }
     /**
-     * Gets the restartCategory property value. OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
+     * Gets the restartCategory property value. Operating System restart category
      * @return a userExperienceAnalyticsOperatingSystemRestartCategory
      */
     @javax.annotation.Nullable
@@ -319,7 +318,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         this._responsiveDesktopTimeInMs = value;
     }
     /**
-     * Sets the restartCategory property value. OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
+     * Sets the restartCategory property value. Operating System restart category
      * @param value Value to set for the restartCategory property.
      * @return a void
      */

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the dataClassificationService singleton. */
 public class JobResponseBase extends Entity implements Parsable {
     /** The creationDateTime property */
     private OffsetDateTime _creationDateTime;
@@ -22,10 +21,8 @@ public class JobResponseBase extends Entity implements Parsable {
     private String _status;
     /** The tenantId property */
     private String _tenantId;
-    /** The type property */
-    private String _type;
     /**
-     * Instantiates a new jobResponseBase and sets the default values.
+     * Instantiates a new JobResponseBase and sets the default values.
      * @return a void
      */
     public JobResponseBase() {
@@ -34,7 +31,7 @@ public class JobResponseBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a jobResponseBase
+     * @return a JobResponseBase
      */
     @javax.annotation.Nonnull
     public static JobResponseBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +85,6 @@ public class JobResponseBase extends Entity implements Parsable {
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -116,14 +112,6 @@ public class JobResponseBase extends Entity implements Parsable {
         return this._tenantId;
     }
     /**
-     * Gets the type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -137,7 +125,6 @@ public class JobResponseBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("status", this.getStatus());
         writer.writeStringValue("tenantId", this.getTenantId());
-        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the creationDateTime property value. The creationDateTime property
@@ -186,13 +173,5 @@ public class JobResponseBase extends Entity implements Parsable {
      */
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
-    }
-    /**
-     * Sets the type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

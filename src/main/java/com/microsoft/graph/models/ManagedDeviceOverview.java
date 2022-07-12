@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Summary data for managed devices */
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /** Distribution of Exchange Access State in Intune */
     private DeviceExchangeAccessStateSummary _deviceExchangeAccessStateSummary;
@@ -25,7 +24,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /** The number of devices enrolled in MDM */
     private Integer _mdmEnrolledCount;
     /**
-     * Instantiates a new managedDeviceOverview and sets the default values.
+     * Instantiates a new ManagedDeviceOverview and sets the default values.
      * @return a void
      */
     public ManagedDeviceOverview() {
@@ -34,7 +33,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceOverview
+     * @return a ManagedDeviceOverview
      */
     @javax.annotation.Nonnull
     public static ManagedDeviceOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

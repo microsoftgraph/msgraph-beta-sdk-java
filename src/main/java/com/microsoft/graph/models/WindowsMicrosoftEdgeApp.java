@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
-    /** The channel to install on target devices. Possible values are: dev, beta, stable. */
+    /** The enum to specify the channels for Microsoft Edge apps. */
     private MicrosoftEdgeChannel _channel;
     /** The language locale to use when the Edge app displays text to the user. */
     private String _displayLanguageLocale;
@@ -30,7 +30,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
         return new WindowsMicrosoftEdgeApp();
     }
     /**
-     * Gets the channel property value. The channel to install on target devices. Possible values are: dev, beta, stable.
+     * Gets the channel property value. The enum to specify the channels for Microsoft Edge apps.
      * @return a microsoftEdgeChannel
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
         writer.writeStringValue("displayLanguageLocale", this.getDisplayLanguageLocale());
     }
     /**
-     * Sets the channel property value. The channel to install on target devices. Possible values are: dev, beta, stable.
+     * Sets the channel property value. The enum to specify the channels for Microsoft Edge apps.
      * @param value Value to set for the channel property.
      * @return a void
      */

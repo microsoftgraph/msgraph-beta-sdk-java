@@ -20,19 +20,19 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     private Location _defaultLocation;
     /** The default monetary price for the service. */
     private Double _defaultPrice;
-    /** The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue. */
+    /** Represents the type of pricing of a booking service. */
     private BookingPriceType _defaultPriceType;
     /** The default set of reminders for an appointment of this service. The value of this property is available only when reading this bookingService by its ID. */
     private java.util.List<BookingReminder> _defaultReminders;
     /** A text description for the service. */
     private String _description;
-    /** The isAnonymousJoinEnabled property */
+    /** True if an anonymousJoinWebUrl(webrtcUrl) will be generated for the appointment booked for this service. */
     private Boolean _isAnonymousJoinEnabled;
     /** True means this service is not available to customers for booking. */
     private Boolean _isHiddenFromCustomers;
     /** True indicates that the appointments for the service will be held online. Default value is false. */
     private Boolean _isLocationOnline;
-    /** The languageTag property */
+    /** The language of the self service booking page. */
     private String _languageTag;
     /** The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation. */
     private Integer _maximumAttendeesCount;
@@ -108,7 +108,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         return this._defaultPrice;
     }
     /**
-     * Gets the defaultPriceType property value. The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Gets the defaultPriceType property value. Represents the type of pricing of a booking service.
      * @return a bookingPriceType
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         }};
     }
     /**
-     * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * Gets the isAnonymousJoinEnabled property value. True if an anonymousJoinWebUrl(webrtcUrl) will be generated for the appointment booked for this service.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         return this._isLocationOnline;
     }
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The language of the self service booking page.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -327,7 +327,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this._defaultPrice = value;
     }
     /**
-     * Sets the defaultPriceType property value. The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Sets the defaultPriceType property value. Represents the type of pricing of a booking service.
      * @param value Value to set for the defaultPriceType property.
      * @return a void
      */
@@ -351,7 +351,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * Sets the isAnonymousJoinEnabled property value. True if an anonymousJoinWebUrl(webrtcUrl) will be generated for the appointment booked for this service.
      * @param value Value to set for the isAnonymousJoinEnabled property.
      * @return a void
      */
@@ -375,7 +375,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this._isLocationOnline = value;
     }
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The language of the self service booking page.
      * @param value Value to set for the languageTag property.
      * @return a void
      */

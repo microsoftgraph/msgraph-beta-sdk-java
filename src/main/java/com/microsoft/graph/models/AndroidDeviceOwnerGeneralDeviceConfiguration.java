@@ -42,7 +42,9 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     private Boolean _dateTimeConfigurationBlocked;
     /** Represents the customized detailed help text provided to users when they attempt to modify managed settings on their device. */
     private AndroidDeviceOwnerUserFacingMessage _detailedHelpText;
-    /** Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged. */
+    /** Represents the customized lock screen message provided to users when they attempt to modify managed settings on their device. */
+    private AndroidDeviceOwnerUserFacingMessage _deviceOwnerLockScreenMessage;
+    /** Android Device Owner Enrollment Profile types. */
     private AndroidDeviceOwnerEnrollmentProfileType _enrollmentProfile;
     /** Indicates whether or not the factory reset option in settings is disabled. */
     private Boolean _factoryResetBlocked;
@@ -208,6 +210,8 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     private AndroidDeviceOwnerPlayStoreMode _playStoreMode;
     /** Indicates whether or not to disable the capability to take screenshots. */
     private Boolean _screenCaptureBlocked;
+    /** Represents the security common criteria mode enabled provided to users when they attempt to modify managed settings on their device. */
+    private Boolean _securityCommonCriteriaModeEnabled;
     /** Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device. */
     private Boolean _securityDeveloperSettingsEnabled;
     /** Indicates whether or not verify apps is required. */
@@ -426,7 +430,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this._detailedHelpText;
     }
     /**
-     * Gets the enrollmentProfile property value. Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
+     * Gets the deviceOwnerLockScreenMessage property value. Represents the customized lock screen message provided to users when they attempt to modify managed settings on their device.
+     * @return a androidDeviceOwnerUserFacingMessage
+     */
+    @javax.annotation.Nullable
+    public AndroidDeviceOwnerUserFacingMessage getDeviceOwnerLockScreenMessage() {
+        return this._deviceOwnerLockScreenMessage;
+    }
+    /**
+     * Gets the enrollmentProfile property value. Android Device Owner Enrollment Profile types.
      * @return a androidDeviceOwnerEnrollmentProfileType
      */
     @javax.annotation.Nullable
@@ -474,6 +486,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
             this.put("dataRoamingBlocked", (n) -> { currentObject.setDataRoamingBlocked(n.getBooleanValue()); });
             this.put("dateTimeConfigurationBlocked", (n) -> { currentObject.setDateTimeConfigurationBlocked(n.getBooleanValue()); });
             this.put("detailedHelpText", (n) -> { currentObject.setDetailedHelpText(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
+            this.put("deviceOwnerLockScreenMessage", (n) -> { currentObject.setDeviceOwnerLockScreenMessage(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
             this.put("enrollmentProfile", (n) -> { currentObject.setEnrollmentProfile(n.getEnumValue(AndroidDeviceOwnerEnrollmentProfileType.class)); });
             this.put("factoryResetBlocked", (n) -> { currentObject.setFactoryResetBlocked(n.getBooleanValue()); });
             this.put("factoryResetDeviceAdministratorEmails", (n) -> { currentObject.setFactoryResetDeviceAdministratorEmails(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -557,6 +570,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
             this.put("personalProfileScreenCaptureBlocked", (n) -> { currentObject.setPersonalProfileScreenCaptureBlocked(n.getBooleanValue()); });
             this.put("playStoreMode", (n) -> { currentObject.setPlayStoreMode(n.getEnumValue(AndroidDeviceOwnerPlayStoreMode.class)); });
             this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+            this.put("securityCommonCriteriaModeEnabled", (n) -> { currentObject.setSecurityCommonCriteriaModeEnabled(n.getBooleanValue()); });
             this.put("securityDeveloperSettingsEnabled", (n) -> { currentObject.setSecurityDeveloperSettingsEnabled(n.getBooleanValue()); });
             this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
             this.put("shortHelpText", (n) -> { currentObject.setShortHelpText(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
@@ -1232,6 +1246,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this._screenCaptureBlocked;
     }
     /**
+     * Gets the securityCommonCriteriaModeEnabled property value. Represents the security common criteria mode enabled provided to users when they attempt to modify managed settings on their device.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getSecurityCommonCriteriaModeEnabled() {
+        return this._securityCommonCriteriaModeEnabled;
+    }
+    /**
      * Gets the securityDeveloperSettingsEnabled property value. Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.
      * @return a boolean
      */
@@ -1512,6 +1534,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeBooleanValue("dataRoamingBlocked", this.getDataRoamingBlocked());
         writer.writeBooleanValue("dateTimeConfigurationBlocked", this.getDateTimeConfigurationBlocked());
         writer.writeObjectValue("detailedHelpText", this.getDetailedHelpText());
+        writer.writeObjectValue("deviceOwnerLockScreenMessage", this.getDeviceOwnerLockScreenMessage());
         writer.writeEnumValue("enrollmentProfile", this.getEnrollmentProfile());
         writer.writeBooleanValue("factoryResetBlocked", this.getFactoryResetBlocked());
         writer.writeCollectionOfPrimitiveValues("factoryResetDeviceAdministratorEmails", this.getFactoryResetDeviceAdministratorEmails());
@@ -1595,6 +1618,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeBooleanValue("personalProfileScreenCaptureBlocked", this.getPersonalProfileScreenCaptureBlocked());
         writer.writeEnumValue("playStoreMode", this.getPlayStoreMode());
         writer.writeBooleanValue("screenCaptureBlocked", this.getScreenCaptureBlocked());
+        writer.writeBooleanValue("securityCommonCriteriaModeEnabled", this.getSecurityCommonCriteriaModeEnabled());
         writer.writeBooleanValue("securityDeveloperSettingsEnabled", this.getSecurityDeveloperSettingsEnabled());
         writer.writeBooleanValue("securityRequireVerifyApps", this.getSecurityRequireVerifyApps());
         writer.writeObjectValue("shortHelpText", this.getShortHelpText());
@@ -1765,7 +1789,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this._detailedHelpText = value;
     }
     /**
-     * Sets the enrollmentProfile property value. Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
+     * Sets the deviceOwnerLockScreenMessage property value. Represents the customized lock screen message provided to users when they attempt to modify managed settings on their device.
+     * @param value Value to set for the deviceOwnerLockScreenMessage property.
+     * @return a void
+     */
+    public void setDeviceOwnerLockScreenMessage(@javax.annotation.Nullable final AndroidDeviceOwnerUserFacingMessage value) {
+        this._deviceOwnerLockScreenMessage = value;
+    }
+    /**
+     * Sets the enrollmentProfile property value. Android Device Owner Enrollment Profile types.
      * @param value Value to set for the enrollmentProfile property.
      * @return a void
      */
@@ -2427,6 +2459,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      */
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
+    }
+    /**
+     * Sets the securityCommonCriteriaModeEnabled property value. Represents the security common criteria mode enabled provided to users when they attempt to modify managed settings on their device.
+     * @param value Value to set for the securityCommonCriteriaModeEnabled property.
+     * @return a void
+     */
+    public void setSecurityCommonCriteriaModeEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._securityCommonCriteriaModeEnabled = value;
     }
     /**
      * Sets the securityDeveloperSettingsEnabled property value. Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.

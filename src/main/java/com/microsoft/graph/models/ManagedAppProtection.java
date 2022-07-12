@@ -13,17 +13,17 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private java.util.List<String> _allowedDataIngestionLocations;
     /** Data storage locations where a user may store managed data. */
     private java.util.List<String> _allowedDataStorageLocations;
-    /** Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none. */
+    /** Data can be transferred from/to these classes of apps */
     private ManagedAppDataTransferLevel _allowedInboundDataTransferSources;
     /** Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed. */
     private Integer _allowedOutboundClipboardSharingExceptionLength;
-    /** The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked. */
+    /** Represents the level to which the device's clipboard may be shared between apps */
     private ManagedAppClipboardSharingLevel _allowedOutboundClipboardSharingLevel;
-    /** Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none. */
+    /** Data can be transferred from/to these classes of apps */
     private ManagedAppDataTransferLevel _allowedOutboundDataTransferDestinations;
-    /** Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfDeviceComplianceRequired;
-    /** Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfMaximumPinRetriesExceeded;
     /** If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn. */
     private ManagedAppRemediationAction _appActionIfUnableToAuthenticateUser;
@@ -35,7 +35,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private Boolean _dataBackupBlocked;
     /** Indicates whether device compliance is required. */
     private Boolean _deviceComplianceRequired;
-    /** The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked. */
+    /** The classes of apps that are allowed to click-to-open a phone number, for making phone calls or sending text messages. */
     private ManagedAppPhoneNumberRedirectLevel _dialerRestrictionLevel;
     /** Indicates whether use of the app pin is required if the device pin is set. */
     private Boolean _disableAppPinIfDevicePinIsSet;
@@ -43,11 +43,11 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private Boolean _fingerprintBlocked;
     /** A grace period before blocking app access during off clock hours. */
     private Period _gracePeriodToBlockAppsDuringOffClockHours;
-    /** Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge. */
+    /** Type of managed browser */
     private ManagedBrowserType _managedBrowser;
     /** Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android) */
     private Boolean _managedBrowserToOpenLinksRequired;
-    /** Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high. */
+    /** The maxium threat level allowed for an app to be compliant. */
     private ManagedAppDeviceThreatLevel _maximumAllowedDeviceThreatLevel;
     /** Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. */
     private Integer _maximumPinRetries;
@@ -71,9 +71,9 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private String _minimumWipeAppVersion;
     /** Versions less than or equal to the specified version will wipe the managed app and the associated company data. */
     private String _minimumWipeOsVersion;
-    /** Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _mobileThreatDefenseRemediationAction;
-    /** Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block. */
+    /** Restrict managed app notification */
     private ManagedAppNotificationRestriction _notificationRestriction;
     /** Indicates whether organizational credentials are required for app use. */
     private Boolean _organizationalCredentialsRequired;
@@ -85,7 +85,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private Period _periodOfflineBeforeWipeIsEnforced;
     /** The period after which access is checked when the device is connected to the internet. */
     private Period _periodOnlineBeforeAccessCheck;
-    /** Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol. */
+    /** Character set which is to be used for a user's app PIN */
     private ManagedAppPinCharacterSet _pinCharacterSet;
     /** Indicates whether an app-level pin is required. */
     private Boolean _pinRequired;
@@ -105,6 +105,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     public ManagedAppProtection() {
         super();
+        this.setOdatatype("#microsoft.graph.managedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -141,7 +142,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedDataStorageLocations;
     }
     /**
-     * Gets the allowedInboundDataTransferSources property value. Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @return a managedAppDataTransferLevel
      */
     @javax.annotation.Nullable
@@ -157,7 +158,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedOutboundClipboardSharingExceptionLength;
     }
     /**
-     * Gets the allowedOutboundClipboardSharingLevel property value. The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
+     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @return a managedAppClipboardSharingLevel
      */
     @javax.annotation.Nullable
@@ -165,7 +166,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedOutboundClipboardSharingLevel;
     }
     /**
-     * Gets the allowedOutboundDataTransferDestinations property value. Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @return a managedAppDataTransferLevel
      */
     @javax.annotation.Nullable
@@ -173,7 +174,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedOutboundDataTransferDestinations;
     }
     /**
-     * Gets the appActionIfDeviceComplianceRequired property value. Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
+     * Gets the appActionIfDeviceComplianceRequired property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -181,7 +182,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._appActionIfDeviceComplianceRequired;
     }
     /**
-     * Gets the appActionIfMaximumPinRetriesExceeded property value. Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
+     * Gets the appActionIfMaximumPinRetriesExceeded property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -229,7 +230,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._deviceComplianceRequired;
     }
     /**
-     * Gets the dialerRestrictionLevel property value. The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
+     * Gets the dialerRestrictionLevel property value. The classes of apps that are allowed to click-to-open a phone number, for making phone calls or sending text messages.
      * @return a managedAppPhoneNumberRedirectLevel
      */
     @javax.annotation.Nullable
@@ -316,7 +317,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._gracePeriodToBlockAppsDuringOffClockHours;
     }
     /**
-     * Gets the managedBrowser property value. Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     * Gets the managedBrowser property value. Type of managed browser
      * @return a managedBrowserType
      */
     @javax.annotation.Nullable
@@ -332,7 +333,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._managedBrowserToOpenLinksRequired;
     }
     /**
-     * Gets the maximumAllowedDeviceThreatLevel property value. Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
+     * Gets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
      * @return a managedAppDeviceThreatLevel
      */
     @javax.annotation.Nullable
@@ -428,7 +429,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._minimumWipeOsVersion;
     }
     /**
-     * Gets the mobileThreatDefenseRemediationAction property value. Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+     * Gets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -436,7 +437,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._mobileThreatDefenseRemediationAction;
     }
     /**
-     * Gets the notificationRestriction property value. Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
+     * Gets the notificationRestriction property value. Restrict managed app notification
      * @return a managedAppNotificationRestriction
      */
     @javax.annotation.Nullable
@@ -484,7 +485,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._periodOnlineBeforeAccessCheck;
     }
     /**
-     * Gets the pinCharacterSet property value. Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
+     * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
      * @return a managedAppPinCharacterSet
      */
     @javax.annotation.Nullable
@@ -610,7 +611,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedDataStorageLocations = value;
     }
     /**
-     * Sets the allowedInboundDataTransferSources property value. Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedInboundDataTransferSources property.
      * @return a void
      */
@@ -626,7 +627,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedOutboundClipboardSharingExceptionLength = value;
     }
     /**
-     * Sets the allowedOutboundClipboardSharingLevel property value. The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
+     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      * @return a void
      */
@@ -634,7 +635,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedOutboundClipboardSharingLevel = value;
     }
     /**
-     * Sets the allowedOutboundDataTransferDestinations property value. Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      * @return a void
      */
@@ -642,7 +643,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedOutboundDataTransferDestinations = value;
     }
     /**
-     * Sets the appActionIfDeviceComplianceRequired property value. Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
+     * Sets the appActionIfDeviceComplianceRequired property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfDeviceComplianceRequired property.
      * @return a void
      */
@@ -650,7 +651,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._appActionIfDeviceComplianceRequired = value;
     }
     /**
-     * Sets the appActionIfMaximumPinRetriesExceeded property value. Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
+     * Sets the appActionIfMaximumPinRetriesExceeded property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfMaximumPinRetriesExceeded property.
      * @return a void
      */
@@ -698,7 +699,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._deviceComplianceRequired = value;
     }
     /**
-     * Sets the dialerRestrictionLevel property value. The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
+     * Sets the dialerRestrictionLevel property value. The classes of apps that are allowed to click-to-open a phone number, for making phone calls or sending text messages.
      * @param value Value to set for the dialerRestrictionLevel property.
      * @return a void
      */
@@ -730,7 +731,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._gracePeriodToBlockAppsDuringOffClockHours = value;
     }
     /**
-     * Sets the managedBrowser property value. Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     * Sets the managedBrowser property value. Type of managed browser
      * @param value Value to set for the managedBrowser property.
      * @return a void
      */
@@ -746,7 +747,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._managedBrowserToOpenLinksRequired = value;
     }
     /**
-     * Sets the maximumAllowedDeviceThreatLevel property value. Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
+     * Sets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
      * @param value Value to set for the maximumAllowedDeviceThreatLevel property.
      * @return a void
      */
@@ -842,7 +843,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._minimumWipeOsVersion = value;
     }
     /**
-     * Sets the mobileThreatDefenseRemediationAction property value. Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+     * Sets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the mobileThreatDefenseRemediationAction property.
      * @return a void
      */
@@ -850,7 +851,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._mobileThreatDefenseRemediationAction = value;
     }
     /**
-     * Sets the notificationRestriction property value. Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
+     * Sets the notificationRestriction property value. Restrict managed app notification
      * @param value Value to set for the notificationRestriction property.
      * @return a void
      */
@@ -898,7 +899,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._periodOnlineBeforeAccessCheck = value;
     }
     /**
-     * Sets the pinCharacterSet property value. Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
+     * Sets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
      * @param value Value to set for the pinCharacterSet property.
      * @return a void
      */

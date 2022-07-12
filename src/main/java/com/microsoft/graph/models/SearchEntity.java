@@ -10,7 +10,6 @@ import java.util.Objects;
 import microsoft.graph.models.search.Acronym;
 import microsoft.graph.models.search.Bookmark;
 import microsoft.graph.models.search.Qna;
-/** Provides operations to manage the searchEntity singleton. */
 public class SearchEntity extends Entity implements Parsable {
     /** Administrative answer in Microsoft Search results to define common acronyms in a organization. */
     private java.util.List<Acronym> _acronyms;
@@ -19,7 +18,7 @@ public class SearchEntity extends Entity implements Parsable {
     /** Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization. */
     private java.util.List<Qna> _qnas;
     /**
-     * Instantiates a new searchEntity and sets the default values.
+     * Instantiates a new SearchEntity and sets the default values.
      * @return a void
      */
     public SearchEntity() {
@@ -28,7 +27,7 @@ public class SearchEntity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchEntity
+     * @return a SearchEntity
      */
     @javax.annotation.Nonnull
     public static SearchEntity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

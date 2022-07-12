@@ -8,16 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity which represents an OnPrem Ndes connector. */
 public class NdesConnector extends Entity implements Parsable {
     /** The friendly name of the Ndes Connector. */
     private String _displayName;
     /** Last connection time for the Ndes Connector */
     private OffsetDateTime _lastConnectionDateTime;
-    /** Ndes Connector Status. Possible values are: none, active, inactive. */
+    /** The current status of the Ndes Connector. */
     private NdesConnectorState _state;
     /**
-     * Instantiates a new ndesConnector and sets the default values.
+     * Instantiates a new NdesConnector and sets the default values.
      * @return a void
      */
     public NdesConnector() {
@@ -26,7 +25,7 @@ public class NdesConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ndesConnector
+     * @return a NdesConnector
      */
     @javax.annotation.Nonnull
     public static NdesConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +62,7 @@ public class NdesConnector extends Entity implements Parsable {
         return this._lastConnectionDateTime;
     }
     /**
-     * Gets the state property value. Ndes Connector Status. Possible values are: none, active, inactive.
+     * Gets the state property value. The current status of the Ndes Connector.
      * @return a ndesConnectorState
      */
     @javax.annotation.Nullable
@@ -99,7 +98,7 @@ public class NdesConnector extends Entity implements Parsable {
         this._lastConnectionDateTime = value;
     }
     /**
-     * Sets the state property value. Ndes Connector Status. Possible values are: none, active, inactive.
+     * Sets the state property value. The current status of the Ndes Connector.
      * @param value Value to set for the state property.
      * @return a void
      */

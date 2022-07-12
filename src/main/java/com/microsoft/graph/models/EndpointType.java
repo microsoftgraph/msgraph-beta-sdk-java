@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum EndpointType implements ValuedEnum {
     Default_escaped("default_escaped"),
     Voicemail("voicemail"),

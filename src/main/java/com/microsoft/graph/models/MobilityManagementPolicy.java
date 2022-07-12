@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of mobilityManagementPolicy entities. */
 public class MobilityManagementPolicy extends Entity implements Parsable {
     /** Indicates the user scope of the mobility management policy. Possible values are: none, all, selected. */
     private PolicyScope _appliesTo;
@@ -26,7 +25,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     /** Terms of Use URL of the mobility management application. */
     private String _termsOfUseUrl;
     /**
-     * Instantiates a new mobilityManagementPolicy and sets the default values.
+     * Instantiates a new MobilityManagementPolicy and sets the default values.
      * @return a void
      */
     public MobilityManagementPolicy() {
@@ -35,7 +34,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobilityManagementPolicy
+     * @return a MobilityManagementPolicy
      */
     @javax.annotation.Nonnull
     public static MobilityManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,13 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcProvisioningPolicy extends Entity implements Parsable {
-    /** The alternateResourceUrl property */
+    /** The URL of the alternate resource that links to this provisioning policy. Read-only. */
     private String _alternateResourceUrl;
     /** A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship. */
     private java.util.List<CloudPcProvisioningPolicyAssignment> _assignments;
-    /** The cloudPcGroupDisplayName property */
+    /** The display name of the Cloud PC group that the Cloud PCs reside in. Read-only. */
     private String _cloudPcGroupDisplayName;
     /** The provisioning policy description. */
     private String _description;
@@ -21,15 +20,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     private String _displayName;
     /** Specifies how Cloud PCs will join Azure Active Directory. */
     private CloudPcDomainJoinConfiguration _domainJoinConfiguration;
-    /** The gracePeriodInHours property */
+    /** The number of hours to wait before reprovisioning/deprovisioning happens. Read-only. */
     private Integer _gracePeriodInHours;
     /** The display name for the OS image you’re provisioning. */
     private String _imageDisplayName;
     /** The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os. */
     private String _imageId;
-    /** The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom. */
+    /** The imageType property */
     private CloudPcProvisioningPolicyImageType _imageType;
-    /** The localAdminEnabled property */
+    /** Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only. */
     private Boolean _localAdminEnabled;
     /** The managedBy property */
     private CloudPcManagementService _managedBy;
@@ -40,7 +39,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     /** Specific Windows settings to configure while creating Cloud PCs for this provisioning policy. */
     private CloudPcWindowsSettings _windowsSettings;
     /**
-     * Instantiates a new cloudPcProvisioningPolicy and sets the default values.
+     * Instantiates a new CloudPcProvisioningPolicy and sets the default values.
      * @return a void
      */
     public CloudPcProvisioningPolicy() {
@@ -49,7 +48,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcProvisioningPolicy
+     * @return a CloudPcProvisioningPolicy
      */
     @javax.annotation.Nonnull
     public static CloudPcProvisioningPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +56,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return new CloudPcProvisioningPolicy();
     }
     /**
-     * Gets the alternateResourceUrl property value. The alternateResourceUrl property
+     * Gets the alternateResourceUrl property value. The URL of the alternate resource that links to this provisioning policy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +72,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._assignments;
     }
     /**
-     * Gets the cloudPcGroupDisplayName property value. The cloudPcGroupDisplayName property
+     * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +129,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the gracePeriodInHours property value. The gracePeriodInHours property
+     * Gets the gracePeriodInHours property value. The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -154,7 +153,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._imageId;
     }
     /**
-     * Gets the imageType property value. The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
+     * Gets the imageType property value. The imageType property
      * @return a cloudPcProvisioningPolicyImageType
      */
     @javax.annotation.Nullable
@@ -162,7 +161,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._imageType;
     }
     /**
-     * Gets the localAdminEnabled property value. The localAdminEnabled property
+     * Gets the localAdminEnabled property value. Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -226,7 +225,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
     /**
-     * Sets the alternateResourceUrl property value. The alternateResourceUrl property
+     * Sets the alternateResourceUrl property value. The URL of the alternate resource that links to this provisioning policy. Read-only.
      * @param value Value to set for the alternateResourceUrl property.
      * @return a void
      */
@@ -242,7 +241,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._assignments = value;
     }
     /**
-     * Sets the cloudPcGroupDisplayName property value. The cloudPcGroupDisplayName property
+     * Sets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @param value Value to set for the cloudPcGroupDisplayName property.
      * @return a void
      */
@@ -274,7 +273,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._domainJoinConfiguration = value;
     }
     /**
-     * Sets the gracePeriodInHours property value. The gracePeriodInHours property
+     * Sets the gracePeriodInHours property value. The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
      * @param value Value to set for the gracePeriodInHours property.
      * @return a void
      */
@@ -298,7 +297,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._imageId = value;
     }
     /**
-     * Sets the imageType property value. The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
+     * Sets the imageType property value. The imageType property
      * @param value Value to set for the imageType property.
      * @return a void
      */
@@ -306,7 +305,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._imageType = value;
     }
     /**
-     * Sets the localAdminEnabled property value. The localAdminEnabled property
+     * Sets the localAdminEnabled property value. Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
      * @param value Value to set for the localAdminEnabled property.
      * @return a void
      */

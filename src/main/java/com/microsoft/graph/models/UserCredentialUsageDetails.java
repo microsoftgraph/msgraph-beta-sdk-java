@@ -8,15 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UserCredentialUsageDetails extends Entity implements Parsable {
-    /** Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue */
+    /** The authMethod property */
     private UsageAuthMethod _authMethod;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _eventDateTime;
     /** Provides the failure reason for the corresponding reset or registration workflow. */
     private String _failureReason;
-    /** Possible values are: registration, reset, unknownFutureValue. */
+    /** The feature property */
     private FeatureType _feature;
     /** Indicates success or failure of the workflow. */
     private Boolean _isSuccess;
@@ -42,7 +42,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
         return new UserCredentialUsageDetails();
     }
     /**
-     * Gets the authMethod property value. Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
+     * Gets the authMethod property value. The authMethod property
      * @return a usageAuthMethod
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
         return this._failureReason;
     }
     /**
-     * Gets the feature property value. Possible values are: registration, reset, unknownFutureValue.
+     * Gets the feature property value. The feature property
      * @return a featureType
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the authMethod property value. Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
+     * Sets the authMethod property value. The authMethod property
      * @param value Value to set for the authMethod property.
      * @return a void
      */
@@ -155,7 +155,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
         this._failureReason = value;
     }
     /**
-     * Sets the feature property value. Possible values are: registration, reset, unknownFutureValue.
+     * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      * @return a void
      */

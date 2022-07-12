@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class SharePointIdentity extends Identity implements Parsable {
     /** The sign in name of the SharePoint identity. */
     private String _loginName;

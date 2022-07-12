@@ -12,12 +12,15 @@ import java.util.Objects;
 public class EdgeHomeButtonConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new edgeHomeButtonConfiguration and sets the default values.
      * @return a void
      */
     public EdgeHomeButtonConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.edgeHomeButtonConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -27,6 +30,16 @@ public class EdgeHomeButtonConfiguration implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public static EdgeHomeButtonConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.edgeHomeButtonHidden": return new EdgeHomeButtonHidden();
+                case "#microsoft.graph.edgeHomeButtonLoadsStartPage": return new EdgeHomeButtonLoadsStartPage();
+                case "#microsoft.graph.edgeHomeButtonOpensCustomURL": return new EdgeHomeButtonOpensCustomURL();
+                case "#microsoft.graph.edgeHomeButtonOpensNewTab": return new EdgeHomeButtonOpensNewTab();
+            }
+        }
         return new EdgeHomeButtonConfiguration();
     }
     /**
@@ -44,8 +57,17 @@ public class EdgeHomeButtonConfiguration implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdgeHomeButtonConfiguration currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -54,6 +76,7 @@ public class EdgeHomeButtonConfiguration implements AdditionalDataHolder, Parsab
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -63,5 +86,13 @@ public class EdgeHomeButtonConfiguration implements AdditionalDataHolder, Parsab
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

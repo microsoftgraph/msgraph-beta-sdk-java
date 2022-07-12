@@ -1,0 +1,87 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class RevokeAppleVppLicensesActionResult extends DeviceActionResult implements Parsable {
+    /** Total number of Apple Vpp licenses that failed to revoke */
+    private Integer _failedLicensesCount;
+    /** Total number of Apple Vpp licenses associated */
+    private Integer _totalLicensesCount;
+    /**
+     * Instantiates a new RevokeAppleVppLicensesActionResult and sets the default values.
+     * @return a void
+     */
+    public RevokeAppleVppLicensesActionResult() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a RevokeAppleVppLicensesActionResult
+     */
+    @javax.annotation.Nonnull
+    public static RevokeAppleVppLicensesActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new RevokeAppleVppLicensesActionResult();
+    }
+    /**
+     * Gets the failedLicensesCount property value. Total number of Apple Vpp licenses that failed to revoke
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getFailedLicensesCount() {
+        return this._failedLicensesCount;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final RevokeAppleVppLicensesActionResult currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
+            this.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
+        }};
+    }
+    /**
+     * Gets the totalLicensesCount property value. Total number of Apple Vpp licenses associated
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getTotalLicensesCount() {
+        return this._totalLicensesCount;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeIntegerValue("failedLicensesCount", this.getFailedLicensesCount());
+        writer.writeIntegerValue("totalLicensesCount", this.getTotalLicensesCount());
+    }
+    /**
+     * Sets the failedLicensesCount property value. Total number of Apple Vpp licenses that failed to revoke
+     * @param value Value to set for the failedLicensesCount property.
+     * @return a void
+     */
+    public void setFailedLicensesCount(@javax.annotation.Nullable final Integer value) {
+        this._failedLicensesCount = value;
+    }
+    /**
+     * Sets the totalLicensesCount property value. Total number of Apple Vpp licenses associated
+     * @param value Value to set for the totalLicensesCount property.
+     * @return a void
+     */
+    public void setTotalLicensesCount(@javax.annotation.Nullable final Integer value) {
+        this._totalLicensesCount = value;
+    }
+}

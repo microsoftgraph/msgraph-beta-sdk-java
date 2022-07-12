@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the financials singleton. */
 public class Account extends Entity implements Parsable {
     /** The blocked property */
     private Boolean _blocked;
@@ -23,7 +22,7 @@ public class Account extends Entity implements Parsable {
     /** The subCategory property */
     private String _subCategory;
     /**
-     * Instantiates a new account and sets the default values.
+     * Instantiates a new Account and sets the default values.
      * @return a void
      */
     public Account() {
@@ -32,7 +31,7 @@ public class Account extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a account
+     * @return a Account
      */
     @javax.annotation.Nonnull
     public static Account createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

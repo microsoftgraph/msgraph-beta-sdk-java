@@ -14,7 +14,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     private Map<String, Object> _additionalData;
     /** The unique identifier of the user experience analytics insight. */
     private String _insightId;
-    /** The value of the user experience analytics insight. Possible values are: none, informational, warning, error. */
+    /** The severity property */
     private UserExperienceAnalyticsInsightSeverity _severity;
     /** The unique identifier of the user experience analytics insight. */
     private String _userExperienceAnalyticsMetricId;
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
         return this._insightId;
     }
     /**
-     * Gets the severity property value. The value of the user experience analytics insight. Possible values are: none, informational, warning, error.
+     * Gets the severity property value. The severity property
      * @return a userExperienceAnalyticsInsightSeverity
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
         this._insightId = value;
     }
     /**
-     * Sets the severity property value. The value of the user experience analytics insight. Possible values are: none, informational, warning, error.
+     * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      * @return a void
      */

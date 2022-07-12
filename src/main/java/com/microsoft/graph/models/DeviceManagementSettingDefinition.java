@@ -29,7 +29,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     private java.util.List<String> _keywords;
     /** Placeholder text as an example of valid input */
     private String _placeholderText;
-    /** The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex. */
+    /** The valueType property */
     private DeviceManangementIntentValueType _valueType;
     /**
      * Instantiates a new deviceManagementSettingDefinition and sets the default values.
@@ -37,6 +37,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     public DeviceManagementSettingDefinition() {
         super();
+        this.setOdatatype("#microsoft.graph.deviceManagementSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -159,7 +160,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
         return this._placeholderText;
     }
     /**
-     * Gets the valueType property value. The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
+     * Gets the valueType property value. The valueType property
      * @return a deviceManangementIntentValueType
      */
     @javax.annotation.Nullable
@@ -267,7 +268,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
         this._placeholderText = value;
     }
     /**
-     * Sets the valueType property value. The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
+     * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      * @return a void
      */

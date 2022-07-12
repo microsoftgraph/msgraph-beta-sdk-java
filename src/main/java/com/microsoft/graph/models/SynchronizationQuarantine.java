@@ -18,7 +18,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     private SynchronizationError _error;
     /** Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _nextAttempt;
-    /** A code that signifies why the quarantine was imposed. Possible values are: EncounteredBaseEscrowThreshold, EncounteredTotalEscrowThreshold, EncounteredEscrowProportionThreshold, EncounteredQuarantineException, QuarantinedOnDemand, TooManyDeletes, Unknown. */
+    /** The reason property */
     private QuarantineReason _reason;
     /** Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _seriesBegan;
@@ -90,7 +90,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         return this._nextAttempt;
     }
     /**
-     * Gets the reason property value. A code that signifies why the quarantine was imposed. Possible values are: EncounteredBaseEscrowThreshold, EncounteredTotalEscrowThreshold, EncounteredEscrowProportionThreshold, EncounteredQuarantineException, QuarantinedOnDemand, TooManyDeletes, Unknown.
+     * Gets the reason property value. The reason property
      * @return a quarantineReason
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         this._nextAttempt = value;
     }
     /**
-     * Sets the reason property value. A code that signifies why the quarantine was imposed. Possible values are: EncounteredBaseEscrowThreshold, EncounteredTotalEscrowThreshold, EncounteredEscrowProportionThreshold, EncounteredQuarantineException, QuarantinedOnDemand, TooManyDeletes, Unknown.
+     * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
      * @return a void
      */

@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implements Parsable {
-    /** Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD. */
+    /** VPN Authentication Method. */
     private VpnAuthenticationMethod _authenticationMethod;
     /** Connection name displayed to the user. */
     private String _connectionName;
-    /** Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix. */
+    /** Android For Work VPN connection type. */
     private AndroidForWorkVpnConnectionType _connectionType;
     /** Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements. */
     private java.util.List<KeyValue> _customData;
@@ -46,7 +46,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
         return new AndroidForWorkVpnConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Gets the authenticationMethod property value. VPN Authentication Method.
      * @return a vpnAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
         return this._connectionName;
     }
     /**
-     * Gets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix.
+     * Gets the connectionType property value. Android For Work VPN connection type.
      * @return a androidForWorkVpnConnectionType
      */
     @javax.annotation.Nullable
@@ -165,7 +165,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
         writer.writeCollectionOfObjectValues("servers", this.getServers());
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
@@ -181,7 +181,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
         this._connectionName = value;
     }
     /**
-     * Sets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix.
+     * Sets the connectionType property value. Android For Work VPN connection type.
      * @param value Value to set for the connectionType property.
      * @return a void
      */

@@ -20,6 +20,8 @@ import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequest
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.CloudPCItemRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.deviceimages.item.CloudPcDeviceImageItemRequestBuilder;
+import microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.ExternalPartnerSettingsRequestBuilder;
+import microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.item.CloudPcExternalPartnerSettingItemRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.galleryimages.item.CloudPcGalleryImageItemRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.geteffectivepermissions.GetEffectivePermissionsRequestBuilder;
@@ -54,6 +56,11 @@ public class VirtualEndpointRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceImagesRequestBuilder deviceImages() {
         return new DeviceImagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The externalPartnerSettings property */
+    @javax.annotation.Nonnull
+    public ExternalPartnerSettingsRequestBuilder externalPartnerSettings() {
+        return new ExternalPartnerSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The galleryImages property */
     @javax.annotation.Nonnull
@@ -304,6 +311,18 @@ public class VirtualEndpointRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcDeviceImage%2Did", id);
         return new CloudPcDeviceImageItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.externalPartnerSettings.item collection
+     * @param id Unique identifier of the item
+     * @return a cloudPcExternalPartnerSettingItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CloudPcExternalPartnerSettingItemRequestBuilder externalPartnerSettings(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("cloudPcExternalPartnerSetting%2Did", id);
+        return new CloudPcExternalPartnerSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.galleryImages.item collection

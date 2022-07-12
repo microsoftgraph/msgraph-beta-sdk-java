@@ -15,9 +15,9 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     private String _defaultValue;
     /** For internal use only. */
     private Boolean _exportMissingReferences;
-    /** Defines when this attribute should be exported to the target directory. Possible values are: FlowWhenChanged and FlowAlways. Default is FlowWhenChanged. */
+    /** The flowBehavior property */
     private AttributeFlowBehavior _flowBehavior;
-    /** Defines when this attribute should be updated in the target directory. Possible values are: Always (default), ObjectAddOnly (only when new object is created), MultiValueAddOnly (only when the change is adding new values to a multi-valued attribute). */
+    /** The flowType property */
     private AttributeFlowType _flowType;
     /** If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes. */
     private Integer _matchingPriority;
@@ -84,7 +84,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the flowBehavior property value. Defines when this attribute should be exported to the target directory. Possible values are: FlowWhenChanged and FlowAlways. Default is FlowWhenChanged.
+     * Gets the flowBehavior property value. The flowBehavior property
      * @return a attributeFlowBehavior
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return this._flowBehavior;
     }
     /**
-     * Gets the flowType property value. Defines when this attribute should be updated in the target directory. Possible values are: Always (default), ObjectAddOnly (only when new object is created), MultiValueAddOnly (only when the change is adding new values to a multi-valued attribute).
+     * Gets the flowType property value. The flowType property
      * @return a attributeFlowType
      */
     @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this._exportMissingReferences = value;
     }
     /**
-     * Sets the flowBehavior property value. Defines when this attribute should be exported to the target directory. Possible values are: FlowWhenChanged and FlowAlways. Default is FlowWhenChanged.
+     * Sets the flowBehavior property value. The flowBehavior property
      * @param value Value to set for the flowBehavior property.
      * @return a void
      */
@@ -172,7 +172,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this._flowBehavior = value;
     }
     /**
-     * Sets the flowType property value. Defines when this attribute should be updated in the target directory. Possible values are: Always (default), ObjectAddOnly (only when new object is created), MultiValueAddOnly (only when the change is adding new values to a multi-valued attribute).
+     * Sets the flowType property value. The flowType property
      * @param value Value to set for the flowType property.
      * @return a void
      */

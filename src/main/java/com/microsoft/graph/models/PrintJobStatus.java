@@ -23,7 +23,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     private PrintJobProcessingState _processingState;
     /** The processingStateDescription property */
     private String _processingStateDescription;
-    /** The print job's current processing state. Valid values are described in the following table. Read-only. */
+    /** The state property */
     private PrintJobProcessingState _state;
     /**
      * Instantiates a new printJobStatus and sets the default values.
@@ -116,7 +116,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
         return this._processingStateDescription;
     }
     /**
-     * Gets the state property value. The print job's current processing state. Valid values are described in the following table. Read-only.
+     * Gets the state property value. The state property
      * @return a printJobProcessingState
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
         this._processingStateDescription = value;
     }
     /**
-     * Sets the state property value. The print job's current processing state. Valid values are described in the following table. Read-only.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

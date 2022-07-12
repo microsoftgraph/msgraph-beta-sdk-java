@@ -7,16 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the filterOperators method. */
 public class FilterOperatorSchema extends Entity implements Parsable {
-    /** Arity of the operator. Possible values are: Binary, Unary. The default is Binary. */
+    /** The arity property */
     private ScopeOperatorType _arity;
-    /** Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All. */
+    /** The multivaluedComparisonType property */
     private ScopeOperatorMultiValuedComparisonType _multivaluedComparisonType;
     /** Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String. */
     private java.util.List<String> _supportedAttributeTypes;
     /**
-     * Instantiates a new filterOperatorSchema and sets the default values.
+     * Instantiates a new FilterOperatorSchema and sets the default values.
      * @return a void
      */
     public FilterOperatorSchema() {
@@ -25,7 +24,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filterOperatorSchema
+     * @return a FilterOperatorSchema
      */
     @javax.annotation.Nonnull
     public static FilterOperatorSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +32,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         return new FilterOperatorSchema();
     }
     /**
-     * Gets the arity property value. Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
+     * Gets the arity property value. The arity property
      * @return a scopeOperatorType
      */
     @javax.annotation.Nullable
@@ -54,7 +53,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the multivaluedComparisonType property value. Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
+     * Gets the multivaluedComparisonType property value. The multivaluedComparisonType property
      * @return a scopeOperatorMultiValuedComparisonType
      */
     @javax.annotation.Nullable
@@ -82,7 +81,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("supportedAttributeTypes", this.getSupportedAttributeTypes());
     }
     /**
-     * Sets the arity property value. Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
+     * Sets the arity property value. The arity property
      * @param value Value to set for the arity property.
      * @return a void
      */
@@ -90,7 +89,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         this._arity = value;
     }
     /**
-     * Sets the multivaluedComparisonType property value. Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
+     * Sets the multivaluedComparisonType property value. The multivaluedComparisonType property
      * @param value Value to set for the multivaluedComparisonType property.
      * @return a void
      */

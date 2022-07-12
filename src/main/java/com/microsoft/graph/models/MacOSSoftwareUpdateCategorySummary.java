@@ -22,7 +22,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     private Integer _successfulUpdateCount;
     /** Number of total updates on the device */
     private Integer _totalUpdateCount;
-    /** Software update type. Possible values are: critical, configurationDataFile, firmware, other. */
+    /** MacOS Software Update Category */
     private MacOSSoftwareUpdateCategory _updateCategory;
     /** Summary of the update states. */
     private java.util.List<MacOSSoftwareUpdateStateSummary> _updateStateSummaries;
@@ -113,7 +113,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
         return this._totalUpdateCount;
     }
     /**
-     * Gets the updateCategory property value. Software update type. Possible values are: critical, configurationDataFile, firmware, other.
+     * Gets the updateCategory property value. MacOS Software Update Category
      * @return a macOSSoftwareUpdateCategory
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
         this._totalUpdateCount = value;
     }
     /**
-     * Sets the updateCategory property value. Software update type. Possible values are: critical, configurationDataFile, firmware, other.
+     * Sets the updateCategory property value. MacOS Software Update Category
      * @param value Value to set for the updateCategory property.
      * @return a void
      */

@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ActivityStatistics extends Entity implements Parsable {
     /** The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting. */
     private AnalyticsActivityType _activity;
@@ -27,6 +27,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     public ActivityStatistics() {
         super();
+        this.setOdatatype("#microsoft.graph.activityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

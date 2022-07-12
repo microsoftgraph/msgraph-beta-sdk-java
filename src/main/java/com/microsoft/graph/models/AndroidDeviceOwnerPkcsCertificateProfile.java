@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
-    /** Target store certificate. Possible values are: user, machine. */
+    /** CertificateStore types */
     private CertificateStore _certificateStore;
     /** PKCS Certificate Template Name */
     private String _certificateTemplateName;
@@ -16,7 +16,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     private String _certificationAuthority;
     /** PKCS Certification Authority Name */
     private String _certificationAuthorityName;
-    /** Certification authority type. Possible values are: notConfigured, microsoft, digiCert. */
+    /** Device Management Certification Authority Types. */
     private DeviceManagementCertificationAuthority _certificationAuthorityType;
     /** Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements. */
     private java.util.List<CustomSubjectAlternativeName> _customSubjectAlternativeNames;
@@ -44,7 +44,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
         return new AndroidDeviceOwnerPkcsCertificateProfile();
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Gets the certificateStore property value. CertificateStore types
      * @return a certificateStore
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
         return this._certificationAuthorityName;
     }
     /**
-     * Gets the certificationAuthorityType property value. Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
+     * Gets the certificationAuthorityType property value. Device Management Certification Authority Types.
      * @return a deviceManagementCertificationAuthority
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Sets the certificateStore property value. CertificateStore types
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
@@ -185,7 +185,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
         this._certificationAuthorityName = value;
     }
     /**
-     * Sets the certificationAuthorityType property value. Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
+     * Sets the certificationAuthorityType property value. Device Management Certification Authority Types.
      * @param value Value to set for the certificationAuthorityType property.
      * @return a void
      */

@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CommsOperation extends Entity implements Parsable {
     /** Unique Client Context string. Max limit is 256 chars. */
     private String _clientContext;
     /** The result information. Read-only. */
     private ResultInfo _resultInfo;
-    /** Possible values are: notStarted, running, completed, failed. Read-only. */
+    /** The status property */
     private OperationStatus _status;
     /**
      * Instantiates a new commsOperation and sets the default values.
@@ -21,6 +21,7 @@ public class CommsOperation extends Entity implements Parsable {
      */
     public CommsOperation() {
         super();
+        this.setOdatatype("#microsoft.graph.commsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,7 +81,7 @@ public class CommsOperation extends Entity implements Parsable {
         return this._resultInfo;
     }
     /**
-     * Gets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Gets the status property value. The status property
      * @return a operationStatus
      */
     @javax.annotation.Nullable
@@ -116,7 +117,7 @@ public class CommsOperation extends Entity implements Parsable {
         this._resultInfo = value;
     }
     /**
-     * Sets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

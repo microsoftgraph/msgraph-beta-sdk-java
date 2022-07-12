@@ -14,7 +14,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     private DomainNameSource _userDomainNameSource;
     /** Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName. */
     private UsernameSource _usernameAADSource;
-    /** Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
+    /** Possible values for username source or email source. */
     private UserEmailSource _usernameSource;
     /**
      * Instantiates a new EasEmailProfileConfigurationBase and sets the default values.
@@ -22,6 +22,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      */
     public EasEmailProfileConfigurationBase() {
         super();
+        this.setOdatatype("#microsoft.graph.easEmailProfileConfigurationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,7 +82,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
         return this._usernameAADSource;
     }
     /**
-     * Gets the usernameSource property value. Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Gets the usernameSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
     @javax.annotation.Nullable
@@ -126,7 +127,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
         this._usernameAADSource = value;
     }
     /**
-     * Sets the usernameSource property value. Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Sets the usernameSource property value. Possible values for username source or email source.
      * @param value Value to set for the usernameSource property.
      * @return a void
      */

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getOffice365GroupsActivityGroupCounts method. */
 public class Office365GroupsActivityGroupCounts extends Entity implements Parsable {
     /** The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups. */
     private Long _active;
@@ -21,7 +20,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
     /** The total number of groups. */
     private Long _total;
     /**
-     * Instantiates a new office365GroupsActivityGroupCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityGroupCounts and sets the default values.
      * @return a void
      */
     public Office365GroupsActivityGroupCounts() {
@@ -30,7 +29,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityGroupCounts
+     * @return a Office365GroupsActivityGroupCounts
      */
     @javax.annotation.Nonnull
     public static Office365GroupsActivityGroupCounts createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

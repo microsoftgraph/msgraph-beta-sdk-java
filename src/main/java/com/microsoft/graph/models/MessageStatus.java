@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of messageTrace entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum MessageStatus implements ValuedEnum {
     GettingStatus("gettingStatus"),
     Pending("pending"),

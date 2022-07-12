@@ -55,6 +55,7 @@ import microsoft.graph.devicemanagement.reports.getfailedmobileappssummaryreport
 import microsoft.graph.devicemanagement.reports.getgrouppolicysettingsdevicesettingsreport.GetGroupPolicySettingsDeviceSettingsReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.gethistoricalreport.GetHistoricalReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getmalwaresummaryreport.GetMalwareSummaryReportRequestBuilder;
+import microsoft.graph.devicemanagement.reports.getnoncompliantdevicesandsettingsreport.GetNoncompliantDevicesAndSettingsReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getpolicynoncompliancemetadata.GetPolicyNonComplianceMetadataRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getpolicynoncompliancereport.GetPolicyNonComplianceReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getpolicynoncompliancesummaryreport.GetPolicyNonComplianceSummaryReportRequestBuilder;
@@ -271,6 +272,11 @@ public class ReportsRequestBuilder {
     @javax.annotation.Nonnull
     public GetMalwareSummaryReportRequestBuilder getMalwareSummaryReport() {
         return new GetMalwareSummaryReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getNoncompliantDevicesAndSettingsReport property */
+    @javax.annotation.Nonnull
+    public GetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport() {
+        return new GetNoncompliantDevicesAndSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
     /** The getPolicyNonComplianceMetadata property */
     @javax.annotation.Nonnull

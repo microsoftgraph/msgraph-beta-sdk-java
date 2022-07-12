@@ -7,16 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Information Protection AppLearning Summary entity. */
 public class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable {
     /** Application Name */
     private String _applicationName;
-    /** Application Type. Possible values are: universal, desktop. */
+    /** Possible types of Application */
     private ApplicationType _applicationType;
     /** Device Count */
     private Integer _deviceCount;
     /**
-     * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
+     * Instantiates a new WindowsInformationProtectionAppLearningSummary and sets the default values.
      * @return a void
      */
     public WindowsInformationProtectionAppLearningSummary() {
@@ -25,7 +24,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionAppLearningSummary
+     * @return a WindowsInformationProtectionAppLearningSummary
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionAppLearningSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +40,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
         return this._applicationName;
     }
     /**
-     * Gets the applicationType property value. Application Type. Possible values are: universal, desktop.
+     * Gets the applicationType property value. Possible types of Application
      * @return a applicationType
      */
     @javax.annotation.Nullable
@@ -90,7 +89,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
         this._applicationName = value;
     }
     /**
-     * Sets the applicationType property value. Application Type. Possible values are: universal, desktop.
+     * Sets the applicationType property value. Possible types of Application
      * @param value Value to set for the applicationType property.
      * @return a void
      */

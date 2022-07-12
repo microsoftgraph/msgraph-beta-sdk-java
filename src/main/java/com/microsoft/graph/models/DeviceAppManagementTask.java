@@ -12,7 +12,7 @@ import java.util.Objects;
 public class DeviceAppManagementTask extends Entity implements Parsable {
     /** The name or email of the admin this task is assigned to. */
     private String _assignedTo;
-    /** The category. Possible values are: unknown, advancedThreatProtection. */
+    /** Device app management task category. */
     private DeviceAppManagementTaskCategory _category;
     /** The created date. */
     private OffsetDateTime _createdDateTime;
@@ -26,9 +26,9 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     private String _displayName;
     /** The due date. */
     private OffsetDateTime _dueDateTime;
-    /** The priority. Possible values are: none, high, low. */
+    /** Device app management task priority. */
     private DeviceAppManagementTaskPriority _priority;
-    /** The status. Possible values are: unknown, pending, active, completed, rejected. */
+    /** Device app management task status. */
     private DeviceAppManagementTaskStatus _status;
     /**
      * Instantiates a new deviceAppManagementTask and sets the default values.
@@ -36,6 +36,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      */
     public DeviceAppManagementTask() {
         super();
+        this.setOdatatype("#microsoft.graph.deviceAppManagementTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +66,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         return this._assignedTo;
     }
     /**
-     * Gets the category property value. The category. Possible values are: unknown, advancedThreatProtection.
+     * Gets the category property value. Device app management task category.
      * @return a deviceAppManagementTaskCategory
      */
     @javax.annotation.Nullable
@@ -141,7 +142,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the priority property value. The priority. Possible values are: none, high, low.
+     * Gets the priority property value. Device app management task priority.
      * @return a deviceAppManagementTaskPriority
      */
     @javax.annotation.Nullable
@@ -149,7 +150,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         return this._priority;
     }
     /**
-     * Gets the status property value. The status. Possible values are: unknown, pending, active, completed, rejected.
+     * Gets the status property value. Device app management task status.
      * @return a deviceAppManagementTaskStatus
      */
     @javax.annotation.Nullable
@@ -184,7 +185,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         this._assignedTo = value;
     }
     /**
-     * Sets the category property value. The category. Possible values are: unknown, advancedThreatProtection.
+     * Sets the category property value. Device app management task category.
      * @param value Value to set for the category property.
      * @return a void
      */
@@ -240,7 +241,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         this._dueDateTime = value;
     }
     /**
-     * Sets the priority property value. The priority. Possible values are: none, high, low.
+     * Sets the priority property value. Device app management task priority.
      * @param value Value to set for the priority property.
      * @return a void
      */
@@ -248,7 +249,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
         this._priority = value;
     }
     /**
-     * Sets the status property value. The status. Possible values are: unknown, pending, active, completed, rejected.
+     * Sets the status property value. Device app management task status.
      * @param value Value to set for the status property.
      * @return a void
      */

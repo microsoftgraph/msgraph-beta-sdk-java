@@ -7,19 +7,18 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Co-Management eligibility state */
 public class ComanagementEligibleDevice extends Entity implements Parsable {
-    /** ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown. */
+    /** Device registration status. */
     private DeviceRegistrationState _clientRegistrationStatus;
     /** DeviceName */
     private String _deviceName;
-    /** DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC. */
+    /** Device type. */
     private DeviceType _deviceType;
     /** EntitySource */
     private Integer _entitySource;
-    /** ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp. */
+    /** Management agent type. */
     private ManagementAgentType _managementAgents;
-    /** ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered. */
+    /** Management state of device in Microsoft Intune. */
     private ManagementState _managementState;
     /** Manufacturer */
     private String _manufacturer;
@@ -31,13 +30,13 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     private String _osDescription;
     /** OSVersion */
     private String _osVersion;
-    /** OwnerType. Possible values are: unknown, company, personal. */
+    /** Owner type of device. */
     private OwnerType _ownerType;
     /** ReferenceId */
     private String _referenceId;
     /** SerialNumber */
     private String _serialNumber;
-    /** ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible. */
+    /** The status property */
     private ComanagementEligibleType _status;
     /** UPN */
     private String _upn;
@@ -48,7 +47,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** UserName */
     private String _userName;
     /**
-     * Instantiates a new comanagementEligibleDevice and sets the default values.
+     * Instantiates a new ComanagementEligibleDevice and sets the default values.
      * @return a void
      */
     public ComanagementEligibleDevice() {
@@ -57,7 +56,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a comanagementEligibleDevice
+     * @return a ComanagementEligibleDevice
      */
     @javax.annotation.Nonnull
     public static ComanagementEligibleDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +64,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         return new ComanagementEligibleDevice();
     }
     /**
-     * Gets the clientRegistrationStatus property value. ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     * Gets the clientRegistrationStatus property value. Device registration status.
      * @return a deviceRegistrationState
      */
     @javax.annotation.Nullable
@@ -81,7 +80,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         return this._deviceName;
     }
     /**
-     * Gets the deviceType property value. DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Gets the deviceType property value. Device type.
      * @return a deviceType
      */
     @javax.annotation.Nullable
@@ -126,7 +125,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the managementAgents property value. ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
+     * Gets the managementAgents property value. Management agent type.
      * @return a managementAgentType
      */
     @javax.annotation.Nullable
@@ -134,7 +133,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         return this._managementAgents;
     }
     /**
-     * Gets the managementState property value. ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+     * Gets the managementState property value. Management state of device in Microsoft Intune.
      * @return a managementState
      */
     @javax.annotation.Nullable
@@ -182,7 +181,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         return this._osVersion;
     }
     /**
-     * Gets the ownerType property value. OwnerType. Possible values are: unknown, company, personal.
+     * Gets the ownerType property value. Owner type of device.
      * @return a ownerType
      */
     @javax.annotation.Nullable
@@ -206,7 +205,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         return this._serialNumber;
     }
     /**
-     * Gets the status property value. ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
+     * Gets the status property value. The status property
      * @return a comanagementEligibleType
      */
     @javax.annotation.Nullable
@@ -274,7 +273,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         writer.writeStringValue("userName", this.getUserName());
     }
     /**
-     * Sets the clientRegistrationStatus property value. ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     * Sets the clientRegistrationStatus property value. Device registration status.
      * @param value Value to set for the clientRegistrationStatus property.
      * @return a void
      */
@@ -290,7 +289,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         this._deviceName = value;
     }
     /**
-     * Sets the deviceType property value. DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
@@ -306,7 +305,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         this._entitySource = value;
     }
     /**
-     * Sets the managementAgents property value. ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
+     * Sets the managementAgents property value. Management agent type.
      * @param value Value to set for the managementAgents property.
      * @return a void
      */
@@ -314,7 +313,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         this._managementAgents = value;
     }
     /**
-     * Sets the managementState property value. ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+     * Sets the managementState property value. Management state of device in Microsoft Intune.
      * @param value Value to set for the managementState property.
      * @return a void
      */
@@ -362,7 +361,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         this._osVersion = value;
     }
     /**
-     * Sets the ownerType property value. OwnerType. Possible values are: unknown, company, personal.
+     * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */
@@ -386,7 +385,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
         this._serialNumber = value;
     }
     /**
-     * Sets the status property value. ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

@@ -81,7 +81,7 @@ public class GetStateRequestBuilder {
     }
     /**
      * Invoke function getState
-     * @return a CompletableFuture of AssignmentFilterState
+     * @return a CompletableFuture of assignmentFilterState
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterState> get() {
         try {
@@ -98,7 +98,7 @@ public class GetStateRequestBuilder {
     /**
      * Invoke function getState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AssignmentFilterState
+     * @return a CompletableFuture of assignmentFilterState
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterState> get(@javax.annotation.Nullable final java.util.function.Consumer<GetStateRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class GetStateRequestBuilder {
      * Invoke function getState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of AssignmentFilterState
+     * @return a CompletableFuture of assignmentFilterState
      */
     public java.util.concurrent.CompletableFuture<AssignmentFilterState> get(@javax.annotation.Nullable final java.util.function.Consumer<GetStateRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

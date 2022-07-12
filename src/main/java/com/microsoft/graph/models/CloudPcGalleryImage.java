@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcGalleryImage extends Entity implements Parsable {
     /** The official display name of the gallery image. Read-only. */
     private String _displayName;
@@ -35,7 +34,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     /** The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only. */
     private CloudPcGalleryImageStatus _status;
     /**
-     * Instantiates a new cloudPcGalleryImage and sets the default values.
+     * Instantiates a new CloudPcGalleryImage and sets the default values.
      * @return a void
      */
     public CloudPcGalleryImage() {
@@ -44,7 +43,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcGalleryImage
+     * @return a CloudPcGalleryImage
      */
     @javax.annotation.Nonnull
     public static CloudPcGalleryImage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

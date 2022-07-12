@@ -11,14 +11,14 @@ import java.util.Objects;
 public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** DecryptionAlgorithm for Content. Possible values are: aes256. */
+    /** The appLogDecryptionAlgorithm property */
     private AppLogDecryptionAlgorithm _appLogDecryptionAlgorithm;
     /** DecryptionKey as string */
     private String _decryptionKey;
     /** Download SAS Url for completed AppLogUploadRequest */
     private String _downloadUrl;
     /**
-     * Instantiates a new AppLogCollectionDownloadDetails and sets the default values.
+     * Instantiates a new appLogCollectionDownloadDetails and sets the default values.
      * @return a void
      */
     public AppLogCollectionDownloadDetails() {
@@ -27,7 +27,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppLogCollectionDownloadDetails
+     * @return a appLogCollectionDownloadDetails
      */
     @javax.annotation.Nonnull
     public static AppLogCollectionDownloadDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
         return this._additionalData;
     }
     /**
-     * Gets the appLogDecryptionAlgorithm property value. DecryptionAlgorithm for Content. Possible values are: aes256.
+     * Gets the appLogDecryptionAlgorithm property value. The appLogDecryptionAlgorithm property
      * @return a appLogDecryptionAlgorithm
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
         this._additionalData = value;
     }
     /**
-     * Sets the appLogDecryptionAlgorithm property value. DecryptionAlgorithm for Content. Possible values are: aes256.
+     * Sets the appLogDecryptionAlgorithm property value. The appLogDecryptionAlgorithm property
      * @param value Value to set for the appLogDecryptionAlgorithm property.
      * @return a void
      */

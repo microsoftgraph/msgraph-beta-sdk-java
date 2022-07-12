@@ -16,9 +16,9 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
     private OffsetDateTime _lastUpdatedDateTime;
     /** Product key of the software update. */
     private String _productKey;
-    /** State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed. */
+    /** MacOS Software Update State */
     private MacOSSoftwareUpdateState _state;
-    /** Software update category. Possible values are: critical, configurationDataFile, firmware, other. */
+    /** MacOS Software Update Category */
     private MacOSSoftwareUpdateCategory _updateCategory;
     /** Version of the software update */
     private String _updateVersion;
@@ -80,7 +80,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
         return this._productKey;
     }
     /**
-     * Gets the state property value. State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
+     * Gets the state property value. MacOS Software Update State
      * @return a macOSSoftwareUpdateState
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
         return this._state;
     }
     /**
-     * Gets the updateCategory property value. Software update category. Possible values are: critical, configurationDataFile, firmware, other.
+     * Gets the updateCategory property value. MacOS Software Update Category
      * @return a macOSSoftwareUpdateCategory
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
         this._productKey = value;
     }
     /**
-     * Sets the state property value. State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
+     * Sets the state property value. MacOS Software Update State
      * @param value Value to set for the state property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
         this._state = value;
     }
     /**
-     * Sets the updateCategory property value. Software update category. Possible values are: critical, configurationDataFile, firmware, other.
+     * Sets the updateCategory property value. MacOS Software Update Category
      * @param value Value to set for the updateCategory property.
      * @return a void
      */

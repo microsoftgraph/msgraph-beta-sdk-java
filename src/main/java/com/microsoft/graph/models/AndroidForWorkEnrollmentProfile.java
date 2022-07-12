@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Enrollment Profile used to enroll COSU devices using Google's Cloud Management. */
 public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable {
     /** Tenant GUID the enrollment profile belongs to. */
     private String _accountId;
@@ -31,7 +30,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     /** Value of the most recently created token for this enrollment profile. */
     private String _tokenValue;
     /**
-     * Instantiates a new androidForWorkEnrollmentProfile and sets the default values.
+     * Instantiates a new AndroidForWorkEnrollmentProfile and sets the default values.
      * @return a void
      */
     public AndroidForWorkEnrollmentProfile() {
@@ -40,7 +39,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkEnrollmentProfile
+     * @return a AndroidForWorkEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

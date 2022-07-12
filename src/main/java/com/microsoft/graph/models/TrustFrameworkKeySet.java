@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the trustFramework singleton. */
 public class TrustFrameworkKeySet extends Entity implements Parsable {
     /** A collection of the keys. */
     private java.util.List<TrustFrameworkKey> _keys;
     /**
-     * Instantiates a new trustFrameworkKeySet and sets the default values.
+     * Instantiates a new TrustFrameworkKeySet and sets the default values.
      * @return a void
      */
     public TrustFrameworkKeySet() {
@@ -21,7 +20,7 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trustFrameworkKeySet
+     * @return a TrustFrameworkKeySet
      */
     @javax.annotation.Nonnull
     public static TrustFrameworkKeySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

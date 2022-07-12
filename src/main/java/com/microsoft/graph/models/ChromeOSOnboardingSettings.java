@@ -14,7 +14,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     private OffsetDateTime _lastDirectorySyncDateTime;
     /** The ChromebookTenant's LastModifiedDateTime */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The ChromebookTenant's OnboardingStatus. Possible values are: unknown, inprogress, onboarded, failed, offboarding, unknownFutureValue. */
+    /** The onboarding status of the tenant. */
     private OnboardingStatus _onboardingStatus;
     /** The ChromebookTenant's OwnerUserPrincipalName */
     private String _ownerUserPrincipalName;
@@ -66,7 +66,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the onboardingStatus property value. The ChromebookTenant's OnboardingStatus. Possible values are: unknown, inprogress, onboarded, failed, offboarding, unknownFutureValue.
+     * Gets the onboardingStatus property value. The onboarding status of the tenant.
      * @return a onboardingStatus
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the onboardingStatus property value. The ChromebookTenant's OnboardingStatus. Possible values are: unknown, inprogress, onboarded, failed, offboarding, unknownFutureValue.
+     * Sets the onboardingStatus property value. The onboarding status of the tenant.
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */

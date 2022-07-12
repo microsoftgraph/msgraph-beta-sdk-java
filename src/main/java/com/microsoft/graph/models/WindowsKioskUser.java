@@ -12,12 +12,15 @@ import java.util.Objects;
 public class WindowsKioskUser implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new windowsKioskUser and sets the default values.
      * @return a void
      */
     public WindowsKioskUser() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.windowsKioskUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -27,6 +30,19 @@ public class WindowsKioskUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static WindowsKioskUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windowsKioskActiveDirectoryGroup": return new WindowsKioskActiveDirectoryGroup();
+                case "#microsoft.graph.windowsKioskAutologon": return new WindowsKioskAutologon();
+                case "#microsoft.graph.windowsKioskAzureADGroup": return new WindowsKioskAzureADGroup();
+                case "#microsoft.graph.windowsKioskAzureADUser": return new WindowsKioskAzureADUser();
+                case "#microsoft.graph.windowsKioskLocalGroup": return new WindowsKioskLocalGroup();
+                case "#microsoft.graph.windowsKioskLocalUser": return new WindowsKioskLocalUser();
+                case "#microsoft.graph.windowsKioskVisitor": return new WindowsKioskVisitor();
+            }
+        }
         return new WindowsKioskUser();
     }
     /**
@@ -44,8 +60,17 @@ public class WindowsKioskUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskUser currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -54,6 +79,7 @@ public class WindowsKioskUser implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -63,5 +89,13 @@ public class WindowsKioskUser implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

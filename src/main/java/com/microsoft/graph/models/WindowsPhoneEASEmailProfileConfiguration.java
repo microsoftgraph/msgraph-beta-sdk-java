@@ -12,11 +12,11 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     private String _accountName;
     /** Value indicating whether this policy only applies to Windows 8.1. This property is read-only. */
     private Boolean _applyOnlyToWindowsPhone81;
-    /** Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited. */
+    /** Possible values for email sync duration. */
     private EmailSyncDuration _durationOfEmailToSync;
     /** Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
     private UserEmailSource _emailAddressSource;
-    /** Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage. */
+    /** Possible values for email sync schedule. */
     private EmailSyncSchedule _emailSyncSchedule;
     /** Exchange location that (URL) that the native mail app connects to. */
     private String _hostName;
@@ -62,7 +62,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         return this._applyOnlyToWindowsPhone81;
     }
     /**
-     * Gets the durationOfEmailToSync property value. Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         return this._emailAddressSource;
     }
     /**
-     * Gets the emailSyncSchedule property value. Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @return a emailSyncSchedule
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         this._applyOnlyToWindowsPhone81 = value;
     }
     /**
-     * Sets the durationOfEmailToSync property value. Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         this._emailAddressSource = value;
     }
     /**
-     * Sets the emailSyncSchedule property value. Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Sets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */

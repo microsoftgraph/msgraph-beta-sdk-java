@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileAppDependency extends MobileAppRelationship implements Parsable {
-    /** The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall. */
+    /** Indicates the dependency type associated with a relationship between two mobile apps. */
     private MobileAppDependencyType _dependencyType;
     /** The total number of apps that directly or indirectly depend on the parent app. */
     private Integer _dependentAppCount;
@@ -32,7 +32,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
         return new MobileAppDependency();
     }
     /**
-     * Gets the dependencyType property value. The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
+     * Gets the dependencyType property value. Indicates the dependency type associated with a relationship between two mobile apps.
      * @return a mobileAppDependencyType
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
         writer.writeIntegerValue("dependsOnAppCount", this.getDependsOnAppCount());
     }
     /**
-     * Sets the dependencyType property value. The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
+     * Sets the dependencyType property value. Indicates the dependency type associated with a relationship between two mobile apps.
      * @param value Value to set for the dependencyType property.
      * @return a void
      */

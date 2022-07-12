@@ -17,7 +17,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _expiration;
     /** The interval between synchronization iterations. */
     private Period _interval;
-    /** Possible values are: Active, Disabled. */
+    /** The state property */
     private SynchronizationScheduleState _state;
     /**
      * Instantiates a new synchronizationSchedule and sets the default values.
@@ -74,7 +74,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         return this._interval;
     }
     /**
-     * Gets the state property value. Possible values are: Active, Disabled.
+     * Gets the state property value. The state property
      * @return a synchronizationScheduleState
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         this._interval = value;
     }
     /**
-     * Sets the state property value. Possible values are: Active, Disabled.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

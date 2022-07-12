@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics battery health capacity entity contains count of devices broken down into 3 categories - devices with capacity > 80%, devices with capacity 50-80% and devices with capacity < 50 %.This API provides the count of devices in these 3 categories.. */
 public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity implements Parsable {
     /** Number of active devices within the tenant. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -21,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /** Recorded date time of this capacity details instance. */
     private OffsetDateTime _lastRefreshedDateTime;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthCapacityDetails() {
@@ -30,7 +29,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthCapacityDetails
+     * @return a UserExperienceAnalyticsBatteryHealthCapacityDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthCapacityDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

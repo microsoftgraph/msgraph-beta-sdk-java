@@ -86,7 +86,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder {
     /**
      * Invoke action getPasswordSingleSignOnCredentials
      * @param body 
-     * @return a CompletableFuture of PasswordSingleSignOnCredentialSet
+     * @return a CompletableFuture of passwordSingleSignOnCredentialSet
      */
     public java.util.concurrent.CompletableFuture<PasswordSingleSignOnCredentialSet> post(@javax.annotation.Nonnull final GetPasswordSingleSignOnCredentialsPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder {
      * Invoke action getPasswordSingleSignOnCredentials
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PasswordSingleSignOnCredentialSet
+     * @return a CompletableFuture of passwordSingleSignOnCredentialSet
      */
     public java.util.concurrent.CompletableFuture<PasswordSingleSignOnCredentialSet> post(@javax.annotation.Nonnull final GetPasswordSingleSignOnCredentialsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPasswordSingleSignOnCredentialsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of PasswordSingleSignOnCredentialSet
+     * @return a CompletableFuture of passwordSingleSignOnCredentialSet
      */
     public java.util.concurrent.CompletableFuture<PasswordSingleSignOnCredentialSet> post(@javax.annotation.Nonnull final GetPasswordSingleSignOnCredentialsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPasswordSingleSignOnCredentialsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

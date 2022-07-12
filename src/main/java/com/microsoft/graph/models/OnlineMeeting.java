@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
 public class OnlineMeeting extends Entity implements Parsable {
     /** Indicates whether attendees can turn on their camera. */
     private Boolean _allowAttendeeToEnableCamera;
@@ -22,6 +21,8 @@ public class OnlineMeeting extends Entity implements Parsable {
     private Boolean _allowTeamworkReactions;
     /** The content stream of the alternative recording of a Microsoft Teams live event. Read-only. */
     private byte[] _alternativeRecording;
+    /** The anonymizeIdentityForRoles property */
+    private java.util.List<String> _anonymizeIdentityForRoles;
     /** The attendance reports of an online meeting. Read-only. */
     private java.util.List<MeetingAttendanceReport> _attendanceReports;
     /** The content stream of the attendee report of a Teams live event. Read-only. */
@@ -46,7 +47,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     private Boolean _isEntryExitAnnounced;
     /** The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only. */
     private ItemBody _joinInformation;
-    /** The joinMeetingIdSettings property */
+    /** Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. */
     private JoinMeetingIdSettings _joinMeetingIdSettings;
     /** The joinUrl property */
     private String _joinUrl;
@@ -71,7 +72,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /** The video teleconferencing ID. Read-only. */
     private String _videoTeleconferenceId;
     /**
-     * Instantiates a new onlineMeeting and sets the default values.
+     * Instantiates a new OnlineMeeting and sets the default values.
      * @return a void
      */
     public OnlineMeeting() {
@@ -80,7 +81,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onlineMeeting
+     * @return a OnlineMeeting
      */
     @javax.annotation.Nonnull
     public static OnlineMeeting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -134,6 +135,14 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nullable
     public byte[] getAlternativeRecording() {
         return this._alternativeRecording;
+    }
+    /**
+     * Gets the anonymizeIdentityForRoles property value. The anonymizeIdentityForRoles property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getAnonymizeIdentityForRoles() {
+        return this._anonymizeIdentityForRoles;
     }
     /**
      * Gets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
@@ -221,6 +230,7 @@ public class OnlineMeeting extends Entity implements Parsable {
             this.put("allowMeetingChat", (n) -> { currentObject.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
             this.put("allowTeamworkReactions", (n) -> { currentObject.setAllowTeamworkReactions(n.getBooleanValue()); });
             this.put("alternativeRecording", (n) -> { currentObject.setAlternativeRecording(n.getByteArrayValue()); });
+            this.put("anonymizeIdentityForRoles", (n) -> { currentObject.setAnonymizeIdentityForRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("attendanceReports", (n) -> { currentObject.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
             this.put("attendeeReport", (n) -> { currentObject.setAttendeeReport(n.getByteArrayValue()); });
             this.put("audioConferencing", (n) -> { currentObject.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
@@ -272,7 +282,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._joinInformation;
     }
     /**
-     * Gets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
      * @return a joinMeetingIdSettings
      */
     @javax.annotation.Nullable
@@ -381,6 +391,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
         writer.writeByteArrayValue("alternativeRecording", this.getAlternativeRecording());
+        writer.writeCollectionOfPrimitiveValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
@@ -453,6 +464,14 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     public void setAlternativeRecording(@javax.annotation.Nullable final byte[] value) {
         this._alternativeRecording = value;
+    }
+    /**
+     * Sets the anonymizeIdentityForRoles property value. The anonymizeIdentityForRoles property
+     * @param value Value to set for the anonymizeIdentityForRoles property.
+     * @return a void
+     */
+    public void setAnonymizeIdentityForRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._anonymizeIdentityForRoles = value;
     }
     /**
      * Sets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
@@ -551,7 +570,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._joinInformation = value;
     }
     /**
-     * Sets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * Sets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
      * @param value Value to set for the joinMeetingIdSettings property.
      * @return a void
      */

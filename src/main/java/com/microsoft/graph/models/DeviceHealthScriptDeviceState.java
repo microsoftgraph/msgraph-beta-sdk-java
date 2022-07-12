@@ -12,7 +12,7 @@ import java.util.Objects;
 public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     /** A list of the assignment filter ids used for health script applicability evaluation */
     private java.util.List<String> _assignmentFilterIds;
-    /** Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable. */
+    /** Indicates the type of execution status of the device management script. */
     private RunState _detectionState;
     /** The next timestamp of when the device health script is expected to execute */
     private OffsetDateTime _expectedStateUpdateDateTime;
@@ -32,7 +32,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     private String _preRemediationDetectionScriptOutput;
     /** Error output of the remediation script */
     private String _remediationScriptError;
-    /** Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError. */
+    /** Indicates the type of execution status of the device management script. */
     private RemediationState _remediationState;
     /**
      * Instantiates a new deviceHealthScriptDeviceState and sets the default values.
@@ -60,7 +60,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
         return this._assignmentFilterIds;
     }
     /**
-     * Gets the detectionState property value. Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Gets the detectionState property value. Indicates the type of execution status of the device management script.
      * @return a runState
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
         return this._remediationScriptError;
     }
     /**
-     * Gets the remediationState property value. Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
+     * Gets the remediationState property value. Indicates the type of execution status of the device management script.
      * @return a remediationState
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
         this._assignmentFilterIds = value;
     }
     /**
-     * Sets the detectionState property value. Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Sets the detectionState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the detectionState property.
      * @return a void
      */
@@ -279,7 +279,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
         this._remediationScriptError = value;
     }
     /**
-     * Sets the remediationState property value. Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
+     * Sets the remediationState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the remediationState property.
      * @return a void
      */

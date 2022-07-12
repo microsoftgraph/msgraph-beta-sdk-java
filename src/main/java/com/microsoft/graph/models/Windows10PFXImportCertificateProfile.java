@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10PFXImportCertificateProfile extends DeviceConfiguration implements Parsable {
-    /** Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp. */
+    /** Key Storage Provider (KSP) Import Options. */
     private KeyStorageProviderOption _keyStorageProvider;
     /**
      * Instantiates a new Windows10PFXImportCertificateProfile and sets the default values.
@@ -39,7 +39,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
         }};
     }
     /**
-     * Gets the keyStorageProvider property value. Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @return a keyStorageProviderOption
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
         writer.writeEnumValue("keyStorageProvider", this.getKeyStorageProvider());
     }
     /**
-     * Sets the keyStorageProvider property value. Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Sets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */

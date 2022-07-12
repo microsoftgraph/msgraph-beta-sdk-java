@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TodoTask extends Entity implements Parsable {
-    /** The attachments property */
+    /** A collection of file attachments for the task. */
     private java.util.List<AttachmentBase> _attachments;
     /** The attachmentSessions property */
     private java.util.List<AttachmentSession> _attachmentSessions;
@@ -30,9 +30,9 @@ public class TodoTask extends Entity implements Parsable {
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task. Nullable. */
     private java.util.List<Extension> _extensions;
-    /** The hasAttachments property */
+    /** Indicates whether the task has attachments. */
     private Boolean _hasAttachments;
-    /** The importance of the task. Possible values are: low, normal, high. */
+    /** The importance property */
     private Importance _importance;
     /** Set to true if an alert is set to remind the user of the task. */
     private Boolean _isReminderOn;
@@ -44,7 +44,9 @@ public class TodoTask extends Entity implements Parsable {
     private PatternedRecurrence _recurrence;
     /** The date and time for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
-    /** Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred. */
+    /** The startDateTime property */
+    private DateTimeTimeZone _startDateTime;
+    /** The status property */
     private TaskStatus _status;
     /** A brief description of the task. */
     private String _title;
@@ -66,7 +68,7 @@ public class TodoTask extends Entity implements Parsable {
         return new TodoTask();
     }
     /**
-     * Gets the attachments property value. The attachments property
+     * Gets the attachments property value. A collection of file attachments for the task.
      * @return a attachmentBase
      */
     @javax.annotation.Nullable
@@ -170,12 +172,13 @@ public class TodoTask extends Entity implements Parsable {
             this.put("linkedResources", (n) -> { currentObject.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource::createFromDiscriminatorValue)); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus.class)); });
             this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the hasAttachments property value. The hasAttachments property
+     * Gets the hasAttachments property value. Indicates whether the task has attachments.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -183,7 +186,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._hasAttachments;
     }
     /**
-     * Gets the importance property value. The importance of the task. Possible values are: low, normal, high.
+     * Gets the importance property value. The importance property
      * @return a importance
      */
     @javax.annotation.Nullable
@@ -231,7 +234,15 @@ public class TodoTask extends Entity implements Parsable {
         return this._reminderDateTime;
     }
     /**
-     * Gets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Gets the startDateTime property value. The startDateTime property
+     * @return a dateTimeTimeZone
+     */
+    @javax.annotation.Nullable
+    public DateTimeTimeZone getStartDateTime() {
+        return this._startDateTime;
+    }
+    /**
+     * Gets the status property value. The status property
      * @return a taskStatus
      */
     @javax.annotation.Nullable
@@ -271,11 +282,12 @@ public class TodoTask extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("linkedResources", this.getLinkedResources());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeObjectValue("reminderDateTime", this.getReminderDateTime());
+        writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the attachments property value. The attachments property
+     * Sets the attachments property value. A collection of file attachments for the task.
      * @param value Value to set for the attachments property.
      * @return a void
      */
@@ -355,7 +367,7 @@ public class TodoTask extends Entity implements Parsable {
         this._extensions = value;
     }
     /**
-     * Sets the hasAttachments property value. The hasAttachments property
+     * Sets the hasAttachments property value. Indicates whether the task has attachments.
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
@@ -363,7 +375,7 @@ public class TodoTask extends Entity implements Parsable {
         this._hasAttachments = value;
     }
     /**
-     * Sets the importance property value. The importance of the task. Possible values are: low, normal, high.
+     * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      * @return a void
      */
@@ -411,7 +423,15 @@ public class TodoTask extends Entity implements Parsable {
         this._reminderDateTime = value;
     }
     /**
-     * Sets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Sets the startDateTime property value. The startDateTime property
+     * @param value Value to set for the startDateTime property.
+     * @return a void
+     */
+    public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+        this._startDateTime = value;
+    }
+    /**
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

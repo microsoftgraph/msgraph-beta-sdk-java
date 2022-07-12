@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for the run summary of a device management script. */
 public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     /** Number of devices on which the detection script execution encountered an error and did not complete */
     private Integer _detectionScriptErrorDeviceCount;

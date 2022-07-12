@@ -1,0 +1,127 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement implements Parsable {
+    /** A value indicating whether this file or folder is for checking 32-bit app on 64-bit system */
+    private Boolean _check32BitOn64System;
+    /** Contains all supported file system detection type. */
+    private Win32LobAppFileSystemDetectionType _detectionType;
+    /** The file or folder name to detect Win32 Line of Business (LoB) app */
+    private String _fileOrFolderName;
+    /** The file or folder path to detect Win32 Line of Business (LoB) app */
+    private String _path;
+    /**
+     * Instantiates a new Win32LobAppFileSystemRequirement and sets the default values.
+     * @return a void
+     */
+    public Win32LobAppFileSystemRequirement() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a Win32LobAppFileSystemRequirement
+     */
+    @javax.annotation.Nonnull
+    public static Win32LobAppFileSystemRequirement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new Win32LobAppFileSystemRequirement();
+    }
+    /**
+     * Gets the check32BitOn64System property value. A value indicating whether this file or folder is for checking 32-bit app on 64-bit system
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getCheck32BitOn64System() {
+        return this._check32BitOn64System;
+    }
+    /**
+     * Gets the detectionType property value. Contains all supported file system detection type.
+     * @return a win32LobAppFileSystemDetectionType
+     */
+    @javax.annotation.Nullable
+    public Win32LobAppFileSystemDetectionType getDetectionType() {
+        return this._detectionType;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final Win32LobAppFileSystemRequirement currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
+            this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppFileSystemDetectionType.class)); });
+            this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });
+            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the fileOrFolderName property value. The file or folder name to detect Win32 Line of Business (LoB) app
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getFileOrFolderName() {
+        return this._fileOrFolderName;
+    }
+    /**
+     * Gets the path property value. The file or folder path to detect Win32 Line of Business (LoB) app
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getPath() {
+        return this._path;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeBooleanValue("check32BitOn64System", this.getCheck32BitOn64System());
+        writer.writeEnumValue("detectionType", this.getDetectionType());
+        writer.writeStringValue("fileOrFolderName", this.getFileOrFolderName());
+        writer.writeStringValue("path", this.getPath());
+    }
+    /**
+     * Sets the check32BitOn64System property value. A value indicating whether this file or folder is for checking 32-bit app on 64-bit system
+     * @param value Value to set for the check32BitOn64System property.
+     * @return a void
+     */
+    public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
+        this._check32BitOn64System = value;
+    }
+    /**
+     * Sets the detectionType property value. Contains all supported file system detection type.
+     * @param value Value to set for the detectionType property.
+     * @return a void
+     */
+    public void setDetectionType(@javax.annotation.Nullable final Win32LobAppFileSystemDetectionType value) {
+        this._detectionType = value;
+    }
+    /**
+     * Sets the fileOrFolderName property value. The file or folder name to detect Win32 Line of Business (LoB) app
+     * @param value Value to set for the fileOrFolderName property.
+     * @return a void
+     */
+    public void setFileOrFolderName(@javax.annotation.Nullable final String value) {
+        this._fileOrFolderName = value;
+    }
+    /**
+     * Sets the path property value. The file or folder path to detect Win32 Line of Business (LoB) app
+     * @param value Value to set for the path property.
+     * @return a void
+     */
+    public void setPath(@javax.annotation.Nullable final String value) {
+        this._path = value;
+    }
+}

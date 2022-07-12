@@ -8,14 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalConnection extends Entity implements Parsable {
+    /** The complianceSettings property */
+    private ComplianceSettings _complianceSettings;
     /** Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional. */
     private Configuration _configuration;
     /** The Teams App ID. Optional. */
     private String _connectorId;
     /** Description of the connection displayed in the Microsoft 365 admin center. Optional. */
     private String _description;
+    /** The enabledContentExperiences property */
+    private ContentExperienceType _enabledContentExperiences;
     /** The groups property */
     private java.util.List<ExternalGroup> _groups;
     /** The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null. */
@@ -35,7 +38,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /** Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required. */
     private ConnectionState _state;
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      * @return a void
      */
     public ExternalConnection() {
@@ -44,12 +47,20 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @javax.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExternalConnection();
+    }
+    /**
+     * Gets the complianceSettings property value. The complianceSettings property
+     * @return a complianceSettings
+     */
+    @javax.annotation.Nullable
+    public ComplianceSettings getComplianceSettings() {
+        return this._complianceSettings;
     }
     /**
      * Gets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
@@ -76,6 +87,14 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._description;
     }
     /**
+     * Gets the enabledContentExperiences property value. The enabledContentExperiences property
+     * @return a contentExperienceType
+     */
+    @javax.annotation.Nullable
+    public ContentExperienceType getEnabledContentExperiences() {
+        return this._enabledContentExperiences;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -83,9 +102,11 @@ public class ExternalConnection extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalConnection currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("complianceSettings", (n) -> { currentObject.setComplianceSettings(n.getObjectValue(ComplianceSettings::createFromDiscriminatorValue)); });
             this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
             this.put("connectorId", (n) -> { currentObject.setConnectorId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+            this.put("enabledContentExperiences", (n) -> { currentObject.setEnabledContentExperiences(n.getEnumValue(ContentExperienceType.class)); });
             this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
             this.put("ingestedItemsCount", (n) -> { currentObject.setIngestedItemsCount(n.getLongValue()); });
             this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(ExternalItem::createFromDiscriminatorValue)); });
@@ -177,9 +198,11 @@ public class ExternalConnection extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("complianceSettings", this.getComplianceSettings());
         writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeStringValue("connectorId", this.getConnectorId());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeEnumValue("enabledContentExperiences", this.getEnabledContentExperiences());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
         writer.writeLongValue("ingestedItemsCount", this.getIngestedItemsCount());
         writer.writeCollectionOfObjectValues("items", this.getItems());
@@ -189,6 +212,14 @@ public class ExternalConnection extends Entity implements Parsable {
         writer.writeObjectValue("schema", this.getSchema());
         writer.writeObjectValue("searchSettings", this.getSearchSettings());
         writer.writeEnumValue("state", this.getState());
+    }
+    /**
+     * Sets the complianceSettings property value. The complianceSettings property
+     * @param value Value to set for the complianceSettings property.
+     * @return a void
+     */
+    public void setComplianceSettings(@javax.annotation.Nullable final ComplianceSettings value) {
+        this._complianceSettings = value;
     }
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
@@ -213,6 +244,14 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
+    }
+    /**
+     * Sets the enabledContentExperiences property value. The enabledContentExperiences property
+     * @param value Value to set for the enabledContentExperiences property.
+     * @return a void
+     */
+    public void setEnabledContentExperiences(@javax.annotation.Nullable final ContentExperienceType value) {
+        this._enabledContentExperiences = value;
     }
     /**
      * Sets the groups property value. The groups property

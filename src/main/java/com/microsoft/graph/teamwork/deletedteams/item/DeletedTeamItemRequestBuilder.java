@@ -99,7 +99,7 @@ public class DeletedTeamItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +107,7 @@ public class DeletedTeamItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +212,7 @@ public class DeletedTeamItemRequestBuilder {
         }
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @return a CompletableFuture of deletedTeam
      */
     public java.util.concurrent.CompletableFuture<DeletedTeam> get() {
@@ -228,7 +228,7 @@ public class DeletedTeamItemRequestBuilder {
         }
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deletedTeam
      */
@@ -245,7 +245,7 @@ public class DeletedTeamItemRequestBuilder {
         }
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of deletedTeam
@@ -332,7 +332,7 @@ public class DeletedTeamItemRequestBuilder {
         public DeletedTeamItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get deletedTeams from teamwork */
+    /** A collection of deleted teams. */
     public class DeletedTeamItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _advancedThreatProtectionRequiredSecurityLevel;
     /** Require that devices have enabled device threat protection. */
     private Boolean _deviceThreatProtectionEnabled;
-    /** Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
     /** Minimum Android security patch level. */
     private String _minAndroidSecurityPatchLevel;
@@ -30,7 +30,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     private Integer _passwordPreviousPasswordBlockCount;
     /** Require a password to unlock device. */
     private Boolean _passwordRequired;
-    /** Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any. */
+    /** Android required password type. */
     private AndroidRequiredPasswordType _passwordRequiredType;
     /** Number of sign-in failures allowed before factory reset. Valid values 1 to 16 */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
@@ -42,7 +42,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     private Boolean _securityPreventInstallAppsFromUnknownSources;
     /** Require the device to pass the Company Portal client app runtime integrity check. */
     private Boolean _securityRequireCompanyPortalAppIntegrity;
-    /** Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked. */
+    /** An enum representing the Android SafetyNet attestation evaluation types. */
     private AndroidSafetyNetEvaluationType _securityRequiredAndroidSafetyNetEvaluationType;
     /** Require Google Play Services to be installed and enabled on the device. */
     private Boolean _securityRequireGooglePlayServices;
@@ -74,7 +74,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return new AndroidWorkProfileCompliancePolicy();
     }
     /**
-     * Gets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return this._deviceThreatProtectionEnabled;
     }
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Gets the passwordRequiredType property value. Android required password type.
      * @return a androidRequiredPasswordType
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return this._securityRequireCompanyPortalAppIntegrity;
     }
     /**
-     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
+     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android SafetyNet attestation evaluation types.
      * @return a androidSafetyNetEvaluationType
      */
     @javax.annotation.Nullable
@@ -333,7 +333,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         writer.writeBooleanValue("storageRequireEncryption", this.getStorageRequireEncryption());
     }
     /**
-     * Sets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -349,7 +349,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         this._deviceThreatProtectionEnabled = value;
     }
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -421,7 +421,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Sets the passwordRequiredType property value. Android required password type.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
@@ -469,7 +469,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         this._securityRequireCompanyPortalAppIntegrity = value;
     }
     /**
-     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
+     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android SafetyNet attestation evaluation types.
      * @param value Value to set for the securityRequiredAndroidSafetyNetEvaluationType property.
      * @return a void
      */

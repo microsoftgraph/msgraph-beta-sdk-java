@@ -11,11 +11,11 @@ import java.util.Map;
 import java.util.Objects;
 /** Defines results for actions on iOS Vpp Apps, contains inherited properties for ActionResult. */
 public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder, Parsable {
-    /** The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate. */
+    /** Possible types of reasons for an Apple Volume Purchase Program token action failure. */
     private VppTokenActionFailureReason _actionFailureReason;
     /** Action name */
     private String _actionName;
-    /** State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported. */
+    /** The actionState property */
     private ActionState _actionState;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -49,7 +49,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
         return new IosVppAppRevokeLicensesActionResult();
     }
     /**
-     * Gets the actionFailureReason property value. The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+     * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
      * @return a vppTokenActionFailureReason
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
         return this._actionName;
     }
     /**
-     * Gets the actionState property value. State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Gets the actionState property value. The actionState property
      * @return a actionState
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionFailureReason property value. The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+     * Sets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
      * @param value Value to set for the actionFailureReason property.
      * @return a void
      */
@@ -182,7 +182,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
         this._actionName = value;
     }
     /**
-     * Sets the actionState property value. State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Sets the actionState property value. The actionState property
      * @param value Value to set for the actionState property.
      * @return a void
      */

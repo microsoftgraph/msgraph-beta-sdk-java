@@ -16,7 +16,7 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
     private String _maximumOperatingSystemVersion;
     /** Minimum OS version */
     private String _minimumOperatingSystemVersion;
-    /** Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC. */
+    /** Device type. */
     private DeviceType _type;
     /**
      * Instantiates a new mobileAppSupportedDeviceType and sets the default values.
@@ -73,7 +73,7 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
         return this._minimumOperatingSystemVersion;
     }
     /**
-     * Gets the type property value. Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Gets the type property value. Device type.
      * @return a deviceType
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
         this._minimumOperatingSystemVersion = value;
     }
     /**
-     * Sets the type property value. Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Sets the type property value. Device type.
      * @param value Value to set for the type property.
      * @return a void
      */

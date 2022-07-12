@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of governanceRoleAssignment entities. */
 public class GovernanceResource extends Entity implements Parsable {
     /** The display name of the resource. */
     private String _displayName;
@@ -30,10 +29,8 @@ public class GovernanceResource extends Entity implements Parsable {
     private java.util.List<GovernanceRoleSetting> _roleSettings;
     /** The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios. */
     private String _status;
-    /** Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc. */
-    private String _type;
     /**
-     * Instantiates a new governanceResource and sets the default values.
+     * Instantiates a new GovernanceResource and sets the default values.
      * @return a void
      */
     public GovernanceResource() {
@@ -42,7 +39,7 @@ public class GovernanceResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceResource
+     * @return a GovernanceResource
      */
     @javax.annotation.Nonnull
     public static GovernanceResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +80,6 @@ public class GovernanceResource extends Entity implements Parsable {
             this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(GovernanceRoleDefinition::createFromDiscriminatorValue)); });
             this.put("roleSettings", (n) -> { currentObject.setRoleSettings(n.getCollectionOfObjectValues(GovernanceRoleSetting::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -151,14 +147,6 @@ public class GovernanceResource extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -176,7 +164,6 @@ public class GovernanceResource extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("roleDefinitions", this.getRoleDefinitions());
         writer.writeCollectionOfObjectValues("roleSettings", this.getRoleSettings());
         writer.writeStringValue("status", this.getStatus());
-        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the displayName property value. The display name of the resource.
@@ -257,13 +244,5 @@ public class GovernanceResource extends Entity implements Parsable {
      */
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
-    }
-    /**
-     * Sets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

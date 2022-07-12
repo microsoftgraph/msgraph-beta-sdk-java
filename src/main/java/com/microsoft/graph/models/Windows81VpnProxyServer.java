@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** VPN Proxy Server. */
 public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable {
     /** Automatically detect proxy settings. */
     private Boolean _automaticallyDetectProxySettings;
     /** Bypass proxy server for local address. */
     private Boolean _bypassProxyServerForLocalAddress;
     /**
-     * Instantiates a new windows81VpnProxyServer and sets the default values.
+     * Instantiates a new Windows81VpnProxyServer and sets the default values.
      * @return a void
      */
     public Windows81VpnProxyServer() {
@@ -23,7 +22,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81VpnProxyServer
+     * @return a Windows81VpnProxyServer
      */
     @javax.annotation.Nonnull
     public static Windows81VpnProxyServer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

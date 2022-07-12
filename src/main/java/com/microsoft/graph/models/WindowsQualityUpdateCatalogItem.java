@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem implements Parsable {
-    /** Classification of the quality update. Possible values are: all, security, nonSecurity. */
+    /** Windows quality update classification */
     private WindowsQualityUpdateClassification _classification;
     /** Flag indicating if update qualifies for expedite */
     private Boolean _isExpeditable;
@@ -32,7 +32,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         return new WindowsQualityUpdateCatalogItem();
     }
     /**
-     * Gets the classification property value. Classification of the quality update. Possible values are: all, security, nonSecurity.
+     * Gets the classification property value. Windows quality update classification
      * @return a windowsQualityUpdateClassification
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         writer.writeStringValue("kbArticleId", this.getKbArticleId());
     }
     /**
-     * Sets the classification property value. Classification of the quality update. Possible values are: all, security, nonSecurity.
+     * Sets the classification property value. Windows quality update classification
      * @param value Value to set for the classification property.
      * @return a void
      */

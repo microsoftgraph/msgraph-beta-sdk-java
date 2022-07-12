@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class EntitlementManagement extends Entity implements Parsable {
     /** Approval stages for decisions associated with access package assignment requests. */
     private java.util.List<Approval> _accessPackageAssignmentApprovals;
@@ -36,7 +35,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     /** Represents the settings that control the behavior of Azure AD entitlement management. */
     private EntitlementManagementSettings _settings;
     /**
-     * Instantiates a new entitlementManagement and sets the default values.
+     * Instantiates a new EntitlementManagement and sets the default values.
      * @return a void
      */
     public EntitlementManagement() {
@@ -45,7 +44,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a entitlementManagement
+     * @return a EntitlementManagement
      */
     @javax.annotation.Nonnull
     public static EntitlementManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

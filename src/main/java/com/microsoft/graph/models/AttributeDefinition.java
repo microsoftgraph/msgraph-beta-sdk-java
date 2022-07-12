@@ -25,7 +25,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     private java.util.List<MetadataEntry> _metadata;
     /** true if an attribute can have multiple values. Default is false. */
     private Boolean _multivalued;
-    /** An attribute's mutability. Possible values are:  ReadWrite, ReadOnly, Immutable, WriteOnly. Default is ReadWrite. */
+    /** The mutability property */
     private Mutability _mutability;
     /** Name of the attribute. Must be unique within the object definition. Not nullable. */
     private String _name;
@@ -33,7 +33,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     private java.util.List<ReferencedObject> _referencedObjects;
     /** true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error. */
     private Boolean _required;
-    /** Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String. */
+    /** The type property */
     private AttributeType _type;
     /**
      * Instantiates a new attributeDefinition and sets the default values.
@@ -139,7 +139,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this._multivalued;
     }
     /**
-     * Gets the mutability property value. An attribute's mutability. Possible values are:  ReadWrite, ReadOnly, Immutable, WriteOnly. Default is ReadWrite.
+     * Gets the mutability property value. The mutability property
      * @return a mutability
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this._required;
     }
     /**
-     * Gets the type property value. Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
+     * Gets the type property value. The type property
      * @return a attributeType
      */
     @javax.annotation.Nullable
@@ -264,7 +264,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this._multivalued = value;
     }
     /**
-     * Sets the mutability property value. An attribute's mutability. Possible values are:  ReadWrite, ReadOnly, Immutable, WriteOnly. Default is ReadWrite.
+     * Sets the mutability property value. The mutability property
      * @param value Value to set for the mutability property.
      * @return a void
      */
@@ -296,7 +296,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this._required = value;
     }
     /**
-     * Sets the type property value. Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

@@ -12,8 +12,6 @@ public class ItemPhone extends ItemFacet implements Parsable {
     private String _displayName;
     /** Phone number provided by the user. */
     private String _number;
-    /** The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio. */
-    private PhoneType _type;
     /**
      * Instantiates a new ItemPhone and sets the default values.
      * @return a void
@@ -49,7 +47,6 @@ public class ItemPhone extends ItemFacet implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
         }};
     }
     /**
@@ -61,14 +58,6 @@ public class ItemPhone extends ItemFacet implements Parsable {
         return this._number;
     }
     /**
-     * Gets the type property value. The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
-     * @return a phoneType
-     */
-    @javax.annotation.Nullable
-    public PhoneType getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,7 +67,6 @@ public class ItemPhone extends ItemFacet implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("number", this.getNumber());
-        writer.writeEnumValue("type", this.getType());
     }
     /**
      * Sets the displayName property value. Friendly name the user has assigned this phone number.
@@ -95,13 +83,5 @@ public class ItemPhone extends ItemFacet implements Parsable {
      */
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
-    }
-    /**
-     * Sets the type property value. The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final PhoneType value) {
-        this._type = value;
     }
 }

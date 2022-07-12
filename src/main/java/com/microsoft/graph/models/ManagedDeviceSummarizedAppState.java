@@ -14,7 +14,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** DeviceId of device represented by this object */
     private String _deviceId;
-    /** runState for the object. Possible values are: unknown, success, fail, scriptError, pending, notApplicable. */
+    /** Indicates the type of execution status of the device management script. */
     private RunState _summarizedAppState;
     /**
      * Instantiates a new managedDeviceSummarizedAppState and sets the default values.
@@ -62,7 +62,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
         }};
     }
     /**
-     * Gets the summarizedAppState property value. runState for the object. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Gets the summarizedAppState property value. Indicates the type of execution status of the device management script.
      * @return a runState
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
         this._deviceId = value;
     }
     /**
-     * Sets the summarizedAppState property value. runState for the object. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Sets the summarizedAppState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the summarizedAppState property.
      * @return a void
      */

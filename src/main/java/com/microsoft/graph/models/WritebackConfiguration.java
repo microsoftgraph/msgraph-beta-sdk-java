@@ -11,14 +11,17 @@ import java.util.Objects;
 public class WritebackConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The isEnabled property */
+    /** Indicates whether writeback of cloud groups to on-premise Active Directory is enabled. Default value is true for Microsoft 365 groups and false for security groups. */
     private Boolean _isEnabled;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new writebackConfiguration and sets the default values.
      * @return a void
      */
     public WritebackConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.writebackConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +31,13 @@ public class WritebackConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static WritebackConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.groupWritebackConfiguration": return new GroupWritebackConfiguration();
+            }
+        }
         return new WritebackConfiguration();
     }
     /**
@@ -45,17 +55,26 @@ public class WritebackConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WritebackConfiguration currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether writeback of cloud groups to on-premise Active Directory is enabled. Default value is true for Microsoft 365 groups and false for security groups.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
         return this._isEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -65,6 +84,7 @@ public class WritebackConfiguration implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -76,11 +96,19 @@ public class WritebackConfiguration implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether writeback of cloud groups to on-premise Active Directory is enabled. Default value is true for Microsoft 365 groups and false for security groups.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

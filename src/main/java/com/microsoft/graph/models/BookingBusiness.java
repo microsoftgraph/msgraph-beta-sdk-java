@@ -28,7 +28,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
     private String _email;
     /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
     private Boolean _isPublished;
-    /** The languageTag property */
+    /** The language of the self service booking page */
     private String _languageTag;
     /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
     private String _phone;
@@ -167,7 +167,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
         return this._isPublished;
     }
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The language of the self service booking page
      * @return a string
      */
     @javax.annotation.Nullable
@@ -329,7 +329,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
         this._isPublished = value;
     }
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The language of the self service booking page
      * @param value Value to set for the languageTag property.
      * @return a void
      */

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The enrollmentProfile resource represents a collection of configurations which must be provided pre-enrollment to enable enrolling certain devices whose identities have been pre-staged. Pre-staged device identities are assigned to this type of profile to apply the profile's configurations at enrollment of the corresponding device. */
 public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsable {
     /** The list of assignments for this profile. */
     private java.util.List<AppleEnrollmentProfileAssignment> _assignments;
@@ -16,7 +15,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     private java.util.List<AppleOwnerTypeEnrollmentType> _availableEnrollmentTypeOptions;
     /** Profile creation time */
     private OffsetDateTime _createdDateTime;
-    /** The default profile enrollment type. Possible values are: unknown, device, user. */
+    /** The defaultEnrollmentType property */
     private AppleUserInitiatedEnrollmentType _defaultEnrollmentType;
     /** Description of the profile */
     private String _description;
@@ -24,12 +23,12 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     private String _displayName;
     /** Profile last modified time */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP. */
+    /** Supported platform types. */
     private DevicePlatformType _platform;
     /** Priority, 0 is highest */
     private Integer _priority;
     /**
-     * Instantiates a new appleUserInitiatedEnrollmentProfile and sets the default values.
+     * Instantiates a new AppleUserInitiatedEnrollmentProfile and sets the default values.
      * @return a void
      */
     public AppleUserInitiatedEnrollmentProfile() {
@@ -38,7 +37,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleUserInitiatedEnrollmentProfile
+     * @return a AppleUserInitiatedEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AppleUserInitiatedEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +69,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
         return this._createdDateTime;
     }
     /**
-     * Gets the defaultEnrollmentType property value. The default profile enrollment type. Possible values are: unknown, device, user.
+     * Gets the defaultEnrollmentType property value. The defaultEnrollmentType property
      * @return a appleUserInitiatedEnrollmentType
      */
     @javax.annotation.Nullable
@@ -121,7 +120,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the platform property value. The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
+     * Gets the platform property value. Supported platform types.
      * @return a devicePlatformType
      */
     @javax.annotation.Nullable
@@ -179,7 +178,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
         this._createdDateTime = value;
     }
     /**
-     * Sets the defaultEnrollmentType property value. The default profile enrollment type. Possible values are: unknown, device, user.
+     * Sets the defaultEnrollmentType property value. The defaultEnrollmentType property
      * @param value Value to set for the defaultEnrollmentType property.
      * @return a void
      */
@@ -211,7 +210,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the platform property value. The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
+     * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */

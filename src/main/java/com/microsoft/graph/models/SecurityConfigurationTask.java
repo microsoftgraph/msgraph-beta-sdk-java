@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityConfigurationTask extends DeviceAppManagementTask implements Parsable {
-    /** The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer. */
+    /** The endpoint security configuration applicable platform. */
     private EndpointSecurityConfigurationApplicablePlatform _applicablePlatform;
-    /** The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection. */
+    /** The endpoint security policy type. */
     private EndpointSecurityConfigurationType _endpointSecurityPolicy;
-    /** The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection. */
+    /** The endpoint security policy profile type. */
     private EndpointSecurityConfigurationProfileType _endpointSecurityPolicyProfile;
     /** Information about the mitigation. */
     private String _insights;
@@ -40,7 +40,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         return new SecurityConfigurationTask();
     }
     /**
-     * Gets the applicablePlatform property value. The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
+     * Gets the applicablePlatform property value. The endpoint security configuration applicable platform.
      * @return a endpointSecurityConfigurationApplicablePlatform
      */
     @javax.annotation.Nullable
@@ -48,7 +48,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         return this._applicablePlatform;
     }
     /**
-     * Gets the endpointSecurityPolicy property value. The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
+     * Gets the endpointSecurityPolicy property value. The endpoint security policy type.
      * @return a endpointSecurityConfigurationType
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         return this._endpointSecurityPolicy;
     }
     /**
-     * Gets the endpointSecurityPolicyProfile property value. The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
+     * Gets the endpointSecurityPolicyProfile property value. The endpoint security policy profile type.
      * @return a endpointSecurityConfigurationProfileType
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
     }
     /**
-     * Sets the applicablePlatform property value. The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
+     * Sets the applicablePlatform property value. The endpoint security configuration applicable platform.
      * @param value Value to set for the applicablePlatform property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         this._applicablePlatform = value;
     }
     /**
-     * Sets the endpointSecurityPolicy property value. The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
+     * Sets the endpointSecurityPolicy property value. The endpoint security policy type.
      * @param value Value to set for the endpointSecurityPolicy property.
      * @return a void
      */
@@ -145,7 +145,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         this._endpointSecurityPolicy = value;
     }
     /**
-     * Sets the endpointSecurityPolicyProfile property value. The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
+     * Sets the endpointSecurityPolicyProfile property value. The endpoint security policy profile type.
      * @param value Value to set for the endpointSecurityPolicyProfile property.
      * @return a void
      */

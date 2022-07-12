@@ -81,7 +81,7 @@ public class GetCapabilitiesRequestBuilder {
     }
     /**
      * Invoke function getCapabilities
-     * @return a CompletableFuture of PrinterCapabilities
+     * @return a CompletableFuture of printerCapabilities
      */
     public java.util.concurrent.CompletableFuture<PrinterCapabilities> get() {
         try {
@@ -98,7 +98,7 @@ public class GetCapabilitiesRequestBuilder {
     /**
      * Invoke function getCapabilities
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrinterCapabilities
+     * @return a CompletableFuture of printerCapabilities
      */
     public java.util.concurrent.CompletableFuture<PrinterCapabilities> get(@javax.annotation.Nullable final java.util.function.Consumer<GetCapabilitiesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class GetCapabilitiesRequestBuilder {
      * Invoke function getCapabilities
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of PrinterCapabilities
+     * @return a CompletableFuture of printerCapabilities
      */
     public java.util.concurrent.CompletableFuture<PrinterCapabilities> get(@javax.annotation.Nullable final java.util.function.Consumer<GetCapabilitiesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

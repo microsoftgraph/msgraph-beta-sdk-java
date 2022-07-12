@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class WindowsUpdateState extends Entity implements Parsable {
     /** Device display name. */
     private String _deviceDisplayName;
@@ -22,7 +22,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     private OffsetDateTime _lastSyncDateTime;
     /** The Quality Update Version of the device. */
     private String _qualityUpdateVersion;
-    /** Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed. */
+    /** Windows update for business configuration device states */
     private WindowsUpdateStatus _status;
     /** The id of the user. */
     private String _userId;
@@ -113,7 +113,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
         return this._qualityUpdateVersion;
     }
     /**
-     * Gets the status property value. Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
+     * Gets the status property value. Windows update for business configuration device states
      * @return a windowsUpdateStatus
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
         this._qualityUpdateVersion = value;
     }
     /**
-     * Sets the status property value. Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
+     * Sets the status property value. Windows update for business configuration device states
      * @param value Value to set for the status property.
      * @return a void
      */

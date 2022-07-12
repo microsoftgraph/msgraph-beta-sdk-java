@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
     private String _accessReviewId;
@@ -30,7 +30,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private Identity _principal;
     /** Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only. */
     private String _principalLink;
-    /** The principalResourceMembership property */
+    /** Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only. */
     private DecisionItemPrincipalResourceMembership _principalResourceMembership;
     /** A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only. */
     private String _recommendation;
@@ -169,7 +169,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this._principalLink;
     }
     /**
-     * Gets the principalResourceMembership property value. The principalResourceMembership property
+     * Gets the principalResourceMembership property value. Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
      * @return a decisionItemPrincipalResourceMembership
      */
     @javax.annotation.Nullable
@@ -331,7 +331,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this._principalLink = value;
     }
     /**
-     * Sets the principalResourceMembership property value. The principalResourceMembership property
+     * Sets the principalResourceMembership property value. Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
      * @param value Value to set for the principalResourceMembership property.
      * @return a void
      */

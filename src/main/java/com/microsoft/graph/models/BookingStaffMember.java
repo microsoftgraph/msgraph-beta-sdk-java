@@ -14,7 +14,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     private Integer _colorIndex;
     /** The isEmailNotificationEnabled property */
     private Boolean _isEmailNotificationEnabled;
-    /** The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required. */
+    /** The role property */
     private BookingStaffRole _role;
     /** The time zone of the staff member. For a list of possible values, see dateTimeTimeZone. */
     private String _timeZone;
@@ -81,7 +81,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         return this._isEmailNotificationEnabled;
     }
     /**
-     * Gets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * Gets the role property value. The role property
      * @return a bookingStaffRole
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         this._isEmailNotificationEnabled = value;
     }
     /**
-     * Sets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * Sets the role property value. The role property
      * @param value Value to set for the role property.
      * @return a void
      */

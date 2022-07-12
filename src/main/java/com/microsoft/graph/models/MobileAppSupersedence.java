@@ -10,7 +10,7 @@ import java.util.Objects;
 public class MobileAppSupersedence extends MobileAppRelationship implements Parsable {
     /** The total number of apps directly or indirectly superseded by the child app. */
     private Integer _supersededAppCount;
-    /** The supersedence relationship type between the parent and child apps. Possible values are: update, replace. */
+    /** Indicates the supersedence type associated with a relationship between two mobile apps. */
     private MobileAppSupersedenceType _supersedenceType;
     /** The total number of apps directly or indirectly superseding the parent app. */
     private Integer _supersedingAppCount;
@@ -53,7 +53,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
         return this._supersededAppCount;
     }
     /**
-     * Gets the supersedenceType property value. The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
+     * Gets the supersedenceType property value. Indicates the supersedence type associated with a relationship between two mobile apps.
      * @return a mobileAppSupersedenceType
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
         this._supersededAppCount = value;
     }
     /**
-     * Sets the supersedenceType property value. The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
+     * Sets the supersedenceType property value. Indicates the supersedence type associated with a relationship between two mobile apps.
      * @param value Value to set for the supersedenceType property.
      * @return a void
      */

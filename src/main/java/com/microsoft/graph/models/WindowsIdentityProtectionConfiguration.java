@@ -12,7 +12,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     private Boolean _enhancedAntiSpoofingForFacialFeaturesEnabled;
     /** Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730 */
     private Integer _pinExpirationInDays;
-    /** This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _pinLowercaseCharactersUsage;
     /** Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127 */
     private Integer _pinMaximumLength;
@@ -22,9 +22,9 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     private Integer _pinPreviousBlockCount;
     /** Boolean value that enables a user to change their PIN by using the Windows Hello for Business PIN recovery service. */
     private Boolean _pinRecoveryEnabled;
-    /** Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _pinSpecialCharactersUsage;
-    /** This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _pinUppercaseCharactersUsage;
     /** Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM. */
     private Boolean _securityDeviceRequired;
@@ -94,7 +94,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
         return this._pinExpirationInDays;
     }
     /**
-     * Gets the pinLowercaseCharactersUsage property value. This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the pinLowercaseCharactersUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
         return this._pinRecoveryEnabled;
     }
     /**
-     * Gets the pinSpecialCharactersUsage property value. Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the pinSpecialCharactersUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
         return this._pinSpecialCharactersUsage;
     }
     /**
-     * Gets the pinUppercaseCharactersUsage property value. This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the pinUppercaseCharactersUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
         this._pinExpirationInDays = value;
     }
     /**
-     * Sets the pinLowercaseCharactersUsage property value. This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the pinLowercaseCharactersUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the pinLowercaseCharactersUsage property.
      * @return a void
      */
@@ -269,7 +269,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
         this._pinRecoveryEnabled = value;
     }
     /**
-     * Sets the pinSpecialCharactersUsage property value. Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the pinSpecialCharactersUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the pinSpecialCharactersUsage property.
      * @return a void
      */
@@ -277,7 +277,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
         this._pinSpecialCharactersUsage = value;
     }
     /**
-     * Sets the pinUppercaseCharactersUsage property value. This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the pinUppercaseCharactersUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the pinUppercaseCharactersUsage property.
      * @return a void
      */

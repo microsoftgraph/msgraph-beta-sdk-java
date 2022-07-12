@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PublishedResource extends Entity implements Parsable {
     /** List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;
     /** Display Name of the publishedResource. */
     private String _displayName;
-    /** Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration. */
+    /** The publishingType property */
     private OnPremisesPublishingType _publishingType;
     /** Name of the publishedResource. */
     private String _resourceName;
@@ -65,7 +65,7 @@ public class PublishedResource extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the publishingType property value. Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
+     * Gets the publishingType property value. The publishingType property
      * @return a onPremisesPublishingType
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class PublishedResource extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the publishingType property value. Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
+     * Sets the publishingType property value. The publishingType property
      * @param value Value to set for the publishingType property.
      * @return a void
      */

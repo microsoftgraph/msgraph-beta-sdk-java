@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getOffice365GroupsActivityCounts method. */
 public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /** The number of emails received by Group mailboxes. */
     private Long _exchangeEmailsReceived;
@@ -25,7 +24,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /** The number of messages read in Yammer groups. */
     private Long _yammerMessagesRead;
     /**
-     * Instantiates a new office365GroupsActivityCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityCounts and sets the default values.
      * @return a void
      */
     public Office365GroupsActivityCounts() {
@@ -34,7 +33,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityCounts
+     * @return a Office365GroupsActivityCounts
      */
     @javax.annotation.Nonnull
     public static Office365GroupsActivityCounts createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

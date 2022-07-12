@@ -86,7 +86,7 @@ public class DecryptBufferRequestBuilder {
     /**
      * Invoke action decryptBuffer
      * @param body 
-     * @return a CompletableFuture of BufferDecryptionResult
+     * @return a CompletableFuture of bufferDecryptionResult
      */
     public java.util.concurrent.CompletableFuture<BufferDecryptionResult> post(@javax.annotation.Nonnull final DecryptBufferPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class DecryptBufferRequestBuilder {
      * Invoke action decryptBuffer
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BufferDecryptionResult
+     * @return a CompletableFuture of bufferDecryptionResult
      */
     public java.util.concurrent.CompletableFuture<BufferDecryptionResult> post(@javax.annotation.Nonnull final DecryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DecryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class DecryptBufferRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of BufferDecryptionResult
+     * @return a CompletableFuture of bufferDecryptionResult
      */
     public java.util.concurrent.CompletableFuture<BufferDecryptionResult> post(@javax.annotation.Nonnull final DecryptBufferPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<DecryptBufferRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

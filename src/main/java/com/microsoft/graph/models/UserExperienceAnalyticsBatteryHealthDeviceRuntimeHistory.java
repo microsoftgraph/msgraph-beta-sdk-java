@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics battery health runtime history entity contains the trend of runtime of a device over a period of 30 days */
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity implements Parsable {
     /** The unique identifier of the device, Intune DeviceID or SCCM device id. */
     private String _deviceId;
@@ -16,7 +15,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     /** The datetime for the instance of runtime history. */
     private String _runtimeDateTime;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
@@ -25,7 +24,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

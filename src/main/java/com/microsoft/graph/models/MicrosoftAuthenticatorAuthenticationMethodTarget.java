@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
-    /** Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any. */
+    /** The authenticationMode property */
     private MicrosoftAuthenticatorAuthenticationMode _authenticationMode;
-    /** Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default. */
+    /** The displayAppInformationRequiredState property */
     private AdvancedConfigState _displayAppInformationRequiredState;
-    /** Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default. */
+    /** The numberMatchingRequiredState property */
     private AdvancedConfigState _numberMatchingRequiredState;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
@@ -32,7 +32,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         return new MicrosoftAuthenticatorAuthenticationMethodTarget();
     }
     /**
-     * Gets the authenticationMode property value. Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Gets the authenticationMode property value. The authenticationMode property
      * @return a microsoftAuthenticatorAuthenticationMode
      */
     @javax.annotation.Nullable
@@ -40,7 +40,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         return this._authenticationMode;
     }
     /**
-     * Gets the displayAppInformationRequiredState property value. Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.
+     * Gets the displayAppInformationRequiredState property value. The displayAppInformationRequiredState property
      * @return a advancedConfigState
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         }};
     }
     /**
-     * Gets the numberMatchingRequiredState property value. Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
+     * Gets the numberMatchingRequiredState property value. The numberMatchingRequiredState property
      * @return a advancedConfigState
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         writer.writeEnumValue("numberMatchingRequiredState", this.getNumberMatchingRequiredState());
     }
     /**
-     * Sets the authenticationMode property value. Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Sets the authenticationMode property value. The authenticationMode property
      * @param value Value to set for the authenticationMode property.
      * @return a void
      */
@@ -89,7 +89,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         this._authenticationMode = value;
     }
     /**
-     * Sets the displayAppInformationRequiredState property value. Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.
+     * Sets the displayAppInformationRequiredState property value. The displayAppInformationRequiredState property
      * @param value Value to set for the displayAppInformationRequiredState property.
      * @return a void
      */
@@ -97,7 +97,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         this._displayAppInformationRequiredState = value;
     }
     /**
-     * Sets the numberMatchingRequiredState property value. Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
+     * Sets the numberMatchingRequiredState property value. The numberMatchingRequiredState property
      * @param value Value to set for the numberMatchingRequiredState property.
      * @return a void
      */

@@ -81,7 +81,7 @@ public class ExportDeviceAndAppManagementDataRequestBuilder {
     }
     /**
      * Invoke function exportDeviceAndAppManagementData
-     * @return a CompletableFuture of DeviceAndAppManagementData
+     * @return a CompletableFuture of deviceAndAppManagementData
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get() {
         try {
@@ -98,7 +98,7 @@ public class ExportDeviceAndAppManagementDataRequestBuilder {
     /**
      * Invoke function exportDeviceAndAppManagementData
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceAndAppManagementData
+     * @return a CompletableFuture of deviceAndAppManagementData
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get(@javax.annotation.Nullable final java.util.function.Consumer<ExportDeviceAndAppManagementDataRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class ExportDeviceAndAppManagementDataRequestBuilder {
      * Invoke function exportDeviceAndAppManagementData
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of DeviceAndAppManagementData
+     * @return a CompletableFuture of deviceAndAppManagementData
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get(@javax.annotation.Nullable final java.util.function.Consumer<ExportDeviceAndAppManagementDataRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

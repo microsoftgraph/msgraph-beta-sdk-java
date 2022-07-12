@@ -28,13 +28,13 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     private Boolean _startupAuthenticationBlockWithoutTpmChip;
     /** Require additional authentication at startup. */
     private Boolean _startupAuthenticationRequired;
-    /** Indicates if TPM startup key is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _startupAuthenticationTpmKeyUsage;
-    /** Indicates if TPM startup pin key and key are allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _startupAuthenticationTpmPinAndKeyUsage;
-    /** Indicates if TPM startup pin is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _startupAuthenticationTpmPinUsage;
-    /** Indicates if TPM startup is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _startupAuthenticationTpmUsage;
     /**
      * Instantiates a new bitLockerSystemDrivePolicy and sets the default values.
@@ -148,7 +148,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         return this._startupAuthenticationRequired;
     }
     /**
-     * Gets the startupAuthenticationTpmKeyUsage property value. Indicates if TPM startup key is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         return this._startupAuthenticationTpmKeyUsage;
     }
     /**
-     * Gets the startupAuthenticationTpmPinAndKeyUsage property value. Indicates if TPM startup pin key and key are allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         return this._startupAuthenticationTpmPinAndKeyUsage;
     }
     /**
-     * Gets the startupAuthenticationTpmPinUsage property value. Indicates if TPM startup pin is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         return this._startupAuthenticationTpmPinUsage;
     }
     /**
-     * Gets the startupAuthenticationTpmUsage property value. Indicates if TPM startup is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -273,7 +273,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         this._startupAuthenticationRequired = value;
     }
     /**
-     * Sets the startupAuthenticationTpmKeyUsage property value. Indicates if TPM startup key is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmKeyUsage property.
      * @return a void
      */
@@ -281,7 +281,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         this._startupAuthenticationTpmKeyUsage = value;
     }
     /**
-     * Sets the startupAuthenticationTpmPinAndKeyUsage property value. Indicates if TPM startup pin key and key are allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmPinAndKeyUsage property.
      * @return a void
      */
@@ -289,7 +289,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         this._startupAuthenticationTpmPinAndKeyUsage = value;
     }
     /**
-     * Sets the startupAuthenticationTpmPinUsage property value. Indicates if TPM startup pin is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmPinUsage property.
      * @return a void
      */
@@ -297,7 +297,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         this._startupAuthenticationTpmPinUsage = value;
     }
     /**
-     * Sets the startupAuthenticationTpmUsage property value. Indicates if TPM startup is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmUsage property.
      * @return a void
      */

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows defender advanced threat protection onboarding state summary across the account. */
 public class AdvancedThreatProtectionOnboardingStateSummary extends Entity implements Parsable {
     /** Not yet documented */
     private java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> _advancedThreatProtectionOnboardingDeviceSettingStates;
@@ -28,7 +27,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /** Number of unknown devices */
     private Integer _unknownDeviceCount;
     /**
-     * Instantiates a new advancedThreatProtectionOnboardingStateSummary and sets the default values.
+     * Instantiates a new AdvancedThreatProtectionOnboardingStateSummary and sets the default values.
      * @return a void
      */
     public AdvancedThreatProtectionOnboardingStateSummary() {
@@ -37,7 +36,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a advancedThreatProtectionOnboardingStateSummary
+     * @return a AdvancedThreatProtectionOnboardingStateSummary
      */
     @javax.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

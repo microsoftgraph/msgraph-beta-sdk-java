@@ -19,7 +19,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
     private OffsetDateTime _completeOrCanceledDateTime;
     /** Date and time when the deployment status was updated from Zebra */
     private OffsetDateTime _lastUpdatedDateTime;
-    /** See zebraFotaDeploymentState enum for possible values. Possible values are: pendingCreation, createFailed, created, inProgress, completed, pendingCancel, canceled, unknownFutureValue. */
+    /** Represents the state of Zebra FOTA deployment. */
     private ZebraFotaDeploymentState _state;
     /** An integer that indicates the total number of devices where installation was successful. */
     private Integer _totalAwaitingInstall;
@@ -115,7 +115,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
         return this._lastUpdatedDateTime;
     }
     /**
-     * Gets the state property value. See zebraFotaDeploymentState enum for possible values. Possible values are: pendingCreation, createFailed, created, inProgress, completed, pendingCancel, canceled, unknownFutureValue.
+     * Gets the state property value. Represents the state of Zebra FOTA deployment.
      * @return a zebraFotaDeploymentState
      */
     @javax.annotation.Nullable
@@ -258,7 +258,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
         this._lastUpdatedDateTime = value;
     }
     /**
-     * Sets the state property value. See zebraFotaDeploymentState enum for possible values. Possible values are: pendingCreation, createFailed, created, inProgress, completed, pendingCancel, canceled, unknownFutureValue.
+     * Sets the state property value. Represents the state of Zebra FOTA deployment.
      * @param value Value to set for the state property.
      * @return a void
      */

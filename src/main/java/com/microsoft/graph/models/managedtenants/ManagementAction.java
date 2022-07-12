@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagementAction extends Entity implements Parsable {
-    /** The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only. */
+    /** The category property */
     private ManagementCategory _category;
     /** The description for the management action. Optional. Read-only. */
     private String _description;
@@ -40,7 +40,7 @@ public class ManagementAction extends Entity implements Parsable {
         return new ManagementAction();
     }
     /**
-     * Gets the category property value. The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only.
+     * Gets the category property value. The category property
      * @return a managementCategory
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class ManagementAction extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("workloadActions", this.getWorkloadActions());
     }
     /**
-     * Sets the category property value. The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only.
+     * Sets the category property value. The category property
      * @param value Value to set for the category property.
      * @return a void
      */

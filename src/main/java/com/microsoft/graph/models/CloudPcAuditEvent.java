@@ -8,21 +8,20 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcAuditEvent extends Entity implements Parsable {
     /** Friendly name of the activity. Optional. */
     private String _activity;
     /** The date time in UTC when the activity was performed. Read-only. */
     private OffsetDateTime _activityDateTime;
-    /** The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only. */
+    /** The activityOperationType property */
     private CloudPcAuditActivityOperationType _activityOperationType;
-    /** The result of the activity. Read-only. */
+    /** The activityResult property */
     private CloudPcAuditActivityResult _activityResult;
     /** The type of activity that was performed. Read-only. */
     private String _activityType;
     /** The actor property */
     private CloudPcAuditActor _actor;
-    /** Audit category. Read-only. */
+    /** The category property */
     private CloudPcAuditCategory _category;
     /** Component name. Read-only. */
     private String _componentName;
@@ -33,7 +32,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     /** List of cloudPcAuditResource objects. Read-only. */
     private java.util.List<CloudPcAuditResource> _resources;
     /**
-     * Instantiates a new cloudPcAuditEvent and sets the default values.
+     * Instantiates a new CloudPcAuditEvent and sets the default values.
      * @return a void
      */
     public CloudPcAuditEvent() {
@@ -42,7 +41,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcAuditEvent
+     * @return a CloudPcAuditEvent
      */
     @javax.annotation.Nonnull
     public static CloudPcAuditEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +65,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this._activityDateTime;
     }
     /**
-     * Gets the activityOperationType property value. The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
+     * Gets the activityOperationType property value. The activityOperationType property
      * @return a cloudPcAuditActivityOperationType
      */
     @javax.annotation.Nullable
@@ -74,7 +73,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this._activityOperationType;
     }
     /**
-     * Gets the activityResult property value. The result of the activity. Read-only.
+     * Gets the activityResult property value. The activityResult property
      * @return a cloudPcAuditActivityResult
      */
     @javax.annotation.Nullable
@@ -98,7 +97,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this._actor;
     }
     /**
-     * Gets the category property value. Audit category. Read-only.
+     * Gets the category property value. The category property
      * @return a cloudPcAuditCategory
      */
     @javax.annotation.Nullable
@@ -195,7 +194,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._activityDateTime = value;
     }
     /**
-     * Sets the activityOperationType property value. The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
+     * Sets the activityOperationType property value. The activityOperationType property
      * @param value Value to set for the activityOperationType property.
      * @return a void
      */
@@ -203,7 +202,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._activityOperationType = value;
     }
     /**
-     * Sets the activityResult property value. The result of the activity. Read-only.
+     * Sets the activityResult property value. The activityResult property
      * @param value Value to set for the activityResult property.
      * @return a void
      */
@@ -227,7 +226,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._actor = value;
     }
     /**
-     * Sets the category property value. Audit category. Read-only.
+     * Sets the category property value. The category property
      * @param value Value to set for the category property.
      * @return a void
      */

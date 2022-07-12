@@ -10,13 +10,13 @@ import java.util.Map;
 import java.util.Objects;
 /** VPN On-Demand Rule definition. */
 public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
-    /** Action. Possible values are: connect, evaluateConnection, ignore, disconnect. */
+    /** VPN On-Demand Rule Connection Action. */
     private VpnOnDemandRuleConnectionAction _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** DNS Search Domains. */
     private java.util.List<String> _dnsSearchDomains;
-    /** Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect. */
+    /** VPN On-Demand Rule Connection Domain Action. */
     private VpnOnDemandRuleConnectionDomainAction _domainAction;
     /** Domains (Only applicable when Action is evaluate connection). */
     private java.util.List<String> _domains;
@@ -44,7 +44,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
         return new VpnOnDemandRule();
     }
     /**
-     * Gets the action property value. Action. Possible values are: connect, evaluateConnection, ignore, disconnect.
+     * Gets the action property value. VPN On-Demand Rule Connection Action.
      * @return a vpnOnDemandRuleConnectionAction
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
         return this._dnsSearchDomains;
     }
     /**
-     * Gets the domainAction property value. Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
+     * Gets the domainAction property value. VPN On-Demand Rule Connection Domain Action.
      * @return a vpnOnDemandRuleConnectionDomainAction
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. Action. Possible values are: connect, evaluateConnection, ignore, disconnect.
+     * Sets the action property value. VPN On-Demand Rule Connection Action.
      * @param value Value to set for the action property.
      * @return a void
      */
@@ -165,7 +165,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
         this._dnsSearchDomains = value;
     }
     /**
-     * Sets the domainAction property value. Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
+     * Sets the domainAction property value. VPN On-Demand Rule Connection Domain Action.
      * @param value Value to set for the domainAction property.
      * @return a void
      */

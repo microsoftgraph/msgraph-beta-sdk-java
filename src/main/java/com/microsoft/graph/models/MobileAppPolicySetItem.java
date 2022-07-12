@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
-    /** Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
+    /** Possible values for the install intent chosen by the admin. */
     private InstallIntent _intent;
     /** Settings of the MobileAppPolicySetItem. */
     private MobileAppAssignmentSettings _settings;
@@ -42,7 +42,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
         }};
     }
     /**
-     * Gets the intent property value. Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Gets the intent property value. Possible values for the install intent chosen by the admin.
      * @return a installIntent
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
-     * Sets the intent property value. Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Sets the intent property value. Possible values for the install intent chosen by the admin.
      * @param value Value to set for the intent property.
      * @return a void
      */

@@ -12,12 +12,15 @@ import java.util.Objects;
 public class UserExperienceAnalyticsInsightValue implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new userExperienceAnalyticsInsightValue and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsInsightValue() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.userExperienceAnalyticsInsightValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -27,6 +30,14 @@ public class UserExperienceAnalyticsInsightValue implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsInsightValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.insightValueDouble": return new InsightValueDouble();
+                case "#microsoft.graph.insightValueInt": return new InsightValueInt();
+            }
+        }
         return new UserExperienceAnalyticsInsightValue();
     }
     /**
@@ -44,8 +55,17 @@ public class UserExperienceAnalyticsInsightValue implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsInsightValue currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -54,6 +74,7 @@ public class UserExperienceAnalyticsInsightValue implements AdditionalDataHolder
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -63,5 +84,13 @@ public class UserExperienceAnalyticsInsightValue implements AdditionalDataHolder
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

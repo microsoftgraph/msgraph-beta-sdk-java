@@ -3,7 +3,7 @@ package microsoft.graph.models.tenantadmin;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum SharingDomainRestrictionMode implements ValuedEnum {
     None("none"),
     AllowList("allowList"),

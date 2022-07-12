@@ -16,7 +16,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     private AppleVpnAlwaysOnConfiguration _alwaysOnConfiguration;
     /** Child Security Association Parameters */
     private IosVpnSecurityAssociationParameters _childSecurityAssociationParameters;
-    /** Type of Client Authentication the VPN client will use. Possible values are: userAuthentication, deviceAuthentication. */
+    /** The type of VPN client authentication type */
     private VpnClientAuthenticationType _clientAuthenticationType;
     /** Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high. */
     private VpnDeadPeerDetectionRate _deadPeerDetectionRate;
@@ -34,7 +34,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     private Boolean _enablePerfectForwardSecrecy;
     /** Enable Use Internal Subnet Attributes. */
     private Boolean _enableUseInternalSubnetAttributes;
-    /** Method of identifying the client that is trying to connect via VPN. . Possible values are: deviceFQDN, empty, clientCertificateSubjectName. */
+    /** The type of VPN local identifier */
     private VpnLocalIdentifier _localIdentifier;
     /** Maximum transmission unit. Valid values 1280 to 1400 */
     private Integer _mtuSizeInBytes;
@@ -104,7 +104,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         return this._childSecurityAssociationParameters;
     }
     /**
-     * Gets the clientAuthenticationType property value. Type of Client Authentication the VPN client will use. Possible values are: userAuthentication, deviceAuthentication.
+     * Gets the clientAuthenticationType property value. The type of VPN client authentication type
      * @return a vpnClientAuthenticationType
      */
     @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         }};
     }
     /**
-     * Gets the localIdentifier property value. Method of identifying the client that is trying to connect via VPN. . Possible values are: deviceFQDN, empty, clientCertificateSubjectName.
+     * Gets the localIdentifier property value. The type of VPN local identifier
      * @return a vpnLocalIdentifier
      */
     @javax.annotation.Nullable
@@ -353,7 +353,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         this._childSecurityAssociationParameters = value;
     }
     /**
-     * Sets the clientAuthenticationType property value. Type of Client Authentication the VPN client will use. Possible values are: userAuthentication, deviceAuthentication.
+     * Sets the clientAuthenticationType property value. The type of VPN client authentication type
      * @param value Value to set for the clientAuthenticationType property.
      * @return a void
      */
@@ -425,7 +425,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         this._enableUseInternalSubnetAttributes = value;
     }
     /**
-     * Sets the localIdentifier property value. Method of identifying the client that is trying to connect via VPN. . Possible values are: deviceFQDN, empty, clientCertificateSubjectName.
+     * Sets the localIdentifier property value. The type of VPN local identifier
      * @param value Value to set for the localIdentifier property.
      * @return a void
      */
