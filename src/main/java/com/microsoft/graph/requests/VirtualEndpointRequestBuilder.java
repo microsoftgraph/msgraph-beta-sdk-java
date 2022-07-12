@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder;
+import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcExternalPartnerSettingRequestBuilder;
 import com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder;
@@ -136,6 +138,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public CloudPcDeviceImageRequestBuilder deviceImages(@Nonnull final String id) {
         return new CloudPcDeviceImageRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPcExternalPartnerSetting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcExternalPartnerSettingCollectionRequestBuilder externalPartnerSettings() {
+        return new CloudPcExternalPartnerSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalPartnerSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcExternalPartnerSetting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcExternalPartnerSettingRequestBuilder externalPartnerSettings(@Nonnull final String id) {
+        return new CloudPcExternalPartnerSettingRequestBuilder(getRequestUrlWithAdditionalSegment("externalPartnerSettings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcGalleryImage collection

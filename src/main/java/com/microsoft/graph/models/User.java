@@ -491,7 +491,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+     * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      */
     @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
@@ -563,7 +563,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -644,7 +644,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Security Identifier.
-     * 
+     * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
     @Expose
@@ -963,7 +963,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;
@@ -1119,7 +1119,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose

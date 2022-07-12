@@ -97,7 +97,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * 
+     * Indicates whether the task has attachments.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -150,6 +150,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     public DateTimeTimeZone reminderDateTime;
 
     /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone startDateTime;
+
+    /**
      * The Status.
      * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      */
@@ -169,7 +178,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * 
+     * A collection of file attachments for the task.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose

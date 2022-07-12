@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationStringFormat;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingValueDefinition;
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceManagementConfigurationSettingValueDefinition implements IJsonBackedObject {
 
+
+    /**
+     * The File Types.
+     * Supported file types for this setting.
+     */
+    @SerializedName(value = "fileTypes", alternate = {"FileTypes"})
+    @Expose
+	@Nullable
+    public java.util.List<String> fileTypes;
 
     /**
      * The Format.

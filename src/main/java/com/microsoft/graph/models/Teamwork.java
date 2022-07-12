@@ -44,7 +44,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Teams.
-     * 
+     * A collection of deleted teams.
      */
     @SerializedName(value = "deletedTeams", alternate = {"DeletedTeams"})
     @Expose
@@ -62,7 +62,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App Settings.
-     * 
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      */
     @SerializedName(value = "teamsAppSettings", alternate = {"TeamsAppSettings"})
     @Expose

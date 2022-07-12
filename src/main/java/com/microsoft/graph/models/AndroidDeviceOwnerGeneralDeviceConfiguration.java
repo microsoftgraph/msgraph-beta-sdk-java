@@ -207,6 +207,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerUserFacingMessage detailedHelpText;
 
     /**
+     * The Device Owner Lock Screen Message.
+     * Represents the customized lock screen message provided to users when they attempt to modify managed settings on their device.
+     */
+    @SerializedName(value = "deviceOwnerLockScreenMessage", alternate = {"DeviceOwnerLockScreenMessage"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerUserFacingMessage deviceOwnerLockScreenMessage;
+
+    /**
      * The Enrollment Profile.
      * Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
      */
@@ -952,6 +961,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean screenCaptureBlocked;
+
+    /**
+     * The Security Common Criteria Mode Enabled.
+     * Represents the security common criteria mode enabled provided to users when they attempt to modify managed settings on their device.
+     */
+    @SerializedName(value = "securityCommonCriteriaModeEnabled", alternate = {"SecurityCommonCriteriaModeEnabled"})
+    @Expose
+	@Nullable
+    public Boolean securityCommonCriteriaModeEnabled;
 
     /**
      * The Security Developer Settings Enabled.

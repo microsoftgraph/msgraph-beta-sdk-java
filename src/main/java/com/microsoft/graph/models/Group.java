@@ -118,7 +118,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -399,7 +399,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -408,7 +408,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Writeback Configuration.
-     * 
+     * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Azure AD Connect sync client.
      */
     @SerializedName(value = "writebackConfiguration", alternate = {"WritebackConfiguration"})
     @Expose
@@ -516,7 +516,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Archived.
-     * When a group is associated with a team, this property determines whether the team is in read-only mode.
+     * When a group is associated with a team, this property determines whether the team is in read-only mode. To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
      */
     @SerializedName(value = "isArchived", alternate = {"IsArchived"})
     @Expose
@@ -559,7 +559,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Members.
-     * Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
+     * Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
      */
 	@Nullable
     public DirectoryObjectCollectionPage members;
@@ -598,14 +598,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
      * The Transitive Members.
-     * 
+     * The direct and transitive members of a group. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMembers;

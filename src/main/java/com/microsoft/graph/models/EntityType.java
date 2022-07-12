@@ -48,6 +48,18 @@ public enum EntityType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * acronym
+    */
+    ACRONYM,
+    /**
+    * bookmark
+    */
+    BOOKMARK,
+    /**
+    * chat Message
+    */
+    CHAT_MESSAGE,
+    /**
     * For EntityType values that were not expected from the service
     */
     UNEXPECTED_VALUE
