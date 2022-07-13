@@ -14,7 +14,7 @@ public class MacOSSingleSignOnExtension extends SingleSignOnExtension implements
      */
     public MacOSSingleSignOnExtension() {
         super();
-        this.setOdatatype("#microsoft.graph.macOSSingleSignOnExtension");
+        this.setType("#microsoft.graph.macOSSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

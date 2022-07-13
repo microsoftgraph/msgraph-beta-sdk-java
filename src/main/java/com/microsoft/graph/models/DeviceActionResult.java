@@ -29,7 +29,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     public DeviceActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceActionResult");
+        this.setType("#microsoft.graph.deviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +92,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -104,20 +104,20 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         return this._lastUpdatedDateTime;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
-    }
-    /**
      * Gets the startDateTime property value. Time the action was initiated
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this._startDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -130,7 +130,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("actionState", this.getActionState());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -166,19 +166,19 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         this._lastUpdatedDateTime = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the startDateTime property value. Time the action was initiated
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

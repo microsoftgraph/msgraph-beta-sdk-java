@@ -19,7 +19,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
      */
     public QualityUpdateReference() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsUpdates.qualityUpdateReference");
+        this.setType("#microsoft.graph.windowsUpdates.qualityUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ public class SingleSignOnExtension implements AdditionalDataHolder, Parsable {
      */
     public SingleSignOnExtension() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.singleSignOnExtension");
+        this.setType("#microsoft.graph.singleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,7 +59,7 @@ public class SingleSignOnExtension implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SingleSignOnExtension currentObject = this;
         return new HashMap<>(1) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -67,7 +67,7 @@ public class SingleSignOnExtension implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -77,7 +77,7 @@ public class SingleSignOnExtension implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -93,7 +93,7 @@ public class SingleSignOnExtension implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

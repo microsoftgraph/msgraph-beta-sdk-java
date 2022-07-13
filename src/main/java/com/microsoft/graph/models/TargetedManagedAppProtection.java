@@ -22,7 +22,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     public TargetedManagedAppProtection() {
         super();
-        this.setOdatatype("#microsoft.graph.targetedManagedAppProtection");
+        this.setType("#microsoft.graph.targetedManagedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

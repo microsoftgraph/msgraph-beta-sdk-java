@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ExactMatchJobBase extends Entity implements Parsable {
     /** The completionDateTime property */
     private OffsetDateTime _completionDateTime;
@@ -26,7 +26,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      */
     public ExactMatchJobBase() {
         super();
-        this.setOdatatype("#microsoft.graph.exactMatchJobBase");
+        this.setType("#microsoft.graph.exactMatchJobBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -21,7 +21,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      */
     public WindowsUpdateCatalogItem() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsUpdateCatalogItem");
+        this.setType("#microsoft.graph.windowsUpdateCatalogItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

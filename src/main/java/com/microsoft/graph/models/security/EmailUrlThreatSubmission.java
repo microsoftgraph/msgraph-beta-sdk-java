@@ -1,0 +1,67 @@
+package microsoft.graph.models.security;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class EmailUrlThreatSubmission extends EmailThreatSubmission implements Parsable {
+    /** The messageUrl property */
+    private String _messageUrl;
+    /**
+     * Instantiates a new EmailUrlThreatSubmission and sets the default values.
+     * @return a void
+     */
+    public EmailUrlThreatSubmission() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a EmailUrlThreatSubmission
+     */
+    @javax.annotation.Nonnull
+    public static EmailUrlThreatSubmission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new EmailUrlThreatSubmission();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final EmailUrlThreatSubmission currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("messageUrl", (n) -> { currentObject.setMessageUrl(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the messageUrl property value. The messageUrl property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getMessageUrl() {
+        return this._messageUrl;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("messageUrl", this.getMessageUrl());
+    }
+    /**
+     * Sets the messageUrl property value. The messageUrl property
+     * @param value Value to set for the messageUrl property.
+     * @return a void
+     */
+    public void setMessageUrl(@javax.annotation.Nullable final String value) {
+        this._messageUrl = value;
+    }
+}

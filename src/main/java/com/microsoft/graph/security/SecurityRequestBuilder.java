@@ -45,6 +45,7 @@ import microsoft.graph.security.securityactions.item.SecurityActionItemRequestBu
 import microsoft.graph.security.securityactions.SecurityActionsRequestBuilder;
 import microsoft.graph.security.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
 import microsoft.graph.security.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
+import microsoft.graph.security.threatsubmission.ThreatSubmissionRequestBuilder;
 import microsoft.graph.security.tiindicators.item.TiIndicatorItemRequestBuilder;
 import microsoft.graph.security.tiindicators.TiIndicatorsRequestBuilder;
 import microsoft.graph.security.triggers.TriggersRequestBuilder;
@@ -146,6 +147,11 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public SubjectRightsRequestsRequestBuilder subjectRightsRequests() {
         return new SubjectRightsRequestsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The threatSubmission property */
+    @javax.annotation.Nonnull
+    public ThreatSubmissionRequestBuilder threatSubmission() {
+        return new ThreatSubmissionRequestBuilder(pathParameters, requestAdapter);
     }
     /** The tiIndicators property */
     @javax.annotation.Nonnull

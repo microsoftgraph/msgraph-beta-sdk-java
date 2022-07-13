@@ -32,7 +32,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     public AlertEvidence() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.security.alertEvidence");
+        this.setType("#microsoft.graph.security.alertEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,17 +93,9 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
             this.put("remediationStatusDetails", (n) -> { currentObject.setRemediationStatusDetails(n.getStringValue()); });
             this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("verdict", (n) -> { currentObject.setVerdict(n.getEnumValue(EvidenceVerdict.class)); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the remediationStatus property value. The remediationStatus property
@@ -138,6 +130,14 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this._tags;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Gets the verdict property value. The verdict property
      * @return a evidenceVerdict
      */
@@ -157,7 +157,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("remediationStatusDetails", this.getRemediationStatusDetails());
         writer.writeCollectionOfPrimitiveValues("roles", this.getRoles());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeEnumValue("verdict", this.getVerdict());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -176,14 +176,6 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
     /**
      * Sets the remediationStatus property value. The remediationStatus property
@@ -216,6 +208,14 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the verdict property value. The verdict property

@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of accessReview entities. */
 public class LegalHold extends Entity implements Parsable {
     /** KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank. */
     private String _contentQuery;
@@ -39,7 +38,7 @@ public class LegalHold extends Entity implements Parsable {
     /** Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site. */
     private java.util.List<UserSource> _userSources;
     /**
-     * Instantiates a new legalHold and sets the default values.
+     * Instantiates a new LegalHold and sets the default values.
      * @return a void
      */
     public LegalHold() {
@@ -48,7 +47,7 @@ public class LegalHold extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a legalHold
+     * @return a LegalHold
      */
     @javax.annotation.Nonnull
     public static LegalHold createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

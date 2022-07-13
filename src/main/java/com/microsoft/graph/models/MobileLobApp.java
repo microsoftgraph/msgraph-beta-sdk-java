@@ -22,7 +22,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     public MobileLobApp() {
         super();
-        this.setOdatatype("#microsoft.graph.mobileLobApp");
+        this.setType("#microsoft.graph.mobileLobApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

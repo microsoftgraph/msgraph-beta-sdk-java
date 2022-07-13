@@ -19,7 +19,7 @@ public class PrintOperation extends Entity implements Parsable {
      */
     public PrintOperation() {
         super();
-        this.setOdatatype("#microsoft.graph.printOperation");
+        this.setType("#microsoft.graph.printOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

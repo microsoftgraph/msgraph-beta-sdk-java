@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum DeviceGuardLocalSystemAuthorityCredentialGuardType implements ValuedEnum {
     /** Turns off Credential Guard remotely if configured previously without UEFI Lock. */
     NotConfigured("notConfigured"),

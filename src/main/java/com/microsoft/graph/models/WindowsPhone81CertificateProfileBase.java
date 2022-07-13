@@ -28,7 +28,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      */
     public WindowsPhone81CertificateProfileBase() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsPhone81CertificateProfileBase");
+        this.setType("#microsoft.graph.windowsPhone81CertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,7 +14,7 @@ public class Windows10XCertificateProfile extends DeviceManagementResourceAccess
      */
     public Windows10XCertificateProfile() {
         super();
-        this.setOdatatype("#microsoft.graph.windows10XCertificateProfile");
+        this.setType("#microsoft.graph.windows10XCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

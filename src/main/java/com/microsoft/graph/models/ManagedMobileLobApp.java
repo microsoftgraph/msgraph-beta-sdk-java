@@ -22,7 +22,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
      */
     public ManagedMobileLobApp() {
         super();
-        this.setOdatatype("#microsoft.graph.managedMobileLobApp");
+        this.setType("#microsoft.graph.managedMobileLobApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

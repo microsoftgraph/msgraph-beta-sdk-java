@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class OAuth2PermissionGrant extends Entity implements Parsable {
     /** The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only). */
     private String _clientId;
@@ -25,7 +24,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
     /** Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required. */
     private OffsetDateTime _startTime;
     /**
-     * Instantiates a new oAuth2PermissionGrant and sets the default values.
+     * Instantiates a new OAuth2PermissionGrant and sets the default values.
      * @return a void
      */
     public OAuth2PermissionGrant() {
@@ -34,7 +33,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a oAuth2PermissionGrant
+     * @return a OAuth2PermissionGrant
      */
     @javax.annotation.Nonnull
     public static OAuth2PermissionGrant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

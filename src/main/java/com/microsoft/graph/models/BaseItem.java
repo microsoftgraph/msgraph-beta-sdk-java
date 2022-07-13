@@ -37,7 +37,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     public BaseItem() {
         super();
-        this.setOdatatype("#microsoft.graph.baseItem");
+        this.setType("#microsoft.graph.baseItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      */
     public VpnConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.vpnConfiguration");
+        this.setType("#microsoft.graph.vpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

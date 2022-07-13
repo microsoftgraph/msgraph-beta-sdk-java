@@ -20,7 +20,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate impl
      */
     public DeviceManagementConfigurationChoiceSettingValueDefaultTemplate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueDefaultTemplate");
+        this.setType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueDefaultTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +55,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate impl
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingValueDefaultTemplate currentObject = this;
         return new HashMap<>(1) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -63,7 +63,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate impl
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -73,7 +73,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate impl
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -89,7 +89,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate impl
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

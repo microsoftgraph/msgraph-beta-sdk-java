@@ -30,7 +30,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     public RoleDefinition() {
         super();
-        this.setOdatatype("#microsoft.graph.roleDefinition");
+        this.setType("#microsoft.graph.roleDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

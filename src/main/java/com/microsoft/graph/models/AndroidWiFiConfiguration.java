@@ -24,7 +24,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      */
     public AndroidWiFiConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.androidWiFiConfiguration");
+        this.setType("#microsoft.graph.androidWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

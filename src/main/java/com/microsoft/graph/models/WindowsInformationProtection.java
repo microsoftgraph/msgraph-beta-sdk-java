@@ -64,7 +64,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      */
     public WindowsInformationProtection() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsInformationProtection");
+        this.setType("#microsoft.graph.windowsInformationProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

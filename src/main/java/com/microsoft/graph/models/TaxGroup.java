@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class TaxGroup extends Entity implements Parsable {
     /** The code property */
     private String _code;
@@ -18,7 +19,7 @@ public class TaxGroup extends Entity implements Parsable {
     /** The taxType property */
     private String _taxType;
     /**
-     * Instantiates a new TaxGroup and sets the default values.
+     * Instantiates a new taxGroup and sets the default values.
      * @return a void
      */
     public TaxGroup() {
@@ -27,7 +28,7 @@ public class TaxGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaxGroup
+     * @return a taxGroup
      */
     @javax.annotation.Nonnull
     public static TaxGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

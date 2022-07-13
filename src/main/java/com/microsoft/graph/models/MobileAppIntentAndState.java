@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** MobileApp Intent and Install State for a given device. */
 public class MobileAppIntentAndState extends Entity implements Parsable {
     /** Device identifier created or collected by Intune. */
     private String _managedDeviceIdentifier;
@@ -16,7 +15,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     /** Identifier for the user that tried to enroll the device. */
     private String _userId;
     /**
-     * Instantiates a new mobileAppIntentAndState and sets the default values.
+     * Instantiates a new MobileAppIntentAndState and sets the default values.
      * @return a void
      */
     public MobileAppIntentAndState() {
@@ -25,7 +24,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppIntentAndState
+     * @return a MobileAppIntentAndState
      */
     @javax.annotation.Nonnull
     public static MobileAppIntentAndState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

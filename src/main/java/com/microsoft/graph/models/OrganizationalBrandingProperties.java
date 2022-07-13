@@ -60,7 +60,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     public OrganizationalBrandingProperties() {
         super();
-        this.setOdatatype("#microsoft.graph.organizationalBrandingProperties");
+        this.setType("#microsoft.graph.organizationalBrandingProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -21,7 +21,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     public Endpoint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.callRecords.endpoint");
+        this.setType("#microsoft.graph.callRecords.endpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +57,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Endpoint currentObject = this;
         return new HashMap<>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getObjectValue(UserAgent::createFromDiscriminatorValue)); });
         }};
     }
@@ -66,7 +66,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -84,7 +84,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeObjectValue("userAgent", this.getUserAgent());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -101,7 +101,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
     /**

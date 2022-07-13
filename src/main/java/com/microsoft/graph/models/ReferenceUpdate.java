@@ -48,8 +48,8 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceUpdate currentObject = this;
         return new HashMap<>(2) {{
-            this.put("@odata.id", (n) -> { currentObject.setOdataid(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -57,7 +57,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdataid() {
+    public String getId() {
         return this._id;
     }
     /**
@@ -65,7 +65,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -75,8 +75,8 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.id", this.getOdataid());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.id", this.getId());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -92,7 +92,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    public void setOdataid(@javax.annotation.Nullable final String value) {
+    public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
     /**
@@ -100,7 +100,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

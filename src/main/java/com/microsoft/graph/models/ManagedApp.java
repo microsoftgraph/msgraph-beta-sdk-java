@@ -18,7 +18,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     public ManagedApp() {
         super();
-        this.setOdatatype("#microsoft.graph.managedApp");
+        this.setType("#microsoft.graph.managedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

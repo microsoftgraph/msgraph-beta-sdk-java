@@ -22,7 +22,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      */
     public EasEmailProfileConfigurationBase() {
         super();
-        this.setOdatatype("#microsoft.graph.easEmailProfileConfigurationBase");
+        this.setType("#microsoft.graph.easEmailProfileConfigurationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

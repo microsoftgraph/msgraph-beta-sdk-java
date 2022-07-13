@@ -30,7 +30,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      */
     public EducationResource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.educationResource");
+        this.setType("#microsoft.graph.educationResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -101,7 +101,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -125,7 +125,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -140,7 +140,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -196,7 +196,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

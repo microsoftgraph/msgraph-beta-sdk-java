@@ -25,7 +25,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      */
     public DeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.windowsUpdates.deploymentSettings");
+        this.setType("#microsoft.graph.windowsUpdates.deploymentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +63,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
             this.put("monitoring", (n) -> { currentObject.setMonitoring(n.getObjectValue(MonitoringSettings::createFromDiscriminatorValue)); });
             this.put("rollout", (n) -> { currentObject.setRollout(n.getObjectValue(RolloutSettings::createFromDiscriminatorValue)); });
             this.put("safeguard", (n) -> { currentObject.setSafeguard(n.getObjectValue(SafeguardSettings::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -73,14 +73,6 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MonitoringSettings getMonitoring() {
         return this._monitoring;
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the rollout property value. Settings governing how the content is rolled out.
@@ -99,6 +91,14 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         return this._safeguard;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -108,7 +108,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("monitoring", this.getMonitoring());
         writer.writeObjectValue("rollout", this.getRollout());
         writer.writeObjectValue("safeguard", this.getSafeguard());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -128,14 +128,6 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         this._monitoring = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the rollout property value. Settings governing how the content is rolled out.
      * @param value Value to set for the rollout property.
      * @return a void
@@ -150,5 +142,13 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      */
     public void setSafeguard(@javax.annotation.Nullable final SafeguardSettings value) {
         this._safeguard = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

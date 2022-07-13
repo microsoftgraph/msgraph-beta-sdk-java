@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
 public class SensitiveType extends Entity implements Parsable {
     /** The classificationMethod property */
     private ClassificationMethod _classificationMethod;
@@ -28,7 +27,7 @@ public class SensitiveType extends Entity implements Parsable {
     /** The state property */
     private String _state;
     /**
-     * Instantiates a new sensitiveType and sets the default values.
+     * Instantiates a new SensitiveType and sets the default values.
      * @return a void
      */
     public SensitiveType() {
@@ -37,7 +36,7 @@ public class SensitiveType extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitiveType
+     * @return a SensitiveType
      */
     @javax.annotation.Nonnull
     public static SensitiveType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

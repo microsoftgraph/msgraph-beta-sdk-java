@@ -21,7 +21,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
      */
     public StatusBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.statusBase");
+        this.setType("#microsoft.graph.statusBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,16 +57,8 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
         final StatusBase currentObject = this;
         return new HashMap<>(2) {{
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ProvisioningResult.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
@@ -77,6 +69,14 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
         return this._status;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -84,7 +84,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -96,19 +96,19 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
     public void setStatus(@javax.annotation.Nullable final ProvisioningResult value) {
         this._status = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

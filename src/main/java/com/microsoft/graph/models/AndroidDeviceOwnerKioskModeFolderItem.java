@@ -14,7 +14,7 @@ public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKio
      */
     public AndroidDeviceOwnerKioskModeFolderItem() {
         super();
-        this.setOdatatype("#microsoft.graph.androidDeviceOwnerKioskModeFolderItem");
+        this.setType("#microsoft.graph.androidDeviceOwnerKioskModeFolderItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     public AccessReviewQueryScope() {
         super();
-        this.setOdatatype("#microsoft.graph.accessReviewQueryScope");
+        this.setType("#microsoft.graph.accessReviewQueryScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

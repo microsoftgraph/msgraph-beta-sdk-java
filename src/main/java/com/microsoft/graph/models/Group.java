@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Group extends DirectoryObject implements Parsable {
     /** The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post. */
     private java.util.List<DirectoryObject> _acceptedSenders;
@@ -84,8 +84,6 @@ public class Group extends DirectoryObject implements Parsable {
     private Boolean _mailEnabled;
     /** The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] ' ; : . <> , SPACE. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). */
     private String _mailNickname;
-    /** The mdmAppId property */
-    private String _mdmAppId;
     /** Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _memberOf;
     /** Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName). */
@@ -406,7 +404,6 @@ public class Group extends DirectoryObject implements Parsable {
             this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
             this.put("mailEnabled", (n) -> { currentObject.setMailEnabled(n.getBooleanValue()); });
             this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("mdmAppId", (n) -> { currentObject.setMdmAppId(n.getStringValue()); });
             this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("membershipRule", (n) -> { currentObject.setMembershipRule(n.getStringValue()); });
@@ -569,14 +566,6 @@ public class Group extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public String getMailNickname() {
         return this._mailNickname;
-    }
-    /**
-     * Gets the mdmAppId property value. The mdmAppId property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getMdmAppId() {
-        return this._mdmAppId;
     }
     /**
      * Gets the memberOf property value. Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
@@ -951,7 +940,6 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeStringValue("mail", this.getMail());
         writer.writeBooleanValue("mailEnabled", this.getMailEnabled());
         writer.writeStringValue("mailNickname", this.getMailNickname());
-        writer.writeStringValue("mdmAppId", this.getMdmAppId());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeStringValue("membershipRule", this.getMembershipRule());
@@ -1289,14 +1277,6 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
-    }
-    /**
-     * Sets the mdmAppId property value. The mdmAppId property
-     * @param value Value to set for the mdmAppId property.
-     * @return a void
-     */
-    public void setMdmAppId(@javax.annotation.Nullable final String value) {
-        this._mdmAppId = value;
     }
     /**
      * Sets the memberOf property value. Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.

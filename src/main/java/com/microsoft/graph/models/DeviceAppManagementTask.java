@@ -36,7 +36,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      */
     public DeviceAppManagementTask() {
         super();
-        this.setOdatatype("#microsoft.graph.deviceAppManagementTask");
+        this.setType("#microsoft.graph.deviceAppManagementTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

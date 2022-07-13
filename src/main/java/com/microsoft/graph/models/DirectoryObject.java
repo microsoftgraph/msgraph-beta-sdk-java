@@ -17,7 +17,7 @@ public class DirectoryObject extends Entity implements Parsable {
      */
     public DirectoryObject() {
         super();
-        this.setOdatatype("#microsoft.graph.directoryObject");
+        this.setType("#microsoft.graph.directoryObject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

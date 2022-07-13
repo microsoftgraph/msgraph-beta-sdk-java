@@ -19,7 +19,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      */
     public DeviceHealthScriptTimeSchedule() {
         super();
-        this.setOdatatype("#microsoft.graph.deviceHealthScriptTimeSchedule");
+        this.setType("#microsoft.graph.deviceHealthScriptTimeSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

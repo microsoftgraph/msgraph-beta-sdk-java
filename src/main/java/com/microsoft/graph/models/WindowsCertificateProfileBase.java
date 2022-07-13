@@ -26,7 +26,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      */
     public WindowsCertificateProfileBase() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsCertificateProfileBase");
+        this.setType("#microsoft.graph.windowsCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

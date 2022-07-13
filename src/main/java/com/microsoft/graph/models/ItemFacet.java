@@ -32,7 +32,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     public ItemFacet() {
         super();
-        this.setOdatatype("#microsoft.graph.itemFacet");
+        this.setType("#microsoft.graph.itemFacet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

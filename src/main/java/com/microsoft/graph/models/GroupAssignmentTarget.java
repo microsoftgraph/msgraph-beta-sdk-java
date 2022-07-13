@@ -16,7 +16,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      */
     public GroupAssignmentTarget() {
         super();
-        this.setOdatatype("#microsoft.graph.groupAssignmentTarget");
+        this.setType("#microsoft.graph.groupAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

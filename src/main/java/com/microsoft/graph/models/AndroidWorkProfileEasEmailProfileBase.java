@@ -28,7 +28,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      */
     public AndroidWorkProfileEasEmailProfileBase() {
         super();
-        this.setOdatatype("#microsoft.graph.androidWorkProfileEasEmailProfileBase");
+        this.setType("#microsoft.graph.androidWorkProfileEasEmailProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

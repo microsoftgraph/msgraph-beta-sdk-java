@@ -25,7 +25,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      */
     public DeviceComplianceScriptError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceComplianceScriptError");
+        this.setType("#microsoft.graph.deviceComplianceScriptError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,7 +79,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
             this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(Code.class)); });
             this.put("deviceComplianceScriptRulesValidationError", (n) -> { currentObject.setDeviceComplianceScriptRulesValidationError(n.getEnumValue(DeviceComplianceScriptRulesValidationError.class)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -95,7 +95,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -108,7 +108,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         writer.writeEnumValue("code", this.getCode());
         writer.writeEnumValue("deviceComplianceScriptRulesValidationError", this.getDeviceComplianceScriptRulesValidationError());
         writer.writeStringValue("message", this.getMessage());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -148,7 +148,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

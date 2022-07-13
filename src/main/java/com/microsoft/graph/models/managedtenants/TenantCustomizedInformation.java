@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TenantCustomizedInformation extends Entity implements Parsable {
     /** The collection of contacts for the managed tenant. Optional. */
     private java.util.List<TenantContactInformation> _contacts;

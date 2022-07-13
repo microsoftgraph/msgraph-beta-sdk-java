@@ -22,7 +22,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     public TeleconferenceDeviceVideoQuality() {
         super();
-        this.setOdatatype("#microsoft.graph.teleconferenceDeviceVideoQuality");
+        this.setType("#microsoft.graph.teleconferenceDeviceVideoQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

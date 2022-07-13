@@ -44,7 +44,7 @@ public class TodoTask extends Entity implements Parsable {
     private PatternedRecurrence _recurrence;
     /** The date and time for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
-    /** The startDateTime property */
+    /** The date in the specified time zone at which the task is scheduled to start. */
     private DateTimeTimeZone _startDateTime;
     /** The status property */
     private TaskStatus _status;
@@ -234,7 +234,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._reminderDateTime;
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The date in the specified time zone at which the task is scheduled to start.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -423,7 +423,7 @@ public class TodoTask extends Entity implements Parsable {
         this._reminderDateTime = value;
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The date in the specified time zone at which the task is scheduled to start.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

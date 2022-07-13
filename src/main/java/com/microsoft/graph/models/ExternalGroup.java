@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class ExternalGroup extends Entity implements Parsable {
     /** The description property */
     private String _description;
     /** The displayName property */
     private String _displayName;
     /**
-     * Instantiates a new ExternalGroup and sets the default values.
+     * Instantiates a new externalGroup and sets the default values.
      * @return a void
      */
     public ExternalGroup() {
@@ -22,7 +23,7 @@ public class ExternalGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalGroup
+     * @return a externalGroup
      */
     @javax.annotation.Nonnull
     public static ExternalGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

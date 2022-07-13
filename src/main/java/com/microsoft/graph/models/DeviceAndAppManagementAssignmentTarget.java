@@ -24,7 +24,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      */
     public DeviceAndAppManagementAssignmentTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceAndAppManagementAssignmentTarget");
+        this.setType("#microsoft.graph.deviceAndAppManagementAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,7 +80,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         return new HashMap<>(3) {{
             this.put("deviceAndAppManagementAssignmentFilterId", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterId(n.getStringValue()); });
             this.put("deviceAndAppManagementAssignmentFilterType", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -88,7 +88,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -100,7 +100,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceAndAppManagementAssignmentFilterId", this.getDeviceAndAppManagementAssignmentFilterId());
         writer.writeEnumValue("deviceAndAppManagementAssignmentFilterType", this.getDeviceAndAppManagementAssignmentFilterType());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -132,7 +132,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

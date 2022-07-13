@@ -14,7 +14,7 @@ public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManag
      */
     public DeviceManagementConfigurationSimpleSettingValue() {
         super();
-        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSimpleSettingValue");
+        this.setType("#microsoft.graph.deviceManagementConfigurationSimpleSettingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

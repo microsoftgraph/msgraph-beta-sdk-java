@@ -28,7 +28,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      */
     public DeviceHealthScriptParameter() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceHealthScriptParameter");
+        this.setType("#microsoft.graph.deviceHealthScriptParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +85,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -109,7 +109,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -123,7 +123,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
         writer.writeStringValue("description", this.getDescription());
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeStringValue("name", this.getName());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -171,7 +171,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

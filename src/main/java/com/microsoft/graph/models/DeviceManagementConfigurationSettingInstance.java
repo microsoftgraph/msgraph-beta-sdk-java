@@ -24,7 +24,7 @@ public class DeviceManagementConfigurationSettingInstance implements AdditionalD
      */
     public DeviceManagementConfigurationSettingInstance() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSettingInstance");
+        this.setType("#microsoft.graph.deviceManagementConfigurationSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,16 +68,8 @@ public class DeviceManagementConfigurationSettingInstance implements AdditionalD
         return new HashMap<>(3) {{
             this.put("settingDefinitionId", (n) -> { currentObject.setSettingDefinitionId(n.getStringValue()); });
             this.put("settingInstanceTemplateReference", (n) -> { currentObject.setSettingInstanceTemplateReference(n.getObjectValue(DeviceManagementConfigurationSettingInstanceTemplateReference::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the settingDefinitionId property value. Setting Definition Id
@@ -96,6 +88,14 @@ public class DeviceManagementConfigurationSettingInstance implements AdditionalD
         return this._settingInstanceTemplateReference;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -104,7 +104,7 @@ public class DeviceManagementConfigurationSettingInstance implements AdditionalD
         Objects.requireNonNull(writer);
         writer.writeStringValue("settingDefinitionId", this.getSettingDefinitionId());
         writer.writeObjectValue("settingInstanceTemplateReference", this.getSettingInstanceTemplateReference());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -114,14 +114,6 @@ public class DeviceManagementConfigurationSettingInstance implements AdditionalD
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
     /**
      * Sets the settingDefinitionId property value. Setting Definition Id
@@ -138,5 +130,13 @@ public class DeviceManagementConfigurationSettingInstance implements AdditionalD
      */
     public void setSettingInstanceTemplateReference(@javax.annotation.Nullable final DeviceManagementConfigurationSettingInstanceTemplateReference value) {
         this._settingInstanceTemplateReference = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

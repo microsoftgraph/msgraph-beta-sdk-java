@@ -28,7 +28,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     public AospDeviceOwnerWiFiConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.aospDeviceOwnerWiFiConfiguration");
+        this.setType("#microsoft.graph.aospDeviceOwnerWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

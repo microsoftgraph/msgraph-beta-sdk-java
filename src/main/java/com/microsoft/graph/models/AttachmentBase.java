@@ -24,7 +24,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     public AttachmentBase() {
         super();
-        this.setOdatatype("#microsoft.graph.attachmentBase");
+        this.setType("#microsoft.graph.attachmentBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

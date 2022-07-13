@@ -14,7 +14,7 @@ public class WindowsUpdateReference extends SoftwareUpdateReference implements P
      */
     public WindowsUpdateReference() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsUpdates.windowsUpdateReference");
+        this.setType("#microsoft.graph.windowsUpdates.windowsUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

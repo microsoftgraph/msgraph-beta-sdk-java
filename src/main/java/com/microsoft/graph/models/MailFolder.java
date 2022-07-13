@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class MailFolder extends Entity implements Parsable {
     /** The number of immediate child mailFolders in the current mailFolder. */
     private Integer _childFolderCount;
@@ -36,17 +35,17 @@ public class MailFolder extends Entity implements Parsable {
     /** The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null. */
     private String _wellKnownName;
     /**
-     * Instantiates a new mailFolder and sets the default values.
+     * Instantiates a new MailFolder and sets the default values.
      * @return a void
      */
     public MailFolder() {
         super();
-        this.setOdatatype("#microsoft.graph.mailFolder");
+        this.setType("#microsoft.graph.mailFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mailFolder
+     * @return a MailFolder
      */
     @javax.annotation.Nonnull
     public static MailFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

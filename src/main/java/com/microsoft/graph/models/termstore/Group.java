@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Group extends Entity implements Parsable {
     /** Date and time of the group creation. Read-only. */
     private OffsetDateTime _createdDateTime;

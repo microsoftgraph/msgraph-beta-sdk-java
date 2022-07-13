@@ -27,17 +27,17 @@ public class CaseOperation extends Entity implements Parsable {
     /** The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed. */
     private CaseOperationStatus _status;
     /**
-     * Instantiates a new CaseOperation and sets the default values.
+     * Instantiates a new caseOperation and sets the default values.
      * @return a void
      */
     public CaseOperation() {
         super();
-        this.setOdatatype("#microsoft.graph.ediscovery.caseOperation");
+        this.setType("#microsoft.graph.ediscovery.caseOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CaseOperation
+     * @return a caseOperation
      */
     @javax.annotation.Nonnull
     public static CaseOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

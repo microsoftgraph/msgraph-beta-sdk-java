@@ -19,7 +19,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      */
     public DeviceManagementSettingInstance() {
         super();
-        this.setOdatatype("#microsoft.graph.deviceManagementSettingInstance");
+        this.setType("#microsoft.graph.deviceManagementSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

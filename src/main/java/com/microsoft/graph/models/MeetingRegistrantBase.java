@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class MeetingRegistrantBase extends Entity implements Parsable {
     /** A unique web URL for the registrant to join the meeting. Read-only. */
     private String _joinWebUrl;
@@ -17,7 +17,7 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      */
     public MeetingRegistrantBase() {
         super();
-        this.setOdatatype("#microsoft.graph.meetingRegistrantBase");
+        this.setType("#microsoft.graph.meetingRegistrantBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

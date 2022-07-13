@@ -26,7 +26,7 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
      */
     public ScheduleEntity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.scheduleEntity");
+        this.setType("#microsoft.graph.scheduleEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,16 +73,8 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("theme", (n) -> { currentObject.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -101,6 +93,14 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
         return this._theme;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -110,7 +110,7 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("theme", this.getTheme());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -130,14 +130,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
         this._endDateTime = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      * @return a void
@@ -152,5 +144,13 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
      */
     public void setTheme(@javax.annotation.Nullable final ScheduleEntityTheme value) {
         this._theme = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

@@ -23,7 +23,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
      */
     public Identity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.identity");
+        this.setType("#microsoft.graph.identity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,6 +50,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.provisionedIdentity": return new ProvisionedIdentity();
                 case "#microsoft.graph.provisioningServicePrincipal": return new ProvisioningServicePrincipal();
                 case "#microsoft.graph.provisioningSystem": return new ProvisioningSystem();
+                case "#microsoft.graph.security.submissionUserIdentity": return new SubmissionUserIdentity();
                 case "#microsoft.graph.servicePrincipalIdentity": return new ServicePrincipalIdentity();
                 case "#microsoft.graph.sharePointIdentity": return new SharePointIdentity();
                 case "#microsoft.graph.teamworkApplicationIdentity": return new TeamworkApplicationIdentity();
@@ -87,7 +88,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -103,7 +104,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -115,7 +116,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -147,7 +148,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }
