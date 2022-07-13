@@ -14,7 +14,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** Custom SAN Name */
     private String _name;
-    /** Custom SAN Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
+    /** Subject Alternative Name Options. */
     private SubjectAlternativeNameType _sanType;
     /**
      * Instantiates a new customSubjectAlternativeName and sets the default values.
@@ -62,7 +62,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
         return this._name;
     }
     /**
-     * Gets the sanType property value. Custom SAN Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the sanType property value. Subject Alternative Name Options.
      * @return a subjectAlternativeNameType
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
         this._name = value;
     }
     /**
-     * Sets the sanType property value. Custom SAN Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the sanType property value. Subject Alternative Name Options.
      * @param value Value to set for the sanType property.
      * @return a void
      */

@@ -18,13 +18,13 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     private String _deviceModel;
     /** The Device Name that is being reported */
     private String _deviceName;
-    /** Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown. */
+    /** Device type. */
     private DeviceType _platformType;
     /** The setting class name and property name. */
     private String _setting;
     /** The Setting Name that is being reported */
     private String _settingName;
-    /** The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The state property */
     private ComplianceStatus _state;
     /** The User email address that is being reported */
     private String _userEmail;
@@ -106,7 +106,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
         }};
     }
     /**
-     * Gets the platformType property value. Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+     * Gets the platformType property value. Device type.
      * @return a deviceType
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
         return this._settingName;
     }
     /**
-     * Gets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the state property value. The state property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -223,7 +223,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
         this._deviceName = value;
     }
     /**
-     * Sets the platformType property value. Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+     * Sets the platformType property value. Device type.
      * @param value Value to set for the platformType property.
      * @return a void
      */
@@ -247,7 +247,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
         this._settingName = value;
     }
     /**
-     * Sets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

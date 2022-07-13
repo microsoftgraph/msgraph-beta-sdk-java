@@ -13,13 +13,13 @@ import java.util.Objects;
 public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Managed Device ComplianceStatus. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The complianceState property */
     private ComplianceStatus _complianceState;
     /** Device Compliance PolicyId */
     private String _deviceCompliancePolicyId;
     /** Device Compliance Policy Name */
     private String _deviceCompliancePolicyName;
-    /** Managed Device Device Type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown. */
+    /** Device type. */
     private DeviceType _deviceType;
     /** Key of the entity. */
     private String _id;
@@ -27,9 +27,9 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     private String _managedDeviceId;
     /** Managed Device Name */
     private String _managedDeviceName;
-    /** Managed Device ManagementAgentType. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, windowsManagementCloudApi. */
+    /** Management agent type. */
     private ManagementAgentType _managementAgent;
-    /** Managed Device ManagedDeviceOwnerType. Possible values are: unknown, company, personal. */
+    /** Owner type of device. */
     private ManagedDeviceOwnerType _ownerType;
     /** Managed Device Retire After DateTime */
     private OffsetDateTime _retireAfterDateTime;
@@ -61,7 +61,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the complianceState property value. Managed Device ComplianceStatus. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the complianceState property value. The complianceState property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         return this._deviceCompliancePolicyName;
     }
     /**
-     * Gets the deviceType property value. Managed Device Device Type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+     * Gets the deviceType property value. Device type.
      * @return a deviceType
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         return this._managedDeviceName;
     }
     /**
-     * Gets the managementAgent property value. Managed Device ManagementAgentType. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, windowsManagementCloudApi.
+     * Gets the managementAgent property value. Management agent type.
      * @return a managementAgentType
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         return this._managementAgent;
     }
     /**
-     * Gets the ownerType property value. Managed Device ManagedDeviceOwnerType. Possible values are: unknown, company, personal.
+     * Gets the ownerType property value. Owner type of device.
      * @return a managedDeviceOwnerType
      */
     @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the complianceState property value. Managed Device ComplianceStatus. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the complianceState property value. The complianceState property
      * @param value Value to set for the complianceState property.
      * @return a void
      */
@@ -222,7 +222,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         this._deviceCompliancePolicyName = value;
     }
     /**
-     * Sets the deviceType property value. Managed Device Device Type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+     * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
@@ -254,7 +254,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         this._managedDeviceName = value;
     }
     /**
-     * Sets the managementAgent property value. Managed Device ManagementAgentType. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, windowsManagementCloudApi.
+     * Sets the managementAgent property value. Management agent type.
      * @param value Value to set for the managementAgent property.
      * @return a void
      */
@@ -262,7 +262,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         this._managementAgent = value;
     }
     /**
-     * Sets the ownerType property value. Managed Device ManagedDeviceOwnerType. Possible values are: unknown, company, personal.
+     * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */

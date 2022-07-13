@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration implements Parsable {
-    /** Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential. */
+    /** Exchange Active Sync authentication method. */
     private EasAuthenticationMethod _authenticationMethod;
-    /** Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited. */
+    /** Possible values for email sync duration. */
     private EmailSyncDuration _durationOfEmailToSync;
-    /** Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
+    /** Possible values for username source or email source. */
     private UserEmailSource _emailAddressSource;
     /** Exchange location (URL) that the mail app connects to. */
     private String _hostName;
@@ -20,7 +20,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
     private AndroidForWorkCertificateProfileBase _identityCertificate;
     /** Indicates whether or not to use SSL. */
     private Boolean _requireSsl;
-    /** Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress. */
+    /** Android username source. */
     private AndroidUsernameSource _usernameSource;
     /**
      * Instantiates a new AndroidForWorkEasEmailProfileBase and sets the default values.
@@ -28,6 +28,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      */
     public AndroidForWorkEasEmailProfileBase() {
         super();
+        this.setOdatatype("#microsoft.graph.androidForWorkEasEmailProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +49,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         return new AndroidForWorkEasEmailProfileBase();
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
      * @return a easAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -56,7 +57,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         return this._authenticationMethod;
     }
     /**
-     * Gets the durationOfEmailToSync property value. Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
     @javax.annotation.Nullable
@@ -64,7 +65,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         return this._durationOfEmailToSync;
     }
     /**
-     * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
     @javax.annotation.Nullable
@@ -113,7 +114,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         return this._requireSsl;
     }
     /**
-     * Gets the usernameSource property value. Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+     * Gets the usernameSource property value. Android username source.
      * @return a androidUsernameSource
      */
     @javax.annotation.Nullable
@@ -137,7 +138,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         writer.writeEnumValue("usernameSource", this.getUsernameSource());
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Sets the authenticationMethod property value. Exchange Active Sync authentication method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
@@ -145,7 +146,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         this._authenticationMethod = value;
     }
     /**
-     * Sets the durationOfEmailToSync property value. Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
@@ -153,7 +154,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         this._durationOfEmailToSync = value;
     }
     /**
-     * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
@@ -185,7 +186,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
         this._requireSsl = value;
     }
     /**
-     * Sets the usernameSource property value. Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+     * Sets the usernameSource property value. Android username source.
      * @param value Value to set for the usernameSource property.
      * @return a void
      */

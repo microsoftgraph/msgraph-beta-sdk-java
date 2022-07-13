@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
 public class CredentialUserRegistrationDetails extends Entity implements Parsable {
     /** Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue. */
     private java.util.List<String> _authMethods;
@@ -24,7 +23,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     /** Provides the user principal name of the corresponding user. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new credentialUserRegistrationDetails and sets the default values.
+     * Instantiates a new CredentialUserRegistrationDetails and sets the default values.
      * @return a void
      */
     public CredentialUserRegistrationDetails() {
@@ -33,7 +32,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationDetails
+     * @return a CredentialUserRegistrationDetails
      */
     @javax.annotation.Nonnull
     public static CredentialUserRegistrationDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

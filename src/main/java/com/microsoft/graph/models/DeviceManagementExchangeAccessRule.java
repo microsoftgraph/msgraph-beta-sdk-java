@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Device Access Rules in Exchange. */
 public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder, Parsable {
-    /** Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine. */
+    /** Access Level in Exchange. */
     private DeviceManagementExchangeAccessLevel _accessLevel;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -34,7 +34,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
         return new DeviceManagementExchangeAccessRule();
     }
     /**
-     * Gets the accessLevel property value. Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
+     * Gets the accessLevel property value. Access Level in Exchange.
      * @return a deviceManagementExchangeAccessLevel
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessLevel property value. Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
+     * Sets the accessLevel property value. Access Level in Exchange.
      * @param value Value to set for the accessLevel property.
      * @return a void
      */

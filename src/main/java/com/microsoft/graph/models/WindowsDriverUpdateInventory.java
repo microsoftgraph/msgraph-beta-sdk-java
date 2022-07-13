@@ -12,9 +12,9 @@ import java.util.Objects;
 public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     /** The number of devices for which this driver is applicable. */
     private Integer _applicableDeviceCount;
-    /** The approval status for this driver. Possible values are: needsReview, declined, approved, suspended. */
+    /** An enum type to represent approval status of a driver. */
     private DriverApprovalStatus _approvalStatus;
-    /** The category for this driver. Possible values are: recommended, previouslyApproved, other. */
+    /** An enum type to represent which category a driver belongs to. */
     private DriverCategory _category;
     /** The date time when a driver should be deployed if approvalStatus is approved. */
     private OffsetDateTime _deployDateTime;
@@ -54,7 +54,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
         return this._applicableDeviceCount;
     }
     /**
-     * Gets the approvalStatus property value. The approval status for this driver. Possible values are: needsReview, declined, approved, suspended.
+     * Gets the approvalStatus property value. An enum type to represent approval status of a driver.
      * @return a driverApprovalStatus
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
         return this._approvalStatus;
     }
     /**
-     * Gets the category property value. The category for this driver. Possible values are: recommended, previouslyApproved, other.
+     * Gets the category property value. An enum type to represent which category a driver belongs to.
      * @return a driverCategory
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
         this._applicableDeviceCount = value;
     }
     /**
-     * Sets the approvalStatus property value. The approval status for this driver. Possible values are: needsReview, declined, approved, suspended.
+     * Sets the approvalStatus property value. An enum type to represent approval status of a driver.
      * @param value Value to set for the approvalStatus property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
         this._approvalStatus = value;
     }
     /**
-     * Sets the category property value. The category for this driver. Possible values are: recommended, previouslyApproved, other.
+     * Sets the category property value. An enum type to represent which category a driver belongs to.
      * @param value Value to set for the category property.
      * @return a void
      */

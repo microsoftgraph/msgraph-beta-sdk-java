@@ -26,11 +26,11 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     private String _proxyManualAddress;
     /** Specify the proxy server port. */
     private Integer _proxyManualPort;
-    /** Specify the proxy setting for Wi-Fi configuration. Possible values include none, manual, and automatic. Possible values are: none, manual, automatic. */
+    /** Wi-Fi Proxy Settings. */
     private WiFiProxySetting _proxySettings;
     /** This is the name of the Wi-Fi network that is broadcast to all devices. */
     private String _ssid;
-    /** Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise. */
+    /** Wi-Fi Security Types for Android Device Owner. */
     private AndroidDeviceOwnerWiFiSecurityType _wiFiSecurityType;
     /**
      * Instantiates a new AndroidDeviceOwnerWiFiConfiguration and sets the default values.
@@ -38,6 +38,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      */
     public AndroidDeviceOwnerWiFiConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.androidDeviceOwnerWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -151,7 +152,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         return this._proxyManualPort;
     }
     /**
-     * Gets the proxySettings property value. Specify the proxy setting for Wi-Fi configuration. Possible values include none, manual, and automatic. Possible values are: none, manual, automatic.
+     * Gets the proxySettings property value. Wi-Fi Proxy Settings.
      * @return a wiFiProxySetting
      */
     @javax.annotation.Nullable
@@ -167,7 +168,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         return this._ssid;
     }
     /**
-     * Gets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise.
+     * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android Device Owner.
      * @return a androidDeviceOwnerWiFiSecurityType
      */
     @javax.annotation.Nullable
@@ -268,7 +269,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         this._proxyManualPort = value;
     }
     /**
-     * Sets the proxySettings property value. Specify the proxy setting for Wi-Fi configuration. Possible values include none, manual, and automatic. Possible values are: none, manual, automatic.
+     * Sets the proxySettings property value. Wi-Fi Proxy Settings.
      * @param value Value to set for the proxySettings property.
      * @return a void
      */
@@ -284,7 +285,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         this._ssid = value;
     }
     /**
-     * Sets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise.
+     * Sets the wiFiSecurityType property value. Wi-Fi Security Types for Android Device Owner.
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */

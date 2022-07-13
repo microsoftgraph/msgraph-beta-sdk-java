@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class GovernanceInsight extends Entity implements Parsable {
     /** Indicates when the insight was created. */
     private OffsetDateTime _insightCreatedDateTime;
@@ -18,6 +18,7 @@ public class GovernanceInsight extends Entity implements Parsable {
      */
     public GovernanceInsight() {
         super();
+        this.setOdatatype("#microsoft.graph.governanceInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,6 +32,7 @@ public class GovernanceInsight extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.membershipOutlierInsight": return new MembershipOutlierInsight();
                 case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             }
         }

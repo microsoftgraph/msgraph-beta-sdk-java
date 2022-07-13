@@ -11,7 +11,7 @@ import java.util.Objects;
 public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Parsable {
     /** The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant. */
     private String _accessContainerId;
-    /** The type of access container (for example, security group) that will be assigned one or more roles through a delegated admin relationship. The possible values are: securityGroup, unknownFutureValue. */
+    /** The accessContainerType property */
     private DelegatedAdminAccessContainerType _accessContainerType;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -41,7 +41,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
         return this._accessContainerId;
     }
     /**
-     * Gets the accessContainerType property value. The type of access container (for example, security group) that will be assigned one or more roles through a delegated admin relationship. The possible values are: securityGroup, unknownFutureValue.
+     * Gets the accessContainerType property value. The accessContainerType property
      * @return a delegatedAdminAccessContainerType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
         this._accessContainerId = value;
     }
     /**
-     * Sets the accessContainerType property value. The type of access container (for example, security group) that will be assigned one or more roles through a delegated admin relationship. The possible values are: securityGroup, unknownFutureValue.
+     * Sets the accessContainerType property value. The accessContainerType property
      * @param value Value to set for the accessContainerType property.
      * @return a void
      */

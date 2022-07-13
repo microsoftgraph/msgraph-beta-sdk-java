@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** The DeviceManagementConfigurationPolicyAssignment entity assigns a specific DeviceManagementConfigurationPolicy to an AAD group. */
 public class DeviceManagementConfigurationPolicyAssignment extends Entity implements Parsable {
-    /** The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets. */
+    /** Represents source of assignment. */
     private DeviceAndAppManagementAssignmentSource _source;
     /** The identifier of the source of the assignment. */
     private String _sourceId;
@@ -46,7 +46,7 @@ public class DeviceManagementConfigurationPolicyAssignment extends Entity implem
         }};
     }
     /**
-     * Gets the source property value. The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
+     * Gets the source property value. Represents source of assignment.
      * @return a deviceAndAppManagementAssignmentSource
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationPolicyAssignment extends Entity implem
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the source property value. The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
+     * Sets the source property value. Represents source of assignment.
      * @param value Value to set for the source property.
      * @return a void
      */

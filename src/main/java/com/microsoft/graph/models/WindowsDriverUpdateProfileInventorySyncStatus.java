@@ -13,7 +13,7 @@ import java.util.Objects;
 public class WindowsDriverUpdateProfileInventorySyncStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The state of the latest sync. Possible values are: pending, success, failure. */
+    /** Windows DnF update inventory sync state. */
     private WindowsDriverUpdateProfileInventorySyncState _driverInventorySyncState;
     /** The last successful sync date and time in UTC. */
     private OffsetDateTime _lastSuccessfulSyncDateTime;
@@ -43,7 +43,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
         return this._additionalData;
     }
     /**
-     * Gets the driverInventorySyncState property value. The state of the latest sync. Possible values are: pending, success, failure.
+     * Gets the driverInventorySyncState property value. Windows DnF update inventory sync state.
      * @return a windowsDriverUpdateProfileInventorySyncState
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
         this._additionalData = value;
     }
     /**
-     * Sets the driverInventorySyncState property value. The state of the latest sync. Possible values are: pending, success, failure.
+     * Sets the driverInventorySyncState property value. Windows DnF update inventory sync state.
      * @param value Value to set for the driverInventorySyncState property.
      * @return a void
      */

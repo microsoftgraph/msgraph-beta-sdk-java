@@ -21,12 +21,15 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     private Integer _sequence;
     /** The text of the question to show to the requestor. */
     private AccessPackageLocalizedContent _text;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new accessPackageQuestion and sets the default values.
      * @return a void
      */
     public AccessPackageQuestion() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.accessPackageQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,6 +39,14 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static AccessPackageQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.accessPackageMultipleChoiceQuestion": return new AccessPackageMultipleChoiceQuestion();
+                case "#microsoft.graph.accessPackageTextInputQuestion": return new AccessPackageTextInputQuestion();
+            }
+        }
         return new AccessPackageQuestion();
     }
     /**
@@ -53,12 +64,13 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageQuestion currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isAnswerEditable", (n) -> { currentObject.setIsAnswerEditable(n.getBooleanValue()); });
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
             this.put("sequence", (n) -> { currentObject.setSequence(n.getIntegerValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getObjectValue(AccessPackageLocalizedContent::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -84,6 +96,14 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsRequired() {
         return this._isRequired;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
@@ -113,6 +133,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeIntegerValue("sequence", this.getSequence());
         writer.writeObjectValue("text", this.getText());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -146,6 +167,14 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRequired = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.

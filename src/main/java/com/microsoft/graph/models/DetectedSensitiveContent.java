@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the dataClassificationService singleton. */
 public class DetectedSensitiveContent extends DetectedSensitiveContentBase implements Parsable {
     /** The classificationAttributes property */
     private java.util.List<ClassificationAttribute> _classificationAttributes;
@@ -20,20 +19,28 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     /** The sensitiveTypeSource property */
     private SensitiveTypeSource _sensitiveTypeSource;
     /**
-     * Instantiates a new detectedSensitiveContent and sets the default values.
+     * Instantiates a new DetectedSensitiveContent and sets the default values.
      * @return a void
      */
     public DetectedSensitiveContent() {
         super();
+        this.setOdatatype("#microsoft.graph.detectedSensitiveContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectedSensitiveContent
+     * @return a DetectedSensitiveContent
      */
     @javax.annotation.Nonnull
     public static DetectedSensitiveContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.machineLearningDetectedSensitiveContent": return new MachineLearningDetectedSensitiveContent();
+            }
+        }
         return new DetectedSensitiveContent();
     }
     /**

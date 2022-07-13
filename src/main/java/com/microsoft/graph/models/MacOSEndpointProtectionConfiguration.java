@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
-    /** Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _advancedThreatProtectionAutomaticSampleSubmission;
-    /** Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _advancedThreatProtectionCloudDelivered;
-    /** Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _advancedThreatProtectionDiagnosticDataCollection;
     /** A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS. */
     private java.util.List<String> _advancedThreatProtectionExcludedExtensions;
@@ -22,7 +22,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     private java.util.List<String> _advancedThreatProtectionExcludedFolders;
     /** A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS. */
     private java.util.List<String> _advancedThreatProtectionExcludedProcesses;
-    /** Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _advancedThreatProtectionRealTime;
     /** Optional. If set to true, the user can defer the enabling of FileVault until they sign out. */
     private Boolean _fileVaultAllowDeferralUntilSignOut;
@@ -42,7 +42,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     private String _fileVaultPersonalRecoveryKeyHelpMessage;
     /** Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months. */
     private Integer _fileVaultPersonalRecoveryKeyRotationInMonths;
-    /** Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey. */
+    /** Recovery key types for macOS FileVault */
     private MacOSFileVaultRecoveryKeyTypes _fileVaultSelectedRecoveryKeyTypes;
     /** List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements. */
     private java.util.List<MacOSFirewallApplication> _firewallApplications;
@@ -52,7 +52,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     private Boolean _firewallEnabled;
     /** Corresponds to 'Enable stealth mode.' */
     private Boolean _firewallEnableStealthMode;
-    /** System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere. */
+    /** App source options for macOS Gatekeeper. */
     private MacOSGatekeeperAppSources _gatekeeperAllowedAppSource;
     /** If set to true, the user override for Gatekeeper will be disabled. */
     private Boolean _gatekeeperBlockOverride;
@@ -74,7 +74,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return new MacOSEndpointProtectionConfiguration();
     }
     /**
-     * Gets the advancedThreatProtectionAutomaticSampleSubmission property value. Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Gets the advancedThreatProtectionAutomaticSampleSubmission property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this._advancedThreatProtectionAutomaticSampleSubmission;
     }
     /**
-     * Gets the advancedThreatProtectionCloudDelivered property value. Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Gets the advancedThreatProtectionCloudDelivered property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this._advancedThreatProtectionCloudDelivered;
     }
     /**
-     * Gets the advancedThreatProtectionDiagnosticDataCollection property value. Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Gets the advancedThreatProtectionDiagnosticDataCollection property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this._advancedThreatProtectionExcludedProcesses;
     }
     /**
-     * Gets the advancedThreatProtectionRealTime property value. Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Gets the advancedThreatProtectionRealTime property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this._fileVaultPersonalRecoveryKeyRotationInMonths;
     }
     /**
-     * Gets the fileVaultSelectedRecoveryKeyTypes property value. Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
+     * Gets the fileVaultSelectedRecoveryKeyTypes property value. Recovery key types for macOS FileVault
      * @return a macOSFileVaultRecoveryKeyTypes
      */
     @javax.annotation.Nullable
@@ -284,7 +284,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this._firewallEnableStealthMode;
     }
     /**
-     * Gets the gatekeeperAllowedAppSource property value. System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+     * Gets the gatekeeperAllowedAppSource property value. App source options for macOS Gatekeeper.
      * @return a macOSGatekeeperAppSources
      */
     @javax.annotation.Nullable
@@ -333,7 +333,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         writer.writeBooleanValue("gatekeeperBlockOverride", this.getGatekeeperBlockOverride());
     }
     /**
-     * Sets the advancedThreatProtectionAutomaticSampleSubmission property value. Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Sets the advancedThreatProtectionAutomaticSampleSubmission property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionAutomaticSampleSubmission property.
      * @return a void
      */
@@ -341,7 +341,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this._advancedThreatProtectionAutomaticSampleSubmission = value;
     }
     /**
-     * Sets the advancedThreatProtectionCloudDelivered property value. Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Sets the advancedThreatProtectionCloudDelivered property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionCloudDelivered property.
      * @return a void
      */
@@ -349,7 +349,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this._advancedThreatProtectionCloudDelivered = value;
     }
     /**
-     * Sets the advancedThreatProtectionDiagnosticDataCollection property value. Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Sets the advancedThreatProtectionDiagnosticDataCollection property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionDiagnosticDataCollection property.
      * @return a void
      */
@@ -389,7 +389,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this._advancedThreatProtectionExcludedProcesses = value;
     }
     /**
-     * Sets the advancedThreatProtectionRealTime property value. Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Sets the advancedThreatProtectionRealTime property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionRealTime property.
      * @return a void
      */
@@ -469,7 +469,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this._fileVaultPersonalRecoveryKeyRotationInMonths = value;
     }
     /**
-     * Sets the fileVaultSelectedRecoveryKeyTypes property value. Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
+     * Sets the fileVaultSelectedRecoveryKeyTypes property value. Recovery key types for macOS FileVault
      * @param value Value to set for the fileVaultSelectedRecoveryKeyTypes property.
      * @return a void
      */
@@ -509,7 +509,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this._firewallEnableStealthMode = value;
     }
     /**
-     * Sets the gatekeeperAllowedAppSource property value. System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+     * Sets the gatekeeperAllowedAppSource property value. App source options for macOS Gatekeeper.
      * @param value Value to set for the gatekeeperAllowedAppSource property.
      * @return a void
      */

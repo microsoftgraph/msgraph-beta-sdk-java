@@ -24,7 +24,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     private String _recommendedAction;
     /** The start time of the health check item. Read-only. */
     private OffsetDateTime _startDateTime;
-    /** The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only. */
+    /** The status property */
     private CloudPcOnPremisesConnectionStatus _status;
     /**
      * Instantiates a new cloudPcOnPremisesConnectionHealthCheck and sets the default values.
@@ -117,7 +117,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this._startDateTime;
     }
     /**
-     * Gets the status property value. The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+     * Gets the status property value. The status property
      * @return a cloudPcOnPremisesConnectionStatus
      */
     @javax.annotation.Nullable
@@ -197,7 +197,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this._startDateTime = value;
     }
     /**
-     * Sets the status property value. The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

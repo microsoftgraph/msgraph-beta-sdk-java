@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Entity that describes tenant level settings for derived credentials */
 public class DeviceManagementResourceAccessProfileAssignment extends Entity implements Parsable {
-    /** The assignment intent for the resource access profile. Possible values are: apply, remove. */
+    /** The administrator intent for the assignment of the profile. */
     private DeviceManagementResourceAccessProfileIntent _intent;
     /** The identifier of the source of the assignment. */
     private String _sourceId;
@@ -46,7 +46,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
         }};
     }
     /**
-     * Gets the intent property value. The assignment intent for the resource access profile. Possible values are: apply, remove.
+     * Gets the intent property value. The administrator intent for the assignment of the profile.
      * @return a deviceManagementResourceAccessProfileIntent
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the intent property value. The assignment intent for the resource access profile. Possible values are: apply, remove.
+     * Sets the intent property value. The administrator intent for the assignment of the profile.
      * @param value Value to set for the intent property.
      * @return a void
      */

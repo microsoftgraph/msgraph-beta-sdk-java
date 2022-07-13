@@ -11,7 +11,7 @@ import java.util.Objects;
 public class LabelingOptions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Possible values are: standard, privileged, auto. */
+    /** The assignmentMethod property */
     private AssignmentMethod _assignmentMethod;
     /** The downgrade justification object that indicates if downgrade was justified and, if so, the reason. */
     private DowngradeJustification _downgradeJustification;
@@ -45,7 +45,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the assignmentMethod property value. Possible values are: standard, privileged, auto.
+     * Gets the assignmentMethod property value. The assignmentMethod property
      * @return a assignmentMethod
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the assignmentMethod property value. Possible values are: standard, privileged, auto.
+     * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      * @return a void
      */

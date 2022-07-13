@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum DelegatedAdminRelationshipStatus implements ValuedEnum {
     Activating("activating"),
     Active("active"),

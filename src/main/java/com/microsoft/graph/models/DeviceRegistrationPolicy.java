@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceRegistrationPolicy singleton. */
 public class DeviceRegistrationPolicy extends Entity implements Parsable {
     /** Specifies the authorization policy for controlling registration of new devices using Azure AD Join within your organization. Required. For more information, see What is a device identity?. */
     private AzureAdJoinPolicy _azureADJoin;
@@ -17,12 +16,12 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     private String _description;
     /** The name of the device registration policy. It is always set to Device Registration Policy. Read-only. */
     private String _displayName;
-    /** Specifies the authentication policy for a user to complete registration using Azure AD Join or Azure AD registered within your organization. The possible values are: 0 (meaning notRequired), 1 (meaning required), and 2 (meaning unknownFutureValue). The default value is 0. */
+    /** The multiFactorAuthConfiguration property */
     private MultiFactorAuthConfiguration _multiFactorAuthConfiguration;
     /** Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property is not specified during the policy update operation, it is automatically reset to 0 to indicate that users are not allowed to join any devices. */
     private Integer _userDeviceQuota;
     /**
-     * Instantiates a new deviceRegistrationPolicy and sets the default values.
+     * Instantiates a new DeviceRegistrationPolicy and sets the default values.
      * @return a void
      */
     public DeviceRegistrationPolicy() {
@@ -31,7 +30,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceRegistrationPolicy
+     * @return a DeviceRegistrationPolicy
      */
     @javax.annotation.Nonnull
     public static DeviceRegistrationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +86,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the multiFactorAuthConfiguration property value. Specifies the authentication policy for a user to complete registration using Azure AD Join or Azure AD registered within your organization. The possible values are: 0 (meaning notRequired), 1 (meaning required), and 2 (meaning unknownFutureValue). The default value is 0.
+     * Gets the multiFactorAuthConfiguration property value. The multiFactorAuthConfiguration property
      * @return a multiFactorAuthConfiguration
      */
     @javax.annotation.Nullable
@@ -150,7 +149,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the multiFactorAuthConfiguration property value. Specifies the authentication policy for a user to complete registration using Azure AD Join or Azure AD registered within your organization. The possible values are: 0 (meaning notRequired), 1 (meaning required), and 2 (meaning unknownFutureValue). The default value is 0.
+     * Sets the multiFactorAuthConfiguration property value. The multiFactorAuthConfiguration property
      * @param value Value to set for the multiFactorAuthConfiguration property.
      * @return a void
      */

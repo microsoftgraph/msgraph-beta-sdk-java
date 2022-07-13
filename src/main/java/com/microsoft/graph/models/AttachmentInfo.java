@@ -11,13 +11,13 @@ import java.util.Objects;
 public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The attachmentType property */
+    /** The type of the attachment. The possible values are: file, item, reference. Required. */
     private AttachmentType _attachmentType;
-    /** The contentType property */
+    /** The nature of the data in the attachment. Optional. */
     private String _contentType;
-    /** The name property */
+    /** The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required. */
     private String _name;
-    /** The size property */
+    /** The length of the attachment in bytes. Required. */
     private Long _size;
     /**
      * Instantiates a new attachmentInfo and sets the default values.
@@ -45,7 +45,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the attachmentType property value. The attachmentType property
+     * Gets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
      * @return a attachmentType
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         return this._attachmentType;
     }
     /**
-     * Gets the contentType property value. The contentType property
+     * Gets the contentType property value. The nature of the data in the attachment. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the size property value. The size property
+     * Gets the size property value. The length of the attachment in bytes. Required.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the attachmentType property value. The attachmentType property
+     * Sets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
      * @param value Value to set for the attachmentType property.
      * @return a void
      */
@@ -120,7 +120,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         this._attachmentType = value;
     }
     /**
-     * Sets the contentType property value. The contentType property
+     * Sets the contentType property value. The nature of the data in the attachment. Optional.
      * @param value Value to set for the contentType property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         this._contentType = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -136,7 +136,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the size property value. The size property
+     * Sets the size property value. The length of the attachment in bytes. Required.
      * @param value Value to set for the size property.
      * @return a void
      */

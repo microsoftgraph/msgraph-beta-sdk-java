@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CredentialUserRegistrationsSummary extends Entity implements Parsable {
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
     private OffsetDateTime _lastRefreshedDateTime;

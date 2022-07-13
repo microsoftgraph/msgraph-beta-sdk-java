@@ -20,12 +20,15 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     private String _name;
     /** The publisher of the application */
     private String _publisher;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new appListItem and sets the default values.
      * @return a void
      */
     public AppListItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.appListItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,6 +38,13 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static AppListItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.appleAppListItem": return new AppleAppListItem();
+            }
+        }
         return new AppListItem();
     }
     /**
@@ -68,11 +78,12 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppListItem currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -82,6 +93,14 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the publisher property value. The publisher of the application
@@ -102,6 +121,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("publisher", this.getPublisher());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -135,6 +155,14 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the publisher property value. The publisher of the application

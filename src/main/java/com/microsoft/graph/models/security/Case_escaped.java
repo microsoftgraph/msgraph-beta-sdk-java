@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the security singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Case_escaped extends Entity implements Parsable {
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
@@ -30,6 +30,7 @@ public class Case_escaped extends Entity implements Parsable {
      */
     public Case_escaped() {
         super();
+        this.setOdatatype("#microsoft.graph.security.case");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -27,12 +27,15 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     private Integer _sensitivity;
     /** The tooltip that should be displayed for the label in a user interface. */
     private String _tooltip;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new parentLabelDetails and sets the default values.
      * @return a void
      */
     public ParentLabelDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.parentLabelDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,6 +45,13 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static ParentLabelDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.labelDetails": return new LabelDetails();
+            }
+        }
         return new ParentLabelDetails();
     }
     /**
@@ -75,7 +85,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParentLabelDetails currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
@@ -84,6 +94,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
             this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(ParentLabelDetails::createFromDiscriminatorValue)); });
             this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getIntegerValue()); });
             this.put("tooltip", (n) -> { currentObject.setTooltip(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -109,6 +120,14 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the parent property value. The parent property
@@ -149,6 +168,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("parent", this.getParent());
         writer.writeIntegerValue("sensitivity", this.getSensitivity());
         writer.writeStringValue("tooltip", this.getTooltip());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -198,6 +218,14 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the parent property value. The parent property

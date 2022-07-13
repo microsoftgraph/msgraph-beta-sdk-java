@@ -7,18 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the teamwork singleton. */
 public class Teamwork extends Entity implements Parsable {
-    /** The deletedTeams property */
+    /** A collection of deleted teams. */
     private java.util.List<DeletedTeam> _deletedTeams;
     /** The Teams devices provisioned for the tenant. */
     private java.util.List<TeamworkDevice> _devices;
-    /** The teamsAppSettings property */
+    /** Represents tenant-wide settings for all Teams apps in the tenant. */
     private TeamsAppSettings _teamsAppSettings;
     /** A workforce integration with shifts. */
     private java.util.List<WorkforceIntegration> _workforceIntegrations;
     /**
-     * Instantiates a new teamwork and sets the default values.
+     * Instantiates a new Teamwork and sets the default values.
      * @return a void
      */
     public Teamwork() {
@@ -27,7 +26,7 @@ public class Teamwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamwork
+     * @return a Teamwork
      */
     @javax.annotation.Nonnull
     public static Teamwork createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +34,7 @@ public class Teamwork extends Entity implements Parsable {
         return new Teamwork();
     }
     /**
-     * Gets the deletedTeams property value. The deletedTeams property
+     * Gets the deletedTeams property value. A collection of deleted teams.
      * @return a deletedTeam
      */
     @javax.annotation.Nullable
@@ -65,7 +64,7 @@ public class Teamwork extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the teamsAppSettings property value. The teamsAppSettings property
+     * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @return a teamsAppSettings
      */
     @javax.annotation.Nullable
@@ -94,7 +93,7 @@ public class Teamwork extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
     /**
-     * Sets the deletedTeams property value. The deletedTeams property
+     * Sets the deletedTeams property value. A collection of deleted teams.
      * @param value Value to set for the deletedTeams property.
      * @return a void
      */
@@ -110,7 +109,7 @@ public class Teamwork extends Entity implements Parsable {
         this._devices = value;
     }
     /**
-     * Sets the teamsAppSettings property value. The teamsAppSettings property
+     * Sets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @param value Value to set for the teamsAppSettings property.
      * @return a void
      */

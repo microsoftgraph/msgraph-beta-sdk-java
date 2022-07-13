@@ -12,7 +12,7 @@ import java.util.Objects;
 import microsoft.graph.models.DriverApprovalAction;
 /** Provides operations to call the executeAction method. */
 public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The actionName property */
+    /** An enum type to represent approval actions of single or list of drivers. */
     private DriverApprovalAction _actionName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -38,7 +38,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
         return new ExecuteActionPostRequestBody();
     }
     /**
-     * Gets the actionName property value. The actionName property
+     * Gets the actionName property value. An enum type to represent approval actions of single or list of drivers.
      * @return a driverApprovalAction
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionName property value. The actionName property
+     * Sets the actionName property value. An enum type to represent approval actions of single or list of drivers.
      * @param value Value to set for the actionName property.
      * @return a void
      */

@@ -10,9 +10,9 @@ import java.util.Objects;
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** Semicolon seperated list of device models allowed, as a string, for the managed app to work. */
     private String _allowedIosDeviceModels;
-    /** Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. Possible values are: block, wipe, warn. */
+    /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _appActionIfIosDeviceModelNotAllowed;
-    /** Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked. */
+    /** Represents the level to which app data is encrypted for managed apps */
     private ManagedAppDataEncryptionType _appDataEncryptionType;
     /** List of apps to which the policy is deployed. */
     private java.util.List<ManagedMobileApp> _apps;
@@ -70,7 +70,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this._allowedIosDeviceModels;
     }
     /**
-     * Gets the appActionIfIosDeviceModelNotAllowed property value. Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. Possible values are: block, wipe, warn.
+     * Gets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this._appActionIfIosDeviceModelNotAllowed;
     }
     /**
-     * Gets the appDataEncryptionType property value. Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @return a managedAppDataEncryptionType
      */
     @javax.annotation.Nullable
@@ -269,7 +269,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this._allowedIosDeviceModels = value;
     }
     /**
-     * Sets the appActionIfIosDeviceModelNotAllowed property value. Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. Possible values are: block, wipe, warn.
+     * Sets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfIosDeviceModelNotAllowed property.
      * @return a void
      */
@@ -277,7 +277,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this._appActionIfIosDeviceModelNotAllowed = value;
     }
     /**
-     * Sets the appDataEncryptionType property value. Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */

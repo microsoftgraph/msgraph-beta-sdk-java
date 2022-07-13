@@ -86,7 +86,7 @@ public class ExtractLabelRequestBuilder {
     /**
      * Invoke action extractLabel
      * @param body 
-     * @return a CompletableFuture of InformationProtectionContentLabel
+     * @return a CompletableFuture of informationProtectionContentLabel
      */
     public java.util.concurrent.CompletableFuture<InformationProtectionContentLabel> post(@javax.annotation.Nonnull final ExtractLabelPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ExtractLabelRequestBuilder {
      * Invoke action extractLabel
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InformationProtectionContentLabel
+     * @return a CompletableFuture of informationProtectionContentLabel
      */
     public java.util.concurrent.CompletableFuture<InformationProtectionContentLabel> post(@javax.annotation.Nonnull final ExtractLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractLabelRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ExtractLabelRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of InformationProtectionContentLabel
+     * @return a CompletableFuture of informationProtectionContentLabel
      */
     public java.util.concurrent.CompletableFuture<InformationProtectionContentLabel> post(@javax.annotation.Nonnull final ExtractLabelPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ExtractLabelRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

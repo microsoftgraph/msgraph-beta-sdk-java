@@ -8,11 +8,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents a booked appointment of a service by a customer in a business. */
 public class BookingAppointment extends Entity implements Parsable {
     /** Additional information that is sent to the customer when an appointment is confirmed. */
     private String _additionalInformation;
-    /** The anonymousJoinWebUrl property */
+    /** Url of meeting to join anonymously. */
     private String _anonymousJoinWebUrl;
     /** The SMTP address of the bookingCustomer who is booking the appointment. */
     private String _customerEmailAddress;
@@ -42,7 +41,7 @@ public class BookingAppointment extends Entity implements Parsable {
     private DateTimeTimeZone _invoiceDate;
     /** The ID of the invoice. */
     private String _invoiceId;
-    /** The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective. */
+    /** The invoiceStatus property */
     private BookingInvoiceStatus _invoiceStatus;
     /** The URL of the invoice in Microsoft Bookings. */
     private String _invoiceUrl;
@@ -62,7 +61,7 @@ public class BookingAppointment extends Entity implements Parsable {
     private Period _preBuffer;
     /** The regular price for an appointment for the specified bookingService. */
     private Double _price;
-    /** A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue. */
+    /** Represents the type of pricing of a booking service. */
     private BookingPriceType _priceType;
     /** The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID. */
     private java.util.List<BookingReminder> _reminders;
@@ -83,7 +82,7 @@ public class BookingAppointment extends Entity implements Parsable {
     /** The start property */
     private DateTimeTimeZone _start;
     /**
-     * Instantiates a new bookingAppointment and sets the default values.
+     * Instantiates a new BookingAppointment and sets the default values.
      * @return a void
      */
     public BookingAppointment() {
@@ -92,7 +91,7 @@ public class BookingAppointment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingAppointment
+     * @return a BookingAppointment
      */
     @javax.annotation.Nonnull
     public static BookingAppointment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -108,7 +107,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._additionalInformation;
     }
     /**
-     * Gets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * Gets the anonymousJoinWebUrl property value. Url of meeting to join anonymously.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -274,7 +273,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._invoiceId;
     }
     /**
-     * Gets the invoiceStatus property value. The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
+     * Gets the invoiceStatus property value. The invoiceStatus property
      * @return a bookingInvoiceStatus
      */
     @javax.annotation.Nullable
@@ -354,7 +353,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._price;
     }
     /**
-     * Gets the priceType property value. A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Gets the priceType property value. Represents the type of pricing of a booking service.
      * @return a bookingPriceType
      */
     @javax.annotation.Nullable
@@ -487,7 +486,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._additionalInformation = value;
     }
     /**
-     * Sets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * Sets the anonymousJoinWebUrl property value. Url of meeting to join anonymously.
      * @param value Value to set for the anonymousJoinWebUrl property.
      * @return a void
      */
@@ -607,7 +606,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._invoiceId = value;
     }
     /**
-     * Sets the invoiceStatus property value. The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
+     * Sets the invoiceStatus property value. The invoiceStatus property
      * @param value Value to set for the invoiceStatus property.
      * @return a void
      */
@@ -687,7 +686,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._price = value;
     }
     /**
-     * Sets the priceType property value. A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Sets the priceType property value. Represents the type of pricing of a booking service.
      * @param value Value to set for the priceType property.
      * @return a void
      */

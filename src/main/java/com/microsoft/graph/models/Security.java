@@ -7,12 +7,18 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.models.security.Alert;
 import microsoft.graph.models.security.CasesRoot;
+import microsoft.graph.models.security.Incident;
 import microsoft.graph.models.security.InformationProtection;
-/** Provides operations to manage the security singleton. */
+import microsoft.graph.models.security.LabelsRoot;
+import microsoft.graph.models.security.TriggersRoot;
+import microsoft.graph.models.security.TriggerTypesRoot;
 public class Security extends Entity implements Parsable {
     /** Notifications for suspicious or potential security issues in a customer’s tenant. */
     private java.util.List<Alert> _alerts;
+    /** The alerts_v2 property */
+    private java.util.List<Alert> _alerts_v2;
     /** Provides tenants capability to launch a simulated and realistic phishing attack and learn from it. */
     private AttackSimulationRoot _attackSimulation;
     /** The cases property */
@@ -25,10 +31,14 @@ public class Security extends Entity implements Parsable {
     private java.util.List<FileSecurityProfile> _fileSecurityProfiles;
     /** The hostSecurityProfiles property */
     private java.util.List<HostSecurityProfile> _hostSecurityProfiles;
+    /** The incidents property */
+    private java.util.List<Incident> _incidents;
     /** The informationProtection property */
     private InformationProtection _informationProtection;
     /** The ipSecurityProfiles property */
     private java.util.List<IpSecurityProfile> _ipSecurityProfiles;
+    /** The labels property */
+    private LabelsRoot _labels;
     /** The providerStatus property */
     private java.util.List<SecurityProviderStatus> _providerStatus;
     /** The providerTenantSettings property */
@@ -43,10 +53,14 @@ public class Security extends Entity implements Parsable {
     private java.util.List<SubjectRightsRequest> _subjectRightsRequests;
     /** The tiIndicators property */
     private java.util.List<TiIndicator> _tiIndicators;
+    /** The triggers property */
+    private TriggersRoot _triggers;
+    /** The triggerTypes property */
+    private TriggerTypesRoot _triggerTypes;
     /** The userSecurityProfiles property */
     private java.util.List<UserSecurityProfile> _userSecurityProfiles;
     /**
-     * Instantiates a new security and sets the default values.
+     * Instantiates a new Security and sets the default values.
      * @return a void
      */
     public Security() {
@@ -55,7 +69,7 @@ public class Security extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a security
+     * @return a Security
      */
     @javax.annotation.Nonnull
     public static Security createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -69,6 +83,14 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<Alert> getAlerts() {
         return this._alerts;
+    }
+    /**
+     * Gets the alerts_v2 property value. The alerts_v2 property
+     * @return a alert
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Alert> getAlerts_v2() {
+        return this._alerts_v2;
     }
     /**
      * Gets the attackSimulation property value. Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
@@ -111,14 +133,17 @@ public class Security extends Entity implements Parsable {
         final Security currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("alerts", (n) -> { currentObject.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
+            this.put("alerts_v2", (n) -> { currentObject.setAlerts_v2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
             this.put("attackSimulation", (n) -> { currentObject.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
             this.put("cases", (n) -> { currentObject.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
             this.put("cloudAppSecurityProfiles", (n) -> { currentObject.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
             this.put("domainSecurityProfiles", (n) -> { currentObject.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
             this.put("fileSecurityProfiles", (n) -> { currentObject.setFileSecurityProfiles(n.getCollectionOfObjectValues(FileSecurityProfile::createFromDiscriminatorValue)); });
             this.put("hostSecurityProfiles", (n) -> { currentObject.setHostSecurityProfiles(n.getCollectionOfObjectValues(HostSecurityProfile::createFromDiscriminatorValue)); });
+            this.put("incidents", (n) -> { currentObject.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
             this.put("informationProtection", (n) -> { currentObject.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
             this.put("ipSecurityProfiles", (n) -> { currentObject.setIpSecurityProfiles(n.getCollectionOfObjectValues(IpSecurityProfile::createFromDiscriminatorValue)); });
+            this.put("labels", (n) -> { currentObject.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
             this.put("providerStatus", (n) -> { currentObject.setProviderStatus(n.getCollectionOfObjectValues(SecurityProviderStatus::createFromDiscriminatorValue)); });
             this.put("providerTenantSettings", (n) -> { currentObject.setProviderTenantSettings(n.getCollectionOfObjectValues(ProviderTenantSetting::createFromDiscriminatorValue)); });
             this.put("secureScoreControlProfiles", (n) -> { currentObject.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
@@ -126,6 +151,8 @@ public class Security extends Entity implements Parsable {
             this.put("securityActions", (n) -> { currentObject.setSecurityActions(n.getCollectionOfObjectValues(SecurityAction::createFromDiscriminatorValue)); });
             this.put("subjectRightsRequests", (n) -> { currentObject.setSubjectRightsRequests(n.getCollectionOfObjectValues(SubjectRightsRequest::createFromDiscriminatorValue)); });
             this.put("tiIndicators", (n) -> { currentObject.setTiIndicators(n.getCollectionOfObjectValues(TiIndicator::createFromDiscriminatorValue)); });
+            this.put("triggers", (n) -> { currentObject.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
+            this.put("triggerTypes", (n) -> { currentObject.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
             this.put("userSecurityProfiles", (n) -> { currentObject.setUserSecurityProfiles(n.getCollectionOfObjectValues(UserSecurityProfile::createFromDiscriminatorValue)); });
         }};
     }
@@ -146,6 +173,14 @@ public class Security extends Entity implements Parsable {
         return this._hostSecurityProfiles;
     }
     /**
+     * Gets the incidents property value. The incidents property
+     * @return a incident
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Incident> getIncidents() {
+        return this._incidents;
+    }
+    /**
      * Gets the informationProtection property value. The informationProtection property
      * @return a informationProtection
      */
@@ -160,6 +195,14 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<IpSecurityProfile> getIpSecurityProfiles() {
         return this._ipSecurityProfiles;
+    }
+    /**
+     * Gets the labels property value. The labels property
+     * @return a labelsRoot
+     */
+    @javax.annotation.Nullable
+    public LabelsRoot getLabels() {
+        return this._labels;
     }
     /**
      * Gets the providerStatus property value. The providerStatus property
@@ -218,6 +261,22 @@ public class Security extends Entity implements Parsable {
         return this._tiIndicators;
     }
     /**
+     * Gets the triggers property value. The triggers property
+     * @return a triggersRoot
+     */
+    @javax.annotation.Nullable
+    public TriggersRoot getTriggers() {
+        return this._triggers;
+    }
+    /**
+     * Gets the triggerTypes property value. The triggerTypes property
+     * @return a triggerTypesRoot
+     */
+    @javax.annotation.Nullable
+    public TriggerTypesRoot getTriggerTypes() {
+        return this._triggerTypes;
+    }
+    /**
      * Gets the userSecurityProfiles property value. The userSecurityProfiles property
      * @return a userSecurityProfile
      */
@@ -234,14 +293,17 @@ public class Security extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
+        writer.writeCollectionOfObjectValues("alerts_v2", this.getAlerts_v2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
         writer.writeCollectionOfObjectValues("fileSecurityProfiles", this.getFileSecurityProfiles());
         writer.writeCollectionOfObjectValues("hostSecurityProfiles", this.getHostSecurityProfiles());
+        writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeCollectionOfObjectValues("ipSecurityProfiles", this.getIpSecurityProfiles());
+        writer.writeObjectValue("labels", this.getLabels());
         writer.writeCollectionOfObjectValues("providerStatus", this.getProviderStatus());
         writer.writeCollectionOfObjectValues("providerTenantSettings", this.getProviderTenantSettings());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
@@ -249,6 +311,8 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("securityActions", this.getSecurityActions());
         writer.writeCollectionOfObjectValues("subjectRightsRequests", this.getSubjectRightsRequests());
         writer.writeCollectionOfObjectValues("tiIndicators", this.getTiIndicators());
+        writer.writeObjectValue("triggers", this.getTriggers());
+        writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
         writer.writeCollectionOfObjectValues("userSecurityProfiles", this.getUserSecurityProfiles());
     }
     /**
@@ -258,6 +322,14 @@ public class Security extends Entity implements Parsable {
      */
     public void setAlerts(@javax.annotation.Nullable final java.util.List<Alert> value) {
         this._alerts = value;
+    }
+    /**
+     * Sets the alerts_v2 property value. The alerts_v2 property
+     * @param value Value to set for the alerts_v2 property.
+     * @return a void
+     */
+    public void setAlerts_v2(@javax.annotation.Nullable final java.util.List<Alert> value) {
+        this._alerts_v2 = value;
     }
     /**
      * Sets the attackSimulation property value. Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
@@ -308,6 +380,14 @@ public class Security extends Entity implements Parsable {
         this._hostSecurityProfiles = value;
     }
     /**
+     * Sets the incidents property value. The incidents property
+     * @param value Value to set for the incidents property.
+     * @return a void
+     */
+    public void setIncidents(@javax.annotation.Nullable final java.util.List<Incident> value) {
+        this._incidents = value;
+    }
+    /**
      * Sets the informationProtection property value. The informationProtection property
      * @param value Value to set for the informationProtection property.
      * @return a void
@@ -322,6 +402,14 @@ public class Security extends Entity implements Parsable {
      */
     public void setIpSecurityProfiles(@javax.annotation.Nullable final java.util.List<IpSecurityProfile> value) {
         this._ipSecurityProfiles = value;
+    }
+    /**
+     * Sets the labels property value. The labels property
+     * @param value Value to set for the labels property.
+     * @return a void
+     */
+    public void setLabels(@javax.annotation.Nullable final LabelsRoot value) {
+        this._labels = value;
     }
     /**
      * Sets the providerStatus property value. The providerStatus property
@@ -378,6 +466,22 @@ public class Security extends Entity implements Parsable {
      */
     public void setTiIndicators(@javax.annotation.Nullable final java.util.List<TiIndicator> value) {
         this._tiIndicators = value;
+    }
+    /**
+     * Sets the triggers property value. The triggers property
+     * @param value Value to set for the triggers property.
+     * @return a void
+     */
+    public void setTriggers(@javax.annotation.Nullable final TriggersRoot value) {
+        this._triggers = value;
+    }
+    /**
+     * Sets the triggerTypes property value. The triggerTypes property
+     * @param value Value to set for the triggerTypes property.
+     * @return a void
+     */
+    public void setTriggerTypes(@javax.annotation.Nullable final TriggerTypesRoot value) {
+        this._triggerTypes = value;
     }
     /**
      * Sets the userSecurityProfiles property value. The userSecurityProfiles property

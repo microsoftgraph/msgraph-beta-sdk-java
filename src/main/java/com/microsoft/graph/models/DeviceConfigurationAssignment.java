@@ -11,7 +11,7 @@ import java.util.Objects;
 public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /** The admin intent to apply or remove the profile. Possible values are: apply, remove. */
     private DeviceConfigAssignmentIntent _intent;
-    /** The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets. */
+    /** Represents source of assignment. */
     private DeviceAndAppManagementAssignmentSource _source;
     /** The identifier of the source of the assignment. This property is read-only. */
     private String _sourceId;
@@ -57,7 +57,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
         return this._intent;
     }
     /**
-     * Gets the source property value. The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
+     * Gets the source property value. Represents source of assignment.
      * @return a deviceAndAppManagementAssignmentSource
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
         this._intent = value;
     }
     /**
-     * Sets the source property value. The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
+     * Sets the source property value. Represents source of assignment.
      * @param value Value to set for the source property.
      * @return a void
      */

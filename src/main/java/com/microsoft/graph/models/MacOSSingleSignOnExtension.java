@@ -7,23 +7,33 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract base class for all macOS-specific single sign-on extension types. */
 public class MacOSSingleSignOnExtension extends SingleSignOnExtension implements Parsable {
     /**
-     * Instantiates a new macOSSingleSignOnExtension and sets the default values.
+     * Instantiates a new MacOSSingleSignOnExtension and sets the default values.
      * @return a void
      */
     public MacOSSingleSignOnExtension() {
         super();
+        this.setOdatatype("#microsoft.graph.macOSSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSSingleSignOnExtension
+     * @return a MacOSSingleSignOnExtension
      */
     @javax.annotation.Nonnull
     public static MacOSSingleSignOnExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.macOSAzureAdSingleSignOnExtension": return new MacOSAzureAdSingleSignOnExtension();
+                case "#microsoft.graph.macOSCredentialSingleSignOnExtension": return new MacOSCredentialSingleSignOnExtension();
+                case "#microsoft.graph.macOSKerberosSingleSignOnExtension": return new MacOSKerberosSingleSignOnExtension();
+                case "#microsoft.graph.macOSRedirectSingleSignOnExtension": return new MacOSRedirectSingleSignOnExtension();
+            }
+        }
         return new MacOSSingleSignOnExtension();
     }
     /**

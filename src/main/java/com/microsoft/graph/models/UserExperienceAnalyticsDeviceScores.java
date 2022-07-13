@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics device scores entity consolidates the various endpoint analytics scores. */
 public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsable {
     /** The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _appReliabilityScore;
@@ -17,7 +16,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     private String _deviceName;
     /** The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _endpointAnalyticsScore;
-    /** The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. */
+    /** The healthStatus property */
     private UserExperienceAnalyticsHealthState _healthStatus;
     /** The user experience analytics device manufacturer. */
     private String _manufacturer;
@@ -28,7 +27,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /** The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _workFromAnywhereScore;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceScores and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceScores and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceScores() {
@@ -37,7 +36,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScores createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -96,7 +95,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         }};
     }
     /**
-     * Gets the healthStatus property value. The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
@@ -186,7 +185,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         this._endpointAnalyticsScore = value;
     }
     /**
-     * Sets the healthStatus property value. The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */

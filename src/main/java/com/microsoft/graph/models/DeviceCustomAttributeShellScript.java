@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents a custom attribute script for macOS. */
 public class DeviceCustomAttributeShellScript extends Entity implements Parsable {
     /** The list of group assignments for the device management script. */
     private java.util.List<DeviceManagementScriptAssignment> _assignments;
@@ -16,7 +15,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
     private OffsetDateTime _createdDateTime;
     /** The name of the custom attribute. */
     private String _customAttributeName;
-    /** The expected type of the custom attribute's value. Possible values are: integer, string, dateTime. */
+    /** Represents the expected type for a macOS custom attribute script value. */
     private DeviceCustomAttributeValueType _customAttributeType;
     /** Optional description for the device management script. */
     private String _description;
@@ -32,7 +31,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
     private OffsetDateTime _lastModifiedDateTime;
     /** List of Scope Tag IDs for this PowerShellScript instance. */
     private java.util.List<String> _roleScopeTagIds;
-    /** Indicates the type of execution context. Possible values are: system, user. */
+    /** Indicates the type of execution context the app runs in. */
     private RunAsAccountType _runAsAccount;
     /** Run summary for device management script. */
     private DeviceManagementScriptRunSummary _runSummary;
@@ -41,7 +40,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
     /** List of run states for this script across all users. */
     private java.util.List<DeviceManagementScriptUserState> _userRunStates;
     /**
-     * Instantiates a new deviceCustomAttributeShellScript and sets the default values.
+     * Instantiates a new DeviceCustomAttributeShellScript and sets the default values.
      * @return a void
      */
     public DeviceCustomAttributeShellScript() {
@@ -50,7 +49,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCustomAttributeShellScript
+     * @return a DeviceCustomAttributeShellScript
      */
     @javax.annotation.Nonnull
     public static DeviceCustomAttributeShellScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +81,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
         return this._customAttributeName;
     }
     /**
-     * Gets the customAttributeType property value. The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
+     * Gets the customAttributeType property value. Represents the expected type for a macOS custom attribute script value.
      * @return a deviceCustomAttributeValueType
      */
     @javax.annotation.Nullable
@@ -171,7 +170,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
         return this._roleScopeTagIds;
     }
     /**
-     * Gets the runAsAccount property value. Indicates the type of execution context. Possible values are: system, user.
+     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return a runAsAccountType
      */
     @javax.annotation.Nullable
@@ -251,7 +250,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
         this._customAttributeName = value;
     }
     /**
-     * Sets the customAttributeType property value. The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
+     * Sets the customAttributeType property value. Represents the expected type for a macOS custom attribute script value.
      * @param value Value to set for the customAttributeType property.
      * @return a void
      */
@@ -315,7 +314,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
         this._roleScopeTagIds = value;
     }
     /**
-     * Sets the runAsAccount property value. Indicates the type of execution context. Possible values are: system, user.
+     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */

@@ -11,13 +11,13 @@ import java.util.Objects;
 public class ContentInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Possible values are: default, email. */
+    /** The format property */
     private ContentFormat _format;
     /** Identifier used for Azure Information Protection Analytics. */
     private String _identifier;
     /** Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName. */
     private java.util.List<KeyValuePair> _metadata;
-    /** Possible values are: rest, motion, use. */
+    /** The state property */
     private ContentState _state;
     /**
      * Instantiates a new contentInfo and sets the default values.
@@ -59,7 +59,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the format property value. Possible values are: default, email.
+     * Gets the format property value. The format property
      * @return a contentFormat
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         return this._metadata;
     }
     /**
-     * Gets the state property value. Possible values are: rest, motion, use.
+     * Gets the state property value. The state property
      * @return a contentState
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the format property value. Possible values are: default, email.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */
@@ -136,7 +136,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this._metadata = value;
     }
     /**
-     * Sets the state property value. Possible values are: rest, motion, use.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

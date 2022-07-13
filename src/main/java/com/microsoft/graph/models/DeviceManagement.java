@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Singleton entity that acts as a container for all device management functionality. */
 public class DeviceManagement extends Entity implements Parsable {
     /** The date & time when tenant data moved between scaleunits. */
     private OffsetDateTime _accountMoveCompletionDateTime;
@@ -218,9 +217,9 @@ public class DeviceManagement extends Entity implements Parsable {
     private DeviceManagementSettings _settings;
     /** The software update status summary. */
     private SoftwareUpdateStatusSummary _softwareUpdateStatusSummary;
-    /** Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB. */
+    /** Tenant mobile device management subscriptions. */
     private DeviceManagementSubscriptions _subscriptions;
-    /** Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut. */
+    /** Tenant mobile device management subscription state. */
     private DeviceManagementSubscriptionState _subscriptionState;
     /** The telecom expense management partners. */
     private java.util.List<TelecomExpenseManagementPartner> _telecomExpenseManagementPartners;
@@ -353,7 +352,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /** Collection of ZebraFotaDeployments associated with account. */
     private java.util.List<ZebraFotaDeployment> _zebraFotaDeployments;
     /**
-     * Instantiates a new deviceManagement and sets the default values.
+     * Instantiates a new DeviceManagement and sets the default values.
      * @return a void
      */
     public DeviceManagement() {
@@ -362,7 +361,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagement
+     * @return a DeviceManagement
      */
     @javax.annotation.Nonnull
     public static DeviceManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -1383,7 +1382,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this._softwareUpdateStatusSummary;
     }
     /**
-     * Gets the subscriptions property value. Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+     * Gets the subscriptions property value. Tenant mobile device management subscriptions.
      * @return a deviceManagementSubscriptions
      */
     @javax.annotation.Nullable
@@ -1391,7 +1390,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this._subscriptions;
     }
     /**
-     * Gets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Gets the subscriptionState property value. Tenant mobile device management subscription state.
      * @return a deviceManagementSubscriptionState
      */
     @javax.annotation.Nullable
@@ -2931,7 +2930,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this._softwareUpdateStatusSummary = value;
     }
     /**
-     * Sets the subscriptions property value. Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+     * Sets the subscriptions property value. Tenant mobile device management subscriptions.
      * @param value Value to set for the subscriptions property.
      * @return a void
      */
@@ -2939,7 +2938,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this._subscriptions = value;
     }
     /**
-     * Sets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Sets the subscriptionState property value. Tenant mobile device management subscription state.
      * @param value Value to set for the subscriptionState property.
      * @return a void
      */

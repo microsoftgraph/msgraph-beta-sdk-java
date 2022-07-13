@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** A rule controlling traffic through the Windows Firewall. */
 public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
-    /** The action the rule enforces. If not specified, the default is Allowed. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -18,11 +18,11 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     private String _description;
     /** The display name of the rule. Does not need to be unique. */
     private String _displayName;
-    /** Indicates whether edge traversal is enabled or disabled for this rule. The EdgeTraversal setting indicates that specific inbound traffic is allowed to tunnel through NATs and other edge devices using the Teredo tunneling technology. In order for this setting to work correctly, the application or service with the inbound firewall rule needs to support IPv6. The primary application of this setting allows listeners on the host to be globally addressable through a Teredo IPv6 address. New rules have the EdgeTraversal property disabled by default. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _edgeTraversal;
     /** The full file path of an app that's affected by the firewall rule. */
     private String _filePath;
-    /** The interface types of the rule. Possible values are: notConfigured, remoteAccess, wireless, lan. */
+    /** Flags representing firewall rule interface types. */
     private WindowsFirewallRuleInterfaceTypes _interfaceTypes;
     /** List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included. */
     private java.util.List<String> _localAddressRanges;
@@ -32,7 +32,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     private String _localUserAuthorizations;
     /** The package family name of a Microsoft Store application that's affected by the firewall rule. */
     private String _packageFamilyName;
-    /** Specifies the profiles to which the rule belongs. If not specified, the default is All. Possible values are: notConfigured, domain, private, public. */
+    /** Flags representing which network profile types apply to a firewall rule. */
     private WindowsFirewallRuleNetworkProfileTypes _profileTypes;
     /** 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255 */
     private Integer _protocol;
@@ -42,7 +42,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _remotePortRanges;
     /** The name used in cases when a service, not an application, is sending or receiving traffic. */
     private String _serviceName;
-    /** The traffic direction that the rule is enabled for. If not specified, the default is Out. Possible values are: notConfigured, out, in. */
+    /** Firewall rule traffic directions. */
     private WindowsFirewallRuleTrafficDirectionType _trafficDirection;
     /**
      * Instantiates a new windowsFirewallRule and sets the default values.
@@ -62,7 +62,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         return new WindowsFirewallRule();
     }
     /**
-     * Gets the action property value. The action the rule enforces. If not specified, the default is Allowed. Possible values are: notConfigured, blocked, allowed.
+     * Gets the action property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the edgeTraversal property value. Indicates whether edge traversal is enabled or disabled for this rule. The EdgeTraversal setting indicates that specific inbound traffic is allowed to tunnel through NATs and other edge devices using the Teredo tunneling technology. In order for this setting to work correctly, the application or service with the inbound firewall rule needs to support IPv6. The primary application of this setting allows listeners on the host to be globally addressable through a Teredo IPv6 address. New rules have the EdgeTraversal property disabled by default. Possible values are: notConfigured, blocked, allowed.
+     * Gets the edgeTraversal property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         return this._filePath;
     }
     /**
-     * Gets the interfaceTypes property value. The interface types of the rule. Possible values are: notConfigured, remoteAccess, wireless, lan.
+     * Gets the interfaceTypes property value. Flags representing firewall rule interface types.
      * @return a windowsFirewallRuleInterfaceTypes
      */
     @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         return this._packageFamilyName;
     }
     /**
-     * Gets the profileTypes property value. Specifies the profiles to which the rule belongs. If not specified, the default is All. Possible values are: notConfigured, domain, private, public.
+     * Gets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
      * @return a windowsFirewallRuleNetworkProfileTypes
      */
     @javax.annotation.Nullable
@@ -216,7 +216,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         return this._serviceName;
     }
     /**
-     * Gets the trafficDirection property value. The traffic direction that the rule is enabled for. If not specified, the default is Out. Possible values are: notConfigured, out, in.
+     * Gets the trafficDirection property value. Firewall rule traffic directions.
      * @return a windowsFirewallRuleTrafficDirectionType
      */
     @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action the rule enforces. If not specified, the default is Allowed. Possible values are: notConfigured, blocked, allowed.
+     * Sets the action property value. State Management Setting.
      * @param value Value to set for the action property.
      * @return a void
      */
@@ -281,7 +281,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the edgeTraversal property value. Indicates whether edge traversal is enabled or disabled for this rule. The EdgeTraversal setting indicates that specific inbound traffic is allowed to tunnel through NATs and other edge devices using the Teredo tunneling technology. In order for this setting to work correctly, the application or service with the inbound firewall rule needs to support IPv6. The primary application of this setting allows listeners on the host to be globally addressable through a Teredo IPv6 address. New rules have the EdgeTraversal property disabled by default. Possible values are: notConfigured, blocked, allowed.
+     * Sets the edgeTraversal property value. State Management Setting.
      * @param value Value to set for the edgeTraversal property.
      * @return a void
      */
@@ -297,7 +297,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         this._filePath = value;
     }
     /**
-     * Sets the interfaceTypes property value. The interface types of the rule. Possible values are: notConfigured, remoteAccess, wireless, lan.
+     * Sets the interfaceTypes property value. Flags representing firewall rule interface types.
      * @param value Value to set for the interfaceTypes property.
      * @return a void
      */
@@ -337,7 +337,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         this._packageFamilyName = value;
     }
     /**
-     * Sets the profileTypes property value. Specifies the profiles to which the rule belongs. If not specified, the default is All. Possible values are: notConfigured, domain, private, public.
+     * Sets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
      * @param value Value to set for the profileTypes property.
      * @return a void
      */
@@ -377,7 +377,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         this._serviceName = value;
     }
     /**
-     * Sets the trafficDirection property value. The traffic direction that the rule is enabled for. If not specified, the default is Out. Possible values are: notConfigured, out, in.
+     * Sets the trafficDirection property value. Firewall rule traffic directions.
      * @param value Value to set for the trafficDirection property.
      * @return a void
      */

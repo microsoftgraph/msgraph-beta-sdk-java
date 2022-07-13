@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics model scores entity consolidates the various endpoint analytics scores. */
 public class UserExperienceAnalyticsModelScores extends Entity implements Parsable {
     /** The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _appReliabilityScore;
@@ -15,7 +14,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
     private Double _batteryHealthScore;
     /** The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _endpointAnalyticsScore;
-    /** The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. */
+    /** The healthStatus property */
     private UserExperienceAnalyticsHealthState _healthStatus;
     /** A unique identifier of the user experience analytics model scores: device manufacturer. */
     private String _manufacturer;
@@ -28,7 +27,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
     /** The user experience analytics model work from anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _workFromAnywhereScore;
     /**
-     * Instantiates a new userExperienceAnalyticsModelScores and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsModelScores and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsModelScores() {
@@ -37,7 +36,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsModelScores
+     * @return a UserExperienceAnalyticsModelScores
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsModelScores createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +87,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         }};
     }
     /**
-     * Gets the healthStatus property value. The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
@@ -178,7 +177,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         this._endpointAnalyticsScore = value;
     }
     /**
-     * Sets the healthStatus property value. The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */

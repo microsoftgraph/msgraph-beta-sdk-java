@@ -86,7 +86,7 @@ public class ApplyRequestBuilder {
     /**
      * Invoke action apply
      * @param body 
-     * @return a CompletableFuture of ManagementActionDeploymentStatus
+     * @return a CompletableFuture of managementActionDeploymentStatus
      */
     public java.util.concurrent.CompletableFuture<ManagementActionDeploymentStatus> post(@javax.annotation.Nonnull final ApplyPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ApplyRequestBuilder {
      * Invoke action apply
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagementActionDeploymentStatus
+     * @return a CompletableFuture of managementActionDeploymentStatus
      */
     public java.util.concurrent.CompletableFuture<ManagementActionDeploymentStatus> post(@javax.annotation.Nonnull final ApplyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ApplyRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ApplyRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of ManagementActionDeploymentStatus
+     * @return a CompletableFuture of managementActionDeploymentStatus
      */
     public java.util.concurrent.CompletableFuture<ManagementActionDeploymentStatus> post(@javax.annotation.Nonnull final ApplyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ApplyRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

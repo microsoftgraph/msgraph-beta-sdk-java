@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
     private java.util.List<Channel> _allChannels;
@@ -30,7 +29,7 @@ public class Team extends Entity implements Parsable {
     private Group _group;
     /** Settings to configure whether guests can create, update, or delete channels in the team. */
     private TeamGuestSettings _guestSettings;
-    /** The incomingChannels property */
+    /** List of channels shared with the team. */
     private java.util.List<Channel> _incomingChannels;
     /** The apps installed in this team. */
     private java.util.List<TeamsAppInstallation> _installedApps;
@@ -211,7 +210,7 @@ public class Team extends Entity implements Parsable {
         return this._guestSettings;
     }
     /**
-     * Gets the incomingChannels property value. The incomingChannels property
+     * Gets the incomingChannels property value. List of channels shared with the team.
      * @return a channel
      */
     @javax.annotation.Nullable
@@ -499,7 +498,7 @@ public class Team extends Entity implements Parsable {
         this._guestSettings = value;
     }
     /**
-     * Sets the incomingChannels property value. The incomingChannels property
+     * Sets the incomingChannels property value. List of channels shared with the team.
      * @param value Value to set for the incomingChannels property.
      * @return a void
      */

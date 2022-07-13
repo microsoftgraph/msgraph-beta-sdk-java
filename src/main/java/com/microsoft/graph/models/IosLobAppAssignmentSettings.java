@@ -1,0 +1,107 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
+    /** Whether or not the app can be removed by the user. */
+    private Boolean _isRemovable;
+    /** Whether or not to uninstall the app when device is removed from Intune. */
+    private Boolean _uninstallOnDeviceRemoval;
+    /** The VPN Configuration Id to apply for this app. */
+    private String _vpnConfigurationId;
+    /**
+     * Instantiates a new IosLobAppAssignmentSettings and sets the default values.
+     * @return a void
+     */
+    public IosLobAppAssignmentSettings() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a IosLobAppAssignmentSettings
+     */
+    @javax.annotation.Nonnull
+    public static IosLobAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new IosLobAppAssignmentSettings();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final IosLobAppAssignmentSettings currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
+            this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
+            this.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the isRemovable property value. Whether or not the app can be removed by the user.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsRemovable() {
+        return this._isRemovable;
+    }
+    /**
+     * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getUninstallOnDeviceRemoval() {
+        return this._uninstallOnDeviceRemoval;
+    }
+    /**
+     * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getVpnConfigurationId() {
+        return this._vpnConfigurationId;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeBooleanValue("isRemovable", this.getIsRemovable());
+        writer.writeBooleanValue("uninstallOnDeviceRemoval", this.getUninstallOnDeviceRemoval());
+        writer.writeStringValue("vpnConfigurationId", this.getVpnConfigurationId());
+    }
+    /**
+     * Sets the isRemovable property value. Whether or not the app can be removed by the user.
+     * @param value Value to set for the isRemovable property.
+     * @return a void
+     */
+    public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
+        this._isRemovable = value;
+    }
+    /**
+     * Sets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
+     * @param value Value to set for the uninstallOnDeviceRemoval property.
+     * @return a void
+     */
+    public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
+        this._uninstallOnDeviceRemoval = value;
+    }
+    /**
+     * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * @param value Value to set for the vpnConfigurationId property.
+     * @return a void
+     */
+    public void setVpnConfigurationId(@javax.annotation.Nullable final String value) {
+        this._vpnConfigurationId = value;
+    }
+}

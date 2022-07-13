@@ -10,7 +10,7 @@ import java.util.Objects;
 public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /** Restrictions based on platform, platform operating system version, and device ownership */
     private DeviceEnrollmentPlatformRestriction _platformRestriction;
-    /** Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac. */
+    /** This enum indicates the platform type for which the enrollment restriction applies. */
     private EnrollmentRestrictionPlatformType _platformType;
     /**
      * Instantiates a new DeviceEnrollmentPlatformRestrictionConfiguration and sets the default values.
@@ -50,7 +50,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
         return this._platformRestriction;
     }
     /**
-     * Gets the platformType property value. Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
+     * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
      * @return a enrollmentRestrictionPlatformType
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
         this._platformRestriction = value;
     }
     /**
-     * Sets the platformType property value. Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
+     * Sets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
      * @param value Value to set for the platformType property.
      * @return a void
      */

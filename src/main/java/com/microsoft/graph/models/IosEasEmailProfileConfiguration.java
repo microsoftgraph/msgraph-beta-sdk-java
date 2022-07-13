@@ -20,13 +20,13 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     private Boolean _blockSyncingRecentlyUsedEmailAddresses;
     /** Tenant level settings for the Derived Credentials to be used for authentication. */
     private DeviceManagementDerivedCredentialSettings _derivedCredentialSettings;
-    /** Duration of time email should be synced back to. . Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited. */
+    /** Possible values for email sync duration. */
     private EmailSyncDuration _durationOfEmailToSync;
     /** Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders. */
     private EasServices _easServices;
     /** Allow users to change sync settings. */
     private Boolean _easServicesUserOverrideEnabled;
-    /** Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
+    /** Possible values for username source or email source. */
     private UserEmailSource _emailAddressSource;
     /** Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential. */
     private EmailCertificateType _encryptionCertificateType;
@@ -128,7 +128,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         return this._derivedCredentialSettings;
     }
     /**
-     * Gets the durationOfEmailToSync property value. Duration of time email should be synced back to. . Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
     @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         return this._easServicesUserOverrideEnabled;
     }
     /**
-     * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
     @javax.annotation.Nullable
@@ -417,7 +417,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         this._derivedCredentialSettings = value;
     }
     /**
-     * Sets the durationOfEmailToSync property value. Duration of time email should be synced back to. . Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
@@ -441,7 +441,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         this._easServicesUserOverrideEnabled = value;
     }
     /**
-     * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */

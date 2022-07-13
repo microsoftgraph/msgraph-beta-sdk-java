@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the tenantRelationship singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /** Identifier for the device compliance policy. Optional. Read-only. */
     private String _compliancePolicyId;

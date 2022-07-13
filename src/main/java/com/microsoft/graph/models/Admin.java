@@ -13,6 +13,8 @@ import microsoft.graph.models.windowsupdates.Windows;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The reportSettings property */
+    private AdminReportSettings _reportSettings;
     /** A container for service communications resources. Read-only. */
     private ServiceAnnouncement _serviceAnnouncement;
     /** A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive. */
@@ -51,11 +53,20 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Admin currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("reportSettings", (n) -> { currentObject.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
             this.put("serviceAnnouncement", (n) -> { currentObject.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
             this.put("sharepoint", (n) -> { currentObject.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
             this.put("windows", (n) -> { currentObject.setWindows(n.getObjectValue(Windows::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the reportSettings property value. The reportSettings property
+     * @return a adminReportSettings
+     */
+    @javax.annotation.Nullable
+    public AdminReportSettings getReportSettings() {
+        return this._reportSettings;
     }
     /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
@@ -88,6 +99,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("reportSettings", this.getReportSettings());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeObjectValue("sharepoint", this.getSharepoint());
         writer.writeObjectValue("windows", this.getWindows());
@@ -100,6 +112,14 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the reportSettings property value. The reportSettings property
+     * @param value Value to set for the reportSettings property.
+     * @return a void
+     */
+    public void setReportSettings(@javax.annotation.Nullable final AdminReportSettings value) {
+        this._reportSettings = value;
     }
     /**
      * Sets the serviceAnnouncement property value. A container for service communications resources. Read-only.

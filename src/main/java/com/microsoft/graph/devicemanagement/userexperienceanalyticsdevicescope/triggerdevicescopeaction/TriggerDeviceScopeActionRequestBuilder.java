@@ -86,7 +86,7 @@ public class TriggerDeviceScopeActionRequestBuilder {
     /**
      * Invoke action triggerDeviceScopeAction
      * @param body 
-     * @return a CompletableFuture of DeviceScopeActionResult
+     * @return a CompletableFuture of deviceScopeActionResult
      */
     public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class TriggerDeviceScopeActionRequestBuilder {
      * Invoke action triggerDeviceScopeAction
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceScopeActionResult
+     * @return a CompletableFuture of deviceScopeActionResult
      */
     public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class TriggerDeviceScopeActionRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of DeviceScopeActionResult
+     * @return a CompletableFuture of deviceScopeActionResult
      */
     public java.util.concurrent.CompletableFuture<DeviceScopeActionResult> post(@javax.annotation.Nonnull final TriggerDeviceScopeActionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<TriggerDeviceScopeActionRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

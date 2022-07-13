@@ -27,7 +27,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     private java.util.List<String> _includeGroups;
     /** The date and time the workload action was last deployed. Optional. */
     private OffsetDateTime _lastDeploymentDateTime;
-    /** The status of the workload action deployment. Possible values are: toAddress, completed, error, timeOut, inProgress, unknownFutureValue. Required. Read-only. */
+    /** The status property */
     private WorkloadActionStatus _status;
     /**
      * Instantiates a new workloadActionDeploymentStatus and sets the default values.
@@ -129,7 +129,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
         return this._lastDeploymentDateTime;
     }
     /**
-     * Gets the status property value. The status of the workload action deployment. Possible values are: toAddress, completed, error, timeOut, inProgress, unknownFutureValue. Required. Read-only.
+     * Gets the status property value. The status property
      * @return a workloadActionStatus
      */
     @javax.annotation.Nullable
@@ -218,7 +218,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
         this._lastDeploymentDateTime = value;
     }
     /**
-     * Sets the status property value. The status of the workload action deployment. Possible values are: toAddress, completed, error, timeOut, inProgress, unknownFutureValue. Required. Read-only.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

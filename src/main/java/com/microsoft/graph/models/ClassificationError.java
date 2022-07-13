@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the dataClassificationService singleton. */
 public class ClassificationError extends ClassifcationErrorBase implements Parsable {
     /** The details property */
     private java.util.List<ClassifcationErrorBase> _details;
     /**
-     * Instantiates a new classificationError and sets the default values.
+     * Instantiates a new ClassificationError and sets the default values.
      * @return a void
      */
     public ClassificationError() {
@@ -21,7 +20,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a classificationError
+     * @return a ClassificationError
      */
     @javax.annotation.Nonnull
     public static ClassificationError createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

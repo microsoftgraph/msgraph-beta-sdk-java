@@ -60,7 +60,7 @@ public class DeletedTeamsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class DeletedTeamsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class DeletedTeamsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @return a CompletableFuture of DeletedTeamCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DeletedTeamCollectionResponse> get() {
@@ -139,7 +139,7 @@ public class DeletedTeamsRequestBuilder {
         }
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeletedTeamCollectionResponse
      */
@@ -156,7 +156,7 @@ public class DeletedTeamsRequestBuilder {
         }
     }
     /**
-     * Get deletedTeams from teamwork
+     * A collection of deleted teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DeletedTeamCollectionResponse
@@ -236,7 +236,7 @@ public class DeletedTeamsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get deletedTeams from teamwork */
+    /** A collection of deleted teams. */
     public class DeletedTeamsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

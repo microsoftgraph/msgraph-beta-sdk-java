@@ -13,7 +13,7 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Provides the registration count for your tenant. */
     private Long _registrationCount;
-    /** Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered. */
+    /** The registrationStatus property */
     private RegistrationStatusType _registrationStatus;
     /**
      * Instantiates a new userRegistrationCount and sets the default values.
@@ -61,7 +61,7 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
         return this._registrationCount;
     }
     /**
-     * Gets the registrationStatus property value. Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered.
+     * Gets the registrationStatus property value. The registrationStatus property
      * @return a registrationStatusType
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
         this._registrationCount = value;
     }
     /**
-     * Sets the registrationStatus property value. Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered.
+     * Sets the registrationStatus property value. The registrationStatus property
      * @param value Value to set for the registrationStatus property.
      * @return a void
      */

@@ -81,7 +81,7 @@ public class GetOemWarrantyRequestBuilder {
     }
     /**
      * Invoke function getOemWarranty
-     * @return a CompletableFuture of OemWarranty
+     * @return a CompletableFuture of oemWarranty
      */
     public java.util.concurrent.CompletableFuture<OemWarranty> get() {
         try {
@@ -98,7 +98,7 @@ public class GetOemWarrantyRequestBuilder {
     /**
      * Invoke function getOemWarranty
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OemWarranty
+     * @return a CompletableFuture of oemWarranty
      */
     public java.util.concurrent.CompletableFuture<OemWarranty> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOemWarrantyRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class GetOemWarrantyRequestBuilder {
      * Invoke function getOemWarranty
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of OemWarranty
+     * @return a CompletableFuture of oemWarranty
      */
     public java.util.concurrent.CompletableFuture<OemWarranty> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOemWarrantyRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

@@ -81,7 +81,7 @@ public class GetAssignedRoleDetailsRequestBuilder {
     }
     /**
      * Retrieves the assigned role definitions and role assignments of the currently authenticated user.
-     * @return a CompletableFuture of DeviceAndAppManagementAssignedRoleDetails
+     * @return a CompletableFuture of deviceAndAppManagementAssignedRoleDetails
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignedRoleDetails> get() {
         try {
@@ -98,7 +98,7 @@ public class GetAssignedRoleDetailsRequestBuilder {
     /**
      * Retrieves the assigned role definitions and role assignments of the currently authenticated user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceAndAppManagementAssignedRoleDetails
+     * @return a CompletableFuture of deviceAndAppManagementAssignedRoleDetails
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignedRoleDetails> get(@javax.annotation.Nullable final java.util.function.Consumer<GetAssignedRoleDetailsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class GetAssignedRoleDetailsRequestBuilder {
      * Retrieves the assigned role definitions and role assignments of the currently authenticated user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of DeviceAndAppManagementAssignedRoleDetails
+     * @return a CompletableFuture of deviceAndAppManagementAssignedRoleDetails
      */
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignedRoleDetails> get(@javax.annotation.Nullable final java.util.function.Consumer<GetAssignedRoleDetailsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

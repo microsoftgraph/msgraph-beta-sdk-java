@@ -23,7 +23,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     private String _settingName;
     /** The policies that contribute to this setting instance */
     private java.util.List<SettingSource> _sourcePolicies;
-    /** The compliance state of the security baseline setting */
+    /** Security Baseline Compliance State */
     private SecurityBaselineComplianceState _state;
     /**
      * Instantiates a new securityBaselineSettingState and sets the default values.
@@ -117,7 +117,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
         return this._sourcePolicies;
     }
     /**
-     * Gets the state property value. The compliance state of the security baseline setting
+     * Gets the state property value. Security Baseline Compliance State
      * @return a securityBaselineComplianceState
      */
     @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
         this._sourcePolicies = value;
     }
     /**
-     * Sets the state property value. The compliance state of the security baseline setting
+     * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      * @return a void
      */

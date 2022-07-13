@@ -12,9 +12,9 @@ import java.util.Objects;
 public class AdminConsent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The admin consent state of sharing user and device data to Apple. Possible values are: notConfigured, granted, notGranted. */
+    /** Admin consent state. */
     private AdminConsentState _shareAPNSData;
-    /** Gets or sets the admin consent for sharing User experience analytics data. Possible values are: notConfigured, granted, notGranted. */
+    /** Admin consent state. */
     private AdminConsentState _shareUserExperienceAnalyticsData;
     /**
      * Instantiates a new adminConsent and sets the default values.
@@ -54,7 +54,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the shareAPNSData property value. The admin consent state of sharing user and device data to Apple. Possible values are: notConfigured, granted, notGranted.
+     * Gets the shareAPNSData property value. Admin consent state.
      * @return a adminConsentState
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
         return this._shareAPNSData;
     }
     /**
-     * Gets the shareUserExperienceAnalyticsData property value. Gets or sets the admin consent for sharing User experience analytics data. Possible values are: notConfigured, granted, notGranted.
+     * Gets the shareUserExperienceAnalyticsData property value. Admin consent state.
      * @return a adminConsentState
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the shareAPNSData property value. The admin consent state of sharing user and device data to Apple. Possible values are: notConfigured, granted, notGranted.
+     * Sets the shareAPNSData property value. Admin consent state.
      * @param value Value to set for the shareAPNSData property.
      * @return a void
      */
@@ -97,7 +97,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
         this._shareAPNSData = value;
     }
     /**
-     * Sets the shareUserExperienceAnalyticsData property value. Gets or sets the admin consent for sharing User experience analytics data. Possible values are: notConfigured, granted, notGranted.
+     * Sets the shareUserExperienceAnalyticsData property value. Admin consent state.
      * @param value Value to set for the shareUserExperienceAnalyticsData property.
      * @return a void
      */

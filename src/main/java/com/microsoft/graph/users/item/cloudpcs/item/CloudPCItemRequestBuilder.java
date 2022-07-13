@@ -18,6 +18,7 @@ import microsoft.graph.models.CloudPC;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
+import microsoft.graph.users.item.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.rename.RenameRequestBuilder;
@@ -279,6 +280,14 @@ public class CloudPCItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getCloudPcConnectivityHistory method.
+     * @return a getCloudPcConnectivityHistoryRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetCloudPcConnectivityHistoryRequestBuilder getCloudPcConnectivityHistory() {
+        return new GetCloudPcConnectivityHistoryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getCloudPcLaunchInfo method.

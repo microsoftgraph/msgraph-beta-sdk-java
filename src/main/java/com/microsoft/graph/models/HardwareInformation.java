@@ -16,18 +16,26 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     private Integer _batteryChargeCycles;
     /** The device’s current battery’s health percentage. Valid values 0 to 100 */
     private Integer _batteryHealthPercentage;
+    /** The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100 */
+    private Double _batteryLevelPercentage;
     /** The serial number of the device’s current battery */
     private String _batterySerialNumber;
     /** Cellular technology of the device */
     private String _cellularTechnology;
     /** Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. */
     private String _deviceFullQualifiedDomainName;
-    /** Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning. */
+    /** The deviceGuardLocalSystemAuthorityCredentialGuardState property */
     private DeviceGuardLocalSystemAuthorityCredentialGuardState _deviceGuardLocalSystemAuthorityCredentialGuardState;
-    /** Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable. */
+    /** The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property */
     private DeviceGuardVirtualizationBasedSecurityHardwareRequirementState _deviceGuardVirtualizationBasedSecurityHardwareRequirementState;
-    /** Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other. */
+    /** The deviceGuardVirtualizationBasedSecurityState property */
     private DeviceGuardVirtualizationBasedSecurityState _deviceGuardVirtualizationBasedSecurityState;
+    /** A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647 */
+    private Integer _deviceLicensingLastErrorCode;
+    /** Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. */
+    private String _deviceLicensingLastErrorDescription;
+    /** Indicates the device licensing status after Windows device based subscription has been enabled. */
+    private DeviceLicensingStatus _deviceLicensingStatus;
     /** eSIM identifier */
     private String _esimIdentifier;
     /** Free storage space of the device. */
@@ -58,6 +66,10 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     private String _osBuildNumber;
     /** Phone number of the device */
     private String _phoneNumber;
+    /** The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained. */
+    private String _productName;
+    /** The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647 */
+    private Integer _residentUsersCount;
     /** Serial number. */
     private String _serialNumber;
     /** All users on the shared Apple device */
@@ -78,6 +90,8 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     private String _tpmVersion;
     /** WiFi MAC address of the device */
     private String _wifiMac;
+    /** A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows. */
+    private java.util.List<String> _wiredIPv4Addresses;
     /**
      * Instantiates a new hardwareInformation and sets the default values.
      * @return a void
@@ -120,6 +134,14 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._batteryHealthPercentage;
     }
     /**
+     * Gets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
+     * @return a double
+     */
+    @javax.annotation.Nullable
+    public Double getBatteryLevelPercentage() {
+        return this._batteryLevelPercentage;
+    }
+    /**
      * Gets the batterySerialNumber property value. The serial number of the device’s current battery
      * @return a string
      */
@@ -144,7 +166,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._deviceFullQualifiedDomainName;
     }
     /**
-     * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning.
+     * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
      * @return a deviceGuardLocalSystemAuthorityCredentialGuardState
      */
     @javax.annotation.Nullable
@@ -152,7 +174,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._deviceGuardLocalSystemAuthorityCredentialGuardState;
     }
     /**
-     * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable.
+     * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
      * @return a deviceGuardVirtualizationBasedSecurityHardwareRequirementState
      */
     @javax.annotation.Nullable
@@ -160,12 +182,36 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._deviceGuardVirtualizationBasedSecurityHardwareRequirementState;
     }
     /**
-     * Gets the deviceGuardVirtualizationBasedSecurityState property value. Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other.
+     * Gets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
      * @return a deviceGuardVirtualizationBasedSecurityState
      */
     @javax.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityState getDeviceGuardVirtualizationBasedSecurityState() {
         return this._deviceGuardVirtualizationBasedSecurityState;
+    }
+    /**
+     * Gets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getDeviceLicensingLastErrorCode() {
+        return this._deviceLicensingLastErrorCode;
+    }
+    /**
+     * Gets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDeviceLicensingLastErrorDescription() {
+        return this._deviceLicensingLastErrorDescription;
+    }
+    /**
+     * Gets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
+     * @return a deviceLicensingStatus
+     */
+    @javax.annotation.Nullable
+    public DeviceLicensingStatus getDeviceLicensingStatus() {
+        return this._deviceLicensingStatus;
     }
     /**
      * Gets the esimIdentifier property value. eSIM identifier
@@ -182,15 +228,19 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HardwareInformation currentObject = this;
-        return new HashMap<>(33) {{
+        return new HashMap<>(40) {{
             this.put("batteryChargeCycles", (n) -> { currentObject.setBatteryChargeCycles(n.getIntegerValue()); });
             this.put("batteryHealthPercentage", (n) -> { currentObject.setBatteryHealthPercentage(n.getIntegerValue()); });
+            this.put("batteryLevelPercentage", (n) -> { currentObject.setBatteryLevelPercentage(n.getDoubleValue()); });
             this.put("batterySerialNumber", (n) -> { currentObject.setBatterySerialNumber(n.getStringValue()); });
             this.put("cellularTechnology", (n) -> { currentObject.setCellularTechnology(n.getStringValue()); });
             this.put("deviceFullQualifiedDomainName", (n) -> { currentObject.setDeviceFullQualifiedDomainName(n.getStringValue()); });
             this.put("deviceGuardLocalSystemAuthorityCredentialGuardState", (n) -> { currentObject.setDeviceGuardLocalSystemAuthorityCredentialGuardState(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardState.class)); });
             this.put("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", (n) -> { currentObject.setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(n.getEnumValue(DeviceGuardVirtualizationBasedSecurityHardwareRequirementState.class)); });
             this.put("deviceGuardVirtualizationBasedSecurityState", (n) -> { currentObject.setDeviceGuardVirtualizationBasedSecurityState(n.getEnumValue(DeviceGuardVirtualizationBasedSecurityState.class)); });
+            this.put("deviceLicensingLastErrorCode", (n) -> { currentObject.setDeviceLicensingLastErrorCode(n.getIntegerValue()); });
+            this.put("deviceLicensingLastErrorDescription", (n) -> { currentObject.setDeviceLicensingLastErrorDescription(n.getStringValue()); });
+            this.put("deviceLicensingStatus", (n) -> { currentObject.setDeviceLicensingStatus(n.getEnumValue(DeviceLicensingStatus.class)); });
             this.put("esimIdentifier", (n) -> { currentObject.setEsimIdentifier(n.getStringValue()); });
             this.put("freeStorageSpace", (n) -> { currentObject.setFreeStorageSpace(n.getLongValue()); });
             this.put("imei", (n) -> { currentObject.setImei(n.getStringValue()); });
@@ -206,6 +256,8 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
             this.put("operatingSystemProductType", (n) -> { currentObject.setOperatingSystemProductType(n.getIntegerValue()); });
             this.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
             this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
+            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
+            this.put("residentUsersCount", (n) -> { currentObject.setResidentUsersCount(n.getIntegerValue()); });
             this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
             this.put("sharedDeviceCachedUsers", (n) -> { currentObject.setSharedDeviceCachedUsers(n.getCollectionOfObjectValues(SharedAppleDeviceUser::createFromDiscriminatorValue)); });
             this.put("subnetAddress", (n) -> { currentObject.setSubnetAddress(n.getStringValue()); });
@@ -216,6 +268,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
             this.put("tpmSpecificationVersion", (n) -> { currentObject.setTpmSpecificationVersion(n.getStringValue()); });
             this.put("tpmVersion", (n) -> { currentObject.setTpmVersion(n.getStringValue()); });
             this.put("wifiMac", (n) -> { currentObject.setWifiMac(n.getStringValue()); });
+            this.put("wiredIPv4Addresses", (n) -> { currentObject.setWiredIPv4Addresses(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
@@ -331,6 +384,22 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._phoneNumber;
     }
     /**
+     * Gets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getProductName() {
+        return this._productName;
+    }
+    /**
+     * Gets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getResidentUsersCount() {
+        return this._residentUsersCount;
+    }
+    /**
      * Gets the serialNumber property value. Serial number.
      * @return a string
      */
@@ -411,6 +480,14 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._wifiMac;
     }
     /**
+     * Gets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getWiredIPv4Addresses() {
+        return this._wiredIPv4Addresses;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -419,12 +496,16 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("batteryChargeCycles", this.getBatteryChargeCycles());
         writer.writeIntegerValue("batteryHealthPercentage", this.getBatteryHealthPercentage());
+        writer.writeDoubleValue("batteryLevelPercentage", this.getBatteryLevelPercentage());
         writer.writeStringValue("batterySerialNumber", this.getBatterySerialNumber());
         writer.writeStringValue("cellularTechnology", this.getCellularTechnology());
         writer.writeStringValue("deviceFullQualifiedDomainName", this.getDeviceFullQualifiedDomainName());
         writer.writeEnumValue("deviceGuardLocalSystemAuthorityCredentialGuardState", this.getDeviceGuardLocalSystemAuthorityCredentialGuardState());
         writer.writeEnumValue("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", this.getDeviceGuardVirtualizationBasedSecurityHardwareRequirementState());
         writer.writeEnumValue("deviceGuardVirtualizationBasedSecurityState", this.getDeviceGuardVirtualizationBasedSecurityState());
+        writer.writeIntegerValue("deviceLicensingLastErrorCode", this.getDeviceLicensingLastErrorCode());
+        writer.writeStringValue("deviceLicensingLastErrorDescription", this.getDeviceLicensingLastErrorDescription());
+        writer.writeEnumValue("deviceLicensingStatus", this.getDeviceLicensingStatus());
         writer.writeStringValue("esimIdentifier", this.getEsimIdentifier());
         writer.writeLongValue("freeStorageSpace", this.getFreeStorageSpace());
         writer.writeStringValue("imei", this.getImei());
@@ -440,6 +521,8 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("operatingSystemProductType", this.getOperatingSystemProductType());
         writer.writeStringValue("osBuildNumber", this.getOsBuildNumber());
         writer.writeStringValue("phoneNumber", this.getPhoneNumber());
+        writer.writeStringValue("productName", this.getProductName());
+        writer.writeIntegerValue("residentUsersCount", this.getResidentUsersCount());
         writer.writeStringValue("serialNumber", this.getSerialNumber());
         writer.writeCollectionOfObjectValues("sharedDeviceCachedUsers", this.getSharedDeviceCachedUsers());
         writer.writeStringValue("subnetAddress", this.getSubnetAddress());
@@ -450,6 +533,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("tpmSpecificationVersion", this.getTpmSpecificationVersion());
         writer.writeStringValue("tpmVersion", this.getTpmVersion());
         writer.writeStringValue("wifiMac", this.getWifiMac());
+        writer.writeCollectionOfPrimitiveValues("wiredIPv4Addresses", this.getWiredIPv4Addresses());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -477,6 +561,14 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._batteryHealthPercentage = value;
     }
     /**
+     * Sets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
+     * @param value Value to set for the batteryLevelPercentage property.
+     * @return a void
+     */
+    public void setBatteryLevelPercentage(@javax.annotation.Nullable final Double value) {
+        this._batteryLevelPercentage = value;
+    }
+    /**
      * Sets the batterySerialNumber property value. The serial number of the device’s current battery
      * @param value Value to set for the batterySerialNumber property.
      * @return a void
@@ -501,7 +593,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._deviceFullQualifiedDomainName = value;
     }
     /**
-     * Sets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning.
+     * Sets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
      * @param value Value to set for the deviceGuardLocalSystemAuthorityCredentialGuardState property.
      * @return a void
      */
@@ -509,7 +601,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._deviceGuardLocalSystemAuthorityCredentialGuardState = value;
     }
     /**
-     * Sets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable.
+     * Sets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property.
      * @return a void
      */
@@ -517,12 +609,36 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._deviceGuardVirtualizationBasedSecurityHardwareRequirementState = value;
     }
     /**
-     * Sets the deviceGuardVirtualizationBasedSecurityState property value. Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other.
+     * Sets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityState property.
      * @return a void
      */
     public void setDeviceGuardVirtualizationBasedSecurityState(@javax.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityState value) {
         this._deviceGuardVirtualizationBasedSecurityState = value;
+    }
+    /**
+     * Sets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
+     * @param value Value to set for the deviceLicensingLastErrorCode property.
+     * @return a void
+     */
+    public void setDeviceLicensingLastErrorCode(@javax.annotation.Nullable final Integer value) {
+        this._deviceLicensingLastErrorCode = value;
+    }
+    /**
+     * Sets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
+     * @param value Value to set for the deviceLicensingLastErrorDescription property.
+     * @return a void
+     */
+    public void setDeviceLicensingLastErrorDescription(@javax.annotation.Nullable final String value) {
+        this._deviceLicensingLastErrorDescription = value;
+    }
+    /**
+     * Sets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
+     * @param value Value to set for the deviceLicensingStatus property.
+     * @return a void
+     */
+    public void setDeviceLicensingStatus(@javax.annotation.Nullable final DeviceLicensingStatus value) {
+        this._deviceLicensingStatus = value;
     }
     /**
      * Sets the esimIdentifier property value. eSIM identifier
@@ -645,6 +761,22 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._phoneNumber = value;
     }
     /**
+     * Sets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
+     * @param value Value to set for the productName property.
+     * @return a void
+     */
+    public void setProductName(@javax.annotation.Nullable final String value) {
+        this._productName = value;
+    }
+    /**
+     * Sets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
+     * @param value Value to set for the residentUsersCount property.
+     * @return a void
+     */
+    public void setResidentUsersCount(@javax.annotation.Nullable final Integer value) {
+        this._residentUsersCount = value;
+    }
+    /**
      * Sets the serialNumber property value. Serial number.
      * @param value Value to set for the serialNumber property.
      * @return a void
@@ -723,5 +855,13 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      */
     public void setWifiMac(@javax.annotation.Nullable final String value) {
         this._wifiMac = value;
+    }
+    /**
+     * Sets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
+     * @param value Value to set for the wiredIPv4Addresses property.
+     * @return a void
+     */
+    public void setWiredIPv4Addresses(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._wiredIPv4Addresses = value;
     }
 }

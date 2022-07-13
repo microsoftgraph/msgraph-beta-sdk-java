@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcServicePlan extends Entity implements Parsable {
     /** The name for the service plan. Read-only. */
     private String _displayName;
@@ -15,14 +14,12 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     private Integer _ramInGB;
     /** The size of the OS Disk in GB. Read-only. */
     private Integer _storageInGB;
-    /** The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only. */
-    private CloudPcServicePlanType _type;
     /** The size of the user profile disk in GB. Read-only. */
     private Integer _userProfileInGB;
     /** The number of vCPUs. Read-only. */
     private Integer _vCpuCount;
     /**
-     * Instantiates a new cloudPcServicePlan and sets the default values.
+     * Instantiates a new CloudPcServicePlan and sets the default values.
      * @return a void
      */
     public CloudPcServicePlan() {
@@ -31,7 +28,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcServicePlan
+     * @return a CloudPcServicePlan
      */
     @javax.annotation.Nonnull
     public static CloudPcServicePlan createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +54,6 @@ public class CloudPcServicePlan extends Entity implements Parsable {
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("ramInGB", (n) -> { currentObject.setRamInGB(n.getIntegerValue()); });
             this.put("storageInGB", (n) -> { currentObject.setStorageInGB(n.getIntegerValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CloudPcServicePlanType.class)); });
             this.put("userProfileInGB", (n) -> { currentObject.setUserProfileInGB(n.getIntegerValue()); });
             this.put("vCpuCount", (n) -> { currentObject.setVCpuCount(n.getIntegerValue()); });
         }};
@@ -77,14 +73,6 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Integer getStorageInGB() {
         return this._storageInGB;
-    }
-    /**
-     * Gets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
-     * @return a cloudPcServicePlanType
-     */
-    @javax.annotation.Nullable
-    public CloudPcServicePlanType getType() {
-        return this._type;
     }
     /**
      * Gets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
@@ -113,7 +101,6 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeIntegerValue("ramInGB", this.getRamInGB());
         writer.writeIntegerValue("storageInGB", this.getStorageInGB());
-        writer.writeEnumValue("type", this.getType());
         writer.writeIntegerValue("userProfileInGB", this.getUserProfileInGB());
         writer.writeIntegerValue("vCpuCount", this.getVCpuCount());
     }
@@ -140,14 +127,6 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     public void setStorageInGB(@javax.annotation.Nullable final Integer value) {
         this._storageInGB = value;
-    }
-    /**
-     * Sets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final CloudPcServicePlanType value) {
-        this._type = value;
     }
     /**
      * Sets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.

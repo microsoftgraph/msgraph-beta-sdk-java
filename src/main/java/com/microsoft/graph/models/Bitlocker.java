@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class Bitlocker extends Entity implements Parsable {
     /** The recovery keys associated with the bitlocker entity. */
     private java.util.List<BitlockerRecoveryKey> _recoveryKeys;

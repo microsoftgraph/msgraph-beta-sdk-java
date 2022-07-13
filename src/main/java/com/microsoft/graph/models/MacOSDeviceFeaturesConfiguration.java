@@ -34,7 +34,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     private Boolean _contentCachingBlockDeletion;
     /** A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements. */
     private java.util.List<IpRange> _contentCachingClientListenRanges;
-    /** Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback. */
+    /** Determines which clients a content cache will serve. */
     private MacOSContentCachingClientPolicy _contentCachingClientPolicy;
     /** The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data */
     private String _contentCachingDataPath;
@@ -52,13 +52,13 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     private Long _contentCachingMaxSizeBytes;
     /** A list of IP addresses representing parent content caches. */
     private java.util.List<String> _contentCachingParents;
-    /** Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable. */
+    /** Determines how content caches select a parent cache. */
     private MacOSContentCachingParentSelectionPolicy _contentCachingParentSelectionPolicy;
     /** A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements. */
     private java.util.List<IpRange> _contentCachingPeerFilterRanges;
     /** A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements. */
     private java.util.List<IpRange> _contentCachingPeerListenRanges;
-    /** Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks. */
+    /** Determines which content caches other content caches will peer with. */
     private MacOSContentCachingPeerPolicy _contentCachingPeerPolicy;
     /** Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535 */
     private Integer _contentCachingPort;
@@ -66,7 +66,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     private java.util.List<IpRange> _contentCachingPublicRanges;
     /** Display content caching alerts as system notifications. */
     private Boolean _contentCachingShowAlerts;
-    /** Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly. */
+    /** Indicates the type of content allowed to be cached by Apple's content caching service. */
     private MacOSContentCachingType _contentCachingType;
     /** Custom text to be displayed on the login window. */
     private String _loginWindowText;
@@ -214,7 +214,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this._contentCachingClientListenRanges;
     }
     /**
-     * Gets the contentCachingClientPolicy property value. Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
+     * Gets the contentCachingClientPolicy property value. Determines which clients a content cache will serve.
      * @return a macOSContentCachingClientPolicy
      */
     @javax.annotation.Nullable
@@ -286,7 +286,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this._contentCachingParents;
     }
     /**
-     * Gets the contentCachingParentSelectionPolicy property value. Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
+     * Gets the contentCachingParentSelectionPolicy property value. Determines how content caches select a parent cache.
      * @return a macOSContentCachingParentSelectionPolicy
      */
     @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this._contentCachingPeerListenRanges;
     }
     /**
-     * Gets the contentCachingPeerPolicy property value. Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
+     * Gets the contentCachingPeerPolicy property value. Determines which content caches other content caches will peer with.
      * @return a macOSContentCachingPeerPolicy
      */
     @javax.annotation.Nullable
@@ -342,7 +342,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this._contentCachingShowAlerts;
     }
     /**
-     * Gets the contentCachingType property value. Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
+     * Gets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
      * @return a macOSContentCachingType
      */
     @javax.annotation.Nullable
@@ -653,7 +653,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this._contentCachingClientListenRanges = value;
     }
     /**
-     * Sets the contentCachingClientPolicy property value. Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
+     * Sets the contentCachingClientPolicy property value. Determines which clients a content cache will serve.
      * @param value Value to set for the contentCachingClientPolicy property.
      * @return a void
      */
@@ -725,7 +725,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this._contentCachingParents = value;
     }
     /**
-     * Sets the contentCachingParentSelectionPolicy property value. Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
+     * Sets the contentCachingParentSelectionPolicy property value. Determines how content caches select a parent cache.
      * @param value Value to set for the contentCachingParentSelectionPolicy property.
      * @return a void
      */
@@ -749,7 +749,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this._contentCachingPeerListenRanges = value;
     }
     /**
-     * Sets the contentCachingPeerPolicy property value. Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
+     * Sets the contentCachingPeerPolicy property value. Determines which content caches other content caches will peer with.
      * @param value Value to set for the contentCachingPeerPolicy property.
      * @return a void
      */
@@ -781,7 +781,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this._contentCachingShowAlerts = value;
     }
     /**
-     * Sets the contentCachingType property value. Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
+     * Sets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
      * @param value Value to set for the contentCachingType property.
      * @return a void
      */

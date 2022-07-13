@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
 public class ApplicationSignInDetailedSummary extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _aggregatedEventDateTime;
@@ -21,7 +20,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     /** Details of the sign-in status. */
     private SignInStatus _status;
     /**
-     * Instantiates a new applicationSignInDetailedSummary and sets the default values.
+     * Instantiates a new ApplicationSignInDetailedSummary and sets the default values.
      * @return a void
      */
     public ApplicationSignInDetailedSummary() {
@@ -30,7 +29,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationSignInDetailedSummary
+     * @return a ApplicationSignInDetailedSummary
      */
     @javax.annotation.Nonnull
     public static ApplicationSignInDetailedSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class BaseTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;
@@ -21,6 +20,7 @@ public class BaseTaskList extends Entity implements Parsable {
      */
     public BaseTaskList() {
         super();
+        this.setOdatatype("#microsoft.graph.baseTaskList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

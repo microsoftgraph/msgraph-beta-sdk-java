@@ -11,15 +11,15 @@ import java.util.Objects;
 public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray. */
+    /** Data types for rules. */
     private DataType _dataType;
-    /** Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray. */
+    /** Data types for rules. */
     private DeviceComplianceScriptRuleDataType _deviceComplianceScriptRuleDataType;
-    /** Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll. */
+    /** Operator for rules. */
     private DeviceComplianceScriptRulOperator _deviceComplianceScriptRulOperator;
     /** Operand specified in the rule. */
     private String _operand;
-    /** Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll. */
+    /** Operator for rules. */
     private Operator _operator;
     /** Setting name specified in the rule. */
     private String _settingName;
@@ -49,7 +49,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         return this._additionalData;
     }
     /**
-     * Gets the dataType property value. Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
+     * Gets the dataType property value. Data types for rules.
      * @return a dataType
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         return this._dataType;
     }
     /**
-     * Gets the deviceComplianceScriptRuleDataType property value. Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
+     * Gets the deviceComplianceScriptRuleDataType property value. Data types for rules.
      * @return a deviceComplianceScriptRuleDataType
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         return this._deviceComplianceScriptRuleDataType;
     }
     /**
-     * Gets the deviceComplianceScriptRulOperator property value. Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
+     * Gets the deviceComplianceScriptRulOperator property value. Operator for rules.
      * @return a deviceComplianceScriptRulOperator
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         return this._operand;
     }
     /**
-     * Gets the operator property value. Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
+     * Gets the operator property value. Operator for rules.
      * @return a operator
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         this._additionalData = value;
     }
     /**
-     * Sets the dataType property value. Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
+     * Sets the dataType property value. Data types for rules.
      * @param value Value to set for the dataType property.
      * @return a void
      */
@@ -144,7 +144,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         this._dataType = value;
     }
     /**
-     * Sets the deviceComplianceScriptRuleDataType property value. Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
+     * Sets the deviceComplianceScriptRuleDataType property value. Data types for rules.
      * @param value Value to set for the deviceComplianceScriptRuleDataType property.
      * @return a void
      */
@@ -152,7 +152,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         this._deviceComplianceScriptRuleDataType = value;
     }
     /**
-     * Sets the deviceComplianceScriptRulOperator property value. Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
+     * Sets the deviceComplianceScriptRulOperator property value. Operator for rules.
      * @param value Value to set for the deviceComplianceScriptRulOperator property.
      * @return a void
      */
@@ -168,7 +168,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         this._operand = value;
     }
     /**
-     * Sets the operator property value. Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
+     * Sets the operator property value. Operator for rules.
      * @param value Value to set for the operator property.
      * @return a void
      */

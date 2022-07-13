@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class UserTeamwork extends Entity implements Parsable {
     /** The list of associatedTeamInfo objects that a user is associated with. */
     private java.util.List<AssociatedTeamInfo> _associatedTeams;

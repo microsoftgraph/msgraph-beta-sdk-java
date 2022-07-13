@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The depOnboardingSetting represents an instance of the Apple DEP service being onboarded to Intune. The onboarded service instance manages an Apple Token used to synchronize data between Apple and Intune. */
 public class DepOnboardingSetting extends Entity implements Parsable {
     /** The Apple ID used to obtain the current token. */
     private String _appleIdentifier;
@@ -40,10 +39,10 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     private OffsetDateTime _tokenExpirationDateTime;
     /** Friendly Name for Dep Token */
     private String _tokenName;
-    /** Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager. */
+    /** The tokenType property */
     private DepTokenType _tokenType;
     /**
-     * Instantiates a new depOnboardingSetting and sets the default values.
+     * Instantiates a new DepOnboardingSetting and sets the default values.
      * @return a void
      */
     public DepOnboardingSetting() {
@@ -52,7 +51,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depOnboardingSetting
+     * @return a DepOnboardingSetting
      */
     @javax.annotation.Nonnull
     public static DepOnboardingSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -206,7 +205,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
         return this._tokenName;
     }
     /**
-     * Gets the tokenType property value. Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
+     * Gets the tokenType property value. The tokenType property
      * @return a depTokenType
      */
     @javax.annotation.Nullable
@@ -359,7 +358,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
         this._tokenName = value;
     }
     /**
-     * Sets the tokenType property value. Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
+     * Sets the tokenType property value. The tokenType property
      * @param value Value to set for the tokenType property.
      * @return a void
      */

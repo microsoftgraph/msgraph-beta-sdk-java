@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum OnlineMeetingPresenters implements ValuedEnum {
     Everyone("everyone"),
     Organization("organization"),

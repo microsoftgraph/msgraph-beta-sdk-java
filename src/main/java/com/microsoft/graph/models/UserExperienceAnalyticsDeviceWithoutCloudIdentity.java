@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics Device without Cloud Identity. */
 public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity implements Parsable {
     /** Azure Active Directory Device Id */
     private String _azureAdDeviceId;
     /** The tenant attach device's name. */
     private String _deviceName;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceWithoutCloudIdentity() {
@@ -23,7 +22,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceWithoutCloudIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

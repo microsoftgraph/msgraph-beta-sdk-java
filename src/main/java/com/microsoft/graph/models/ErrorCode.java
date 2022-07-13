@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceAppManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum ErrorCode implements ValuedEnum {
     /** Default Value to indicate no error. */
     NoError("noError"),

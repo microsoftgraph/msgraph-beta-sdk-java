@@ -12,7 +12,7 @@ import java.util.Objects;
 public class DeviceManagementSettingComparison implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Setting comparison result. Possible values are: unknown, equal, notEqual, added, removed. */
+    /** Setting comparison result type */
     private DeviceManagementComparisonResult _comparisonResult;
     /** JSON representation of current intent (or) template setting's value */
     private String _currentValueJson;
@@ -50,7 +50,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         return this._additionalData;
     }
     /**
-     * Gets the comparisonResult property value. Setting comparison result. Possible values are: unknown, equal, notEqual, added, removed.
+     * Gets the comparisonResult property value. Setting comparison result type
      * @return a deviceManagementComparisonResult
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         this._additionalData = value;
     }
     /**
-     * Sets the comparisonResult property value. Setting comparison result. Possible values are: unknown, equal, notEqual, added, removed.
+     * Sets the comparisonResult property value. Setting comparison result type
      * @param value Value to set for the comparisonResult property.
      * @return a void
      */

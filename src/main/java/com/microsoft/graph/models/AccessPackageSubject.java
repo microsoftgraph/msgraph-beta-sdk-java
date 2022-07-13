@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageSubject extends Entity implements Parsable {
     /** The altSecId property */
     private String _altSecId;
@@ -25,8 +24,6 @@ public class AccessPackageSubject extends Entity implements Parsable {
     private String _onPremisesSecurityIdentifier;
     /** The principal name, if known, of the subject. */
     private String _principalName;
-    /** The resource type of the subject. */
-    private String _type;
     /**
      * Instantiates a new accessPackageSubject and sets the default values.
      * @return a void
@@ -100,7 +97,6 @@ public class AccessPackageSubject extends Entity implements Parsable {
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
             this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
             this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -128,14 +124,6 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this._principalName;
     }
     /**
-     * Gets the type property value. The resource type of the subject.
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -151,7 +139,6 @@ public class AccessPackageSubject extends Entity implements Parsable {
         writer.writeStringValue("objectId", this.getObjectId());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeStringValue("principalName", this.getPrincipalName());
-        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the altSecId property value. The altSecId property
@@ -216,13 +203,5 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
         this._principalName = value;
-    }
-    /**
-     * Sets the type property value. The resource type of the subject.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

@@ -10,15 +10,15 @@ import java.util.Objects;
 public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration implements Parsable {
     /** Exchange ActiveSync account name, displayed to users as name of EAS (this) profile. */
     private String _accountName;
-    /** Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential. */
+    /** Exchange Active Sync authentication method. */
     private EasAuthenticationMethod _authenticationMethod;
     /** Custom domain name value used while generating an email profile before installing on the device. */
     private String _customDomainName;
-    /** Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited. */
+    /** Possible values for email sync duration. */
     private EmailSyncDuration _durationOfEmailToSync;
-    /** Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
+    /** Possible values for username source or email source. */
     private UserEmailSource _emailAddressSource;
-    /** Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage. */
+    /** Possible values for email sync schedule. */
     private EmailSyncSchedule _emailSyncSchedule;
     /** Exchange location (URL) that the native mail app connects to. */
     private String _hostName;
@@ -40,7 +40,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
     private Boolean _syncTasks;
     /** UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName. */
     private DomainNameSource _userDomainNameSource;
-    /** Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress. */
+    /** Android username source. */
     private AndroidUsernameSource _usernameSource;
     /**
      * Instantiates a new AndroidEasEmailProfileConfiguration and sets the default values.
@@ -68,7 +68,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         return this._accountName;
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
      * @return a easAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         return this._customDomainName;
     }
     /**
-     * Gets the durationOfEmailToSync property value. Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         return this._durationOfEmailToSync;
     }
     /**
-     * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         return this._emailAddressSource;
     }
     /**
-     * Gets the emailSyncSchedule property value. Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @return a emailSyncSchedule
      */
     @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         return this._userDomainNameSource;
     }
     /**
-     * Gets the usernameSource property value. Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+     * Gets the usernameSource property value. Android username source.
      * @return a androidUsernameSource
      */
     @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         this._accountName = value;
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Sets the authenticationMethod property value. Exchange Active Sync authentication method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
@@ -273,7 +273,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         this._customDomainName = value;
     }
     /**
-     * Sets the durationOfEmailToSync property value. Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
@@ -281,7 +281,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         this._durationOfEmailToSync = value;
     }
     /**
-     * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
@@ -289,7 +289,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         this._emailAddressSource = value;
     }
     /**
-     * Sets the emailSyncSchedule property value. Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Sets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */
@@ -377,7 +377,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         this._userDomainNameSource = value;
     }
     /**
-     * Sets the usernameSource property value. Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+     * Sets the usernameSource property value. Android username source.
      * @param value Value to set for the usernameSource property.
      * @return a void
      */

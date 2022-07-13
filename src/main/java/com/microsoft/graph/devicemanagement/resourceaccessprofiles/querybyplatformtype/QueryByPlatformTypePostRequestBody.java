@@ -13,7 +13,7 @@ import microsoft.graph.models.PolicyPlatformType;
 public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The platformType property */
+    /** Supported platform types for policies. */
     private PolicyPlatformType _platformType;
     /**
      * Instantiates a new queryByPlatformTypePostRequestBody and sets the default values.
@@ -52,7 +52,7 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
         }};
     }
     /**
-     * Gets the platformType property value. The platformType property
+     * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
         this._additionalData = value;
     }
     /**
-     * Sets the platformType property value. The platformType property
+     * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      * @return a void
      */

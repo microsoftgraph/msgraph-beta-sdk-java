@@ -14,7 +14,7 @@ public class PolicySetItem extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** DisplayName of the PolicySetItem. */
     private String _displayName;
-    /** Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted. */
+    /** The errorCode property */
     private ErrorCode _errorCode;
     /** Tags of the guided deployment */
     private java.util.List<String> _guidedDeploymentTags;
@@ -24,7 +24,7 @@ public class PolicySetItem extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** PayloadId of the PolicySetItem. */
     private String _payloadId;
-    /** Status of the PolicySetItem. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned. */
+    /** The enum to specify the status of PolicySet. */
     private PolicySetStatus _status;
     /**
      * Instantiates a new policySetItem and sets the default values.
@@ -32,6 +32,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     public PolicySetItem() {
         super();
+        this.setOdatatype("#microsoft.graph.policySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,7 +80,7 @@ public class PolicySetItem extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the errorCode property value. Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
+     * Gets the errorCode property value. The errorCode property
      * @return a errorCode
      */
     @javax.annotation.Nullable
@@ -137,7 +138,7 @@ public class PolicySetItem extends Entity implements Parsable {
         return this._payloadId;
     }
     /**
-     * Gets the status property value. Status of the PolicySetItem. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
+     * Gets the status property value. The enum to specify the status of PolicySet.
      * @return a policySetStatus
      */
     @javax.annotation.Nullable
@@ -178,7 +179,7 @@ public class PolicySetItem extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the errorCode property value. Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
+     * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
      * @return a void
      */
@@ -218,7 +219,7 @@ public class PolicySetItem extends Entity implements Parsable {
         this._payloadId = value;
     }
     /**
-     * Sets the status property value. Status of the PolicySetItem. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
+     * Sets the status property value. The enum to specify the status of PolicySet.
      * @param value Value to set for the status property.
      * @return a void
      */

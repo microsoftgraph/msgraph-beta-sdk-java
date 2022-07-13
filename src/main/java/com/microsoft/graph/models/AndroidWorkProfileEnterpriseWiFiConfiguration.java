@@ -10,7 +10,7 @@ import java.util.Objects;
 public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkProfileWiFiConfiguration implements Parsable {
     /** Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential. */
     private WiFiAuthenticationMethod _authenticationMethod;
-    /** Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap. */
+    /** Extensible Authentication Protocol (EAP) Configuration Types. */
     private AndroidEapType _eapType;
     /** Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection. */
     private AndroidWorkProfileCertificateProfileBase _identityCertificateForClientAuthentication;
@@ -22,7 +22,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
     private String _outerIdentityPrivacyTemporaryValue;
     /** URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file. */
     private String _proxyAutomaticConfigurationUrl;
-    /** Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic. */
+    /** Wi-Fi Proxy Settings. */
     private WiFiProxySetting _proxySettings;
     /** Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt. */
     private AndroidWorkProfileTrustedRootCertificate _rootCertificateForServerValidation;
@@ -54,7 +54,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         return this._authenticationMethod;
     }
     /**
-     * Gets the eapType property value. Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
      * @return a androidEapType
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         return this._proxyAutomaticConfigurationUrl;
     }
     /**
-     * Gets the proxySettings property value. Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+     * Gets the proxySettings property value. Wi-Fi Proxy Settings.
      * @return a wiFiProxySetting
      */
     @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         this._authenticationMethod = value;
     }
     /**
-     * Sets the eapType property value. Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
      * @param value Value to set for the eapType property.
      * @return a void
      */
@@ -221,7 +221,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         this._proxyAutomaticConfigurationUrl = value;
     }
     /**
-     * Sets the proxySettings property value. Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+     * Sets the proxySettings property value. Wi-Fi Proxy Settings.
      * @param value Value to set for the proxySettings property.
      * @return a void
      */

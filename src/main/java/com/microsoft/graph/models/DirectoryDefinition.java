@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DirectoryDefinition extends Entity implements Parsable {
-    /** Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue. */
+    /** The discoverabilities property */
     private DirectoryDefinitionDiscoverabilities _discoverabilities;
     /** Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _discoveryDateTime;
@@ -40,7 +40,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         return new DirectoryDefinition();
     }
     /**
-     * Gets the discoverabilities property value. Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue.
+     * Gets the discoverabilities property value. The discoverabilities property
      * @return a directoryDefinitionDiscoverabilities
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the discoverabilities property value. Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue.
+     * Sets the discoverabilities property value. The discoverabilities property
      * @param value Value to set for the discoverabilities property.
      * @return a void
      */

@@ -17,7 +17,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     private String _minOSVersion;
     /** Name for object. */
     private String _name;
-    /** Applicability Rule type. Possible values are: include, exclude. */
+    /** Supported Applicability rule types for Device Configuration */
     private DeviceManagementApplicabilityRuleType _ruleType;
     /**
      * Instantiates a new deviceManagementApplicabilityRuleOsVersion and sets the default values.
@@ -83,7 +83,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         return this._name;
     }
     /**
-     * Gets the ruleType property value. Applicability Rule type. Possible values are: include, exclude.
+     * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @return a deviceManagementApplicabilityRuleType
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         this._name = value;
     }
     /**
-     * Sets the ruleType property value. Applicability Rule type. Possible values are: include, exclude.
+     * Sets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @param value Value to set for the ruleType property.
      * @return a void
      */

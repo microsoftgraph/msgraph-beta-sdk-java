@@ -11,7 +11,6 @@ import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
 import microsoft.graph.models.ResultInfo;
-/** Provides operations to manage the security singleton. */
 public class CaseOperation extends Entity implements Parsable {
     /** The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData */
     private CaseAction _action;
@@ -33,6 +32,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     public CaseOperation() {
         super();
+        this.setOdatatype("#microsoft.graph.security.caseOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

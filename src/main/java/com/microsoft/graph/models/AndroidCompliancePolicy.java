@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _advancedThreatProtectionRequiredSecurityLevel;
     /** Condition statement id. */
     private String _conditionStatementId;
     /** Require that devices have enabled device threat protection. */
     private Boolean _deviceThreatProtectionEnabled;
-    /** Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
     /** Minimum Android security patch level. */
     private String _minAndroidSecurityPatchLevel;
@@ -32,11 +32,11 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
     private Integer _passwordPreviousPasswordBlockCount;
     /** Require a password to unlock device. */
     private Boolean _passwordRequired;
-    /** Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any. */
+    /** Android required password type. */
     private AndroidRequiredPasswordType _passwordRequiredType;
     /** Number of sign-in failures allowed before factory reset. Valid values 1 to 16 */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
-    /** Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+. Possible values are: none, low, medium, high. */
+    /** The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. */
     private AndroidRequiredPasswordComplexity _requiredPasswordComplexity;
     /** Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements. */
     private java.util.List<AppListItem> _restrictedApps;
@@ -80,7 +80,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         return new AndroidCompliancePolicy();
     }
     /**
-     * Gets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         return this._deviceThreatProtectionEnabled;
     }
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -213,7 +213,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Gets the passwordRequiredType property value. Android required password type.
      * @return a androidRequiredPasswordType
      */
     @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         return this._passwordSignInFailureCountBeforeFactoryReset;
     }
     /**
-     * Gets the requiredPasswordComplexity property value. Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+. Possible values are: none, low, medium, high.
+     * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      * @return a androidRequiredPasswordComplexity
      */
     @javax.annotation.Nullable
@@ -369,7 +369,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         writer.writeBooleanValue("storageRequireEncryption", this.getStorageRequireEncryption());
     }
     /**
-     * Sets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -393,7 +393,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         this._deviceThreatProtectionEnabled = value;
     }
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -465,7 +465,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Sets the passwordRequiredType property value. Android required password type.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
@@ -481,7 +481,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
-     * Sets the requiredPasswordComplexity property value. Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+. Possible values are: none, low, medium, high.
+     * Sets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      * @param value Value to set for the requiredPasswordComplexity property.
      * @return a void
      */

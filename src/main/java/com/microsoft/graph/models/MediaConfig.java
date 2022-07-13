@@ -13,12 +13,15 @@ public class MediaConfig implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The removeFromDefaultAudioGroup property */
     private Boolean _removeFromDefaultAudioGroup;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new mediaConfig and sets the default values.
      * @return a void
      */
     public MediaConfig() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.mediaConfig");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +31,14 @@ public class MediaConfig implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static MediaConfig createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.appHostedMediaConfig": return new AppHostedMediaConfig();
+                case "#microsoft.graph.serviceHostedMediaConfig": return new ServiceHostedMediaConfig();
+            }
+        }
         return new MediaConfig();
     }
     /**
@@ -45,9 +56,18 @@ public class MediaConfig implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaConfig currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("removeFromDefaultAudioGroup", (n) -> { currentObject.setRemoveFromDefaultAudioGroup(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the removeFromDefaultAudioGroup property value. The removeFromDefaultAudioGroup property
@@ -65,6 +85,7 @@ public class MediaConfig implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("removeFromDefaultAudioGroup", this.getRemoveFromDefaultAudioGroup());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -74,6 +95,14 @@ public class MediaConfig implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the removeFromDefaultAudioGroup property value. The removeFromDefaultAudioGroup property

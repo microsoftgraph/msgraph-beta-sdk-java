@@ -54,12 +54,15 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     private String _remoteIPAddress;
     /** The remote media port. */
     private Integer _remotePort;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
      * @return a void
      */
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.teleconferenceDeviceMediaQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,6 +72,14 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public static TeleconferenceDeviceMediaQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.teleconferenceDeviceAudioQuality": return new TeleconferenceDeviceAudioQuality();
+                case "#microsoft.graph.teleconferenceDeviceVideoQuality": return new TeleconferenceDeviceVideoQuality();
+            }
+        }
         return new TeleconferenceDeviceMediaQuality();
     }
     /**
@@ -142,7 +153,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceMediaQuality currentObject = this;
-        return new HashMap<>(21) {{
+        return new HashMap<>(22) {{
             this.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
             this.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
             this.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
@@ -164,6 +175,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
             this.put("outboundPackets", (n) -> { currentObject.setOutboundPackets(n.getLongValue()); });
             this.put("remoteIPAddress", (n) -> { currentObject.setRemoteIPAddress(n.getStringValue()); });
             this.put("remotePort", (n) -> { currentObject.setRemotePort(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -255,6 +267,14 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         return this._networkLinkSpeedInBytes;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
+    }
+    /**
      * Gets the outboundPackets property value. The total number of the outbound packets.
      * @return a int64
      */
@@ -306,6 +326,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         writer.writeLongValue("outboundPackets", this.getOutboundPackets());
         writer.writeStringValue("remoteIPAddress", this.getRemoteIPAddress());
         writer.writeIntegerValue("remotePort", this.getRemotePort());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -459,6 +480,14 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      */
     public void setNetworkLinkSpeedInBytes(@javax.annotation.Nullable final Long value) {
         this._networkLinkSpeedInBytes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the outboundPackets property value. The total number of the outbound packets.

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnum {
     DnsCheckFqdnNotFound("dnsCheckFqdnNotFound"),
     DnsCheckNameWithInvalidCharacter("dnsCheckNameWithInvalidCharacter"),
@@ -45,6 +45,9 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     ResourceAvailabilityCheckSubnetWithExternalResources("resourceAvailabilityCheckSubnetWithExternalResources"),
     ResourceAvailabilityCheckResourceGroupLockedForReadonly("resourceAvailabilityCheckResourceGroupLockedForReadonly"),
     ResourceAvailabilityCheckResourceGroupLockedForDelete("resourceAvailabilityCheckResourceGroupLockedForDelete"),
+    ResourceAvailabilityCheckNoIntuneReaderRoleError("resourceAvailabilityCheckNoIntuneReaderRoleError"),
+    ResourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation("resourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation"),
+    ResourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation("resourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation"),
     ResourceAvailabilityCheckTransientServiceError("resourceAvailabilityCheckTransientServiceError"),
     ResourceAvailabilityCheckUnknownError("resourceAvailabilityCheckUnknownError"),
     PermissionCheckNoSubscriptionReaderRole("permissionCheckNoSubscriptionReaderRole"),
@@ -109,6 +112,9 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "resourceAvailabilityCheckSubnetWithExternalResources": return ResourceAvailabilityCheckSubnetWithExternalResources;
             case "resourceAvailabilityCheckResourceGroupLockedForReadonly": return ResourceAvailabilityCheckResourceGroupLockedForReadonly;
             case "resourceAvailabilityCheckResourceGroupLockedForDelete": return ResourceAvailabilityCheckResourceGroupLockedForDelete;
+            case "resourceAvailabilityCheckNoIntuneReaderRoleError": return ResourceAvailabilityCheckNoIntuneReaderRoleError;
+            case "resourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation": return ResourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation;
+            case "resourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation": return ResourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation;
             case "resourceAvailabilityCheckTransientServiceError": return ResourceAvailabilityCheckTransientServiceError;
             case "resourceAvailabilityCheckUnknownError": return ResourceAvailabilityCheckUnknownError;
             case "permissionCheckNoSubscriptionReaderRole": return PermissionCheckNoSubscriptionReaderRole;

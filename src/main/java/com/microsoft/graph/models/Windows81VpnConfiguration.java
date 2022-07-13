@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Windows81VpnConfiguration extends WindowsVpnConfiguration implements Parsable {
     /** Value indicating whether this policy only applies to Windows 8.1. This property is read-only. */
     private Boolean _applyOnlyToWindows81;
-    /** Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn. */
+    /** Windows VPN connection type. */
     private WindowsVpnConnectionType _connectionType;
     /** Enable split tunneling for the VPN. */
     private Boolean _enableSplitTunneling;
@@ -24,6 +24,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      */
     public Windows81VpnConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.windows81VpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +52,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
         return this._applyOnlyToWindows81;
     }
     /**
-     * Gets the connectionType property value. Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
+     * Gets the connectionType property value. Windows VPN connection type.
      * @return a windowsVpnConnectionType
      */
     @javax.annotation.Nullable
@@ -120,7 +121,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
         this._applyOnlyToWindows81 = value;
     }
     /**
-     * Sets the connectionType property value. Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
+     * Sets the connectionType property value. Windows VPN connection type.
      * @param value Value to set for the connectionType property.
      * @return a void
      */

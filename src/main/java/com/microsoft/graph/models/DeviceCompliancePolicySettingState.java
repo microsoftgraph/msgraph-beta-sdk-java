@@ -28,7 +28,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     private String _settingName;
     /** Contributing policies */
     private java.util.List<SettingSource> _sources;
-    /** The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The state property */
     private ComplianceStatus _state;
     /** UserEmail */
     private String _userEmail;
@@ -151,7 +151,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         return this._sources;
     }
     /**
-     * Gets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the state property value. The state property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -285,7 +285,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         this._sources = value;
     }
     /**
-     * Sets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

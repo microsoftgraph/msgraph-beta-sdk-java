@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class ManagedAllDeviceCertificateState extends Entity implements Parsable {
     /** Certificate expiry date */
     private OffsetDateTime _certificateExpirationDateTime;
@@ -20,7 +19,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     private String _certificateIssuerName;
     /** Key Usage */
     private Integer _certificateKeyUsages;
-    /** Revoke status. Possible values are: none, pending, issued, failed, revoked. */
+    /** Certificate Revocation Status. */
     private CertificateRevocationStatus _certificateRevokeStatus;
     /** The time the revoke status was last changed */
     private OffsetDateTime _certificateRevokeStatusLastChangeDateTime;
@@ -35,7 +34,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     /** User principal name */
     private String _userPrincipalName;
     /**
-     * Instantiates a new managedAllDeviceCertificateState and sets the default values.
+     * Instantiates a new ManagedAllDeviceCertificateState and sets the default values.
      * @return a void
      */
     public ManagedAllDeviceCertificateState() {
@@ -44,7 +43,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAllDeviceCertificateState
+     * @return a ManagedAllDeviceCertificateState
      */
     @javax.annotation.Nonnull
     public static ManagedAllDeviceCertificateState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -92,7 +91,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
         return this._certificateKeyUsages;
     }
     /**
-     * Gets the certificateRevokeStatus property value. Revoke status. Possible values are: none, pending, issued, failed, revoked.
+     * Gets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @return a certificateRevocationStatus
      */
     @javax.annotation.Nullable
@@ -231,7 +230,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
         this._certificateKeyUsages = value;
     }
     /**
-     * Sets the certificateRevokeStatus property value. Revoke status. Possible values are: none, pending, issued, failed, revoked.
+     * Sets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @param value Value to set for the certificateRevokeStatus property.
      * @return a void
      */

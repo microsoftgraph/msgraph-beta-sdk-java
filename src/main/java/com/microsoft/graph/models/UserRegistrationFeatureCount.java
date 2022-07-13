@@ -11,7 +11,7 @@ import java.util.Objects;
 public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Number of users registered or capable for Multi-Factor Authentication, Self-Service Password Reset and Passwordless Authentication. Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable. */
+    /** The feature property */
     private AuthenticationMethodFeature _feature;
     /** Number of users. */
     private Long _userCount;
@@ -41,7 +41,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the feature property value. Number of users registered or capable for Multi-Factor Authentication, Self-Service Password Reset and Passwordless Authentication. Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable.
+     * Gets the feature property value. The feature property
      * @return a authenticationMethodFeature
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the feature property value. Number of users registered or capable for Multi-Factor Authentication, Self-Service Password Reset and Passwordless Authentication. Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable.
+     * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      * @return a void
      */

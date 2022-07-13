@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OnPremisesAgentGroup extends Entity implements Parsable {
     /** List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable. */
     private java.util.List<OnPremisesAgent> _agents;
@@ -17,7 +17,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     private Boolean _isDefault;
     /** List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable. */
     private java.util.List<PublishedResource> _publishedResources;
-    /** Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration. */
+    /** The publishingType property */
     private OnPremisesPublishingType _publishingType;
     /**
      * Instantiates a new onPremisesAgentGroup and sets the default values.
@@ -84,7 +84,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
         return this._publishedResources;
     }
     /**
-     * Gets the publishingType property value. Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
+     * Gets the publishingType property value. The publishingType property
      * @return a onPremisesPublishingType
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
         this._publishedResources = value;
     }
     /**
-     * Sets the publishingType property value. Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
+     * Sets the publishingType property value. The publishingType property
      * @param value Value to set for the publishingType property.
      * @return a void
      */

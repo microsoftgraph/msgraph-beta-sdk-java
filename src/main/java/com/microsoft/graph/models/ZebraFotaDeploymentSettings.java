@@ -20,7 +20,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     private Boolean _batteryRuleRequireCharger;
     /** Deploy update for devices with this model only. */
     private String _deviceModel;
-    /** Download network type as described in 'zebraFotaNetworkType'. Default: any. Possible values are: any, wifi, cellular, wifiAndCellular, unknownFutureValue. */
+    /** Represents various network types for Zebra FOTA deployment. */
     private ZebraFotaNetworkType _downloadRuleNetworkType;
     /** Date and time in the device time zone when the download will start (e.g., 2018-07-25T10:20:32). The default value is UTC now and the maximum is 10 days from deployment creation. */
     private OffsetDateTime _downloadRuleStartDateTime;
@@ -38,11 +38,11 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     private LocalTime _installRuleWindowStartTime;
     /** Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used. */
     private Integer _scheduleDurationInDays;
-    /** Deployment installation schedule mode. Default is installNow. All scheduled deployments date and time are in the device’s timezone. For Install Now, the date and time are in UTC (same date and time anywhere in the world). Possible values are: installNow, scheduled, unknownFutureValue. */
+    /** Represents various schedule modes for Zebra FOTA deployment. */
     private ZebraFotaScheduleMode _scheduleMode;
     /** This attribute indicates the deployment time offset (e.g.180 represents an offset of +03:00, and -270 represents an offset of -04:30). The time offset is the time timezone where the devices are located. The deployment start and end data uses this timezone */
     private Integer _timeZoneOffsetInMinutes;
-    /** The deployment's update type. Possible values are custom, latest, and auto. When custom mode is set, the request must provide artifact values. When latest type is set, the latest released update becomes the target OS. If latest is specified, the firmware target values are not required. Note: latest may update the device to a new Android version. When the value is set to auto, the device always looks for the latest package available and tries to update whenever a new package is available. This continues until the admin cancels the auto update. While other modes return an ID starting with FOTA-x, auto mode returns an ID starting with AUTO-x. Possible values are: custom, latest, auto, unknownFutureValue. */
+    /** Represents various update types for Zebra FOTA deployment. */
     private ZebraFotaUpdateType _updateType;
     /**
      * Instantiates a new zebraFotaDeploymentSettings and sets the default values.
@@ -94,7 +94,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         return this._deviceModel;
     }
     /**
-     * Gets the downloadRuleNetworkType property value. Download network type as described in 'zebraFotaNetworkType'. Default: any. Possible values are: any, wifi, cellular, wifiAndCellular, unknownFutureValue.
+     * Gets the downloadRuleNetworkType property value. Represents various network types for Zebra FOTA deployment.
      * @return a zebraFotaNetworkType
      */
     @javax.annotation.Nullable
@@ -191,7 +191,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         return this._scheduleDurationInDays;
     }
     /**
-     * Gets the scheduleMode property value. Deployment installation schedule mode. Default is installNow. All scheduled deployments date and time are in the device’s timezone. For Install Now, the date and time are in UTC (same date and time anywhere in the world). Possible values are: installNow, scheduled, unknownFutureValue.
+     * Gets the scheduleMode property value. Represents various schedule modes for Zebra FOTA deployment.
      * @return a zebraFotaScheduleMode
      */
     @javax.annotation.Nullable
@@ -207,7 +207,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         return this._timeZoneOffsetInMinutes;
     }
     /**
-     * Gets the updateType property value. The deployment's update type. Possible values are custom, latest, and auto. When custom mode is set, the request must provide artifact values. When latest type is set, the latest released update becomes the target OS. If latest is specified, the firmware target values are not required. Note: latest may update the device to a new Android version. When the value is set to auto, the device always looks for the latest package available and tries to update whenever a new package is available. This continues until the admin cancels the auto update. While other modes return an ID starting with FOTA-x, auto mode returns an ID starting with AUTO-x. Possible values are: custom, latest, auto, unknownFutureValue.
+     * Gets the updateType property value. Represents various update types for Zebra FOTA deployment.
      * @return a zebraFotaUpdateType
      */
     @javax.annotation.Nullable
@@ -271,7 +271,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         this._deviceModel = value;
     }
     /**
-     * Sets the downloadRuleNetworkType property value. Download network type as described in 'zebraFotaNetworkType'. Default: any. Possible values are: any, wifi, cellular, wifiAndCellular, unknownFutureValue.
+     * Sets the downloadRuleNetworkType property value. Represents various network types for Zebra FOTA deployment.
      * @param value Value to set for the downloadRuleNetworkType property.
      * @return a void
      */
@@ -343,7 +343,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         this._scheduleDurationInDays = value;
     }
     /**
-     * Sets the scheduleMode property value. Deployment installation schedule mode. Default is installNow. All scheduled deployments date and time are in the device’s timezone. For Install Now, the date and time are in UTC (same date and time anywhere in the world). Possible values are: installNow, scheduled, unknownFutureValue.
+     * Sets the scheduleMode property value. Represents various schedule modes for Zebra FOTA deployment.
      * @param value Value to set for the scheduleMode property.
      * @return a void
      */
@@ -359,7 +359,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         this._timeZoneOffsetInMinutes = value;
     }
     /**
-     * Sets the updateType property value. The deployment's update type. Possible values are custom, latest, and auto. When custom mode is set, the request must provide artifact values. When latest type is set, the latest released update becomes the target OS. If latest is specified, the firmware target values are not required. Note: latest may update the device to a new Android version. When the value is set to auto, the device always looks for the latest package available and tries to update whenever a new package is available. This continues until the admin cancels the auto update. While other modes return an ID starting with FOTA-x, auto mode returns an ID starting with AUTO-x. Possible values are: custom, latest, auto, unknownFutureValue.
+     * Sets the updateType property value. Represents various update types for Zebra FOTA deployment.
      * @param value Value to set for the updateType property.
      * @return a void
      */

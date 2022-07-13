@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** No Branding. */
     None("none"),
@@ -14,7 +14,9 @@ public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** Include Contact Info. */
     IncludeContactInformation("includeContactInformation"),
     /** Include Company Portal Link. */
-    IncludeCompanyPortalLink("includeCompanyPortalLink");
+    IncludeCompanyPortalLink("includeCompanyPortalLink"),
+    /** Include Device Details. */
+    IncludeDeviceDetails("includeDeviceDetails");
     public final String value;
     NotificationTemplateBrandingOptions(final String value) {
         this.value = value;
@@ -30,6 +32,7 @@ public enum NotificationTemplateBrandingOptions implements ValuedEnum {
             case "includeCompanyName": return IncludeCompanyName;
             case "includeContactInformation": return IncludeContactInformation;
             case "includeCompanyPortalLink": return IncludeCompanyPortalLink;
+            case "includeDeviceDetails": return IncludeDeviceDetails;
             default: return null;
         }
     }

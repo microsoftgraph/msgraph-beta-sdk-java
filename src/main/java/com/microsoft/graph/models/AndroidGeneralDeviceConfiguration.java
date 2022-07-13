@@ -32,7 +32,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     private Boolean _cellularBlockVoiceRoaming;
     /** Indicates whether or not to block syncing Wi-Fi tethering. */
     private Boolean _cellularBlockWiFiTethering;
-    /** Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant. */
+    /** Possible values of the compliance app list. */
     private AppListType _compliantAppListType;
     /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
     private java.util.List<AppListItem> _compliantAppsList;
@@ -72,13 +72,13 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     private Integer _passwordPreviousPasswordBlockCount;
     /** Indicates whether or not to require a password. */
     private Boolean _passwordRequired;
-    /** Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any. */
+    /** Android required password type. */
     private AndroidRequiredPasswordType _passwordRequiredType;
     /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
     /** Indicates whether or not to block powering off the device. */
     private Boolean _powerOffBlocked;
-    /** Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high. */
+    /** The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. */
     private AndroidRequiredPasswordComplexity _requiredPasswordComplexity;
     /** Indicates whether or not to block screenshots. */
     private Boolean _screenCaptureBlocked;
@@ -104,7 +104,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     private Boolean _webBrowserBlockJavaScript;
     /** Indicates whether or not to block popups within the web browser. */
     private Boolean _webBrowserBlockPopups;
-    /** Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways. */
+    /** Web Browser Cookie Settings. */
     private WebBrowserCookieSettings _webBrowserCookieSettings;
     /** Indicates whether or not to block syncing Wi-Fi. */
     private Boolean _wiFiBlocked;
@@ -222,7 +222,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         return this._cellularBlockWiFiTethering;
     }
     /**
-     * Gets the compliantAppListType property value. Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
     @javax.annotation.Nullable
@@ -442,7 +442,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Gets the passwordRequiredType property value. Android required password type.
      * @return a androidRequiredPasswordType
      */
     @javax.annotation.Nullable
@@ -466,7 +466,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         return this._powerOffBlocked;
     }
     /**
-     * Gets the requiredPasswordComplexity property value. Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
+     * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      * @return a androidRequiredPasswordComplexity
      */
     @javax.annotation.Nullable
@@ -570,7 +570,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         return this._webBrowserBlockPopups;
     }
     /**
-     * Gets the webBrowserCookieSettings property value. Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Gets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
      * @return a webBrowserCookieSettings
      */
     @javax.annotation.Nullable
@@ -741,7 +741,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         this._cellularBlockWiFiTethering = value;
     }
     /**
-     * Sets the compliantAppListType property value. Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
@@ -901,7 +901,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Sets the passwordRequiredType property value. Android required password type.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
@@ -925,7 +925,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         this._powerOffBlocked = value;
     }
     /**
-     * Sets the requiredPasswordComplexity property value. Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
+     * Sets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      * @param value Value to set for the requiredPasswordComplexity property.
      * @return a void
      */
@@ -1029,7 +1029,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         this._webBrowserBlockPopups = value;
     }
     /**
-     * Sets the webBrowserCookieSettings property value. Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Sets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
      * @param value Value to set for the webBrowserCookieSettings property.
      * @return a void
      */

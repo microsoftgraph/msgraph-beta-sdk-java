@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     private String _templateDisplayName;
     /** Template Display Version of the referenced Template. This property is read-only. */
     private String _templateDisplayVersion;
-    /** Template Family of the referenced Template. This property is read-only. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline. */
+    /** Describes the TemplateFamily for the Template entity */
     private DeviceManagementConfigurationTemplateFamily _templateFamily;
     /** Template id */
     private String _templateId;
@@ -76,7 +76,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
         return this._templateDisplayVersion;
     }
     /**
-     * Gets the templateFamily property value. Template Family of the referenced Template. This property is read-only. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+     * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @return a deviceManagementConfigurationTemplateFamily
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
         this._templateDisplayVersion = value;
     }
     /**
-     * Sets the templateFamily property value. Template Family of the referenced Template. This property is read-only. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+     * Sets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @param value Value to set for the templateFamily property.
      * @return a void
      */

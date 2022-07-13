@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AuthenticationMethodTarget extends Entity implements Parsable {
     /** Determines if the user is enforced to register the authentication method. */
     private Boolean _isRegistrationRequired;
-    /** Possible values are: user, group, and unknownFutureValue. */
+    /** The targetType property */
     private AuthenticationMethodTargetType _targetType;
     /**
      * Instantiates a new authenticationMethodTarget and sets the default values.
@@ -19,6 +19,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      */
     public AuthenticationMethodTarget() {
         super();
+        this.setOdatatype("#microsoft.graph.authenticationMethodTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,7 +60,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
         return this._isRegistrationRequired;
     }
     /**
-     * Gets the targetType property value. Possible values are: user, group, and unknownFutureValue.
+     * Gets the targetType property value. The targetType property
      * @return a authenticationMethodTargetType
      */
     @javax.annotation.Nullable
@@ -86,7 +87,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
         this._isRegistrationRequired = value;
     }
     /**
-     * Sets the targetType property value. Possible values are: user, group, and unknownFutureValue.
+     * Sets the targetType property value. The targetType property
      * @param value Value to set for the targetType property.
      * @return a void
      */

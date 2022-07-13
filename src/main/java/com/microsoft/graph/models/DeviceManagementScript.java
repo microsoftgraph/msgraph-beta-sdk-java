@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Intune will provide customer the ability to run their Powershell scripts on the enrolled windows 10 Azure Active Directory joined devices. The script can be run once or periodically. */
 public class DeviceManagementScript extends Entity implements Parsable {
     /** The list of group assignments for the device management script. */
     private java.util.List<DeviceManagementScriptAssignment> _assignments;
@@ -32,7 +31,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     private java.util.List<String> _roleScopeTagIds;
     /** A value indicating whether the PowerShell script should run as 32-bit */
     private Boolean _runAs32Bit;
-    /** Indicates the type of execution context. Possible values are: system, user. */
+    /** Indicates the type of execution context the app runs in. */
     private RunAsAccountType _runAsAccount;
     /** Run summary for device management script. */
     private DeviceManagementScriptRunSummary _runSummary;
@@ -41,7 +40,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     /** List of run states for this script across all users. */
     private java.util.List<DeviceManagementScriptUserState> _userRunStates;
     /**
-     * Instantiates a new deviceManagementScript and sets the default values.
+     * Instantiates a new DeviceManagementScript and sets the default values.
      * @return a void
      */
     public DeviceManagementScript() {
@@ -50,7 +49,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScript
+     * @return a DeviceManagementScript
      */
     @javax.annotation.Nonnull
     public static DeviceManagementScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -171,7 +170,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
         return this._runAs32Bit;
     }
     /**
-     * Gets the runAsAccount property value. Indicates the type of execution context. Possible values are: system, user.
+     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return a runAsAccountType
      */
     @javax.annotation.Nullable
@@ -315,7 +314,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
         this._runAs32Bit = value;
     }
     /**
-     * Sets the runAsAccount property value. Indicates the type of execution context. Possible values are: system, user.
+     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */

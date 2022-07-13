@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The enrollmentProfile resource represents a collection of configurations which must be provided pre-enrollment to enable enrolling certain devices whose identities have been pre-staged. Pre-staged device identities are assigned to this type of profile to apply the profile's configurations at enrollment of the corresponding device. */
 public class EnrollmentProfile extends Entity implements Parsable {
     /** Configuration endpoint url to use for Enrollment */
     private String _configurationEndpointUrl;
@@ -27,6 +26,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      */
     public EnrollmentProfile() {
         super();
+        this.setOdatatype("#microsoft.graph.enrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

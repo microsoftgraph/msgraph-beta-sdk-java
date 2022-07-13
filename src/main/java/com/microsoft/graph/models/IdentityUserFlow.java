@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
 public class IdentityUserFlow extends Entity implements Parsable {
     /** The userFlowType property */
     private UserFlowType _userFlowType;
@@ -19,6 +18,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     public IdentityUserFlow() {
         super();
+        this.setOdatatype("#microsoft.graph.identityUserFlow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration implements Parsable {
-    /** Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _allowDeviceHealthMonitoring;
     /** Specifies custom set of events collected from the device where health monitoring is enabled */
     private String _configDeviceHealthMonitoringCustomScope;
-    /** Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates. */
+    /** Device health monitoring scope */
     private WindowsHealthMonitoringScope _configDeviceHealthMonitoringScope;
     /**
      * Instantiates a new WindowsHealthMonitoringConfiguration and sets the default values.
@@ -32,7 +32,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
         return new WindowsHealthMonitoringConfiguration();
     }
     /**
-     * Gets the allowDeviceHealthMonitoring property value. Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
+     * Gets the allowDeviceHealthMonitoring property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -48,7 +48,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
         return this._configDeviceHealthMonitoringCustomScope;
     }
     /**
-     * Gets the configDeviceHealthMonitoringScope property value. Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
+     * Gets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
      * @return a windowsHealthMonitoringScope
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
         writer.writeEnumValue("configDeviceHealthMonitoringScope", this.getConfigDeviceHealthMonitoringScope());
     }
     /**
-     * Sets the allowDeviceHealthMonitoring property value. Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
+     * Sets the allowDeviceHealthMonitoring property value. Possible values of a property
      * @param value Value to set for the allowDeviceHealthMonitoring property.
      * @return a void
      */
@@ -97,7 +97,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
         this._configDeviceHealthMonitoringCustomScope = value;
     }
     /**
-     * Sets the configDeviceHealthMonitoringScope property value. Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
+     * Sets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
      * @param value Value to set for the configDeviceHealthMonitoringScope property.
      * @return a void
      */

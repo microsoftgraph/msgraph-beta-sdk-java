@@ -22,7 +22,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     /** true if the expression was parsed successfully. */
     private Boolean _parsingSucceeded;
     /**
-     * Instantiates a new ParseExpressionResponse and sets the default values.
+     * Instantiates a new parseExpressionResponse and sets the default values.
      * @return a void
      */
     public ParseExpressionResponse() {
@@ -31,7 +31,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParseExpressionResponse
+     * @return a parseExpressionResponse
      */
     @javax.annotation.Nonnull
     public static ParseExpressionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

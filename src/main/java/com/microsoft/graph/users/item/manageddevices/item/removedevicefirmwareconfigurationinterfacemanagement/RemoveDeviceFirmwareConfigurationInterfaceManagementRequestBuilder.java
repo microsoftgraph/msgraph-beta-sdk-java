@@ -50,7 +50,7 @@ public class RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder 
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action removeDeviceFirmwareConfigurationInterfaceManagement
+     * Remove device from Device Firmware Configuration Interface management
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -58,7 +58,7 @@ public class RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder 
         return createPostRequestInformation(null);
     }
     /**
-     * Invoke action removeDeviceFirmwareConfigurationInterfaceManagement
+     * Remove device from Device Firmware Configuration Interface management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,7 +78,7 @@ public class RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder 
         return requestInfo;
     }
     /**
-     * Invoke action removeDeviceFirmwareConfigurationInterfaceManagement
+     * Remove device from Device Firmware Configuration Interface management
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -94,7 +94,7 @@ public class RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder 
         }
     }
     /**
-     * Invoke action removeDeviceFirmwareConfigurationInterfaceManagement
+     * Remove device from Device Firmware Configuration Interface management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -111,7 +111,7 @@ public class RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder 
         }
     }
     /**
-     * Invoke action removeDeviceFirmwareConfigurationInterfaceManagement
+     * Remove device from Device Firmware Configuration Interface management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void

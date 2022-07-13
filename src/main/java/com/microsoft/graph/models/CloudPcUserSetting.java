@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcUserSetting extends Entity implements Parsable {
     /** Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample. */
     private java.util.List<CloudPcUserSettingAssignment> _assignments;
@@ -25,7 +24,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     /** Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. */
     private Boolean _selfServiceEnabled;
     /**
-     * Instantiates a new cloudPcUserSetting and sets the default values.
+     * Instantiates a new CloudPcUserSetting and sets the default values.
      * @return a void
      */
     public CloudPcUserSetting() {
@@ -34,7 +33,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcUserSetting
+     * @return a CloudPcUserSetting
      */
     @javax.annotation.Nonnull
     public static CloudPcUserSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

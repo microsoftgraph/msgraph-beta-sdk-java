@@ -30,7 +30,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     private Boolean _homeButtonScreenDisabled;
     /** Indicates if iMessage and FaceTime screen is disabled */
     private Boolean _iMessageAndFaceTimeScreenDisabled;
-    /** Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate. */
+    /** The iTunesPairingMode property */
     private ITunesPairingMode _iTunesPairingMode;
     /** Management certificates for Apple Configurator */
     private java.util.List<ManagementCertificateWithThumbprint> _managementCertificates;
@@ -211,7 +211,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         return this._iMessageAndFaceTimeScreenDisabled;
     }
     /**
-     * Gets the iTunesPairingMode property value. Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+     * Gets the iTunesPairingMode property value. The iTunesPairingMode property
      * @return a iTunesPairingMode
      */
     @javax.annotation.Nullable
@@ -481,7 +481,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         this._iMessageAndFaceTimeScreenDisabled = value;
     }
     /**
-     * Sets the iTunesPairingMode property value. Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+     * Sets the iTunesPairingMode property value. The iTunesPairingMode property
      * @param value Value to set for the iTunesPairingMode property.
      * @return a void
      */

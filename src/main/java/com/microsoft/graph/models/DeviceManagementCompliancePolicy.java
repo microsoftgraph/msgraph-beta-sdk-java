@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Management Compliance Policy */
 public class DeviceManagementCompliancePolicy extends Entity implements Parsable {
     /** Policy assignments */
     private java.util.List<DeviceManagementConfigurationPolicyAssignment> _assignments;
@@ -24,7 +23,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     private OffsetDateTime _lastModifiedDateTime;
     /** Policy name */
     private String _name;
-    /** Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue. */
+    /** Supported platform types. */
     private DeviceManagementConfigurationPlatforms _platforms;
     /** List of Scope Tags for this Entity instance. */
     private java.util.List<String> _roleScopeTagIds;
@@ -34,10 +33,10 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     private Integer _settingCount;
     /** Policy settings */
     private java.util.List<DeviceManagementConfigurationSetting> _settings;
-    /** Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue. */
+    /** Describes which technology this setting can be deployed with */
     private DeviceManagementConfigurationTechnologies _technologies;
     /**
-     * Instantiates a new deviceManagementCompliancePolicy and sets the default values.
+     * Instantiates a new DeviceManagementCompliancePolicy and sets the default values.
      * @return a void
      */
     public DeviceManagementCompliancePolicy() {
@@ -46,7 +45,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCompliancePolicy
+     * @return a DeviceManagementCompliancePolicy
      */
     @javax.annotation.Nonnull
     public static DeviceManagementCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -133,7 +132,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
         return this._name;
     }
     /**
-     * Gets the platforms property value. Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Gets the platforms property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
     @javax.annotation.Nullable
@@ -173,7 +172,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
         return this._settings;
     }
     /**
-     * Gets the technologies property value. Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
     @javax.annotation.Nullable
@@ -259,7 +258,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
         this._name = value;
     }
     /**
-     * Sets the platforms property value. Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      * @return a void
      */
@@ -299,7 +298,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
         this._settings = value;
     }
     /**
-     * Sets the technologies property value. Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      * @return a void
      */

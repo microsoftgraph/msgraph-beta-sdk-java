@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VpnConfiguration extends DeviceConfiguration implements Parsable {
-    /** Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD. */
+    /** VPN Authentication Method. */
     private VpnAuthenticationMethod _authenticationMethod;
     /** Connection name displayed to the user. */
     private String _connectionName;
@@ -24,6 +24,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      */
     public VpnConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.vpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +44,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
         return new VpnConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Gets the authenticationMethod property value. VPN Authentication Method.
      * @return a vpnAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -112,7 +113,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
         writer.writeCollectionOfObjectValues("servers", this.getServers());
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */

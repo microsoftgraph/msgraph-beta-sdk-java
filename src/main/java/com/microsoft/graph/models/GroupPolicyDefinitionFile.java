@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The entity represents an ADMX (Administrative Template) XML file. The ADMX file contains a collection of group policy definitions and their locations by category path. The group policy definition file also contains the languages supported as determined by the language dependent ADML (Administrative Template) language files. */
 public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     /** The group policy definitions associated with the file. */
     private java.util.List<GroupPolicyDefinition> _definitions;
@@ -22,7 +21,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     private java.util.List<String> _languageCodes;
     /** The date and time the entity was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Specifies the type of group policy. Possible values are: admxBacked, admxIngested. */
+    /** Type of Group Policy File or Definition. */
     private GroupPolicyType _policyType;
     /** The revision version associated with the file. */
     private String _revision;
@@ -36,6 +35,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     public GroupPolicyDefinitionFile() {
         super();
+        this.setOdatatype("#microsoft.graph.groupPolicyDefinitionFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -123,7 +123,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the policyType property value. Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+     * Gets the policyType property value. Type of Group Policy File or Definition.
      * @return a groupPolicyType
      */
     @javax.annotation.Nullable
@@ -222,7 +222,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the policyType property value. Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+     * Sets the policyType property value. Type of Group Policy File or Definition.
      * @param value Value to set for the policyType property.
      * @return a void
      */

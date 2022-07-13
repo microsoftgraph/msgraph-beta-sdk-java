@@ -15,7 +15,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
     private String _namespaceUrl;
     /** Node name of the unsupported extension. */
     private String _nodeName;
-    /** Setting Scope of the unsupported extension. Possible values are: unknown, device, user. */
+    /** Scope of the group policy setting. */
     private GroupPolicySettingScope _settingScope;
     /**
      * Instantiates a new unsupportedGroupPolicyExtension and sets the default values.
@@ -73,7 +73,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
         return this._nodeName;
     }
     /**
-     * Gets the settingScope property value. Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
+     * Gets the settingScope property value. Scope of the group policy setting.
      * @return a groupPolicySettingScope
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
         this._nodeName = value;
     }
     /**
-     * Sets the settingScope property value. Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
+     * Sets the settingScope property value. Scope of the group policy setting.
      * @param value Value to set for the settingScope property.
      * @return a void
      */

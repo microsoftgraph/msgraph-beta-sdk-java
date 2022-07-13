@@ -30,7 +30,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     private Long _size;
     /** The size of the file after encryption. */
     private Long _sizeEncrypted;
-    /** The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut. */
+    /** Contains properties for upload request states. */
     private MobileAppContentFileUploadState _uploadState;
     /**
      * Instantiates a new mobileAppContentFile and sets the default values.
@@ -151,7 +151,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this._sizeEncrypted;
     }
     /**
-     * Gets the uploadState property value. The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
+     * Gets the uploadState property value. Contains properties for upload request states.
      * @return a mobileAppContentFileUploadState
      */
     @javax.annotation.Nullable
@@ -259,7 +259,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         this._sizeEncrypted = value;
     }
     /**
-     * Sets the uploadState property value. The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
+     * Sets the uploadState property value. Contains properties for upload request states.
      * @param value Value to set for the uploadState property.
      * @return a void
      */

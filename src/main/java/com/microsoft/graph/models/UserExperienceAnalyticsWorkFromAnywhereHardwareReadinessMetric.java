@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics hardware readiness entity contains account level information about hardware blockers for windows upgrade. */
 public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Entity implements Parsable {
     /** The percentage of devices for which OS check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _osCheckFailedPercentage;
@@ -32,7 +31,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     /** The count of devices in an organization eligible for windows upgrade. Valid values -2147483648 to 2147483647 */
     private Integer _upgradeEligibleDeviceCount;
     /**
-     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
@@ -41,7 +40,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

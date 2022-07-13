@@ -10,7 +10,7 @@ import java.util.Objects;
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
     /** The collection of contained apps in a mobileApp acting as a package. */
     private java.util.List<MobileContainedApp> _containedApps;
-    /** The app license type. Possible values are: offline, online. */
+    /** The licenseType property */
     private MicrosoftStoreForBusinessLicenseType _licenseType;
     /** The supported License Type. */
     private VppLicensingType _licensingType;
@@ -65,7 +65,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
         }};
     }
     /**
-     * Gets the licenseType property value. The app license type. Possible values are: offline, online.
+     * Gets the licenseType property value. The licenseType property
      * @return a microsoftStoreForBusinessLicenseType
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
         this._containedApps = value;
     }
     /**
-     * Sets the licenseType property value. The app license type. Possible values are: offline, online.
+     * Sets the licenseType property value. The licenseType property
      * @param value Value to set for the licenseType property.
      * @return a void
      */

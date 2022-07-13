@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the tenantRelationship singleton. */
 public class ManagementTemplateStepVersion extends Entity implements Parsable {
     /** The acceptedFor property */
     private ManagementTemplateStep _acceptedFor;

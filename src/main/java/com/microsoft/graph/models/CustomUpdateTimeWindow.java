@@ -13,11 +13,11 @@ import java.util.Objects;
 public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. */
+    /** The endDay property */
     private DayOfWeek _endDay;
     /** End time of the time window */
     private LocalTime _endTime;
-    /** Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. */
+    /** The startDay property */
     private DayOfWeek _startDay;
     /** Start time of the time window */
     private LocalTime _startTime;
@@ -47,7 +47,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the endDay property value. End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Gets the endDay property value. The endDay property
      * @return a dayOfWeek
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the startDay property value. Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Gets the startDay property value. The startDay property
      * @return a dayOfWeek
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the endDay property value. End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Sets the endDay property value. The endDay property
      * @param value Value to set for the endDay property.
      * @return a void
      */
@@ -130,7 +130,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
         this._endTime = value;
     }
     /**
-     * Sets the startDay property value. Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Sets the startDay property value. The startDay property
      * @param value Value to set for the startDay property.
      * @return a void
      */

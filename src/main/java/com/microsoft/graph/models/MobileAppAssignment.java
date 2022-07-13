@@ -9,11 +9,11 @@ import java.util.Map;
 import java.util.Objects;
 /** A class containing the properties used for Group Assignment of a Mobile App. */
 public class MobileAppAssignment extends Entity implements Parsable {
-    /** The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
+    /** Possible values for the install intent chosen by the admin. */
     private InstallIntent _intent;
     /** The settings for target assignment defined by the admin. */
     private MobileAppAssignmentSettings _settings;
-    /** The resource type which is the source for the assignment. Possible values are: direct, policySets. */
+    /** Represents source of assignment. */
     private DeviceAndAppManagementAssignmentSource _source;
     /** The identifier of the source of the assignment. */
     private String _sourceId;
@@ -52,7 +52,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the intent property value. The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Gets the intent property value. Possible values for the install intent chosen by the admin.
      * @return a installIntent
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         return this._settings;
     }
     /**
-     * Gets the source property value. The resource type which is the source for the assignment. Possible values are: direct, policySets.
+     * Gets the source property value. Represents source of assignment.
      * @return a deviceAndAppManagementAssignmentSource
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the intent property value. The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Sets the intent property value. Possible values for the install intent chosen by the admin.
      * @param value Value to set for the intent property.
      * @return a void
      */
@@ -122,7 +122,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         this._settings = value;
     }
     /**
-     * Sets the source property value. The resource type which is the source for the assignment. Possible values are: direct, policySets.
+     * Sets the source property value. Represents source of assignment.
      * @param value Value to set for the source property.
      * @return a void
      */

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity that represents user state summary for an intent */
 public class DeviceManagementIntentUserStateSummary extends Entity implements Parsable {
     /** Number of users in conflict */
     private Integer _conflictCount;

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidCertificateProfileBase extends DeviceConfiguration implements Parsable {
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period. */
     private Integer _certificateValidityPeriodValue;
@@ -18,9 +18,9 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
     private Integer _renewalThresholdPercentage;
     /** Trusted Root Certificate. */
     private AndroidTrustedRootCertificate _rootCertificate;
-    /** Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
+    /** Subject Alternative Name Options. */
     private SubjectAlternativeNameType _subjectAlternativeNameType;
-    /** Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId. */
+    /** Subject Name Format Options. */
     private SubjectNameFormat _subjectNameFormat;
     /**
      * Instantiates a new AndroidCertificateProfileBase and sets the default values.
@@ -28,6 +28,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
      */
     public AndroidCertificateProfileBase() {
         super();
+        this.setOdatatype("#microsoft.graph.androidCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +51,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         return new AndroidCertificateProfileBase();
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -107,7 +108,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         return this._rootCertificate;
     }
     /**
-     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the subjectAlternativeNameType property value. Subject Alternative Name Options.
      * @return a subjectAlternativeNameType
      */
     @javax.annotation.Nullable
@@ -115,7 +116,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         return this._subjectAlternativeNameType;
     }
     /**
-     * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Gets the subjectNameFormat property value. Subject Name Format Options.
      * @return a subjectNameFormat
      */
     @javax.annotation.Nullable
@@ -139,7 +140,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
@@ -179,7 +180,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         this._rootCertificate = value;
     }
     /**
-     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the subjectAlternativeNameType property value. Subject Alternative Name Options.
      * @param value Value to set for the subjectAlternativeNameType property.
      * @return a void
      */
@@ -187,7 +188,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         this._subjectAlternativeNameType = value;
     }
     /**
-     * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Sets the subjectNameFormat property value. Subject Name Format Options.
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */

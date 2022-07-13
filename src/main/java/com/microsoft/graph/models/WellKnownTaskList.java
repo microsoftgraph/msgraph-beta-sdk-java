@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WellKnownTaskList extends BaseTaskList implements Parsable {
-    /** Property indicating the list name if the given list is a well-known list.. The possible values are: none, defaultList, flaggedEmails, unknownFutureValue. */
+    /** The wellKnownListName property */
     private WellKnownListName_v2 _wellKnownListName;
     /**
      * Instantiates a new WellKnownTaskList and sets the default values.
@@ -39,7 +39,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
         }};
     }
     /**
-     * Gets the wellKnownListName property value. Property indicating the list name if the given list is a well-known list.. The possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * Gets the wellKnownListName property value. The wellKnownListName property
      * @return a wellKnownListName_v2
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
         writer.writeEnumValue("wellKnownListName", this.getWellKnownListName());
     }
     /**
-     * Sets the wellKnownListName property value. Property indicating the list name if the given list is a well-known list.. The possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * Sets the wellKnownListName property value. The wellKnownListName property
      * @param value Value to set for the wellKnownListName property.
      * @return a void
      */

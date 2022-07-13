@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for the deployment summary of a WindowsDefenderApplicationControl supplemental policy. */
 public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary extends Entity implements Parsable {
     /** Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy. */
     private Integer _deployedDeviceCount;

@@ -12,7 +12,7 @@ import java.util.Objects;
 public class WindowsPackageInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The Windows architecture for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64. */
+    /** Contains properties for Windows architecture. */
     private WindowsArchitecture _applicableArchitecture;
     /** The Display Name. */
     private String _displayName;
@@ -52,7 +52,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         return this._additionalData;
     }
     /**
-     * Gets the applicableArchitecture property value. The Windows architecture for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the applicableArchitecture property value. The Windows architecture for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitecture property.
      * @return a void
      */

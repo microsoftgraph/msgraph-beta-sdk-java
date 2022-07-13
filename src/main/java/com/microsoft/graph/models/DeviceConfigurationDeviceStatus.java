@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DeviceConfigurationDeviceStatus extends Entity implements Parsable {
     /** The DateTime when device compliance grace period expires */
     private OffsetDateTime _complianceGracePeriodExpirationDateTime;
@@ -20,7 +20,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
     private OffsetDateTime _lastReportedDateTime;
     /** Platform of the device that is being reported */
     private Integer _platform;
-    /** Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The status property */
     private ComplianceStatus _status;
     /** The User Name that is being reported */
     private String _userName;
@@ -102,7 +102,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
         return this._platform;
     }
     /**
-     * Gets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the status property value. The status property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
         this._platform = value;
     }
     /**
-     * Sets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

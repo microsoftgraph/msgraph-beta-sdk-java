@@ -13,9 +13,9 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Specifies the reasons the deployment has its state value. Read-only. */
     private java.util.List<DeploymentStateReason> _reasons;
-    /** Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused, unknownFutureValue. */
+    /** The requestedValue property */
     private RequestedDeploymentStateValue _requestedValue;
-    /** Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only. */
+    /** The value property */
     private DeploymentStateValue _value;
     /**
      * Instantiates a new deploymentState and sets the default values.
@@ -64,7 +64,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
         return this._reasons;
     }
     /**
-     * Gets the requestedValue property value. Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused, unknownFutureValue.
+     * Gets the requestedValue property value. The requestedValue property
      * @return a requestedDeploymentStateValue
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
         return this._requestedValue;
     }
     /**
-     * Gets the value property value. Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
+     * Gets the value property value. The value property
      * @return a deploymentStateValue
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
         this._reasons = value;
     }
     /**
-     * Sets the requestedValue property value. Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused, unknownFutureValue.
+     * Sets the requestedValue property value. The requestedValue property
      * @param value Value to set for the requestedValue property.
      * @return a void
      */
@@ -116,7 +116,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
         this._requestedValue = value;
     }
     /**
-     * Sets the value property value. Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
+     * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */

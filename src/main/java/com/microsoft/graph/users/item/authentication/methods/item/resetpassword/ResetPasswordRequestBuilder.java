@@ -86,7 +86,7 @@ public class ResetPasswordRequestBuilder {
     /**
      * Invoke action resetPassword
      * @param body 
-     * @return a CompletableFuture of PasswordResetResponse
+     * @return a CompletableFuture of passwordResetResponse
      */
     public java.util.concurrent.CompletableFuture<PasswordResetResponse> post(@javax.annotation.Nonnull final ResetPasswordPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class ResetPasswordRequestBuilder {
      * Invoke action resetPassword
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PasswordResetResponse
+     * @return a CompletableFuture of passwordResetResponse
      */
     public java.util.concurrent.CompletableFuture<PasswordResetResponse> post(@javax.annotation.Nonnull final ResetPasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ResetPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class ResetPasswordRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of PasswordResetResponse
+     * @return a CompletableFuture of passwordResetResponse
      */
     public java.util.concurrent.CompletableFuture<PasswordResetResponse> post(@javax.annotation.Nonnull final ResetPasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ResetPasswordRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

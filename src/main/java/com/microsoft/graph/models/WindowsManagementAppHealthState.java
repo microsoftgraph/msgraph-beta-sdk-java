@@ -14,7 +14,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     private String _deviceName;
     /** Windows 10 OS version of the device on which Windows management app is installed. */
     private String _deviceOSVersion;
-    /** Windows management app health state. Possible values are: unknown, healthy, unhealthy. */
+    /** Indicates health state of the Windows management app. */
     private HealthState _healthState;
     /** Windows management app installed version. */
     private String _installedVersion;
@@ -69,7 +69,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
         }};
     }
     /**
-     * Gets the healthState property value. Windows management app health state. Possible values are: unknown, healthy, unhealthy.
+     * Gets the healthState property value. Indicates health state of the Windows management app.
      * @return a healthState
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
         this._deviceOSVersion = value;
     }
     /**
-     * Sets the healthState property value. Windows management app health state. Possible values are: unknown, healthy, unhealthy.
+     * Sets the healthState property value. Indicates health state of the Windows management app.
      * @param value Value to set for the healthState property.
      * @return a void
      */

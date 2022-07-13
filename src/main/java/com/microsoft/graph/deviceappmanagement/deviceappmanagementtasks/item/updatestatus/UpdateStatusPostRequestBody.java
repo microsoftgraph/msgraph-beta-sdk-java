@@ -15,7 +15,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
     private Map<String, Object> _additionalData;
     /** The note property */
     private String _note;
-    /** The status property */
+    /** Device app management task status. */
     private DeviceAppManagementTaskStatus _status;
     /**
      * Instantiates a new updateStatusPostRequestBody and sets the default values.
@@ -63,7 +63,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
         return this._note;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Device app management task status.
      * @return a deviceAppManagementTaskStatus
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
         this._note = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Device app management task status.
      * @param value Value to set for the status property.
      * @return a void
      */

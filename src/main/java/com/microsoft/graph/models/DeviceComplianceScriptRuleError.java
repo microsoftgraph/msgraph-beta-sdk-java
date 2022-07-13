@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the validateComplianceScript method. */
 public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError implements Parsable {
     /** Setting name for the rule with error. */
     private String _settingName;
     /**
-     * Instantiates a new deviceComplianceScriptRuleError and sets the default values.
+     * Instantiates a new DeviceComplianceScriptRuleError and sets the default values.
      * @return a void
      */
     public DeviceComplianceScriptRuleError() {
@@ -21,7 +20,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptRuleError
+     * @return a DeviceComplianceScriptRuleError
      */
     @javax.annotation.Nonnull
     public static DeviceComplianceScriptRuleError createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

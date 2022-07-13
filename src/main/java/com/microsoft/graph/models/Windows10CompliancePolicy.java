@@ -28,7 +28,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     private DeviceCompliancePolicyScript _deviceCompliancePolicyScript;
     /** Require that devices have enabled device threat protection. */
     private Boolean _deviceThreatProtectionEnabled;
-    /** Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
     /** Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled. */
     private Boolean _earlyLaunchAntiMalwareDriverEnabled;
@@ -56,7 +56,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     private Boolean _passwordRequired;
     /** Require a password to unlock an idle device. */
     private Boolean _passwordRequiredToUnlockFromIdle;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Require devices to be reported as healthy by Windows Device Health Attestation. */
     private Boolean _requireHealthyDeviceReport;
@@ -170,7 +170,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         return this._deviceThreatProtectionEnabled;
     }
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -324,7 +324,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         return this._passwordRequiredToUnlockFromIdle;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -509,7 +509,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         this._deviceThreatProtectionEnabled = value;
     }
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -621,7 +621,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         this._passwordRequiredToUnlockFromIdle = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

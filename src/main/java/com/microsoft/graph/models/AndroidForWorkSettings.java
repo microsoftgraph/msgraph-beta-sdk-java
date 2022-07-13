@@ -8,17 +8,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Settings for Android For Work. */
 public class AndroidForWorkSettings extends Entity implements Parsable {
-    /** Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding. */
+    /** Bind status of the tenant with the Google EMM API */
     private AndroidForWorkBindStatus _bindStatus;
     /** Indicates if this account is flighting for Android Device Owner Management with CloudDPC. */
     private Boolean _deviceOwnerManagementEnabled;
-    /** Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions. */
+    /** Android for Work device management targeting type for the account */
     private AndroidForWorkEnrollmentTarget _enrollmentTarget;
     /** Last completion time for app sync */
     private OffsetDateTime _lastAppSyncDateTime;
-    /** Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none. */
+    /** Sync status of the tenant with the Google EMM API */
     private AndroidForWorkSyncStatus _lastAppSyncStatus;
     /** Last modification time for Android for Work settings */
     private OffsetDateTime _lastModifiedDateTime;
@@ -29,7 +28,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
     private java.util.List<String> _targetGroupIds;
     /**
-     * Instantiates a new androidForWorkSettings and sets the default values.
+     * Instantiates a new AndroidForWorkSettings and sets the default values.
      * @return a void
      */
     public AndroidForWorkSettings() {
@@ -38,7 +37,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkSettings
+     * @return a AndroidForWorkSettings
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +45,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         return new AndroidForWorkSettings();
     }
     /**
-     * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+     * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API
      * @return a androidForWorkBindStatus
      */
     @javax.annotation.Nullable
@@ -62,7 +61,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         return this._deviceOwnerManagementEnabled;
     }
     /**
-     * Gets the enrollmentTarget property value. Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+     * Gets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @return a androidForWorkEnrollmentTarget
      */
     @javax.annotation.Nullable
@@ -97,7 +96,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         return this._lastAppSyncDateTime;
     }
     /**
-     * Gets the lastAppSyncStatus property value. Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+     * Gets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @return a androidForWorkSyncStatus
      */
     @javax.annotation.Nullable
@@ -155,7 +154,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("targetGroupIds", this.getTargetGroupIds());
     }
     /**
-     * Sets the bindStatus property value. Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+     * Sets the bindStatus property value. Bind status of the tenant with the Google EMM API
      * @param value Value to set for the bindStatus property.
      * @return a void
      */
@@ -171,7 +170,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         this._deviceOwnerManagementEnabled = value;
     }
     /**
-     * Sets the enrollmentTarget property value. Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+     * Sets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @param value Value to set for the enrollmentTarget property.
      * @return a void
      */
@@ -187,7 +186,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         this._lastAppSyncDateTime = value;
     }
     /**
-     * Sets the lastAppSyncStatus property value. Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+     * Sets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @param value Value to set for the lastAppSyncStatus property.
      * @return a void
      */

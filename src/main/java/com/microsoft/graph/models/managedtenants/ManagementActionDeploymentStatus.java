@@ -17,7 +17,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
     private String _managementTemplateId;
     /** The managementTemplateVersion property */
     private Integer _managementTemplateVersion;
-    /** The status of the management action. Possible values are: toAddress, completed, error, timeOut, inProgress, planned, resolvedBy3rdParty, resolvedThroughAlternateMitigation, riskAccepted, unknownFutureValue. Required. */
+    /** The status property */
     private ManagementActionStatus _status;
     /** The collection of workload action deployment statues for the given management action. Optional. */
     private java.util.List<WorkloadActionDeploymentStatus> _workloadActionDeploymentStatuses;
@@ -86,7 +86,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
         return this._managementTemplateVersion;
     }
     /**
-     * Gets the status property value. The status of the management action. Possible values are: toAddress, completed, error, timeOut, inProgress, planned, resolvedBy3rdParty, resolvedThroughAlternateMitigation, riskAccepted, unknownFutureValue. Required.
+     * Gets the status property value. The status property
      * @return a managementActionStatus
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
         this._managementTemplateVersion = value;
     }
     /**
-     * Sets the status property value. The status of the management action. Possible values are: toAddress, completed, error, timeOut, inProgress, planned, resolvedBy3rdParty, resolvedThroughAlternateMitigation, riskAccepted, unknownFutureValue. Required.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

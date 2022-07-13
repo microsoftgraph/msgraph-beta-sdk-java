@@ -9,13 +9,13 @@ import java.util.Map;
 import java.util.Objects;
 /** Specify access control level per privacy data category */
 public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsable {
-    /** This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl. */
+    /** Determine the access level to specific Windows privacy data category. */
     private WindowsPrivacyDataAccessLevel _accessLevel;
     /** The Package Family Name of a Windows app. When set, the access level applies to the specified application. */
     private String _appDisplayName;
     /** The Package Family Name of a Windows app. When set, the access level applies to the specified application. */
     private String _appPackageFamilyName;
-    /** This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices. */
+    /** Windows privacy data category specifier for privacy data access. */
     private WindowsPrivacyDataCategory _dataCategory;
     /**
      * Instantiates a new windowsPrivacyDataAccessControlItem and sets the default values.
@@ -35,7 +35,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
         return new WindowsPrivacyDataAccessControlItem();
     }
     /**
-     * Gets the accessLevel property value. This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
+     * Gets the accessLevel property value. Determine the access level to specific Windows privacy data category.
      * @return a windowsPrivacyDataAccessLevel
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
         return this._appPackageFamilyName;
     }
     /**
-     * Gets the dataCategory property value. This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
+     * Gets the dataCategory property value. Windows privacy data category specifier for privacy data access.
      * @return a windowsPrivacyDataCategory
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
         writer.writeEnumValue("dataCategory", this.getDataCategory());
     }
     /**
-     * Sets the accessLevel property value. This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
+     * Sets the accessLevel property value. Determine the access level to specific Windows privacy data category.
      * @param value Value to set for the accessLevel property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
         this._appPackageFamilyName = value;
     }
     /**
-     * Sets the dataCategory property value. This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
+     * Sets the dataCategory property value. Windows privacy data category specifier for privacy data access.
      * @param value Value to set for the dataCategory property.
      * @return a void
      */

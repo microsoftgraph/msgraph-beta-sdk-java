@@ -154,6 +154,7 @@ import microsoft.graph.print.reports.monthlyprintusagebyprinter.MonthlyPrintUsag
 import microsoft.graph.print.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import microsoft.graph.print.reports.monthlyprintusagesummariesbyprinter.MonthlyPrintUsageSummariesByPrinterRequestBuilder;
 import microsoft.graph.print.reports.monthlyprintusagesummariesbyuser.MonthlyPrintUsageSummariesByUserRequestBuilder;
+import microsoft.graph.print.reports.security.SecurityRequestBuilder;
 import microsoft.graph.print.reports.usercredentialusagedetails.item.UserCredentialUsageDetailsItemRequestBuilder;
 import microsoft.graph.print.reports.usercredentialusagedetails.UserCredentialUsageDetailsRequestBuilder;
 /** Provides operations to manage the reports property of the microsoft.graph.print entity. */
@@ -217,6 +218,11 @@ public class ReportsRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The security property */
+    @javax.annotation.Nonnull
+    public SecurityRequestBuilder security() {
+        return new SecurityRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /** The userCredentialUsageDetails property */

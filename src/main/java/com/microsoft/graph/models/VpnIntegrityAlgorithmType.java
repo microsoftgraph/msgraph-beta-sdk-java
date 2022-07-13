@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum VpnIntegrityAlgorithmType implements ValuedEnum {
     /** SHA2-256 */
     Sha2_256("sha2_256"),

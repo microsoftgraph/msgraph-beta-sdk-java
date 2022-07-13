@@ -14,12 +14,15 @@ public class DeviceManagementConfigurationSettingValue implements AdditionalData
     private Map<String, Object> _additionalData;
     /** Setting value template reference */
     private DeviceManagementConfigurationSettingValueTemplateReference _settingValueTemplateReference;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new deviceManagementConfigurationSettingValue and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationSettingValue() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSettingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -29,6 +32,15 @@ public class DeviceManagementConfigurationSettingValue implements AdditionalData
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationSettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue": return new DeviceManagementConfigurationChoiceSettingValue();
+                case "#microsoft.graph.deviceManagementConfigurationGroupSettingValue": return new DeviceManagementConfigurationGroupSettingValue();
+                case "#microsoft.graph.deviceManagementConfigurationSimpleSettingValue": return new DeviceManagementConfigurationSimpleSettingValue();
+            }
+        }
         return new DeviceManagementConfigurationSettingValue();
     }
     /**
@@ -46,9 +58,18 @@ public class DeviceManagementConfigurationSettingValue implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingValue currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("settingValueTemplateReference", (n) -> { currentObject.setSettingValueTemplateReference(n.getObjectValue(DeviceManagementConfigurationSettingValueTemplateReference::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Gets the settingValueTemplateReference property value. Setting value template reference
@@ -66,6 +87,7 @@ public class DeviceManagementConfigurationSettingValue implements AdditionalData
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("settingValueTemplateReference", this.getSettingValueTemplateReference());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -75,6 +97,14 @@ public class DeviceManagementConfigurationSettingValue implements AdditionalData
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the settingValueTemplateReference property value. Setting value template reference

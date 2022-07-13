@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the security singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CloudAppSecurityProfile extends Entity implements Parsable {
     /** The azureSubscriptionId property */
     private String _azureSubscriptionId;
@@ -40,8 +40,6 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     private String _riskScore;
     /** The tags property */
     private java.util.List<String> _tags;
-    /** The type property */
-    private String _type;
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
@@ -124,7 +122,6 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
             this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
             this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
             this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
         }};
     }
@@ -209,14 +206,6 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
         return this._tags;
     }
     /**
-     * Gets the type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Gets the vendorInformation property value. The vendorInformation property
      * @return a securityVendorInformation
      */
@@ -247,7 +236,6 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeStringValue("riskScore", this.getRiskScore());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("type", this.getType());
         writer.writeObjectValue("vendorInformation", this.getVendorInformation());
     }
     /**
@@ -369,14 +357,6 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      */
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
-    }
-    /**
-     * Sets the type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property

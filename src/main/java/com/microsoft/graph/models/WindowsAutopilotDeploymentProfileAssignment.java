@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** An assignment of a Windows Autopilot deployment profile to an AAD group. */
 public class WindowsAutopilotDeploymentProfileAssignment extends Entity implements Parsable {
-    /** Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets. */
+    /** Represents source of assignment. */
     private DeviceAndAppManagementAssignmentSource _source;
     /** Identifier for resource used for deployment to a group */
     private String _sourceId;
@@ -46,7 +46,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
         }};
     }
     /**
-     * Gets the source property value. Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
+     * Gets the source property value. Represents source of assignment.
      * @return a deviceAndAppManagementAssignmentSource
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the source property value. Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
+     * Sets the source property value. Represents source of assignment.
      * @param value Value to set for the source property.
      * @return a void
      */

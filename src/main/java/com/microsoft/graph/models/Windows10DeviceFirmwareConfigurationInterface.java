@@ -8,47 +8,47 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration implements Parsable {
-    /** Defines whether a user is allowed to enable Bluetooth. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _bluetooth;
-    /** Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _bootFromBuiltInNetworkAdapters;
-    /** Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _bootFromExternalMedia;
-    /** Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _cameras;
-    /** Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none. */
+    /** Defines the permission level granted to users to enable them change Uefi settings */
     private ChangeUefiSettingsPermission _changeUefiSettingsPermission;
-    /** Defines whether a user is allowed to enable Front Camera. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _frontCamera;
-    /** Defines whether a user is allowed to enable Infrared camera. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _infraredCamera;
-    /** Defines whether a user is allowed to enable Microphone. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _microphone;
-    /** Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _microphonesAndSpeakers;
-    /** Defines whether a user is allowed to enable Near Field Communication. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _nearFieldCommunication;
-    /** Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _radios;
-    /** Defines whether a user is allowed to enable rear camera. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _rearCamera;
-    /** Defines whether a user is allowed to enable SD Card Port. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _sdCard;
-    /** Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _simultaneousMultiThreading;
-    /** Defines whether a user is allowed to enable USB Type A Port. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _usbTypeAPort;
-    /** Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _virtualizationOfCpuAndIO;
-    /** Defines whether a user is allowed to enable Wake on LAN. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _wakeOnLAN;
-    /** Defines whether a user is allowed to enable Wake On Power. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _wakeOnPower;
-    /** Defines whether a user is allowed to enable WiFi. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _wiFi;
-    /** Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _windowsPlatformBinaryTable;
-    /** Defines whether a user is allowed to enable Wireless Wide Area Network. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _wirelessWideAreaNetwork;
     /**
      * Instantiates a new Windows10DeviceFirmwareConfigurationInterface and sets the default values.
@@ -68,7 +68,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return new Windows10DeviceFirmwareConfigurationInterface();
     }
     /**
-     * Gets the bluetooth property value. Defines whether a user is allowed to enable Bluetooth. Possible values are: notConfigured, enabled, disabled.
+     * Gets the bluetooth property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._bluetooth;
     }
     /**
-     * Gets the bootFromBuiltInNetworkAdapters property value. Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
+     * Gets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._bootFromBuiltInNetworkAdapters;
     }
     /**
-     * Gets the bootFromExternalMedia property value. Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
+     * Gets the bootFromExternalMedia property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._bootFromExternalMedia;
     }
     /**
-     * Gets the cameras property value. Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
+     * Gets the cameras property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._cameras;
     }
     /**
-     * Gets the changeUefiSettingsPermission property value. Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
+     * Gets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
      * @return a changeUefiSettingsPermission
      */
     @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         }};
     }
     /**
-     * Gets the frontCamera property value. Defines whether a user is allowed to enable Front Camera. Possible values are: notConfigured, enabled, disabled.
+     * Gets the frontCamera property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._frontCamera;
     }
     /**
-     * Gets the infraredCamera property value. Defines whether a user is allowed to enable Infrared camera. Possible values are: notConfigured, enabled, disabled.
+     * Gets the infraredCamera property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._infraredCamera;
     }
     /**
-     * Gets the microphone property value. Defines whether a user is allowed to enable Microphone. Possible values are: notConfigured, enabled, disabled.
+     * Gets the microphone property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._microphone;
     }
     /**
-     * Gets the microphonesAndSpeakers property value. Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
+     * Gets the microphonesAndSpeakers property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._microphonesAndSpeakers;
     }
     /**
-     * Gets the nearFieldCommunication property value. Defines whether a user is allowed to enable Near Field Communication. Possible values are: notConfigured, enabled, disabled.
+     * Gets the nearFieldCommunication property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._nearFieldCommunication;
     }
     /**
-     * Gets the radios property value. Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
+     * Gets the radios property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._radios;
     }
     /**
-     * Gets the rearCamera property value. Defines whether a user is allowed to enable rear camera. Possible values are: notConfigured, enabled, disabled.
+     * Gets the rearCamera property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._rearCamera;
     }
     /**
-     * Gets the sdCard property value. Defines whether a user is allowed to enable SD Card Port. Possible values are: notConfigured, enabled, disabled.
+     * Gets the sdCard property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._sdCard;
     }
     /**
-     * Gets the simultaneousMultiThreading property value. Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
+     * Gets the simultaneousMultiThreading property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._simultaneousMultiThreading;
     }
     /**
-     * Gets the usbTypeAPort property value. Defines whether a user is allowed to enable USB Type A Port. Possible values are: notConfigured, enabled, disabled.
+     * Gets the usbTypeAPort property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._usbTypeAPort;
     }
     /**
-     * Gets the virtualizationOfCpuAndIO property value. Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
+     * Gets the virtualizationOfCpuAndIO property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._virtualizationOfCpuAndIO;
     }
     /**
-     * Gets the wakeOnLAN property value. Defines whether a user is allowed to enable Wake on LAN. Possible values are: notConfigured, enabled, disabled.
+     * Gets the wakeOnLAN property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._wakeOnLAN;
     }
     /**
-     * Gets the wakeOnPower property value. Defines whether a user is allowed to enable Wake On Power. Possible values are: notConfigured, enabled, disabled.
+     * Gets the wakeOnPower property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -243,7 +243,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._wakeOnPower;
     }
     /**
-     * Gets the wiFi property value. Defines whether a user is allowed to enable WiFi. Possible values are: notConfigured, enabled, disabled.
+     * Gets the wiFi property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._wiFi;
     }
     /**
-     * Gets the windowsPlatformBinaryTable property value. Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
+     * Gets the windowsPlatformBinaryTable property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -259,7 +259,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         return this._windowsPlatformBinaryTable;
     }
     /**
-     * Gets the wirelessWideAreaNetwork property value. Defines whether a user is allowed to enable Wireless Wide Area Network. Possible values are: notConfigured, enabled, disabled.
+     * Gets the wirelessWideAreaNetwork property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -297,7 +297,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         writer.writeEnumValue("wirelessWideAreaNetwork", this.getWirelessWideAreaNetwork());
     }
     /**
-     * Sets the bluetooth property value. Defines whether a user is allowed to enable Bluetooth. Possible values are: notConfigured, enabled, disabled.
+     * Sets the bluetooth property value. Possible values of a property
      * @param value Value to set for the bluetooth property.
      * @return a void
      */
@@ -305,7 +305,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._bluetooth = value;
     }
     /**
-     * Sets the bootFromBuiltInNetworkAdapters property value. Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
+     * Sets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
      * @param value Value to set for the bootFromBuiltInNetworkAdapters property.
      * @return a void
      */
@@ -313,7 +313,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._bootFromBuiltInNetworkAdapters = value;
     }
     /**
-     * Sets the bootFromExternalMedia property value. Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
+     * Sets the bootFromExternalMedia property value. Possible values of a property
      * @param value Value to set for the bootFromExternalMedia property.
      * @return a void
      */
@@ -321,7 +321,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._bootFromExternalMedia = value;
     }
     /**
-     * Sets the cameras property value. Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
+     * Sets the cameras property value. Possible values of a property
      * @param value Value to set for the cameras property.
      * @return a void
      */
@@ -329,7 +329,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._cameras = value;
     }
     /**
-     * Sets the changeUefiSettingsPermission property value. Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
+     * Sets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
      * @param value Value to set for the changeUefiSettingsPermission property.
      * @return a void
      */
@@ -337,7 +337,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._changeUefiSettingsPermission = value;
     }
     /**
-     * Sets the frontCamera property value. Defines whether a user is allowed to enable Front Camera. Possible values are: notConfigured, enabled, disabled.
+     * Sets the frontCamera property value. Possible values of a property
      * @param value Value to set for the frontCamera property.
      * @return a void
      */
@@ -345,7 +345,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._frontCamera = value;
     }
     /**
-     * Sets the infraredCamera property value. Defines whether a user is allowed to enable Infrared camera. Possible values are: notConfigured, enabled, disabled.
+     * Sets the infraredCamera property value. Possible values of a property
      * @param value Value to set for the infraredCamera property.
      * @return a void
      */
@@ -353,7 +353,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._infraredCamera = value;
     }
     /**
-     * Sets the microphone property value. Defines whether a user is allowed to enable Microphone. Possible values are: notConfigured, enabled, disabled.
+     * Sets the microphone property value. Possible values of a property
      * @param value Value to set for the microphone property.
      * @return a void
      */
@@ -361,7 +361,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._microphone = value;
     }
     /**
-     * Sets the microphonesAndSpeakers property value. Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
+     * Sets the microphonesAndSpeakers property value. Possible values of a property
      * @param value Value to set for the microphonesAndSpeakers property.
      * @return a void
      */
@@ -369,7 +369,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._microphonesAndSpeakers = value;
     }
     /**
-     * Sets the nearFieldCommunication property value. Defines whether a user is allowed to enable Near Field Communication. Possible values are: notConfigured, enabled, disabled.
+     * Sets the nearFieldCommunication property value. Possible values of a property
      * @param value Value to set for the nearFieldCommunication property.
      * @return a void
      */
@@ -377,7 +377,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._nearFieldCommunication = value;
     }
     /**
-     * Sets the radios property value. Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
+     * Sets the radios property value. Possible values of a property
      * @param value Value to set for the radios property.
      * @return a void
      */
@@ -385,7 +385,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._radios = value;
     }
     /**
-     * Sets the rearCamera property value. Defines whether a user is allowed to enable rear camera. Possible values are: notConfigured, enabled, disabled.
+     * Sets the rearCamera property value. Possible values of a property
      * @param value Value to set for the rearCamera property.
      * @return a void
      */
@@ -393,7 +393,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._rearCamera = value;
     }
     /**
-     * Sets the sdCard property value. Defines whether a user is allowed to enable SD Card Port. Possible values are: notConfigured, enabled, disabled.
+     * Sets the sdCard property value. Possible values of a property
      * @param value Value to set for the sdCard property.
      * @return a void
      */
@@ -401,7 +401,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._sdCard = value;
     }
     /**
-     * Sets the simultaneousMultiThreading property value. Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
+     * Sets the simultaneousMultiThreading property value. Possible values of a property
      * @param value Value to set for the simultaneousMultiThreading property.
      * @return a void
      */
@@ -409,7 +409,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._simultaneousMultiThreading = value;
     }
     /**
-     * Sets the usbTypeAPort property value. Defines whether a user is allowed to enable USB Type A Port. Possible values are: notConfigured, enabled, disabled.
+     * Sets the usbTypeAPort property value. Possible values of a property
      * @param value Value to set for the usbTypeAPort property.
      * @return a void
      */
@@ -417,7 +417,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._usbTypeAPort = value;
     }
     /**
-     * Sets the virtualizationOfCpuAndIO property value. Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
+     * Sets the virtualizationOfCpuAndIO property value. Possible values of a property
      * @param value Value to set for the virtualizationOfCpuAndIO property.
      * @return a void
      */
@@ -425,7 +425,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._virtualizationOfCpuAndIO = value;
     }
     /**
-     * Sets the wakeOnLAN property value. Defines whether a user is allowed to enable Wake on LAN. Possible values are: notConfigured, enabled, disabled.
+     * Sets the wakeOnLAN property value. Possible values of a property
      * @param value Value to set for the wakeOnLAN property.
      * @return a void
      */
@@ -433,7 +433,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._wakeOnLAN = value;
     }
     /**
-     * Sets the wakeOnPower property value. Defines whether a user is allowed to enable Wake On Power. Possible values are: notConfigured, enabled, disabled.
+     * Sets the wakeOnPower property value. Possible values of a property
      * @param value Value to set for the wakeOnPower property.
      * @return a void
      */
@@ -441,7 +441,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._wakeOnPower = value;
     }
     /**
-     * Sets the wiFi property value. Defines whether a user is allowed to enable WiFi. Possible values are: notConfigured, enabled, disabled.
+     * Sets the wiFi property value. Possible values of a property
      * @param value Value to set for the wiFi property.
      * @return a void
      */
@@ -449,7 +449,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._wiFi = value;
     }
     /**
-     * Sets the windowsPlatformBinaryTable property value. Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
+     * Sets the windowsPlatformBinaryTable property value. Possible values of a property
      * @param value Value to set for the windowsPlatformBinaryTable property.
      * @return a void
      */
@@ -457,7 +457,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
         this._windowsPlatformBinaryTable = value;
     }
     /**
-     * Sets the wirelessWideAreaNetwork property value. Defines whether a user is allowed to enable Wireless Wide Area Network. Possible values are: notConfigured, enabled, disabled.
+     * Sets the wirelessWideAreaNetwork property value. Possible values of a property
      * @param value Value to set for the wirelessWideAreaNetwork property.
      * @return a void
      */

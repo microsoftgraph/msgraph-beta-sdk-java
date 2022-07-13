@@ -7,12 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class CloudPcSupportedRegion extends Entity implements Parsable {
     /** The name for the supported region. Read-only. */
     private String _displayName;
+    /** The regionStatus property */
+    private CloudPcSupportedRegionStatus _regionStatus;
     /**
-     * Instantiates a new cloudPcSupportedRegion and sets the default values.
+     * Instantiates a new CloudPcSupportedRegion and sets the default values.
      * @return a void
      */
     public CloudPcSupportedRegion() {
@@ -21,7 +22,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcSupportedRegion
+     * @return a CloudPcSupportedRegion
      */
     @javax.annotation.Nonnull
     public static CloudPcSupportedRegion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +46,16 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         final CloudPcSupportedRegion currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("regionStatus", (n) -> { currentObject.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus.class)); });
         }};
+    }
+    /**
+     * Gets the regionStatus property value. The regionStatus property
+     * @return a cloudPcSupportedRegionStatus
+     */
+    @javax.annotation.Nullable
+    public CloudPcSupportedRegionStatus getRegionStatus() {
+        return this._regionStatus;
     }
     /**
      * Serializes information the current object
@@ -56,6 +66,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("regionStatus", this.getRegionStatus());
     }
     /**
      * Sets the displayName property value. The name for the supported region. Read-only.
@@ -64,5 +75,13 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the regionStatus property value. The regionStatus property
+     * @param value Value to set for the regionStatus property.
+     * @return a void
+     */
+    public void setRegionStatus(@javax.annotation.Nullable final CloudPcSupportedRegionStatus value) {
+        this._regionStatus = value;
     }
 }

@@ -14,6 +14,7 @@ public class SoftwareUpdateCatalogEntry extends CatalogEntry implements Parsable
      */
     public SoftwareUpdateCatalogEntry() {
         super();
+        this.setOdatatype("#microsoft.graph.windowsUpdates.softwareUpdateCatalogEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

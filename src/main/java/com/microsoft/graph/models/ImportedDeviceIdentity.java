@@ -8,35 +8,35 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The importedDeviceIdentity resource represents a unique hardware identity of a device that has been pre-staged for pre-enrollment configuration. */
 public class ImportedDeviceIdentity extends Entity implements Parsable {
     /** Created Date Time of the device */
     private OffsetDateTime _createdDateTime;
     /** The description of the device */
     private String _description;
-    /** The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked. */
+    /** The enrollmentState property */
     private EnrollmentState _enrollmentState;
     /** Imported Device Identifier */
     private String _importedDeviceIdentifier;
-    /** Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber. */
+    /** The importedDeviceIdentityType property */
     private ImportedDeviceIdentityType _importedDeviceIdentityType;
     /** Last Contacted Date Time of the device */
     private OffsetDateTime _lastContactedDateTime;
     /** Last Modified DateTime of the description */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS. */
+    /** The platform property */
     private Platform _platform;
     /**
-     * Instantiates a new importedDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedDeviceIdentity and sets the default values.
      * @return a void
      */
     public ImportedDeviceIdentity() {
         super();
+        this.setOdatatype("#microsoft.graph.importedDeviceIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedDeviceIdentity
+     * @return a ImportedDeviceIdentity
      */
     @javax.annotation.Nonnull
     public static ImportedDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the enrollmentState property value. The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         return this._importedDeviceIdentifier;
     }
     /**
-     * Gets the importedDeviceIdentityType property value. Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
+     * Gets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
      * @return a importedDeviceIdentityType
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the platform property value. The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
+     * Gets the platform property value. The platform property
      * @return a platform
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the enrollmentState property value. The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
@@ -182,7 +182,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         this._importedDeviceIdentifier = value;
     }
     /**
-     * Sets the importedDeviceIdentityType property value. Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
+     * Sets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
      * @param value Value to set for the importedDeviceIdentityType property.
      * @return a void
      */
@@ -206,7 +206,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the platform property value. The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
+     * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      * @return a void
      */

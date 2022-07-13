@@ -21,7 +21,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     private String _id;
     /** Mobile phone number of the contact. */
     private String _mobilePhone;
-    /** Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue. */
+    /** The relationship property */
     private ContactRelationship _relationship;
     /**
      * Instantiates a new relatedContact and sets the default values.
@@ -105,7 +105,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
         return this._mobilePhone;
     }
     /**
-     * Gets the relationship property value. Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+     * Gets the relationship property value. The relationship property
      * @return a contactRelationship
      */
     @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
         this._mobilePhone = value;
     }
     /**
-     * Sets the relationship property value. Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+     * Sets the relationship property value. The relationship property
      * @param value Value to set for the relationship property.
      * @return a void
      */

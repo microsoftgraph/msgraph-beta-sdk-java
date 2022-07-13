@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SharedPCConfiguration extends DeviceConfiguration implements Parsable {
     /** Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false. */
     private SharedPCAccountManagerPolicy _accountManagerPolicy;
-    /** Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain. */
+    /** Type of accounts that are allowed to share the PC. */
     private SharedPCAllowedAccountType _allowedAccounts;
     /** Specifies whether local storage is allowed on a shared PC. */
     private Boolean _allowLocalStorage;
@@ -25,7 +25,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     private Boolean _disableSignInOnResume;
     /** Enables shared PC mode and applies the shared pc policies. */
     private Boolean _enabled;
-    /** Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _fastFirstSignIn;
     /** Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring. */
     private Integer _idleTimeBeforeSleepInSeconds;
@@ -33,17 +33,17 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     private String _kioskAppDisplayName;
     /** Specifies the application user model ID of the app to use with assigned access. */
     private String _kioskAppUserModelId;
-    /** Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _localStorage;
     /** Specifies the daily start time of maintenance hour. */
     private LocalTime _maintenanceStartTime;
-    /** Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _setAccountManager;
-    /** Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _setEduPolicies;
-    /** Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _setPowerPolicies;
-    /** Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled. */
+    /** Possible values of a property */
     private Enablement _signInOnResume;
     /**
      * Instantiates a new SharedPCConfiguration and sets the default values.
@@ -71,7 +71,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._accountManagerPolicy;
     }
     /**
-     * Gets the allowedAccounts property value. Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      * @return a sharedPCAllowedAccountType
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._enabled;
     }
     /**
-     * Gets the fastFirstSignIn property value. Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
+     * Gets the fastFirstSignIn property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._kioskAppUserModelId;
     }
     /**
-     * Gets the localStorage property value. Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
+     * Gets the localStorage property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._maintenanceStartTime;
     }
     /**
-     * Gets the setAccountManager property value. Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
+     * Gets the setAccountManager property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._setAccountManager;
     }
     /**
-     * Gets the setEduPolicies property value. Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
+     * Gets the setEduPolicies property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._setEduPolicies;
     }
     /**
-     * Gets the setPowerPolicies property value. Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
+     * Gets the setPowerPolicies property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._setPowerPolicies;
     }
     /**
-     * Gets the signInOnResume property value. Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
+     * Gets the signInOnResume property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -270,7 +270,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._accountManagerPolicy = value;
     }
     /**
-     * Sets the allowedAccounts property value. Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Sets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      * @param value Value to set for the allowedAccounts property.
      * @return a void
      */
@@ -326,7 +326,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._enabled = value;
     }
     /**
-     * Sets the fastFirstSignIn property value. Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
+     * Sets the fastFirstSignIn property value. Possible values of a property
      * @param value Value to set for the fastFirstSignIn property.
      * @return a void
      */
@@ -358,7 +358,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._kioskAppUserModelId = value;
     }
     /**
-     * Sets the localStorage property value. Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
+     * Sets the localStorage property value. Possible values of a property
      * @param value Value to set for the localStorage property.
      * @return a void
      */
@@ -374,7 +374,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._maintenanceStartTime = value;
     }
     /**
-     * Sets the setAccountManager property value. Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
+     * Sets the setAccountManager property value. Possible values of a property
      * @param value Value to set for the setAccountManager property.
      * @return a void
      */
@@ -382,7 +382,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._setAccountManager = value;
     }
     /**
-     * Sets the setEduPolicies property value. Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
+     * Sets the setEduPolicies property value. Possible values of a property
      * @param value Value to set for the setEduPolicies property.
      * @return a void
      */
@@ -390,7 +390,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._setEduPolicies = value;
     }
     /**
-     * Sets the setPowerPolicies property value. Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
+     * Sets the setPowerPolicies property value. Possible values of a property
      * @param value Value to set for the setPowerPolicies property.
      * @return a void
      */
@@ -398,7 +398,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._setPowerPolicies = value;
     }
     /**
-     * Sets the signInOnResume property value. Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
+     * Sets the signInOnResume property value. Possible values of a property
      * @param value Value to set for the signInOnResume property.
      * @return a void
      */

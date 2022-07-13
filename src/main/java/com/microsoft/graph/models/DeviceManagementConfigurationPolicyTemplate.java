@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Management Configuration Policy Template */
 public class DeviceManagementConfigurationPolicyTemplate extends Entity implements Parsable {
     /** Allow unmanaged setting templates */
     private Boolean _allowUnmanagedSettings;
@@ -19,22 +18,22 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     private String _displayName;
     /** Description of template version */
     private String _displayVersion;
-    /** Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired. */
+    /** Describes current lifecycle state of a template */
     private DeviceManagementTemplateLifecycleState _lifecycleState;
-    /** Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue. */
+    /** Supported platform types. */
     private DeviceManagementConfigurationPlatforms _platforms;
     /** Number of setting templates. Valid values 0 to 2147483647. This property is read-only. */
     private Integer _settingTemplateCount;
     /** Setting templates */
     private java.util.List<DeviceManagementConfigurationSettingTemplate> _settingTemplates;
-    /** Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue. */
+    /** Describes which technology this setting can be deployed with */
     private DeviceManagementConfigurationTechnologies _technologies;
-    /** TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline. */
+    /** Describes the TemplateFamily for the Template entity */
     private DeviceManagementConfigurationTemplateFamily _templateFamily;
     /** Template version. Valid values 1 to 2147483647. This property is read-only. */
     private Integer _version;
     /**
-     * Instantiates a new deviceManagementConfigurationPolicyTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicyTemplate and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationPolicyTemplate() {
@@ -43,7 +42,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicyTemplate
+     * @return a DeviceManagementConfigurationPolicyTemplate
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -113,7 +112,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         }};
     }
     /**
-     * Gets the lifecycleState property value. Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
+     * Gets the lifecycleState property value. Describes current lifecycle state of a template
      * @return a deviceManagementTemplateLifecycleState
      */
     @javax.annotation.Nullable
@@ -121,7 +120,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         return this._lifecycleState;
     }
     /**
-     * Gets the platforms property value. Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Gets the platforms property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
     @javax.annotation.Nullable
@@ -145,7 +144,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         return this._settingTemplates;
     }
     /**
-     * Gets the technologies property value. Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
     @javax.annotation.Nullable
@@ -153,7 +152,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         return this._technologies;
     }
     /**
-     * Gets the templateFamily property value. TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+     * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @return a deviceManagementConfigurationTemplateFamily
      */
     @javax.annotation.Nullable
@@ -230,7 +229,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         this._displayVersion = value;
     }
     /**
-     * Sets the lifecycleState property value. Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
+     * Sets the lifecycleState property value. Describes current lifecycle state of a template
      * @param value Value to set for the lifecycleState property.
      * @return a void
      */
@@ -238,7 +237,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         this._lifecycleState = value;
     }
     /**
-     * Sets the platforms property value. Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      * @return a void
      */
@@ -262,7 +261,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         this._settingTemplates = value;
     }
     /**
-     * Sets the technologies property value. Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      * @return a void
      */
@@ -270,7 +269,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         this._technologies = value;
     }
     /**
-     * Sets the templateFamily property value. TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+     * Sets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @param value Value to set for the templateFamily property.
      * @return a void
      */

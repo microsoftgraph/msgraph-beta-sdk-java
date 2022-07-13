@@ -20,12 +20,15 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     private Boolean _isRequired;
     /** The name of the param */
     private String _name;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new deviceHealthScriptParameter and sets the default values.
      * @return a void
      */
     public DeviceHealthScriptParameter() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.deviceHealthScriptParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,6 +38,15 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public static DeviceHealthScriptParameter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceHealthScriptBooleanParameter": return new DeviceHealthScriptBooleanParameter();
+                case "#microsoft.graph.deviceHealthScriptIntegerParameter": return new DeviceHealthScriptIntegerParameter();
+                case "#microsoft.graph.deviceHealthScriptStringParameter": return new DeviceHealthScriptStringParameter();
+            }
+        }
         return new DeviceHealthScriptParameter();
     }
     /**
@@ -68,11 +80,12 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptParameter currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("applyDefaultValueWhenNotAssigned", (n) -> { currentObject.setApplyDefaultValueWhenNotAssigned(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -92,6 +105,14 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -102,6 +123,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
         writer.writeStringValue("description", this.getDescription());
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -143,5 +165,13 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

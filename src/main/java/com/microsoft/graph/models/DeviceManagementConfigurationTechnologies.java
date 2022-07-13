@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     /** Setting cannot be deployed through any channel */
     None("none"),
@@ -21,6 +21,8 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     ExchangeOnline("exchangeOnline"),
     /** Setting can be deployed through the Linux Mdm channel */
     LinuxMdm("linuxMdm"),
+    /** Setting can be deployed through device enrollment. */
+    Enrollment("enrollment"),
     /** Sentinel member for cases where the client cannot handle the new enum values. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -41,6 +43,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "microsoftSense": return MicrosoftSense;
             case "exchangeOnline": return ExchangeOnline;
             case "linuxMdm": return LinuxMdm;
+            case "enrollment": return Enrollment;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

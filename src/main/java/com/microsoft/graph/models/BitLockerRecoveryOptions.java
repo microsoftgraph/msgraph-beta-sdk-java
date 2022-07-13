@@ -20,11 +20,11 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
     private Boolean _enableRecoveryInformationSaveToStore;
     /** Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk. */
     private Boolean _hideRecoveryOptions;
-    /** Configure what pieces of BitLocker recovery information are stored to AD DS. Possible values are: passwordAndKey, passwordOnly. */
+    /** BitLockerRecoveryInformationType types */
     private BitLockerRecoveryInformationType _recoveryInformationToStore;
-    /** Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _recoveryKeyUsage;
-    /** Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured. */
+    /** Possible values of the ConfigurationUsage list. */
     private ConfigurationUsage _recoveryPasswordUsage;
     /**
      * Instantiates a new bitLockerRecoveryOptions and sets the default values.
@@ -101,7 +101,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         return this._hideRecoveryOptions;
     }
     /**
-     * Gets the recoveryInformationToStore property value. Configure what pieces of BitLocker recovery information are stored to AD DS. Possible values are: passwordAndKey, passwordOnly.
+     * Gets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types
      * @return a bitLockerRecoveryInformationType
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         return this._recoveryInformationToStore;
     }
     /**
-     * Gets the recoveryKeyUsage property value. Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the recoveryKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         return this._recoveryKeyUsage;
     }
     /**
-     * Gets the recoveryPasswordUsage property value. Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+     * Gets the recoveryPasswordUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         this._hideRecoveryOptions = value;
     }
     /**
-     * Sets the recoveryInformationToStore property value. Configure what pieces of BitLocker recovery information are stored to AD DS. Possible values are: passwordAndKey, passwordOnly.
+     * Sets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types
      * @param value Value to set for the recoveryInformationToStore property.
      * @return a void
      */
@@ -189,7 +189,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         this._recoveryInformationToStore = value;
     }
     /**
-     * Sets the recoveryKeyUsage property value. Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the recoveryKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the recoveryKeyUsage property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         this._recoveryKeyUsage = value;
     }
     /**
-     * Sets the recoveryPasswordUsage property value. Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+     * Sets the recoveryPasswordUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the recoveryPasswordUsage property.
      * @return a void
      */

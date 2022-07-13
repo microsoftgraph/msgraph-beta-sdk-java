@@ -15,9 +15,9 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** Day of month. Valid values 1 to 31 */
     private Integer _dayofMonth;
-    /** Day of week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. */
+    /** The dayofWeek property */
     private DayOfWeek _dayofWeek;
-    /** Recurrence schedule. Possible values are: none, daily, weekly, monthly. */
+    /** Possible values for App update on Windows10 recurrence. */
     private Windows10AppsUpdateRecurrence _recurrence;
     /** If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence. */
     private Boolean _runImmediatelyIfAfterStartDateTime;
@@ -57,7 +57,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
         return this._dayofMonth;
     }
     /**
-     * Gets the dayofWeek property value. Day of week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Gets the dayofWeek property value. The dayofWeek property
      * @return a dayOfWeek
      */
     @javax.annotation.Nullable
@@ -80,7 +80,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
         }};
     }
     /**
-     * Gets the recurrence property value. Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+     * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @return a windows10AppsUpdateRecurrence
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
         this._dayofMonth = value;
     }
     /**
-     * Sets the dayofWeek property value. Day of week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Sets the dayofWeek property value. The dayofWeek property
      * @param value Value to set for the dayofWeek property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
         this._dayofWeek = value;
     }
     /**
-     * Sets the recurrence property value. Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+     * Sets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @param value Value to set for the recurrence property.
      * @return a void
      */

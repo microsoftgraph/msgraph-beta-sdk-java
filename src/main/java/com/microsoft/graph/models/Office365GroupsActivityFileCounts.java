@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getOffice365GroupsActivityFileCounts method. */
 public class Office365GroupsActivityFileCounts extends Entity implements Parsable {
     /** The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library. */
     private Long _active;
@@ -21,7 +20,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     /** The total number of files in the group's SharePoint document library. */
     private Long _total;
     /**
-     * Instantiates a new office365GroupsActivityFileCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityFileCounts and sets the default values.
      * @return a void
      */
     public Office365GroupsActivityFileCounts() {
@@ -30,7 +29,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityFileCounts
+     * @return a Office365GroupsActivityFileCounts
      */
     @javax.annotation.Nonnull
     public static Office365GroupsActivityFileCounts createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

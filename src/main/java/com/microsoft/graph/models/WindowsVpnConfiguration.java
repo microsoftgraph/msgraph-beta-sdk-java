@@ -20,6 +20,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      */
     public WindowsVpnConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.windowsVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

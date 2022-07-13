@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Schema describing an Android application's custom configurations. */
 public class AndroidManagedStoreAppConfigurationSchema extends Entity implements Parsable {
     /** UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app */
     private byte[] _exampleJson;
@@ -16,7 +15,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     /** Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration. */
     private java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> _schemaItems;
     /**
-     * Instantiates a new androidManagedStoreAppConfigurationSchema and sets the default values.
+     * Instantiates a new AndroidManagedStoreAppConfigurationSchema and sets the default values.
      * @return a void
      */
     public AndroidManagedStoreAppConfigurationSchema() {
@@ -25,7 +24,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAppConfigurationSchema
+     * @return a AndroidManagedStoreAppConfigurationSchema
      */
     @javax.annotation.Nonnull
     public static AndroidManagedStoreAppConfigurationSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

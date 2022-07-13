@@ -12,13 +12,13 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     private WiFiAuthenticationMethod _authenticationMethod;
     /** EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously. */
     private EapFastConfiguration _eapFastConfiguration;
-    /** Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap. */
+    /** Extensible Authentication Protocol (EAP) configuration types. */
     private EapType _eapType;
     /** Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'. */
     private String _enableOuterIdentityPrivacy;
     /** Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). */
     private MacOSCertificateProfileBase _identityCertificateForClientAuthentication;
-    /** Network interface. Possible values are: anyEthernet, firstActiveEthernet, secondActiveEthernet, thirdActiveEthernet, firstEthernet, secondEthernet, thirdEthernet. */
+    /** Apple network interface type. */
     private WiredNetworkInterface _networkInterface;
     /** Network Name */
     private String _networkName;
@@ -62,7 +62,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this._eapFastConfiguration;
     }
     /**
-     * Gets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this._identityCertificateForClientAuthentication;
     }
     /**
-     * Gets the networkInterface property value. Network interface. Possible values are: anyEthernet, firstActiveEthernet, secondActiveEthernet, thirdActiveEthernet, firstEthernet, secondEthernet, thirdEthernet.
+     * Gets the networkInterface property value. Apple network interface type.
      * @return a wiredNetworkInterface
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         this._eapFastConfiguration = value;
     }
     /**
-     * Sets the eapType property value. Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
+     * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
      * @return a void
      */
@@ -205,7 +205,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         this._identityCertificateForClientAuthentication = value;
     }
     /**
-     * Sets the networkInterface property value. Network interface. Possible values are: anyEthernet, firstActiveEthernet, secondActiveEthernet, thirdActiveEthernet, firstEthernet, secondEthernet, thirdEthernet.
+     * Sets the networkInterface property value. Apple network interface type.
      * @param value Value to set for the networkInterface property.
      * @return a void
      */

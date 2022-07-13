@@ -19,15 +19,15 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     private String _assignmentFilterId;
     /** The time the assignment filter was last modified. */
     private OffsetDateTime _assignmentFilterLastModifiedDateTime;
-    /** The platform for which this assignment filter is created. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown. */
+    /** Supported platform types. */
     private DevicePlatformType _assignmentFilterPlatform;
-    /** Indicate filter type either include or exclude. Possible values are: none, include, exclude. */
+    /** Represents type of the assignment filter. */
     private DeviceAndAppManagementAssignmentFilterType _assignmentFilterType;
     /** A collection of filter types and their corresponding evaluation results. */
     private java.util.List<AssignmentFilterTypeAndEvaluationResult> _assignmentFilterTypeAndEvaluationResults;
     /** The time assignment filter was evaluated. */
     private OffsetDateTime _evaluationDateTime;
-    /** Assignment filter evaluation result. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated. */
+    /** Supported evaluation results for filter. */
     private AssignmentFilterEvaluationResult _evaluationResult;
     /**
      * Instantiates a new assignmentFilterEvaluationSummary and sets the default values.
@@ -79,7 +79,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         return this._assignmentFilterLastModifiedDateTime;
     }
     /**
-     * Gets the assignmentFilterPlatform property value. The platform for which this assignment filter is created. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Gets the assignmentFilterPlatform property value. Supported platform types.
      * @return a devicePlatformType
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         return this._assignmentFilterPlatform;
     }
     /**
-     * Gets the assignmentFilterType property value. Indicate filter type either include or exclude. Possible values are: none, include, exclude.
+     * Gets the assignmentFilterType property value. Represents type of the assignment filter.
      * @return a deviceAndAppManagementAssignmentFilterType
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         return this._evaluationDateTime;
     }
     /**
-     * Gets the evaluationResult property value. Assignment filter evaluation result. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
+     * Gets the evaluationResult property value. Supported evaluation results for filter.
      * @return a assignmentFilterEvaluationResult
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         this._assignmentFilterLastModifiedDateTime = value;
     }
     /**
-     * Sets the assignmentFilterPlatform property value. The platform for which this assignment filter is created. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Sets the assignmentFilterPlatform property value. Supported platform types.
      * @param value Value to set for the assignmentFilterPlatform property.
      * @return a void
      */
@@ -194,7 +194,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         this._assignmentFilterPlatform = value;
     }
     /**
-     * Sets the assignmentFilterType property value. Indicate filter type either include or exclude. Possible values are: none, include, exclude.
+     * Sets the assignmentFilterType property value. Represents type of the assignment filter.
      * @param value Value to set for the assignmentFilterType property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         this._evaluationDateTime = value;
     }
     /**
-     * Sets the evaluationResult property value. Assignment filter evaluation result. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
+     * Sets the evaluationResult property value. Supported evaluation results for filter.
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */

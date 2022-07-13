@@ -10,13 +10,13 @@ import java.util.Map;
 import java.util.Objects;
 /** Blocked actions on the company portal as per platform and device ownership types */
 public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsable {
-    /** Device Action. Possible values are: unknown, remove, reset. */
+    /** Action on a device that can be executed in the Company Portal */
     private CompanyPortalAction _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Device ownership type. Possible values are: unknown, company, personal. */
+    /** Owner type of device. */
     private OwnerType _ownerType;
-    /** Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown. */
+    /** Supported platform types. */
     private DevicePlatformType _platform;
     /**
      * Instantiates a new companyPortalBlockedAction and sets the default values.
@@ -36,7 +36,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
         return new CompanyPortalBlockedAction();
     }
     /**
-     * Gets the action property value. Device Action. Possible values are: unknown, remove, reset.
+     * Gets the action property value. Action on a device that can be executed in the Company Portal
      * @return a companyPortalAction
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
         }};
     }
     /**
-     * Gets the ownerType property value. Device ownership type. Possible values are: unknown, company, personal.
+     * Gets the ownerType property value. Owner type of device.
      * @return a ownerType
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
         return this._ownerType;
     }
     /**
-     * Gets the platform property value. Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Gets the platform property value. Supported platform types.
      * @return a devicePlatformType
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. Device Action. Possible values are: unknown, remove, reset.
+     * Sets the action property value. Action on a device that can be executed in the Company Portal
      * @param value Value to set for the action property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
         this._additionalData = value;
     }
     /**
-     * Sets the ownerType property value. Device ownership type. Possible values are: unknown, company, personal.
+     * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
         this._ownerType = value;
     }
     /**
-     * Sets the platform property value. Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */

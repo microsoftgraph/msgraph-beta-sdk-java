@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class ConnectedOrganization extends Entity implements Parsable {
     /** UPN of the user who created this resource. Read-only. */
     private String _createdBy;

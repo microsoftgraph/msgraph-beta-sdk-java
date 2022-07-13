@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
 public class ChatMessageInfo extends Entity implements Parsable {
     /** Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments. */
     private ItemBody _body;
@@ -20,7 +19,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     private ChatMessageFromIdentitySet _from;
     /** If set to true, the original message has been deleted. */
     private Boolean _isDeleted;
-    /** The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage. */
+    /** The messageType property */
     private ChatMessageType _messageType;
     /**
      * Instantiates a new chatMessageInfo and sets the default values.
@@ -96,7 +95,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         return this._isDeleted;
     }
     /**
-     * Gets the messageType property value. The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
+     * Gets the messageType property value. The messageType property
      * @return a chatMessageType
      */
     @javax.annotation.Nullable
@@ -159,7 +158,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         this._isDeleted = value;
     }
     /**
-     * Sets the messageType property value. The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
+     * Sets the messageType property value. The messageType property
      * @param value Value to set for the messageType property.
      * @return a void
      */

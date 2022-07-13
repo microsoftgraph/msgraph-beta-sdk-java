@@ -15,12 +15,15 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
     private String _address;
     /** The display name of an entity instance. */
     private String _name;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new emailAddress and sets the default values.
      * @return a void
      */
     public EmailAddress() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.emailAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,6 +33,13 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static EmailAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.typedEmailAddress": return new TypedEmailAddress();
+            }
+        }
         return new EmailAddress();
     }
     /**
@@ -55,9 +65,10 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailAddress currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +80,14 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +96,7 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +122,13 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

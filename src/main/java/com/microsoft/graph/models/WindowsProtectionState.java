@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device protection status entity. */
 public class WindowsProtectionState extends Entity implements Parsable {
     /** Current anti malware version */
     private String _antiMalwareVersion;

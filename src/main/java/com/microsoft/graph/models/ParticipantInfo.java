@@ -19,6 +19,8 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private IdentitySet _identity;
     /** The language culture string. Read-only. */
     private String _languageId;
+    /** The nonAnonymizedIdentity property */
+    private IdentitySet _nonAnonymizedIdentity;
     /** The participant ID of the participant. Read-only. */
     private String _participantId;
     /** The client platform ID of the participant. Read-only. */
@@ -73,11 +75,12 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantInfo currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
             this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("languageId", (n) -> { currentObject.setLanguageId(n.getStringValue()); });
+            this.put("nonAnonymizedIdentity", (n) -> { currentObject.setNonAnonymizedIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
             this.put("platformId", (n) -> { currentObject.setPlatformId(n.getStringValue()); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
@@ -98,6 +101,14 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLanguageId() {
         return this._languageId;
+    }
+    /**
+     * Gets the nonAnonymizedIdentity property value. The nonAnonymizedIdentity property
+     * @return a identitySet
+     */
+    @javax.annotation.Nullable
+    public IdentitySet getNonAnonymizedIdentity() {
+        return this._nonAnonymizedIdentity;
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
@@ -134,6 +145,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("endpointType", this.getEndpointType());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("languageId", this.getLanguageId());
+        writer.writeObjectValue("nonAnonymizedIdentity", this.getNonAnonymizedIdentity());
         writer.writeStringValue("participantId", this.getParticipantId());
         writer.writeStringValue("platformId", this.getPlatformId());
         writer.writeStringValue("region", this.getRegion());
@@ -178,6 +190,14 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     public void setLanguageId(@javax.annotation.Nullable final String value) {
         this._languageId = value;
+    }
+    /**
+     * Sets the nonAnonymizedIdentity property value. The nonAnonymizedIdentity property
+     * @param value Value to set for the nonAnonymizedIdentity property.
+     * @return a void
+     */
+    public void setNonAnonymizedIdentity(@javax.annotation.Nullable final IdentitySet value) {
+        this._nonAnonymizedIdentity = value;
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.

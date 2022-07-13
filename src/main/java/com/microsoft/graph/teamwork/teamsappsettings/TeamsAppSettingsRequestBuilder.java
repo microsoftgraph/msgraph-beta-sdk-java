@@ -80,7 +80,7 @@ public class TeamsAppSettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class TeamsAppSettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class TeamsAppSettingsRequestBuilder {
         }
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      * @return a CompletableFuture of teamsAppSettings
      */
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get() {
@@ -209,7 +209,7 @@ public class TeamsAppSettingsRequestBuilder {
         }
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAppSettings
      */
@@ -226,7 +226,7 @@ public class TeamsAppSettingsRequestBuilder {
         }
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of teamsAppSettings
@@ -313,7 +313,7 @@ public class TeamsAppSettingsRequestBuilder {
         public TeamsAppSettingsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get teamsAppSettings from teamwork */
+    /** Represents tenant-wide settings for all Teams apps in the tenant. */
     public class TeamsAppSettingsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

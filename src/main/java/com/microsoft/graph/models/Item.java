@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the financials singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Item extends Entity implements Parsable {
     /** The baseUnitOfMeasureId property */
     private String _baseUnitOfMeasureId;
@@ -39,8 +39,6 @@ public class Item extends Entity implements Parsable {
     private String _taxGroupCode;
     /** The taxGroupId property */
     private String _taxGroupId;
-    /** The type property */
-    private String _type;
     /** The unitCost property */
     private BigDecimal _unitCost;
     /** The unitPrice property */
@@ -108,7 +106,6 @@ public class Item extends Entity implements Parsable {
             this.put("priceIncludesTax", (n) -> { currentObject.setPriceIncludesTax(n.getBooleanValue()); });
             this.put("taxGroupCode", (n) -> { currentObject.setTaxGroupCode(n.getStringValue()); });
             this.put("taxGroupId", (n) -> { currentObject.setTaxGroupId(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("unitCost", (n) -> { currentObject.setUnitCost(n.getBigDecimalValue()); });
             this.put("unitPrice", (n) -> { currentObject.setUnitPrice(n.getBigDecimalValue()); });
         }};
@@ -202,14 +199,6 @@ public class Item extends Entity implements Parsable {
         return this._taxGroupId;
     }
     /**
-     * Gets the type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Gets the unitCost property value. The unitCost property
      * @return a decimal
      */
@@ -247,7 +236,6 @@ public class Item extends Entity implements Parsable {
         writer.writeBooleanValue("priceIncludesTax", this.getPriceIncludesTax());
         writer.writeStringValue("taxGroupCode", this.getTaxGroupCode());
         writer.writeStringValue("taxGroupId", this.getTaxGroupId());
-        writer.writeStringValue("type", this.getType());
         writer.writeBigDecimalValue("unitCost", this.getUnitCost());
         writer.writeBigDecimalValue("unitPrice", this.getUnitPrice());
     }
@@ -362,14 +350,6 @@ public class Item extends Entity implements Parsable {
      */
     public void setTaxGroupId(@javax.annotation.Nullable final String value) {
         this._taxGroupId = value;
-    }
-    /**
-     * Sets the type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
     /**
      * Sets the unitCost property value. The unitCost property

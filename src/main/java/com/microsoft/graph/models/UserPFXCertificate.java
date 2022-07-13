@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity that encapsulates all information required for a user's PFX certificates. */
 public class UserPFXCertificate extends Entity implements Parsable {
     /** Date/time when this PFX certificate was imported. */
     private OffsetDateTime _createdDateTime;
@@ -18,13 +17,13 @@ public class UserPFXCertificate extends Entity implements Parsable {
     private String _encryptedPfxPassword;
     /** Certificate's validity expiration date/time. */
     private OffsetDateTime _expirationDateTime;
-    /** Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi. */
+    /** Supported values for the intended purpose of a user PFX certificate. */
     private UserPfxIntendedPurpose _intendedPurpose;
     /** Name of the key (within the provider) used to encrypt the blob. */
     private String _keyName;
     /** Date/time when this PFX certificate was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512. */
+    /** Supported values for the padding scheme used by encryption provider. */
     private UserPfxPaddingScheme _paddingScheme;
     /** Crypto provider used to encrypt this blob. */
     private String _providerName;
@@ -35,7 +34,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     /** User Principal Name of the PFX certificate. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new userPFXCertificate and sets the default values.
+     * Instantiates a new UserPFXCertificate and sets the default values.
      * @return a void
      */
     public UserPFXCertificate() {
@@ -44,7 +43,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userPFXCertificate
+     * @return a UserPFXCertificate
      */
     @javax.annotation.Nonnull
     public static UserPFXCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -106,7 +105,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the intendedPurpose property value. Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+     * Gets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
      * @return a userPfxIntendedPurpose
      */
     @javax.annotation.Nullable
@@ -130,7 +129,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the paddingScheme property value. Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
+     * Gets the paddingScheme property value. Supported values for the padding scheme used by encryption provider.
      * @return a userPfxPaddingScheme
      */
     @javax.annotation.Nullable
@@ -223,7 +222,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the intendedPurpose property value. Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+     * Sets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */
@@ -247,7 +246,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the paddingScheme property value. Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
+     * Sets the paddingScheme property value. Supported values for the padding scheme used by encryption provider.
      * @param value Value to set for the paddingScheme property.
      * @return a void
      */

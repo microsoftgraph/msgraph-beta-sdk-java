@@ -16,7 +16,7 @@ public class SecurityBaselineContributingPolicy implements AdditionalDataHolder,
     private String _displayName;
     /** Unique identifier of the policy */
     private String _sourceId;
-    /** Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent. */
+    /** Authoring source of a policy */
     private SecurityBaselinePolicySourceType _sourceType;
     /**
      * Instantiates a new securityBaselineContributingPolicy and sets the default values.
@@ -73,7 +73,7 @@ public class SecurityBaselineContributingPolicy implements AdditionalDataHolder,
         return this._sourceId;
     }
     /**
-     * Gets the sourceType property value. Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
+     * Gets the sourceType property value. Authoring source of a policy
      * @return a securityBaselinePolicySourceType
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class SecurityBaselineContributingPolicy implements AdditionalDataHolder,
         this._sourceId = value;
     }
     /**
-     * Sets the sourceType property value. Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
+     * Sets the sourceType property value. Authoring source of a policy
      * @param value Value to set for the sourceType property.
      * @return a void
      */

@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the compliance singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Case_escaped extends Entity implements Parsable {
     /** The user who closed the case. */
     private IdentitySet _closedBy;

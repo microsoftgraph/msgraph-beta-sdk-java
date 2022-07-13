@@ -15,12 +15,15 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     private AccessPackageQuestion _answeredQuestion;
     /** The display value of the answer. Required. */
     private String _displayValue;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new accessPackageAnswer and sets the default values.
      * @return a void
      */
     public AccessPackageAnswer() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.accessPackageAnswer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,6 +33,13 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static AccessPackageAnswer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.accessPackageAnswerString": return new AccessPackageAnswerString();
+            }
+        }
         return new AccessPackageAnswer();
     }
     /**
@@ -63,10 +73,19 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAnswer currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("answeredQuestion", (n) -> { currentObject.setAnsweredQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
             this.put("displayValue", (n) -> { currentObject.setDisplayValue(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -77,6 +96,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("answeredQuestion", this.getAnsweredQuestion());
         writer.writeStringValue("displayValue", this.getDisplayValue());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +122,13 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayValue(@javax.annotation.Nullable final String value) {
         this._displayValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

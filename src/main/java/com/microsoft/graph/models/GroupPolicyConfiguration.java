@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The group policy configuration entity contains the configured values for one or more group policy definitions. */
 public class GroupPolicyConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the configuration. */
     private java.util.List<GroupPolicyConfigurationAssignment> _assignments;
@@ -25,7 +24,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     /** The list of scope tags for the configuration. */
     private java.util.List<String> _roleScopeTagIds;
     /**
-     * Instantiates a new groupPolicyConfiguration and sets the default values.
+     * Instantiates a new GroupPolicyConfiguration and sets the default values.
      * @return a void
      */
     public GroupPolicyConfiguration() {
@@ -34,7 +33,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfiguration
+     * @return a GroupPolicyConfiguration
      */
     @javax.annotation.Nonnull
     public static GroupPolicyConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

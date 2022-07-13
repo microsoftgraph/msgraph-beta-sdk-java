@@ -86,7 +86,7 @@ public class UploadSecretRequestBuilder {
     /**
      * Invoke action uploadSecret
      * @param body 
-     * @return a CompletableFuture of TrustFrameworkKey
+     * @return a CompletableFuture of trustFrameworkKey
      */
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadSecretPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class UploadSecretRequestBuilder {
      * Invoke action uploadSecret
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TrustFrameworkKey
+     * @return a CompletableFuture of trustFrameworkKey
      */
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadSecretPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadSecretRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class UploadSecretRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of TrustFrameworkKey
+     * @return a CompletableFuture of trustFrameworkKey
      */
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadSecretPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadSecretRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

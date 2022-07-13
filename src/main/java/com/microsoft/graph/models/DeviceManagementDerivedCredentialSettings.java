@@ -7,15 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity that describes tenant level settings for derived credentials */
 public class DeviceManagementDerivedCredentialSettings extends Entity implements Parsable {
     /** The display name for the profile. */
     private String _displayName;
     /** The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal. */
     private String _helpUrl;
-    /** The derived credential provider to use. */
+    /** Supported values for the derived credential issuer. */
     private DeviceManagementDerivedCredentialIssuer _issuer;
-    /** The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device. */
+    /** Supported values for the notification type to use. */
     private DeviceManagementDerivedCredentialNotificationType _notificationType;
     /** The nominal percentage of time before certificate renewal is initiated by the client. */
     private Integer _renewalThresholdPercentage;
@@ -68,7 +67,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         return this._helpUrl;
     }
     /**
-     * Gets the issuer property value. The derived credential provider to use.
+     * Gets the issuer property value. Supported values for the derived credential issuer.
      * @return a deviceManagementDerivedCredentialIssuer
      */
     @javax.annotation.Nullable
@@ -76,7 +75,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         return this._issuer;
     }
     /**
-     * Gets the notificationType property value. The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device.
+     * Gets the notificationType property value. Supported values for the notification type to use.
      * @return a deviceManagementDerivedCredentialNotificationType
      */
     @javax.annotation.Nullable
@@ -122,7 +121,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         this._helpUrl = value;
     }
     /**
-     * Sets the issuer property value. The derived credential provider to use.
+     * Sets the issuer property value. Supported values for the derived credential issuer.
      * @param value Value to set for the issuer property.
      * @return a void
      */
@@ -130,7 +129,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         this._issuer = value;
     }
     /**
-     * Sets the notificationType property value. The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device.
+     * Sets the notificationType property value. Supported values for the notification type to use.
      * @param value Value to set for the notificationType property.
      * @return a void
      */

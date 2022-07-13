@@ -18,7 +18,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     private Integer _cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
     /** Specifies cache servers host names. */
     private java.util.List<String> _cacheServerHostNames;
-    /** Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode. */
+    /** Delivery optimization mode for peer distribution */
     private WindowsDeliveryOptimizationMode _deliveryOptimizationMode;
     /** Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400 */
     private Long _foregroundDownloadFromHttpDelayInSeconds;
@@ -38,9 +38,9 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     private Integer _minimumRamAllowedToPeerInGigabytes;
     /** Specifies the drive that Delivery Optimization should use for its cache. */
     private String _modifyCacheLocation;
-    /** Specifies to restrict peer selection via selected option. */
+    /** Values to restrict peer selection by. */
     private DeliveryOptimizationRestrictPeerSelectionByOptions _restrictPeerSelectionBy;
-    /** Specifies whether the device is allowed to participate in Peer Caching while connected via VPN to the domain network. */
+    /** Possible values of a property */
     private Enablement _vpnPeerCaching;
     /**
      * Instantiates a new WindowsDeliveryOptimizationConfiguration and sets the default values.
@@ -100,7 +100,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         return this._cacheServerHostNames;
     }
     /**
-     * Gets the deliveryOptimizationMode property value. Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @return a windowsDeliveryOptimizationMode
      */
     @javax.annotation.Nullable
@@ -207,7 +207,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         return this._modifyCacheLocation;
     }
     /**
-     * Gets the restrictPeerSelectionBy property value. Specifies to restrict peer selection via selected option.
+     * Gets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
      * @return a deliveryOptimizationRestrictPeerSelectionByOptions
      */
     @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         return this._restrictPeerSelectionBy;
     }
     /**
-     * Gets the vpnPeerCaching property value. Specifies whether the device is allowed to participate in Peer Caching while connected via VPN to the domain network.
+     * Gets the vpnPeerCaching property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -289,7 +289,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         this._cacheServerHostNames = value;
     }
     /**
-     * Sets the deliveryOptimizationMode property value. Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @param value Value to set for the deliveryOptimizationMode property.
      * @return a void
      */
@@ -369,7 +369,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         this._modifyCacheLocation = value;
     }
     /**
-     * Sets the restrictPeerSelectionBy property value. Specifies to restrict peer selection via selected option.
+     * Sets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
      * @param value Value to set for the restrictPeerSelectionBy property.
      * @return a void
      */
@@ -377,7 +377,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         this._restrictPeerSelectionBy = value;
     }
     /**
-     * Sets the vpnPeerCaching property value. Specifies whether the device is allowed to participate in Peer Caching while connected via VPN to the domain network.
+     * Sets the vpnPeerCaching property value. Possible values of a property
      * @param value Value to set for the vpnPeerCaching property.
      * @return a void
      */

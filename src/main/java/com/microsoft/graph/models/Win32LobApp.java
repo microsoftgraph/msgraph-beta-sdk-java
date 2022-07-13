@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobApp extends MobileLobApp implements Parsable {
-    /** The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64. */
+    /** When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an Available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE. */
+    private Boolean _allowAvailableUninstall;
+    /** Contains properties for Windows architecture. */
     private WindowsArchitecture _applicableArchitectures;
     /** The detection rules to detect Win32 Line of Business (LoB) app. */
     private java.util.List<Win32LobAppDetection> _detectionRules;
@@ -60,7 +62,15 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return new Win32LobApp();
     }
     /**
-     * Gets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the allowAvailableUninstall property value. When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an Available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowAvailableUninstall() {
+        return this._allowAvailableUninstall;
+    }
+    /**
+     * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
@@ -91,6 +101,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobApp currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("allowAvailableUninstall", (n) -> { currentObject.setAllowAvailableUninstall(n.getBooleanValue()); });
             this.put("applicableArchitectures", (n) -> { currentObject.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
             this.put("detectionRules", (n) -> { currentObject.setDetectionRules(n.getCollectionOfObjectValues(Win32LobAppDetection::createFromDiscriminatorValue)); });
             this.put("displayVersion", (n) -> { currentObject.setDisplayVersion(n.getStringValue()); });
@@ -230,6 +241,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("allowAvailableUninstall", this.getAllowAvailableUninstall());
         writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
         writer.writeCollectionOfObjectValues("detectionRules", this.getDetectionRules());
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
@@ -249,7 +261,15 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("uninstallCommandLine", this.getUninstallCommandLine());
     }
     /**
-     * Sets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the allowAvailableUninstall property value. When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an Available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
+     * @param value Value to set for the allowAvailableUninstall property.
+     * @return a void
+     */
+    public void setAllowAvailableUninstall(@javax.annotation.Nullable final Boolean value) {
+        this._allowAvailableUninstall = value;
+    }
+    /**
+     * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */

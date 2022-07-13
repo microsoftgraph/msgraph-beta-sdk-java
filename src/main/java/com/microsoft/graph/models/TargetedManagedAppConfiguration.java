@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
-    /** Public Apps selection: group or individual */
+    /** Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps */
     private TargetedManagedAppGroupType _appGroupType;
     /** List of apps to which the policy is deployed. */
     private java.util.List<ManagedMobileApp> _apps;
@@ -38,7 +38,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
         return new TargetedManagedAppConfiguration();
     }
     /**
-     * Gets the appGroupType property value. Public Apps selection: group or individual
+     * Gets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
      * @return a targetedManagedAppGroupType
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
         writer.writeBooleanValue("isAssigned", this.getIsAssigned());
     }
     /**
-     * Sets the appGroupType property value. Public Apps selection: group or individual
+     * Sets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
      * @param value Value to set for the appGroupType property.
      * @return a void
      */

@@ -17,7 +17,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     private java.util.List<GroupPolicyOperation> _groupPolicyOperations;
     /** The list of ADML files associated with the uploaded ADMX file. */
     private java.util.List<GroupPolicyUploadedLanguageFile> _groupPolicyUploadedLanguageFiles;
-    /** The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed. */
+    /** Type of Group Policy uploaded definition file status. */
     private GroupPolicyUploadedDefinitionFileStatus _status;
     /** The uploaded time of the uploaded ADMX file. */
     private OffsetDateTime _uploadDateTime;
@@ -87,7 +87,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
         return this._groupPolicyUploadedLanguageFiles;
     }
     /**
-     * Gets the status property value. The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed.
+     * Gets the status property value. Type of Group Policy uploaded definition file status.
      * @return a groupPolicyUploadedDefinitionFileStatus
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
         this._groupPolicyUploadedLanguageFiles = value;
     }
     /**
-     * Sets the status property value. The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed.
+     * Sets the status property value. Type of Group Policy uploaded definition file status.
      * @param value Value to set for the status property.
      * @return a void
      */

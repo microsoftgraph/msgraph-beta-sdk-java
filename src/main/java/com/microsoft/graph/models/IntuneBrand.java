@@ -34,7 +34,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private Boolean _disableClientTelemetry;
     /** Company/organization name that is displayed to end users. */
     private String _displayName;
-    /** Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable. */
+    /** Options available for enrollment flow customization */
     private EnrollmentAvailabilityOptions _enrollmentAvailability;
     /** Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices. */
     private Boolean _isFactoryResetDisabled;
@@ -180,7 +180,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the enrollmentAvailability property value. Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
+     * Gets the enrollmentAvailability property value. Options available for enrollment flow customization
      * @return a enrollmentAvailabilityOptions
      */
     @javax.annotation.Nullable
@@ -477,7 +477,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the enrollmentAvailability property value. Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
+     * Sets the enrollmentAvailability property value. Options available for enrollment flow customization
      * @param value Value to set for the enrollmentAvailability property.
      * @return a void
      */

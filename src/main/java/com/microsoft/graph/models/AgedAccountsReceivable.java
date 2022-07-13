@@ -9,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the financials singleton. */
 public class AgedAccountsReceivable extends Entity implements Parsable {
     /** The agedAsOfDate property */
     private LocalDate _agedAsOfDate;
@@ -32,7 +31,7 @@ public class AgedAccountsReceivable extends Entity implements Parsable {
     /** The periodLengthFilter property */
     private String _periodLengthFilter;
     /**
-     * Instantiates a new agedAccountsReceivable and sets the default values.
+     * Instantiates a new AgedAccountsReceivable and sets the default values.
      * @return a void
      */
     public AgedAccountsReceivable() {
@@ -41,7 +40,7 @@ public class AgedAccountsReceivable extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agedAccountsReceivable
+     * @return a AgedAccountsReceivable
      */
     @javax.annotation.Nonnull
     public static AgedAccountsReceivable createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

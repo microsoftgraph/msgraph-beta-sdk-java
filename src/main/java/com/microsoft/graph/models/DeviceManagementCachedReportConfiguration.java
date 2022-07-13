@@ -24,7 +24,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     private String _reportName;
     /** Columns selected from the report */
     private java.util.List<String> _select;
-    /** Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed. */
+    /** Possible statuses associated with a generated report */
     private DeviceManagementReportStatus _status;
     /**
      * Instantiates a new deviceManagementCachedReportConfiguration and sets the default values.
@@ -118,7 +118,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this._select;
     }
     /**
-     * Gets the status property value. Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Gets the status property value. Possible statuses associated with a generated report
      * @return a deviceManagementReportStatus
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         this._select = value;
     }
     /**
-     * Sets the status property value. Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Sets the status property value. Possible statuses associated with a generated report
      * @param value Value to set for the status property.
      * @return a void
      */

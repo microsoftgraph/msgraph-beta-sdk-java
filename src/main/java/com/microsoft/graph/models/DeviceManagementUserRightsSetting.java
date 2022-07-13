@@ -14,7 +14,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     private Map<String, Object> _additionalData;
     /** Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements. */
     private java.util.List<DeviceManagementUserRightsLocalUserOrGroup> _localUsersOrGroups;
-    /** Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _state;
     /**
      * Instantiates a new deviceManagementUserRightsSetting and sets the default values.
@@ -62,7 +62,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
         return this._localUsersOrGroups;
     }
     /**
-     * Gets the state property value. Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
+     * Gets the state property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
         this._localUsersOrGroups = value;
     }
     /**
-     * Sets the state property value. Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
+     * Sets the state property value. State Management Setting.
      * @param value Value to set for the state property.
      * @return a void
      */

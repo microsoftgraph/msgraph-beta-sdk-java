@@ -7,21 +7,20 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Base Windows Phone 8.1+ certificate profile. */
 public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration implements Parsable {
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validtiy Period. */
     private Integer _certificateValidityPeriodValue;
     /** Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements. */
     private java.util.List<ExtendedKeyUsage> _extendedKeyUsages;
-    /** Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp. */
+    /** Key Storage Provider (KSP) Import Options. */
     private KeyStorageProviderOption _keyStorageProvider;
     /** Certificate renewal threshold percentage. */
     private Integer _renewalThresholdPercentage;
-    /** Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
+    /** Subject Alternative Name Options. */
     private SubjectAlternativeNameType _subjectAlternativeNameType;
-    /** Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId. */
+    /** Subject Name Format Options. */
     private SubjectNameFormat _subjectNameFormat;
     /**
      * Instantiates a new windowsPhone81CertificateProfileBase and sets the default values.
@@ -29,6 +28,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      */
     public WindowsPhone81CertificateProfileBase() {
         super();
+        this.setOdatatype("#microsoft.graph.windowsPhone81CertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +48,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         return new WindowsPhone81CertificateProfileBase();
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         }};
     }
     /**
-     * Gets the keyStorageProvider property value. Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @return a keyStorageProviderOption
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         return this._renewalThresholdPercentage;
     }
     /**
-     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the subjectAlternativeNameType property value. Subject Alternative Name Options.
      * @return a subjectAlternativeNameType
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         return this._subjectAlternativeNameType;
     }
     /**
-     * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Gets the subjectNameFormat property value. Subject Name Format Options.
      * @return a subjectNameFormat
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
@@ -161,7 +161,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         this._extendedKeyUsages = value;
     }
     /**
-     * Sets the keyStorageProvider property value. Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Sets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         this._renewalThresholdPercentage = value;
     }
     /**
-     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the subjectAlternativeNameType property value. Subject Alternative Name Options.
      * @param value Value to set for the subjectAlternativeNameType property.
      * @return a void
      */
@@ -185,7 +185,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
         this._subjectAlternativeNameType = value;
     }
     /**
-     * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Sets the subjectNameFormat property value. Subject Name Format Options.
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */

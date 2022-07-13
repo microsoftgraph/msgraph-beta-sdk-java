@@ -26,10 +26,10 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     private String _subscriptionId;
     /** The name of the Azure subscription in which the Cloud PC snapshot is being saved. */
     private String _subscriptionName;
-    /** The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted. */
+    /** The userAccessLevel property */
     private CloudPcUserAccessLevel _userAccessLevel;
     /**
-     * Instantiates a new CloudPcReviewStatus and sets the default values.
+     * Instantiates a new cloudPcReviewStatus and sets the default values.
      * @return a void
      */
     public CloudPcReviewStatus() {
@@ -38,7 +38,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcReviewStatus
+     * @return a cloudPcReviewStatus
      */
     @javax.annotation.Nonnull
     public static CloudPcReviewStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -128,7 +128,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._subscriptionName;
     }
     /**
-     * Gets the userAccessLevel property value. The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted.
+     * Gets the userAccessLevel property value. The userAccessLevel property
      * @return a cloudPcUserAccessLevel
      */
     @javax.annotation.Nullable
@@ -217,7 +217,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         this._subscriptionName = value;
     }
     /**
-     * Sets the userAccessLevel property value. The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted.
+     * Sets the userAccessLevel property value. The userAccessLevel property
      * @param value Value to set for the userAccessLevel property.
      * @return a void
      */

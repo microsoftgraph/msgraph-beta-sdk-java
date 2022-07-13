@@ -12,12 +12,15 @@ import java.util.Objects;
 public class Win32LobAppDetection implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new win32LobAppDetection and sets the default values.
      * @return a void
      */
     public Win32LobAppDetection() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.win32LobAppDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -27,6 +30,16 @@ public class Win32LobAppDetection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static Win32LobAppDetection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.win32LobAppFileSystemDetection": return new Win32LobAppFileSystemDetection();
+                case "#microsoft.graph.win32LobAppPowerShellScriptDetection": return new Win32LobAppPowerShellScriptDetection();
+                case "#microsoft.graph.win32LobAppProductCodeDetection": return new Win32LobAppProductCodeDetection();
+                case "#microsoft.graph.win32LobAppRegistryDetection": return new Win32LobAppRegistryDetection();
+            }
+        }
         return new Win32LobAppDetection();
     }
     /**
@@ -44,8 +57,17 @@ public class Win32LobAppDetection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppDetection currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -54,6 +76,7 @@ public class Win32LobAppDetection implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -63,5 +86,13 @@ public class Win32LobAppDetection implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

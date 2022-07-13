@@ -18,7 +18,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     private String _displayName;
     /** Last modified time of the Assignment Filter. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown. */
+    /** Supported platform types. */
     private DevicePlatformType _platform;
     /** RoleScopeTags of the Assignment Filter. */
     private java.util.List<String> _roleScopeTags;
@@ -30,6 +30,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      */
     public DeviceAndAppManagementAssignmentFilter() {
         super();
+        this.setOdatatype("#microsoft.graph.deviceAndAppManagementAssignmentFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,7 +99,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the platform property value. Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Gets the platform property value. Supported platform types.
      * @return a devicePlatformType
      */
     @javax.annotation.Nullable
@@ -170,7 +171,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the platform property value. Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */

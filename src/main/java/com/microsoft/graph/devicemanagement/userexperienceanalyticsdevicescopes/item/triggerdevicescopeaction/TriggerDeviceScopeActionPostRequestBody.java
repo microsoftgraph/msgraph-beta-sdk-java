@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the triggerDeviceScopeAction method. */
 public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The actionName property */
+    /** Trigger on the service to either START or STOP computing metrics data based on a device scope configuration. */
     private String _actionName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -34,7 +34,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
         return new TriggerDeviceScopeActionPostRequestBody();
     }
     /**
-     * Gets the actionName property value. The actionName property
+     * Gets the actionName property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionName property value. The actionName property
+     * Sets the actionName property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
      * @param value Value to set for the actionName property.
      * @return a void
      */

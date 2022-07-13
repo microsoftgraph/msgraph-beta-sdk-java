@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles. */
 public class RoleAssignment extends Entity implements Parsable {
     /** Description of the Role Assignment. */
     private String _description;
@@ -19,19 +18,20 @@ public class RoleAssignment extends Entity implements Parsable {
     private RoleDefinition _roleDefinition;
     /** List of ids of role scope member security groups.  These are IDs from Azure Active Directory. */
     private java.util.List<String> _scopeMembers;
-    /** Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty. Possible values are: resourceScope, allDevices, allLicensedUsers, allDevicesAndLicensedUsers. */
+    /** Specifies the type of scope for a Role Assignment. */
     private RoleAssignmentScopeType _scopeType;
     /**
-     * Instantiates a new roleAssignment and sets the default values.
+     * Instantiates a new RoleAssignment and sets the default values.
      * @return a void
      */
     public RoleAssignment() {
         super();
+        this.setOdatatype("#microsoft.graph.roleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleAssignment
+     * @return a RoleAssignment
      */
     @javax.annotation.Nonnull
     public static RoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -102,7 +102,7 @@ public class RoleAssignment extends Entity implements Parsable {
         return this._scopeMembers;
     }
     /**
-     * Gets the scopeType property value. Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty. Possible values are: resourceScope, allDevices, allLicensedUsers, allDevicesAndLicensedUsers.
+     * Gets the scopeType property value. Specifies the type of scope for a Role Assignment.
      * @return a roleAssignmentScopeType
      */
     @javax.annotation.Nullable
@@ -165,7 +165,7 @@ public class RoleAssignment extends Entity implements Parsable {
         this._scopeMembers = value;
     }
     /**
-     * Sets the scopeType property value. Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty. Possible values are: resourceScope, allDevices, allLicensedUsers, allDevicesAndLicensedUsers.
+     * Sets the scopeType property value. Specifies the type of scope for a Role Assignment.
      * @param value Value to set for the scopeType property.
      * @return a void
      */

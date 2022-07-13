@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum HashAlgorithms implements ValuedEnum {
     /** SHA-1 Hash Algorithm. */
     Sha1("sha1"),

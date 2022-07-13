@@ -11,18 +11,21 @@ import java.util.Objects;
 public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing. */
+    /** Error code for rule validation. */
     private Code _code;
-    /** Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing. */
+    /** Error code for rule validation. */
     private DeviceComplianceScriptRulesValidationError _deviceComplianceScriptRulesValidationError;
     /** Error message. */
     private String _message;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new deviceComplianceScriptError and sets the default values.
      * @return a void
      */
     public DeviceComplianceScriptError() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.deviceComplianceScriptError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,6 +35,13 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public static DeviceComplianceScriptError createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceComplianceScriptRuleError": return new DeviceComplianceScriptRuleError();
+            }
+        }
         return new DeviceComplianceScriptError();
     }
     /**
@@ -43,7 +53,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         return this._additionalData;
     }
     /**
-     * Gets the code property value. Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
+     * Gets the code property value. Error code for rule validation.
      * @return a code
      */
     @javax.annotation.Nullable
@@ -51,7 +61,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         return this._code;
     }
     /**
-     * Gets the deviceComplianceScriptRulesValidationError property value. Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
+     * Gets the deviceComplianceScriptRulesValidationError property value. Error code for rule validation.
      * @return a deviceComplianceScriptRulesValidationError
      */
     @javax.annotation.Nullable
@@ -65,10 +75,11 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptError currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(Code.class)); });
             this.put("deviceComplianceScriptRulesValidationError", (n) -> { currentObject.setDeviceComplianceScriptRulesValidationError(n.getEnumValue(DeviceComplianceScriptRulesValidationError.class)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +91,14 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         return this._message;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +108,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         writer.writeEnumValue("code", this.getCode());
         writer.writeEnumValue("deviceComplianceScriptRulesValidationError", this.getDeviceComplianceScriptRulesValidationError());
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -100,7 +120,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         this._additionalData = value;
     }
     /**
-     * Sets the code property value. Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
+     * Sets the code property value. Error code for rule validation.
      * @param value Value to set for the code property.
      * @return a void
      */
@@ -108,7 +128,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         this._code = value;
     }
     /**
-     * Sets the deviceComplianceScriptRulesValidationError property value. Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
+     * Sets the deviceComplianceScriptRulesValidationError property value. Error code for rule validation.
      * @param value Value to set for the deviceComplianceScriptRulesValidationError property.
      * @return a void
      */
@@ -122,5 +142,13 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      */
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

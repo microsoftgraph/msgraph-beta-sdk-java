@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
 public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /** The DateTime when device compliance grace period expires */
     private OffsetDateTime _complianceGracePeriodExpirationDateTime;
@@ -18,7 +17,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     private String _deviceId;
     /** The device model that is being reported */
     private String _deviceModel;
-    /** The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed. */
+    /** The installStatus property */
     private IosUpdatesInstallStatus _installStatus;
     /** Last modified date time of the policy report. */
     private OffsetDateTime _lastReportedDateTime;
@@ -26,7 +25,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     private String _osVersion;
     /** Platform of the device that is being reported */
     private Integer _platform;
-    /** Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The status property */
     private ComplianceStatus _status;
     /** The User id that is being reported. */
     private String _userId;
@@ -35,7 +34,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /** UserPrincipalName. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new iosUpdateDeviceStatus and sets the default values.
+     * Instantiates a new IosUpdateDeviceStatus and sets the default values.
      * @return a void
      */
     public IosUpdateDeviceStatus() {
@@ -44,7 +43,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosUpdateDeviceStatus
+     * @return a IosUpdateDeviceStatus
      */
     @javax.annotation.Nonnull
     public static IosUpdateDeviceStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -106,7 +105,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the installStatus property value. The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
+     * Gets the installStatus property value. The installStatus property
      * @return a iosUpdatesInstallStatus
      */
     @javax.annotation.Nullable
@@ -138,7 +137,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
         return this._platform;
     }
     /**
-     * Gets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the status property value. The status property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -223,7 +222,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
         this._deviceModel = value;
     }
     /**
-     * Sets the installStatus property value. The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
+     * Sets the installStatus property value. The installStatus property
      * @param value Value to set for the installStatus property.
      * @return a void
      */
@@ -255,7 +254,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
         this._platform = value;
     }
     /**
-     * Sets the status property value. Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

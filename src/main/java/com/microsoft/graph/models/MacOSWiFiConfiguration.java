@@ -22,11 +22,11 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
     private String _proxyManualAddress;
     /** Port of the proxy server when manual configuration is selected. */
     private Integer _proxyManualPort;
-    /** Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic. */
+    /** Wi-Fi Proxy Settings. */
     private WiFiProxySetting _proxySettings;
     /** This is the name of the Wi-Fi network that is broadcast to all devices. */
     private String _ssid;
-    /** Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise. */
+    /** Wi-Fi Security Types. */
     private WiFiSecurityType _wiFiSecurityType;
     /**
      * Instantiates a new MacOSWiFiConfiguration and sets the default values.
@@ -34,6 +34,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      */
     public MacOSWiFiConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.macOSWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -129,7 +130,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this._proxyManualPort;
     }
     /**
-     * Gets the proxySettings property value. Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+     * Gets the proxySettings property value. Wi-Fi Proxy Settings.
      * @return a wiFiProxySetting
      */
     @javax.annotation.Nullable
@@ -145,7 +146,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this._ssid;
     }
     /**
-     * Gets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Gets the wiFiSecurityType property value. Wi-Fi Security Types.
      * @return a wiFiSecurityType
      */
     @javax.annotation.Nullable
@@ -228,7 +229,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         this._proxyManualPort = value;
     }
     /**
-     * Sets the proxySettings property value. Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+     * Sets the proxySettings property value. Wi-Fi Proxy Settings.
      * @param value Value to set for the proxySettings property.
      * @return a void
      */
@@ -244,7 +245,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         this._ssid = value;
     }
     /**
-     * Sets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Sets the wiFiSecurityType property value. Wi-Fi Security Types.
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */

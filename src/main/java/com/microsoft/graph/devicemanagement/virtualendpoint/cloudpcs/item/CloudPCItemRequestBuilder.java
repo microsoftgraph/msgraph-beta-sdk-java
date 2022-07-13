@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
+import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.reboot.RebootRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.rename.RenameRequestBuilder;
@@ -279,6 +280,14 @@ public class CloudPCItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getCloudPcConnectivityHistory method.
+     * @return a getCloudPcConnectivityHistoryRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetCloudPcConnectivityHistoryRequestBuilder getCloudPcConnectivityHistory() {
+        return new GetCloudPcConnectivityHistoryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getCloudPcLaunchInfo method.

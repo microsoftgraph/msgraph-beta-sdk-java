@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getRelyingPartyDetailedSummary method. */
 public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /** Number of failed sign in on Active Directory Federation Service in the period specified. */
     private Long _failedSignInCount;
-    /** Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue. */
+    /** The migrationStatus property */
     private MigrationStatus _migrationStatus;
     /** Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. */
     private java.util.List<KeyValuePair> _migrationValidationDetails;
@@ -32,7 +31,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /** Number of unique users that have signed into the application. */
     private Long _uniqueUserCount;
     /**
-     * Instantiates a new relyingPartyDetailedSummary and sets the default values.
+     * Instantiates a new RelyingPartyDetailedSummary and sets the default values.
      * @return a void
      */
     public RelyingPartyDetailedSummary() {
@@ -41,7 +40,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relyingPartyDetailedSummary
+     * @return a RelyingPartyDetailedSummary
      */
     @javax.annotation.Nonnull
     public static RelyingPartyDetailedSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +77,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the migrationStatus property value. Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
+     * Gets the migrationStatus property value. The migrationStatus property
      * @return a migrationStatus
      */
     @javax.annotation.Nullable
@@ -186,7 +185,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         this._failedSignInCount = value;
     }
     /**
-     * Sets the migrationStatus property value. Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
+     * Sets the migrationStatus property value. The migrationStatus property
      * @param value Value to set for the migrationStatus property.
      * @return a void
      */

@@ -14,7 +14,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** The unique identifier */
     private String _id;
-    /** The template type that is sent with the collection request. Possible values are: predefined. */
+    /** Enum for the template type used for collecting logs */
     private DeviceLogCollectionTemplateType _templateType;
     /**
      * Instantiates a new deviceLogCollectionRequest and sets the default values.
@@ -62,7 +62,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
         return this._id;
     }
     /**
-     * Gets the templateType property value. The template type that is sent with the collection request. Possible values are: predefined.
+     * Gets the templateType property value. Enum for the template type used for collecting logs
      * @return a deviceLogCollectionTemplateType
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
         this._id = value;
     }
     /**
-     * Sets the templateType property value. The template type that is sent with the collection request. Possible values are: predefined.
+     * Sets the templateType property value. Enum for the template type used for collecting logs
      * @param value Value to set for the templateType property.
      * @return a void
      */

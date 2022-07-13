@@ -1,0 +1,107 @@
+package microsoft.graph.models.security;
+
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import microsoft.graph.models.PublicError;
+public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> _additionalData;
+    /** The error if the status is not successful. */
+    private PublicError _error;
+    /** The status of the distribution. The possible values are: pending, error, success, notAvaliable. */
+    private EventStatusType _status;
+    /**
+     * Instantiates a new retentionEventStatus and sets the default values.
+     * @return a void
+     */
+    public RetentionEventStatus() {
+        this.setAdditionalData(new HashMap<>());
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a retentionEventStatus
+     */
+    @javax.annotation.Nonnull
+    public static RetentionEventStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new RetentionEventStatus();
+    }
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this._additionalData;
+    }
+    /**
+     * Gets the error property value. The error if the status is not successful.
+     * @return a publicError
+     */
+    @javax.annotation.Nullable
+    public PublicError getError() {
+        return this._error;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final RetentionEventStatus currentObject = this;
+        return new HashMap<>(2) {{
+            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EventStatusType.class)); });
+        }};
+    }
+    /**
+     * Gets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
+     * @return a eventStatusType
+     */
+    @javax.annotation.Nullable
+    public EventStatusType getStatus() {
+        return this._status;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        writer.writeObjectValue("error", this.getError());
+        writer.writeEnumValue("status", this.getStatus());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this._additionalData = value;
+    }
+    /**
+     * Sets the error property value. The error if the status is not successful.
+     * @param value Value to set for the error property.
+     * @return a void
+     */
+    public void setError(@javax.annotation.Nullable final PublicError value) {
+        this._error = value;
+    }
+    /**
+     * Sets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
+     * @param value Value to set for the status property.
+     * @return a void
+     */
+    public void setStatus(@javax.annotation.Nullable final EventStatusType value) {
+        this._status = value;
+    }
+}

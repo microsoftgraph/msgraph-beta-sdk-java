@@ -11,7 +11,7 @@ import java.util.Objects;
 public class DeploymentStateReason implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: faultedByContentOutdated. Read-only. */
+    /** The value property */
     private DeploymentStateReasonValue _value;
     /**
      * Instantiates a new deploymentStateReason and sets the default values.
@@ -50,7 +50,7 @@ public class DeploymentStateReason implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the value property value. Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: faultedByContentOutdated. Read-only.
+     * Gets the value property value. The value property
      * @return a deploymentStateReasonValue
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class DeploymentStateReason implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the value property value. Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: faultedByContentOutdated. Read-only.
+     * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */

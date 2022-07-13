@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class UsageRight extends Entity implements Parsable {
     /** Product id corresponding to the usage right. */
     private String _catalogId;
     /** Identifier of the service corresponding to the usage right. */
     private String _serviceIdentifier;
-    /** The state of the usage right. Possible values are: active, inactive, warning, suspended. */
+    /** The state property */
     private UsageRightState _state;
     /**
      * Instantiates a new usageRight and sets the default values.
@@ -62,7 +62,7 @@ public class UsageRight extends Entity implements Parsable {
         return this._serviceIdentifier;
     }
     /**
-     * Gets the state property value. The state of the usage right. Possible values are: active, inactive, warning, suspended.
+     * Gets the state property value. The state property
      * @return a usageRightState
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class UsageRight extends Entity implements Parsable {
         this._serviceIdentifier = value;
     }
     /**
-     * Sets the state property value. The state of the usage right. Possible values are: active, inactive, warning, suspended.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSCustomConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel. */
+    /** Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel */
     private AppleDeploymentChannel _deploymentChannel;
     /** Payload. (UTF8 encoded byte array) */
     private byte[] _payload;
@@ -34,7 +34,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
         return new MacOSCustomConfiguration();
     }
     /**
-     * Gets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel.
+     * Gets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
      * @return a appleDeploymentChannel
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
         writer.writeStringValue("payloadName", this.getPayloadName());
     }
     /**
-     * Sets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel.
+     * Sets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
      * @param value Value to set for the deploymentChannel property.
      * @return a void
      */

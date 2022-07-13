@@ -52,6 +52,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     public DepEnrollmentBaseProfile() {
         super();
+        this.setOdatatype("#microsoft.graph.depEnrollmentBaseProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

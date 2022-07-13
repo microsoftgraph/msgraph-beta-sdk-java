@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the security singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PolicyBase extends Entity implements Parsable {
     /** The createdBy property */
     private IdentitySet _createdBy;
@@ -32,6 +32,7 @@ public class PolicyBase extends Entity implements Parsable {
      */
     public PolicyBase() {
         super();
+        this.setOdatatype("#microsoft.graph.security.policyBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

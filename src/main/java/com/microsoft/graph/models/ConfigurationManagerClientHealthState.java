@@ -17,7 +17,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
     private Integer _errorCode;
     /** Datetime for last sync with configuration manager management point. */
     private OffsetDateTime _lastSyncDateTime;
-    /** Current configuration manager client state. Possible values are: unknown, installed, healthy, installFailed, updateFailed, communicationError. */
+    /** Configuration manager client state */
     private ConfigurationManagerClientState _state;
     /**
      * Instantiates a new configurationManagerClientHealthState and sets the default values.
@@ -74,7 +74,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
         return this._lastSyncDateTime;
     }
     /**
-     * Gets the state property value. Current configuration manager client state. Possible values are: unknown, installed, healthy, installFailed, updateFailed, communicationError.
+     * Gets the state property value. Configuration manager client state
      * @return a configurationManagerClientState
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
         this._lastSyncDateTime = value;
     }
     /**
-     * Sets the state property value. Current configuration manager client state. Possible values are: unknown, installed, healthy, installFailed, updateFailed, communicationError.
+     * Sets the state property value. Configuration manager client state
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -14,6 +14,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     private Boolean _allowDeviceUseOnInstallFailure;
     /** Allow or block log collection on installation failure */
     private Boolean _allowLogCollectionOnInstallFailure;
+    /** Install all required apps as non blocking apps during white glove */
+    private Boolean _allowNonBlockingAppInstallation;
     /** Allow the user to retry the setup on installation failure */
     private Boolean _blockDeviceSetupRetryByUser;
     /** Set custom error message to show upon installation failure */
@@ -70,6 +72,14 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this._allowLogCollectionOnInstallFailure;
     }
     /**
+     * Gets the allowNonBlockingAppInstallation property value. Install all required apps as non blocking apps during white glove
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowNonBlockingAppInstallation() {
+        return this._allowNonBlockingAppInstallation;
+    }
+    /**
      * Gets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure
      * @return a boolean
      */
@@ -104,6 +114,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
             this.put("allowDeviceResetOnInstallFailure", (n) -> { currentObject.setAllowDeviceResetOnInstallFailure(n.getBooleanValue()); });
             this.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
             this.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });
+            this.put("allowNonBlockingAppInstallation", (n) -> { currentObject.setAllowNonBlockingAppInstallation(n.getBooleanValue()); });
             this.put("blockDeviceSetupRetryByUser", (n) -> { currentObject.setBlockDeviceSetupRetryByUser(n.getBooleanValue()); });
             this.put("customErrorMessage", (n) -> { currentObject.setCustomErrorMessage(n.getStringValue()); });
             this.put("disableUserStatusTrackingAfterFirstUser", (n) -> { currentObject.setDisableUserStatusTrackingAfterFirstUser(n.getBooleanValue()); });
@@ -156,6 +167,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         writer.writeBooleanValue("allowDeviceResetOnInstallFailure", this.getAllowDeviceResetOnInstallFailure());
         writer.writeBooleanValue("allowDeviceUseOnInstallFailure", this.getAllowDeviceUseOnInstallFailure());
         writer.writeBooleanValue("allowLogCollectionOnInstallFailure", this.getAllowLogCollectionOnInstallFailure());
+        writer.writeBooleanValue("allowNonBlockingAppInstallation", this.getAllowNonBlockingAppInstallation());
         writer.writeBooleanValue("blockDeviceSetupRetryByUser", this.getBlockDeviceSetupRetryByUser());
         writer.writeStringValue("customErrorMessage", this.getCustomErrorMessage());
         writer.writeBooleanValue("disableUserStatusTrackingAfterFirstUser", this.getDisableUserStatusTrackingAfterFirstUser());
@@ -187,6 +199,14 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      */
     public void setAllowLogCollectionOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
         this._allowLogCollectionOnInstallFailure = value;
+    }
+    /**
+     * Sets the allowNonBlockingAppInstallation property value. Install all required apps as non blocking apps during white glove
+     * @param value Value to set for the allowNonBlockingAppInstallation property.
+     * @return a void
+     */
+    public void setAllowNonBlockingAppInstallation(@javax.annotation.Nullable final Boolean value) {
+        this._allowNonBlockingAppInstallation = value;
     }
     /**
      * Sets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure

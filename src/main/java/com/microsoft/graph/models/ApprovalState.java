@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of privilegedApproval entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum ApprovalState implements ValuedEnum {
     Pending("pending"),
     Approved("approved"),

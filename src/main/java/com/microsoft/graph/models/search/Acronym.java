@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Acronym extends SearchAnswer implements Parsable {
     /** What the acronym stands for. */
     private String _standsFor;
-    /** State of the acronym. Possible values are: published, draft, excluded, or unknownFutureValue. */
+    /** The state property */
     private AnswerState _state;
     /**
      * Instantiates a new Acronym and sets the default values.
@@ -50,7 +50,7 @@ public class Acronym extends SearchAnswer implements Parsable {
         return this._standsFor;
     }
     /**
-     * Gets the state property value. State of the acronym. Possible values are: published, draft, excluded, or unknownFutureValue.
+     * Gets the state property value. The state property
      * @return a answerState
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class Acronym extends SearchAnswer implements Parsable {
         this._standsFor = value;
     }
     /**
-     * Sets the state property value. State of the acronym. Possible values are: published, draft, excluded, or unknownFutureValue.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

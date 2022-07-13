@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the directory singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class RecommendationResource extends Entity implements Parsable {
     /** The addedDateTime property */
     private OffsetDateTime _addedDateTime;

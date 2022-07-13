@@ -12,9 +12,9 @@ import java.util.Objects;
 public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Represents the filter type. Possible values are: none, include, exclude. */
+    /** Represents type of the assignment filter. */
     private DeviceAndAppManagementAssignmentFilterType _assignmentFilterType;
-    /** Represents the evalaution result of the filter. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated. */
+    /** Supported evaluation results for filter. */
     private AssignmentFilterEvaluationResult _evaluationResult;
     /**
      * Instantiates a new assignmentFilterTypeAndEvaluationResult and sets the default values.
@@ -42,7 +42,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
         return this._additionalData;
     }
     /**
-     * Gets the assignmentFilterType property value. Represents the filter type. Possible values are: none, include, exclude.
+     * Gets the assignmentFilterType property value. Represents type of the assignment filter.
      * @return a deviceAndAppManagementAssignmentFilterType
      */
     @javax.annotation.Nullable
@@ -50,7 +50,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
         return this._assignmentFilterType;
     }
     /**
-     * Gets the evaluationResult property value. Represents the evalaution result of the filter. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
+     * Gets the evaluationResult property value. Supported evaluation results for filter.
      * @return a assignmentFilterEvaluationResult
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
         this._additionalData = value;
     }
     /**
-     * Sets the assignmentFilterType property value. Represents the filter type. Possible values are: none, include, exclude.
+     * Sets the assignmentFilterType property value. Represents type of the assignment filter.
      * @param value Value to set for the assignmentFilterType property.
      * @return a void
      */
@@ -97,7 +97,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
         this._assignmentFilterType = value;
     }
     /**
-     * Sets the evaluationResult property value. Represents the evalaution result of the filter. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
+     * Sets the evaluationResult property value. Supported evaluation results for filter.
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */

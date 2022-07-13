@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityProtectionRoot singleton. */
 public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /** Indicates the activity type the detected risk is linked to.  The possible values are: signin, unknownFutureValue, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal. */
     private ActivityType _activity;
@@ -51,7 +50,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /** Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, UnknownFutureValue. */
     private TokenIssuerType _tokenIssuerType;
     /**
-     * Instantiates a new servicePrincipalRiskDetection and sets the default values.
+     * Instantiates a new ServicePrincipalRiskDetection and sets the default values.
      * @return a void
      */
     public ServicePrincipalRiskDetection() {
@@ -60,7 +59,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalRiskDetection
+     * @return a ServicePrincipalRiskDetection
      */
     @javax.annotation.Nonnull
     public static ServicePrincipalRiskDetection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

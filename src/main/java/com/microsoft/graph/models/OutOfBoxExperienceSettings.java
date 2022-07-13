@@ -12,7 +12,7 @@ import java.util.Objects;
 public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** AAD join authentication type. Possible values are: singleUser, shared. */
+    /** The deviceUsageType property */
     private WindowsDeviceUsageType _deviceUsageType;
     /** If set to true, then the user can't start over with different account, on company sign-in */
     private Boolean _hideEscapeLink;
@@ -22,7 +22,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
     private Boolean _hidePrivacySettings;
     /** If set, then skip the keyboard selection page if Language and Region are set */
     private Boolean _skipKeyboardSelectionPage;
-    /** Type of user. Possible values are: administrator, standard. */
+    /** The userType property */
     private WindowsUserType _userType;
     /**
      * Instantiates a new outOfBoxExperienceSettings and sets the default values.
@@ -50,7 +50,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
         return this._additionalData;
     }
     /**
-     * Gets the deviceUsageType property value. AAD join authentication type. Possible values are: singleUser, shared.
+     * Gets the deviceUsageType property value. The deviceUsageType property
      * @return a windowsDeviceUsageType
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
         return this._skipKeyboardSelectionPage;
     }
     /**
-     * Gets the userType property value. Type of user. Possible values are: administrator, standard.
+     * Gets the userType property value. The userType property
      * @return a windowsUserType
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
         this._additionalData = value;
     }
     /**
-     * Sets the deviceUsageType property value. AAD join authentication type. Possible values are: singleUser, shared.
+     * Sets the deviceUsageType property value. The deviceUsageType property
      * @param value Value to set for the deviceUsageType property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
         this._skipKeyboardSelectionPage = value;
     }
     /**
-     * Sets the userType property value. Type of user. Possible values are: administrator, standard.
+     * Sets the userType property value. The userType property
      * @param value Value to set for the userType property.
      * @return a void
      */

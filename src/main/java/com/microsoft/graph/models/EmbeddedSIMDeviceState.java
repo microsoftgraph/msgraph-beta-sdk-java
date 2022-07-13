@@ -18,7 +18,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
     private OffsetDateTime _lastSyncDateTime;
     /** The time the embedded SIM device status was last modified. Updated service side. */
     private OffsetDateTime _modifiedDateTime;
-    /** The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser. */
+    /** Describes the various states for an embedded SIM activation code. */
     private EmbeddedSIMDeviceStateValue _state;
     /** String description of the provisioning state. */
     private String _stateDetails;
@@ -94,7 +94,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
         return this._modifiedDateTime;
     }
     /**
-     * Gets the state property value. The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
+     * Gets the state property value. Describes the various states for an embedded SIM activation code.
      * @return a embeddedSIMDeviceStateValue
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
         this._modifiedDateTime = value;
     }
     /**
-     * Sets the state property value. The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
+     * Sets the state property value. Describes the various states for an embedded SIM activation code.
      * @param value Value to set for the state property.
      * @return a void
      */

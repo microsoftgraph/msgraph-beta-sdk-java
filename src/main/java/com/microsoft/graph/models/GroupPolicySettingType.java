@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum GroupPolicySettingType implements ValuedEnum {
     /** GroupPolicySettingType unknown */
     Unknown("unknown"),

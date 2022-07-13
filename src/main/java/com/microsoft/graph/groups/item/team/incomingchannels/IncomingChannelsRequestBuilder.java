@@ -58,7 +58,7 @@ public class IncomingChannelsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get incomingChannels from groups
+     * List of channels shared with the team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class IncomingChannelsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get incomingChannels from groups
+     * List of channels shared with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class IncomingChannelsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get incomingChannels from groups
+     * List of channels shared with the team.
      * @return a CompletableFuture of ChannelCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get() {
@@ -104,7 +104,7 @@ public class IncomingChannelsRequestBuilder {
         }
     }
     /**
-     * Get incomingChannels from groups
+     * List of channels shared with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChannelCollectionResponse
      */
@@ -121,7 +121,7 @@ public class IncomingChannelsRequestBuilder {
         }
     }
     /**
-     * Get incomingChannels from groups
+     * List of channels shared with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ChannelCollectionResponse
@@ -138,7 +138,7 @@ public class IncomingChannelsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get incomingChannels from groups */
+    /** List of channels shared with the team. */
     public class IncomingChannelsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

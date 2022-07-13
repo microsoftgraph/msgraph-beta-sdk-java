@@ -20,7 +20,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     private Boolean _preSharedKeyIsSet;
     /** This is the name of the Wi-Fi network that is broadcast to all devices. */
     private String _ssid;
-    /** Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise. */
+    /** Wi-Fi Security Types for AOSP Device Owner. */
     private AospDeviceOwnerWiFiSecurityType _wiFiSecurityType;
     /**
      * Instantiates a new AospDeviceOwnerWiFiConfiguration and sets the default values.
@@ -28,6 +28,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     public AospDeviceOwnerWiFiConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.aospDeviceOwnerWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -112,7 +113,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
         return this._ssid;
     }
     /**
-     * Gets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise.
+     * Gets the wiFiSecurityType property value. Wi-Fi Security Types for AOSP Device Owner.
      * @return a aospDeviceOwnerWiFiSecurityType
      */
     @javax.annotation.Nullable
@@ -184,7 +185,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
         this._ssid = value;
     }
     /**
-     * Sets the wiFiSecurityType property value. Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise.
+     * Sets the wiFiSecurityType property value. Wi-Fi Security Types for AOSP Device Owner.
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */

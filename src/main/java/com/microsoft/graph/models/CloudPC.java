@@ -8,10 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of administrativeUnit entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CloudPC extends Entity implements Parsable {
     /** The Azure Active Directory (Azure AD) device ID of the Cloud PC. */
     private String _aadDeviceId;
+    /** The connectivityResult property */
+    private CloudPcConnectivityResult _connectivityResult;
     /** The display name of the Cloud PC. */
     private String _displayName;
     /** The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
@@ -42,7 +44,7 @@ public class CloudPC extends Entity implements Parsable {
     private String _servicePlanName;
     /** The service plan type of the Cloud PC. */
     private CloudPcServicePlanType _servicePlanType;
-    /** The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring. */
+    /** The status property */
     private CloudPcStatus _status;
     /** The details of the Cloud PC status. */
     private CloudPcStatusDetails _statusDetails;
@@ -76,6 +78,14 @@ public class CloudPC extends Entity implements Parsable {
         return this._aadDeviceId;
     }
     /**
+     * Gets the connectivityResult property value. The connectivityResult property
+     * @return a cloudPcConnectivityResult
+     */
+    @javax.annotation.Nullable
+    public CloudPcConnectivityResult getConnectivityResult() {
+        return this._connectivityResult;
+    }
+    /**
      * Gets the displayName property value. The display name of the Cloud PC.
      * @return a string
      */
@@ -92,6 +102,7 @@ public class CloudPC extends Entity implements Parsable {
         final CloudPC currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("aadDeviceId", (n) -> { currentObject.setAadDeviceId(n.getStringValue()); });
+            this.put("connectivityResult", (n) -> { currentObject.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("gracePeriodEndDateTime", (n) -> { currentObject.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
@@ -226,7 +237,7 @@ public class CloudPC extends Entity implements Parsable {
         return this._servicePlanType;
     }
     /**
-     * Gets the status property value. The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
+     * Gets the status property value. The status property
      * @return a cloudPcStatus
      */
     @javax.annotation.Nullable
@@ -266,6 +277,7 @@ public class CloudPC extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
+        writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
@@ -293,6 +305,14 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setAadDeviceId(@javax.annotation.Nullable final String value) {
         this._aadDeviceId = value;
+    }
+    /**
+     * Sets the connectivityResult property value. The connectivityResult property
+     * @param value Value to set for the connectivityResult property.
+     * @return a void
+     */
+    public void setConnectivityResult(@javax.annotation.Nullable final CloudPcConnectivityResult value) {
+        this._connectivityResult = value;
     }
     /**
      * Sets the displayName property value. The display name of the Cloud PC.
@@ -415,7 +435,7 @@ public class CloudPC extends Entity implements Parsable {
         this._servicePlanType = value;
     }
     /**
-     * Sets the status property value. The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

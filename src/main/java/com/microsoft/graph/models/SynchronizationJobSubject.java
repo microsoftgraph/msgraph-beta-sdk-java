@@ -11,11 +11,11 @@ import java.util.Objects;
 public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The links property */
+    /** Principals that you would like to provision. */
     private SynchronizationLinkedObjects _links;
     /** The identifier of an object to which a synchronizationJob is to be applied. Can be one of the following: An onPremisesDistinguishedName for synchronization from Active Directory to Azure AD.The user ID for synchronization from Azure AD to a third-party.The Worker ID of the Workday worker for synchronization from Workday to either Active Directory or Azure AD. */
     private String _objectId;
-    /** The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronization from Active Directory to Azure AD.User for synchronization from Azure AD to a third-party application. Worker for synchronization from Workday to either Active Directory or Azure AD. */
+    /** The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application. */
     private String _objectTypeName;
     /**
      * Instantiates a new synchronizationJobSubject and sets the default values.
@@ -56,7 +56,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the links property value. The links property
+     * Gets the links property value. Principals that you would like to provision.
      * @return a synchronizationLinkedObjects
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         return this._objectId;
     }
     /**
-     * Gets the objectTypeName property value. The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronization from Active Directory to Azure AD.User for synchronization from Azure AD to a third-party application. Worker for synchronization from Workday to either Active Directory or Azure AD.
+     * Gets the objectTypeName property value. The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the links property value. The links property
+     * Sets the links property value. Principals that you would like to provision.
      * @param value Value to set for the links property.
      * @return a void
      */
@@ -116,7 +116,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         this._objectId = value;
     }
     /**
-     * Sets the objectTypeName property value. The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronization from Active Directory to Azure AD.User for synchronization from Azure AD to a third-party application. Worker for synchronization from Workday to either Active Directory or Azure AD.
+     * Sets the objectTypeName property value. The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
      * @param value Value to set for the objectTypeName property.
      * @return a void
      */

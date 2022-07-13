@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
 public class MeetingRegistrationBase extends Entity implements Parsable {
     /** Specifies who can register for the meeting. */
     private MeetingAudience _allowedRegistrant;
@@ -19,6 +18,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      */
     public MeetingRegistrationBase() {
         super();
+        this.setOdatatype("#microsoft.graph.meetingRegistrationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

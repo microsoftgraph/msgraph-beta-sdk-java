@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
-    /** The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64. */
+    /** Contains properties for Windows architecture. */
     private WindowsArchitecture _applicableArchitectures;
     /** The Identity Name. */
     private String _identityName;
@@ -30,6 +30,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     public WindowsPhone81AppX() {
         super();
+        this.setOdatatype("#microsoft.graph.windowsPhone81AppX");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +50,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
         return new WindowsPhone81AppX();
     }
     /**
-     * Gets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
@@ -148,7 +149,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
         writer.writeStringValue("phonePublisherId", this.getPhonePublisherId());
     }
     /**
-     * Sets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class containing the base properties for Intune mobile apps. */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
     private java.util.List<MobileAppAssignment> _assignments;
@@ -46,7 +45,7 @@ public class MobileApp extends Entity implements Parsable {
     private String _privacyInformationUrl;
     /** The publisher of the app. */
     private String _publisher;
-    /** The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published. */
+    /** Indicates the publishing state of an app. */
     private MobileAppPublishingState _publishingState;
     /** List of relationships for this mobile app. */
     private java.util.List<MobileAppRelationship> _relationships;
@@ -61,16 +60,17 @@ public class MobileApp extends Entity implements Parsable {
     /** The list of installation states for this mobile app. */
     private java.util.List<UserAppInstallStatus> _userStatuses;
     /**
-     * Instantiates a new mobileApp and sets the default values.
+     * Instantiates a new MobileApp and sets the default values.
      * @return a void
      */
     public MobileApp() {
         super();
+        this.setOdatatype("#microsoft.graph.mobileApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileApp
+     * @return a MobileApp
      */
     @javax.annotation.Nonnull
     public static MobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -282,7 +282,7 @@ public class MobileApp extends Entity implements Parsable {
         return this._publisher;
     }
     /**
-     * Gets the publishingState property value. The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * Gets the publishingState property value. Indicates the publishing state of an app.
      * @return a mobileAppPublishingState
      */
     @javax.annotation.Nullable
@@ -516,7 +516,7 @@ public class MobileApp extends Entity implements Parsable {
         this._publisher = value;
     }
     /**
-     * Sets the publishingState property value. The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * Sets the publishingState property value. Indicates the publishing state of an app.
      * @param value Value to set for the publishingState property.
      * @return a void
      */

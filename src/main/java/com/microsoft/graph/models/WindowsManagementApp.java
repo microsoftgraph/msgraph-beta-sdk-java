@@ -7,13 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows management app entity. */
 public class WindowsManagementApp extends Entity implements Parsable {
     /** Windows management app available version. */
     private String _availableVersion;
     /** The list of health states for installed Windows management app. */
     private java.util.List<WindowsManagementAppHealthState> _healthStates;
-    /** Managed Installer Status. Possible values are: disabled, enabled. */
+    /** ManagedInstallerStatus */
     private ManagedInstallerStatus _managedInstaller;
     /** Managed Installer Configured Date Time */
     private String _managedInstallerConfiguredDateTime;
@@ -65,7 +64,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
         return this._healthStates;
     }
     /**
-     * Gets the managedInstaller property value. Managed Installer Status. Possible values are: disabled, enabled.
+     * Gets the managedInstaller property value. ManagedInstallerStatus
      * @return a managedInstallerStatus
      */
     @javax.annotation.Nullable
@@ -110,7 +109,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
         this._healthStates = value;
     }
     /**
-     * Sets the managedInstaller property value. Managed Installer Status. Possible values are: disabled, enabled.
+     * Sets the managedInstaller property value. ManagedInstallerStatus
      * @param value Value to set for the managedInstaller property.
      * @return a void
      */

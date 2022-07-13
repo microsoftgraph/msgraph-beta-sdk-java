@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of programControlType entities. */
 public class ProgramControlType extends Entity implements Parsable {
     /** The controlTypeGroupId property */
     private String _controlTypeGroupId;
     /** The name of the program control type */
     private String _displayName;
     /**
-     * Instantiates a new programControlType and sets the default values.
+     * Instantiates a new ProgramControlType and sets the default values.
      * @return a void
      */
     public ProgramControlType() {
@@ -23,7 +22,7 @@ public class ProgramControlType extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a programControlType
+     * @return a ProgramControlType
      */
     @javax.annotation.Nonnull
     public static ProgramControlType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

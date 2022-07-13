@@ -27,7 +27,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     private java.util.List<String> _platforms;
     /** List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page. */
     private java.util.List<String> _powerAppIds;
-    /** State of the bookmark. Possible values are: published, draft, excluded, or unknownFutureValue. */
+    /** The state property */
     private AnswerState _state;
     /** Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations. */
     private java.util.List<AnswerVariant> _targetedVariations;
@@ -142,7 +142,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this._powerAppIds;
     }
     /**
-     * Gets the state property value. State of the bookmark. Possible values are: published, draft, excluded, or unknownFutureValue.
+     * Gets the state property value. The state property
      * @return a answerState
      */
     @javax.annotation.Nullable
@@ -250,7 +250,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         this._powerAppIds = value;
     }
     /**
-     * Sets the state property value. State of the bookmark. Possible values are: published, draft, excluded, or unknownFutureValue.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

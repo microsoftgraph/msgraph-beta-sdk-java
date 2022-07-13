@@ -12,13 +12,13 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     private Boolean _autoAcceptEula;
     /** The property to represent the apps which are excluded from the selected Office365 Product Id. */
     private ExcludedApps _excludedApps;
-    /** To specify the level of display for the Installation Progress Setup UI on the Device. Possible values are: none, full. */
+    /** The Enum to specify the level of display for the Installation Progress Setup UI on the Device. */
     private OfficeSuiteInstallProgressDisplayLevel _installProgressDisplayLevel;
     /** The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/library/cc179219(v=office.16).aspx */
     private java.util.List<String> _localesToInstall;
     /** The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app. */
     private byte[] _officeConfigurationXml;
-    /** The property to represent the Office365 app suite version. Possible values are: none, x86, x64, arm, neutral, arm64. */
+    /** Contains properties for Windows architecture. */
     private WindowsArchitecture _officePlatformArchitecture;
     /** The Product Ids that represent the Office365 Suite SKU. */
     private java.util.List<String> _productIds;
@@ -26,7 +26,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     private Boolean _shouldUninstallOlderVersionsOfOffice;
     /** The property to represent the specific target version for the Office365 app suite that should be remained deployed on the devices. */
     private String _targetVersion;
-    /** The property to represent the Office365 Update Channel. Possible values are: none, current, deferred, firstReleaseCurrent, firstReleaseDeferred, monthlyEnterprise. */
+    /** The Enum to specify the Office365 Updates Channel. */
     private OfficeUpdateChannel _updateChannel;
     /** The property to represent the update version in which the specific target version is available for the Office365 app suite. */
     private String _updateVersion;
@@ -88,7 +88,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         }};
     }
     /**
-     * Gets the installProgressDisplayLevel property value. To specify the level of display for the Installation Progress Setup UI on the Device. Possible values are: none, full.
+     * Gets the installProgressDisplayLevel property value. The Enum to specify the level of display for the Installation Progress Setup UI on the Device.
      * @return a officeSuiteInstallProgressDisplayLevel
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         return this._officeConfigurationXml;
     }
     /**
-     * Gets the officePlatformArchitecture property value. The property to represent the Office365 app suite version. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the officePlatformArchitecture property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         return this._targetVersion;
     }
     /**
-     * Gets the updateChannel property value. The property to represent the Office365 Update Channel. Possible values are: none, current, deferred, firstReleaseCurrent, firstReleaseDeferred, monthlyEnterprise.
+     * Gets the updateChannel property value. The Enum to specify the Office365 Updates Channel.
      * @return a officeUpdateChannel
      */
     @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         this._excludedApps = value;
     }
     /**
-     * Sets the installProgressDisplayLevel property value. To specify the level of display for the Installation Progress Setup UI on the Device. Possible values are: none, full.
+     * Sets the installProgressDisplayLevel property value. The Enum to specify the level of display for the Installation Progress Setup UI on the Device.
      * @param value Value to set for the installProgressDisplayLevel property.
      * @return a void
      */
@@ -229,7 +229,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         this._officeConfigurationXml = value;
     }
     /**
-     * Sets the officePlatformArchitecture property value. The property to represent the Office365 app suite version. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the officePlatformArchitecture property value. Contains properties for Windows architecture.
      * @param value Value to set for the officePlatformArchitecture property.
      * @return a void
      */
@@ -261,7 +261,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         this._targetVersion = value;
     }
     /**
-     * Sets the updateChannel property value. The property to represent the Office365 Update Channel. Possible values are: none, current, deferred, firstReleaseCurrent, firstReleaseDeferred, monthlyEnterprise.
+     * Sets the updateChannel property value. The Enum to specify the Office365 Updates Channel.
      * @param value Value to set for the updateChannel property.
      * @return a void
      */

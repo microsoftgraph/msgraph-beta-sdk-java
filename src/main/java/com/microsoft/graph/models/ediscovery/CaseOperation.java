@@ -11,7 +11,6 @@ import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
 import microsoft.graph.models.ResultInfo;
-/** Provides operations to manage the compliance singleton. */
 public class CaseOperation extends Entity implements Parsable {
     /** The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData */
     private CaseAction _action;
@@ -28,16 +27,17 @@ public class CaseOperation extends Entity implements Parsable {
     /** The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed. */
     private CaseOperationStatus _status;
     /**
-     * Instantiates a new caseOperation and sets the default values.
+     * Instantiates a new CaseOperation and sets the default values.
      * @return a void
      */
     public CaseOperation() {
         super();
+        this.setOdatatype("#microsoft.graph.ediscovery.caseOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a caseOperation
+     * @return a CaseOperation
      */
     @javax.annotation.Nonnull
     public static CaseOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

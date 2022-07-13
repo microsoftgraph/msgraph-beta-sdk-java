@@ -13,7 +13,7 @@ import microsoft.graph.models.AdministratorConfiguredDeviceComplianceState;
 public class OverrideComplianceStatePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The complianceState property */
+    /** Administrator configured device compliance state Enum */
     private AdministratorConfiguredDeviceComplianceState _complianceState;
     /** The remediationUrl property */
     private String _remediationUrl;
@@ -43,7 +43,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
         return this._additionalData;
     }
     /**
-     * Gets the complianceState property value. The complianceState property
+     * Gets the complianceState property value. Administrator configured device compliance state Enum
      * @return a administratorConfiguredDeviceComplianceState
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
         this._additionalData = value;
     }
     /**
-     * Sets the complianceState property value. The complianceState property
+     * Sets the complianceState property value. Administrator configured device compliance state Enum
      * @param value Value to set for the complianceState property.
      * @return a void
      */

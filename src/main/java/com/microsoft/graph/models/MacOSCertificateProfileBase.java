@@ -7,9 +7,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Mac OS certificate profile. */
 public class MacOSCertificateProfileBase extends DeviceConfiguration implements Parsable {
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period. */
     private Integer _certificateValidityPeriodValue;
@@ -17,7 +16,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     private Integer _renewalThresholdPercentage;
     /** Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
     private SubjectAlternativeNameType _subjectAlternativeNameType;
-    /** Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber. */
+    /** Subject Name Format Options for Apple devices. */
     private AppleSubjectNameFormat _subjectNameFormat;
     /**
      * Instantiates a new macOSCertificateProfileBase and sets the default values.
@@ -25,6 +24,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      */
     public MacOSCertificateProfileBase() {
         super();
+        this.setOdatatype("#microsoft.graph.macOSCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +46,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
         return new MacOSCertificateProfileBase();
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
         return this._subjectAlternativeNameType;
     }
     /**
-     * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
+     * Gets the subjectNameFormat property value. Subject Name Format Options for Apple devices.
      * @return a appleSubjectNameFormat
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
@@ -147,7 +147,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
         this._subjectAlternativeNameType = value;
     }
     /**
-     * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
+     * Sets the subjectNameFormat property value. Subject Name Format Options for Apple devices.
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */

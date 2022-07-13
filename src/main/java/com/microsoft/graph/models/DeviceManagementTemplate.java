@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity that represents a defined collection of device settings */
 public class DeviceManagementTemplate extends Entity implements Parsable {
     /** Collection of setting categories within the template */
     private java.util.List<DeviceManagementTemplateSettingCategory> _categories;
@@ -22,29 +21,30 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     private Boolean _isDeprecated;
     /** Collection of templates this template can migrate to */
     private java.util.List<DeviceManagementTemplate> _migratableTo;
-    /** The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all. */
+    /** Supported platform types for policies. */
     private PolicyPlatformType _platformType;
     /** When the template was published */
     private OffsetDateTime _publishedDateTime;
     /** Collection of all settings this template has */
     private java.util.List<DeviceManagementSettingInstance> _settings;
-    /** The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist. */
+    /** Template subtype */
     private DeviceManagementTemplateSubtype _templateSubtype;
-    /** The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings. */
+    /** Template type */
     private DeviceManagementTemplateType _templateType;
     /** The template's version information */
     private String _versionInfo;
     /**
-     * Instantiates a new deviceManagementTemplate and sets the default values.
+     * Instantiates a new DeviceManagementTemplate and sets the default values.
      * @return a void
      */
     public DeviceManagementTemplate() {
         super();
+        this.setOdatatype("#microsoft.graph.deviceManagementTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTemplate
+     * @return a DeviceManagementTemplate
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -129,7 +129,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         return this._migratableTo;
     }
     /**
-     * Gets the platformType property value. The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+     * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         return this._settings;
     }
     /**
-     * Gets the templateSubtype property value. The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
+     * Gets the templateSubtype property value. Template subtype
      * @return a deviceManagementTemplateSubtype
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         return this._templateSubtype;
     }
     /**
-     * Gets the templateType property value. The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
+     * Gets the templateType property value. Template type
      * @return a deviceManagementTemplateType
      */
     @javax.annotation.Nullable
@@ -246,7 +246,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         this._migratableTo = value;
     }
     /**
-     * Sets the platformType property value. The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+     * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      * @return a void
      */
@@ -270,7 +270,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         this._settings = value;
     }
     /**
-     * Sets the templateSubtype property value. The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
+     * Sets the templateSubtype property value. Template subtype
      * @param value Value to set for the templateSubtype property.
      * @return a void
      */
@@ -278,7 +278,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         this._templateSubtype = value;
     }
     /**
-     * Sets the templateType property value. The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
+     * Sets the templateType property value. Template type
      * @param value Value to set for the templateType property.
      * @return a void
      */

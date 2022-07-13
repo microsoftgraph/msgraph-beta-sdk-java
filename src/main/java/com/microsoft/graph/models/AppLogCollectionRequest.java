@@ -16,7 +16,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     private java.util.List<String> _customLogFolders;
     /** Error message if any during the upload process */
     private String _errorMessage;
-    /** Log upload status. Possible values are: pending, completed, failed. */
+    /** AppLogUploadStatus */
     private AppLogUploadState _status;
     /**
      * Instantiates a new appLogCollectionRequest and sets the default values.
@@ -74,7 +74,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the status property value. Log upload status. Possible values are: pending, completed, failed.
+     * Gets the status property value. AppLogUploadStatus
      * @return a appLogUploadState
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
         this._errorMessage = value;
     }
     /**
-     * Sets the status property value. Log upload status. Possible values are: pending, completed, failed.
+     * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
      * @return a void
      */

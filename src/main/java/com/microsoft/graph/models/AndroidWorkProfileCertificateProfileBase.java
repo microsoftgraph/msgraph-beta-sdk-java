@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration implements Parsable {
-    /** Scale for the Certificate Validity Period. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period. */
     private Integer _certificateValidityPeriodValue;
@@ -20,7 +20,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
     private AndroidWorkProfileTrustedRootCertificate _rootCertificate;
     /** Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
     private SubjectAlternativeNameType _subjectAlternativeNameType;
-    /** Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId. */
+    /** Subject Name Format Options. */
     private SubjectNameFormat _subjectNameFormat;
     /**
      * Instantiates a new AndroidWorkProfileCertificateProfileBase and sets the default values.
@@ -28,6 +28,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
      */
     public AndroidWorkProfileCertificateProfileBase() {
         super();
+        this.setOdatatype("#microsoft.graph.androidWorkProfileCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +49,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
         return new AndroidWorkProfileCertificateProfileBase();
     }
     /**
-     * Gets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -113,7 +114,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
         return this._subjectAlternativeNameType;
     }
     /**
-     * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Gets the subjectNameFormat property value. Subject Name Format Options.
      * @return a subjectNameFormat
      */
     @javax.annotation.Nullable
@@ -137,7 +138,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
-     * Sets the certificateValidityPeriodScale property value. Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
@@ -185,7 +186,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
         this._subjectAlternativeNameType = value;
     }
     /**
-     * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Sets the subjectNameFormat property value. Subject Name Format Options.
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */

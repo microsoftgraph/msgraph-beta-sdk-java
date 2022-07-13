@@ -34,7 +34,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     private Long _countImportedReferenceDeltas;
     /** If an error was encountered, contains a synchronizationError object with details. */
     private SynchronizationError _error;
-    /** Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors. */
+    /** The state property */
     private SynchronizationTaskExecutionResult _state;
     /** Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _timeBegan;
@@ -178,7 +178,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         }};
     }
     /**
-     * Gets the state property value. Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors.
+     * Gets the state property value. The state property
      * @return a synchronizationTaskExecutionResult
      */
     @javax.annotation.Nullable
@@ -321,7 +321,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this._error = value;
     }
     /**
-     * Sets the state property value. Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

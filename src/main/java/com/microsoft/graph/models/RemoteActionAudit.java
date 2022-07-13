@@ -8,11 +8,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Report of remote actions initiated on the devices belonging to a certain tenant. */
 public class RemoteActionAudit extends Entity implements Parsable {
-    /** The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim. */
+    /** Remote actions Intune supports. */
     private RemoteAction _action;
-    /** Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported. */
+    /** The actionState property */
     private ActionState _actionState;
     /** Intune device name. */
     private String _deviceDisplayName;
@@ -29,7 +28,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /** [deprecated] Please use InitiatedByUserPrincipalName instead. */
     private String _userName;
     /**
-     * Instantiates a new remoteActionAudit and sets the default values.
+     * Instantiates a new RemoteActionAudit and sets the default values.
      * @return a void
      */
     public RemoteActionAudit() {
@@ -38,7 +37,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteActionAudit
+     * @return a RemoteActionAudit
      */
     @javax.annotation.Nonnull
     public static RemoteActionAudit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +45,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
         return new RemoteActionAudit();
     }
     /**
-     * Gets the action property value. The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim.
+     * Gets the action property value. Remote actions Intune supports.
      * @return a remoteAction
      */
     @javax.annotation.Nullable
@@ -54,7 +53,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
         return this._action;
     }
     /**
-     * Gets the actionState property value. Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Gets the actionState property value. The actionState property
      * @return a actionState
      */
     @javax.annotation.Nullable
@@ -155,7 +154,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
         writer.writeStringValue("userName", this.getUserName());
     }
     /**
-     * Sets the action property value. The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim.
+     * Sets the action property value. Remote actions Intune supports.
      * @param value Value to set for the action property.
      * @return a void
      */
@@ -163,7 +162,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
         this._action = value;
     }
     /**
-     * Sets the actionState property value. Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Sets the actionState property value. The actionState property
      * @param value Value to set for the actionState property.
      * @return a void
      */

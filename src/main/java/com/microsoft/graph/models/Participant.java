@@ -7,10 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;
+    /** The isIdentityAnonymized property */
+    private Boolean _isIdentityAnonymized;
     /** true if the participant is in lobby. */
     private Boolean _isInLobby;
     /** true if the participant is muted (client or server muted). */
@@ -47,6 +49,7 @@ public class Participant extends Entity implements Parsable {
         final Participant currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+            this.put("isIdentityAnonymized", (n) -> { currentObject.setIsIdentityAnonymized(n.getBooleanValue()); });
             this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
             this.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });
             this.put("mediaStreams", (n) -> { currentObject.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
@@ -61,6 +64,14 @@ public class Participant extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ParticipantInfo getInfo() {
         return this._info;
+    }
+    /**
+     * Gets the isIdentityAnonymized property value. The isIdentityAnonymized property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsIdentityAnonymized() {
+        return this._isIdentityAnonymized;
     }
     /**
      * Gets the isInLobby property value. true if the participant is in lobby.
@@ -111,6 +122,7 @@ public class Participant extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("info", this.getInfo());
+        writer.writeBooleanValue("isIdentityAnonymized", this.getIsIdentityAnonymized());
         writer.writeBooleanValue("isInLobby", this.getIsInLobby());
         writer.writeBooleanValue("isMuted", this.getIsMuted());
         writer.writeCollectionOfObjectValues("mediaStreams", this.getMediaStreams());
@@ -124,6 +136,14 @@ public class Participant extends Entity implements Parsable {
      */
     public void setInfo(@javax.annotation.Nullable final ParticipantInfo value) {
         this._info = value;
+    }
+    /**
+     * Sets the isIdentityAnonymized property value. The isIdentityAnonymized property
+     * @param value Value to set for the isIdentityAnonymized property.
+     * @return a void
+     */
+    public void setIsIdentityAnonymized(@javax.annotation.Nullable final Boolean value) {
+        this._isIdentityAnonymized = value;
     }
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.

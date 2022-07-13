@@ -17,7 +17,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     private String _targetId;
     /** The target mobile app's publisher. */
     private String _targetPublisher;
-    /** The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent. */
+    /** Indicates whether the target of a relationship is the parent or the child in the relationship. */
     private MobileAppRelationshipType _targetType;
     /**
      * Instantiates a new mobileAppRelationship and sets the default values.
@@ -25,6 +25,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     public MobileAppRelationship() {
         super();
+        this.setOdatatype("#microsoft.graph.mobileAppRelationship");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +93,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this._targetPublisher;
     }
     /**
-     * Gets the targetType property value. The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent.
+     * Gets the targetType property value. Indicates whether the target of a relationship is the parent or the child in the relationship.
      * @return a mobileAppRelationshipType
      */
     @javax.annotation.Nullable
@@ -146,7 +147,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         this._targetPublisher = value;
     }
     /**
-     * Sets the targetType property value. The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent.
+     * Sets the targetType property value. Indicates whether the target of a relationship is the parent or the child in the relationship.
      * @param value Value to set for the targetType property.
      * @return a void
      */

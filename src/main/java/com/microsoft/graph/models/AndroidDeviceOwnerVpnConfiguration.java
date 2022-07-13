@@ -12,7 +12,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     private Boolean _alwaysOn;
     /** If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected. */
     private Boolean _alwaysOnLockdown;
-    /** Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility, microsoftProtect. */
+    /** Android VPN connection type. */
     private AndroidVpnConnectionType _connectionType;
     /** Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements. */
     private java.util.List<KeyValue> _customData;
@@ -64,7 +64,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
         return this._alwaysOnLockdown;
     }
     /**
-     * Gets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Gets the connectionType property value. Android VPN connection type.
      * @return a androidVpnConnectionType
      */
     @javax.annotation.Nullable
@@ -193,7 +193,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
         this._alwaysOnLockdown = value;
     }
     /**
-     * Sets the connectionType property value. Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Sets the connectionType property value. Android VPN connection type.
      * @param value Value to set for the connectionType property.
      * @return a void
      */

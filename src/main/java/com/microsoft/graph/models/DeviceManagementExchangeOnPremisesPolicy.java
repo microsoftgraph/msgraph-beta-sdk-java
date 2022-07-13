@@ -7,20 +7,19 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Singleton entity which represents the Exchange OnPremises policy configured for a tenant. */
 public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements Parsable {
     /** The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization */
     private java.util.List<DeviceManagementExchangeAccessRule> _accessRules;
     /** The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
     private OnPremisesConditionalAccessSettings _conditionalAccessSettings;
-    /** Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine. */
+    /** Access Level in Exchange. */
     private DeviceManagementExchangeAccessLevel _defaultAccessLevel;
     /** The list of device classes known to Exchange */
     private java.util.List<DeviceManagementExchangeDeviceClass> _knownDeviceClasses;
     /** Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML. */
     private byte[] _notificationContent;
     /**
-     * Instantiates a new deviceManagementExchangeOnPremisesPolicy and sets the default values.
+     * Instantiates a new DeviceManagementExchangeOnPremisesPolicy and sets the default values.
      * @return a void
      */
     public DeviceManagementExchangeOnPremisesPolicy() {
@@ -29,7 +28,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementExchangeOnPremisesPolicy
+     * @return a DeviceManagementExchangeOnPremisesPolicy
      */
     @javax.annotation.Nonnull
     public static DeviceManagementExchangeOnPremisesPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +52,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
         return this._conditionalAccessSettings;
     }
     /**
-     * Gets the defaultAccessLevel property value. Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
+     * Gets the defaultAccessLevel property value. Access Level in Exchange.
      * @return a deviceManagementExchangeAccessLevel
      */
     @javax.annotation.Nullable
@@ -122,7 +121,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
         this._conditionalAccessSettings = value;
     }
     /**
-     * Sets the defaultAccessLevel property value. Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
+     * Sets the defaultAccessLevel property value. Access Level in Exchange.
      * @param value Value to set for the defaultAccessLevel property.
      * @return a void
      */

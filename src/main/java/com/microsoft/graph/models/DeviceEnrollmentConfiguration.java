@@ -16,7 +16,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The description of the device enrollment configuration */
     private String _description;
-    /** Support for Enrollment Configuration Type */
+    /** Describes the TemplateFamily for the Template entity */
     private DeviceEnrollmentConfigurationType _deviceEnrollmentConfigurationType;
     /** The display name of the device enrollment configuration */
     private String _displayName;
@@ -34,6 +34,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     public DeviceEnrollmentConfiguration() {
         super();
+        this.setOdatatype("#microsoft.graph.deviceEnrollmentConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,7 +84,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the deviceEnrollmentConfigurationType property value. Support for Enrollment Configuration Type
+     * Gets the deviceEnrollmentConfigurationType property value. Describes the TemplateFamily for the Template entity
      * @return a deviceEnrollmentConfigurationType
      */
     @javax.annotation.Nullable
@@ -192,7 +193,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the deviceEnrollmentConfigurationType property value. Support for Enrollment Configuration Type
+     * Sets the deviceEnrollmentConfigurationType property value. Describes the TemplateFamily for the Template entity
      * @param value Value to set for the deviceEnrollmentConfigurationType property.
      * @return a void
      */

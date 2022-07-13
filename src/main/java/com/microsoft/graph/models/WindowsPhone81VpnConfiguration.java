@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration implements Parsable {
-    /** Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD. */
+    /** VPN Authentication Method. */
     private VpnAuthenticationMethod _authenticationMethod;
     /** Bypass VPN on company Wi-Fi. */
     private Boolean _bypassVpnOnCompanyWifi;
@@ -38,7 +38,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
         return new WindowsPhone81VpnConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Gets the authenticationMethod property value. VPN Authentication Method.
      * @return a vpnAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
         writer.writeBooleanValue("rememberUserCredentials", this.getRememberUserCredentials());
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Android For Work Trusted Root Certificate configuration profile */
 public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration implements Parsable {
     /** File name to display in UI. */
     private String _certFileName;

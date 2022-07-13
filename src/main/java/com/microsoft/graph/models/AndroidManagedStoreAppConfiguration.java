@@ -18,7 +18,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     private String _payloadJson;
     /** List of Android app permissions and corresponding permission actions. */
     private java.util.List<AndroidPermissionAction> _permissionActions;
-    /** Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner. */
+    /** Android profile applicability */
     private AndroidProfileApplicability _profileApplicability;
     /**
      * Instantiates a new AndroidManagedStoreAppConfiguration and sets the default values.
@@ -94,7 +94,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         return this._permissionActions;
     }
     /**
-     * Gets the profileApplicability property value. Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
+     * Gets the profileApplicability property value. Android profile applicability
      * @return a androidProfileApplicability
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         this._permissionActions = value;
     }
     /**
-     * Sets the profileApplicability property value. Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
+     * Sets the profileApplicability property value. Android profile applicability
      * @param value Value to set for the profileApplicability property.
      * @return a void
      */

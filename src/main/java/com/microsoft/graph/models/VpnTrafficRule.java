@@ -14,7 +14,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** App identifier, if this traffic rule is triggered by an app. */
     private String _appId;
-    /** App type, if this traffic rule is triggered by an app. Possible values are: none, desktop, universal. */
+    /** Indicates the type of app that a VPN traffic rule is associated with. */
     private VpnTrafficRuleAppType _appType;
     /** Claims associated with this traffic rule. */
     private String _claims;
@@ -30,7 +30,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     private java.util.List<IPv4Range> _remoteAddressRanges;
     /** Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements. */
     private java.util.List<NumberRange> _remotePortRanges;
-    /** When app triggered, indicates whether to enable split tunneling along this route. Possible values are: none, splitTunnel, forceTunnel. */
+    /** Specifies the routing policy for a VPN traffic rule. */
     private VpnTrafficRuleRoutingPolicyType _routingPolicyType;
     /**
      * Instantiates a new vpnTrafficRule and sets the default values.
@@ -66,7 +66,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         return this._appId;
     }
     /**
-     * Gets the appType property value. App type, if this traffic rule is triggered by an app. Possible values are: none, desktop, universal.
+     * Gets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
      * @return a vpnTrafficRuleAppType
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         return this._remotePortRanges;
     }
     /**
-     * Gets the routingPolicyType property value. When app triggered, indicates whether to enable split tunneling along this route. Possible values are: none, splitTunnel, forceTunnel.
+     * Gets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
      * @return a vpnTrafficRuleRoutingPolicyType
      */
     @javax.annotation.Nullable
@@ -193,7 +193,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         this._appId = value;
     }
     /**
-     * Sets the appType property value. App type, if this traffic rule is triggered by an app. Possible values are: none, desktop, universal.
+     * Sets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
      * @param value Value to set for the appType property.
      * @return a void
      */
@@ -257,7 +257,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         this._remotePortRanges = value;
     }
     /**
-     * Sets the routingPolicyType property value. When app triggered, indicates whether to enable split tunneling along this route. Possible values are: none, splitTunnel, forceTunnel.
+     * Sets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
      * @param value Value to set for the routingPolicyType property.
      * @return a void
      */

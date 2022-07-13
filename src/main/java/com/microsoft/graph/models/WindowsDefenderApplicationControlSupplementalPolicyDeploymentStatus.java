@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Contains properties for the deployment state of a WindowsDefenderApplicationControl supplemental policy for a device. */
 public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extends Entity implements Parsable {
-    /** The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound. */
+    /** Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses. */
     private WindowsDefenderApplicationControlSupplementalPolicyStatuses _deploymentStatus;
     /** Device ID. */
     private String _deviceId;
@@ -48,7 +48,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
         return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus();
     }
     /**
-     * Gets the deploymentStatus property value. The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
+     * Gets the deploymentStatus property value. Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
      * @return a windowsDefenderApplicationControlSupplementalPolicyStatuses
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the deploymentStatus property value. The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
+     * Sets the deploymentStatus property value. Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
      * @param value Value to set for the deploymentStatus property.
      * @return a void
      */

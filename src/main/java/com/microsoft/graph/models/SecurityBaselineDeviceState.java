@@ -16,7 +16,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     private OffsetDateTime _lastReportedDateTime;
     /** Intune device id */
     private String _managedDeviceId;
-    /** Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict. */
+    /** Security Baseline Compliance State */
     private SecurityBaselineComplianceState _state;
     /** User Principal Name */
     private String _userPrincipalName;
@@ -77,7 +77,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
         return this._managedDeviceId;
     }
     /**
-     * Gets the state property value. Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
+     * Gets the state property value. Security Baseline Compliance State
      * @return a securityBaselineComplianceState
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
         this._managedDeviceId = value;
     }
     /**
-     * Sets the state property value. Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
+     * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      * @return a void
      */

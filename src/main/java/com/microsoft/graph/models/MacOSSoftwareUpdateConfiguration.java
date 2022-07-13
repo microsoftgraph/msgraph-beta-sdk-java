@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implements Parsable {
-    /** Update behavior for all other updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater. */
+    /** Update behavior options for macOS software updates. */
     private MacOSSoftwareUpdateBehavior _allOtherUpdateBehavior;
-    /** Update behavior for configuration data file updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater. */
+    /** Update behavior options for macOS software updates. */
     private MacOSSoftwareUpdateBehavior _configDataUpdateBehavior;
-    /** Update behavior for critical updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater. */
+    /** Update behavior options for macOS software updates. */
     private MacOSSoftwareUpdateBehavior _criticalUpdateBehavior;
     /** Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements. */
     private java.util.List<CustomUpdateTimeWindow> _customUpdateTimeWindows;
-    /** Update behavior for firmware updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater. */
+    /** Update behavior options for macOS software updates. */
     private MacOSSoftwareUpdateBehavior _firmwareUpdateBehavior;
-    /** Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows. */
+    /** Update schedule type for macOS software updates. */
     private MacOSSoftwareUpdateScheduleType _updateScheduleType;
     /** Minutes indicating UTC offset for each update time window */
     private Integer _updateTimeWindowUtcOffsetInMinutes;
@@ -40,7 +40,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return new MacOSSoftwareUpdateConfiguration();
     }
     /**
-     * Gets the allOtherUpdateBehavior property value. Update behavior for all other updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Gets the allOtherUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
@@ -48,7 +48,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return this._allOtherUpdateBehavior;
     }
     /**
-     * Gets the configDataUpdateBehavior property value. Update behavior for configuration data file updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Gets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return this._configDataUpdateBehavior;
     }
     /**
-     * Gets the criticalUpdateBehavior property value. Update behavior for critical updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Gets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         }};
     }
     /**
-     * Gets the firmwareUpdateBehavior property value. Update behavior for firmware updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Gets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return this._firmwareUpdateBehavior;
     }
     /**
-     * Gets the updateScheduleType property value. Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+     * Gets the updateScheduleType property value. Update schedule type for macOS software updates.
      * @return a macOSSoftwareUpdateScheduleType
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         writer.writeIntegerValue("updateTimeWindowUtcOffsetInMinutes", this.getUpdateTimeWindowUtcOffsetInMinutes());
     }
     /**
-     * Sets the allOtherUpdateBehavior property value. Update behavior for all other updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Sets the allOtherUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the allOtherUpdateBehavior property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         this._allOtherUpdateBehavior = value;
     }
     /**
-     * Sets the configDataUpdateBehavior property value. Update behavior for configuration data file updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Sets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the configDataUpdateBehavior property.
      * @return a void
      */
@@ -145,7 +145,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         this._configDataUpdateBehavior = value;
     }
     /**
-     * Sets the criticalUpdateBehavior property value. Update behavior for critical updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Sets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the criticalUpdateBehavior property.
      * @return a void
      */
@@ -161,7 +161,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         this._customUpdateTimeWindows = value;
     }
     /**
-     * Sets the firmwareUpdateBehavior property value. Update behavior for firmware updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
+     * Sets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the firmwareUpdateBehavior property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         this._firmwareUpdateBehavior = value;
     }
     /**
-     * Sets the updateScheduleType property value. Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+     * Sets the updateScheduleType property value. Update schedule type for macOS software updates.
      * @param value Value to set for the updateScheduleType property.
      * @return a void
      */

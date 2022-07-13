@@ -13,18 +13,21 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     private Map<String, Object> _additionalData;
     /** description of the setting */
     private String _description;
-    /** Device Mode that setting can be applied on. Possible values are: none, kiosk. */
+    /** Describes applicability for the mode the device is in */
     private DeviceManagementConfigurationDeviceMode _deviceMode;
-    /** Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue. */
+    /** Supported platform types. */
     private DeviceManagementConfigurationPlatforms _platform;
-    /** Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue. */
+    /** Describes which technology this setting can be deployed with */
     private DeviceManagementConfigurationTechnologies _technologies;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new deviceManagementConfigurationSettingApplicability and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationSettingApplicability() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSettingApplicability");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,6 +37,14 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationSettingApplicability createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementConfigurationExchangeOnlineSettingApplicability": return new DeviceManagementConfigurationExchangeOnlineSettingApplicability();
+                case "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability": return new DeviceManagementConfigurationWindowsSettingApplicability();
+            }
+        }
         return new DeviceManagementConfigurationSettingApplicability();
     }
     /**
@@ -53,7 +64,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         return this._description;
     }
     /**
-     * Gets the deviceMode property value. Device Mode that setting can be applied on. Possible values are: none, kiosk.
+     * Gets the deviceMode property value. Describes applicability for the mode the device is in
      * @return a deviceManagementConfigurationDeviceMode
      */
     @javax.annotation.Nullable
@@ -67,15 +78,24 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingApplicability currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("deviceMode", (n) -> { currentObject.setDeviceMode(n.getEnumValue(DeviceManagementConfigurationDeviceMode.class)); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
             this.put("technologies", (n) -> { currentObject.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the platform property value. Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdatatype() {
+        return this._type;
+    }
+    /**
+     * Gets the platform property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
     @javax.annotation.Nullable
@@ -83,7 +103,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         return this._platform;
     }
     /**
-     * Gets the technologies property value. Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
     @javax.annotation.Nullable
@@ -101,6 +121,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         writer.writeEnumValue("deviceMode", this.getDeviceMode());
         writer.writeEnumValue("platform", this.getPlatform());
         writer.writeEnumValue("technologies", this.getTechnologies());
+        writer.writeStringValue("@odata.type", this.getOdatatype());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,7 +141,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         this._description = value;
     }
     /**
-     * Sets the deviceMode property value. Device Mode that setting can be applied on. Possible values are: none, kiosk.
+     * Sets the deviceMode property value. Describes applicability for the mode the device is in
      * @param value Value to set for the deviceMode property.
      * @return a void
      */
@@ -128,7 +149,15 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         this._deviceMode = value;
     }
     /**
-     * Sets the platform property value. Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setOdatatype(@javax.annotation.Nullable final String value) {
+        this._type = value;
+    }
+    /**
+     * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */
@@ -136,7 +165,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         this._platform = value;
     }
     /**
-     * Sets the technologies property value. Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      * @return a void
      */

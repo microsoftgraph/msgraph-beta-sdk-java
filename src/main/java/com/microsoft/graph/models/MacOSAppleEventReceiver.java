@@ -18,7 +18,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     private String _codeRequirement;
     /** Bundle ID of the app or file path of the process or executable that receives the Apple Event. */
     private String _identifier;
-    /** Use bundle ID for an app or path for a process or executable that receives the Apple Event. Possible values are: bundleID, path. */
+    /** Process identifier types for MacOS Privacy Preferences */
     private MacOSProcessIdentifierType _identifierType;
     /**
      * Instantiates a new macOSAppleEventReceiver and sets the default values.
@@ -84,7 +84,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         return this._identifier;
     }
     /**
-     * Gets the identifierType property value. Use bundle ID for an app or path for a process or executable that receives the Apple Event. Possible values are: bundleID, path.
+     * Gets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @return a macOSProcessIdentifierType
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         this._identifier = value;
     }
     /**
-     * Sets the identifierType property value. Use bundle ID for an app or path for a process or executable that receives the Apple Event. Possible values are: bundleID, path.
+     * Sets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @param value Value to set for the identifierType property.
      * @return a void
      */

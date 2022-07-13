@@ -14,6 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.admin.reportsettings.ReportSettingsRequestBuilder;
 import microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
 import microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
 import microsoft.graph.admin.windows.WindowsRequestBuilder;
@@ -23,6 +24,11 @@ import microsoft.graph.models.odataerrors.ODataError;
 public class AdminRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The reportSettings property */
+    @javax.annotation.Nonnull
+    public ReportSettingsRequestBuilder reportSettings() {
+        return new ReportSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** The serviceAnnouncement property */

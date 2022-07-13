@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase implements Parsable {
-    /** SCEP Hash Algorithm. Possible values are: sha1, sha2. */
+    /** Hash Algorithm Options. */
     private HashAlgorithms _hashAlgorithm;
-    /** SCEP Key Size. Possible values are: size1024, size2048, size4096. */
+    /** Key Size Options. */
     private KeySize _keySize;
-    /** SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature. */
+    /** Key Usage Options. */
     private KeyUsages _keyUsage;
     /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
     private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
@@ -57,7 +57,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         }};
     }
     /**
-     * Gets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * Gets the hashAlgorithm property value. Hash Algorithm Options.
      * @return a hashAlgorithms
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         return this._hashAlgorithm;
     }
     /**
-     * Gets the keySize property value. SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * Gets the keySize property value. Key Size Options.
      * @return a keySize
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         return this._keySize;
     }
     /**
-     * Gets the keyUsage property value. SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * Gets the keyUsage property value. Key Usage Options.
      * @return a keyUsages
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
     }
     /**
-     * Sets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * Sets the hashAlgorithm property value. Hash Algorithm Options.
      * @param value Value to set for the hashAlgorithm property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         this._hashAlgorithm = value;
     }
     /**
-     * Sets the keySize property value. SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      * @return a void
      */
@@ -145,7 +145,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         this._keySize = value;
     }
     /**
-     * Sets the keyUsage property value. SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      * @return a void
      */

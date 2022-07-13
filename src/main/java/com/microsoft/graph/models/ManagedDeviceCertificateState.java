@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagedDeviceCertificateState extends Entity implements Parsable {
     /** Extended key usage */
     private String _certificateEnhancedKeyUsage;
@@ -18,29 +18,29 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
     private OffsetDateTime _certificateExpirationDateTime;
     /** Issuance date */
     private OffsetDateTime _certificateIssuanceDateTime;
-    /** Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested. */
+    /** Certificate Issuance State Options. */
     private CertificateIssuanceStates _certificateIssuanceState;
     /** Issuer */
     private String _certificateIssuer;
     /** Key length */
     private Integer _certificateKeyLength;
-    /** Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp. */
+    /** Key Storage Provider (KSP) Import Options. */
     private KeyStorageProviderOption _certificateKeyStorageProvider;
-    /** Key usage. Possible values are: keyEncipherment, digitalSignature. */
+    /** Key Usage Options. */
     private KeyUsages _certificateKeyUsage;
     /** Last certificate issuance state change */
     private OffsetDateTime _certificateLastIssuanceStateChangedDateTime;
     /** Certificate profile display name */
     private String _certificateProfileDisplayName;
-    /** Revoke status. Possible values are: none, pending, issued, failed, revoked. */
+    /** Certificate Revocation Status. */
     private CertificateRevocationStatus _certificateRevokeStatus;
     /** Serial number */
     private String _certificateSerialNumber;
-    /** Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier. */
+    /** Subject Alternative Name Options. */
     private SubjectAlternativeNameType _certificateSubjectAlternativeNameFormat;
     /** Subject alternative name format string for custom formats */
     private String _certificateSubjectAlternativeNameFormatString;
-    /** Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId. */
+    /** Subject Name Format Options. */
     private SubjectNameFormat _certificateSubjectNameFormat;
     /** Subject name format string for custom subject name formats */
     private String _certificateSubjectNameFormatString;
@@ -48,11 +48,11 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
     private String _certificateThumbprint;
     /** Validity period */
     private Integer _certificateValidityPeriod;
-    /** Validity period units. Possible values are: days, months, years. */
+    /** Certificate Validity Period Options. */
     private CertificateValidityPeriodScale _certificateValidityPeriodUnits;
     /** Device display name */
     private String _deviceDisplayName;
-    /** Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP. */
+    /** Supported platform types. */
     private DevicePlatformType _devicePlatform;
     /** Last certificate issuance state change */
     private OffsetDateTime _lastCertificateStateChangeDateTime;
@@ -108,7 +108,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateIssuanceDateTime;
     }
     /**
-     * Gets the certificateIssuanceState property value. Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
+     * Gets the certificateIssuanceState property value. Certificate Issuance State Options.
      * @return a certificateIssuanceStates
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateKeyLength;
     }
     /**
-     * Gets the certificateKeyStorageProvider property value. Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Gets the certificateKeyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @return a keyStorageProviderOption
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateKeyStorageProvider;
     }
     /**
-     * Gets the certificateKeyUsage property value. Key usage. Possible values are: keyEncipherment, digitalSignature.
+     * Gets the certificateKeyUsage property value. Key Usage Options.
      * @return a keyUsages
      */
     @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateProfileDisplayName;
     }
     /**
-     * Gets the certificateRevokeStatus property value. Revoke status. Possible values are: none, pending, issued, failed, revoked.
+     * Gets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @return a certificateRevocationStatus
      */
     @javax.annotation.Nullable
@@ -180,7 +180,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateSerialNumber;
     }
     /**
-     * Gets the certificateSubjectAlternativeNameFormat property value. Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the certificateSubjectAlternativeNameFormat property value. Subject Alternative Name Options.
      * @return a subjectAlternativeNameType
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateSubjectAlternativeNameFormatString;
     }
     /**
-     * Gets the certificateSubjectNameFormat property value. Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Gets the certificateSubjectNameFormat property value. Subject Name Format Options.
      * @return a subjectNameFormat
      */
     @javax.annotation.Nullable
@@ -228,7 +228,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._certificateValidityPeriod;
     }
     /**
-     * Gets the certificateValidityPeriodUnits property value. Validity period units. Possible values are: days, months, years.
+     * Gets the certificateValidityPeriodUnits property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         return this._deviceDisplayName;
     }
     /**
-     * Gets the devicePlatform property value. Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
+     * Gets the devicePlatform property value. Supported platform types.
      * @return a devicePlatformType
      */
     @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateIssuanceDateTime = value;
     }
     /**
-     * Sets the certificateIssuanceState property value. Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
+     * Sets the certificateIssuanceState property value. Certificate Issuance State Options.
      * @param value Value to set for the certificateIssuanceState property.
      * @return a void
      */
@@ -391,7 +391,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateKeyLength = value;
     }
     /**
-     * Sets the certificateKeyStorageProvider property value. Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Sets the certificateKeyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @param value Value to set for the certificateKeyStorageProvider property.
      * @return a void
      */
@@ -399,7 +399,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateKeyStorageProvider = value;
     }
     /**
-     * Sets the certificateKeyUsage property value. Key usage. Possible values are: keyEncipherment, digitalSignature.
+     * Sets the certificateKeyUsage property value. Key Usage Options.
      * @param value Value to set for the certificateKeyUsage property.
      * @return a void
      */
@@ -423,7 +423,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateProfileDisplayName = value;
     }
     /**
-     * Sets the certificateRevokeStatus property value. Revoke status. Possible values are: none, pending, issued, failed, revoked.
+     * Sets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @param value Value to set for the certificateRevokeStatus property.
      * @return a void
      */
@@ -439,7 +439,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateSerialNumber = value;
     }
     /**
-     * Sets the certificateSubjectAlternativeNameFormat property value. Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the certificateSubjectAlternativeNameFormat property value. Subject Alternative Name Options.
      * @param value Value to set for the certificateSubjectAlternativeNameFormat property.
      * @return a void
      */
@@ -455,7 +455,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateSubjectAlternativeNameFormatString = value;
     }
     /**
-     * Sets the certificateSubjectNameFormat property value. Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Sets the certificateSubjectNameFormat property value. Subject Name Format Options.
      * @param value Value to set for the certificateSubjectNameFormat property.
      * @return a void
      */
@@ -487,7 +487,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._certificateValidityPeriod = value;
     }
     /**
-     * Sets the certificateValidityPeriodUnits property value. Validity period units. Possible values are: days, months, years.
+     * Sets the certificateValidityPeriodUnits property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodUnits property.
      * @return a void
      */
@@ -503,7 +503,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         this._deviceDisplayName = value;
     }
     /**
-     * Sets the devicePlatform property value. Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
+     * Sets the devicePlatform property value. Supported platform types.
      * @param value Value to set for the devicePlatform property.
      * @return a void
      */

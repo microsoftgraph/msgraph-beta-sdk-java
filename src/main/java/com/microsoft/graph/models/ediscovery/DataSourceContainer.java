@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the compliance singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DataSourceContainer extends Entity implements Parsable {
     /** Created date and time of the dataSourceContainer entity. */
     private OffsetDateTime _createdDateTime;
@@ -31,6 +31,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     public DataSourceContainer() {
         super();
+        this.setOdatatype("#microsoft.graph.ediscovery.dataSourceContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

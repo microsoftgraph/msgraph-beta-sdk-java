@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getOffice365ActiveUserCounts method. */
 public class Office365ActiveUserCounts extends Entity implements Parsable {
     /** The number of active users in Exchange. Any user who can read and send email is considered an active user. */
     private Long _exchange;
@@ -31,7 +30,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     /** The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user. */
     private Long _yammer;
     /**
-     * Instantiates a new office365ActiveUserCounts and sets the default values.
+     * Instantiates a new Office365ActiveUserCounts and sets the default values.
      * @return a void
      */
     public Office365ActiveUserCounts() {
@@ -40,7 +39,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365ActiveUserCounts
+     * @return a Office365ActiveUserCounts
      */
     @javax.annotation.Nonnull
     public static Office365ActiveUserCounts createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
