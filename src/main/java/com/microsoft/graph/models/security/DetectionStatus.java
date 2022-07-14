@@ -3,7 +3,7 @@ package microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum DetectionStatus implements ValuedEnum {
     Detected("detected"),
     Blocked("blocked"),

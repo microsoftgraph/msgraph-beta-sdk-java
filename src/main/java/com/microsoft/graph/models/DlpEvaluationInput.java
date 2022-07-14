@@ -25,7 +25,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      */
     public DlpEvaluationInput() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.dlpEvaluationInput");
+        this.setType("#microsoft.graph.dlpEvaluationInput");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,7 +87,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
             this.put("accessScope", (n) -> { currentObject.setAccessScope(n.getEnumValue(AccessScope.class)); });
             this.put("currentLabel", (n) -> { currentObject.setCurrentLabel(n.getObjectValue(CurrentLabel::createFromDiscriminatorValue)); });
             this.put("discoveredSensitiveTypes", (n) -> { currentObject.setDiscoveredSensitiveTypes(n.getCollectionOfObjectValues(DiscoveredSensitiveType::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -95,7 +95,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -108,7 +108,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("accessScope", this.getAccessScope());
         writer.writeObjectValue("currentLabel", this.getCurrentLabel());
         writer.writeCollectionOfObjectValues("discoveredSensitiveTypes", this.getDiscoveredSensitiveTypes());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -148,7 +148,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

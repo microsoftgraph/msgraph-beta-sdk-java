@@ -39,7 +39,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     private DeviceRegistrationPolicy _deviceRegistrationPolicy;
     /** The directoryRoleAccessReviewPolicy property */
     private DirectoryRoleAccessReviewPolicy _directoryRoleAccessReviewPolicy;
-    /** The externalIdentitiesPolicy property */
+    /** Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls. */
     private ExternalIdentitiesPolicy _externalIdentitiesPolicy;
     /** The feature rollout policy associated with a directory object. */
     private java.util.List<FeatureRolloutPolicy> _featureRolloutPolicies;
@@ -201,7 +201,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         return this._directoryRoleAccessReviewPolicy;
     }
     /**
-     * Gets the externalIdentitiesPolicy property value. The externalIdentitiesPolicy property
+     * Gets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @return a externalIdentitiesPolicy
      */
     @javax.annotation.Nullable
@@ -488,7 +488,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         this._directoryRoleAccessReviewPolicy = value;
     }
     /**
-     * Sets the externalIdentitiesPolicy property value. The externalIdentitiesPolicy property
+     * Sets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param value Value to set for the externalIdentitiesPolicy property.
      * @return a void
      */

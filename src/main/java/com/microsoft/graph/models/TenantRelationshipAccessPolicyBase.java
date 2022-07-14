@@ -16,7 +16,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      */
     public TenantRelationshipAccessPolicyBase() {
         super();
-        this.setOdatatype("#microsoft.graph.tenantRelationshipAccessPolicyBase");
+        this.setType("#microsoft.graph.tenantRelationshipAccessPolicyBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
      */
     public Win32LobAppRequirement() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.win32LobAppRequirement");
+        this.setType("#microsoft.graph.win32LobAppRequirement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,16 +71,8 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("detectionValue", (n) -> { currentObject.setDetectionValue(n.getStringValue()); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
@@ -91,6 +83,14 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         return this._operator;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -99,7 +99,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("detectionValue", this.getDetectionValue());
         writer.writeEnumValue("operator", this.getOperator());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -119,19 +119,19 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         this._detectionValue = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
      * @return a void
      */
     public void setOperator(@javax.annotation.Nullable final Win32LobAppDetectionOperator value) {
         this._operator = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

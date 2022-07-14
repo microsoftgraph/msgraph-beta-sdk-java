@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Search extends Entity implements Parsable {
     /** The contentQuery property */
     private String _contentQuery;
@@ -32,7 +32,7 @@ public class Search extends Entity implements Parsable {
      */
     public Search() {
         super();
-        this.setOdatatype("#microsoft.graph.security.search");
+        this.setType("#microsoft.graph.security.search");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

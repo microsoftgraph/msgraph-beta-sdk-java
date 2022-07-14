@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PolicyBase extends DirectoryObject implements Parsable {
     /** Description for this policy. Required. */
     private String _description;
@@ -19,7 +19,7 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      */
     public PolicyBase() {
         super();
-        this.setOdatatype("#microsoft.graph.policyBase");
+        this.setType("#microsoft.graph.policyBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

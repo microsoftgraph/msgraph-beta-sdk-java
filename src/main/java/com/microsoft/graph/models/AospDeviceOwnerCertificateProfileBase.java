@@ -28,7 +28,7 @@ public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration i
      */
     public AospDeviceOwnerCertificateProfileBase() {
         super();
-        this.setOdatatype("#microsoft.graph.aospDeviceOwnerCertificateProfileBase");
+        this.setType("#microsoft.graph.aospDeviceOwnerCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      */
     public DeviceHealthScriptRunSchedule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceHealthScriptRunSchedule");
+        this.setType("#microsoft.graph.deviceHealthScriptRunSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,7 +59,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
         final DeviceHealthScriptRunSchedule currentObject = this;
         return new HashMap<>(2) {{
             this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -75,7 +75,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -86,7 +86,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("interval", this.getInterval());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -110,7 +110,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

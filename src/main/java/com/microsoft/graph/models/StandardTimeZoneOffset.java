@@ -30,7 +30,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     public StandardTimeZoneOffset() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.standardTimeZoneOffset");
+        this.setType("#microsoft.graph.standardTimeZoneOffset");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +85,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
             this.put("dayOfWeek", (n) -> { currentObject.setDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
             this.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });
             this.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
         }};
     }
@@ -98,20 +98,20 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
         return this._month;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
-    }
-    /**
      * Gets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
      * @return a LocalTime
      */
     @javax.annotation.Nullable
     public LocalTime getTime() {
         return this._time;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Gets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
@@ -132,7 +132,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("dayOfWeek", this.getDayOfWeek());
         writer.writeIntegerValue("month", this.getMonth());
         writer.writeLocalTimeValue("time", this.getTime());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeIntegerValue("year", this.getYear());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -169,20 +169,20 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
         this._month = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the time property.
      * @return a void
      */
     public void setTime(@javax.annotation.Nullable final LocalTime value) {
         this._time = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.

@@ -30,7 +30,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     public OfficeClientConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.officeClientConfiguration");
+        this.setType("#microsoft.graph.officeClientConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

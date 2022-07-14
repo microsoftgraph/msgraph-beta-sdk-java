@@ -23,7 +23,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      */
     public AccessPackageAnswer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.accessPackageAnswer");
+        this.setType("#microsoft.graph.accessPackageAnswer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,7 +76,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("answeredQuestion", (n) -> { currentObject.setAnsweredQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
             this.put("displayValue", (n) -> { currentObject.setDisplayValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -84,7 +84,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -96,7 +96,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("answeredQuestion", this.getAnsweredQuestion());
         writer.writeStringValue("displayValue", this.getDisplayValue());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -128,7 +128,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

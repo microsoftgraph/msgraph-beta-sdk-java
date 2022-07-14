@@ -12,6 +12,7 @@ import microsoft.graph.models.security.CasesRoot;
 import microsoft.graph.models.security.Incident;
 import microsoft.graph.models.security.InformationProtection;
 import microsoft.graph.models.security.LabelsRoot;
+import microsoft.graph.models.security.ThreatSubmissionRoot;
 import microsoft.graph.models.security.TriggersRoot;
 import microsoft.graph.models.security.TriggerTypesRoot;
 public class Security extends Entity implements Parsable {
@@ -51,6 +52,8 @@ public class Security extends Entity implements Parsable {
     private java.util.List<SecurityAction> _securityActions;
     /** The subjectRightsRequests property */
     private java.util.List<SubjectRightsRequest> _subjectRightsRequests;
+    /** The threatSubmission property */
+    private ThreatSubmissionRoot _threatSubmission;
     /** The tiIndicators property */
     private java.util.List<TiIndicator> _tiIndicators;
     /** The triggers property */
@@ -150,6 +153,7 @@ public class Security extends Entity implements Parsable {
             this.put("secureScores", (n) -> { currentObject.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
             this.put("securityActions", (n) -> { currentObject.setSecurityActions(n.getCollectionOfObjectValues(SecurityAction::createFromDiscriminatorValue)); });
             this.put("subjectRightsRequests", (n) -> { currentObject.setSubjectRightsRequests(n.getCollectionOfObjectValues(SubjectRightsRequest::createFromDiscriminatorValue)); });
+            this.put("threatSubmission", (n) -> { currentObject.setThreatSubmission(n.getObjectValue(ThreatSubmissionRoot::createFromDiscriminatorValue)); });
             this.put("tiIndicators", (n) -> { currentObject.setTiIndicators(n.getCollectionOfObjectValues(TiIndicator::createFromDiscriminatorValue)); });
             this.put("triggers", (n) -> { currentObject.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
             this.put("triggerTypes", (n) -> { currentObject.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
@@ -253,6 +257,14 @@ public class Security extends Entity implements Parsable {
         return this._subjectRightsRequests;
     }
     /**
+     * Gets the threatSubmission property value. The threatSubmission property
+     * @return a threatSubmissionRoot
+     */
+    @javax.annotation.Nullable
+    public ThreatSubmissionRoot getThreatSubmission() {
+        return this._threatSubmission;
+    }
+    /**
      * Gets the tiIndicators property value. The tiIndicators property
      * @return a tiIndicator
      */
@@ -310,6 +322,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
         writer.writeCollectionOfObjectValues("securityActions", this.getSecurityActions());
         writer.writeCollectionOfObjectValues("subjectRightsRequests", this.getSubjectRightsRequests());
+        writer.writeObjectValue("threatSubmission", this.getThreatSubmission());
         writer.writeCollectionOfObjectValues("tiIndicators", this.getTiIndicators());
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
@@ -458,6 +471,14 @@ public class Security extends Entity implements Parsable {
      */
     public void setSubjectRightsRequests(@javax.annotation.Nullable final java.util.List<SubjectRightsRequest> value) {
         this._subjectRightsRequests = value;
+    }
+    /**
+     * Sets the threatSubmission property value. The threatSubmission property
+     * @param value Value to set for the threatSubmission property.
+     * @return a void
+     */
+    public void setThreatSubmission(@javax.annotation.Nullable final ThreatSubmissionRoot value) {
+        this._threatSubmission = value;
     }
     /**
      * Sets the tiIndicators property value. The tiIndicators property

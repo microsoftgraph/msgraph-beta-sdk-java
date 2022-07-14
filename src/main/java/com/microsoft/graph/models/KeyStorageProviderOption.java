@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum KeyStorageProviderOption implements ValuedEnum {
     /** Import to Trusted Platform Module (TPM) KSP if present, otherwise import to Software KSP. */
     UseTpmKspOtherwiseUseSoftwareKsp("useTpmKspOtherwiseUseSoftwareKsp"),

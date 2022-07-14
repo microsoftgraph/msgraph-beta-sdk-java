@@ -29,7 +29,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      */
     public DetectedSensitiveContentBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.detectedSensitiveContentBase");
+        this.setType("#microsoft.graph.detectedSensitiveContentBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +85,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("recommendedConfidence", (n) -> { currentObject.setRecommendedConfidence(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("uniqueCount", (n) -> { currentObject.setUniqueCount(n.getIntegerValue()); });
         }};
     }
@@ -98,20 +98,20 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
         return this._id;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
-    }
-    /**
      * Gets the recommendedConfidence property value. The recommendedConfidence property
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getRecommendedConfidence() {
         return this._recommendedConfidence;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Gets the uniqueCount property value. The uniqueCount property
@@ -132,7 +132,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeIntegerValue("recommendedConfidence", this.getRecommendedConfidence());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeIntegerValue("uniqueCount", this.getUniqueCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -169,20 +169,20 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
         this._id = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the recommendedConfidence property value. The recommendedConfidence property
      * @param value Value to set for the recommendedConfidence property.
      * @return a void
      */
     public void setRecommendedConfidence(@javax.annotation.Nullable final Integer value) {
         this._recommendedConfidence = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the uniqueCount property value. The uniqueCount property

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum DefenderPotentiallyUnwantedAppAction implements ValuedEnum {
     /** PUA Protection is off. Defender will not protect against potentially unwanted applications. */
     DeviceDefault("deviceDefault"),

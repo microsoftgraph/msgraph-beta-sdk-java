@@ -24,7 +24,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      */
     public Windows81VpnConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.windows81VpnConfiguration");
+        this.setType("#microsoft.graph.windows81VpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

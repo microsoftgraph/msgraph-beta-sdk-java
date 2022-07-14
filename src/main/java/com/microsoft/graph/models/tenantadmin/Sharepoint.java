@@ -12,7 +12,7 @@ public class Sharepoint extends Entity implements Parsable {
     /** Represents the tenant-level settings for SharePoint and OneDrive. */
     private Settings _settings;
     /**
-     * Instantiates a new Sharepoint and sets the default values.
+     * Instantiates a new sharepoint and sets the default values.
      * @return a void
      */
     public Sharepoint() {
@@ -21,7 +21,7 @@ public class Sharepoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Sharepoint
+     * @return a sharepoint
      */
     @javax.annotation.Nonnull
     public static Sharepoint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

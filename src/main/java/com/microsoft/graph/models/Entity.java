@@ -21,7 +21,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     public Entity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.entity");
+        this.setType("#microsoft.graph.entity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -651,6 +651,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.security.dataSourceContainer": return new DataSourceContainer();
                 case "#microsoft.graph.security.dispositionReviewStage": return new DispositionReviewStage();
                 case "#microsoft.graph.security.ediscoveryCaseSettings": return new EdiscoveryCaseSettings();
+                case "#microsoft.graph.security.emailThreatSubmissionPolicy": return new EmailThreatSubmissionPolicy();
                 case "#microsoft.graph.security.file": return new File();
                 case "#microsoft.graph.security.incident": return new Incident();
                 case "#microsoft.graph.security.informationProtection": return new InformationProtection();
@@ -664,6 +665,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.security.security": return new Security();
                 case "#microsoft.graph.security.sensitivityLabel": return new SensitivityLabel();
                 case "#microsoft.graph.security.tag": return new Tag();
+                case "#microsoft.graph.security.threatSubmission": return new ThreatSubmission();
+                case "#microsoft.graph.security.threatSubmissionRoot": return new ThreatSubmissionRoot();
                 case "#microsoft.graph.security.triggersRoot": return new TriggersRoot();
                 case "#microsoft.graph.security.triggerTypesRoot": return new TriggerTypesRoot();
                 case "#microsoft.graph.securityAction": return new SecurityAction();
@@ -936,7 +939,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
         final Entity currentObject = this;
         return new HashMap<>(2) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -952,7 +955,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -963,7 +966,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -987,7 +990,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

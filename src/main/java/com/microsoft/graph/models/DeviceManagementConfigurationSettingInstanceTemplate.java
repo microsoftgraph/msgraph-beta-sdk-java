@@ -26,7 +26,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      */
     public DeviceManagementConfigurationSettingInstanceTemplate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSettingInstanceTemplate");
+        this.setType("#microsoft.graph.deviceManagementConfigurationSettingInstanceTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,7 +69,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
             this.put("settingDefinitionId", (n) -> { currentObject.setSettingDefinitionId(n.getStringValue()); });
             this.put("settingInstanceTemplateId", (n) -> { currentObject.setSettingInstanceTemplateId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -79,14 +79,6 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     @javax.annotation.Nullable
     public Boolean getIsRequired() {
         return this._isRequired;
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the settingDefinitionId property value. Setting Definition Id
@@ -105,6 +97,14 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         return this._settingInstanceTemplateId;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -114,7 +114,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeStringValue("settingDefinitionId", this.getSettingDefinitionId());
         writer.writeStringValue("settingInstanceTemplateId", this.getSettingInstanceTemplateId());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -134,14 +134,6 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         this._isRequired = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the settingDefinitionId property value. Setting Definition Id
      * @param value Value to set for the settingDefinitionId property.
      * @return a void
@@ -156,5 +148,13 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      */
     public void setSettingInstanceTemplateId(@javax.annotation.Nullable final String value) {
         this._settingInstanceTemplateId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

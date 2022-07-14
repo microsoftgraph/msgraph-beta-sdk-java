@@ -21,7 +21,7 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
      */
     public ConditionalAccessSessionControl() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.conditionalAccessSessionControl");
+        this.setType("#microsoft.graph.conditionalAccessSessionControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +60,7 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
         final ConditionalAccessSessionControl currentObject = this;
         return new HashMap<>(2) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -76,7 +76,7 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -87,7 +87,7 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -111,7 +111,7 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

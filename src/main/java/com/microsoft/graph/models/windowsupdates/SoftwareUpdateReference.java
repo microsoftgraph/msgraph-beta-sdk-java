@@ -14,7 +14,7 @@ public class SoftwareUpdateReference extends DeployableContent implements Parsab
      */
     public SoftwareUpdateReference() {
         super();
-        this.setOdatatype("#microsoft.graph.windowsUpdates.softwareUpdateReference");
+        this.setType("#microsoft.graph.windowsUpdates.softwareUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

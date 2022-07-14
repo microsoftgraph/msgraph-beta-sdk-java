@@ -29,7 +29,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      */
     public DeviceManagementResourceAccessProfileBase() {
         super();
-        this.setOdatatype("#microsoft.graph.deviceManagementResourceAccessProfileBase");
+        this.setType("#microsoft.graph.deviceManagementResourceAccessProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

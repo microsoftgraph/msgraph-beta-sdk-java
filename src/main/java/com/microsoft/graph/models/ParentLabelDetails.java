@@ -35,7 +35,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      */
     public ParentLabelDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.parentLabelDetails");
+        this.setType("#microsoft.graph.parentLabelDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,7 +94,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
             this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(ParentLabelDetails::createFromDiscriminatorValue)); });
             this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getIntegerValue()); });
             this.put("tooltip", (n) -> { currentObject.setTooltip(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -122,14 +122,6 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
-    }
-    /**
      * Gets the parent property value. The parent property
      * @return a parentLabelDetails
      */
@@ -154,6 +146,14 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         return this._tooltip;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -168,7 +168,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("parent", this.getParent());
         writer.writeIntegerValue("sensitivity", this.getSensitivity());
         writer.writeStringValue("tooltip", this.getTooltip());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -220,14 +220,6 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the parent property value. The parent property
      * @param value Value to set for the parent property.
      * @return a void
@@ -250,5 +242,13 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      */
     public void setTooltip(@javax.annotation.Nullable final String value) {
         this._tooltip = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

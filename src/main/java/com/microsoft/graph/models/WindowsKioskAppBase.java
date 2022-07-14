@@ -28,7 +28,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     public WindowsKioskAppBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.windowsKioskAppBase");
+        this.setType("#microsoft.graph.windowsKioskAppBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +85,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
             this.put("autoLaunch", (n) -> { currentObject.setAutoLaunch(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("startLayoutTileSize", (n) -> { currentObject.setStartLayoutTileSize(n.getEnumValue(WindowsAppStartLayoutTileSize.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -97,20 +97,20 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
-    }
-    /**
      * Gets the startLayoutTileSize property value. The tile size of Windows app in the start layout.
      * @return a windowsAppStartLayoutTileSize
      */
     @javax.annotation.Nullable
     public WindowsAppStartLayoutTileSize getStartLayoutTileSize() {
         return this._startLayoutTileSize;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -123,7 +123,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("autoLaunch", this.getAutoLaunch());
         writer.writeStringValue("name", this.getName());
         writer.writeEnumValue("startLayoutTileSize", this.getStartLayoutTileSize());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -159,19 +159,19 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the startLayoutTileSize property value. The tile size of Windows app in the start layout.
      * @param value Value to set for the startLayoutTileSize property.
      * @return a void
      */
     public void setStartLayoutTileSize(@javax.annotation.Nullable final WindowsAppStartLayoutTileSize value) {
         this._startLayoutTileSize = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

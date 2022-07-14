@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class OutlookItem extends Entity implements Parsable {
     /** The categories associated with the item */
     private java.util.List<String> _categories;
@@ -24,7 +24,7 @@ public class OutlookItem extends Entity implements Parsable {
      */
     public OutlookItem() {
         super();
-        this.setOdatatype("#microsoft.graph.outlookItem");
+        this.setType("#microsoft.graph.outlookItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

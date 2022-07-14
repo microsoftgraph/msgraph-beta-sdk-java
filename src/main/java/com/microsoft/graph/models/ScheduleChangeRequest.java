@@ -31,7 +31,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     public ScheduleChangeRequest() {
         super();
-        this.setOdatatype("#microsoft.graph.scheduleChangeRequest");
+        this.setType("#microsoft.graph.scheduleChangeRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

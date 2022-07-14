@@ -41,7 +41,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     public DeviceCompliancePolicy() {
         super();
-        this.setOdatatype("#microsoft.graph.deviceCompliancePolicy");
+        this.setType("#microsoft.graph.deviceCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

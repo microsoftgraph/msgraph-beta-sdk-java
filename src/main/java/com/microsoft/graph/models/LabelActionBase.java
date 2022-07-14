@@ -21,7 +21,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
      */
     public LabelActionBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.labelActionBase");
+        this.setType("#microsoft.graph.labelActionBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +61,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
         final LabelActionBase currentObject = this;
         return new HashMap<>(2) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -77,7 +77,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -88,7 +88,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -112,7 +112,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

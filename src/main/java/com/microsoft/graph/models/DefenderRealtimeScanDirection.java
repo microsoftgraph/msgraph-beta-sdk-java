@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum DefenderRealtimeScanDirection implements ValuedEnum {
     /** 0 (default) – Monitor all files(bi-directional) */
     MonitorAllFiles("monitorAllFiles"),

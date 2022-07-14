@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Devices that are managed or pre-enrolled through Intune */
 public class ManagedDevice extends Entity implements Parsable {
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
     private Boolean _aadRegistered;
@@ -193,17 +192,17 @@ public class ManagedDevice extends Entity implements Parsable {
     /** Count of remediated malware for this windows device. This property is read-only. */
     private Integer _windowsRemediatedMalwareCount;
     /**
-     * Instantiates a new managedDevice and sets the default values.
+     * Instantiates a new ManagedDevice and sets the default values.
      * @return a void
      */
     public ManagedDevice() {
         super();
-        this.setOdatatype("#microsoft.graph.managedDevice");
+        this.setType("#microsoft.graph.managedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @javax.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

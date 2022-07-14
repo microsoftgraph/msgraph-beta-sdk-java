@@ -16,7 +16,7 @@ public class BookingNamedEntity extends Entity implements Parsable {
      */
     public BookingNamedEntity() {
         super();
-        this.setOdatatype("#microsoft.graph.bookingNamedEntity");
+        this.setType("#microsoft.graph.bookingNamedEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

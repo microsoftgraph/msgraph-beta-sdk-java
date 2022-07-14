@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The ManagedAppEntity is the base entity type for all other entity types under app management workflow. */
 public class ManagedAppRegistration extends Entity implements Parsable {
     /** The app package Identifier */
     private MobileAppIdentifier _appIdentifier;
@@ -49,17 +48,17 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /** Version of the entity. */
     private String _version;
     /**
-     * Instantiates a new managedAppRegistration and sets the default values.
+     * Instantiates a new ManagedAppRegistration and sets the default values.
      * @return a void
      */
     public ManagedAppRegistration() {
         super();
-        this.setOdatatype("#microsoft.graph.managedAppRegistration");
+        this.setType("#microsoft.graph.managedAppRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppRegistration
+     * @return a ManagedAppRegistration
      */
     @javax.annotation.Nonnull
     public static ManagedAppRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

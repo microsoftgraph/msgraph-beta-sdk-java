@@ -23,7 +23,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
      */
     public EducationSynchronizationConnectionSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.educationSynchronizationConnectionSettings");
+        this.setType("#microsoft.graph.educationSynchronizationConnectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,7 +77,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         return new HashMap<>(3) {{
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -85,7 +85,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -97,7 +97,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientId", this.getClientId());
         writer.writeStringValue("clientSecret", this.getClientSecret());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -129,7 +129,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

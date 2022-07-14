@@ -28,7 +28,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     public ManagedAppPolicy() {
         super();
-        this.setOdatatype("#microsoft.graph.managedAppPolicy");
+        this.setType("#microsoft.graph.managedAppPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

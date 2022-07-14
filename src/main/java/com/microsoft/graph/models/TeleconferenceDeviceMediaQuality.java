@@ -62,7 +62,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      */
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.teleconferenceDeviceMediaQuality");
+        this.setType("#microsoft.graph.teleconferenceDeviceMediaQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -175,7 +175,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
             this.put("outboundPackets", (n) -> { currentObject.setOutboundPackets(n.getLongValue()); });
             this.put("remoteIPAddress", (n) -> { currentObject.setRemoteIPAddress(n.getStringValue()); });
             this.put("remotePort", (n) -> { currentObject.setRemotePort(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -267,14 +267,6 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         return this._networkLinkSpeedInBytes;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
-    }
-    /**
      * Gets the outboundPackets property value. The total number of the outbound packets.
      * @return a int64
      */
@@ -297,6 +289,14 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public Integer getRemotePort() {
         return this._remotePort;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -326,7 +326,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         writer.writeLongValue("outboundPackets", this.getOutboundPackets());
         writer.writeStringValue("remoteIPAddress", this.getRemoteIPAddress());
         writer.writeIntegerValue("remotePort", this.getRemotePort());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -482,14 +482,6 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         this._networkLinkSpeedInBytes = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the outboundPackets property value. The total number of the outbound packets.
      * @param value Value to set for the outboundPackets property.
      * @return a void
@@ -512,5 +504,13 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      */
     public void setRemotePort(@javax.annotation.Nullable final Integer value) {
         this._remotePort = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

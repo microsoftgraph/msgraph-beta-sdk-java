@@ -20,7 +20,7 @@ public class BaseTaskList extends Entity implements Parsable {
      */
     public BaseTaskList() {
         super();
-        this.setOdatatype("#microsoft.graph.baseTaskList");
+        this.setType("#microsoft.graph.baseTaskList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

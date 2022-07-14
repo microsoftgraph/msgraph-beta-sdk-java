@@ -34,7 +34,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      */
     public MacOSWiFiConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.macOSWiFiConfiguration");
+        this.setType("#microsoft.graph.macOSWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

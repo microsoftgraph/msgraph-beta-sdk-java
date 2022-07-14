@@ -30,7 +30,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     public WindowsInformationProtectionApp() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.windowsInformationProtectionApp");
+        this.setType("#microsoft.graph.windowsInformationProtectionApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -95,16 +95,8 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
             this.put("publisherName", (n) -> { currentObject.setPublisherName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the productName property value. The product name.
@@ -123,6 +115,14 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
         return this._publisherName;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -134,7 +134,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("productName", this.getProductName());
         writer.writeStringValue("publisherName", this.getPublisherName());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -170,14 +170,6 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
         this._displayName = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the productName property value. The product name.
      * @param value Value to set for the productName property.
      * @return a void
@@ -192,5 +184,13 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     public void setPublisherName(@javax.annotation.Nullable final String value) {
         this._publisherName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

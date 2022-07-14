@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Agreement extends Entity implements Parsable {
     /** Read-only. Information about acceptances of this agreement. */
     private java.util.List<AgreementAcceptance> _acceptances;

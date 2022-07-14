@@ -24,7 +24,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      */
     public MacOSCertificateProfileBase() {
         super();
-        this.setOdatatype("#microsoft.graph.macOSCertificateProfileBase");
+        this.setType("#microsoft.graph.macOSCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

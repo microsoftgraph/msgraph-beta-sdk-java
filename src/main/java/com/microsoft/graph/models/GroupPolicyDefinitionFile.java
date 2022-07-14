@@ -35,7 +35,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     public GroupPolicyDefinitionFile() {
         super();
-        this.setOdatatype("#microsoft.graph.groupPolicyDefinitionFile");
+        this.setType("#microsoft.graph.groupPolicyDefinitionFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

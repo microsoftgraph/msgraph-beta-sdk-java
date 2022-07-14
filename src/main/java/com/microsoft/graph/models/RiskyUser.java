@@ -33,7 +33,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     public RiskyUser() {
         super();
-        this.setOdatatype("#microsoft.graph.riskyUser");
+        this.setType("#microsoft.graph.riskyUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

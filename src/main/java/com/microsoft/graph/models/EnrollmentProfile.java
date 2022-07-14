@@ -26,7 +26,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      */
     public EnrollmentProfile() {
         super();
-        this.setOdatatype("#microsoft.graph.enrollmentProfile");
+        this.setType("#microsoft.graph.enrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

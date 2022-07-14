@@ -23,7 +23,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     public UserAgent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.callRecords.userAgent");
+        this.setType("#microsoft.graph.callRecords.userAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,7 +69,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
             this.put("headerValue", (n) -> { currentObject.setHeaderValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -85,7 +85,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -97,7 +97,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationVersion", this.getApplicationVersion());
         writer.writeStringValue("headerValue", this.getHeaderValue());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -129,7 +129,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

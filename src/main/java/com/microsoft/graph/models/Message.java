@@ -83,7 +83,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     public Message() {
         super();
-        this.setOdatatype("#microsoft.graph.message");
+        this.setType("#microsoft.graph.message");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

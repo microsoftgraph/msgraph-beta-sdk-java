@@ -25,7 +25,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     public IdentitySet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.identitySet");
+        this.setType("#microsoft.graph.identitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,7 +82,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return new HashMap<>(4) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         }};
     }
@@ -91,7 +91,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -111,7 +111,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
         writer.writeObjectValue("device", this.getDevice());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -144,7 +144,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
     /**

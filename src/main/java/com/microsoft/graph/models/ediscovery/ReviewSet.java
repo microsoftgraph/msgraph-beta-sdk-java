@@ -20,7 +20,7 @@ public class ReviewSet extends Entity implements Parsable {
     /** The queries property */
     private java.util.List<ReviewSetQuery> _queries;
     /**
-     * Instantiates a new reviewSet and sets the default values.
+     * Instantiates a new ReviewSet and sets the default values.
      * @return a void
      */
     public ReviewSet() {
@@ -29,7 +29,7 @@ public class ReviewSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a reviewSet
+     * @return a ReviewSet
      */
     @javax.annotation.Nonnull
     public static ReviewSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

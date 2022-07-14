@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
-    /** The allowDeletedIdentitiesDataRemoval property */
+    /** Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant. */
     private Boolean _allowDeletedIdentitiesDataRemoval;
-    /** The allowExternalIdentitiesToLeave property */
+    /** Defines whether external users can leave the guest tenant. If set to false, self-service controls are not enabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. */
     private Boolean _allowExternalIdentitiesToLeave;
     /**
      * Instantiates a new ExternalIdentitiesPolicy and sets the default values.
@@ -30,7 +30,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         return new ExternalIdentitiesPolicy();
     }
     /**
-     * Gets the allowDeletedIdentitiesDataRemoval property value. The allowDeletedIdentitiesDataRemoval property
+     * Gets the allowDeletedIdentitiesDataRemoval property value. Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -38,7 +38,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         return this._allowDeletedIdentitiesDataRemoval;
     }
     /**
-     * Gets the allowExternalIdentitiesToLeave property value. The allowExternalIdentitiesToLeave property
+     * Gets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are not enabled, and the admin of the guest tenant must manually remove the external user from the guest tenant.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         writer.writeBooleanValue("allowExternalIdentitiesToLeave", this.getAllowExternalIdentitiesToLeave());
     }
     /**
-     * Sets the allowDeletedIdentitiesDataRemoval property value. The allowDeletedIdentitiesDataRemoval property
+     * Sets the allowDeletedIdentitiesDataRemoval property value. Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant.
      * @param value Value to set for the allowDeletedIdentitiesDataRemoval property.
      * @return a void
      */
@@ -77,7 +77,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         this._allowDeletedIdentitiesDataRemoval = value;
     }
     /**
-     * Sets the allowExternalIdentitiesToLeave property value. The allowExternalIdentitiesToLeave property
+     * Sets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are not enabled, and the admin of the guest tenant must manually remove the external user from the guest tenant.
      * @param value Value to set for the allowExternalIdentitiesToLeave property.
      * @return a void
      */

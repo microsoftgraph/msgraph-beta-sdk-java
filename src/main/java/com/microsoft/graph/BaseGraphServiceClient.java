@@ -193,6 +193,7 @@ import microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
 import microsoft.graph.teamwork.TeamworkRequestBuilder;
 import microsoft.graph.tenantrelationships.TenantRelationshipsRequestBuilder;
 import microsoft.graph.termstore.TermStoreRequestBuilder;
+import microsoft.graph.threatsubmission.ThreatSubmissionRequestBuilder;
 import microsoft.graph.trustframework.TrustFrameworkRequestBuilder;
 import microsoft.graph.users.item.UserItemRequestBuilder;
 import microsoft.graph.users.UsersRequestBuilder;
@@ -748,6 +749,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
         return new TermStoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The threatSubmission property */
+    @javax.annotation.Nonnull
+    public ThreatSubmissionRequestBuilder threatSubmission() {
+        return new ThreatSubmissionRequestBuilder(pathParameters, requestAdapter);
     }
     /** The trustFramework property */
     @javax.annotation.Nonnull

@@ -80,7 +80,7 @@ public class ExternalIdentitiesPolicyRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get externalIdentitiesPolicy from policies
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ExternalIdentitiesPolicyRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get externalIdentitiesPolicy from policies
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ExternalIdentitiesPolicyRequestBuilder {
         }
     }
     /**
-     * Get externalIdentitiesPolicy from policies
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @return a CompletableFuture of externalIdentitiesPolicy
      */
     public java.util.concurrent.CompletableFuture<ExternalIdentitiesPolicy> get() {
@@ -209,7 +209,7 @@ public class ExternalIdentitiesPolicyRequestBuilder {
         }
     }
     /**
-     * Get externalIdentitiesPolicy from policies
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalIdentitiesPolicy
      */
@@ -226,7 +226,7 @@ public class ExternalIdentitiesPolicyRequestBuilder {
         }
     }
     /**
-     * Get externalIdentitiesPolicy from policies
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of externalIdentitiesPolicy
@@ -313,7 +313,7 @@ public class ExternalIdentitiesPolicyRequestBuilder {
         public ExternalIdentitiesPolicyRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get externalIdentitiesPolicy from policies */
+    /** Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls. */
     public class ExternalIdentitiesPolicyRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

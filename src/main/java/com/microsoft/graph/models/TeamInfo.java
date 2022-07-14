@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TeamInfo extends Entity implements Parsable {
     /** The name of the team. */
     private String _displayName;
@@ -21,7 +21,7 @@ public class TeamInfo extends Entity implements Parsable {
      */
     public TeamInfo() {
         super();
-        this.setOdatatype("#microsoft.graph.teamInfo");
+        this.setType("#microsoft.graph.teamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

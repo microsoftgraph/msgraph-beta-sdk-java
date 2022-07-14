@@ -20,7 +20,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
      */
     public MarkContent() {
         super();
-        this.setOdatatype("#microsoft.graph.markContent");
+        this.setType("#microsoft.graph.markContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,7 +23,7 @@ public class GenericError implements AdditionalDataHolder, Parsable {
      */
     public GenericError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.genericError");
+        this.setType("#microsoft.graph.genericError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,7 +68,7 @@ public class GenericError implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -84,7 +84,7 @@ public class GenericError implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -96,7 +96,7 @@ public class GenericError implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
         writer.writeStringValue("message", this.getMessage());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -128,7 +128,7 @@ public class GenericError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

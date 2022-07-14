@@ -16,7 +16,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      */
     public AndroidDeviceComplianceLocalActionBase() {
         super();
-        this.setOdatatype("#microsoft.graph.androidDeviceComplianceLocalActionBase");
+        this.setType("#microsoft.graph.androidDeviceComplianceLocalActionBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

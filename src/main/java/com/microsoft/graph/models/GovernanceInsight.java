@@ -18,7 +18,7 @@ public class GovernanceInsight extends Entity implements Parsable {
      */
     public GovernanceInsight() {
         super();
-        this.setOdatatype("#microsoft.graph.governanceInsight");
+        this.setType("#microsoft.graph.governanceInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

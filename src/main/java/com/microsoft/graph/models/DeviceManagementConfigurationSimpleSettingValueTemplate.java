@@ -22,7 +22,7 @@ public class DeviceManagementConfigurationSimpleSettingValueTemplate implements 
      */
     public DeviceManagementConfigurationSimpleSettingValueTemplate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.deviceManagementConfigurationSimpleSettingValueTemplate");
+        this.setType("#microsoft.graph.deviceManagementConfigurationSimpleSettingValueTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,16 +59,8 @@ public class DeviceManagementConfigurationSimpleSettingValueTemplate implements 
         final DeviceManagementConfigurationSimpleSettingValueTemplate currentObject = this;
         return new HashMap<>(2) {{
             this.put("settingValueTemplateId", (n) -> { currentObject.setSettingValueTemplateId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdatatype() {
-        return this._type;
     }
     /**
      * Gets the settingValueTemplateId property value. Setting Value Template Id
@@ -79,6 +71,14 @@ public class DeviceManagementConfigurationSimpleSettingValueTemplate implements 
         return this._settingValueTemplateId;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -86,7 +86,7 @@ public class DeviceManagementConfigurationSimpleSettingValueTemplate implements 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("settingValueTemplateId", this.getSettingValueTemplateId());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -98,19 +98,19 @@ public class DeviceManagementConfigurationSimpleSettingValueTemplate implements 
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
-        this._type = value;
-    }
-    /**
      * Sets the settingValueTemplateId property value. Setting Value Template Id
      * @param value Value to set for the settingValueTemplateId property.
      * @return a void
      */
     public void setSettingValueTemplateId(@javax.annotation.Nullable final String value) {
         this._settingValueTemplateId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

@@ -20,7 +20,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      */
     public MobileAppAssignmentSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.mobileAppAssignmentSettings");
+        this.setType("#microsoft.graph.mobileAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,7 +64,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppAssignmentSettings currentObject = this;
         return new HashMap<>(1) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -72,7 +72,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -82,7 +82,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -98,7 +98,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }

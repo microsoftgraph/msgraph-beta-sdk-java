@@ -24,7 +24,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     public CustomCalloutExtension() {
         super();
-        this.setOdatatype("#microsoft.graph.customCalloutExtension");
+        this.setType("#microsoft.graph.customCalloutExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

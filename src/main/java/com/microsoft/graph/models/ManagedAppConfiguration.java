@@ -16,7 +16,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      */
     public ManagedAppConfiguration() {
         super();
-        this.setOdatatype("#microsoft.graph.managedAppConfiguration");
+        this.setType("#microsoft.graph.managedAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

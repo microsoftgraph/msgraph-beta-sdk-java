@@ -21,7 +21,7 @@ public class DlpActionInfo implements AdditionalDataHolder, Parsable {
      */
     public DlpActionInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdatatype("#microsoft.graph.dlpActionInfo");
+        this.setType("#microsoft.graph.dlpActionInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,7 +67,7 @@ public class DlpActionInfo implements AdditionalDataHolder, Parsable {
         final DlpActionInfo currentObject = this;
         return new HashMap<>(2) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(DlpAction.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdatatype(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -75,7 +75,7 @@ public class DlpActionInfo implements AdditionalDataHolder, Parsable {
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatatype() {
+    public String getType() {
         return this._type;
     }
     /**
@@ -86,7 +86,7 @@ public class DlpActionInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
-        writer.writeStringValue("@odata.type", this.getOdatatype());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -110,7 +110,7 @@ public class DlpActionInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    public void setOdatatype(@javax.annotation.Nullable final String value) {
+    public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
 }
