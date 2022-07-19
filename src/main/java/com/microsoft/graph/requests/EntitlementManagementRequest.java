@@ -33,6 +33,8 @@ import com.microsoft.graph.requests.AccessPackageRequestBuilder;
 import com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageSubjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -61,7 +61,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Report Settings.
-     * 
+     * A container for administrative resources to manage reports.
      */
     @SerializedName(value = "reportSettings", alternate = {"ReportSettings"})
     @Expose

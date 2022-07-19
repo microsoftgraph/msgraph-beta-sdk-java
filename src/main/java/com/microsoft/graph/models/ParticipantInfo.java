@@ -76,6 +76,15 @@ public class ParticipantInfo implements IJsonBackedObject {
     public String languageId;
 
     /**
+     * The Non Anonymized Identity.
+     * 
+     */
+    @SerializedName(value = "nonAnonymizedIdentity", alternate = {"NonAnonymizedIdentity"})
+    @Expose
+	@Nullable
+    public IdentitySet nonAnonymizedIdentity;
+
+    /**
      * The Participant Id.
      * The participant ID of the participant. Read-only.
      */
