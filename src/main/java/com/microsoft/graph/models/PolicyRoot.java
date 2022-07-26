@@ -169,7 +169,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The External Identities Policy.
-     * 
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      */
     @SerializedName(value = "externalIdentitiesPolicy", alternate = {"ExternalIdentitiesPolicy"})
     @Expose

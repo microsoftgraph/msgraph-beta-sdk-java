@@ -33,6 +33,8 @@ import com.microsoft.graph.requests.AccessPackageRequestBuilder;
 import com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageSubjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -330,5 +332,25 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
     @Nonnull
     public EntitlementManagementSettingsRequestBuilder settings() {
         return new EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageSubject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageSubjectCollectionRequestBuilder subjects() {
+        return new AccessPackageSubjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subjects"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageSubject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageSubjectRequestBuilder subjects(@Nonnull final String id) {
+        return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subjects") + "/" + id, getClient(), null);
     }
 }

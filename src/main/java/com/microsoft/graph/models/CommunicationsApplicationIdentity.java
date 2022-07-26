@@ -27,7 +27,7 @@ public class CommunicationsApplicationIdentity extends Identity implements IJson
 
     /**
      * The Application Type.
-     * 
+     * First party Microsoft application presenting this identity.
      */
     @SerializedName(value = "applicationType", alternate = {"ApplicationType"})
     @Expose
@@ -36,7 +36,7 @@ public class CommunicationsApplicationIdentity extends Identity implements IJson
 
     /**
      * The Hidden.
-     * 
+     * True if the participant would not like to be shown in other participants' rosters.
      */
     @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose

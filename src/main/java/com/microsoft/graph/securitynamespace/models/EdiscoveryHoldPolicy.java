@@ -59,7 +59,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
     /**
      * The Site Sources.
-     * 
+     * Data sources that represent SharePoint sites.
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
@@ -68,7 +68,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
     /**
      * The User Sources.
-     * 
+     * Data sources that represent Exchange mailboxes.
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose

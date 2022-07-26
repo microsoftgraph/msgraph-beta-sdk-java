@@ -486,7 +486,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Remove device from Device Firmware Configuration Interface management
      * @return the request builder
      */
     @Nonnull
