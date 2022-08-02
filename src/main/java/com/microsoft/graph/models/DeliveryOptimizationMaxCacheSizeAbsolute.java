@@ -16,6 +16,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      */
     public DeliveryOptimizationMaxCacheSizeAbsolute() {
         super();
+        this.setOdataType("#microsoft.graph.deliveryOptimizationMaxCacheSizeAbsolute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

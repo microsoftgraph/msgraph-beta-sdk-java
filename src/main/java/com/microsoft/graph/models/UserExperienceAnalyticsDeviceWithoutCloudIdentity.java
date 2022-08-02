@@ -18,6 +18,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      */
     public UserExperienceAnalyticsDeviceWithoutCloudIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceWithoutCloudIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

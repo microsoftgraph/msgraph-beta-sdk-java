@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
     /** The notebook that contains the section group. Read-only. */
     private Notebook _parentNotebook;
@@ -27,6 +27,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     public SectionGroup() {
         super();
+        this.setOdataType("#microsoft.graph.sectionGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

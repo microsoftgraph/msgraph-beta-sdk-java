@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.deployments.count.CountRequestBuilder;
 /** Provides operations to manage the deployments property of the microsoft.graph.managedTenants.managementTemplateStepVersion entity. */
 public class DeploymentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

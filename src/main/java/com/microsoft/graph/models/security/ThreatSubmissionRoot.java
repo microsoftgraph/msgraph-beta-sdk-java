@@ -23,6 +23,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      */
     public ThreatSubmissionRoot() {
         super();
+        this.setOdataType("#microsoft.graph.security.threatSubmissionRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

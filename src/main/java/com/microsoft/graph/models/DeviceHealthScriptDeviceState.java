@@ -40,6 +40,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     public DeviceHealthScriptDeviceState() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,8 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     private Boolean _ignoreNumbers;
     /** Indicates whether themes is enabled for the case. */
     private Boolean _isEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** To learn more, see Maximum number of themes. */
     private Integer _topicCount;
     /**
@@ -25,6 +27,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     public TopicModelingSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.ediscovery.topicModelingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,10 +62,11 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TopicModelingSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("dynamicallyAdjustTopicCount", (n) -> { currentObject.setDynamicallyAdjustTopicCount(n.getBooleanValue()); });
             this.put("ignoreNumbers", (n) -> { currentObject.setIgnoreNumbers(n.getBooleanValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("topicCount", (n) -> { currentObject.setTopicCount(n.getIntegerValue()); });
         }};
     }
@@ -83,6 +87,14 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._isEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the topicCount property value. To learn more, see Maximum number of themes.
      * @return a integer
      */
@@ -100,6 +112,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("dynamicallyAdjustTopicCount", this.getDynamicallyAdjustTopicCount());
         writer.writeBooleanValue("ignoreNumbers", this.getIgnoreNumbers());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("topicCount", this.getTopicCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the topicCount property value. To learn more, see Maximum number of themes.

@@ -307,7 +307,7 @@ public class ProgramControlTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new programControlTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ProgramControlTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProgramControlTypeItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ProgramControlTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public ProgramControlTypeItemRequestBuilderGetQueryParameters queryParameters = new ProgramControlTypeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new programControlTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ProgramControlTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProgramControlTypeItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ProgramControlTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new programControlTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ProgramControlTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProgramControlTypeItemRequestBuilderPatchRequestConfiguration() {

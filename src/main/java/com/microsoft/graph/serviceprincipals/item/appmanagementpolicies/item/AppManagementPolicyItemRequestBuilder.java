@@ -155,7 +155,7 @@ public class AppManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public AppManagementPolicyItemRequestBuilderGetQueryParameters queryParameters = new AppManagementPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppManagementPolicyItemRequestBuilderGetRequestConfiguration() {

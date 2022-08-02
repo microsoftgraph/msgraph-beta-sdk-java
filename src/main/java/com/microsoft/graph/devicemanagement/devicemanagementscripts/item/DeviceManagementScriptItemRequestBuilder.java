@@ -67,7 +67,7 @@ public class DeviceManagementScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementScripts.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptAssignmentItemRequestBuilder
+     * @return a DeviceManagementScriptAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -247,7 +247,7 @@ public class DeviceManagementScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptDeviceStateItemRequestBuilder
+     * @return a DeviceManagementScriptDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptDeviceStateItemRequestBuilder deviceRunStates(@javax.annotation.Nonnull final String id) {
@@ -310,7 +310,7 @@ public class DeviceManagementScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementScripts.item.groupAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptGroupAssignmentItemRequestBuilder
+     * @return a DeviceManagementScriptGroupAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptGroupAssignmentItemRequestBuilder groupAssignments(@javax.annotation.Nonnull final String id) {
@@ -377,7 +377,7 @@ public class DeviceManagementScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementScripts.item.userRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptUserStateItemRequestBuilder
+     * @return a DeviceManagementScriptUserStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptUserStateItemRequestBuilder userRunStates(@javax.annotation.Nonnull final String id) {
@@ -395,7 +395,7 @@ public class DeviceManagementScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptItemRequestBuilderDeleteRequestConfiguration() {
@@ -424,7 +424,7 @@ public class DeviceManagementScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementScriptItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementScriptItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptItemRequestBuilderGetRequestConfiguration() {
@@ -439,7 +439,7 @@ public class DeviceManagementScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptItemRequestBuilderPatchRequestConfiguration() {

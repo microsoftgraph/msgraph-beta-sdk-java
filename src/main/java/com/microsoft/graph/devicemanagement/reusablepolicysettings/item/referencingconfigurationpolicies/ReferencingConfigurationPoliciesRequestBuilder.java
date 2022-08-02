@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceManagementConfigurationPolicyCollectionRespo
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the referencingConfigurationPolicies property of the microsoft.graph.deviceManagementReusablePolicySetting entity. */
 public class ReferencingConfigurationPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

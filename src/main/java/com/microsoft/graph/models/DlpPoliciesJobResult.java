@@ -18,12 +18,15 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _evaluationDateTime;
     /** The matchingRules property */
     private java.util.List<MatchingDlpRule> _matchingRules;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new dlpPoliciesJobResult and sets the default values.
      * @return a void
      */
     public DlpPoliciesJobResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.dlpPoliciesJobResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,10 +69,11 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpPoliciesJobResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("auditCorrelationId", (n) -> { currentObject.setAuditCorrelationId(n.getStringValue()); });
             this.put("evaluationDateTime", (n) -> { currentObject.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
             this.put("matchingRules", (n) -> { currentObject.setMatchingRules(n.getCollectionOfObjectValues(MatchingDlpRule::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +85,14 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
         return this._matchingRules;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +102,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("auditCorrelationId", this.getAuditCorrelationId());
         writer.writeOffsetDateTimeValue("evaluationDateTime", this.getEvaluationDateTime());
         writer.writeCollectionOfObjectValues("matchingRules", this.getMatchingRules());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      */
     public void setMatchingRules(@javax.annotation.Nullable final java.util.List<MatchingDlpRule> value) {
         this._matchingRules = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

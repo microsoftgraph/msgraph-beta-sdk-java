@@ -18,6 +18,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
      */
     public CloudPcSubscription() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcSubscription");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

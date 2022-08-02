@@ -307,7 +307,7 @@ public class IdentityUserFlowItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new identityUserFlowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityUserFlowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityUserFlowItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class IdentityUserFlowItemRequestBuilder {
         @javax.annotation.Nullable
         public IdentityUserFlowItemRequestBuilderGetQueryParameters queryParameters = new IdentityUserFlowItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new identityUserFlowItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityUserFlowItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityUserFlowItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class IdentityUserFlowItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new identityUserFlowItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityUserFlowItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityUserFlowItemRequestBuilderPatchRequestConfiguration() {

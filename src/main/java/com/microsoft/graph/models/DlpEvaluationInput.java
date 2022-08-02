@@ -17,15 +17,15 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
     private CurrentLabel _currentLabel;
     /** The discoveredSensitiveTypes property */
     private java.util.List<DiscoveredSensitiveType> _discoveredSensitiveTypes;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new dlpEvaluationInput and sets the default values.
      * @return a void
      */
     public DlpEvaluationInput() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.dlpEvaluationInput");
+        this.setOdataType("#microsoft.graph.dlpEvaluationInput");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,16 +87,16 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
             this.put("accessScope", (n) -> { currentObject.setAccessScope(n.getEnumValue(AccessScope.class)); });
             this.put("currentLabel", (n) -> { currentObject.setCurrentLabel(n.getObjectValue(CurrentLabel::createFromDiscriminatorValue)); });
             this.put("discoveredSensitiveTypes", (n) -> { currentObject.setDiscoveredSensitiveTypes(n.getCollectionOfObjectValues(DiscoveredSensitiveType::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -108,7 +108,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("accessScope", this.getAccessScope());
         writer.writeObjectValue("currentLabel", this.getCurrentLabel());
         writer.writeCollectionOfObjectValues("discoveredSensitiveTypes", this.getDiscoveredSensitiveTypes());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -144,11 +144,11 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
         this._discoveredSensitiveTypes = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

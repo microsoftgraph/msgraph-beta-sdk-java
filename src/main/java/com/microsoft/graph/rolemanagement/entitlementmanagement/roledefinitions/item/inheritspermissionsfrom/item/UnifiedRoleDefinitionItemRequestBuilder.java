@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.UnifiedRoleDefinition;
+import microsoft.graph.rolemanagement.entitlementmanagement.roledefinitions.item.inheritspermissionsfrom.item.assignedprincipalswithtransitivewithdirectoryscopetypewithdirectoryscopeid.AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder;
 /** Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity. */
 public class UnifiedRoleDefinitionItemRequestBuilder {
     /** Path parameters for the request */
@@ -24,6 +25,14 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Provides operations to call the assignedPrincipals method.
+     * @return a assignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder assignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeId() {
+        return new AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new UnifiedRoleDefinitionItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -307,7 +316,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +345,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +360,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration() {

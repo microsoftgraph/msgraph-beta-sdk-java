@@ -16,6 +16,8 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** New value. */
     private String _newValue;
+    /** The OdataType property */
+    private String _odataType;
     /** Old value. */
     private String _oldValue;
     /**
@@ -24,6 +26,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     public AuditProperty() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.auditProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditProperty currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("newValue", (n) -> { currentObject.setNewValue(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("oldValue", (n) -> { currentObject.setOldValue(n.getStringValue()); });
         }};
     }
@@ -71,6 +75,14 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getNewValue() {
         return this._newValue;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the oldValue property value. Old value.
@@ -89,6 +101,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("newValue", this.getNewValue());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("oldValue", this.getOldValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     public void setNewValue(@javax.annotation.Nullable final String value) {
         this._newValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the oldValue property value. Old value.

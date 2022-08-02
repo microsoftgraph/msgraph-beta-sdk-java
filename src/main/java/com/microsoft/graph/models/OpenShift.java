@@ -22,6 +22,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     public OpenShift() {
         super();
+        this.setOdataType("#microsoft.graph.openShift");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

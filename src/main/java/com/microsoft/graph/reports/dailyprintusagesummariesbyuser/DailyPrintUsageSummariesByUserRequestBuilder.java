@@ -20,7 +20,7 @@ import microsoft.graph.models.PrintUsageByUserCollectionResponse;
 import microsoft.graph.reports.dailyprintusagesummariesbyuser.count.CountRequestBuilder;
 /** Provides operations to manage the dailyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity. */
 public class DailyPrintUsageSummariesByUserRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

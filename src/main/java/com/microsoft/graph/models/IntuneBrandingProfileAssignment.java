@@ -17,6 +17,7 @@ public class IntuneBrandingProfileAssignment extends Entity implements Parsable 
      */
     public IntuneBrandingProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.intuneBrandingProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class MyRoleTenantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new myRoleTenantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MyRoleTenantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MyRoleTenantItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MyRoleTenantItemRequestBuilder {
         @javax.annotation.Nullable
         public MyRoleTenantItemRequestBuilderGetQueryParameters queryParameters = new MyRoleTenantItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new myRoleTenantItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MyRoleTenantItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MyRoleTenantItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MyRoleTenantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new myRoleTenantItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MyRoleTenantItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MyRoleTenantItemRequestBuilderPatchRequestConfiguration() {

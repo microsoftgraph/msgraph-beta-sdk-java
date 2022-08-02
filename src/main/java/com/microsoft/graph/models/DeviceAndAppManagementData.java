@@ -14,12 +14,15 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** Not yet documented */
     private byte[] _content;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceAndAppManagementData and sets the default values.
      * @return a void
      */
     public DeviceAndAppManagementData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceAndAppManagementData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementData currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
      */
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

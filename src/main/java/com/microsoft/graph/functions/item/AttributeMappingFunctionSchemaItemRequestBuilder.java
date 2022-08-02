@@ -307,7 +307,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new attributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public AttributeMappingFunctionSchemaItemRequestBuilderGetQueryParameters queryParameters = new AttributeMappingFunctionSchemaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new attributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AttributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new attributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration() {

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health model performance entity contains battery related information for all unique device models in their organization. */
 public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity implements Parsable {
     /** Number of active devices for that model. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -23,16 +24,17 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     /** A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
     private Integer _modelBatteryHealthScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthModelPerformance() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthModelPerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a userExperienceAnalyticsBatteryHealthModelPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthModelPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

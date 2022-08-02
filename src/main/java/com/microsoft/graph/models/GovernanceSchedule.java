@@ -17,6 +17,8 @@ public class GovernanceSchedule implements AdditionalDataHolder, Parsable {
     private Period _duration;
     /** The end time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Note: if the value is null, it indicates a permanent assignment. */
     private OffsetDateTime _endDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _startDateTime;
     /** The role assignment schedule type. Only Once is supported for now. */
@@ -27,6 +29,7 @@ public class GovernanceSchedule implements AdditionalDataHolder, Parsable {
      */
     public GovernanceSchedule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.governanceSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,12 +72,21 @@ public class GovernanceSchedule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceSchedule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -101,6 +113,7 @@ public class GovernanceSchedule implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("duration", this.getDuration());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -128,6 +141,14 @@ public class GovernanceSchedule implements AdditionalDataHolder, Parsable {
      */
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z

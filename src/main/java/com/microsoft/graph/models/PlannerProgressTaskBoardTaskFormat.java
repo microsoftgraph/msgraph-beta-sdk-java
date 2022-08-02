@@ -16,6 +16,7 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
      */
     public PlannerProgressTaskBoardTaskFormat() {
         super();
+        this.setOdataType("#microsoft.graph.plannerProgressTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -42,6 +42,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      */
     public AgreementAcceptance() {
         super();
+        this.setOdataType("#microsoft.graph.agreementAcceptance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

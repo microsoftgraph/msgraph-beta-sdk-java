@@ -202,7 +202,7 @@ public class CatalogRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.catalog.entries.item collection
      * @param id Unique identifier of the item
-     * @return a catalogEntryItemRequestBuilder
+     * @return a CatalogEntryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CatalogEntryItemRequestBuilder entries(@javax.annotation.Nonnull final String id) {

@@ -18,6 +18,8 @@ public class RolloutSettings implements AdditionalDataHolder, Parsable {
     private String _durationBetweenOffers;
     /** Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time. */
     private OffsetDateTime _endDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned. */
     private OffsetDateTime _startDateTime;
     /**
@@ -26,6 +28,7 @@ public class RolloutSettings implements AdditionalDataHolder, Parsable {
      */
     public RolloutSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsUpdates.rolloutSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,12 +79,21 @@ public class RolloutSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RolloutSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("devicesPerOffer", (n) -> { currentObject.setDevicesPerOffer(n.getIntegerValue()); });
             this.put("durationBetweenOffers", (n) -> { currentObject.setDurationBetweenOffers(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned.
@@ -101,6 +113,7 @@ public class RolloutSettings implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("devicesPerOffer", this.getDevicesPerOffer());
         writer.writeStringValue("durationBetweenOffers", this.getDurationBetweenOffers());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +148,14 @@ public class RolloutSettings implements AdditionalDataHolder, Parsable {
      */
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned.

@@ -128,7 +128,7 @@ public class MessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.mailFolders.item.messages.item.attachments.item collection
      * @param id Unique identifier of the item
-     * @return a attachmentItemRequestBuilder
+     * @return a AttachmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
@@ -308,7 +308,7 @@ public class MessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.mailFolders.item.messages.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -371,7 +371,7 @@ public class MessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.mailFolders.item.messages.item.mentions.item collection
      * @param id Unique identifier of the item
-     * @return a mentionItemRequestBuilder
+     * @return a MentionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MentionItemRequestBuilder mentions(@javax.annotation.Nonnull final String id) {
@@ -383,7 +383,7 @@ public class MessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.mailFolders.item.messages.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -450,7 +450,7 @@ public class MessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.mailFolders.item.messages.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -468,7 +468,7 @@ public class MessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageItemRequestBuilderDeleteRequestConfiguration() {
@@ -497,7 +497,7 @@ public class MessageItemRequestBuilder {
         @javax.annotation.Nullable
         public MessageItemRequestBuilderGetQueryParameters queryParameters = new MessageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new messageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MessageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageItemRequestBuilderGetRequestConfiguration() {
@@ -512,7 +512,7 @@ public class MessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageItemRequestBuilderPatchRequestConfiguration() {

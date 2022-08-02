@@ -23,6 +23,7 @@ public class RoleScopeTag extends Entity implements Parsable {
      */
     public RoleScopeTag() {
         super();
+        this.setOdataType("#microsoft.graph.roleScopeTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

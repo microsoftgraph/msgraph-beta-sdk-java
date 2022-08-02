@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.onlinemeetings.item.registration.customquestions.count.CountRequestBuilder;
 /** Provides operations to manage the customQuestions property of the microsoft.graph.meetingRegistration entity. */
 public class CustomQuestionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

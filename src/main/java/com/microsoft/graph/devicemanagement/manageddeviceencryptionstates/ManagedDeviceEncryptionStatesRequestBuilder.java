@@ -20,7 +20,7 @@ import microsoft.graph.models.ManagedDeviceEncryptionStateCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDeviceEncryptionStates property of the microsoft.graph.deviceManagement entity. */
 public class ManagedDeviceEncryptionStatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -21,7 +21,7 @@ import microsoft.graph.privilegedroleassignments.count.CountRequestBuilder;
 import microsoft.graph.privilegedroleassignments.my.MyRequestBuilder;
 /** Provides operations to manage the collection of privilegedRoleAssignment entities. */
 public class PrivilegedRoleAssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

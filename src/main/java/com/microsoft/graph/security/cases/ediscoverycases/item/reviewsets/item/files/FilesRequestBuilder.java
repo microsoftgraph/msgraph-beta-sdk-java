@@ -20,7 +20,7 @@ import microsoft.graph.models.security.EdiscoveryFileCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.count.CountRequestBuilder;
 /** Provides operations to manage the files property of the microsoft.graph.security.ediscoveryReviewSet entity. */
 public class FilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

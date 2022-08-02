@@ -16,6 +16,8 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
     private Boolean _allowDisplayNameUpdate;
     /** Indicates whether synchronization of the parent entity is deferred to a later date. */
     private Boolean _isSyncDeferred;
+    /** The OdataType property */
+    private String _odataType;
     /** The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters */
     private java.util.List<String> _optionalPropertiesToSync;
     /** The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments */
@@ -26,6 +28,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      */
     public EducationSynchronizationCustomization() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationSynchronizationCustomization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,9 +63,10 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationCustomization currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowDisplayNameUpdate", (n) -> { currentObject.setAllowDisplayNameUpdate(n.getBooleanValue()); });
             this.put("isSyncDeferred", (n) -> { currentObject.setIsSyncDeferred(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("optionalPropertiesToSync", (n) -> { currentObject.setOptionalPropertiesToSync(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("synchronizationStartDate", (n) -> { currentObject.setSynchronizationStartDate(n.getOffsetDateTimeValue()); });
         }};
@@ -74,6 +78,14 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
     @javax.annotation.Nullable
     public Boolean getIsSyncDeferred() {
         return this._isSyncDeferred;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the optionalPropertiesToSync property value. The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
@@ -100,6 +112,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowDisplayNameUpdate", this.getAllowDisplayNameUpdate());
         writer.writeBooleanValue("isSyncDeferred", this.getIsSyncDeferred());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("optionalPropertiesToSync", this.getOptionalPropertiesToSync());
         writer.writeOffsetDateTimeValue("synchronizationStartDate", this.getSynchronizationStartDate());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +140,14 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      */
     public void setIsSyncDeferred(@javax.annotation.Nullable final Boolean value) {
         this._isSyncDeferred = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the optionalPropertiesToSync property value. The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters

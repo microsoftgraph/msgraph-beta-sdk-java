@@ -25,6 +25,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     public SynchronizationJob() {
         super();
+        this.setOdataType("#microsoft.graph.synchronizationJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

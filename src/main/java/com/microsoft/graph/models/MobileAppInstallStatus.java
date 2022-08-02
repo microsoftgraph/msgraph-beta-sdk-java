@@ -42,6 +42,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      */
     public MobileAppInstallStatus() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppInstallStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

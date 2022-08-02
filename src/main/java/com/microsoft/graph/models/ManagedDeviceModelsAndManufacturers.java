@@ -16,12 +16,15 @@ public class ManagedDeviceModelsAndManufacturers implements AdditionalDataHolder
     private java.util.List<String> _deviceManufacturers;
     /** List of Models for managed devices in the account */
     private java.util.List<String> _deviceModels;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new managedDeviceModelsAndManufacturers and sets the default values.
      * @return a void
      */
     public ManagedDeviceModelsAndManufacturers() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedDeviceModelsAndManufacturers");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,19 @@ public class ManagedDeviceModelsAndManufacturers implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceModelsAndManufacturers currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("deviceManufacturers", (n) -> { currentObject.setDeviceManufacturers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("deviceModels", (n) -> { currentObject.setDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -78,6 +90,7 @@ public class ManagedDeviceModelsAndManufacturers implements AdditionalDataHolder
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("deviceManufacturers", this.getDeviceManufacturers());
         writer.writeCollectionOfPrimitiveValues("deviceModels", this.getDeviceModels());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class ManagedDeviceModelsAndManufacturers implements AdditionalDataHolder
      */
     public void setDeviceModels(@javax.annotation.Nullable final java.util.List<String> value) {
         this._deviceModels = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

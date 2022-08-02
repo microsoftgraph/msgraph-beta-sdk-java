@@ -20,7 +20,7 @@ import microsoft.graph.models.DimensionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the dimensions property of the microsoft.graph.company entity. */
 public class DimensionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class ItemPhoneItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemPhoneItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPhoneItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPhoneItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ItemPhoneItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemPhoneItemRequestBuilderGetQueryParameters queryParameters = new ItemPhoneItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemPhoneItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPhoneItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPhoneItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ItemPhoneItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemPhoneItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPhoneItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPhoneItemRequestBuilderPatchRequestConfiguration() {

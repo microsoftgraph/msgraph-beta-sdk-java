@@ -16,6 +16,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      */
     public ProtectByTemplateAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.protectByTemplateAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

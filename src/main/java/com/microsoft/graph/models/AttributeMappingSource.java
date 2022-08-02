@@ -15,6 +15,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     private String _expression;
     /** The name property */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The parameters property */
     private java.util.List<StringKeyAttributeMappingSourceValuePair> _parameters;
     /** The type property */
@@ -25,6 +27,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     public AttributeMappingSource() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attributeMappingSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeMappingSource currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parameters", (n) -> { currentObject.setParameters(n.getCollectionOfObjectValues(StringKeyAttributeMappingSourceValuePair::createFromDiscriminatorValue)); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttributeMappingSourceType.class)); });
         }};
@@ -73,6 +77,14 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the parameters property value. The parameters property
@@ -99,6 +111,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("parameters", this.getParameters());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the parameters property value. The parameters property

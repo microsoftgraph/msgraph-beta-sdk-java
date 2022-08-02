@@ -18,6 +18,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      */
     public PlannerAssignedToTaskBoardTaskFormat() {
         super();
+        this.setOdataType("#microsoft.graph.plannerAssignedToTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

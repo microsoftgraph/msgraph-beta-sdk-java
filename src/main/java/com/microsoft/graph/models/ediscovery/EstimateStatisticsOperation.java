@@ -28,6 +28,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      */
     public EstimateStatisticsOperation() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.estimateStatisticsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

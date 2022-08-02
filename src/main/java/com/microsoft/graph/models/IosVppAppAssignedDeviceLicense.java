@@ -18,6 +18,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      */
     public IosVppAppAssignedDeviceLicense() {
         super();
+        this.setOdataType("#microsoft.graph.iosVppAppAssignedDeviceLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

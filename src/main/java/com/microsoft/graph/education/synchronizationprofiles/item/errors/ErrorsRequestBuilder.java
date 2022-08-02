@@ -20,7 +20,7 @@ import microsoft.graph.models.EducationSynchronizationErrorCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the errors property of the microsoft.graph.educationSynchronizationProfile entity. */
 public class ErrorsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

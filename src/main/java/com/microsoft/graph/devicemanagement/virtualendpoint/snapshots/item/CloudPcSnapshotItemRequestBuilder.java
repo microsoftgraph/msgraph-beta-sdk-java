@@ -307,7 +307,7 @@ public class CloudPcSnapshotItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcSnapshotItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcSnapshotItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcSnapshotItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcSnapshotItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcSnapshotItemRequestBuilderGetQueryParameters queryParameters = new CloudPcSnapshotItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcSnapshotItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcSnapshotItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcSnapshotItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcSnapshotItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcSnapshotItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcSnapshotItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcSnapshotItemRequestBuilderPatchRequestConfiguration() {

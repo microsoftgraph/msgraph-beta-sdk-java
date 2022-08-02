@@ -307,7 +307,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appleEnrollmentProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppleEnrollmentProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppleEnrollmentProfileAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public AppleEnrollmentProfileAssignmentItemRequestBuilderGetQueryParameters queryParameters = new AppleEnrollmentProfileAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appleEnrollmentProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppleEnrollmentProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppleEnrollmentProfileAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appleEnrollmentProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppleEnrollmentProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppleEnrollmentProfileAssignmentItemRequestBuilderPatchRequestConfiguration() {

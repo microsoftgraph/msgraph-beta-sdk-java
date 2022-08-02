@@ -15,6 +15,8 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Email address of the user. */
     private String _email;
+    /** The OdataType property */
+    private String _odataType;
     /** This is the id property value of the user resource that represents the user in the Azure AD tenant. */
     private String _userId;
     /**
@@ -23,6 +25,7 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
      */
     public AttackSimulationUser() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attackSimulationUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationUser currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userId property value. This is the id property value of the user resource that represents the user in the Azure AD tenant.
@@ -88,6 +100,7 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
      */
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userId property value. This is the id property value of the user resource that represents the user in the Azure AD tenant.

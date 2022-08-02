@@ -14,7 +14,7 @@ public class IosSingleSignOnExtension extends SingleSignOnExtension implements P
      */
     public IosSingleSignOnExtension() {
         super();
-        this.setType("#microsoft.graph.iosSingleSignOnExtension");
+        this.setOdataType("#microsoft.graph.iosSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -13,7 +13,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only. */
     private String _countryCode;
-    /** The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only. */
+    /** The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only. */
     private EndpointType _endpointType;
     /** The identity property */
     private IdentitySet _identity;
@@ -21,6 +21,8 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private String _languageId;
     /** The nonAnonymizedIdentity property */
     private IdentitySet _nonAnonymizedIdentity;
+    /** The OdataType property */
+    private String _odataType;
     /** The participant ID of the participant. Read-only. */
     private String _participantId;
     /** The client platform ID of the participant. Read-only. */
@@ -33,6 +35,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.participantInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +64,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         return this._countryCode;
     }
     /**
-     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      * @return a endpointType
      */
     @javax.annotation.Nullable
@@ -75,12 +78,13 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantInfo currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
             this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("languageId", (n) -> { currentObject.setLanguageId(n.getStringValue()); });
             this.put("nonAnonymizedIdentity", (n) -> { currentObject.setNonAnonymizedIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
             this.put("platformId", (n) -> { currentObject.setPlatformId(n.getStringValue()); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
@@ -109,6 +113,14 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySet getNonAnonymizedIdentity() {
         return this._nonAnonymizedIdentity;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
@@ -146,6 +158,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("languageId", this.getLanguageId());
         writer.writeObjectValue("nonAnonymizedIdentity", this.getNonAnonymizedIdentity());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("participantId", this.getParticipantId());
         writer.writeStringValue("platformId", this.getPlatformId());
         writer.writeStringValue("region", this.getRegion());
@@ -168,7 +181,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         this._countryCode = value;
     }
     /**
-     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      * @param value Value to set for the endpointType property.
      * @return a void
      */
@@ -198,6 +211,14 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     public void setNonAnonymizedIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._nonAnonymizedIdentity = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.

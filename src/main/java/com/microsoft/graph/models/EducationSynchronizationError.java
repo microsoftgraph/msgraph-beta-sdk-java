@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class EducationSynchronizationError extends Entity implements Parsable {
     /** Represents the sync entity (school, section, student, teacher). */
     private String _entryType;
@@ -28,6 +28,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      */
     public EducationSynchronizationError() {
         super();
+        this.setOdataType("#microsoft.graph.educationSynchronizationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

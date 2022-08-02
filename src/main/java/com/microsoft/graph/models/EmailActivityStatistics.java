@@ -21,6 +21,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      */
     public EmailActivityStatistics() {
         super();
+        this.setOdataType("#microsoft.graph.emailActivityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

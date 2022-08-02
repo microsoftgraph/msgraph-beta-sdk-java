@@ -17,12 +17,15 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
     private java.util.List<DeviceHealthScriptRemediationHistoryData> _historyData;
     /** The date on which the results history is calculated for the healthscript. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceHealthScriptRemediationHistory and sets the default values.
      * @return a void
      */
     public DeviceHealthScriptRemediationHistory() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceHealthScriptRemediationHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRemediationHistory currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("historyData", (n) -> { currentObject.setHistoryData(n.getCollectionOfObjectValues(DeviceHealthScriptRemediationHistoryData::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -71,6 +75,14 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
         return this._lastModifiedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -79,6 +91,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("historyData", this.getHistoryData());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -104,5 +117,13 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

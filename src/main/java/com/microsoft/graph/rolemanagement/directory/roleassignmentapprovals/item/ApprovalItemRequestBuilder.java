@@ -308,7 +308,7 @@ public class ApprovalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.directory.roleAssignmentApprovals.item.steps.item collection
      * @param id Unique identifier of the item
-     * @return a approvalStepItemRequestBuilder
+     * @return a ApprovalStepItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApprovalStepItemRequestBuilder steps(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ApprovalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new approvalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class ApprovalItemRequestBuilder {
         @javax.annotation.Nullable
         public ApprovalItemRequestBuilderGetQueryParameters queryParameters = new ApprovalItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new approvalItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class ApprovalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new approvalItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalItemRequestBuilderPatchRequestConfiguration() {

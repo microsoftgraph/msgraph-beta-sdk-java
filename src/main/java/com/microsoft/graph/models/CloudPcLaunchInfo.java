@@ -15,12 +15,15 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
     private String _cloudPcId;
     /** The connect URL of the Cloud PC. */
     private String _cloudPcLaunchUrl;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new cloudPcLaunchInfo and sets the default values.
      * @return a void
      */
     public CloudPcLaunchInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcLaunchInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcLaunchInfo currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("cloudPcId", (n) -> { currentObject.setCloudPcId(n.getStringValue()); });
             this.put("cloudPcLaunchUrl", (n) -> { currentObject.setCloudPcLaunchUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("cloudPcId", this.getCloudPcId());
         writer.writeStringValue("cloudPcLaunchUrl", this.getCloudPcLaunchUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
      */
     public void setCloudPcLaunchUrl(@javax.annotation.Nullable final String value) {
         this._cloudPcLaunchUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

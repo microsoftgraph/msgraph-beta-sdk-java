@@ -17,6 +17,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      */
     public DeviceManagementScriptGroupAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementScriptGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

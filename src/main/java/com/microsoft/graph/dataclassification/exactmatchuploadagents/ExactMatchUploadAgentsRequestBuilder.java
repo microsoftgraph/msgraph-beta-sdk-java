@@ -20,7 +20,7 @@ import microsoft.graph.models.ExactMatchUploadAgentCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exactMatchUploadAgents property of the microsoft.graph.dataClassificationService entity. */
 public class ExactMatchUploadAgentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

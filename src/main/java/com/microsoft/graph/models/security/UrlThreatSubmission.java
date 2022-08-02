@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
-    /** The webUrl property */
+    /** Denotes the webUrl that needs to be submitted. */
     private String _webUrl;
     /**
      * Instantiates a new UrlThreatSubmission and sets the default values.
@@ -16,6 +16,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      */
     public UrlThreatSubmission() {
         super();
+        this.setOdataType("#microsoft.graph.security.urlThreatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +40,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
         }};
     }
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. Denotes the webUrl that needs to be submitted.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. Denotes the webUrl that needs to be submitted.
      * @param value Value to set for the webUrl property.
      * @return a void
      */

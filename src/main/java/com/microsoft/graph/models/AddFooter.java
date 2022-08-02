@@ -18,6 +18,7 @@ public class AddFooter extends MarkContent implements Parsable {
      */
     public AddFooter() {
         super();
+        this.setOdataType("#microsoft.graph.addFooter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

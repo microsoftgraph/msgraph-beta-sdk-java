@@ -307,7 +307,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidManagedStoreAppConfigurationSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderGetQueryParameters queryParameters = new AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new androidManagedStoreAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidManagedStoreAppConfigurationSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidManagedStoreAppConfigurationSchemaItemRequestBuilderPatchRequestConfiguration() {

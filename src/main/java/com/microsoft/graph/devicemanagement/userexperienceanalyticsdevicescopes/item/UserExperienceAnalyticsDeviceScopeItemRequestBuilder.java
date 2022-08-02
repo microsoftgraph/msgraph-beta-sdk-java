@@ -313,7 +313,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceScopeItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsDeviceScopeItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsDeviceScopeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceScopeItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceScopeItemRequestBuilderPatchRequestConfiguration() {

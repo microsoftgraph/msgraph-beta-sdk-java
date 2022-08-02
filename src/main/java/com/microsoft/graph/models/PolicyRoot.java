@@ -51,6 +51,8 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     private java.util.List<MobilityManagementPolicy> _mobileAppManagementPolicies;
     /** The mobileDeviceManagementPolicies property */
     private java.util.List<MobilityManagementPolicy> _mobileDeviceManagementPolicies;
+    /** The OdataType property */
+    private String _odataType;
     /** The policy that specifies the conditions under which consent can be granted. */
     private java.util.List<PermissionGrantPolicy> _permissionGrantPolicies;
     /** Represents the role management policies. */
@@ -69,6 +71,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      */
     public PolicyRoot() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.policyRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -223,7 +226,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PolicyRoot currentObject = this;
-        return new HashMap<>(26) {{
+        return new HashMap<>(27) {{
             this.put("accessReviewPolicy", (n) -> { currentObject.setAccessReviewPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
             this.put("activityBasedTimeoutPolicies", (n) -> { currentObject.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
             this.put("adminConsentRequestPolicy", (n) -> { currentObject.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
@@ -244,6 +247,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
             this.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { currentObject.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
             this.put("mobileAppManagementPolicies", (n) -> { currentObject.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
             this.put("mobileDeviceManagementPolicies", (n) -> { currentObject.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permissionGrantPolicies", (n) -> { currentObject.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
             this.put("roleManagementPolicies", (n) -> { currentObject.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
             this.put("roleManagementPolicyAssignments", (n) -> { currentObject.setRoleManagementPolicyAssignments(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue)); });
@@ -283,6 +287,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getMobileDeviceManagementPolicies() {
         return this._mobileDeviceManagementPolicies;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -359,6 +371,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
         writer.writeCollectionOfObjectValues("mobileAppManagementPolicies", this.getMobileAppManagementPolicies());
         writer.writeCollectionOfObjectValues("mobileDeviceManagementPolicies", this.getMobileDeviceManagementPolicies());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("permissionGrantPolicies", this.getPermissionGrantPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicies", this.getRoleManagementPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicyAssignments", this.getRoleManagementPolicyAssignments());
@@ -534,6 +547,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      */
     public void setMobileDeviceManagementPolicies(@javax.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
         this._mobileDeviceManagementPolicies = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.

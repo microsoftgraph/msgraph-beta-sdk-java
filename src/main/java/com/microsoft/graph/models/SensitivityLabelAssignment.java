@@ -13,6 +13,8 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** The assignmentMethod property */
     private SensitivityLabelAssignmentMethod _assignmentMethod;
+    /** The OdataType property */
+    private String _odataType;
     /** The unique identifier for the sensitivity label assigned to the file. */
     private String _sensitivityLabelId;
     /** The unique identifier for the tenant that hosts the file when this label is applied. */
@@ -23,6 +25,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     public SensitivityLabelAssignment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sensitivityLabelAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitivityLabelAssignment currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(SensitivityLabelAssignmentMethod.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sensitivityLabelId", (n) -> { currentObject.setSensitivityLabelId(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sensitivityLabelId property value. The unique identifier for the sensitivity label assigned to the file.
@@ -87,6 +99,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sensitivityLabelId", this.getSensitivityLabelId());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     public void setAssignmentMethod(@javax.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
         this._assignmentMethod = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sensitivityLabelId property value. The unique identifier for the sensitivity label assigned to the file.

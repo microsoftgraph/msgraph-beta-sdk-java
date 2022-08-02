@@ -16,6 +16,8 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     private Boolean _autoTrigger;
     /** Name. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Keep this rule active even when the VPN is not connected: Default False */
     private Boolean _persistent;
     /** Proxy Server Uri. */
@@ -28,6 +30,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      */
     public VpnDnsRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.vpnDnsRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,9 +65,10 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnDnsRule currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("autoTrigger", (n) -> { currentObject.setAutoTrigger(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("persistent", (n) -> { currentObject.setPersistent(n.getBooleanValue()); });
             this.put("proxyServerUri", (n) -> { currentObject.setProxyServerUri(n.getStringValue()); });
             this.put("servers", (n) -> { currentObject.setServers(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -77,6 +81,14 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the persistent property value. Keep this rule active even when the VPN is not connected: Default False
@@ -111,6 +123,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("autoTrigger", this.getAutoTrigger());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("persistent", this.getPersistent());
         writer.writeStringValue("proxyServerUri", this.getProxyServerUri());
         writer.writeCollectionOfPrimitiveValues("servers", this.getServers());
@@ -139,6 +152,14 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the persistent property value. Keep this rule active even when the VPN is not connected: Default False

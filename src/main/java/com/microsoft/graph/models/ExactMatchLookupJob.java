@@ -18,6 +18,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      */
     public ExactMatchLookupJob() {
         super();
+        this.setOdataType("#microsoft.graph.exactMatchLookupJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

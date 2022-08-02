@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Segment extends Entity implements Parsable {
     /** Endpoint that answered this segment. */
     private Endpoint _callee;
@@ -29,6 +29,7 @@ public class Segment extends Entity implements Parsable {
      */
     public Segment() {
         super();
+        this.setOdataType("#microsoft.graph.callRecords.segment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

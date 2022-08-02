@@ -18,6 +18,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
      */
     public Windows81VpnProxyServer() {
         super();
+        this.setOdataType("#microsoft.graph.windows81VpnProxyServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

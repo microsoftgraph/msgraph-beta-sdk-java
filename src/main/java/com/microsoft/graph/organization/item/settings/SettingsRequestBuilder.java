@@ -326,7 +326,7 @@ public class SettingsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.organization.item.settings.profileCardProperties.item collection
      * @param id Unique identifier of the item
-     * @return a profileCardPropertyItemRequestBuilder
+     * @return a ProfileCardPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProfileCardPropertyItemRequestBuilder profileCardProperties(@javax.annotation.Nonnull final String id) {

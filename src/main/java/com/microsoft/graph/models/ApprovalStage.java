@@ -21,6 +21,8 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
     private Boolean _isApproverJustificationRequired;
     /** If true, then one or more escalation approvers are configured in this approval stage. */
     private Boolean _isEscalationEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection. */
     private java.util.List<UserSet> _primaryApprovers;
     /**
@@ -29,6 +31,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      */
     public ApprovalStage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.approvalStage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,12 +82,13 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalStage currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("approvalStageTimeOutInDays", (n) -> { currentObject.setApprovalStageTimeOutInDays(n.getIntegerValue()); });
             this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
             this.put("escalationTimeInMinutes", (n) -> { currentObject.setEscalationTimeInMinutes(n.getIntegerValue()); });
             this.put("isApproverJustificationRequired", (n) -> { currentObject.setIsApproverJustificationRequired(n.getBooleanValue()); });
             this.put("isEscalationEnabled", (n) -> { currentObject.setIsEscalationEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("primaryApprovers", (n) -> { currentObject.setPrimaryApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
         }};
     }
@@ -103,6 +107,14 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
         return this._isEscalationEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the primaryApprovers property value. The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
@@ -124,6 +136,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("escalationTimeInMinutes", this.getEscalationTimeInMinutes());
         writer.writeBooleanValue("isApproverJustificationRequired", this.getIsApproverJustificationRequired());
         writer.writeBooleanValue("isEscalationEnabled", this.getIsEscalationEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("primaryApprovers", this.getPrimaryApprovers());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -174,6 +187,14 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      */
     public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEscalationEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the primaryApprovers property value. The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.

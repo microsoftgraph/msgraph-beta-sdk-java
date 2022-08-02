@@ -307,7 +307,7 @@ public class AccessPackageResourceScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AccessPackageResourceScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageResourceScopeItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageResourceScopeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageResourceScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AccessPackageResourceScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration() {

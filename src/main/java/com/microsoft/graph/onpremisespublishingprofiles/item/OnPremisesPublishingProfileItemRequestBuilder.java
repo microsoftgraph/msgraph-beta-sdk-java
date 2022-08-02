@@ -62,7 +62,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item collection
      * @param id Unique identifier of the item
-     * @return a onPremisesAgentGroupItemRequestBuilder
+     * @return a OnPremisesAgentGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentGroupItemRequestBuilder agentGroups(@javax.annotation.Nonnull final String id) {
@@ -74,7 +74,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agents.item collection
      * @param id Unique identifier of the item
-     * @return a onPremisesAgentItemRequestBuilder
+     * @return a OnPremisesAgentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentItemRequestBuilder agents(@javax.annotation.Nonnull final String id) {
@@ -86,7 +86,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item collection
      * @param id Unique identifier of the item
-     * @return a connectorGroupItemRequestBuilder
+     * @return a ConnectorGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectorGroupItemRequestBuilder connectorGroups(@javax.annotation.Nonnull final String id) {
@@ -98,7 +98,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item collection
      * @param id Unique identifier of the item
-     * @return a connectorItemRequestBuilder
+     * @return a ConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectorItemRequestBuilder connectors(@javax.annotation.Nonnull final String id) {
@@ -384,7 +384,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.publishedResources.item collection
      * @param id Unique identifier of the item
-     * @return a publishedResourceItemRequestBuilder
+     * @return a PublishedResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PublishedResourceItemRequestBuilder publishedResources(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -431,7 +431,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public OnPremisesPublishingProfileItemRequestBuilderGetQueryParameters queryParameters = new OnPremisesPublishingProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration() {
@@ -446,7 +446,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration() {

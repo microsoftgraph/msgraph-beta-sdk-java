@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TenantDetailedInformation extends Entity implements Parsable {
     /** The city where the managed tenant is located. Optional. Read-only. */
     private String _city;
@@ -36,6 +36,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     public TenantDetailedInformation() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.tenantDetailedInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

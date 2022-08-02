@@ -13,12 +13,15 @@ public class SafeguardSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** List of safeguards to ignore per device. */
     private java.util.List<SafeguardProfile> _disabledSafeguardProfiles;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new safeguardSettings and sets the default values.
      * @return a void
      */
     public SafeguardSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsUpdates.safeguardSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class SafeguardSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SafeguardSettings currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("disabledSafeguardProfiles", (n) -> { currentObject.setDisabledSafeguardProfiles(n.getCollectionOfObjectValues(SafeguardProfile::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class SafeguardSettings implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("disabledSafeguardProfiles", this.getDisabledSafeguardProfiles());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class SafeguardSettings implements AdditionalDataHolder, Parsable {
      */
     public void setDisabledSafeguardProfiles(@javax.annotation.Nullable final java.util.List<SafeguardProfile> value) {
         this._disabledSafeguardProfiles = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

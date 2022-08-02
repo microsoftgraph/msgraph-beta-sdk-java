@@ -247,7 +247,7 @@ public class SalesOrderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesOrders.item.salesOrderLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesOrderLineItemRequestBuilder
+     * @return a SalesOrderLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesOrderLineItemRequestBuilder salesOrderLines(@javax.annotation.Nonnull final String id) {
@@ -279,7 +279,7 @@ public class SalesOrderItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesOrderItemRequestBuilderGetQueryParameters queryParameters = new SalesOrderItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesOrderItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesOrderItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesOrderItemRequestBuilderGetRequestConfiguration() {
@@ -294,7 +294,7 @@ public class SalesOrderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesOrderItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesOrderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesOrderItemRequestBuilderPatchRequestConfiguration() {

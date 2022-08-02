@@ -16,6 +16,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      */
     public CloudPcProvisioningPolicyAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcProvisioningPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

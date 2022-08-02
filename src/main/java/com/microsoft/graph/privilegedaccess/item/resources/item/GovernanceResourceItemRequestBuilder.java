@@ -335,7 +335,7 @@ public class GovernanceResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.resources.item.roleAssignmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleAssignmentRequestItemRequestBuilder
+     * @return a GovernanceRoleAssignmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentRequestItemRequestBuilder roleAssignmentRequests(@javax.annotation.Nonnull final String id) {
@@ -347,7 +347,7 @@ public class GovernanceResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.resources.item.roleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleAssignmentItemRequestBuilder
+     * @return a GovernanceRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
@@ -359,7 +359,7 @@ public class GovernanceResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.resources.item.roleDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleDefinitionItemRequestBuilder
+     * @return a GovernanceRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
@@ -371,7 +371,7 @@ public class GovernanceResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.resources.item.roleSettings.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleSettingItemRequestBuilder
+     * @return a GovernanceRoleSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleSettingItemRequestBuilder roleSettings(@javax.annotation.Nonnull final String id) {
@@ -389,7 +389,7 @@ public class GovernanceResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new governanceResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -418,7 +418,7 @@ public class GovernanceResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public GovernanceResourceItemRequestBuilderGetQueryParameters queryParameters = new GovernanceResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new governanceResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceResourceItemRequestBuilderGetRequestConfiguration() {
@@ -433,7 +433,7 @@ public class GovernanceResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new governanceResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceResourceItemRequestBuilderPatchRequestConfiguration() {

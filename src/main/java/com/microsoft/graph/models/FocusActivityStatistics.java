@@ -14,6 +14,7 @@ public class FocusActivityStatistics extends ActivityStatistics implements Parsa
      */
     public FocusActivityStatistics() {
         super();
+        this.setOdataType("#microsoft.graph.focusActivityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

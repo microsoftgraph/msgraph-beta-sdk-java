@@ -56,6 +56,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      */
     public KerberosSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.kerberosSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

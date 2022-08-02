@@ -32,6 +32,7 @@ public class AospDeviceOwnerScepCertificateProfile extends AospDeviceOwnerCertif
      */
     public AospDeviceOwnerScepCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.aospDeviceOwnerScepCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

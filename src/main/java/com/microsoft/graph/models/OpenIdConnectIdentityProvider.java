@@ -30,6 +30,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      */
     public OpenIdConnectIdentityProvider() {
         super();
+        this.setOdataType("#microsoft.graph.openIdConnectIdentityProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

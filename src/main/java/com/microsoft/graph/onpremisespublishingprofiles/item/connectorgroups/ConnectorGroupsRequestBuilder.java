@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.count.CountRequestBuilder;
 /** Provides operations to manage the connectorGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
 public class ConnectorGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

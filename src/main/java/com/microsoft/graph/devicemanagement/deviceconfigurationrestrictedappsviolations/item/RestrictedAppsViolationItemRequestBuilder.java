@@ -307,7 +307,7 @@ public class RestrictedAppsViolationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new restrictedAppsViolationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RestrictedAppsViolationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RestrictedAppsViolationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RestrictedAppsViolationItemRequestBuilder {
         @javax.annotation.Nullable
         public RestrictedAppsViolationItemRequestBuilderGetQueryParameters queryParameters = new RestrictedAppsViolationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new restrictedAppsViolationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RestrictedAppsViolationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RestrictedAppsViolationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RestrictedAppsViolationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new restrictedAppsViolationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RestrictedAppsViolationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RestrictedAppsViolationItemRequestBuilderPatchRequestConfiguration() {

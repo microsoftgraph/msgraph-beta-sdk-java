@@ -20,14 +20,14 @@ import microsoft.graph.onpremisespublishingprofiles.item.connectors.item.membero
 import microsoft.graph.onpremisespublishingprofiles.item.connectors.item.memberof.ref.RefRequestBuilder;
 /** Provides operations to manage the memberOf property of the microsoft.graph.connector entity. */
 public class MemberOfRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

@@ -320,7 +320,7 @@ public class NextVersionDefinitionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitions.item.previousVersionDefinition.nextVersionDefinition.presentations.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyPresentationItemRequestBuilder
+     * @return a GroupPolicyPresentationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyPresentationItemRequestBuilder presentations(@javax.annotation.Nonnull final String id) {

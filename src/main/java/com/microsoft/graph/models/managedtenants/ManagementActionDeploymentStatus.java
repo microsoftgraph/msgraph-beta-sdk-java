@@ -17,6 +17,8 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
     private String _managementTemplateId;
     /** The managementTemplateVersion property */
     private Integer _managementTemplateVersion;
+    /** The OdataType property */
+    private String _odataType;
     /** The status property */
     private ManagementActionStatus _status;
     /** The collection of workload action deployment statues for the given management action. Optional. */
@@ -27,6 +29,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      */
     public ManagementActionDeploymentStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.managementActionDeploymentStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,10 +56,11 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementActionDeploymentStatus currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("managementActionId", (n) -> { currentObject.setManagementActionId(n.getStringValue()); });
             this.put("managementTemplateId", (n) -> { currentObject.setManagementTemplateId(n.getStringValue()); });
             this.put("managementTemplateVersion", (n) -> { currentObject.setManagementTemplateVersion(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ManagementActionStatus.class)); });
             this.put("workloadActionDeploymentStatuses", (n) -> { currentObject.setWorkloadActionDeploymentStatuses(n.getCollectionOfObjectValues(WorkloadActionDeploymentStatus::createFromDiscriminatorValue)); });
         }};
@@ -86,6 +90,14 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
         return this._managementTemplateVersion;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the status property value. The status property
      * @return a managementActionStatus
      */
@@ -111,6 +123,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
         writer.writeStringValue("managementActionId", this.getManagementActionId());
         writer.writeStringValue("managementTemplateId", this.getManagementTemplateId());
         writer.writeIntegerValue("managementTemplateVersion", this.getManagementTemplateVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("workloadActionDeploymentStatuses", this.getWorkloadActionDeploymentStatuses());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      */
     public void setManagementTemplateVersion(@javax.annotation.Nullable final Integer value) {
         this._managementTemplateVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. The status property

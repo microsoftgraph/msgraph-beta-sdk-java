@@ -20,7 +20,7 @@ import microsoft.graph.models.Vendor;
 import microsoft.graph.models.VendorCollectionResponse;
 /** Provides operations to manage the vendors property of the microsoft.graph.company entity. */
 public class VendorsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

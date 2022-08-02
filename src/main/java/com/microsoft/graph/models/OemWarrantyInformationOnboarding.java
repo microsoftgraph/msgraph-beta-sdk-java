@@ -20,6 +20,7 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
      */
     public OemWarrantyInformationOnboarding() {
         super();
+        this.setOdataType("#microsoft.graph.oemWarrantyInformationOnboarding");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,7 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
      */
     public WindowsQualityUpdateProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.windowsQualityUpdateProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

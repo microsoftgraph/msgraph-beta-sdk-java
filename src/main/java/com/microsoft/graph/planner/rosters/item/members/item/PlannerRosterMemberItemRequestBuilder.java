@@ -307,7 +307,7 @@ public class PlannerRosterMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerRosterMemberItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerRosterMemberItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerRosterMemberItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PlannerRosterMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerRosterMemberItemRequestBuilderGetQueryParameters queryParameters = new PlannerRosterMemberItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerRosterMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerRosterMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerRosterMemberItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PlannerRosterMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerRosterMemberItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerRosterMemberItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerRosterMemberItemRequestBuilderPatchRequestConfiguration() {

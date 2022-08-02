@@ -265,7 +265,7 @@ public class ChatMessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.channels.item.messages.item.replies.item.hostedContents.item collection
      * @param id Unique identifier of the item
-     * @return a chatMessageHostedContentItemRequestBuilder
+     * @return a ChatMessageHostedContentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatMessageHostedContentItemRequestBuilder hostedContents(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class ChatMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chatMessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ChatMessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatMessageItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class ChatMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public ChatMessageItemRequestBuilderGetQueryParameters queryParameters = new ChatMessageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new chatMessageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChatMessageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatMessageItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class ChatMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chatMessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ChatMessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatMessageItemRequestBuilderPatchRequestConfiguration() {

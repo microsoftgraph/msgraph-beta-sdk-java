@@ -30,6 +30,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     public AndroidWorkProfilePkcsCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidWorkProfilePkcsCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

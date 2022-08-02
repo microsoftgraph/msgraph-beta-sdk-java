@@ -20,6 +20,8 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     private Integer _compromisedCount;
     /** Date and time of latest attack simulation and training campaign that the user was included in. */
     private OffsetDateTime _latestSimulationDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Number of attack simulation and training campaigns that the user was included in. */
     private Integer _simulationCount;
     /**
@@ -28,6 +30,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     public AttackSimulationSimulationUserCoverage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attackSimulationSimulationUserCoverage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,11 +81,12 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationSimulationUserCoverage currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
             this.put("clickCount", (n) -> { currentObject.setClickCount(n.getIntegerValue()); });
             this.put("compromisedCount", (n) -> { currentObject.setCompromisedCount(n.getIntegerValue()); });
             this.put("latestSimulationDateTime", (n) -> { currentObject.setLatestSimulationDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("simulationCount", (n) -> { currentObject.setSimulationCount(n.getIntegerValue()); });
         }};
     }
@@ -93,6 +97,14 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     @javax.annotation.Nullable
     public OffsetDateTime getLatestSimulationDateTime() {
         return this._latestSimulationDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
@@ -113,6 +125,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
         writer.writeIntegerValue("clickCount", this.getClickCount());
         writer.writeIntegerValue("compromisedCount", this.getCompromisedCount());
         writer.writeOffsetDateTimeValue("latestSimulationDateTime", this.getLatestSimulationDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("simulationCount", this.getSimulationCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -155,6 +168,14 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     public void setLatestSimulationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._latestSimulationDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.

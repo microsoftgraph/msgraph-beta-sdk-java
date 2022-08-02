@@ -34,7 +34,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceEnvironments.item.accessPackageResources.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceItemRequestBuilder
+     * @return a AccessPackageResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceItemRequestBuilder accessPackageResources(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageResourceEnvironmentItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageResourceEnvironmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration() {

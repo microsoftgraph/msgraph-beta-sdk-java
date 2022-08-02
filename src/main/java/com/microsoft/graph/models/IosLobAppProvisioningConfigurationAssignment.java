@@ -17,6 +17,7 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
      */
     public IosLobAppProvisioningConfigurationAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.iosLobAppProvisioningConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

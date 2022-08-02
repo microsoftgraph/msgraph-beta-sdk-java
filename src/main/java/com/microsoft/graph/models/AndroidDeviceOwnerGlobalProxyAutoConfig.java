@@ -16,6 +16,7 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
      */
     public AndroidDeviceOwnerGlobalProxyAutoConfig() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerGlobalProxyAutoConfig");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

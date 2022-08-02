@@ -20,7 +20,7 @@ import microsoft.graph.models.EmployeeCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the employees property of the microsoft.graph.company entity. */
 public class EmployeesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

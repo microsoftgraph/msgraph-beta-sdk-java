@@ -19,6 +19,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
      */
     public CustomAccessPackageWorkflowExtension() {
         super();
+        this.setOdataType("#microsoft.graph.customAccessPackageWorkflowExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

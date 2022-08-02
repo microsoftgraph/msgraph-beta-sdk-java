@@ -307,7 +307,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPCConnectivityIssueItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPCConnectivityIssueItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPCConnectivityIssueItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPCConnectivityIssueItemRequestBuilderGetQueryParameters queryParameters = new CloudPCConnectivityIssueItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPCConnectivityIssueItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPCConnectivityIssueItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPCConnectivityIssueItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPCConnectivityIssueItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPCConnectivityIssueItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPCConnectivityIssueItemRequestBuilderPatchRequestConfiguration() {

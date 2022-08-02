@@ -20,7 +20,7 @@ import microsoft.graph.models.UsageRight;
 import microsoft.graph.models.UsageRightCollectionResponse;
 /** Provides operations to manage the usageRights property of the microsoft.graph.user entity. */
 public class UsageRightsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

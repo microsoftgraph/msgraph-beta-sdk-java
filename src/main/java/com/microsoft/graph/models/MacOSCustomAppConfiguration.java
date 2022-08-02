@@ -20,6 +20,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      */
     public MacOSCustomAppConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSCustomAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

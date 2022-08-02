@@ -21,6 +21,7 @@ public class TenantRelationship extends Entity implements Parsable {
      */
     public TenantRelationship() {
         super();
+        this.setOdataType("#microsoft.graph.tenantRelationship");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

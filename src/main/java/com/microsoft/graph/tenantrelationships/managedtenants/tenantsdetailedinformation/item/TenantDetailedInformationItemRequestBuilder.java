@@ -307,7 +307,7 @@ public class TenantDetailedInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tenantDetailedInformationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TenantDetailedInformationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TenantDetailedInformationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TenantDetailedInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public TenantDetailedInformationItemRequestBuilderGetQueryParameters queryParameters = new TenantDetailedInformationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tenantDetailedInformationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TenantDetailedInformationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TenantDetailedInformationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TenantDetailedInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tenantDetailedInformationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TenantDetailedInformationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TenantDetailedInformationItemRequestBuilderPatchRequestConfiguration() {

@@ -18,6 +18,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      */
     public ConnectionOperation() {
         super();
+        this.setOdataType("#microsoft.graph.connectionOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

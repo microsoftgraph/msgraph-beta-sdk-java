@@ -15,12 +15,15 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
     private String _kerberosServicePrincipalName;
     /** The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName. */
     private KerberosSignOnMappingAttributeType _kerberosSignOnMappingAttributeType;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new kerberosSignOnSettings and sets the default values.
      * @return a void
      */
     public KerberosSignOnSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.kerberosSignOnSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,9 +50,10 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KerberosSignOnSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("kerberosServicePrincipalName", (n) -> { currentObject.setKerberosServicePrincipalName(n.getStringValue()); });
             this.put("kerberosSignOnMappingAttributeType", (n) -> { currentObject.setKerberosSignOnMappingAttributeType(n.getEnumValue(KerberosSignOnMappingAttributeType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
         return this._kerberosSignOnMappingAttributeType;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("kerberosServicePrincipalName", this.getKerberosServicePrincipalName());
         writer.writeEnumValue("kerberosSignOnMappingAttributeType", this.getKerberosSignOnMappingAttributeType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      */
     public void setKerberosSignOnMappingAttributeType(@javax.annotation.Nullable final KerberosSignOnMappingAttributeType value) {
         this._kerberosSignOnMappingAttributeType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

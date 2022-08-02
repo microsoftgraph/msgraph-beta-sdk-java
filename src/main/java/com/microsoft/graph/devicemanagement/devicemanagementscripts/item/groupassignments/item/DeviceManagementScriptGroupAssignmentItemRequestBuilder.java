@@ -307,7 +307,7 @@ public class DeviceManagementScriptGroupAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementScriptGroupAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptGroupAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptGroupAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementScriptGroupAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementScriptGroupAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementScriptGroupAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementScriptGroupAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptGroupAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptGroupAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementScriptGroupAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementScriptGroupAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptGroupAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptGroupAssignmentItemRequestBuilderPatchRequestConfiguration() {

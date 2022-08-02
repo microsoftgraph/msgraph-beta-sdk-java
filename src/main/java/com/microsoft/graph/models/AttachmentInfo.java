@@ -17,6 +17,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     private String _contentType;
     /** The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The length of the attachment in bytes. Required. */
     private Long _size;
     /**
@@ -25,6 +27,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      */
     public AttachmentInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attachmentInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttachmentInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("attachmentType", (n) -> { currentObject.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the size property value. The length of the attachment in bytes. Required.
@@ -100,6 +112,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("attachmentType", this.getAttachmentType());
         writer.writeStringValue("contentType", this.getContentType());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("size", this.getSize());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.

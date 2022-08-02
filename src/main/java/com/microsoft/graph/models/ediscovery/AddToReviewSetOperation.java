@@ -18,6 +18,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      */
     public AddToReviewSetOperation() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.addToReviewSetOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

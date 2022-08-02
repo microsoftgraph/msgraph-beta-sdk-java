@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolic
 import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse;
 /** Provides operations to manage the deviceStatuses property of the microsoft.graph.windowsDefenderApplicationControlSupplementalPolicy entity. */
 public class DeviceStatusesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

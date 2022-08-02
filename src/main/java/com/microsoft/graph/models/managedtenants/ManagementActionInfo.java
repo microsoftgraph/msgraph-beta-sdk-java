@@ -17,12 +17,15 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
     private String _managementTemplateId;
     /** The managementTemplateVersion property */
     private Integer _managementTemplateVersion;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new managementActionInfo and sets the default values.
      * @return a void
      */
     public ManagementActionInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.managementActionInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementActionInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("managementActionId", (n) -> { currentObject.setManagementActionId(n.getStringValue()); });
             this.put("managementTemplateId", (n) -> { currentObject.setManagementTemplateId(n.getStringValue()); });
             this.put("managementTemplateVersion", (n) -> { currentObject.setManagementTemplateVersion(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
         return this._managementTemplateVersion;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("managementActionId", this.getManagementActionId());
         writer.writeStringValue("managementTemplateId", this.getManagementTemplateId());
         writer.writeIntegerValue("managementTemplateVersion", this.getManagementTemplateVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      */
     public void setManagementTemplateVersion(@javax.annotation.Nullable final Integer value) {
         this._managementTemplateVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

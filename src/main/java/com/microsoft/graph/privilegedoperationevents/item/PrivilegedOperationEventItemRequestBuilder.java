@@ -307,7 +307,7 @@ public class PrivilegedOperationEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedOperationEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedOperationEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedOperationEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PrivilegedOperationEventItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedOperationEventItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedOperationEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedOperationEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedOperationEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedOperationEventItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PrivilegedOperationEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedOperationEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedOperationEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedOperationEventItemRequestBuilderPatchRequestConfiguration() {

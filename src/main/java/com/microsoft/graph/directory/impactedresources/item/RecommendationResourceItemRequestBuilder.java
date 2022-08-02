@@ -331,7 +331,7 @@ public class RecommendationResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new recommendationResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RecommendationResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RecommendationResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class RecommendationResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public RecommendationResourceItemRequestBuilderGetQueryParameters queryParameters = new RecommendationResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new recommendationResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RecommendationResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RecommendationResourceItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class RecommendationResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new recommendationResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RecommendationResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RecommendationResourceItemRequestBuilderPatchRequestConfiguration() {

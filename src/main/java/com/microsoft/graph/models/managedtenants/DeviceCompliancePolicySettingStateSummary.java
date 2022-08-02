@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable {
     /** The number of devices in a conflict state. Optional. Read-only. */
     private Integer _conflictDeviceCount;
@@ -43,6 +43,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      */
     public DeviceCompliancePolicySettingStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.deviceCompliancePolicySettingStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

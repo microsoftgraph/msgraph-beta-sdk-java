@@ -26,6 +26,8 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
     private Integer _natKeepAliveIntervalInSeconds;
     /** Enable hardware offloading of NAT keepalive signals when the device is asleep */
     private Boolean _natKeepAliveOffloadEnable;
+    /** The OdataType property */
+    private String _odataType;
     /** The type of tunnels that will be present to the VPN client for configuration */
     private VpnTunnelConfigurationType _tunnelConfiguration;
     /** Allow the user to toggle the VPN configuration using the UI */
@@ -38,6 +40,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     public AppleVpnAlwaysOnConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.appleVpnAlwaysOnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -104,7 +107,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleVpnAlwaysOnConfiguration currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("airPrintExceptionAction", (n) -> { currentObject.setAirPrintExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
             this.put("allowAllCaptiveNetworkPlugins", (n) -> { currentObject.setAllowAllCaptiveNetworkPlugins(n.getBooleanValue()); });
             this.put("allowCaptiveWebSheet", (n) -> { currentObject.setAllowCaptiveWebSheet(n.getBooleanValue()); });
@@ -112,6 +115,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
             this.put("cellularExceptionAction", (n) -> { currentObject.setCellularExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
             this.put("natKeepAliveIntervalInSeconds", (n) -> { currentObject.setNatKeepAliveIntervalInSeconds(n.getIntegerValue()); });
             this.put("natKeepAliveOffloadEnable", (n) -> { currentObject.setNatKeepAliveOffloadEnable(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tunnelConfiguration", (n) -> { currentObject.setTunnelConfiguration(n.getEnumValue(VpnTunnelConfigurationType.class)); });
             this.put("userToggleEnabled", (n) -> { currentObject.setUserToggleEnabled(n.getBooleanValue()); });
             this.put("voicemailExceptionAction", (n) -> { currentObject.setVoicemailExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
@@ -132,6 +136,14 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public Boolean getNatKeepAliveOffloadEnable() {
         return this._natKeepAliveOffloadEnable;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration
@@ -171,6 +183,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
         writer.writeEnumValue("cellularExceptionAction", this.getCellularExceptionAction());
         writer.writeIntegerValue("natKeepAliveIntervalInSeconds", this.getNatKeepAliveIntervalInSeconds());
         writer.writeBooleanValue("natKeepAliveOffloadEnable", this.getNatKeepAliveOffloadEnable());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("tunnelConfiguration", this.getTunnelConfiguration());
         writer.writeBooleanValue("userToggleEnabled", this.getUserToggleEnabled());
         writer.writeEnumValue("voicemailExceptionAction", this.getVoicemailExceptionAction());
@@ -239,6 +252,14 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     public void setNatKeepAliveOffloadEnable(@javax.annotation.Nullable final Boolean value) {
         this._natKeepAliveOffloadEnable = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration

@@ -307,7 +307,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosLobAppProvisioningConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new iosLobAppProvisioningConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosLobAppProvisioningConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosLobAppProvisioningConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration() {

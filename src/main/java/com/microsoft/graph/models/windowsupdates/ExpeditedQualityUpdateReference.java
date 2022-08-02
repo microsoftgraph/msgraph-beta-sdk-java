@@ -16,6 +16,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
      */
     public ExpeditedQualityUpdateReference() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.expeditedQualityUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -283,7 +283,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyUploadedDefinitionFiles.item.groupPolicyOperations.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyOperationItemRequestBuilder
+     * @return a GroupPolicyOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyOperationItemRequestBuilder groupPolicyOperations(@javax.annotation.Nonnull final String id) {
@@ -356,7 +356,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyUploadedDefinitionFileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyUploadedDefinitionFileItemRequestBuilderDeleteRequestConfiguration() {
@@ -385,7 +385,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyUploadedDefinitionFileItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyUploadedDefinitionFileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyUploadedDefinitionFileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyUploadedDefinitionFileItemRequestBuilderGetRequestConfiguration() {
@@ -400,7 +400,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyUploadedDefinitionFileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyUploadedDefinitionFileItemRequestBuilderPatchRequestConfiguration() {

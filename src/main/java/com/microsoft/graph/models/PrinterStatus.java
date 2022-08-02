@@ -15,6 +15,8 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     private String _description;
     /** The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only. */
     private java.util.List<String> _details;
+    /** The OdataType property */
+    private String _odataType;
     /** The processingState property */
     private PrinterProcessingState _processingState;
     /** The processingStateDescription property */
@@ -29,6 +31,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      */
     public PrinterStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printerStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,14 +74,23 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterStatus currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrinterProcessingState.class)); });
             this.put("processingStateDescription", (n) -> { currentObject.setProcessingStateDescription(n.getStringValue()); });
             this.put("processingStateReasons", (n) -> { currentObject.setProcessingStateReasons(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrinterProcessingState.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the processingState property value. The processingState property
@@ -121,6 +133,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfPrimitiveValues("details", this.getDetails());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("processingState", this.getProcessingState());
         writer.writeStringValue("processingStateDescription", this.getProcessingStateDescription());
         writer.writeCollectionOfPrimitiveValues("processingStateReasons", this.getProcessingStateReasons());
@@ -150,6 +163,14 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      */
     public void setDetails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._details = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the processingState property value. The processingState property

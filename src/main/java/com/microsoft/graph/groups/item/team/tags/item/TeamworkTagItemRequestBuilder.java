@@ -253,7 +253,7 @@ public class TeamworkTagItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.tags.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a teamworkTagMemberItemRequestBuilder
+     * @return a TeamworkTagMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamworkTagMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class TeamworkTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkTagItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class TeamworkTagItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamworkTagItemRequestBuilderGetQueryParameters queryParameters = new TeamworkTagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamworkTagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkTagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkTagItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class TeamworkTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkTagItemRequestBuilderPatchRequestConfiguration() {

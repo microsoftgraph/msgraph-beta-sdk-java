@@ -209,7 +209,7 @@ public class BaseTaskListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.tasks.lists.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class BaseTaskListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.tasks.lists.item.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a baseTaskItemRequestBuilder
+     * @return a BaseTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BaseTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class BaseTaskListItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new baseTaskListItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BaseTaskListItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BaseTaskListItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class BaseTaskListItemRequestBuilder {
         @javax.annotation.Nullable
         public BaseTaskListItemRequestBuilderGetQueryParameters queryParameters = new BaseTaskListItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new baseTaskListItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BaseTaskListItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BaseTaskListItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class BaseTaskListItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new baseTaskListItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BaseTaskListItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BaseTaskListItemRequestBuilderPatchRequestConfiguration() {

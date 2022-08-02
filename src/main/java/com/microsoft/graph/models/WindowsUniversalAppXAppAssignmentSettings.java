@@ -16,6 +16,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
      */
     public WindowsUniversalAppXAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUniversalAppXAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,6 +14,7 @@ public class TaskList extends BaseTaskList implements Parsable {
      */
     public TaskList() {
         super();
+        this.setOdataType("#microsoft.graph.taskList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

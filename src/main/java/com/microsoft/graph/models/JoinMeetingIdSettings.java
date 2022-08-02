@@ -15,6 +15,8 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     private Boolean _isPasscodeRequired;
     /** The meeting ID to be used to join a meeting. Optional. Read-only. */
     private String _joinMeetingId;
+    /** The OdataType property */
+    private String _odataType;
     /** The passcode to join a meeting.  Optional. Read-only. */
     private String _passcode;
     /**
@@ -23,6 +25,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      */
     public JoinMeetingIdSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.joinMeetingIdSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final JoinMeetingIdSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isPasscodeRequired", (n) -> { currentObject.setIsPasscodeRequired(n.getBooleanValue()); });
             this.put("joinMeetingId", (n) -> { currentObject.setJoinMeetingId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         return this._joinMeetingId;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the passcode property value. The passcode to join a meeting.  Optional. Read-only.
      * @return a string
      */
@@ -88,6 +100,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isPasscodeRequired", this.getIsPasscodeRequired());
         writer.writeStringValue("joinMeetingId", this.getJoinMeetingId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("passcode", this.getPasscode());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      */
     public void setJoinMeetingId(@javax.annotation.Nullable final String value) {
         this._joinMeetingId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the passcode property value. The passcode to join a meeting.  Optional. Read-only.

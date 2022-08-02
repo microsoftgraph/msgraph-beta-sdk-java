@@ -16,6 +16,7 @@ public class InformationProtectionPolicy extends Entity implements Parsable {
      */
     public InformationProtectionPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.informationProtectionPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

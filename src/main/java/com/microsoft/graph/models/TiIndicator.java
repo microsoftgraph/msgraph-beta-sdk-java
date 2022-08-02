@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TiIndicator extends Entity implements Parsable {
     /** The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required. */
     private TiAction _action;
@@ -127,16 +126,17 @@ public class TiIndicator extends Entity implements Parsable {
     /** The userAgent property */
     private String _userAgent;
     /**
-     * Instantiates a new tiIndicator and sets the default values.
+     * Instantiates a new TiIndicator and sets the default values.
      * @return a void
      */
     public TiIndicator() {
         super();
+        this.setOdataType("#microsoft.graph.tiIndicator");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tiIndicator
+     * @return a TiIndicator
      */
     @javax.annotation.Nonnull
     public static TiIndicator createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

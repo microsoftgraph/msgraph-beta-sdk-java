@@ -155,7 +155,7 @@ public class ManagedEBookCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedEBookCategoryItemRequestBuilderGetQueryParameters queryParameters = new ManagedEBookCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedEBookCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookCategoryItemRequestBuilderGetRequestConfiguration() {

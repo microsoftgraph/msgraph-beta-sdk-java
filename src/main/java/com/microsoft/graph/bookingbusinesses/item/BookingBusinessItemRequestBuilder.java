@@ -85,7 +85,7 @@ public class BookingBusinessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item.appointments.item collection
      * @param id Unique identifier of the item
-     * @return a bookingAppointmentItemRequestBuilder
+     * @return a BookingAppointmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder appointments(@javax.annotation.Nonnull final String id) {
@@ -97,7 +97,7 @@ public class BookingBusinessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item.calendarView.item collection
      * @param id Unique identifier of the item
-     * @return a bookingAppointmentItemRequestBuilder
+     * @return a BookingAppointmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
@@ -226,7 +226,7 @@ public class BookingBusinessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item.customers.item collection
      * @param id Unique identifier of the item
-     * @return a bookingCustomerItemRequestBuilder
+     * @return a BookingCustomerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingCustomerItemRequestBuilder customers(@javax.annotation.Nonnull final String id) {
@@ -238,7 +238,7 @@ public class BookingBusinessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item.customQuestions.item collection
      * @param id Unique identifier of the item
-     * @return a bookingCustomQuestionItemRequestBuilder
+     * @return a BookingCustomQuestionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingCustomQuestionItemRequestBuilder customQuestions(@javax.annotation.Nonnull final String id) {
@@ -407,7 +407,7 @@ public class BookingBusinessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item.services.item collection
      * @param id Unique identifier of the item
-     * @return a bookingServiceItemRequestBuilder
+     * @return a BookingServiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingServiceItemRequestBuilder services(@javax.annotation.Nonnull final String id) {
@@ -419,7 +419,7 @@ public class BookingBusinessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item.staffMembers.item collection
      * @param id Unique identifier of the item
-     * @return a bookingStaffMemberItemRequestBuilder
+     * @return a BookingStaffMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingStaffMemberItemRequestBuilder staffMembers(@javax.annotation.Nonnull final String id) {
@@ -437,7 +437,7 @@ public class BookingBusinessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingBusinessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BookingBusinessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingBusinessItemRequestBuilderDeleteRequestConfiguration() {
@@ -466,7 +466,7 @@ public class BookingBusinessItemRequestBuilder {
         @javax.annotation.Nullable
         public BookingBusinessItemRequestBuilderGetQueryParameters queryParameters = new BookingBusinessItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new bookingBusinessItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BookingBusinessItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingBusinessItemRequestBuilderGetRequestConfiguration() {
@@ -481,7 +481,7 @@ public class BookingBusinessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingBusinessItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BookingBusinessItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingBusinessItemRequestBuilderPatchRequestConfiguration() {

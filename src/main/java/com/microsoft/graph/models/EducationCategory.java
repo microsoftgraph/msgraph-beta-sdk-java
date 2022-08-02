@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class EducationCategory extends Entity implements Parsable {
     /** Unique identifier for the category. */
     private String _displayName;
@@ -17,6 +17,7 @@ public class EducationCategory extends Entity implements Parsable {
      */
     public EducationCategory() {
         super();
+        this.setOdataType("#microsoft.graph.educationCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

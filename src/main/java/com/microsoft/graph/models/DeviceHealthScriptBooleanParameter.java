@@ -16,6 +16,7 @@ public class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParame
      */
     public DeviceHealthScriptBooleanParameter() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptBooleanParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

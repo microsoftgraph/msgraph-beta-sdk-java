@@ -313,7 +313,7 @@ public class JournalLineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new journalLineItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new JournalLineItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public JournalLineItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class JournalLineItemRequestBuilder {
         @javax.annotation.Nullable
         public JournalLineItemRequestBuilderGetQueryParameters queryParameters = new JournalLineItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new journalLineItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new JournalLineItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public JournalLineItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class JournalLineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new journalLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new JournalLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public JournalLineItemRequestBuilderPatchRequestConfiguration() {

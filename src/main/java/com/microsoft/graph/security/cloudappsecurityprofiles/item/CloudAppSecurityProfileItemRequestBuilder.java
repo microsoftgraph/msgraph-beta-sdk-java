@@ -307,7 +307,7 @@ public class CloudAppSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudAppSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudAppSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudAppSecurityProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudAppSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudAppSecurityProfileItemRequestBuilderGetQueryParameters queryParameters = new CloudAppSecurityProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudAppSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudAppSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudAppSecurityProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudAppSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudAppSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudAppSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudAppSecurityProfileItemRequestBuilderPatchRequestConfiguration() {

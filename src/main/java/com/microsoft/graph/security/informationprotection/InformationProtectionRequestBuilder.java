@@ -314,7 +314,7 @@ public class InformationProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.informationProtection.sensitivityLabels.item collection
      * @param id Unique identifier of the item
-     * @return a sensitivityLabelItemRequestBuilder
+     * @return a SensitivityLabelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SensitivityLabelItemRequestBuilder sensitivityLabels(@javax.annotation.Nonnull final String id) {

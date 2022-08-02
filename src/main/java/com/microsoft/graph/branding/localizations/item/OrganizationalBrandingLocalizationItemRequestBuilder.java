@@ -18,6 +18,7 @@ import microsoft.graph.branding.localizations.item.backgroundimage.BackgroundIma
 import microsoft.graph.branding.localizations.item.bannerlogo.BannerLogoRequestBuilder;
 import microsoft.graph.branding.localizations.item.favicon.FaviconRequestBuilder;
 import microsoft.graph.branding.localizations.item.squarelogo.SquareLogoRequestBuilder;
+import microsoft.graph.branding.localizations.item.squarelogodark.SquareLogoDarkRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.OrganizationalBrandingLocalization;
 /** Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity. */
@@ -45,6 +46,11 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
     @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The squareLogoDark property */
+    @javax.annotation.Nonnull
+    public SquareLogoDarkRequestBuilder squareLogoDark() {
+        return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
@@ -331,7 +337,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new organizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +366,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters queryParameters = new OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new organizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +381,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new organizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration() {

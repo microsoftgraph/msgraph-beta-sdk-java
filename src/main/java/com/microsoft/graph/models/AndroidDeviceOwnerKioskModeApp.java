@@ -18,6 +18,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      */
     public AndroidDeviceOwnerKioskModeApp() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -13,7 +13,9 @@ import microsoft.graph.models.windowsupdates.Windows;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The reportSettings property */
+    /** The OdataType property */
+    private String _odataType;
+    /** A container for administrative resources to manage reports. */
     private AdminReportSettings _reportSettings;
     /** A container for service communications resources. Read-only. */
     private ServiceAnnouncement _serviceAnnouncement;
@@ -27,6 +29,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public Admin() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.admin");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +56,8 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Admin currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reportSettings", (n) -> { currentObject.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
             this.put("serviceAnnouncement", (n) -> { currentObject.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
             this.put("sharepoint", (n) -> { currentObject.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
@@ -61,7 +65,15 @@ public class Admin implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the reportSettings property value. The reportSettings property
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the reportSettings property value. A container for administrative resources to manage reports.
      * @return a adminReportSettings
      */
     @javax.annotation.Nullable
@@ -99,6 +111,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("reportSettings", this.getReportSettings());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeObjectValue("sharepoint", this.getSharepoint());
@@ -114,7 +127,15 @@ public class Admin implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the reportSettings property value. The reportSettings property
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the reportSettings property value. A container for administrative resources to manage reports.
      * @param value Value to set for the reportSettings property.
      * @return a void
      */

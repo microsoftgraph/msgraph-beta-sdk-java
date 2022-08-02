@@ -20,6 +20,8 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     private Integer _failedDeviceCount;
     /** The number of devices evaluated to be noncompliant by the policy. */
     private Integer _nonCompliantDeviceCount;
+    /** The OdataType property */
+    private String _odataType;
     /** The number of devices that have acknowledged the policy but are pending evaluation. */
     private Integer _pendingDeviceCount;
     /** The number of devices targeted by the policy. */
@@ -30,6 +32,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     public ConfigManagerPolicySummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.configManagerPolicySummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,11 +83,12 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigManagerPolicySummary currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
             this.put("enforcedDeviceCount", (n) -> { currentObject.setEnforcedDeviceCount(n.getIntegerValue()); });
             this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
             this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("pendingDeviceCount", (n) -> { currentObject.setPendingDeviceCount(n.getIntegerValue()); });
             this.put("targetedDeviceCount", (n) -> { currentObject.setTargetedDeviceCount(n.getIntegerValue()); });
         }};
@@ -96,6 +100,14 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
         return this._nonCompliantDeviceCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
@@ -124,6 +136,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
         writer.writeIntegerValue("enforcedDeviceCount", this.getEnforcedDeviceCount());
         writer.writeIntegerValue("failedDeviceCount", this.getFailedDeviceCount());
         writer.writeIntegerValue("nonCompliantDeviceCount", this.getNonCompliantDeviceCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("pendingDeviceCount", this.getPendingDeviceCount());
         writer.writeIntegerValue("targetedDeviceCount", this.getTargetedDeviceCount());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -167,6 +180,14 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._nonCompliantDeviceCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.

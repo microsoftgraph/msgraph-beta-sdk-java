@@ -15,6 +15,8 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     private Windows10DeviceModeType _deviceMode;
     /** Name for object. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Supported Applicability rule types for Device Configuration */
     private DeviceManagementApplicabilityRuleType _ruleType;
     /**
@@ -23,6 +25,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      */
     public DeviceManagementApplicabilityRuleDeviceMode() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementApplicabilityRuleDeviceMode");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,9 +60,10 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementApplicabilityRuleDeviceMode currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("deviceMode", (n) -> { currentObject.setDeviceMode(n.getEnumValue(Windows10DeviceModeType.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleType", (n) -> { currentObject.setRuleType(n.getEnumValue(DeviceManagementApplicabilityRuleType.class)); });
         }};
     }
@@ -70,6 +74,14 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
@@ -88,6 +100,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         Objects.requireNonNull(writer);
         writer.writeEnumValue("deviceMode", this.getDeviceMode());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("ruleType", this.getRuleType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the ruleType property value. Supported Applicability rule types for Device Configuration

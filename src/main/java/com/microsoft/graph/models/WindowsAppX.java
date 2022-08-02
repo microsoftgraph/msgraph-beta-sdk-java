@@ -28,6 +28,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      */
     public WindowsAppX() {
         super();
+        this.setOdataType("#microsoft.graph.windowsAppX");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

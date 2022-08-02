@@ -28,6 +28,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      */
     public AddContentHeaderAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.addContentHeaderAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

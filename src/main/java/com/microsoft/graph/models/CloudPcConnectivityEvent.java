@@ -22,12 +22,15 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
     private CloudPcConnectivityEventType _eventType;
     /** The message property */
     private String _message;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new cloudPcConnectivityEvent and sets the default values.
      * @return a void
      */
     public CloudPcConnectivityEvent() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcConnectivityEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,12 +89,13 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcConnectivityEvent currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
             this.put("eventResult", (n) -> { currentObject.setEventResult(n.getEnumValue(CloudPcConnectivityEventResult.class)); });
             this.put("eventType", (n) -> { currentObject.setEventType(n.getEnumValue(CloudPcConnectivityEventType.class)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -101,6 +105,14 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public String getMessage() {
         return this._message;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -114,6 +126,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         writer.writeEnumValue("eventResult", this.getEventResult());
         writer.writeEnumValue("eventType", this.getEventType());
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -163,5 +176,13 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      */
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

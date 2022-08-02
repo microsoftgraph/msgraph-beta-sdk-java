@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrintConnector extends Entity implements Parsable {
     /** The connector's version. */
     private String _appVersion;
@@ -32,6 +32,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     public PrintConnector() {
         super();
+        this.setOdataType("#microsoft.graph.printConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

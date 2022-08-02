@@ -16,6 +16,7 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
      */
     public RotateBitLockerKeysDeviceActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.rotateBitLockerKeysDeviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

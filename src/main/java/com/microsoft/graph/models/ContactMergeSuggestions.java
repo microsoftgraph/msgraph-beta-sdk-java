@@ -16,6 +16,7 @@ public class ContactMergeSuggestions extends Entity implements Parsable {
      */
     public ContactMergeSuggestions() {
         super();
+        this.setOdataType("#microsoft.graph.contactMergeSuggestions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

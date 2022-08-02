@@ -25,6 +25,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      */
     public ApplicationSignInDetailedSummary() {
         super();
+        this.setOdataType("#microsoft.graph.applicationSignInDetailedSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

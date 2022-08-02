@@ -24,7 +24,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      */
     public AndroidForWorkWiFiConfiguration() {
         super();
-        this.setType("#microsoft.graph.androidForWorkWiFiConfiguration");
+        this.setOdataType("#microsoft.graph.androidForWorkWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

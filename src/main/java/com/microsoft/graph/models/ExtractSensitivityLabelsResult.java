@@ -13,12 +13,15 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
     private Map<String, Object> _additionalData;
     /** List of sensitivity labels assigned to a file. */
     private java.util.List<SensitivityLabelAssignment> _labels;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new extractSensitivityLabelsResult and sets the default values.
      * @return a void
      */
     public ExtractSensitivityLabelsResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.extractSensitivityLabelsResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExtractSensitivityLabelsResult currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfObjectValues(SensitivityLabelAssignment::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
         return this._labels;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("labels", this.getLabels());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      */
     public void setLabels(@javax.annotation.Nullable final java.util.List<SensitivityLabelAssignment> value) {
         this._labels = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

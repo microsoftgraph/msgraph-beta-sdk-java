@@ -7,28 +7,30 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes a single artifact for a specific device model. */
 public class ZebraFotaArtifact extends Entity implements Parsable {
-    /** The version of the Board Support Package. */
+    /** The version of the Board Support Package (BSP. E.g.: 01.18.02.00) */
     private String _boardSupportPackageVersion;
-    /** Artifact device model. */
+    /** Applicable device model (e.g.: TC8300) */
     private String _deviceModel;
-    /** Artifact OS version. */
+    /** Artifact OS version (e.g.: 8.1.0) */
     private String _osVersion;
-    /** Artifact patch version. */
+    /** Artifact patch version (e.g.: U00) */
     private String _patchVersion;
-    /** Artifact release notes URL. */
+    /** Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>) */
     private String _releaseNotesUrl;
     /**
-     * Instantiates a new ZebraFotaArtifact and sets the default values.
+     * Instantiates a new zebraFotaArtifact and sets the default values.
      * @return a void
      */
     public ZebraFotaArtifact() {
         super();
+        this.setOdataType("#microsoft.graph.zebraFotaArtifact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ZebraFotaArtifact
+     * @return a zebraFotaArtifact
      */
     @javax.annotation.Nonnull
     public static ZebraFotaArtifact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +38,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         return new ZebraFotaArtifact();
     }
     /**
-     * Gets the boardSupportPackageVersion property value. The version of the Board Support Package.
+     * Gets the boardSupportPackageVersion property value. The version of the Board Support Package (BSP. E.g.: 01.18.02.00)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -44,7 +46,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         return this._boardSupportPackageVersion;
     }
     /**
-     * Gets the deviceModel property value. Artifact device model.
+     * Gets the deviceModel property value. Applicable device model (e.g.: TC8300)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -67,7 +69,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the osVersion property value. Artifact OS version.
+     * Gets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +77,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         return this._osVersion;
     }
     /**
-     * Gets the patchVersion property value. Artifact patch version.
+     * Gets the patchVersion property value. Artifact patch version (e.g.: U00)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +85,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         return this._patchVersion;
     }
     /**
-     * Gets the releaseNotesUrl property value. Artifact release notes URL.
+     * Gets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -105,7 +107,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         writer.writeStringValue("releaseNotesUrl", this.getReleaseNotesUrl());
     }
     /**
-     * Sets the boardSupportPackageVersion property value. The version of the Board Support Package.
+     * Sets the boardSupportPackageVersion property value. The version of the Board Support Package (BSP. E.g.: 01.18.02.00)
      * @param value Value to set for the boardSupportPackageVersion property.
      * @return a void
      */
@@ -113,7 +115,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         this._boardSupportPackageVersion = value;
     }
     /**
-     * Sets the deviceModel property value. Artifact device model.
+     * Sets the deviceModel property value. Applicable device model (e.g.: TC8300)
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
@@ -121,7 +123,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         this._deviceModel = value;
     }
     /**
-     * Sets the osVersion property value. Artifact OS version.
+     * Sets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
      * @param value Value to set for the osVersion property.
      * @return a void
      */
@@ -129,7 +131,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         this._osVersion = value;
     }
     /**
-     * Sets the patchVersion property value. Artifact patch version.
+     * Sets the patchVersion property value. Artifact patch version (e.g.: U00)
      * @param value Value to set for the patchVersion property.
      * @return a void
      */
@@ -137,7 +139,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         this._patchVersion = value;
     }
     /**
-     * Sets the releaseNotesUrl property value. Artifact release notes URL.
+     * Sets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
      * @param value Value to set for the releaseNotesUrl property.
      * @return a void
      */

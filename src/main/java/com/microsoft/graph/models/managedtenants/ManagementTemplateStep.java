@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.ActionUrl;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagementTemplateStep extends Entity implements Parsable {
     /** The acceptedVersion property */
     private ManagementTemplateStepVersion _acceptedVersion;
@@ -42,6 +42,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      */
     public ManagementTemplateStep() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managementTemplateStep");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

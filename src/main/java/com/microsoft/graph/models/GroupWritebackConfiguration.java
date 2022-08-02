@@ -16,6 +16,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      */
     public GroupWritebackConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.groupWritebackConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

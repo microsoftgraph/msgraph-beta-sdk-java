@@ -29,6 +29,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      */
     public ItemPatent() {
         super();
+        this.setOdataType("#microsoft.graph.itemPatent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -246,7 +246,7 @@ public class AdministrativeUnitItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -309,7 +309,7 @@ public class AdministrativeUnitItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -376,7 +376,7 @@ public class AdministrativeUnitItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item.scopedRoleMembers.item collection
      * @param id Unique identifier of the item
-     * @return a scopedRoleMembershipItemRequestBuilder
+     * @return a ScopedRoleMembershipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedRoleMembers(@javax.annotation.Nonnull final String id) {
@@ -394,7 +394,7 @@ public class AdministrativeUnitItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new administrativeUnitItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration() {
@@ -423,7 +423,7 @@ public class AdministrativeUnitItemRequestBuilder {
         @javax.annotation.Nullable
         public AdministrativeUnitItemRequestBuilderGetQueryParameters queryParameters = new AdministrativeUnitItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new administrativeUnitItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AdministrativeUnitItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AdministrativeUnitItemRequestBuilderGetRequestConfiguration() {
@@ -438,7 +438,7 @@ public class AdministrativeUnitItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new administrativeUnitItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AdministrativeUnitItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AdministrativeUnitItemRequestBuilderPatchRequestConfiguration() {

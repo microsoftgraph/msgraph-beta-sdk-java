@@ -16,6 +16,8 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     private Boolean _isEnabled;
     /** Maximum image size that will be processed in KB). */
     private Integer _maxImageSize;
+    /** The OdataType property */
+    private String _odataType;
     /** The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time. */
     private Period _timeout;
     /**
@@ -24,6 +26,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     public OcrSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.ediscovery.ocrSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,9 +53,10 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OcrSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("maxImageSize", (n) -> { currentObject.setMaxImageSize(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeout", (n) -> { currentObject.setTimeout(n.getPeriodValue()); });
         }};
     }
@@ -73,6 +77,14 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         return this._maxImageSize;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the timeout property value. The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time.
      * @return a Period
      */
@@ -89,6 +101,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeIntegerValue("maxImageSize", this.getMaxImageSize());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writePeriodValue("timeout", this.getTimeout());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     public void setMaxImageSize(@javax.annotation.Nullable final Integer value) {
         this._maxImageSize = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the timeout property value. The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time.

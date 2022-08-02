@@ -13,6 +13,8 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** True if the current peripheral is optional. If set to false, this property is also used as part of the calculation of the health state for the device. */
     private Boolean _isOptional;
+    /** The OdataType property */
+    private String _odataType;
     /** The peripheral property */
     private TeamworkPeripheral _peripheral;
     /**
@@ -21,6 +23,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
      */
     public TeamworkConfiguredPeripheral() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkConfiguredPeripheral");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkConfiguredPeripheral currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("peripheral", (n) -> { currentObject.setPeripheral(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
         }};
     }
@@ -59,6 +63,14 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Boolean getIsOptional() {
         return this._isOptional;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the peripheral property value. The peripheral property
@@ -76,6 +88,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isOptional", this.getIsOptional());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("peripheral", this.getPeripheral());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
      */
     public void setIsOptional(@javax.annotation.Nullable final Boolean value) {
         this._isOptional = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the peripheral property value. The peripheral property

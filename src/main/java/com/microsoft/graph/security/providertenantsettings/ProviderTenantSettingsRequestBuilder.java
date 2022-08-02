@@ -20,7 +20,7 @@ import microsoft.graph.models.ProviderTenantSettingCollectionResponse;
 import microsoft.graph.security.providertenantsettings.count.CountRequestBuilder;
 /** Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity. */
 public class ProviderTenantSettingsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

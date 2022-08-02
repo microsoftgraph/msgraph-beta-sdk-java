@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import microsoft.graph.models.WindowsAutopilotDeviceIdentityCollectionResponse;
 /** Provides operations to manage the assignedDevices property of the microsoft.graph.windowsAutopilotDeploymentProfile entity. */
 public class AssignedDevicesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

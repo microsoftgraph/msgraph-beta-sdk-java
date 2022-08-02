@@ -24,6 +24,8 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
     private String _certificationAuthority;
     /** PKCS Certification Authority Name. */
     private String _certificationAuthorityName;
+    /** The OdataType property */
+    private String _odataType;
     /** Certificate renewal threshold percentage. Valid values 1 to 99 */
     private Integer _renewalThresholdPercentage;
     /** Trusted Root Certificate. */
@@ -34,6 +36,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      */
     public IosEduCertificateSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosEduCertificateSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -108,16 +111,25 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosEduCertificateSettings currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
             this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
             this.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
             this.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
             this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
             this.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
             this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
@@ -148,6 +160,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
         writer.writeIntegerValue("certificateValidityPeriodValue", this.getCertificateValidityPeriodValue());
         writer.writeStringValue("certificationAuthority", this.getCertificationAuthority());
         writer.writeStringValue("certificationAuthorityName", this.getCertificationAuthorityName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
         writer.writeByteArrayValue("trustedRootCertificate", this.getTrustedRootCertificate());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -207,6 +220,14 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      */
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
         this._certificationAuthorityName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99

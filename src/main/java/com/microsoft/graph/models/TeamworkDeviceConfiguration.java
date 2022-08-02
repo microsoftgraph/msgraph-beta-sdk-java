@@ -39,6 +39,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      */
     public TeamworkDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.teamworkDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

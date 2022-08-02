@@ -307,7 +307,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuil
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuil
         @javax.annotation.Nullable
         public AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetQueryParameters queryParameters = new AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuil
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilderPatchRequestConfiguration() {

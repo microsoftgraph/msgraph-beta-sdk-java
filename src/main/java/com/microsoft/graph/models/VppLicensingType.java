@@ -12,6 +12,8 @@ import java.util.Objects;
 public class VppLicensingType implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Whether the program supports the device licensing type. */
     private Boolean _supportDeviceLicensing;
     /** Whether the program supports the device licensing type. */
@@ -26,6 +28,7 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
      */
     public VppLicensingType() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.vppLicensingType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,12 +55,21 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppLicensingType currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("supportDeviceLicensing", (n) -> { currentObject.setSupportDeviceLicensing(n.getBooleanValue()); });
             this.put("supportsDeviceLicensing", (n) -> { currentObject.setSupportsDeviceLicensing(n.getBooleanValue()); });
             this.put("supportsUserLicensing", (n) -> { currentObject.setSupportsUserLicensing(n.getBooleanValue()); });
             this.put("supportUserLicensing", (n) -> { currentObject.setSupportUserLicensing(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the supportDeviceLicensing property value. Whether the program supports the device licensing type.
@@ -98,6 +110,7 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("supportDeviceLicensing", this.getSupportDeviceLicensing());
         writer.writeBooleanValue("supportsDeviceLicensing", this.getSupportsDeviceLicensing());
         writer.writeBooleanValue("supportsUserLicensing", this.getSupportsUserLicensing());
@@ -111,6 +124,14 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the supportDeviceLicensing property value. Whether the program supports the device licensing type.

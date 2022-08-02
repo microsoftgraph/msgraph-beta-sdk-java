@@ -20,7 +20,7 @@ import microsoft.graph.models.PurchaseInvoiceLine;
 import microsoft.graph.models.PurchaseInvoiceLineCollectionResponse;
 /** Provides operations to manage the purchaseInvoiceLines property of the microsoft.graph.company entity. */
 public class PurchaseInvoiceLinesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -67,7 +67,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptAssignmentItemRequestBuilder
+     * @return a DeviceManagementScriptAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -247,7 +247,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptDeviceStateItemRequestBuilder
+     * @return a DeviceManagementScriptDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptDeviceStateItemRequestBuilder deviceRunStates(@javax.annotation.Nonnull final String id) {
@@ -310,7 +310,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.groupAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptGroupAssignmentItemRequestBuilder
+     * @return a DeviceManagementScriptGroupAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptGroupAssignmentItemRequestBuilder groupAssignments(@javax.annotation.Nonnull final String id) {
@@ -377,7 +377,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.userRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptUserStateItemRequestBuilder
+     * @return a DeviceManagementScriptUserStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptUserStateItemRequestBuilder userRunStates(@javax.annotation.Nonnull final String id) {
@@ -395,7 +395,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceCustomAttributeShellScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCustomAttributeShellScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCustomAttributeShellScriptItemRequestBuilderDeleteRequestConfiguration() {
@@ -424,7 +424,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceCustomAttributeShellScriptItemRequestBuilderGetQueryParameters queryParameters = new DeviceCustomAttributeShellScriptItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceCustomAttributeShellScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCustomAttributeShellScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCustomAttributeShellScriptItemRequestBuilderGetRequestConfiguration() {
@@ -439,7 +439,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceCustomAttributeShellScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCustomAttributeShellScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCustomAttributeShellScriptItemRequestBuilderPatchRequestConfiguration() {

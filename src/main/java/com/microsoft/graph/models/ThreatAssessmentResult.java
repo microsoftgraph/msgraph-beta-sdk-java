@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ThreatAssessmentResult extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
@@ -22,6 +22,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      */
     public ThreatAssessmentResult() {
         super();
+        this.setOdataType("#microsoft.graph.threatAssessmentResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

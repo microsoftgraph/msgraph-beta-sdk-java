@@ -18,6 +18,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
      */
     public FileClassificationRequest() {
         super();
+        this.setOdataType("#microsoft.graph.fileClassificationRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

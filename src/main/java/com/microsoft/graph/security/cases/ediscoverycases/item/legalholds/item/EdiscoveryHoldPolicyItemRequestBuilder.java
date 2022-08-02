@@ -315,7 +315,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item.siteSources.item collection
      * @param id Unique identifier of the item
-     * @return a siteSourceItemRequestBuilder
+     * @return a SiteSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteSourceItemRequestBuilder siteSources(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item.userSources.item collection
      * @param id Unique identifier of the item
-     * @return a userSourceItemRequestBuilder
+     * @return a UserSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserSourceItemRequestBuilder userSources(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryHoldPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryHoldPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryHoldPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryHoldPolicyItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryHoldPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryHoldPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryHoldPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryHoldPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryHoldPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryHoldPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryHoldPolicyItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.security.UserSourceCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.usersources.count.CountRequestBuilder;
 /** Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryHoldPolicy entity. */
 public class UserSourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +59,7 @@ public class UserSourcesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UserSourcesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class UserSourcesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @return a CompletableFuture of UserSourceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserSourceCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class UserSourcesRequestBuilder {
         }
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserSourceCollectionResponse
      */
@@ -155,7 +155,7 @@ public class UserSourcesRequestBuilder {
         }
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserSourceCollectionResponse
@@ -227,7 +227,7 @@ public class UserSourcesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get userSources from security */
+    /** Data sources that represent Exchange mailboxes. */
     public class UserSourcesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

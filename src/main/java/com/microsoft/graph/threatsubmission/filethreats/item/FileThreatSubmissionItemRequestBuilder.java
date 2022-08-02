@@ -307,7 +307,7 @@ public class FileThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new fileThreatSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new FileThreatSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public FileThreatSubmissionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class FileThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public FileThreatSubmissionItemRequestBuilderGetQueryParameters queryParameters = new FileThreatSubmissionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new fileThreatSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new FileThreatSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public FileThreatSubmissionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class FileThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new fileThreatSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new FileThreatSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public FileThreatSubmissionItemRequestBuilderPatchRequestConfiguration() {

@@ -18,6 +18,7 @@ public class IosImportedPFXCertificateProfile extends IosCertificateProfile impl
      */
     public IosImportedPFXCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.iosImportedPFXCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

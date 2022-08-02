@@ -25,6 +25,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     public Office365GroupsActivityStorage() {
         super();
+        this.setOdataType("#microsoft.graph.office365GroupsActivityStorage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

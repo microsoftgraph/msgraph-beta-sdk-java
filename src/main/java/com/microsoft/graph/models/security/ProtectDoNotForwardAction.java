@@ -14,6 +14,7 @@ public class ProtectDoNotForwardAction extends InformationProtectionAction imple
      */
     public ProtectDoNotForwardAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.protectDoNotForwardAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

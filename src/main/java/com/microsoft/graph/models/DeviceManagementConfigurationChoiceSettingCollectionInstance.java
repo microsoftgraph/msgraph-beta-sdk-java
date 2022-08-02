@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      */
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

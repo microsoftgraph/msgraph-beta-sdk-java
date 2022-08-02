@@ -20,6 +20,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      */
     public PersonAnnotation() {
         super();
+        this.setOdataType("#microsoft.graph.personAnnotation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

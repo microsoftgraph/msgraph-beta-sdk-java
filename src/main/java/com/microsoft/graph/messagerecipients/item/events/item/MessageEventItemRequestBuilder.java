@@ -307,7 +307,7 @@ public class MessageEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MessageEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MessageEventItemRequestBuilder {
         @javax.annotation.Nullable
         public MessageEventItemRequestBuilderGetQueryParameters queryParameters = new MessageEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new messageEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MessageEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageEventItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MessageEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MessageEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageEventItemRequestBuilderPatchRequestConfiguration() {

@@ -57,6 +57,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     public WindowsProtectionState() {
         super();
+        this.setOdataType("#microsoft.graph.windowsProtectionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

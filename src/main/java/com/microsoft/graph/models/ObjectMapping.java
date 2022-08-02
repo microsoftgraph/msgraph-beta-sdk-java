@@ -21,6 +21,8 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     private java.util.List<MetadataEntry> _metadata;
     /** Human-friendly name of the object mapping. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US. */
     private Filter _scope;
     /** Name of the object in the source directory. Must match the object name from the source directory definition. */
@@ -33,6 +35,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     public ObjectMapping() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.objectMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,12 +78,13 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectMapping currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("attributeMappings", (n) -> { currentObject.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("flowTypes", (n) -> { currentObject.setFlowTypes(n.getEnumValue(ObjectFlowTypes.class)); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(Filter::createFromDiscriminatorValue)); });
             this.put("sourceObjectName", (n) -> { currentObject.setSourceObjectName(n.getStringValue()); });
             this.put("targetObjectName", (n) -> { currentObject.setTargetObjectName(n.getStringValue()); });
@@ -109,6 +113,14 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
@@ -146,6 +158,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("flowTypes", this.getFlowTypes());
         writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("scope", this.getScope());
         writer.writeStringValue("sourceObjectName", this.getSourceObjectName());
         writer.writeStringValue("targetObjectName", this.getTargetObjectName());
@@ -198,6 +211,14 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.

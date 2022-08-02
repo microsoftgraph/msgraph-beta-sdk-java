@@ -307,7 +307,7 @@ public class UserAccountInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userAccountInformationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserAccountInformationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserAccountInformationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserAccountInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public UserAccountInformationItemRequestBuilderGetQueryParameters queryParameters = new UserAccountInformationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userAccountInformationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserAccountInformationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserAccountInformationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserAccountInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userAccountInformationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserAccountInformationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserAccountInformationItemRequestBuilderPatchRequestConfiguration() {

@@ -28,7 +28,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
      */
     public AndroidForWorkCertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.androidForWorkCertificateProfileBase");
+        this.setOdataType("#microsoft.graph.androidForWorkCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

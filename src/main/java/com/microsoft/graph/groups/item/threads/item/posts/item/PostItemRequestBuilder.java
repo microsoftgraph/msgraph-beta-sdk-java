@@ -80,7 +80,7 @@ public class PostItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.attachments.item collection
      * @param id Unique identifier of the item
-     * @return a attachmentItemRequestBuilder
+     * @return a AttachmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
@@ -260,7 +260,7 @@ public class PostItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -323,7 +323,7 @@ public class PostItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.mentions.item collection
      * @param id Unique identifier of the item
-     * @return a mentionItemRequestBuilder
+     * @return a MentionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MentionItemRequestBuilder mentions(@javax.annotation.Nonnull final String id) {
@@ -335,7 +335,7 @@ public class PostItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class PostItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -420,7 +420,7 @@ public class PostItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new postItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PostItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PostItemRequestBuilderDeleteRequestConfiguration() {
@@ -449,7 +449,7 @@ public class PostItemRequestBuilder {
         @javax.annotation.Nullable
         public PostItemRequestBuilderGetQueryParameters queryParameters = new PostItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new postItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PostItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PostItemRequestBuilderGetRequestConfiguration() {
@@ -464,7 +464,7 @@ public class PostItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new postItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PostItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PostItemRequestBuilderPatchRequestConfiguration() {

@@ -34,7 +34,7 @@ public class AppManagementPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.appManagementPolicies.item.appliesTo.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder appliesTo(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AppManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appManagementPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppManagementPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppManagementPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AppManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public AppManagementPolicyItemRequestBuilderGetQueryParameters queryParameters = new AppManagementPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppManagementPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AppManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appManagementPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppManagementPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppManagementPolicyItemRequestBuilderPatchRequestConfiguration() {

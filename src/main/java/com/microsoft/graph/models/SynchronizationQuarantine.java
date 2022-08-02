@@ -18,6 +18,8 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     private SynchronizationError _error;
     /** Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _nextAttempt;
+    /** The OdataType property */
+    private String _odataType;
     /** The reason property */
     private QuarantineReason _reason;
     /** Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
@@ -30,6 +32,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      */
     public SynchronizationQuarantine() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationQuarantine");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,10 +75,11 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationQuarantine currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("currentBegan", (n) -> { currentObject.setCurrentBegan(n.getOffsetDateTimeValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
             this.put("nextAttempt", (n) -> { currentObject.setNextAttempt(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(QuarantineReason.class)); });
             this.put("seriesBegan", (n) -> { currentObject.setSeriesBegan(n.getOffsetDateTimeValue()); });
             this.put("seriesCount", (n) -> { currentObject.setSeriesCount(n.getLongValue()); });
@@ -88,6 +92,14 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public OffsetDateTime getNextAttempt() {
         return this._nextAttempt;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reason property value. The reason property
@@ -123,6 +135,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         writer.writeOffsetDateTimeValue("currentBegan", this.getCurrentBegan());
         writer.writeObjectValue("error", this.getError());
         writer.writeOffsetDateTimeValue("nextAttempt", this.getNextAttempt());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("reason", this.getReason());
         writer.writeOffsetDateTimeValue("seriesBegan", this.getSeriesBegan());
         writer.writeLongValue("seriesCount", this.getSeriesCount());
@@ -159,6 +172,14 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      */
     public void setNextAttempt(@javax.annotation.Nullable final OffsetDateTime value) {
         this._nextAttempt = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reason property value. The reason property

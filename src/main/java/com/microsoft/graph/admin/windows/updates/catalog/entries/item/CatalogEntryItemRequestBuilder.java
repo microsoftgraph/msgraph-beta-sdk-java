@@ -307,7 +307,7 @@ public class CatalogEntryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new catalogEntryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CatalogEntryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CatalogEntryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CatalogEntryItemRequestBuilder {
         @javax.annotation.Nullable
         public CatalogEntryItemRequestBuilderGetQueryParameters queryParameters = new CatalogEntryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new catalogEntryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CatalogEntryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CatalogEntryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CatalogEntryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new catalogEntryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CatalogEntryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CatalogEntryItemRequestBuilderPatchRequestConfiguration() {

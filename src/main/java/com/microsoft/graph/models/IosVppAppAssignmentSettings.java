@@ -22,6 +22,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     public IosVppAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.iosVppAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

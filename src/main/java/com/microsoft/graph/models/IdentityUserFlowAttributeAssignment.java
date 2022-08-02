@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class IdentityUserFlowAttributeAssignment extends Entity implements Parsable {
     /** The display name of the identityUserFlowAttribute within a user flow. */
     private String _displayName;
@@ -27,6 +27,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      */
     public IdentityUserFlowAttributeAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.identityUserFlowAttributeAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

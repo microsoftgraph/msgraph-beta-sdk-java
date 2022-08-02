@@ -21,6 +21,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      */
     public DeviceConfigurationGroupAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.deviceConfigurationGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

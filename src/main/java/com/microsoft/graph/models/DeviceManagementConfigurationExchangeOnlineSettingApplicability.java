@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationExchangeOnlineSettingApplicability ext
      */
     public DeviceManagementConfigurationExchangeOnlineSettingApplicability() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationExchangeOnlineSettingApplicability");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

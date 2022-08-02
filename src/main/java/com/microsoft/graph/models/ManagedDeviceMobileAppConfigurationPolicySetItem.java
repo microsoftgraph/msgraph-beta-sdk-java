@@ -14,6 +14,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItem extends PolicySetI
      */
     public ManagedDeviceMobileAppConfigurationPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -31,6 +31,7 @@ public class MessageTrace extends Entity implements Parsable {
      */
     public MessageTrace() {
         super();
+        this.setOdataType("#microsoft.graph.messageTrace");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Notification extends Entity implements Parsable {
     /** Sets how long (in seconds) this notification content will stay in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user's Windows Action Center. */
     private Integer _displayTimeToLive;
@@ -24,16 +25,17 @@ public class Notification extends Entity implements Parsable {
     /** Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user. */
     private TargetPolicyEndpoints _targetPolicy;
     /**
-     * Instantiates a new Notification and sets the default values.
+     * Instantiates a new notification and sets the default values.
      * @return a void
      */
     public Notification() {
         super();
+        this.setOdataType("#microsoft.graph.notification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Notification
+     * @return a notification
      */
     @javax.annotation.Nonnull
     public static Notification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

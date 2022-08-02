@@ -332,7 +332,7 @@ public class GroupPolicyDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitions.item.presentations.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyPresentationItemRequestBuilder
+     * @return a GroupPolicyPresentationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyPresentationItemRequestBuilder presentations(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class GroupPolicyDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -379,7 +379,7 @@ public class GroupPolicyDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyDefinitionItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -394,7 +394,7 @@ public class GroupPolicyDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionItemRequestBuilderPatchRequestConfiguration() {

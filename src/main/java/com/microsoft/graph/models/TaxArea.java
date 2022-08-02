@@ -24,6 +24,7 @@ public class TaxArea extends Entity implements Parsable {
      */
     public TaxArea() {
         super();
+        this.setOdataType("#microsoft.graph.taxArea");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

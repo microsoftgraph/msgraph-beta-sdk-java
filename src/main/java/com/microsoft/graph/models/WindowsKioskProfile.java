@@ -13,6 +13,8 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The app base class used to identify the application info for the kiosk configuration */
     private WindowsKioskAppConfiguration _appConfiguration;
+    /** The OdataType property */
+    private String _odataType;
     /** Key of the entity. */
     private String _profileId;
     /** This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
@@ -25,6 +27,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
      */
     public WindowsKioskProfile() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsKioskProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,21 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskProfile currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("appConfiguration", (n) -> { currentObject.setAppConfiguration(n.getObjectValue(WindowsKioskAppConfiguration::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("profileId", (n) -> { currentObject.setProfileId(n.getStringValue()); });
             this.put("profileName", (n) -> { currentObject.setProfileName(n.getStringValue()); });
             this.put("userAccountsConfiguration", (n) -> { currentObject.setUserAccountsConfiguration(n.getCollectionOfObjectValues(WindowsKioskUser::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the profileId property value. Key of the entity.
@@ -98,6 +110,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("appConfiguration", this.getAppConfiguration());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("profileId", this.getProfileId());
         writer.writeStringValue("profileName", this.getProfileName());
         writer.writeCollectionOfObjectValues("userAccountsConfiguration", this.getUserAccountsConfiguration());
@@ -118,6 +131,14 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
      */
     public void setAppConfiguration(@javax.annotation.Nullable final WindowsKioskAppConfiguration value) {
         this._appConfiguration = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the profileId property value. Key of the entity.

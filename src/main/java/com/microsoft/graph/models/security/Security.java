@@ -17,6 +17,7 @@ public class Security extends Entity implements Parsable {
      */
     public Security() {
         super();
+        this.setOdataType("#microsoft.graph.security.security");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

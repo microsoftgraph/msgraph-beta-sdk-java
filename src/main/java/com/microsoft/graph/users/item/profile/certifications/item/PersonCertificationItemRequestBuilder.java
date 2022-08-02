@@ -307,7 +307,7 @@ public class PersonCertificationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personCertificationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PersonCertificationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonCertificationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PersonCertificationItemRequestBuilder {
         @javax.annotation.Nullable
         public PersonCertificationItemRequestBuilderGetQueryParameters queryParameters = new PersonCertificationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new personCertificationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PersonCertificationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonCertificationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PersonCertificationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personCertificationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PersonCertificationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonCertificationItemRequestBuilderPatchRequestConfiguration() {

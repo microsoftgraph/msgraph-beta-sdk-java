@@ -25,6 +25,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      */
     public Office365GroupsActivityGroupCounts() {
         super();
+        this.setOdataType("#microsoft.graph.office365GroupsActivityGroupCounts");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

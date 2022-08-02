@@ -16,6 +16,7 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
      */
     public GroupPolicyPresentationValueDecimal() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationValueDecimal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

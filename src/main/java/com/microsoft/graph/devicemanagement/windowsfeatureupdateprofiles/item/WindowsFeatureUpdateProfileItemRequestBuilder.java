@@ -40,7 +40,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsFeatureUpdateProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a windowsFeatureUpdateProfileAssignmentItemRequestBuilder
+     * @return a WindowsFeatureUpdateProfileAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsFeatureUpdateProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsFeatureUpdateProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsFeatureUpdateProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsFeatureUpdateProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsFeatureUpdateProfileItemRequestBuilderGetQueryParameters queryParameters = new WindowsFeatureUpdateProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsFeatureUpdateProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsFeatureUpdateProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsFeatureUpdateProfileItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsFeatureUpdateProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsFeatureUpdateProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsFeatureUpdateProfileItemRequestBuilderPatchRequestConfiguration() {

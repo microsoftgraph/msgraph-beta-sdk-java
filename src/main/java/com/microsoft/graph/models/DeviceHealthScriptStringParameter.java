@@ -16,6 +16,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      */
     public DeviceHealthScriptStringParameter() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptStringParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

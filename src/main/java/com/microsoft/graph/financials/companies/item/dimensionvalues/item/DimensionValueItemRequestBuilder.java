@@ -155,7 +155,7 @@ public class DimensionValueItemRequestBuilder {
         @javax.annotation.Nullable
         public DimensionValueItemRequestBuilderGetQueryParameters queryParameters = new DimensionValueItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dimensionValueItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DimensionValueItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DimensionValueItemRequestBuilderGetRequestConfiguration() {

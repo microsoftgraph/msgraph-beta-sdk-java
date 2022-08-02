@@ -32,6 +32,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      */
     public Windows10EasEmailProfileConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10EasEmailProfileConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

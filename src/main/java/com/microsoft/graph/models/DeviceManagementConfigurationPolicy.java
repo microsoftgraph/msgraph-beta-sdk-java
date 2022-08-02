@@ -41,6 +41,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      */
     public DeviceManagementConfigurationPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

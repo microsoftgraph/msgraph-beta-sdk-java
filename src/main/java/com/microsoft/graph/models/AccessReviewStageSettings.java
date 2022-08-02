@@ -20,6 +20,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     private Integer _durationInDays;
     /** If provided, the fallback reviewers are asked to complete a review if the primary reviewers do not exist. For example, if managers are selected as reviewers and a principal under review does not have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object. */
     private java.util.List<AccessReviewReviewerScope> _fallbackReviewers;
+    /** The OdataType property */
+    private String _odataType;
     /** The recommendationInsightSettings property */
     private java.util.List<AccessReviewRecommendationInsightSetting> _recommendationInsightSettings;
     /** Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object. */
@@ -36,6 +38,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     public AccessReviewStageSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewStageSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,17 +97,26 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewStageSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
             this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommendationInsightSettings", (n) -> { currentObject.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
             this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
             this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
             this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
             this.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
@@ -157,6 +169,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         writer.writeCollectionOfPrimitiveValues("dependsOn", this.getDependsOn());
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("recommendationInsightSettings", this.getRecommendationInsightSettings());
         writer.writePeriodValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
         writer.writeBooleanValue("recommendationsEnabled", this.getRecommendationsEnabled());
@@ -203,6 +216,14 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._fallbackReviewers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property

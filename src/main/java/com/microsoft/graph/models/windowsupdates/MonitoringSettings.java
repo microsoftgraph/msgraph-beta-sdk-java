@@ -13,12 +13,15 @@ public class MonitoringSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or'. */
     private java.util.List<MonitoringRule> _monitoringRules;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new monitoringSettings and sets the default values.
      * @return a void
      */
     public MonitoringSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsUpdates.monitoringSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class MonitoringSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MonitoringSettings currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("monitoringRules", (n) -> { currentObject.setMonitoringRules(n.getCollectionOfObjectValues(MonitoringRule::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class MonitoringSettings implements AdditionalDataHolder, Parsable {
         return this._monitoringRules;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class MonitoringSettings implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("monitoringRules", this.getMonitoringRules());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class MonitoringSettings implements AdditionalDataHolder, Parsable {
      */
     public void setMonitoringRules(@javax.annotation.Nullable final java.util.List<MonitoringRule> value) {
         this._monitoringRules = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

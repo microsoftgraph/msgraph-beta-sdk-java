@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class WorkbookChartSeries extends Entity implements Parsable {
     /** Represents the formatting of a chart series, which includes fill and line formatting. Read-only. */
     private WorkbookChartSeriesFormat _format;
@@ -21,6 +21,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     public WorkbookChartSeries() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartSeries");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

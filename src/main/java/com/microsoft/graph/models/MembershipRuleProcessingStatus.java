@@ -16,6 +16,8 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
     private String _errorMessage;
     /** Most recent date and time when membership of a dynamic group was updated.  Optional. Read-only. */
     private OffsetDateTime _lastMembershipUpdated;
+    /** The OdataType property */
+    private String _odataType;
     /** Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only. */
     private MembershipRuleProcessingStatusDetails _status;
     /**
@@ -24,6 +26,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      */
     public MembershipRuleProcessingStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.membershipRuleProcessingStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MembershipRuleProcessingStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
             this.put("lastMembershipUpdated", (n) -> { currentObject.setLastMembershipUpdated(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(MembershipRuleProcessingStatusDetails.class)); });
         }};
     }
@@ -71,6 +75,14 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public OffsetDateTime getLastMembershipUpdated() {
         return this._lastMembershipUpdated;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
@@ -89,6 +101,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
         Objects.requireNonNull(writer);
         writer.writeStringValue("errorMessage", this.getErrorMessage());
         writer.writeOffsetDateTimeValue("lastMembershipUpdated", this.getLastMembershipUpdated());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      */
     public void setLastMembershipUpdated(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastMembershipUpdated = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.

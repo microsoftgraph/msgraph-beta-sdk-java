@@ -17,6 +17,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      */
     public EmbeddedSIMActivationCodePoolAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.embeddedSIMActivationCodePoolAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

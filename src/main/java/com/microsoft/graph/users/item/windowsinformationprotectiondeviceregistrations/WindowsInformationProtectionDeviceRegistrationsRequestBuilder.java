@@ -19,7 +19,7 @@ import microsoft.graph.models.WindowsInformationProtectionDeviceRegistrationColl
 import microsoft.graph.users.item.windowsinformationprotectiondeviceregistrations.count.CountRequestBuilder;
 /** Provides operations to manage the windowsInformationProtectionDeviceRegistrations property of the microsoft.graph.user entity. */
 public class WindowsInformationProtectionDeviceRegistrationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

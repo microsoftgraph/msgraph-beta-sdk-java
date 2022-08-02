@@ -307,7 +307,7 @@ public class CloudPcDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcDeviceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcDeviceItemRequestBuilderGetQueryParameters queryParameters = new CloudPcDeviceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcDeviceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcDeviceItemRequestBuilderPatchRequestConfiguration() {

@@ -14,6 +14,7 @@ public class DeviceManagementSettingXmlConstraint extends DeviceManagementConstr
      */
     public DeviceManagementSettingXmlConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingXmlConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

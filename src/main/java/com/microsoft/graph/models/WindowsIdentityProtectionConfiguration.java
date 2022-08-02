@@ -42,6 +42,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      */
     public WindowsIdentityProtectionConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsIdentityProtectionConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

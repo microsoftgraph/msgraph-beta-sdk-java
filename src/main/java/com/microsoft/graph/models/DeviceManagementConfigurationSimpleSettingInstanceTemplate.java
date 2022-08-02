@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends 
      */
     public DeviceManagementConfigurationSimpleSettingInstanceTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -313,7 +313,7 @@ public class SitePageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sitePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SitePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SitePageItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class SitePageItemRequestBuilder {
         @javax.annotation.Nullable
         public SitePageItemRequestBuilderGetQueryParameters queryParameters = new SitePageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sitePageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SitePageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SitePageItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class SitePageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sitePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SitePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SitePageItemRequestBuilderPatchRequestConfiguration() {

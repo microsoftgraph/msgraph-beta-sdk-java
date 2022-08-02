@@ -331,7 +331,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.installedApps.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAppInstallationItemRequestBuilder
+     * @return a TeamsAppInstallationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a conversationMemberItemRequestBuilder
+     * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -355,7 +355,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.messages.item collection
      * @param id Unique identifier of the item
-     * @return a chatMessageItemRequestBuilder
+     * @return a ChatMessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
@@ -367,7 +367,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAsyncOperationItemRequestBuilder
+     * @return a TeamsAsyncOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAsyncOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -434,7 +434,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.permissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a resourceSpecificPermissionGrantItemRequestBuilder
+     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
@@ -446,7 +446,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.pinnedMessages.item collection
      * @param id Unique identifier of the item
-     * @return a pinnedChatMessageInfoItemRequestBuilder
+     * @return a PinnedChatMessageInfoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PinnedChatMessageInfoItemRequestBuilder pinnedMessages(@javax.annotation.Nonnull final String id) {
@@ -458,7 +458,7 @@ public class ChatItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.chats.item.tabs.item collection
      * @param id Unique identifier of the item
-     * @return a teamsTabItemRequestBuilder
+     * @return a TeamsTabItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsTabItemRequestBuilder tabs(@javax.annotation.Nonnull final String id) {
@@ -476,7 +476,7 @@ public class ChatItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chatItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ChatItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatItemRequestBuilderDeleteRequestConfiguration() {
@@ -505,7 +505,7 @@ public class ChatItemRequestBuilder {
         @javax.annotation.Nullable
         public ChatItemRequestBuilderGetQueryParameters queryParameters = new ChatItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new chatItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChatItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatItemRequestBuilderGetRequestConfiguration() {
@@ -520,7 +520,7 @@ public class ChatItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chatItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ChatItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatItemRequestBuilderPatchRequestConfiguration() {

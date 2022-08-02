@@ -40,6 +40,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      */
     public Windows10XSCEPCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windows10XSCEPCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

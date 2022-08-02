@@ -14,6 +14,8 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The Application ID of the calling application that submitted an update (PATCH) to the action. The appId should be extracted from the auth token and not entered manually by the calling application. */
     private String _appId;
+    /** The OdataType property */
+    private String _odataType;
     /** Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed. */
     private OperationStatus _status;
     /** Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
@@ -26,6 +28,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      */
     public SecurityActionState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.securityActionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,12 +63,21 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityActionState currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });
             this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
@@ -99,6 +111,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeOffsetDateTimeValue("updatedDateTime", this.getUpdatedDateTime());
         writer.writeStringValue("user", this.getUser());
@@ -119,6 +132,14 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      */
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.

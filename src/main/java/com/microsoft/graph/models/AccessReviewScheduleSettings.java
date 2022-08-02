@@ -28,6 +28,8 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     private Boolean _justificationRequiredOnApproval;
     /** Indicates whether emails are enabled or disabled. Default value is false. */
     private Boolean _mailNotificationsEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property. */
     private java.util.List<AccessReviewRecommendationInsightSetting> _recommendationInsightSettings;
     /** Optional field. Indicates the period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationLookBackDuration setting will be used instead of the value of this property. */
@@ -44,6 +46,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -110,7 +113,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewScheduleSettings currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<>(14) {{
             this.put("applyActions", (n) -> { currentObject.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
             this.put("autoApplyDecisionsEnabled", (n) -> { currentObject.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
             this.put("decisionHistoriesForReviewersEnabled", (n) -> { currentObject.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
@@ -119,6 +122,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
             this.put("instanceDurationInDays", (n) -> { currentObject.setInstanceDurationInDays(n.getIntegerValue()); });
             this.put("justificationRequiredOnApproval", (n) -> { currentObject.setJustificationRequiredOnApproval(n.getBooleanValue()); });
             this.put("mailNotificationsEnabled", (n) -> { currentObject.setMailNotificationsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommendationInsightSettings", (n) -> { currentObject.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
             this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
             this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
@@ -149,6 +153,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Boolean getMailNotificationsEnabled() {
         return this._mailNotificationsEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommendationInsightSettings property value. Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.
@@ -205,6 +217,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         writer.writeIntegerValue("instanceDurationInDays", this.getInstanceDurationInDays());
         writer.writeBooleanValue("justificationRequiredOnApproval", this.getJustificationRequiredOnApproval());
         writer.writeBooleanValue("mailNotificationsEnabled", this.getMailNotificationsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("recommendationInsightSettings", this.getRecommendationInsightSettings());
         writer.writePeriodValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
         writer.writeBooleanValue("recommendationsEnabled", this.getRecommendationsEnabled());
@@ -283,6 +296,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     public void setMailNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailNotificationsEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommendationInsightSettings property value. Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.

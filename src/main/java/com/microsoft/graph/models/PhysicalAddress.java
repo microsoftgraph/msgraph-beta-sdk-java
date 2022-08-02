@@ -15,6 +15,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     private String _city;
     /** The country or region. It's a free-format string value, for example, 'United States'. */
     private String _countryOrRegion;
+    /** The OdataType property */
+    private String _odataType;
     /** The postal code. */
     private String _postalCode;
     /** The post office box number. */
@@ -31,6 +33,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      */
     public PhysicalAddress() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.physicalAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,15 +76,24 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PhysicalAddress currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
             this.put("postOfficeBox", (n) -> { currentObject.setPostOfficeBox(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
             this.put("street", (n) -> { currentObject.setStreet(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhysicalAddressType.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the postalCode property value. The postal code.
@@ -132,6 +144,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("city", this.getCity());
         writer.writeStringValue("countryOrRegion", this.getCountryOrRegion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("postalCode", this.getPostalCode());
         writer.writeStringValue("postOfficeBox", this.getPostOfficeBox());
         writer.writeStringValue("state", this.getState());
@@ -162,6 +175,14 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      */
     public void setCountryOrRegion(@javax.annotation.Nullable final String value) {
         this._countryOrRegion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the postalCode property value. The postal code.

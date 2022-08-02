@@ -313,7 +313,7 @@ public class GroupPolicyPresentationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyPresentationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyPresentationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyPresentationItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class GroupPolicyPresentationItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyPresentationItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyPresentationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyPresentationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyPresentationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyPresentationItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class GroupPolicyPresentationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyPresentationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyPresentationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyPresentationItemRequestBuilderPatchRequestConfiguration() {

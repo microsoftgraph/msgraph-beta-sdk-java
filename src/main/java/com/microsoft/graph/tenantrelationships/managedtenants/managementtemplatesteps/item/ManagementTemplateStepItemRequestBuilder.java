@@ -320,7 +320,7 @@ public class ManagementTemplateStepItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateSteps.item.versions.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateStepVersionItemRequestBuilder
+     * @return a ManagementTemplateStepVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class ManagementTemplateStepItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateStepItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class ManagementTemplateStepItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementTemplateStepItemRequestBuilderGetQueryParameters queryParameters = new ManagementTemplateStepItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementTemplateStepItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class ManagementTemplateStepItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateStepItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepItemRequestBuilderPatchRequestConfiguration() {

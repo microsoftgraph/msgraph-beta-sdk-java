@@ -307,7 +307,7 @@ public class AccessReviewDecisionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewDecisionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewDecisionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewDecisionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AccessReviewDecisionItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewDecisionItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewDecisionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewDecisionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewDecisionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewDecisionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AccessReviewDecisionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewDecisionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewDecisionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewDecisionItemRequestBuilderPatchRequestConfiguration() {

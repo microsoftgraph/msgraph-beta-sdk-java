@@ -23,6 +23,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
         super();
+        this.setOdataType("#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.ServicePrincipalCreationConditionSetCollectionResp
 import microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.count.CountRequestBuilder;
 /** Provides operations to manage the includes property of the microsoft.graph.servicePrincipalCreationPolicy entity. */
 public class IncludesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

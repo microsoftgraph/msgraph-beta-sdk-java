@@ -307,7 +307,7 @@ public class NotificationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new notificationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new NotificationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotificationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class NotificationItemRequestBuilder {
         @javax.annotation.Nullable
         public NotificationItemRequestBuilderGetQueryParameters queryParameters = new NotificationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new notificationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NotificationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotificationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class NotificationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new notificationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new NotificationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotificationItemRequestBuilderPatchRequestConfiguration() {

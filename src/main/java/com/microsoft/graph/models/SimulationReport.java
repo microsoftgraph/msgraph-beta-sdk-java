@@ -11,6 +11,8 @@ import java.util.Objects;
 public class SimulationReport implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Overview of an attack simulation and training campaign. */
     private SimulationReportOverview _overview;
     /** Represents users of a tenant and their online actions in an attack simulation and training campaign. */
@@ -21,6 +23,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     public SimulationReport() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.simulationReport");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationReport currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("overview", (n) -> { currentObject.setOverview(n.getObjectValue(SimulationReportOverview::createFromDiscriminatorValue)); });
             this.put("simulationUsers", (n) -> { currentObject.setSimulationUsers(n.getCollectionOfObjectValues(UserSimulationDetails::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the overview property value. Overview of an attack simulation and training campaign.
@@ -75,6 +87,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("overview", this.getOverview());
         writer.writeCollectionOfObjectValues("simulationUsers", this.getSimulationUsers());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the overview property value. Overview of an attack simulation and training campaign.

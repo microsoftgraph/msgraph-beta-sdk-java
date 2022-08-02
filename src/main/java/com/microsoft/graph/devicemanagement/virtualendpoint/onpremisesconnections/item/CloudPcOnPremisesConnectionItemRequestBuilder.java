@@ -319,7 +319,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcOnPremisesConnectionItemRequestBuilderGetQueryParameters queryParameters = new CloudPcOnPremisesConnectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration() {

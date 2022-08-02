@@ -30,6 +30,7 @@ public class Journal extends Entity implements Parsable {
      */
     public Journal() {
         super();
+        this.setOdataType("#microsoft.graph.journal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

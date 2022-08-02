@@ -16,6 +16,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
      */
     public UserExperienceAnalyticsOverview() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

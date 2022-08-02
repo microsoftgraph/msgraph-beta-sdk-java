@@ -27,7 +27,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      */
     public SecurityBaselineStateSummary() {
         super();
-        this.setType("#microsoft.graph.securityBaselineStateSummary");
+        this.setOdataType("#microsoft.graph.securityBaselineStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

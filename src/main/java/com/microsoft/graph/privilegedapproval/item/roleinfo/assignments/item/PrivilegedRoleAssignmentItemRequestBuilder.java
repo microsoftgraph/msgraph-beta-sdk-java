@@ -155,7 +155,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedRoleAssignmentItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedRoleAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration() {

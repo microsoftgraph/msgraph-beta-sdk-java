@@ -20,7 +20,7 @@ import microsoft.graph.models.SynchronizationTemplate;
 import microsoft.graph.models.SynchronizationTemplateCollectionResponse;
 /** Provides operations to manage the templates property of the microsoft.graph.synchronization entity. */
 public class TemplatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

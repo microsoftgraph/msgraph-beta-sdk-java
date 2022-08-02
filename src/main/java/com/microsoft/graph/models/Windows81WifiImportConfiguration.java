@@ -20,6 +20,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      */
     public Windows81WifiImportConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows81WifiImportConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

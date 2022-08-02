@@ -313,7 +313,7 @@ public class DeviceAppManagementTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAppManagementTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAppManagementTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAppManagementTaskItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DeviceAppManagementTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceAppManagementTaskItemRequestBuilderGetQueryParameters queryParameters = new DeviceAppManagementTaskItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceAppManagementTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAppManagementTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAppManagementTaskItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DeviceAppManagementTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAppManagementTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAppManagementTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAppManagementTaskItemRequestBuilderPatchRequestConfiguration() {

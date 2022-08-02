@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OperationalInsightsConnection extends ResourceConnection implements Parsable {
-    /** The azureResourceGroupName property */
+    /** The name of the Azure resource group that contains the Log Analytics workspace. */
     private String _azureResourceGroupName;
-    /** The azureSubscriptionId property */
+    /** The Azure subscription ID that contains the Log Analytics workspace. */
     private String _azureSubscriptionId;
-    /** The workspaceName property */
+    /** The name of the Log Analytics workspace. */
     private String _workspaceName;
     /**
      * Instantiates a new OperationalInsightsConnection and sets the default values.
@@ -20,6 +20,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
      */
     public OperationalInsightsConnection() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.operationalInsightsConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,7 +33,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
         return new OperationalInsightsConnection();
     }
     /**
-     * Gets the azureResourceGroupName property value. The azureResourceGroupName property
+     * Gets the azureResourceGroupName property value. The name of the Azure resource group that contains the Log Analytics workspace.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -40,7 +41,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
         return this._azureResourceGroupName;
     }
     /**
-     * Gets the azureSubscriptionId property value. The azureSubscriptionId property
+     * Gets the azureSubscriptionId property value. The Azure subscription ID that contains the Log Analytics workspace.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +62,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
         }};
     }
     /**
-     * Gets the workspaceName property value. The workspaceName property
+     * Gets the workspaceName property value. The name of the Log Analytics workspace.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -81,7 +82,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
         writer.writeStringValue("workspaceName", this.getWorkspaceName());
     }
     /**
-     * Sets the azureResourceGroupName property value. The azureResourceGroupName property
+     * Sets the azureResourceGroupName property value. The name of the Azure resource group that contains the Log Analytics workspace.
      * @param value Value to set for the azureResourceGroupName property.
      * @return a void
      */
@@ -89,7 +90,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
         this._azureResourceGroupName = value;
     }
     /**
-     * Sets the azureSubscriptionId property value. The azureSubscriptionId property
+     * Sets the azureSubscriptionId property value. The Azure subscription ID that contains the Log Analytics workspace.
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
@@ -97,7 +98,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
         this._azureSubscriptionId = value;
     }
     /**
-     * Sets the workspaceName property value. The workspaceName property
+     * Sets the workspaceName property value. The name of the Log Analytics workspace.
      * @param value Value to set for the workspaceName property.
      * @return a void
      */

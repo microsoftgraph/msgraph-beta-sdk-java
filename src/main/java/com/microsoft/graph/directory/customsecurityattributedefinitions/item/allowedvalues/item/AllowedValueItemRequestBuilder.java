@@ -307,7 +307,7 @@ public class AllowedValueItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new allowedValueItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AllowedValueItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AllowedValueItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AllowedValueItemRequestBuilder {
         @javax.annotation.Nullable
         public AllowedValueItemRequestBuilderGetQueryParameters queryParameters = new AllowedValueItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new allowedValueItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AllowedValueItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AllowedValueItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AllowedValueItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new allowedValueItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AllowedValueItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AllowedValueItemRequestBuilderPatchRequestConfiguration() {

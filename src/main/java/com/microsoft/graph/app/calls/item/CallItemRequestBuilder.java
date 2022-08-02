@@ -145,7 +145,7 @@ public class CallItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.calls.item.audioRoutingGroups.item collection
      * @param id Unique identifier of the item
-     * @return a audioRoutingGroupItemRequestBuilder
+     * @return a AudioRoutingGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AudioRoutingGroupItemRequestBuilder audioRoutingGroups(@javax.annotation.Nonnull final String id) {
@@ -184,7 +184,7 @@ public class CallItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.calls.item.contentSharingSessions.item collection
      * @param id Unique identifier of the item
-     * @return a contentSharingSessionItemRequestBuilder
+     * @return a ContentSharingSessionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContentSharingSessionItemRequestBuilder contentSharingSessions(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class CallItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.calls.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a commsOperationItemRequestBuilder
+     * @return a CommsOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CommsOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -400,7 +400,7 @@ public class CallItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.calls.item.participants.item collection
      * @param id Unique identifier of the item
-     * @return a participantItemRequestBuilder
+     * @return a ParticipantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ParticipantItemRequestBuilder participants(@javax.annotation.Nonnull final String id) {
@@ -473,7 +473,7 @@ public class CallItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new callItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CallItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CallItemRequestBuilderDeleteRequestConfiguration() {
@@ -502,7 +502,7 @@ public class CallItemRequestBuilder {
         @javax.annotation.Nullable
         public CallItemRequestBuilderGetQueryParameters queryParameters = new CallItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new callItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CallItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CallItemRequestBuilderGetRequestConfiguration() {
@@ -517,7 +517,7 @@ public class CallItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new callItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CallItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CallItemRequestBuilderPatchRequestConfiguration() {

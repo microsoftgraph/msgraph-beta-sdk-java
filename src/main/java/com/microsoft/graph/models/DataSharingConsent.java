@@ -27,6 +27,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     public DataSharingConsent() {
         super();
+        this.setOdataType("#microsoft.graph.dataSharingConsent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

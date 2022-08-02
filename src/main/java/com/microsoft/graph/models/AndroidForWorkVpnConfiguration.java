@@ -34,6 +34,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      */
     public AndroidForWorkVpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

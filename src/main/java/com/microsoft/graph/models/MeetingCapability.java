@@ -17,12 +17,15 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
     private Boolean _allowAnonymousUsersToStartMeeting;
     /** The autoAdmittedUsers property */
     private AutoAdmittedUsersType _autoAdmittedUsers;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new meetingCapability and sets the default values.
      * @return a void
      */
     public MeetingCapability() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.meetingCapability");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,20 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingCapability currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("allowAnonymousUsersToDialOut", (n) -> { currentObject.setAllowAnonymousUsersToDialOut(n.getBooleanValue()); });
             this.put("allowAnonymousUsersToStartMeeting", (n) -> { currentObject.setAllowAnonymousUsersToStartMeeting(n.getBooleanValue()); });
             this.put("autoAdmittedUsers", (n) -> { currentObject.setAutoAdmittedUsers(n.getEnumValue(AutoAdmittedUsersType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -89,6 +101,7 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowAnonymousUsersToDialOut", this.getAllowAnonymousUsersToDialOut());
         writer.writeBooleanValue("allowAnonymousUsersToStartMeeting", this.getAllowAnonymousUsersToStartMeeting());
         writer.writeEnumValue("autoAdmittedUsers", this.getAutoAdmittedUsers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
      */
     public void setAutoAdmittedUsers(@javax.annotation.Nullable final AutoAdmittedUsersType value) {
         this._autoAdmittedUsers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

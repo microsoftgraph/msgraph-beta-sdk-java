@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;
@@ -19,6 +19,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     public EdiscoveryNoncustodialDataSource() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryNoncustodialDataSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

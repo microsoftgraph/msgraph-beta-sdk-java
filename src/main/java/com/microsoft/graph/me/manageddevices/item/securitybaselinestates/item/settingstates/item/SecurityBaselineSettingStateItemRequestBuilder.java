@@ -307,7 +307,7 @@ public class SecurityBaselineSettingStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new securityBaselineSettingStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityBaselineSettingStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityBaselineSettingStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SecurityBaselineSettingStateItemRequestBuilder {
         @javax.annotation.Nullable
         public SecurityBaselineSettingStateItemRequestBuilderGetQueryParameters queryParameters = new SecurityBaselineSettingStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new securityBaselineSettingStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityBaselineSettingStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityBaselineSettingStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SecurityBaselineSettingStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new securityBaselineSettingStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityBaselineSettingStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityBaselineSettingStateItemRequestBuilderPatchRequestConfiguration() {

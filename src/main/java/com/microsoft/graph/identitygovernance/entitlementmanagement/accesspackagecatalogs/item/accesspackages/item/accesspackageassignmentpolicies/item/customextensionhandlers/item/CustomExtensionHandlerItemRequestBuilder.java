@@ -313,7 +313,7 @@ public class CustomExtensionHandlerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customExtensionHandlerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CustomExtensionHandlerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomExtensionHandlerItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class CustomExtensionHandlerItemRequestBuilder {
         @javax.annotation.Nullable
         public CustomExtensionHandlerItemRequestBuilderGetQueryParameters queryParameters = new CustomExtensionHandlerItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new customExtensionHandlerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CustomExtensionHandlerItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomExtensionHandlerItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class CustomExtensionHandlerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customExtensionHandlerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CustomExtensionHandlerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomExtensionHandlerItemRequestBuilderPatchRequestConfiguration() {

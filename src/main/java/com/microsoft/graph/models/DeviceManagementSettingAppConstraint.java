@@ -16,6 +16,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      */
     public DeviceManagementSettingAppConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingAppConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

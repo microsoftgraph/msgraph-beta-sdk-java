@@ -28,6 +28,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     private Integer _devicesWithoutCloudIdentity;
     /** The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647 */
     private Integer _intuneDevices;
+    /** The OdataType property */
+    private String _odataType;
     /** Total count of tenant attach devices. Valid values -2147483648 to 2147483647 */
     private Integer _tenantAttachDevices;
     /** The total count of devices. Valid values -2147483648 to 2147483647 */
@@ -46,6 +48,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -128,7 +131,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereDevicesSummary currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<>(15) {{
             this.put("autopilotDevicesSummary", (n) -> { currentObject.setAutopilotDevicesSummary(n.getObjectValue(UserExperienceAnalyticsAutopilotDevicesSummary::createFromDiscriminatorValue)); });
             this.put("cloudIdentityDevicesSummary", (n) -> { currentObject.setCloudIdentityDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudIdentityDevicesSummary::createFromDiscriminatorValue)); });
             this.put("cloudManagementDevicesSummary", (n) -> { currentObject.setCloudManagementDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudManagementDevicesSummary::createFromDiscriminatorValue)); });
@@ -137,6 +140,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
             this.put("devicesWithoutAutopilotProfileAssigned", (n) -> { currentObject.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
             this.put("devicesWithoutCloudIdentity", (n) -> { currentObject.setDevicesWithoutCloudIdentity(n.getIntegerValue()); });
             this.put("intuneDevices", (n) -> { currentObject.setIntuneDevices(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tenantAttachDevices", (n) -> { currentObject.setTenantAttachDevices(n.getIntegerValue()); });
             this.put("totalDevices", (n) -> { currentObject.setTotalDevices(n.getIntegerValue()); });
             this.put("unsupportedOSversionDevices", (n) -> { currentObject.setUnsupportedOSversionDevices(n.getIntegerValue()); });
@@ -152,6 +156,14 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     @javax.annotation.Nullable
     public Integer getIntuneDevices() {
         return this._intuneDevices;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tenantAttachDevices property value. Total count of tenant attach devices. Valid values -2147483648 to 2147483647
@@ -216,6 +228,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
         writer.writeIntegerValue("devicesWithoutAutopilotProfileAssigned", this.getDevicesWithoutAutopilotProfileAssigned());
         writer.writeIntegerValue("devicesWithoutCloudIdentity", this.getDevicesWithoutCloudIdentity());
         writer.writeIntegerValue("intuneDevices", this.getIntuneDevices());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("tenantAttachDevices", this.getTenantAttachDevices());
         writer.writeIntegerValue("totalDevices", this.getTotalDevices());
         writer.writeIntegerValue("unsupportedOSversionDevices", this.getUnsupportedOSversionDevices());
@@ -295,6 +308,14 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     public void setIntuneDevices(@javax.annotation.Nullable final Integer value) {
         this._intuneDevices = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tenantAttachDevices property value. Total count of tenant attach devices. Valid values -2147483648 to 2147483647

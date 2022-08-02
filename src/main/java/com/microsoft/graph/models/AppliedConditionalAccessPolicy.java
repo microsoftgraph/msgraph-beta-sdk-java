@@ -29,6 +29,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     private String _id;
     /** List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ 'application' : 'AllApps'}, {'users': 'Group'}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule. */
     private java.util.List<ConditionalAccessRuleSatisfied> _includeRulesSatisfied;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. */
     private AppliedConditionalAccessPolicyResult _result;
     /** Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions). */
@@ -39,6 +41,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     public AppliedConditionalAccessPolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.appliedConditionalAccessPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -121,7 +124,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppliedConditionalAccessPolicy currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("authenticationStrength", (n) -> { currentObject.setAuthenticationStrength(n.getObjectValue(AuthenticationStrength::createFromDiscriminatorValue)); });
             this.put("conditionsNotSatisfied", (n) -> { currentObject.setConditionsNotSatisfied(n.getEnumValue(ConditionalAccessConditions.class)); });
             this.put("conditionsSatisfied", (n) -> { currentObject.setConditionsSatisfied(n.getEnumValue(ConditionalAccessConditions.class)); });
@@ -131,6 +134,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
             this.put("excludeRulesSatisfied", (n) -> { currentObject.setExcludeRulesSatisfied(n.getCollectionOfObjectValues(ConditionalAccessRuleSatisfied::createFromDiscriminatorValue)); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("includeRulesSatisfied", (n) -> { currentObject.setIncludeRulesSatisfied(n.getCollectionOfObjectValues(ConditionalAccessRuleSatisfied::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("result", (n) -> { currentObject.setResult(n.getEnumValue(AppliedConditionalAccessPolicyResult.class)); });
             this.put("sessionControlsNotSatisfied", (n) -> { currentObject.setSessionControlsNotSatisfied(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
@@ -150,6 +154,14 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessRuleSatisfied> getIncludeRulesSatisfied() {
         return this._includeRulesSatisfied;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
@@ -183,6 +195,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         writer.writeCollectionOfObjectValues("excludeRulesSatisfied", this.getExcludeRulesSatisfied());
         writer.writeStringValue("id", this.getId());
         writer.writeCollectionOfObjectValues("includeRulesSatisfied", this.getIncludeRulesSatisfied());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("result", this.getResult());
         writer.writeCollectionOfPrimitiveValues("sessionControlsNotSatisfied", this.getSessionControlsNotSatisfied());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -266,6 +279,14 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     public void setIncludeRulesSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
         this._includeRulesSatisfied = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.

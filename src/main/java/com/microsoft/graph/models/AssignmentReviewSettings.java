@@ -22,6 +22,8 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     private Boolean _isApprovalJustificationRequired;
     /** If true, access reviews are required for assignments from this policy. */
     private Boolean _isEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The interval for recurrence, such as monthly or quarterly. */
     private String _recurrenceType;
     /** If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers. */
@@ -36,6 +38,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      */
     public AssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,12 +81,13 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentReviewSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("accessReviewTimeoutBehavior", (n) -> { currentObject.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior.class)); });
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
             this.put("isAccessRecommendationEnabled", (n) -> { currentObject.setIsAccessRecommendationEnabled(n.getBooleanValue()); });
             this.put("isApprovalJustificationRequired", (n) -> { currentObject.setIsApprovalJustificationRequired(n.getBooleanValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrenceType", (n) -> { currentObject.setRecurrenceType(n.getStringValue()); });
             this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
             this.put("reviewerType", (n) -> { currentObject.setReviewerType(n.getStringValue()); });
@@ -113,6 +117,14 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
         return this._isEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recurrenceType property value. The interval for recurrence, such as monthly or quarterly.
@@ -158,6 +170,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
         writer.writeBooleanValue("isAccessRecommendationEnabled", this.getIsAccessRecommendationEnabled());
         writer.writeBooleanValue("isApprovalJustificationRequired", this.getIsApprovalJustificationRequired());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("recurrenceType", this.getRecurrenceType());
         writer.writeCollectionOfObjectValues("reviewers", this.getReviewers());
         writer.writeStringValue("reviewerType", this.getReviewerType());
@@ -211,6 +224,14 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      */
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recurrenceType property value. The interval for recurrence, such as monthly or quarterly.

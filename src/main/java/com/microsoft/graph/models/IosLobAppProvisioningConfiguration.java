@@ -42,6 +42,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
      */
     public IosLobAppProvisioningConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosLobAppProvisioningConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

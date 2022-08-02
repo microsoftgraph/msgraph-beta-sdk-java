@@ -27,6 +27,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      */
     public MeetingRegistrant() {
         super();
+        this.setOdataType("#microsoft.graph.meetingRegistrant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

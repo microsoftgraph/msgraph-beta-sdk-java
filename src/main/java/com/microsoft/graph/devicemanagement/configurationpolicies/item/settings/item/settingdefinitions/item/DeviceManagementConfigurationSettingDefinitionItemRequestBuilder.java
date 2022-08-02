@@ -155,7 +155,7 @@ public class DeviceManagementConfigurationSettingDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetRequestConfiguration() {

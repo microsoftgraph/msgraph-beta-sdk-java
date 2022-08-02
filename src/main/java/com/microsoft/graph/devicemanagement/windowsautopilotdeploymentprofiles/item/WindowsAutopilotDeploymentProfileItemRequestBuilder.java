@@ -47,7 +47,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a windowsAutopilotDeviceIdentityItemRequestBuilder
+     * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsAutopilotDeviceIdentityItemRequestBuilder assignedDevices(@javax.annotation.Nonnull final String id) {
@@ -59,7 +59,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a windowsAutopilotDeploymentProfileAssignmentItemRequestBuilder
+     * @return a WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsAutopilotDeploymentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsAutopilotDeploymentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsAutopilotDeploymentProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsAutopilotDeploymentProfileItemRequestBuilderGetQueryParameters queryParameters = new WindowsAutopilotDeploymentProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration() {

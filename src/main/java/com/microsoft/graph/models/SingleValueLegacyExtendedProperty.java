@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SingleValueLegacyExtendedProperty extends Entity implements Parsable {
     /** A property value. */
     private String _value;
@@ -17,6 +17,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      */
     public SingleValueLegacyExtendedProperty() {
         super();
+        this.setOdataType("#microsoft.graph.singleValueLegacyExtendedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OnPremisesAgentGroup extends Entity implements Parsable {
     /** List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable. */
     private java.util.List<OnPremisesAgent> _agents;
@@ -25,6 +25,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      */
     public OnPremisesAgentGroup() {
         super();
+        this.setOdataType("#microsoft.graph.onPremisesAgentGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

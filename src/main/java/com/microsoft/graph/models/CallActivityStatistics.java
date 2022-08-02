@@ -17,6 +17,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      */
     public CallActivityStatistics() {
         super();
+        this.setOdataType("#microsoft.graph.callActivityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

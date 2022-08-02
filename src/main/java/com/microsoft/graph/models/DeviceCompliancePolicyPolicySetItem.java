@@ -14,6 +14,7 @@ public class DeviceCompliancePolicyPolicySetItem extends PolicySetItem implement
      */
     public DeviceCompliancePolicyPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.deviceCompliancePolicyPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

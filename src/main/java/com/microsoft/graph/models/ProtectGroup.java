@@ -20,6 +20,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      */
     public ProtectGroup() {
         super();
+        this.setOdataType("#microsoft.graph.protectGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -326,7 +326,7 @@ public class VendorItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.vendors.item.picture.item collection
      * @param id Unique identifier of the item
-     * @return a pictureItemRequestBuilder
+     * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {
@@ -344,7 +344,7 @@ public class VendorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new vendorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new VendorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public VendorItemRequestBuilderDeleteRequestConfiguration() {
@@ -373,7 +373,7 @@ public class VendorItemRequestBuilder {
         @javax.annotation.Nullable
         public VendorItemRequestBuilderGetQueryParameters queryParameters = new VendorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new vendorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new VendorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public VendorItemRequestBuilderGetRequestConfiguration() {
@@ -388,7 +388,7 @@ public class VendorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new vendorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new VendorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public VendorItemRequestBuilderPatchRequestConfiguration() {

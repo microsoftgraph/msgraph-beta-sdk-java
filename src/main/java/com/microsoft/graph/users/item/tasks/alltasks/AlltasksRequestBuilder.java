@@ -21,7 +21,7 @@ import microsoft.graph.users.item.tasks.alltasks.count.CountRequestBuilder;
 import microsoft.graph.users.item.tasks.alltasks.delta.DeltaRequestBuilder;
 /** Provides operations to manage the alltasks property of the microsoft.graph.tasks entity. */
 public class AlltasksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class FileSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new fileSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new FileSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public FileSecurityProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class FileSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public FileSecurityProfileItemRequestBuilderGetQueryParameters queryParameters = new FileSecurityProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new fileSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new FileSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public FileSecurityProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class FileSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new fileSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new FileSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public FileSecurityProfileItemRequestBuilderPatchRequestConfiguration() {

@@ -211,7 +211,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item collection
      * @param id Unique identifier of the item
-     * @return a custodianItemRequestBuilder
+     * @return a CustodianItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustodianItemRequestBuilder custodians(@javax.annotation.Nonnull final String id) {
@@ -325,7 +325,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item collection
      * @param id Unique identifier of the item
-     * @return a legalHoldItemRequestBuilder
+     * @return a LegalHoldItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LegalHoldItemRequestBuilder legalHolds(@javax.annotation.Nonnull final String id) {
@@ -337,7 +337,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.noncustodialDataSources.item collection
      * @param id Unique identifier of the item
-     * @return a noncustodialDataSourceItemRequestBuilder
+     * @return a NoncustodialDataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public NoncustodialDataSourceItemRequestBuilder noncustodialDataSources(@javax.annotation.Nonnull final String id) {
@@ -349,7 +349,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a caseOperationItemRequestBuilder
+     * @return a CaseOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CaseOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -416,7 +416,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.reviewSets.item collection
      * @param id Unique identifier of the item
-     * @return a reviewSetItemRequestBuilder
+     * @return a ReviewSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ReviewSetItemRequestBuilder reviewSets(@javax.annotation.Nonnull final String id) {
@@ -428,7 +428,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item collection
      * @param id Unique identifier of the item
-     * @return a sourceCollectionItemRequestBuilder
+     * @return a SourceCollectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SourceCollectionItemRequestBuilder sourceCollections(@javax.annotation.Nonnull final String id) {
@@ -440,7 +440,7 @@ public class CaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.tags.item collection
      * @param id Unique identifier of the item
-     * @return a tagItemRequestBuilder
+     * @return a TagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
@@ -458,7 +458,7 @@ public class CaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new caseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CaseItemRequestBuilderDeleteRequestConfiguration() {
@@ -487,7 +487,7 @@ public class CaseItemRequestBuilder {
         @javax.annotation.Nullable
         public CaseItemRequestBuilderGetQueryParameters queryParameters = new CaseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new caseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CaseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CaseItemRequestBuilderGetRequestConfiguration() {
@@ -502,7 +502,7 @@ public class CaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new caseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CaseItemRequestBuilderPatchRequestConfiguration() {

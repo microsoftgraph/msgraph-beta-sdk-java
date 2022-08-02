@@ -307,7 +307,7 @@ public class WorkPositionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new workPositionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WorkPositionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WorkPositionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WorkPositionItemRequestBuilder {
         @javax.annotation.Nullable
         public WorkPositionItemRequestBuilderGetQueryParameters queryParameters = new WorkPositionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new workPositionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WorkPositionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WorkPositionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WorkPositionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new workPositionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WorkPositionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WorkPositionItemRequestBuilderPatchRequestConfiguration() {

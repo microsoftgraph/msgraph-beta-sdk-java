@@ -16,6 +16,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      */
     public DeviceManagementSettingRegexConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingRegexConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

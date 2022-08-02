@@ -32,6 +32,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      */
     public AospDeviceOwnerCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.aospDeviceOwnerCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

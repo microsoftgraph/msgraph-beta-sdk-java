@@ -14,12 +14,15 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
     private Map<String, Object> _additionalData;
     /** Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN */
     private java.util.List<String> _allowedBundleIdentifiers;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new specifiedCaptiveNetworkPlugins and sets the default values.
      * @return a void
      */
     public SpecifiedCaptiveNetworkPlugins() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.specifiedCaptiveNetworkPlugins");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SpecifiedCaptiveNetworkPlugins currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("allowedBundleIdentifiers", (n) -> { currentObject.setAllowedBundleIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedBundleIdentifiers", this.getAllowedBundleIdentifiers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      */
     public void setAllowedBundleIdentifiers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedBundleIdentifiers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

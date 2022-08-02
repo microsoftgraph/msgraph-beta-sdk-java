@@ -19,6 +19,8 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     private String _logoutUrl;
     /** The oauth2AllowImplicitFlow property */
     private Boolean _oauth2AllowImplicitFlow;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. */
     private java.util.List<String> _redirectUris;
     /** Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML. */
@@ -29,6 +31,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.webApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,11 +58,12 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
             this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
             this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
             this.put("oauth2AllowImplicitFlow", (n) -> { currentObject.setOauth2AllowImplicitFlow(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
         }};
@@ -97,6 +101,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         return this._oauth2AllowImplicitFlow;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * @return a string
      */
@@ -123,6 +135,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("implicitGrantSettings", this.getImplicitGrantSettings());
         writer.writeStringValue("logoutUrl", this.getLogoutUrl());
         writer.writeBooleanValue("oauth2AllowImplicitFlow", this.getOauth2AllowImplicitFlow());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("redirectUris", this.getRedirectUris());
         writer.writeCollectionOfObjectValues("redirectUriSettings", this.getRedirectUriSettings());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -166,6 +179,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     public void setOauth2AllowImplicitFlow(@javax.annotation.Nullable final Boolean value) {
         this._oauth2AllowImplicitFlow = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.

@@ -16,12 +16,15 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     private String _defaultMessage;
     /** The list of <locale, message> pairs. This collection can contain a maximum of 500 elements. */
     private java.util.List<KeyValuePair> _localizedMessages;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new androidDeviceOwnerUserFacingMessage and sets the default values.
      * @return a void
      */
     public AndroidDeviceOwnerUserFacingMessage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerUserFacingMessage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,9 +59,10 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerUserFacingMessage currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("defaultMessage", (n) -> { currentObject.setDefaultMessage(n.getStringValue()); });
             this.put("localizedMessages", (n) -> { currentObject.setLocalizedMessages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         return this._localizedMessages;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultMessage", this.getDefaultMessage());
         writer.writeCollectionOfObjectValues("localizedMessages", this.getLocalizedMessages());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      */
     public void setLocalizedMessages(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._localizedMessages = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

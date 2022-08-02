@@ -20,7 +20,7 @@ import microsoft.graph.models.SkillProficiencyCollectionResponse;
 import microsoft.graph.users.item.profile.skills.count.CountRequestBuilder;
 /** Provides operations to manage the skills property of the microsoft.graph.profile entity. */
 public class SkillsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

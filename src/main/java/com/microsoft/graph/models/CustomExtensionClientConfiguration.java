@@ -11,6 +11,8 @@ import java.util.Objects;
 public class CustomExtensionClientConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The max duration in milliseconds that Azure AD will wait for a response from the logic app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000. */
     private Integer _timeoutInMilliseconds;
     /**
@@ -19,6 +21,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     public CustomExtensionClientConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.customExtensionClientConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,9 +48,18 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionClientConfiguration currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeoutInMilliseconds", (n) -> { currentObject.setTimeoutInMilliseconds(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the timeoutInMilliseconds property value. The max duration in milliseconds that Azure AD will wait for a response from the logic app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
@@ -64,6 +76,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("timeoutInMilliseconds", this.getTimeoutInMilliseconds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -74,6 +87,14 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the timeoutInMilliseconds property value. The max duration in milliseconds that Azure AD will wait for a response from the logic app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.

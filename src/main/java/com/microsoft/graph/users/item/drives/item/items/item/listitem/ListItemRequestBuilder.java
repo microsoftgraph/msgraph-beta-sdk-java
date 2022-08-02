@@ -73,7 +73,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.drives.item.items.item.listItem.activities.item collection
      * @param id Unique identifier of the item
-     * @return a itemActivityOLDItemRequestBuilder
+     * @return a ItemActivityOLDItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemActivityOLDItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
@@ -253,7 +253,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.drives.item.items.item.listItem.documentSetVersions.item collection
      * @param id Unique identifier of the item
-     * @return a documentSetVersionItemRequestBuilder
+     * @return a DocumentSetVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DocumentSetVersionItemRequestBuilder documentSetVersions(@javax.annotation.Nonnull final String id) {
@@ -385,7 +385,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.drives.item.items.item.listItem.versions.item collection
      * @param id Unique identifier of the item
-     * @return a listItemVersionItemRequestBuilder
+     * @return a ListItemVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ListItemVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {

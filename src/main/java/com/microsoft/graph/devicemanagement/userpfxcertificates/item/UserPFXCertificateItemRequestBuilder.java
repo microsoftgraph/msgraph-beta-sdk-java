@@ -307,7 +307,7 @@ public class UserPFXCertificateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userPFXCertificateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserPFXCertificateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserPFXCertificateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserPFXCertificateItemRequestBuilder {
         @javax.annotation.Nullable
         public UserPFXCertificateItemRequestBuilderGetQueryParameters queryParameters = new UserPFXCertificateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userPFXCertificateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserPFXCertificateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserPFXCertificateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserPFXCertificateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userPFXCertificateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserPFXCertificateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserPFXCertificateItemRequestBuilderPatchRequestConfiguration() {

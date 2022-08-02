@@ -24,6 +24,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      */
     public PrivilegedRoleSummary() {
         super();
+        this.setOdataType("#microsoft.graph.privilegedRoleSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      */
     public EducationSynchronizationOAuth2ClientCredentialsConnectionSettings() {
         super();
+        this.setOdataType("#microsoft.graph.educationSynchronizationOAuth2ClientCredentialsConnectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

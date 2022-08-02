@@ -25,6 +25,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     public DocumentSetVersion() {
         super();
+        this.setOdataType("#microsoft.graph.documentSetVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

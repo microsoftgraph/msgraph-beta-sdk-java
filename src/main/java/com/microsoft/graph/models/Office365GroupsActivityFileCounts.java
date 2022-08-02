@@ -25,6 +25,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     public Office365GroupsActivityFileCounts() {
         super();
+        this.setOdataType("#microsoft.graph.office365GroupsActivityFileCounts");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Mention extends Entity implements Parsable {
     /** The name of the application where the mention is created. Optional. Not used and defaulted as null for message. */
     private String _application;
@@ -32,6 +32,7 @@ public class Mention extends Entity implements Parsable {
      */
     public Mention() {
         super();
+        this.setOdataType("#microsoft.graph.mention");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

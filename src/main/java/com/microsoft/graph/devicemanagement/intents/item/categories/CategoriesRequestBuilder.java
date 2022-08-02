@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceManagementIntentSettingCategoryCollectionRes
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.deviceManagementIntent entity. */
 public class CategoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

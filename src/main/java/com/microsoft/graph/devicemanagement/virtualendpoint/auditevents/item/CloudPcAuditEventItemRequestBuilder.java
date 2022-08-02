@@ -307,7 +307,7 @@ public class CloudPcAuditEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcAuditEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcAuditEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcAuditEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcAuditEventItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcAuditEventItemRequestBuilderGetQueryParameters queryParameters = new CloudPcAuditEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcAuditEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcAuditEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcAuditEventItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcAuditEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcAuditEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcAuditEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcAuditEventItemRequestBuilderPatchRequestConfiguration() {

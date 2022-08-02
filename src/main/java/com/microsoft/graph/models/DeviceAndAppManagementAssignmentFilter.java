@@ -29,7 +29,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      */
     public DeviceAndAppManagementAssignmentFilter() {
         super();
-        this.setType("#microsoft.graph.deviceAndAppManagementAssignmentFilter");
+        this.setOdataType("#microsoft.graph.deviceAndAppManagementAssignmentFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

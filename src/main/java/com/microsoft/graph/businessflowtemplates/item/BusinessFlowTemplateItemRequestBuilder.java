@@ -307,7 +307,7 @@ public class BusinessFlowTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new businessFlowTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BusinessFlowTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BusinessFlowTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class BusinessFlowTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public BusinessFlowTemplateItemRequestBuilderGetQueryParameters queryParameters = new BusinessFlowTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new businessFlowTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BusinessFlowTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BusinessFlowTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class BusinessFlowTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new businessFlowTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BusinessFlowTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BusinessFlowTemplateItemRequestBuilderPatchRequestConfiguration() {

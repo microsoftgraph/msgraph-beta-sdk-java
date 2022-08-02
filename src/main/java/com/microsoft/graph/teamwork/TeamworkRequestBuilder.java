@@ -149,7 +149,7 @@ public class TeamworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teamwork.deletedTeams.item collection
      * @param id Unique identifier of the item
-     * @return a deletedTeamItemRequestBuilder
+     * @return a DeletedTeamItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeletedTeamItemRequestBuilder deletedTeams(@javax.annotation.Nonnull final String id) {
@@ -161,7 +161,7 @@ public class TeamworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teamwork.devices.item collection
      * @param id Unique identifier of the item
-     * @return a teamworkDeviceItemRequestBuilder
+     * @return a TeamworkDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamworkDeviceItemRequestBuilder devices(@javax.annotation.Nonnull final String id) {
@@ -279,7 +279,7 @@ public class TeamworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teamwork.workforceIntegrations.item collection
      * @param id Unique identifier of the item
-     * @return a workforceIntegrationItemRequestBuilder
+     * @return a WorkforceIntegrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WorkforceIntegrationItemRequestBuilder workforceIntegrations(@javax.annotation.Nonnull final String id) {

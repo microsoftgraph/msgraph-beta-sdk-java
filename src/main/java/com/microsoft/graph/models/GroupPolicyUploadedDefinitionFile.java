@@ -27,6 +27,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      */
     public GroupPolicyUploadedDefinitionFile() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyUploadedDefinitionFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

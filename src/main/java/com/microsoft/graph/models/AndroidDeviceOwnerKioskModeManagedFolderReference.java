@@ -18,6 +18,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      */
     public AndroidDeviceOwnerKioskModeManagedFolderReference() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeManagedFolderReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

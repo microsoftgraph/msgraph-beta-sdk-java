@@ -26,6 +26,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     public MembershipOutlierInsight() {
         super();
+        this.setOdataType("#microsoft.graph.membershipOutlierInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

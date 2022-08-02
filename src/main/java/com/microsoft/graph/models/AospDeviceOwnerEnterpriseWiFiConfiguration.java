@@ -30,6 +30,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      */
     public AospDeviceOwnerEnterpriseWiFiConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.aospDeviceOwnerEnterpriseWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -74,6 +74,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      */
     public MacOSKerberosSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.macOSKerberosSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

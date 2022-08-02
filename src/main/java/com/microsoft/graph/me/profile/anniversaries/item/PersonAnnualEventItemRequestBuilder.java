@@ -307,7 +307,7 @@ public class PersonAnnualEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personAnnualEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PersonAnnualEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonAnnualEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PersonAnnualEventItemRequestBuilder {
         @javax.annotation.Nullable
         public PersonAnnualEventItemRequestBuilderGetQueryParameters queryParameters = new PersonAnnualEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new personAnnualEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PersonAnnualEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonAnnualEventItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PersonAnnualEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personAnnualEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PersonAnnualEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonAnnualEventItemRequestBuilderPatchRequestConfiguration() {

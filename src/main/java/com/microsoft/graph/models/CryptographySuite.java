@@ -22,6 +22,8 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     private VpnEncryptionAlgorithmType _encryptionMethod;
     /** Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5. */
     private VpnIntegrityAlgorithmType _integrityCheckMethod;
+    /** The OdataType property */
+    private String _odataType;
     /** Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24. */
     private PerfectForwardSecrecyGroup _pfsGroup;
     /**
@@ -30,6 +32,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     public CryptographySuite() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cryptographySuite");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,12 +91,13 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CryptographySuite currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("authenticationTransformConstants", (n) -> { currentObject.setAuthenticationTransformConstants(n.getEnumValue(AuthenticationTransformConstant.class)); });
             this.put("cipherTransformConstants", (n) -> { currentObject.setCipherTransformConstants(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
             this.put("dhGroup", (n) -> { currentObject.setDhGroup(n.getEnumValue(DiffieHellmanGroup.class)); });
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
             this.put("integrityCheckMethod", (n) -> { currentObject.setIntegrityCheckMethod(n.getEnumValue(VpnIntegrityAlgorithmType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("pfsGroup", (n) -> { currentObject.setPfsGroup(n.getEnumValue(PerfectForwardSecrecyGroup.class)); });
         }};
     }
@@ -104,6 +108,14 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VpnIntegrityAlgorithmType getIntegrityCheckMethod() {
         return this._integrityCheckMethod;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
@@ -125,6 +137,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("dhGroup", this.getDhGroup());
         writer.writeEnumValue("encryptionMethod", this.getEncryptionMethod());
         writer.writeEnumValue("integrityCheckMethod", this.getIntegrityCheckMethod());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("pfsGroup", this.getPfsGroup());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -175,6 +188,14 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     public void setIntegrityCheckMethod(@javax.annotation.Nullable final VpnIntegrityAlgorithmType value) {
         this._integrityCheckMethod = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.

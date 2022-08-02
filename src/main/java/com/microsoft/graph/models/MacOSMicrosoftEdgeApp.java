@@ -16,6 +16,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     public MacOSMicrosoftEdgeApp() {
         super();
+        this.setOdataType("#microsoft.graph.macOSMicrosoftEdgeApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

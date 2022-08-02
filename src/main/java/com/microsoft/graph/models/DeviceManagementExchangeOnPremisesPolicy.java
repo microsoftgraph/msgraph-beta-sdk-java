@@ -24,6 +24,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      */
     public DeviceManagementExchangeOnPremisesPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementExchangeOnPremisesPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

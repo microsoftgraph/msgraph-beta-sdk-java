@@ -17,7 +17,7 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      */
     public MeetingRegistrantBase() {
         super();
-        this.setType("#microsoft.graph.meetingRegistrantBase");
+        this.setOdataType("#microsoft.graph.meetingRegistrantBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

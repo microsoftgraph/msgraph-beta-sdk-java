@@ -13,6 +13,8 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** If true, this activity was a reply to an existing comment thread. */
     private Boolean _isReply;
+    /** The OdataType property */
+    private String _odataType;
     /** The identity of the user who started the comment thread. */
     private IdentitySet _parentAuthor;
     /** The identities of the users participating in this comment thread. */
@@ -23,6 +25,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      */
     public CommentAction() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.commentAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommentAction currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isReply", (n) -> { currentObject.setIsReply(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentAuthor", (n) -> { currentObject.setParentAuthor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
         }};
@@ -62,6 +66,14 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsReply() {
         return this._isReply;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the parentAuthor property value. The identity of the user who started the comment thread.
@@ -87,6 +99,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isReply", this.getIsReply());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("parentAuthor", this.getParentAuthor());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      */
     public void setIsReply(@javax.annotation.Nullable final Boolean value) {
         this._isReply = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the parentAuthor property value. The identity of the user who started the comment thread.

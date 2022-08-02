@@ -20,7 +20,7 @@ import microsoft.graph.models.CloudPcProvisioningPolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the provisioningPolicies property of the microsoft.graph.virtualEndpoint entity. */
 public class ProvisioningPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

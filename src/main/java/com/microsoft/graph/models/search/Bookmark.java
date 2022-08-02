@@ -37,6 +37,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     public Bookmark() {
         super();
+        this.setOdataType("#microsoft.graph.search.bookmark");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -32,6 +32,7 @@ public class DataClassificationService extends Entity implements Parsable {
      */
     public DataClassificationService() {
         super();
+        this.setOdataType("#microsoft.graph.dataClassificationService");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

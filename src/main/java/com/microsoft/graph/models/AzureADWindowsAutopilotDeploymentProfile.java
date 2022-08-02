@@ -14,6 +14,7 @@ public class AzureADWindowsAutopilotDeploymentProfile extends WindowsAutopilotDe
      */
     public AzureADWindowsAutopilotDeploymentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.azureADWindowsAutopilotDeploymentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

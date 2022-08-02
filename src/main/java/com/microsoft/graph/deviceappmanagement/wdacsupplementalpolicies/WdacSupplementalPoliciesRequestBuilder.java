@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolic
 import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse;
 /** Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity. */
 public class WdacSupplementalPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

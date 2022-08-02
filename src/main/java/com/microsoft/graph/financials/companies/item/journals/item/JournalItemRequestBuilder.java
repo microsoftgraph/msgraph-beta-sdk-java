@@ -265,7 +265,7 @@ public class JournalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.journals.item.journalLines.item collection
      * @param id Unique identifier of the item
-     * @return a journalLineItemRequestBuilder
+     * @return a JournalLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public JournalLineItemRequestBuilder journalLines(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class JournalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new journalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new JournalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public JournalItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class JournalItemRequestBuilder {
         @javax.annotation.Nullable
         public JournalItemRequestBuilderGetQueryParameters queryParameters = new JournalItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new journalItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new JournalItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public JournalItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class JournalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new journalItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new JournalItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public JournalItemRequestBuilderPatchRequestConfiguration() {

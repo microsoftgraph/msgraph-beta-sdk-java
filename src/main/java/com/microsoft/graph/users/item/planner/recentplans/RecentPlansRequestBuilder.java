@@ -19,7 +19,7 @@ import microsoft.graph.models.PlannerPlanCollectionResponse;
 import microsoft.graph.users.item.planner.recentplans.count.CountRequestBuilder;
 /** Provides operations to manage the recentPlans property of the microsoft.graph.plannerUser entity. */
 public class RecentPlansRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

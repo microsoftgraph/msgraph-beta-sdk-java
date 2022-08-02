@@ -16,6 +16,7 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
      */
     public DeviceManagementComplexSettingDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementComplexSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

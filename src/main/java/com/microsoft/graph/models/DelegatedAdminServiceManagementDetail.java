@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /** The URL of the management portal for the managed service. Read-only. */
     private String _serviceManagementUrl;
@@ -19,6 +19,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      */
     public DelegatedAdminServiceManagementDetail() {
         super();
+        this.setOdataType("#microsoft.graph.delegatedAdminServiceManagementDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CatalogEntry extends Entity implements Parsable {
     /** The date on which the content is no longer available to deploy using the service. Read-only. */
     private OffsetDateTime _deployableUntilDateTime;
@@ -23,7 +23,7 @@ public class CatalogEntry extends Entity implements Parsable {
      */
     public CatalogEntry() {
         super();
-        this.setType("#microsoft.graph.windowsUpdates.catalogEntry");
+        this.setOdataType("#microsoft.graph.windowsUpdates.catalogEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,6 +37,8 @@ public class CatalogEntry extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry": return new FeatureUpdateCatalogEntry();
+                case "#microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry": return new QualityUpdateCatalogEntry();
                 case "#microsoft.graph.windowsUpdates.softwareUpdateCatalogEntry": return new SoftwareUpdateCatalogEntry();
             }
         }

@@ -18,6 +18,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      */
     public AndroidForWorkTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

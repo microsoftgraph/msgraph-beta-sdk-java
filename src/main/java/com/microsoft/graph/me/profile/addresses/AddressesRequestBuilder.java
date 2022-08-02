@@ -20,7 +20,7 @@ import microsoft.graph.models.ItemAddressCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the addresses property of the microsoft.graph.profile entity. */
 public class AddressesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.count.CountRequestBuilder;
 /** Provides operations to manage the appScopes property of the microsoft.graph.unifiedRoleAssignmentMultiple entity. */
 public class AppScopesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

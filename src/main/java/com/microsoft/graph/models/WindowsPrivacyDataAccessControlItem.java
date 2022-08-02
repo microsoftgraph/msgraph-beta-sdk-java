@@ -23,6 +23,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      */
     public WindowsPrivacyDataAccessControlItem() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPrivacyDataAccessControlItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

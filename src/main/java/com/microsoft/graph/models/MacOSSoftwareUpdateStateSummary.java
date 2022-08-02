@@ -28,6 +28,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     public MacOSSoftwareUpdateStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.macOSSoftwareUpdateStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

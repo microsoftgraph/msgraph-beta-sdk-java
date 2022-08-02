@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.privilegedaccess.item.rolesettings.count.CountRequestBuilder;
 /** Provides operations to manage the roleSettings property of the microsoft.graph.privilegedAccess entity. */
 public class RoleSettingsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

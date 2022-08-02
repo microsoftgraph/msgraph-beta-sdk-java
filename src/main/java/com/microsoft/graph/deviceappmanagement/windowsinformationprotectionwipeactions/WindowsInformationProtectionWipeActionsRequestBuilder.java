@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsInformationProtectionWipeAction;
 import microsoft.graph.models.WindowsInformationProtectionWipeActionCollectionResponse;
 /** Provides operations to manage the windowsInformationProtectionWipeActions property of the microsoft.graph.deviceAppManagement entity. */
 public class WindowsInformationProtectionWipeActionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -32,6 +32,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      */
     public MacOSEnterpriseWiFiConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSEnterpriseWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,6 +24,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     public StatusDetails() {
         super();
+        this.setOdataType("#microsoft.graph.statusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

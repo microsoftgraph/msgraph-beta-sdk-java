@@ -16,6 +16,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
      */
     public TeamsAppSettings() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAppSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

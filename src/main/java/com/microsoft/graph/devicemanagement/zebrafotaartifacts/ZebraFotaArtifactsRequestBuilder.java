@@ -20,7 +20,7 @@ import microsoft.graph.models.ZebraFotaArtifact;
 import microsoft.graph.models.ZebraFotaArtifactCollectionResponse;
 /** Provides operations to manage the zebraFotaArtifacts property of the microsoft.graph.deviceManagement entity. */
 public class ZebraFotaArtifactsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

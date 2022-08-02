@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Relation extends Entity implements Parsable {
     /** The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
     private Term _fromTerm;
@@ -24,6 +24,7 @@ public class Relation extends Entity implements Parsable {
      */
     public Relation() {
         super();
+        this.setOdataType("#microsoft.graph.termStore.relation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

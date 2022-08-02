@@ -308,7 +308,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.settings.item.settingDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationSettingDefinitionItemRequestBuilder
+     * @return a DeviceManagementConfigurationSettingDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationSettingDefinitionItemRequestBuilder settingDefinitions(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementConfigurationSettingItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementConfigurationSettingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingItemRequestBuilderPatchRequestConfiguration() {

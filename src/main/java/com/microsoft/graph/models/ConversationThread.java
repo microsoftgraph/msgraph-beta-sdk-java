@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ConversationThread extends Entity implements Parsable {
     /** The Cc: recipients for the thread. Returned only on $select. */
     private java.util.List<Recipient> _ccRecipients;
@@ -34,6 +34,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     public ConversationThread() {
         super();
+        this.setOdataType("#microsoft.graph.conversationThread");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

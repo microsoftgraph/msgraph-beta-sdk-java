@@ -45,6 +45,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      */
     public StrongAuthenticationPhoneAppDetail() {
         super();
+        this.setOdataType("#microsoft.graph.strongAuthenticationPhoneAppDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

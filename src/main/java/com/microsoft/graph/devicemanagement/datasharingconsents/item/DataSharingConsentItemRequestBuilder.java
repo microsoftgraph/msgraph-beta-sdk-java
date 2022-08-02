@@ -313,7 +313,7 @@ public class DataSharingConsentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dataSharingConsentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DataSharingConsentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataSharingConsentItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DataSharingConsentItemRequestBuilder {
         @javax.annotation.Nullable
         public DataSharingConsentItemRequestBuilderGetQueryParameters queryParameters = new DataSharingConsentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dataSharingConsentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DataSharingConsentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataSharingConsentItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DataSharingConsentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dataSharingConsentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DataSharingConsentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataSharingConsentItemRequestBuilderPatchRequestConfiguration() {

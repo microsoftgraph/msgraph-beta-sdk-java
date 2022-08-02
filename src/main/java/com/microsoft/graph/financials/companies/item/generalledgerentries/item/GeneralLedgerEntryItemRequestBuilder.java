@@ -161,7 +161,7 @@ public class GeneralLedgerEntryItemRequestBuilder {
         @javax.annotation.Nullable
         public GeneralLedgerEntryItemRequestBuilderGetQueryParameters queryParameters = new GeneralLedgerEntryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new generalLedgerEntryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GeneralLedgerEntryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GeneralLedgerEntryItemRequestBuilderGetRequestConfiguration() {

@@ -260,7 +260,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item.groupPolicySettingMappings.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicySettingMappingItemRequestBuilder
+     * @return a GroupPolicySettingMappingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicySettingMappingItemRequestBuilder groupPolicySettingMappings(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item.unsupportedGroupPolicyExtensions.item collection
      * @param id Unique identifier of the item
-     * @return a unsupportedGroupPolicyExtensionItemRequestBuilder
+     * @return a UnsupportedGroupPolicyExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnsupportedGroupPolicyExtensionItemRequestBuilder unsupportedGroupPolicyExtensions(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyMigrationReportItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyMigrationReportItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyMigrationReportItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyMigrationReportItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyMigrationReportItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyMigrationReportItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyMigrationReportItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyMigrationReportItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyMigrationReportItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyMigrationReportItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyMigrationReportItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.ShipmentMethod;
 import microsoft.graph.models.ShipmentMethodCollectionResponse;
 /** Provides operations to manage the shipmentMethods property of the microsoft.graph.company entity. */
 public class ShipmentMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

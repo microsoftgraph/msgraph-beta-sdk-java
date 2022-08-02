@@ -52,7 +52,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackageAssignmentResourceRoles.item.accessPackageAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentItemRequestBuilder
+     * @return a AccessPackageAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentItemRequestBuilder accessPackageAssignments(@javax.annotation.Nonnull final String id) {
@@ -344,7 +344,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageAssignmentResourceRoleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentResourceRoleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentResourceRoleItemRequestBuilderDeleteRequestConfiguration() {
@@ -373,7 +373,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageAssignmentResourceRoleItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageAssignmentResourceRoleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageAssignmentResourceRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentResourceRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentResourceRoleItemRequestBuilderGetRequestConfiguration() {
@@ -388,7 +388,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageAssignmentResourceRoleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentResourceRoleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentResourceRoleItemRequestBuilderPatchRequestConfiguration() {

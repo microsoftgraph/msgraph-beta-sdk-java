@@ -15,12 +15,15 @@ public class Media implements AdditionalDataHolder, Parsable {
     private Boolean _isTranscriptionShown;
     /** Information about the source of media. Read-only. */
     private MediaSource _mediaSource;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new media and sets the default values.
      * @return a void
      */
     public Media() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.media");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,9 +50,10 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Media currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("isTranscriptionShown", (n) -> { currentObject.setIsTranscriptionShown(n.getBooleanValue()); });
             this.put("mediaSource", (n) -> { currentObject.setMediaSource(n.getObjectValue(MediaSource::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class Media implements AdditionalDataHolder, Parsable {
         return this._mediaSource;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class Media implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isTranscriptionShown", this.getIsTranscriptionShown());
         writer.writeObjectValue("mediaSource", this.getMediaSource());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class Media implements AdditionalDataHolder, Parsable {
      */
     public void setMediaSource(@javax.annotation.Nullable final MediaSource value) {
         this._mediaSource = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -233,7 +233,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.synchronizationProfiles.item.errors.item collection
      * @param id Unique identifier of the item
-     * @return a educationSynchronizationErrorItemRequestBuilder
+     * @return a EducationSynchronizationErrorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationSynchronizationErrorItemRequestBuilder errors(@javax.annotation.Nonnull final String id) {
@@ -365,7 +365,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSynchronizationProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSynchronizationProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSynchronizationProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -394,7 +394,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationSynchronizationProfileItemRequestBuilderGetQueryParameters queryParameters = new EducationSynchronizationProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationSynchronizationProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSynchronizationProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSynchronizationProfileItemRequestBuilderGetRequestConfiguration() {
@@ -409,7 +409,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSynchronizationProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSynchronizationProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSynchronizationProfileItemRequestBuilderPatchRequestConfiguration() {

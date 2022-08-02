@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrintDocument extends Entity implements Parsable {
     /** The configuration property */
     private PrinterDocumentConfiguration _configuration;
@@ -23,6 +23,7 @@ public class PrintDocument extends Entity implements Parsable {
      */
     public PrintDocument() {
         super();
+        this.setOdataType("#microsoft.graph.printDocument");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

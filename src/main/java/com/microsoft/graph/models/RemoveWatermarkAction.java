@@ -16,6 +16,7 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
      */
     public RemoveWatermarkAction() {
         super();
+        this.setOdataType("#microsoft.graph.removeWatermarkAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

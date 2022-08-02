@@ -20,6 +20,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      */
     public EncryptWithUserDefinedRights() {
         super();
+        this.setOdataType("#microsoft.graph.encryptWithUserDefinedRights");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

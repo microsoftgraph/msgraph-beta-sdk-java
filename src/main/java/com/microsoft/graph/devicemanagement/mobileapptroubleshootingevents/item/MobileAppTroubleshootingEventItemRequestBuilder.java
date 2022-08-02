@@ -34,7 +34,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.mobileAppTroubleshootingEvents.item.appLogCollectionRequests.item collection
      * @param id Unique identifier of the item
-     * @return a appLogCollectionRequestItemRequestBuilder
+     * @return a AppLogCollectionRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppLogCollectionRequestItemRequestBuilder appLogCollectionRequests(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppTroubleshootingEventItemRequestBuilderGetQueryParameters queryParameters = new MobileAppTroubleshootingEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration() {

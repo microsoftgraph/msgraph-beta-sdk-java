@@ -18,6 +18,7 @@ public class ProgramControlType extends Entity implements Parsable {
      */
     public ProgramControlType() {
         super();
+        this.setOdataType("#microsoft.graph.programControlType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

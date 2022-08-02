@@ -20,7 +20,7 @@ import microsoft.graph.models.TaxGroup;
 import microsoft.graph.models.TaxGroupCollectionResponse;
 /** Provides operations to manage the taxGroups property of the microsoft.graph.company entity. */
 public class TaxGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -313,7 +313,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementExchangeOnPremisesPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementExchangeOnPremisesPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExchangeOnPremisesPolicyItemRequestBuilderPatchRequestConfiguration() {

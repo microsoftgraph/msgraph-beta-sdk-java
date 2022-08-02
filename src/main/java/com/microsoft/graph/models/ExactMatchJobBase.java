@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ExactMatchJobBase extends Entity implements Parsable {
     /** The completionDateTime property */
     private OffsetDateTime _completionDateTime;
@@ -26,7 +26,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      */
     public ExactMatchJobBase() {
         super();
-        this.setType("#microsoft.graph.exactMatchJobBase");
+        this.setOdataType("#microsoft.graph.exactMatchJobBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,6 +41,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.exactMatchLookupJob": return new ExactMatchLookupJob();
+                case "#microsoft.graph.exactMatchSession": return new ExactMatchSession();
                 case "#microsoft.graph.exactMatchSessionBase": return new ExactMatchSessionBase();
             }
         }

@@ -18,6 +18,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      */
     public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceComplianceLocalActionLockDeviceWithPasscode");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

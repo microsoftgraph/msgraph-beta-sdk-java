@@ -27,6 +27,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
     private String _grade;
     /** Additional notes the user has provided. */
     private String _notes;
+    /** The OdataType property */
+    private String _odataType;
     /** Link to the degree or program page. */
     private String _webUrl;
     /**
@@ -35,6 +37,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      */
     public EducationalActivityDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationalActivityDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -101,7 +104,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationalActivityDetail currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("abbreviation", (n) -> { currentObject.setAbbreviation(n.getStringValue()); });
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("awards", (n) -> { currentObject.setAwards(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -110,6 +113,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
             this.put("fieldsOfStudy", (n) -> { currentObject.setFieldsOfStudy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("grade", (n) -> { currentObject.setGrade(n.getStringValue()); });
             this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
     }
@@ -138,6 +142,14 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
         return this._notes;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the webUrl property value. Link to the degree or program page.
      * @return a string
      */
@@ -160,6 +172,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
         writer.writeCollectionOfPrimitiveValues("fieldsOfStudy", this.getFieldsOfStudy());
         writer.writeStringValue("grade", this.getGrade());
         writer.writeStringValue("notes", this.getNotes());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("webUrl", this.getWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -234,6 +247,14 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      */
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the webUrl property value. Link to the degree or program page.

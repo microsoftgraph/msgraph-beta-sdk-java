@@ -15,6 +15,8 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     private String _availableVersion;
     /** The current software version. */
     private String _currentVersion;
+    /** The OdataType property */
+    private String _odataType;
     /** The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue. */
     private TeamworkSoftwareFreshness _softwareFreshness;
     /**
@@ -23,6 +25,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      */
     public TeamworkSoftwareUpdateStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkSoftwareUpdateStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSoftwareUpdateStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("availableVersion", (n) -> { currentObject.setAvailableVersion(n.getStringValue()); });
             this.put("currentVersion", (n) -> { currentObject.setCurrentVersion(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("softwareFreshness", (n) -> { currentObject.setSoftwareFreshness(n.getEnumValue(TeamworkSoftwareFreshness.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the softwareFreshness property value. The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
@@ -88,6 +100,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeStringValue("availableVersion", this.getAvailableVersion());
         writer.writeStringValue("currentVersion", this.getCurrentVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("softwareFreshness", this.getSoftwareFreshness());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      */
     public void setCurrentVersion(@javax.annotation.Nullable final String value) {
         this._currentVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the softwareFreshness property value. The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.

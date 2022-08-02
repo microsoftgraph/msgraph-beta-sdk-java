@@ -307,7 +307,7 @@ public class ConfigManagerCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new configManagerCollectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConfigManagerCollectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConfigManagerCollectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ConfigManagerCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public ConfigManagerCollectionItemRequestBuilderGetQueryParameters queryParameters = new ConfigManagerCollectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new configManagerCollectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConfigManagerCollectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConfigManagerCollectionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ConfigManagerCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new configManagerCollectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConfigManagerCollectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConfigManagerCollectionItemRequestBuilderPatchRequestConfiguration() {

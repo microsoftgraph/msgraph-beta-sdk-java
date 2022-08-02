@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceManagementDerivedCredentialSettingsCollectio
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the derivedCredentials property of the microsoft.graph.deviceManagement entity. */
 public class DerivedCredentialsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -313,7 +313,7 @@ public class MobileAppInstallStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppInstallStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppInstallStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppInstallStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class MobileAppInstallStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppInstallStatusItemRequestBuilderGetQueryParameters queryParameters = new MobileAppInstallStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppInstallStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppInstallStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppInstallStatusItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class MobileAppInstallStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppInstallStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppInstallStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppInstallStatusItemRequestBuilderPatchRequestConfiguration() {

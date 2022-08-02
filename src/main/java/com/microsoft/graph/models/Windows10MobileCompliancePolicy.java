@@ -50,6 +50,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     public Windows10MobileCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.windows10MobileCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

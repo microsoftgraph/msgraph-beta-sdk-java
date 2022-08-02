@@ -52,7 +52,7 @@ public class Security extends Entity implements Parsable {
     private java.util.List<SecurityAction> _securityActions;
     /** The subjectRightsRequests property */
     private java.util.List<SubjectRightsRequest> _subjectRightsRequests;
-    /** The threatSubmission property */
+    /** A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat. */
     private ThreatSubmissionRoot _threatSubmission;
     /** The tiIndicators property */
     private java.util.List<TiIndicator> _tiIndicators;
@@ -68,6 +68,7 @@ public class Security extends Entity implements Parsable {
      */
     public Security() {
         super();
+        this.setOdataType("#microsoft.graph.security");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -257,7 +258,7 @@ public class Security extends Entity implements Parsable {
         return this._subjectRightsRequests;
     }
     /**
-     * Gets the threatSubmission property value. The threatSubmission property
+     * Gets the threatSubmission property value. A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @return a threatSubmissionRoot
      */
     @javax.annotation.Nullable
@@ -473,7 +474,7 @@ public class Security extends Entity implements Parsable {
         this._subjectRightsRequests = value;
     }
     /**
-     * Sets the threatSubmission property value. The threatSubmission property
+     * Sets the threatSubmission property value. A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @param value Value to set for the threatSubmission property.
      * @return a void
      */

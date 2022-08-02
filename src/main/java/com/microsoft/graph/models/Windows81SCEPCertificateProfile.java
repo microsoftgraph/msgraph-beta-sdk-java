@@ -32,6 +32,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      */
     public Windows81SCEPCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windows81SCEPCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

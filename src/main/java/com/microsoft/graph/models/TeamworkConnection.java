@@ -16,12 +16,15 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
     private TeamworkConnectionStatus _connectionStatus;
     /** Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamworkConnection and sets the default values.
      * @return a void
      */
     public TeamworkConnection() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,9 +59,10 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkConnection currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("connectionStatus", (n) -> { currentObject.setConnectionStatus(n.getEnumValue(TeamworkConnectionStatus.class)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
         return this._lastModifiedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("connectionStatus", this.getConnectionStatus());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

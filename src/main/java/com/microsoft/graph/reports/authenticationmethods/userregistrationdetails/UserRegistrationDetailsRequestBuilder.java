@@ -20,7 +20,7 @@ import microsoft.graph.models.UserRegistrationDetailsCollectionResponse;
 import microsoft.graph.reports.authenticationmethods.userregistrationdetails.count.CountRequestBuilder;
 /** Provides operations to manage the userRegistrationDetails property of the microsoft.graph.authenticationMethodsRoot entity. */
 public class UserRegistrationDetailsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

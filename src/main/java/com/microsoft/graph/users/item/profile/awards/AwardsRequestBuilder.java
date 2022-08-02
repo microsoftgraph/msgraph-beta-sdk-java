@@ -20,7 +20,7 @@ import microsoft.graph.models.PersonAwardCollectionResponse;
 import microsoft.graph.users.item.profile.awards.count.CountRequestBuilder;
 /** Provides operations to manage the awards property of the microsoft.graph.profile entity. */
 public class AwardsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

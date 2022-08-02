@@ -313,7 +313,7 @@ public class ManagementActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementActionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class ManagementActionItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementActionItemRequestBuilderGetQueryParameters queryParameters = new ManagementActionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementActionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementActionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementActionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class ManagementActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementActionItemRequestBuilderPatchRequestConfiguration() {

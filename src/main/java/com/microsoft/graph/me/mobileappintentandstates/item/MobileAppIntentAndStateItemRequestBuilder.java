@@ -307,7 +307,7 @@ public class MobileAppIntentAndStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppIntentAndStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppIntentAndStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppIntentAndStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MobileAppIntentAndStateItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppIntentAndStateItemRequestBuilderGetQueryParameters queryParameters = new MobileAppIntentAndStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppIntentAndStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppIntentAndStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppIntentAndStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MobileAppIntentAndStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppIntentAndStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppIntentAndStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppIntentAndStateItemRequestBuilderPatchRequestConfiguration() {

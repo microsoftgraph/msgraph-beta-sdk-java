@@ -155,7 +155,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementTemplateStepVersionItemRequestBuilderGetQueryParameters queryParameters = new ManagementTemplateStepVersionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementTemplateStepVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepVersionItemRequestBuilderGetRequestConfiguration() {

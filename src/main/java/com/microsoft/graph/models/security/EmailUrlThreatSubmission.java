@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailUrlThreatSubmission extends EmailThreatSubmission implements Parsable {
-    /** The messageUrl property */
+    /** Specifies the url of the message to be submitted. */
     private String _messageUrl;
     /**
      * Instantiates a new EmailUrlThreatSubmission and sets the default values.
@@ -16,6 +16,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
      */
     public EmailUrlThreatSubmission() {
         super();
+        this.setOdataType("#microsoft.graph.security.emailUrlThreatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +40,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
         }};
     }
     /**
-     * Gets the messageUrl property value. The messageUrl property
+     * Gets the messageUrl property value. Specifies the url of the message to be submitted.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
         writer.writeStringValue("messageUrl", this.getMessageUrl());
     }
     /**
-     * Sets the messageUrl property value. The messageUrl property
+     * Sets the messageUrl property value. Specifies the url of the message to be submitted.
      * @param value Value to set for the messageUrl property.
      * @return a void
      */

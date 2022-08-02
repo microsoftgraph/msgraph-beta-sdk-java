@@ -16,6 +16,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
      */
     public AzureAdTokenAuthentication() {
         super();
+        this.setOdataType("#microsoft.graph.azureAdTokenAuthentication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

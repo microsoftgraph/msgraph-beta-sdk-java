@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamworkTagMember;
 import microsoft.graph.models.TeamworkTagMemberCollectionResponse;
 /** Provides operations to manage the members property of the microsoft.graph.teamworkTag entity. */
 public class MembersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

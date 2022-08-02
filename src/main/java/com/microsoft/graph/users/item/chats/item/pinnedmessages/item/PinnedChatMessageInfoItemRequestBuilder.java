@@ -313,7 +313,7 @@ public class PinnedChatMessageInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new pinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class PinnedChatMessageInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public PinnedChatMessageInfoItemRequestBuilderGetQueryParameters queryParameters = new PinnedChatMessageInfoItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new pinnedChatMessageInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PinnedChatMessageInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PinnedChatMessageInfoItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class PinnedChatMessageInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new pinnedChatMessageInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PinnedChatMessageInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PinnedChatMessageInfoItemRequestBuilderPatchRequestConfiguration() {

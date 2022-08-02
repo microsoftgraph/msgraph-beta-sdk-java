@@ -20,7 +20,7 @@ import microsoft.graph.models.PrivilegedRoleCollectionResponse;
 import microsoft.graph.privilegedroles.count.CountRequestBuilder;
 /** Provides operations to manage the collection of privilegedRole entities. */
 public class PrivilegedRolesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

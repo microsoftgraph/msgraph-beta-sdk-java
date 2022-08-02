@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommunicationsApplicationInstanceIdentity extends Identity implements Parsable {
-    /** The hidden property */
+    /** True if the participant would not like to be shown in other participants' rosters. */
     private Boolean _hidden;
-    /** The tenantId property */
+    /** The application's tenant ID. */
     private String _tenantId;
     /**
      * Instantiates a new CommunicationsApplicationInstanceIdentity and sets the default values.
@@ -18,6 +18,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      */
     public CommunicationsApplicationInstanceIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.communicationsApplicationInstanceIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +43,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         }};
     }
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -50,7 +51,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         return this._hidden;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The application's tenant ID.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -69,7 +70,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      * @return a void
      */
@@ -77,7 +78,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         this._hidden = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The application's tenant ID.
      * @param value Value to set for the tenantId property.
      * @return a void
      */

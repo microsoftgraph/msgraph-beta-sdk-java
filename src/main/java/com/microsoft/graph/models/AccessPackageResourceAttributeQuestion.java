@@ -16,6 +16,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
      */
     public AccessPackageResourceAttributeQuestion() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageResourceAttributeQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

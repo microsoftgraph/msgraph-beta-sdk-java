@@ -13,6 +13,8 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     private Map<String, Object> _additionalData;
     /** The unique identifier for the client application. */
     private String _appId;
+    /** The OdataType property */
+    private String _odataType;
     /** The unique identifier for the scopes the client application is granted. */
     private java.util.List<String> _permissionIds;
     /**
@@ -21,6 +23,7 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
      */
     public PreAuthorizedApplication() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.preAuthorizedApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PreAuthorizedApplication currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permissionIds", (n) -> { currentObject.setPermissionIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the permissionIds property value. The unique identifier for the scopes the client application is granted.
@@ -76,6 +88,7 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("permissionIds", this.getPermissionIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
      */
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the permissionIds property value. The unique identifier for the scopes the client application is granted.

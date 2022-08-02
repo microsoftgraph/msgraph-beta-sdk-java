@@ -36,6 +36,8 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     private LocalTime _installRuleWindowEndTime;
     /** Time of day (00:00:00 - 23:30:00) when installation should begin. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 00:00:00. Respected for all values of update type, including AUTO. */
     private LocalTime _installRuleWindowStartTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used. */
     private Integer _scheduleDurationInDays;
     /** Represents various schedule modes for Zebra FOTA deployment. */
@@ -50,6 +52,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      */
     public ZebraFotaDeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.zebraFotaDeploymentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -116,7 +119,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeploymentSettings currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<>(16) {{
             this.put("batteryRuleMinimumBatteryLevelPercentage", (n) -> { currentObject.setBatteryRuleMinimumBatteryLevelPercentage(n.getIntegerValue()); });
             this.put("batteryRuleRequireCharger", (n) -> { currentObject.setBatteryRuleRequireCharger(n.getBooleanValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
@@ -128,6 +131,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
             this.put("installRuleStartDateTime", (n) -> { currentObject.setInstallRuleStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("installRuleWindowEndTime", (n) -> { currentObject.setInstallRuleWindowEndTime(n.getLocalTimeValue()); });
             this.put("installRuleWindowStartTime", (n) -> { currentObject.setInstallRuleWindowStartTime(n.getLocalTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scheduleDurationInDays", (n) -> { currentObject.setScheduleDurationInDays(n.getIntegerValue()); });
             this.put("scheduleMode", (n) -> { currentObject.setScheduleMode(n.getEnumValue(ZebraFotaScheduleMode.class)); });
             this.put("timeZoneOffsetInMinutes", (n) -> { currentObject.setTimeZoneOffsetInMinutes(n.getIntegerValue()); });
@@ -183,6 +187,14 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         return this._installRuleWindowStartTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the scheduleDurationInDays property value. Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used.
      * @return a integer
      */
@@ -232,6 +244,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         writer.writeOffsetDateTimeValue("installRuleStartDateTime", this.getInstallRuleStartDateTime());
         writer.writeLocalTimeValue("installRuleWindowEndTime", this.getInstallRuleWindowEndTime());
         writer.writeLocalTimeValue("installRuleWindowStartTime", this.getInstallRuleWindowStartTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("scheduleDurationInDays", this.getScheduleDurationInDays());
         writer.writeEnumValue("scheduleMode", this.getScheduleMode());
         writer.writeIntegerValue("timeZoneOffsetInMinutes", this.getTimeZoneOffsetInMinutes());
@@ -333,6 +346,14 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      */
     public void setInstallRuleWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._installRuleWindowStartTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the scheduleDurationInDays property value. Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used.

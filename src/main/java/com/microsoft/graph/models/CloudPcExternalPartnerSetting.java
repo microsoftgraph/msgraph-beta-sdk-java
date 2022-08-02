@@ -9,15 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
-    /** The enableConnection property */
+    /** Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq). */
     private Boolean _enableConnection;
-    /** The lastSyncDateTime property */
+    /** Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'. */
     private OffsetDateTime _lastSyncDateTime;
-    /** The partnerId property */
+    /** The external partner ID. */
     private String _partnerId;
     /** The status property */
     private CloudPcExternalPartnerStatus _status;
-    /** The statusDetails property */
+    /** Status details message. */
     private String _statusDetails;
     /**
      * Instantiates a new CloudPcExternalPartnerSetting and sets the default values.
@@ -25,6 +25,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      */
     public CloudPcExternalPartnerSetting() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcExternalPartnerSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +38,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         return new CloudPcExternalPartnerSetting();
     }
     /**
-     * Gets the enableConnection property value. The enableConnection property
+     * Gets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -60,7 +61,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastSyncDateTime property value. The lastSyncDateTime property
+     * Gets the lastSyncDateTime property value. Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -68,7 +69,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         return this._lastSyncDateTime;
     }
     /**
-     * Gets the partnerId property value. The partnerId property
+     * Gets the partnerId property value. The external partner ID.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +85,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the statusDetails property value. The statusDetails property
+     * Gets the statusDetails property value. Status details message.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +107,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         writer.writeStringValue("statusDetails", this.getStatusDetails());
     }
     /**
-     * Sets the enableConnection property value. The enableConnection property
+     * Sets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
      * @param value Value to set for the enableConnection property.
      * @return a void
      */
@@ -114,7 +115,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         this._enableConnection = value;
     }
     /**
-     * Sets the lastSyncDateTime property value. The lastSyncDateTime property
+     * Sets the lastSyncDateTime property value. Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
@@ -122,7 +123,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         this._lastSyncDateTime = value;
     }
     /**
-     * Sets the partnerId property value. The partnerId property
+     * Sets the partnerId property value. The external partner ID.
      * @param value Value to set for the partnerId property.
      * @return a void
      */
@@ -138,7 +139,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the statusDetails property value. The statusDetails property
+     * Sets the statusDetails property value. Status details message.
      * @param value Value to set for the statusDetails property.
      * @return a void
      */

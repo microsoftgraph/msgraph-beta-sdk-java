@@ -16,6 +16,7 @@ public class WindowsAppIdentifier extends MobileAppIdentifier implements Parsabl
      */
     public WindowsAppIdentifier() {
         super();
+        this.setOdataType("#microsoft.graph.windowsAppIdentifier");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,6 +14,8 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Destination prefix (IPv4/v6 address). */
     private String _destinationPrefix;
+    /** The OdataType property */
+    private String _odataType;
     /** Prefix size. (1-32). Valid values 1 to 32 */
     private Integer _prefixSize;
     /**
@@ -22,6 +24,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      */
     public VpnRoute() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.vpnRoute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,10 +59,19 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnRoute currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("destinationPrefix", (n) -> { currentObject.setDestinationPrefix(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("prefixSize", (n) -> { currentObject.setPrefixSize(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the prefixSize property value. Prefix size. (1-32). Valid values 1 to 32
@@ -77,6 +89,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("destinationPrefix", this.getDestinationPrefix());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("prefixSize", this.getPrefixSize());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      */
     public void setDestinationPrefix(@javax.annotation.Nullable final String value) {
         this._destinationPrefix = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the prefixSize property value. Prefix size. (1-32). Valid values 1 to 32

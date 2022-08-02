@@ -319,7 +319,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new governanceRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceRoleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public GovernanceRoleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new GovernanceRoleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new governanceRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceRoleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new governanceRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceRoleDefinitionItemRequestBuilderPatchRequestConfiguration() {

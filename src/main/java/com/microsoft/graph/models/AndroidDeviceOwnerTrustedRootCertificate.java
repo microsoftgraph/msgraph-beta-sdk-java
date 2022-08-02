@@ -18,6 +18,7 @@ public class AndroidDeviceOwnerTrustedRootCertificate extends DeviceConfiguratio
      */
     public AndroidDeviceOwnerTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

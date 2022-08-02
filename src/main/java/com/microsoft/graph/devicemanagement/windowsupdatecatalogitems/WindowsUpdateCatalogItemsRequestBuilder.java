@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsUpdateCatalogItem;
 import microsoft.graph.models.WindowsUpdateCatalogItemCollectionResponse;
 /** Provides operations to manage the windowsUpdateCatalogItems property of the microsoft.graph.deviceManagement entity. */
 public class WindowsUpdateCatalogItemsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

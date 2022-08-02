@@ -21,7 +21,7 @@ import microsoft.graph.users.item.approvals.count.CountRequestBuilder;
 import microsoft.graph.users.item.approvals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the approvals property of the microsoft.graph.user entity. */
 public class ApprovalsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

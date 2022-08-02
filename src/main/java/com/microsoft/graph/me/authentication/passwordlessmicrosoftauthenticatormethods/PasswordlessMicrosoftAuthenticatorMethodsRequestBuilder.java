@@ -20,7 +20,7 @@ import microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMe
 import microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
 /** Provides operations to manage the passwordlessMicrosoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
 public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

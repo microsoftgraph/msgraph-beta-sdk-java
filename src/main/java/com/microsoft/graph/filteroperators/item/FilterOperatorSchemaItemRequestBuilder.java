@@ -307,7 +307,7 @@ public class FilterOperatorSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new filterOperatorSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new FilterOperatorSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public FilterOperatorSchemaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class FilterOperatorSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public FilterOperatorSchemaItemRequestBuilderGetQueryParameters queryParameters = new FilterOperatorSchemaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new filterOperatorSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new FilterOperatorSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public FilterOperatorSchemaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class FilterOperatorSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new filterOperatorSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new FilterOperatorSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public FilterOperatorSchemaItemRequestBuilderPatchRequestConfiguration() {

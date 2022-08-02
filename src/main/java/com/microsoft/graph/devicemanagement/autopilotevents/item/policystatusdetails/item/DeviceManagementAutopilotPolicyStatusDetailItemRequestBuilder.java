@@ -307,7 +307,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementAutopilotPolicyStatusDetailItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementAutopilotPolicyStatusDetailItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementAutopilotPolicyStatusDetailItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilderPatchRequestConfiguration() {

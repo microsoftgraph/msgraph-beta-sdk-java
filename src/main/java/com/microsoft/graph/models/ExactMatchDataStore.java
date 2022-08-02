@@ -16,6 +16,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
      */
     public ExactMatchDataStore() {
         super();
+        this.setOdataType("#microsoft.graph.exactMatchDataStore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

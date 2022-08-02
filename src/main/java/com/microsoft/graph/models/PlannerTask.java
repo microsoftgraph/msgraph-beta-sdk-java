@@ -68,6 +68,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     public PlannerTask() {
         super();
+        this.setOdataType("#microsoft.graph.plannerTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -33,6 +33,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      */
     public EducationSynchronizationProfile() {
         super();
+        this.setOdataType("#microsoft.graph.educationSynchronizationProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

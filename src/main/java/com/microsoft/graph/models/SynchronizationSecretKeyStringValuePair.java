@@ -13,6 +13,8 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
     private Map<String, Object> _additionalData;
     /** The key property */
     private SynchronizationSecret _key;
+    /** The OdataType property */
+    private String _odataType;
     /** The value of the secret. */
     private String _value;
     /**
@@ -21,6 +23,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
      */
     public SynchronizationSecretKeyStringValuePair() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationSecretKeyStringValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationSecretKeyStringValuePair currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("key", (n) -> { currentObject.setKey(n.getEnumValue(SynchronizationSecret.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
     @javax.annotation.Nullable
     public SynchronizationSecret getKey() {
         return this._key;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the value property value. The value of the secret.
@@ -76,6 +88,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("key", this.getKey());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
      */
     public void setKey(@javax.annotation.Nullable final SynchronizationSecret value) {
         this._key = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the value property value. The value of the secret.

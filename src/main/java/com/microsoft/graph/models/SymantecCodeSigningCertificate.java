@@ -33,6 +33,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      */
     public SymantecCodeSigningCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.symantecCodeSigningCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

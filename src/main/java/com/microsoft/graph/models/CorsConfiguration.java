@@ -19,6 +19,8 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _allowedOrigins;
     /** The maxAgeInSeconds property */
     private Integer _maxAgeInSeconds;
+    /** The OdataType property */
+    private String _odataType;
     /** The resource property */
     private String _resource;
     /**
@@ -27,6 +29,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     public CorsConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.corsConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,11 +80,12 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CorsConfiguration currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("allowedHeaders", (n) -> { currentObject.setAllowedHeaders(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedMethods", (n) -> { currentObject.setAllowedMethods(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedOrigins", (n) -> { currentObject.setAllowedOrigins(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("maxAgeInSeconds", (n) -> { currentObject.setMaxAgeInSeconds(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
         }};
     }
@@ -92,6 +96,14 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getMaxAgeInSeconds() {
         return this._maxAgeInSeconds;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the resource property value. The resource property
@@ -112,6 +124,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("allowedMethods", this.getAllowedMethods());
         writer.writeCollectionOfPrimitiveValues("allowedOrigins", this.getAllowedOrigins());
         writer.writeIntegerValue("maxAgeInSeconds", this.getMaxAgeInSeconds());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("resource", this.getResource());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     public void setMaxAgeInSeconds(@javax.annotation.Nullable final Integer value) {
         this._maxAgeInSeconds = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the resource property value. The resource property

@@ -19,7 +19,7 @@ import microsoft.graph.models.UserCollectionResponse;
 import microsoft.graph.teams.item.owners.count.CountRequestBuilder;
 /** Provides operations to manage the owners property of the microsoft.graph.team entity. */
 public class OwnersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -37,7 +37,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     public DeviceManagementSettingDefinition() {
         super();
-        this.setType("#microsoft.graph.deviceManagementSettingDefinition");
+        this.setOdataType("#microsoft.graph.deviceManagementSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

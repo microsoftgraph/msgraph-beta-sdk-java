@@ -20,6 +20,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      */
     public IosEduDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosEduDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -37,6 +37,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      */
     public GovernanceRoleSetting() {
         super();
+        this.setOdataType("#microsoft.graph.governanceRoleSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

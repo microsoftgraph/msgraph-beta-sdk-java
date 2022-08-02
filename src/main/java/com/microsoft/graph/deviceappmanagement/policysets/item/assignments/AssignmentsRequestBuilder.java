@@ -20,7 +20,7 @@ import microsoft.graph.models.PolicySetAssignment;
 import microsoft.graph.models.PolicySetAssignmentCollectionResponse;
 /** Provides operations to manage the assignments property of the microsoft.graph.policySet entity. */
 public class AssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -14,6 +14,7 @@ public class IosExpeditedCheckinConfiguration extends AppleExpeditedCheckinConfi
      */
     public IosExpeditedCheckinConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosExpeditedCheckinConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

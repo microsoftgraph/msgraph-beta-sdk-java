@@ -144,7 +144,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.threatSubmission.emailThreats.item collection
      * @param id Unique identifier of the item
-     * @return a emailThreatSubmissionItemRequestBuilder
+     * @return a EmailThreatSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmailThreatSubmissionItemRequestBuilder emailThreats(@javax.annotation.Nonnull final String id) {
@@ -156,7 +156,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.threatSubmission.emailThreatSubmissionPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a emailThreatSubmissionPolicyItemRequestBuilder
+     * @return a EmailThreatSubmissionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmailThreatSubmissionPolicyItemRequestBuilder emailThreatSubmissionPolicies(@javax.annotation.Nonnull final String id) {
@@ -168,7 +168,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.threatSubmission.fileThreats.item collection
      * @param id Unique identifier of the item
-     * @return a fileThreatSubmissionItemRequestBuilder
+     * @return a FileThreatSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FileThreatSubmissionItemRequestBuilder fileThreats(@javax.annotation.Nonnull final String id) {
@@ -286,7 +286,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.threatSubmission.urlThreats.item collection
      * @param id Unique identifier of the item
-     * @return a urlThreatSubmissionItemRequestBuilder
+     * @return a UrlThreatSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UrlThreatSubmissionItemRequestBuilder urlThreats(@javax.annotation.Nonnull final String id) {

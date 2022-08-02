@@ -17,6 +17,8 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     private String _city;
     /** The countryOrRegionCode property */
     private String _countryOrRegionCode;
+    /** The OdataType property */
+    private String _odataType;
     /** The organization property */
     private String _organization;
     /** The state property */
@@ -29,6 +31,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
      */
     public IpReferenceData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.ipReferenceData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,14 +82,23 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IpReferenceData currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("asn", (n) -> { currentObject.setAsn(n.getLongValue()); });
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryOrRegionCode", (n) -> { currentObject.setCountryOrRegionCode(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("organization", (n) -> { currentObject.setOrganization(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
             this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the organization property value. The organization property
@@ -122,6 +134,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
         writer.writeLongValue("asn", this.getAsn());
         writer.writeStringValue("city", this.getCity());
         writer.writeStringValue("countryOrRegionCode", this.getCountryOrRegionCode());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("organization", this.getOrganization());
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("vendor", this.getVendor());
@@ -158,6 +171,14 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
      */
     public void setCountryOrRegionCode(@javax.annotation.Nullable final String value) {
         this._countryOrRegionCode = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the organization property value. The organization property

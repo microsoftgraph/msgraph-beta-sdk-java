@@ -307,7 +307,7 @@ public class CurrencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new currencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CurrencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CurrencyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CurrencyItemRequestBuilder {
         @javax.annotation.Nullable
         public CurrencyItemRequestBuilderGetQueryParameters queryParameters = new CurrencyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new currencyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CurrencyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CurrencyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CurrencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new currencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CurrencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CurrencyItemRequestBuilderPatchRequestConfiguration() {

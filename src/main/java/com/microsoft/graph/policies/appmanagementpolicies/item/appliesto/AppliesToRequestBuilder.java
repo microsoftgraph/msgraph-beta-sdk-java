@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.appmanagementpolicies.item.appliesto.count.CountRequestBuilder;
 /** Provides operations to manage the appliesTo property of the microsoft.graph.appManagementPolicy entity. */
 public class AppliesToRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

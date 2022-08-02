@@ -14,6 +14,7 @@ public class WindowsKioskAutologon extends WindowsKioskUser implements Parsable 
      */
     public WindowsKioskAutologon() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskAutologon");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -48,6 +48,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     public WindowsDeliveryOptimizationConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDeliveryOptimizationConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

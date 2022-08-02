@@ -326,7 +326,7 @@ public class VendorRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoices.item.vendor.picture.item collection
      * @param id Unique identifier of the item
-     * @return a pictureItemRequestBuilder
+     * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {

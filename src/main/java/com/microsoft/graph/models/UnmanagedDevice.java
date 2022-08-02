@@ -31,6 +31,8 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     private String _manufacturer;
     /** Model. */
     private String _model;
+    /** The OdataType property */
+    private String _odataType;
     /** Operating system. */
     private String _os;
     /** Operating system version. */
@@ -41,6 +43,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     public UnmanagedDevice() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.unmanagedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,7 +86,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnmanagedDevice currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
@@ -93,6 +96,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
             this.put("macAddress", (n) -> { currentObject.setMacAddress(n.getStringValue()); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("os", (n) -> { currentObject.setOs(n.getStringValue()); });
             this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
         }};
@@ -154,6 +158,14 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
         return this._model;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the os property value. Operating system.
      * @return a string
      */
@@ -185,6 +197,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("macAddress", this.getMacAddress());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("model", this.getModel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("os", this.getOs());
         writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -268,6 +281,14 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the os property value. Operating system.

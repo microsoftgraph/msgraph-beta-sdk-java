@@ -80,7 +80,7 @@ public class UserSourceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class UserSourceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class UserSourceItemRequestBuilder {
         }
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @return a CompletableFuture of userSource
      */
     public java.util.concurrent.CompletableFuture<UserSource> get() {
@@ -209,7 +209,7 @@ public class UserSourceItemRequestBuilder {
         }
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userSource
      */
@@ -226,7 +226,7 @@ public class UserSourceItemRequestBuilder {
         }
     }
     /**
-     * Get userSources from security
+     * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of userSource
@@ -307,13 +307,13 @@ public class UserSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserSourceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get userSources from security */
+    /** Data sources that represent Exchange mailboxes. */
     public class UserSourceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -336,7 +336,7 @@ public class UserSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public UserSourceItemRequestBuilderGetQueryParameters queryParameters = new UserSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserSourceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserSourceItemRequestBuilderPatchRequestConfiguration() {

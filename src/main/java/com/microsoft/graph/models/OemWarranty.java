@@ -20,12 +20,15 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
     private String _deviceConfigurationUrl;
     /** Device warranty page URL */
     private String _deviceWarrantyUrl;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new oemWarranty and sets the default values.
      * @return a void
      */
     public OemWarranty() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.oemWarranty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,12 +87,21 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OemWarranty currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("additionalWarranties", (n) -> { currentObject.setAdditionalWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
             this.put("baseWarranties", (n) -> { currentObject.setBaseWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
             this.put("deviceConfigurationUrl", (n) -> { currentObject.setDeviceConfigurationUrl(n.getStringValue()); });
             this.put("deviceWarrantyUrl", (n) -> { currentObject.setDeviceWarrantyUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -102,6 +114,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("baseWarranties", this.getBaseWarranties());
         writer.writeStringValue("deviceConfigurationUrl", this.getDeviceConfigurationUrl());
         writer.writeStringValue("deviceWarrantyUrl", this.getDeviceWarrantyUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -143,5 +156,13 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      */
     public void setDeviceWarrantyUrl(@javax.annotation.Nullable final String value) {
         this._deviceWarrantyUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

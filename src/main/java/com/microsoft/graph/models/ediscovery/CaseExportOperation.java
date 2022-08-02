@@ -30,6 +30,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      */
     public CaseExportOperation() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.caseExportOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

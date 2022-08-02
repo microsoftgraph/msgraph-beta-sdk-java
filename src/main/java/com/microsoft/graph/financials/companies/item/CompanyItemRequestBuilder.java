@@ -272,7 +272,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.accounts.item collection
      * @param id Unique identifier of the item
-     * @return a accountItemRequestBuilder
+     * @return a AccountItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccountItemRequestBuilder accounts(@javax.annotation.Nonnull final String id) {
@@ -284,7 +284,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.agedAccountsPayable.item collection
      * @param id Unique identifier of the item
-     * @return a agedAccountsPayableItemRequestBuilder
+     * @return a AgedAccountsPayableItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgedAccountsPayableItemRequestBuilder agedAccountsPayable(@javax.annotation.Nonnull final String id) {
@@ -296,7 +296,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.agedAccountsReceivable.item collection
      * @param id Unique identifier of the item
-     * @return a agedAccountsReceivableItemRequestBuilder
+     * @return a AgedAccountsReceivableItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgedAccountsReceivableItemRequestBuilder agedAccountsReceivable(@javax.annotation.Nonnull final String id) {
@@ -308,7 +308,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.companyInformation.item collection
      * @param id Unique identifier of the item
-     * @return a companyInformationItemRequestBuilder
+     * @return a CompanyInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CompanyInformationItemRequestBuilder companyInformation(@javax.annotation.Nonnull final String id) {
@@ -347,7 +347,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.countriesRegions.item collection
      * @param id Unique identifier of the item
-     * @return a countryRegionItemRequestBuilder
+     * @return a CountryRegionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CountryRegionItemRequestBuilder countriesRegions(@javax.annotation.Nonnull final String id) {
@@ -389,7 +389,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.currencies.item collection
      * @param id Unique identifier of the item
-     * @return a currencyItemRequestBuilder
+     * @return a CurrencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CurrencyItemRequestBuilder currencies(@javax.annotation.Nonnull final String id) {
@@ -401,7 +401,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.customerPaymentJournals.item collection
      * @param id Unique identifier of the item
-     * @return a customerPaymentJournalItemRequestBuilder
+     * @return a CustomerPaymentJournalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerPaymentJournalItemRequestBuilder customerPaymentJournals(@javax.annotation.Nonnull final String id) {
@@ -413,7 +413,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.customerPayments.item collection
      * @param id Unique identifier of the item
-     * @return a customerPaymentItemRequestBuilder
+     * @return a CustomerPaymentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerPaymentItemRequestBuilder customerPayments(@javax.annotation.Nonnull final String id) {
@@ -425,7 +425,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.customers.item collection
      * @param id Unique identifier of the item
-     * @return a customerItemRequestBuilder
+     * @return a CustomerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerItemRequestBuilder customers(@javax.annotation.Nonnull final String id) {
@@ -437,7 +437,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.dimensions.item collection
      * @param id Unique identifier of the item
-     * @return a dimensionItemRequestBuilder
+     * @return a DimensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DimensionItemRequestBuilder dimensions(@javax.annotation.Nonnull final String id) {
@@ -449,7 +449,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.dimensionValues.item collection
      * @param id Unique identifier of the item
-     * @return a dimensionValueItemRequestBuilder
+     * @return a DimensionValueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DimensionValueItemRequestBuilder dimensionValues(@javax.annotation.Nonnull final String id) {
@@ -461,7 +461,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.employees.item collection
      * @param id Unique identifier of the item
-     * @return a employeeItemRequestBuilder
+     * @return a EmployeeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmployeeItemRequestBuilder employees(@javax.annotation.Nonnull final String id) {
@@ -473,7 +473,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.generalLedgerEntries.item collection
      * @param id Unique identifier of the item
-     * @return a generalLedgerEntryItemRequestBuilder
+     * @return a GeneralLedgerEntryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GeneralLedgerEntryItemRequestBuilder generalLedgerEntries(@javax.annotation.Nonnull final String id) {
@@ -536,7 +536,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.itemCategories.item collection
      * @param id Unique identifier of the item
-     * @return a itemCategoryItemRequestBuilder
+     * @return a ItemCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemCategoryItemRequestBuilder itemCategories(@javax.annotation.Nonnull final String id) {
@@ -548,7 +548,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a itemItemRequestBuilder
+     * @return a ItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -560,7 +560,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.journalLines.item collection
      * @param id Unique identifier of the item
-     * @return a journalLineItemRequestBuilder
+     * @return a JournalLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public JournalLineItemRequestBuilder journalLines(@javax.annotation.Nonnull final String id) {
@@ -572,7 +572,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.journals.item collection
      * @param id Unique identifier of the item
-     * @return a journalItemRequestBuilder
+     * @return a JournalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public JournalItemRequestBuilder journals(@javax.annotation.Nonnull final String id) {
@@ -584,7 +584,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.paymentMethods.item collection
      * @param id Unique identifier of the item
-     * @return a paymentMethodItemRequestBuilder
+     * @return a PaymentMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PaymentMethodItemRequestBuilder paymentMethods(@javax.annotation.Nonnull final String id) {
@@ -596,7 +596,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.paymentTerms.item collection
      * @param id Unique identifier of the item
-     * @return a paymentTermItemRequestBuilder
+     * @return a PaymentTermItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PaymentTermItemRequestBuilder paymentTerms(@javax.annotation.Nonnull final String id) {
@@ -608,7 +608,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.picture.item collection
      * @param id Unique identifier of the item
-     * @return a pictureItemRequestBuilder
+     * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {
@@ -620,7 +620,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoiceLines.item collection
      * @param id Unique identifier of the item
-     * @return a purchaseInvoiceLineItemRequestBuilder
+     * @return a PurchaseInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PurchaseInvoiceLineItemRequestBuilder purchaseInvoiceLines(@javax.annotation.Nonnull final String id) {
@@ -632,7 +632,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoices.item collection
      * @param id Unique identifier of the item
-     * @return a purchaseInvoiceItemRequestBuilder
+     * @return a PurchaseInvoiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PurchaseInvoiceItemRequestBuilder purchaseInvoices(@javax.annotation.Nonnull final String id) {
@@ -644,7 +644,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesCreditMemoLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesCreditMemoLineItemRequestBuilder
+     * @return a SalesCreditMemoLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesCreditMemoLineItemRequestBuilder salesCreditMemoLines(@javax.annotation.Nonnull final String id) {
@@ -656,7 +656,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesCreditMemos.item collection
      * @param id Unique identifier of the item
-     * @return a salesCreditMemoItemRequestBuilder
+     * @return a SalesCreditMemoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesCreditMemoItemRequestBuilder salesCreditMemos(@javax.annotation.Nonnull final String id) {
@@ -668,7 +668,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesInvoiceLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesInvoiceLineItemRequestBuilder
+     * @return a SalesInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder salesInvoiceLines(@javax.annotation.Nonnull final String id) {
@@ -680,7 +680,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesInvoices.item collection
      * @param id Unique identifier of the item
-     * @return a salesInvoiceItemRequestBuilder
+     * @return a SalesInvoiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesInvoiceItemRequestBuilder salesInvoices(@javax.annotation.Nonnull final String id) {
@@ -692,7 +692,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesOrderLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesOrderLineItemRequestBuilder
+     * @return a SalesOrderLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesOrderLineItemRequestBuilder salesOrderLines(@javax.annotation.Nonnull final String id) {
@@ -704,7 +704,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesOrders.item collection
      * @param id Unique identifier of the item
-     * @return a salesOrderItemRequestBuilder
+     * @return a SalesOrderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesOrderItemRequestBuilder salesOrders(@javax.annotation.Nonnull final String id) {
@@ -716,7 +716,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuoteLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesQuoteLineItemRequestBuilder
+     * @return a SalesQuoteLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesQuoteLineItemRequestBuilder salesQuoteLines(@javax.annotation.Nonnull final String id) {
@@ -728,7 +728,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuotes.item collection
      * @param id Unique identifier of the item
-     * @return a salesQuoteItemRequestBuilder
+     * @return a SalesQuoteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesQuoteItemRequestBuilder salesQuotes(@javax.annotation.Nonnull final String id) {
@@ -740,7 +740,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.shipmentMethods.item collection
      * @param id Unique identifier of the item
-     * @return a shipmentMethodItemRequestBuilder
+     * @return a ShipmentMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ShipmentMethodItemRequestBuilder shipmentMethods(@javax.annotation.Nonnull final String id) {
@@ -752,7 +752,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.taxAreas.item collection
      * @param id Unique identifier of the item
-     * @return a taxAreaItemRequestBuilder
+     * @return a TaxAreaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TaxAreaItemRequestBuilder taxAreas(@javax.annotation.Nonnull final String id) {
@@ -764,7 +764,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.taxGroups.item collection
      * @param id Unique identifier of the item
-     * @return a taxGroupItemRequestBuilder
+     * @return a TaxGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TaxGroupItemRequestBuilder taxGroups(@javax.annotation.Nonnull final String id) {
@@ -776,7 +776,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.unitsOfMeasure.item collection
      * @param id Unique identifier of the item
-     * @return a unitOfMeasureItemRequestBuilder
+     * @return a UnitOfMeasureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnitOfMeasureItemRequestBuilder unitsOfMeasure(@javax.annotation.Nonnull final String id) {
@@ -788,7 +788,7 @@ public class CompanyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.vendors.item collection
      * @param id Unique identifier of the item
-     * @return a vendorItemRequestBuilder
+     * @return a VendorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public VendorItemRequestBuilder vendors(@javax.annotation.Nonnull final String id) {
@@ -820,7 +820,7 @@ public class CompanyItemRequestBuilder {
         @javax.annotation.Nullable
         public CompanyItemRequestBuilderGetQueryParameters queryParameters = new CompanyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new companyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CompanyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CompanyItemRequestBuilderGetRequestConfiguration() {

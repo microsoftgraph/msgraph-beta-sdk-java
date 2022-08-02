@@ -322,7 +322,7 @@ public class CloudPCRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.resourceNamespaces.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRbacResourceNamespaceItemRequestBuilder
+     * @return a UnifiedRbacResourceNamespaceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRbacResourceNamespaceItemRequestBuilder resourceNamespaces(@javax.annotation.Nonnull final String id) {
@@ -334,7 +334,7 @@ public class CloudPCRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleAssignmentMultipleItemRequestBuilder
+     * @return a UnifiedRoleAssignmentMultipleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentMultipleItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
@@ -346,7 +346,7 @@ public class CloudPCRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleDefinitionItemRequestBuilder
+     * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {

@@ -307,7 +307,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public MicrosoftTunnelConfigurationItemRequestBuilderGetQueryParameters queryParameters = new MicrosoftTunnelConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new microsoftTunnelConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelConfigurationItemRequestBuilderPatchRequestConfiguration() {

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileContentThreatSubmission extends FileThreatSubmission implements Parsable {
-    /** The fileContent property */
+    /** It specifies the file content in base 64 format. */
     private String _fileContent;
     /**
      * Instantiates a new FileContentThreatSubmission and sets the default values.
@@ -16,6 +16,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      */
     public FileContentThreatSubmission() {
         super();
+        this.setOdataType("#microsoft.graph.security.fileContentThreatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +40,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
         }};
     }
     /**
-     * Gets the fileContent property value. The fileContent property
+     * Gets the fileContent property value. It specifies the file content in base 64 format.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
         writer.writeStringValue("fileContent", this.getFileContent());
     }
     /**
-     * Sets the fileContent property value. The fileContent property
+     * Sets the fileContent property value. It specifies the file content in base 64 format.
      * @param value Value to set for the fileContent property.
      * @return a void
      */

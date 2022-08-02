@@ -20,6 +20,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      */
     public DirectorySettingTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.directorySettingTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

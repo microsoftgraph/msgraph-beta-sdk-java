@@ -16,6 +16,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      */
     public DeviceManagementSettingFileConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingFileConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

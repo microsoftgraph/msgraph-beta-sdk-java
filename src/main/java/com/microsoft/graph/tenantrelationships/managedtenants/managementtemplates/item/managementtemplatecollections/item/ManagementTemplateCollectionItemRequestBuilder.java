@@ -155,7 +155,7 @@ public class ManagementTemplateCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementTemplateCollectionItemRequestBuilderGetQueryParameters queryParameters = new ManagementTemplateCollectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementTemplateCollectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateCollectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateCollectionItemRequestBuilderGetRequestConfiguration() {

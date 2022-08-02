@@ -22,6 +22,8 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     private String _authenticationStepRequirement;
     /** Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token. */
     private String _authenticationStepResultDetail;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the status of the authentication step. Possible values: succeeded, failed. */
     private Boolean _succeeded;
     /**
@@ -30,6 +32,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     public AuthenticationDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.authenticationDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,14 +99,23 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
             this.put("authenticationMethodDetail", (n) -> { currentObject.setAuthenticationMethodDetail(n.getStringValue()); });
             this.put("authenticationStepDateTime", (n) -> { currentObject.setAuthenticationStepDateTime(n.getOffsetDateTimeValue()); });
             this.put("authenticationStepRequirement", (n) -> { currentObject.setAuthenticationStepRequirement(n.getStringValue()); });
             this.put("authenticationStepResultDetail", (n) -> { currentObject.setAuthenticationStepResultDetail(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("succeeded", (n) -> { currentObject.setSucceeded(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the succeeded property value. Indicates the status of the authentication step. Possible values: succeeded, failed.
@@ -125,6 +137,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("authenticationStepDateTime", this.getAuthenticationStepDateTime());
         writer.writeStringValue("authenticationStepRequirement", this.getAuthenticationStepRequirement());
         writer.writeStringValue("authenticationStepResultDetail", this.getAuthenticationStepResultDetail());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("succeeded", this.getSucceeded());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -175,6 +188,14 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     public void setAuthenticationStepResultDetail(@javax.annotation.Nullable final String value) {
         this._authenticationStepResultDetail = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the succeeded property value. Indicates the status of the authentication step. Possible values: succeeded, failed.

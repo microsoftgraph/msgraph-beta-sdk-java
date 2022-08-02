@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrinterBase extends Entity implements Parsable {
     /** The capabilities of the printer/printerShare. */
     private PrinterCapabilities _capabilities;
@@ -35,7 +35,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     public PrinterBase() {
         super();
-        this.setType("#microsoft.graph.printerBase");
+        this.setOdataType("#microsoft.graph.printerBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagedDeviceCertificateState extends Entity implements Parsable {
     /** Extended key usage */
     private String _certificateEnhancedKeyUsage;
@@ -64,6 +64,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
      */
     public ManagedDeviceCertificateState() {
         super();
+        this.setOdataType("#microsoft.graph.managedDeviceCertificateState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

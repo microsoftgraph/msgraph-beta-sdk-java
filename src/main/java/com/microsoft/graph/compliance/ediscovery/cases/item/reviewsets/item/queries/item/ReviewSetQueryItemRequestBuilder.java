@@ -313,7 +313,7 @@ public class ReviewSetQueryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new reviewSetQueryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ReviewSetQueryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ReviewSetQueryItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class ReviewSetQueryItemRequestBuilder {
         @javax.annotation.Nullable
         public ReviewSetQueryItemRequestBuilderGetQueryParameters queryParameters = new ReviewSetQueryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new reviewSetQueryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ReviewSetQueryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ReviewSetQueryItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class ReviewSetQueryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new reviewSetQueryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ReviewSetQueryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ReviewSetQueryItemRequestBuilderPatchRequestConfiguration() {

@@ -15,12 +15,15 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
     private java.util.List<String> _excludeStates;
     /** States in the scope of the policy. All is the only allowed value. */
     private java.util.List<String> _includeStates;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new conditionalAccessDeviceStates and sets the default values.
      * @return a void
      */
     public ConditionalAccessDeviceStates() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessDeviceStates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessDeviceStates currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("excludeStates", (n) -> { currentObject.setExcludeStates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeStates", (n) -> { currentObject.setIncludeStates(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
         return this._includeStates;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeStates", this.getExcludeStates());
         writer.writeCollectionOfPrimitiveValues("includeStates", this.getIncludeStates());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      */
     public void setIncludeStates(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeStates = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

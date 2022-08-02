@@ -70,7 +70,7 @@ public class SourceCollectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.additionalSources.item collection
      * @param id Unique identifier of the item
-     * @return a dataSourceItemRequestBuilder
+     * @return a DataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.item.DataSourceItemRequestBuilder additionalSources(@javax.annotation.Nonnull final String id) {
@@ -199,7 +199,7 @@ public class SourceCollectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.custodianSources.item collection
      * @param id Unique identifier of the item
-     * @return a dataSourceItemRequestBuilder
+     * @return a DataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item.DataSourceItemRequestBuilder custodianSources(@javax.annotation.Nonnull final String id) {
@@ -313,7 +313,7 @@ public class SourceCollectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.noncustodialSources.item collection
      * @param id Unique identifier of the item
-     * @return a noncustodialDataSourceItemRequestBuilder
+     * @return a NoncustodialDataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public NoncustodialDataSourceItemRequestBuilder noncustodialSources(@javax.annotation.Nonnull final String id) {
@@ -386,7 +386,7 @@ public class SourceCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sourceCollectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SourceCollectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SourceCollectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -415,7 +415,7 @@ public class SourceCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public SourceCollectionItemRequestBuilderGetQueryParameters queryParameters = new SourceCollectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sourceCollectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SourceCollectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SourceCollectionItemRequestBuilderGetRequestConfiguration() {
@@ -430,7 +430,7 @@ public class SourceCollectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sourceCollectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SourceCollectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SourceCollectionItemRequestBuilderPatchRequestConfiguration() {

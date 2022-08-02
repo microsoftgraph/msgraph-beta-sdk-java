@@ -62,6 +62,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     public MacOSEndpointProtectionConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSEndpointProtectionConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

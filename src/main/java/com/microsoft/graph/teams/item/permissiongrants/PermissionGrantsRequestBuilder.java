@@ -23,7 +23,7 @@ import microsoft.graph.teams.item.permissiongrants.getuserownedobjects.GetUserOw
 import microsoft.graph.teams.item.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.team entity. */
 public class PermissionGrantsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

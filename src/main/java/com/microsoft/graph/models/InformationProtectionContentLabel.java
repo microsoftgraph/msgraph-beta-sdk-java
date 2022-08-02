@@ -18,12 +18,15 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     private OffsetDateTime _creationDateTime;
     /** Details on the label that is currently applied to the file. */
     private LabelDetails _label;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new informationProtectionContentLabel and sets the default values.
      * @return a void
      */
     public InformationProtectionContentLabel() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.informationProtectionContentLabel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,10 +69,11 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtectionContentLabel currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
             this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
             this.put("label", (n) -> { currentObject.setLabel(n.getObjectValue(LabelDetails::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +85,14 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
         return this._label;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +102,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeObjectValue("label", this.getLabel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
      */
     public void setLabel(@javax.annotation.Nullable final LabelDetails value) {
         this._label = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

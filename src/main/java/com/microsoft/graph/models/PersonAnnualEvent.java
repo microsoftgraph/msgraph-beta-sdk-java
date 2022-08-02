@@ -13,12 +13,15 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
     private LocalDate _date;
     /** The displayName property */
     private String _displayName;
+    /** The type property */
+    private PersonAnnualEventType _type;
     /**
      * Instantiates a new PersonAnnualEvent and sets the default values.
      * @return a void
      */
     public PersonAnnualEvent() {
         super();
+        this.setOdataType("#microsoft.graph.personAnnualEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +59,16 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PersonAnnualEventType.class)); });
         }};
+    }
+    /**
+     * Gets the type property value. The type property
+     * @return a personAnnualEventType
+     */
+    @javax.annotation.Nullable
+    public PersonAnnualEventType getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -68,6 +80,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
         super.serialize(writer);
         writer.writeLocalDateValue("date", this.getDate());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("type", this.getType());
     }
     /**
      * Sets the date property value. The date property
@@ -84,5 +97,13 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final PersonAnnualEventType value) {
+        this._type = value;
     }
 }

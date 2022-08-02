@@ -22,7 +22,7 @@ import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.it
 import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.recordalldecisions.RecordAllDecisionsRequestBuilder;
 /** Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity. */
 public class DecisionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

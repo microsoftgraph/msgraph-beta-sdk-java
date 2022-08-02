@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class MessageRule extends Entity implements Parsable {
     /** Actions to be taken on a message when the corresponding conditions are fulfilled. */
     private MessageRuleActions _actions;
@@ -31,6 +31,7 @@ public class MessageRule extends Entity implements Parsable {
      */
     public MessageRule() {
         super();
+        this.setOdataType("#microsoft.graph.messageRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

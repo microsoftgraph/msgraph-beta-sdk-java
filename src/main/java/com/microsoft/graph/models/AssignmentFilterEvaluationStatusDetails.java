@@ -17,6 +17,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
      */
     public AssignmentFilterEvaluationStatusDetails() {
         super();
+        this.setOdataType("#microsoft.graph.assignmentFilterEvaluationStatusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

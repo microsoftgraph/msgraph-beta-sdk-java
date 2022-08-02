@@ -307,7 +307,7 @@ public class TaxGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new taxGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TaxGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TaxGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TaxGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public TaxGroupItemRequestBuilderGetQueryParameters queryParameters = new TaxGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new taxGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TaxGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TaxGroupItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TaxGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new taxGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TaxGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TaxGroupItemRequestBuilderPatchRequestConfiguration() {

@@ -40,7 +40,7 @@ public class AccessPackageResourceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item.accessPackageResourceRole.accessPackageResource.accessPackageResourceScopes.item.accessPackageResource.accessPackageResourceRoles.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRoleItemRequestBuilder
+     * @return a AccessPackageResourceRoleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleItemRequestBuilder accessPackageResourceRoles(@javax.annotation.Nonnull final String id) {

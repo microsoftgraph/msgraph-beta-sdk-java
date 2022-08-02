@@ -19,6 +19,8 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
     private OffsetDateTime _completeOrCanceledDateTime;
     /** Date and time when the deployment status was updated from Zebra */
     private OffsetDateTime _lastUpdatedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Represents the state of Zebra FOTA deployment. */
     private ZebraFotaDeploymentState _state;
     /** An integer that indicates the total number of devices where installation was successful. */
@@ -47,6 +49,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      */
     public ZebraFotaDeploymentStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.zebraFotaDeploymentStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,10 +92,11 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeploymentStatus currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<>(15) {{
             this.put("cancelRequested", (n) -> { currentObject.setCancelRequested(n.getBooleanValue()); });
             this.put("completeOrCanceledDateTime", (n) -> { currentObject.setCompleteOrCanceledDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ZebraFotaDeploymentState.class)); });
             this.put("totalAwaitingInstall", (n) -> { currentObject.setTotalAwaitingInstall(n.getIntegerValue()); });
             this.put("totalCanceled", (n) -> { currentObject.setTotalCanceled(n.getIntegerValue()); });
@@ -113,6 +117,14 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this._lastUpdatedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. Represents the state of Zebra FOTA deployment.
@@ -212,6 +224,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
         writer.writeBooleanValue("cancelRequested", this.getCancelRequested());
         writer.writeOffsetDateTimeValue("completeOrCanceledDateTime", this.getCompleteOrCanceledDateTime());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("state", this.getState());
         writer.writeIntegerValue("totalAwaitingInstall", this.getTotalAwaitingInstall());
         writer.writeIntegerValue("totalCanceled", this.getTotalCanceled());
@@ -256,6 +269,14 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      */
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. Represents the state of Zebra FOTA deployment.

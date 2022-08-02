@@ -27,6 +27,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      */
     public ConfigManagerCollection() {
         super();
+        this.setOdataType("#microsoft.graph.configManagerCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

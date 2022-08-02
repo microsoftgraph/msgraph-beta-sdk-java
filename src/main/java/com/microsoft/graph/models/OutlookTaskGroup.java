@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OutlookTaskGroup extends Entity implements Parsable {
     /** The version of the task group. */
     private String _changeKey;
@@ -25,6 +25,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      */
     public OutlookTaskGroup() {
         super();
+        this.setOdataType("#microsoft.graph.outlookTaskGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

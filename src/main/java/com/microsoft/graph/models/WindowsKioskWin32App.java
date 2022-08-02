@@ -24,6 +24,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      */
     public WindowsKioskWin32App() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskWin32App");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

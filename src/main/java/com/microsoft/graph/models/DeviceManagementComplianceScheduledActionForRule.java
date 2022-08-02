@@ -19,6 +19,7 @@ public class DeviceManagementComplianceScheduledActionForRule extends Entity imp
      */
     public DeviceManagementComplianceScheduledActionForRule() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementComplianceScheduledActionForRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

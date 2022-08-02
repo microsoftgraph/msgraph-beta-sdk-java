@@ -11,6 +11,8 @@ import java.util.Objects;
 public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Total number of users accounts, excluding those that are blocked */
     private Long _totalUserCount;
     /** Number of users registered or capable for Multi-Factor Authentication, Self-Service Password Reset and Passwordless Authentication. */
@@ -25,6 +27,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      */
     public UserRegistrationFeatureSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userRegistrationFeatureSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +54,21 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationFeatureSummary currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getLongValue()); });
             this.put("userRegistrationFeatureCounts", (n) -> { currentObject.setUserRegistrationFeatureCounts(n.getCollectionOfObjectValues(UserRegistrationFeatureCount::createFromDiscriminatorValue)); });
             this.put("userRoles", (n) -> { currentObject.setUserRoles(n.getEnumValue(IncludedUserRoles.class)); });
             this.put("userTypes", (n) -> { currentObject.setUserTypes(n.getEnumValue(IncludedUserTypes.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the totalUserCount property value. Total number of users accounts, excluding those that are blocked
@@ -97,6 +109,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("totalUserCount", this.getTotalUserCount());
         writer.writeCollectionOfObjectValues("userRegistrationFeatureCounts", this.getUserRegistrationFeatureCounts());
         writer.writeEnumValue("userRoles", this.getUserRoles());
@@ -110,6 +123,14 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the totalUserCount property value. Total number of users accounts, excluding those that are blocked

@@ -34,6 +34,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     public MacOSSoftwareUpdateCategorySummary() {
         super();
+        this.setOdataType("#microsoft.graph.macOSSoftwareUpdateCategorySummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

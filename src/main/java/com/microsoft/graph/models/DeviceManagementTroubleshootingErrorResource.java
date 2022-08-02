@@ -14,6 +14,8 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
     private Map<String, Object> _additionalData;
     /** The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}} */
     private String _link;
+    /** The OdataType property */
+    private String _odataType;
     /** Not yet documented */
     private String _text;
     /**
@@ -22,6 +24,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      */
     public DeviceManagementTroubleshootingErrorResource() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingErrorResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingErrorResource currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
         }};
     }
@@ -60,6 +64,14 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
     @javax.annotation.Nullable
     public String getLink() {
         return this._link;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the text property value. Not yet documented
@@ -77,6 +89,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("link", this.getLink());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("text", this.getText());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      */
     public void setLink(@javax.annotation.Nullable final String value) {
         this._link = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the text property value. Not yet documented

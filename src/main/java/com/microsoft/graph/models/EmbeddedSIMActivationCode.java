@@ -16,6 +16,8 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     private String _integratedCircuitCardIdentifier;
     /** The MatchingIdentifier (MatchingID) as specified in the GSMA Association SGP.22 RSP Technical Specification section 4.1. */
     private String _matchingIdentifier;
+    /** The OdataType property */
+    private String _odataType;
     /** The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification. */
     private String _smdpPlusServerAddress;
     /**
@@ -24,6 +26,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
      */
     public EmbeddedSIMActivationCode() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.embeddedSIMActivationCode");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,9 +53,10 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmbeddedSIMActivationCode currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("integratedCircuitCardIdentifier", (n) -> { currentObject.setIntegratedCircuitCardIdentifier(n.getStringValue()); });
             this.put("matchingIdentifier", (n) -> { currentObject.setMatchingIdentifier(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("smdpPlusServerAddress", (n) -> { currentObject.setSmdpPlusServerAddress(n.getStringValue()); });
         }};
     }
@@ -73,6 +77,14 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
         return this._matchingIdentifier;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the smdpPlusServerAddress property value. The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification.
      * @return a string
      */
@@ -89,6 +101,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
         Objects.requireNonNull(writer);
         writer.writeStringValue("integratedCircuitCardIdentifier", this.getIntegratedCircuitCardIdentifier());
         writer.writeStringValue("matchingIdentifier", this.getMatchingIdentifier());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("smdpPlusServerAddress", this.getSmdpPlusServerAddress());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
      */
     public void setMatchingIdentifier(@javax.annotation.Nullable final String value) {
         this._matchingIdentifier = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the smdpPlusServerAddress property value. The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification.

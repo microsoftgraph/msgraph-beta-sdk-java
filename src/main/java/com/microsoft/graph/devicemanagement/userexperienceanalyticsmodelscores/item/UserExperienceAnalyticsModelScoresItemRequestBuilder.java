@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsModelScoresItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsModelScoresItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration() {

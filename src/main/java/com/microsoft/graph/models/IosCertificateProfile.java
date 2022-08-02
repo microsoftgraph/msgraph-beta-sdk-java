@@ -14,7 +14,7 @@ public class IosCertificateProfile extends DeviceConfiguration implements Parsab
      */
     public IosCertificateProfile() {
         super();
-        this.setType("#microsoft.graph.iosCertificateProfile");
+        this.setOdataType("#microsoft.graph.iosCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,6 +30,8 @@ public class IosCertificateProfile extends DeviceConfiguration implements Parsab
             switch (mappingValue) {
                 case "#microsoft.graph.iosCertificateProfileBase": return new IosCertificateProfileBase();
                 case "#microsoft.graph.iosImportedPFXCertificateProfile": return new IosImportedPFXCertificateProfile();
+                case "#microsoft.graph.iosPkcsCertificateProfile": return new IosPkcsCertificateProfile();
+                case "#microsoft.graph.iosScepCertificateProfile": return new IosScepCertificateProfile();
             }
         }
         return new IosCertificateProfile();

@@ -20,6 +20,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
      */
     public GroupPolicyPresentationDropdownList() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationDropdownList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

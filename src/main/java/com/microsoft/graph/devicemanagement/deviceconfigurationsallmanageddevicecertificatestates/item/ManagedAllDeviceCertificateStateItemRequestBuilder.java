@@ -307,7 +307,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAllDeviceCertificateStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAllDeviceCertificateStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAllDeviceCertificateStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedAllDeviceCertificateStateItemRequestBuilderGetQueryParameters queryParameters = new ManagedAllDeviceCertificateStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedAllDeviceCertificateStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAllDeviceCertificateStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAllDeviceCertificateStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAllDeviceCertificateStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAllDeviceCertificateStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAllDeviceCertificateStateItemRequestBuilderPatchRequestConfiguration() {

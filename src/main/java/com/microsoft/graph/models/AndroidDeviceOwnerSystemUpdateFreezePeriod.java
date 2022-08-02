@@ -16,6 +16,8 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     private Integer _endDay;
     /** The month of the end date of the freeze period. Valid values 1 to 12 */
     private Integer _endMonth;
+    /** The OdataType property */
+    private String _odataType;
     /** The day of the start date of the freeze period. Valid values 1 to 31 */
     private Integer _startDay;
     /** The month of the start date of the freeze period. Valid values 1 to 12 */
@@ -26,6 +28,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      */
     public AndroidDeviceOwnerSystemUpdateFreezePeriod() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerSystemUpdateFreezePeriod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,12 +71,21 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerSystemUpdateFreezePeriod currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("endDay", (n) -> { currentObject.setEndDay(n.getIntegerValue()); });
             this.put("endMonth", (n) -> { currentObject.setEndMonth(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDay", (n) -> { currentObject.setStartDay(n.getIntegerValue()); });
             this.put("startMonth", (n) -> { currentObject.setStartMonth(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDay property value. The day of the start date of the freeze period. Valid values 1 to 31
@@ -100,6 +112,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("endDay", this.getEndDay());
         writer.writeIntegerValue("endMonth", this.getEndMonth());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("startDay", this.getStartDay());
         writer.writeIntegerValue("startMonth", this.getStartMonth());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +140,14 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      */
     public void setEndMonth(@javax.annotation.Nullable final Integer value) {
         this._endMonth = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDay property value. The day of the start date of the freeze period. Valid values 1 to 31

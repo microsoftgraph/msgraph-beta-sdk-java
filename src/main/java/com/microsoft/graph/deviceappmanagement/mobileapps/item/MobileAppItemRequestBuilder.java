@@ -93,7 +93,7 @@ public class MobileAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppAssignmentItemRequestBuilder
+     * @return a MobileAppAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -105,7 +105,7 @@ public class MobileAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.categories.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppCategoryItemRequestBuilder
+     * @return a MobileAppCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
@@ -285,7 +285,7 @@ public class MobileAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppInstallStatusItemRequestBuilder
+     * @return a MobileAppInstallStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppInstallStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -415,7 +415,7 @@ public class MobileAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.relationships.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppRelationshipItemRequestBuilder
+     * @return a MobileAppRelationshipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppRelationshipItemRequestBuilder relationships(@javax.annotation.Nonnull final String id) {
@@ -427,7 +427,7 @@ public class MobileAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.userStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a userAppInstallStatusItemRequestBuilder
+     * @return a UserAppInstallStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserAppInstallStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
@@ -445,7 +445,7 @@ public class MobileAppItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppItemRequestBuilderDeleteRequestConfiguration() {
@@ -474,7 +474,7 @@ public class MobileAppItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppItemRequestBuilderGetQueryParameters queryParameters = new MobileAppItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppItemRequestBuilderGetRequestConfiguration() {
@@ -489,7 +489,7 @@ public class MobileAppItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppItemRequestBuilderPatchRequestConfiguration() {

@@ -18,6 +18,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      */
     public DeviceManagementSettingIntegerConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingIntegerConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

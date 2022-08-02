@@ -313,7 +313,7 @@ public class DocumentSetVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new documentSetVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DocumentSetVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public DocumentSetVersionItemRequestBuilderGetQueryParameters queryParameters = new DocumentSetVersionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new documentSetVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DocumentSetVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DocumentSetVersionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DocumentSetVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new documentSetVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DocumentSetVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DocumentSetVersionItemRequestBuilderPatchRequestConfiguration() {

@@ -308,7 +308,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.templates.item.migratableTo.item.categories.item.recommendedSettings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementSettingInstanceItemRequestBuilder
+     * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementSettingInstanceItemRequestBuilder recommendedSettings(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementTemplateSettingCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementTemplateSettingCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementTemplateSettingCategoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementTemplateSettingCategoryItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementTemplateSettingCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementTemplateSettingCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementTemplateSettingCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementTemplateSettingCategoryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementTemplateSettingCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementTemplateSettingCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementTemplateSettingCategoryItemRequestBuilderPatchRequestConfiguration() {

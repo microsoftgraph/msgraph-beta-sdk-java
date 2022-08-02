@@ -18,6 +18,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      */
     public AndroidDeviceOwnerImportedPFXCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerImportedPFXCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

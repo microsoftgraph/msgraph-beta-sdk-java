@@ -20,7 +20,7 @@ import microsoft.graph.models.ProgramCollectionResponse;
 import microsoft.graph.programs.count.CountRequestBuilder;
 /** Provides operations to manage the collection of program entities. */
 public class ProgramsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

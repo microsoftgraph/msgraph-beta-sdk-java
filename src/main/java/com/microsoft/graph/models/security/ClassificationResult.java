@@ -15,6 +15,8 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     private Integer _confidenceLevel;
     /** The count property */
     private Integer _count;
+    /** The OdataType property */
+    private String _odataType;
     /** The sensitiveTypeId property */
     private String _sensitiveTypeId;
     /**
@@ -23,6 +25,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
      */
     public ClassificationResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.classificationResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("confidenceLevel", (n) -> { currentObject.setConfidenceLevel(n.getIntegerValue()); });
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sensitiveTypeId", (n) -> { currentObject.setSensitiveTypeId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sensitiveTypeId property value. The sensitiveTypeId property
@@ -88,6 +100,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidenceLevel", this.getConfidenceLevel());
         writer.writeIntegerValue("count", this.getCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sensitiveTypeId", this.getSensitiveTypeId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
      */
     public void setCount(@javax.annotation.Nullable final Integer value) {
         this._count = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sensitiveTypeId property value. The sensitiveTypeId property

@@ -20,7 +20,7 @@ import microsoft.graph.models.GovernanceRoleDefinitionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of governanceRoleDefinition entities. */
 public class GovernanceRoleDefinitionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

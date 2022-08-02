@@ -40,7 +40,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.resourceAccessProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementResourceAccessProfileAssignmentItemRequestBuilder
+     * @return a DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementResourceAccessProfileBaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementResourceAccessProfileBaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementResourceAccessProfileBaseItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementResourceAccessProfileBaseItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementResourceAccessProfileBaseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementResourceAccessProfileBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementResourceAccessProfileBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementResourceAccessProfileBaseItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementResourceAccessProfileBaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementResourceAccessProfileBaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementResourceAccessProfileBaseItemRequestBuilderPatchRequestConfiguration() {

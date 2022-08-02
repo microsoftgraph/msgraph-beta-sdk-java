@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessReviewReviewer extends Entity implements Parsable {
     /** The date when the reviewer was added for the access review. */
     private OffsetDateTime _createdDateTime;
@@ -22,6 +22,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      */
     public AccessReviewReviewer() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewReviewer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

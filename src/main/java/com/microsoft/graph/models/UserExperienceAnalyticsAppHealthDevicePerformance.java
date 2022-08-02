@@ -39,6 +39,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     public UserExperienceAnalyticsAppHealthDevicePerformance() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

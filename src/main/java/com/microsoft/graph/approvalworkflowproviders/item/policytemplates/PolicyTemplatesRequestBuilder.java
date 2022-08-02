@@ -20,7 +20,7 @@ import microsoft.graph.models.GovernancePolicyTemplateCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the policyTemplates property of the microsoft.graph.approvalWorkflowProvider entity. */
 public class PolicyTemplatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

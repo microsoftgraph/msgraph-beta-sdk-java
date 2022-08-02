@@ -13,6 +13,8 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Confidence score reflecting the accuracy of the data inferred about the user. */
     private Double _confidenceScore;
+    /** The OdataType property */
+    private String _odataType;
     /** Records if the user has confirmed this inference as being True or False. */
     private Boolean _userHasVerifiedAccuracy;
     /**
@@ -21,6 +23,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
      */
     public InferenceData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.inferenceData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InferenceData currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("confidenceScore", (n) -> { currentObject.setConfidenceScore(n.getDoubleValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userHasVerifiedAccuracy", (n) -> { currentObject.setUserHasVerifiedAccuracy(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userHasVerifiedAccuracy property value. Records if the user has confirmed this inference as being True or False.
@@ -76,6 +88,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("confidenceScore", this.getConfidenceScore());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("userHasVerifiedAccuracy", this.getUserHasVerifiedAccuracy());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
      */
     public void setConfidenceScore(@javax.annotation.Nullable final Double value) {
         this._confidenceScore = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userHasVerifiedAccuracy property value. Records if the user has confirmed this inference as being True or False.

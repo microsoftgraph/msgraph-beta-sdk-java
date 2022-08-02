@@ -16,6 +16,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      */
     public AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerDerivedCredentialAuthenticationConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

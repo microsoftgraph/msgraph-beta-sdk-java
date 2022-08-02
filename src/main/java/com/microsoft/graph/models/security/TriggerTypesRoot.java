@@ -17,6 +17,7 @@ public class TriggerTypesRoot extends Entity implements Parsable {
      */
     public TriggerTypesRoot() {
         super();
+        this.setOdataType("#microsoft.graph.security.triggerTypesRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

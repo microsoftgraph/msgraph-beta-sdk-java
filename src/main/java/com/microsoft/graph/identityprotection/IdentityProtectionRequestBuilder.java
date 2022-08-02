@@ -250,7 +250,7 @@ public class IdentityProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityProtection.riskDetections.item collection
      * @param id Unique identifier of the item
-     * @return a riskDetectionItemRequestBuilder
+     * @return a RiskDetectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskDetectionItemRequestBuilder riskDetections(@javax.annotation.Nonnull final String id) {
@@ -262,7 +262,7 @@ public class IdentityProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityProtection.riskyServicePrincipals.item collection
      * @param id Unique identifier of the item
-     * @return a riskyServicePrincipalItemRequestBuilder
+     * @return a RiskyServicePrincipalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskyServicePrincipalItemRequestBuilder riskyServicePrincipals(@javax.annotation.Nonnull final String id) {
@@ -274,7 +274,7 @@ public class IdentityProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityProtection.riskyUsers.item collection
      * @param id Unique identifier of the item
-     * @return a riskyUserItemRequestBuilder
+     * @return a RiskyUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskyUserItemRequestBuilder riskyUsers(@javax.annotation.Nonnull final String id) {
@@ -286,7 +286,7 @@ public class IdentityProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityProtection.servicePrincipalRiskDetections.item collection
      * @param id Unique identifier of the item
-     * @return a servicePrincipalRiskDetectionItemRequestBuilder
+     * @return a ServicePrincipalRiskDetectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServicePrincipalRiskDetectionItemRequestBuilder servicePrincipalRiskDetections(@javax.annotation.Nonnull final String id) {

@@ -34,6 +34,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      */
     public WindowsPhoneEASEmailProfileConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhoneEASEmailProfileConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

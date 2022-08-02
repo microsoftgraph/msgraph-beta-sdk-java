@@ -16,6 +16,7 @@ public class WindowsKioskLocalUser extends WindowsKioskUser implements Parsable 
      */
     public WindowsKioskLocalUser() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskLocalUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,6 +14,8 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** The unique identifier */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** Enum for the template type used for collecting logs */
     private DeviceLogCollectionTemplateType _templateType;
     /**
@@ -22,6 +24,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      */
     public DeviceLogCollectionRequest() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceLogCollectionRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceLogCollectionRequest currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("templateType", (n) -> { currentObject.setTemplateType(n.getEnumValue(DeviceLogCollectionTemplateType.class)); });
         }};
     }
@@ -60,6 +64,14 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the templateType property value. Enum for the template type used for collecting logs
@@ -77,6 +89,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("templateType", this.getTemplateType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the templateType property value. Enum for the template type used for collecting logs

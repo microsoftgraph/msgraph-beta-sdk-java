@@ -16,6 +16,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
      */
     public WindowsKioskSingleWin32App() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskSingleWin32App");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

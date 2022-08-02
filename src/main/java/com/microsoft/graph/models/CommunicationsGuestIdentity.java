@@ -14,6 +14,7 @@ public class CommunicationsGuestIdentity extends Identity implements Parsable {
      */
     public CommunicationsGuestIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.communicationsGuestIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

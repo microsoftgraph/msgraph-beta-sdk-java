@@ -316,7 +316,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAndAppManagementAssignmentFilterItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementAssignmentFilterItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementAssignmentFilterItemRequestBuilderDeleteRequestConfiguration() {
@@ -345,7 +345,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceAndAppManagementAssignmentFilterItemRequestBuilderGetQueryParameters queryParameters = new DeviceAndAppManagementAssignmentFilterItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceAndAppManagementAssignmentFilterItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementAssignmentFilterItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementAssignmentFilterItemRequestBuilderGetRequestConfiguration() {
@@ -360,7 +360,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAndAppManagementAssignmentFilterItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementAssignmentFilterItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementAssignmentFilterItemRequestBuilderPatchRequestConfiguration() {

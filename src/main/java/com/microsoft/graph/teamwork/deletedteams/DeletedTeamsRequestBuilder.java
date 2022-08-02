@@ -21,7 +21,7 @@ import microsoft.graph.teamwork.deletedteams.count.CountRequestBuilder;
 import microsoft.graph.teamwork.deletedteams.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity. */
 public class DeletedTeamsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

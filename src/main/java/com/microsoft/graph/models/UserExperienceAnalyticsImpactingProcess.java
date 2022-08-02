@@ -26,6 +26,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      */
     public UserExperienceAnalyticsImpactingProcess() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsImpactingProcess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

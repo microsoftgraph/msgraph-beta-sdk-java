@@ -28,6 +28,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     public LanguageProficiency() {
         super();
+        this.setOdataType("#microsoft.graph.languageProficiency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -41,6 +41,7 @@ public class CompanyInformation extends Entity implements Parsable {
      */
     public CompanyInformation() {
         super();
+        this.setOdataType("#microsoft.graph.companyInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

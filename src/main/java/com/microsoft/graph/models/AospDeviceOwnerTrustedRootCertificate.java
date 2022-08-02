@@ -18,6 +18,7 @@ public class AospDeviceOwnerTrustedRootCertificate extends DeviceConfiguration i
      */
     public AospDeviceOwnerTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.aospDeviceOwnerTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

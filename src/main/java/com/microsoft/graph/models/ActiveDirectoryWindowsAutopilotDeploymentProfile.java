@@ -18,6 +18,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      */
     public ActiveDirectoryWindowsAutopilotDeploymentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.activeDirectoryWindowsAutopilotDeploymentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

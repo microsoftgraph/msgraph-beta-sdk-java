@@ -307,7 +307,7 @@ public class MentionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mentionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MentionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MentionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MentionItemRequestBuilder {
         @javax.annotation.Nullable
         public MentionItemRequestBuilderGetQueryParameters queryParameters = new MentionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mentionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MentionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MentionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MentionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mentionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MentionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MentionItemRequestBuilderPatchRequestConfiguration() {

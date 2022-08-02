@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SharedInsight extends Entity implements Parsable {
     /** Details about the shared item. Read only. */
     private SharingDetail _lastShared;
@@ -27,6 +27,7 @@ public class SharedInsight extends Entity implements Parsable {
      */
     public SharedInsight() {
         super();
+        this.setOdataType("#microsoft.graph.sharedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

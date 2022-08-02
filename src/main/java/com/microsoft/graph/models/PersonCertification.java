@@ -35,6 +35,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      */
     public PersonCertification() {
         super();
+        this.setOdataType("#microsoft.graph.personCertification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

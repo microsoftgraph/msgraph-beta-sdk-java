@@ -307,7 +307,7 @@ public class PlannerDeltaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerDeltaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerDeltaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerDeltaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PlannerDeltaItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerDeltaItemRequestBuilderGetQueryParameters queryParameters = new PlannerDeltaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerDeltaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerDeltaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerDeltaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PlannerDeltaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerDeltaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerDeltaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerDeltaItemRequestBuilderPatchRequestConfiguration() {

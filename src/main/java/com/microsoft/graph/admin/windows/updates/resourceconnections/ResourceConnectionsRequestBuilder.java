@@ -20,7 +20,7 @@ import microsoft.graph.models.windowsupdates.ResourceConnection;
 import microsoft.graph.models.windowsupdates.ResourceConnectionCollectionResponse;
 /** Provides operations to manage the resourceConnections property of the microsoft.graph.windowsUpdates.updates entity. */
 public class ResourceConnectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +59,7 @@ public class ResourceConnectionsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ResourceConnectionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ResourceConnectionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @return a CompletableFuture of ResourceConnectionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ResourceConnectionCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ResourceConnectionsRequestBuilder {
         }
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ResourceConnectionCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ResourceConnectionsRequestBuilder {
         }
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ResourceConnectionCollectionResponse
@@ -227,7 +227,7 @@ public class ResourceConnectionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get resourceConnections from admin */
+    /** Service connections to external resources such as analytics workspaces. */
     public class ResourceConnectionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -16,6 +16,8 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _failedDriverIds;
     /** List of driver Ids that are not found. */
     private java.util.List<String> _notFoundDriverIds;
+    /** The OdataType property */
+    private String _odataType;
     /** List of driver Ids where the action is successful. */
     private java.util.List<String> _successfulDriverIds;
     /**
@@ -24,6 +26,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     public BulkDriverActionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bulkDriverActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BulkDriverActionResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("failedDriverIds", (n) -> { currentObject.setFailedDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("notFoundDriverIds", (n) -> { currentObject.setNotFoundDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("successfulDriverIds", (n) -> { currentObject.setSuccessfulDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -71,6 +75,14 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<String> getNotFoundDriverIds() {
         return this._notFoundDriverIds;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the successfulDriverIds property value. List of driver Ids where the action is successful.
@@ -89,6 +101,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("failedDriverIds", this.getFailedDriverIds());
         writer.writeCollectionOfPrimitiveValues("notFoundDriverIds", this.getNotFoundDriverIds());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("successfulDriverIds", this.getSuccessfulDriverIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     public void setNotFoundDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notFoundDriverIds = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the successfulDriverIds property value. List of driver Ids where the action is successful.

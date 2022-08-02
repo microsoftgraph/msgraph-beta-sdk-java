@@ -24,6 +24,7 @@ public class AndroidForWorkApp extends MobileApp implements Parsable {
      */
     public AndroidForWorkApp() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

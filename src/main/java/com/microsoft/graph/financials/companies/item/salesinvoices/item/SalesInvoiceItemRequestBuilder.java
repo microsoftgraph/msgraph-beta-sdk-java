@@ -283,7 +283,7 @@ public class SalesInvoiceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesInvoices.item.salesInvoiceLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesInvoiceLineItemRequestBuilder
+     * @return a SalesInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder salesInvoiceLines(@javax.annotation.Nonnull final String id) {
@@ -315,7 +315,7 @@ public class SalesInvoiceItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesInvoiceItemRequestBuilderGetQueryParameters queryParameters = new SalesInvoiceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesInvoiceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesInvoiceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesInvoiceItemRequestBuilderGetRequestConfiguration() {
@@ -330,7 +330,7 @@ public class SalesInvoiceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesInvoiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesInvoiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesInvoiceItemRequestBuilderPatchRequestConfiguration() {

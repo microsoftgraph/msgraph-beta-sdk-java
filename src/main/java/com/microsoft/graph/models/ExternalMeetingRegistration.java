@@ -14,6 +14,7 @@ public class ExternalMeetingRegistration extends MeetingRegistrationBase impleme
      */
     public ExternalMeetingRegistration() {
         super();
+        this.setOdataType("#microsoft.graph.externalMeetingRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

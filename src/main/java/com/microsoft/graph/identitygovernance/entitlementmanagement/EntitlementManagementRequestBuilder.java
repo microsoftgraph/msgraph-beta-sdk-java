@@ -39,6 +39,8 @@ import microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.i
 import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
 import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.ConnectedOrganizationItemRequestBuilder;
 import microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
+import microsoft.graph.identitygovernance.entitlementmanagement.subjects.item.AccessPackageSubjectItemRequestBuilder;
+import microsoft.graph.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
 import microsoft.graph.models.EntitlementManagement;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity. */
@@ -112,12 +114,17 @@ public class EntitlementManagementRequestBuilder {
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The subjects property */
+    @javax.annotation.Nonnull
+    public SubjectsRequestBuilder subjects() {
+        return new SubjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
      * @param id Unique identifier of the item
-     * @return a approvalItemRequestBuilder
+     * @return a ApprovalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApprovalItemRequestBuilder accessPackageAssignmentApprovals(@javax.annotation.Nonnull final String id) {
@@ -129,7 +136,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentPolicyItemRequestBuilder
+     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentPolicyItemRequestBuilder accessPackageAssignmentPolicies(@javax.annotation.Nonnull final String id) {
@@ -141,7 +148,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentRequestItemRequestBuilder
+     * @return a AccessPackageAssignmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentRequestItemRequestBuilder accessPackageAssignmentRequests(@javax.annotation.Nonnull final String id) {
@@ -153,7 +160,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentResourceRoles.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentResourceRoleItemRequestBuilder
+     * @return a AccessPackageAssignmentResourceRoleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentResourceRoleItemRequestBuilder accessPackageAssignmentResourceRoles(@javax.annotation.Nonnull final String id) {
@@ -165,7 +172,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentItemRequestBuilder
+     * @return a AccessPackageAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentItemRequestBuilder accessPackageAssignments(@javax.annotation.Nonnull final String id) {
@@ -177,7 +184,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageCatalogItemRequestBuilder
+     * @return a AccessPackageCatalogItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageCatalogItemRequestBuilder accessPackageCatalogs(@javax.annotation.Nonnull final String id) {
@@ -189,7 +196,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceEnvironments.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceEnvironmentItemRequestBuilder
+     * @return a AccessPackageResourceEnvironmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceEnvironmentItemRequestBuilder accessPackageResourceEnvironments(@javax.annotation.Nonnull final String id) {
@@ -201,7 +208,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRequests.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRequestItemRequestBuilder
+     * @return a AccessPackageResourceRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRequestItemRequestBuilder accessPackageResourceRequests(@javax.annotation.Nonnull final String id) {
@@ -213,7 +220,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRoleScopes.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRoleScopeItemRequestBuilder
+     * @return a AccessPackageResourceRoleScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleScopeItemRequestBuilder accessPackageResourceRoleScopes(@javax.annotation.Nonnull final String id) {
@@ -225,7 +232,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResources.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceItemRequestBuilder
+     * @return a AccessPackageResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceItemRequestBuilder accessPackageResources(@javax.annotation.Nonnull final String id) {
@@ -237,7 +244,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageItemRequestBuilder accessPackages(@javax.annotation.Nonnull final String id) {
@@ -249,7 +256,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
      * @param id Unique identifier of the item
-     * @return a connectedOrganizationItemRequestBuilder
+     * @return a ConnectedOrganizationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectedOrganizationItemRequestBuilder connectedOrganizations(@javax.annotation.Nonnull final String id) {
@@ -531,6 +538,18 @@ public class EntitlementManagementRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.subjects.item collection
+     * @param id Unique identifier of the item
+     * @return a AccessPackageSubjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageSubjectItemRequestBuilder subjects(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackageSubject%2Did", id);
+        return new AccessPackageSubjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class EntitlementManagementRequestBuilderDeleteRequestConfiguration {

@@ -50,6 +50,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     public AccessPackageAssignmentPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -47,6 +47,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
      */
     public Office365ServicesUserCounts() {
         super();
+        this.setOdataType("#microsoft.graph.office365ServicesUserCounts");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

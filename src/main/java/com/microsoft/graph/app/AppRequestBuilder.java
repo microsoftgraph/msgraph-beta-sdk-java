@@ -41,7 +41,7 @@ public class AppRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.calls.item collection
      * @param id Unique identifier of the item
-     * @return a callItemRequestBuilder
+     * @return a CallItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CallItemRequestBuilder calls(@javax.annotation.Nonnull final String id) {
@@ -193,7 +193,7 @@ public class AppRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.onlineMeetings.item collection
      * @param id Unique identifier of the item
-     * @return a onlineMeetingItemRequestBuilder
+     * @return a OnlineMeetingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {

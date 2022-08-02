@@ -19,7 +19,7 @@ import microsoft.graph.models.PlannerPlanCollectionResponse;
 import microsoft.graph.users.item.planner.rosterplans.count.CountRequestBuilder;
 /** Provides operations to manage the rosterPlans property of the microsoft.graph.plannerUser entity. */
 public class RosterPlansRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

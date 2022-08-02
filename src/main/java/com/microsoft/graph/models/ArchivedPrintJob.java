@@ -32,6 +32,8 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     private Integer _duplexPageCount;
     /** The archived print job's GUID. Read-only. */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** The total number of pages that were printed. Read-only. */
     private Integer _pageCount;
     /** The printer ID that the job was queued for. Read-only. */
@@ -46,6 +48,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     public ArchivedPrintJob() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.archivedPrintJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -144,7 +147,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ArchivedPrintJob currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<>(15) {{
             this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
             this.put("acquiredDateTime", (n) -> { currentObject.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
             this.put("blackAndWhitePageCount", (n) -> { currentObject.setBlackAndWhitePageCount(n.getIntegerValue()); });
@@ -155,6 +158,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("duplexPageCount", (n) -> { currentObject.setDuplexPageCount(n.getIntegerValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("pageCount", (n) -> { currentObject.setPageCount(n.getIntegerValue()); });
             this.put("printerId", (n) -> { currentObject.setPrinterId(n.getStringValue()); });
             this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
@@ -168,6 +172,14 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the pageCount property value. The total number of pages that were printed. Read-only.
@@ -218,6 +230,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeIntegerValue("duplexPageCount", this.getDuplexPageCount());
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("pageCount", this.getPageCount());
         writer.writeStringValue("printerId", this.getPrinterId());
         writer.writeEnumValue("processingState", this.getProcessingState());
@@ -311,6 +324,14 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the pageCount property value. The total number of pages that were printed. Read-only.

@@ -24,6 +24,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      */
     public WorkPosition() {
         super();
+        this.setOdataType("#microsoft.graph.workPosition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

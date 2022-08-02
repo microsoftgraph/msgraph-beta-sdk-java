@@ -23,6 +23,7 @@ public class Picture extends Entity implements Parsable {
      */
     public Picture() {
         super();
+        this.setOdataType("#microsoft.graph.picture");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

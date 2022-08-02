@@ -47,7 +47,7 @@ public class PolicySetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.policySets.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a policySetAssignmentItemRequestBuilder
+     * @return a PolicySetAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PolicySetAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -278,7 +278,7 @@ public class PolicySetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.policySets.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a policySetItemItemRequestBuilder
+     * @return a PolicySetItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PolicySetItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class PolicySetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new policySetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class PolicySetItemRequestBuilder {
         @javax.annotation.Nullable
         public PolicySetItemRequestBuilderGetQueryParameters queryParameters = new PolicySetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new policySetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class PolicySetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new policySetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetItemRequestBuilderPatchRequestConfiguration() {

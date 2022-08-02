@@ -157,7 +157,7 @@ public class CustomerPaymentJournalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.customerPaymentJournals.item.customerPayments.item collection
      * @param id Unique identifier of the item
-     * @return a customerPaymentItemRequestBuilder
+     * @return a CustomerPaymentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerPaymentItemRequestBuilder customerPayments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class CustomerPaymentJournalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customerPaymentJournalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CustomerPaymentJournalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomerPaymentJournalItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class CustomerPaymentJournalItemRequestBuilder {
         @javax.annotation.Nullable
         public CustomerPaymentJournalItemRequestBuilderGetQueryParameters queryParameters = new CustomerPaymentJournalItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new customerPaymentJournalItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CustomerPaymentJournalItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomerPaymentJournalItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class CustomerPaymentJournalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customerPaymentJournalItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CustomerPaymentJournalItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomerPaymentJournalItemRequestBuilderPatchRequestConfiguration() {

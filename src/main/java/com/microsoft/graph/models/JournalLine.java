@@ -42,6 +42,7 @@ public class JournalLine extends Entity implements Parsable {
      */
     public JournalLine() {
         super();
+        this.setOdataType("#microsoft.graph.journalLine");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

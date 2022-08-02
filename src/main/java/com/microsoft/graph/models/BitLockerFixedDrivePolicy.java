@@ -14,6 +14,8 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256. */
     private BitLockerEncryptionMethod _encryptionMethod;
+    /** The OdataType property */
+    private String _odataType;
     /** This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker. */
     private BitLockerRecoveryOptions _recoveryOptions;
     /** This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer. */
@@ -24,6 +26,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
      */
     public BitLockerFixedDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bitLockerFixedDrivePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,11 +61,20 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerFixedDrivePolicy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recoveryOptions", (n) -> { currentObject.setRecoveryOptions(n.getObjectValue(BitLockerRecoveryOptions::createFromDiscriminatorValue)); });
             this.put("requireEncryptionForWriteAccess", (n) -> { currentObject.setRequireEncryptionForWriteAccess(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recoveryOptions property value. This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.
@@ -88,6 +100,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("encryptionMethod", this.getEncryptionMethod());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("recoveryOptions", this.getRecoveryOptions());
         writer.writeBooleanValue("requireEncryptionForWriteAccess", this.getRequireEncryptionForWriteAccess());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,6 +120,14 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
      */
     public void setEncryptionMethod(@javax.annotation.Nullable final BitLockerEncryptionMethod value) {
         this._encryptionMethod = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recoveryOptions property value. This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.

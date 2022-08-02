@@ -30,6 +30,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

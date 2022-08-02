@@ -260,7 +260,7 @@ public class ManagementTemplateItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item.managementTemplateCollections.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateCollectionItemRequestBuilder
+     * @return a ManagementTemplateCollectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateCollectionItemRequestBuilder managementTemplateCollections(@javax.annotation.Nonnull final String id) {
@@ -272,7 +272,7 @@ public class ManagementTemplateItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item.managementTemplateSteps.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateStepItemRequestBuilder
+     * @return a ManagementTemplateStepItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepItemRequestBuilder managementTemplateSteps(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class ManagementTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class ManagementTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementTemplateItemRequestBuilderGetQueryParameters queryParameters = new ManagementTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class ManagementTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateItemRequestBuilderPatchRequestConfiguration() {

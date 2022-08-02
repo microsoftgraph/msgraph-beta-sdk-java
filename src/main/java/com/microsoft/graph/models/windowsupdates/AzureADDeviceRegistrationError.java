@@ -16,6 +16,7 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
      */
     public AzureADDeviceRegistrationError() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.azureADDeviceRegistrationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

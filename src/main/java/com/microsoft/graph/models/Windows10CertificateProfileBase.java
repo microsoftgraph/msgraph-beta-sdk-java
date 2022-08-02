@@ -14,7 +14,7 @@ public class Windows10CertificateProfileBase extends WindowsCertificateProfileBa
      */
     public Windows10CertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.windows10CertificateProfileBase");
+        this.setOdataType("#microsoft.graph.windows10CertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

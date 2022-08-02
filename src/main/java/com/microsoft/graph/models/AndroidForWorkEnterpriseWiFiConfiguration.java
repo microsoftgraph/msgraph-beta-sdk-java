@@ -30,6 +30,7 @@ public class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiF
      */
     public AndroidForWorkEnterpriseWiFiConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkEnterpriseWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

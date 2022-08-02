@@ -30,6 +30,7 @@ public class Note extends OutlookItem implements Parsable {
      */
     public Note() {
         super();
+        this.setOdataType("#microsoft.graph.note");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

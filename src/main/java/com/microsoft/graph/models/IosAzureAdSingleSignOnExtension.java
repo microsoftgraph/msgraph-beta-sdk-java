@@ -20,6 +20,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      */
     public IosAzureAdSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.iosAzureAdSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

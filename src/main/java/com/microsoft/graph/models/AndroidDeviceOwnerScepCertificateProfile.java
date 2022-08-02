@@ -32,6 +32,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
      */
     public AndroidDeviceOwnerScepCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerScepCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

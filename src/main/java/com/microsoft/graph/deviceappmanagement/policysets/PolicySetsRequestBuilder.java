@@ -21,7 +21,7 @@ import microsoft.graph.models.PolicySet;
 import microsoft.graph.models.PolicySetCollectionResponse;
 /** Provides operations to manage the policySets property of the microsoft.graph.deviceAppManagement entity. */
 public class PolicySetsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

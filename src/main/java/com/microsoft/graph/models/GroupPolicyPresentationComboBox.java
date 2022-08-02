@@ -22,6 +22,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyPresentation imp
      */
     public GroupPolicyPresentationComboBox() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationComboBox");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

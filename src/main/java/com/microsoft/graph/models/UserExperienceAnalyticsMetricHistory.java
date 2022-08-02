@@ -21,6 +21,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      */
     public UserExperienceAnalyticsMetricHistory() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsMetricHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

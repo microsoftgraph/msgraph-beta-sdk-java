@@ -53,7 +53,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a windowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -233,7 +233,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -386,7 +386,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
         @javax.annotation.Nullable
         public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderGetQueryParameters queryParameters = new WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -401,7 +401,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilderPatchRequestConfiguration() {

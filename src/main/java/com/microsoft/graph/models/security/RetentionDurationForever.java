@@ -14,6 +14,7 @@ public class RetentionDurationForever extends RetentionDuration implements Parsa
      */
     public RetentionDurationForever() {
         super();
+        this.setOdataType("#microsoft.graph.security.retentionDurationForever");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

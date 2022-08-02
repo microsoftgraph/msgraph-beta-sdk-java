@@ -20,6 +20,7 @@ public class MessageRecipient extends Entity implements Parsable {
      */
     public MessageRecipient() {
         super();
+        this.setOdataType("#microsoft.graph.messageRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

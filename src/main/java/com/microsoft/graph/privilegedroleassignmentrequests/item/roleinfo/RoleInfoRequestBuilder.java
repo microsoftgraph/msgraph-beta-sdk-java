@@ -58,7 +58,7 @@ public class RoleInfoRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedRoleAssignmentRequests.item.roleInfo.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedRoleAssignmentItemRequestBuilder
+     * @return a PrivilegedRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedRoleAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {

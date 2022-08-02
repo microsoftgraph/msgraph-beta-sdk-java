@@ -307,7 +307,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new comanagementEligibleDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ComanagementEligibleDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ComanagementEligibleDeviceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public ComanagementEligibleDeviceItemRequestBuilderGetQueryParameters queryParameters = new ComanagementEligibleDeviceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new comanagementEligibleDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ComanagementEligibleDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ComanagementEligibleDeviceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new comanagementEligibleDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ComanagementEligibleDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ComanagementEligibleDeviceItemRequestBuilderPatchRequestConfiguration() {

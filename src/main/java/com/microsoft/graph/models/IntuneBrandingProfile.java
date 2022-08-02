@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains data which is used in customizing the tenant level appearance of the Company Portal applications as well as the end user web portal. */
 public class IntuneBrandingProfile extends Entity implements Parsable {
     /** The list of group assignments for the branding profile */
     private java.util.List<IntuneBrandingProfileAssignment> _assignments;
@@ -74,16 +75,17 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     /** Logo image displayed in Company Portal apps which have a theme color background behind the logo */
     private MimeContent _themeColorLogo;
     /**
-     * Instantiates a new IntuneBrandingProfile and sets the default values.
+     * Instantiates a new intuneBrandingProfile and sets the default values.
      * @return a void
      */
     public IntuneBrandingProfile() {
         super();
+        this.setOdataType("#microsoft.graph.intuneBrandingProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IntuneBrandingProfile
+     * @return a intuneBrandingProfile
      */
     @javax.annotation.Nonnull
     public static IntuneBrandingProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

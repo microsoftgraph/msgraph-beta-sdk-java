@@ -17,6 +17,8 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
     private java.util.List<String> _notFoundDeviceIds;
     /** A list of all the Intune managed device IDs that were identified as unsupported for the bulk action. */
     private java.util.List<String> _notSupportedDeviceIds;
+    /** The OdataType property */
+    private String _odataType;
     /** A list of all the Intune managed device IDs that completed the bulk action successfully. */
     private java.util.List<String> _successfulDeviceIds;
     /**
@@ -25,6 +27,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      */
     public CloudPcBulkRemoteActionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcBulkRemoteActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,10 +62,11 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcBulkRemoteActionResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("failedDeviceIds", (n) -> { currentObject.setFailedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("notFoundDeviceIds", (n) -> { currentObject.setNotFoundDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("notSupportedDeviceIds", (n) -> { currentObject.setNotSupportedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("successfulDeviceIds", (n) -> { currentObject.setSuccessfulDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -83,6 +87,14 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
         return this._notSupportedDeviceIds;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the successfulDeviceIds property value. A list of all the Intune managed device IDs that completed the bulk action successfully.
      * @return a string
      */
@@ -100,6 +112,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
         writer.writeCollectionOfPrimitiveValues("failedDeviceIds", this.getFailedDeviceIds());
         writer.writeCollectionOfPrimitiveValues("notFoundDeviceIds", this.getNotFoundDeviceIds());
         writer.writeCollectionOfPrimitiveValues("notSupportedDeviceIds", this.getNotSupportedDeviceIds());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("successfulDeviceIds", this.getSuccessfulDeviceIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      */
     public void setNotSupportedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notSupportedDeviceIds = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the successfulDeviceIds property value. A list of all the Intune managed device IDs that completed the bulk action successfully.

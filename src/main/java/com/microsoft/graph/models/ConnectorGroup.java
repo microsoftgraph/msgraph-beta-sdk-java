@@ -21,16 +21,17 @@ public class ConnectorGroup extends Entity implements Parsable {
     /** The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue. */
     private ConnectorGroupRegion _region;
     /**
-     * Instantiates a new ConnectorGroup and sets the default values.
+     * Instantiates a new connectorGroup and sets the default values.
      * @return a void
      */
     public ConnectorGroup() {
         super();
+        this.setOdataType("#microsoft.graph.connectorGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectorGroup
+     * @return a connectorGroup
      */
     @javax.annotation.Nonnull
     public static ConnectorGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

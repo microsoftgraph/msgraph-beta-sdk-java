@@ -253,7 +253,7 @@ public class ConnectorItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a connectorGroupItemRequestBuilder
+     * @return a ConnectorGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectorGroupItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class ConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public ConnectorItemRequestBuilderGetQueryParameters queryParameters = new ConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new connectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class ConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectorItemRequestBuilderPatchRequestConfiguration() {

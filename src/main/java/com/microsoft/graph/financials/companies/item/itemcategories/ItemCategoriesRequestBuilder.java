@@ -20,7 +20,7 @@ import microsoft.graph.models.ItemCategoryCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the itemCategories property of the microsoft.graph.company entity. */
 public class ItemCategoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

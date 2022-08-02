@@ -19,6 +19,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      */
     public DeviceManagementConfigurationSetting() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      */
     public MacOSTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.macOSTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.SoftwareOathAuthenticationMethod;
 import microsoft.graph.models.SoftwareOathAuthenticationMethodCollectionResponse;
 /** Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity. */
 public class SoftwareOathMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

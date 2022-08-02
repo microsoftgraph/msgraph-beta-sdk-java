@@ -22,6 +22,7 @@ public class VulnerableManagedDevice extends Entity implements Parsable {
      */
     public VulnerableManagedDevice() {
         super();
+        this.setOdataType("#microsoft.graph.vulnerableManagedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

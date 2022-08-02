@@ -13,6 +13,8 @@ public class Credential implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The name of the field for this credential. e.g, username or password or phoneNumber. This is defined by the application. Must match what is in the html field on singleSignOnSettings/password object. */
     private String _fieldId;
+    /** The OdataType property */
+    private String _odataType;
     /** The type for this credential. Valid values: username, password, or other. */
     private String _type;
     /** The value for this credential. e.g, mysuperhiddenpassword. Note the value for passwords is write-only, the value can never be read back. */
@@ -23,6 +25,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
      */
     public Credential() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.credential");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class Credential implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Credential currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("fieldId", (n) -> { currentObject.setFieldId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
@@ -62,6 +66,14 @@ public class Credential implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getFieldId() {
         return this._fieldId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. The type for this credential. Valid values: username, password, or other.
@@ -87,6 +99,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fieldId", this.getFieldId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class Credential implements AdditionalDataHolder, Parsable {
      */
     public void setFieldId(@javax.annotation.Nullable final String value) {
         this._fieldId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. The type for this credential. Valid values: username, password, or other.

@@ -14,6 +14,8 @@ public class NumberRange implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Lower number. */
     private Integer _lowerNumber;
+    /** The OdataType property */
+    private String _odataType;
     /** Upper number. */
     private Integer _upperNumber;
     /**
@@ -22,6 +24,7 @@ public class NumberRange implements AdditionalDataHolder, Parsable {
      */
     public NumberRange() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.numberRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class NumberRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NumberRange currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("lowerNumber", (n) -> { currentObject.setLowerNumber(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("upperNumber", (n) -> { currentObject.setUpperNumber(n.getIntegerValue()); });
         }};
     }
@@ -60,6 +64,14 @@ public class NumberRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getLowerNumber() {
         return this._lowerNumber;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the upperNumber property value. Upper number.
@@ -77,6 +89,7 @@ public class NumberRange implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("lowerNumber", this.getLowerNumber());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("upperNumber", this.getUpperNumber());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class NumberRange implements AdditionalDataHolder, Parsable {
      */
     public void setLowerNumber(@javax.annotation.Nullable final Integer value) {
         this._lowerNumber = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the upperNumber property value. Upper number.

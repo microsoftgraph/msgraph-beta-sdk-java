@@ -18,7 +18,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      */
     public Windows81CertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.windows81CertificateProfileBase");
+        this.setOdataType("#microsoft.graph.windows81CertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

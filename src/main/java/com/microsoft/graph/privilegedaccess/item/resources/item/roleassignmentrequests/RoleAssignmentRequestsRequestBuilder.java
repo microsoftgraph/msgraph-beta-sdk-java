@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.privilegedaccess.item.resources.item.roleassignmentrequests.count.CountRequestBuilder;
 /** Provides operations to manage the roleAssignmentRequests property of the microsoft.graph.governanceResource entity. */
 public class RoleAssignmentRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

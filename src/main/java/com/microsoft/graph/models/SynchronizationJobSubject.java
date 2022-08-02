@@ -17,12 +17,15 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     private String _objectId;
     /** The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application. */
     private String _objectTypeName;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new synchronizationJobSubject and sets the default values.
      * @return a void
      */
     public SynchronizationJobSubject() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationJobSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationJobSubject currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SynchronizationLinkedObjects::createFromDiscriminatorValue)); });
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
             this.put("objectTypeName", (n) -> { currentObject.setObjectTypeName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         return this._objectTypeName;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         writer.writeObjectValue("links", this.getLinks());
         writer.writeStringValue("objectId", this.getObjectId());
         writer.writeStringValue("objectTypeName", this.getObjectTypeName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      */
     public void setObjectTypeName(@javax.annotation.Nullable final String value) {
         this._objectTypeName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

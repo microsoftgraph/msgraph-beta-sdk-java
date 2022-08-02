@@ -21,14 +21,14 @@ import microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item
 import microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.agentgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the agentGroups property of the microsoft.graph.publishedResource entity. */
 public class AgentGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

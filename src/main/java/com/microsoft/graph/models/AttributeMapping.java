@@ -21,6 +21,8 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     private AttributeFlowType _flowType;
     /** If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes. */
     private Integer _matchingPriority;
+    /** The OdataType property */
+    private String _odataType;
     /** Defines how a value should be extracted (or transformed) from the source object. */
     private AttributeMappingSource _source;
     /** Name of the attribute on the target object. */
@@ -31,6 +33,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     public AttributeMapping() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attributeMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,12 +76,13 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeMapping currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
             this.put("exportMissingReferences", (n) -> { currentObject.setExportMissingReferences(n.getBooleanValue()); });
             this.put("flowBehavior", (n) -> { currentObject.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });
             this.put("flowType", (n) -> { currentObject.setFlowType(n.getEnumValue(AttributeFlowType.class)); });
             this.put("matchingPriority", (n) -> { currentObject.setMatchingPriority(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
             this.put("targetAttributeName", (n) -> { currentObject.setTargetAttributeName(n.getStringValue()); });
         }};
@@ -108,6 +112,14 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return this._matchingPriority;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @return a attributeMappingSource
      */
@@ -135,6 +147,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("flowBehavior", this.getFlowBehavior());
         writer.writeEnumValue("flowType", this.getFlowType());
         writer.writeIntegerValue("matchingPriority", this.getMatchingPriority());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("source", this.getSource());
         writer.writeStringValue("targetAttributeName", this.getTargetAttributeName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -186,6 +199,14 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     public void setMatchingPriority(@javax.annotation.Nullable final Integer value) {
         this._matchingPriority = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the source property value. Defines how a value should be extracted (or transformed) from the source object.

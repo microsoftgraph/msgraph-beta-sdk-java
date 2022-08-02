@@ -21,7 +21,7 @@ import microsoft.graph.officeconfiguration.clientconfigurations.count.CountReque
 import microsoft.graph.officeconfiguration.clientconfigurations.updatepriorities.UpdatePrioritiesRequestBuilder;
 /** Provides operations to manage the clientConfigurations property of the microsoft.graph.officeConfiguration entity. */
 public class ClientConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

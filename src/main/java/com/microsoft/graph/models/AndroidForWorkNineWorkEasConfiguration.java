@@ -20,6 +20,7 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
      */
     public AndroidForWorkNineWorkEasConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkNineWorkEasConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

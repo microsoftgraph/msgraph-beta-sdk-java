@@ -11,6 +11,8 @@ import java.util.Objects;
 public class DeviceComplianceScriptValidationResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Errors in json for the script for rules. */
     private java.util.List<DeviceComplianceScriptRuleError> _ruleErrors;
     /** Parsed rules from json. */
@@ -23,6 +25,7 @@ public class DeviceComplianceScriptValidationResult implements AdditionalDataHol
      */
     public DeviceComplianceScriptValidationResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceComplianceScriptValidationResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,11 +52,20 @@ public class DeviceComplianceScriptValidationResult implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptValidationResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleErrors", (n) -> { currentObject.setRuleErrors(n.getCollectionOfObjectValues(DeviceComplianceScriptRuleError::createFromDiscriminatorValue)); });
             this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(DeviceComplianceScriptRule::createFromDiscriminatorValue)); });
             this.put("scriptErrors", (n) -> { currentObject.setScriptErrors(n.getCollectionOfObjectValues(DeviceComplianceScriptError::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the ruleErrors property value. Errors in json for the script for rules.
@@ -86,6 +98,7 @@ public class DeviceComplianceScriptValidationResult implements AdditionalDataHol
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("ruleErrors", this.getRuleErrors());
         writer.writeCollectionOfObjectValues("rules", this.getRules());
         writer.writeCollectionOfObjectValues("scriptErrors", this.getScriptErrors());
@@ -98,6 +111,14 @@ public class DeviceComplianceScriptValidationResult implements AdditionalDataHol
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the ruleErrors property value. Errors in json for the script for rules.

@@ -33,6 +33,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      */
     public RestrictedAppsViolation() {
         super();
+        this.setOdataType("#microsoft.graph.restrictedAppsViolation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

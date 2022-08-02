@@ -29,6 +29,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     public AccessPackageAssignmentResourceRole() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentResourceRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

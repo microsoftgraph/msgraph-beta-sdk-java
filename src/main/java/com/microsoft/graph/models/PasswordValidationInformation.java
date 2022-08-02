@@ -13,6 +13,8 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     private Map<String, Object> _additionalData;
     /** Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only. */
     private Boolean _isValid;
+    /** The OdataType property */
+    private String _odataType;
     /** The list of password validation rules and whether the password passed those rules. Not nullable. Read-only. */
     private java.util.List<ValidationResult> _validationResults;
     /**
@@ -21,6 +23,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      */
     public PasswordValidationInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.passwordValidationInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordValidationInformation currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("isValid", (n) -> { currentObject.setIsValid(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("validationResults", (n) -> { currentObject.setValidationResults(n.getCollectionOfObjectValues(ValidationResult::createFromDiscriminatorValue)); });
         }};
     }
@@ -59,6 +63,14 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public Boolean getIsValid() {
         return this._isValid;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the validationResults property value. The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.
@@ -76,6 +88,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isValid", this.getIsValid());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("validationResults", this.getValidationResults());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      */
     public void setIsValid(@javax.annotation.Nullable final Boolean value) {
         this._isValid = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the validationResults property value. The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.

@@ -36,6 +36,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      */
     public AndroidDeviceOwnerVpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

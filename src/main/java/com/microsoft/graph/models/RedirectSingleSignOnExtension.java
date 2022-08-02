@@ -22,6 +22,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      */
     public RedirectSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.redirectSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

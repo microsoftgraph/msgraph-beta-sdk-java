@@ -15,12 +15,15 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
     private Integer _maxDeviceOccurrence;
     /** Minimum times setting can be set on device. A MinDeviceOccurrence of 0 means setting is optional */
     private Integer _minDeviceOccurrence;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceManagementConfigurationSettingOccurrence and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationSettingOccurrence() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingOccurrence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,9 +50,10 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingOccurrence currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("maxDeviceOccurrence", (n) -> { currentObject.setMaxDeviceOccurrence(n.getIntegerValue()); });
             this.put("minDeviceOccurrence", (n) -> { currentObject.setMinDeviceOccurrence(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
         return this._minDeviceOccurrence;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maxDeviceOccurrence", this.getMaxDeviceOccurrence());
         writer.writeIntegerValue("minDeviceOccurrence", this.getMinDeviceOccurrence());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      */
     public void setMinDeviceOccurrence(@javax.annotation.Nullable final Integer value) {
         this._minDeviceOccurrence = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

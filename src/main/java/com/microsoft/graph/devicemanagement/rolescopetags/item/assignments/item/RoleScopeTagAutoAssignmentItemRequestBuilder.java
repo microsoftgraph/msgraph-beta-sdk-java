@@ -307,7 +307,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleScopeTagAutoAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagAutoAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagAutoAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public RoleScopeTagAutoAssignmentItemRequestBuilderGetQueryParameters queryParameters = new RoleScopeTagAutoAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new roleScopeTagAutoAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagAutoAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagAutoAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleScopeTagAutoAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagAutoAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagAutoAssignmentItemRequestBuilderPatchRequestConfiguration() {

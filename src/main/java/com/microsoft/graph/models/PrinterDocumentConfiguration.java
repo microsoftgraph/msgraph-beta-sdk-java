@@ -39,6 +39,8 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     private String _mediaType;
     /** The multipageLayout property */
     private PrintMultipageLayout _multipageLayout;
+    /** The OdataType property */
+    private String _odataType;
     /** The orientation property */
     private PrintOrientation _orientation;
     /** The outputBin property */
@@ -57,6 +59,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      */
     public PrinterDocumentConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printerDocumentConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -139,7 +142,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterDocumentConfiguration currentObject = this;
-        return new HashMap<>(20) {{
+        return new HashMap<>(21) {{
             this.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
             this.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
             this.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });
@@ -154,6 +157,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
             this.put("mediaSize", (n) -> { currentObject.setMediaSize(n.getStringValue()); });
             this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
             this.put("multipageLayout", (n) -> { currentObject.setMultipageLayout(n.getEnumValue(PrintMultipageLayout.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PrintOrientation.class)); });
             this.put("outputBin", (n) -> { currentObject.setOutputBin(n.getStringValue()); });
             this.put("pageRanges", (n) -> { currentObject.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
@@ -217,6 +221,14 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
         return this._multipageLayout;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the orientation property value. The orientation property
@@ -287,6 +299,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         writer.writeStringValue("mediaSize", this.getMediaSize());
         writer.writeStringValue("mediaType", this.getMediaType());
         writer.writeEnumValue("multipageLayout", this.getMultipageLayout());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("orientation", this.getOrientation());
         writer.writeStringValue("outputBin", this.getOutputBin());
         writer.writeCollectionOfObjectValues("pageRanges", this.getPageRanges());
@@ -414,6 +427,14 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      */
     public void setMultipageLayout(@javax.annotation.Nullable final PrintMultipageLayout value) {
         this._multipageLayout = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation property

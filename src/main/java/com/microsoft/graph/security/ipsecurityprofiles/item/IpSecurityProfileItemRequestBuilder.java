@@ -307,7 +307,7 @@ public class IpSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ipSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IpSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IpSecurityProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class IpSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public IpSecurityProfileItemRequestBuilderGetQueryParameters queryParameters = new IpSecurityProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ipSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IpSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IpSecurityProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class IpSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ipSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IpSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IpSecurityProfileItemRequestBuilderPatchRequestConfiguration() {

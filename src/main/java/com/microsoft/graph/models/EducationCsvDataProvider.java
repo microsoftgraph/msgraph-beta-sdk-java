@@ -16,6 +16,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
      */
     public EducationCsvDataProvider() {
         super();
+        this.setOdataType("#microsoft.graph.educationCsvDataProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

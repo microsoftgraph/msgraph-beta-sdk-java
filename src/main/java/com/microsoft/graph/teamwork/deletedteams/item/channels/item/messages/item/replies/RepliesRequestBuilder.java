@@ -21,7 +21,7 @@ import microsoft.graph.teamwork.deletedteams.item.channels.item.messages.item.re
 import microsoft.graph.teamwork.deletedteams.item.channels.item.messages.item.replies.delta.DeltaRequestBuilder;
 /** Provides operations to manage the replies property of the microsoft.graph.chatMessage entity. */
 public class RepliesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

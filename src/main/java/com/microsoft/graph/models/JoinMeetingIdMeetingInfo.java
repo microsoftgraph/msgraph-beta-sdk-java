@@ -18,6 +18,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      */
     public JoinMeetingIdMeetingInfo() {
         super();
+        this.setOdataType("#microsoft.graph.joinMeetingIdMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

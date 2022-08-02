@@ -155,7 +155,7 @@ public class GroupPolicyDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyDefinitionItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionItemRequestBuilderGetRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsImpactingProcess;
 import microsoft.graph.models.UserExperienceAnalyticsImpactingProcessCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsImpactingProcess property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsImpactingProcessRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

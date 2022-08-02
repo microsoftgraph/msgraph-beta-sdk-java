@@ -22,6 +22,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
      */
     public ApplyLabelAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.applyLabelAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

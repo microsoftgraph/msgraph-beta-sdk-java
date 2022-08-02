@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Group Policy Object file uploaded by admin. */
 public class GroupPolicyObjectFile extends Entity implements Parsable {
     /** The Group Policy Object file content. */
     private String _content;
@@ -20,16 +21,17 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     /** The distinguished name of the OU. */
     private String _ouDistinguishedName;
     /**
-     * Instantiates a new GroupPolicyObjectFile and sets the default values.
+     * Instantiates a new groupPolicyObjectFile and sets the default values.
      * @return a void
      */
     public GroupPolicyObjectFile() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyObjectFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyObjectFile
+     * @return a groupPolicyObjectFile
      */
     @javax.annotation.Nonnull
     public static GroupPolicyObjectFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

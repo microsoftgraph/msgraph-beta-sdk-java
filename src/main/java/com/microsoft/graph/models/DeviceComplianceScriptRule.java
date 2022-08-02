@@ -17,6 +17,8 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     private DeviceComplianceScriptRuleDataType _deviceComplianceScriptRuleDataType;
     /** Operator for rules. */
     private DeviceComplianceScriptRulOperator _deviceComplianceScriptRulOperator;
+    /** The OdataType property */
+    private String _odataType;
     /** Operand specified in the rule. */
     private String _operand;
     /** Operator for rules. */
@@ -29,6 +31,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      */
     public DeviceComplianceScriptRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceComplianceScriptRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,14 +82,23 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptRule currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(DataType.class)); });
             this.put("deviceComplianceScriptRuleDataType", (n) -> { currentObject.setDeviceComplianceScriptRuleDataType(n.getEnumValue(DeviceComplianceScriptRuleDataType.class)); });
             this.put("deviceComplianceScriptRulOperator", (n) -> { currentObject.setDeviceComplianceScriptRulOperator(n.getEnumValue(DeviceComplianceScriptRulOperator.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operand", (n) -> { currentObject.setOperand(n.getStringValue()); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Operator.class)); });
             this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operand property value. Operand specified in the rule.
@@ -122,6 +134,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         writer.writeEnumValue("dataType", this.getDataType());
         writer.writeEnumValue("deviceComplianceScriptRuleDataType", this.getDeviceComplianceScriptRuleDataType());
         writer.writeEnumValue("deviceComplianceScriptRulOperator", this.getDeviceComplianceScriptRulOperator());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operand", this.getOperand());
         writer.writeEnumValue("operator", this.getOperator());
         writer.writeStringValue("settingName", this.getSettingName());
@@ -158,6 +171,14 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      */
     public void setDeviceComplianceScriptRulOperator(@javax.annotation.Nullable final DeviceComplianceScriptRulOperator value) {
         this._deviceComplianceScriptRulOperator = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operand property value. Operand specified in the rule.

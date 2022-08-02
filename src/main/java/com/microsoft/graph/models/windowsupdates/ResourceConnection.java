@@ -8,22 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the admin singleton. */
 public class ResourceConnection extends Entity implements Parsable {
-    /** The state property */
+    /** The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue. */
     private ResourceConnectionState _state;
     /**
-     * Instantiates a new resourceConnection and sets the default values.
+     * Instantiates a new ResourceConnection and sets the default values.
      * @return a void
      */
     public ResourceConnection() {
         super();
-        this.setType("#microsoft.graph.windowsUpdates.resourceConnection");
+        this.setOdataType("#microsoft.graph.windowsUpdates.resourceConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceConnection
+     * @return a ResourceConnection
      */
     @javax.annotation.Nonnull
     public static ResourceConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +48,7 @@ public class ResourceConnection extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue.
      * @return a resourceConnectionState
      */
     @javax.annotation.Nullable
@@ -67,7 +66,7 @@ public class ResourceConnection extends Entity implements Parsable {
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue.
      * @param value Value to set for the state property.
      * @return a void
      */

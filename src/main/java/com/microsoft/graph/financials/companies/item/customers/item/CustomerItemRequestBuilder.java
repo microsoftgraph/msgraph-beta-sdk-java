@@ -332,7 +332,7 @@ public class CustomerItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.customers.item.picture.item collection
      * @param id Unique identifier of the item
-     * @return a pictureItemRequestBuilder
+     * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class CustomerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CustomerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomerItemRequestBuilderDeleteRequestConfiguration() {
@@ -379,7 +379,7 @@ public class CustomerItemRequestBuilder {
         @javax.annotation.Nullable
         public CustomerItemRequestBuilderGetQueryParameters queryParameters = new CustomerItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new customerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CustomerItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomerItemRequestBuilderGetRequestConfiguration() {
@@ -394,7 +394,7 @@ public class CustomerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CustomerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomerItemRequestBuilderPatchRequestConfiguration() {

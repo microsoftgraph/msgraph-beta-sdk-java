@@ -19,7 +19,7 @@ import microsoft.graph.models.security.EdiscoveryReviewTagCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.tags.count.CountRequestBuilder;
 /** Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryFile entity. */
 public class TagsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

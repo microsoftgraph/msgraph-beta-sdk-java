@@ -16,6 +16,8 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
     private String _description;
     /** The name of this local user or group. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The security identifier of this local user or group (e.g. S-1-5-32-544). */
     private String _securityIdentifier;
     /**
@@ -24,6 +26,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
      */
     public DeviceManagementUserRightsLocalUserOrGroup() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementUserRightsLocalUserOrGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementUserRightsLocalUserOrGroup currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("securityIdentifier", (n) -> { currentObject.setSecurityIdentifier(n.getStringValue()); });
         }};
     }
@@ -71,6 +75,14 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the securityIdentifier property value. The security identifier of this local user or group (e.g. S-1-5-32-544).
@@ -89,6 +101,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("securityIdentifier", this.getSecurityIdentifier());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the securityIdentifier property value. The security identifier of this local user or group (e.g. S-1-5-32-544).

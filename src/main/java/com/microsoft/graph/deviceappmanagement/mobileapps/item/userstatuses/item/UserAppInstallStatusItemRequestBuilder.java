@@ -208,7 +208,7 @@ public class UserAppInstallStatusItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.userStatuses.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppInstallStatusItemRequestBuilder
+     * @return a MobileAppInstallStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppInstallStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class UserAppInstallStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userAppInstallStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserAppInstallStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserAppInstallStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class UserAppInstallStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public UserAppInstallStatusItemRequestBuilderGetQueryParameters queryParameters = new UserAppInstallStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userAppInstallStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserAppInstallStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserAppInstallStatusItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class UserAppInstallStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userAppInstallStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserAppInstallStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserAppInstallStatusItemRequestBuilderPatchRequestConfiguration() {

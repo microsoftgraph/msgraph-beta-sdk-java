@@ -18,6 +18,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
      */
     public RevokeAppleVppLicensesActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.revokeAppleVppLicensesActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

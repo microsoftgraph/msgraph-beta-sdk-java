@@ -16,6 +16,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      */
     public SoftwareOathAuthenticationMethod() {
         super();
+        this.setOdataType("#microsoft.graph.softwareOathAuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

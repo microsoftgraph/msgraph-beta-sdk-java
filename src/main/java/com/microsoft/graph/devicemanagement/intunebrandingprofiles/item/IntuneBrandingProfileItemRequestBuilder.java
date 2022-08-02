@@ -40,7 +40,7 @@ public class IntuneBrandingProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intuneBrandingProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a intuneBrandingProfileAssignmentItemRequestBuilder
+     * @return a IntuneBrandingProfileAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IntuneBrandingProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class IntuneBrandingProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new intuneBrandingProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IntuneBrandingProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IntuneBrandingProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class IntuneBrandingProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public IntuneBrandingProfileItemRequestBuilderGetQueryParameters queryParameters = new IntuneBrandingProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new intuneBrandingProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IntuneBrandingProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IntuneBrandingProfileItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class IntuneBrandingProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new intuneBrandingProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IntuneBrandingProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IntuneBrandingProfileItemRequestBuilderPatchRequestConfiguration() {

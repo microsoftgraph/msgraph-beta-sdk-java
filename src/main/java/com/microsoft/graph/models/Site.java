@@ -55,6 +55,7 @@ public class Site extends BaseItem implements Parsable {
      */
     public Site() {
         super();
+        this.setOdataType("#microsoft.graph.site");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

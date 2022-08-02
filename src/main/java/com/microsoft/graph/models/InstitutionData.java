@@ -17,6 +17,8 @@ public class InstitutionData implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Address or location of the institute. */
     private PhysicalAddress _location;
+    /** The OdataType property */
+    private String _odataType;
     /** Link to the institution or department homepage. */
     private String _webUrl;
     /**
@@ -25,6 +27,7 @@ public class InstitutionData implements AdditionalDataHolder, Parsable {
      */
     public InstitutionData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.institutionData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class InstitutionData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InstitutionData currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class InstitutionData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PhysicalAddress getLocation() {
         return this._location;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the webUrl property value. Link to the institution or department homepage.
@@ -100,6 +112,7 @@ public class InstitutionData implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("location", this.getLocation());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("webUrl", this.getWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class InstitutionData implements AdditionalDataHolder, Parsable {
      */
     public void setLocation(@javax.annotation.Nullable final PhysicalAddress value) {
         this._location = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the webUrl property value. Link to the institution or department homepage.

@@ -15,15 +15,15 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     private AccessPackageQuestion _answeredQuestion;
     /** The display value of the answer. Required. */
     private String _displayValue;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new accessPackageAnswer and sets the default values.
      * @return a void
      */
     public AccessPackageAnswer() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.accessPackageAnswer");
+        this.setOdataType("#microsoft.graph.accessPackageAnswer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,16 +76,16 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("answeredQuestion", (n) -> { currentObject.setAnsweredQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
             this.put("displayValue", (n) -> { currentObject.setDisplayValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -96,7 +96,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("answeredQuestion", this.getAnsweredQuestion());
         writer.writeStringValue("displayValue", this.getDisplayValue());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -124,11 +124,11 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
         this._displayValue = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

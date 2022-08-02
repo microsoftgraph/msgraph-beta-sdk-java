@@ -307,7 +307,7 @@ public class SharedEmailDomainItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedEmailDomainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SharedEmailDomainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedEmailDomainItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SharedEmailDomainItemRequestBuilder {
         @javax.annotation.Nullable
         public SharedEmailDomainItemRequestBuilderGetQueryParameters queryParameters = new SharedEmailDomainItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sharedEmailDomainItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SharedEmailDomainItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedEmailDomainItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SharedEmailDomainItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedEmailDomainItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SharedEmailDomainItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedEmailDomainItemRequestBuilderPatchRequestConfiguration() {

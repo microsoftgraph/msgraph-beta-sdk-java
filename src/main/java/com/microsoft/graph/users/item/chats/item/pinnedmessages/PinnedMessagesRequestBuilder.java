@@ -20,7 +20,7 @@ import microsoft.graph.models.PinnedChatMessageInfoCollectionResponse;
 import microsoft.graph.users.item.chats.item.pinnedmessages.count.CountRequestBuilder;
 /** Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity. */
 public class PinnedMessagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

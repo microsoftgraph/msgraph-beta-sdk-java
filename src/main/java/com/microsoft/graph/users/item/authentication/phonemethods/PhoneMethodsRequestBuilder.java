@@ -20,7 +20,7 @@ import microsoft.graph.models.PhoneAuthenticationMethodCollectionResponse;
 import microsoft.graph.users.item.authentication.phonemethods.count.CountRequestBuilder;
 /** Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity. */
 public class PhoneMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

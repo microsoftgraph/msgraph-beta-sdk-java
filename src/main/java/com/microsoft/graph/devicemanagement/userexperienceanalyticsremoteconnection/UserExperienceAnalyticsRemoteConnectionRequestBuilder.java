@@ -21,7 +21,7 @@ import microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
 import microsoft.graph.models.UserExperienceAnalyticsRemoteConnectionCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsRemoteConnection property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsRemoteConnectionRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

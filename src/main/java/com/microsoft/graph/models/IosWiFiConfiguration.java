@@ -36,7 +36,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
      */
     public IosWiFiConfiguration() {
         super();
-        this.setType("#microsoft.graph.iosWiFiConfiguration");
+        this.setOdataType("#microsoft.graph.iosWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

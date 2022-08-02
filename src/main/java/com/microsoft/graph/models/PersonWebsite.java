@@ -24,6 +24,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      */
     public PersonWebsite() {
         super();
+        this.setOdataType("#microsoft.graph.personWebsite");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

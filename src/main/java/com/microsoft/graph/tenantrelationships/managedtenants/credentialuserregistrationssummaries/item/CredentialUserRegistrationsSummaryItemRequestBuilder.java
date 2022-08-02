@@ -307,7 +307,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new credentialUserRegistrationsSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CredentialUserRegistrationsSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CredentialUserRegistrationsSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public CredentialUserRegistrationsSummaryItemRequestBuilderGetQueryParameters queryParameters = new CredentialUserRegistrationsSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new credentialUserRegistrationsSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CredentialUserRegistrationsSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CredentialUserRegistrationsSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new credentialUserRegistrationsSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CredentialUserRegistrationsSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CredentialUserRegistrationsSummaryItemRequestBuilderPatchRequestConfiguration() {

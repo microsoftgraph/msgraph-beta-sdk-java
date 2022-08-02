@@ -22,6 +22,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     private Integer _inProgressTrainingsCount;
     /** Flag representing if user was compromised in an attack simulation and training campaign. */
     private Boolean _isCompromised;
+    /** The OdataType property */
+    private String _odataType;
     /** Date and time when user reported delivered payload as phish in the attack simulation and training campaign. */
     private OffsetDateTime _reportedPhishDateTime;
     /** List of simulation events of a user in the attack simulation and training campaign. */
@@ -36,6 +38,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      */
     public UserSimulationDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userSimulationDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,12 +89,13 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSimulationDetails currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("assignedTrainingsCount", (n) -> { currentObject.setAssignedTrainingsCount(n.getIntegerValue()); });
             this.put("completedTrainingsCount", (n) -> { currentObject.setCompletedTrainingsCount(n.getIntegerValue()); });
             this.put("compromisedDateTime", (n) -> { currentObject.setCompromisedDateTime(n.getOffsetDateTimeValue()); });
             this.put("inProgressTrainingsCount", (n) -> { currentObject.setInProgressTrainingsCount(n.getIntegerValue()); });
             this.put("isCompromised", (n) -> { currentObject.setIsCompromised(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reportedPhishDateTime", (n) -> { currentObject.setReportedPhishDateTime(n.getOffsetDateTimeValue()); });
             this.put("simulationEvents", (n) -> { currentObject.setSimulationEvents(n.getCollectionOfObjectValues(UserSimulationEventInfo::createFromDiscriminatorValue)); });
             this.put("simulationUser", (n) -> { currentObject.setSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
@@ -113,6 +117,14 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsCompromised() {
         return this._isCompromised;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reportedPhishDateTime property value. Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
@@ -158,6 +170,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("compromisedDateTime", this.getCompromisedDateTime());
         writer.writeIntegerValue("inProgressTrainingsCount", this.getInProgressTrainingsCount());
         writer.writeBooleanValue("isCompromised", this.getIsCompromised());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("reportedPhishDateTime", this.getReportedPhishDateTime());
         writer.writeCollectionOfObjectValues("simulationEvents", this.getSimulationEvents());
         writer.writeObjectValue("simulationUser", this.getSimulationUser());
@@ -211,6 +224,14 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      */
     public void setIsCompromised(@javax.annotation.Nullable final Boolean value) {
         this._isCompromised = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reportedPhishDateTime property value. Date and time when user reported delivered payload as phish in the attack simulation and training campaign.

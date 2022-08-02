@@ -20,7 +20,7 @@ import microsoft.graph.models.OutlookTaskCollectionResponse;
 import microsoft.graph.users.item.outlook.taskgroups.item.taskfolders.item.tasks.count.CountRequestBuilder;
 /** Provides operations to manage the tasks property of the microsoft.graph.outlookTaskFolder entity. */
 public class TasksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

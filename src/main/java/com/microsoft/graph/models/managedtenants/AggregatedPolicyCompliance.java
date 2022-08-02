@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /** Identifier for the device compliance policy. Optional. Read-only. */
     private String _compliancePolicyId;
@@ -39,6 +39,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     public AggregatedPolicyCompliance() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.aggregatedPolicyCompliance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

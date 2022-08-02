@@ -20,7 +20,7 @@ import microsoft.graph.models.search.QnaCollectionResponse;
 import microsoft.graph.search.qnas.count.CountRequestBuilder;
 /** Provides operations to manage the qnas property of the microsoft.graph.searchEntity entity. */
 public class QnasRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

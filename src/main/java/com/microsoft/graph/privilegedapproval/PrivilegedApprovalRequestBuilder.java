@@ -21,7 +21,7 @@ import microsoft.graph.privilegedapproval.count.CountRequestBuilder;
 import microsoft.graph.privilegedapproval.myrequests.MyRequestsRequestBuilder;
 /** Provides operations to manage the collection of privilegedApproval entities. */
 public class PrivilegedApprovalRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

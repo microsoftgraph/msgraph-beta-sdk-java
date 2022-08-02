@@ -21,7 +21,7 @@ import microsoft.graph.models.AttachmentBaseCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the attachments property of the microsoft.graph.todoTask entity. */
 public class AttachmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

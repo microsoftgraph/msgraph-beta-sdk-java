@@ -34,6 +34,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      */
     public WindowsKioskConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

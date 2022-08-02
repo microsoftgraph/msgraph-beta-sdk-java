@@ -20,6 +20,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      */
     public ItemAddress() {
         super();
+        this.setOdataType("#microsoft.graph.itemAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

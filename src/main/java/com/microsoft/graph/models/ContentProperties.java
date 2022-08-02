@@ -20,12 +20,15 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The metadata property */
     private ContentMetadata _metadata;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new contentProperties and sets the default values.
      * @return a void
      */
     public ContentProperties() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.contentProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,11 +63,12 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentProperties currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getObjectValue(ContentMetadata::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -92,6 +96,14 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
         return this._metadata;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -102,6 +114,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("metadata", this.getMetadata());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -143,5 +156,13 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      */
     public void setMetadata(@javax.annotation.Nullable final ContentMetadata value) {
         this._metadata = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

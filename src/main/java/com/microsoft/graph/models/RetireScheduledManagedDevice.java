@@ -29,6 +29,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     private String _managedDeviceName;
     /** Management agent type. */
     private ManagementAgentType _managementAgent;
+    /** The OdataType property */
+    private String _odataType;
     /** Owner type of device. */
     private ManagedDeviceOwnerType _ownerType;
     /** Managed Device Retire After DateTime */
@@ -41,6 +43,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     public RetireScheduledManagedDevice() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.retireScheduledManagedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -99,7 +102,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetireScheduledManagedDevice currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("complianceState", (n) -> { currentObject.setComplianceState(n.getEnumValue(ComplianceStatus.class)); });
             this.put("deviceCompliancePolicyId", (n) -> { currentObject.setDeviceCompliancePolicyId(n.getStringValue()); });
             this.put("deviceCompliancePolicyName", (n) -> { currentObject.setDeviceCompliancePolicyName(n.getStringValue()); });
@@ -108,6 +111,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
             this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
             this.put("managementAgent", (n) -> { currentObject.setManagementAgent(n.getEnumValue(ManagementAgentType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
             this.put("retireAfterDateTime", (n) -> { currentObject.setRetireAfterDateTime(n.getOffsetDateTimeValue()); });
             this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -144,6 +148,14 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
         return this._managementAgent;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the ownerType property value. Owner type of device.
@@ -184,6 +196,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("ownerType", this.getOwnerType());
         writer.writeOffsetDateTimeValue("retireAfterDateTime", this.getRetireAfterDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
@@ -260,6 +273,14 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     public void setManagementAgent(@javax.annotation.Nullable final ManagementAgentType value) {
         this._managementAgent = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the ownerType property value. Owner type of device.

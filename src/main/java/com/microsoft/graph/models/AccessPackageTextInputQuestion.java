@@ -10,12 +10,15 @@ import java.util.Objects;
 public class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Parsable {
     /** Indicates whether the answer will be in single or multiple line format. */
     private Boolean _isSingleLineQuestion;
+    /** The regexPattern property */
+    private String _regexPattern;
     /**
      * Instantiates a new AccessPackageTextInputQuestion and sets the default values.
      * @return a void
      */
     public AccessPackageTextInputQuestion() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageTextInputQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,6 +39,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         final AccessPackageTextInputQuestion currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("isSingleLineQuestion", (n) -> { currentObject.setIsSingleLineQuestion(n.getBooleanValue()); });
+            this.put("regexPattern", (n) -> { currentObject.setRegexPattern(n.getStringValue()); });
         }};
     }
     /**
@@ -47,6 +51,14 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         return this._isSingleLineQuestion;
     }
     /**
+     * Gets the regexPattern property value. The regexPattern property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getRegexPattern() {
+        return this._regexPattern;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -55,6 +67,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isSingleLineQuestion", this.getIsSingleLineQuestion());
+        writer.writeStringValue("regexPattern", this.getRegexPattern());
     }
     /**
      * Sets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
@@ -63,5 +76,13 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      */
     public void setIsSingleLineQuestion(@javax.annotation.Nullable final Boolean value) {
         this._isSingleLineQuestion = value;
+    }
+    /**
+     * Sets the regexPattern property value. The regexPattern property
+     * @param value Value to set for the regexPattern property.
+     * @return a void
+     */
+    public void setRegexPattern(@javax.annotation.Nullable final String value) {
+        this._regexPattern = value;
     }
 }

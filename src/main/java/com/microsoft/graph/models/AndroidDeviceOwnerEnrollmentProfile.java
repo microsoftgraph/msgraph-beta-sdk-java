@@ -53,6 +53,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     public AndroidDeviceOwnerEnrollmentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerEnrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

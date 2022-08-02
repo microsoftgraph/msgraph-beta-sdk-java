@@ -16,6 +16,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      */
     public InsightValueDouble() {
         super();
+        this.setOdataType("#microsoft.graph.insightValueDouble");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

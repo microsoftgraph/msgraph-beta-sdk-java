@@ -254,7 +254,7 @@ public class SalesCreditMemoLineItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesCreditMemoLineItemRequestBuilderGetQueryParameters queryParameters = new SalesCreditMemoLineItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesCreditMemoLineItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesCreditMemoLineItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesCreditMemoLineItemRequestBuilderGetRequestConfiguration() {
@@ -269,7 +269,7 @@ public class SalesCreditMemoLineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesCreditMemoLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesCreditMemoLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesCreditMemoLineItemRequestBuilderPatchRequestConfiguration() {

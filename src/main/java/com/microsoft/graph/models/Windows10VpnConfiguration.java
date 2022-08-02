@@ -64,6 +64,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     public Windows10VpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10VpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

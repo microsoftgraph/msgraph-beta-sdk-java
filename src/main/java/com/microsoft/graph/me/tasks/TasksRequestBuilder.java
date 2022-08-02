@@ -41,7 +41,7 @@ public class TasksRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.tasks.alltasks.item collection
      * @param id Unique identifier of the item
-     * @return a baseTaskItemRequestBuilder
+     * @return a BaseTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BaseTaskItemRequestBuilder alltasks(@javax.annotation.Nonnull final String id) {
@@ -272,7 +272,7 @@ public class TasksRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.tasks.lists.item collection
      * @param id Unique identifier of the item
-     * @return a baseTaskListItemRequestBuilder
+     * @return a BaseTaskListItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BaseTaskListItemRequestBuilder lists(@javax.annotation.Nonnull final String id) {

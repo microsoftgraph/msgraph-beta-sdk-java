@@ -61,7 +61,7 @@ public class ProgramRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.programControls.item.program.controls.item collection
      * @param id Unique identifier of the item
-     * @return a programControlItemRequestBuilder
+     * @return a ProgramControlItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProgramControlItemRequestBuilder controls(@javax.annotation.Nonnull final String id) {

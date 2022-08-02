@@ -18,6 +18,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
      */
     public TeamsAppIcon() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAppIcon");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

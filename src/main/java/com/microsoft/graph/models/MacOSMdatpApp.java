@@ -14,6 +14,7 @@ public class MacOSMdatpApp extends MobileApp implements Parsable {
      */
     public MacOSMdatpApp() {
         super();
+        this.setOdataType("#microsoft.graph.macOSMdatpApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

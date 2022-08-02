@@ -13,6 +13,8 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     private Map<String, Object> _additionalData;
     /** Identifier of child setting that is dependent on the current setting */
     private String _dependedOnBy;
+    /** The OdataType property */
+    private String _odataType;
     /** Value that determines if the child setting is required based on the parent setting's selection */
     private Boolean _required;
     /**
@@ -21,6 +23,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      */
     public DeviceManagementConfigurationSettingDependedOnBy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingDependedOnBy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingDependedOnBy currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the required property value. Value that determines if the child setting is required based on the parent setting's selection
@@ -76,6 +88,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dependedOnBy", this.getDependedOnBy());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("required", this.getRequired());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      */
     public void setDependedOnBy(@javax.annotation.Nullable final String value) {
         this._dependedOnBy = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the required property value. Value that determines if the child setting is required based on the parent setting's selection

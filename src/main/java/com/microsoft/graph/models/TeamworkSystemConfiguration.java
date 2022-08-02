@@ -36,12 +36,15 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     private String _loggingLevel;
     /** The network configuration for the device. */
     private TeamworkNetworkConfiguration _networkConfiguration;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamworkSystemConfiguration and sets the default values.
      * @return a void
      */
     public TeamworkSystemConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkSystemConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +95,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSystemConfiguration currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("dateTimeConfiguration", (n) -> { currentObject.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
             this.put("defaultPassword", (n) -> { currentObject.setDefaultPassword(n.getStringValue()); });
             this.put("deviceLockTimeout", (n) -> { currentObject.setDeviceLockTimeout(n.getPeriodValue()); });
@@ -105,6 +108,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
             this.put("lockPin", (n) -> { currentObject.setLockPin(n.getStringValue()); });
             this.put("loggingLevel", (n) -> { currentObject.setLoggingLevel(n.getStringValue()); });
             this.put("networkConfiguration", (n) -> { currentObject.setNetworkConfiguration(n.getObjectValue(TeamworkNetworkConfiguration::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -180,6 +184,14 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         return this._networkConfiguration;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -198,6 +210,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         writer.writeStringValue("lockPin", this.getLockPin());
         writer.writeStringValue("loggingLevel", this.getLoggingLevel());
         writer.writeObjectValue("networkConfiguration", this.getNetworkConfiguration());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -303,5 +316,13 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     public void setNetworkConfiguration(@javax.annotation.Nullable final TeamworkNetworkConfiguration value) {
         this._networkConfiguration = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

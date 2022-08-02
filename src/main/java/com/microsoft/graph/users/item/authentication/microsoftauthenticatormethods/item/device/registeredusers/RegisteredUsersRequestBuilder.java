@@ -22,7 +22,7 @@ import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.i
 import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredusers.user.UserRequestBuilder;
 /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
 public class RegisteredUsersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

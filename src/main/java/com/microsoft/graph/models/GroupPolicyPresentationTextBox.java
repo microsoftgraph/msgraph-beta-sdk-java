@@ -20,6 +20,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyPresentation impl
      */
     public GroupPolicyPresentationTextBox() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationTextBox");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

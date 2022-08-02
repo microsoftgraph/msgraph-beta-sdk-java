@@ -29,6 +29,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      */
     public MicrosoftTunnelServerLogCollectionResponse() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftTunnelServerLogCollectionResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

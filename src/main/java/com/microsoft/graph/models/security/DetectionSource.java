@@ -3,7 +3,7 @@ package microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum DetectionSource implements ValuedEnum {
     Unknown("unknown"),
     MicrosoftDefenderForEndpoint("microsoftDefenderForEndpoint"),

@@ -20,6 +20,8 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
     private String _errorDescription;
     /** Name of setting instance that is being reported. */
     private String _instanceDisplayName;
+    /** The OdataType property */
+    private String _odataType;
     /** The setting that is being reported */
     private String _setting;
     /** SettingInstanceId */
@@ -44,6 +46,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      */
     public ManagedDeviceMobileAppConfigurationSettingState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationSettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,11 +97,12 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceMobileAppConfigurationSettingState currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<>(14) {{
             this.put("currentValue", (n) -> { currentObject.setCurrentValue(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
             this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
             this.put("instanceDisplayName", (n) -> { currentObject.setInstanceDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
             this.put("settingInstanceId", (n) -> { currentObject.setSettingInstanceId(n.getStringValue()); });
             this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
@@ -117,6 +121,14 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
     @javax.annotation.Nullable
     public String getInstanceDisplayName() {
         return this._instanceDisplayName;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the setting property value. The setting that is being reported
@@ -201,6 +213,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
         writer.writeLongValue("errorCode", this.getErrorCode());
         writer.writeStringValue("errorDescription", this.getErrorDescription());
         writer.writeStringValue("instanceDisplayName", this.getInstanceDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("setting", this.getSetting());
         writer.writeStringValue("settingInstanceId", this.getSettingInstanceId());
         writer.writeStringValue("settingName", this.getSettingName());
@@ -251,6 +264,14 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      */
     public void setInstanceDisplayName(@javax.annotation.Nullable final String value) {
         this._instanceDisplayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the setting property value. The setting that is being reported

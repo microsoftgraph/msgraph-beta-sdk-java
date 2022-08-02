@@ -30,6 +30,7 @@ public class PaymentTerm extends Entity implements Parsable {
      */
     public PaymentTerm() {
         super();
+        this.setOdataType("#microsoft.graph.paymentTerm");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      */
     public DeviceManagementBooleanSettingInstance() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementBooleanSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

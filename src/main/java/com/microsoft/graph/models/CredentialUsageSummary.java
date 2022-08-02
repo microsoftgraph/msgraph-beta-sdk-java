@@ -22,6 +22,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      */
     public CredentialUsageSummary() {
         super();
+        this.setOdataType("#microsoft.graph.credentialUsageSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

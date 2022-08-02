@@ -21,6 +21,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     private Boolean _isCustomAssignmentScheduleAllowed;
     /** Indicates whether a requestor must supply justification when submitting an assignment request. */
     private Boolean _isRequestorJustificationRequired;
+    /** The OdataType property */
+    private String _odataType;
     /** The description of the policy that the user is trying to request access using. */
     private String _policyDescription;
     /** The display name of the policy that the user is trying to request access using. */
@@ -37,6 +39,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      */
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestRequirements");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,12 +74,13 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestRequirements currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("existingAnswers", (n) -> { currentObject.setExistingAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
             this.put("isApprovalRequired", (n) -> { currentObject.setIsApprovalRequired(n.getBooleanValue()); });
             this.put("isApprovalRequiredForExtension", (n) -> { currentObject.setIsApprovalRequiredForExtension(n.getBooleanValue()); });
             this.put("isCustomAssignmentScheduleAllowed", (n) -> { currentObject.setIsCustomAssignmentScheduleAllowed(n.getBooleanValue()); });
             this.put("isRequestorJustificationRequired", (n) -> { currentObject.setIsRequestorJustificationRequired(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policyDescription", (n) -> { currentObject.setPolicyDescription(n.getStringValue()); });
             this.put("policyDisplayName", (n) -> { currentObject.setPolicyDisplayName(n.getStringValue()); });
             this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
@@ -115,6 +119,14 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nullable
     public Boolean getIsRequestorJustificationRequired() {
         return this._isRequestorJustificationRequired;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the policyDescription property value. The description of the policy that the user is trying to request access using.
@@ -168,6 +180,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
         writer.writeBooleanValue("isApprovalRequiredForExtension", this.getIsApprovalRequiredForExtension());
         writer.writeBooleanValue("isCustomAssignmentScheduleAllowed", this.getIsCustomAssignmentScheduleAllowed());
         writer.writeBooleanValue("isRequestorJustificationRequired", this.getIsRequestorJustificationRequired());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("policyDescription", this.getPolicyDescription());
         writer.writeStringValue("policyDisplayName", this.getPolicyDisplayName());
         writer.writeStringValue("policyId", this.getPolicyId());
@@ -222,6 +235,14 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      */
     public void setIsRequestorJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRequestorJustificationRequired = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the policyDescription property value. The description of the policy that the user is trying to request access using.

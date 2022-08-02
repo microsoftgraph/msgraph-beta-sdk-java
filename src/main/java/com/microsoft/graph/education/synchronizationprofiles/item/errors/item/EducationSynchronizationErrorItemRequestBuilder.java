@@ -307,7 +307,7 @@ public class EducationSynchronizationErrorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSynchronizationErrorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSynchronizationErrorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSynchronizationErrorItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EducationSynchronizationErrorItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationSynchronizationErrorItemRequestBuilderGetQueryParameters queryParameters = new EducationSynchronizationErrorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationSynchronizationErrorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSynchronizationErrorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSynchronizationErrorItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EducationSynchronizationErrorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSynchronizationErrorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSynchronizationErrorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSynchronizationErrorItemRequestBuilderPatchRequestConfiguration() {

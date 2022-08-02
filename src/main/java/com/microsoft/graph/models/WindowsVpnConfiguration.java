@@ -20,7 +20,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      */
     public WindowsVpnConfiguration() {
         super();
-        this.setType("#microsoft.graph.windowsVpnConfiguration");
+        this.setOdataType("#microsoft.graph.windowsVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,6 +36,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
             switch (mappingValue) {
                 case "#microsoft.graph.windows10VpnConfiguration": return new Windows10VpnConfiguration();
                 case "#microsoft.graph.windows81VpnConfiguration": return new Windows81VpnConfiguration();
+                case "#microsoft.graph.windowsPhone81VpnConfiguration": return new WindowsPhone81VpnConfiguration();
             }
         }
         return new WindowsVpnConfiguration();

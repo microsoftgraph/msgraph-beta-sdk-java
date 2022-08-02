@@ -20,6 +20,7 @@ public class ManagedEBookCategory extends Entity implements Parsable {
      */
     public ManagedEBookCategory() {
         super();
+        this.setOdataType("#microsoft.graph.managedEBookCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

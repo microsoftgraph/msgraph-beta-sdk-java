@@ -13,12 +13,15 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** Applications to include for evaluation of the authenticationListener. These applications trigger the associated action when used as the client application in the authentication flow. The application identifer is the application's client id. */
     private java.util.List<String> _includeApplications;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new authenticationSourceFilter and sets the default values.
      * @return a void
      */
     public AuthenticationSourceFilter() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.authenticationSourceFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationSourceFilter currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("includeApplications", (n) -> { currentObject.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, Parsabl
         return this._includeApplications;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("includeApplications", this.getIncludeApplications());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, Parsabl
      */
     public void setIncludeApplications(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeApplications = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

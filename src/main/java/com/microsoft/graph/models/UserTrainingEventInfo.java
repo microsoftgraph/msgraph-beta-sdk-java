@@ -15,6 +15,8 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
     private TrainingStatus _latestTrainingStatus;
+    /** The OdataType property */
+    private String _odataType;
     /** Event details of the training when it was assigned to the user. */
     private UserTrainingContentEventInfo _trainingAssignedProperties;
     /** Event details of the training when it was completed by the user. */
@@ -27,6 +29,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      */
     public UserTrainingEventInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userTrainingEventInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,9 +64,10 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingEventInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("latestTrainingStatus", (n) -> { currentObject.setLatestTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("trainingAssignedProperties", (n) -> { currentObject.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
             this.put("trainingCompletedProperties", (n) -> { currentObject.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
             this.put("trainingUpdatedProperties", (n) -> { currentObject.setTrainingUpdatedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
@@ -76,6 +80,14 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TrainingStatus getLatestTrainingStatus() {
         return this._latestTrainingStatus;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.
@@ -110,6 +122,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("latestTrainingStatus", this.getLatestTrainingStatus());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("trainingAssignedProperties", this.getTrainingAssignedProperties());
         writer.writeObjectValue("trainingCompletedProperties", this.getTrainingCompletedProperties());
         writer.writeObjectValue("trainingUpdatedProperties", this.getTrainingUpdatedProperties());
@@ -138,6 +151,14 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      */
     public void setLatestTrainingStatus(@javax.annotation.Nullable final TrainingStatus value) {
         this._latestTrainingStatus = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.

@@ -14,6 +14,7 @@ public class GroupPeerOutlierRecommendationInsightSettings extends AccessReviewR
      */
     public GroupPeerOutlierRecommendationInsightSettings() {
         super();
+        this.setOdataType("#microsoft.graph.groupPeerOutlierRecommendationInsightSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

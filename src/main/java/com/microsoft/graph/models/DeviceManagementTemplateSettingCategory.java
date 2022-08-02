@@ -16,6 +16,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
      */
     public DeviceManagementTemplateSettingCategory() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementTemplateSettingCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.AuthenticationContextClassReferenceCollectionRespo
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity. */
 public class AuthenticationContextClassReferencesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -267,7 +267,7 @@ public class SynchronizationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.synchronization.jobs.item collection
      * @param id Unique identifier of the item
-     * @return a synchronizationJobItemRequestBuilder
+     * @return a SynchronizationJobItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SynchronizationJobItemRequestBuilder jobs(@javax.annotation.Nonnull final String id) {
@@ -342,7 +342,7 @@ public class SynchronizationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.synchronization.templates.item collection
      * @param id Unique identifier of the item
-     * @return a synchronizationTemplateItemRequestBuilder
+     * @return a SynchronizationTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SynchronizationTemplateItemRequestBuilder templates(@javax.annotation.Nonnull final String id) {

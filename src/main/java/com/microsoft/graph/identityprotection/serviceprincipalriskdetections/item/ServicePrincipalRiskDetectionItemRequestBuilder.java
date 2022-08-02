@@ -307,7 +307,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder {
         @javax.annotation.Nullable
         public ServicePrincipalRiskDetectionItemRequestBuilderGetQueryParameters queryParameters = new ServicePrincipalRiskDetectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new servicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration() {

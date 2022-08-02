@@ -211,7 +211,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryCustodianItemRequestBuilder
+     * @return a EdiscoveryCustodianItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryCustodianItemRequestBuilder custodians(@javax.annotation.Nonnull final String id) {
@@ -325,7 +325,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryHoldPolicyItemRequestBuilder
+     * @return a EdiscoveryHoldPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryHoldPolicyItemRequestBuilder legalHolds(@javax.annotation.Nonnull final String id) {
@@ -337,7 +337,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.noncustodialDataSources.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryNoncustodialDataSourceItemRequestBuilder
+     * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryNoncustodialDataSourceItemRequestBuilder noncustodialDataSources(@javax.annotation.Nonnull final String id) {
@@ -349,7 +349,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a caseOperationItemRequestBuilder
+     * @return a CaseOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CaseOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -416,7 +416,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryReviewSetItemRequestBuilder
+     * @return a EdiscoveryReviewSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryReviewSetItemRequestBuilder reviewSets(@javax.annotation.Nonnull final String id) {
@@ -428,7 +428,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoverySearchItemRequestBuilder
+     * @return a EdiscoverySearchItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoverySearchItemRequestBuilder searches(@javax.annotation.Nonnull final String id) {
@@ -440,7 +440,7 @@ public class EdiscoveryCaseItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryReviewTagItemRequestBuilder
+     * @return a EdiscoveryReviewTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryReviewTagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
@@ -458,7 +458,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryCaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryCaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryCaseItemRequestBuilderDeleteRequestConfiguration() {
@@ -487,7 +487,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryCaseItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryCaseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryCaseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryCaseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryCaseItemRequestBuilderGetRequestConfiguration() {
@@ -502,7 +502,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryCaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryCaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryCaseItemRequestBuilderPatchRequestConfiguration() {

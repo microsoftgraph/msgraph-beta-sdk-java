@@ -45,6 +45,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     public DeviceEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.deviceEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

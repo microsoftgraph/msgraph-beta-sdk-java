@@ -219,7 +219,7 @@ public class AudienceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.deployments.item.audience.exclusions.item collection
      * @param id Unique identifier of the item
-     * @return a updatableAssetItemRequestBuilder
+     * @return a UpdatableAssetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.UpdatableAssetItemRequestBuilder exclusions(@javax.annotation.Nonnull final String id) {
@@ -282,7 +282,7 @@ public class AudienceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.deployments.item.audience.members.item collection
      * @param id Unique identifier of the item
-     * @return a updatableAssetItemRequestBuilder
+     * @return a UpdatableAssetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.UpdatableAssetItemRequestBuilder members(@javax.annotation.Nonnull final String id) {

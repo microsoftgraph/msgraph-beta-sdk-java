@@ -18,6 +18,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      */
     public DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

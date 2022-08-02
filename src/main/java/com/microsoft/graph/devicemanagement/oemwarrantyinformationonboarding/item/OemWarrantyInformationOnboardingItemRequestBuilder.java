@@ -319,7 +319,7 @@ public class OemWarrantyInformationOnboardingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new oemWarrantyInformationOnboardingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OemWarrantyInformationOnboardingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OemWarrantyInformationOnboardingItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class OemWarrantyInformationOnboardingItemRequestBuilder {
         @javax.annotation.Nullable
         public OemWarrantyInformationOnboardingItemRequestBuilderGetQueryParameters queryParameters = new OemWarrantyInformationOnboardingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new oemWarrantyInformationOnboardingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OemWarrantyInformationOnboardingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OemWarrantyInformationOnboardingItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class OemWarrantyInformationOnboardingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new oemWarrantyInformationOnboardingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OemWarrantyInformationOnboardingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OemWarrantyInformationOnboardingItemRequestBuilderPatchRequestConfiguration() {

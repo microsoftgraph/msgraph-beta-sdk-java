@@ -16,6 +16,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     private BitLockerEncryptionMethod _encryptionMethod;
     /** Indicates the minimum length of startup pin. Valid values 4 to 20 */
     private Integer _minimumPinLength;
+    /** The OdataType property */
+    private String _odataType;
     /** Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect. */
     private Boolean _prebootRecoveryEnableMessageAndUrl;
     /** Defines a custom recovery message. */
@@ -42,6 +44,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     public BitLockerSystemDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bitLockerSystemDrivePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,9 +79,10 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerSystemDrivePolicy currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
             this.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("prebootRecoveryEnableMessageAndUrl", (n) -> { currentObject.setPrebootRecoveryEnableMessageAndUrl(n.getBooleanValue()); });
             this.put("prebootRecoveryMessage", (n) -> { currentObject.setPrebootRecoveryMessage(n.getStringValue()); });
             this.put("prebootRecoveryUrl", (n) -> { currentObject.setPrebootRecoveryUrl(n.getStringValue()); });
@@ -98,6 +102,14 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Integer getMinimumPinLength() {
         return this._minimumPinLength;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
@@ -188,6 +200,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeEnumValue("encryptionMethod", this.getEncryptionMethod());
         writer.writeIntegerValue("minimumPinLength", this.getMinimumPinLength());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("prebootRecoveryEnableMessageAndUrl", this.getPrebootRecoveryEnableMessageAndUrl());
         writer.writeStringValue("prebootRecoveryMessage", this.getPrebootRecoveryMessage());
         writer.writeStringValue("prebootRecoveryUrl", this.getPrebootRecoveryUrl());
@@ -223,6 +236,14 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     public void setMinimumPinLength(@javax.annotation.Nullable final Integer value) {
         this._minimumPinLength = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.

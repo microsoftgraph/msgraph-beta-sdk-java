@@ -22,6 +22,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
      */
     public MacOSRedirectSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.macOSRedirectSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

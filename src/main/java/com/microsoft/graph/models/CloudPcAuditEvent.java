@@ -37,6 +37,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
      */
     public CloudPcAuditEvent() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcAuditEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

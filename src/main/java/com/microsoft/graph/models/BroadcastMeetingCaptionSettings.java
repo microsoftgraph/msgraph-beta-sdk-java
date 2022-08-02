@@ -13,6 +13,8 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** Indicates whether caption is enabled for this Teams live event. */
     private Boolean _isCaptionEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The spoken language. */
     private String _spokenLanguage;
     /** The translation languages (choose up to 6). */
@@ -23,6 +25,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     public BroadcastMeetingCaptionSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.broadcastMeetingCaptionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingCaptionSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isCaptionEnabled", (n) -> { currentObject.setIsCaptionEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("spokenLanguage", (n) -> { currentObject.setSpokenLanguage(n.getStringValue()); });
             this.put("translationLanguages", (n) -> { currentObject.setTranslationLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
@@ -62,6 +66,14 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public Boolean getIsCaptionEnabled() {
         return this._isCaptionEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the spokenLanguage property value. The spoken language.
@@ -87,6 +99,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isCaptionEnabled", this.getIsCaptionEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("spokenLanguage", this.getSpokenLanguage());
         writer.writeCollectionOfPrimitiveValues("translationLanguages", this.getTranslationLanguages());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     public void setIsCaptionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isCaptionEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the spokenLanguage property value. The spoken language.

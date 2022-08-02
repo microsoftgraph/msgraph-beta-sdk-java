@@ -13,6 +13,8 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
     private Map<String, Object> _additionalData;
     /** The user role type to assign to license. Possible values are: student, teacher, faculty. */
     private EducationUserRole _appliesTo;
+    /** The OdataType property */
+    private String _odataType;
     /** Represents the SKU identifiers of the licenses to assign. */
     private java.util.List<String> _skuIds;
     /**
@@ -21,6 +23,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      */
     public EducationSynchronizationLicenseAssignment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationSynchronizationLicenseAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationLicenseAssignment currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skuIds", (n) -> { currentObject.setSkuIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the skuIds property value. Represents the SKU identifiers of the licenses to assign.
@@ -76,6 +88,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("skuIds", this.getSkuIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      */
     public void setAppliesTo(@javax.annotation.Nullable final EducationUserRole value) {
         this._appliesTo = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the skuIds property value. Represents the SKU identifiers of the licenses to assign.

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PolicyBase extends DirectoryObject implements Parsable {
     /** Description for this policy. Required. */
     private String _description;
@@ -19,7 +19,7 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      */
     public PolicyBase() {
         super();
-        this.setType("#microsoft.graph.policyBase");
+        this.setOdataType("#microsoft.graph.policyBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,15 +33,21 @@ public class PolicyBase extends DirectoryObject implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
                 case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
                 case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+                case "#microsoft.graph.claimsMappingPolicy": return new ClaimsMappingPolicy();
+                case "#microsoft.graph.crossTenantAccessPolicy": return new CrossTenantAccessPolicy();
                 case "#microsoft.graph.externalIdentitiesPolicy": return new ExternalIdentitiesPolicy();
+                case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
                 case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
                 case "#microsoft.graph.servicePrincipalCreationPolicy": return new ServicePrincipalCreationPolicy();
                 case "#microsoft.graph.stsPolicy": return new StsPolicy();
                 case "#microsoft.graph.tenantAppManagementPolicy": return new TenantAppManagementPolicy();
                 case "#microsoft.graph.tenantRelationshipAccessPolicyBase": return new TenantRelationshipAccessPolicyBase();
+                case "#microsoft.graph.tokenIssuancePolicy": return new TokenIssuancePolicy();
+                case "#microsoft.graph.tokenLifetimePolicy": return new TokenLifetimePolicy();
             }
         }
         return new PolicyBase();

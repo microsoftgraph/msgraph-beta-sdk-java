@@ -14,12 +14,15 @@ public class AssignmentFilterState implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Indicator to if AssignmentFilter is enabled or disabled. */
     private Boolean _enabled;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new assignmentFilterState and sets the default values.
      * @return a void
      */
     public AssignmentFilterState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentFilterState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class AssignmentFilterState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterState currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class AssignmentFilterState implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enabled", this.getEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class AssignmentFilterState implements AdditionalDataHolder, Parsable {
      */
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

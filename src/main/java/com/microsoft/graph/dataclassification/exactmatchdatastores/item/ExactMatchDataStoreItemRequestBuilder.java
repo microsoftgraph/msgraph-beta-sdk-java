@@ -314,7 +314,7 @@ public class ExactMatchDataStoreItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.exactMatchDataStores.item.sessions.item collection
      * @param id Unique identifier of the item
-     * @return a exactMatchSessionItemRequestBuilder
+     * @return a ExactMatchSessionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExactMatchSessionItemRequestBuilder sessions(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class ExactMatchDataStoreItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new exactMatchDataStoreItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchDataStoreItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchDataStoreItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class ExactMatchDataStoreItemRequestBuilder {
         @javax.annotation.Nullable
         public ExactMatchDataStoreItemRequestBuilderGetQueryParameters queryParameters = new ExactMatchDataStoreItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new exactMatchDataStoreItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchDataStoreItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchDataStoreItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class ExactMatchDataStoreItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new exactMatchDataStoreItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchDataStoreItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchDataStoreItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.security.EdiscoveryHoldPolicyCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.legalholds.count.CountRequestBuilder;
 /** Provides operations to manage the legalHolds property of the microsoft.graph.security.ediscoveryCase entity. */
 public class LegalHoldsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

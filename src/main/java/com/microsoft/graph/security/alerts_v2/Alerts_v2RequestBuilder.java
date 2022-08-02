@@ -20,7 +20,7 @@ import microsoft.graph.models.security.AlertCollectionResponse;
 import microsoft.graph.security.alerts_v2.count.CountRequestBuilder;
 /** Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity. */
 public class Alerts_v2RequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

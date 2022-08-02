@@ -14,6 +14,7 @@ public class EducationSynchronizationOAuth1ConnectionSettings extends EducationS
      */
     public EducationSynchronizationOAuth1ConnectionSettings() {
         super();
+        this.setOdataType("#microsoft.graph.educationSynchronizationOAuth1ConnectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

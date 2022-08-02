@@ -307,7 +307,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceMobileAppConfigurationStateItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceMobileAppConfigurationStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationStateItemRequestBuilderPatchRequestConfiguration() {

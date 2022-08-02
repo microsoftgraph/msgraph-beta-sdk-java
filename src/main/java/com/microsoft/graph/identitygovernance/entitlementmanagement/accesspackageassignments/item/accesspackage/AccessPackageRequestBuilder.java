@@ -72,7 +72,7 @@ public class AccessPackageRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageAssignmentPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentPolicyItemRequestBuilder
+     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentPolicyItemRequestBuilder accessPackageAssignmentPolicies(@javax.annotation.Nonnull final String id) {
@@ -84,7 +84,7 @@ public class AccessPackageRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRoleScopeItemRequestBuilder
+     * @return a AccessPackageResourceRoleScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleScopeItemRequestBuilder accessPackageResourceRoleScopes(@javax.annotation.Nonnull final String id) {
@@ -96,7 +96,7 @@ public class AccessPackageRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackagesIncompatibleWith.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder accessPackagesIncompatibleWith(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class AccessPackageRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.incompatibleAccessPackages.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder incompatibleAccessPackages(@javax.annotation.Nonnull final String id) {
@@ -339,7 +339,7 @@ public class AccessPackageRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.incompatibleGroups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder incompatibleGroups(@javax.annotation.Nonnull final String id) {

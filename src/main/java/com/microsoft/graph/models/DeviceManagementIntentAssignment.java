@@ -17,6 +17,7 @@ public class DeviceManagementIntentAssignment extends Entity implements Parsable
      */
     public DeviceManagementIntentAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntentAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.tenantrelationships.managedtenants.cloudpcconnections.count.CountRequestBuilder;
 /** Provides operations to manage the cloudPcConnections property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class CloudPcConnectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

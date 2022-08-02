@@ -16,6 +16,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      */
     public IosDerivedCredentialAuthenticationConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosDerivedCredentialAuthenticationConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

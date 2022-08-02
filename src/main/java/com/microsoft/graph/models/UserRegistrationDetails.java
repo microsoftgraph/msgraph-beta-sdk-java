@@ -7,10 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UserRegistrationDetails extends Entity implements Parsable {
     /** The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue. */
     private DefaultMfaMethodType _defaultMfaMethod;
+    /** The isAdmin property */
+    private Boolean _isAdmin;
     /** Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq). */
     private Boolean _isMfaCapable;
     /** Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq). */
@@ -29,12 +31,15 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     private String _userDisplayName;
     /** The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy. */
     private String _userPrincipalName;
+    /** The userType property */
+    private SignInUserType _userType;
     /**
      * Instantiates a new userRegistrationDetails and sets the default values.
      * @return a void
      */
     public UserRegistrationDetails() {
         super();
+        this.setOdataType("#microsoft.graph.userRegistrationDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,6 +68,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         final UserRegistrationDetails currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("defaultMfaMethod", (n) -> { currentObject.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
+            this.put("isAdmin", (n) -> { currentObject.setIsAdmin(n.getBooleanValue()); });
             this.put("isMfaCapable", (n) -> { currentObject.setIsMfaCapable(n.getBooleanValue()); });
             this.put("isMfaRegistered", (n) -> { currentObject.setIsMfaRegistered(n.getBooleanValue()); });
             this.put("isPasswordlessCapable", (n) -> { currentObject.setIsPasswordlessCapable(n.getBooleanValue()); });
@@ -72,7 +78,16 @@ public class UserRegistrationDetails extends Entity implements Parsable {
             this.put("methodsRegistered", (n) -> { currentObject.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(SignInUserType.class)); });
         }};
+    }
+    /**
+     * Gets the isAdmin property value. The isAdmin property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsAdmin() {
+        return this._isAdmin;
     }
     /**
      * Gets the isMfaCapable property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
@@ -147,6 +162,14 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         return this._userPrincipalName;
     }
     /**
+     * Gets the userType property value. The userType property
+     * @return a signInUserType
+     */
+    @javax.annotation.Nullable
+    public SignInUserType getUserType() {
+        return this._userType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -155,6 +178,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("defaultMfaMethod", this.getDefaultMfaMethod());
+        writer.writeBooleanValue("isAdmin", this.getIsAdmin());
         writer.writeBooleanValue("isMfaCapable", this.getIsMfaCapable());
         writer.writeBooleanValue("isMfaRegistered", this.getIsMfaRegistered());
         writer.writeBooleanValue("isPasswordlessCapable", this.getIsPasswordlessCapable());
@@ -164,6 +188,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("methodsRegistered", this.getMethodsRegistered());
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
+        writer.writeEnumValue("userType", this.getUserType());
     }
     /**
      * Sets the defaultMfaMethod property value. The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
@@ -172,6 +197,14 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     public void setDefaultMfaMethod(@javax.annotation.Nullable final DefaultMfaMethodType value) {
         this._defaultMfaMethod = value;
+    }
+    /**
+     * Sets the isAdmin property value. The isAdmin property
+     * @param value Value to set for the isAdmin property.
+     * @return a void
+     */
+    public void setIsAdmin(@javax.annotation.Nullable final Boolean value) {
+        this._isAdmin = value;
     }
     /**
      * Sets the isMfaCapable property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
@@ -244,5 +277,13 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
+    }
+    /**
+     * Sets the userType property value. The userType property
+     * @param value Value to set for the userType property.
+     * @return a void
+     */
+    public void setUserType(@javax.annotation.Nullable final SignInUserType value) {
+        this._userType = value;
     }
 }

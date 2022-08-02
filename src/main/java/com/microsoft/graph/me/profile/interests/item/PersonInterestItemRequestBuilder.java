@@ -307,7 +307,7 @@ public class PersonInterestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personInterestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PersonInterestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonInterestItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PersonInterestItemRequestBuilder {
         @javax.annotation.Nullable
         public PersonInterestItemRequestBuilderGetQueryParameters queryParameters = new PersonInterestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new personInterestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PersonInterestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonInterestItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PersonInterestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personInterestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PersonInterestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonInterestItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.UserPFXCertificate;
 import microsoft.graph.models.UserPFXCertificateCollectionResponse;
 /** Provides operations to manage the userPfxCertificates property of the microsoft.graph.deviceManagement entity. */
 public class UserPfxCertificatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

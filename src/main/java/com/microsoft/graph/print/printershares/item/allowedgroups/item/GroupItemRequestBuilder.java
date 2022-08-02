@@ -8,7 +8,7 @@ import microsoft.graph.print.printershares.item.allowedgroups.item.ref.RefReques
 public class GroupItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class ExactMatchUploadAgentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new exactMatchUploadAgentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchUploadAgentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchUploadAgentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ExactMatchUploadAgentItemRequestBuilder {
         @javax.annotation.Nullable
         public ExactMatchUploadAgentItemRequestBuilderGetQueryParameters queryParameters = new ExactMatchUploadAgentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new exactMatchUploadAgentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchUploadAgentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchUploadAgentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ExactMatchUploadAgentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new exactMatchUploadAgentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchUploadAgentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchUploadAgentItemRequestBuilderPatchRequestConfiguration() {

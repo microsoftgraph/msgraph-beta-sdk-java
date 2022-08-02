@@ -21,12 +21,15 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
     private java.util.List<String> _includeDevices;
     /** The includeDeviceStates property */
     private java.util.List<String> _includeDeviceStates;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new conditionalAccessDevices and sets the default values.
      * @return a void
      */
     public ConditionalAccessDevices() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessDevices");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,12 +80,13 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessDevices currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("deviceFilter", (n) -> { currentObject.setDeviceFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
             this.put("excludeDevices", (n) -> { currentObject.setExcludeDevices(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("excludeDeviceStates", (n) -> { currentObject.setExcludeDeviceStates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeDevices", (n) -> { currentObject.setIncludeDevices(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeDeviceStates", (n) -> { currentObject.setIncludeDeviceStates(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
         return this._includeDeviceStates;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -113,6 +125,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
         writer.writeCollectionOfPrimitiveValues("excludeDeviceStates", this.getExcludeDeviceStates());
         writer.writeCollectionOfPrimitiveValues("includeDevices", this.getIncludeDevices());
         writer.writeCollectionOfPrimitiveValues("includeDeviceStates", this.getIncludeDeviceStates());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,5 +175,13 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     public void setIncludeDeviceStates(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeDeviceStates = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

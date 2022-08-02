@@ -21,6 +21,7 @@ public class PaymentMethod extends Entity implements Parsable {
      */
     public PaymentMethod() {
         super();
+        this.setOdataType("#microsoft.graph.paymentMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

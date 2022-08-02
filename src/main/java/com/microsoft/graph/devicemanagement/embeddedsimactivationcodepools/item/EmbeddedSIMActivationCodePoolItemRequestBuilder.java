@@ -47,7 +47,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a embeddedSIMActivationCodePoolAssignmentItemRequestBuilder
+     * @return a EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -227,7 +227,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item.deviceStates.item collection
      * @param id Unique identifier of the item
-     * @return a embeddedSIMDeviceStateItemRequestBuilder
+     * @return a EmbeddedSIMDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmbeddedSIMDeviceStateItemRequestBuilder deviceStates(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new embeddedSIMActivationCodePoolItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMActivationCodePoolItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMActivationCodePoolItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
         @javax.annotation.Nullable
         public EmbeddedSIMActivationCodePoolItemRequestBuilderGetQueryParameters queryParameters = new EmbeddedSIMActivationCodePoolItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new embeddedSIMActivationCodePoolItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMActivationCodePoolItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMActivationCodePoolItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new embeddedSIMActivationCodePoolItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMActivationCodePoolItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMActivationCodePoolItemRequestBuilderPatchRequestConfiguration() {

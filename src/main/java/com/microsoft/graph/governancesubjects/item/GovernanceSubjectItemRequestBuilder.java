@@ -307,7 +307,7 @@ public class GovernanceSubjectItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new governanceSubjectItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceSubjectItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceSubjectItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class GovernanceSubjectItemRequestBuilder {
         @javax.annotation.Nullable
         public GovernanceSubjectItemRequestBuilderGetQueryParameters queryParameters = new GovernanceSubjectItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new governanceSubjectItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceSubjectItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceSubjectItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class GovernanceSubjectItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new governanceSubjectItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GovernanceSubjectItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GovernanceSubjectItemRequestBuilderPatchRequestConfiguration() {

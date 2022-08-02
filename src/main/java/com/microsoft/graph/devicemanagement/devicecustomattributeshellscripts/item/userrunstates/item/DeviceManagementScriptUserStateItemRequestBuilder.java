@@ -202,7 +202,7 @@ public class DeviceManagementScriptUserStateItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.userRunStates.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptDeviceStateItemRequestBuilder
+     * @return a DeviceManagementScriptDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptDeviceStateItemRequestBuilder deviceRunStates(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementScriptUserStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementScriptUserStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptUserStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptUserStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementScriptUserStateItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementScriptUserStateItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementScriptUserStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementScriptUserStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptUserStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptUserStateItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementScriptUserStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementScriptUserStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementScriptUserStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementScriptUserStateItemRequestBuilderPatchRequestConfiguration() {

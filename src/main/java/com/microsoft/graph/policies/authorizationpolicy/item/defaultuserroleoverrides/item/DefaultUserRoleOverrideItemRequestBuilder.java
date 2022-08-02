@@ -307,7 +307,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new defaultUserRoleOverrideItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DefaultUserRoleOverrideItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DefaultUserRoleOverrideItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder {
         @javax.annotation.Nullable
         public DefaultUserRoleOverrideItemRequestBuilderGetQueryParameters queryParameters = new DefaultUserRoleOverrideItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new defaultUserRoleOverrideItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DefaultUserRoleOverrideItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DefaultUserRoleOverrideItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new defaultUserRoleOverrideItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DefaultUserRoleOverrideItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DefaultUserRoleOverrideItemRequestBuilderPatchRequestConfiguration() {

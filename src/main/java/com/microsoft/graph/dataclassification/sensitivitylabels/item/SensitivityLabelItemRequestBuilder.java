@@ -307,7 +307,7 @@ public class SensitivityLabelItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.sensitivityLabels.item.sublabels.item collection
      * @param id Unique identifier of the item
-     * @return a sensitivityLabelItemRequestBuilder
+     * @return a SensitivityLabelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SensitivityLabelItemRequestBuilder sublabels(@javax.annotation.Nonnull final String id) {
@@ -325,7 +325,7 @@ public class SensitivityLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sensitivityLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SensitivityLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitivityLabelItemRequestBuilderDeleteRequestConfiguration() {
@@ -354,7 +354,7 @@ public class SensitivityLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public SensitivityLabelItemRequestBuilderGetQueryParameters queryParameters = new SensitivityLabelItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sensitivityLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SensitivityLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitivityLabelItemRequestBuilderGetRequestConfiguration() {
@@ -369,7 +369,7 @@ public class SensitivityLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sensitivityLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SensitivityLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitivityLabelItemRequestBuilderPatchRequestConfiguration() {

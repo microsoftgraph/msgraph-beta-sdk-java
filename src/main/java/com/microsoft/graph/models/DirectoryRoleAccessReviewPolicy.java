@@ -16,6 +16,7 @@ public class DirectoryRoleAccessReviewPolicy extends Entity implements Parsable 
      */
     public DirectoryRoleAccessReviewPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.directoryRoleAccessReviewPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

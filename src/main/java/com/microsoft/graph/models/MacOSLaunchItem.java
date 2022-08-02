@@ -14,6 +14,8 @@ public class MacOSLaunchItem implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Whether or not to hide the item from the Users and Groups List. */
     private Boolean _hide;
+    /** The OdataType property */
+    private String _odataType;
     /** Path to the launch item. */
     private String _path;
     /**
@@ -22,6 +24,7 @@ public class MacOSLaunchItem implements AdditionalDataHolder, Parsable {
      */
     public MacOSLaunchItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSLaunchItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class MacOSLaunchItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLaunchItem currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("hide", (n) -> { currentObject.setHide(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
         }};
     }
@@ -60,6 +64,14 @@ public class MacOSLaunchItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getHide() {
         return this._hide;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the path property value. Path to the launch item.
@@ -77,6 +89,7 @@ public class MacOSLaunchItem implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hide", this.getHide());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("path", this.getPath());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class MacOSLaunchItem implements AdditionalDataHolder, Parsable {
      */
     public void setHide(@javax.annotation.Nullable final Boolean value) {
         this._hide = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the path property value. Path to the launch item.

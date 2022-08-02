@@ -23,12 +23,15 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
     private Boolean _hideResetItNow;
     /** Option to hide the 'Terms of Use' hyperlink in the footer. */
     private Boolean _hideTermsOfUse;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new loginPageTextVisibilitySettings and sets the default values.
      * @return a void
      */
     public LoginPageTextVisibilitySettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.loginPageTextVisibilitySettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,13 +58,14 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LoginPageTextVisibilitySettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("hideAccountResetCredentials", (n) -> { currentObject.setHideAccountResetCredentials(n.getBooleanValue()); });
             this.put("hideCannotAccessYourAccount", (n) -> { currentObject.setHideCannotAccessYourAccount(n.getBooleanValue()); });
             this.put("hideForgotMyPassword", (n) -> { currentObject.setHideForgotMyPassword(n.getBooleanValue()); });
             this.put("hidePrivacyAndCookies", (n) -> { currentObject.setHidePrivacyAndCookies(n.getBooleanValue()); });
             this.put("hideResetItNow", (n) -> { currentObject.setHideResetItNow(n.getBooleanValue()); });
             this.put("hideTermsOfUse", (n) -> { currentObject.setHideTermsOfUse(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -113,6 +117,14 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return this._hideTermsOfUse;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -125,6 +137,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         writer.writeBooleanValue("hidePrivacyAndCookies", this.getHidePrivacyAndCookies());
         writer.writeBooleanValue("hideResetItNow", this.getHideResetItNow());
         writer.writeBooleanValue("hideTermsOfUse", this.getHideTermsOfUse());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -182,5 +195,13 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     public void setHideTermsOfUse(@javax.annotation.Nullable final Boolean value) {
         this._hideTermsOfUse = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

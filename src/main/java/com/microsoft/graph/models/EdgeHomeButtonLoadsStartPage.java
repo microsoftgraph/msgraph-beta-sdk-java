@@ -14,6 +14,7 @@ public class EdgeHomeButtonLoadsStartPage extends EdgeHomeButtonConfiguration im
      */
     public EdgeHomeButtonLoadsStartPage() {
         super();
+        this.setOdataType("#microsoft.graph.edgeHomeButtonLoadsStartPage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

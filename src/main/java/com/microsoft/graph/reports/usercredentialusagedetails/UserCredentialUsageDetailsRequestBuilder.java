@@ -20,7 +20,7 @@ import microsoft.graph.models.UserCredentialUsageDetailsCollectionResponse;
 import microsoft.graph.reports.usercredentialusagedetails.count.CountRequestBuilder;
 /** Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity. */
 public class UserCredentialUsageDetailsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

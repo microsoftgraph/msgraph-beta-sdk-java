@@ -18,6 +18,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      */
     public MachineLearningDetectedSensitiveContent() {
         super();
+        this.setOdataType("#microsoft.graph.machineLearningDetectedSensitiveContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -15,12 +15,15 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
     private java.util.List<GovernanceCriteria> _decisionMakerCriteria;
     /** The notificationPolicy property */
     private GovernanceNotificationPolicy _notificationPolicy;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new governancePolicy and sets the default values.
      * @return a void
      */
     public GovernancePolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.governancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernancePolicy currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("decisionMakerCriteria", (n) -> { currentObject.setDecisionMakerCriteria(n.getCollectionOfObjectValues(GovernanceCriteria::createFromDiscriminatorValue)); });
             this.put("notificationPolicy", (n) -> { currentObject.setNotificationPolicy(n.getObjectValue(GovernanceNotificationPolicy::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
         return this._notificationPolicy;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("decisionMakerCriteria", this.getDecisionMakerCriteria());
         writer.writeObjectValue("notificationPolicy", this.getNotificationPolicy());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
      */
     public void setNotificationPolicy(@javax.annotation.Nullable final GovernanceNotificationPolicy value) {
         this._notificationPolicy = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

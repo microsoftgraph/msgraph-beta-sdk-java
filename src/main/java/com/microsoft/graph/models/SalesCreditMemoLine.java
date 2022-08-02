@@ -65,6 +65,7 @@ public class SalesCreditMemoLine extends Entity implements Parsable {
      */
     public SalesCreditMemoLine() {
         super();
+        this.setOdataType("#microsoft.graph.salesCreditMemoLine");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

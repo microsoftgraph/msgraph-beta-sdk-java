@@ -307,7 +307,7 @@ public class UserSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserSecurityProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public UserSecurityProfileItemRequestBuilderGetQueryParameters queryParameters = new UserSecurityProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserSecurityProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserSecurityProfileItemRequestBuilderPatchRequestConfiguration() {

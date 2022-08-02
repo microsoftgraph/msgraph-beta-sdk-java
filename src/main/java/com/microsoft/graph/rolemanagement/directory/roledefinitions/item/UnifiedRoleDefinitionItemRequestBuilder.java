@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.UnifiedRoleDefinition;
+import microsoft.graph.rolemanagement.directory.roledefinitions.item.assignedprincipalswithtransitivewithdirectoryscopetypewithdirectoryscopeid.AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder;
 import microsoft.graph.rolemanagement.directory.roledefinitions.item.inheritspermissionsfrom.InheritsPermissionsFromRequestBuilder;
 /** Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleDefinitionItemRequestBuilder {
@@ -30,6 +31,14 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Provides operations to call the assignedPrincipals method.
+     * @return a assignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder assignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeId() {
+        return new AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new UnifiedRoleDefinitionItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -252,7 +261,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.directory.roleDefinitions.item.inheritsPermissionsFrom.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleDefinitionItemRequestBuilder
+     * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleDefinitionItemRequestBuilder inheritsPermissionsFrom(@javax.annotation.Nonnull final String id) {
@@ -325,7 +334,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -354,7 +363,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -369,7 +378,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration() {

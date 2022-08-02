@@ -307,7 +307,7 @@ public class CloudPcProvisioningPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcProvisioningPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetQueryParameters queryParameters = new CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcProvisioningPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.count.CountRequestBuilder;
 /** Provides operations to manage the serviceManagementDetails property of the microsoft.graph.delegatedAdminCustomer entity. */
 public class ServiceManagementDetailsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

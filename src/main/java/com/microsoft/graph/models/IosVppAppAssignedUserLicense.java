@@ -14,6 +14,7 @@ public class IosVppAppAssignedUserLicense extends IosVppAppAssignedLicense imple
      */
     public IosVppAppAssignedUserLicense() {
         super();
+        this.setOdataType("#microsoft.graph.iosVppAppAssignedUserLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

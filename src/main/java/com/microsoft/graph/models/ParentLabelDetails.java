@@ -21,21 +21,21 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     private Boolean _isActive;
     /** The plaintext name of the label. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The parent property */
     private ParentLabelDetails _parent;
     /** The sensitivity value of the label, where lower is less sensitive. */
     private Integer _sensitivity;
     /** The tooltip that should be displayed for the label in a user interface. */
     private String _tooltip;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new parentLabelDetails and sets the default values.
      * @return a void
      */
     public ParentLabelDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.parentLabelDetails");
+        this.setOdataType("#microsoft.graph.parentLabelDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,10 +91,10 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(ParentLabelDetails::createFromDiscriminatorValue)); });
             this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getIntegerValue()); });
             this.put("tooltip", (n) -> { currentObject.setTooltip(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -122,6 +122,14 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the parent property value. The parent property
      * @return a parentLabelDetails
      */
@@ -146,14 +154,6 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         return this._tooltip;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -165,10 +165,10 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isActive", this.getIsActive());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("parent", this.getParent());
         writer.writeIntegerValue("sensitivity", this.getSensitivity());
         writer.writeStringValue("tooltip", this.getTooltip());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -220,6 +220,14 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the parent property value. The parent property
      * @param value Value to set for the parent property.
      * @return a void
@@ -242,13 +250,5 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      */
     public void setTooltip(@javax.annotation.Nullable final String value) {
         this._tooltip = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

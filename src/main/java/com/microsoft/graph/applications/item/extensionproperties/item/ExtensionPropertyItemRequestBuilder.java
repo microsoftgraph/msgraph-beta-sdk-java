@@ -80,7 +80,7 @@ public class ExtensionPropertyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ExtensionPropertyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @return a CompletableFuture of extensionProperty
      */
     public java.util.concurrent.CompletableFuture<ExtensionProperty> get() {
@@ -209,7 +209,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionProperty
      */
@@ -226,7 +226,7 @@ public class ExtensionPropertyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of extensionProperty
@@ -307,13 +307,13 @@ public class ExtensionPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new extensionPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
     public class ExtensionPropertyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -336,7 +336,7 @@ public class ExtensionPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public ExtensionPropertyItemRequestBuilderGetQueryParameters queryParameters = new ExtensionPropertyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new extensionPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExtensionPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExtensionPropertyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ExtensionPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new extensionPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExtensionPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExtensionPropertyItemRequestBuilderPatchRequestConfiguration() {

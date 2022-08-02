@@ -47,7 +47,7 @@ public class AccessPackageResourceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentResourceRoles.item.accessPackageResourceRole.accessPackageResource.accessPackageResourceRoles.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRoleItemRequestBuilder
+     * @return a AccessPackageResourceRoleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleItemRequestBuilder accessPackageResourceRoles(@javax.annotation.Nonnull final String id) {
@@ -59,7 +59,7 @@ public class AccessPackageResourceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentResourceRoles.item.accessPackageResourceRole.accessPackageResource.accessPackageResourceScopes.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceScopeItemRequestBuilder
+     * @return a AccessPackageResourceScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceScopeItemRequestBuilder accessPackageResourceScopes(@javax.annotation.Nonnull final String id) {

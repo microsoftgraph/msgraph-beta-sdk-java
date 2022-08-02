@@ -21,12 +21,15 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     private String _localIpV6Address;
     /** MAC address of the NIC on this host. */
     private String _macAddress;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new networkInterface and sets the default values.
      * @return a void
      */
     public NetworkInterface() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.networkInterface");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,12 +64,13 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkInterface currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("ipV4Address", (n) -> { currentObject.setIpV4Address(n.getStringValue()); });
             this.put("ipV6Address", (n) -> { currentObject.setIpV6Address(n.getStringValue()); });
             this.put("localIpV6Address", (n) -> { currentObject.setLocalIpV6Address(n.getStringValue()); });
             this.put("macAddress", (n) -> { currentObject.setMacAddress(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         return this._macAddress;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -113,6 +125,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("ipV6Address", this.getIpV6Address());
         writer.writeStringValue("localIpV6Address", this.getLocalIpV6Address());
         writer.writeStringValue("macAddress", this.getMacAddress());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,5 +175,13 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      */
     public void setMacAddress(@javax.annotation.Nullable final String value) {
         this._macAddress = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

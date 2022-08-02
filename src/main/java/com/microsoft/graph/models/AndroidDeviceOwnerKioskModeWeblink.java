@@ -18,6 +18,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      */
     public AndroidDeviceOwnerKioskModeWeblink() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeWeblink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

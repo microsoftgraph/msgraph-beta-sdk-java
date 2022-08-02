@@ -23,6 +23,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      */
     public InformationProtectionPolicySetting() {
         super();
+        this.setOdataType("#microsoft.graph.security.informationProtectionPolicySetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

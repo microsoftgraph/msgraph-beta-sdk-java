@@ -30,7 +30,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     public WindowsPhone81AppX() {
         super();
-        this.setType("#microsoft.graph.windowsPhone81AppX");
+        this.setOdataType("#microsoft.graph.windowsPhone81AppX");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

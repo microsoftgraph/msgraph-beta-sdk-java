@@ -307,7 +307,7 @@ public class CloudPcOverviewTenantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcOverviewTenantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcOverviewTenantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcOverviewTenantItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcOverviewTenantItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcOverviewTenantItemRequestBuilderGetQueryParameters queryParameters = new CloudPcOverviewTenantItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcOverviewTenantItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcOverviewTenantItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcOverviewTenantItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcOverviewTenantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcOverviewTenantItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcOverviewTenantItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcOverviewTenantItemRequestBuilderPatchRequestConfiguration() {

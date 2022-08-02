@@ -22,6 +22,7 @@ import microsoft.graph.organization.item.branding.favicon.FaviconRequestBuilder;
 import microsoft.graph.organization.item.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
 import microsoft.graph.organization.item.branding.localizations.LocalizationsRequestBuilder;
 import microsoft.graph.organization.item.branding.squarelogo.SquareLogoRequestBuilder;
+import microsoft.graph.organization.item.branding.squarelogodark.SquareLogoDarkRequestBuilder;
 /** Provides operations to manage the branding property of the microsoft.graph.organization entity. */
 public class BrandingRequestBuilder {
     /** The backgroundImage property */
@@ -52,6 +53,11 @@ public class BrandingRequestBuilder {
     @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The squareLogoDark property */
+    @javax.annotation.Nonnull
+    public SquareLogoDarkRequestBuilder squareLogoDark() {
+        return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
@@ -277,7 +283,7 @@ public class BrandingRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.organization.item.branding.localizations.item collection
      * @param id Unique identifier of the item
-     * @return a organizationalBrandingLocalizationItemRequestBuilder
+     * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OrganizationalBrandingLocalizationItemRequestBuilder localizations(@javax.annotation.Nonnull final String id) {

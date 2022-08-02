@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
 import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereMetrics property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

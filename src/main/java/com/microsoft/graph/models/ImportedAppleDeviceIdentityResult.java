@@ -16,6 +16,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      */
     public ImportedAppleDeviceIdentityResult() {
         super();
+        this.setOdataType("#microsoft.graph.importedAppleDeviceIdentityResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

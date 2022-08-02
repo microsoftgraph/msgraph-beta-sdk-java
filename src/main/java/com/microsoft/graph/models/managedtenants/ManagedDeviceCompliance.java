@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagedDeviceCompliance extends Entity implements Parsable {
     /** Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only. */
     private String _complianceStatus;
@@ -45,6 +45,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     public ManagedDeviceCompliance() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managedDeviceCompliance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -12,11 +12,13 @@ import java.util.Objects;
 public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The reviewBy property */
+    /** The OdataType property */
+    private String _odataType;
+    /** Specifies who reviewed the email. The identification is an email ID or other identity strings. */
     private String _reviewBy;
-    /** The reviewDateTime property */
+    /** Specifies the date time when the review occurred. */
     private OffsetDateTime _reviewDateTime;
-    /** The reviewResult property */
+    /** Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue. */
     private SubmissionResultCategory _reviewResult;
     /**
      * Instantiates a new submissionAdminReview and sets the default values.
@@ -24,6 +26,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      */
     public SubmissionAdminReview() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.submissionAdminReview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,14 +53,23 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubmissionAdminReview currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reviewBy", (n) -> { currentObject.setReviewBy(n.getStringValue()); });
             this.put("reviewDateTime", (n) -> { currentObject.setReviewDateTime(n.getOffsetDateTimeValue()); });
             this.put("reviewResult", (n) -> { currentObject.setReviewResult(n.getEnumValue(SubmissionResultCategory.class)); });
         }};
     }
     /**
-     * Gets the reviewBy property value. The reviewBy property
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the reviewBy property value. Specifies who reviewed the email. The identification is an email ID or other identity strings.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -65,7 +77,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         return this._reviewBy;
     }
     /**
-     * Gets the reviewDateTime property value. The reviewDateTime property
+     * Gets the reviewDateTime property value. Specifies the date time when the review occurred.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -73,7 +85,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         return this._reviewDateTime;
     }
     /**
-     * Gets the reviewResult property value. The reviewResult property
+     * Gets the reviewResult property value. Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue.
      * @return a submissionResultCategory
      */
     @javax.annotation.Nullable
@@ -87,6 +99,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("reviewBy", this.getReviewBy());
         writer.writeOffsetDateTimeValue("reviewDateTime", this.getReviewDateTime());
         writer.writeEnumValue("reviewResult", this.getReviewResult());
@@ -101,7 +114,15 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the reviewBy property value. The reviewBy property
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the reviewBy property value. Specifies who reviewed the email. The identification is an email ID or other identity strings.
      * @param value Value to set for the reviewBy property.
      * @return a void
      */
@@ -109,7 +130,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         this._reviewBy = value;
     }
     /**
-     * Sets the reviewDateTime property value. The reviewDateTime property
+     * Sets the reviewDateTime property value. Specifies the date time when the review occurred.
      * @param value Value to set for the reviewDateTime property.
      * @return a void
      */
@@ -117,7 +138,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         this._reviewDateTime = value;
     }
     /**
-     * Sets the reviewResult property value. The reviewResult property
+     * Sets the reviewResult property value. Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue.
      * @param value Value to set for the reviewResult property.
      * @return a void
      */

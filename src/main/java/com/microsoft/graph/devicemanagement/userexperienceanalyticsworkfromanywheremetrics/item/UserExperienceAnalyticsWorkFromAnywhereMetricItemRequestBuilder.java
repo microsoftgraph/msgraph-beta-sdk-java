@@ -253,7 +253,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsWorkFromAnywhereMetrics.item.metricDevices.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder metricDevices(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilderPatchRequestConfiguration() {

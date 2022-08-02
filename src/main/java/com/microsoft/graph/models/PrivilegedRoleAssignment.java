@@ -28,6 +28,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     public PrivilegedRoleAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.privilegedRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

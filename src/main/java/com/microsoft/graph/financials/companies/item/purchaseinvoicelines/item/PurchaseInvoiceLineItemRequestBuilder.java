@@ -254,7 +254,7 @@ public class PurchaseInvoiceLineItemRequestBuilder {
         @javax.annotation.Nullable
         public PurchaseInvoiceLineItemRequestBuilderGetQueryParameters queryParameters = new PurchaseInvoiceLineItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new purchaseInvoiceLineItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PurchaseInvoiceLineItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PurchaseInvoiceLineItemRequestBuilderGetRequestConfiguration() {
@@ -269,7 +269,7 @@ public class PurchaseInvoiceLineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new purchaseInvoiceLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PurchaseInvoiceLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PurchaseInvoiceLineItemRequestBuilderPatchRequestConfiguration() {

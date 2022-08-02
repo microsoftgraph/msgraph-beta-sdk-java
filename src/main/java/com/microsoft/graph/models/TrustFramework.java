@@ -13,6 +13,8 @@ public class TrustFramework implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The keySets property */
     private java.util.List<TrustFrameworkKeySet> _keySets;
+    /** The OdataType property */
+    private String _odataType;
     /** The policies property */
     private java.util.List<TrustFrameworkPolicy> _policies;
     /**
@@ -21,6 +23,7 @@ public class TrustFramework implements AdditionalDataHolder, Parsable {
      */
     public TrustFramework() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.trustFramework");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class TrustFramework implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TrustFramework currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("keySets", (n) -> { currentObject.setKeySets(n.getCollectionOfObjectValues(TrustFrameworkKeySet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policies", (n) -> { currentObject.setPolicies(n.getCollectionOfObjectValues(TrustFrameworkPolicy::createFromDiscriminatorValue)); });
         }};
     }
@@ -59,6 +63,14 @@ public class TrustFramework implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<TrustFrameworkKeySet> getKeySets() {
         return this._keySets;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the policies property value. The policies property
@@ -76,6 +88,7 @@ public class TrustFramework implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("keySets", this.getKeySets());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class TrustFramework implements AdditionalDataHolder, Parsable {
      */
     public void setKeySets(@javax.annotation.Nullable final java.util.List<TrustFrameworkKeySet> value) {
         this._keySets = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the policies property value. The policies property

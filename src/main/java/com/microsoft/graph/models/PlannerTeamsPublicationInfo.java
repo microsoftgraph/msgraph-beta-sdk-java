@@ -14,6 +14,8 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
     private Map<String, Object> _additionalData;
     /** The date and time when this task was last modified by the publication process. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The identifier of the publication. Read-only. */
     private String _publicationId;
     /** The identifier of the plannerPlan this task was originally placed in. Read-only. */
@@ -28,6 +30,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     public PlannerTeamsPublicationInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.plannerTeamsPublicationInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,8 +57,9 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTeamsPublicationInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("publicationId", (n) -> { currentObject.setPublicationId(n.getStringValue()); });
             this.put("publishedToPlanId", (n) -> { currentObject.setPublishedToPlanId(n.getStringValue()); });
             this.put("publishingTeamId", (n) -> { currentObject.setPublishingTeamId(n.getStringValue()); });
@@ -69,6 +73,14 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this._lastModifiedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
@@ -110,6 +122,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("publicationId", this.getPublicationId());
         writer.writeStringValue("publishedToPlanId", this.getPublishedToPlanId());
         writer.writeStringValue("publishingTeamId", this.getPublishingTeamId());
@@ -131,6 +144,14 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the publicationId property value. The identifier of the publication. Read-only.

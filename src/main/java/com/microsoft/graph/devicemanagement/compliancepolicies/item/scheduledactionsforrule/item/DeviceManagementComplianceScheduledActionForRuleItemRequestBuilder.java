@@ -308,7 +308,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.compliancePolicies.item.scheduledActionsForRule.item.scheduledActionConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementComplianceActionItemItemRequestBuilder
+     * @return a DeviceManagementComplianceActionItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementComplianceActionItemItemRequestBuilder scheduledActionConfigurations(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
         @javax.annotation.Nullable
         public DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration() {

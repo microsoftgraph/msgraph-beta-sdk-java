@@ -308,7 +308,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.categories.item.settings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementSettingInstanceItemRequestBuilder
+     * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementSettingInstanceItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementIntentSettingCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentSettingCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentSettingCategoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementIntentSettingCategoryItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementIntentSettingCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementIntentSettingCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentSettingCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentSettingCategoryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementIntentSettingCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentSettingCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentSettingCategoryItemRequestBuilderPatchRequestConfiguration() {

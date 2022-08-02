@@ -307,7 +307,7 @@ public class TaxAreaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new taxAreaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TaxAreaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TaxAreaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TaxAreaItemRequestBuilder {
         @javax.annotation.Nullable
         public TaxAreaItemRequestBuilderGetQueryParameters queryParameters = new TaxAreaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new taxAreaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TaxAreaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TaxAreaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TaxAreaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new taxAreaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TaxAreaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TaxAreaItemRequestBuilderPatchRequestConfiguration() {

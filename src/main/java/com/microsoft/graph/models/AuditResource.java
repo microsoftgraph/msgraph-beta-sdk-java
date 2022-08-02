@@ -16,6 +16,8 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** List of modified properties. */
     private java.util.List<AuditProperty> _modifiedProperties;
+    /** The OdataType property */
+    private String _odataType;
     /** Audit resource's Id. */
     private String _resourceId;
     /** Audit resource's type. */
@@ -26,6 +28,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     public AuditResource() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.auditResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,9 +63,10 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditResource currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(AuditProperty::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
@@ -74,6 +78,14 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<AuditProperty> getModifiedProperties() {
         return this._modifiedProperties;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the resourceId property value. Audit resource's Id.
@@ -100,6 +112,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("modifiedProperties", this.getModifiedProperties());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("resourceId", this.getResourceId());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +140,14 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<AuditProperty> value) {
         this._modifiedProperties = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the resourceId property value. Audit resource's Id.

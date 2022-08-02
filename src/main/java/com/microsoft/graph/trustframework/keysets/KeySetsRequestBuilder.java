@@ -20,7 +20,7 @@ import microsoft.graph.models.TrustFrameworkKeySetCollectionResponse;
 import microsoft.graph.trustframework.keysets.count.CountRequestBuilder;
 /** Provides operations to manage the keySets property of the microsoft.graph.trustFramework entity. */
 public class KeySetsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

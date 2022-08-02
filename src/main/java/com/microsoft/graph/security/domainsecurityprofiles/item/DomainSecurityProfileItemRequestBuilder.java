@@ -307,7 +307,7 @@ public class DomainSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DomainSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainSecurityProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DomainSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public DomainSecurityProfileItemRequestBuilderGetQueryParameters queryParameters = new DomainSecurityProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new domainSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DomainSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainSecurityProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DomainSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DomainSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainSecurityProfileItemRequestBuilderPatchRequestConfiguration() {

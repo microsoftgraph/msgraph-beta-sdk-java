@@ -26,6 +26,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      */
     public WebAccount() {
         super();
+        this.setOdataType("#microsoft.graph.webAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

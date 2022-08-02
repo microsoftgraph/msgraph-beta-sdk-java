@@ -18,6 +18,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
      */
     public DeviceManagementSettingStringLengthConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingStringLengthConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

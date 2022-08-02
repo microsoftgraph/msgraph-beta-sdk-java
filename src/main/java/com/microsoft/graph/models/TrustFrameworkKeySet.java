@@ -16,6 +16,7 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
      */
     public TrustFrameworkKeySet() {
         super();
+        this.setOdataType("#microsoft.graph.trustFrameworkKeySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

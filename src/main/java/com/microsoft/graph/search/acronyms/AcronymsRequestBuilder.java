@@ -20,7 +20,7 @@ import microsoft.graph.models.search.AcronymCollectionResponse;
 import microsoft.graph.search.acronyms.count.CountRequestBuilder;
 /** Provides operations to manage the acronyms property of the microsoft.graph.searchEntity entity. */
 public class AcronymsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -16,6 +16,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      */
     public EducationIdentityCreationConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.educationIdentityCreationConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

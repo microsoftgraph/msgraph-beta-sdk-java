@@ -313,7 +313,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceLogCollectionResponseItemRequestBuilderGetQueryParameters queryParameters = new DeviceLogCollectionResponseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration() {

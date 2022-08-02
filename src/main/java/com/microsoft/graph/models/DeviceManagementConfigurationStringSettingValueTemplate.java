@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
      */
     public DeviceManagementConfigurationStringSettingValueTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

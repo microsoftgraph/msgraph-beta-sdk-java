@@ -336,7 +336,7 @@ public class PrivilegedAccessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.resources.item collection
      * @param id Unique identifier of the item
-     * @return a governanceResourceItemRequestBuilder
+     * @return a GovernanceResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
@@ -348,7 +348,7 @@ public class PrivilegedAccessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleAssignmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleAssignmentRequestItemRequestBuilder
+     * @return a GovernanceRoleAssignmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentRequestItemRequestBuilder roleAssignmentRequests(@javax.annotation.Nonnull final String id) {
@@ -360,7 +360,7 @@ public class PrivilegedAccessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleAssignmentItemRequestBuilder
+     * @return a GovernanceRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
@@ -372,7 +372,7 @@ public class PrivilegedAccessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleDefinitionItemRequestBuilder
+     * @return a GovernanceRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
@@ -384,7 +384,7 @@ public class PrivilegedAccessItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleSettings.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleSettingItemRequestBuilder
+     * @return a GovernanceRoleSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleSettingItemRequestBuilder roleSettings(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class PrivilegedAccessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedAccessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedAccessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedAccessItemRequestBuilderDeleteRequestConfiguration() {
@@ -431,7 +431,7 @@ public class PrivilegedAccessItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedAccessItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedAccessItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedAccessItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedAccessItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedAccessItemRequestBuilderGetRequestConfiguration() {
@@ -446,7 +446,7 @@ public class PrivilegedAccessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedAccessItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedAccessItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedAccessItemRequestBuilderPatchRequestConfiguration() {

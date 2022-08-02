@@ -15,6 +15,8 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     private Identity _application;
     /** The device property */
     private Identity _device;
+    /** The OdataType property */
+    private String _odataType;
     /** The user property */
     private Identity _user;
     /**
@@ -23,6 +25,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     public IdentitySet() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.search.identitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentitySet currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the user property value. The user property
@@ -88,6 +100,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
         writer.writeObjectValue("device", this.getDevice());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     public void setDevice(@javax.annotation.Nullable final Identity value) {
         this._device = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the user property value. The user property

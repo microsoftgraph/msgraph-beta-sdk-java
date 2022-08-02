@@ -16,6 +16,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
      */
     public WindowsPhone81AppXBundle() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81AppXBundle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

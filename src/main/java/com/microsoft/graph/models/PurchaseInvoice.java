@@ -76,6 +76,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      */
     public PurchaseInvoice() {
         super();
+        this.setOdataType("#microsoft.graph.purchaseInvoice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

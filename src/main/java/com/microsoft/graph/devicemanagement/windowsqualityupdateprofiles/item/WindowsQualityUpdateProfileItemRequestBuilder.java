@@ -40,7 +40,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsQualityUpdateProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a windowsQualityUpdateProfileAssignmentItemRequestBuilder
+     * @return a WindowsQualityUpdateProfileAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsQualityUpdateProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsQualityUpdateProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsQualityUpdateProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsQualityUpdateProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsQualityUpdateProfileItemRequestBuilderGetQueryParameters queryParameters = new WindowsQualityUpdateProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsQualityUpdateProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsQualityUpdateProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsQualityUpdateProfileItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsQualityUpdateProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsQualityUpdateProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsQualityUpdateProfileItemRequestBuilderPatchRequestConfiguration() {

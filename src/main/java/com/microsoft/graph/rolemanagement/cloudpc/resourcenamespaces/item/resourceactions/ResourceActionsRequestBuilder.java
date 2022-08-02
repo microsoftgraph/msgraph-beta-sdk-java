@@ -20,7 +20,7 @@ import microsoft.graph.models.UnifiedRbacResourceActionCollectionResponse;
 import microsoft.graph.rolemanagement.cloudpc.resourcenamespaces.item.resourceactions.count.CountRequestBuilder;
 /** Provides operations to manage the resourceActions property of the microsoft.graph.unifiedRbacResourceNamespace entity. */
 public class ResourceActionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

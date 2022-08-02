@@ -14,6 +14,7 @@ public class DeviceManagementIntentSettingSecretConstraint extends DeviceManagem
      */
     public DeviceManagementIntentSettingSecretConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntentSettingSecretConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

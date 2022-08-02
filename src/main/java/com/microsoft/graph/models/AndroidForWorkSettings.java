@@ -33,6 +33,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     public AndroidForWorkSettings() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

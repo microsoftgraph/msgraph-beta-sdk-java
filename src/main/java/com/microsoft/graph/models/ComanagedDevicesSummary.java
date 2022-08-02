@@ -22,6 +22,8 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     private Integer _inventoryCount;
     /** Number of devices with ModernApps swung-over. This property is read-only. */
     private Integer _modernAppsCount;
+    /** The OdataType property */
+    private String _odataType;
     /** Number of devices with OfficeApps swung-over. This property is read-only. */
     private Integer _officeAppsCount;
     /** Number of devices with ResourceAccess swung-over. This property is read-only. */
@@ -36,6 +38,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      */
     public ComanagedDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.comanagedDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,12 +89,13 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagedDevicesSummary currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("compliancePolicyCount", (n) -> { currentObject.setCompliancePolicyCount(n.getIntegerValue()); });
             this.put("configurationSettingsCount", (n) -> { currentObject.setConfigurationSettingsCount(n.getIntegerValue()); });
             this.put("endpointProtectionCount", (n) -> { currentObject.setEndpointProtectionCount(n.getIntegerValue()); });
             this.put("inventoryCount", (n) -> { currentObject.setInventoryCount(n.getIntegerValue()); });
             this.put("modernAppsCount", (n) -> { currentObject.setModernAppsCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("officeAppsCount", (n) -> { currentObject.setOfficeAppsCount(n.getIntegerValue()); });
             this.put("resourceAccessCount", (n) -> { currentObject.setResourceAccessCount(n.getIntegerValue()); });
             this.put("totalComanagedCount", (n) -> { currentObject.setTotalComanagedCount(n.getIntegerValue()); });
@@ -113,6 +117,14 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getModernAppsCount() {
         return this._modernAppsCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the officeAppsCount property value. Number of devices with OfficeApps swung-over. This property is read-only.
@@ -158,6 +170,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("endpointProtectionCount", this.getEndpointProtectionCount());
         writer.writeIntegerValue("inventoryCount", this.getInventoryCount());
         writer.writeIntegerValue("modernAppsCount", this.getModernAppsCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("officeAppsCount", this.getOfficeAppsCount());
         writer.writeIntegerValue("resourceAccessCount", this.getResourceAccessCount());
         writer.writeIntegerValue("totalComanagedCount", this.getTotalComanagedCount());
@@ -211,6 +224,14 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      */
     public void setModernAppsCount(@javax.annotation.Nullable final Integer value) {
         this._modernAppsCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the officeAppsCount property value. Number of devices with OfficeApps swung-over. This property is read-only.

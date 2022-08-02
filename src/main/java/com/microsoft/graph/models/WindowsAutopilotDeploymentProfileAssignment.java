@@ -21,6 +21,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
      */
     public WindowsAutopilotDeploymentProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.windowsAutopilotDeploymentProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

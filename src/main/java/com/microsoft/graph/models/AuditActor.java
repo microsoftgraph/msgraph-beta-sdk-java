@@ -18,6 +18,8 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     private String _applicationId;
     /** IPAddress. */
     private String _ipAddress;
+    /** The OdataType property */
+    private String _odataType;
     /** Remote Tenant Id */
     private String _remoteTenantId;
     /** Remote User Id */
@@ -40,6 +42,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     public AuditActor() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.auditActor");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,10 +85,11 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditActor currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remoteTenantId", (n) -> { currentObject.setRemoteTenantId(n.getStringValue()); });
             this.put("remoteUserId", (n) -> { currentObject.setRemoteUserId(n.getStringValue()); });
             this.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
@@ -103,6 +107,14 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getIpAddress() {
         return this._ipAddress;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the remoteTenantId property value. Remote Tenant Id
@@ -178,6 +190,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("applicationDisplayName", this.getApplicationDisplayName());
         writer.writeStringValue("applicationId", this.getApplicationId());
         writer.writeStringValue("ipAddress", this.getIpAddress());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("remoteTenantId", this.getRemoteTenantId());
         writer.writeStringValue("remoteUserId", this.getRemoteUserId());
         writer.writeStringValue("servicePrincipalName", this.getServicePrincipalName());
@@ -219,6 +232,14 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the remoteTenantId property value. Remote Tenant Id

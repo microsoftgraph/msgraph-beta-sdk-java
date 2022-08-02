@@ -60,6 +60,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      */
     public IosikEv2VpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosikEv2VpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

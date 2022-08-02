@@ -307,7 +307,7 @@ public class ItemEmailItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemEmailItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemEmailItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemEmailItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ItemEmailItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemEmailItemRequestBuilderGetQueryParameters queryParameters = new ItemEmailItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemEmailItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemEmailItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemEmailItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ItemEmailItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemEmailItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemEmailItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemEmailItemRequestBuilderPatchRequestConfiguration() {

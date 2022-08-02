@@ -17,12 +17,15 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     private String _decryptionKey;
     /** Download SAS Url for completed AppLogUploadRequest */
     private String _downloadUrl;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new appLogCollectionDownloadDetails and sets the default values.
      * @return a void
      */
     public AppLogCollectionDownloadDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.appLogCollectionDownloadDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,20 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppLogCollectionDownloadDetails currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("appLogDecryptionAlgorithm", (n) -> { currentObject.setAppLogDecryptionAlgorithm(n.getEnumValue(AppLogDecryptionAlgorithm.class)); });
             this.put("decryptionKey", (n) -> { currentObject.setDecryptionKey(n.getStringValue()); });
             this.put("downloadUrl", (n) -> { currentObject.setDownloadUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -89,6 +101,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
         writer.writeEnumValue("appLogDecryptionAlgorithm", this.getAppLogDecryptionAlgorithm());
         writer.writeStringValue("decryptionKey", this.getDecryptionKey());
         writer.writeStringValue("downloadUrl", this.getDownloadUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      */
     public void setDownloadUrl(@javax.annotation.Nullable final String value) {
         this._downloadUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

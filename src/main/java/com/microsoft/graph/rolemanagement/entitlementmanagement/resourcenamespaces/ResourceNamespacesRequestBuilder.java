@@ -20,7 +20,7 @@ import microsoft.graph.models.UnifiedRbacResourceNamespaceCollectionResponse;
 import microsoft.graph.rolemanagement.entitlementmanagement.resourcenamespaces.count.CountRequestBuilder;
 /** Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity. */
 public class ResourceNamespacesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementDerivedCredentialSettingsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementDerivedCredentialSettingsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementDerivedCredentialSettingsItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementDerivedCredentialSettingsItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementDerivedCredentialSettingsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementDerivedCredentialSettingsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementDerivedCredentialSettingsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementDerivedCredentialSettingsItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementDerivedCredentialSettingsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementDerivedCredentialSettingsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementDerivedCredentialSettingsItemRequestBuilderPatchRequestConfiguration() {

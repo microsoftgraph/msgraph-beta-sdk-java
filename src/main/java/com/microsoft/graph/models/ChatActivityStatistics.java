@@ -17,6 +17,7 @@ public class ChatActivityStatistics extends ActivityStatistics implements Parsab
      */
     public ChatActivityStatistics() {
         super();
+        this.setOdataType("#microsoft.graph.chatActivityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -32,6 +32,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      */
     public AndroidDeviceOwnerEnterpriseWiFiConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerEnterpriseWiFiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -325,7 +325,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -354,7 +354,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedRoleAssignmentItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedRoleAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -369,7 +369,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleAssignmentItemRequestBuilderPatchRequestConfiguration() {

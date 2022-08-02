@@ -14,6 +14,8 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** DeviceId of device represented by this object */
     private String _deviceId;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the type of execution status of the device management script. */
     private RunState _summarizedAppState;
     /**
@@ -22,6 +24,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
      */
     public ManagedDeviceSummarizedAppState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedDeviceSummarizedAppState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,10 +59,19 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceSummarizedAppState currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("summarizedAppState", (n) -> { currentObject.setSummarizedAppState(n.getEnumValue(RunState.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the summarizedAppState property value. Indicates the type of execution status of the device management script.
@@ -77,6 +89,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("summarizedAppState", this.getSummarizedAppState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Pa
      */
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the summarizedAppState property value. Indicates the type of execution status of the device management script.

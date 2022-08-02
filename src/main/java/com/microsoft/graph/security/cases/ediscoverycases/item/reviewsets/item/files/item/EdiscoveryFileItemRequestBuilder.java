@@ -326,7 +326,7 @@ public class EdiscoveryFileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.files.item.tags.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryReviewTagItemRequestBuilder
+     * @return a EdiscoveryReviewTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryReviewTagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
@@ -344,7 +344,7 @@ public class EdiscoveryFileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryFileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryFileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryFileItemRequestBuilderDeleteRequestConfiguration() {
@@ -373,7 +373,7 @@ public class EdiscoveryFileItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryFileItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryFileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryFileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryFileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryFileItemRequestBuilderGetRequestConfiguration() {
@@ -388,7 +388,7 @@ public class EdiscoveryFileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryFileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryFileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryFileItemRequestBuilderPatchRequestConfiguration() {

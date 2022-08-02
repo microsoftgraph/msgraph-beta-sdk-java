@@ -12,11 +12,13 @@ import microsoft.graph.models.Json;
 public class DisplayTemplate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The text identifier for the display template; for example, contosoTickets. */
+    /** The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed. */
     private String _id;
     /** The layout property */
     private Json _layout;
-    /** Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. */
+    /** The OdataType property */
+    private String _odataType;
+    /** Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value. */
     private Integer _priority;
     /** Specifies additional rules for selecting this display template based on the item schema. Optional. */
     private java.util.List<PropertyRule> _rules;
@@ -26,6 +28,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     public DisplayTemplate() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.externalConnectors.displayTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,15 +55,16 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DisplayTemplate currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("layout", (n) -> { currentObject.setLayout(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
             this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(PropertyRule::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the id property value. The text identifier for the display template; for example, contosoTickets.
+     * Gets the id property value. The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +80,15 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
         return this._layout;
     }
     /**
-     * Gets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported.
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -100,6 +112,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
         writer.writeObjectValue("layout", this.getLayout());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("priority", this.getPriority());
         writer.writeCollectionOfObjectValues("rules", this.getRules());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -113,7 +126,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the id property value. The text identifier for the display template; for example, contosoTickets.
+     * Sets the id property value. The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
      * @param value Value to set for the id property.
      * @return a void
      */
@@ -129,7 +142,15 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
         this._layout = value;
     }
     /**
-     * Sets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
      * @param value Value to set for the priority property.
      * @return a void
      */

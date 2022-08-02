@@ -14,6 +14,8 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
     private Map<String, Object> _additionalData;
     /** The date format for the device. */
     private String _dateFormat;
+    /** The OdataType property */
+    private String _odataType;
     /** The time of the day when the device is turned off. */
     private LocalTime _officeHoursEndTime;
     /** The time of the day when the device is turned on. */
@@ -28,6 +30,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      */
     public TeamworkDateTimeConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkDateTimeConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,13 +65,22 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDateTimeConfiguration currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("officeHoursEndTime", (n) -> { currentObject.setOfficeHoursEndTime(n.getLocalTimeValue()); });
             this.put("officeHoursStartTime", (n) -> { currentObject.setOfficeHoursStartTime(n.getLocalTimeValue()); });
             this.put("timeFormat", (n) -> { currentObject.setTimeFormat(n.getStringValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the officeHoursEndTime property value. The time of the day when the device is turned off.
@@ -110,6 +122,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dateFormat", this.getDateFormat());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("officeHoursEndTime", this.getOfficeHoursEndTime());
         writer.writeLocalTimeValue("officeHoursStartTime", this.getOfficeHoursStartTime());
         writer.writeStringValue("timeFormat", this.getTimeFormat());
@@ -131,6 +144,14 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      */
     public void setDateFormat(@javax.annotation.Nullable final String value) {
         this._dateFormat = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the officeHoursEndTime property value. The time of the day when the device is turned off.

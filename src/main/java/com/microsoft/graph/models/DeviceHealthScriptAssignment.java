@@ -21,6 +21,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      */
     public DeviceHealthScriptAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

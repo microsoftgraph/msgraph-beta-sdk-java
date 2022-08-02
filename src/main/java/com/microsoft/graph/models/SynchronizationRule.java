@@ -21,6 +21,8 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     private String _name;
     /** Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized. */
     private java.util.List<ObjectMapping> _objectMappings;
+    /** The OdataType property */
+    private String _odataType;
     /** Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first. */
     private Integer _priority;
     /** Name of the source directory. Must match one of the directory definitions in synchronizationSchema. */
@@ -33,6 +35,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     public SynchronizationRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,12 +70,13 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationRule currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("editable", (n) -> { currentObject.setEditable(n.getBooleanValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("objectMappings", (n) -> { currentObject.setObjectMappings(n.getCollectionOfObjectValues(ObjectMapping::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
             this.put("sourceDirectoryName", (n) -> { currentObject.setSourceDirectoryName(n.getStringValue()); });
             this.put("targetDirectoryName", (n) -> { currentObject.setTargetDirectoryName(n.getStringValue()); });
@@ -111,6 +115,14 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this._objectMappings;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      * @return a integer
      */
@@ -146,6 +158,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfObjectValues("objectMappings", this.getObjectMappings());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("priority", this.getPriority());
         writer.writeStringValue("sourceDirectoryName", this.getSourceDirectoryName());
         writer.writeStringValue("targetDirectoryName", this.getTargetDirectoryName());
@@ -198,6 +211,14 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     public void setObjectMappings(@javax.annotation.Nullable final java.util.List<ObjectMapping> value) {
         this._objectMappings = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.

@@ -307,7 +307,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new applicationSignInDetailedSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationSignInDetailedSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationSignInDetailedSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public ApplicationSignInDetailedSummaryItemRequestBuilderGetQueryParameters queryParameters = new ApplicationSignInDetailedSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new applicationSignInDetailedSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationSignInDetailedSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationSignInDetailedSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new applicationSignInDetailedSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationSignInDetailedSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationSignInDetailedSummaryItemRequestBuilderPatchRequestConfiguration() {

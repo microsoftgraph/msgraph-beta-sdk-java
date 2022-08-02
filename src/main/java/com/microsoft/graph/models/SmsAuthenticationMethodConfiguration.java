@@ -16,6 +16,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      */
     public SmsAuthenticationMethodConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.smsAuthenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

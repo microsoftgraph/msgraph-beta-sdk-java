@@ -18,6 +18,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      */
     public IosiPadOSWebClip() {
         super();
+        this.setOdataType("#microsoft.graph.iosiPadOSWebClip");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

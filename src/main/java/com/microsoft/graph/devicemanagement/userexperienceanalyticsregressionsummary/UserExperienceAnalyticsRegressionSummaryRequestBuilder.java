@@ -265,7 +265,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.manufacturerRegression.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.item.UserExperienceAnalyticsMetricItemRequestBuilder manufacturerRegression(@javax.annotation.Nonnull final String id) {
@@ -277,7 +277,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.modelRegression.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.item.UserExperienceAnalyticsMetricItemRequestBuilder modelRegression(@javax.annotation.Nonnull final String id) {
@@ -289,7 +289,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.operatingSystemRegression.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.item.UserExperienceAnalyticsMetricItemRequestBuilder operatingSystemRegression(@javax.annotation.Nonnull final String id) {

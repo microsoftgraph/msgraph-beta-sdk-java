@@ -11,15 +11,17 @@ import java.util.Objects;
 public class SubmissionResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The category property */
+    /** The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue. */
     private SubmissionResultCategory _category;
-    /** The detail property */
+    /** Specifies the additional details provided by Microsoft to substantiate their analysis result. */
     private SubmissionResultDetail _detail;
-    /** The detectedFiles property */
+    /** Specifies the files detected by Microsoft in the submitted emails. */
     private java.util.List<SubmissionDetectedFile> _detectedFiles;
-    /** The detectedUrls property */
+    /** Specifes the URLs detected by Microsoft in the submitted email. */
     private java.util.List<String> _detectedUrls;
-    /** The userMailboxSetting property */
+    /** The OdataType property */
+    private String _odataType;
+    /** Specifies the setting for user mailbox denoted by a comma-separated string. */
     private UserMailboxSetting _userMailboxSetting;
     /**
      * Instantiates a new submissionResult and sets the default values.
@@ -27,6 +29,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      */
     public SubmissionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.submissionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +50,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the category property value. The category property
+     * Gets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
      * @return a submissionResultCategory
      */
     @javax.annotation.Nullable
@@ -55,7 +58,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return this._category;
     }
     /**
-     * Gets the detail property value. The detail property
+     * Gets the detail property value. Specifies the additional details provided by Microsoft to substantiate their analysis result.
      * @return a submissionResultDetail
      */
     @javax.annotation.Nullable
@@ -63,7 +66,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return this._detail;
     }
     /**
-     * Gets the detectedFiles property value. The detectedFiles property
+     * Gets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
      * @return a submissionDetectedFile
      */
     @javax.annotation.Nullable
@@ -71,7 +74,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return this._detectedFiles;
     }
     /**
-     * Gets the detectedUrls property value. The detectedUrls property
+     * Gets the detectedUrls property value. Specifes the URLs detected by Microsoft in the submitted email.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,16 +88,25 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubmissionResult currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(SubmissionResultCategory.class)); });
             this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(SubmissionResultDetail.class)); });
             this.put("detectedFiles", (n) -> { currentObject.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });
             this.put("detectedUrls", (n) -> { currentObject.setDetectedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userMailboxSetting", (n) -> { currentObject.setUserMailboxSetting(n.getEnumValue(UserMailboxSetting.class)); });
         }};
     }
     /**
-     * Gets the userMailboxSetting property value. The userMailboxSetting property
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
      * @return a userMailboxSetting
      */
     @javax.annotation.Nullable
@@ -112,6 +124,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("detail", this.getDetail());
         writer.writeCollectionOfObjectValues("detectedFiles", this.getDetectedFiles());
         writer.writeCollectionOfPrimitiveValues("detectedUrls", this.getDetectedUrls());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("userMailboxSetting", this.getUserMailboxSetting());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -124,7 +137,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the category property value. The category property
+     * Sets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
      * @param value Value to set for the category property.
      * @return a void
      */
@@ -132,7 +145,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this._category = value;
     }
     /**
-     * Sets the detail property value. The detail property
+     * Sets the detail property value. Specifies the additional details provided by Microsoft to substantiate their analysis result.
      * @param value Value to set for the detail property.
      * @return a void
      */
@@ -140,7 +153,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this._detail = value;
     }
     /**
-     * Sets the detectedFiles property value. The detectedFiles property
+     * Sets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
      * @param value Value to set for the detectedFiles property.
      * @return a void
      */
@@ -148,7 +161,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this._detectedFiles = value;
     }
     /**
-     * Sets the detectedUrls property value. The detectedUrls property
+     * Sets the detectedUrls property value. Specifes the URLs detected by Microsoft in the submitted email.
      * @param value Value to set for the detectedUrls property.
      * @return a void
      */
@@ -156,7 +169,15 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this._detectedUrls = value;
     }
     /**
-     * Sets the userMailboxSetting property value. The userMailboxSetting property
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
      * @param value Value to set for the userMailboxSetting property.
      * @return a void
      */

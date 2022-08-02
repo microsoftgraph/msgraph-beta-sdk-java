@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationPolicyAssignmentItemRequestBuilder
+     * @return a DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -339,7 +339,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.settings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationSettingItemRequestBuilder
+     * @return a DeviceManagementConfigurationSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationSettingItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -386,7 +386,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementConfigurationPolicyItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementConfigurationPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementConfigurationPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -401,7 +401,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationPolicyItemRequestBuilderPatchRequestConfiguration() {

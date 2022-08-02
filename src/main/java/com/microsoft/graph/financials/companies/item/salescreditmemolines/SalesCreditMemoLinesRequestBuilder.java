@@ -20,7 +20,7 @@ import microsoft.graph.models.SalesCreditMemoLine;
 import microsoft.graph.models.SalesCreditMemoLineCollectionResponse;
 /** Provides operations to manage the salesCreditMemoLines property of the microsoft.graph.company entity. */
 public class SalesCreditMemoLinesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

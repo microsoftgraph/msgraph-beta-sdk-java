@@ -18,6 +18,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      */
     public DeviceManagementAbstractComplexSettingInstance() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementAbstractComplexSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

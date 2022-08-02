@@ -65,7 +65,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     public MobileApp() {
         super();
-        this.setType("#microsoft.graph.mobileApp");
+        this.setOdataType("#microsoft.graph.mobileApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,23 +80,40 @@ public class MobileApp extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.androidForWorkApp": return new AndroidForWorkApp();
+                case "#microsoft.graph.androidLobApp": return new AndroidLobApp();
                 case "#microsoft.graph.androidManagedStoreApp": return new AndroidManagedStoreApp();
+                case "#microsoft.graph.androidManagedStoreWebApp": return new AndroidManagedStoreWebApp();
                 case "#microsoft.graph.androidStoreApp": return new AndroidStoreApp();
                 case "#microsoft.graph.iosiPadOSWebClip": return new IosiPadOSWebClip();
+                case "#microsoft.graph.iosLobApp": return new IosLobApp();
                 case "#microsoft.graph.iosStoreApp": return new IosStoreApp();
                 case "#microsoft.graph.iosVppApp": return new IosVppApp();
+                case "#microsoft.graph.macOSDmgApp": return new MacOSDmgApp();
+                case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
                 case "#microsoft.graph.macOSMdatpApp": return new MacOSMdatpApp();
                 case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
                 case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
                 case "#microsoft.graph.macOsVppApp": return new MacOsVppApp();
+                case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
+                case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
                 case "#microsoft.graph.managedApp": return new ManagedApp();
+                case "#microsoft.graph.managedIOSLobApp": return new ManagedIOSLobApp();
+                case "#microsoft.graph.managedIOSStoreApp": return new ManagedIOSStoreApp();
+                case "#microsoft.graph.managedMobileLobApp": return new ManagedMobileLobApp();
                 case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
                 case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
                 case "#microsoft.graph.officeSuiteApp": return new OfficeSuiteApp();
                 case "#microsoft.graph.webApp": return new WebApp();
+                case "#microsoft.graph.win32LobApp": return new Win32LobApp();
+                case "#microsoft.graph.windowsAppX": return new WindowsAppX();
                 case "#microsoft.graph.windowsMicrosoftEdgeApp": return new WindowsMicrosoftEdgeApp();
+                case "#microsoft.graph.windowsMobileMSI": return new WindowsMobileMSI();
+                case "#microsoft.graph.windowsPhone81AppX": return new WindowsPhone81AppX();
+                case "#microsoft.graph.windowsPhone81AppXBundle": return new WindowsPhone81AppXBundle();
                 case "#microsoft.graph.windowsPhone81StoreApp": return new WindowsPhone81StoreApp();
+                case "#microsoft.graph.windowsPhoneXAP": return new WindowsPhoneXAP();
                 case "#microsoft.graph.windowsStoreApp": return new WindowsStoreApp();
+                case "#microsoft.graph.windowsUniversalAppX": return new WindowsUniversalAppX();
                 case "#microsoft.graph.windowsWebApp": return new WindowsWebApp();
             }
         }

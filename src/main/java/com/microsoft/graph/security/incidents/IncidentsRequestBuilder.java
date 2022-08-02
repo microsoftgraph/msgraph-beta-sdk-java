@@ -20,7 +20,7 @@ import microsoft.graph.models.security.IncidentCollectionResponse;
 import microsoft.graph.security.incidents.count.CountRequestBuilder;
 /** Provides operations to manage the incidents property of the microsoft.graph.security entity. */
 public class IncidentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

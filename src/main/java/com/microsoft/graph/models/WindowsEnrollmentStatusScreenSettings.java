@@ -26,12 +26,15 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     private Boolean _hideInstallationProgress;
     /** Set installation progress timeout in minutes */
     private Integer _installProgressTimeoutInMinutes;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new windowsEnrollmentStatusScreenSettings and sets the default values.
      * @return a void
      */
     public WindowsEnrollmentStatusScreenSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsEnrollmentStatusScreenSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,7 +101,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsEnrollmentStatusScreenSettings currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("allowDeviceUseBeforeProfileAndAppInstallComplete", (n) -> { currentObject.setAllowDeviceUseBeforeProfileAndAppInstallComplete(n.getBooleanValue()); });
             this.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
             this.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });
@@ -106,6 +109,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
             this.put("customErrorMessage", (n) -> { currentObject.setCustomErrorMessage(n.getStringValue()); });
             this.put("hideInstallationProgress", (n) -> { currentObject.setHideInstallationProgress(n.getBooleanValue()); });
             this.put("installProgressTimeoutInMinutes", (n) -> { currentObject.setInstallProgressTimeoutInMinutes(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -125,6 +129,14 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
         return this._installProgressTimeoutInMinutes;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -138,6 +150,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
         writer.writeStringValue("customErrorMessage", this.getCustomErrorMessage());
         writer.writeBooleanValue("hideInstallationProgress", this.getHideInstallationProgress());
         writer.writeIntegerValue("installProgressTimeoutInMinutes", this.getInstallProgressTimeoutInMinutes());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -203,5 +216,13 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      */
     public void setInstallProgressTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
         this._installProgressTimeoutInMinutes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

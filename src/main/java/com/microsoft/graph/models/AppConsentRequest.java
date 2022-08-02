@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AppConsentRequest extends Entity implements Parsable {
     /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
     private String _appDisplayName;
@@ -25,6 +25,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     public AppConsentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.appConsentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

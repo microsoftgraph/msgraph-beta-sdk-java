@@ -16,6 +16,7 @@ public class DeletedTeam extends Entity implements Parsable {
      */
     public DeletedTeam() {
         super();
+        this.setOdataType("#microsoft.graph.deletedTeam");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

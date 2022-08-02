@@ -253,7 +253,7 @@ public class RiskyServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityProtection.riskyServicePrincipals.item.history.item collection
      * @param id Unique identifier of the item
-     * @return a riskyServicePrincipalHistoryItemItemRequestBuilder
+     * @return a RiskyServicePrincipalHistoryItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskyServicePrincipalHistoryItemItemRequestBuilder history(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class RiskyServicePrincipalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class RiskyServicePrincipalItemRequestBuilder {
         @javax.annotation.Nullable
         public RiskyServicePrincipalItemRequestBuilderGetQueryParameters queryParameters = new RiskyServicePrincipalItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new riskyServicePrincipalItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class RiskyServicePrincipalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskyServicePrincipalItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyServicePrincipalItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyServicePrincipalItemRequestBuilderPatchRequestConfiguration() {

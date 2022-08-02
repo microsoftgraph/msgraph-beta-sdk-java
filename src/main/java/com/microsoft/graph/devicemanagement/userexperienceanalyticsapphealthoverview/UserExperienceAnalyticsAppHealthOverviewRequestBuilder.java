@@ -253,7 +253,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthOverview.metricValues.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsMetricItemRequestBuilder metricValues(@javax.annotation.Nonnull final String id) {

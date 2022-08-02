@@ -18,6 +18,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      */
     public DeviceManagementSettingProfileConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingProfileConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

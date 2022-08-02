@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsScoreHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsScoreHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsScoreHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration() {

@@ -14,6 +14,7 @@ public class ItemInsights extends OfficeGraphInsights implements Parsable {
      */
     public ItemInsights() {
         super();
+        this.setOdataType("#microsoft.graph.itemInsights");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     /** The number of devices with a compliant status. Required. Read-only. */
     private Integer _compliantDeviceCount;
@@ -34,6 +34,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     public ManagedDeviceComplianceTrend() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managedDeviceComplianceTrend");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

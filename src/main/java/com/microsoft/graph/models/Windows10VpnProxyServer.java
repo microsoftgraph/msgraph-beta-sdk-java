@@ -16,6 +16,7 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
      */
     public Windows10VpnProxyServer() {
         super();
+        this.setOdataType("#microsoft.graph.windows10VpnProxyServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

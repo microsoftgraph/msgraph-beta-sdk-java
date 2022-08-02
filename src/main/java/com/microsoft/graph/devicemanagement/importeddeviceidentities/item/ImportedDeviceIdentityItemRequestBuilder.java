@@ -307,7 +307,7 @@ public class ImportedDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new importedDeviceIdentityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedDeviceIdentityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedDeviceIdentityItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ImportedDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public ImportedDeviceIdentityItemRequestBuilderGetQueryParameters queryParameters = new ImportedDeviceIdentityItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new importedDeviceIdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedDeviceIdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedDeviceIdentityItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ImportedDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new importedDeviceIdentityItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedDeviceIdentityItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedDeviceIdentityItemRequestBuilderPatchRequestConfiguration() {

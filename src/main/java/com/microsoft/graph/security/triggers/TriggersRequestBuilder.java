@@ -308,7 +308,7 @@ public class TriggersRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.triggers.retentionEvents.item collection
      * @param id Unique identifier of the item
-     * @return a retentionEventItemRequestBuilder
+     * @return a RetentionEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RetentionEventItemRequestBuilder retentionEvents(@javax.annotation.Nonnull final String id) {

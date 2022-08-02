@@ -26,6 +26,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
      */
     public SkillProficiency() {
         super();
+        this.setOdataType("#microsoft.graph.skillProficiency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

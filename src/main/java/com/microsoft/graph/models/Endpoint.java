@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Endpoint extends DirectoryObject implements Parsable {
     /** Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only. */
     private String _capability;
@@ -25,6 +25,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     public Endpoint() {
         super();
+        this.setOdataType("#microsoft.graph.endpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

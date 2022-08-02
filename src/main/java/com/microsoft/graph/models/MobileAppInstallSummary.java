@@ -34,6 +34,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
      */
     public MobileAppInstallSummary() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppInstallSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _evaluationResult;
     /** true if the evaluation was successful. */
     private Boolean _evaluationSucceeded;
+    /** The OdataType property */
+    private String _odataType;
     /** An attributeMappingSource object representing the parsed expression. */
     private AttributeMappingSource _parsedExpression;
     /** true if the expression was parsed successfully. */
@@ -27,6 +29,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     public ParseExpressionResponse() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.parseExpressionResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +80,22 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParseExpressionResponse currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
             this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("evaluationSucceeded", (n) -> { currentObject.setEvaluationSucceeded(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parsedExpression", (n) -> { currentObject.setParsedExpression(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
             this.put("parsingSucceeded", (n) -> { currentObject.setParsingSucceeded(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
@@ -111,6 +123,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("error", this.getError());
         writer.writeCollectionOfPrimitiveValues("evaluationResult", this.getEvaluationResult());
         writer.writeBooleanValue("evaluationSucceeded", this.getEvaluationSucceeded());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("parsedExpression", this.getParsedExpression());
         writer.writeBooleanValue("parsingSucceeded", this.getParsingSucceeded());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     public void setEvaluationSucceeded(@javax.annotation.Nullable final Boolean value) {
         this._evaluationSucceeded = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.

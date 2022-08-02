@@ -18,19 +18,19 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Indicates whether the value field is encrypted. This property is read-only. */
     private Boolean _isEncrypted;
+    /** The OdataType property */
+    private String _odataType;
     /** OMA. */
     private String _omaUri;
     /** ReferenceId for looking up secret for decryption. This property is read-only. */
     private String _secretReferenceValueId;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new omaSetting and sets the default values.
      * @return a void
      */
     public OmaSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.omaSetting");
+        this.setOdataType("#microsoft.graph.omaSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,9 +90,9 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("omaUri", (n) -> { currentObject.setOmaUri(n.getStringValue()); });
             this.put("secretReferenceValueId", (n) -> { currentObject.setSecretReferenceValueId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +102,14 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsEncrypted() {
         return this._isEncrypted;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the omaUri property value. OMA.
@@ -120,14 +128,6 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         return this._secretReferenceValueId;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -137,9 +137,9 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("omaUri", this.getOmaUri());
         writer.writeStringValue("secretReferenceValueId", this.getSecretReferenceValueId());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -175,6 +175,14 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         this._isEncrypted = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the omaUri property value. OMA.
      * @param value Value to set for the omaUri property.
      * @return a void
@@ -189,13 +197,5 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      */
     public void setSecretReferenceValueId(@javax.annotation.Nullable final String value) {
         this._secretReferenceValueId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

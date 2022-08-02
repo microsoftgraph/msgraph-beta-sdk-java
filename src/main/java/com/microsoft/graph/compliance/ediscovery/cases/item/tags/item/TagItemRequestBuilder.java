@@ -39,7 +39,7 @@ public class TagItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.tags.item.childTags.item collection
      * @param id Unique identifier of the item
-     * @return a tagItemRequestBuilder
+     * @return a TagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TagItemRequestBuilder childTags(@javax.annotation.Nonnull final String id) {
@@ -331,7 +331,7 @@ public class TagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TagItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class TagItemRequestBuilder {
         @javax.annotation.Nullable
         public TagItemRequestBuilderGetQueryParameters queryParameters = new TagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TagItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class TagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tagItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TagItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TagItemRequestBuilderPatchRequestConfiguration() {

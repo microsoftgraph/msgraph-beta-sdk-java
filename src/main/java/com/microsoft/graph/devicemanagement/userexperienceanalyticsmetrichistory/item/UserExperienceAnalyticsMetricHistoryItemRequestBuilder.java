@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration() {

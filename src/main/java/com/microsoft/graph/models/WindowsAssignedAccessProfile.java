@@ -26,6 +26,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      */
     public WindowsAssignedAccessProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windowsAssignedAccessProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

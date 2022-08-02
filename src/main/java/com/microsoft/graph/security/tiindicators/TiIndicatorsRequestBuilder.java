@@ -24,7 +24,7 @@ import microsoft.graph.security.tiindicators.submittiindicators.SubmitTiIndicato
 import microsoft.graph.security.tiindicators.updatetiindicators.UpdateTiIndicatorsRequestBuilder;
 /** Provides operations to manage the tiIndicators property of the microsoft.graph.security entity. */
 public class TiIndicatorsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -12,6 +12,8 @@ import java.util.Objects;
 public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Order the devices should be sorted in. Default is ascending on device name. */
     private java.util.List<String> _orderBy;
     /** Supported platform types. */
@@ -30,6 +32,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      */
     public AssignmentFilterEvaluateRequest() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentFilterEvaluateRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +59,8 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluateRequest currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
             this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
@@ -64,6 +68,14 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
             this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
             this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the orderBy property value. Order the devices should be sorted in. Default is ascending on device name.
@@ -120,6 +132,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
         writer.writeEnumValue("platform", this.getPlatform());
         writer.writeStringValue("rule", this.getRule());
@@ -135,6 +148,14 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the orderBy property value. Order the devices should be sorted in. Default is ascending on device name.

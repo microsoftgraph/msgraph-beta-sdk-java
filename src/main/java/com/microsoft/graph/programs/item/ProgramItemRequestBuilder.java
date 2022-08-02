@@ -61,7 +61,7 @@ public class ProgramItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.programs.item.controls.item collection
      * @param id Unique identifier of the item
-     * @return a programControlItemRequestBuilder
+     * @return a ProgramControlItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProgramControlItemRequestBuilder controls(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ProgramItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new programItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ProgramItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProgramItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class ProgramItemRequestBuilder {
         @javax.annotation.Nullable
         public ProgramItemRequestBuilderGetQueryParameters queryParameters = new ProgramItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new programItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ProgramItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProgramItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class ProgramItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new programItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ProgramItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProgramItemRequestBuilderPatchRequestConfiguration() {

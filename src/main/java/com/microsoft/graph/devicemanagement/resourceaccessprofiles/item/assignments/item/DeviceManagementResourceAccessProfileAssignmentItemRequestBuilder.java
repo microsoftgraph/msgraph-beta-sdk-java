@@ -307,7 +307,7 @@ public class DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementResourceAccessProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementResourceAccessProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementResourceAccessProfileAssignmentItemRequestBuilderPatchRequestConfiguration() {

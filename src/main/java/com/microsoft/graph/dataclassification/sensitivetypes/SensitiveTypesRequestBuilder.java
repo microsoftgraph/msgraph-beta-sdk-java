@@ -20,7 +20,7 @@ import microsoft.graph.models.SensitiveType;
 import microsoft.graph.models.SensitiveTypeCollectionResponse;
 /** Provides operations to manage the sensitiveTypes property of the microsoft.graph.dataClassificationService entity. */
 public class SensitiveTypesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

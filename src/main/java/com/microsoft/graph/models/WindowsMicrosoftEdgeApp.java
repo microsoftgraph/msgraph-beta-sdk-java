@@ -18,6 +18,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     public WindowsMicrosoftEdgeApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsMicrosoftEdgeApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

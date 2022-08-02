@@ -15,17 +15,17 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     private Map<String, Object> _additionalData;
     /** Time when the history item occurred. */
     private OffsetDateTime _occurrenceDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Object containing detailed information about the error and its remediation. */
     private DeviceManagementTroubleshootingErrorDetails _troubleshootingErrorDetails;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new mobileAppTroubleshootingHistoryItem and sets the default values.
      * @return a void
      */
     public MobileAppTroubleshootingHistoryItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.mobileAppTroubleshootingHistoryItem");
+        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,8 +65,8 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
         final MobileAppTroubleshootingHistoryItem currentObject = this;
         return new HashMap<>(3) {{
             this.put("occurrenceDateTime", (n) -> { currentObject.setOccurrenceDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("troubleshootingErrorDetails", (n) -> { currentObject.setTroubleshootingErrorDetails(n.getObjectValue(DeviceManagementTroubleshootingErrorDetails::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -78,20 +78,20 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
         return this._occurrenceDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.
      * @return a deviceManagementTroubleshootingErrorDetails
      */
     @javax.annotation.Nullable
     public DeviceManagementTroubleshootingErrorDetails getTroubleshootingErrorDetails() {
         return this._troubleshootingErrorDetails;
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
     }
     /**
      * Serializes information the current object
@@ -101,8 +101,8 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("occurrenceDateTime", this.getOccurrenceDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("troubleshootingErrorDetails", this.getTroubleshootingErrorDetails());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,19 +122,19 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
         this._occurrenceDateTime = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.
      * @param value Value to set for the troubleshootingErrorDetails property.
      * @return a void
      */
     public void setTroubleshootingErrorDetails(@javax.annotation.Nullable final DeviceManagementTroubleshootingErrorDetails value) {
         this._troubleshootingErrorDetails = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

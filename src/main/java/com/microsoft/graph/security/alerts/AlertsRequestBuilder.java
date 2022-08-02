@@ -21,7 +21,7 @@ import microsoft.graph.security.alerts.count.CountRequestBuilder;
 import microsoft.graph.security.alerts.updatealerts.UpdateAlertsRequestBuilder;
 /** Provides operations to manage the alerts property of the microsoft.graph.security entity. */
 public class AlertsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

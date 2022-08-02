@@ -155,7 +155,7 @@ public class ItemActivityOLDItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemActivityOLDItemRequestBuilderGetQueryParameters queryParameters = new ItemActivityOLDItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemActivityOLDItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemActivityOLDItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemActivityOLDItemRequestBuilderGetRequestConfiguration() {

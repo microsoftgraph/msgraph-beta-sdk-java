@@ -16,6 +16,8 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The lastSeenDateTime property */
     private OffsetDateTime _lastSeenDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The riskScore property */
     private String _riskScore;
     /** The service property */
@@ -30,6 +32,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     public UserAccount() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,9 +67,10 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAccount currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
             this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
             this.put("signinName", (n) -> { currentObject.setSigninName(n.getStringValue()); });
@@ -80,6 +84,14 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this._lastSeenDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the riskScore property value. The riskScore property
@@ -122,6 +134,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("riskScore", this.getRiskScore());
         writer.writeStringValue("service", this.getService());
         writer.writeStringValue("signinName", this.getSigninName());
@@ -151,6 +164,14 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the riskScore property value. The riskScore property

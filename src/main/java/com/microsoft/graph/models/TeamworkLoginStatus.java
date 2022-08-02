@@ -13,6 +13,8 @@ public class TeamworkLoginStatus implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Information about the Exchange connection. */
     private TeamworkConnection _exchangeConnection;
+    /** The OdataType property */
+    private String _odataType;
     /** Information about the Skype for Business connection. */
     private TeamworkConnection _skypeConnection;
     /** Information about the Teams connection. */
@@ -23,6 +25,7 @@ public class TeamworkLoginStatus implements AdditionalDataHolder, Parsable {
      */
     public TeamworkLoginStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkLoginStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class TeamworkLoginStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkLoginStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("exchangeConnection", (n) -> { currentObject.setExchangeConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skypeConnection", (n) -> { currentObject.setSkypeConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
             this.put("teamsConnection", (n) -> { currentObject.setTeamsConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the skypeConnection property value. Information about the Skype for Business connection.
@@ -87,6 +99,7 @@ public class TeamworkLoginStatus implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("exchangeConnection", this.getExchangeConnection());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("skypeConnection", this.getSkypeConnection());
         writer.writeObjectValue("teamsConnection", this.getTeamsConnection());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class TeamworkLoginStatus implements AdditionalDataHolder, Parsable {
      */
     public void setExchangeConnection(@javax.annotation.Nullable final TeamworkConnection value) {
         this._exchangeConnection = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the skypeConnection property value. Information about the Skype for Business connection.

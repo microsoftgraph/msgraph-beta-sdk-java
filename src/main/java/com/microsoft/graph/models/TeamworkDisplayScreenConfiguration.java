@@ -20,6 +20,8 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     private Boolean _isHighContrastEnabled;
     /** True if screensaver is enabled. Not applicable for Teams Rooms devices. */
     private Boolean _isScreensaverEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices. */
     private Period _screensaverTimeout;
     /**
@@ -28,6 +30,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      */
     public TeamworkDisplayScreenConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkDisplayScreenConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,11 +73,12 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDisplayScreenConfiguration currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("backlightBrightness", (n) -> { currentObject.setBacklightBrightness(n.getIntegerValue()); });
             this.put("backlightTimeout", (n) -> { currentObject.setBacklightTimeout(n.getPeriodValue()); });
             this.put("isHighContrastEnabled", (n) -> { currentObject.setIsHighContrastEnabled(n.getBooleanValue()); });
             this.put("isScreensaverEnabled", (n) -> { currentObject.setIsScreensaverEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("screensaverTimeout", (n) -> { currentObject.setScreensaverTimeout(n.getPeriodValue()); });
         }};
     }
@@ -95,6 +99,14 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
         return this._isScreensaverEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the screensaverTimeout property value. Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
      * @return a Period
      */
@@ -113,6 +125,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
         writer.writePeriodValue("backlightTimeout", this.getBacklightTimeout());
         writer.writeBooleanValue("isHighContrastEnabled", this.getIsHighContrastEnabled());
         writer.writeBooleanValue("isScreensaverEnabled", this.getIsScreensaverEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writePeriodValue("screensaverTimeout", this.getScreensaverTimeout());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -155,6 +168,14 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      */
     public void setIsScreensaverEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isScreensaverEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the screensaverTimeout property value. Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.

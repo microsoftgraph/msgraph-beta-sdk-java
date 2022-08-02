@@ -155,7 +155,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public IdentityProviderBaseItemRequestBuilderGetQueryParameters queryParameters = new IdentityProviderBaseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new identityProviderBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityProviderBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityProviderBaseItemRequestBuilderGetRequestConfiguration() {

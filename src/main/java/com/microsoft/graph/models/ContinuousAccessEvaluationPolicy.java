@@ -26,6 +26,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      */
     public ContinuousAccessEvaluationPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.continuousAccessEvaluationPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

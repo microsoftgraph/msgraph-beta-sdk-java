@@ -20,7 +20,7 @@ import microsoft.graph.models.UnsupportedGroupPolicyExtension;
 import microsoft.graph.models.UnsupportedGroupPolicyExtensionCollectionResponse;
 /** Provides operations to manage the unsupportedGroupPolicyExtensions property of the microsoft.graph.groupPolicyMigrationReport entity. */
 public class UnsupportedGroupPolicyExtensionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

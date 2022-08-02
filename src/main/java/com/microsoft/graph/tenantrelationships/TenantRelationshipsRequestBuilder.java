@@ -20,6 +20,8 @@ import microsoft.graph.tenantrelationships.delegatedadmincustomers.DelegatedAdmi
 import microsoft.graph.tenantrelationships.delegatedadmincustomers.item.DelegatedAdminCustomerItemRequestBuilder;
 import microsoft.graph.tenantrelationships.delegatedadminrelationships.DelegatedAdminRelationshipsRequestBuilder;
 import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.DelegatedAdminRelationshipItemRequestBuilder;
+import microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname.FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
+import microsoft.graph.tenantrelationships.findtenantinformationbytenantidwithtenantid.FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
 import microsoft.graph.tenantrelationships.managedtenants.ManagedTenantsRequestBuilder;
 /** Provides operations to manage the tenantRelationship singleton. */
 public class TenantRelationshipsRequestBuilder {
@@ -136,7 +138,7 @@ public class TenantRelationshipsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminCustomers.item collection
      * @param id Unique identifier of the item
-     * @return a delegatedAdminCustomerItemRequestBuilder
+     * @return a DelegatedAdminCustomerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DelegatedAdminCustomerItemRequestBuilder delegatedAdminCustomers(@javax.annotation.Nonnull final String id) {
@@ -148,7 +150,7 @@ public class TenantRelationshipsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item collection
      * @param id Unique identifier of the item
-     * @return a delegatedAdminRelationshipItemRequestBuilder
+     * @return a DelegatedAdminRelationshipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DelegatedAdminRelationshipItemRequestBuilder delegatedAdminRelationships(@javax.annotation.Nonnull final String id) {
@@ -156,6 +158,26 @@ public class TenantRelationshipsRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("delegatedAdminRelationship%2Did", id);
         return new DelegatedAdminRelationshipItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to call the findTenantInformationByDomainName method.
+     * @param domainName Usage: domainName='{domainName}'
+     * @return a findTenantInformationByDomainNameWithDomainNameRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FindTenantInformationByDomainNameWithDomainNameRequestBuilder findTenantInformationByDomainNameWithDomainName(@javax.annotation.Nonnull final String domainName) {
+        Objects.requireNonNull(domainName);
+        return new FindTenantInformationByDomainNameWithDomainNameRequestBuilder(pathParameters, requestAdapter, domainName);
+    }
+    /**
+     * Provides operations to call the findTenantInformationByTenantId method.
+     * @param tenantId Usage: tenantId='{tenantId}'
+     * @return a findTenantInformationByTenantIdWithTenantIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FindTenantInformationByTenantIdWithTenantIdRequestBuilder findTenantInformationByTenantIdWithTenantId(@javax.annotation.Nonnull final String tenantId) {
+        Objects.requireNonNull(tenantId);
+        return new FindTenantInformationByTenantIdWithTenantIdRequestBuilder(pathParameters, requestAdapter, tenantId);
     }
     /**
      * Get tenantRelationships

@@ -17,6 +17,7 @@ public class AppleEnrollmentProfileAssignment extends Entity implements Parsable
      */
     public AppleEnrollmentProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.appleEnrollmentProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

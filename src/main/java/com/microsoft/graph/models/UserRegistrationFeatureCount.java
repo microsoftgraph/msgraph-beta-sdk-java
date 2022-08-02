@@ -13,6 +13,8 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** The feature property */
     private AuthenticationMethodFeature _feature;
+    /** The OdataType property */
+    private String _odataType;
     /** Number of users. */
     private Long _userCount;
     /**
@@ -21,6 +23,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     public UserRegistrationFeatureCount() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userRegistrationFeatureCount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationFeatureCount currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(AuthenticationMethodFeature.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userCount", (n) -> { currentObject.setUserCount(n.getLongValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userCount property value. Number of users.
@@ -76,6 +88,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("feature", this.getFeature());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("userCount", this.getUserCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     public void setFeature(@javax.annotation.Nullable final AuthenticationMethodFeature value) {
         this._feature = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userCount property value. Number of users.

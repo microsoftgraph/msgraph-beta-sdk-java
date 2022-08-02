@@ -16,6 +16,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      */
     public MicrosoftAccountUserConversationMember() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftAccountUserConversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

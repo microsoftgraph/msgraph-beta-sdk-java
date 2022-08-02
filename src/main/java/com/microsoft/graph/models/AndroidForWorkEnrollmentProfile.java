@@ -35,6 +35,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     public AndroidForWorkEnrollmentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkEnrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

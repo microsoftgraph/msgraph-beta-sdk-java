@@ -307,7 +307,7 @@ public class ShipmentMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new shipmentMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ShipmentMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ShipmentMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ShipmentMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public ShipmentMethodItemRequestBuilderGetQueryParameters queryParameters = new ShipmentMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new shipmentMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ShipmentMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ShipmentMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ShipmentMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new shipmentMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ShipmentMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ShipmentMethodItemRequestBuilderPatchRequestConfiguration() {

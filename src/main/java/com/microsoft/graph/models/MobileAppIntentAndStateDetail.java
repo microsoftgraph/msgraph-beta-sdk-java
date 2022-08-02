@@ -22,6 +22,8 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
     private ResultantAppState _installState;
     /** Indicates the status of the mobile app on the device. */
     private MobileAppIntent _mobileAppIntent;
+    /** The OdataType property */
+    private String _odataType;
     /** The supported platforms for the app. */
     private java.util.List<MobileAppSupportedDeviceType> _supportedDeviceTypes;
     /**
@@ -30,6 +32,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      */
     public MobileAppIntentAndStateDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mobileAppIntentAndStateDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,12 +83,13 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppIntentAndStateDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("displayVersion", (n) -> { currentObject.setDisplayVersion(n.getStringValue()); });
             this.put("installState", (n) -> { currentObject.setInstallState(n.getEnumValue(ResultantAppState.class)); });
             this.put("mobileAppIntent", (n) -> { currentObject.setMobileAppIntent(n.getEnumValue(MobileAppIntent.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("supportedDeviceTypes", (n) -> { currentObject.setSupportedDeviceTypes(n.getCollectionOfObjectValues(MobileAppSupportedDeviceType::createFromDiscriminatorValue)); });
         }};
     }
@@ -104,6 +108,14 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public MobileAppIntent getMobileAppIntent() {
         return this._mobileAppIntent;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the supportedDeviceTypes property value. The supported platforms for the app.
@@ -125,6 +137,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
         writer.writeEnumValue("installState", this.getInstallState());
         writer.writeEnumValue("mobileAppIntent", this.getMobileAppIntent());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("supportedDeviceTypes", this.getSupportedDeviceTypes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -175,6 +188,14 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      */
     public void setMobileAppIntent(@javax.annotation.Nullable final MobileAppIntent value) {
         this._mobileAppIntent = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the supportedDeviceTypes property value. The supported platforms for the app.

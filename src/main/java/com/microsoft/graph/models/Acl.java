@@ -15,6 +15,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The identitySource property */
     private IdentitySourceType _identitySource;
+    /** The OdataType property */
+    private String _odataType;
     /** The type property */
     private AclType _type;
     /** The value property */
@@ -25,6 +27,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      */
     public Acl() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.acl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class Acl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Acl currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(AccessType.class)); });
             this.put("identitySource", (n) -> { currentObject.setIdentitySource(n.getEnumValue(IdentitySourceType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AclType.class)); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
@@ -73,6 +77,14 @@ public class Acl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySourceType getIdentitySource() {
         return this._identitySource;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. The type property
@@ -99,6 +111,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessType", this.getAccessType());
         writer.writeEnumValue("identitySource", this.getIdentitySource());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class Acl implements AdditionalDataHolder, Parsable {
      */
     public void setIdentitySource(@javax.annotation.Nullable final IdentitySourceType value) {
         this._identitySource = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. The type property

@@ -155,7 +155,7 @@ public class AgedAccountsReceivableItemRequestBuilder {
         @javax.annotation.Nullable
         public AgedAccountsReceivableItemRequestBuilderGetQueryParameters queryParameters = new AgedAccountsReceivableItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new agedAccountsReceivableItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AgedAccountsReceivableItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgedAccountsReceivableItemRequestBuilderGetRequestConfiguration() {

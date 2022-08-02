@@ -307,7 +307,7 @@ public class CloudPcUserSettingAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcUserSettingAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcUserSettingAssignmentItemRequestBuilderGetQueryParameters queryParameters = new CloudPcUserSettingAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcUserSettingAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration() {

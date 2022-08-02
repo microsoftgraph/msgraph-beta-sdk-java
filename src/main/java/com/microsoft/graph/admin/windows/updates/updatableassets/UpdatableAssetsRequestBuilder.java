@@ -24,7 +24,7 @@ import microsoft.graph.models.windowsupdates.UpdatableAsset;
 import microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 /** Provides operations to manage the updatableAssets property of the microsoft.graph.windowsUpdates.updates entity. */
 public class UpdatableAssetsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

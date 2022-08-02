@@ -18,6 +18,8 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     private Boolean _isCollection;
     /** Name of the property. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Regex string to do validation on the property value. */
     private String _propertyRegexConstraint;
     /** List of all supported operators on this property. */
@@ -30,6 +32,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      */
     public AssignmentFilterSupportedProperty() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentFilterSupportedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,11 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterSupportedProperty currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getStringValue()); });
             this.put("isCollection", (n) -> { currentObject.setIsCollection(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("propertyRegexConstraint", (n) -> { currentObject.setPropertyRegexConstraint(n.getStringValue()); });
             this.put("supportedOperators", (n) -> { currentObject.setSupportedOperators(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("supportedValues", (n) -> { currentObject.setSupportedValues(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -88,6 +92,14 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the propertyRegexConstraint property value. Regex string to do validation on the property value.
@@ -123,6 +135,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         writer.writeStringValue("dataType", this.getDataType());
         writer.writeBooleanValue("isCollection", this.getIsCollection());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("propertyRegexConstraint", this.getPropertyRegexConstraint());
         writer.writeCollectionOfPrimitiveValues("supportedOperators", this.getSupportedOperators());
         writer.writeCollectionOfPrimitiveValues("supportedValues", this.getSupportedValues());
@@ -159,6 +172,14 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the propertyRegexConstraint property value. Regex string to do validation on the property value.

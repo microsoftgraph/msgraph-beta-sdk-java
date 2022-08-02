@@ -15,6 +15,8 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     private SynchronizationJobSubject _manager;
     /** All group members that you would like to provision. */
     private java.util.List<SynchronizationJobSubject> _members;
+    /** The OdataType property */
+    private String _odataType;
     /** The owners property */
     private java.util.List<SynchronizationJobSubject> _owners;
     /**
@@ -23,6 +25,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      */
     public SynchronizationLinkedObjects() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationLinkedObjects");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationLinkedObjects currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(SynchronizationJobSubject::createFromDiscriminatorValue)); });
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(SynchronizationJobSubject::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("owners", (n) -> { currentObject.setOwners(n.getCollectionOfObjectValues(SynchronizationJobSubject::createFromDiscriminatorValue)); });
         }};
     }
@@ -72,6 +76,14 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
         return this._members;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the owners property value. The owners property
      * @return a synchronizationJobSubject
      */
@@ -88,6 +100,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeObjectValue("manager", this.getManager());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      */
     public void setMembers(@javax.annotation.Nullable final java.util.List<SynchronizationJobSubject> value) {
         this._members = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the owners property value. The owners property

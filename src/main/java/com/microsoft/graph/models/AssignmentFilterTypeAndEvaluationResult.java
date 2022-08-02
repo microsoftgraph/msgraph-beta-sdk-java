@@ -16,12 +16,15 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
     private DeviceAndAppManagementAssignmentFilterType _assignmentFilterType;
     /** Supported evaluation results for filter. */
     private AssignmentFilterEvaluationResult _evaluationResult;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new assignmentFilterTypeAndEvaluationResult and sets the default values.
      * @return a void
      */
     public AssignmentFilterTypeAndEvaluationResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentFilterTypeAndEvaluationResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,19 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterTypeAndEvaluationResult currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("assignmentFilterType", (n) -> { currentObject.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
             this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -78,6 +90,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentFilterType", this.getAssignmentFilterType());
         writer.writeEnumValue("evaluationResult", this.getEvaluationResult());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      */
     public void setEvaluationResult(@javax.annotation.Nullable final AssignmentFilterEvaluationResult value) {
         this._evaluationResult = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

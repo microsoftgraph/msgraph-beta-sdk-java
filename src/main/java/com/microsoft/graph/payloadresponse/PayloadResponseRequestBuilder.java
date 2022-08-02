@@ -20,7 +20,7 @@ import microsoft.graph.models.PayloadResponseCollectionResponse;
 import microsoft.graph.payloadresponse.count.CountRequestBuilder;
 /** Provides operations to manage the collection of payloadResponse entities. */
 public class PayloadResponseRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

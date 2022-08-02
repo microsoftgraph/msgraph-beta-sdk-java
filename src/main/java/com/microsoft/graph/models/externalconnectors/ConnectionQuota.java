@@ -17,6 +17,7 @@ public class ConnectionQuota extends Entity implements Parsable {
      */
     public ConnectionQuota() {
         super();
+        this.setOdataType("#microsoft.graph.externalConnectors.connectionQuota");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

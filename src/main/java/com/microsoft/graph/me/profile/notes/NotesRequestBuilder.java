@@ -20,7 +20,7 @@ import microsoft.graph.models.PersonAnnotation;
 import microsoft.graph.models.PersonAnnotationCollectionResponse;
 /** Provides operations to manage the notes property of the microsoft.graph.profile entity. */
 public class NotesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

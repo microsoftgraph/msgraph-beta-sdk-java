@@ -29,6 +29,7 @@ public class AzureADUserFeatureUsage extends Entity implements Parsable {
      */
     public AzureADUserFeatureUsage() {
         super();
+        this.setOdataType("#microsoft.graph.azureADUserFeatureUsage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

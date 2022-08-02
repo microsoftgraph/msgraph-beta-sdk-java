@@ -18,6 +18,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     public QualityUpdateCatalogEntry() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

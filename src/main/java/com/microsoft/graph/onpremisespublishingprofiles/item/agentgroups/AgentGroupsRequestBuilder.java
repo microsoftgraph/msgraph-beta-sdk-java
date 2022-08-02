@@ -20,7 +20,7 @@ import microsoft.graph.models.OnPremisesAgentGroupCollectionResponse;
 import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.count.CountRequestBuilder;
 /** Provides operations to manage the agentGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
 public class AgentGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

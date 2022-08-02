@@ -17,6 +17,8 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     private String _azureAdUserId;
     /** The domainName property */
     private String _domainName;
+    /** The OdataType property */
+    private String _odataType;
     /** The userPrincipalName property */
     private String _userPrincipalName;
     /** The userSid property */
@@ -27,6 +29,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     public UserAccount() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.userAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +80,22 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAccount currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("azureAdUserId", (n) -> { currentObject.setAzureAdUserId(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
             this.put("userSid", (n) -> { currentObject.setUserSid(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName property
@@ -111,6 +123,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("accountName", this.getAccountName());
         writer.writeStringValue("azureAdUserId", this.getAzureAdUserId());
         writer.writeStringValue("domainName", this.getDomainName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeStringValue("userSid", this.getUserSid());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     public void setDomainName(@javax.annotation.Nullable final String value) {
         this._domainName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName property

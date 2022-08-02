@@ -13,6 +13,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     private Map<String, Object> _additionalData;
     /** The appliesTo property */
     private EducationUserRole _appliesTo;
+    /** The OdataType property */
+    private String _odataType;
     /** The name of the source property, which should be a field name in the source data. This property is case-sensitive. */
     private String _sourcePropertyName;
     /** The domain to suffix with the source property to match on the target. If provided as null, the source property will be used to match with the target property. */
@@ -25,6 +27,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      */
     public EducationIdentityMatchingOptions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationIdentityMatchingOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,21 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityMatchingOptions currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourcePropertyName", (n) -> { currentObject.setSourcePropertyName(n.getStringValue()); });
             this.put("targetDomain", (n) -> { currentObject.setTargetDomain(n.getStringValue()); });
             this.put("targetPropertyName", (n) -> { currentObject.setTargetPropertyName(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sourcePropertyName property value. The name of the source property, which should be a field name in the source data. This property is case-sensitive.
@@ -98,6 +110,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sourcePropertyName", this.getSourcePropertyName());
         writer.writeStringValue("targetDomain", this.getTargetDomain());
         writer.writeStringValue("targetPropertyName", this.getTargetPropertyName());
@@ -118,6 +131,14 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      */
     public void setAppliesTo(@javax.annotation.Nullable final EducationUserRole value) {
         this._appliesTo = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sourcePropertyName property value. The name of the source property, which should be a field name in the source data. This property is case-sensitive.

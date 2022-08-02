@@ -16,6 +16,8 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
     private Integer _devicesNotAutopilotRegistered;
     /** The count of intune devices not autopilot profile assigned. */
     private Integer _devicesWithoutAutopilotProfileAssigned;
+    /** The OdataType property */
+    private String _odataType;
     /** The count of windows 10 devices that are Intune and Comanaged. */
     private Integer _totalWindows10DevicesWithoutTenantAttached;
     /**
@@ -24,6 +26,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      */
     public UserExperienceAnalyticsAutopilotDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAutopilotDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAutopilotDevicesSummary currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("devicesNotAutopilotRegistered", (n) -> { currentObject.setDevicesNotAutopilotRegistered(n.getIntegerValue()); });
             this.put("devicesWithoutAutopilotProfileAssigned", (n) -> { currentObject.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("totalWindows10DevicesWithoutTenantAttached", (n) -> { currentObject.setTotalWindows10DevicesWithoutTenantAttached(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the totalWindows10DevicesWithoutTenantAttached property value. The count of windows 10 devices that are Intune and Comanaged.
@@ -89,6 +101,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("devicesNotAutopilotRegistered", this.getDevicesNotAutopilotRegistered());
         writer.writeIntegerValue("devicesWithoutAutopilotProfileAssigned", this.getDevicesWithoutAutopilotProfileAssigned());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("totalWindows10DevicesWithoutTenantAttached", this.getTotalWindows10DevicesWithoutTenantAttached());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      */
     public void setDevicesWithoutAutopilotProfileAssigned(@javax.annotation.Nullable final Integer value) {
         this._devicesWithoutAutopilotProfileAssigned = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the totalWindows10DevicesWithoutTenantAttached property value. The count of windows 10 devices that are Intune and Comanaged.

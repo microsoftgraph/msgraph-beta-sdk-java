@@ -34,12 +34,15 @@ public class EntitlementManagement extends Entity implements Parsable {
     private java.util.List<ConnectedOrganization> _connectedOrganizations;
     /** Represents the settings that control the behavior of Azure AD entitlement management. */
     private EntitlementManagementSettings _settings;
+    /** The subjects property */
+    private java.util.List<AccessPackageSubject> _subjects;
     /**
      * Instantiates a new EntitlementManagement and sets the default values.
      * @return a void
      */
     public EntitlementManagement() {
         super();
+        this.setOdataType("#microsoft.graph.entitlementManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -168,6 +171,7 @@ public class EntitlementManagement extends Entity implements Parsable {
             this.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
             this.put("connectedOrganizations", (n) -> { currentObject.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
+            this.put("subjects", (n) -> { currentObject.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -177,6 +181,14 @@ public class EntitlementManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EntitlementManagementSettings getSettings() {
         return this._settings;
+    }
+    /**
+     * Gets the subjects property value. The subjects property
+     * @return a accessPackageSubject
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageSubject> getSubjects() {
+        return this._subjects;
     }
     /**
      * Serializes information the current object
@@ -199,6 +211,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("accessPackages", this.getAccessPackages());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
         writer.writeObjectValue("settings", this.getSettings());
+        writer.writeCollectionOfObjectValues("subjects", this.getSubjects());
     }
     /**
      * Sets the accessPackageAssignmentApprovals property value. Approval stages for decisions associated with access package assignment requests.
@@ -303,5 +316,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setSettings(@javax.annotation.Nullable final EntitlementManagementSettings value) {
         this._settings = value;
+    }
+    /**
+     * Sets the subjects property value. The subjects property
+     * @param value Value to set for the subjects property.
+     * @return a void
+     */
+    public void setSubjects(@javax.annotation.Nullable final java.util.List<AccessPackageSubject> value) {
+        this._subjects = value;
     }
 }

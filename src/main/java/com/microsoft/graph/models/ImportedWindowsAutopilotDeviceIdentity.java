@@ -28,6 +28,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     public ImportedWindowsAutopilotDeviceIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

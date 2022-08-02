@@ -16,6 +16,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
      */
     public DeviceManagementSettingEnrollmentTypeConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

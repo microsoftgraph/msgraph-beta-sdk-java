@@ -20,7 +20,7 @@ import microsoft.graph.models.OutboundSharedUserProfile;
 import microsoft.graph.models.OutboundSharedUserProfileCollectionResponse;
 /** Provides operations to manage the outboundSharedUserProfiles property of the microsoft.graph.directory entity. */
 public class OutboundSharedUserProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

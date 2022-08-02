@@ -16,6 +16,7 @@ public class BusinessFlowTemplate extends Entity implements Parsable {
      */
     public BusinessFlowTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.businessFlowTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

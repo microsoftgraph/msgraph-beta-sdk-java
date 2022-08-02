@@ -307,7 +307,7 @@ public class ItemAddressItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemAddressItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemAddressItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemAddressItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ItemAddressItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemAddressItemRequestBuilderGetQueryParameters queryParameters = new ItemAddressItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemAddressItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemAddressItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemAddressItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ItemAddressItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemAddressItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemAddressItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemAddressItemRequestBuilderPatchRequestConfiguration() {

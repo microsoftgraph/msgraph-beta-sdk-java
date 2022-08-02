@@ -24,6 +24,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      */
     public TextClassificationRequest() {
         super();
+        this.setOdataType("#microsoft.graph.textClassificationRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

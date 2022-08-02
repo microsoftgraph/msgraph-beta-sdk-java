@@ -17,6 +17,8 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     private Long _maximum;
     /** The minimum property */
     private Long _minimum;
+    /** The OdataType property */
+    private String _odataType;
     /** The inclusive lower bound of the integer range. */
     private Long _start;
     /**
@@ -25,6 +27,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     public IntegerRange() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.integerRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,10 +62,11 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntegerRange currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getLongValue()); });
             this.put("maximum", (n) -> { currentObject.setMaximum(n.getLongValue()); });
             this.put("minimum", (n) -> { currentObject.setMinimum(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("start", (n) -> { currentObject.setStart(n.getLongValue()); });
         }};
     }
@@ -83,6 +87,14 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
         return this._minimum;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the start property value. The inclusive lower bound of the integer range.
      * @return a int64
      */
@@ -100,6 +112,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
         writer.writeLongValue("end", this.getEnd());
         writer.writeLongValue("maximum", this.getMaximum());
         writer.writeLongValue("minimum", this.getMinimum());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("start", this.getStart());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     public void setMinimum(@javax.annotation.Nullable final Long value) {
         this._minimum = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the start property value. The inclusive lower bound of the integer range.

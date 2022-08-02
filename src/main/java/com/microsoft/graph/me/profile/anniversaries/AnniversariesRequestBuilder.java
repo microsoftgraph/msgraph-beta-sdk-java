@@ -20,7 +20,7 @@ import microsoft.graph.models.PersonAnnualEvent;
 import microsoft.graph.models.PersonAnnualEventCollectionResponse;
 /** Provides operations to manage the anniversaries property of the microsoft.graph.profile entity. */
 public class AnniversariesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

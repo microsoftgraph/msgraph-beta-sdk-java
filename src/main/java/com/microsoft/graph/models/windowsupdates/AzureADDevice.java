@@ -18,6 +18,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      */
     public AzureADDevice() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.azureADDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,7 @@ import microsoft.graph.applications.item.appmanagementpolicies.item.ref.RefReque
 public class AppManagementPolicyItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

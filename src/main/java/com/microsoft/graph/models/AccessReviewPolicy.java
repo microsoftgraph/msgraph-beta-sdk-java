@@ -20,6 +20,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      */
     public AccessReviewPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

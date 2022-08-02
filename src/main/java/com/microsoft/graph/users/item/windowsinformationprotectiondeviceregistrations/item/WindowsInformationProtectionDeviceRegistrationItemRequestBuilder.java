@@ -155,7 +155,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration() {

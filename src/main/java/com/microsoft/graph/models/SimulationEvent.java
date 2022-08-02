@@ -15,12 +15,15 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     private Integer _count;
     /** Name of the simulation event in an attack simulation and training campaign. */
     private String _eventName;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new simulationEvent and sets the default values.
      * @return a void
      */
     public SimulationEvent() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.simulationEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationEvent currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
             this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("count", this.getCount());
         writer.writeStringValue("eventName", this.getEventName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     public void setEventName(@javax.annotation.Nullable final String value) {
         this._eventName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

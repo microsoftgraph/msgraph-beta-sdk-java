@@ -33,6 +33,7 @@ public class Qna extends SearchAnswer implements Parsable {
      */
     public Qna() {
         super();
+        this.setOdataType("#microsoft.graph.search.qna");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

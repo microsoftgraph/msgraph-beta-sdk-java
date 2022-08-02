@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Devices that are managed or pre-enrolled through Intune */
 public class ManagedDevice extends Entity implements Parsable {
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
     private Boolean _aadRegistered;
@@ -25,7 +26,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _azureADDeviceId;
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
     private Boolean _azureADRegistered;
-    /** Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only. */
+    /** Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only. */
     private Boolean _bootstrapTokenEscrowed;
     /** Chassis type. */
     private ChassisType _chassisType;
@@ -192,17 +193,17 @@ public class ManagedDevice extends Entity implements Parsable {
     /** Count of remediated malware for this windows device. This property is read-only. */
     private Integer _windowsRemediatedMalwareCount;
     /**
-     * Instantiates a new ManagedDevice and sets the default values.
+     * Instantiates a new managedDevice and sets the default values.
      * @return a void
      */
     public ManagedDevice() {
         super();
-        this.setType("#microsoft.graph.managedDevice");
+        this.setOdataType("#microsoft.graph.managedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDevice
+     * @return a managedDevice
      */
     @javax.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -281,7 +282,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._azureADRegistered;
     }
     /**
-     * Gets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
+     * Gets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1210,7 +1211,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._azureADRegistered = value;
     }
     /**
-     * Sets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
+     * Sets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
      * @param value Value to set for the bootstrapTokenEscrowed property.
      * @return a void
      */

@@ -20,7 +20,7 @@ import microsoft.graph.models.windowsupdates.CatalogEntry;
 import microsoft.graph.models.windowsupdates.CatalogEntryCollectionResponse;
 /** Provides operations to manage the entries property of the microsoft.graph.windowsUpdates.catalog entity. */
 public class EntriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -16,6 +16,8 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
     private Boolean _allowUpdateConfigurationOverride;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _deferUpdateDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The updateWindow property */
     private UpdateWindow _updateWindow;
     /**
@@ -24,6 +26,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     public HybridAgentUpdaterConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.hybridAgentUpdaterConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HybridAgentUpdaterConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("allowUpdateConfigurationOverride", (n) -> { currentObject.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
             this.put("deferUpdateDateTime", (n) -> { currentObject.setDeferUpdateDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("updateWindow", (n) -> { currentObject.setUpdateWindow(n.getObjectValue(UpdateWindow::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the updateWindow property value. The updateWindow property
@@ -89,6 +101,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowUpdateConfigurationOverride", this.getAllowUpdateConfigurationOverride());
         writer.writeOffsetDateTimeValue("deferUpdateDateTime", this.getDeferUpdateDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("updateWindow", this.getUpdateWindow());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     public void setDeferUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deferUpdateDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the updateWindow property value. The updateWindow property

@@ -25,6 +25,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      */
     public EducationalActivity() {
         super();
+        this.setOdataType("#microsoft.graph.educationalActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

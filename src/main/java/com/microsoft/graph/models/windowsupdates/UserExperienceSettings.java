@@ -13,12 +13,15 @@ public class UserExperienceSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Specifies the number of days after an update is installed, during which the user of the device can control when the device restarts. */
     private Integer _daysUntilForcedReboot;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new userExperienceSettings and sets the default values.
      * @return a void
      */
     public UserExperienceSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsUpdates.userExperienceSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class UserExperienceSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceSettings currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("daysUntilForcedReboot", (n) -> { currentObject.setDaysUntilForcedReboot(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class UserExperienceSettings implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("daysUntilForcedReboot", this.getDaysUntilForcedReboot());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class UserExperienceSettings implements AdditionalDataHolder, Parsable {
      */
     public void setDaysUntilForcedReboot(@javax.annotation.Nullable final Integer value) {
         this._daysUntilForcedReboot = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

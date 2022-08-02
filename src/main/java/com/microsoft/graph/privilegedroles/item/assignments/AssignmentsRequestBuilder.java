@@ -19,7 +19,7 @@ import microsoft.graph.models.PrivilegedRoleAssignmentCollectionResponse;
 import microsoft.graph.privilegedroles.item.assignments.count.CountRequestBuilder;
 /** Provides operations to manage the assignments property of the microsoft.graph.privilegedRole entity. */
 public class AssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

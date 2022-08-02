@@ -11,6 +11,8 @@ import java.util.Objects;
 public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Information about the publication process that created this task. null value indicates that the task was not created by a publication process. */
     private PlannerTeamsPublicationInfo _teamsPublicationInfo;
     /**
@@ -19,6 +21,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      */
     public PlannerTaskCreation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.plannerTaskCreation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,9 +48,18 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTaskCreation currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("teamsPublicationInfo", (n) -> { currentObject.setTeamsPublicationInfo(n.getObjectValue(PlannerTeamsPublicationInfo::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the teamsPublicationInfo property value. Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
@@ -64,6 +76,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("teamsPublicationInfo", this.getTeamsPublicationInfo());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -74,6 +87,14 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the teamsPublicationInfo property value. Information about the publication process that created this task. null value indicates that the task was not created by a publication process.

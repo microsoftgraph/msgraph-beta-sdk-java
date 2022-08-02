@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ChecklistItem extends Entity implements Parsable {
     /** The date and time when the checklistItem was finished. */
     private OffsetDateTime _checkedDateTime;
@@ -24,6 +24,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     public ChecklistItem() {
         super();
+        this.setOdataType("#microsoft.graph.checklistItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

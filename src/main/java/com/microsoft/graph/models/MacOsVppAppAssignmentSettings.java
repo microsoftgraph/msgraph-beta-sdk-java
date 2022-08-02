@@ -18,6 +18,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     public MacOsVppAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.macOsVppAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

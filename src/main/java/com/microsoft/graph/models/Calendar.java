@@ -56,6 +56,7 @@ public class Calendar extends Entity implements Parsable {
      */
     public Calendar() {
         super();
+        this.setOdataType("#microsoft.graph.calendar");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class WindowsProtectionStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsProtectionStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsProtectionStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsProtectionStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsProtectionStateItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsProtectionStateItemRequestBuilderGetQueryParameters queryParameters = new WindowsProtectionStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsProtectionStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsProtectionStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsProtectionStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsProtectionStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsProtectionStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsProtectionStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsProtectionStateItemRequestBuilderPatchRequestConfiguration() {

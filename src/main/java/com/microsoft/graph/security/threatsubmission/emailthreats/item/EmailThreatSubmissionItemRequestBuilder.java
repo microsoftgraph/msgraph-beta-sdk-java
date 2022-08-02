@@ -307,7 +307,7 @@ public class EmailThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new emailThreatSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EmailThreatSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmailThreatSubmissionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EmailThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public EmailThreatSubmissionItemRequestBuilderGetQueryParameters queryParameters = new EmailThreatSubmissionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new emailThreatSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EmailThreatSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmailThreatSubmissionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EmailThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new emailThreatSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EmailThreatSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmailThreatSubmissionItemRequestBuilderPatchRequestConfiguration() {

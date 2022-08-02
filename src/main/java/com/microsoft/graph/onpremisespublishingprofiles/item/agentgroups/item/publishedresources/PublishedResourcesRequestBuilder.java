@@ -20,7 +20,7 @@ import microsoft.graph.models.PublishedResourceCollectionResponse;
 import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.publishedresources.count.CountRequestBuilder;
 /** Provides operations to manage the publishedResources property of the microsoft.graph.onPremisesAgentGroup entity. */
 public class PublishedResourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

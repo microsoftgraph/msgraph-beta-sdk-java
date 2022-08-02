@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SharedEmailDomain extends Entity implements Parsable {
     /** The provisioningStatus property */
     private String _provisioningStatus;
@@ -17,6 +17,7 @@ public class SharedEmailDomain extends Entity implements Parsable {
      */
     public SharedEmailDomain() {
         super();
+        this.setOdataType("#microsoft.graph.sharedEmailDomain");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

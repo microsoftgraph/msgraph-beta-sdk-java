@@ -16,6 +16,7 @@ public class GroupPolicyPresentationValueBoolean extends GroupPolicyPresentation
      */
     public GroupPolicyPresentationValueBoolean() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationValueBoolean");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

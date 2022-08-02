@@ -21,7 +21,7 @@ import microsoft.graph.models.DeviceManagementScriptCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceManagementScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementScriptsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

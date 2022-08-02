@@ -13,6 +13,8 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The identifier of the X.509 certificate. Required. */
     private String _identifier;
+    /** The OdataType property */
+    private String _odataType;
     /** The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required. */
     private X509CertificateAuthenticationMode _x509CertificateAuthenticationMode;
     /** The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required. */
@@ -23,6 +25,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
      */
     public X509CertificateRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.x509CertificateRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final X509CertificateRule currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("x509CertificateAuthenticationMode", (n) -> { currentObject.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
             this.put("x509CertificateRuleType", (n) -> { currentObject.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType.class)); });
         }};
@@ -62,6 +66,14 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getIdentifier() {
         return this._identifier;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
@@ -87,6 +99,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("identifier", this.getIdentifier());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("x509CertificateAuthenticationMode", this.getX509CertificateAuthenticationMode());
         writer.writeEnumValue("x509CertificateRuleType", this.getX509CertificateRuleType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
      */
     public void setIdentifier(@javax.annotation.Nullable final String value) {
         this._identifier = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.

@@ -24,6 +24,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      */
     public WindowsKioskMultipleApps() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskMultipleApps");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

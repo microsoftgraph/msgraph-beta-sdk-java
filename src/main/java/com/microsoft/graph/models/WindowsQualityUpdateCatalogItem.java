@@ -20,6 +20,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      */
     public WindowsQualityUpdateCatalogItem() {
         super();
+        this.setOdataType("#microsoft.graph.windowsQualityUpdateCatalogItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

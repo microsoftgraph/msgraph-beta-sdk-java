@@ -20,7 +20,7 @@ import microsoft.graph.models.BusinessFlowCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the businessFlows property of the microsoft.graph.approvalWorkflowProvider entity. */
 public class BusinessFlowsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

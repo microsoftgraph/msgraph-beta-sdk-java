@@ -58,7 +58,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      */
     public AppleVpnConfiguration() {
         super();
-        this.setType("#microsoft.graph.appleVpnConfiguration");
+        this.setOdataType("#microsoft.graph.appleVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,6 +72,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.iosikEv2VpnConfiguration": return new IosikEv2VpnConfiguration();
                 case "#microsoft.graph.iosVpnConfiguration": return new IosVpnConfiguration();
                 case "#microsoft.graph.macOSVpnConfiguration": return new MacOSVpnConfiguration();
             }

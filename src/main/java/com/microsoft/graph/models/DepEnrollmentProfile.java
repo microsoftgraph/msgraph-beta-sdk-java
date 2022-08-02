@@ -62,6 +62,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      */
     public DepEnrollmentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.depEnrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

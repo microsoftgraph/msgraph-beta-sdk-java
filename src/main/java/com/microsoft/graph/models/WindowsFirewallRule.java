@@ -30,6 +30,8 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _localPortRanges;
     /** Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format. */
     private String _localUserAuthorizations;
+    /** The OdataType property */
+    private String _odataType;
     /** The package family name of a Microsoft Store application that's affected by the firewall rule. */
     private String _packageFamilyName;
     /** Flags representing which network profile types apply to a firewall rule. */
@@ -50,6 +52,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      */
     public WindowsFirewallRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsFirewallRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -108,7 +111,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFirewallRule currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<>(17) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(StateManagementSetting.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -118,6 +121,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
             this.put("localAddressRanges", (n) -> { currentObject.setLocalAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("localPortRanges", (n) -> { currentObject.setLocalPortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("localUserAuthorizations", (n) -> { currentObject.setLocalUserAuthorizations(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });
             this.put("profileTypes", (n) -> { currentObject.setProfileTypes(n.getEnumValue(WindowsFirewallRuleNetworkProfileTypes.class)); });
             this.put("protocol", (n) -> { currentObject.setProtocol(n.getIntegerValue()); });
@@ -166,6 +170,14 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLocalUserAuthorizations() {
         return this._localUserAuthorizations;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
@@ -239,6 +251,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("localAddressRanges", this.getLocalAddressRanges());
         writer.writeCollectionOfPrimitiveValues("localPortRanges", this.getLocalPortRanges());
         writer.writeStringValue("localUserAuthorizations", this.getLocalUserAuthorizations());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("packageFamilyName", this.getPackageFamilyName());
         writer.writeEnumValue("profileTypes", this.getProfileTypes());
         writer.writeIntegerValue("protocol", this.getProtocol());
@@ -327,6 +340,14 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      */
     public void setLocalUserAuthorizations(@javax.annotation.Nullable final String value) {
         this._localUserAuthorizations = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.

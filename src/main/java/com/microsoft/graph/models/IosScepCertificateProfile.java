@@ -34,6 +34,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     public IosScepCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.iosScepCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

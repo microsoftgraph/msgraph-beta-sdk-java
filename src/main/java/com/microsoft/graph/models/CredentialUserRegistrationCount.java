@@ -18,6 +18,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      */
     public CredentialUserRegistrationCount() {
         super();
+        this.setOdataType("#microsoft.graph.credentialUserRegistrationCount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

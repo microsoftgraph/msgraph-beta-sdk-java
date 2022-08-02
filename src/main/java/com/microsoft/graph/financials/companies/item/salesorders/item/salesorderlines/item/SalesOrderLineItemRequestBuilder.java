@@ -254,7 +254,7 @@ public class SalesOrderLineItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesOrderLineItemRequestBuilderGetQueryParameters queryParameters = new SalesOrderLineItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesOrderLineItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesOrderLineItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesOrderLineItemRequestBuilderGetRequestConfiguration() {
@@ -269,7 +269,7 @@ public class SalesOrderLineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesOrderLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesOrderLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesOrderLineItemRequestBuilderPatchRequestConfiguration() {

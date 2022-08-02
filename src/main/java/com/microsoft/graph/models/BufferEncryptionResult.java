@@ -13,6 +13,8 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The encryptedBuffer property */
     private byte[] _encryptedBuffer;
+    /** The OdataType property */
+    private String _odataType;
     /** The publishingLicense property */
     private byte[] _publishingLicense;
     /**
@@ -21,6 +23,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      */
     public BufferEncryptionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bufferEncryptionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BufferEncryptionResult currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("encryptedBuffer", (n) -> { currentObject.setEncryptedBuffer(n.getByteArrayValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("publishingLicense", (n) -> { currentObject.setPublishingLicense(n.getByteArrayValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the publishingLicense property value. The publishingLicense property
@@ -76,6 +88,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("encryptedBuffer", this.getEncryptedBuffer());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeByteArrayValue("publishingLicense", this.getPublishingLicense());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      */
     public void setEncryptedBuffer(@javax.annotation.Nullable final byte[] value) {
         this._encryptedBuffer = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the publishingLicense property value. The publishingLicense property

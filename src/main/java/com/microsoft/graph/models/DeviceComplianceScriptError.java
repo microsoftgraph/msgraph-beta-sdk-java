@@ -17,15 +17,15 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
     private DeviceComplianceScriptRulesValidationError _deviceComplianceScriptRulesValidationError;
     /** Error message. */
     private String _message;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceComplianceScriptError and sets the default values.
      * @return a void
      */
     public DeviceComplianceScriptError() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.deviceComplianceScriptError");
+        this.setOdataType("#microsoft.graph.deviceComplianceScriptError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,7 +79,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
             this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(Code.class)); });
             this.put("deviceComplianceScriptRulesValidationError", (n) -> { currentObject.setDeviceComplianceScriptRulesValidationError(n.getEnumValue(DeviceComplianceScriptRulesValidationError.class)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -91,12 +91,12 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         return this._message;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -108,7 +108,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         writer.writeEnumValue("code", this.getCode());
         writer.writeEnumValue("deviceComplianceScriptRulesValidationError", this.getDeviceComplianceScriptRulesValidationError());
         writer.writeStringValue("message", this.getMessage());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -144,11 +144,11 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
         this._message = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

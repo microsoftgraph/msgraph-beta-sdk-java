@@ -53,6 +53,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      */
     public Office365GroupsActivityDetail() {
         super();
+        this.setOdataType("#microsoft.graph.office365GroupsActivityDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

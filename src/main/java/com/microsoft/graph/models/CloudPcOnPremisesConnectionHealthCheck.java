@@ -20,6 +20,8 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     private OffsetDateTime _endDateTime;
     /** The type of error that occurred during this health check. */
     private CloudPcOnPremisesConnectionHealthCheckErrorType _errorType;
+    /** The OdataType property */
+    private String _odataType;
     /** The recommended action to fix the corresponding error. */
     private String _recommendedAction;
     /** The start time of the health check item. Read-only. */
@@ -32,6 +34,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     public CloudPcOnPremisesConnectionHealthCheck() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcOnPremisesConnectionHealthCheck");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,15 +93,24 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOnPremisesConnectionHealthCheck currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("errorType", (n) -> { currentObject.setErrorType(n.getEnumValue(CloudPcOnPremisesConnectionHealthCheckErrorType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
@@ -135,6 +147,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeEnumValue("errorType", this.getErrorType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("recommendedAction", this.getRecommendedAction());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
@@ -179,6 +192,14 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     public void setErrorType(@javax.annotation.Nullable final CloudPcOnPremisesConnectionHealthCheckErrorType value) {
         this._errorType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommendedAction property value. The recommended action to fix the corresponding error.

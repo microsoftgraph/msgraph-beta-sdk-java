@@ -34,7 +34,7 @@ public class EdiscoveryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item collection
      * @param id Unique identifier of the item
-     * @return a caseItemRequestBuilder
+     * @return a CaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CaseItemRequestBuilder cases(@javax.annotation.Nonnull final String id) {

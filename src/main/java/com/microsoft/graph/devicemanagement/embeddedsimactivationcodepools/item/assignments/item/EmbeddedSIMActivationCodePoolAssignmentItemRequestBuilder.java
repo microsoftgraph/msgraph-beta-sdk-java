@@ -307,7 +307,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new embeddedSIMActivationCodePoolAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetQueryParameters queryParameters = new EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new embeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new embeddedSIMActivationCodePoolAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilderPatchRequestConfiguration() {

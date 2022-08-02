@@ -30,6 +30,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      */
     public ExactMatchSession() {
         super();
+        this.setOdataType("#microsoft.graph.exactMatchSession");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

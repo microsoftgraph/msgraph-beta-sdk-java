@@ -34,6 +34,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      */
     public AccessReviewDecision() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewDecision");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -21,7 +21,7 @@ import microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import microsoft.graph.models.WindowsAutopilotDeploymentProfileCollectionResponse;
 /** Provides operations to manage the windowsAutopilotDeploymentProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsAutopilotDeploymentProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

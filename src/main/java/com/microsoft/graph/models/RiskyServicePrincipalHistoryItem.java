@@ -21,6 +21,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      */
     public RiskyServicePrincipalHistoryItem() {
         super();
+        this.setOdataType("#microsoft.graph.riskyServicePrincipalHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

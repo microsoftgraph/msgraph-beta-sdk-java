@@ -20,7 +20,7 @@ import microsoft.graph.models.SitePage;
 import microsoft.graph.models.SitePageCollectionResponse;
 /** Provides operations to manage the pages property of the microsoft.graph.site entity. */
 public class PagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

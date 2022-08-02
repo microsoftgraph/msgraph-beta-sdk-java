@@ -21,7 +21,7 @@ import microsoft.graph.models.DeviceManagementTemplateCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the migratableTo property of the microsoft.graph.deviceManagementTemplate entity. */
 public class MigratableToRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

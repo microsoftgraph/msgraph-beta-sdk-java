@@ -20,7 +20,7 @@ import microsoft.graph.models.ManagedEBookCategoryCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedEBookCategories property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedEBookCategoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -16,12 +16,15 @@ public class ChatViewpoint implements AdditionalDataHolder, Parsable {
     private Boolean _isHidden;
     /** Represents the dateTime up until which the current user has read chatMessages in a specific chat. */
     private OffsetDateTime _lastMessageReadDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new chatViewpoint and sets the default values.
      * @return a void
      */
     public ChatViewpoint() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.chatViewpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,9 +51,10 @@ public class ChatViewpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatViewpoint currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("isHidden", (n) -> { currentObject.setIsHidden(n.getBooleanValue()); });
             this.put("lastMessageReadDateTime", (n) -> { currentObject.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class ChatViewpoint implements AdditionalDataHolder, Parsable {
         return this._lastMessageReadDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class ChatViewpoint implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isHidden", this.getIsHidden());
         writer.writeOffsetDateTimeValue("lastMessageReadDateTime", this.getLastMessageReadDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class ChatViewpoint implements AdditionalDataHolder, Parsable {
      */
     public void setLastMessageReadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastMessageReadDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

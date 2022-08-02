@@ -26,6 +26,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      */
     public UserExperienceAnalyticsBatteryHealthAppImpact() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthAppImpact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

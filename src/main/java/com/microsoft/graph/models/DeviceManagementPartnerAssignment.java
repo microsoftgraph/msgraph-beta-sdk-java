@@ -12,6 +12,8 @@ import java.util.Objects;
 public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** User groups targeting for devices to be enrolled through partner. */
     private DeviceAndAppManagementAssignmentTarget _target;
     /**
@@ -20,6 +22,7 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
      */
     public DeviceManagementPartnerAssignment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementPartnerAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,9 +49,18 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementPartnerAssignment currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the target property value. User groups targeting for devices to be enrolled through partner.
@@ -65,6 +77,7 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("target", this.getTarget());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -75,6 +88,14 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the target property value. User groups targeting for devices to be enrolled through partner.

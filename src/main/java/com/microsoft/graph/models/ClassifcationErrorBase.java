@@ -17,17 +17,17 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, Parsable {
     private ClassificationInnerError _innerError;
     /** The message property */
     private String _message;
+    /** The OdataType property */
+    private String _odataType;
     /** The target property */
     private String _target;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new classifcationErrorBase and sets the default values.
      * @return a void
      */
     public ClassifcationErrorBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.classifcationErrorBase");
+        this.setOdataType("#microsoft.graph.classifcationErrorBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,8 +73,8 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, Parsable {
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(ClassificationInnerError::createFromDiscriminatorValue)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -94,20 +94,20 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, Parsable {
         return this._message;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the target property value. The target property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getTarget() {
         return this._target;
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
     }
     /**
      * Serializes information the current object
@@ -119,8 +119,8 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("code", this.getCode());
         writer.writeObjectValue("innerError", this.getInnerError());
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("target", this.getTarget());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -156,19 +156,19 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, Parsable {
         this._message = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the target property value. The target property
      * @param value Value to set for the target property.
      * @return a void
      */
     public void setTarget(@javax.annotation.Nullable final String value) {
         this._target = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

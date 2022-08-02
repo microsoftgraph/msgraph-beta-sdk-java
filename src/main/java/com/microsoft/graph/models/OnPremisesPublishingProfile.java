@@ -28,6 +28,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      */
     public OnPremisesPublishingProfile() {
         super();
+        this.setOdataType("#microsoft.graph.onPremisesPublishingProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      */
     public DlpEvaluatePoliciesJobResponse() {
         super();
+        this.setOdataType("#microsoft.graph.dlpEvaluatePoliciesJobResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

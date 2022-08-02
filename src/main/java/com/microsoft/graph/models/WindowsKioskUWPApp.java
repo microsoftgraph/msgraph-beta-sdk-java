@@ -20,6 +20,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      */
     public WindowsKioskUWPApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskUWPApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

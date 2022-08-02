@@ -14,6 +14,8 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
     private Map<String, Object> _additionalData;
     /** A message explaining why an entity is unsupported. */
     private String _message;
+    /** The OdataType property */
+    private String _odataType;
     /** If message is related to a specific property in the original entity, then the name of that property. */
     private String _propertyName;
     /**
@@ -22,6 +24,7 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
      */
     public UnsupportedDeviceConfigurationDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.unsupportedDeviceConfigurationDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnsupportedDeviceConfigurationDetail currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("propertyName", (n) -> { currentObject.setPropertyName(n.getStringValue()); });
         }};
     }
@@ -60,6 +64,14 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
     @javax.annotation.Nullable
     public String getMessage() {
         return this._message;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the propertyName property value. If message is related to a specific property in the original entity, then the name of that property.
@@ -77,6 +89,7 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("propertyName", this.getPropertyName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
      */
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the propertyName property value. If message is related to a specific property in the original entity, then the name of that property.

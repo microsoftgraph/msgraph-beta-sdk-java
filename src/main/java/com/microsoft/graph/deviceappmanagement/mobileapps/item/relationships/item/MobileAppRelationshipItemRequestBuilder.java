@@ -307,7 +307,7 @@ public class MobileAppRelationshipItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MobileAppRelationshipItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppRelationshipItemRequestBuilderGetQueryParameters queryParameters = new MobileAppRelationshipItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppRelationshipItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppRelationshipItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppRelationshipItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MobileAppRelationshipItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppRelationshipItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppRelationshipItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppRelationshipItemRequestBuilderPatchRequestConfiguration() {

@@ -155,7 +155,7 @@ public class PlannerPlanItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerPlanItemRequestBuilderGetQueryParameters queryParameters = new PlannerPlanItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerPlanItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerPlanItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerPlanItemRequestBuilderGetRequestConfiguration() {

@@ -16,12 +16,15 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     private Integer _maxValue;
     /** Integer Setting Minimum Value. Valid values -2147483648 to 2147483647 */
     private Integer _minValue;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceManagementConfigurationIntegerSettingValueDefinitionTemplate and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinitionTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,9 +51,10 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("maxValue", (n) -> { currentObject.setMaxValue(n.getIntegerValue()); });
             this.put("minValue", (n) -> { currentObject.setMinValue(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
         return this._minValue;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maxValue", this.getMaxValue());
         writer.writeIntegerValue("minValue", this.getMinValue());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      */
     public void setMinValue(@javax.annotation.Nullable final Integer value) {
         this._minValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

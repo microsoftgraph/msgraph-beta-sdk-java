@@ -19,12 +19,15 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     private String _externalUrl;
     /** The internalUrl property */
     private String _internalUrl;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new onPremisesApplicationSegment and sets the default values.
      * @return a void
      */
     public OnPremisesApplicationSegment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.onPremisesApplicationSegment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,11 +78,12 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesApplicationSegment currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("alternateUrl", (n) -> { currentObject.setAlternateUrl(n.getStringValue()); });
             this.put("corsConfigurations", (n) -> { currentObject.setCorsConfigurations(n.getCollectionOfObjectValues(CorsConfiguration::createFromDiscriminatorValue)); });
             this.put("externalUrl", (n) -> { currentObject.setExternalUrl(n.getStringValue()); });
             this.put("internalUrl", (n) -> { currentObject.setInternalUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -89,6 +93,14 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public String getInternalUrl() {
         return this._internalUrl;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -101,6 +113,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         writer.writeCollectionOfObjectValues("corsConfigurations", this.getCorsConfigurations());
         writer.writeStringValue("externalUrl", this.getExternalUrl());
         writer.writeStringValue("internalUrl", this.getInternalUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
      */
     public void setInternalUrl(@javax.annotation.Nullable final String value) {
         this._internalUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsMetric;
 import microsoft.graph.models.UserExperienceAnalyticsMetricCollectionResponse;
 /** Provides operations to manage the operatingSystemRegression property of the microsoft.graph.userExperienceAnalyticsRegressionSummary entity. */
 public class OperatingSystemRegressionRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -19,12 +19,15 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     private java.util.List<KeyValuePair> _extendedProperties;
     /** The GUID of the label that should be applied to the information. */
     private String _labelId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new labelingOptions and sets the default values.
      * @return a void
      */
     public LabelingOptions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.labelingOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,11 +78,12 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LabelingOptions currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
             this.put("downgradeJustification", (n) -> { currentObject.setDowngradeJustification(n.getObjectValue(DowngradeJustification::createFromDiscriminatorValue)); });
             this.put("extendedProperties", (n) -> { currentObject.setExtendedProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("labelId", (n) -> { currentObject.setLabelId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -89,6 +93,14 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLabelId() {
         return this._labelId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -101,6 +113,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("downgradeJustification", this.getDowngradeJustification());
         writer.writeCollectionOfObjectValues("extendedProperties", this.getExtendedProperties());
         writer.writeStringValue("labelId", this.getLabelId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      */
     public void setLabelId(@javax.annotation.Nullable final String value) {
         this._labelId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

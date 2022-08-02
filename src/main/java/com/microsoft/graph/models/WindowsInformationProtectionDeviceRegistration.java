@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents device registration records for Bring-Your-Own-Device(BYOD) Windows devices. */
 public class WindowsInformationProtectionDeviceRegistration extends Entity implements Parsable {
     /** Device Mac address. */
     private String _deviceMacAddress;
@@ -22,16 +23,17 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     /** UserId associated with this device registration record. */
     private String _userId;
     /**
-     * Instantiates a new WindowsInformationProtectionDeviceRegistration and sets the default values.
+     * Instantiates a new windowsInformationProtectionDeviceRegistration and sets the default values.
      * @return a void
      */
     public WindowsInformationProtectionDeviceRegistration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionDeviceRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionDeviceRegistration
+     * @return a windowsInformationProtectionDeviceRegistration
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

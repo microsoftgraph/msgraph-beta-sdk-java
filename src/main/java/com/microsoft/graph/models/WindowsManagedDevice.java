@@ -14,6 +14,7 @@ public class WindowsManagedDevice extends ManagedDevice implements Parsable {
      */
     public WindowsManagedDevice() {
         super();
+        this.setOdataType("#microsoft.graph.windowsManagedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

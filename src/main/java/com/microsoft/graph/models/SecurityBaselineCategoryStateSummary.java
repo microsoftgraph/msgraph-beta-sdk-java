@@ -16,6 +16,7 @@ public class SecurityBaselineCategoryStateSummary extends SecurityBaselineStateS
      */
     public SecurityBaselineCategoryStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.securityBaselineCategoryStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

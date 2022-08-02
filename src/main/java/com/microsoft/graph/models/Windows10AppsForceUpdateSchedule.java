@@ -13,6 +13,8 @@ import java.util.Objects;
 public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Possible values for App update on Windows10 recurrence. */
     private Windows10AppsUpdateRecurrence _recurrence;
     /** If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence. */
@@ -25,6 +27,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      */
     public Windows10AppsForceUpdateSchedule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windows10AppsForceUpdateSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,11 +54,20 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10AppsForceUpdateSchedule currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getEnumValue(Windows10AppsUpdateRecurrence.class)); });
             this.put("runImmediatelyIfAfterStartDateTime", (n) -> { currentObject.setRunImmediatelyIfAfterStartDateTime(n.getBooleanValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
@@ -88,6 +100,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("recurrence", this.getRecurrence());
         writer.writeBooleanValue("runImmediatelyIfAfterStartDateTime", this.getRunImmediatelyIfAfterStartDateTime());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
@@ -100,6 +113,14 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recurrence property value. Possible values for App update on Windows10 recurrence.

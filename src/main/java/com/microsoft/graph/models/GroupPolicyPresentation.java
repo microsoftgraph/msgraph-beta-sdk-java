@@ -22,7 +22,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      */
     public GroupPolicyPresentation() {
         super();
-        this.setType("#microsoft.graph.groupPolicyPresentation");
+        this.setOdataType("#microsoft.graph.groupPolicyPresentation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

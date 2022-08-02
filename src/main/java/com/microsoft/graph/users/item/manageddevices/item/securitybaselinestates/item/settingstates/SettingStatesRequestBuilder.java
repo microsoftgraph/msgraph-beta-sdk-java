@@ -20,7 +20,7 @@ import microsoft.graph.models.SecurityBaselineSettingStateCollectionResponse;
 import microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item.settingstates.count.CountRequestBuilder;
 /** Provides operations to manage the settingStates property of the microsoft.graph.securityBaselineState entity. */
 public class SettingStatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

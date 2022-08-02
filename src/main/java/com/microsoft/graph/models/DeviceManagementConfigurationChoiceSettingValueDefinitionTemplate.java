@@ -14,12 +14,15 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
     private Map<String, Object> _additionalData;
     /** Choice Setting Allowed Options */
     private java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> _allowedOptions;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceManagementConfigurationChoiceSettingValueDefinitionTemplate and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueDefinitionTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("allowedOptions", (n) -> { currentObject.setAllowedOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinitionTemplate::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedOptions", this.getAllowedOptions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      */
     public void setAllowedOptions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> value) {
         this._allowedOptions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

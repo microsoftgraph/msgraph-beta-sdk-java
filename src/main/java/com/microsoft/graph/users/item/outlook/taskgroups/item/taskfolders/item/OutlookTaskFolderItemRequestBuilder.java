@@ -267,7 +267,7 @@ public class OutlookTaskFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.outlook.taskGroups.item.taskFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -334,7 +334,7 @@ public class OutlookTaskFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.outlook.taskGroups.item.taskFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -346,7 +346,7 @@ public class OutlookTaskFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.outlook.taskGroups.item.taskFolders.item.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a outlookTaskItemRequestBuilder
+     * @return a OutlookTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outlookTaskFolderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookTaskFolderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookTaskFolderItemRequestBuilderDeleteRequestConfiguration() {
@@ -389,7 +389,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public OutlookTaskFolderItemRequestBuilderGetQueryParameters queryParameters = new OutlookTaskFolderItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new outlookTaskFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookTaskFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookTaskFolderItemRequestBuilderGetRequestConfiguration() {
@@ -404,7 +404,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outlookTaskFolderItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookTaskFolderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookTaskFolderItemRequestBuilderPatchRequestConfiguration() {

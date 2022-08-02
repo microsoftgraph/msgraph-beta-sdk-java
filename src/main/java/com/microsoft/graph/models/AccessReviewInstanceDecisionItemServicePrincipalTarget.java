@@ -20,6 +20,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      */
     public AccessReviewInstanceDecisionItemServicePrincipalTarget() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,7 @@ public class AllowedValue extends Entity implements Parsable {
      */
     public AllowedValue() {
         super();
+        this.setOdataType("#microsoft.graph.allowedValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,8 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     private String _defaultLabel;
     /** Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password. */
     private String _fieldId;
+    /** The OdataType property */
+    private String _odataType;
     /** Type of the credential. The values can be text, password. */
     private String _type;
     /**
@@ -25,6 +27,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      */
     public PasswordSingleSignOnField() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.passwordSingleSignOnField");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordSingleSignOnField currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("customizedLabel", (n) -> { currentObject.setCustomizedLabel(n.getStringValue()); });
             this.put("defaultLabel", (n) -> { currentObject.setDefaultLabel(n.getStringValue()); });
             this.put("fieldId", (n) -> { currentObject.setFieldId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public String getFieldId() {
         return this._fieldId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. Type of the credential. The values can be text, password.
@@ -100,6 +112,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         writer.writeStringValue("customizedLabel", this.getCustomizedLabel());
         writer.writeStringValue("defaultLabel", this.getDefaultLabel());
         writer.writeStringValue("fieldId", this.getFieldId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      */
     public void setFieldId(@javax.annotation.Nullable final String value) {
         this._fieldId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Type of the credential. The values can be text, password.

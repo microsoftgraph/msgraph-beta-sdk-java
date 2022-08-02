@@ -16,7 +16,7 @@ public class BookingNamedEntity extends Entity implements Parsable {
      */
     public BookingNamedEntity() {
         super();
-        this.setType("#microsoft.graph.bookingNamedEntity");
+        this.setOdataType("#microsoft.graph.bookingNamedEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,8 +31,10 @@ public class BookingNamedEntity extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.bookingBusiness": return new BookingBusiness();
+                case "#microsoft.graph.bookingCustomer": return new BookingCustomer();
                 case "#microsoft.graph.bookingPerson": return new BookingPerson();
                 case "#microsoft.graph.bookingService": return new BookingService();
+                case "#microsoft.graph.bookingStaffMember": return new BookingStaffMember();
             }
         }
         return new BookingNamedEntity();

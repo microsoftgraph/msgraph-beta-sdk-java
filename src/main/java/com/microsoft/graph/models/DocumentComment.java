@@ -18,6 +18,7 @@ public class DocumentComment extends Entity implements Parsable {
      */
     public DocumentComment() {
         super();
+        this.setOdataType("#microsoft.graph.documentComment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

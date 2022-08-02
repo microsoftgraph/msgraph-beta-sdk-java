@@ -28,6 +28,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     public DeviceManagementAutopilotPolicyStatusDetail() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementAutopilotPolicyStatusDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

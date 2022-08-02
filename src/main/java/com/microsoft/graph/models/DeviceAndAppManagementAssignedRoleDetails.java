@@ -12,6 +12,8 @@ import java.util.Objects;
 public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Role Assignment IDs for the specifc Role Assignments assigned to a user. This property is read-only. */
     private java.util.List<String> _roleAssignmentIds;
     /** Role Definition IDs for the specifc Role Definitions assigned to a user. This property is read-only. */
@@ -22,6 +24,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      */
     public DeviceAndAppManagementAssignedRoleDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceAndAppManagementAssignedRoleDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,10 +51,19 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementAssignedRoleDetails currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("roleAssignmentIds", (n) -> { currentObject.setRoleAssignmentIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("roleDefinitionIds", (n) -> { currentObject.setRoleDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the roleAssignmentIds property value. Role Assignment IDs for the specifc Role Assignments assigned to a user. This property is read-only.
@@ -76,6 +88,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("roleAssignmentIds", this.getRoleAssignmentIds());
         writer.writeCollectionOfPrimitiveValues("roleDefinitionIds", this.getRoleDefinitionIds());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -87,6 +100,14 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the roleAssignmentIds property value. Role Assignment IDs for the specifc Role Assignments assigned to a user. This property is read-only.

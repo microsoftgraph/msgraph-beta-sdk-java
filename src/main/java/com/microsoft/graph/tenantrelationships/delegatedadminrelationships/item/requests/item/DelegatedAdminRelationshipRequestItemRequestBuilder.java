@@ -307,7 +307,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public DelegatedAdminRelationshipRequestItemRequestBuilderGetQueryParameters queryParameters = new DelegatedAdminRelationshipRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new delegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration() {

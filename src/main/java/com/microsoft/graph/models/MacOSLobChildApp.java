@@ -16,6 +16,8 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     private String _buildNumber;
     /** The Identity Name. */
     private String _bundleId;
+    /** The OdataType property */
+    private String _odataType;
     /** The version number of MacOS Line of Business (LoB) app. */
     private String _versionNumber;
     /**
@@ -24,6 +26,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     public MacOSLobChildApp() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSLobChildApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobChildApp currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the versionNumber property value. The version number of MacOS Line of Business (LoB) app.
@@ -89,6 +101,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("buildNumber", this.getBuildNumber());
         writer.writeStringValue("bundleId", this.getBundleId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("versionNumber", this.getVersionNumber());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the versionNumber property value. The version number of MacOS Line of Business (LoB) app.

@@ -15,6 +15,8 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Date time when user logs on */
     private OffsetDateTime _lastLogOnDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** User id */
     private String _userId;
     /**
@@ -23,6 +25,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
      */
     public LoggedOnUser() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.loggedOnUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LoggedOnUser currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("lastLogOnDateTime", (n) -> { currentObject.setLastLogOnDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
     }
@@ -61,6 +65,14 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastLogOnDateTime() {
         return this._lastLogOnDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userId property value. User id
@@ -78,6 +90,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastLogOnDateTime", this.getLastLogOnDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -96,6 +109,14 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
      */
     public void setLastLogOnDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastLogOnDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userId property value. User id

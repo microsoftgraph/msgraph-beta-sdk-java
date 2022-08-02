@@ -26,6 +26,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      */
     public PrivilegedAccess() {
         super();
+        this.setOdataType("#microsoft.graph.privilegedAccess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

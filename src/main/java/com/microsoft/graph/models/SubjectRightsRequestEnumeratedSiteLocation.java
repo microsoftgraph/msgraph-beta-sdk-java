@@ -16,6 +16,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      */
     public SubjectRightsRequestEnumeratedSiteLocation() {
         super();
+        this.setOdataType("#microsoft.graph.subjectRightsRequestEnumeratedSiteLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

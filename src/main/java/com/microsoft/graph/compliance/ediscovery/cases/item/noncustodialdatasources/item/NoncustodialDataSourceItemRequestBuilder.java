@@ -337,7 +337,7 @@ public class NoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new noncustodialDataSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new NoncustodialDataSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public NoncustodialDataSourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -366,7 +366,7 @@ public class NoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public NoncustodialDataSourceItemRequestBuilderGetQueryParameters queryParameters = new NoncustodialDataSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new noncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NoncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NoncustodialDataSourceItemRequestBuilderGetRequestConfiguration() {
@@ -381,7 +381,7 @@ public class NoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new noncustodialDataSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new NoncustodialDataSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public NoncustodialDataSourceItemRequestBuilderPatchRequestConfiguration() {

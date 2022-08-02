@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class MultiValueLegacyExtendedProperty extends Entity implements Parsable {
     /** A collection of property values. */
     private java.util.List<String> _value;
@@ -17,6 +17,7 @@ public class MultiValueLegacyExtendedProperty extends Entity implements Parsable
      */
     public MultiValueLegacyExtendedProperty() {
         super();
+        this.setOdataType("#microsoft.graph.multiValueLegacyExtendedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

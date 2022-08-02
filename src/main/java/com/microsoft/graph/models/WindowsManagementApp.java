@@ -22,6 +22,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      */
     public WindowsManagementApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsManagementApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

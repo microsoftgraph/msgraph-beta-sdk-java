@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class WorkbookTableRow extends Entity implements Parsable {
     /** Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only. */
     private Integer _index;
@@ -19,6 +19,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     public WorkbookTableRow() {
         super();
+        this.setOdataType("#microsoft.graph.workbookTableRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

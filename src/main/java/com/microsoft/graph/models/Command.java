@@ -25,12 +25,15 @@ public class Command extends Entity implements Parsable {
     private PayloadResponse _responsepayload;
     /** The status property */
     private String _status;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new command and sets the default values.
      * @return a void
      */
     public Command() {
         super();
+        this.setOdataType("#microsoft.graph.command");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,6 +77,7 @@ public class Command extends Entity implements Parsable {
             this.put("postBackUri", (n) -> { currentObject.setPostBackUri(n.getStringValue()); });
             this.put("responsepayload", (n) -> { currentObject.setResponsepayload(n.getObjectValue(PayloadResponse::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -125,6 +129,14 @@ public class Command extends Entity implements Parsable {
         return this._status;
     }
     /**
+     * Gets the type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -140,6 +152,7 @@ public class Command extends Entity implements Parsable {
         writer.writeStringValue("postBackUri", this.getPostBackUri());
         writer.writeObjectValue("responsepayload", this.getResponsepayload());
         writer.writeStringValue("status", this.getStatus());
+        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the appServiceName property value. The appServiceName property
@@ -204,5 +217,13 @@ public class Command extends Entity implements Parsable {
      */
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
+    }
+    /**
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

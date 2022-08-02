@@ -313,7 +313,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelServerLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderGetQueryParameters queryParameters = new MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new microsoftTunnelServerLogCollectionResponseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelServerLogCollectionResponseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelServerLogCollectionResponseItemRequestBuilderPatchRequestConfiguration() {

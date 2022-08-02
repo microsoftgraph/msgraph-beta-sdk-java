@@ -16,6 +16,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      */
     public WindowsFeatureUpdateCatalogItem() {
         super();
+        this.setOdataType("#microsoft.graph.windowsFeatureUpdateCatalogItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

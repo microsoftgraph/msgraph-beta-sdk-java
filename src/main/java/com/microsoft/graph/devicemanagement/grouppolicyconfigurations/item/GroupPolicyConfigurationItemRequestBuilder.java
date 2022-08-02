@@ -53,7 +53,7 @@ public class GroupPolicyConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyConfigurationAssignmentItemRequestBuilder
+     * @return a GroupPolicyConfigurationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -182,7 +182,7 @@ public class GroupPolicyConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyConfigurations.item.definitionValues.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyDefinitionValueItemRequestBuilder
+     * @return a GroupPolicyDefinitionValueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyDefinitionValueItemRequestBuilder definitionValues(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class GroupPolicyConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -386,7 +386,7 @@ public class GroupPolicyConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyConfigurationItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -401,7 +401,7 @@ public class GroupPolicyConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyConfigurationItemRequestBuilderPatchRequestConfiguration() {

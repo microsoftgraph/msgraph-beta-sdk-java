@@ -233,7 +233,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.applicationSignInDetailedSummary.item collection
      * @param id Unique identifier of the item
-     * @return a applicationSignInDetailedSummaryItemRequestBuilder
+     * @return a ApplicationSignInDetailedSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApplicationSignInDetailedSummaryItemRequestBuilder applicationSignInDetailedSummary(@javax.annotation.Nonnull final String id) {
@@ -362,7 +362,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.credentialUserRegistrationDetails.item collection
      * @param id Unique identifier of the item
-     * @return a credentialUserRegistrationDetailsItemRequestBuilder
+     * @return a CredentialUserRegistrationDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CredentialUserRegistrationDetailsItemRequestBuilder credentialUserRegistrationDetails(@javax.annotation.Nonnull final String id) {
@@ -374,7 +374,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.dailyPrintUsageByPrinter.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByPrinterItemRequestBuilder
+     * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder dailyPrintUsageByPrinter(@javax.annotation.Nonnull final String id) {
@@ -386,7 +386,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.dailyPrintUsageByUser.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByUserItemRequestBuilder
+     * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder dailyPrintUsageByUser(@javax.annotation.Nonnull final String id) {
@@ -398,7 +398,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.dailyPrintUsageSummariesByPrinter.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByPrinterItemRequestBuilder
+     * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.dailyprintusagesummariesbyprinter.item.PrintUsageByPrinterItemRequestBuilder dailyPrintUsageSummariesByPrinter(@javax.annotation.Nonnull final String id) {
@@ -410,7 +410,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.dailyPrintUsageSummariesByUser.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByUserItemRequestBuilder
+     * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.dailyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder dailyPrintUsageSummariesByUser(@javax.annotation.Nonnull final String id) {
@@ -1758,7 +1758,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.monthlyPrintUsageByPrinter.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByPrinterItemRequestBuilder
+     * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder monthlyPrintUsageByPrinter(@javax.annotation.Nonnull final String id) {
@@ -1770,7 +1770,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.monthlyPrintUsageByUser.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByUserItemRequestBuilder
+     * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder monthlyPrintUsageByUser(@javax.annotation.Nonnull final String id) {
@@ -1782,7 +1782,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.monthlyPrintUsageSummariesByPrinter.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByPrinterItemRequestBuilder
+     * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.monthlyprintusagesummariesbyprinter.item.PrintUsageByPrinterItemRequestBuilder monthlyPrintUsageSummariesByPrinter(@javax.annotation.Nonnull final String id) {
@@ -1794,7 +1794,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.monthlyPrintUsageSummariesByUser.item collection
      * @param id Unique identifier of the item
-     * @return a printUsageByUserItemRequestBuilder
+     * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.reports.monthlyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder monthlyPrintUsageSummariesByUser(@javax.annotation.Nonnull final String id) {
@@ -1861,7 +1861,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.userCredentialUsageDetails.item collection
      * @param id Unique identifier of the item
-     * @return a userCredentialUsageDetailsItemRequestBuilder
+     * @return a UserCredentialUsageDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserCredentialUsageDetailsItemRequestBuilder userCredentialUsageDetails(@javax.annotation.Nonnull final String id) {

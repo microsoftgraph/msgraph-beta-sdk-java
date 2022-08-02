@@ -18,6 +18,7 @@ public class Windows10ImportedPFXCertificateProfile extends WindowsCertificatePr
      */
     public Windows10ImportedPFXCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windows10ImportedPFXCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
