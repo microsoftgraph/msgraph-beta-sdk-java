@@ -53,7 +53,7 @@ public class Updates extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Connections.
-     * 
+     * Service connections to external resources such as analytics workspaces.
      */
     @SerializedName(value = "resourceConnections", alternate = {"ResourceConnections"})
     @Expose

@@ -148,7 +148,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Security.
-     * 
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      */
     @SerializedName(value = "security", alternate = {"Security"})
     @Expose

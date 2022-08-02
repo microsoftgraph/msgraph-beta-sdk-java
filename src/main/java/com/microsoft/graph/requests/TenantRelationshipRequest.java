@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TenantRelationship;
+import com.microsoft.graph.models.TenantInformation;
 import com.microsoft.graph.managedtenants.requests.ManagedTenantRequestBuilder;
 import com.microsoft.graph.requests.DelegatedAdminCustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.DelegatedAdminCustomerRequestBuilder;

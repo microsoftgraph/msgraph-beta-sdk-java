@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationStringFormat;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingValueDefinition;
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceManagementConfigurationSettingValueDefinition implements IJsonBackedObject {
 
+
+    /**
+     * The File Types.
+     * Supported file types for this setting.
+     */
+    @SerializedName(value = "fileTypes", alternate = {"FileTypes"})
+    @Expose
+	@Nullable
+    public java.util.List<String> fileTypes;
 
     /**
      * The Format.
@@ -55,7 +65,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
 
     /**
      * The Maximum Length.
-     * Maximum length of string. Valid values 0 to 87516
+     * Maximum length of string
      */
     @SerializedName(value = "maximumLength", alternate = {"MaximumLength"})
     @Expose
@@ -64,7 +74,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
 
     /**
      * The Minimum Length.
-     * Minimum length of string. Valid values 0 to 87516
+     * Minimum length of string
      */
     @SerializedName(value = "minimumLength", alternate = {"MinimumLength"})
     @Expose

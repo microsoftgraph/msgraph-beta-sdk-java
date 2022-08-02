@@ -29,7 +29,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Asserted Identity.
-     * 
+     * An identity the participant would like to present itself as to the other participants in the call.
      */
     @SerializedName(value = "assertedIdentity", alternate = {"AssertedIdentity"})
     @Expose
@@ -38,7 +38,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Azure Communication Services User.
-     * 
+     * The Azure Communication Services user associated with this action.
      */
     @SerializedName(value = "azureCommunicationServicesUser", alternate = {"AzureCommunicationServicesUser"})
     @Expose
@@ -47,7 +47,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Endpoint Type.
-     * 
+     * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose

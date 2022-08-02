@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DefaultMfaMethodType;
+import com.microsoft.graph.models.SignInUserType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -35,6 +36,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public DefaultMfaMethodType defaultMfaMethod;
+
+    /**
+     * The Is Admin.
+     * 
+     */
+    @SerializedName(value = "isAdmin", alternate = {"IsAdmin"})
+    @Expose
+	@Nullable
+    public Boolean isAdmin;
 
     /**
      * The Is Mfa Capable.
@@ -116,6 +126,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public String userPrincipalName;
+
+    /**
+     * The User Type.
+     * 
+     */
+    @SerializedName(value = "userType", alternate = {"UserType"})
+    @Expose
+	@Nullable
+    public SignInUserType userType;
 
 
     /**

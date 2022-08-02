@@ -27,7 +27,7 @@ public class AdminReportSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Concealed Names.
-     * 
+     * If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      */
     @SerializedName(value = "displayConcealedNames", alternate = {"DisplayConcealedNames"})
     @Expose

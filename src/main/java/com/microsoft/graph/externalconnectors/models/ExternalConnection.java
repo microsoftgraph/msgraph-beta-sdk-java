@@ -9,7 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.externalconnectors.models.ComplianceSettings;
 import com.microsoft.graph.externalconnectors.models.Configuration;
+import com.microsoft.graph.externalconnectors.models.ContentExperienceType;
 import com.microsoft.graph.externalconnectors.models.SearchSettings;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
 import com.microsoft.graph.externalconnectors.models.ExternalGroup;
@@ -38,6 +40,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Compliance Settings.
+     * 
+     */
+    @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
+    @Expose
+	@Nullable
+    public ComplianceSettings complianceSettings;
+
+    /**
      * The Configuration.
      * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      */
@@ -63,6 +74,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Enabled Content Experiences.
+     * 
+     */
+    @SerializedName(value = "enabledContentExperiences", alternate = {"EnabledContentExperiences"})
+    @Expose
+	@Nullable
+    public EnumSet<ContentExperienceType> enabledContentExperiences;
 
     /**
      * The Ingested Items Count.

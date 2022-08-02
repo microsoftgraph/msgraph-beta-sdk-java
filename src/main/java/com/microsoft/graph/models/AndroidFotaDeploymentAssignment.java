@@ -40,7 +40,7 @@ public class AndroidFotaDeploymentAssignment implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Key for the Android FOTA Assignment entity
+     * A unique identifier assigned to each Android FOTA Assignment entity
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

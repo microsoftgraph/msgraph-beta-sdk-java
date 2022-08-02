@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcAuditEvent;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcDeviceImage;
+import com.microsoft.graph.models.CloudPcExternalPartnerSetting;
 import com.microsoft.graph.models.CloudPcGalleryImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcOrganizationSettings;
@@ -24,6 +25,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
+import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage;
 import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
@@ -73,6 +75,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudPcDeviceImageCollectionPage deviceImages;
+
+    /**
+     * The External Partner Settings.
+     * The external partner settings on a Cloud PC.
+     */
+    @SerializedName(value = "externalPartnerSettings", alternate = {"ExternalPartnerSettings"})
+    @Expose
+	@Nullable
+    public CloudPcExternalPartnerSettingCollectionPage externalPartnerSettings;
 
     /**
      * The Gallery Images.
@@ -166,6 +177,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("deviceImages")) {
             deviceImages = serializer.deserializeObject(json.get("deviceImages"), CloudPcDeviceImageCollectionPage.class);
+        }
+
+        if (json.has("externalPartnerSettings")) {
+            externalPartnerSettings = serializer.deserializeObject(json.get("externalPartnerSettings"), CloudPcExternalPartnerSettingCollectionPage.class);
         }
 
         if (json.has("galleryImages")) {

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcSupportedRegionStatus;
 import com.microsoft.graph.models.Entity;
 
 
@@ -33,6 +34,15 @@ public class CloudPcSupportedRegion extends Entity implements IJsonBackedObject 
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Region Status.
+     * The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
+     */
+    @SerializedName(value = "regionStatus", alternate = {"RegionStatus"})
+    @Expose
+	@Nullable
+    public CloudPcSupportedRegionStatus regionStatus;
 
 
     /**
