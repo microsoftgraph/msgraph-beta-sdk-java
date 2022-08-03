@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AuthenticationListener extends Entity implements Parsable {
     /** The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high. */
     private Integer _priority;
@@ -19,7 +19,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      */
     public AuthenticationListener() {
         super();
-        this.setType("#microsoft.graph.authenticationListener");
+        this.setOdataType("#microsoft.graph.authenticationListener");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

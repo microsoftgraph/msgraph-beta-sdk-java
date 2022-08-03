@@ -24,6 +24,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      */
     public PersonResponsibility() {
         super();
+        this.setOdataType("#microsoft.graph.personResponsibility");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

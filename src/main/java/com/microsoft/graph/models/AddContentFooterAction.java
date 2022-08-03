@@ -28,6 +28,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      */
     public AddContentFooterAction() {
         super();
+        this.setOdataType("#microsoft.graph.addContentFooterAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

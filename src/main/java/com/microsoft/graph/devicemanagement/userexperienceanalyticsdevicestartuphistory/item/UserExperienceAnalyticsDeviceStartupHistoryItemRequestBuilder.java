@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilderPatchRequestConfiguration() {

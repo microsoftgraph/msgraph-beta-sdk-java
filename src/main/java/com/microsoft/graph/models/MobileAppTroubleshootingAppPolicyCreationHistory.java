@@ -18,6 +18,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      */
     public MobileAppTroubleshootingAppPolicyCreationHistory() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingAppPolicyCreationHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

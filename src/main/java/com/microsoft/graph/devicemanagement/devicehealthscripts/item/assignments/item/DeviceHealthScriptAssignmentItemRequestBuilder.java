@@ -307,7 +307,7 @@ public class DeviceHealthScriptAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceHealthScriptAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceHealthScriptAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceHealthScriptAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceHealthScriptAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceHealthScriptAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceHealthScriptAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceHealthScriptAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceHealthScriptAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceHealthScriptAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceHealthScriptAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceHealthScriptAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceHealthScriptAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceHealthScriptAssignmentItemRequestBuilderPatchRequestConfiguration() {

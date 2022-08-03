@@ -31,6 +31,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      */
     public ManagedDeviceMobileAppConfigurationState() {
         super();
+        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

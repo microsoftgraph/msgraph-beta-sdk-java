@@ -19,6 +19,8 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     private String _idMatch;
     /** The length property */
     private Integer _length;
+    /** The OdataType property */
+    private String _odataType;
     /** The offset property */
     private Integer _offset;
     /**
@@ -27,6 +29,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     public SensitiveContentLocation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sensitiveContentLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,11 +72,12 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitiveContentLocation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
             this.put("evidences", (n) -> { currentObject.setEvidences(n.getCollectionOfObjectValues(SensitiveContentEvidence::createFromDiscriminatorValue)); });
             this.put("idMatch", (n) -> { currentObject.setIdMatch(n.getStringValue()); });
             this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
         }};
     }
@@ -94,6 +98,14 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
         return this._length;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the offset property value. The offset property
      * @return a integer
      */
@@ -112,6 +124,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
         writer.writeCollectionOfObjectValues("evidences", this.getEvidences());
         writer.writeStringValue("idMatch", this.getIdMatch());
         writer.writeIntegerValue("length", this.getLength());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("offset", this.getOffset());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     public void setLength(@javax.annotation.Nullable final Integer value) {
         this._length = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the offset property value. The offset property

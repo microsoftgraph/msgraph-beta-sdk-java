@@ -313,7 +313,7 @@ public class AttachmentSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new attachmentSessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AttachmentSessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttachmentSessionItemRequestBuilderDeleteRequestConfiguration() {
@@ -338,7 +338,7 @@ public class AttachmentSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public AttachmentSessionItemRequestBuilderGetQueryParameters queryParameters = new AttachmentSessionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new attachmentSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AttachmentSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttachmentSessionItemRequestBuilderGetRequestConfiguration() {
@@ -353,7 +353,7 @@ public class AttachmentSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new attachmentSessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AttachmentSessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttachmentSessionItemRequestBuilderPatchRequestConfiguration() {

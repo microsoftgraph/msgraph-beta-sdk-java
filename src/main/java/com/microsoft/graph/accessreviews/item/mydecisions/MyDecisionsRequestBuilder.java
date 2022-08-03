@@ -20,7 +20,7 @@ import microsoft.graph.models.AccessReviewDecisionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the myDecisions property of the microsoft.graph.accessReview entity. */
 public class MyDecisionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

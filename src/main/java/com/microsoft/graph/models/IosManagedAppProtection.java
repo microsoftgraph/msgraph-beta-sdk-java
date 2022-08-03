@@ -50,6 +50,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     public IosManagedAppProtection() {
         super();
+        this.setOdataType("#microsoft.graph.iosManagedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

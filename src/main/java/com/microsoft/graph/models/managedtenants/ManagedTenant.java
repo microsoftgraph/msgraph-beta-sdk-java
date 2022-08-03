@@ -65,6 +65,7 @@ public class ManagedTenant extends Entity implements Parsable {
      */
     public ManagedTenant() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managedTenant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

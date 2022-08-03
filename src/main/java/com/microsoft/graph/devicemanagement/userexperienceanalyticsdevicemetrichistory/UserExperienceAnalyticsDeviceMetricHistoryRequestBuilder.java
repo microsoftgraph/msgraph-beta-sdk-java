@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
 import microsoft.graph.models.UserExperienceAnalyticsMetricHistoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceMetricHistory property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

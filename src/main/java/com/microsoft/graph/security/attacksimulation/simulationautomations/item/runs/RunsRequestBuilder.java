@@ -20,7 +20,7 @@ import microsoft.graph.models.SimulationAutomationRunCollectionResponse;
 import microsoft.graph.security.attacksimulation.simulationautomations.item.runs.count.CountRequestBuilder;
 /** Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity. */
 public class RunsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

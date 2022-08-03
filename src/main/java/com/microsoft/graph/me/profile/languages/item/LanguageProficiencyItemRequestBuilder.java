@@ -307,7 +307,7 @@ public class LanguageProficiencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new languageProficiencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new LanguageProficiencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public LanguageProficiencyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class LanguageProficiencyItemRequestBuilder {
         @javax.annotation.Nullable
         public LanguageProficiencyItemRequestBuilderGetQueryParameters queryParameters = new LanguageProficiencyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new languageProficiencyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new LanguageProficiencyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public LanguageProficiencyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class LanguageProficiencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new languageProficiencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new LanguageProficiencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public LanguageProficiencyItemRequestBuilderPatchRequestConfiguration() {

@@ -27,6 +27,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      */
     public MeetingActivityStatistics() {
         super();
+        this.setOdataType("#microsoft.graph.meetingActivityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,8 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _completionDateTime;
     /** Display name of the assigned training. */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
     private TrainingStatus _trainingStatus;
     /**
@@ -26,6 +28,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     public UserTrainingStatusInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userTrainingStatusInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,12 +79,21 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingStatusInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
             this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("trainingStatus", (n) -> { currentObject.setTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the trainingStatus property value. Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
@@ -101,6 +113,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
         writer.writeOffsetDateTimeValue("completionDateTime", this.getCompletionDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("trainingStatus", this.getTrainingStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +148,14 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the trainingStatus property value. Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.

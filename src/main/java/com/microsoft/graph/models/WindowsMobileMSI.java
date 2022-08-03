@@ -26,6 +26,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     public WindowsMobileMSI() {
         super();
+        this.setOdataType("#microsoft.graph.windowsMobileMSI");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

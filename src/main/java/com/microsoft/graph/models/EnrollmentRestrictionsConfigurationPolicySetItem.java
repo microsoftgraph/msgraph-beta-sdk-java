@@ -18,6 +18,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      */
     public EnrollmentRestrictionsConfigurationPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.enrollmentRestrictionsConfigurationPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

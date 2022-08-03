@@ -16,12 +16,15 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
     private java.util.List<DeviceManagementConstraint> _constraints;
     /** The setting definition ID of the setting depended on */
     private String _definitionId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceManagementSettingDependency and sets the default values.
      * @return a void
      */
     public DeviceManagementSettingDependency() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementSettingDependency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,19 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingDependency currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("constraints", (n) -> { currentObject.setConstraints(n.getCollectionOfObjectValues(DeviceManagementConstraint::createFromDiscriminatorValue)); });
             this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -78,6 +90,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("constraints", this.getConstraints());
         writer.writeStringValue("definitionId", this.getDefinitionId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      */
     public void setDefinitionId(@javax.annotation.Nullable final String value) {
         this._definitionId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

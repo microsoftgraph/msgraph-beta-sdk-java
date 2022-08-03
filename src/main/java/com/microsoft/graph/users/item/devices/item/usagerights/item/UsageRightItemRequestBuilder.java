@@ -307,7 +307,7 @@ public class UsageRightItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new usageRightItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UsageRightItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UsageRightItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UsageRightItemRequestBuilder {
         @javax.annotation.Nullable
         public UsageRightItemRequestBuilderGetQueryParameters queryParameters = new UsageRightItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new usageRightItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UsageRightItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UsageRightItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UsageRightItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new usageRightItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UsageRightItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UsageRightItemRequestBuilderPatchRequestConfiguration() {

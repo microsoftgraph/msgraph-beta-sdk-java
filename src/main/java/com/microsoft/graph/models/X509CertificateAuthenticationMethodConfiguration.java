@@ -20,6 +20,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     public X509CertificateAuthenticationMethodConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.x509CertificateAuthenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

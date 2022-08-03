@@ -56,6 +56,8 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     private String _meid;
     /** Model of the device */
     private String _model;
+    /** The OdataType property */
+    private String _odataType;
     /** String that specifies the OS edition. */
     private String _operatingSystemEdition;
     /** Operating system language of the device */
@@ -98,6 +100,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      */
     public HardwareInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.hardwareInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -228,7 +231,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HardwareInformation currentObject = this;
-        return new HashMap<>(40) {{
+        return new HashMap<>(41) {{
             this.put("batteryChargeCycles", (n) -> { currentObject.setBatteryChargeCycles(n.getIntegerValue()); });
             this.put("batteryHealthPercentage", (n) -> { currentObject.setBatteryHealthPercentage(n.getIntegerValue()); });
             this.put("batteryLevelPercentage", (n) -> { currentObject.setBatteryLevelPercentage(n.getDoubleValue()); });
@@ -251,6 +254,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("meid", (n) -> { currentObject.setMeid(n.getStringValue()); });
             this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operatingSystemEdition", (n) -> { currentObject.setOperatingSystemEdition(n.getStringValue()); });
             this.put("operatingSystemLanguage", (n) -> { currentObject.setOperatingSystemLanguage(n.getStringValue()); });
             this.put("operatingSystemProductType", (n) -> { currentObject.setOperatingSystemProductType(n.getIntegerValue()); });
@@ -342,6 +346,14 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getModel() {
         return this._model;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operatingSystemEdition property value. String that specifies the OS edition.
@@ -516,6 +528,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("meid", this.getMeid());
         writer.writeStringValue("model", this.getModel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operatingSystemEdition", this.getOperatingSystemEdition());
         writer.writeStringValue("operatingSystemLanguage", this.getOperatingSystemLanguage());
         writer.writeIntegerValue("operatingSystemProductType", this.getOperatingSystemProductType());
@@ -719,6 +732,14 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      */
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operatingSystemEdition property value. String that specifies the OS edition.

@@ -25,6 +25,8 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
     private OffsetDateTime _lastUpdatedDateTime;
     /** DeviceId associated with the action. */
     private String _managedDeviceId;
+    /** The OdataType property */
+    private String _odataType;
     /** Time the action was initiated */
     private OffsetDateTime _startDateTime;
     /** A count of the number of licenses for which revoke was attempted. */
@@ -37,6 +39,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      */
     public MacOsVppAppRevokeLicensesActionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOsVppAppRevokeLicensesActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -95,13 +98,14 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOsVppAppRevokeLicensesActionResult currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("actionFailureReason", (n) -> { currentObject.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
@@ -122,6 +126,14 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
         return this._managedDeviceId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
@@ -160,6 +172,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
         writer.writeIntegerValue("failedLicensesCount", this.getFailedLicensesCount());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeIntegerValue("totalLicensesCount", this.getTotalLicensesCount());
         writer.writeStringValue("userId", this.getUserId());
@@ -220,6 +233,14 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      */
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated

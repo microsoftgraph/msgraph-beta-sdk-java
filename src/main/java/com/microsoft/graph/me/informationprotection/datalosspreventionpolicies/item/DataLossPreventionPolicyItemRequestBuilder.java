@@ -307,7 +307,7 @@ public class DataLossPreventionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dataLossPreventionPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DataLossPreventionPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataLossPreventionPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DataLossPreventionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public DataLossPreventionPolicyItemRequestBuilderGetQueryParameters queryParameters = new DataLossPreventionPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dataLossPreventionPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DataLossPreventionPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataLossPreventionPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DataLossPreventionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dataLossPreventionPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DataLossPreventionPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataLossPreventionPolicyItemRequestBuilderPatchRequestConfiguration() {

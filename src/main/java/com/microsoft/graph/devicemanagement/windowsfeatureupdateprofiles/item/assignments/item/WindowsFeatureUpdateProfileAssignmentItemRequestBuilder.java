@@ -307,7 +307,7 @@ public class WindowsFeatureUpdateProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsFeatureUpdateProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsFeatureUpdateProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsFeatureUpdateProfileAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsFeatureUpdateProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsFeatureUpdateProfileAssignmentItemRequestBuilderGetQueryParameters queryParameters = new WindowsFeatureUpdateProfileAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsFeatureUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsFeatureUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsFeatureUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsFeatureUpdateProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsFeatureUpdateProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsFeatureUpdateProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsFeatureUpdateProfileAssignmentItemRequestBuilderPatchRequestConfiguration() {

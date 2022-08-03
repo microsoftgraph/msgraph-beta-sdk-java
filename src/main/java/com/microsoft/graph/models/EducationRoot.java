@@ -15,6 +15,8 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     private java.util.List<EducationClass> _classes;
     /** The me property */
     private EducationUser _me;
+    /** The OdataType property */
+    private String _odataType;
     /** The schools property */
     private java.util.List<EducationSchool> _schools;
     /** The synchronizationProfiles property */
@@ -27,6 +29,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     public EducationRoot() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,9 +64,10 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationRoot currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("classes", (n) -> { currentObject.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
             this.put("me", (n) -> { currentObject.setMe(n.getObjectValue(EducationUser::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
             this.put("synchronizationProfiles", (n) -> { currentObject.setSynchronizationProfiles(n.getCollectionOfObjectValues(EducationSynchronizationProfile::createFromDiscriminatorValue)); });
             this.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
@@ -76,6 +80,14 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationUser getMe() {
         return this._me;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the schools property value. The schools property
@@ -110,6 +122,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classes", this.getClasses());
         writer.writeObjectValue("me", this.getMe());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("schools", this.getSchools());
         writer.writeCollectionOfObjectValues("synchronizationProfiles", this.getSynchronizationProfiles());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
@@ -138,6 +151,14 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     public void setMe(@javax.annotation.Nullable final EducationUser value) {
         this._me = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the schools property value. The schools property

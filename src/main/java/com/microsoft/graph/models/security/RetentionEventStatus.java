@@ -14,6 +14,8 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The error if the status is not successful. */
     private PublicError _error;
+    /** The OdataType property */
+    private String _odataType;
     /** The status of the distribution. The possible values are: pending, error, success, notAvaliable. */
     private EventStatusType _status;
     /**
@@ -22,6 +24,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
      */
     public RetentionEventStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.retentionEventStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,10 +59,19 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetentionEventStatus currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EventStatusType.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
@@ -77,6 +89,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
      */
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.

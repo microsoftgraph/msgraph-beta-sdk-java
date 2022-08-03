@@ -16,6 +16,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
      */
     public RemoveContentHeaderAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.removeContentHeaderAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

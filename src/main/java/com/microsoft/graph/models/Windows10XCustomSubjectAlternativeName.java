@@ -14,6 +14,8 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
     private Map<String, Object> _additionalData;
     /** Custom SAN Name */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Subject Alternative Name Options. */
     private SubjectAlternativeNameType _sanType;
     /**
@@ -22,6 +24,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
      */
     public Windows10XCustomSubjectAlternativeName() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windows10XCustomSubjectAlternativeName");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10XCustomSubjectAlternativeName currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sanType", (n) -> { currentObject.setSanType(n.getEnumValue(SubjectAlternativeNameType.class)); });
         }};
     }
@@ -60,6 +64,14 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sanType property value. Subject Alternative Name Options.
@@ -77,6 +89,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("sanType", this.getSanType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sanType property value. Subject Alternative Name Options.

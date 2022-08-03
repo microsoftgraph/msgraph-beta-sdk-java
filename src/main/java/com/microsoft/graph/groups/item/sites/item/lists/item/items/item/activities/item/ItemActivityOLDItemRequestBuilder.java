@@ -319,7 +319,7 @@ public class ItemActivityOLDItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemActivityOLDItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemActivityOLDItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemActivityOLDItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class ItemActivityOLDItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemActivityOLDItemRequestBuilderGetQueryParameters queryParameters = new ItemActivityOLDItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemActivityOLDItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemActivityOLDItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemActivityOLDItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class ItemActivityOLDItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemActivityOLDItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemActivityOLDItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemActivityOLDItemRequestBuilderPatchRequestConfiguration() {

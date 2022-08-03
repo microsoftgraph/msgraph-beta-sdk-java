@@ -21,7 +21,7 @@ import microsoft.graph.users.item.informationprotection.sensitivitylabels.item.s
 import microsoft.graph.users.item.informationprotection.sensitivitylabels.item.sublabels.evaluate.EvaluateRequestBuilder;
 /** Provides operations to manage the sublabels property of the microsoft.graph.sensitivityLabel entity. */
 public class SublabelsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

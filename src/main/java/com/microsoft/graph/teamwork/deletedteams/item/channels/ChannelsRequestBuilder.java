@@ -22,7 +22,7 @@ import microsoft.graph.teamwork.deletedteams.item.channels.count.CountRequestBui
 import microsoft.graph.teamwork.deletedteams.item.channels.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the channels property of the microsoft.graph.deletedTeam entity. */
 public class ChannelsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

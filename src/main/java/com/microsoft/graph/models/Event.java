@@ -93,6 +93,8 @@ public class Event extends OutlookItem implements Parsable {
     private String _subject;
     /** The transactionId property */
     private String _transactionId;
+    /** The type property */
+    private EventType _type;
     /** The uid property */
     private String _uid;
     /** The webLink property */
@@ -103,6 +105,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     public Event() {
         super();
+        this.setOdataType("#microsoft.graph.event");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -244,6 +247,7 @@ public class Event extends OutlookItem implements Parsable {
             this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
             this.put("transactionId", (n) -> { currentObject.setTransactionId(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EventType.class)); });
             this.put("uid", (n) -> { currentObject.setUid(n.getStringValue()); });
             this.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
         }};
@@ -505,6 +509,14 @@ public class Event extends OutlookItem implements Parsable {
         return this._transactionId;
     }
     /**
+     * Gets the type property value. The type property
+     * @return a eventType
+     */
+    @javax.annotation.Nullable
+    public EventType getType() {
+        return this._type;
+    }
+    /**
      * Gets the uid property value. The uid property
      * @return a string
      */
@@ -570,6 +582,7 @@ public class Event extends OutlookItem implements Parsable {
         writer.writeObjectValue("start", this.getStart());
         writer.writeStringValue("subject", this.getSubject());
         writer.writeStringValue("transactionId", this.getTransactionId());
+        writer.writeEnumValue("type", this.getType());
         writer.writeStringValue("uid", this.getUid());
         writer.writeStringValue("webLink", this.getWebLink());
     }
@@ -908,6 +921,14 @@ public class Event extends OutlookItem implements Parsable {
      */
     public void setTransactionId(@javax.annotation.Nullable final String value) {
         this._transactionId = value;
+    }
+    /**
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final EventType value) {
+        this._type = value;
     }
     /**
      * Sets the uid property value. The uid property

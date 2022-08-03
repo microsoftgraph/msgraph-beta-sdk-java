@@ -307,7 +307,7 @@ public class SensitivityLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sensitivityLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SensitivityLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitivityLabelItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SensitivityLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public SensitivityLabelItemRequestBuilderGetQueryParameters queryParameters = new SensitivityLabelItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sensitivityLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SensitivityLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitivityLabelItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SensitivityLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sensitivityLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SensitivityLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitivityLabelItemRequestBuilderPatchRequestConfiguration() {

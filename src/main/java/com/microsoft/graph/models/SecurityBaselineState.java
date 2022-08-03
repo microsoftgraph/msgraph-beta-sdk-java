@@ -25,6 +25,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
      */
     public SecurityBaselineState() {
         super();
+        this.setOdataType("#microsoft.graph.securityBaselineState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

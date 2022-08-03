@@ -13,6 +13,8 @@ public class Print implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The list of available print connectors. */
     private java.util.List<PrintConnector> _connectors;
+    /** The OdataType property */
+    private String _odataType;
     /** The list of print long running operations. */
     private java.util.List<PrintOperation> _operations;
     /** The list of printers registered in the tenant. */
@@ -35,6 +37,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     public Print() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.print");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,8 +72,9 @@ public class Print implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Print currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
             this.put("printers", (n) -> { currentObject.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
             this.put("printerShares", (n) -> { currentObject.setPrinterShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
@@ -80,6 +84,14 @@ public class Print implements AdditionalDataHolder, Parsable {
             this.put("shares", (n) -> { currentObject.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
             this.put("taskDefinitions", (n) -> { currentObject.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operations property value. The list of print long running operations.
@@ -153,6 +165,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("connectors", this.getConnectors());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("printers", this.getPrinters());
         writer.writeCollectionOfObjectValues("printerShares", this.getPrinterShares());
@@ -178,6 +191,14 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     public void setConnectors(@javax.annotation.Nullable final java.util.List<PrintConnector> value) {
         this._connectors = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operations property value. The list of print long running operations.

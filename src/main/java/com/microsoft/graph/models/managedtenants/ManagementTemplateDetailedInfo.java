@@ -17,6 +17,8 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     private String _displayName;
     /** The unique identifier for the management template. Required. Read-only. */
     private String _managementTemplateId;
+    /** The OdataType property */
+    private String _odataType;
     /** The version property */
     private Integer _version;
     /**
@@ -25,6 +27,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
      */
     public ManagementTemplateDetailedInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.managementTemplateDetailedInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementTemplateDetailedInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("managementTemplateId", (n) -> { currentObject.setManagementTemplateId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public String getManagementTemplateId() {
         return this._managementTemplateId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the version property value. The version property
@@ -100,6 +112,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         writer.writeEnumValue("category", this.getCategory());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("managementTemplateId", this.getManagementTemplateId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("version", this.getVersion());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
      */
     public void setManagementTemplateId(@javax.annotation.Nullable final String value) {
         this._managementTemplateId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the version property value. The version property

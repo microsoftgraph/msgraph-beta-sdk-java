@@ -19,6 +19,8 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     private Boolean _isCommunicationSpeakerOptional;
     /** True if the configured speaker is optional. Used to compute the health state if the speaker is not optional. */
     private Boolean _isSpeakerOptional;
+    /** The OdataType property */
+    private String _odataType;
     /** The speakers property */
     private java.util.List<TeamworkPeripheral> _speakers;
     /**
@@ -27,6 +29,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      */
     public TeamworkSpeakerConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkSpeakerConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,11 +72,12 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSpeakerConfiguration currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("defaultCommunicationSpeaker", (n) -> { currentObject.setDefaultCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("defaultSpeaker", (n) -> { currentObject.setDefaultSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("isCommunicationSpeakerOptional", (n) -> { currentObject.setIsCommunicationSpeakerOptional(n.getBooleanValue()); });
             this.put("isSpeakerOptional", (n) -> { currentObject.setIsSpeakerOptional(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("speakers", (n) -> { currentObject.setSpeakers(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
         }};
     }
@@ -94,6 +98,14 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
         return this._isSpeakerOptional;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the speakers property value. The speakers property
      * @return a teamworkPeripheral
      */
@@ -112,6 +124,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
         writer.writeObjectValue("defaultSpeaker", this.getDefaultSpeaker());
         writer.writeBooleanValue("isCommunicationSpeakerOptional", this.getIsCommunicationSpeakerOptional());
         writer.writeBooleanValue("isSpeakerOptional", this.getIsSpeakerOptional());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("speakers", this.getSpeakers());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      */
     public void setIsSpeakerOptional(@javax.annotation.Nullable final Boolean value) {
         this._isSpeakerOptional = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the speakers property value. The speakers property

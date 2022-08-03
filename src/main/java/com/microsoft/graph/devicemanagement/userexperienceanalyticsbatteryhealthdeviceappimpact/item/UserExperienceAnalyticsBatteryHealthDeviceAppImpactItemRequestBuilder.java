@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuild
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuild
         @javax.annotation.Nullable
         public UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuild
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilderPatchRequestConfiguration() {

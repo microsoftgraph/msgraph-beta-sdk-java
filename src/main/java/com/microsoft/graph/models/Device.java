@@ -96,16 +96,17 @@ public class Device extends DirectoryObject implements Parsable {
     /** Represents the usage rights a device has been granted. */
     private java.util.List<UsageRight> _usageRights;
     /**
-     * Instantiates a new device and sets the default values.
+     * Instantiates a new Device and sets the default values.
      * @return a void
      */
     public Device() {
         super();
+        this.setOdataType("#microsoft.graph.device");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a device
+     * @return a Device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

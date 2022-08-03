@@ -34,7 +34,7 @@ public class DeletedTeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teamwork.deletedTeams.item.channels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeletedTeamItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deletedTeamItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeletedTeamItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeletedTeamItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeletedTeamItemRequestBuilder {
         @javax.annotation.Nullable
         public DeletedTeamItemRequestBuilderGetQueryParameters queryParameters = new DeletedTeamItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deletedTeamItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeletedTeamItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeletedTeamItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeletedTeamItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deletedTeamItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeletedTeamItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeletedTeamItemRequestBuilderPatchRequestConfiguration() {

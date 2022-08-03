@@ -16,6 +16,7 @@ public class WindowsStoreApp extends MobileApp implements Parsable {
      */
     public WindowsStoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsStoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

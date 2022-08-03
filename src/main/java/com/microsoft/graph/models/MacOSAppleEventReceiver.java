@@ -20,12 +20,15 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     private String _identifier;
     /** Process identifier types for MacOS Privacy Preferences */
     private MacOSProcessIdentifierType _identifierType;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new macOSAppleEventReceiver and sets the default values.
      * @return a void
      */
     public MacOSAppleEventReceiver() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSAppleEventReceiver");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,11 +71,12 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSAppleEventReceiver currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowed", (n) -> { currentObject.setAllowed(n.getBooleanValue()); });
             this.put("codeRequirement", (n) -> { currentObject.setCodeRequirement(n.getStringValue()); });
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
             this.put("identifierType", (n) -> { currentObject.setIdentifierType(n.getEnumValue(MacOSProcessIdentifierType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -92,6 +96,14 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         return this._identifierType;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -102,6 +114,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("codeRequirement", this.getCodeRequirement());
         writer.writeStringValue("identifier", this.getIdentifier());
         writer.writeEnumValue("identifierType", this.getIdentifierType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -143,5 +156,13 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      */
     public void setIdentifierType(@javax.annotation.Nullable final MacOSProcessIdentifierType value) {
         this._identifierType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

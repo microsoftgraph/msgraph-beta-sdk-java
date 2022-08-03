@@ -26,6 +26,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      */
     public Win32LobAppPowerShellScriptRequirement() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptRequirement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

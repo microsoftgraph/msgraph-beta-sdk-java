@@ -313,7 +313,7 @@ public class RetentionEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new retentionEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RetentionEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RetentionEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class RetentionEventItemRequestBuilder {
         @javax.annotation.Nullable
         public RetentionEventItemRequestBuilderGetQueryParameters queryParameters = new RetentionEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new retentionEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RetentionEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RetentionEventItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class RetentionEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new retentionEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RetentionEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RetentionEventItemRequestBuilderPatchRequestConfiguration() {

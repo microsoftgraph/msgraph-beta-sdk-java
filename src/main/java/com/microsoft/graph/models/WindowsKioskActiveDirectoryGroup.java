@@ -16,6 +16,7 @@ public class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser implement
      */
     public WindowsKioskActiveDirectoryGroup() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskActiveDirectoryGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

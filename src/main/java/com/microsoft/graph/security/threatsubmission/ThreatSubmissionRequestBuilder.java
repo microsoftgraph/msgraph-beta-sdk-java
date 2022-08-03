@@ -108,7 +108,7 @@ public class ThreatSubmissionRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get threatSubmission from security
+     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ThreatSubmissionRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get threatSubmission from security
+     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.threatSubmission.emailThreats.item collection
      * @param id Unique identifier of the item
-     * @return a emailThreatSubmissionItemRequestBuilder
+     * @return a EmailThreatSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmailThreatSubmissionItemRequestBuilder emailThreats(@javax.annotation.Nonnull final String id) {
@@ -235,7 +235,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.threatSubmission.emailThreatSubmissionPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a emailThreatSubmissionPolicyItemRequestBuilder
+     * @return a EmailThreatSubmissionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmailThreatSubmissionPolicyItemRequestBuilder emailThreatSubmissionPolicies(@javax.annotation.Nonnull final String id) {
@@ -247,7 +247,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.threatSubmission.fileThreats.item collection
      * @param id Unique identifier of the item
-     * @return a fileThreatSubmissionItemRequestBuilder
+     * @return a FileThreatSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FileThreatSubmissionItemRequestBuilder fileThreats(@javax.annotation.Nonnull final String id) {
@@ -257,7 +257,7 @@ public class ThreatSubmissionRequestBuilder {
         return new FileThreatSubmissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get threatSubmission from security
+     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @return a CompletableFuture of threatSubmissionRoot
      */
     public java.util.concurrent.CompletableFuture<ThreatSubmissionRoot> get() {
@@ -273,7 +273,7 @@ public class ThreatSubmissionRequestBuilder {
         }
     }
     /**
-     * Get threatSubmission from security
+     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of threatSubmissionRoot
      */
@@ -290,7 +290,7 @@ public class ThreatSubmissionRequestBuilder {
         }
     }
     /**
-     * Get threatSubmission from security
+     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of threatSubmissionRoot
@@ -365,7 +365,7 @@ public class ThreatSubmissionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.threatSubmission.urlThreats.item collection
      * @param id Unique identifier of the item
-     * @return a urlThreatSubmissionItemRequestBuilder
+     * @return a UrlThreatSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UrlThreatSubmissionItemRequestBuilder urlThreats(@javax.annotation.Nonnull final String id) {
@@ -389,7 +389,7 @@ public class ThreatSubmissionRequestBuilder {
         public ThreatSubmissionRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get threatSubmission from security */
+    /** A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat. */
     public class ThreatSubmissionRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

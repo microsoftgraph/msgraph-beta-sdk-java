@@ -13,12 +13,15 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** True if the signed-in user is mentioned in the parent resource instance. Read-only. Supports filter. */
     private Boolean _isMentioned;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new mentionsPreview and sets the default values.
      * @return a void
      */
     public MentionsPreview() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mentionsPreview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MentionsPreview currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("isMentioned", (n) -> { currentObject.setIsMentioned(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
         return this._isMentioned;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isMentioned", this.getIsMentioned());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
      */
     public void setIsMentioned(@javax.annotation.Nullable final Boolean value) {
         this._isMentioned = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

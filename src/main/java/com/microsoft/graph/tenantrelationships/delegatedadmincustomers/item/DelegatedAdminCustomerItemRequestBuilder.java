@@ -308,7 +308,7 @@ public class DelegatedAdminCustomerItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminCustomers.item.serviceManagementDetails.item collection
      * @param id Unique identifier of the item
-     * @return a delegatedAdminServiceManagementDetailItemRequestBuilder
+     * @return a DelegatedAdminServiceManagementDetailItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DelegatedAdminServiceManagementDetailItemRequestBuilder serviceManagementDetails(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DelegatedAdminCustomerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DelegatedAdminCustomerItemRequestBuilder {
         @javax.annotation.Nullable
         public DelegatedAdminCustomerItemRequestBuilderGetQueryParameters queryParameters = new DelegatedAdminCustomerItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new delegatedAdminCustomerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DelegatedAdminCustomerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration() {

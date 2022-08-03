@@ -13,6 +13,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** Details of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden,  adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal. */
     private RiskDetail _detail;
+    /** The OdataType property */
+    private String _odataType;
     /** The riskEventTypes property */
     private java.util.List<String> _riskEventTypes;
     /**
@@ -21,6 +23,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      */
     public RiskServicePrincipalActivity() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.riskServicePrincipalActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskServicePrincipalActivity currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(RiskDetail.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the riskEventTypes property value. The riskEventTypes property
@@ -76,6 +88,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("detail", this.getDetail());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      */
     public void setDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._detail = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the riskEventTypes property value. The riskEventTypes property

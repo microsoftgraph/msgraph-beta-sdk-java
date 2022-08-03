@@ -24,7 +24,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      */
     public DetectedSensitiveContent() {
         super();
-        this.setType("#microsoft.graph.detectedSensitiveContent");
+        this.setOdataType("#microsoft.graph.detectedSensitiveContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

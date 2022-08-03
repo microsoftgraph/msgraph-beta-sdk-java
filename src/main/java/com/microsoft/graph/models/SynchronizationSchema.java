@@ -20,6 +20,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
      */
     public SynchronizationSchema() {
         super();
+        this.setOdataType("#microsoft.graph.synchronizationSchema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

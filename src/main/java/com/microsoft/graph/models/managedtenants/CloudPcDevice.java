@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CloudPcDevice extends Entity implements Parsable {
     /** The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only. */
     private String _cloudPcStatus;
@@ -41,6 +41,7 @@ public class CloudPcDevice extends Entity implements Parsable {
      */
     public CloudPcDevice() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.cloudPcDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

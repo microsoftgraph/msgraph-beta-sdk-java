@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsManagedAppProtection;
 import microsoft.graph.models.WindowsManagedAppProtectionCollectionResponse;
 /** Provides operations to manage the windowsManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
 public class WindowsManagedAppProtectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

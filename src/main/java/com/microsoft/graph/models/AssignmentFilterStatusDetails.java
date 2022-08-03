@@ -18,6 +18,8 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
     private java.util.List<AssignmentFilterEvaluationSummary> _evalutionSummaries;
     /** Unique identifier for the device object. */
     private String _managedDeviceId;
+    /** The OdataType property */
+    private String _odataType;
     /** Unique identifier for payload object. */
     private String _payloadId;
     /** Unique identifier for UserId object. Can be null */
@@ -28,6 +30,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     public AssignmentFilterStatusDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentFilterStatusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,10 +73,11 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterStatusDetails currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("deviceProperties", (n) -> { currentObject.setDeviceProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("evalutionSummaries", (n) -> { currentObject.setEvalutionSummaries(n.getCollectionOfObjectValues(AssignmentFilterEvaluationSummary::createFromDiscriminatorValue)); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
@@ -85,6 +89,14 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
         return this._managedDeviceId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the payloadId property value. Unique identifier for payload object.
@@ -112,6 +124,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
         writer.writeCollectionOfObjectValues("deviceProperties", this.getDeviceProperties());
         writer.writeCollectionOfObjectValues("evalutionSummaries", this.getEvalutionSummaries());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("payloadId", this.getPayloadId());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,6 +160,14 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the payloadId property value. Unique identifier for payload object.

@@ -307,7 +307,7 @@ public class SimulationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new simulationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SimulationItemRequestBuilder {
         @javax.annotation.Nullable
         public SimulationItemRequestBuilderGetQueryParameters queryParameters = new SimulationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new simulationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SimulationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new simulationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationItemRequestBuilderPatchRequestConfiguration() {

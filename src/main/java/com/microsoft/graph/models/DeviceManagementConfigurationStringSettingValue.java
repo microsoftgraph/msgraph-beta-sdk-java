@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationStringSettingValue extends DeviceManag
      */
     public DeviceManagementConfigurationStringSettingValue() {
         super();
-        this.setType("#microsoft.graph.deviceManagementConfigurationStringSettingValue");
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

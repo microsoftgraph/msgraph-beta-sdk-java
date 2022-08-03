@@ -20,6 +20,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      */
     public TenantAppManagementPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.tenantAppManagementPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

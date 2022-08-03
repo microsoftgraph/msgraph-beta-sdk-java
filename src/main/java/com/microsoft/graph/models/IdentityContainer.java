@@ -23,6 +23,8 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     private ContinuousAccessEvaluationPolicy _continuousAccessEvaluationPolicy;
     /** Represents entry point for identity provider base. */
     private java.util.List<IdentityProviderBase> _identityProviders;
+    /** The OdataType property */
+    private String _odataType;
     /** Represents entry point for identity userflow attributes. */
     private java.util.List<IdentityUserFlowAttribute> _userFlowAttributes;
     /** The userFlows property */
@@ -33,6 +35,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      */
     public IdentityContainer() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.identityContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -99,13 +102,14 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityContainer currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("apiConnectors", (n) -> { currentObject.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
             this.put("b2cUserFlows", (n) -> { currentObject.setB2cUserFlows(n.getCollectionOfObjectValues(B2cIdentityUserFlow::createFromDiscriminatorValue)); });
             this.put("b2xUserFlows", (n) -> { currentObject.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
             this.put("conditionalAccess", (n) -> { currentObject.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
             this.put("continuousAccessEvaluationPolicy", (n) -> { currentObject.setContinuousAccessEvaluationPolicy(n.getObjectValue(ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue)); });
             this.put("identityProviders", (n) -> { currentObject.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userFlowAttributes", (n) -> { currentObject.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
             this.put("userFlows", (n) -> { currentObject.setUserFlows(n.getCollectionOfObjectValues(IdentityUserFlow::createFromDiscriminatorValue)); });
         }};
@@ -117,6 +121,14 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
         return this._identityProviders;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
@@ -147,6 +159,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("conditionalAccess", this.getConditionalAccess());
         writer.writeObjectValue("continuousAccessEvaluationPolicy", this.getContinuousAccessEvaluationPolicy());
         writer.writeCollectionOfObjectValues("identityProviders", this.getIdentityProviders());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("userFlowAttributes", this.getUserFlowAttributes());
         writer.writeCollectionOfObjectValues("userFlows", this.getUserFlows());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -206,6 +219,14 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      */
     public void setIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this._identityProviders = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.

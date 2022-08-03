@@ -18,6 +18,8 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     private String _azureStorageAccountName;
     /** True if the Cloud PC is set to in review by the administrator. */
     private Boolean _inReview;
+    /** The OdataType property */
+    private String _odataType;
     /** The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
     private OffsetDateTime _restorePointDateTime;
     /** The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
@@ -34,6 +36,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      */
     public CloudPcReviewStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcReviewStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,10 +79,11 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcReviewStatus currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("azureStorageAccountId", (n) -> { currentObject.setAzureStorageAccountId(n.getStringValue()); });
             this.put("azureStorageAccountName", (n) -> { currentObject.setAzureStorageAccountName(n.getStringValue()); });
             this.put("inReview", (n) -> { currentObject.setInReview(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("restorePointDateTime", (n) -> { currentObject.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
             this.put("reviewStartDateTime", (n) -> { currentObject.setReviewStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
@@ -94,6 +98,14 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getInReview() {
         return this._inReview;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
@@ -145,6 +157,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("azureStorageAccountId", this.getAzureStorageAccountId());
         writer.writeStringValue("azureStorageAccountName", this.getAzureStorageAccountName());
         writer.writeBooleanValue("inReview", this.getInReview());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restorePointDateTime", this.getRestorePointDateTime());
         writer.writeOffsetDateTimeValue("reviewStartDateTime", this.getReviewStartDateTime());
         writer.writeStringValue("subscriptionId", this.getSubscriptionId());
@@ -183,6 +196,14 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      */
     public void setInReview(@javax.annotation.Nullable final Boolean value) {
         this._inReview = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.

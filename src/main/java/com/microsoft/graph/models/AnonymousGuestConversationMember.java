@@ -16,6 +16,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
      */
     public AnonymousGuestConversationMember() {
         super();
+        this.setOdataType("#microsoft.graph.anonymousGuestConversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

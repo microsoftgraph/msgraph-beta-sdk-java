@@ -20,6 +20,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      */
     public AndroidManagedStoreAppConfigurationSchema() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedStoreAppConfigurationSchema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

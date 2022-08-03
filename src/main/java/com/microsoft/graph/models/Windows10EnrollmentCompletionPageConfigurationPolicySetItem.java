@@ -16,6 +16,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
      */
     public Windows10EnrollmentCompletionPageConfigurationPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.windows10EnrollmentCompletionPageConfigurationPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

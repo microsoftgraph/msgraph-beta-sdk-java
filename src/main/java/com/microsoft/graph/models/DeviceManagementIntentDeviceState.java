@@ -28,6 +28,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      */
     public DeviceManagementIntentDeviceState() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntentDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

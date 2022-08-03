@@ -24,6 +24,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      */
     public OnPremisesAgent() {
         super();
+        this.setOdataType("#microsoft.graph.onPremisesAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

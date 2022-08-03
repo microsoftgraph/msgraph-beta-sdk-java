@@ -17,6 +17,8 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _endDateTime;
     /** The name of the metric for which a time series is requested. */
     private String _metricName;
+    /** The OdataType property */
+    private String _odataType;
     /** Start time of the series being requested. */
     private OffsetDateTime _startDateTime;
     /**
@@ -25,6 +27,7 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
      */
     public TimeSeriesParameter() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.timeSeriesParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeSeriesParameter currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("metricName", (n) -> { currentObject.setMetricName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMetricName() {
         return this._metricName;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. Start time of the series being requested.
@@ -90,6 +102,7 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("metricName", this.getMetricName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +129,14 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
      */
     public void setMetricName(@javax.annotation.Nullable final String value) {
         this._metricName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. Start time of the series being requested.

@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.PlannerPlanCollectionResponse;
 /** Provides operations to manage the favoritePlans property of the microsoft.graph.plannerUser entity. */
 public class FavoritePlansRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

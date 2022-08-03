@@ -28,6 +28,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
      */
     public AndroidScepCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidScepCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

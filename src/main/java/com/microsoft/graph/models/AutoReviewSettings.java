@@ -13,12 +13,15 @@ public class AutoReviewSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Possible values: Approve, Deny, or Recommendation.  If Recommendation, then accessRecommendationsEnabled in the accessReviewSettings resource should also be set to true. If you want to have the system provide a decision even if the reviewer does not make a choice, set the autoReviewEnabled property in the accessReviewSettings resource to true and include an autoReviewSettings object with the notReviewedResult property. Then, when a review completes, based on the notReviewedResult property, the decision is recorded as either Approve or Deny. */
     private String _notReviewedResult;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new autoReviewSettings and sets the default values.
      * @return a void
      */
     public AutoReviewSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.autoReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class AutoReviewSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutoReviewSettings currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("notReviewedResult", (n) -> { currentObject.setNotReviewedResult(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class AutoReviewSettings implements AdditionalDataHolder, Parsable {
         return this._notReviewedResult;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class AutoReviewSettings implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("notReviewedResult", this.getNotReviewedResult());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class AutoReviewSettings implements AdditionalDataHolder, Parsable {
      */
     public void setNotReviewedResult(@javax.annotation.Nullable final String value) {
         this._notReviewedResult = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

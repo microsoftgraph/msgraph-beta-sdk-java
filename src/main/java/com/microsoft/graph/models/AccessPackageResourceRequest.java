@@ -36,6 +36,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     public AccessPackageResourceRequest() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageResourceRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

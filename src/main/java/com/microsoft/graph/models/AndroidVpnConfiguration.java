@@ -34,6 +34,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
      */
     public AndroidVpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

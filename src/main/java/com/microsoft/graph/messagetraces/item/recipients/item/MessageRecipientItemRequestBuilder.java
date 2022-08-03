@@ -202,7 +202,7 @@ public class MessageRecipientItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.messageTraces.item.recipients.item.events.item collection
      * @param id Unique identifier of the item
-     * @return a messageEventItemRequestBuilder
+     * @return a MessageEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageEventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class MessageRecipientItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageRecipientItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MessageRecipientItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageRecipientItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class MessageRecipientItemRequestBuilder {
         @javax.annotation.Nullable
         public MessageRecipientItemRequestBuilderGetQueryParameters queryParameters = new MessageRecipientItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new messageRecipientItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MessageRecipientItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageRecipientItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class MessageRecipientItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageRecipientItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MessageRecipientItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageRecipientItemRequestBuilderPatchRequestConfiguration() {

@@ -19,6 +19,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      */
     public CustomExtensionHandler() {
         super();
+        this.setOdataType("#microsoft.graph.customExtensionHandler");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      */
     public DeviceManagementConfigurationSecretSettingValue() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSecretSettingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

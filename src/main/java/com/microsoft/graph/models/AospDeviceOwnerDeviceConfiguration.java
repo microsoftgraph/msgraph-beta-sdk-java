@@ -42,6 +42,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      */
     public AospDeviceOwnerDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.aospDeviceOwnerDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

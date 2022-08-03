@@ -18,6 +18,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
      */
     public AndroidForWorkAppConfigurationSchema() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkAppConfigurationSchema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

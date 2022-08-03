@@ -15,6 +15,8 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     private Boolean _enabled;
     /** The endpoint property */
     private String _endpoint;
+    /** The OdataType property */
+    private String _odataType;
     /** The provider property */
     private String _provider;
     /** The region property */
@@ -27,6 +29,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     public SecurityProviderStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.securityProviderStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +72,22 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityProviderStatus currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("endpoint", (n) -> { currentObject.setEndpoint(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
             this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the provider property value. The provider property
@@ -110,6 +122,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enabled", this.getEnabled());
         writer.writeStringValue("endpoint", this.getEndpoint());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("provider", this.getProvider());
         writer.writeStringValue("region", this.getRegion());
         writer.writeStringValue("vendor", this.getVendor());
@@ -138,6 +151,14 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     public void setEndpoint(@javax.annotation.Nullable final String value) {
         this._endpoint = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the provider property value. The provider property

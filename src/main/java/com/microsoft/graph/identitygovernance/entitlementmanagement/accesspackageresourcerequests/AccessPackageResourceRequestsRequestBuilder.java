@@ -20,7 +20,7 @@ import microsoft.graph.models.AccessPackageResourceRequestCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageResourceRequests property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageResourceRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

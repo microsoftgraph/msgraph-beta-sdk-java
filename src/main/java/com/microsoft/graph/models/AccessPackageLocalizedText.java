@@ -13,6 +13,8 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** The ISO code for the intended language. Required. */
     private String _languageCode;
+    /** The OdataType property */
+    private String _odataType;
     /** The text in the specific language. Required. */
     private String _text;
     /**
@@ -21,6 +23,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     public AccessPackageLocalizedText() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageLocalizedText");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageLocalizedText currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("languageCode", (n) -> { currentObject.setLanguageCode(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public String getLanguageCode() {
         return this._languageCode;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the text property value. The text in the specific language. Required.
@@ -76,6 +88,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("languageCode", this.getLanguageCode());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("text", this.getText());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     public void setLanguageCode(@javax.annotation.Nullable final String value) {
         this._languageCode = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the text property value. The text in the specific language. Required.

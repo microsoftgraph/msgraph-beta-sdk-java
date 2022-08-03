@@ -18,6 +18,7 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
      */
     public AndroidForWorkImportedPFXCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkImportedPFXCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

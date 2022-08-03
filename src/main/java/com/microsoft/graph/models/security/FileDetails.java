@@ -21,6 +21,8 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     private Long _fileSize;
     /** The issuer property */
     private String _issuer;
+    /** The OdataType property */
+    private String _odataType;
     /** The sha1 property */
     private String _sha1;
     /** The sha256 property */
@@ -33,6 +35,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      */
     public FileDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.fileDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,13 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileDetails currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
             this.put("filePublisher", (n) -> { currentObject.setFilePublisher(n.getStringValue()); });
             this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sha1", (n) -> { currentObject.setSha1(n.getStringValue()); });
             this.put("sha256", (n) -> { currentObject.setSha256(n.getStringValue()); });
             this.put("signer", (n) -> { currentObject.setSigner(n.getStringValue()); });
@@ -111,6 +115,14 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._issuer;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the sha1 property value. The sha1 property
      * @return a string
      */
@@ -146,6 +158,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("filePublisher", this.getFilePublisher());
         writer.writeLongValue("fileSize", this.getFileSize());
         writer.writeStringValue("issuer", this.getIssuer());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sha1", this.getSha1());
         writer.writeStringValue("sha256", this.getSha256());
         writer.writeStringValue("signer", this.getSigner());
@@ -198,6 +211,14 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      */
     public void setIssuer(@javax.annotation.Nullable final String value) {
         this._issuer = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sha1 property value. The sha1 property

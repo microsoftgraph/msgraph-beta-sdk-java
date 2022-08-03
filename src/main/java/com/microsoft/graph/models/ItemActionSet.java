@@ -23,6 +23,8 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
     private MentionAction _mention;
     /** An item was moved. */
     private MoveAction _move;
+    /** The OdataType property */
+    private String _odataType;
     /** An item was renamed. */
     private RenameAction _rename;
     /** An item was restored. */
@@ -37,6 +39,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     public ItemActionSet() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.itemActionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -95,13 +98,14 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActionSet currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("comment", (n) -> { currentObject.setComment(n.getObjectValue(CommentAction::createFromDiscriminatorValue)); });
             this.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(CreateAction::createFromDiscriminatorValue)); });
             this.put("delete", (n) -> { currentObject.setDelete(n.getObjectValue(DeleteAction::createFromDiscriminatorValue)); });
             this.put("edit", (n) -> { currentObject.setEdit(n.getObjectValue(EditAction::createFromDiscriminatorValue)); });
             this.put("mention", (n) -> { currentObject.setMention(n.getObjectValue(MentionAction::createFromDiscriminatorValue)); });
             this.put("move", (n) -> { currentObject.setMove(n.getObjectValue(MoveAction::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rename", (n) -> { currentObject.setRename(n.getObjectValue(RenameAction::createFromDiscriminatorValue)); });
             this.put("restore", (n) -> { currentObject.setRestore(n.getObjectValue(RestoreAction::createFromDiscriminatorValue)); });
             this.put("share", (n) -> { currentObject.setShare(n.getObjectValue(ShareAction::createFromDiscriminatorValue)); });
@@ -123,6 +127,14 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MoveAction getMove() {
         return this._move;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the rename property value. An item was renamed.
@@ -169,6 +181,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("edit", this.getEdit());
         writer.writeObjectValue("mention", this.getMention());
         writer.writeObjectValue("move", this.getMove());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("rename", this.getRename());
         writer.writeObjectValue("restore", this.getRestore());
         writer.writeObjectValue("share", this.getShare());
@@ -230,6 +243,14 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     public void setMove(@javax.annotation.Nullable final MoveAction value) {
         this._move = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the rename property value. An item was renamed.

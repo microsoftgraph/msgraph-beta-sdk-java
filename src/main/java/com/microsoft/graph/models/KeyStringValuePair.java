@@ -16,6 +16,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      */
     public KeyStringValuePair() {
         super();
+        this.setOdataType("#microsoft.graph.keyStringValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

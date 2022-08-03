@@ -17,6 +17,7 @@ public class Catalog extends Entity implements Parsable {
      */
     public Catalog() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.catalog");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

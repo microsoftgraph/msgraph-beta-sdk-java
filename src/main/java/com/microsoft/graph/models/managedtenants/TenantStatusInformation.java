@@ -16,6 +16,8 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     private DelegatedPrivilegeStatus _delegatedPrivilegeStatus;
     /** The date and time the delegated admin privileges status was updated. Optional. Read-only. */
     private OffsetDateTime _lastDelegatedPrivilegeRefreshDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The identifier for the account that offboarded the managed tenant. Optional. Read-only. */
     private String _offboardedByUserId;
     /** The date and time when the managed tenant was offboarded. Optional. Read-only. */
@@ -36,6 +38,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     public TenantStatusInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.tenantStatusInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,9 +73,10 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantStatusInformation currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("delegatedPrivilegeStatus", (n) -> { currentObject.setDelegatedPrivilegeStatus(n.getEnumValue(DelegatedPrivilegeStatus.class)); });
             this.put("lastDelegatedPrivilegeRefreshDateTime", (n) -> { currentObject.setLastDelegatedPrivilegeRefreshDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("offboardedByUserId", (n) -> { currentObject.setOffboardedByUserId(n.getStringValue()); });
             this.put("offboardedDateTime", (n) -> { currentObject.setOffboardedDateTime(n.getOffsetDateTimeValue()); });
             this.put("onboardedByUserId", (n) -> { currentObject.setOnboardedByUserId(n.getStringValue()); });
@@ -89,6 +93,14 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastDelegatedPrivilegeRefreshDateTime() {
         return this._lastDelegatedPrivilegeRefreshDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the offboardedByUserId property value. The identifier for the account that offboarded the managed tenant. Optional. Read-only.
@@ -155,6 +167,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("delegatedPrivilegeStatus", this.getDelegatedPrivilegeStatus());
         writer.writeOffsetDateTimeValue("lastDelegatedPrivilegeRefreshDateTime", this.getLastDelegatedPrivilegeRefreshDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("offboardedByUserId", this.getOffboardedByUserId());
         writer.writeOffsetDateTimeValue("offboardedDateTime", this.getOffboardedDateTime());
         writer.writeStringValue("onboardedByUserId", this.getOnboardedByUserId());
@@ -187,6 +200,14 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     public void setLastDelegatedPrivilegeRefreshDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastDelegatedPrivilegeRefreshDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the offboardedByUserId property value. The identifier for the account that offboarded the managed tenant. Optional. Read-only.

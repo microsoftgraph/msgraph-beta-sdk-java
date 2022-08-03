@@ -18,6 +18,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      */
     public ConfigurationManagerActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.configurationManagerActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

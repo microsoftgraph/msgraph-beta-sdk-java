@@ -279,7 +279,7 @@ public class ExternalConnectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.external.connections.item.groups.item collection
      * @param id Unique identifier of the item
-     * @return a externalGroupItemRequestBuilder
+     * @return a ExternalGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExternalGroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
@@ -291,7 +291,7 @@ public class ExternalConnectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.external.connections.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a externalItemItemRequestBuilder
+     * @return a ExternalItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExternalItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -303,7 +303,7 @@ public class ExternalConnectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.external.connections.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a connectionOperationItemRequestBuilder
+     * @return a ConnectionOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectionOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -376,7 +376,7 @@ public class ExternalConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new externalConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalConnectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -405,7 +405,7 @@ public class ExternalConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public ExternalConnectionItemRequestBuilderGetQueryParameters queryParameters = new ExternalConnectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new externalConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalConnectionItemRequestBuilderGetRequestConfiguration() {
@@ -420,7 +420,7 @@ public class ExternalConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new externalConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalConnectionItemRequestBuilderPatchRequestConfiguration() {

@@ -307,7 +307,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new aggregatedPolicyComplianceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AggregatedPolicyComplianceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AggregatedPolicyComplianceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder {
         @javax.annotation.Nullable
         public AggregatedPolicyComplianceItemRequestBuilderGetQueryParameters queryParameters = new AggregatedPolicyComplianceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new aggregatedPolicyComplianceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AggregatedPolicyComplianceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AggregatedPolicyComplianceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new aggregatedPolicyComplianceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AggregatedPolicyComplianceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AggregatedPolicyComplianceItemRequestBuilderPatchRequestConfiguration() {

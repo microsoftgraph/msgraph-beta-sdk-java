@@ -20,7 +20,7 @@ import microsoft.graph.models.RecommendationResource;
 import microsoft.graph.models.RecommendationResourceCollectionResponse;
 /** Provides operations to manage the impactedResources property of the microsoft.graph.directory entity. */
 public class ImpactedResourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ReviewSetQuery extends Entity implements Parsable {
     /** The user who created the query. */
     private IdentitySet _createdBy;
@@ -30,6 +30,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      */
     public ReviewSetQuery() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.reviewSetQuery");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

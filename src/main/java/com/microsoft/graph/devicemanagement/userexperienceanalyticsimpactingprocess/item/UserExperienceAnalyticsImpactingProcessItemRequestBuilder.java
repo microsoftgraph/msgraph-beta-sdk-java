@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsImpactingProcessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsImpactingProcessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsImpactingProcessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsImpactingProcessItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsImpactingProcessItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsImpactingProcessItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsImpactingProcessItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsImpactingProcessItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsImpactingProcessItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsImpactingProcessItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsImpactingProcessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsImpactingProcessItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsImpactingProcessItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsImpactingProcessItemRequestBuilderPatchRequestConfiguration() {

@@ -17,6 +17,8 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     private java.util.List<MetadataEntry> _metadata;
     /** The name property */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The supportedApis property */
     private java.util.List<String> _supportedApis;
     /**
@@ -25,6 +27,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     public ObjectDefinition() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.objectDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,10 +62,11 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectDefinition currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("attributes", (n) -> { currentObject.setAttributes(n.getCollectionOfObjectValues(AttributeDefinition::createFromDiscriminatorValue)); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("supportedApis", (n) -> { currentObject.setSupportedApis(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -83,6 +87,14 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the supportedApis property value. The supportedApis property
      * @return a string
      */
@@ -100,6 +112,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("attributes", this.getAttributes());
         writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("supportedApis", this.getSupportedApis());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the supportedApis property value. The supportedApis property

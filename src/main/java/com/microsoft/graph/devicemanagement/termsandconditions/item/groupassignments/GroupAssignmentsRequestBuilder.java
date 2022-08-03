@@ -20,7 +20,7 @@ import microsoft.graph.models.TermsAndConditionsGroupAssignment;
 import microsoft.graph.models.TermsAndConditionsGroupAssignmentCollectionResponse;
 /** Provides operations to manage the groupAssignments property of the microsoft.graph.termsAndConditions entity. */
 public class GroupAssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

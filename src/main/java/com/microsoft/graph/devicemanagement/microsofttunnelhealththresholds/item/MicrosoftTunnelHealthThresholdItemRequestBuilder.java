@@ -307,7 +307,7 @@ public class MicrosoftTunnelHealthThresholdItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelHealthThresholdItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelHealthThresholdItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelHealthThresholdItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MicrosoftTunnelHealthThresholdItemRequestBuilder {
         @javax.annotation.Nullable
         public MicrosoftTunnelHealthThresholdItemRequestBuilderGetQueryParameters queryParameters = new MicrosoftTunnelHealthThresholdItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new microsoftTunnelHealthThresholdItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelHealthThresholdItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelHealthThresholdItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MicrosoftTunnelHealthThresholdItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelHealthThresholdItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelHealthThresholdItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelHealthThresholdItemRequestBuilderPatchRequestConfiguration() {

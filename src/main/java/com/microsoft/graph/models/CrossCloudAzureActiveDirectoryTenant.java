@@ -20,6 +20,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     public CrossCloudAzureActiveDirectoryTenant() {
         super();
+        this.setOdataType("#microsoft.graph.crossCloudAzureActiveDirectoryTenant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

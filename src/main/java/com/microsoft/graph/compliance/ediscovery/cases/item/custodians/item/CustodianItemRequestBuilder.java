@@ -352,7 +352,7 @@ public class CustodianItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.siteSources.item collection
      * @param id Unique identifier of the item
-     * @return a siteSourceItemRequestBuilder
+     * @return a SiteSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteSourceItemRequestBuilder siteSources(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class CustodianItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.unifiedGroupSources.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedGroupSourceItemRequestBuilder
+     * @return a UnifiedGroupSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedGroupSourceItemRequestBuilder unifiedGroupSources(@javax.annotation.Nonnull final String id) {
@@ -376,7 +376,7 @@ public class CustodianItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.userSources.item collection
      * @param id Unique identifier of the item
-     * @return a userSourceItemRequestBuilder
+     * @return a UserSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserSourceItemRequestBuilder userSources(@javax.annotation.Nonnull final String id) {
@@ -394,7 +394,7 @@ public class CustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new custodianItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CustodianItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustodianItemRequestBuilderDeleteRequestConfiguration() {
@@ -423,7 +423,7 @@ public class CustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public CustodianItemRequestBuilderGetQueryParameters queryParameters = new CustodianItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new custodianItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CustodianItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustodianItemRequestBuilderGetRequestConfiguration() {
@@ -438,7 +438,7 @@ public class CustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new custodianItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CustodianItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustodianItemRequestBuilderPatchRequestConfiguration() {

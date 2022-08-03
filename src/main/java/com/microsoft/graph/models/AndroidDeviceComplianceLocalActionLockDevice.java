@@ -14,6 +14,7 @@ public class AndroidDeviceComplianceLocalActionLockDevice extends AndroidDeviceC
      */
     public AndroidDeviceComplianceLocalActionLockDevice() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceComplianceLocalActionLockDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,7 +23,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      */
     public IosVppAppAssignedLicense() {
         super();
-        this.setType("#microsoft.graph.iosVppAppAssignedLicense");
+        this.setOdataType("#microsoft.graph.iosVppAppAssignedLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

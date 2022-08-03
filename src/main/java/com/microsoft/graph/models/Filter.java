@@ -17,12 +17,15 @@ public class Filter implements AdditionalDataHolder, Parsable {
     private java.util.List<FilterGroup> _groups;
     /** *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true. */
     private java.util.List<FilterGroup> _inputFilterGroups;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new filter and sets the default values.
      * @return a void
      */
     public Filter() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.filter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,10 +60,11 @@ public class Filter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Filter currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("categoryFilterGroups", (n) -> { currentObject.setCategoryFilterGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
             this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
             this.put("inputFilterGroups", (n) -> { currentObject.setInputFilterGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class Filter implements AdditionalDataHolder, Parsable {
         return this._inputFilterGroups;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("categoryFilterGroups", this.getCategoryFilterGroups());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
         writer.writeCollectionOfObjectValues("inputFilterGroups", this.getInputFilterGroups());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class Filter implements AdditionalDataHolder, Parsable {
      */
     public void setInputFilterGroups(@javax.annotation.Nullable final java.util.List<FilterGroup> value) {
         this._inputFilterGroups = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

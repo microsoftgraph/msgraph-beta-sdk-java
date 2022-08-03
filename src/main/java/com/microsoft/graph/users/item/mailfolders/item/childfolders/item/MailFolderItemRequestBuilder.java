@@ -293,7 +293,7 @@ public class MailFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.childFolders.item.messageRules.item collection
      * @param id Unique identifier of the item
-     * @return a messageRuleItemRequestBuilder
+     * @return a MessageRuleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageRuleItemRequestBuilder messageRules(@javax.annotation.Nonnull final String id) {
@@ -305,7 +305,7 @@ public class MailFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.childFolders.item.messages.item collection
      * @param id Unique identifier of the item
-     * @return a messageItemRequestBuilder
+     * @return a MessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
@@ -317,7 +317,7 @@ public class MailFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.childFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -384,7 +384,7 @@ public class MailFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.childFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -396,7 +396,7 @@ public class MailFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.childFolders.item.userConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a userConfigurationItemRequestBuilder
+     * @return a UserConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserConfigurationItemRequestBuilder userConfigurations(@javax.annotation.Nonnull final String id) {
@@ -414,7 +414,7 @@ public class MailFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mailFolderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MailFolderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MailFolderItemRequestBuilderDeleteRequestConfiguration() {
@@ -443,7 +443,7 @@ public class MailFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public MailFolderItemRequestBuilderGetQueryParameters queryParameters = new MailFolderItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mailFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MailFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MailFolderItemRequestBuilderGetRequestConfiguration() {
@@ -458,7 +458,7 @@ public class MailFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mailFolderItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MailFolderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MailFolderItemRequestBuilderPatchRequestConfiguration() {

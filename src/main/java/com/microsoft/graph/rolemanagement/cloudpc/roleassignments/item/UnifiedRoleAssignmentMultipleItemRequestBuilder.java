@@ -52,7 +52,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.appScopes.item collection
      * @param id Unique identifier of the item
-     * @return a appScopeItemRequestBuilder
+     * @return a AppScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppScopeItemRequestBuilder appScopes(@javax.annotation.Nonnull final String id) {
@@ -232,7 +232,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.directoryScopes.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.item.DirectoryObjectItemRequestBuilder directoryScopes(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.principals.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.item.DirectoryObjectItemRequestBuilder principals(@javax.annotation.Nonnull final String id) {
@@ -368,7 +368,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleAssignmentMultipleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleAssignmentMultipleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleAssignmentMultipleItemRequestBuilderDeleteRequestConfiguration() {
@@ -397,7 +397,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleAssignmentMultipleItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleAssignmentMultipleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleAssignmentMultipleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleAssignmentMultipleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleAssignmentMultipleItemRequestBuilderGetRequestConfiguration() {
@@ -412,7 +412,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleAssignmentMultipleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleAssignmentMultipleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleAssignmentMultipleItemRequestBuilderPatchRequestConfiguration() {

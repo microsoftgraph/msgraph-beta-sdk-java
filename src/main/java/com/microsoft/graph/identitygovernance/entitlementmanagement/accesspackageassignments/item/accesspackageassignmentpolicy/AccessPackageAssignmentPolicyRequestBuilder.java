@@ -163,7 +163,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackageAssignmentPolicy.customExtensionHandlers.item collection
      * @param id Unique identifier of the item
-     * @return a customExtensionHandlerItemRequestBuilder
+     * @return a CustomExtensionHandlerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomExtensionHandlerItemRequestBuilder customExtensionHandlers(@javax.annotation.Nonnull final String id) {

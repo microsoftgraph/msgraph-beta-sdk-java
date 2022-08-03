@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TeamsAppDefinition extends Entity implements Parsable {
     /** A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. */
     private TeamsAppInstallationScopes _allowedInstallationScopes;
@@ -42,6 +42,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     public TeamsAppDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAppDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -39,6 +39,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      */
     public AndroidManagedStoreAccountEnterpriseSettings() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedStoreAccountEnterpriseSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

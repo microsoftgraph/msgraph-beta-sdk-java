@@ -307,7 +307,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new assignmentFilterEvaluationStatusDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AssignmentFilterEvaluationStatusDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AssignmentFilterEvaluationStatusDetailsItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public AssignmentFilterEvaluationStatusDetailsItemRequestBuilderGetQueryParameters queryParameters = new AssignmentFilterEvaluationStatusDetailsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new assignmentFilterEvaluationStatusDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AssignmentFilterEvaluationStatusDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AssignmentFilterEvaluationStatusDetailsItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new assignmentFilterEvaluationStatusDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AssignmentFilterEvaluationStatusDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AssignmentFilterEvaluationStatusDetailsItemRequestBuilderPatchRequestConfiguration() {

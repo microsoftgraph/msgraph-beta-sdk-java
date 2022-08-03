@@ -307,7 +307,7 @@ public class ItemPatentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemPatentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPatentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPatentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ItemPatentItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemPatentItemRequestBuilderGetQueryParameters queryParameters = new ItemPatentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemPatentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPatentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPatentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ItemPatentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemPatentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPatentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPatentItemRequestBuilderPatchRequestConfiguration() {

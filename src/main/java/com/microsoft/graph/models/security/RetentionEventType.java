@@ -29,6 +29,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     public RetentionEventType() {
         super();
+        this.setOdataType("#microsoft.graph.security.retentionEventType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

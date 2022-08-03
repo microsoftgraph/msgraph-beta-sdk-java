@@ -308,7 +308,7 @@ public class SecurityBaselineStateItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.managedDevices.item.securityBaselineStates.item.settingStates.item collection
      * @param id Unique identifier of the item
-     * @return a securityBaselineSettingStateItemRequestBuilder
+     * @return a SecurityBaselineSettingStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecurityBaselineSettingStateItemRequestBuilder settingStates(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class SecurityBaselineStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new securityBaselineStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityBaselineStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityBaselineStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class SecurityBaselineStateItemRequestBuilder {
         @javax.annotation.Nullable
         public SecurityBaselineStateItemRequestBuilderGetQueryParameters queryParameters = new SecurityBaselineStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new securityBaselineStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityBaselineStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityBaselineStateItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class SecurityBaselineStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new securityBaselineStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityBaselineStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityBaselineStateItemRequestBuilderPatchRequestConfiguration() {

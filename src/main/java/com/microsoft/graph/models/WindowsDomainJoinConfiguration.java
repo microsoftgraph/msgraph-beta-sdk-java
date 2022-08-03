@@ -19,16 +19,17 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     /** Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain. */
     private String _organizationalUnit;
     /**
-     * Instantiates a new windowsDomainJoinConfiguration and sets the default values.
+     * Instantiates a new WindowsDomainJoinConfiguration and sets the default values.
      * @return a void
      */
     public WindowsDomainJoinConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDomainJoinConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDomainJoinConfiguration
+     * @return a WindowsDomainJoinConfiguration
      */
     @javax.annotation.Nonnull
     public static WindowsDomainJoinConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

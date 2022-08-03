@@ -39,6 +39,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     private Boolean _isTranslateHostHeaderEnabled;
     /** Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false. */
     private Boolean _isTranslateLinksInBodyEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The onPremisesApplicationSegments property */
     private java.util.List<OnPremisesApplicationSegment> _onPremisesApplicationSegments;
     /** Represents the single sign-on configuration for the on-premises application. */
@@ -57,6 +59,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     public OnPremisesPublishing() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.onPremisesPublishing");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -123,7 +126,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesPublishing currentObject = this;
-        return new HashMap<>(20) {{
+        return new HashMap<>(21) {{
             this.put("alternateUrl", (n) -> { currentObject.setAlternateUrl(n.getStringValue()); });
             this.put("applicationServerTimeout", (n) -> { currentObject.setApplicationServerTimeout(n.getStringValue()); });
             this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });
@@ -138,6 +141,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
             this.put("isStateSessionEnabled", (n) -> { currentObject.setIsStateSessionEnabled(n.getBooleanValue()); });
             this.put("isTranslateHostHeaderEnabled", (n) -> { currentObject.setIsTranslateHostHeaderEnabled(n.getBooleanValue()); });
             this.put("isTranslateLinksInBodyEnabled", (n) -> { currentObject.setIsTranslateLinksInBodyEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onPremisesApplicationSegments", (n) -> { currentObject.setOnPremisesApplicationSegments(n.getCollectionOfObjectValues(OnPremisesApplicationSegment::createFromDiscriminatorValue)); });
             this.put("singleSignOnSettings", (n) -> { currentObject.setSingleSignOnSettings(n.getObjectValue(OnPremisesPublishingSingleSignOn::createFromDiscriminatorValue)); });
             this.put("useAlternateUrlForTranslationAndRedirect", (n) -> { currentObject.setUseAlternateUrlForTranslationAndRedirect(n.getBooleanValue()); });
@@ -219,6 +223,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this._isTranslateLinksInBodyEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
      * @return a onPremisesApplicationSegment
      */
@@ -287,6 +299,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isStateSessionEnabled", this.getIsStateSessionEnabled());
         writer.writeBooleanValue("isTranslateHostHeaderEnabled", this.getIsTranslateHostHeaderEnabled());
         writer.writeBooleanValue("isTranslateLinksInBodyEnabled", this.getIsTranslateLinksInBodyEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("onPremisesApplicationSegments", this.getOnPremisesApplicationSegments());
         writer.writeObjectValue("singleSignOnSettings", this.getSingleSignOnSettings());
         writer.writeBooleanValue("useAlternateUrlForTranslationAndRedirect", this.getUseAlternateUrlForTranslationAndRedirect());
@@ -414,6 +427,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     public void setIsTranslateLinksInBodyEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isTranslateLinksInBodyEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property

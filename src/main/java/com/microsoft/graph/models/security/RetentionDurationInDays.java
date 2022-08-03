@@ -16,6 +16,7 @@ public class RetentionDurationInDays extends RetentionDuration implements Parsab
      */
     public RetentionDurationInDays() {
         super();
+        this.setOdataType("#microsoft.graph.security.retentionDurationInDays");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

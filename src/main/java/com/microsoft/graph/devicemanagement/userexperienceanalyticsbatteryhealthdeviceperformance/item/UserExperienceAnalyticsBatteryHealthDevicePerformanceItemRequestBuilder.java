@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBui
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBui
         @javax.annotation.Nullable
         public UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBui
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilderPatchRequestConfiguration() {

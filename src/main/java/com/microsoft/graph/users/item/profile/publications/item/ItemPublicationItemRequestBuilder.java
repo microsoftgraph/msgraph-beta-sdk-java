@@ -307,7 +307,7 @@ public class ItemPublicationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemPublicationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPublicationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPublicationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ItemPublicationItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemPublicationItemRequestBuilderGetQueryParameters queryParameters = new ItemPublicationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemPublicationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPublicationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPublicationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ItemPublicationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemPublicationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemPublicationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemPublicationItemRequestBuilderPatchRequestConfiguration() {

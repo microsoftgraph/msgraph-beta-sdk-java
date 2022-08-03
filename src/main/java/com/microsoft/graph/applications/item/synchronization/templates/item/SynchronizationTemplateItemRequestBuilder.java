@@ -313,7 +313,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new synchronizationTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public SynchronizationTemplateItemRequestBuilderGetQueryParameters queryParameters = new SynchronizationTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new synchronizationTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SynchronizationTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SynchronizationTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new synchronizationTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration() {

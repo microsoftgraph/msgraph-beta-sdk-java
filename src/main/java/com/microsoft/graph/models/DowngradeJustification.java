@@ -15,12 +15,15 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
     private Boolean _isDowngradeJustified;
     /** Message that indicates why a downgrade is justified. The message will appear in administrative logs. */
     private String _justificationMessage;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new downgradeJustification and sets the default values.
      * @return a void
      */
     public DowngradeJustification() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.downgradeJustification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,9 +50,10 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DowngradeJustification currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("isDowngradeJustified", (n) -> { currentObject.setIsDowngradeJustified(n.getBooleanValue()); });
             this.put("justificationMessage", (n) -> { currentObject.setJustificationMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         return this._justificationMessage;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isDowngradeJustified", this.getIsDowngradeJustified());
         writer.writeStringValue("justificationMessage", this.getJustificationMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
      */
     public void setJustificationMessage(@javax.annotation.Nullable final String value) {
         this._justificationMessage = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

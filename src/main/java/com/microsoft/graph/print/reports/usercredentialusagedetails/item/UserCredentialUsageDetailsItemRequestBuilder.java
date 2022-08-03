@@ -307,7 +307,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userCredentialUsageDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserCredentialUsageDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserCredentialUsageDetailsItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public UserCredentialUsageDetailsItemRequestBuilderGetQueryParameters queryParameters = new UserCredentialUsageDetailsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userCredentialUsageDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserCredentialUsageDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserCredentialUsageDetailsItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userCredentialUsageDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserCredentialUsageDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserCredentialUsageDetailsItemRequestBuilderPatchRequestConfiguration() {

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TenantGroup extends Entity implements Parsable {
     /** A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only. */
     private Boolean _allTenantsIncluded;
@@ -26,6 +26,7 @@ public class TenantGroup extends Entity implements Parsable {
      */
     public TenantGroup() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.tenantGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

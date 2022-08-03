@@ -26,6 +26,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      */
     public WindowsPhone81VpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81VpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

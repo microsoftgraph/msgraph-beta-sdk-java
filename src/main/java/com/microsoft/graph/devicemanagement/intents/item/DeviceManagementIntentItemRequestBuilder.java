@@ -106,7 +106,7 @@ public class DeviceManagementIntentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementIntentAssignmentItemRequestBuilder
+     * @return a DeviceManagementIntentAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementIntentAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -118,7 +118,7 @@ public class DeviceManagementIntentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.categories.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementIntentSettingCategoryItemRequestBuilder
+     * @return a DeviceManagementIntentSettingCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementIntentSettingCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
@@ -308,7 +308,7 @@ public class DeviceManagementIntentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.deviceSettingStateSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder
+     * @return a DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder deviceSettingStateSummaries(@javax.annotation.Nonnull final String id) {
@@ -320,7 +320,7 @@ public class DeviceManagementIntentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.deviceStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementIntentDeviceStateItemRequestBuilder
+     * @return a DeviceManagementIntentDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementIntentDeviceStateItemRequestBuilder deviceStates(@javax.annotation.Nonnull final String id) {
@@ -438,7 +438,7 @@ public class DeviceManagementIntentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.settings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementSettingInstanceItemRequestBuilder
+     * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementSettingInstanceItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
@@ -450,7 +450,7 @@ public class DeviceManagementIntentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.userStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementIntentUserStateItemRequestBuilder
+     * @return a DeviceManagementIntentUserStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementIntentUserStateItemRequestBuilder userStates(@javax.annotation.Nonnull final String id) {
@@ -468,7 +468,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementIntentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentItemRequestBuilderDeleteRequestConfiguration() {
@@ -497,7 +497,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementIntentItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementIntentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementIntentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentItemRequestBuilderGetRequestConfiguration() {
@@ -512,7 +512,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementIntentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentItemRequestBuilderPatchRequestConfiguration() {

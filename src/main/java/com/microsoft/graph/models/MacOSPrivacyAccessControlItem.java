@@ -40,6 +40,8 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
     private MacOSProcessIdentifierType _identifierType;
     /** Possible values of a property */
     private Enablement _mediaLibrary;
+    /** The OdataType property */
+    private String _odataType;
     /** Possible values of a property */
     private Enablement _photos;
     /** Possible values of a property */
@@ -70,6 +72,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      */
     public MacOSPrivacyAccessControlItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSPrivacyAccessControlItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -176,7 +179,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSPrivacyAccessControlItem currentObject = this;
-        return new HashMap<>(26) {{
+        return new HashMap<>(27) {{
             this.put("accessibility", (n) -> { currentObject.setAccessibility(n.getEnumValue(Enablement.class)); });
             this.put("addressBook", (n) -> { currentObject.setAddressBook(n.getEnumValue(Enablement.class)); });
             this.put("appleEventsAllowedReceivers", (n) -> { currentObject.setAppleEventsAllowedReceivers(n.getCollectionOfObjectValues(MacOSAppleEventReceiver::createFromDiscriminatorValue)); });
@@ -191,6 +194,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
             this.put("identifierType", (n) -> { currentObject.setIdentifierType(n.getEnumValue(MacOSProcessIdentifierType.class)); });
             this.put("mediaLibrary", (n) -> { currentObject.setMediaLibrary(n.getEnumValue(Enablement.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("photos", (n) -> { currentObject.setPhotos(n.getEnumValue(Enablement.class)); });
             this.put("postEvent", (n) -> { currentObject.setPostEvent(n.getEnumValue(Enablement.class)); });
             this.put("reminders", (n) -> { currentObject.setReminders(n.getEnumValue(Enablement.class)); });
@@ -236,6 +240,14 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public Enablement getMediaLibrary() {
         return this._mediaLibrary;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the photos property value. Possible values of a property
@@ -354,6 +366,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
         writer.writeStringValue("identifier", this.getIdentifier());
         writer.writeEnumValue("identifierType", this.getIdentifierType());
         writer.writeEnumValue("mediaLibrary", this.getMediaLibrary());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("photos", this.getPhotos());
         writer.writeEnumValue("postEvent", this.getPostEvent());
         writer.writeEnumValue("reminders", this.getReminders());
@@ -487,6 +500,14 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      */
     public void setMediaLibrary(@javax.annotation.Nullable final Enablement value) {
         this._mediaLibrary = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the photos property value. Possible values of a property

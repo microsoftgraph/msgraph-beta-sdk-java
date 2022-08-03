@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsAppHealthOSVersionPerforman
 import microsoft.graph.models.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsAppHealthOSVersionPerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

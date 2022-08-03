@@ -208,7 +208,7 @@ public class RetentionLabelItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.labels.retentionLabels.item.dispositionReviewStages.item collection
      * @param id Unique identifier of the item
-     * @return a dispositionReviewStageItemRequestBuilder
+     * @return a DispositionReviewStageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DispositionReviewStageItemRequestBuilder dispositionReviewStages(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class RetentionLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new retentionLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RetentionLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RetentionLabelItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class RetentionLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public RetentionLabelItemRequestBuilderGetQueryParameters queryParameters = new RetentionLabelItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new retentionLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RetentionLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RetentionLabelItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class RetentionLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new retentionLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RetentionLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RetentionLabelItemRequestBuilderPatchRequestConfiguration() {

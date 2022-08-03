@@ -74,7 +74,7 @@ public class ListRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.list.columns.item collection
      * @param id Unique identifier of the item
-     * @return a columnDefinitionItemRequestBuilder
+     * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
@@ -113,7 +113,7 @@ public class ListRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.list.contentTypes.item collection
      * @param id Unique identifier of the item
-     * @return a contentTypeItemRequestBuilder
+     * @return a ContentTypeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContentTypeItemRequestBuilder contentTypes(@javax.annotation.Nonnull final String id) {
@@ -317,7 +317,7 @@ public class ListRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.list.items.item collection
      * @param id Unique identifier of the item
-     * @return a listItemItemRequestBuilder
+     * @return a ListItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ListItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -329,7 +329,7 @@ public class ListRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.list.operations.item collection
      * @param id Unique identifier of the item
-     * @return a richLongRunningOperationItemRequestBuilder
+     * @return a RichLongRunningOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RichLongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -396,7 +396,7 @@ public class ListRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.list.subscriptions.item collection
      * @param id Unique identifier of the item
-     * @return a subscriptionItemRequestBuilder
+     * @return a SubscriptionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {

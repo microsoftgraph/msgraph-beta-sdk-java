@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.item.managementtemplates.count.CountRequestBuilder;
 /** Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managementTemplateCollection entity. */
 public class ManagementTemplatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

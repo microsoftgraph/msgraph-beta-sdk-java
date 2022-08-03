@@ -80,7 +80,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get externalPartnerSettings from deviceManagement
+     * The external partner settings on a Cloud PC.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get externalPartnerSettings from deviceManagement
+     * The external partner settings on a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         }
     }
     /**
-     * Get externalPartnerSettings from deviceManagement
+     * The external partner settings on a Cloud PC.
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
      */
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> get() {
@@ -209,7 +209,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         }
     }
     /**
-     * Get externalPartnerSettings from deviceManagement
+     * The external partner settings on a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
      */
@@ -226,7 +226,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         }
     }
     /**
-     * Get externalPartnerSettings from deviceManagement
+     * The external partner settings on a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
@@ -307,13 +307,13 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcExternalPartnerSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcExternalPartnerSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcExternalPartnerSettingItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get externalPartnerSettings from deviceManagement */
+    /** The external partner settings on a Cloud PC. */
     public class CloudPcExternalPartnerSettingItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -336,7 +336,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcExternalPartnerSettingItemRequestBuilderGetQueryParameters queryParameters = new CloudPcExternalPartnerSettingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcExternalPartnerSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcExternalPartnerSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcExternalPartnerSettingItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcExternalPartnerSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcExternalPartnerSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcExternalPartnerSettingItemRequestBuilderPatchRequestConfiguration() {

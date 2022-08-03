@@ -17,12 +17,15 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
     private TeamworkContentCameraConfiguration _contentCameraConfiguration;
     /** The defaultContentCamera property */
     private TeamworkPeripheral _defaultContentCamera;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamworkCameraConfiguration and sets the default values.
      * @return a void
      */
     public TeamworkCameraConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkCameraConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,20 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkCameraConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("cameras", (n) -> { currentObject.setCameras(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("contentCameraConfiguration", (n) -> { currentObject.setContentCameraConfiguration(n.getObjectValue(TeamworkContentCameraConfiguration::createFromDiscriminatorValue)); });
             this.put("defaultContentCamera", (n) -> { currentObject.setDefaultContentCamera(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -89,6 +101,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
         writer.writeCollectionOfObjectValues("cameras", this.getCameras());
         writer.writeObjectValue("contentCameraConfiguration", this.getContentCameraConfiguration());
         writer.writeObjectValue("defaultContentCamera", this.getDefaultContentCamera());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      */
     public void setDefaultContentCamera(@javax.annotation.Nullable final TeamworkPeripheral value) {
         this._defaultContentCamera = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerform
 import microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceStartupProcessPerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

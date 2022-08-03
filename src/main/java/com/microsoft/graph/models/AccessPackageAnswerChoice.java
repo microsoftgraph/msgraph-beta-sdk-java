@@ -15,12 +15,15 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** The localized display values shown to the requestor and approvers. Required. */
     private AccessPackageLocalizedContent _displayValue;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new accessPackageAnswerChoice and sets the default values.
      * @return a void
      */
     public AccessPackageAnswerChoice() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAnswerChoice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAnswerChoice currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("actualValue", (n) -> { currentObject.setActualValue(n.getStringValue()); });
             this.put("displayValue", (n) -> { currentObject.setDisplayValue(n.getObjectValue(AccessPackageLocalizedContent::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
         Objects.requireNonNull(writer);
         writer.writeStringValue("actualValue", this.getActualValue());
         writer.writeObjectValue("displayValue", this.getDisplayValue());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
      */
     public void setDisplayValue(@javax.annotation.Nullable final AccessPackageLocalizedContent value) {
         this._displayValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

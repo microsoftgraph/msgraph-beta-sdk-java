@@ -28,7 +28,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      */
     public AndroidForWorkEasEmailProfileBase() {
         super();
-        this.setType("#microsoft.graph.androidForWorkEasEmailProfileBase");
+        this.setOdataType("#microsoft.graph.androidForWorkEasEmailProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

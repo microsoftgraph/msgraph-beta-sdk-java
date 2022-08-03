@@ -18,6 +18,8 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The languageTag property */
     private String _languageTag;
+    /** The OdataType property */
+    private String _odataType;
     /** The platform property */
     private DevicePlatformType _platform;
     /** Answer variation URL link. When users click this answer variation in search results, they will go to this URL. */
@@ -28,6 +30,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      */
     public AnswerVariant() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.search.answerVariant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,10 +73,11 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerVariant currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
@@ -85,6 +89,14 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLanguageTag() {
         return this._languageTag;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the platform property value. The platform property
@@ -112,6 +124,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("languageTag", this.getLanguageTag());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("platform", this.getPlatform());
         writer.writeStringValue("webUrl", this.getWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,6 +160,14 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      */
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
         this._languageTag = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the platform property value. The platform property

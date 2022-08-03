@@ -315,7 +315,7 @@ public class AttackSimulationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.attackSimulation.simulationAutomations.item collection
      * @param id Unique identifier of the item
-     * @return a simulationAutomationItemRequestBuilder
+     * @return a SimulationAutomationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SimulationAutomationItemRequestBuilder simulationAutomations(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class AttackSimulationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.attackSimulation.simulations.item collection
      * @param id Unique identifier of the item
-     * @return a simulationItemRequestBuilder
+     * @return a SimulationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SimulationItemRequestBuilder simulations(@javax.annotation.Nonnull final String id) {

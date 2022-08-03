@@ -18,6 +18,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
      */
     public ExternalIdentitiesPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.externalIdentitiesPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

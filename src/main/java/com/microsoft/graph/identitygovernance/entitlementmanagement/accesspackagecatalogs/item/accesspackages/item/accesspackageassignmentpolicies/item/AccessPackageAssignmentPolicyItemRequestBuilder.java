@@ -163,7 +163,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item.accessPackages.item.accessPackageAssignmentPolicies.item.customExtensionHandlers.item collection
      * @param id Unique identifier of the item
-     * @return a customExtensionHandlerItemRequestBuilder
+     * @return a CustomExtensionHandlerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomExtensionHandlerItemRequestBuilder customExtensionHandlers(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageAssignmentPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentPolicyItemRequestBuilderPatchRequestConfiguration() {

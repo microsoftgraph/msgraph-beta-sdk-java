@@ -25,6 +25,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _fields;
     /** Specifies the offset for the search results. Offset 0 returns the very first result. Optional. */
     private Integer _from;
+    /** The OdataType property */
+    private String _odataType;
     /** The query property */
     private SearchQuery _query;
     /** Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional. */
@@ -47,6 +49,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -113,7 +116,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchRequest currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<>(16) {{
             this.put("aggregationFilters", (n) -> { currentObject.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
             this.put("contentSources", (n) -> { currentObject.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -121,6 +124,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
             this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("from", (n) -> { currentObject.setFrom(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("query", (n) -> { currentObject.setQuery(n.getObjectValue(SearchQuery::createFromDiscriminatorValue)); });
             this.put("queryAlterationOptions", (n) -> { currentObject.setQueryAlterationOptions(n.getObjectValue(SearchAlterationOptions::createFromDiscriminatorValue)); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
@@ -146,6 +150,14 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getFrom() {
         return this._from;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the query property value. The query property
@@ -225,6 +237,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("entityTypes", this.getEntityTypes());
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
         writer.writeIntegerValue("from", this.getFrom());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("query", this.getQuery());
         writer.writeObjectValue("queryAlterationOptions", this.getQueryAlterationOptions());
         writer.writeStringValue("region", this.getRegion());
@@ -298,6 +311,14 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     public void setFrom(@javax.annotation.Nullable final Integer value) {
         this._from = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the query property value. The query property

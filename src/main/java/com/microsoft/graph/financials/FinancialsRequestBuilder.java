@@ -34,7 +34,7 @@ public class FinancialsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item collection
      * @param id Unique identifier of the item
-     * @return a companyItemRequestBuilder
+     * @return a CompanyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CompanyItemRequestBuilder companies(@javax.annotation.Nonnull final String id) {

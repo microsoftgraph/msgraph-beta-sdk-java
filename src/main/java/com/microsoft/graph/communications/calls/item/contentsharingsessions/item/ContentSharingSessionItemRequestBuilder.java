@@ -307,7 +307,7 @@ public class ContentSharingSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contentSharingSessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ContentSharingSessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentSharingSessionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ContentSharingSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public ContentSharingSessionItemRequestBuilderGetQueryParameters queryParameters = new ContentSharingSessionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new contentSharingSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ContentSharingSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentSharingSessionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ContentSharingSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contentSharingSessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ContentSharingSessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentSharingSessionItemRequestBuilderPatchRequestConfiguration() {

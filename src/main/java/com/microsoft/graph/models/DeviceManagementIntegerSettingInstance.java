@@ -16,6 +16,7 @@ public class DeviceManagementIntegerSettingInstance extends DeviceManagementSett
      */
     public DeviceManagementIntegerSettingInstance() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntegerSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

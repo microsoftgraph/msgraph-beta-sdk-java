@@ -247,7 +247,7 @@ public class PurchaseInvoiceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoices.item.purchaseInvoiceLines.item collection
      * @param id Unique identifier of the item
-     * @return a purchaseInvoiceLineItemRequestBuilder
+     * @return a PurchaseInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PurchaseInvoiceLineItemRequestBuilder purchaseInvoiceLines(@javax.annotation.Nonnull final String id) {
@@ -279,7 +279,7 @@ public class PurchaseInvoiceItemRequestBuilder {
         @javax.annotation.Nullable
         public PurchaseInvoiceItemRequestBuilderGetQueryParameters queryParameters = new PurchaseInvoiceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new purchaseInvoiceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PurchaseInvoiceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PurchaseInvoiceItemRequestBuilderGetRequestConfiguration() {
@@ -294,7 +294,7 @@ public class PurchaseInvoiceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new purchaseInvoiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PurchaseInvoiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PurchaseInvoiceItemRequestBuilderPatchRequestConfiguration() {

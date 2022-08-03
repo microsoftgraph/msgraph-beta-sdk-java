@@ -40,7 +40,7 @@ public class CloudPcUserSettingItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.userSettings.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcUserSettingAssignmentItemRequestBuilder
+     * @return a CloudPcUserSettingAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcUserSettingAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class CloudPcUserSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcUserSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcUserSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcUserSettingItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class CloudPcUserSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcUserSettingItemRequestBuilderGetQueryParameters queryParameters = new CloudPcUserSettingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcUserSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcUserSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcUserSettingItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class CloudPcUserSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcUserSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcUserSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcUserSettingItemRequestBuilderPatchRequestConfiguration() {

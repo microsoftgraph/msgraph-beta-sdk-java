@@ -349,7 +349,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsBaselineItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBaselineItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBaselineItemRequestBuilderDeleteRequestConfiguration() {
@@ -378,7 +378,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsBaselineItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsBaselineItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsBaselineItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBaselineItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBaselineItemRequestBuilderGetRequestConfiguration() {
@@ -393,7 +393,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsBaselineItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsBaselineItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsBaselineItemRequestBuilderPatchRequestConfiguration() {

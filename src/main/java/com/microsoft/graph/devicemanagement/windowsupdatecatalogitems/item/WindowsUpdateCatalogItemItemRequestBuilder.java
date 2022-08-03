@@ -307,7 +307,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsUpdateCatalogItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsUpdateCatalogItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsUpdateCatalogItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsUpdateCatalogItemItemRequestBuilderGetQueryParameters queryParameters = new WindowsUpdateCatalogItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsUpdateCatalogItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsUpdateCatalogItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsUpdateCatalogItemItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsUpdateCatalogItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsUpdateCatalogItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsUpdateCatalogItemItemRequestBuilderPatchRequestConfiguration() {

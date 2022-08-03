@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.item.insights.count.CountRequestBuilder;
 /** Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity. */
 public class InsightsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

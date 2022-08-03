@@ -260,7 +260,7 @@ public class PlannerRosterItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.planner.rosters.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a plannerRosterMemberItemRequestBuilder
+     * @return a PlannerRosterMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerRosterMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class PlannerRosterItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.planner.rosters.item.plans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class PlannerRosterItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerRosterItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerRosterItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerRosterItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class PlannerRosterItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerRosterItemRequestBuilderGetQueryParameters queryParameters = new PlannerRosterItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerRosterItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerRosterItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerRosterItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class PlannerRosterItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerRosterItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerRosterItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerRosterItemRequestBuilderPatchRequestConfiguration() {

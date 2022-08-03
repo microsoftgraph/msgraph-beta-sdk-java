@@ -18,6 +18,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      */
     public ResetPasscodeActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.resetPasscodeActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,8 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
     private DayOfWeek _endDay;
     /** End time of the time window */
     private LocalTime _endTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The startDay property */
     private DayOfWeek _startDay;
     /** Start time of the time window */
@@ -27,6 +29,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      */
     public CustomUpdateTimeWindow() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.customUpdateTimeWindow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,12 +72,21 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomUpdateTimeWindow currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("endDay", (n) -> { currentObject.setEndDay(n.getEnumValue(DayOfWeek.class)); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDay", (n) -> { currentObject.setStartDay(n.getEnumValue(DayOfWeek.class)); });
             this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDay property value. The startDay property
@@ -101,6 +113,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("endDay", this.getEndDay());
         writer.writeLocalTimeValue("endTime", this.getEndTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("startDay", this.getStartDay());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -128,6 +141,14 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      */
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._endTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDay property value. The startDay property

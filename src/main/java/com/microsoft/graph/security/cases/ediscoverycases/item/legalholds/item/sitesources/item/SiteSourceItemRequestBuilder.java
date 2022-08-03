@@ -86,7 +86,7 @@ public class SiteSourceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get siteSources from security
+     * Data sources that represent SharePoint sites.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SiteSourceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get siteSources from security
+     * Data sources that represent SharePoint sites.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class SiteSourceItemRequestBuilder {
         }
     }
     /**
-     * Get siteSources from security
+     * Data sources that represent SharePoint sites.
      * @return a CompletableFuture of siteSource
      */
     public java.util.concurrent.CompletableFuture<SiteSource> get() {
@@ -215,7 +215,7 @@ public class SiteSourceItemRequestBuilder {
         }
     }
     /**
-     * Get siteSources from security
+     * Data sources that represent SharePoint sites.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of siteSource
      */
@@ -232,7 +232,7 @@ public class SiteSourceItemRequestBuilder {
         }
     }
     /**
-     * Get siteSources from security
+     * Data sources that represent SharePoint sites.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of siteSource
@@ -313,13 +313,13 @@ public class SiteSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new siteSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SiteSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SiteSourceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get siteSources from security */
+    /** Data sources that represent SharePoint sites. */
     public class SiteSourceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -342,7 +342,7 @@ public class SiteSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public SiteSourceItemRequestBuilderGetQueryParameters queryParameters = new SiteSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new siteSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SiteSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SiteSourceItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class SiteSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new siteSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SiteSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SiteSourceItemRequestBuilderPatchRequestConfiguration() {

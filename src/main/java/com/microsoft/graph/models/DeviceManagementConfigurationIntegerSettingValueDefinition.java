@@ -18,6 +18,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
      */
     public DeviceManagementConfigurationIntegerSettingValueDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

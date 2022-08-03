@@ -24,6 +24,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      */
     public MacOSDmgApp() {
         super();
+        this.setOdataType("#microsoft.graph.macOSDmgApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

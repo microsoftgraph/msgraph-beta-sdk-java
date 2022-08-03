@@ -32,6 +32,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      */
     public DeviceManagementCachedReportConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementCachedReportConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

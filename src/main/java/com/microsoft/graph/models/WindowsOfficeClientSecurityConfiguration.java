@@ -14,6 +14,7 @@ public class WindowsOfficeClientSecurityConfiguration extends OfficeClientConfig
      */
     public WindowsOfficeClientSecurityConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsOfficeClientSecurityConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
      */
     public WindowsPhone81ImportedPFXCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81ImportedPFXCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

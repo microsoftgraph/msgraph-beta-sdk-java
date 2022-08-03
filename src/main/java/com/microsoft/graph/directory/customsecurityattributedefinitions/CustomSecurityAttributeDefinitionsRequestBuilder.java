@@ -20,7 +20,7 @@ import microsoft.graph.models.CustomSecurityAttributeDefinitionCollectionRespons
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity. */
 public class CustomSecurityAttributeDefinitionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class QnaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new qnaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new QnaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public QnaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class QnaItemRequestBuilder {
         @javax.annotation.Nullable
         public QnaItemRequestBuilderGetQueryParameters queryParameters = new QnaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new qnaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new QnaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public QnaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class QnaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new qnaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new QnaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public QnaItemRequestBuilderPatchRequestConfiguration() {

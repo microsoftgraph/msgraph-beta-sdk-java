@@ -24,6 +24,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      */
     public AndroidPkcsCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.androidPkcsCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

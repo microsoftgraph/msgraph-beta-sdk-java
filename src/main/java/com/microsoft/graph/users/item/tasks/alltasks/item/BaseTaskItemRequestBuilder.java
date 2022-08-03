@@ -60,7 +60,7 @@ public class BaseTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.tasks.alltasks.item.checklistItems.item collection
      * @param id Unique identifier of the item
-     * @return a checklistItemItemRequestBuilder
+     * @return a ChecklistItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChecklistItemItemRequestBuilder checklistItems(@javax.annotation.Nonnull final String id) {
@@ -240,7 +240,7 @@ public class BaseTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.tasks.alltasks.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -303,7 +303,7 @@ public class BaseTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.tasks.alltasks.item.linkedResources.item collection
      * @param id Unique identifier of the item
-     * @return a linkedResource_v2ItemRequestBuilder
+     * @return a LinkedResource_v2ItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LinkedResource_v2ItemRequestBuilder linkedResources(@javax.annotation.Nonnull final String id) {
@@ -376,7 +376,7 @@ public class BaseTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new baseTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BaseTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BaseTaskItemRequestBuilderDeleteRequestConfiguration() {
@@ -405,7 +405,7 @@ public class BaseTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public BaseTaskItemRequestBuilderGetQueryParameters queryParameters = new BaseTaskItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new baseTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BaseTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BaseTaskItemRequestBuilderGetRequestConfiguration() {
@@ -420,7 +420,7 @@ public class BaseTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new baseTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BaseTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BaseTaskItemRequestBuilderPatchRequestConfiguration() {

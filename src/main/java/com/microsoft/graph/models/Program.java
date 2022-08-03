@@ -20,6 +20,7 @@ public class Program extends Entity implements Parsable {
      */
     public Program() {
         super();
+        this.setOdataType("#microsoft.graph.program");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

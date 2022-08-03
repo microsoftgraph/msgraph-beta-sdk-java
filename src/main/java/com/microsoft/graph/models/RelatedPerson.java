@@ -13,6 +13,8 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Name of the person. */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue. */
     private PersonRelationship _relationship;
     /** Email address or reference to person within organization. */
@@ -23,6 +25,7 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
      */
     public RelatedPerson() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.relatedPerson");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RelatedPerson currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(PersonRelationship.class)); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
@@ -87,6 +99,7 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("relationship", this.getRelationship());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.

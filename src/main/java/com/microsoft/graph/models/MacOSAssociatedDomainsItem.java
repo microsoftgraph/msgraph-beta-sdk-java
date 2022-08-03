@@ -18,12 +18,15 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
     private Boolean _directDownloadsEnabled;
     /** The list of domains to associate. */
     private java.util.List<String> _domains;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new macOSAssociatedDomainsItem and sets the default values.
      * @return a void
      */
     public MacOSAssociatedDomainsItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSAssociatedDomainsItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,11 +77,20 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSAssociatedDomainsItem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
             this.put("directDownloadsEnabled", (n) -> { currentObject.setDirectDownloadsEnabled(n.getBooleanValue()); });
             this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -90,6 +102,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
         writer.writeStringValue("applicationIdentifier", this.getApplicationIdentifier());
         writer.writeBooleanValue("directDownloadsEnabled", this.getDirectDownloadsEnabled());
         writer.writeCollectionOfPrimitiveValues("domains", this.getDomains());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      */
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

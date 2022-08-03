@@ -22,6 +22,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      */
     public RecommendLabelAction() {
         super();
+        this.setOdataType("#microsoft.graph.recommendLabelAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

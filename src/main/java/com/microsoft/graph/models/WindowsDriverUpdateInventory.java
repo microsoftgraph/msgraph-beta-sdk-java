@@ -34,6 +34,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     public WindowsDriverUpdateInventory() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDriverUpdateInventory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

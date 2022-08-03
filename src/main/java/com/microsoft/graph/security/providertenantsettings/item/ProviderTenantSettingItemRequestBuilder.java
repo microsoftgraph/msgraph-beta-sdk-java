@@ -307,7 +307,7 @@ public class ProviderTenantSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new providerTenantSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ProviderTenantSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProviderTenantSettingItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ProviderTenantSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public ProviderTenantSettingItemRequestBuilderGetQueryParameters queryParameters = new ProviderTenantSettingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new providerTenantSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ProviderTenantSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProviderTenantSettingItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ProviderTenantSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new providerTenantSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ProviderTenantSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProviderTenantSettingItemRequestBuilderPatchRequestConfiguration() {

@@ -23,6 +23,7 @@ public class Connector extends Entity implements Parsable {
      */
     public Connector() {
         super();
+        this.setOdataType("#microsoft.graph.connector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

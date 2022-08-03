@@ -18,6 +18,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      */
     public DeliveryOptimizationBandwidthAbsolute() {
         super();
+        this.setOdataType("#microsoft.graph.deliveryOptimizationBandwidthAbsolute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -12,6 +12,8 @@ import microsoft.graph.models.BinaryOperator;
 public class PropertyRule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The operation property */
     private RuleOperation _operation;
     /** The property from the externalItem schema. Required. */
@@ -26,6 +28,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     public PropertyRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.externalConnectors.propertyRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,12 +55,21 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PropertyRule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operation", (n) -> { currentObject.setOperation(n.getEnumValue(RuleOperation.class)); });
             this.put("property", (n) -> { currentObject.setProperty(n.getStringValue()); });
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("valuesJoinedBy", (n) -> { currentObject.setValuesJoinedBy(n.getEnumValue(BinaryOperator.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operation property value. The operation property
@@ -98,6 +110,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("operation", this.getOperation());
         writer.writeStringValue("property", this.getProperty());
         writer.writeCollectionOfPrimitiveValues("values", this.getValues());
@@ -111,6 +124,14 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operation property value. The operation property

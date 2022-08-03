@@ -307,7 +307,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new meetingRegistrationQuestionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MeetingRegistrationQuestionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MeetingRegistrationQuestionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder {
         @javax.annotation.Nullable
         public MeetingRegistrationQuestionItemRequestBuilderGetQueryParameters queryParameters = new MeetingRegistrationQuestionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new meetingRegistrationQuestionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MeetingRegistrationQuestionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MeetingRegistrationQuestionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new meetingRegistrationQuestionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MeetingRegistrationQuestionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MeetingRegistrationQuestionItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.TrustFrameworkPolicyCollectionResponse;
 import microsoft.graph.trustframework.policies.count.CountRequestBuilder;
 /** Provides operations to manage the policies property of the microsoft.graph.trustFramework entity. */
 public class PoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

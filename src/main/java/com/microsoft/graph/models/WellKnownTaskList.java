@@ -16,6 +16,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
      */
     public WellKnownTaskList() {
         super();
+        this.setOdataType("#microsoft.graph.wellKnownTaskList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

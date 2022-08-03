@@ -14,6 +14,7 @@ public class TagOperation extends CaseOperation implements Parsable {
      */
     public TagOperation() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.tagOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

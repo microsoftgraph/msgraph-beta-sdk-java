@@ -54,7 +54,7 @@ public class SearchRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.search.acronyms.item collection
      * @param id Unique identifier of the item
-     * @return a acronymItemRequestBuilder
+     * @return a AcronymItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AcronymItemRequestBuilder acronyms(@javax.annotation.Nonnull final String id) {
@@ -66,7 +66,7 @@ public class SearchRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.search.bookmarks.item collection
      * @param id Unique identifier of the item
-     * @return a bookmarkItemRequestBuilder
+     * @return a BookmarkItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookmarkItemRequestBuilder bookmarks(@javax.annotation.Nonnull final String id) {
@@ -273,7 +273,7 @@ public class SearchRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.search.qnas.item collection
      * @param id Unique identifier of the item
-     * @return a qnaItemRequestBuilder
+     * @return a QnaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public QnaItemRequestBuilder qnas(@javax.annotation.Nonnull final String id) {

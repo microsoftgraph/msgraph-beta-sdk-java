@@ -51,6 +51,8 @@ public class Customer extends Entity implements Parsable {
     private Boolean _taxLiable;
     /** The taxRegistrationNumber property */
     private String _taxRegistrationNumber;
+    /** The type property */
+    private String _type;
     /** The website property */
     private String _website;
     /**
@@ -59,6 +61,7 @@ public class Customer extends Entity implements Parsable {
      */
     public Customer() {
         super();
+        this.setOdataType("#microsoft.graph.customer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -155,6 +158,7 @@ public class Customer extends Entity implements Parsable {
             this.put("taxAreaId", (n) -> { currentObject.setTaxAreaId(n.getStringValue()); });
             this.put("taxLiable", (n) -> { currentObject.setTaxLiable(n.getBooleanValue()); });
             this.put("taxRegistrationNumber", (n) -> { currentObject.setTaxRegistrationNumber(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("website", (n) -> { currentObject.setWebsite(n.getStringValue()); });
         }};
     }
@@ -271,6 +275,14 @@ public class Customer extends Entity implements Parsable {
         return this._taxRegistrationNumber;
     }
     /**
+     * Gets the type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Gets the website property value. The website property
      * @return a string
      */
@@ -307,6 +319,7 @@ public class Customer extends Entity implements Parsable {
         writer.writeStringValue("taxAreaId", this.getTaxAreaId());
         writer.writeBooleanValue("taxLiable", this.getTaxLiable());
         writer.writeStringValue("taxRegistrationNumber", this.getTaxRegistrationNumber());
+        writer.writeStringValue("type", this.getType());
         writer.writeStringValue("website", this.getWebsite());
     }
     /**
@@ -476,6 +489,14 @@ public class Customer extends Entity implements Parsable {
      */
     public void setTaxRegistrationNumber(@javax.annotation.Nullable final String value) {
         this._taxRegistrationNumber = value;
+    }
+    /**
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the website property value. The website property

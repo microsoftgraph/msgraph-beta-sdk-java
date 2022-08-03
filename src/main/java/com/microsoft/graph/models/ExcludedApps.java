@@ -24,6 +24,8 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     private Boolean _infoPath;
     /** The value for if MS Office Skype for Business - Lync should be excluded or not. */
     private Boolean _lync;
+    /** The OdataType property */
+    private String _odataType;
     /** The value for if MS Office OneDrive should be excluded or not. */
     private Boolean _oneDrive;
     /** The value for if MS Office OneNote should be excluded or not. */
@@ -48,6 +50,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      */
     public ExcludedApps() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.excludedApps");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,13 +101,14 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExcludedApps currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<>(16) {{
             this.put("access", (n) -> { currentObject.setAccess(n.getBooleanValue()); });
             this.put("bing", (n) -> { currentObject.setBing(n.getBooleanValue()); });
             this.put("excel", (n) -> { currentObject.setExcel(n.getBooleanValue()); });
             this.put("groove", (n) -> { currentObject.setGroove(n.getBooleanValue()); });
             this.put("infoPath", (n) -> { currentObject.setInfoPath(n.getBooleanValue()); });
             this.put("lync", (n) -> { currentObject.setLync(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("oneDrive", (n) -> { currentObject.setOneDrive(n.getBooleanValue()); });
             this.put("oneNote", (n) -> { currentObject.setOneNote(n.getBooleanValue()); });
             this.put("outlook", (n) -> { currentObject.setOutlook(n.getBooleanValue()); });
@@ -139,6 +143,14 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getLync() {
         return this._lync;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the oneDrive property value. The value for if MS Office OneDrive should be excluded or not.
@@ -225,6 +237,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("groove", this.getGroove());
         writer.writeBooleanValue("infoPath", this.getInfoPath());
         writer.writeBooleanValue("lync", this.getLync());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("oneDrive", this.getOneDrive());
         writer.writeBooleanValue("oneNote", this.getOneNote());
         writer.writeBooleanValue("outlook", this.getOutlook());
@@ -291,6 +304,14 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      */
     public void setLync(@javax.annotation.Nullable final Boolean value) {
         this._lync = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the oneDrive property value. The value for if MS Office OneDrive should be excluded or not.

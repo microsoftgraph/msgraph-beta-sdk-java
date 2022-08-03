@@ -307,7 +307,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new importedAppleDeviceIdentityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedAppleDeviceIdentityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedAppleDeviceIdentityItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public ImportedAppleDeviceIdentityItemRequestBuilderGetQueryParameters queryParameters = new ImportedAppleDeviceIdentityItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new importedAppleDeviceIdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedAppleDeviceIdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedAppleDeviceIdentityItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new importedAppleDeviceIdentityItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedAppleDeviceIdentityItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedAppleDeviceIdentityItemRequestBuilderPatchRequestConfiguration() {

@@ -25,6 +25,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     public AccessPackageResourceRole() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageResourceRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

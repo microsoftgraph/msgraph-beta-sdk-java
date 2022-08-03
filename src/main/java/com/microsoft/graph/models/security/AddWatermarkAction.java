@@ -26,6 +26,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     public AddWatermarkAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.addWatermarkAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

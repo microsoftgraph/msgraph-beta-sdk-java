@@ -15,12 +15,15 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _networkNames;
     /** Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue. */
     private NetworkType _networkType;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new networkLocationDetail and sets the default values.
      * @return a void
      */
     public NetworkLocationDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.networkLocationDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,9 +50,10 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkLocationDetail currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("networkNames", (n) -> { currentObject.setNetworkNames(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("networkType", (n) -> { currentObject.setNetworkType(n.getEnumValue(NetworkType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
         return this._networkType;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("networkNames", this.getNetworkNames());
         writer.writeEnumValue("networkType", this.getNetworkType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
      */
     public void setNetworkType(@javax.annotation.Nullable final NetworkType value) {
         this._networkType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

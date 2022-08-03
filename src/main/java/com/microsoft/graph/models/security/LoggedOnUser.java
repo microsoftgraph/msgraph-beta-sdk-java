@@ -15,12 +15,15 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The domainName property */
     private String _domainName;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new loggedOnUser and sets the default values.
      * @return a void
      */
     public LoggedOnUser() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.loggedOnUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LoggedOnUser currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
         writer.writeStringValue("domainName", this.getDomainName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
      */
     public void setDomainName(@javax.annotation.Nullable final String value) {
         this._domainName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

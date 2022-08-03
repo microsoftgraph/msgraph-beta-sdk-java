@@ -17,12 +17,15 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     private ExpressionEvaluationDetails _membershipRuleEvaluationDetails;
     /** The value is true if the user or device is a member of the group. The value can also be true if a membership rule was provided and the user or device passes the rule evaluation; otherwise false. */
     private Boolean _membershipRuleEvaluationResult;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new evaluateDynamicMembershipResult and sets the default values.
      * @return a void
      */
     public EvaluateDynamicMembershipResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.evaluateDynamicMembershipResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateDynamicMembershipResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("membershipRule", (n) -> { currentObject.setMembershipRule(n.getStringValue()); });
             this.put("membershipRuleEvaluationDetails", (n) -> { currentObject.setMembershipRuleEvaluationDetails(n.getObjectValue(ExpressionEvaluationDetails::createFromDiscriminatorValue)); });
             this.put("membershipRuleEvaluationResult", (n) -> { currentObject.setMembershipRuleEvaluationResult(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
         return this._membershipRuleEvaluationResult;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
         writer.writeStringValue("membershipRule", this.getMembershipRule());
         writer.writeObjectValue("membershipRuleEvaluationDetails", this.getMembershipRuleEvaluationDetails());
         writer.writeBooleanValue("membershipRuleEvaluationResult", this.getMembershipRuleEvaluationResult());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      */
     public void setMembershipRuleEvaluationResult(@javax.annotation.Nullable final Boolean value) {
         this._membershipRuleEvaluationResult = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

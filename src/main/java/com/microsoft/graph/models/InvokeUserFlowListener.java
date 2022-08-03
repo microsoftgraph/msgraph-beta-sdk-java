@@ -16,6 +16,7 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
      */
     public InvokeUserFlowListener() {
         super();
+        this.setOdataType("#microsoft.graph.invokeUserFlowListener");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,12 +16,15 @@ public class MacOSFirewallApplication implements AdditionalDataHolder, Parsable 
     private Boolean _allowsIncomingConnections;
     /** BundleId of the application. */
     private String _bundleId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new macOSFirewallApplication and sets the default values.
      * @return a void
      */
     public MacOSFirewallApplication() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSFirewallApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,19 @@ public class MacOSFirewallApplication implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSFirewallApplication currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("allowsIncomingConnections", (n) -> { currentObject.setAllowsIncomingConnections(n.getBooleanValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -78,6 +90,7 @@ public class MacOSFirewallApplication implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowsIncomingConnections", this.getAllowsIncomingConnections());
         writer.writeStringValue("bundleId", this.getBundleId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class MacOSFirewallApplication implements AdditionalDataHolder, Parsable 
      */
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

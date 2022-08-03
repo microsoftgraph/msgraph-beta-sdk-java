@@ -20,7 +20,7 @@ import microsoft.graph.models.ManagedAllDeviceCertificateStateCollectionResponse
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurationsAllManagedDeviceCertificateStates property of the microsoft.graph.deviceManagement entity. */
 public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

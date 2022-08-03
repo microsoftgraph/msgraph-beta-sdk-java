@@ -16,6 +16,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      */
     public MicrosoftStoreForBusinessContainedApp() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftStoreForBusinessContainedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

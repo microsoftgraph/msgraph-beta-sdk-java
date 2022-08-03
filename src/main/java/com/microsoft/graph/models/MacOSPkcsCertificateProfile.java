@@ -32,6 +32,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      */
     public MacOSPkcsCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.macOSPkcsCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

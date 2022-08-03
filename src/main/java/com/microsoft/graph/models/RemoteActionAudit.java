@@ -33,6 +33,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      */
     public RemoteActionAudit() {
         super();
+        this.setOdataType("#microsoft.graph.remoteActionAudit");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyPresentation imp
      */
     public GroupPolicyPresentationCheckBox() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationCheckBox");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

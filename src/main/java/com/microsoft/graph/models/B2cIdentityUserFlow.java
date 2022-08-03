@@ -28,6 +28,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      */
     public B2cIdentityUserFlow() {
         super();
+        this.setOdataType("#microsoft.graph.b2cIdentityUserFlow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,12 +16,15 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
     private Windows10AppType _appType;
     /** Identifier. */
     private String _identifier;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new windows10AssociatedApps and sets the default values.
      * @return a void
      */
     public Windows10AssociatedApps() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windows10AssociatedApps");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,9 +59,10 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10AssociatedApps currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(Windows10AppType.class)); });
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
         return this._identifier;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appType", this.getAppType());
         writer.writeStringValue("identifier", this.getIdentifier());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
      */
     public void setIdentifier(@javax.annotation.Nullable final String value) {
         this._identifier = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

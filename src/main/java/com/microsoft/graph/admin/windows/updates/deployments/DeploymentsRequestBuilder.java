@@ -20,7 +20,7 @@ import microsoft.graph.models.windowsupdates.Deployment;
 import microsoft.graph.models.windowsupdates.DeploymentCollectionResponse;
 /** Provides operations to manage the deployments property of the microsoft.graph.windowsUpdates.updates entity. */
 public class DeploymentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

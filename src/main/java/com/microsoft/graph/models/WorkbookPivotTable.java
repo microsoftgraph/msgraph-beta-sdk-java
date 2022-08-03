@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class WorkbookPivotTable extends Entity implements Parsable {
     /** Name of the PivotTable. */
     private String _name;
@@ -19,6 +19,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     public WorkbookPivotTable() {
         super();
+        this.setOdataType("#microsoft.graph.workbookPivotTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

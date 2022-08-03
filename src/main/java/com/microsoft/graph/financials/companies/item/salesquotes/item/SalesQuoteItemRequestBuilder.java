@@ -265,7 +265,7 @@ public class SalesQuoteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuotes.item.salesQuoteLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesQuoteLineItemRequestBuilder
+     * @return a SalesQuoteLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesQuoteLineItemRequestBuilder salesQuoteLines(@javax.annotation.Nonnull final String id) {
@@ -297,7 +297,7 @@ public class SalesQuoteItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesQuoteItemRequestBuilderGetQueryParameters queryParameters = new SalesQuoteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesQuoteItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesQuoteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesQuoteItemRequestBuilderGetRequestConfiguration() {
@@ -312,7 +312,7 @@ public class SalesQuoteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesQuoteItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesQuoteItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesQuoteItemRequestBuilderPatchRequestConfiguration() {

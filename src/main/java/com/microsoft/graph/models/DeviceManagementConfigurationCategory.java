@@ -36,6 +36,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      */
     public DeviceManagementConfigurationCategory() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

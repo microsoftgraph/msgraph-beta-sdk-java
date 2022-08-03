@@ -17,6 +17,8 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
     private Integer _deviceCount;
     /** The Timestamp of the last update for the device count in UTC */
     private OffsetDateTime _lastUpdateDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** OS version */
     private String _osVersion;
     /**
@@ -25,6 +27,7 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
      */
     public OsVersionCount() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.osVersionCount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OsVersionCount currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
             this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
         return this._lastUpdateDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the osVersion property value. OS version
@@ -90,6 +102,7 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceCount", this.getDeviceCount());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +129,14 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
      */
     public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdateDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the osVersion property value. OS version

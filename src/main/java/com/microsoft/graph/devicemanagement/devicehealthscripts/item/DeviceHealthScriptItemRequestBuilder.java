@@ -66,7 +66,7 @@ public class DeviceHealthScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceHealthScripts.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceHealthScriptAssignmentItemRequestBuilder
+     * @return a DeviceHealthScriptAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceHealthScriptAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -246,7 +246,7 @@ public class DeviceHealthScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceHealthScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceHealthScriptDeviceStateItemRequestBuilder
+     * @return a DeviceHealthScriptDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceHealthScriptDeviceStateItemRequestBuilder deviceRunStates(@javax.annotation.Nonnull final String id) {
@@ -378,7 +378,7 @@ public class DeviceHealthScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceHealthScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceHealthScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceHealthScriptItemRequestBuilderDeleteRequestConfiguration() {
@@ -407,7 +407,7 @@ public class DeviceHealthScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceHealthScriptItemRequestBuilderGetQueryParameters queryParameters = new DeviceHealthScriptItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceHealthScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceHealthScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceHealthScriptItemRequestBuilderGetRequestConfiguration() {
@@ -422,7 +422,7 @@ public class DeviceHealthScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceHealthScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceHealthScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceHealthScriptItemRequestBuilderPatchRequestConfiguration() {

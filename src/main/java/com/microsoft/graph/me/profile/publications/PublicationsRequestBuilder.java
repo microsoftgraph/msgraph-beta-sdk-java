@@ -20,7 +20,7 @@ import microsoft.graph.models.ItemPublicationCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the publications property of the microsoft.graph.profile entity. */
 public class PublicationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

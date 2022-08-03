@@ -34,7 +34,7 @@ public class MeetingAttendanceReportRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.app.onlineMeetings.item.meetingAttendanceReport.attendanceRecords.item collection
      * @param id Unique identifier of the item
-     * @return a attendanceRecordItemRequestBuilder
+     * @return a AttendanceRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttendanceRecordItemRequestBuilder attendanceRecords(@javax.annotation.Nonnull final String id) {

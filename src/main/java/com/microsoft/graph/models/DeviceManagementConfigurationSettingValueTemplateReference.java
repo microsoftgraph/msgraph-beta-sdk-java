@@ -12,6 +12,8 @@ import java.util.Objects;
 public class DeviceManagementConfigurationSettingValueTemplateReference implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Setting value template id */
     private String _settingValueTemplateId;
     /** Indicates whether to update policy setting value to match template setting default value */
@@ -22,6 +24,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     public DeviceManagementConfigurationSettingValueTemplateReference() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingValueTemplateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,10 +51,19 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingValueTemplateReference currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("settingValueTemplateId", (n) -> { currentObject.setSettingValueTemplateId(n.getStringValue()); });
             this.put("useTemplateDefault", (n) -> { currentObject.setUseTemplateDefault(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the settingValueTemplateId property value. Setting value template id
@@ -76,6 +88,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("settingValueTemplateId", this.getSettingValueTemplateId());
         writer.writeBooleanValue("useTemplateDefault", this.getUseTemplateDefault());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -87,6 +100,14 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the settingValueTemplateId property value. Setting value template id

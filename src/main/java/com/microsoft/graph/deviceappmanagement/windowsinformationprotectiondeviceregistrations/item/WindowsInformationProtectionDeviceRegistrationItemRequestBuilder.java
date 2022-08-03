@@ -313,7 +313,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionDeviceRegistrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionDeviceRegistrationItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionDeviceRegistrationItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionDeviceRegistrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionDeviceRegistrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionDeviceRegistrationItemRequestBuilderPatchRequestConfiguration() {

@@ -15,12 +15,15 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
     private Integer _confidence;
     /** The count property */
     private Integer _count;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new classificationAttribute and sets the default values.
      * @return a void
      */
     public ClassificationAttribute() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.classificationAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationAttribute currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidence", this.getConfidence());
         writer.writeIntegerValue("count", this.getCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      */
     public void setCount(@javax.annotation.Nullable final Integer value) {
         this._count = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

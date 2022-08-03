@@ -20,6 +20,8 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     private LocalDate _endMonthYear;
     /** The title held when in that position. */
     private String _jobTitle;
+    /** The OdataType property */
+    private String _odataType;
     /** The role the position entailed. */
     private String _role;
     /** The start month and year of the position. */
@@ -32,6 +34,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     public PositionDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.positionDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,11 +85,12 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PositionDetail currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("company", (n) -> { currentObject.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("endMonthYear", (n) -> { currentObject.setEndMonthYear(n.getLocalDateValue()); });
             this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
             this.put("startMonthYear", (n) -> { currentObject.setStartMonthYear(n.getLocalDateValue()); });
             this.put("summary", (n) -> { currentObject.setSummary(n.getStringValue()); });
@@ -99,6 +103,14 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getJobTitle() {
         return this._jobTitle;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the role property value. The role the position entailed.
@@ -135,6 +147,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeLocalDateValue("endMonthYear", this.getEndMonthYear());
         writer.writeStringValue("jobTitle", this.getJobTitle());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("role", this.getRole());
         writer.writeLocalDateValue("startMonthYear", this.getStartMonthYear());
         writer.writeStringValue("summary", this.getSummary());
@@ -179,6 +192,14 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     public void setJobTitle(@javax.annotation.Nullable final String value) {
         this._jobTitle = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the role property value. The role the position entailed.

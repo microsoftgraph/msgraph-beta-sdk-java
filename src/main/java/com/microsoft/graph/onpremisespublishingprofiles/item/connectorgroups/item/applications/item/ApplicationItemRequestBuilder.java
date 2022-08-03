@@ -161,7 +161,7 @@ public class ApplicationItemRequestBuilder {
         @javax.annotation.Nullable
         public ApplicationItemRequestBuilderGetQueryParameters queryParameters = new ApplicationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new applicationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationItemRequestBuilderGetRequestConfiguration() {

@@ -14,6 +14,8 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The remediationStatus property */
     private EvidenceRemediationStatus _remediationStatus;
     /** The remediationStatusDetails property */
@@ -22,8 +24,6 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _roles;
     /** The tags property */
     private java.util.List<String> _tags;
-    /** The type property */
-    private String _type;
     /** The verdict property */
     private EvidenceVerdict _verdict;
     /**
@@ -32,7 +32,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     public AlertEvidence() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.security.alertEvidence");
+        this.setOdataType("#microsoft.graph.security.alertEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,13 +89,21 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         final AlertEvidence currentObject = this;
         return new HashMap<>(7) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remediationStatus", (n) -> { currentObject.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus.class)); });
             this.put("remediationStatusDetails", (n) -> { currentObject.setRemediationStatusDetails(n.getStringValue()); });
             this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("verdict", (n) -> { currentObject.setVerdict(n.getEnumValue(EvidenceVerdict.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the remediationStatus property value. The remediationStatus property
@@ -130,14 +138,6 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this._tags;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Gets the verdict property value. The verdict property
      * @return a evidenceVerdict
      */
@@ -153,11 +153,11 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("remediationStatus", this.getRemediationStatus());
         writer.writeStringValue("remediationStatusDetails", this.getRemediationStatusDetails());
         writer.writeCollectionOfPrimitiveValues("roles", this.getRoles());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeEnumValue("verdict", this.getVerdict());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -176,6 +176,14 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the remediationStatus property value. The remediationStatus property
@@ -208,14 +216,6 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
     /**
      * Sets the verdict property value. The verdict property

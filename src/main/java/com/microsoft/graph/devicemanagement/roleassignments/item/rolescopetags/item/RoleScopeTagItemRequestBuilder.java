@@ -155,7 +155,7 @@ public class RoleScopeTagItemRequestBuilder {
         @javax.annotation.Nullable
         public RoleScopeTagItemRequestBuilderGetQueryParameters queryParameters = new RoleScopeTagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new roleScopeTagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagItemRequestBuilderGetRequestConfiguration() {

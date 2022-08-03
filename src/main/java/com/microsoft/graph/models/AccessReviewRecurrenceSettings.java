@@ -13,6 +13,8 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     private Map<String, Object> _additionalData;
     /** The duration in days for recurrence. */
     private Integer _durationInDays;
+    /** The OdataType property */
+    private String _odataType;
     /** The count of recurrences, if the value of recurrenceEndType is occurrences, or 0 otherwise. */
     private Integer _recurrenceCount;
     /** How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it is never, then there is no explicit end of the recurrence series. If it is endBy, then the recurrence ends at a certain date. If it is occurrences, then the series ends after recurrenceCount instances of the review have completed. */
@@ -25,6 +27,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      */
     public AccessReviewRecurrenceSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewRecurrenceSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,21 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewRecurrenceSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrenceCount", (n) -> { currentObject.setRecurrenceCount(n.getIntegerValue()); });
             this.put("recurrenceEndType", (n) -> { currentObject.setRecurrenceEndType(n.getStringValue()); });
             this.put("recurrenceType", (n) -> { currentObject.setRecurrenceType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recurrenceCount property value. The count of recurrences, if the value of recurrenceEndType is occurrences, or 0 otherwise.
@@ -98,6 +110,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("recurrenceCount", this.getRecurrenceCount());
         writer.writeStringValue("recurrenceEndType", this.getRecurrenceEndType());
         writer.writeStringValue("recurrenceType", this.getRecurrenceType());
@@ -118,6 +131,14 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      */
     public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._durationInDays = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recurrenceCount property value. The count of recurrences, if the value of recurrenceEndType is occurrences, or 0 otherwise.

@@ -38,6 +38,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     public GeneralLedgerEntry() {
         super();
+        this.setOdataType("#microsoft.graph.generalLedgerEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

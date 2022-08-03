@@ -21,7 +21,7 @@ import microsoft.graph.models.EventCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exceptionOccurrences property of the microsoft.graph.event entity. */
 public class ExceptionOccurrencesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

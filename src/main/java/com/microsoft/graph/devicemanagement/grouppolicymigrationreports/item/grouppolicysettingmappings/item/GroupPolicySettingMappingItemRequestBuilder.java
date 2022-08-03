@@ -307,7 +307,7 @@ public class GroupPolicySettingMappingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicySettingMappingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicySettingMappingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicySettingMappingItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class GroupPolicySettingMappingItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicySettingMappingItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicySettingMappingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicySettingMappingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicySettingMappingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicySettingMappingItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class GroupPolicySettingMappingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicySettingMappingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicySettingMappingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicySettingMappingItemRequestBuilderPatchRequestConfiguration() {

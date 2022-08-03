@@ -91,7 +91,7 @@ public class DimensionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.dimensions.item.dimensionValues.item collection
      * @param id Unique identifier of the item
-     * @return a dimensionValueItemRequestBuilder
+     * @return a DimensionValueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DimensionValueItemRequestBuilder dimensionValues(@javax.annotation.Nonnull final String id) {
@@ -174,7 +174,7 @@ public class DimensionItemRequestBuilder {
         @javax.annotation.Nullable
         public DimensionItemRequestBuilderGetQueryParameters queryParameters = new DimensionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dimensionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DimensionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DimensionItemRequestBuilderGetRequestConfiguration() {

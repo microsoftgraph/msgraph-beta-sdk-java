@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class RetentionEvent extends Entity implements Parsable {
     /** The user who created the retentionEvent. */
     private IdentitySet _createdBy;
@@ -42,6 +42,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     public RetentionEvent() {
         super();
+        this.setOdataType("#microsoft.graph.security.retentionEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

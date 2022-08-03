@@ -313,7 +313,7 @@ public class CloudPcDeviceImageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcDeviceImageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcDeviceImageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcDeviceImageItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class CloudPcDeviceImageItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcDeviceImageItemRequestBuilderGetQueryParameters queryParameters = new CloudPcDeviceImageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcDeviceImageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcDeviceImageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcDeviceImageItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class CloudPcDeviceImageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcDeviceImageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcDeviceImageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcDeviceImageItemRequestBuilderPatchRequestConfiguration() {

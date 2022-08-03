@@ -307,7 +307,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionWipeActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionWipeActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionWipeActionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsInformationProtectionWipeActionItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionWipeActionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsInformationProtectionWipeActionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionWipeActionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionWipeActionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionWipeActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionWipeActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionWipeActionItemRequestBuilderPatchRequestConfiguration() {

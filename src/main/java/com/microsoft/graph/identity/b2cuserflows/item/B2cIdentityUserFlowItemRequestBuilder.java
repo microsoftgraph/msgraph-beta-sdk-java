@@ -274,7 +274,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.identityProviders.item collection
      * @param id Unique identifier of the item
-     * @return a identityProviderItemRequestBuilder
+     * @return a IdentityProviderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
@@ -286,7 +286,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.languages.item collection
      * @param id Unique identifier of the item
-     * @return a userFlowLanguageConfigurationItemRequestBuilder
+     * @return a UserFlowLanguageConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserFlowLanguageConfigurationItemRequestBuilder languages(@javax.annotation.Nonnull final String id) {
@@ -353,7 +353,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.userAttributeAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a identityUserFlowAttributeAssignmentItemRequestBuilder
+     * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityUserFlowAttributeAssignmentItemRequestBuilder userAttributeAssignments(@javax.annotation.Nonnull final String id) {
@@ -365,7 +365,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.userFlowIdentityProviders.item collection
      * @param id Unique identifier of the item
-     * @return a identityProviderBaseItemRequestBuilder
+     * @return a IdentityProviderBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder userFlowIdentityProviders(@javax.annotation.Nonnull final String id) {
@@ -383,7 +383,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new b2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration() {
@@ -412,7 +412,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         @javax.annotation.Nullable
         public B2cIdentityUserFlowItemRequestBuilderGetQueryParameters queryParameters = new B2cIdentityUserFlowItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new b2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration() {
@@ -427,7 +427,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new b2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration() {

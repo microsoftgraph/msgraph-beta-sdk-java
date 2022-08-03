@@ -80,7 +80,7 @@ public class ResourceConnectionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ResourceConnectionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ResourceConnectionItemRequestBuilder {
         }
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @return a CompletableFuture of resourceConnection
      */
     public java.util.concurrent.CompletableFuture<ResourceConnection> get() {
@@ -209,7 +209,7 @@ public class ResourceConnectionItemRequestBuilder {
         }
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceConnection
      */
@@ -226,7 +226,7 @@ public class ResourceConnectionItemRequestBuilder {
         }
     }
     /**
-     * Get resourceConnections from admin
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of resourceConnection
@@ -307,13 +307,13 @@ public class ResourceConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new resourceConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceConnectionItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get resourceConnections from admin */
+    /** Service connections to external resources such as analytics workspaces. */
     public class ResourceConnectionItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -336,7 +336,7 @@ public class ResourceConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public ResourceConnectionItemRequestBuilderGetQueryParameters queryParameters = new ResourceConnectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new resourceConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceConnectionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ResourceConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new resourceConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceConnectionItemRequestBuilderPatchRequestConfiguration() {

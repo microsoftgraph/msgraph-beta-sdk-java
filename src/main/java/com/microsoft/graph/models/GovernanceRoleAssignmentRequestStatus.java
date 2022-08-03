@@ -11,6 +11,8 @@ import java.util.Objects;
 public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The status of the role assignment request. The value can be InProgress or Closed. */
     private String _status;
     /** The details of the status of the role assignment request. It represents the evaluation results of different rules. */
@@ -23,6 +25,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      */
     public GovernanceRoleAssignmentRequestStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.governanceRoleAssignmentRequestStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,11 +52,20 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceRoleAssignmentRequestStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
             this.put("statusDetails", (n) -> { currentObject.setStatusDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
             this.put("subStatus", (n) -> { currentObject.setSubStatus(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the status property value. The status of the role assignment request. The value can be InProgress or Closed.
@@ -86,6 +98,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("statusDetails", this.getStatusDetails());
         writer.writeStringValue("subStatus", this.getSubStatus());
@@ -98,6 +111,14 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. The status of the role assignment request. The value can be InProgress or Closed.

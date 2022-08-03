@@ -12,6 +12,8 @@ import java.util.Objects;
 public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The number of devices remediated by device health scripts. */
     private Integer _remediatedDeviceCount;
     /** The number of device health scripts deployed. */
@@ -22,6 +24,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      */
     public DeviceHealthScriptRemediationSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceHealthScriptRemediationSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,10 +51,19 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRemediationSummary currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
             this.put("scriptCount", (n) -> { currentObject.setScriptCount(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the remediatedDeviceCount property value. The number of devices remediated by device health scripts.
@@ -76,6 +88,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("remediatedDeviceCount", this.getRemediatedDeviceCount());
         writer.writeIntegerValue("scriptCount", this.getScriptCount());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -87,6 +100,14 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. The number of devices remediated by device health scripts.

@@ -17,6 +17,8 @@ public class CompanyDetail implements AdditionalDataHolder, Parsable {
     private String _department;
     /** Company name. */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** Office Location of the person referred to. */
     private String _officeLocation;
     /** Pronunciation guide for the company name. */
@@ -29,6 +31,7 @@ public class CompanyDetail implements AdditionalDataHolder, Parsable {
      */
     public CompanyDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.companyDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,14 +82,23 @@ public class CompanyDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CompanyDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
             this.put("pronunciation", (n) -> { currentObject.setPronunciation(n.getStringValue()); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the officeLocation property value. Office Location of the person referred to.
@@ -122,6 +134,7 @@ public class CompanyDetail implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("address", this.getAddress());
         writer.writeStringValue("department", this.getDepartment());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("officeLocation", this.getOfficeLocation());
         writer.writeStringValue("pronunciation", this.getPronunciation());
         writer.writeStringValue("webUrl", this.getWebUrl());
@@ -158,6 +171,14 @@ public class CompanyDetail implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the officeLocation property value. Office Location of the person referred to.

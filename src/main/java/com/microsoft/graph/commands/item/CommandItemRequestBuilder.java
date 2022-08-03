@@ -313,7 +313,7 @@ public class CommandItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new commandItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CommandItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CommandItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class CommandItemRequestBuilder {
         @javax.annotation.Nullable
         public CommandItemRequestBuilderGetQueryParameters queryParameters = new CommandItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new commandItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CommandItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CommandItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class CommandItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new commandItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CommandItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CommandItemRequestBuilderPatchRequestConfiguration() {

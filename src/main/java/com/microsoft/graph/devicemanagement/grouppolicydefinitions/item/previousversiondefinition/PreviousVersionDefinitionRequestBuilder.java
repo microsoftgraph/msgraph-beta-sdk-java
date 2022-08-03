@@ -326,7 +326,7 @@ public class PreviousVersionDefinitionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitions.item.previousVersionDefinition.presentations.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyPresentationItemRequestBuilder
+     * @return a GroupPolicyPresentationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyPresentationItemRequestBuilder presentations(@javax.annotation.Nonnull final String id) {

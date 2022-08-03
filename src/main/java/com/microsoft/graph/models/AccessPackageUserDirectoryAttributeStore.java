@@ -14,6 +14,7 @@ public class AccessPackageUserDirectoryAttributeStore extends AccessPackageResou
      */
     public AccessPackageUserDirectoryAttributeStore() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageUserDirectoryAttributeStore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -29,6 +29,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     public SynchronizationTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.synchronizationTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

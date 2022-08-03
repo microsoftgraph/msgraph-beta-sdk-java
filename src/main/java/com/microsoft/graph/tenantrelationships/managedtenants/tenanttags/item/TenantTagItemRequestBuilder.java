@@ -319,7 +319,7 @@ public class TenantTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tenantTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TenantTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TenantTagItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class TenantTagItemRequestBuilder {
         @javax.annotation.Nullable
         public TenantTagItemRequestBuilderGetQueryParameters queryParameters = new TenantTagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tenantTagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TenantTagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TenantTagItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class TenantTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tenantTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TenantTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TenantTagItemRequestBuilderPatchRequestConfiguration() {

@@ -26,7 +26,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      */
     public EnrollmentProfile() {
         super();
-        this.setType("#microsoft.graph.enrollmentProfile");
+        this.setOdataType("#microsoft.graph.enrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,6 +42,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.depEnrollmentBaseProfile": return new DepEnrollmentBaseProfile();
                 case "#microsoft.graph.depEnrollmentProfile": return new DepEnrollmentProfile();
+                case "#microsoft.graph.depIOSEnrollmentProfile": return new DepIOSEnrollmentProfile();
+                case "#microsoft.graph.depMacOSEnrollmentProfile": return new DepMacOSEnrollmentProfile();
             }
         }
         return new EnrollmentProfile();

@@ -30,6 +30,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      */
     public MobilityManagementPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.mobilityManagementPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

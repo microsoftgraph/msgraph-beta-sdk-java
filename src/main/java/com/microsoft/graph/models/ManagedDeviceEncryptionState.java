@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Encryption report per device */
 public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /** Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError. */
     private AdvancedBitLockerState _advancedBitLockerStates;
@@ -31,16 +32,17 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /** User name */
     private String _userPrincipalName;
     /**
-     * Instantiates a new ManagedDeviceEncryptionState and sets the default values.
+     * Instantiates a new managedDeviceEncryptionState and sets the default values.
      * @return a void
      */
     public ManagedDeviceEncryptionState() {
         super();
+        this.setOdataType("#microsoft.graph.managedDeviceEncryptionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceEncryptionState
+     * @return a managedDeviceEncryptionState
      */
     @javax.annotation.Nonnull
     public static ManagedDeviceEncryptionState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

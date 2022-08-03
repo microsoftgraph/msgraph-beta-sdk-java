@@ -21,7 +21,7 @@ import microsoft.graph.models.ediscovery.TagCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the tags property of the microsoft.graph.ediscovery.case entity. */
 public class TagsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

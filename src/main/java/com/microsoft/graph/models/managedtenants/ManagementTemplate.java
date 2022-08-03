@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.ActionUrl;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagementTemplate extends Entity implements Parsable {
     /** The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only. */
     private ManagementCategory _category;
@@ -50,6 +50,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      */
     public ManagementTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managementTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

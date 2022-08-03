@@ -31,7 +31,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      */
     public ImportedDeviceIdentity() {
         super();
-        this.setType("#microsoft.graph.importedDeviceIdentity");
+        this.setOdataType("#microsoft.graph.importedDeviceIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

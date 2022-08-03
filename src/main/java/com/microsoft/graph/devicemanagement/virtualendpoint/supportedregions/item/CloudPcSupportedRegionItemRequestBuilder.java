@@ -307,7 +307,7 @@ public class CloudPcSupportedRegionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcSupportedRegionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcSupportedRegionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcSupportedRegionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcSupportedRegionItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcSupportedRegionItemRequestBuilderGetQueryParameters queryParameters = new CloudPcSupportedRegionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcSupportedRegionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcSupportedRegionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcSupportedRegionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcSupportedRegionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcSupportedRegionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcSupportedRegionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcSupportedRegionItemRequestBuilderPatchRequestConfiguration() {

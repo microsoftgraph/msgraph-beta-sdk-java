@@ -151,7 +151,7 @@ public class GroupPolicyDefinitionFileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitionFiles.item.definitions.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyDefinitionItemRequestBuilder
+     * @return a GroupPolicyDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyDefinitionItemRequestBuilder definitions(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class GroupPolicyDefinitionFileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyDefinitionFileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionFileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionFileItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class GroupPolicyDefinitionFileItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyDefinitionFileItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyDefinitionFileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyDefinitionFileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionFileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionFileItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class GroupPolicyDefinitionFileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyDefinitionFileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyDefinitionFileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyDefinitionFileItemRequestBuilderPatchRequestConfiguration() {

@@ -18,6 +18,8 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     private OffsetDateTime _contentDateTime;
     /** IP address of the user for the training event. */
     private String _ipAddress;
+    /** The OdataType property */
+    private String _odataType;
     /** The operating system, platform, and device details of the user for the training event. */
     private String _osPlatformDeviceDetails;
     /** Potential improvement in security posture of the tenant after completion of the training by the user. */
@@ -28,6 +30,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      */
     public UserTrainingContentEventInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userTrainingContentEventInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,10 +73,11 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingContentEventInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
             this.put("contentDateTime", (n) -> { currentObject.setContentDateTime(n.getOffsetDateTimeValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
             this.put("potentialScoreImpact", (n) -> { currentObject.setPotentialScoreImpact(n.getDoubleValue()); });
         }};
@@ -85,6 +89,14 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public String getIpAddress() {
         return this._ipAddress;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
@@ -112,6 +124,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
         writer.writeStringValue("browser", this.getBrowser());
         writer.writeOffsetDateTimeValue("contentDateTime", this.getContentDateTime());
         writer.writeStringValue("ipAddress", this.getIpAddress());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("osPlatformDeviceDetails", this.getOsPlatformDeviceDetails());
         writer.writeDoubleValue("potentialScoreImpact", this.getPotentialScoreImpact());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,6 +160,14 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      */
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.

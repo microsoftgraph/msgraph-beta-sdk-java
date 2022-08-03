@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommunicationsUserIdentity extends Identity implements Parsable {
-    /** The tenantId property */
+    /** The user's tenant ID. */
     private String _tenantId;
     /**
      * Instantiates a new CommunicationsUserIdentity and sets the default values.
@@ -16,6 +16,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
      */
     public CommunicationsUserIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.communicationsUserIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +40,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
         }};
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The user's tenant ID.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The user's tenant ID.
      * @param value Value to set for the tenantId property.
      * @return a void
      */

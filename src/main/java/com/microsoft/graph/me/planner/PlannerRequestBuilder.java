@@ -65,7 +65,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.planner.all.item collection
      * @param id Unique identifier of the item
-     * @return a plannerDeltaItemRequestBuilder
+     * @return a PlannerDeltaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerDeltaItemRequestBuilder all(@javax.annotation.Nonnull final String id) {
@@ -245,7 +245,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.planner.favoritePlans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.planner.favoriteplans.item.PlannerPlanItemRequestBuilder favoritePlans(@javax.annotation.Nonnull final String id) {
@@ -363,7 +363,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.planner.plans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
@@ -375,7 +375,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.planner.recentPlans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.planner.recentplans.item.PlannerPlanItemRequestBuilder recentPlans(@javax.annotation.Nonnull final String id) {
@@ -387,7 +387,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.planner.rosterPlans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.planner.rosterplans.item.PlannerPlanItemRequestBuilder rosterPlans(@javax.annotation.Nonnull final String id) {
@@ -399,7 +399,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.planner.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a plannerTaskItemRequestBuilder
+     * @return a PlannerTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {

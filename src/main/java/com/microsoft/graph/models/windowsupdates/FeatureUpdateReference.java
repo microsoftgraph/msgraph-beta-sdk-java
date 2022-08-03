@@ -16,6 +16,7 @@ public class FeatureUpdateReference extends WindowsUpdateReference implements Pa
      */
     public FeatureUpdateReference() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.featureUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

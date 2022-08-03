@@ -21,7 +21,7 @@ import microsoft.graph.privilegedaccess.item.resources.count.CountRequestBuilder
 import microsoft.graph.privilegedaccess.item.resources.register.RegisterRequestBuilder;
 /** Provides operations to manage the resources property of the microsoft.graph.privilegedAccess entity. */
 public class ResourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

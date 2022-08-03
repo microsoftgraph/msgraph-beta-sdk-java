@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PublishedResource extends Entity implements Parsable {
     /** List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;
@@ -23,6 +23,7 @@ public class PublishedResource extends Entity implements Parsable {
      */
     public PublishedResource() {
         super();
+        this.setOdataType("#microsoft.graph.publishedResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

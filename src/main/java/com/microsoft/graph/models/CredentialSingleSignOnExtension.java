@@ -24,6 +24,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      */
     public CredentialSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.credentialSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

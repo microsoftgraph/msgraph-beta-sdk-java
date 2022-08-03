@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /** HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values. */
     private String _actionVerb;
@@ -25,6 +25,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     public UnifiedRbacResourceAction() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRbacResourceAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

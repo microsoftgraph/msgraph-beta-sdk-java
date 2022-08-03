@@ -14,6 +14,8 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     private Map<String, Object> _additionalData;
     /** Lifetime (minutes) */
     private Integer _lifetimeInMinutes;
+    /** The OdataType property */
+    private String _odataType;
     /** Diffie-Hellman Group */
     private Integer _securityDiffieHellmanGroup;
     /** Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305. */
@@ -26,6 +28,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      */
     public IosVpnSecurityAssociationParameters() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosVpnSecurityAssociationParameters");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,8 +55,9 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVpnSecurityAssociationParameters currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("securityDiffieHellmanGroup", (n) -> { currentObject.setSecurityDiffieHellmanGroup(n.getIntegerValue()); });
             this.put("securityEncryptionAlgorithm", (n) -> { currentObject.setSecurityEncryptionAlgorithm(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
             this.put("securityIntegrityAlgorithm", (n) -> { currentObject.setSecurityIntegrityAlgorithm(n.getEnumValue(VpnIntegrityAlgorithmType.class)); });
@@ -66,6 +70,14 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     @javax.annotation.Nullable
     public Integer getLifetimeInMinutes() {
         return this._lifetimeInMinutes;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the securityDiffieHellmanGroup property value. Diffie-Hellman Group
@@ -99,6 +111,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("lifetimeInMinutes", this.getLifetimeInMinutes());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("securityDiffieHellmanGroup", this.getSecurityDiffieHellmanGroup());
         writer.writeEnumValue("securityEncryptionAlgorithm", this.getSecurityEncryptionAlgorithm());
         writer.writeEnumValue("securityIntegrityAlgorithm", this.getSecurityIntegrityAlgorithm());
@@ -119,6 +132,14 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      */
     public void setLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._lifetimeInMinutes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the securityDiffieHellmanGroup property value. Diffie-Hellman Group

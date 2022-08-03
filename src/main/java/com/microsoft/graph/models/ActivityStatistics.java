@@ -27,7 +27,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     public ActivityStatistics() {
         super();
-        this.setType("#microsoft.graph.activityStatistics");
+        this.setOdataType("#microsoft.graph.activityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

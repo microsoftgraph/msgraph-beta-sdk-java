@@ -21,7 +21,7 @@ import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprov
 import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity. */
 public class RoleAssignmentApprovalsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

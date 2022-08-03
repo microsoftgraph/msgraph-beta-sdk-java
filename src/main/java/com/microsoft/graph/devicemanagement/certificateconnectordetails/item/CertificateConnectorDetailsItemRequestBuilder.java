@@ -319,7 +319,7 @@ public class CertificateConnectorDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new certificateConnectorDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateConnectorDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateConnectorDetailsItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class CertificateConnectorDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public CertificateConnectorDetailsItemRequestBuilderGetQueryParameters queryParameters = new CertificateConnectorDetailsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new certificateConnectorDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateConnectorDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateConnectorDetailsItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class CertificateConnectorDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new certificateConnectorDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateConnectorDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateConnectorDetailsItemRequestBuilderPatchRequestConfiguration() {

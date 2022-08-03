@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity used to retrieve information about Intune Certificate Connectors. */
 public class CertificateConnectorDetails extends Entity implements Parsable {
     /** Connector name (set during enrollment). */
     private String _connectorName;
@@ -18,16 +19,17 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     /** Name of the machine hosting this connector service. */
     private String _machineName;
     /**
-     * Instantiates a new CertificateConnectorDetails and sets the default values.
+     * Instantiates a new certificateConnectorDetails and sets the default values.
      * @return a void
      */
     public CertificateConnectorDetails() {
         super();
+        this.setOdataType("#microsoft.graph.certificateConnectorDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CertificateConnectorDetails
+     * @return a certificateConnectorDetails
      */
     @javax.annotation.Nonnull
     public static CertificateConnectorDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

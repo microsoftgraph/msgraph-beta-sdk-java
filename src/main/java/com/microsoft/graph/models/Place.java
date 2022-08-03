@@ -22,7 +22,7 @@ public class Place extends Entity implements Parsable {
      */
     public Place() {
         super();
-        this.setType("#microsoft.graph.place");
+        this.setOdataType("#microsoft.graph.place");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,6 +38,7 @@ public class Place extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.room": return new Room();
                 case "#microsoft.graph.roomList": return new RoomList();
+                case "#microsoft.graph.workspace": return new Workspace();
             }
         }
         return new Place();

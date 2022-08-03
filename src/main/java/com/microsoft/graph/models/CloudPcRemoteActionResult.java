@@ -22,6 +22,8 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     private OffsetDateTime _lastUpdatedDateTime;
     /** The ID of the Intune managed device on which the remote action is performed. Read-only. */
     private String _managedDeviceId;
+    /** The OdataType property */
+    private String _odataType;
     /** Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. */
     private OffsetDateTime _startDateTime;
     /** The details of the Cloud PC status. */
@@ -32,6 +34,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
      */
     public CloudPcRemoteActionResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcRemoteActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,12 +85,13 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcRemoteActionResult currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("cloudPcId", (n) -> { currentObject.setCloudPcId(n.getStringValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("statusDetails", (n) -> { currentObject.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
         }};
@@ -107,6 +111,14 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
         return this._managedDeviceId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
@@ -136,6 +148,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
         writer.writeStringValue("cloudPcId", this.getCloudPcId());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeObjectValue("statusDetails", this.getStatusDetails());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -187,6 +200,14 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
      */
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.

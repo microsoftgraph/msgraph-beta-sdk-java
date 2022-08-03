@@ -26,7 +26,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      */
     public WindowsCertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.windowsCertificateProfileBase");
+        this.setOdataType("#microsoft.graph.windowsCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +42,9 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
             switch (mappingValue) {
                 case "#microsoft.graph.windows10CertificateProfileBase": return new Windows10CertificateProfileBase();
                 case "#microsoft.graph.windows10ImportedPFXCertificateProfile": return new Windows10ImportedPFXCertificateProfile();
+                case "#microsoft.graph.windows10PkcsCertificateProfile": return new Windows10PkcsCertificateProfile();
                 case "#microsoft.graph.windows81CertificateProfileBase": return new Windows81CertificateProfileBase();
+                case "#microsoft.graph.windows81SCEPCertificateProfile": return new Windows81SCEPCertificateProfile();
                 case "#microsoft.graph.windowsPhone81ImportedPFXCertificateProfile": return new WindowsPhone81ImportedPFXCertificateProfile();
             }
         }

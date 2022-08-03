@@ -307,7 +307,7 @@ public class SimulationAutomationRunItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new simulationAutomationRunItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationAutomationRunItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationAutomationRunItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SimulationAutomationRunItemRequestBuilder {
         @javax.annotation.Nullable
         public SimulationAutomationRunItemRequestBuilderGetQueryParameters queryParameters = new SimulationAutomationRunItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new simulationAutomationRunItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationAutomationRunItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationAutomationRunItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SimulationAutomationRunItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new simulationAutomationRunItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration() {

@@ -19,6 +19,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      */
     public UnifiedGroupSource() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.unifiedGroupSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

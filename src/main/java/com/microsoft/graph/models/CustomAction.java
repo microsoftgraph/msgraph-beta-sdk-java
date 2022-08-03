@@ -18,6 +18,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      */
     public CustomAction() {
         super();
+        this.setOdataType("#microsoft.graph.customAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

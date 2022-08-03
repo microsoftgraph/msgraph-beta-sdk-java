@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.commands.count.CountRequestBuilder;
 /** Provides operations to manage the commands property of the microsoft.graph.device entity. */
 public class CommandsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

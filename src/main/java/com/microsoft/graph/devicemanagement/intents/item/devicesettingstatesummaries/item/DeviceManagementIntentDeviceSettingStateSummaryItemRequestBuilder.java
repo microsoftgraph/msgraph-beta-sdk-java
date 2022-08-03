@@ -307,7 +307,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilderPatchRequestConfiguration() {

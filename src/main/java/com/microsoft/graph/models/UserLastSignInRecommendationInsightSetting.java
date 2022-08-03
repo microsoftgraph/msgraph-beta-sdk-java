@@ -19,6 +19,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      */
     public UserLastSignInRecommendationInsightSetting() {
         super();
+        this.setOdataType("#microsoft.graph.userLastSignInRecommendationInsightSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

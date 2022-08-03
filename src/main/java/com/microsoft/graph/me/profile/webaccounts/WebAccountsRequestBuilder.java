@@ -20,7 +20,7 @@ import microsoft.graph.models.WebAccount;
 import microsoft.graph.models.WebAccountCollectionResponse;
 /** Provides operations to manage the webAccounts property of the microsoft.graph.profile entity. */
 public class WebAccountsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

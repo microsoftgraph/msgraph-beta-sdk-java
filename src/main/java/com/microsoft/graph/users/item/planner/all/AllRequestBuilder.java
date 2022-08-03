@@ -21,7 +21,7 @@ import microsoft.graph.users.item.planner.all.count.CountRequestBuilder;
 import microsoft.graph.users.item.planner.all.delta.DeltaRequestBuilder;
 /** Provides operations to manage the all property of the microsoft.graph.plannerUser entity. */
 public class AllRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

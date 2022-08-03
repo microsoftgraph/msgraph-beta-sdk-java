@@ -20,6 +20,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     public B2cAuthenticationMethodsPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.b2cAuthenticationMethodsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

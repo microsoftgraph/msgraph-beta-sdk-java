@@ -307,7 +307,7 @@ public class ManagementIntentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementIntentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementIntentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementIntentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagementIntentItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementIntentItemRequestBuilderGetQueryParameters queryParameters = new ManagementIntentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementIntentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementIntentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementIntentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagementIntentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementIntentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementIntentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementIntentItemRequestBuilderPatchRequestConfiguration() {

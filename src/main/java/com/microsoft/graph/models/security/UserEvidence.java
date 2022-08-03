@@ -16,6 +16,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      */
     public UserEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.userEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,8 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     private String _identifier;
     /** Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName. */
     private java.util.List<KeyValuePair> _metadata;
+    /** The OdataType property */
+    private String _odataType;
     /** The state property */
     private ContentState _state;
     /**
@@ -25,6 +27,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      */
     public ContentInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.contentInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,10 +54,11 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(ContentFormat.class)); });
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ContentState.class)); });
         }};
     }
@@ -83,6 +87,14 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         return this._metadata;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the state property value. The state property
      * @return a contentState
      */
@@ -100,6 +112,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("format", this.getFormat());
         writer.writeStringValue("identifier", this.getIdentifier());
         writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      */
     public void setMetadata(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._metadata = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. The state property

@@ -36,6 +36,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      */
     public Windows10EnrollmentCompletionPageConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10EnrollmentCompletionPageConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

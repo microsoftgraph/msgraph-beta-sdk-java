@@ -155,7 +155,7 @@ public class TagItemRequestBuilder {
         @javax.annotation.Nullable
         public TagItemRequestBuilderGetQueryParameters queryParameters = new TagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TagItemRequestBuilderGetRequestConfiguration() {

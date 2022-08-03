@@ -38,6 +38,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      */
     public MacOSScepCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.macOSScepCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

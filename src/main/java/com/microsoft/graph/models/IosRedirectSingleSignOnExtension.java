@@ -22,6 +22,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      */
     public IosRedirectSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.iosRedirectSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

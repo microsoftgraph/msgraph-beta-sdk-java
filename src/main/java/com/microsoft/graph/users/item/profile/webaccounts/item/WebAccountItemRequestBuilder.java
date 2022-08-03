@@ -307,7 +307,7 @@ public class WebAccountItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new webAccountItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WebAccountItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WebAccountItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WebAccountItemRequestBuilder {
         @javax.annotation.Nullable
         public WebAccountItemRequestBuilderGetQueryParameters queryParameters = new WebAccountItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new webAccountItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WebAccountItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WebAccountItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WebAccountItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new webAccountItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WebAccountItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WebAccountItemRequestBuilderPatchRequestConfiguration() {

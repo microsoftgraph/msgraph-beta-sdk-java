@@ -39,7 +39,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      */
     public DeviceManagementTemplate() {
         super();
-        this.setType("#microsoft.graph.deviceManagementTemplate");
+        this.setOdataType("#microsoft.graph.deviceManagementTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

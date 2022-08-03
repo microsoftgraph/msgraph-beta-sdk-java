@@ -14,12 +14,15 @@ public class DeviceHealth implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The last time the device was connected. */
     private OffsetDateTime _lastConnectionTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceHealth and sets the default values.
      * @return a void
      */
     public DeviceHealth() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,8 +49,9 @@ public class DeviceHealth implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealth currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("lastConnectionTime", (n) -> { currentObject.setLastConnectionTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -59,6 +63,14 @@ public class DeviceHealth implements AdditionalDataHolder, Parsable {
         return this._lastConnectionTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -66,6 +78,7 @@ public class DeviceHealth implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastConnectionTime", this.getLastConnectionTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class DeviceHealth implements AdditionalDataHolder, Parsable {
      */
     public void setLastConnectionTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastConnectionTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

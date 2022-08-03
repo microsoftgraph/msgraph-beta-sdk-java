@@ -24,6 +24,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      */
     public MacOSCredentialSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.macOSCredentialSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

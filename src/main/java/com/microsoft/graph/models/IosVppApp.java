@@ -41,6 +41,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     public IosVppApp() {
         super();
+        this.setOdataType("#microsoft.graph.iosVppApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,7 @@ import microsoft.graph.models.security.SensitivityLabel;
 import microsoft.graph.models.security.SensitivityLabelCollectionResponse;
 /** Provides operations to manage the sensitivityLabels property of the microsoft.graph.security.informationProtection entity. */
 public class SensitivityLabelsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

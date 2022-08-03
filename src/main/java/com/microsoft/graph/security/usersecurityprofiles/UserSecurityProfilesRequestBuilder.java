@@ -20,7 +20,7 @@ import microsoft.graph.models.UserSecurityProfileCollectionResponse;
 import microsoft.graph.security.usersecurityprofiles.count.CountRequestBuilder;
 /** Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity. */
 public class UserSecurityProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

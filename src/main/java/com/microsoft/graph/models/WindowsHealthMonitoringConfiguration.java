@@ -20,6 +20,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      */
     public WindowsHealthMonitoringConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsHealthMonitoringConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -196,7 +196,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a activityBasedTimeoutPolicyItemRequestBuilder
+     * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ActivityBasedTimeoutPolicyItemRequestBuilder activityBasedTimeoutPolicies(@javax.annotation.Nonnull final String id) {
@@ -208,7 +208,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.appManagementPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a appManagementPolicyItemRequestBuilder
+     * @return a AppManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppManagementPolicyItemRequestBuilder appManagementPolicies(@javax.annotation.Nonnull final String id) {
@@ -220,7 +220,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.authorizationPolicy.item collection
      * @param id Unique identifier of the item
-     * @return a authorizationPolicyItemRequestBuilder
+     * @return a AuthorizationPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuthorizationPolicyItemRequestBuilder authorizationPolicy(@javax.annotation.Nonnull final String id) {
@@ -232,7 +232,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.claimsMappingPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a claimsMappingPolicyItemRequestBuilder
+     * @return a ClaimsMappingPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ClaimsMappingPolicyItemRequestBuilder claimsMappingPolicies(@javax.annotation.Nonnull final String id) {
@@ -244,7 +244,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.conditionalAccessPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a conditionalAccessPolicyItemRequestBuilder
+     * @return a ConditionalAccessPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyItemRequestBuilder conditionalAccessPolicies(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.featureRolloutPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a featureRolloutPolicyItemRequestBuilder
+     * @return a FeatureRolloutPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FeatureRolloutPolicyItemRequestBuilder featureRolloutPolicies(@javax.annotation.Nonnull final String id) {
@@ -408,7 +408,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a homeRealmDiscoveryPolicyItemRequestBuilder
+     * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPolicyItemRequestBuilder homeRealmDiscoveryPolicies(@javax.annotation.Nonnull final String id) {
@@ -420,7 +420,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.mobileAppManagementPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a mobilityManagementPolicyItemRequestBuilder
+     * @return a MobilityManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileAppManagementPolicies(@javax.annotation.Nonnull final String id) {
@@ -432,7 +432,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.mobileDeviceManagementPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a mobilityManagementPolicyItemRequestBuilder
+     * @return a MobilityManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileDeviceManagementPolicies(@javax.annotation.Nonnull final String id) {
@@ -499,7 +499,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a permissionGrantPolicyItemRequestBuilder
+     * @return a PermissionGrantPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PermissionGrantPolicyItemRequestBuilder permissionGrantPolicies(@javax.annotation.Nonnull final String id) {
@@ -511,7 +511,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleManagementPolicyItemRequestBuilder
+     * @return a UnifiedRoleManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleManagementPolicyItemRequestBuilder roleManagementPolicies(@javax.annotation.Nonnull final String id) {
@@ -523,7 +523,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.roleManagementPolicyAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleManagementPolicyAssignmentItemRequestBuilder
+     * @return a UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleManagementPolicyAssignmentItemRequestBuilder roleManagementPolicyAssignments(@javax.annotation.Nonnull final String id) {
@@ -535,7 +535,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.servicePrincipalCreationPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a servicePrincipalCreationPolicyItemRequestBuilder
+     * @return a ServicePrincipalCreationPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServicePrincipalCreationPolicyItemRequestBuilder servicePrincipalCreationPolicies(@javax.annotation.Nonnull final String id) {
@@ -547,7 +547,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a tokenIssuancePolicyItemRequestBuilder
+     * @return a TokenIssuancePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TokenIssuancePolicyItemRequestBuilder tokenIssuancePolicies(@javax.annotation.Nonnull final String id) {
@@ -559,7 +559,7 @@ public class PoliciesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a tokenLifetimePolicyItemRequestBuilder
+     * @return a TokenLifetimePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TokenLifetimePolicyItemRequestBuilder tokenLifetimePolicies(@javax.annotation.Nonnull final String id) {

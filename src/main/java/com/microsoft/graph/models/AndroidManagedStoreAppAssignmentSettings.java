@@ -18,6 +18,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      */
     public AndroidManagedStoreAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedStoreAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

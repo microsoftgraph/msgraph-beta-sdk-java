@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics Device not windows autopilot ready. */
 public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity implements Parsable {
     /** The intune device's autopilotProfileAssigned. */
     private Boolean _autoPilotProfileAssigned;
@@ -27,16 +28,17 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     /** The intune device's serial number. */
     private String _serialNumber;
     /**
-     * Instantiates a new UserExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
+     * Instantiates a new userExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsNotAutopilotReadyDevice() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsNotAutopilotReadyDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsNotAutopilotReadyDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

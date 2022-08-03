@@ -361,7 +361,7 @@ public class CloudPCItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPCItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPCItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPCItemRequestBuilderDeleteRequestConfiguration() {
@@ -390,7 +390,7 @@ public class CloudPCItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPCItemRequestBuilderGetQueryParameters queryParameters = new CloudPCItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPCItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPCItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPCItemRequestBuilderGetRequestConfiguration() {
@@ -405,7 +405,7 @@ public class CloudPCItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPCItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPCItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPCItemRequestBuilderPatchRequestConfiguration() {

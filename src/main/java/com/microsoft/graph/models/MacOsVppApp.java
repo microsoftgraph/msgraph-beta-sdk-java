@@ -39,6 +39,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      */
     public MacOsVppApp() {
         super();
+        this.setOdataType("#microsoft.graph.macOsVppApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

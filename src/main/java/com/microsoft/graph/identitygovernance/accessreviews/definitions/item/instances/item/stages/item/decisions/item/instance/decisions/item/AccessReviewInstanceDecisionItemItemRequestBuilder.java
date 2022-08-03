@@ -253,7 +253,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.insights.item collection
      * @param id Unique identifier of the item
-     * @return a governanceInsightItemRequestBuilder
+     * @return a GovernanceInsightItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceInsightItemRequestBuilder insights(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewInstanceDecisionItemItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewInstanceDecisionItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration() {

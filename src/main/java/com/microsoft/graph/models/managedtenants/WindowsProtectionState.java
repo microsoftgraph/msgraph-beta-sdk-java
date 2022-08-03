@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class WindowsProtectionState extends Entity implements Parsable {
     /** The anti-malware version for the managed device. Optional. Read-only. */
     private String _antiMalwareVersion;
@@ -67,6 +67,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     public WindowsProtectionState() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.windowsProtectionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

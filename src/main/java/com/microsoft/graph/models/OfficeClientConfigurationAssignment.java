@@ -17,6 +17,7 @@ public class OfficeClientConfigurationAssignment extends Entity implements Parsa
      */
     public OfficeClientConfigurationAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.officeClientConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

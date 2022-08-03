@@ -16,6 +16,7 @@ public class WindowsPhone81StoreApp extends MobileApp implements Parsable {
      */
     public WindowsPhone81StoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81StoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

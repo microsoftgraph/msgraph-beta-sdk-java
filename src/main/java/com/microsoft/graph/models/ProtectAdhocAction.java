@@ -14,6 +14,7 @@ public class ProtectAdhocAction extends InformationProtectionAction implements P
      */
     public ProtectAdhocAction() {
         super();
+        this.setOdataType("#microsoft.graph.protectAdhocAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

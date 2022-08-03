@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class GovernanceRoleAssignmentRequest extends Entity implements Parsable {
     /** Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users). */
     private String _assignmentState;
@@ -34,12 +34,15 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     private GovernanceSubject _subject;
     /** Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals. */
     private String _subjectId;
+    /** Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew. */
+    private String _type;
     /**
      * Instantiates a new governanceRoleAssignmentRequest and sets the default values.
      * @return a void
      */
     public GovernanceRoleAssignmentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.governanceRoleAssignmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,6 +82,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
             this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(GovernanceRoleAssignmentRequestStatus::createFromDiscriminatorValue)); });
             this.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(GovernanceSubject::createFromDiscriminatorValue)); });
             this.put("subjectId", (n) -> { currentObject.setSubjectId(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -170,6 +174,14 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
         return this._subjectId;
     }
     /**
+     * Gets the type property value. Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -189,6 +201,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
         writer.writeObjectValue("status", this.getStatus());
         writer.writeObjectValue("subject", this.getSubject());
         writer.writeStringValue("subjectId", this.getSubjectId());
+        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the assignmentState property value. Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
@@ -285,5 +298,13 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      */
     public void setSubjectId(@javax.annotation.Nullable final String value) {
         this._subjectId = value;
+    }
+    /**
+     * Sets the type property value. Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

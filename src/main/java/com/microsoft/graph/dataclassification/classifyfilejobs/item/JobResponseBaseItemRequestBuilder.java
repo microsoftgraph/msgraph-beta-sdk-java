@@ -307,7 +307,7 @@ public class JobResponseBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new jobResponseBaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new JobResponseBaseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public JobResponseBaseItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class JobResponseBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public JobResponseBaseItemRequestBuilderGetQueryParameters queryParameters = new JobResponseBaseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new jobResponseBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new JobResponseBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public JobResponseBaseItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class JobResponseBaseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new jobResponseBaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new JobResponseBaseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public JobResponseBaseItemRequestBuilderPatchRequestConfiguration() {

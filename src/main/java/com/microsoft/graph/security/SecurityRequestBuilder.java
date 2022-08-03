@@ -178,7 +178,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.alerts.item collection
      * @param id Unique identifier of the item
-     * @return a alertItemRequestBuilder
+     * @return a AlertItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.security.alerts.item.AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
@@ -190,7 +190,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.alerts_v2.item collection
      * @param id Unique identifier of the item
-     * @return a alertItemRequestBuilder
+     * @return a AlertItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder alerts_v2(@javax.annotation.Nonnull final String id) {
@@ -202,7 +202,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cloudAppSecurityProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a cloudAppSecurityProfileItemRequestBuilder
+     * @return a CloudAppSecurityProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudAppSecurityProfileItemRequestBuilder cloudAppSecurityProfiles(@javax.annotation.Nonnull final String id) {
@@ -303,7 +303,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.domainSecurityProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a domainSecurityProfileItemRequestBuilder
+     * @return a DomainSecurityProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DomainSecurityProfileItemRequestBuilder domainSecurityProfiles(@javax.annotation.Nonnull final String id) {
@@ -315,7 +315,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.fileSecurityProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a fileSecurityProfileItemRequestBuilder
+     * @return a FileSecurityProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FileSecurityProfileItemRequestBuilder fileSecurityProfiles(@javax.annotation.Nonnull final String id) {
@@ -378,7 +378,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.hostSecurityProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a hostSecurityProfileItemRequestBuilder
+     * @return a HostSecurityProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public HostSecurityProfileItemRequestBuilder hostSecurityProfiles(@javax.annotation.Nonnull final String id) {
@@ -390,7 +390,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.incidents.item collection
      * @param id Unique identifier of the item
-     * @return a incidentItemRequestBuilder
+     * @return a IncidentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IncidentItemRequestBuilder incidents(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.ipSecurityProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a ipSecurityProfileItemRequestBuilder
+     * @return a IpSecurityProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IpSecurityProfileItemRequestBuilder ipSecurityProfiles(@javax.annotation.Nonnull final String id) {
@@ -469,7 +469,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.providerTenantSettings.item collection
      * @param id Unique identifier of the item
-     * @return a providerTenantSettingItemRequestBuilder
+     * @return a ProviderTenantSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProviderTenantSettingItemRequestBuilder providerTenantSettings(@javax.annotation.Nonnull final String id) {
@@ -481,7 +481,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.secureScoreControlProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a secureScoreControlProfileItemRequestBuilder
+     * @return a SecureScoreControlProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecureScoreControlProfileItemRequestBuilder secureScoreControlProfiles(@javax.annotation.Nonnull final String id) {
@@ -493,7 +493,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.secureScores.item collection
      * @param id Unique identifier of the item
-     * @return a secureScoreItemRequestBuilder
+     * @return a SecureScoreItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecureScoreItemRequestBuilder secureScores(@javax.annotation.Nonnull final String id) {
@@ -505,7 +505,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.securityActions.item collection
      * @param id Unique identifier of the item
-     * @return a securityActionItemRequestBuilder
+     * @return a SecurityActionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecurityActionItemRequestBuilder securityActions(@javax.annotation.Nonnull final String id) {
@@ -517,7 +517,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.subjectRightsRequests.item collection
      * @param id Unique identifier of the item
-     * @return a subjectRightsRequestItemRequestBuilder
+     * @return a SubjectRightsRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubjectRightsRequestItemRequestBuilder subjectRightsRequests(@javax.annotation.Nonnull final String id) {
@@ -529,7 +529,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.tiIndicators.item collection
      * @param id Unique identifier of the item
-     * @return a tiIndicatorItemRequestBuilder
+     * @return a TiIndicatorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TiIndicatorItemRequestBuilder tiIndicators(@javax.annotation.Nonnull final String id) {
@@ -541,7 +541,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.userSecurityProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a userSecurityProfileItemRequestBuilder
+     * @return a UserSecurityProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserSecurityProfileItemRequestBuilder userSecurityProfiles(@javax.annotation.Nonnull final String id) {

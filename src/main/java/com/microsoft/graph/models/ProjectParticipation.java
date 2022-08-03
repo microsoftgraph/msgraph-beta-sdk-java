@@ -30,6 +30,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     public ProjectParticipation() {
         super();
+        this.setOdataType("#microsoft.graph.projectParticipation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

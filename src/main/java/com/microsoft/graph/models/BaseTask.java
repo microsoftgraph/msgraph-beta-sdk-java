@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class BaseTask extends Entity implements Parsable {
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
@@ -48,7 +48,7 @@ public class BaseTask extends Entity implements Parsable {
      */
     public BaseTask() {
         super();
-        this.setType("#microsoft.graph.baseTask");
+        this.setOdataType("#microsoft.graph.baseTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

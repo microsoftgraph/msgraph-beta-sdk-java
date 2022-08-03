@@ -307,7 +307,7 @@ public class ZebraFotaArtifactItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new zebraFotaArtifactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ZebraFotaArtifactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ZebraFotaArtifactItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ZebraFotaArtifactItemRequestBuilder {
         @javax.annotation.Nullable
         public ZebraFotaArtifactItemRequestBuilderGetQueryParameters queryParameters = new ZebraFotaArtifactItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new zebraFotaArtifactItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ZebraFotaArtifactItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ZebraFotaArtifactItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ZebraFotaArtifactItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new zebraFotaArtifactItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ZebraFotaArtifactItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ZebraFotaArtifactItemRequestBuilderPatchRequestConfiguration() {

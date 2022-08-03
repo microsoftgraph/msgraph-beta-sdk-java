@@ -307,7 +307,7 @@ public class AppScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppScopeItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AppScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public AppScopeItemRequestBuilderGetQueryParameters queryParameters = new AppScopeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppScopeItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AppScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppScopeItemRequestBuilderPatchRequestConfiguration() {

@@ -16,6 +16,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      */
     public TaskFileAttachment() {
         super();
+        this.setOdataType("#microsoft.graph.taskFileAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

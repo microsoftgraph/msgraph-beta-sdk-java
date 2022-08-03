@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class EducationOutcome extends Entity implements Parsable {
     /** The individual who updated the resource. */
     private IdentitySet _lastModifiedBy;
@@ -20,7 +20,7 @@ public class EducationOutcome extends Entity implements Parsable {
      */
     public EducationOutcome() {
         super();
-        this.setType("#microsoft.graph.educationOutcome");
+        this.setOdataType("#microsoft.graph.educationOutcome");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

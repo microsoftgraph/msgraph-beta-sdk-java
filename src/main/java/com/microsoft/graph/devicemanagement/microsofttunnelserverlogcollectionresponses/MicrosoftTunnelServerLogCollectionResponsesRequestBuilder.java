@@ -20,7 +20,7 @@ import microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponseCollecti
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftTunnelServerLogCollectionResponses property of the microsoft.graph.deviceManagement entity. */
 public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

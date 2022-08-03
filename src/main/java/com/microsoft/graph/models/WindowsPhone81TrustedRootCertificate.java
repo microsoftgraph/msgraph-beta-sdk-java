@@ -18,6 +18,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
      */
     public WindowsPhone81TrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81TrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

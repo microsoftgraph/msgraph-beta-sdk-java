@@ -13,6 +13,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
     private Map<String, Object> _additionalData;
     /** The display name of the customer tenant as set by Azure AD. Read only */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** The Azure AD-assigned tenant ID of the customer tenant. */
     private String _tenantId;
     /**
@@ -21,6 +23,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      */
     public DelegatedAdminRelationshipCustomerParticipant() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.delegatedAdminRelationshipCustomerParticipant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminRelationshipCustomerParticipant currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer tenant.
@@ -76,6 +88,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer tenant.

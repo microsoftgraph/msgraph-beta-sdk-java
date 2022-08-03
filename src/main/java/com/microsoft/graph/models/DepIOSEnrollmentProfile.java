@@ -72,6 +72,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      */
     public DepIOSEnrollmentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.depIOSEnrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

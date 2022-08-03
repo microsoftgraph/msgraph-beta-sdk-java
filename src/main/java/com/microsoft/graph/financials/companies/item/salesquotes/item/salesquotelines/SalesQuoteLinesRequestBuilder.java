@@ -20,7 +20,7 @@ import microsoft.graph.models.SalesQuoteLine;
 import microsoft.graph.models.SalesQuoteLineCollectionResponse;
 /** Provides operations to manage the salesQuoteLines property of the microsoft.graph.salesQuote entity. */
 public class SalesQuoteLinesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

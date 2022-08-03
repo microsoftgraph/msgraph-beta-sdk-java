@@ -7,22 +7,21 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class IdentityProviderBase extends Entity implements Parsable {
     /** The display name of the identity provider. */
     private String _displayName;
     /**
-     * Instantiates a new identityProviderBase and sets the default values.
+     * Instantiates a new IdentityProviderBase and sets the default values.
      * @return a void
      */
     public IdentityProviderBase() {
         super();
-        this.setType("#microsoft.graph.identityProviderBase");
+        this.setOdataType("#microsoft.graph.identityProviderBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityProviderBase
+     * @return a IdentityProviderBase
      */
     @javax.annotation.Nonnull
     public static IdentityProviderBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +32,9 @@ public class IdentityProviderBase extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.appleManagedIdentityProvider": return new AppleManagedIdentityProvider();
                 case "#microsoft.graph.builtInIdentityProvider": return new BuiltInIdentityProvider();
+                case "#microsoft.graph.internalDomainFederation": return new InternalDomainFederation();
                 case "#microsoft.graph.openIdConnectIdentityProvider": return new OpenIdConnectIdentityProvider();
+                case "#microsoft.graph.samlOrWsFedExternalDomainFederation": return new SamlOrWsFedExternalDomainFederation();
                 case "#microsoft.graph.samlOrWsFedProvider": return new SamlOrWsFedProvider();
                 case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
             }

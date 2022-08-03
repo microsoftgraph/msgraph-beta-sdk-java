@@ -102,7 +102,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.commands.item collection
      * @param id Unique identifier of the item
-     * @return a commandItemRequestBuilder
+     * @return a CommandItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CommandItemRequestBuilder commands(@javax.annotation.Nonnull final String id) {
@@ -282,7 +282,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -412,7 +412,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.registeredOwners.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
@@ -424,7 +424,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.registeredUsers.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
@@ -436,7 +436,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -448,7 +448,7 @@ public class DeviceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.usageRights.item collection
      * @param id Unique identifier of the item
-     * @return a usageRightItemRequestBuilder
+     * @return a UsageRightItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UsageRightItemRequestBuilder usageRights(@javax.annotation.Nonnull final String id) {

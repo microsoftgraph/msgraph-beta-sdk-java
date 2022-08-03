@@ -16,6 +16,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      */
     public DeviceManagementSettingRequiredConstraint() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementSettingRequiredConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      */
     public DeviceHealthScriptRunOnceSchedule() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptRunOnceSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

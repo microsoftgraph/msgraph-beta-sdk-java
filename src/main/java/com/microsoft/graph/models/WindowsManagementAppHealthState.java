@@ -26,6 +26,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      */
     public WindowsManagementAppHealthState() {
         super();
+        this.setOdataType("#microsoft.graph.windowsManagementAppHealthState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -19,6 +19,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      */
     public CloudPcUserSettingAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcUserSettingAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

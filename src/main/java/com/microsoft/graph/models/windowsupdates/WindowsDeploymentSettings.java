@@ -16,6 +16,7 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements Par
      */
     public WindowsDeploymentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.windowsDeploymentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

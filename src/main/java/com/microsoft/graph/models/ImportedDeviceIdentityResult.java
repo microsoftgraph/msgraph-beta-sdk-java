@@ -16,6 +16,7 @@ public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity impleme
      */
     public ImportedDeviceIdentityResult() {
         super();
+        this.setOdataType("#microsoft.graph.importedDeviceIdentityResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

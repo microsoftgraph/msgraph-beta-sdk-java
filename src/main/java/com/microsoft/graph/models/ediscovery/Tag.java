@@ -31,6 +31,7 @@ public class Tag extends Entity implements Parsable {
      */
     public Tag() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.tag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

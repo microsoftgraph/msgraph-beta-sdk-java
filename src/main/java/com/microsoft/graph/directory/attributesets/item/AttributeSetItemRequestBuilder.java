@@ -307,7 +307,7 @@ public class AttributeSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new attributeSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AttributeSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttributeSetItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AttributeSetItemRequestBuilder {
         @javax.annotation.Nullable
         public AttributeSetItemRequestBuilderGetQueryParameters queryParameters = new AttributeSetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new attributeSetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AttributeSetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttributeSetItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AttributeSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new attributeSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AttributeSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AttributeSetItemRequestBuilderPatchRequestConfiguration() {

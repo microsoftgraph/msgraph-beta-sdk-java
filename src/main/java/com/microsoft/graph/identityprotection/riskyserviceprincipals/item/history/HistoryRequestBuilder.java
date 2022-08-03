@@ -20,7 +20,7 @@ import microsoft.graph.models.RiskyServicePrincipalHistoryItem;
 import microsoft.graph.models.RiskyServicePrincipalHistoryItemCollectionResponse;
 /** Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity. */
 public class HistoryRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

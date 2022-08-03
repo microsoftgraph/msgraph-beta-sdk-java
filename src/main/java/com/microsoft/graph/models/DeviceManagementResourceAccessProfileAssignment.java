@@ -21,6 +21,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
      */
     public DeviceManagementResourceAccessProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementResourceAccessProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

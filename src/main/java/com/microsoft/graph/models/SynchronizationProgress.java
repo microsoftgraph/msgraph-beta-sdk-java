@@ -14,6 +14,8 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The numerator of a progress ratio; the number of units of changes already processed. */
     private Long _completedUnits;
+    /** The OdataType property */
+    private String _odataType;
     /** The time of a progress observation as an offset in minutes from UTC. */
     private OffsetDateTime _progressObservationDateTime;
     /** The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization. */
@@ -26,6 +28,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      */
     public SynchronizationProgress() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationProgress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,12 +63,21 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationProgress currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("completedUnits", (n) -> { currentObject.setCompletedUnits(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("progressObservationDateTime", (n) -> { currentObject.setProgressObservationDateTime(n.getOffsetDateTimeValue()); });
             this.put("totalUnits", (n) -> { currentObject.setTotalUnits(n.getLongValue()); });
             this.put("units", (n) -> { currentObject.setUnits(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
@@ -99,6 +111,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("completedUnits", this.getCompletedUnits());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("progressObservationDateTime", this.getProgressObservationDateTime());
         writer.writeLongValue("totalUnits", this.getTotalUnits());
         writer.writeStringValue("units", this.getUnits());
@@ -119,6 +132,14 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      */
     public void setCompletedUnits(@javax.annotation.Nullable final Long value) {
         this._completedUnits = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.

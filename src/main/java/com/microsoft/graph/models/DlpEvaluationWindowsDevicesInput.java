@@ -18,6 +18,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      */
     public DlpEvaluationWindowsDevicesInput() {
         super();
+        this.setOdataType("#microsoft.graph.dlpEvaluationWindowsDevicesInput");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

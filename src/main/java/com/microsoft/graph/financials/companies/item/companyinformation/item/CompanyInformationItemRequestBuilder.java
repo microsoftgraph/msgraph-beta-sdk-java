@@ -248,7 +248,7 @@ public class CompanyInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public CompanyInformationItemRequestBuilderGetQueryParameters queryParameters = new CompanyInformationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new companyInformationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CompanyInformationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CompanyInformationItemRequestBuilderGetRequestConfiguration() {
@@ -263,7 +263,7 @@ public class CompanyInformationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new companyInformationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CompanyInformationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CompanyInformationItemRequestBuilderPatchRequestConfiguration() {

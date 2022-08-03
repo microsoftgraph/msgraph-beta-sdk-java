@@ -255,7 +255,7 @@ public class OrgContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.contacts.item.directReports.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
@@ -318,7 +318,7 @@ public class OrgContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.contacts.item.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.contacts.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -385,7 +385,7 @@ public class OrgContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.contacts.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -397,7 +397,7 @@ public class OrgContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.contacts.item.transitiveReports.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.contacts.item.transitivereports.item.DirectoryObjectItemRequestBuilder transitiveReports(@javax.annotation.Nonnull final String id) {
@@ -415,7 +415,7 @@ public class OrgContactItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new orgContactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OrgContactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrgContactItemRequestBuilderDeleteRequestConfiguration() {
@@ -444,7 +444,7 @@ public class OrgContactItemRequestBuilder {
         @javax.annotation.Nullable
         public OrgContactItemRequestBuilderGetQueryParameters queryParameters = new OrgContactItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new orgContactItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OrgContactItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrgContactItemRequestBuilderGetRequestConfiguration() {
@@ -459,7 +459,7 @@ public class OrgContactItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new orgContactItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OrgContactItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrgContactItemRequestBuilderPatchRequestConfiguration() {

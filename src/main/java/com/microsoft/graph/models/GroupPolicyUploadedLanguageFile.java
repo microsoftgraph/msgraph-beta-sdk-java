@@ -23,12 +23,15 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     private String _languageCode;
     /** The date and time the entity was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new groupPolicyUploadedLanguageFile and sets the default values.
      * @return a void
      */
     public GroupPolicyUploadedLanguageFile() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.groupPolicyUploadedLanguageFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,12 +66,13 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyUploadedLanguageFile currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("languageCode", (n) -> { currentObject.setLanguageCode(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -104,6 +108,14 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
         return this._lastModifiedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -115,6 +127,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("languageCode", this.getLanguageCode());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -164,5 +177,13 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

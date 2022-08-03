@@ -14,12 +14,15 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** Number of days when the device has not contacted Intune. */
     private String _deviceInactivityBeforeRetirementInDays;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new managedDeviceCleanupSettings and sets the default values.
      * @return a void
      */
     public ManagedDeviceCleanupSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedDeviceCleanupSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceCleanupSettings currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("deviceInactivityBeforeRetirementInDays", (n) -> { currentObject.setDeviceInactivityBeforeRetirementInDays(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceInactivityBeforeRetirementInDays", this.getDeviceInactivityBeforeRetirementInDays());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
      */
     public void setDeviceInactivityBeforeRetirementInDays(@javax.annotation.Nullable final String value) {
         this._deviceInactivityBeforeRetirementInDays = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

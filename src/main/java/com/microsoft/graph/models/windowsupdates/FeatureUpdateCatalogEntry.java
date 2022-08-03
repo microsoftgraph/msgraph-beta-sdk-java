@@ -16,6 +16,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     public FeatureUpdateCatalogEntry() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

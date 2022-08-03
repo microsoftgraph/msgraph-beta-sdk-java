@@ -58,6 +58,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      */
     public AndroidDeviceOwnerCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

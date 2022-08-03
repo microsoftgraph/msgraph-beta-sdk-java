@@ -17,6 +17,8 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
     private TeamworkSoftwareUpdateStatus _companyPortalSoftwareUpdateStatus;
     /** The software update available for the firmware. */
     private TeamworkSoftwareUpdateStatus _firmwareSoftwareUpdateStatus;
+    /** The OdataType property */
+    private String _odataType;
     /** The software update available for the operating system. */
     private TeamworkSoftwareUpdateStatus _operatingSystemSoftwareUpdateStatus;
     /** The software update available for the partner agent. */
@@ -29,6 +31,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
      */
     public TeamworkSoftwareUpdateHealth() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkSoftwareUpdateHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,10 +74,11 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSoftwareUpdateHealth currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("adminAgentSoftwareUpdateStatus", (n) -> { currentObject.setAdminAgentSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
             this.put("companyPortalSoftwareUpdateStatus", (n) -> { currentObject.setCompanyPortalSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
             this.put("firmwareSoftwareUpdateStatus", (n) -> { currentObject.setFirmwareSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operatingSystemSoftwareUpdateStatus", (n) -> { currentObject.setOperatingSystemSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
             this.put("partnerAgentSoftwareUpdateStatus", (n) -> { currentObject.setPartnerAgentSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
             this.put("teamsClientSoftwareUpdateStatus", (n) -> { currentObject.setTeamsClientSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
@@ -87,6 +91,14 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getFirmwareSoftwareUpdateStatus() {
         return this._firmwareSoftwareUpdateStatus;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operatingSystemSoftwareUpdateStatus property value. The software update available for the operating system.
@@ -122,6 +134,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
         writer.writeObjectValue("adminAgentSoftwareUpdateStatus", this.getAdminAgentSoftwareUpdateStatus());
         writer.writeObjectValue("companyPortalSoftwareUpdateStatus", this.getCompanyPortalSoftwareUpdateStatus());
         writer.writeObjectValue("firmwareSoftwareUpdateStatus", this.getFirmwareSoftwareUpdateStatus());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("operatingSystemSoftwareUpdateStatus", this.getOperatingSystemSoftwareUpdateStatus());
         writer.writeObjectValue("partnerAgentSoftwareUpdateStatus", this.getPartnerAgentSoftwareUpdateStatus());
         writer.writeObjectValue("teamsClientSoftwareUpdateStatus", this.getTeamsClientSoftwareUpdateStatus());
@@ -158,6 +171,14 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
      */
     public void setFirmwareSoftwareUpdateStatus(@javax.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
         this._firmwareSoftwareUpdateStatus = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operatingSystemSoftwareUpdateStatus property value. The software update available for the operating system.

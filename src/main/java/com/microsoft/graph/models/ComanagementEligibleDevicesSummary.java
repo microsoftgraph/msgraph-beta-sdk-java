@@ -21,12 +21,15 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     private Integer _ineligibleCount;
     /** Count of devices that will be eligible for Co-Management after an OS update */
     private Integer _needsOsUpdateCount;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new comanagementEligibleDevicesSummary and sets the default values.
      * @return a void
      */
     public ComanagementEligibleDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.comanagementEligibleDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,12 +80,13 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagementEligibleDevicesSummary currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("comanagedCount", (n) -> { currentObject.setComanagedCount(n.getIntegerValue()); });
             this.put("eligibleButNotAzureAdJoinedCount", (n) -> { currentObject.setEligibleButNotAzureAdJoinedCount(n.getIntegerValue()); });
             this.put("eligibleCount", (n) -> { currentObject.setEligibleCount(n.getIntegerValue()); });
             this.put("ineligibleCount", (n) -> { currentObject.setIneligibleCount(n.getIntegerValue()); });
             this.put("needsOsUpdateCount", (n) -> { currentObject.setNeedsOsUpdateCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         return this._needsOsUpdateCount;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -113,6 +125,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         writer.writeIntegerValue("eligibleCount", this.getEligibleCount());
         writer.writeIntegerValue("ineligibleCount", this.getIneligibleCount());
         writer.writeIntegerValue("needsOsUpdateCount", this.getNeedsOsUpdateCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,5 +175,13 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     public void setNeedsOsUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._needsOsUpdateCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

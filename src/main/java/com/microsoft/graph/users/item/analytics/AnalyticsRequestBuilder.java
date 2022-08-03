@@ -34,7 +34,7 @@ public class AnalyticsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.analytics.activityStatistics.item collection
      * @param id Unique identifier of the item
-     * @return a activityStatisticsItemRequestBuilder
+     * @return a ActivityStatisticsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ActivityStatisticsItemRequestBuilder activityStatistics(@javax.annotation.Nonnull final String id) {

@@ -147,7 +147,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.allChannels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.teams.item.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
@@ -159,7 +159,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.channels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.teams.item.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
@@ -390,7 +390,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.incomingChannels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.teams.item.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.installedApps.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAppInstallationItemRequestBuilder
+     * @return a TeamsAppInstallationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
@@ -414,7 +414,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a conversationMemberItemRequestBuilder
+     * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -426,7 +426,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAsyncOperationItemRequestBuilder
+     * @return a TeamsAsyncOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAsyncOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -438,7 +438,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.owners.item collection
      * @param id Unique identifier of the item
-     * @return a userItemRequestBuilder
+     * @return a UserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
@@ -505,7 +505,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.permissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a resourceSpecificPermissionGrantItemRequestBuilder
+     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
@@ -517,7 +517,7 @@ public class TeamItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.tags.item collection
      * @param id Unique identifier of the item
-     * @return a teamworkTagItemRequestBuilder
+     * @return a TeamworkTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamworkTagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
@@ -535,7 +535,7 @@ public class TeamItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamItemRequestBuilderDeleteRequestConfiguration() {
@@ -564,7 +564,7 @@ public class TeamItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamItemRequestBuilderGetQueryParameters queryParameters = new TeamItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamItemRequestBuilderGetRequestConfiguration() {
@@ -579,7 +579,7 @@ public class TeamItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamItemRequestBuilderPatchRequestConfiguration() {

@@ -14,6 +14,7 @@ public class AppleAppListItem extends AppListItem implements Parsable {
      */
     public AppleAppListItem() {
         super();
+        this.setOdataType("#microsoft.graph.appleAppListItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

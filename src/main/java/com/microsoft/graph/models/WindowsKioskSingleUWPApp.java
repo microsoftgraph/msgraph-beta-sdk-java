@@ -16,6 +16,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      */
     public WindowsKioskSingleUWPApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskSingleUWPApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

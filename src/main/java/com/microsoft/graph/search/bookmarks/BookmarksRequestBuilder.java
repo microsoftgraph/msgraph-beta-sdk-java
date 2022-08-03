@@ -20,7 +20,7 @@ import microsoft.graph.models.search.BookmarkCollectionResponse;
 import microsoft.graph.search.bookmarks.count.CountRequestBuilder;
 /** Provides operations to manage the bookmarks property of the microsoft.graph.searchEntity entity. */
 public class BookmarksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

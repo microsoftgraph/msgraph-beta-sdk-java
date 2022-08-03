@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileThreatSubmission extends ThreatSubmission implements Parsable {
-    /** The fileName property */
+    /** It specifies the file name to be submitted. */
     private String _fileName;
     /**
      * Instantiates a new FileThreatSubmission and sets the default values.
@@ -16,7 +16,7 @@ public class FileThreatSubmission extends ThreatSubmission implements Parsable {
      */
     public FileThreatSubmission() {
         super();
-        this.setType("#microsoft.graph.security.fileThreatSubmission");
+        this.setOdataType("#microsoft.graph.security.fileThreatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +48,7 @@ public class FileThreatSubmission extends ThreatSubmission implements Parsable {
         }};
     }
     /**
-     * Gets the fileName property value. The fileName property
+     * Gets the fileName property value. It specifies the file name to be submitted.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class FileThreatSubmission extends ThreatSubmission implements Parsable {
         writer.writeStringValue("fileName", this.getFileName());
     }
     /**
-     * Sets the fileName property value. The fileName property
+     * Sets the fileName property value. It specifies the file name to be submitted.
      * @param value Value to set for the fileName property.
      * @return a void
      */

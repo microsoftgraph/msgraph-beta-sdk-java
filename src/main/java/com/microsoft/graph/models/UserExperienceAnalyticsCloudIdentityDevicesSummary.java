@@ -14,12 +14,15 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
     private Map<String, Object> _additionalData;
     /** The count of devices that are not cloud identity. */
     private Integer _deviceWithoutCloudIdentityCount;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new userExperienceAnalyticsCloudIdentityDevicesSummary and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsCloudIdentityDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsCloudIdentityDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsCloudIdentityDevicesSummary currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("deviceWithoutCloudIdentityCount", (n) -> { currentObject.setDeviceWithoutCloudIdentityCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceWithoutCloudIdentityCount", this.getDeviceWithoutCloudIdentityCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
      */
     public void setDeviceWithoutCloudIdentityCount(@javax.annotation.Nullable final Integer value) {
         this._deviceWithoutCloudIdentityCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

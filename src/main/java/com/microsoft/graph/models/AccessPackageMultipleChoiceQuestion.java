@@ -18,6 +18,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      */
     public AccessPackageMultipleChoiceQuestion() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageMultipleChoiceQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

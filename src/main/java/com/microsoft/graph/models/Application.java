@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for an application that implements a web API. */
     private ApiApplication _api;
-    /** The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. */
+    /** The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq). */
     private String _appId;
     /** The appManagementPolicy applied to this application. */
     private java.util.List<AppManagementPolicy> _appManagementPolicies;
@@ -33,7 +33,7 @@ public class Application extends DirectoryObject implements Parsable {
     private String _disabledByMicrosoftStatus;
     /** The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
-    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
     private java.util.List<ExtensionProperty> _extensionProperties;
     /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
@@ -103,6 +103,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public Application() {
         super();
+        this.setOdataType("#microsoft.graph.application");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -123,7 +124,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._api;
     }
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -211,7 +212,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @return a extensionProperty
      */
     @javax.annotation.Nullable
@@ -582,7 +583,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._api = value;
     }
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -670,7 +671,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param value Value to set for the extensionProperties property.
      * @return a void
      */

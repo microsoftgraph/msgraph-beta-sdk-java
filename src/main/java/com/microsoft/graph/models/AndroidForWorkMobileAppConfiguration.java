@@ -24,6 +24,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
      */
     public AndroidForWorkMobileAppConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidForWorkMobileAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

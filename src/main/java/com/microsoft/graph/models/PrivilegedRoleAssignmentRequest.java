@@ -29,6 +29,8 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     private String _ticketNumber;
     /** The ticketSystem for the role assignment. */
     private String _ticketSystem;
+    /** Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments. */
+    private String _type;
     /** The id of the user. */
     private String _userId;
     /**
@@ -37,6 +39,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      */
     public PrivilegedRoleAssignmentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.privilegedRoleAssignmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,6 +85,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
             this.put("ticketNumber", (n) -> { currentObject.setTicketNumber(n.getStringValue()); });
             this.put("ticketSystem", (n) -> { currentObject.setTicketSystem(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
     }
@@ -150,6 +154,14 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
         return this._ticketSystem;
     }
     /**
+     * Gets the type property value. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Gets the userId property value. The id of the user.
      * @return a string
      */
@@ -175,6 +187,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
         writer.writeStringValue("status", this.getStatus());
         writer.writeStringValue("ticketNumber", this.getTicketNumber());
         writer.writeStringValue("ticketSystem", this.getTicketSystem());
+        writer.writeStringValue("type", this.getType());
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
@@ -256,6 +269,14 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      */
     public void setTicketSystem(@javax.annotation.Nullable final String value) {
         this._ticketSystem = value;
+    }
+    /**
+     * Sets the type property value. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the userId property value. The id of the user.

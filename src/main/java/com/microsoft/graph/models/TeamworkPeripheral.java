@@ -20,6 +20,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      */
     public TeamworkPeripheral() {
         super();
+        this.setOdataType("#microsoft.graph.teamworkPeripheral");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

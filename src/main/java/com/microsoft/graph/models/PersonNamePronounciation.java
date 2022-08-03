@@ -21,12 +21,15 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
     private String _maiden;
     /** The middle property */
     private String _middle;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new personNamePronounciation and sets the default values.
      * @return a void
      */
     public PersonNamePronounciation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.personNamePronounciation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,12 +64,13 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonNamePronounciation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("first", (n) -> { currentObject.setFirst(n.getStringValue()); });
             this.put("last", (n) -> { currentObject.setLast(n.getStringValue()); });
             this.put("maiden", (n) -> { currentObject.setMaiden(n.getStringValue()); });
             this.put("middle", (n) -> { currentObject.setMiddle(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
         return this._middle;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -113,6 +125,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
         writer.writeStringValue("last", this.getLast());
         writer.writeStringValue("maiden", this.getMaiden());
         writer.writeStringValue("middle", this.getMiddle());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,5 +175,13 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      */
     public void setMiddle(@javax.annotation.Nullable final String value) {
         this._middle = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

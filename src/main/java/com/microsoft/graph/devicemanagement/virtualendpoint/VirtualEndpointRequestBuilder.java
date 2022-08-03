@@ -111,7 +111,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.auditEvents.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcAuditEventItemRequestBuilder
+     * @return a CloudPcAuditEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcAuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
@@ -123,7 +123,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.cloudPCs.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPCItemRequestBuilder
+     * @return a CloudPCItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPCItemRequestBuilder cloudPCs(@javax.annotation.Nonnull final String id) {
@@ -303,7 +303,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.deviceImages.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcDeviceImageItemRequestBuilder
+     * @return a CloudPcDeviceImageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcDeviceImageItemRequestBuilder deviceImages(@javax.annotation.Nonnull final String id) {
@@ -315,7 +315,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.externalPartnerSettings.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcExternalPartnerSettingItemRequestBuilder
+     * @return a CloudPcExternalPartnerSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcExternalPartnerSettingItemRequestBuilder externalPartnerSettings(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.galleryImages.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcGalleryImageItemRequestBuilder
+     * @return a CloudPcGalleryImageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcGalleryImageItemRequestBuilder galleryImages(@javax.annotation.Nonnull final String id) {
@@ -398,7 +398,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.onPremisesConnections.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcOnPremisesConnectionItemRequestBuilder
+     * @return a CloudPcOnPremisesConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcOnPremisesConnectionItemRequestBuilder onPremisesConnections(@javax.annotation.Nonnull final String id) {
@@ -465,7 +465,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.provisioningPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcProvisioningPolicyItemRequestBuilder
+     * @return a CloudPcProvisioningPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcProvisioningPolicyItemRequestBuilder provisioningPolicies(@javax.annotation.Nonnull final String id) {
@@ -477,7 +477,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.servicePlans.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcServicePlanItemRequestBuilder
+     * @return a CloudPcServicePlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcServicePlanItemRequestBuilder servicePlans(@javax.annotation.Nonnull final String id) {
@@ -489,7 +489,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.snapshots.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcSnapshotItemRequestBuilder
+     * @return a CloudPcSnapshotItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcSnapshotItemRequestBuilder snapshots(@javax.annotation.Nonnull final String id) {
@@ -501,7 +501,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.supportedRegions.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcSupportedRegionItemRequestBuilder
+     * @return a CloudPcSupportedRegionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcSupportedRegionItemRequestBuilder supportedRegions(@javax.annotation.Nonnull final String id) {
@@ -513,7 +513,7 @@ public class VirtualEndpointRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.userSettings.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcUserSettingItemRequestBuilder
+     * @return a CloudPcUserSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcUserSettingItemRequestBuilder userSettings(@javax.annotation.Nonnull final String id) {

@@ -19,6 +19,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      */
     public NoncustodialDataSource() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.noncustodialDataSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

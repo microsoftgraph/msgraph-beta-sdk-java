@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum WindowsManagedAppClipboardSharingLevel implements ValuedEnum {
     /** Org users can paste data from and cut/copy data to any account, document, location or application. */
     AnyDestinationAnySource("anyDestinationAnySource"),

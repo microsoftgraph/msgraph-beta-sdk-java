@@ -18,6 +18,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      */
     public MetadataAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.metadataAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

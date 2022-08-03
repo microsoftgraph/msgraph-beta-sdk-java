@@ -155,7 +155,7 @@ public class AccessPackageItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageItemRequestBuilderGetRequestConfiguration() {

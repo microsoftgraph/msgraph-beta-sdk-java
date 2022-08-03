@@ -41,6 +41,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
      */
     public MicrosoftTunnelConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftTunnelConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

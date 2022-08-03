@@ -40,7 +40,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.appleUserInitiatedEnrollmentProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a appleEnrollmentProfileAssignmentItemRequestBuilder
+     * @return a AppleEnrollmentProfileAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppleEnrollmentProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appleUserInitiatedEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppleUserInitiatedEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppleUserInitiatedEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public AppleUserInitiatedEnrollmentProfileItemRequestBuilderGetQueryParameters queryParameters = new AppleUserInitiatedEnrollmentProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appleUserInitiatedEnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppleUserInitiatedEnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppleUserInitiatedEnrollmentProfileItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appleUserInitiatedEnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppleUserInitiatedEnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppleUserInitiatedEnrollmentProfileItemRequestBuilderPatchRequestConfiguration() {

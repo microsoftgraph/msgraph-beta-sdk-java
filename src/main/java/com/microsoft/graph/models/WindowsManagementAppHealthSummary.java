@@ -20,6 +20,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      */
     public WindowsManagementAppHealthSummary() {
         super();
+        this.setOdataType("#microsoft.graph.windowsManagementAppHealthSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerRosterMember extends Entity implements Parsable {
     /** Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster. */
     private java.util.List<String> _roles;
@@ -21,6 +21,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      */
     public PlannerRosterMember() {
         super();
+        this.setOdataType("#microsoft.graph.plannerRosterMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

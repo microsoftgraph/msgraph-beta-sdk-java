@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileUrlThreatSubmission extends FileThreatSubmission implements Parsable {
-    /** The fileUrl property */
+    /** It specifies the URL of the file which needs to be submitted. */
     private String _fileUrl;
     /**
      * Instantiates a new FileUrlThreatSubmission and sets the default values.
@@ -16,6 +16,7 @@ public class FileUrlThreatSubmission extends FileThreatSubmission implements Par
      */
     public FileUrlThreatSubmission() {
         super();
+        this.setOdataType("#microsoft.graph.security.fileUrlThreatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +40,7 @@ public class FileUrlThreatSubmission extends FileThreatSubmission implements Par
         }};
     }
     /**
-     * Gets the fileUrl property value. The fileUrl property
+     * Gets the fileUrl property value. It specifies the URL of the file which needs to be submitted.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class FileUrlThreatSubmission extends FileThreatSubmission implements Par
         writer.writeStringValue("fileUrl", this.getFileUrl());
     }
     /**
-     * Sets the fileUrl property value. The fileUrl property
+     * Sets the fileUrl property value. It specifies the URL of the file which needs to be submitted.
      * @param value Value to set for the fileUrl property.
      * @return a void
      */

@@ -20,12 +20,15 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
     private String _code;
     /** The errorDateTime property */
     private OffsetDateTime _errorDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new classificationInnerError and sets the default values.
      * @return a void
      */
     public ClassificationInnerError() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.classificationInnerError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,12 +87,21 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationInnerError currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("activityId", (n) -> { currentObject.setActivityId(n.getStringValue()); });
             this.put("clientRequestId", (n) -> { currentObject.setClientRequestId(n.getStringValue()); });
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("errorDateTime", (n) -> { currentObject.setErrorDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -102,6 +114,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
         writer.writeStringValue("clientRequestId", this.getClientRequestId());
         writer.writeStringValue("code", this.getCode());
         writer.writeOffsetDateTimeValue("errorDateTime", this.getErrorDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -143,5 +156,13 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      */
     public void setErrorDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._errorDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

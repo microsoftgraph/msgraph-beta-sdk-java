@@ -155,7 +155,7 @@ public class NoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public NoncustodialDataSourceItemRequestBuilderGetQueryParameters queryParameters = new NoncustodialDataSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new noncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NoncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NoncustodialDataSourceItemRequestBuilderGetRequestConfiguration() {

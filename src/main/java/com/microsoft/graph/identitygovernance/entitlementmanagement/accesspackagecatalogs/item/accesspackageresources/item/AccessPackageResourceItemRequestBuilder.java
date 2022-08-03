@@ -47,7 +47,7 @@ public class AccessPackageResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item.accessPackageResources.item.accessPackageResourceRoles.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRoleItemRequestBuilder
+     * @return a AccessPackageResourceRoleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleItemRequestBuilder accessPackageResourceRoles(@javax.annotation.Nonnull final String id) {
@@ -59,7 +59,7 @@ public class AccessPackageResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item.accessPackageResources.item.accessPackageResourceScopes.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceScopeItemRequestBuilder
+     * @return a AccessPackageResourceScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceScopeItemRequestBuilder accessPackageResourceScopes(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class AccessPackageResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class AccessPackageResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageResourceItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class AccessPackageResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceItemRequestBuilderPatchRequestConfiguration() {

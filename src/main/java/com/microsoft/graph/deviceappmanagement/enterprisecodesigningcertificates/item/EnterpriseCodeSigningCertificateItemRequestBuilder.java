@@ -307,7 +307,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new enterpriseCodeSigningCertificateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EnterpriseCodeSigningCertificateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnterpriseCodeSigningCertificateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder {
         @javax.annotation.Nullable
         public EnterpriseCodeSigningCertificateItemRequestBuilderGetQueryParameters queryParameters = new EnterpriseCodeSigningCertificateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new enterpriseCodeSigningCertificateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EnterpriseCodeSigningCertificateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnterpriseCodeSigningCertificateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new enterpriseCodeSigningCertificateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EnterpriseCodeSigningCertificateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnterpriseCodeSigningCertificateItemRequestBuilderPatchRequestConfiguration() {

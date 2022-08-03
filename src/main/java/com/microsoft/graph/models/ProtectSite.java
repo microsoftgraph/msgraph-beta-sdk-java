@@ -18,6 +18,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      */
     public ProtectSite() {
         super();
+        this.setOdataType("#microsoft.graph.protectSite");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

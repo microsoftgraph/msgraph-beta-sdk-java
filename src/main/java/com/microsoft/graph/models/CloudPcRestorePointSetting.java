@@ -13,6 +13,8 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours. */
     private Integer _frequencyInHours;
+    /** The OdataType property */
+    private String _odataType;
     /** If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC. */
     private Boolean _userRestoreEnabled;
     /**
@@ -21,6 +23,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      */
     public CloudPcRestorePointSetting() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcRestorePointSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcRestorePointSetting currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("frequencyInHours", (n) -> { currentObject.setFrequencyInHours(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userRestoreEnabled", (n) -> { currentObject.setUserRestoreEnabled(n.getBooleanValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Integer getFrequencyInHours() {
         return this._frequencyInHours;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
@@ -76,6 +88,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("frequencyInHours", this.getFrequencyInHours());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("userRestoreEnabled", this.getUserRestoreEnabled());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      */
     public void setFrequencyInHours(@javax.annotation.Nullable final Integer value) {
         this._frequencyInHours = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.

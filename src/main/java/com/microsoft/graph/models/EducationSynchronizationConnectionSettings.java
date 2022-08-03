@@ -15,15 +15,15 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
     private String _clientId;
     /** Client secret to authenticate the connection to the provider. */
     private String _clientSecret;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new educationSynchronizationConnectionSettings and sets the default values.
      * @return a void
      */
     public EducationSynchronizationConnectionSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.educationSynchronizationConnectionSettings");
+        this.setOdataType("#microsoft.graph.educationSynchronizationConnectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,16 +77,16 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         return new HashMap<>(3) {{
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -97,7 +97,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientId", this.getClientId());
         writer.writeStringValue("clientSecret", this.getClientSecret());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -125,11 +125,11 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         this._clientSecret = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

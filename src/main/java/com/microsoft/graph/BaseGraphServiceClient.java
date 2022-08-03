@@ -85,6 +85,7 @@ import microsoft.graph.drive.DriveRequestBuilder;
 import microsoft.graph.drives.DrivesRequestBuilder;
 import microsoft.graph.drives.item.DriveItemRequestBuilder;
 import microsoft.graph.education.EducationRequestBuilder;
+import microsoft.graph.employeeexperience.EmployeeExperienceRequestBuilder;
 import microsoft.graph.external.ExternalRequestBuilder;
 import microsoft.graph.filteroperators.FilterOperatorsRequestBuilder;
 import microsoft.graph.filteroperators.item.FilterOperatorSchemaItemRequestBuilder;
@@ -425,6 +426,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public EducationRequestBuilder education() {
         return new EducationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The employeeExperience property */
+    @javax.annotation.Nonnull
+    public EmployeeExperienceRequestBuilder employeeExperience() {
+        return new EmployeeExperienceRequestBuilder(pathParameters, requestAdapter);
     }
     /** The external property */
     @javax.annotation.Nonnull
@@ -775,7 +781,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.accessReviewDecisions.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewDecisionItemRequestBuilder
+     * @return a AccessReviewDecisionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewDecisionItemRequestBuilder accessReviewDecisions(@javax.annotation.Nonnull final String id) {
@@ -787,7 +793,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.accessReviews.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewItemRequestBuilder
+     * @return a AccessReviewItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewItemRequestBuilder accessReviews(@javax.annotation.Nonnull final String id) {
@@ -799,7 +805,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.activitystatistics.item collection
      * @param id Unique identifier of the item
-     * @return a activityStatisticsItemRequestBuilder
+     * @return a ActivityStatisticsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ActivityStatisticsItemRequestBuilder activitystatistics(@javax.annotation.Nonnull final String id) {
@@ -811,7 +817,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.administrativeUnits.item collection
      * @param id Unique identifier of the item
-     * @return a administrativeUnitItemRequestBuilder
+     * @return a AdministrativeUnitItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AdministrativeUnitItemRequestBuilder administrativeUnits(@javax.annotation.Nonnull final String id) {
@@ -823,7 +829,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.agreementAcceptances.item collection
      * @param id Unique identifier of the item
-     * @return a agreementAcceptanceItemRequestBuilder
+     * @return a AgreementAcceptanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
@@ -835,7 +841,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.agreements.item collection
      * @param id Unique identifier of the item
-     * @return a agreementItemRequestBuilder
+     * @return a AgreementItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementItemRequestBuilder agreements(@javax.annotation.Nonnull final String id) {
@@ -847,7 +853,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.allowedDataLocations.item collection
      * @param id Unique identifier of the item
-     * @return a allowedDataLocationItemRequestBuilder
+     * @return a AllowedDataLocationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AllowedDataLocationItemRequestBuilder allowedDataLocations(@javax.annotation.Nonnull final String id) {
@@ -859,7 +865,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.applications.item collection
      * @param id Unique identifier of the item
-     * @return a applicationItemRequestBuilder
+     * @return a ApplicationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApplicationItemRequestBuilder applications(@javax.annotation.Nonnull final String id) {
@@ -871,7 +877,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.applicationTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a applicationTemplateItemRequestBuilder
+     * @return a ApplicationTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApplicationTemplateItemRequestBuilder applicationTemplates(@javax.annotation.Nonnull final String id) {
@@ -883,7 +889,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.appRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a appRoleAssignmentItemRequestBuilder
+     * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -895,7 +901,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item collection
      * @param id Unique identifier of the item
-     * @return a approvalWorkflowProviderItemRequestBuilder
+     * @return a ApprovalWorkflowProviderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApprovalWorkflowProviderItemRequestBuilder approvalWorkflowProviders(@javax.annotation.Nonnull final String id) {
@@ -907,7 +913,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.authenticationMethodConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a authenticationMethodConfigurationItemRequestBuilder
+     * @return a AuthenticationMethodConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationItemRequestBuilder authenticationMethodConfigurations(@javax.annotation.Nonnull final String id) {
@@ -919,7 +925,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.bookingBusinesses.item collection
      * @param id Unique identifier of the item
-     * @return a bookingBusinessItemRequestBuilder
+     * @return a BookingBusinessItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingBusinessItemRequestBuilder bookingBusinesses(@javax.annotation.Nonnull final String id) {
@@ -931,7 +937,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.bookingCurrencies.item collection
      * @param id Unique identifier of the item
-     * @return a bookingCurrencyItemRequestBuilder
+     * @return a BookingCurrencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingCurrencyItemRequestBuilder bookingCurrencies(@javax.annotation.Nonnull final String id) {
@@ -943,7 +949,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.businessFlowTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a businessFlowTemplateItemRequestBuilder
+     * @return a BusinessFlowTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BusinessFlowTemplateItemRequestBuilder businessFlowTemplates(@javax.annotation.Nonnull final String id) {
@@ -955,7 +961,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.certificateBasedAuthConfiguration.item collection
      * @param id Unique identifier of the item
-     * @return a certificateBasedAuthConfigurationItemRequestBuilder
+     * @return a CertificateBasedAuthConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationItemRequestBuilder certificateBasedAuthConfiguration(@javax.annotation.Nonnull final String id) {
@@ -967,7 +973,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.chats.item collection
      * @param id Unique identifier of the item
-     * @return a chatItemRequestBuilder
+     * @return a ChatItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatItemRequestBuilder chats(@javax.annotation.Nonnull final String id) {
@@ -979,7 +985,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.commands.item collection
      * @param id Unique identifier of the item
-     * @return a commandItemRequestBuilder
+     * @return a CommandItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CommandItemRequestBuilder commands(@javax.annotation.Nonnull final String id) {
@@ -991,7 +997,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.connections.item collection
      * @param id Unique identifier of the item
-     * @return a externalConnectionItemRequestBuilder
+     * @return a ExternalConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExternalConnectionItemRequestBuilder connections(@javax.annotation.Nonnull final String id) {
@@ -1021,7 +1027,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.contacts.item collection
      * @param id Unique identifier of the item
-     * @return a orgContactItemRequestBuilder
+     * @return a OrgContactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OrgContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
@@ -1033,7 +1039,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.contracts.item collection
      * @param id Unique identifier of the item
-     * @return a contractItemRequestBuilder
+     * @return a ContractItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContractItemRequestBuilder contracts(@javax.annotation.Nonnull final String id) {
@@ -1045,7 +1051,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.dataPolicyOperations.item collection
      * @param id Unique identifier of the item
-     * @return a dataPolicyOperationItemRequestBuilder
+     * @return a DataPolicyOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DataPolicyOperationItemRequestBuilder dataPolicyOperations(@javax.annotation.Nonnull final String id) {
@@ -1057,7 +1063,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.devices.item collection
      * @param id Unique identifier of the item
-     * @return a deviceItemRequestBuilder
+     * @return a DeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceItemRequestBuilder devices(@javax.annotation.Nonnull final String id) {
@@ -1069,7 +1075,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.directoryObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder directoryObjects(@javax.annotation.Nonnull final String id) {
@@ -1081,7 +1087,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.directoryRoles.item collection
      * @param id Unique identifier of the item
-     * @return a directoryRoleItemRequestBuilder
+     * @return a DirectoryRoleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryRoleItemRequestBuilder directoryRoles(@javax.annotation.Nonnull final String id) {
@@ -1093,7 +1099,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.directoryRoleTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a directoryRoleTemplateItemRequestBuilder
+     * @return a DirectoryRoleTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryRoleTemplateItemRequestBuilder directoryRoleTemplates(@javax.annotation.Nonnull final String id) {
@@ -1105,7 +1111,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.directorySettingTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a directorySettingTemplateItemRequestBuilder
+     * @return a DirectorySettingTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectorySettingTemplateItemRequestBuilder directorySettingTemplates(@javax.annotation.Nonnull final String id) {
@@ -1117,7 +1123,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.domainDnsRecords.item collection
      * @param id Unique identifier of the item
-     * @return a domainDnsRecordItemRequestBuilder
+     * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DomainDnsRecordItemRequestBuilder domainDnsRecords(@javax.annotation.Nonnull final String id) {
@@ -1129,7 +1135,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.domains.item collection
      * @param id Unique identifier of the item
-     * @return a domainItemRequestBuilder
+     * @return a DomainItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DomainItemRequestBuilder domains(@javax.annotation.Nonnull final String id) {
@@ -1141,7 +1147,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.drives.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemRequestBuilder
+     * @return a DriveItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
@@ -1153,7 +1159,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.filterOperators.item collection
      * @param id Unique identifier of the item
-     * @return a filterOperatorSchemaItemRequestBuilder
+     * @return a FilterOperatorSchemaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FilterOperatorSchemaItemRequestBuilder filterOperators(@javax.annotation.Nonnull final String id) {
@@ -1165,7 +1171,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.functions.item collection
      * @param id Unique identifier of the item
-     * @return a attributeMappingFunctionSchemaItemRequestBuilder
+     * @return a AttributeMappingFunctionSchemaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttributeMappingFunctionSchemaItemRequestBuilder functions(@javax.annotation.Nonnull final String id) {
@@ -1177,7 +1183,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.governanceResources.item collection
      * @param id Unique identifier of the item
-     * @return a governanceResourceItemRequestBuilder
+     * @return a GovernanceResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceResourceItemRequestBuilder governanceResources(@javax.annotation.Nonnull final String id) {
@@ -1189,7 +1195,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.governanceRoleAssignmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleAssignmentRequestItemRequestBuilder
+     * @return a GovernanceRoleAssignmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentRequestItemRequestBuilder governanceRoleAssignmentRequests(@javax.annotation.Nonnull final String id) {
@@ -1201,7 +1207,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.governanceRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleAssignmentItemRequestBuilder
+     * @return a GovernanceRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentItemRequestBuilder governanceRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -1213,7 +1219,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.governanceRoleDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleDefinitionItemRequestBuilder
+     * @return a GovernanceRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleDefinitionItemRequestBuilder governanceRoleDefinitions(@javax.annotation.Nonnull final String id) {
@@ -1225,7 +1231,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.governanceRoleSettings.item collection
      * @param id Unique identifier of the item
-     * @return a governanceRoleSettingItemRequestBuilder
+     * @return a GovernanceRoleSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceRoleSettingItemRequestBuilder governanceRoleSettings(@javax.annotation.Nonnull final String id) {
@@ -1237,7 +1243,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.governanceSubjects.item collection
      * @param id Unique identifier of the item
-     * @return a governanceSubjectItemRequestBuilder
+     * @return a GovernanceSubjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernanceSubjectItemRequestBuilder governanceSubjects(@javax.annotation.Nonnull final String id) {
@@ -1249,7 +1255,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.groupLifecyclePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a groupLifecyclePolicyItemRequestBuilder
+     * @return a GroupLifecyclePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupLifecyclePolicyItemRequestBuilder groupLifecyclePolicies(@javax.annotation.Nonnull final String id) {
@@ -1261,7 +1267,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.groups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
@@ -1273,7 +1279,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.identityProviders.item collection
      * @param id Unique identifier of the item
-     * @return a identityProviderItemRequestBuilder
+     * @return a IdentityProviderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
@@ -1285,7 +1291,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.invitations.item collection
      * @param id Unique identifier of the item
-     * @return a invitationItemRequestBuilder
+     * @return a InvitationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public InvitationItemRequestBuilder invitations(@javax.annotation.Nonnull final String id) {
@@ -1297,7 +1303,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.messageEvents.item collection
      * @param id Unique identifier of the item
-     * @return a messageEventItemRequestBuilder
+     * @return a MessageEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageEventItemRequestBuilder messageEvents(@javax.annotation.Nonnull final String id) {
@@ -1309,7 +1315,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.messageRecipients.item collection
      * @param id Unique identifier of the item
-     * @return a messageRecipientItemRequestBuilder
+     * @return a MessageRecipientItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageRecipientItemRequestBuilder messageRecipients(@javax.annotation.Nonnull final String id) {
@@ -1321,7 +1327,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.messageTraces.item collection
      * @param id Unique identifier of the item
-     * @return a messageTraceItemRequestBuilder
+     * @return a MessageTraceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageTraceItemRequestBuilder messageTraces(@javax.annotation.Nonnull final String id) {
@@ -1333,7 +1339,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.mobilityManagementPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a mobilityManagementPolicyItemRequestBuilder
+     * @return a MobilityManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobilityManagementPolicyItemRequestBuilder mobilityManagementPolicies(@javax.annotation.Nonnull final String id) {
@@ -1345,7 +1351,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a oAuth2PermissionGrantItemRequestBuilder
+     * @return a OAuth2PermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
@@ -1357,7 +1363,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a onPremisesPublishingProfileItemRequestBuilder
+     * @return a OnPremisesPublishingProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesPublishingProfileItemRequestBuilder onPremisesPublishingProfiles(@javax.annotation.Nonnull final String id) {
@@ -1369,7 +1375,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.organization.item collection
      * @param id Unique identifier of the item
-     * @return a organizationItemRequestBuilder
+     * @return a OrganizationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OrganizationItemRequestBuilder organization(@javax.annotation.Nonnull final String id) {
@@ -1381,7 +1387,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.payloadResponse.item collection
      * @param id Unique identifier of the item
-     * @return a payloadResponseItemRequestBuilder
+     * @return a PayloadResponseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PayloadResponseItemRequestBuilder payloadResponse(@javax.annotation.Nonnull final String id) {
@@ -1393,7 +1399,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.permissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a resourceSpecificPermissionGrantItemRequestBuilder
+     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
@@ -1405,7 +1411,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.places.item collection
      * @param id Unique identifier of the item
-     * @return a placeItemRequestBuilder
+     * @return a PlaceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlaceItemRequestBuilder places(@javax.annotation.Nonnull final String id) {
@@ -1417,7 +1423,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedAccess.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedAccessItemRequestBuilder
+     * @return a PrivilegedAccessItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedAccessItemRequestBuilder privilegedAccess(@javax.annotation.Nonnull final String id) {
@@ -1429,7 +1435,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedApproval.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedApprovalItemRequestBuilder
+     * @return a PrivilegedApprovalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedApprovalItemRequestBuilder privilegedApproval(@javax.annotation.Nonnull final String id) {
@@ -1441,7 +1447,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedOperationEvents.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedOperationEventItemRequestBuilder
+     * @return a PrivilegedOperationEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedOperationEventItemRequestBuilder privilegedOperationEvents(@javax.annotation.Nonnull final String id) {
@@ -1453,7 +1459,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedRoleAssignmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedRoleAssignmentRequestItemRequestBuilder
+     * @return a PrivilegedRoleAssignmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedRoleAssignmentRequestItemRequestBuilder privilegedRoleAssignmentRequests(@javax.annotation.Nonnull final String id) {
@@ -1465,7 +1471,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedRoleAssignmentItemRequestBuilder
+     * @return a PrivilegedRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedRoleAssignmentItemRequestBuilder privilegedRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -1477,7 +1483,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedRoles.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedRoleItemRequestBuilder
+     * @return a PrivilegedRoleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedRoleItemRequestBuilder privilegedRoles(@javax.annotation.Nonnull final String id) {
@@ -1489,7 +1495,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.privilegedSignupStatus.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedSignupStatusItemRequestBuilder
+     * @return a PrivilegedSignupStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedSignupStatusItemRequestBuilder privilegedSignupStatus(@javax.annotation.Nonnull final String id) {
@@ -1501,7 +1507,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.programControls.item collection
      * @param id Unique identifier of the item
-     * @return a programControlItemRequestBuilder
+     * @return a ProgramControlItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProgramControlItemRequestBuilder programControls(@javax.annotation.Nonnull final String id) {
@@ -1513,7 +1519,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.programControlTypes.item collection
      * @param id Unique identifier of the item
-     * @return a programControlTypeItemRequestBuilder
+     * @return a ProgramControlTypeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProgramControlTypeItemRequestBuilder programControlTypes(@javax.annotation.Nonnull final String id) {
@@ -1525,7 +1531,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.programs.item collection
      * @param id Unique identifier of the item
-     * @return a programItemRequestBuilder
+     * @return a ProgramItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProgramItemRequestBuilder programs(@javax.annotation.Nonnull final String id) {
@@ -1537,7 +1543,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.riskDetections.item collection
      * @param id Unique identifier of the item
-     * @return a riskDetectionItemRequestBuilder
+     * @return a RiskDetectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskDetectionItemRequestBuilder riskDetections(@javax.annotation.Nonnull final String id) {
@@ -1549,7 +1555,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.riskyUsers.item collection
      * @param id Unique identifier of the item
-     * @return a riskyUserItemRequestBuilder
+     * @return a RiskyUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskyUserItemRequestBuilder riskyUsers(@javax.annotation.Nonnull final String id) {
@@ -1561,7 +1567,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.schemaExtensions.item collection
      * @param id Unique identifier of the item
-     * @return a schemaExtensionItemRequestBuilder
+     * @return a SchemaExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SchemaExtensionItemRequestBuilder schemaExtensions(@javax.annotation.Nonnull final String id) {
@@ -1573,7 +1579,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.scopedRoleMemberships.item collection
      * @param id Unique identifier of the item
-     * @return a scopedRoleMembershipItemRequestBuilder
+     * @return a ScopedRoleMembershipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedRoleMemberships(@javax.annotation.Nonnull final String id) {
@@ -1585,7 +1591,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item collection
      * @param id Unique identifier of the item
-     * @return a servicePrincipalItemRequestBuilder
+     * @return a ServicePrincipalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServicePrincipalItemRequestBuilder servicePrincipals(@javax.annotation.Nonnull final String id) {
@@ -1597,7 +1603,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.settings.item collection
      * @param id Unique identifier of the item
-     * @return a directorySettingItemRequestBuilder
+     * @return a DirectorySettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectorySettingItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
@@ -1609,7 +1615,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.shares.item collection
      * @param id Unique identifier of the item
-     * @return a sharedDriveItemItemRequestBuilder
+     * @return a SharedDriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedDriveItemItemRequestBuilder shares(@javax.annotation.Nonnull final String id) {
@@ -1621,7 +1627,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.sites.item collection
      * @param id Unique identifier of the item
-     * @return a siteItemRequestBuilder
+     * @return a SiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
@@ -1633,7 +1639,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.subscribedSkus.item collection
      * @param id Unique identifier of the item
-     * @return a subscribedSkuItemRequestBuilder
+     * @return a SubscribedSkuItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubscribedSkuItemRequestBuilder subscribedSkus(@javax.annotation.Nonnull final String id) {
@@ -1645,7 +1651,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.subscriptions.item collection
      * @param id Unique identifier of the item
-     * @return a subscriptionItemRequestBuilder
+     * @return a SubscriptionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {
@@ -1657,7 +1663,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.teams.item collection
      * @param id Unique identifier of the item
-     * @return a teamItemRequestBuilder
+     * @return a TeamItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamItemRequestBuilder teams(@javax.annotation.Nonnull final String id) {
@@ -1669,7 +1675,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.teamsTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a teamsTemplateItemRequestBuilder
+     * @return a TeamsTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsTemplateItemRequestBuilder teamsTemplates(@javax.annotation.Nonnull final String id) {
@@ -1681,7 +1687,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.users.item collection
      * @param id Unique identifier of the item
-     * @return a userItemRequestBuilder
+     * @return a UserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
@@ -1693,7 +1699,7 @@ public class BaseGraphServiceClient {
     /**
      * Gets an item from the Microsoft.Graph.workbooks.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemItemRequestBuilder workbooks(@javax.annotation.Nonnull final String id) {

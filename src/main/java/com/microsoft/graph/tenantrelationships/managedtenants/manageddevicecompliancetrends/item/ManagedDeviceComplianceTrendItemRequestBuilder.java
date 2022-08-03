@@ -307,7 +307,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceComplianceTrendItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceComplianceTrendItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceComplianceTrendItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceComplianceTrendItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceComplianceTrendItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceComplianceTrendItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceComplianceTrendItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceComplianceTrendItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceComplianceTrendItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceComplianceTrendItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceComplianceTrendItemRequestBuilderPatchRequestConfiguration() {

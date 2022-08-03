@@ -25,7 +25,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     public MobileAppRelationship() {
         super();
-        this.setType("#microsoft.graph.mobileAppRelationship");
+        this.setOdataType("#microsoft.graph.mobileAppRelationship");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -331,7 +331,7 @@ public class TimeCardItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new timeCardItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TimeCardItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TimeCardItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class TimeCardItemRequestBuilder {
         @javax.annotation.Nullable
         public TimeCardItemRequestBuilderGetQueryParameters queryParameters = new TimeCardItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new timeCardItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TimeCardItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TimeCardItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class TimeCardItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new timeCardItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TimeCardItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TimeCardItemRequestBuilderPatchRequestConfiguration() {

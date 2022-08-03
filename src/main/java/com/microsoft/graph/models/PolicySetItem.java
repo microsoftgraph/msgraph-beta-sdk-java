@@ -32,7 +32,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     public PolicySetItem() {
         super();
-        this.setType("#microsoft.graph.policySetItem");
+        this.setOdataType("#microsoft.graph.policySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

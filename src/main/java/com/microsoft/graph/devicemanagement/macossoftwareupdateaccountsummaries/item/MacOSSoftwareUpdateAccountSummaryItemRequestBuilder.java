@@ -34,7 +34,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.macOSSoftwareUpdateAccountSummaries.item.categorySummaries.item collection
      * @param id Unique identifier of the item
-     * @return a macOSSoftwareUpdateCategorySummaryItemRequestBuilder
+     * @return a MacOSSoftwareUpdateCategorySummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MacOSSoftwareUpdateCategorySummaryItemRequestBuilder categorySummaries(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new macOSSoftwareUpdateAccountSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MacOSSoftwareUpdateAccountSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MacOSSoftwareUpdateAccountSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public MacOSSoftwareUpdateAccountSummaryItemRequestBuilderGetQueryParameters queryParameters = new MacOSSoftwareUpdateAccountSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new macOSSoftwareUpdateAccountSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MacOSSoftwareUpdateAccountSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MacOSSoftwareUpdateAccountSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new macOSSoftwareUpdateAccountSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MacOSSoftwareUpdateAccountSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MacOSSoftwareUpdateAccountSummaryItemRequestBuilderPatchRequestConfiguration() {

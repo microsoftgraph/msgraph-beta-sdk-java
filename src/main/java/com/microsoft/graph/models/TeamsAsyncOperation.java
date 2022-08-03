@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TeamsAsyncOperation extends Entity implements Parsable {
     /** Number of times the operation was attempted before being marked successful or failed. */
     private Integer _attemptsCount;
@@ -32,6 +32,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     public TeamsAsyncOperation() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAsyncOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

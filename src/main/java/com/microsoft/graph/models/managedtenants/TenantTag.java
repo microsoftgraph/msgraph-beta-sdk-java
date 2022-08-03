@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TenantTag extends Entity implements Parsable {
     /** The identifier for the account that created the tenant tag. Required. Read-only. */
     private String _createdByUserId;
@@ -33,6 +33,7 @@ public class TenantTag extends Entity implements Parsable {
      */
     public TenantTag() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.tenantTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

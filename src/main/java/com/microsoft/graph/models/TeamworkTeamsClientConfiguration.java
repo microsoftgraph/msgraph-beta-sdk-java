@@ -15,12 +15,15 @@ public class TeamworkTeamsClientConfiguration implements AdditionalDataHolder, P
     private Map<String, Object> _additionalData;
     /** The configuration of Microsoft Teams client features for a device. */
     private TeamworkFeaturesConfiguration _featuresConfiguration;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamworkTeamsClientConfiguration and sets the default values.
      * @return a void
      */
     public TeamworkTeamsClientConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkTeamsClientConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class TeamworkTeamsClientConfiguration implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkTeamsClientConfiguration currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("accountConfiguration", (n) -> { currentObject.setAccountConfiguration(n.getObjectValue(TeamworkAccountConfiguration::createFromDiscriminatorValue)); });
             this.put("featuresConfiguration", (n) -> { currentObject.setFeaturesConfiguration(n.getObjectValue(TeamworkFeaturesConfiguration::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class TeamworkTeamsClientConfiguration implements AdditionalDataHolder, P
         Objects.requireNonNull(writer);
         writer.writeObjectValue("accountConfiguration", this.getAccountConfiguration());
         writer.writeObjectValue("featuresConfiguration", this.getFeaturesConfiguration());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class TeamworkTeamsClientConfiguration implements AdditionalDataHolder, P
      */
     public void setFeaturesConfiguration(@javax.annotation.Nullable final TeamworkFeaturesConfiguration value) {
         this._featuresConfiguration = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

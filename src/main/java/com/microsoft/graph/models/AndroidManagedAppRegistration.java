@@ -16,6 +16,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      */
     public AndroidManagedAppRegistration() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedAppRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

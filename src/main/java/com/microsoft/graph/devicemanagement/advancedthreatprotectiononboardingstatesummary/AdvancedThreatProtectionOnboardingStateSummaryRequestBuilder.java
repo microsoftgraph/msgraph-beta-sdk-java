@@ -34,7 +34,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.advancedThreatProtectionOnboardingStateSummary.advancedThreatProtectionOnboardingDeviceSettingStates.item collection
      * @param id Unique identifier of the item
-     * @return a advancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder
+     * @return a AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates(@javax.annotation.Nonnull final String id) {

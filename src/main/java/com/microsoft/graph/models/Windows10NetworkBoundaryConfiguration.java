@@ -16,6 +16,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      */
     public Windows10NetworkBoundaryConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10NetworkBoundaryConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

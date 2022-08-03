@@ -46,7 +46,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item.businessFlows.item collection
      * @param id Unique identifier of the item
-     * @return a businessFlowItemRequestBuilder
+     * @return a BusinessFlowItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder businessFlows(@javax.annotation.Nonnull final String id) {
@@ -58,7 +58,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item.businessFlowsWithRequestsAwaitingMyDecision.item collection
      * @param id Unique identifier of the item
-     * @return a businessFlowItemRequestBuilder
+     * @return a BusinessFlowItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(@javax.annotation.Nonnull final String id) {
@@ -344,7 +344,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item.policyTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a governancePolicyTemplateItemRequestBuilder
+     * @return a GovernancePolicyTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GovernancePolicyTemplateItemRequestBuilder policyTemplates(@javax.annotation.Nonnull final String id) {
@@ -362,7 +362,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new approvalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration() {
@@ -391,7 +391,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         @javax.annotation.Nullable
         public ApprovalWorkflowProviderItemRequestBuilderGetQueryParameters queryParameters = new ApprovalWorkflowProviderItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new approvalWorkflowProviderItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalWorkflowProviderItemRequestBuilderGetRequestConfiguration() {
@@ -406,7 +406,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new approvalWorkflowProviderItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration() {

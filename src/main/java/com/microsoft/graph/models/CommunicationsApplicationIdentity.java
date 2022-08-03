@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommunicationsApplicationIdentity extends Identity implements Parsable {
-    /** The applicationType property */
+    /** First party Microsoft application presenting this identity. */
     private String _applicationType;
-    /** The hidden property */
+    /** True if the participant would not like to be shown in other participants' rosters. */
     private Boolean _hidden;
     /**
      * Instantiates a new CommunicationsApplicationIdentity and sets the default values.
@@ -18,6 +18,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     public CommunicationsApplicationIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.communicationsApplicationIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,7 +31,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         return new CommunicationsApplicationIdentity();
     }
     /**
-     * Gets the applicationType property value. The applicationType property
+     * Gets the applicationType property value. First party Microsoft application presenting this identity.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -50,7 +51,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         }};
     }
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -69,7 +70,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         writer.writeBooleanValue("hidden", this.getHidden());
     }
     /**
-     * Sets the applicationType property value. The applicationType property
+     * Sets the applicationType property value. First party Microsoft application presenting this identity.
      * @param value Value to set for the applicationType property.
      * @return a void
      */
@@ -77,7 +78,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         this._applicationType = value;
     }
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      * @return a void
      */

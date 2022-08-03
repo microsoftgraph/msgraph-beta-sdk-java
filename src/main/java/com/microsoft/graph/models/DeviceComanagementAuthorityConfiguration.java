@@ -20,6 +20,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      */
     public DeviceComanagementAuthorityConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.deviceComanagementAuthorityConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

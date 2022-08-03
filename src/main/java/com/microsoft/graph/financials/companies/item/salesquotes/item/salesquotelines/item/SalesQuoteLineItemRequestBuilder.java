@@ -254,7 +254,7 @@ public class SalesQuoteLineItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesQuoteLineItemRequestBuilderGetQueryParameters queryParameters = new SalesQuoteLineItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesQuoteLineItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesQuoteLineItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesQuoteLineItemRequestBuilderGetRequestConfiguration() {
@@ -269,7 +269,7 @@ public class SalesQuoteLineItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesQuoteLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesQuoteLineItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesQuoteLineItemRequestBuilderPatchRequestConfiguration() {

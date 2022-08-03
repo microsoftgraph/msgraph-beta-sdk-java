@@ -22,6 +22,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      */
     public OauthApplicationEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.oauthApplicationEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

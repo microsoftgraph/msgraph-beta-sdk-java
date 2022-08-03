@@ -29,6 +29,8 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     private Mutability _mutability;
     /** Name of the attribute. Must be unique within the object definition. Not nullable. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object). */
     private java.util.List<ReferencedObject> _referencedObjects;
     /** true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error. */
@@ -41,6 +43,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     public AttributeDefinition() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attributeDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -99,7 +102,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeDefinition currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("anchor", (n) -> { currentObject.setAnchor(n.getBooleanValue()); });
             this.put("apiExpressions", (n) -> { currentObject.setApiExpressions(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
             this.put("caseExact", (n) -> { currentObject.setCaseExact(n.getBooleanValue()); });
@@ -109,6 +112,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
             this.put("multivalued", (n) -> { currentObject.setMultivalued(n.getBooleanValue()); });
             this.put("mutability", (n) -> { currentObject.setMutability(n.getEnumValue(Mutability.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("referencedObjects", (n) -> { currentObject.setReferencedObjects(n.getCollectionOfObjectValues(ReferencedObject::createFromDiscriminatorValue)); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttributeType.class)); });
@@ -155,6 +159,14 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @return a referencedObject
      */
@@ -194,6 +206,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("multivalued", this.getMultivalued());
         writer.writeEnumValue("mutability", this.getMutability());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("referencedObjects", this.getReferencedObjects());
         writer.writeBooleanValue("required", this.getRequired());
         writer.writeEnumValue("type", this.getType());
@@ -278,6 +291,14 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).

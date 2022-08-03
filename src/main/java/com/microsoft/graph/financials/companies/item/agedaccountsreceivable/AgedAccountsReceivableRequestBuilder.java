@@ -20,7 +20,7 @@ import microsoft.graph.models.AgedAccountsReceivableCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the agedAccountsReceivable property of the microsoft.graph.company entity. */
 public class AgedAccountsReceivableRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

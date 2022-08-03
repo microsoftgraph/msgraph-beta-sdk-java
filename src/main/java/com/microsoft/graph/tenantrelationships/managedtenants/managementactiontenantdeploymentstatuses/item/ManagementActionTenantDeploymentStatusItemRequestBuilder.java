@@ -307,7 +307,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementActionTenantDeploymentStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementActionTenantDeploymentStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementActionTenantDeploymentStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementActionTenantDeploymentStatusItemRequestBuilderGetQueryParameters queryParameters = new ManagementActionTenantDeploymentStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementActionTenantDeploymentStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementActionTenantDeploymentStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementActionTenantDeploymentStatusItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementActionTenantDeploymentStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementActionTenantDeploymentStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementActionTenantDeploymentStatusItemRequestBuilderPatchRequestConfiguration() {

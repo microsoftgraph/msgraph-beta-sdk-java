@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class BitlockerRecoveryKey extends Entity implements Parsable {
     /** The date and time when the key was originally backed up to Azure Active Directory. */
     private OffsetDateTime _createdDateTime;
@@ -24,6 +24,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      */
     public BitlockerRecoveryKey() {
         super();
+        this.setOdataType("#microsoft.graph.bitlockerRecoveryKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

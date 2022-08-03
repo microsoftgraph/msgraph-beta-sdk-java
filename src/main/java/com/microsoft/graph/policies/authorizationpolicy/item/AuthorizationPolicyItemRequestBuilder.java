@@ -151,7 +151,7 @@ public class AuthorizationPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.authorizationPolicy.item.defaultUserRoleOverrides.item collection
      * @param id Unique identifier of the item
-     * @return a defaultUserRoleOverrideItemRequestBuilder
+     * @return a DefaultUserRoleOverrideItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DefaultUserRoleOverrideItemRequestBuilder defaultUserRoleOverrides(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AuthorizationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new authorizationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AuthorizationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthorizationPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AuthorizationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public AuthorizationPolicyItemRequestBuilderGetQueryParameters queryParameters = new AuthorizationPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new authorizationPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AuthorizationPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthorizationPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AuthorizationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new authorizationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AuthorizationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthorizationPolicyItemRequestBuilderPatchRequestConfiguration() {

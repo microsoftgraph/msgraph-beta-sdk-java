@@ -18,6 +18,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      */
     public DeliveryOptimizationBandwidthHoursWithPercentage() {
         super();
+        this.setOdataType("#microsoft.graph.deliveryOptimizationBandwidthHoursWithPercentage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

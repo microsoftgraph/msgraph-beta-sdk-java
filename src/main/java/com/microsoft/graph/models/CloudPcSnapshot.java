@@ -23,6 +23,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     public CloudPcSnapshot() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcSnapshot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

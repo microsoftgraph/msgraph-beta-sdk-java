@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.rolemanagement.devicemanagement.roleassignments.item.directoryscopes.count.CountRequestBuilder;
 /** Provides operations to manage the directoryScopes property of the microsoft.graph.unifiedRoleAssignmentMultiple entity. */
 public class DirectoryScopesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -16,6 +16,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
      */
     public ClassificationError() {
         super();
+        this.setOdataType("#microsoft.graph.classificationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

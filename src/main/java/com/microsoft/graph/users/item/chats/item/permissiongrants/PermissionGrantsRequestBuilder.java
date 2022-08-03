@@ -23,7 +23,7 @@ import microsoft.graph.users.item.chats.item.permissiongrants.getuserownedobject
 import microsoft.graph.users.item.chats.item.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity. */
 public class PermissionGrantsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

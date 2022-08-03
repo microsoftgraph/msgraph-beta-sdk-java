@@ -15,6 +15,8 @@ public class RequestorSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The users who are allowed to request on this policy, which can be singleUser, groupMembers, and connectedOrganizationMembers. */
     private java.util.List<UserSet> _allowedRequestors;
+    /** The OdataType property */
+    private String _odataType;
     /** Who can request. One of NoSubjects, SpecificDirectorySubjects, SpecificConnectedOrganizationSubjects, AllConfiguredConnectedOrganizationSubjects, AllExistingConnectedOrganizationSubjects, AllExistingDirectoryMemberUsers, AllExistingDirectorySubjects or AllExternalSubjects. */
     private String _scopeType;
     /**
@@ -23,6 +25,7 @@ public class RequestorSettings implements AdditionalDataHolder, Parsable {
      */
     public RequestorSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.requestorSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class RequestorSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequestorSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("acceptRequests", (n) -> { currentObject.setAcceptRequests(n.getBooleanValue()); });
             this.put("allowedRequestors", (n) -> { currentObject.setAllowedRequestors(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scopeType", (n) -> { currentObject.setScopeType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the scopeType property value. Who can request. One of NoSubjects, SpecificDirectorySubjects, SpecificConnectedOrganizationSubjects, AllConfiguredConnectedOrganizationSubjects, AllExistingConnectedOrganizationSubjects, AllExistingDirectoryMemberUsers, AllExistingDirectorySubjects or AllExternalSubjects.
@@ -88,6 +100,7 @@ public class RequestorSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acceptRequests", this.getAcceptRequests());
         writer.writeCollectionOfObjectValues("allowedRequestors", this.getAllowedRequestors());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("scopeType", this.getScopeType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class RequestorSettings implements AdditionalDataHolder, Parsable {
      */
     public void setAllowedRequestors(@javax.annotation.Nullable final java.util.List<UserSet> value) {
         this._allowedRequestors = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the scopeType property value. Who can request. One of NoSubjects, SpecificDirectorySubjects, SpecificConnectedOrganizationSubjects, AllConfiguredConnectedOrganizationSubjects, AllExistingConnectedOrganizationSubjects, AllExistingDirectoryMemberUsers, AllExistingDirectorySubjects or AllExternalSubjects.

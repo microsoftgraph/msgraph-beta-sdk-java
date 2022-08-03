@@ -20,7 +20,7 @@ import microsoft.graph.models.EnrollmentProfileCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the enrollmentProfiles property of the microsoft.graph.depOnboardingSetting entity. */
 public class EnrollmentProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -16,9 +16,9 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     private String _inputValidationSchema;
     /** Specifies whether the setting needs to be treated as a secret. Settings marked as yes will be encrypted in transit and at rest and will be displayed as asterisks when represented in the UX. */
     private Boolean _isSecret;
-    /** Maximum length of string. Valid values 0 to 87516 */
+    /** Maximum length of string */
     private Long _maximumLength;
-    /** Minimum length of string. Valid values 0 to 87516 */
+    /** Minimum length of string */
     private Long _minimumLength;
     /**
      * Instantiates a new DeviceManagementConfigurationStringSettingValueDefinition and sets the default values.
@@ -26,6 +26,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      */
     public DeviceManagementConfigurationStringSettingValueDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,7 +87,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this._isSecret;
     }
     /**
-     * Gets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
+     * Gets the maximumLength property value. Maximum length of string
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -94,7 +95,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this._maximumLength;
     }
     /**
-     * Gets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
+     * Gets the minimumLength property value. Minimum length of string
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -149,7 +150,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this._isSecret = value;
     }
     /**
-     * Sets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
+     * Sets the maximumLength property value. Maximum length of string
      * @param value Value to set for the maximumLength property.
      * @return a void
      */
@@ -157,7 +158,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this._maximumLength = value;
     }
     /**
-     * Sets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
+     * Sets the minimumLength property value. Minimum length of string
      * @param value Value to set for the minimumLength property.
      * @return a void
      */

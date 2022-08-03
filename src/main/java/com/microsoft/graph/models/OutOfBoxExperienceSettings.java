@@ -20,6 +20,8 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
     private Boolean _hideEULA;
     /** Show or hide privacy settings to user */
     private Boolean _hidePrivacySettings;
+    /** The OdataType property */
+    private String _odataType;
     /** If set, then skip the keyboard selection page if Language and Region are set */
     private Boolean _skipKeyboardSelectionPage;
     /** The userType property */
@@ -30,6 +32,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     public OutOfBoxExperienceSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.outOfBoxExperienceSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,11 +67,12 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutOfBoxExperienceSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("deviceUsageType", (n) -> { currentObject.setDeviceUsageType(n.getEnumValue(WindowsDeviceUsageType.class)); });
             this.put("hideEscapeLink", (n) -> { currentObject.setHideEscapeLink(n.getBooleanValue()); });
             this.put("hideEULA", (n) -> { currentObject.setHideEULA(n.getBooleanValue()); });
             this.put("hidePrivacySettings", (n) -> { currentObject.setHidePrivacySettings(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skipKeyboardSelectionPage", (n) -> { currentObject.setSkipKeyboardSelectionPage(n.getBooleanValue()); });
             this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(WindowsUserType.class)); });
         }};
@@ -98,6 +102,14 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
         return this._hidePrivacySettings;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the skipKeyboardSelectionPage property value. If set, then skip the keyboard selection page if Language and Region are set
      * @return a boolean
      */
@@ -124,6 +136,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
         writer.writeBooleanValue("hideEscapeLink", this.getHideEscapeLink());
         writer.writeBooleanValue("hideEULA", this.getHideEULA());
         writer.writeBooleanValue("hidePrivacySettings", this.getHidePrivacySettings());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("skipKeyboardSelectionPage", this.getSkipKeyboardSelectionPage());
         writer.writeEnumValue("userType", this.getUserType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -167,6 +180,14 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     public void setHidePrivacySettings(@javax.annotation.Nullable final Boolean value) {
         this._hidePrivacySettings = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the skipKeyboardSelectionPage property value. If set, then skip the keyboard selection page if Language and Region are set

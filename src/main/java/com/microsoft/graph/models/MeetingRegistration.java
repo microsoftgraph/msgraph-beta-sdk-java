@@ -31,6 +31,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      */
     public MeetingRegistration() {
         super();
+        this.setOdataType("#microsoft.graph.meetingRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

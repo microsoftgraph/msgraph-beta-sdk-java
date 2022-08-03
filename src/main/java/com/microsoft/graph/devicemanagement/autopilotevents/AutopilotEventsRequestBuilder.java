@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceManagementAutopilotEventCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the autopilotEvents property of the microsoft.graph.deviceManagement entity. */
 public class AutopilotEventsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

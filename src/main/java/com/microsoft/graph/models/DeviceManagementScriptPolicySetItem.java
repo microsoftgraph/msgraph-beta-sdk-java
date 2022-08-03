@@ -14,6 +14,7 @@ public class DeviceManagementScriptPolicySetItem extends PolicySetItem implement
      */
     public DeviceManagementScriptPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementScriptPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

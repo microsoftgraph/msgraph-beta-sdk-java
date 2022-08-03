@@ -18,6 +18,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      */
     public DlpWindowsDevicesNotification() {
         super();
+        this.setOdataType("#microsoft.graph.dlpWindowsDevicesNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

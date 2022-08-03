@@ -307,7 +307,7 @@ public class ServicePrincipalCreationConditionSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalCreationConditionSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalCreationConditionSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalCreationConditionSetItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ServicePrincipalCreationConditionSetItemRequestBuilder {
         @javax.annotation.Nullable
         public ServicePrincipalCreationConditionSetItemRequestBuilderGetQueryParameters queryParameters = new ServicePrincipalCreationConditionSetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new servicePrincipalCreationConditionSetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalCreationConditionSetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalCreationConditionSetItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ServicePrincipalCreationConditionSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalCreationConditionSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalCreationConditionSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalCreationConditionSetItemRequestBuilderPatchRequestConfiguration() {

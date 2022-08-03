@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      */
     public DeviceManagementConfigurationSimpleSettingInstance() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

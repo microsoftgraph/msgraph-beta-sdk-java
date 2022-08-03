@@ -307,7 +307,7 @@ public class UnitOfMeasureItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unitOfMeasureItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnitOfMeasureItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnitOfMeasureItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UnitOfMeasureItemRequestBuilder {
         @javax.annotation.Nullable
         public UnitOfMeasureItemRequestBuilderGetQueryParameters queryParameters = new UnitOfMeasureItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unitOfMeasureItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnitOfMeasureItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnitOfMeasureItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UnitOfMeasureItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unitOfMeasureItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnitOfMeasureItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnitOfMeasureItemRequestBuilderPatchRequestConfiguration() {

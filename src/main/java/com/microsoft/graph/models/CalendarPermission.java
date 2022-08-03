@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CalendarPermission extends Entity implements Parsable {
     /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
     private java.util.List<String> _allowedRoles;
@@ -25,6 +25,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     public CalendarPermission() {
         super();
+        this.setOdataType("#microsoft.graph.calendarPermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

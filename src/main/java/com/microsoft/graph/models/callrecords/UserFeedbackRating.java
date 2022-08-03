@@ -3,7 +3,7 @@ package microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum UserFeedbackRating implements ValuedEnum {
     NotRated("notRated"),
     Bad("bad"),

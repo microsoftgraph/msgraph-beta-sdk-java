@@ -29,6 +29,7 @@ public class Currency extends Entity implements Parsable {
      */
     public Currency() {
         super();
+        this.setOdataType("#microsoft.graph.currency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

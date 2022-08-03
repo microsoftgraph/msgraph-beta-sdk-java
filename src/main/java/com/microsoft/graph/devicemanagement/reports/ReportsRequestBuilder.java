@@ -377,7 +377,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reports.cachedReportConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementCachedReportConfigurationItemRequestBuilder
+     * @return a DeviceManagementCachedReportConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementCachedReportConfigurationItemRequestBuilder cachedReportConfigurations(@javax.annotation.Nonnull final String id) {
@@ -557,7 +557,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reports.exportJobs.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementExportJobItemRequestBuilder
+     * @return a DeviceManagementExportJobItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementExportJobItemRequestBuilder exportJobs(@javax.annotation.Nonnull final String id) {

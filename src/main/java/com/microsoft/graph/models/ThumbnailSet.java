@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ThumbnailSet extends Entity implements Parsable {
     /** A 1920x1920 scaled thumbnail. */
     private Thumbnail _large;
@@ -23,6 +23,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     public ThumbnailSet() {
         super();
+        this.setOdataType("#microsoft.graph.thumbnailSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

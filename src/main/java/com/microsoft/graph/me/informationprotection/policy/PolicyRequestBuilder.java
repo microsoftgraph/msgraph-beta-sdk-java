@@ -253,7 +253,7 @@ public class PolicyRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.informationProtection.policy.labels.item collection
      * @param id Unique identifier of the item
-     * @return a informationProtectionLabelItemRequestBuilder
+     * @return a InformationProtectionLabelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public InformationProtectionLabelItemRequestBuilder labels(@javax.annotation.Nonnull final String id) {

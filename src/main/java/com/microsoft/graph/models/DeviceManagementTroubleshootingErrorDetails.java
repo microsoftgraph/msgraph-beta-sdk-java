@@ -18,6 +18,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
     private String _failure;
     /** The detailed description of what went wrong. */
     private String _failureDetails;
+    /** The OdataType property */
+    private String _odataType;
     /** The detailed description of how to remediate this issue. */
     private String _remediation;
     /** Links to helpful documentation about this failure. */
@@ -28,6 +30,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      */
     public DeviceManagementTroubleshootingErrorDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingErrorDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,13 +81,22 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingErrorDetails currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("context", (n) -> { currentObject.setContext(n.getStringValue()); });
             this.put("failure", (n) -> { currentObject.setFailure(n.getStringValue()); });
             this.put("failureDetails", (n) -> { currentObject.setFailureDetails(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remediation", (n) -> { currentObject.setRemediation(n.getStringValue()); });
             this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingErrorResource::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the remediation property value. The detailed description of how to remediate this issue.
@@ -112,6 +124,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
         writer.writeStringValue("context", this.getContext());
         writer.writeStringValue("failure", this.getFailure());
         writer.writeStringValue("failureDetails", this.getFailureDetails());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("remediation", this.getRemediation());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,6 +160,14 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      */
     public void setFailureDetails(@javax.annotation.Nullable final String value) {
         this._failureDetails = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the remediation property value. The detailed description of how to remediate this issue.

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagementTemplateCollection extends Entity implements Parsable {
     /** The createdByUserId property */
     private String _createdByUserId;
@@ -31,6 +31,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     public ManagementTemplateCollection() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managementTemplateCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

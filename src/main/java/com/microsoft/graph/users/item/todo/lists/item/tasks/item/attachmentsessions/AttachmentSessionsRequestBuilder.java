@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.count.CountRequestBuilder;
 /** Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity. */
 public class AttachmentSessionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

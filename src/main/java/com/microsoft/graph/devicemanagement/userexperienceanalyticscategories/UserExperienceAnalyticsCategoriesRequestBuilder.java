@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsCategory;
 import microsoft.graph.models.UserExperienceAnalyticsCategoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsCategories property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsCategoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -13,6 +13,8 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined. */
     private java.util.List<String> _categories;
+    /** The OdataType property */
+    private String _odataType;
     /** The date and time for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
     /**
@@ -21,6 +23,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      */
     public TaskViewpoint() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.taskViewpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TaskViewpoint currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
@@ -76,6 +88,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("reminderDateTime", this.getReminderDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      */
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.

@@ -307,7 +307,7 @@ public class DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementConfigurationPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationPolicyAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationPolicyAssignmentItemRequestBuilderPatchRequestConfiguration() {

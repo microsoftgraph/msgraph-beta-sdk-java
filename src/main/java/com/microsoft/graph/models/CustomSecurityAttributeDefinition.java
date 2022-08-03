@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class CustomSecurityAttributeDefinition extends Entity implements Parsable {
     /** Values that are predefined for this custom security attribute.This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues. */
     private java.util.List<AllowedValue> _allowedValues;
@@ -23,19 +22,22 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     private String _name;
     /** Specifies whether the custom security attribute is active or deactivated. Acceptable values are Available and Deprecated. Can be changed later. */
     private String _status;
+    /** Data type for the custom security attribute values. Supported types are Boolean, Integer, and String. Cannot be changed later. */
+    private String _type;
     /** Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true. */
     private Boolean _usePreDefinedValuesOnly;
     /**
-     * Instantiates a new customSecurityAttributeDefinition and sets the default values.
+     * Instantiates a new CustomSecurityAttributeDefinition and sets the default values.
      * @return a void
      */
     public CustomSecurityAttributeDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.customSecurityAttributeDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customSecurityAttributeDefinition
+     * @return a CustomSecurityAttributeDefinition
      */
     @javax.annotation.Nonnull
     public static CustomSecurityAttributeDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -81,6 +83,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
             this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("usePreDefinedValuesOnly", (n) -> { currentObject.setUsePreDefinedValuesOnly(n.getBooleanValue()); });
         }};
     }
@@ -117,6 +120,14 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this._status;
     }
     /**
+     * Gets the type property value. Data type for the custom security attribute values. Supported types are Boolean, Integer, and String. Cannot be changed later.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Gets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
      * @return a boolean
      */
@@ -139,6 +150,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         writer.writeBooleanValue("isSearchable", this.getIsSearchable());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("status", this.getStatus());
+        writer.writeStringValue("type", this.getType());
         writer.writeBooleanValue("usePreDefinedValuesOnly", this.getUsePreDefinedValuesOnly());
     }
     /**
@@ -196,6 +208,14 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      */
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
+    }
+    /**
+     * Sets the type property value. Data type for the custom security attribute values. Supported types are Boolean, Integer, and String. Cannot be changed later.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.

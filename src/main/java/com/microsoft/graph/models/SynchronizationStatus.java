@@ -24,6 +24,8 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     private SynchronizationTaskExecution _lastSuccessfulExecution;
     /** Details of the last execution of the job, which exported objects into the target directory. */
     private SynchronizationTaskExecution _lastSuccessfulExecutionWithExports;
+    /** The OdataType property */
+    private String _odataType;
     /** Details of the progress of a job toward completion. */
     private java.util.List<SynchronizationProgress> _progress;
     /** If job is in quarantine, quarantine details. */
@@ -42,6 +44,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     public SynchronizationStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,13 +95,14 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationStatus currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
             this.put("countSuccessiveCompleteFailures", (n) -> { currentObject.setCountSuccessiveCompleteFailures(n.getLongValue()); });
             this.put("escrowsPruned", (n) -> { currentObject.setEscrowsPruned(n.getBooleanValue()); });
             this.put("lastExecution", (n) -> { currentObject.setLastExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
             this.put("lastSuccessfulExecution", (n) -> { currentObject.setLastSuccessfulExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
             this.put("lastSuccessfulExecutionWithExports", (n) -> { currentObject.setLastSuccessfulExecutionWithExports(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("progress", (n) -> { currentObject.setProgress(n.getCollectionOfObjectValues(SynchronizationProgress::createFromDiscriminatorValue)); });
             this.put("quarantine", (n) -> { currentObject.setQuarantine(n.getObjectValue(SynchronizationQuarantine::createFromDiscriminatorValue)); });
             this.put("steadyStateFirstAchievedTime", (n) -> { currentObject.setSteadyStateFirstAchievedTime(n.getOffsetDateTimeValue()); });
@@ -130,6 +134,14 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecutionWithExports() {
         return this._lastSuccessfulExecutionWithExports;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the progress property value. Details of the progress of a job toward completion.
@@ -192,6 +204,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("lastExecution", this.getLastExecution());
         writer.writeObjectValue("lastSuccessfulExecution", this.getLastSuccessfulExecution());
         writer.writeObjectValue("lastSuccessfulExecutionWithExports", this.getLastSuccessfulExecutionWithExports());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("progress", this.getProgress());
         writer.writeObjectValue("quarantine", this.getQuarantine());
         writer.writeOffsetDateTimeValue("steadyStateFirstAchievedTime", this.getSteadyStateFirstAchievedTime());
@@ -255,6 +268,14 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     public void setLastSuccessfulExecutionWithExports(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastSuccessfulExecutionWithExports = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the progress property value. Details of the progress of a job toward completion.

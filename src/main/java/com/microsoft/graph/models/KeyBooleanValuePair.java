@@ -16,6 +16,7 @@ public class KeyBooleanValuePair extends KeyTypedValuePair implements Parsable {
      */
     public KeyBooleanValuePair() {
         super();
+        this.setOdataType("#microsoft.graph.keyBooleanValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      */
     public IosWebContentFilterSpecificWebsitesAccess() {
         super();
+        this.setOdataType("#microsoft.graph.iosWebContentFilterSpecificWebsitesAccess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

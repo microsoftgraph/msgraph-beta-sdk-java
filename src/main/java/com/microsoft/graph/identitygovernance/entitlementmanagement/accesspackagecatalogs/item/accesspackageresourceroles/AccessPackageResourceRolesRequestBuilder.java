@@ -20,7 +20,7 @@ import microsoft.graph.models.AccessPackageResourceRoleCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageResourceRoles property of the microsoft.graph.accessPackageCatalog entity. */
 public class AccessPackageResourceRolesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

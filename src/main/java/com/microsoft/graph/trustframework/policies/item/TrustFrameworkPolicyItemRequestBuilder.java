@@ -313,7 +313,7 @@ public class TrustFrameworkPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new trustFrameworkPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TrustFrameworkPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrustFrameworkPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class TrustFrameworkPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public TrustFrameworkPolicyItemRequestBuilderGetQueryParameters queryParameters = new TrustFrameworkPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new trustFrameworkPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TrustFrameworkPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrustFrameworkPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class TrustFrameworkPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new trustFrameworkPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TrustFrameworkPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrustFrameworkPolicyItemRequestBuilderPatchRequestConfiguration() {

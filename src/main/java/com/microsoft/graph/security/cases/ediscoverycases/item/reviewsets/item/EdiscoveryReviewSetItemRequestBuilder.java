@@ -221,7 +221,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.files.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryFileItemRequestBuilder
+     * @return a EdiscoveryFileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryFileItemRequestBuilder files(@javax.annotation.Nonnull final String id) {
@@ -339,7 +339,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.queries.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryReviewSetQueryItemRequestBuilder
+     * @return a EdiscoveryReviewSetQueryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryReviewSetQueryItemRequestBuilder queries(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryReviewSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewSetItemRequestBuilderDeleteRequestConfiguration() {
@@ -386,7 +386,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryReviewSetItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryReviewSetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryReviewSetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration() {
@@ -401,7 +401,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryReviewSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewSetItemRequestBuilderPatchRequestConfiguration() {

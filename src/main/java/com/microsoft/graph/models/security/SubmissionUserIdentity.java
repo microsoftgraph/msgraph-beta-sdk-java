@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Identity;
 public class SubmissionUserIdentity extends Identity implements Parsable {
-    /** The email property */
+    /** The email of user who is making the submission when logged in (delegated token case). */
     private String _email;
     /**
      * Instantiates a new SubmissionUserIdentity and sets the default values.
@@ -17,6 +17,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
      */
     public SubmissionUserIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.security.submissionUserIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +30,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
         return new SubmissionUserIdentity();
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email of user who is making the submission when logged in (delegated token case).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +59,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
         writer.writeStringValue("email", this.getEmail());
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email of user who is making the submission when logged in (delegated token case).
      * @param value Value to set for the email property.
      * @return a void
      */

@@ -313,7 +313,7 @@ public class AppLogCollectionRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class AppLogCollectionRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public AppLogCollectionRequestItemRequestBuilderGetQueryParameters queryParameters = new AppLogCollectionRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appLogCollectionRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class AppLogCollectionRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appLogCollectionRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration() {

@@ -22,6 +22,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
      */
     public MicrosoftTunnelHealthThreshold() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftTunnelHealthThreshold");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

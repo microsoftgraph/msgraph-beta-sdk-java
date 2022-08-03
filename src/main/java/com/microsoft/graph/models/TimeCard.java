@@ -30,6 +30,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      */
     public TimeCard() {
         super();
+        this.setOdataType("#microsoft.graph.timeCard");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

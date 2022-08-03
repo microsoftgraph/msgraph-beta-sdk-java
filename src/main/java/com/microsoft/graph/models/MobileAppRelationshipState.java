@@ -21,6 +21,8 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
     private ResultantAppState _installState;
     /** Enum indicating additional details regarding why an application has a particular install state. */
     private ResultantAppStateDetail _installStateDetail;
+    /** The OdataType property */
+    private String _odataType;
     /** The collection of source mobile app's ids. */
     private java.util.List<String> _sourceIds;
     /** The related target app's display name. */
@@ -35,6 +37,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      */
     public MobileAppRelationshipState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mobileAppRelationshipState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,11 +80,12 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppRelationshipState currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
             this.put("installState", (n) -> { currentObject.setInstallState(n.getEnumValue(ResultantAppState.class)); });
             this.put("installStateDetail", (n) -> { currentObject.setInstallStateDetail(n.getEnumValue(ResultantAppStateDetail.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceIds", (n) -> { currentObject.setSourceIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("targetDisplayName", (n) -> { currentObject.setTargetDisplayName(n.getStringValue()); });
             this.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
@@ -103,6 +107,14 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ResultantAppStateDetail getInstallStateDetail() {
         return this._installStateDetail;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sourceIds property value. The collection of source mobile app's ids.
@@ -147,6 +159,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
         writer.writeIntegerValue("errorCode", this.getErrorCode());
         writer.writeEnumValue("installState", this.getInstallState());
         writer.writeEnumValue("installStateDetail", this.getInstallStateDetail());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("sourceIds", this.getSourceIds());
         writer.writeStringValue("targetDisplayName", this.getTargetDisplayName());
         writer.writeStringValue("targetId", this.getTargetId());
@@ -192,6 +205,14 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      */
     public void setInstallStateDetail(@javax.annotation.Nullable final ResultantAppStateDetail value) {
         this._installStateDetail = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sourceIds property value. The collection of source mobile app's ids.

@@ -20,6 +20,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      */
     public MobileAppSupersedence() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppSupersedence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

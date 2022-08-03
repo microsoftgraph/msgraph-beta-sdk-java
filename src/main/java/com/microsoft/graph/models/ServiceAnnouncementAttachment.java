@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /** The attachment content. */
     private byte[] _content;
@@ -26,6 +26,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     public ServiceAnnouncementAttachment() {
         super();
+        this.setOdataType("#microsoft.graph.serviceAnnouncementAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

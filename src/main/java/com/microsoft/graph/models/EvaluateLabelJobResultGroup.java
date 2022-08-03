@@ -13,6 +13,8 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     private Map<String, Object> _additionalData;
     /** The automatic property */
     private EvaluateLabelJobResult _automatic;
+    /** The OdataType property */
+    private String _odataType;
     /** The recommended property */
     private EvaluateLabelJobResult _recommended;
     /**
@@ -21,6 +23,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
      */
     public EvaluateLabelJobResultGroup() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.evaluateLabelJobResultGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateLabelJobResultGroup currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("automatic", (n) -> { currentObject.setAutomatic(n.getObjectValue(EvaluateLabelJobResult::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommended", (n) -> { currentObject.setRecommended(n.getObjectValue(EvaluateLabelJobResult::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommended property value. The recommended property
@@ -76,6 +88,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automatic", this.getAutomatic());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("recommended", this.getRecommended());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
      */
     public void setAutomatic(@javax.annotation.Nullable final EvaluateLabelJobResult value) {
         this._automatic = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommended property value. The recommended property

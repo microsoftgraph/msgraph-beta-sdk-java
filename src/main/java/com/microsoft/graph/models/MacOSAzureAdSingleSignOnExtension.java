@@ -20,6 +20,7 @@ public class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtensio
      */
     public MacOSAzureAdSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.macOSAzureAdSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

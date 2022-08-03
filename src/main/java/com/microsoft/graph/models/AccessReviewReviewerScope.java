@@ -20,6 +20,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
      */
     public AccessReviewReviewerScope() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewReviewerScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

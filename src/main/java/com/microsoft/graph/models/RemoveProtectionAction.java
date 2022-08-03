@@ -14,6 +14,7 @@ public class RemoveProtectionAction extends InformationProtectionAction implemen
      */
     public RemoveProtectionAction() {
         super();
+        this.setOdataType("#microsoft.graph.removeProtectionAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

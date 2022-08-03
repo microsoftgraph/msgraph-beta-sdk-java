@@ -34,6 +34,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     public UserExperienceAnalyticsAppHealthApplicationPerformance() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

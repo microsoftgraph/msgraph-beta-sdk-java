@@ -307,7 +307,7 @@ public class PolicySetItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new policySetItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PolicySetItemItemRequestBuilder {
         @javax.annotation.Nullable
         public PolicySetItemItemRequestBuilderGetQueryParameters queryParameters = new PolicySetItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new policySetItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetItemItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PolicySetItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new policySetItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetItemItemRequestBuilderPatchRequestConfiguration() {

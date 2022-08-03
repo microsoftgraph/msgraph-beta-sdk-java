@@ -18,6 +18,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
      */
     public IosHomeScreenApp() {
         super();
+        this.setOdataType("#microsoft.graph.iosHomeScreenApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

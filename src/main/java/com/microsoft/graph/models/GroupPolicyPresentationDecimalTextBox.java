@@ -26,6 +26,7 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyPresentati
      */
     public GroupPolicyPresentationDecimalTextBox() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationDecimalTextBox");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

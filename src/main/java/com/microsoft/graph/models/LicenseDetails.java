@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class LicenseDetails extends Entity implements Parsable {
     /** Information about the service plans assigned with the license. Read-only, Not nullable */
     private java.util.List<ServicePlanInfo> _servicePlans;
@@ -15,16 +16,17 @@ public class LicenseDetails extends Entity implements Parsable {
     /** Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only */
     private String _skuPartNumber;
     /**
-     * Instantiates a new LicenseDetails and sets the default values.
+     * Instantiates a new licenseDetails and sets the default values.
      * @return a void
      */
     public LicenseDetails() {
         super();
+        this.setOdataType("#microsoft.graph.licenseDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LicenseDetails
+     * @return a licenseDetails
      */
     @javax.annotation.Nonnull
     public static LicenseDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -15,6 +15,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     private String _adminAgentSoftwareVersion;
     /** The software version for the firmware running on the device. */
     private String _firmwareSoftwareVersion;
+    /** The OdataType property */
+    private String _odataType;
     /** The software version for the operating system on the device. */
     private String _operatingSystemSoftwareVersion;
     /** The software version for the partner agent running on the device. */
@@ -27,6 +29,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      */
     public TeamworkDeviceSoftwareVersions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkDeviceSoftwareVersions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,9 +64,10 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDeviceSoftwareVersions currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("adminAgentSoftwareVersion", (n) -> { currentObject.setAdminAgentSoftwareVersion(n.getStringValue()); });
             this.put("firmwareSoftwareVersion", (n) -> { currentObject.setFirmwareSoftwareVersion(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operatingSystemSoftwareVersion", (n) -> { currentObject.setOperatingSystemSoftwareVersion(n.getStringValue()); });
             this.put("partnerAgentSoftwareVersion", (n) -> { currentObject.setPartnerAgentSoftwareVersion(n.getStringValue()); });
             this.put("teamsClientSoftwareVersion", (n) -> { currentObject.setTeamsClientSoftwareVersion(n.getStringValue()); });
@@ -76,6 +80,14 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public String getFirmwareSoftwareVersion() {
         return this._firmwareSoftwareVersion;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.
@@ -110,6 +122,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
         Objects.requireNonNull(writer);
         writer.writeStringValue("adminAgentSoftwareVersion", this.getAdminAgentSoftwareVersion());
         writer.writeStringValue("firmwareSoftwareVersion", this.getFirmwareSoftwareVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operatingSystemSoftwareVersion", this.getOperatingSystemSoftwareVersion());
         writer.writeStringValue("partnerAgentSoftwareVersion", this.getPartnerAgentSoftwareVersion());
         writer.writeStringValue("teamsClientSoftwareVersion", this.getTeamsClientSoftwareVersion());
@@ -138,6 +151,14 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      */
     public void setFirmwareSoftwareVersion(@javax.annotation.Nullable final String value) {
         this._firmwareSoftwareVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.

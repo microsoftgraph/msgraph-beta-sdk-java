@@ -20,6 +20,8 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     private String _eventName;
     /** IP address from where the simulation event was initiated by a user in an attack simulation and training campaign. */
     private String _ipAddress;
+    /** The OdataType property */
+    private String _odataType;
     /** The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign. */
     private String _osPlatformDeviceDetails;
     /**
@@ -28,6 +30,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     public UserSimulationEventInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userSimulationEventInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,11 +81,12 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSimulationEventInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
         }};
     }
@@ -93,6 +97,14 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getIpAddress() {
         return this._ipAddress;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
@@ -113,6 +125,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
         writer.writeStringValue("eventName", this.getEventName());
         writer.writeStringValue("ipAddress", this.getIpAddress());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("osPlatformDeviceDetails", this.getOsPlatformDeviceDetails());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -155,6 +168,14 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.

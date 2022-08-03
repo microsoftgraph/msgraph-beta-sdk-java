@@ -19,12 +19,15 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
     private PolicyScope _appliesTo;
     /** Specifies whether this policy scope is configurable by the admin. The default value is false. When an admin has enabled Intune (MEM) to manage devices, this property is set to false and appliesTo defaults to 1 (meaning all). */
     private Boolean _isAdminConfigurable;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new azureADRegistrationPolicy and sets the default values.
      * @return a void
      */
     public AzureADRegistrationPolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.azureADRegistrationPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,11 +78,12 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureADRegistrationPolicy currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
             this.put("isAdminConfigurable", (n) -> { currentObject.setIsAdminConfigurable(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -89,6 +93,14 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public Boolean getIsAdminConfigurable() {
         return this._isAdminConfigurable;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -101,6 +113,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
         writer.writeCollectionOfPrimitiveValues("allowedUsers", this.getAllowedUsers());
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
         writer.writeBooleanValue("isAdminConfigurable", this.getIsAdminConfigurable());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      */
     public void setIsAdminConfigurable(@javax.annotation.Nullable final Boolean value) {
         this._isAdminConfigurable = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

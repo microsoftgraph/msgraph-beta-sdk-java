@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item.steps.count.CountRequestBuilder;
 /** Provides operations to manage the steps property of the microsoft.graph.approval entity. */
 public class StepsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

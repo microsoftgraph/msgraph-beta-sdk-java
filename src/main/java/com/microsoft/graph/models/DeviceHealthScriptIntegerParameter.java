@@ -16,6 +16,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
      */
     public DeviceHealthScriptIntegerParameter() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptIntegerParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

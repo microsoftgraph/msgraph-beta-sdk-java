@@ -53,7 +53,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsManagedAppProtections.item.apps.item collection
      * @param id Unique identifier of the item
-     * @return a managedMobileAppItemRequestBuilder
+     * @return a ManagedMobileAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedMobileAppItemRequestBuilder apps(@javax.annotation.Nonnull final String id) {
@@ -65,7 +65,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsManagedAppProtections.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a targetedManagedAppPolicyAssignmentItemRequestBuilder
+     * @return a TargetedManagedAppPolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TargetedManagedAppPolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -386,7 +386,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsManagedAppProtectionItemRequestBuilderGetQueryParameters queryParameters = new WindowsManagedAppProtectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsManagedAppProtectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsManagedAppProtectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsManagedAppProtectionItemRequestBuilderGetRequestConfiguration() {
@@ -401,7 +401,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsManagedAppProtectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsManagedAppProtectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsManagedAppProtectionItemRequestBuilderPatchRequestConfiguration() {

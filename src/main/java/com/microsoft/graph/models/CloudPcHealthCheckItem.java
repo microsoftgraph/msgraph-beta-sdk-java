@@ -18,6 +18,8 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The lastHealthCheckDateTime property */
     private OffsetDateTime _lastHealthCheckDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The result property */
     private CloudPcConnectivityEventResult _result;
     /**
@@ -26,6 +28,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
      */
     public CloudPcHealthCheckItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcHealthCheckItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,10 +71,11 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcHealthCheckItem currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastHealthCheckDateTime", (n) -> { currentObject.setLastHealthCheckDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("result", (n) -> { currentObject.setResult(n.getEnumValue(CloudPcConnectivityEventResult.class)); });
         }};
     }
@@ -82,6 +86,14 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastHealthCheckDateTime() {
         return this._lastHealthCheckDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the result property value. The result property
@@ -101,6 +113,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastHealthCheckDateTime", this.getLastHealthCheckDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("result", this.getResult());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +148,14 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
      */
     public void setLastHealthCheckDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastHealthCheckDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the result property value. The result property

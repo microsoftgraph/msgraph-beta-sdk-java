@@ -22,6 +22,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      */
     public Win32LobAppFileSystemRequirement() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppFileSystemRequirement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

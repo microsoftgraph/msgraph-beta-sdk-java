@@ -181,7 +181,7 @@ public class TrustFrameworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.trustFramework.keySets.item collection
      * @param id Unique identifier of the item
-     * @return a trustFrameworkKeySetItemRequestBuilder
+     * @return a TrustFrameworkKeySetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TrustFrameworkKeySetItemRequestBuilder keySets(@javax.annotation.Nonnull final String id) {
@@ -248,7 +248,7 @@ public class TrustFrameworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.trustFramework.policies.item collection
      * @param id Unique identifier of the item
-     * @return a trustFrameworkPolicyItemRequestBuilder
+     * @return a TrustFrameworkPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TrustFrameworkPolicyItemRequestBuilder policies(@javax.annotation.Nonnull final String id) {

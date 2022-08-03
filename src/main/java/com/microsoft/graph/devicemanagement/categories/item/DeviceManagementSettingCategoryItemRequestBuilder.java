@@ -308,7 +308,7 @@ public class DeviceManagementSettingCategoryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.categories.item.settingDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementSettingDefinitionItemRequestBuilder
+     * @return a DeviceManagementSettingDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementSettingDefinitionItemRequestBuilder settingDefinitions(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementSettingCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementSettingCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementSettingCategoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementSettingCategoryItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementSettingCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementSettingCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementSettingCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementSettingCategoryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementSettingCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementSettingCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementSettingCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementSettingCategoryItemRequestBuilderPatchRequestConfiguration() {

@@ -307,7 +307,7 @@ public class AcronymItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new acronymItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AcronymItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AcronymItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AcronymItemRequestBuilder {
         @javax.annotation.Nullable
         public AcronymItemRequestBuilderGetQueryParameters queryParameters = new AcronymItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new acronymItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AcronymItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AcronymItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AcronymItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new acronymItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AcronymItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AcronymItemRequestBuilderPatchRequestConfiguration() {

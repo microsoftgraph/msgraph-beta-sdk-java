@@ -14,6 +14,7 @@ public class CommunicationsEncryptedIdentity extends Identity implements Parsabl
      */
     public CommunicationsEncryptedIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.communicationsEncryptedIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

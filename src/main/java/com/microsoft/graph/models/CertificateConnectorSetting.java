@@ -23,6 +23,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
     private OffsetDateTime _lastConnectorConnectionTime;
     /** Version of last uploaded certificate connector */
     private Long _lastUploadVersion;
+    /** The OdataType property */
+    private String _odataType;
     /** Certificate connector status */
     private Integer _status;
     /**
@@ -31,6 +33,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     public CertificateConnectorSetting() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.certificateConnectorSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,12 +84,13 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateConnectorSetting currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("certExpiryTime", (n) -> { currentObject.setCertExpiryTime(n.getOffsetDateTimeValue()); });
             this.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
             this.put("enrollmentError", (n) -> { currentObject.setEnrollmentError(n.getStringValue()); });
             this.put("lastConnectorConnectionTime", (n) -> { currentObject.setLastConnectorConnectionTime(n.getOffsetDateTimeValue()); });
             this.put("lastUploadVersion", (n) -> { currentObject.setLastUploadVersion(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getIntegerValue()); });
         }};
     }
@@ -105,6 +109,14 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public Long getLastUploadVersion() {
         return this._lastUploadVersion;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the status property value. Certificate connector status
@@ -126,6 +138,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
         writer.writeStringValue("enrollmentError", this.getEnrollmentError());
         writer.writeOffsetDateTimeValue("lastConnectorConnectionTime", this.getLastConnectorConnectionTime());
         writer.writeLongValue("lastUploadVersion", this.getLastUploadVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -176,6 +189,14 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     public void setLastUploadVersion(@javax.annotation.Nullable final Long value) {
         this._lastUploadVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. Certificate connector status

@@ -30,7 +30,7 @@ public class ReportRoot extends Entity implements Parsable {
     private java.util.List<PrintUsageByPrinter> _monthlyPrintUsageSummariesByPrinter;
     /** The monthlyPrintUsageSummariesByUser property */
     private java.util.List<PrintUsageByUser> _monthlyPrintUsageSummariesByUser;
-    /** The security property */
+    /** Provides the ability to launch a realistic simulated phishing attack that organizations can learn from. */
     private SecurityReportsRoot _security;
     /** Represents the self-service password reset (SSPR) usage for a given tenant. */
     private java.util.List<UserCredentialUsageDetails> _userCredentialUsageDetails;
@@ -40,6 +40,7 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public ReportRoot() {
         super();
+        this.setOdataType("#microsoft.graph.reportRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -163,7 +164,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this._monthlyPrintUsageSummariesByUser;
     }
     /**
-     * Gets the security property value. The security property
+     * Gets the security property value. Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @return a securityReportsRoot
      */
     @javax.annotation.Nullable
@@ -289,7 +290,7 @@ public class ReportRoot extends Entity implements Parsable {
         this._monthlyPrintUsageSummariesByUser = value;
     }
     /**
-     * Sets the security property value. The security property
+     * Sets the security property value. Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @param value Value to set for the security property.
      * @return a void
      */

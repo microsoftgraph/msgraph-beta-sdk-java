@@ -14,6 +14,7 @@ public class MobileAppTroubleshootingAppUpdateHistory extends MobileAppTroublesh
      */
     public MobileAppTroubleshootingAppUpdateHistory() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingAppUpdateHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

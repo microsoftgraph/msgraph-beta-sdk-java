@@ -21,6 +21,7 @@ public class NdesConnector extends Entity implements Parsable {
      */
     public NdesConnector() {
         super();
+        this.setOdataType("#microsoft.graph.ndesConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

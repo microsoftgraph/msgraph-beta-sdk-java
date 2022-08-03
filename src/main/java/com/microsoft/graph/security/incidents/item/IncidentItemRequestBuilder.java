@@ -34,7 +34,7 @@ public class IncidentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.incidents.item.alerts.item collection
      * @param id Unique identifier of the item
-     * @return a alertItemRequestBuilder
+     * @return a AlertItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class IncidentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new incidentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IncidentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IncidentItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class IncidentItemRequestBuilder {
         @javax.annotation.Nullable
         public IncidentItemRequestBuilderGetQueryParameters queryParameters = new IncidentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new incidentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IncidentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IncidentItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class IncidentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new incidentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IncidentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IncidentItemRequestBuilderPatchRequestConfiguration() {

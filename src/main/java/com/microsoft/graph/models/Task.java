@@ -14,6 +14,7 @@ public class Task extends BaseTask implements Parsable {
      */
     public Task() {
         super();
+        this.setOdataType("#microsoft.graph.task");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

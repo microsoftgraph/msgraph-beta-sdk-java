@@ -15,6 +15,8 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The isMostRestrictive property */
     private Boolean _isMostRestrictive;
+    /** The OdataType property */
+    private String _odataType;
     /** The policyId property */
     private String _policyId;
     /** The policyName property */
@@ -33,6 +35,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     public MatchingDlpRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.matchingDlpRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,9 +70,10 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MatchingDlpRule currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
             this.put("isMostRestrictive", (n) -> { currentObject.setIsMostRestrictive(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
             this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
@@ -85,6 +89,14 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsMostRestrictive() {
         return this._isMostRestrictive;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the policyId property value. The policyId property
@@ -143,6 +155,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("actions", this.getActions());
         writer.writeBooleanValue("isMostRestrictive", this.getIsMostRestrictive());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeStringValue("policyName", this.getPolicyName());
         writer.writeIntegerValue("priority", this.getPriority());
@@ -174,6 +187,14 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     public void setIsMostRestrictive(@javax.annotation.Nullable final Boolean value) {
         this._isMostRestrictive = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the policyId property value. The policyId property

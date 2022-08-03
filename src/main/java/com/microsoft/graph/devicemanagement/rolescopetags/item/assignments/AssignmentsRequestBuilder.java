@@ -20,7 +20,7 @@ import microsoft.graph.models.RoleScopeTagAutoAssignment;
 import microsoft.graph.models.RoleScopeTagAutoAssignmentCollectionResponse;
 /** Provides operations to manage the assignments property of the microsoft.graph.roleScopeTag entity. */
 public class AssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

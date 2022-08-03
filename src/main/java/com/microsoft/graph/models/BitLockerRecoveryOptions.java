@@ -20,6 +20,8 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
     private Boolean _enableRecoveryInformationSaveToStore;
     /** Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk. */
     private Boolean _hideRecoveryOptions;
+    /** The OdataType property */
+    private String _odataType;
     /** BitLockerRecoveryInformationType types */
     private BitLockerRecoveryInformationType _recoveryInformationToStore;
     /** Possible values of the ConfigurationUsage list. */
@@ -32,6 +34,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     public BitLockerRecoveryOptions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bitLockerRecoveryOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,11 +85,12 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerRecoveryOptions currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("blockDataRecoveryAgent", (n) -> { currentObject.setBlockDataRecoveryAgent(n.getBooleanValue()); });
             this.put("enableBitLockerAfterRecoveryInformationToStore", (n) -> { currentObject.setEnableBitLockerAfterRecoveryInformationToStore(n.getBooleanValue()); });
             this.put("enableRecoveryInformationSaveToStore", (n) -> { currentObject.setEnableRecoveryInformationSaveToStore(n.getBooleanValue()); });
             this.put("hideRecoveryOptions", (n) -> { currentObject.setHideRecoveryOptions(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recoveryInformationToStore", (n) -> { currentObject.setRecoveryInformationToStore(n.getEnumValue(BitLockerRecoveryInformationType.class)); });
             this.put("recoveryKeyUsage", (n) -> { currentObject.setRecoveryKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
             this.put("recoveryPasswordUsage", (n) -> { currentObject.setRecoveryPasswordUsage(n.getEnumValue(ConfigurationUsage.class)); });
@@ -99,6 +103,14 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public Boolean getHideRecoveryOptions() {
         return this._hideRecoveryOptions;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types
@@ -135,6 +147,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
         writer.writeBooleanValue("enableBitLockerAfterRecoveryInformationToStore", this.getEnableBitLockerAfterRecoveryInformationToStore());
         writer.writeBooleanValue("enableRecoveryInformationSaveToStore", this.getEnableRecoveryInformationSaveToStore());
         writer.writeBooleanValue("hideRecoveryOptions", this.getHideRecoveryOptions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("recoveryInformationToStore", this.getRecoveryInformationToStore());
         writer.writeEnumValue("recoveryKeyUsage", this.getRecoveryKeyUsage());
         writer.writeEnumValue("recoveryPasswordUsage", this.getRecoveryPasswordUsage());
@@ -179,6 +192,14 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     public void setHideRecoveryOptions(@javax.annotation.Nullable final Boolean value) {
         this._hideRecoveryOptions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types

@@ -202,7 +202,7 @@ public class WindowsProtectionStateRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.managedDevices.item.windowsProtectionState.detectedMalwareState.item collection
      * @param id Unique identifier of the item
-     * @return a windowsDeviceMalwareStateItemRequestBuilder
+     * @return a WindowsDeviceMalwareStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDeviceMalwareStateItemRequestBuilder detectedMalwareState(@javax.annotation.Nonnull final String id) {

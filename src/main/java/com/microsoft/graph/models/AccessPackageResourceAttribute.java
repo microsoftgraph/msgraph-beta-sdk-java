@@ -23,12 +23,15 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
     private Boolean _isEditable;
     /** Specifies whether the attribute will remain in the end system after an assignment ends. */
     private Boolean _isPersistedOnAssignmentRemoval;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new accessPackageResourceAttribute and sets the default values.
      * @return a void
      */
     public AccessPackageResourceAttribute() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageResourceAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,13 +82,14 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResourceAttribute currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("attributeDestination", (n) -> { currentObject.setAttributeDestination(n.getObjectValue(AccessPackageResourceAttributeDestination::createFromDiscriminatorValue)); });
             this.put("attributeName", (n) -> { currentObject.setAttributeName(n.getStringValue()); });
             this.put("attributeSource", (n) -> { currentObject.setAttributeSource(n.getObjectValue(AccessPackageResourceAttributeSource::createFromDiscriminatorValue)); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isEditable", (n) -> { currentObject.setIsEditable(n.getBooleanValue()); });
             this.put("isPersistedOnAssignmentRemoval", (n) -> { currentObject.setIsPersistedOnAssignmentRemoval(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -113,6 +117,14 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
         return this._isPersistedOnAssignmentRemoval;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -125,6 +137,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isEditable", this.getIsEditable());
         writer.writeBooleanValue("isPersistedOnAssignmentRemoval", this.getIsPersistedOnAssignmentRemoval());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -182,5 +195,13 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      */
     public void setIsPersistedOnAssignmentRemoval(@javax.annotation.Nullable final Boolean value) {
         this._isPersistedOnAssignmentRemoval = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

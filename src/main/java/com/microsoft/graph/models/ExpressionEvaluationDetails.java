@@ -17,6 +17,8 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
     private java.util.List<ExpressionEvaluationDetails> _expressionEvaluationDetails;
     /** Represents the value of the result of the current expression. */
     private Boolean _expressionResult;
+    /** The OdataType property */
+    private String _odataType;
     /** Defines the name of the property and the value of that property. */
     private PropertyToEvaluate _propertyToEvaluate;
     /**
@@ -25,6 +27,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      */
     public ExpressionEvaluationDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.expressionEvaluationDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,12 +78,21 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExpressionEvaluationDetails currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
             this.put("expressionEvaluationDetails", (n) -> { currentObject.setExpressionEvaluationDetails(n.getCollectionOfObjectValues(ExpressionEvaluationDetails::createFromDiscriminatorValue)); });
             this.put("expressionResult", (n) -> { currentObject.setExpressionResult(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("propertyToEvaluate", (n) -> { currentObject.setPropertyToEvaluate(n.getObjectValue(PropertyToEvaluate::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the propertyToEvaluate property value. Defines the name of the property and the value of that property.
@@ -100,6 +112,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
         writer.writeStringValue("expression", this.getExpression());
         writer.writeCollectionOfObjectValues("expressionEvaluationDetails", this.getExpressionEvaluationDetails());
         writer.writeBooleanValue("expressionResult", this.getExpressionResult());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("propertyToEvaluate", this.getPropertyToEvaluate());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      */
     public void setExpressionResult(@javax.annotation.Nullable final Boolean value) {
         this._expressionResult = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the propertyToEvaluate property value. Defines the name of the property and the value of that property.

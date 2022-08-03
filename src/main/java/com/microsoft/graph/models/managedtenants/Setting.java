@@ -15,6 +15,8 @@ public class Setting implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The value for the setting serialized as string of JSON. Required. Read-only. */
     private String _jsonValue;
+    /** The OdataType property */
+    private String _odataType;
     /** A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only. */
     private Boolean _overwriteAllowed;
     /** The settingId property */
@@ -27,6 +29,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      */
     public Setting() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.setting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,9 +64,10 @@ public class Setting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Setting currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("jsonValue", (n) -> { currentObject.setJsonValue(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("overwriteAllowed", (n) -> { currentObject.setOverwriteAllowed(n.getBooleanValue()); });
             this.put("settingId", (n) -> { currentObject.setSettingId(n.getStringValue()); });
             this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
@@ -76,6 +80,14 @@ public class Setting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getJsonValue() {
         return this._jsonValue;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the overwriteAllowed property value. A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
@@ -110,6 +122,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("jsonValue", this.getJsonValue());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("overwriteAllowed", this.getOverwriteAllowed());
         writer.writeStringValue("settingId", this.getSettingId());
         writer.writeEnumValue("valueType", this.getValueType());
@@ -138,6 +151,14 @@ public class Setting implements AdditionalDataHolder, Parsable {
      */
     public void setJsonValue(@javax.annotation.Nullable final String value) {
         this._jsonValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the overwriteAllowed property value. A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.

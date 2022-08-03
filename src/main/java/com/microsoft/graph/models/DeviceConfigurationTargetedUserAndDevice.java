@@ -19,6 +19,8 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     private String _deviceName;
     /** Last checkin time for this user/device pair. */
     private OffsetDateTime _lastCheckinDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The display name of the user in the checkin */
     private String _userDisplayName;
     /** The id of the user in the checkin. */
@@ -31,6 +33,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      */
     public DeviceConfigurationTargetedUserAndDevice() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceConfigurationTargetedUserAndDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,10 +76,11 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationTargetedUserAndDevice currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("lastCheckinDateTime", (n) -> { currentObject.setLastCheckinDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
@@ -89,6 +93,14 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     @javax.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
         return this._lastCheckinDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userDisplayName property value. The display name of the user in the checkin
@@ -124,6 +136,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeOffsetDateTimeValue("lastCheckinDateTime", this.getLastCheckinDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
@@ -160,6 +173,14 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      */
     public void setLastCheckinDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCheckinDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userDisplayName property value. The display name of the user in the checkin

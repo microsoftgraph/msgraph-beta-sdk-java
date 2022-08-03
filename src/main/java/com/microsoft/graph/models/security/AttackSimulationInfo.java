@@ -13,20 +13,23 @@ import java.util.Objects;
 public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The attackSimDateTime property */
+    /** Specifies the date time of the attack simulation. */
     private OffsetDateTime _attackSimDateTime;
-    /** The attackSimDurationTime property */
+    /** Specifies the duration (in time) for the attack simulation */
     private Period _attackSimDurationTime;
-    /** The attackSimId property */
+    /** Specifies the activity id for the attack simulation. */
     private String _attackSimId;
-    /** The attackSimUserId property */
+    /** Specifies the user id of the user who got the attack simulation email */
     private String _attackSimUserId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new attackSimulationInfo and sets the default values.
      * @return a void
      */
     public AttackSimulationInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.attackSimulationInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +50,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the attackSimDateTime property value. The attackSimDateTime property
+     * Gets the attackSimDateTime property value. Specifies the date time of the attack simulation.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -55,7 +58,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         return this._attackSimDateTime;
     }
     /**
-     * Gets the attackSimDurationTime property value. The attackSimDurationTime property
+     * Gets the attackSimDurationTime property value. Specifies the duration (in time) for the attack simulation
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -63,7 +66,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         return this._attackSimDurationTime;
     }
     /**
-     * Gets the attackSimId property value. The attackSimId property
+     * Gets the attackSimId property value. Specifies the activity id for the attack simulation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +74,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         return this._attackSimId;
     }
     /**
-     * Gets the attackSimUserId property value. The attackSimUserId property
+     * Gets the attackSimUserId property value. Specifies the user id of the user who got the attack simulation email
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,12 +88,21 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("attackSimDateTime", (n) -> { currentObject.setAttackSimDateTime(n.getOffsetDateTimeValue()); });
             this.put("attackSimDurationTime", (n) -> { currentObject.setAttackSimDurationTime(n.getPeriodValue()); });
             this.put("attackSimId", (n) -> { currentObject.setAttackSimId(n.getStringValue()); });
             this.put("attackSimUserId", (n) -> { currentObject.setAttackSimUserId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -103,6 +115,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         writer.writePeriodValue("attackSimDurationTime", this.getAttackSimDurationTime());
         writer.writeStringValue("attackSimId", this.getAttackSimId());
         writer.writeStringValue("attackSimUserId", this.getAttackSimUserId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -114,7 +127,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the attackSimDateTime property value. The attackSimDateTime property
+     * Sets the attackSimDateTime property value. Specifies the date time of the attack simulation.
      * @param value Value to set for the attackSimDateTime property.
      * @return a void
      */
@@ -122,7 +135,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         this._attackSimDateTime = value;
     }
     /**
-     * Sets the attackSimDurationTime property value. The attackSimDurationTime property
+     * Sets the attackSimDurationTime property value. Specifies the duration (in time) for the attack simulation
      * @param value Value to set for the attackSimDurationTime property.
      * @return a void
      */
@@ -130,7 +143,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         this._attackSimDurationTime = value;
     }
     /**
-     * Sets the attackSimId property value. The attackSimId property
+     * Sets the attackSimId property value. Specifies the activity id for the attack simulation.
      * @param value Value to set for the attackSimId property.
      * @return a void
      */
@@ -138,11 +151,19 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
         this._attackSimId = value;
     }
     /**
-     * Sets the attackSimUserId property value. The attackSimUserId property
+     * Sets the attackSimUserId property value. Specifies the user id of the user who got the attack simulation email
      * @param value Value to set for the attackSimUserId property.
      * @return a void
      */
     public void setAttackSimUserId(@javax.annotation.Nullable final String value) {
         this._attackSimUserId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

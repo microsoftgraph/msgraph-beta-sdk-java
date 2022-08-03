@@ -20,6 +20,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
      */
     public Win32LobAppProductCodeDetection() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppProductCodeDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

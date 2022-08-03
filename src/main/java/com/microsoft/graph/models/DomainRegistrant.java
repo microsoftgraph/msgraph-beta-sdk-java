@@ -13,6 +13,8 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The countryOrRegionCode property */
     private String _countryOrRegionCode;
+    /** The OdataType property */
+    private String _odataType;
     /** The organization property */
     private String _organization;
     /** The url property */
@@ -25,6 +27,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     public DomainRegistrant() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.domainRegistrant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,21 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainRegistrant currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("countryOrRegionCode", (n) -> { currentObject.setCountryOrRegionCode(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("organization", (n) -> { currentObject.setOrganization(n.getStringValue()); });
             this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
             this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the organization property value. The organization property
@@ -98,6 +110,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("countryOrRegionCode", this.getCountryOrRegionCode());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("organization", this.getOrganization());
         writer.writeStringValue("url", this.getUrl());
         writer.writeStringValue("vendor", this.getVendor());
@@ -118,6 +131,14 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     public void setCountryOrRegionCode(@javax.annotation.Nullable final String value) {
         this._countryOrRegionCode = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the organization property value. The organization property

@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsFeatureUpdateProfile;
 import microsoft.graph.models.WindowsFeatureUpdateProfileCollectionResponse;
 /** Provides operations to manage the windowsFeatureUpdateProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsFeatureUpdateProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

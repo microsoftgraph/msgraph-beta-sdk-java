@@ -34,7 +34,7 @@ public class PublishedResourceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.publishedResources.item.agentGroups.item collection
      * @param id Unique identifier of the item
-     * @return a onPremisesAgentGroupItemRequestBuilder
+     * @return a OnPremisesAgentGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentGroupItemRequestBuilder agentGroups(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class PublishedResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new publishedResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PublishedResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PublishedResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class PublishedResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public PublishedResourceItemRequestBuilderGetQueryParameters queryParameters = new PublishedResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new publishedResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PublishedResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PublishedResourceItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class PublishedResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new publishedResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PublishedResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PublishedResourceItemRequestBuilderPatchRequestConfiguration() {

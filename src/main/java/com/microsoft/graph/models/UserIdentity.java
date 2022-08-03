@@ -18,7 +18,7 @@ public class UserIdentity extends Identity implements Parsable {
      */
     public UserIdentity() {
         super();
-        this.setType("#microsoft.graph.userIdentity");
+        this.setOdataType("#microsoft.graph.userIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      */
     public DeviceManagementConfigurationSimpleSettingDefinition() {
         super();
-        this.setType("#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition");
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

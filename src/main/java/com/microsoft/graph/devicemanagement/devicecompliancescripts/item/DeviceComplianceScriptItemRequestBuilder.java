@@ -53,7 +53,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceComplianceScripts.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceHealthScriptAssignmentItemRequestBuilder
+     * @return a DeviceHealthScriptAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceHealthScriptAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -233,7 +233,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceComplianceScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceScriptDeviceStateItemRequestBuilder
+     * @return a DeviceComplianceScriptDeviceStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceScriptDeviceStateItemRequestBuilder deviceRunStates(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceComplianceScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceComplianceScriptItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceComplianceScriptItemRequestBuilderDeleteRequestConfiguration() {
@@ -386,7 +386,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceComplianceScriptItemRequestBuilderGetQueryParameters queryParameters = new DeviceComplianceScriptItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceComplianceScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceComplianceScriptItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceComplianceScriptItemRequestBuilderGetRequestConfiguration() {
@@ -401,7 +401,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceComplianceScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceComplianceScriptItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceComplianceScriptItemRequestBuilderPatchRequestConfiguration() {

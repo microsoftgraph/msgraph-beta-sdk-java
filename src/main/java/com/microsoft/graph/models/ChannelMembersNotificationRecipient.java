@@ -18,6 +18,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     public ChannelMembersNotificationRecipient() {
         super();
+        this.setOdataType("#microsoft.graph.channelMembersNotificationRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

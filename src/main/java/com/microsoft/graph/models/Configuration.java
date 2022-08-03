@@ -15,12 +15,15 @@ public class Configuration implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _authorizedAppIds;
     /** The authorizedApps property */
     private java.util.List<String> _authorizedApps;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new configuration and sets the default values.
      * @return a void
      */
     public Configuration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.configuration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class Configuration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Configuration currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("authorizedAppIds", (n) -> { currentObject.setAuthorizedAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("authorizedApps", (n) -> { currentObject.setAuthorizedApps(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class Configuration implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("authorizedAppIds", this.getAuthorizedAppIds());
         writer.writeCollectionOfPrimitiveValues("authorizedApps", this.getAuthorizedApps());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class Configuration implements AdditionalDataHolder, Parsable {
      */
     public void setAuthorizedApps(@javax.annotation.Nullable final java.util.List<String> value) {
         this._authorizedApps = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

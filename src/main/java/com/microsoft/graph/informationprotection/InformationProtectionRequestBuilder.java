@@ -179,7 +179,7 @@ public class InformationProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.informationProtection.dataLossPreventionPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a dataLossPreventionPolicyItemRequestBuilder
+     * @return a DataLossPreventionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DataLossPreventionPolicyItemRequestBuilder dataLossPreventionPolicies(@javax.annotation.Nonnull final String id) {
@@ -297,7 +297,7 @@ public class InformationProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.informationProtection.sensitivityLabels.item collection
      * @param id Unique identifier of the item
-     * @return a sensitivityLabelItemRequestBuilder
+     * @return a SensitivityLabelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SensitivityLabelItemRequestBuilder sensitivityLabels(@javax.annotation.Nonnull final String id) {
@@ -309,7 +309,7 @@ public class InformationProtectionRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.informationProtection.threatAssessmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a threatAssessmentRequestItemRequestBuilder
+     * @return a ThreatAssessmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ThreatAssessmentRequestItemRequestBuilder threatAssessmentRequests(@javax.annotation.Nonnull final String id) {

@@ -15,12 +15,15 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, Parsable {
     private String _detail;
     /** If a conditional access session management policy required the user to authenticate in this sign-in event, this field describes the policy type that required authentication. The possible values are: rememberMultifactorAuthenticationOnTrustedDevices, tenantTokenLifetimePolicy, audienceTokenLifetimePolicy, signInFrequencyPeriodicReauthentication, ngcMfa, signInFrequencyEveryTime, unknownFutureValue. */
     private ExpirationRequirement _expirationRequirement;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new sessionLifetimePolicy and sets the default values.
      * @return a void
      */
     public SessionLifetimePolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sessionLifetimePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SessionLifetimePolicy currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getStringValue()); });
             this.put("expirationRequirement", (n) -> { currentObject.setExpirationRequirement(n.getEnumValue(ExpirationRequirement.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("detail", this.getDetail());
         writer.writeEnumValue("expirationRequirement", this.getExpirationRequirement());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, Parsable {
      */
     public void setExpirationRequirement(@javax.annotation.Nullable final ExpirationRequirement value) {
         this._expirationRequirement = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

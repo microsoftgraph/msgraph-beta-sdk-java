@@ -8,33 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
-    /** The customizedNotificationSenderEmailAddress property */
+    /** Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation. */
     private String _customizedNotificationSenderEmailAddress;
-    /** The customizedReportRecipientEmailAddress property */
+    /** Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation. */
     private String _customizedReportRecipientEmailAddress;
-    /** The isAlwaysReportEnabledForUsers property */
+    /** Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation. */
     private Boolean _isAlwaysReportEnabledForUsers;
-    /** The isAskMeEnabledForUsers property */
+    /** Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation. */
     private Boolean _isAskMeEnabledForUsers;
-    /** The isCustomizedMessageEnabled property */
+    /** Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation. */
     private Boolean _isCustomizedMessageEnabled;
-    /** The isCustomizedMessageEnabledForPhishing property */
+    /** If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation. */
     private Boolean _isCustomizedMessageEnabledForPhishing;
-    /** The isCustomizedNotificationSenderEnabled property */
+    /** Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation. */
     private Boolean _isCustomizedNotificationSenderEnabled;
-    /** The isNeverReportEnabledForUsers property */
+    /** Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation. */
     private Boolean _isNeverReportEnabledForUsers;
-    /** The isOrganizationBrandingEnabled property */
+    /** Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation. */
     private Boolean _isOrganizationBrandingEnabled;
-    /** The isReportFromQuarantineEnabled property */
+    /** Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation. */
     private Boolean _isReportFromQuarantineEnabled;
-    /** The isReportToCustomizedEmailAddressEnabled property */
+    /** Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation. */
     private Boolean _isReportToCustomizedEmailAddressEnabled;
-    /** The isReportToMicrosoftEnabled property */
+    /** If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation. */
     private Boolean _isReportToMicrosoftEnabled;
-    /** The isReviewEmailNotificationEnabled property */
+    /** Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation. */
     private Boolean _isReviewEmailNotificationEnabled;
     /**
      * Instantiates a new emailThreatSubmissionPolicy and sets the default values.
@@ -42,6 +42,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      */
     public EmailThreatSubmissionPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.security.emailThreatSubmissionPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +55,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return new EmailThreatSubmissionPolicy();
     }
     /**
-     * Gets the customizedNotificationSenderEmailAddress property value. The customizedNotificationSenderEmailAddress property
+     * Gets the customizedNotificationSenderEmailAddress property value. Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +63,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._customizedNotificationSenderEmailAddress;
     }
     /**
-     * Gets the customizedReportRecipientEmailAddress property value. The customizedReportRecipientEmailAddress property
+     * Gets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -93,7 +94,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the isAlwaysReportEnabledForUsers property value. The isAlwaysReportEnabledForUsers property
+     * Gets the isAlwaysReportEnabledForUsers property value. Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -101,7 +102,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isAlwaysReportEnabledForUsers;
     }
     /**
-     * Gets the isAskMeEnabledForUsers property value. The isAskMeEnabledForUsers property
+     * Gets the isAskMeEnabledForUsers property value. Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -109,7 +110,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isAskMeEnabledForUsers;
     }
     /**
-     * Gets the isCustomizedMessageEnabled property value. The isCustomizedMessageEnabled property
+     * Gets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -117,7 +118,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isCustomizedMessageEnabled;
     }
     /**
-     * Gets the isCustomizedMessageEnabledForPhishing property value. The isCustomizedMessageEnabledForPhishing property
+     * Gets the isCustomizedMessageEnabledForPhishing property value. If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -125,7 +126,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isCustomizedMessageEnabledForPhishing;
     }
     /**
-     * Gets the isCustomizedNotificationSenderEnabled property value. The isCustomizedNotificationSenderEnabled property
+     * Gets the isCustomizedNotificationSenderEnabled property value. Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -133,7 +134,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isCustomizedNotificationSenderEnabled;
     }
     /**
-     * Gets the isNeverReportEnabledForUsers property value. The isNeverReportEnabledForUsers property
+     * Gets the isNeverReportEnabledForUsers property value. Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -141,7 +142,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isNeverReportEnabledForUsers;
     }
     /**
-     * Gets the isOrganizationBrandingEnabled property value. The isOrganizationBrandingEnabled property
+     * Gets the isOrganizationBrandingEnabled property value. Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -149,7 +150,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isOrganizationBrandingEnabled;
     }
     /**
-     * Gets the isReportFromQuarantineEnabled property value. The isReportFromQuarantineEnabled property
+     * Gets the isReportFromQuarantineEnabled property value. Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -157,7 +158,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isReportFromQuarantineEnabled;
     }
     /**
-     * Gets the isReportToCustomizedEmailAddressEnabled property value. The isReportToCustomizedEmailAddressEnabled property
+     * Gets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -165,7 +166,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isReportToCustomizedEmailAddressEnabled;
     }
     /**
-     * Gets the isReportToMicrosoftEnabled property value. The isReportToMicrosoftEnabled property
+     * Gets the isReportToMicrosoftEnabled property value. If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -173,7 +174,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         return this._isReportToMicrosoftEnabled;
     }
     /**
-     * Gets the isReviewEmailNotificationEnabled property value. The isReviewEmailNotificationEnabled property
+     * Gets the isReviewEmailNotificationEnabled property value. Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -203,7 +204,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         writer.writeBooleanValue("isReviewEmailNotificationEnabled", this.getIsReviewEmailNotificationEnabled());
     }
     /**
-     * Sets the customizedNotificationSenderEmailAddress property value. The customizedNotificationSenderEmailAddress property
+     * Sets the customizedNotificationSenderEmailAddress property value. Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation.
      * @param value Value to set for the customizedNotificationSenderEmailAddress property.
      * @return a void
      */
@@ -211,7 +212,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._customizedNotificationSenderEmailAddress = value;
     }
     /**
-     * Sets the customizedReportRecipientEmailAddress property value. The customizedReportRecipientEmailAddress property
+     * Sets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
      * @param value Value to set for the customizedReportRecipientEmailAddress property.
      * @return a void
      */
@@ -219,7 +220,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._customizedReportRecipientEmailAddress = value;
     }
     /**
-     * Sets the isAlwaysReportEnabledForUsers property value. The isAlwaysReportEnabledForUsers property
+     * Sets the isAlwaysReportEnabledForUsers property value. Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation.
      * @param value Value to set for the isAlwaysReportEnabledForUsers property.
      * @return a void
      */
@@ -227,7 +228,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isAlwaysReportEnabledForUsers = value;
     }
     /**
-     * Sets the isAskMeEnabledForUsers property value. The isAskMeEnabledForUsers property
+     * Sets the isAskMeEnabledForUsers property value. Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation.
      * @param value Value to set for the isAskMeEnabledForUsers property.
      * @return a void
      */
@@ -235,7 +236,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isAskMeEnabledForUsers = value;
     }
     /**
-     * Sets the isCustomizedMessageEnabled property value. The isCustomizedMessageEnabled property
+     * Sets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
      * @param value Value to set for the isCustomizedMessageEnabled property.
      * @return a void
      */
@@ -243,7 +244,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isCustomizedMessageEnabled = value;
     }
     /**
-     * Sets the isCustomizedMessageEnabledForPhishing property value. The isCustomizedMessageEnabledForPhishing property
+     * Sets the isCustomizedMessageEnabledForPhishing property value. If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation.
      * @param value Value to set for the isCustomizedMessageEnabledForPhishing property.
      * @return a void
      */
@@ -251,7 +252,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isCustomizedMessageEnabledForPhishing = value;
     }
     /**
-     * Sets the isCustomizedNotificationSenderEnabled property value. The isCustomizedNotificationSenderEnabled property
+     * Sets the isCustomizedNotificationSenderEnabled property value. Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation.
      * @param value Value to set for the isCustomizedNotificationSenderEnabled property.
      * @return a void
      */
@@ -259,7 +260,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isCustomizedNotificationSenderEnabled = value;
     }
     /**
-     * Sets the isNeverReportEnabledForUsers property value. The isNeverReportEnabledForUsers property
+     * Sets the isNeverReportEnabledForUsers property value. Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
      * @param value Value to set for the isNeverReportEnabledForUsers property.
      * @return a void
      */
@@ -267,7 +268,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isNeverReportEnabledForUsers = value;
     }
     /**
-     * Sets the isOrganizationBrandingEnabled property value. The isOrganizationBrandingEnabled property
+     * Sets the isOrganizationBrandingEnabled property value. Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation.
      * @param value Value to set for the isOrganizationBrandingEnabled property.
      * @return a void
      */
@@ -275,7 +276,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isOrganizationBrandingEnabled = value;
     }
     /**
-     * Sets the isReportFromQuarantineEnabled property value. The isReportFromQuarantineEnabled property
+     * Sets the isReportFromQuarantineEnabled property value. Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation.
      * @param value Value to set for the isReportFromQuarantineEnabled property.
      * @return a void
      */
@@ -283,7 +284,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isReportFromQuarantineEnabled = value;
     }
     /**
-     * Sets the isReportToCustomizedEmailAddressEnabled property value. The isReportToCustomizedEmailAddressEnabled property
+     * Sets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
      * @param value Value to set for the isReportToCustomizedEmailAddressEnabled property.
      * @return a void
      */
@@ -291,7 +292,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isReportToCustomizedEmailAddressEnabled = value;
     }
     /**
-     * Sets the isReportToMicrosoftEnabled property value. The isReportToMicrosoftEnabled property
+     * Sets the isReportToMicrosoftEnabled property value. If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
      * @param value Value to set for the isReportToMicrosoftEnabled property.
      * @return a void
      */
@@ -299,7 +300,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
         this._isReportToMicrosoftEnabled = value;
     }
     /**
-     * Sets the isReviewEmailNotificationEnabled property value. The isReviewEmailNotificationEnabled property
+     * Sets the isReviewEmailNotificationEnabled property value. Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation.
      * @param value Value to set for the isReviewEmailNotificationEnabled property.
      * @return a void
      */

@@ -21,7 +21,7 @@ import microsoft.graph.models.DeviceManagementTemplateCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the templates property of the microsoft.graph.deviceManagement entity. */
 public class TemplatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -312,7 +312,7 @@ public class AuthenticationMethodsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.reports.authenticationMethods.userRegistrationDetails.item collection
      * @param id Unique identifier of the item
-     * @return a userRegistrationDetailsItemRequestBuilder
+     * @return a UserRegistrationDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserRegistrationDetailsItemRequestBuilder userRegistrationDetails(@javax.annotation.Nonnull final String id) {

@@ -307,7 +307,7 @@ public class AuditEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new auditEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AuditEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuditEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AuditEventItemRequestBuilder {
         @javax.annotation.Nullable
         public AuditEventItemRequestBuilderGetQueryParameters queryParameters = new AuditEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new auditEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AuditEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuditEventItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AuditEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new auditEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AuditEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuditEventItemRequestBuilderPatchRequestConfiguration() {

@@ -80,7 +80,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.connectors.item collection
      * @param id Unique identifier of the item
-     * @return a printConnectorItemRequestBuilder
+     * @return a PrintConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintConnectorItemRequestBuilder connectors(@javax.annotation.Nonnull final String id) {
@@ -232,7 +232,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.operations.item collection
      * @param id Unique identifier of the item
-     * @return a printOperationItemRequestBuilder
+     * @return a PrintOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -299,7 +299,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.printers.item collection
      * @param id Unique identifier of the item
-     * @return a printerItemRequestBuilder
+     * @return a PrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrinterItemRequestBuilder printers(@javax.annotation.Nonnull final String id) {
@@ -311,7 +311,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.printerShares.item collection
      * @param id Unique identifier of the item
-     * @return a printerShareItemRequestBuilder
+     * @return a PrinterShareItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.printershares.item.PrinterShareItemRequestBuilder printerShares(@javax.annotation.Nonnull final String id) {
@@ -323,7 +323,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.services.item collection
      * @param id Unique identifier of the item
-     * @return a printServiceItemRequestBuilder
+     * @return a PrintServiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintServiceItemRequestBuilder services(@javax.annotation.Nonnull final String id) {
@@ -335,7 +335,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.shares.item collection
      * @param id Unique identifier of the item
-     * @return a printerShareItemRequestBuilder
+     * @return a PrinterShareItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.print.shares.item.PrinterShareItemRequestBuilder shares(@javax.annotation.Nonnull final String id) {
@@ -347,7 +347,7 @@ public class PrintRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.taskDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a printTaskDefinitionItemRequestBuilder
+     * @return a PrintTaskDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintTaskDefinitionItemRequestBuilder taskDefinitions(@javax.annotation.Nonnull final String id) {

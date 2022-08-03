@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class LinkedResource_v2 extends Entity implements Parsable {
     /** Field indicating the app name of the source that is sending the linkedResource. */
     private String _applicationName;
@@ -23,6 +23,7 @@ public class LinkedResource_v2 extends Entity implements Parsable {
      */
     public LinkedResource_v2() {
         super();
+        this.setOdataType("#microsoft.graph.linkedResource_v2");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

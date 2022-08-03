@@ -20,6 +20,7 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
      */
     public MobileAppTroubleshootingAppTargetHistory() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingAppTargetHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

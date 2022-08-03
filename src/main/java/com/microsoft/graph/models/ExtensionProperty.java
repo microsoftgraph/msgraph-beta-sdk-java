@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ExtensionProperty extends DirectoryObject implements Parsable {
     /** Display name of the application object on which this extension property is defined. Read-only. */
     private String _appDisplayName;
@@ -17,7 +17,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     private Boolean _isSyncedFromOnPremises;
     /** Name of the extension property. Not nullable. */
     private String _name;
-    /** Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication */
+    /** Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization */
     private java.util.List<String> _targetObjects;
     /**
      * Instantiates a new extensionProperty and sets the default values.
@@ -25,6 +25,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     public ExtensionProperty() {
         super();
+        this.setOdataType("#microsoft.graph.extensionProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,7 +85,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         return this._name;
     }
     /**
-     * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      * @return a string
      */
     @javax.annotation.Nullable
@@ -138,7 +139,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      * @param value Value to set for the targetObjects property.
      * @return a void
      */

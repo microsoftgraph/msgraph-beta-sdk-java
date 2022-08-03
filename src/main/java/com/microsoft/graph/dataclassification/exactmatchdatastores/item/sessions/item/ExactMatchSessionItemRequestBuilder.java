@@ -331,7 +331,7 @@ public class ExactMatchSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new exactMatchSessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchSessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchSessionItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class ExactMatchSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public ExactMatchSessionItemRequestBuilderGetQueryParameters queryParameters = new ExactMatchSessionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new exactMatchSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchSessionItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class ExactMatchSessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new exactMatchSessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExactMatchSessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExactMatchSessionItemRequestBuilderPatchRequestConfiguration() {

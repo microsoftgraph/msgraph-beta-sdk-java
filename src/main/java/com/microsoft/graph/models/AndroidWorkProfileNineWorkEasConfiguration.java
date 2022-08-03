@@ -20,6 +20,7 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      */
     public AndroidWorkProfileNineWorkEasConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidWorkProfileNineWorkEasConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

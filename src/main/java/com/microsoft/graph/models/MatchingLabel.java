@@ -25,6 +25,8 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     private java.util.List<LabelActionBase> _labelActions;
     /** The name property */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The policyTip property */
     private String _policyTip;
     /** The priority property */
@@ -37,6 +39,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     public MatchingLabel() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.matchingLabel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,7 +90,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MatchingLabel currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -95,6 +98,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
             this.put("isEndpointProtectionEnabled", (n) -> { currentObject.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
             this.put("labelActions", (n) -> { currentObject.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policyTip", (n) -> { currentObject.setPolicyTip(n.getStringValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
             this.put("toolTip", (n) -> { currentObject.setToolTip(n.getStringValue()); });
@@ -131,6 +135,14 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the policyTip property value. The policyTip property
@@ -170,6 +182,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isEndpointProtectionEnabled", this.getIsEndpointProtectionEnabled());
         writer.writeCollectionOfObjectValues("labelActions", this.getLabelActions());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("policyTip", this.getPolicyTip());
         writer.writeIntegerValue("priority", this.getPriority());
         writer.writeStringValue("toolTip", this.getToolTip());
@@ -238,6 +251,14 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the policyTip property value. The policyTip property

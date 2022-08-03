@@ -314,7 +314,7 @@ public class ItemItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.items.item.picture.item collection
      * @param id Unique identifier of the item
-     * @return a pictureItemRequestBuilder
+     * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class ItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class ItemItemRequestBuilder {
         @javax.annotation.Nullable
         public ItemItemRequestBuilderGetQueryParameters queryParameters = new ItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new itemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class ItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new itemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ItemItemRequestBuilderPatchRequestConfiguration() {

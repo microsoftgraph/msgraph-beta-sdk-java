@@ -307,7 +307,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsDriverUpdateInventoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDriverUpdateInventoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDriverUpdateInventoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsDriverUpdateInventoryItemRequestBuilderGetQueryParameters queryParameters = new WindowsDriverUpdateInventoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsDriverUpdateInventoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDriverUpdateInventoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDriverUpdateInventoryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsDriverUpdateInventoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDriverUpdateInventoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDriverUpdateInventoryItemRequestBuilderPatchRequestConfiguration() {

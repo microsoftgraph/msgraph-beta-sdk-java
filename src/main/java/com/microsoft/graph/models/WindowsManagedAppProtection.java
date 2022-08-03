@@ -63,6 +63,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      */
     public WindowsManagedAppProtection() {
         super();
+        this.setOdataType("#microsoft.graph.windowsManagedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

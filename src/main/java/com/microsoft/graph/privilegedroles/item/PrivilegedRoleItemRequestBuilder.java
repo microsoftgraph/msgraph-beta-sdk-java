@@ -58,7 +58,7 @@ public class PrivilegedRoleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privilegedRoles.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a privilegedRoleAssignmentItemRequestBuilder
+     * @return a PrivilegedRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrivilegedRoleAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class PrivilegedRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedRoleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleItemRequestBuilderDeleteRequestConfiguration() {
@@ -379,7 +379,7 @@ public class PrivilegedRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedRoleItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedRoleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleItemRequestBuilderGetRequestConfiguration() {
@@ -394,7 +394,7 @@ public class PrivilegedRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedRoleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedRoleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedRoleItemRequestBuilderPatchRequestConfiguration() {

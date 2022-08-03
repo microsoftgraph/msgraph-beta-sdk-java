@@ -307,7 +307,7 @@ public class NdesConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ndesConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new NdesConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public NdesConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class NdesConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public NdesConnectorItemRequestBuilderGetQueryParameters queryParameters = new NdesConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ndesConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NdesConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NdesConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class NdesConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ndesConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new NdesConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public NdesConnectorItemRequestBuilderPatchRequestConfiguration() {

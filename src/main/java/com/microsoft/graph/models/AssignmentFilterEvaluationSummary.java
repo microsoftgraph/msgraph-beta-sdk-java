@@ -29,12 +29,15 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     private OffsetDateTime _evaluationDateTime;
     /** Supported evaluation results for filter. */
     private AssignmentFilterEvaluationResult _evaluationResult;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new assignmentFilterEvaluationSummary and sets the default values.
      * @return a void
      */
     public AssignmentFilterEvaluationSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.assignmentFilterEvaluationSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -125,7 +128,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluationSummary currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("assignmentFilterDisplayName", (n) -> { currentObject.setAssignmentFilterDisplayName(n.getStringValue()); });
             this.put("assignmentFilterId", (n) -> { currentObject.setAssignmentFilterId(n.getStringValue()); });
             this.put("assignmentFilterLastModifiedDateTime", (n) -> { currentObject.setAssignmentFilterLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -134,7 +137,16 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
             this.put("assignmentFilterTypeAndEvaluationResults", (n) -> { currentObject.setAssignmentFilterTypeAndEvaluationResults(n.getCollectionOfObjectValues(AssignmentFilterTypeAndEvaluationResult::createFromDiscriminatorValue)); });
             this.put("evaluationDateTime", (n) -> { currentObject.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
             this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -151,6 +163,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
         writer.writeCollectionOfObjectValues("assignmentFilterTypeAndEvaluationResults", this.getAssignmentFilterTypeAndEvaluationResults());
         writer.writeOffsetDateTimeValue("evaluationDateTime", this.getEvaluationDateTime());
         writer.writeEnumValue("evaluationResult", this.getEvaluationResult());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -224,5 +237,13 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     public void setEvaluationResult(@javax.annotation.Nullable final AssignmentFilterEvaluationResult value) {
         this._evaluationResult = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

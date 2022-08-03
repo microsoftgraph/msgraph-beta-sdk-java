@@ -69,14 +69,19 @@ public class OnlineMeeting extends Entity implements Parsable {
     private OffsetDateTime _startDateTime;
     /** The subject of the online meeting. */
     private String _subject;
+    /** The transcripts of an online meeting. Read-only. */
+    private java.util.List<CallTranscript> _transcripts;
     /** The video teleconferencing ID. Read-only. */
     private String _videoTeleconferenceId;
+    /** The virtualAppointment property */
+    private VirtualAppointment _virtualAppointment;
     /**
      * Instantiates a new OnlineMeeting and sets the default values.
      * @return a void
      */
     public OnlineMeeting() {
         super();
+        this.setOdataType("#microsoft.graph.onlineMeeting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -254,7 +259,9 @@ public class OnlineMeeting extends Entity implements Parsable {
             this.put("registration", (n) -> { currentObject.setRegistration(n.getObjectValue(MeetingRegistration::createFromDiscriminatorValue)); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
+            this.put("transcripts", (n) -> { currentObject.setTranscripts(n.getCollectionOfObjectValues(CallTranscript::createFromDiscriminatorValue)); });
             this.put("videoTeleconferenceId", (n) -> { currentObject.setVideoTeleconferenceId(n.getStringValue()); });
+            this.put("virtualAppointment", (n) -> { currentObject.setVirtualAppointment(n.getObjectValue(VirtualAppointment::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -370,12 +377,28 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._subject;
     }
     /**
+     * Gets the transcripts property value. The transcripts of an online meeting. Read-only.
+     * @return a callTranscript
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CallTranscript> getTranscripts() {
+        return this._transcripts;
+    }
+    /**
      * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getVideoTeleconferenceId() {
         return this._videoTeleconferenceId;
+    }
+    /**
+     * Gets the virtualAppointment property value. The virtualAppointment property
+     * @return a virtualAppointment
+     */
+    @javax.annotation.Nullable
+    public VirtualAppointment getVirtualAppointment() {
+        return this._virtualAppointment;
     }
     /**
      * Serializes information the current object
@@ -415,7 +438,9 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeObjectValue("registration", this.getRegistration());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("subject", this.getSubject());
+        writer.writeCollectionOfObjectValues("transcripts", this.getTranscripts());
         writer.writeStringValue("videoTeleconferenceId", this.getVideoTeleconferenceId());
+        writer.writeObjectValue("virtualAppointment", this.getVirtualAppointment());
     }
     /**
      * Sets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
@@ -658,11 +683,27 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._subject = value;
     }
     /**
+     * Sets the transcripts property value. The transcripts of an online meeting. Read-only.
+     * @param value Value to set for the transcripts property.
+     * @return a void
+     */
+    public void setTranscripts(@javax.annotation.Nullable final java.util.List<CallTranscript> value) {
+        this._transcripts = value;
+    }
+    /**
      * Sets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @param value Value to set for the videoTeleconferenceId property.
      * @return a void
      */
     public void setVideoTeleconferenceId(@javax.annotation.Nullable final String value) {
         this._videoTeleconferenceId = value;
+    }
+    /**
+     * Sets the virtualAppointment property value. The virtualAppointment property
+     * @param value Value to set for the virtualAppointment property.
+     * @return a void
+     */
+    public void setVirtualAppointment(@javax.annotation.Nullable final VirtualAppointment value) {
+        this._virtualAppointment = value;
     }
 }

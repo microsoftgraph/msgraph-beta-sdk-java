@@ -328,7 +328,7 @@ public class EnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new enrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnrollmentProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -357,7 +357,7 @@ public class EnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public EnrollmentProfileItemRequestBuilderGetQueryParameters queryParameters = new EnrollmentProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new enrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnrollmentProfileItemRequestBuilderGetRequestConfiguration() {
@@ -372,7 +372,7 @@ public class EnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new enrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnrollmentProfileItemRequestBuilderPatchRequestConfiguration() {

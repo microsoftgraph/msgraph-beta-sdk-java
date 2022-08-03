@@ -29,6 +29,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     public DeviceManagementIntentDeviceSettingStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntentDeviceSettingStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

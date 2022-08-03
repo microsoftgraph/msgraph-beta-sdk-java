@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /** Indicates whether this is the user's default section. Read-only. */
     private Boolean _isDefault;
@@ -27,6 +27,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     public OnenoteSection() {
         super();
+        this.setOdataType("#microsoft.graph.onenoteSection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

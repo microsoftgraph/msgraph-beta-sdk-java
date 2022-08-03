@@ -41,7 +41,7 @@ public class ConnectorGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.applications.item collection
      * @param id Unique identifier of the item
-     * @return a applicationItemRequestBuilder
+     * @return a ApplicationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApplicationItemRequestBuilder applications(@javax.annotation.Nonnull final String id) {
@@ -272,7 +272,7 @@ public class ConnectorGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a connectorItemRequestBuilder
+     * @return a ConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectorItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class ConnectorGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectorGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectorGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectorGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class ConnectorGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public ConnectorGroupItemRequestBuilderGetQueryParameters queryParameters = new ConnectorGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new connectorGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectorGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectorGroupItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class ConnectorGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectorGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectorGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectorGroupItemRequestBuilderPatchRequestConfiguration() {

@@ -16,6 +16,8 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     private String _error;
     /** Indicate whether a payload has any link or not. */
     private Boolean _hasLink;
+    /** The OdataType property */
+    private String _odataType;
     /** Key of the Payload, In the format of Guid. */
     private String _payloadId;
     /** The reason where the link comes from. */
@@ -26,6 +28,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      */
     public HasPayloadLinkResultItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.hasPayloadLinkResultItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,9 +63,10 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HasPayloadLinkResultItem currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
             this.put("hasLink", (n) -> { currentObject.setHasLink(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
             this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
@@ -74,6 +78,14 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public Boolean getHasLink() {
         return this._hasLink;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the payloadId property value. Key of the Payload, In the format of Guid.
@@ -100,6 +112,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeStringValue("error", this.getError());
         writer.writeBooleanValue("hasLink", this.getHasLink());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("payloadId", this.getPayloadId());
         writer.writeCollectionOfPrimitiveValues("sources", this.getSources());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +140,14 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      */
     public void setHasLink(@javax.annotation.Nullable final Boolean value) {
         this._hasLink = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the payloadId property value. Key of the Payload, In the format of Guid.

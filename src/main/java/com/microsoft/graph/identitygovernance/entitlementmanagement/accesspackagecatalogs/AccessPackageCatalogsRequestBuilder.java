@@ -21,7 +21,7 @@ import microsoft.graph.models.AccessPackageCatalogCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageCatalogs property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageCatalogsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -50,6 +50,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      */
     public OutlookTask() {
         super();
+        this.setOdataType("#microsoft.graph.outlookTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

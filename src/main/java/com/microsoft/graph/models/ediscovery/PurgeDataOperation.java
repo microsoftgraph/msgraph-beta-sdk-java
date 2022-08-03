@@ -14,6 +14,7 @@ public class PurgeDataOperation extends CaseOperation implements Parsable {
      */
     public PurgeDataOperation() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.purgeDataOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

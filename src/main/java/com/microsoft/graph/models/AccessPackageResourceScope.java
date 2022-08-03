@@ -31,6 +31,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      */
     public AccessPackageResourceScope() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageResourceScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

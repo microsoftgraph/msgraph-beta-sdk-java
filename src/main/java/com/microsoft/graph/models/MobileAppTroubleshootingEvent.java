@@ -24,6 +24,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     public MobileAppTroubleshootingEvent() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

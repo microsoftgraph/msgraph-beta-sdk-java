@@ -23,6 +23,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
     private Boolean _isDhcpEnabled;
     /** True if the PC port is enabled. */
     private Boolean _isPCPortEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** A primary DNS is the first point of contact for a device that translates the hostname into an IP address. */
     private String _primaryDns;
     /** A secondary DNS is used when the primary DNS is not available. */
@@ -35,6 +37,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      */
     public TeamworkNetworkConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkNetworkConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +80,14 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkNetworkConfiguration currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("defaultGateway", (n) -> { currentObject.setDefaultGateway(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
             this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
             this.put("isDhcpEnabled", (n) -> { currentObject.setIsDhcpEnabled(n.getBooleanValue()); });
             this.put("isPCPortEnabled", (n) -> { currentObject.setIsPCPortEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("primaryDns", (n) -> { currentObject.setPrimaryDns(n.getStringValue()); });
             this.put("secondaryDns", (n) -> { currentObject.setSecondaryDns(n.getStringValue()); });
             this.put("subnetMask", (n) -> { currentObject.setSubnetMask(n.getStringValue()); });
@@ -122,6 +126,14 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
         return this._isPCPortEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the primaryDns property value. A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
      * @return a string
      */
@@ -158,6 +170,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeBooleanValue("isDhcpEnabled", this.getIsDhcpEnabled());
         writer.writeBooleanValue("isPCPortEnabled", this.getIsPCPortEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("primaryDns", this.getPrimaryDns());
         writer.writeStringValue("secondaryDns", this.getSecondaryDns());
         writer.writeStringValue("subnetMask", this.getSubnetMask());
@@ -218,6 +231,14 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      */
     public void setIsPCPortEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isPCPortEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the primaryDns property value. A primary DNS is the first point of contact for a device that translates the hostname into an IP address.

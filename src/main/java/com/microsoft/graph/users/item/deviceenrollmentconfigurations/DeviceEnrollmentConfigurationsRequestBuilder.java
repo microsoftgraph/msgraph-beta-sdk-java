@@ -22,7 +22,7 @@ import microsoft.graph.users.item.deviceenrollmentconfigurations.createenrollmen
 import microsoft.graph.users.item.deviceenrollmentconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity. */
 public class DeviceEnrollmentConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

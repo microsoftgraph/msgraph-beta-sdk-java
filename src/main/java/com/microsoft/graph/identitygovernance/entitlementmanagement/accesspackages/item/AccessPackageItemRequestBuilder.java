@@ -72,7 +72,7 @@ public class AccessPackageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.accessPackageAssignmentPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentPolicyItemRequestBuilder
+     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentPolicyItemRequestBuilder accessPackageAssignmentPolicies(@javax.annotation.Nonnull final String id) {
@@ -84,7 +84,7 @@ public class AccessPackageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.accessPackageResourceRoleScopes.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageResourceRoleScopeItemRequestBuilder
+     * @return a AccessPackageResourceRoleScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleScopeItemRequestBuilder accessPackageResourceRoleScopes(@javax.annotation.Nonnull final String id) {
@@ -96,7 +96,7 @@ public class AccessPackageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.accessPackagesIncompatibleWith.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder accessPackagesIncompatibleWith(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class AccessPackageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.incompatibleAccessPackages.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder incompatibleAccessPackages(@javax.annotation.Nonnull final String id) {
@@ -339,7 +339,7 @@ public class AccessPackageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.incompatibleGroups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder incompatibleGroups(@javax.annotation.Nonnull final String id) {
@@ -412,7 +412,7 @@ public class AccessPackageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageItemRequestBuilderDeleteRequestConfiguration() {
@@ -441,7 +441,7 @@ public class AccessPackageItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageItemRequestBuilderGetRequestConfiguration() {
@@ -456,7 +456,7 @@ public class AccessPackageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageItemRequestBuilderPatchRequestConfiguration() {

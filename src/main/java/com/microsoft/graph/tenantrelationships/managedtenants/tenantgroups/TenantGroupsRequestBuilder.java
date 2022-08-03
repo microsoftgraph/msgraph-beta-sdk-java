@@ -21,7 +21,7 @@ import microsoft.graph.tenantrelationships.managedtenants.tenantgroups.count.Cou
 import microsoft.graph.tenantrelationships.managedtenants.tenantgroups.tenantsearch.TenantSearchRequestBuilder;
 /** Provides operations to manage the tenantGroups property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class TenantGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

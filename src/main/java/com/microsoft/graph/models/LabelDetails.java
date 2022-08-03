@@ -14,6 +14,7 @@ public class LabelDetails extends ParentLabelDetails implements Parsable {
      */
     public LabelDetails() {
         super();
+        this.setOdataType("#microsoft.graph.labelDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

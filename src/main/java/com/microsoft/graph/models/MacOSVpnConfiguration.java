@@ -16,6 +16,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      */
     public MacOSVpnConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSVpnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

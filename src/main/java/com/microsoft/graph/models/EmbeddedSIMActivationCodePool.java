@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A pool represents a group of embedded SIM activation codes. */
 public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /** The total count of activation codes which belong to this pool. */
     private Integer _activationCodeCount;
@@ -24,16 +25,17 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /** The time the embedded SIM activation code pool was last modified. Updated service side. */
     private OffsetDateTime _modifiedDateTime;
     /**
-     * Instantiates a new EmbeddedSIMActivationCodePool and sets the default values.
+     * Instantiates a new embeddedSIMActivationCodePool and sets the default values.
      * @return a void
      */
     public EmbeddedSIMActivationCodePool() {
         super();
+        this.setOdataType("#microsoft.graph.embeddedSIMActivationCodePool");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmbeddedSIMActivationCodePool
+     * @return a embeddedSIMActivationCodePool
      */
     @javax.annotation.Nonnull
     public static EmbeddedSIMActivationCodePool createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

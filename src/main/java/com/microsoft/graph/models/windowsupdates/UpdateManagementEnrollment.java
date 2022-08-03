@@ -16,6 +16,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      */
     public UpdateManagementEnrollment() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.updateManagementEnrollment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

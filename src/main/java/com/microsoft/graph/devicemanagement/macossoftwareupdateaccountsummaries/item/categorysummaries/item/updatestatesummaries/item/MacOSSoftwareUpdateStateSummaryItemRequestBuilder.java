@@ -307,7 +307,7 @@ public class MacOSSoftwareUpdateStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new macOSSoftwareUpdateStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MacOSSoftwareUpdateStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MacOSSoftwareUpdateStateSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MacOSSoftwareUpdateStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public MacOSSoftwareUpdateStateSummaryItemRequestBuilderGetQueryParameters queryParameters = new MacOSSoftwareUpdateStateSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new macOSSoftwareUpdateStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MacOSSoftwareUpdateStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MacOSSoftwareUpdateStateSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MacOSSoftwareUpdateStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new macOSSoftwareUpdateStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MacOSSoftwareUpdateStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MacOSSoftwareUpdateStateSummaryItemRequestBuilderPatchRequestConfiguration() {

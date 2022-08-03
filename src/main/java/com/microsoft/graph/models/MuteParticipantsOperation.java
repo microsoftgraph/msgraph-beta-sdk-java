@@ -16,6 +16,7 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
      */
     public MuteParticipantsOperation() {
         super();
+        this.setOdataType("#microsoft.graph.muteParticipantsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

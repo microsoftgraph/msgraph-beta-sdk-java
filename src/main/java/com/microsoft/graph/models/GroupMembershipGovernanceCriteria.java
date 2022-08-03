@@ -16,6 +16,7 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
      */
     public GroupMembershipGovernanceCriteria() {
         super();
+        this.setOdataType("#microsoft.graph.groupMembershipGovernanceCriteria");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

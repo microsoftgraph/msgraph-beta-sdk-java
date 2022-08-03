@@ -17,12 +17,15 @@ public class ManagementIntentInfo implements AdditionalDataHolder, Parsable {
     private String _managementIntentId;
     /** The collection of management template information associated with the management intent. Optional. Read-only. */
     private java.util.List<ManagementTemplateDetailedInfo> _managementTemplates;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new managementIntentInfo and sets the default values.
      * @return a void
      */
     public ManagementIntentInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.managementIntentInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class ManagementIntentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementIntentInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("managementIntentDisplayName", (n) -> { currentObject.setManagementIntentDisplayName(n.getStringValue()); });
             this.put("managementIntentId", (n) -> { currentObject.setManagementIntentId(n.getStringValue()); });
             this.put("managementTemplates", (n) -> { currentObject.setManagementTemplates(n.getCollectionOfObjectValues(ManagementTemplateDetailedInfo::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class ManagementIntentInfo implements AdditionalDataHolder, Parsable {
         return this._managementTemplates;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class ManagementIntentInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("managementIntentDisplayName", this.getManagementIntentDisplayName());
         writer.writeStringValue("managementIntentId", this.getManagementIntentId());
         writer.writeCollectionOfObjectValues("managementTemplates", this.getManagementTemplates());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class ManagementIntentInfo implements AdditionalDataHolder, Parsable {
      */
     public void setManagementTemplates(@javax.annotation.Nullable final java.util.List<ManagementTemplateDetailedInfo> value) {
         this._managementTemplates = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

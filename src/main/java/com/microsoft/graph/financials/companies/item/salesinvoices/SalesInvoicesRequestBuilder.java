@@ -20,7 +20,7 @@ import microsoft.graph.models.SalesInvoice;
 import microsoft.graph.models.SalesInvoiceCollectionResponse;
 /** Provides operations to manage the salesInvoices property of the microsoft.graph.company entity. */
 public class SalesInvoicesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

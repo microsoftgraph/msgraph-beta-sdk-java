@@ -307,7 +307,7 @@ public class TeamworkDeviceOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkDeviceOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkDeviceOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkDeviceOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TeamworkDeviceOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamworkDeviceOperationItemRequestBuilderGetQueryParameters queryParameters = new TeamworkDeviceOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamworkDeviceOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkDeviceOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkDeviceOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TeamworkDeviceOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkDeviceOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkDeviceOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkDeviceOperationItemRequestBuilderPatchRequestConfiguration() {

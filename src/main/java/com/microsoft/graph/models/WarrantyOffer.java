@@ -17,6 +17,8 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
     private String _description;
     /** Warranty offer end date */
     private OffsetDateTime _endDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Warranty offer start date */
     private OffsetDateTime _startDateTime;
     /** Models and Manufactures meatadata for managed devices in the account */
@@ -27,6 +29,7 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
      */
     public WarrantyOffer() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.warrantyOffer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,12 +72,21 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WarrantyOffer currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(WarrantyType.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. Warranty offer start date
@@ -101,6 +113,7 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -128,6 +141,14 @@ public class WarrantyOffer implements AdditionalDataHolder, Parsable {
      */
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. Warranty offer start date

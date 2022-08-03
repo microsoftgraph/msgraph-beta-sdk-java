@@ -307,7 +307,7 @@ public class RemoteActionAuditItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new remoteActionAuditItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RemoteActionAuditItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RemoteActionAuditItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RemoteActionAuditItemRequestBuilder {
         @javax.annotation.Nullable
         public RemoteActionAuditItemRequestBuilderGetQueryParameters queryParameters = new RemoteActionAuditItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new remoteActionAuditItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RemoteActionAuditItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RemoteActionAuditItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RemoteActionAuditItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new remoteActionAuditItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RemoteActionAuditItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RemoteActionAuditItemRequestBuilderPatchRequestConfiguration() {

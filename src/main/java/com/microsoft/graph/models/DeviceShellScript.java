@@ -48,6 +48,7 @@ public class DeviceShellScript extends Entity implements Parsable {
      */
     public DeviceShellScript() {
         super();
+        this.setOdataType("#microsoft.graph.deviceShellScript");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

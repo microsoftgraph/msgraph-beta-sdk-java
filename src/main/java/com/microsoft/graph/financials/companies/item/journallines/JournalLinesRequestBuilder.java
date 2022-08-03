@@ -20,7 +20,7 @@ import microsoft.graph.models.JournalLineCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the journalLines property of the microsoft.graph.company entity. */
 public class JournalLinesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

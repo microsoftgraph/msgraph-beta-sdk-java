@@ -307,7 +307,7 @@ public class SkillProficiencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new skillProficiencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SkillProficiencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SkillProficiencyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SkillProficiencyItemRequestBuilder {
         @javax.annotation.Nullable
         public SkillProficiencyItemRequestBuilderGetQueryParameters queryParameters = new SkillProficiencyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new skillProficiencyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SkillProficiencyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SkillProficiencyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SkillProficiencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new skillProficiencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SkillProficiencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SkillProficiencyItemRequestBuilderPatchRequestConfiguration() {

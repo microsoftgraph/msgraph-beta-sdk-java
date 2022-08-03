@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class EducationAssignmentResource extends Entity implements Parsable {
     /** Indicates whether this resource should be copied to each student submission for modification and submission. Required */
     private Boolean _distributeForStudentWork;
@@ -19,6 +19,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     public EducationAssignmentResource() {
         super();
+        this.setOdataType("#microsoft.graph.educationAssignmentResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

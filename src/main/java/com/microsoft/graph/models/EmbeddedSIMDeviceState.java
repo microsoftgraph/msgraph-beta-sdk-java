@@ -32,6 +32,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     public EmbeddedSIMDeviceState() {
         super();
+        this.setOdataType("#microsoft.graph.embeddedSIMDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -61,7 +61,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a iosLobAppProvisioningConfigurationAssignmentItemRequestBuilder
+     * @return a IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -241,7 +241,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
+     * @return a ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -304,7 +304,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.groupAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppProvisioningConfigGroupAssignmentItemRequestBuilder
+     * @return a MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder groupAssignments(@javax.annotation.Nonnull final String id) {
@@ -371,7 +371,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.userStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
+     * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
@@ -389,7 +389,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosLobAppProvisioningConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IosLobAppProvisioningConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosLobAppProvisioningConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -418,7 +418,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public IosLobAppProvisioningConfigurationItemRequestBuilderGetQueryParameters queryParameters = new IosLobAppProvisioningConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new iosLobAppProvisioningConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IosLobAppProvisioningConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosLobAppProvisioningConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -433,7 +433,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosLobAppProvisioningConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IosLobAppProvisioningConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosLobAppProvisioningConfigurationItemRequestBuilderPatchRequestConfiguration() {

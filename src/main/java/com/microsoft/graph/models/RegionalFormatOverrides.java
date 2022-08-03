@@ -19,6 +19,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     private String _longDateFormat;
     /** The long time format to be used for displaying time.Returned by default. */
     private String _longTimeFormat;
+    /** The OdataType property */
+    private String _odataType;
     /** The short date time format to be used for displaying dates.Returned by default. */
     private String _shortDateFormat;
     /** The short time format to be used for displaying time.Returned by default. */
@@ -31,6 +33,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      */
     public RegionalFormatOverrides() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.regionalFormatOverrides");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,12 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegionalFormatOverrides currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("calendar", (n) -> { currentObject.setCalendar(n.getStringValue()); });
             this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getStringValue()); });
             this.put("longDateFormat", (n) -> { currentObject.setLongDateFormat(n.getStringValue()); });
             this.put("longTimeFormat", (n) -> { currentObject.setLongTimeFormat(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("shortDateFormat", (n) -> { currentObject.setShortDateFormat(n.getStringValue()); });
             this.put("shortTimeFormat", (n) -> { currentObject.setShortTimeFormat(n.getStringValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
@@ -98,6 +102,14 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLongTimeFormat() {
         return this._longTimeFormat;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the shortDateFormat property value. The short date time format to be used for displaying dates.Returned by default.
@@ -134,6 +146,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("firstDayOfWeek", this.getFirstDayOfWeek());
         writer.writeStringValue("longDateFormat", this.getLongDateFormat());
         writer.writeStringValue("longTimeFormat", this.getLongTimeFormat());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("shortDateFormat", this.getShortDateFormat());
         writer.writeStringValue("shortTimeFormat", this.getShortTimeFormat());
         writer.writeStringValue("timeZone", this.getTimeZone());
@@ -178,6 +191,14 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      */
     public void setLongTimeFormat(@javax.annotation.Nullable final String value) {
         this._longTimeFormat = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the shortDateFormat property value. The short date time format to be used for displaying dates.Returned by default.

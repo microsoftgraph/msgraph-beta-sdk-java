@@ -40,6 +40,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     public AdvancedThreatProtectionOnboardingDeviceSettingState() {
         super();
+        this.setOdataType("#microsoft.graph.advancedThreatProtectionOnboardingDeviceSettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -308,7 +308,7 @@ public class SimulationAutomationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.attackSimulation.simulationAutomations.item.runs.item collection
      * @param id Unique identifier of the item
-     * @return a simulationAutomationRunItemRequestBuilder
+     * @return a SimulationAutomationRunItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SimulationAutomationRunItemRequestBuilder runs(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class SimulationAutomationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new simulationAutomationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationAutomationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationAutomationItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class SimulationAutomationItemRequestBuilder {
         @javax.annotation.Nullable
         public SimulationAutomationItemRequestBuilderGetQueryParameters queryParameters = new SimulationAutomationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new simulationAutomationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationAutomationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationAutomationItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class SimulationAutomationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new simulationAutomationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SimulationAutomationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SimulationAutomationItemRequestBuilderPatchRequestConfiguration() {

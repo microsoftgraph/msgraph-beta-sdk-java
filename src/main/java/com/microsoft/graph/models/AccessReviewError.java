@@ -14,6 +14,7 @@ public class AccessReviewError extends GenericError implements Parsable {
      */
     public AccessReviewError() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

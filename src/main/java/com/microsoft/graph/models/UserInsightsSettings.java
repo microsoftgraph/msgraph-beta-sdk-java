@@ -16,6 +16,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
      */
     public UserInsightsSettings() {
         super();
+        this.setOdataType("#microsoft.graph.userInsightsSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,7 +16,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      */
     public ListItemVersion() {
         super();
-        this.setType("#microsoft.graph.listItemVersion");
+        this.setOdataType("#microsoft.graph.listItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

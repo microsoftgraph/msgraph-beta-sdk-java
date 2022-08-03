@@ -308,7 +308,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.autopilotEvents.item.policyStatusDetails.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementAutopilotPolicyStatusDetailItemRequestBuilder
+     * @return a DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder policyStatusDetails(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementAutopilotEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementAutopilotEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementAutopilotEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementAutopilotEventItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementAutopilotEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementAutopilotEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementAutopilotEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementAutopilotEventItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementAutopilotEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementAutopilotEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementAutopilotEventItemRequestBuilderPatchRequestConfiguration() {

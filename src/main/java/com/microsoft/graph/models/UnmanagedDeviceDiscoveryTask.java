@@ -16,6 +16,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
      */
     public UnmanagedDeviceDiscoveryTask() {
         super();
+        this.setOdataType("#microsoft.graph.unmanagedDeviceDiscoveryTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

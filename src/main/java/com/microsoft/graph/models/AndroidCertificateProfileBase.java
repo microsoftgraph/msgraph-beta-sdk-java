@@ -28,7 +28,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
      */
     public AndroidCertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.androidCertificateProfileBase");
+        this.setOdataType("#microsoft.graph.androidCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

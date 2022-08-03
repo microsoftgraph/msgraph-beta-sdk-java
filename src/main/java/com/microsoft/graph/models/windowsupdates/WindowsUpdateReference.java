@@ -14,7 +14,7 @@ public class WindowsUpdateReference extends SoftwareUpdateReference implements P
      */
     public WindowsUpdateReference() {
         super();
-        this.setType("#microsoft.graph.windowsUpdates.windowsUpdateReference");
+        this.setOdataType("#microsoft.graph.windowsUpdates.windowsUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +28,7 @@ public class WindowsUpdateReference extends SoftwareUpdateReference implements P
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.expeditedQualityUpdateReference": return new ExpeditedQualityUpdateReference();
                 case "#microsoft.graph.windowsUpdates.featureUpdateReference": return new FeatureUpdateReference();
                 case "#microsoft.graph.windowsUpdates.qualityUpdateReference": return new QualityUpdateReference();
             }

@@ -104,7 +104,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item collection
      * @param id Unique identifier of the item
-     * @return a administrativeUnitItemRequestBuilder
+     * @return a AdministrativeUnitItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AdministrativeUnitItemRequestBuilder administrativeUnits(@javax.annotation.Nonnull final String id) {
@@ -116,7 +116,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.attributeSets.item collection
      * @param id Unique identifier of the item
-     * @return a attributeSetItemRequestBuilder
+     * @return a AttributeSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttributeSetItemRequestBuilder attributeSets(@javax.annotation.Nonnull final String id) {
@@ -217,7 +217,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.customSecurityAttributeDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a customSecurityAttributeDefinitionItemRequestBuilder
+     * @return a CustomSecurityAttributeDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomSecurityAttributeDefinitionItemRequestBuilder customSecurityAttributeDefinitions(@javax.annotation.Nonnull final String id) {
@@ -229,7 +229,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.deletedItems.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder deletedItems(@javax.annotation.Nonnull final String id) {
@@ -241,7 +241,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.featureRolloutPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a featureRolloutPolicyItemRequestBuilder
+     * @return a FeatureRolloutPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FeatureRolloutPolicyItemRequestBuilder featureRolloutPolicies(@javax.annotation.Nonnull final String id) {
@@ -253,7 +253,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.federationConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a identityProviderBaseItemRequestBuilder
+     * @return a IdentityProviderBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder federationConfigurations(@javax.annotation.Nonnull final String id) {
@@ -316,7 +316,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.impactedResources.item collection
      * @param id Unique identifier of the item
-     * @return a recommendationResourceItemRequestBuilder
+     * @return a RecommendationResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RecommendationResourceItemRequestBuilder impactedResources(@javax.annotation.Nonnull final String id) {
@@ -328,7 +328,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.inboundSharedUserProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a inboundSharedUserProfileUserItemRequestBuilder
+     * @return a InboundSharedUserProfileUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public InboundSharedUserProfileUserItemRequestBuilder inboundSharedUserProfiles(@javax.annotation.Nonnull final String id) {
@@ -340,7 +340,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.outboundSharedUserProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a outboundSharedUserProfileUserItemRequestBuilder
+     * @return a OutboundSharedUserProfileUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutboundSharedUserProfileUserItemRequestBuilder outboundSharedUserProfiles(@javax.annotation.Nonnull final String id) {
@@ -407,7 +407,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.recommendations.item collection
      * @param id Unique identifier of the item
-     * @return a recommendationItemRequestBuilder
+     * @return a RecommendationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RecommendationItemRequestBuilder recommendations(@javax.annotation.Nonnull final String id) {
@@ -419,7 +419,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.sharedEmailDomains.item collection
      * @param id Unique identifier of the item
-     * @return a sharedEmailDomainItemRequestBuilder
+     * @return a SharedEmailDomainItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedEmailDomainItemRequestBuilder sharedEmailDomains(@javax.annotation.Nonnull final String id) {

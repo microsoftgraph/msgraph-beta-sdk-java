@@ -17,6 +17,8 @@ public class SharedAppleDeviceUser implements AdditionalDataHolder, Parsable {
     private Boolean _dataToSync;
     /** Data quota */
     private Long _dataUsed;
+    /** The OdataType property */
+    private String _odataType;
     /** User name */
     private String _userPrincipalName;
     /**
@@ -25,6 +27,7 @@ public class SharedAppleDeviceUser implements AdditionalDataHolder, Parsable {
      */
     public SharedAppleDeviceUser() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sharedAppleDeviceUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,12 +78,21 @@ public class SharedAppleDeviceUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedAppleDeviceUser currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("dataQuota", (n) -> { currentObject.setDataQuota(n.getLongValue()); });
             this.put("dataToSync", (n) -> { currentObject.setDataToSync(n.getBooleanValue()); });
             this.put("dataUsed", (n) -> { currentObject.setDataUsed(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userPrincipalName property value. User name
@@ -100,6 +112,7 @@ public class SharedAppleDeviceUser implements AdditionalDataHolder, Parsable {
         writer.writeLongValue("dataQuota", this.getDataQuota());
         writer.writeBooleanValue("dataToSync", this.getDataToSync());
         writer.writeLongValue("dataUsed", this.getDataUsed());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class SharedAppleDeviceUser implements AdditionalDataHolder, Parsable {
      */
     public void setDataUsed(@javax.annotation.Nullable final Long value) {
         this._dataUsed = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userPrincipalName property value. User name

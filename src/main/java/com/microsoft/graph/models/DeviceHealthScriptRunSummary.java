@@ -37,6 +37,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
      */
     public DeviceHealthScriptRunSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceHealthScriptRunSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

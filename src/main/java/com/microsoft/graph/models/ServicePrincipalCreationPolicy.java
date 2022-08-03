@@ -20,6 +20,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      */
     public ServicePrincipalCreationPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.servicePrincipalCreationPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -202,7 +202,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.aggregatedPolicyCompliances.item collection
      * @param id Unique identifier of the item
-     * @return a aggregatedPolicyComplianceItemRequestBuilder
+     * @return a AggregatedPolicyComplianceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AggregatedPolicyComplianceItemRequestBuilder aggregatedPolicyCompliances(@javax.annotation.Nonnull final String id) {
@@ -214,7 +214,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.auditEvents.item collection
      * @param id Unique identifier of the item
-     * @return a auditEventItemRequestBuilder
+     * @return a AuditEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
@@ -226,7 +226,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcConnections.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcConnectionItemRequestBuilder
+     * @return a CloudPcConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcConnectionItemRequestBuilder cloudPcConnections(@javax.annotation.Nonnull final String id) {
@@ -238,7 +238,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcDevices.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcDeviceItemRequestBuilder
+     * @return a CloudPcDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcDeviceItemRequestBuilder cloudPcDevices(@javax.annotation.Nonnull final String id) {
@@ -250,7 +250,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcsOverview.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcOverviewTenantItemRequestBuilder
+     * @return a CloudPcOverviewTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcOverviewTenantItemRequestBuilder cloudPcsOverview(@javax.annotation.Nonnull final String id) {
@@ -262,7 +262,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.conditionalAccessPolicyCoverages.item collection
      * @param id Unique identifier of the item
-     * @return a conditionalAccessPolicyCoverageItemRequestBuilder
+     * @return a ConditionalAccessPolicyCoverageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyCoverageItemRequestBuilder conditionalAccessPolicyCoverages(@javax.annotation.Nonnull final String id) {
@@ -391,7 +391,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.credentialUserRegistrationsSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a credentialUserRegistrationsSummaryItemRequestBuilder
+     * @return a CredentialUserRegistrationsSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CredentialUserRegistrationsSummaryItemRequestBuilder credentialUserRegistrationsSummaries(@javax.annotation.Nonnull final String id) {
@@ -454,7 +454,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.deviceCompliancePolicySettingStateSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCompliancePolicySettingStateSummaryItemRequestBuilder
+     * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder deviceCompliancePolicySettingStateSummaries(@javax.annotation.Nonnull final String id) {
@@ -517,7 +517,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceCompliances.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceComplianceItemRequestBuilder
+     * @return a ManagedDeviceComplianceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceItemRequestBuilder managedDeviceCompliances(@javax.annotation.Nonnull final String id) {
@@ -529,7 +529,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceComplianceTrends.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceComplianceTrendItemRequestBuilder
+     * @return a ManagedDeviceComplianceTrendItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceTrendItemRequestBuilder managedDeviceComplianceTrends(@javax.annotation.Nonnull final String id) {
@@ -541,7 +541,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementActions.item collection
      * @param id Unique identifier of the item
-     * @return a managementActionItemRequestBuilder
+     * @return a ManagementActionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementActionItemRequestBuilder managementActions(@javax.annotation.Nonnull final String id) {
@@ -553,7 +553,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementActionTenantDeploymentStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a managementActionTenantDeploymentStatusItemRequestBuilder
+     * @return a ManagementActionTenantDeploymentStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementActionTenantDeploymentStatusItemRequestBuilder managementActionTenantDeploymentStatuses(@javax.annotation.Nonnull final String id) {
@@ -565,7 +565,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementIntents.item collection
      * @param id Unique identifier of the item
-     * @return a managementIntentItemRequestBuilder
+     * @return a ManagementIntentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementIntentItemRequestBuilder managementIntents(@javax.annotation.Nonnull final String id) {
@@ -577,7 +577,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateCollections.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateCollectionItemRequestBuilder
+     * @return a ManagementTemplateCollectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateCollectionItemRequestBuilder managementTemplateCollections(@javax.annotation.Nonnull final String id) {
@@ -589,7 +589,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateItemRequestBuilder
+     * @return a ManagementTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateItemRequestBuilder managementTemplates(@javax.annotation.Nonnull final String id) {
@@ -601,7 +601,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateSteps.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateStepItemRequestBuilder
+     * @return a ManagementTemplateStepItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepItemRequestBuilder managementTemplateSteps(@javax.annotation.Nonnull final String id) {
@@ -613,7 +613,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateStepVersions.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateStepVersionItemRequestBuilder
+     * @return a ManagementTemplateStepVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepVersionItemRequestBuilder managementTemplateStepVersions(@javax.annotation.Nonnull final String id) {
@@ -625,7 +625,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.myRoles.item collection
      * @param id Unique identifier of the item
-     * @return a myRoleTenantItemRequestBuilder
+     * @return a MyRoleTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MyRoleTenantItemRequestBuilder myRoles(@javax.annotation.Nonnull final String id) {
@@ -692,7 +692,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantGroups.item collection
      * @param id Unique identifier of the item
-     * @return a tenantGroupItemRequestBuilder
+     * @return a TenantGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantGroupItemRequestBuilder tenantGroups(@javax.annotation.Nonnull final String id) {
@@ -704,7 +704,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenants.item collection
      * @param id Unique identifier of the item
-     * @return a tenantItemRequestBuilder
+     * @return a TenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantItemRequestBuilder tenants(@javax.annotation.Nonnull final String id) {
@@ -716,7 +716,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantsCustomizedInformation.item collection
      * @param id Unique identifier of the item
-     * @return a tenantCustomizedInformationItemRequestBuilder
+     * @return a TenantCustomizedInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantCustomizedInformationItemRequestBuilder tenantsCustomizedInformation(@javax.annotation.Nonnull final String id) {
@@ -728,7 +728,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantsDetailedInformation.item collection
      * @param id Unique identifier of the item
-     * @return a tenantDetailedInformationItemRequestBuilder
+     * @return a TenantDetailedInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantDetailedInformationItemRequestBuilder tenantsDetailedInformation(@javax.annotation.Nonnull final String id) {
@@ -740,7 +740,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantTags.item collection
      * @param id Unique identifier of the item
-     * @return a tenantTagItemRequestBuilder
+     * @return a TenantTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantTagItemRequestBuilder tenantTags(@javax.annotation.Nonnull final String id) {
@@ -752,7 +752,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.windowsDeviceMalwareStates.item collection
      * @param id Unique identifier of the item
-     * @return a windowsDeviceMalwareStateItemRequestBuilder
+     * @return a WindowsDeviceMalwareStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDeviceMalwareStateItemRequestBuilder windowsDeviceMalwareStates(@javax.annotation.Nonnull final String id) {
@@ -764,7 +764,7 @@ public class ManagedTenantsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.windowsProtectionStates.item collection
      * @param id Unique identifier of the item
-     * @return a windowsProtectionStateItemRequestBuilder
+     * @return a WindowsProtectionStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsProtectionStateItemRequestBuilder windowsProtectionStates(@javax.annotation.Nonnull final String id) {

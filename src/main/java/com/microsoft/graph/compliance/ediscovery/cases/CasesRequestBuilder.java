@@ -20,7 +20,7 @@ import microsoft.graph.models.ediscovery.CaseCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the cases property of the microsoft.graph.ediscovery.ediscoveryroot entity. */
 public class CasesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

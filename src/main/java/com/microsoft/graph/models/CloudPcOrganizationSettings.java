@@ -20,6 +20,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      */
     public CloudPcOrganizationSettings() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcOrganizationSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -13,6 +13,8 @@ public class VisualProperties implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The body of a visual user notification. Body is optional. */
     private String _body;
+    /** The OdataType property */
+    private String _odataType;
     /** The title of a visual user notification. This field is required for visual notification payloads. */
     private String _title;
     /**
@@ -21,6 +23,7 @@ public class VisualProperties implements AdditionalDataHolder, Parsable {
      */
     public VisualProperties() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.visualProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class VisualProperties implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VisualProperties currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("body", (n) -> { currentObject.setBody(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the title property value. The title of a visual user notification. This field is required for visual notification payloads.
@@ -76,6 +88,7 @@ public class VisualProperties implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("body", this.getBody());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("title", this.getTitle());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class VisualProperties implements AdditionalDataHolder, Parsable {
      */
     public void setBody(@javax.annotation.Nullable final String value) {
         this._body = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the title property value. The title of a visual user notification. This field is required for visual notification payloads.

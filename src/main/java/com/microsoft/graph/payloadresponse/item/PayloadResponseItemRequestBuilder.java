@@ -307,7 +307,7 @@ public class PayloadResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new payloadResponseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PayloadResponseItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PayloadResponseItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PayloadResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public PayloadResponseItemRequestBuilderGetQueryParameters queryParameters = new PayloadResponseItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new payloadResponseItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PayloadResponseItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PayloadResponseItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PayloadResponseItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new payloadResponseItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PayloadResponseItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PayloadResponseItemRequestBuilderPatchRequestConfiguration() {

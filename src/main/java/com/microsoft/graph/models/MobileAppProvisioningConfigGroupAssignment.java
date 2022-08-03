@@ -17,6 +17,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      */
     public MobileAppProvisioningConfigGroupAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppProvisioningConfigGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsRemoteConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsRemoteConnectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsRemoteConnectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsRemoteConnectionItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsRemoteConnectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsRemoteConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsRemoteConnectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsRemoteConnectionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsRemoteConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsRemoteConnectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsRemoteConnectionItemRequestBuilderPatchRequestConfiguration() {

@@ -15,6 +15,8 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     private Boolean _allowNewMessageFromBots;
     /** Indicates whether connectors are allowed to post messages. */
     private Boolean _allowNewMessageFromConnectors;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue. */
     private ReplyRestriction _replyRestriction;
     /** Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue. */
@@ -25,6 +27,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      */
     public ChannelModerationSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.channelModerationSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,12 +70,21 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelModerationSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowNewMessageFromBots", (n) -> { currentObject.setAllowNewMessageFromBots(n.getBooleanValue()); });
             this.put("allowNewMessageFromConnectors", (n) -> { currentObject.setAllowNewMessageFromConnectors(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("replyRestriction", (n) -> { currentObject.setReplyRestriction(n.getEnumValue(ReplyRestriction.class)); });
             this.put("userNewMessageRestriction", (n) -> { currentObject.setUserNewMessageRestriction(n.getEnumValue(UserNewMessageRestriction.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
@@ -99,6 +111,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowNewMessageFromBots", this.getAllowNewMessageFromBots());
         writer.writeBooleanValue("allowNewMessageFromConnectors", this.getAllowNewMessageFromConnectors());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("replyRestriction", this.getReplyRestriction());
         writer.writeEnumValue("userNewMessageRestriction", this.getUserNewMessageRestriction());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      */
     public void setAllowNewMessageFromConnectors(@javax.annotation.Nullable final Boolean value) {
         this._allowNewMessageFromConnectors = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.

@@ -307,7 +307,7 @@ public class BookmarkItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookmarkItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BookmarkItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookmarkItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class BookmarkItemRequestBuilder {
         @javax.annotation.Nullable
         public BookmarkItemRequestBuilderGetQueryParameters queryParameters = new BookmarkItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new bookmarkItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BookmarkItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookmarkItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class BookmarkItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookmarkItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BookmarkItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookmarkItemRequestBuilderPatchRequestConfiguration() {

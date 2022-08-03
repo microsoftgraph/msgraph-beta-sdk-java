@@ -83,7 +83,7 @@ public class SecurityRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get security from print
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class SecurityRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get security from print
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -196,7 +196,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Get security from print
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @return a CompletableFuture of securityReportsRoot
      */
     public java.util.concurrent.CompletableFuture<SecurityReportsRoot> get() {
@@ -212,7 +212,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Get security from print
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of securityReportsRoot
      */
@@ -229,7 +229,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Get security from print
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of securityReportsRoot
@@ -340,7 +340,7 @@ public class SecurityRequestBuilder {
         public SecurityRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get security from print */
+    /** Provides the ability to launch a realistic simulated phishing attack that organizations can learn from. */
     public class SecurityRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

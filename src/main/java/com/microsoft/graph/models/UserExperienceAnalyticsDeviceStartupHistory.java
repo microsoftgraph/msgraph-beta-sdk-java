@@ -47,6 +47,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      */
     public UserExperienceAnalyticsDeviceStartupHistory() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

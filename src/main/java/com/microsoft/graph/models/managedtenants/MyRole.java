@@ -13,6 +13,8 @@ public class MyRole implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** A collection of role assignments for the managed tenant. */
     private java.util.List<RoleAssignment> _assignments;
+    /** The OdataType property */
+    private String _odataType;
     /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
     private String _tenantId;
     /**
@@ -21,6 +23,7 @@ public class MyRole implements AdditionalDataHolder, Parsable {
      */
     public MyRole() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.myRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class MyRole implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MyRole currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(RoleAssignment::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -76,6 +88,7 @@ public class MyRole implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class MyRole implements AdditionalDataHolder, Parsable {
      */
     public void setAssignments(@javax.annotation.Nullable final java.util.List<RoleAssignment> value) {
         this._assignments = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.

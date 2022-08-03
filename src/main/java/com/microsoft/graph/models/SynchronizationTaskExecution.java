@@ -34,6 +34,8 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     private Long _countImportedReferenceDeltas;
     /** If an error was encountered, contains a synchronizationError object with details. */
     private SynchronizationError _error;
+    /** The OdataType property */
+    private String _odataType;
     /** The state property */
     private SynchronizationTaskExecutionResult _state;
     /** Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
@@ -46,6 +48,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     public SynchronizationTaskExecution() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.synchronizationTaskExecution");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -160,7 +163,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationTaskExecution currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<>(15) {{
             this.put("activityIdentifier", (n) -> { currentObject.setActivityIdentifier(n.getStringValue()); });
             this.put("countEntitled", (n) -> { currentObject.setCountEntitled(n.getLongValue()); });
             this.put("countEntitledForProvisioning", (n) -> { currentObject.setCountEntitledForProvisioning(n.getLongValue()); });
@@ -172,10 +175,19 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
             this.put("countImportedDeltas", (n) -> { currentObject.setCountImportedDeltas(n.getLongValue()); });
             this.put("countImportedReferenceDeltas", (n) -> { currentObject.setCountImportedReferenceDeltas(n.getLongValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(SynchronizationTaskExecutionResult.class)); });
             this.put("timeBegan", (n) -> { currentObject.setTimeBegan(n.getOffsetDateTimeValue()); });
             this.put("timeEnded", (n) -> { currentObject.setTimeEnded(n.getOffsetDateTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. The state property
@@ -219,6 +231,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         writer.writeLongValue("countImportedDeltas", this.getCountImportedDeltas());
         writer.writeLongValue("countImportedReferenceDeltas", this.getCountImportedReferenceDeltas());
         writer.writeObjectValue("error", this.getError());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("state", this.getState());
         writer.writeOffsetDateTimeValue("timeBegan", this.getTimeBegan());
         writer.writeOffsetDateTimeValue("timeEnded", this.getTimeEnded());
@@ -319,6 +332,14 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     public void setError(@javax.annotation.Nullable final SynchronizationError value) {
         this._error = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. The state property

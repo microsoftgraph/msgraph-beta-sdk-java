@@ -10,7 +10,7 @@ import java.util.Objects;
 public class CloudPcSupportedRegion extends Entity implements Parsable {
     /** The name for the supported region. Read-only. */
     private String _displayName;
-    /** The regionStatus property */
+    /** The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only. */
     private CloudPcSupportedRegionStatus _regionStatus;
     /**
      * Instantiates a new CloudPcSupportedRegion and sets the default values.
@@ -18,6 +18,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      */
     public CloudPcSupportedRegion() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcSupportedRegion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +51,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the regionStatus property value. The regionStatus property
+     * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @return a cloudPcSupportedRegionStatus
      */
     @javax.annotation.Nullable
@@ -77,7 +78,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the regionStatus property value. The regionStatus property
+     * Sets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @param value Value to set for the regionStatus property.
      * @return a void
      */

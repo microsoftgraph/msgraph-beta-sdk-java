@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /** The columns property */
     private java.util.List<ExactDataMatchStoreColumn> _columns;
@@ -24,7 +24,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
      */
     public ExactMatchDataStoreBase() {
         super();
-        this.setType("#microsoft.graph.exactMatchDataStoreBase");
+        this.setOdataType("#microsoft.graph.exactMatchDataStoreBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

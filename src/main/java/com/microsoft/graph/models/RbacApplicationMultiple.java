@@ -20,6 +20,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      */
     public RbacApplicationMultiple() {
         super();
+        this.setOdataType("#microsoft.graph.rbacApplicationMultiple");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

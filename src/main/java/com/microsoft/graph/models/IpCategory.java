@@ -15,6 +15,8 @@ public class IpCategory implements AdditionalDataHolder, Parsable {
     private String _description;
     /** The name property */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The vendor property */
     private String _vendor;
     /**
@@ -23,6 +25,7 @@ public class IpCategory implements AdditionalDataHolder, Parsable {
      */
     public IpCategory() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.ipCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,9 +60,10 @@ public class IpCategory implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IpCategory currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
         }};
     }
@@ -70,6 +74,14 @@ public class IpCategory implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the vendor property value. The vendor property
@@ -88,6 +100,7 @@ public class IpCategory implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("vendor", this.getVendor());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class IpCategory implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the vendor property value. The vendor property

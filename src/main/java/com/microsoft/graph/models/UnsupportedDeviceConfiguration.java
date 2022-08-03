@@ -18,6 +18,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      */
     public UnsupportedDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.unsupportedDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

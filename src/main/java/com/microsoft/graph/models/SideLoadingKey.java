@@ -25,6 +25,7 @@ public class SideLoadingKey extends Entity implements Parsable {
      */
     public SideLoadingKey() {
         super();
+        this.setOdataType("#microsoft.graph.sideLoadingKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

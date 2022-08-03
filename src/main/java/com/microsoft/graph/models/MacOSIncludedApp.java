@@ -16,12 +16,15 @@ public class MacOSIncludedApp implements AdditionalDataHolder, Parsable {
     private String _bundleId;
     /** The CFBundleVersion. */
     private String _bundleVersion;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new macOSIncludedApp and sets the default values.
      * @return a void
      */
     public MacOSIncludedApp() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.macOSIncludedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,19 @@ public class MacOSIncludedApp implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSIncludedApp currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("bundleVersion", (n) -> { currentObject.setBundleVersion(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -78,6 +90,7 @@ public class MacOSIncludedApp implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("bundleId", this.getBundleId());
         writer.writeStringValue("bundleVersion", this.getBundleVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class MacOSIncludedApp implements AdditionalDataHolder, Parsable {
      */
     public void setBundleVersion(@javax.annotation.Nullable final String value) {
         this._bundleVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

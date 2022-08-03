@@ -307,7 +307,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new phoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public PhoneAuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new PhoneAuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new phoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new phoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

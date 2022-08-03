@@ -20,7 +20,7 @@ import microsoft.graph.models.BusinessFlowTemplateCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of businessFlowTemplate entities. */
 public class BusinessFlowTemplatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

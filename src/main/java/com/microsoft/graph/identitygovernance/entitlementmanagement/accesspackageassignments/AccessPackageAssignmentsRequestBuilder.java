@@ -23,7 +23,7 @@ import microsoft.graph.models.AccessPackageAssignmentCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageAssignments property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageAssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

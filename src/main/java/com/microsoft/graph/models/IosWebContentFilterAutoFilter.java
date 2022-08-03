@@ -18,6 +18,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      */
     public IosWebContentFilterAutoFilter() {
         super();
+        this.setOdataType("#microsoft.graph.iosWebContentFilterAutoFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

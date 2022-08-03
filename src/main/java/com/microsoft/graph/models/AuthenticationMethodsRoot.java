@@ -16,6 +16,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
      */
     public AuthenticationMethodsRoot() {
         super();
+        this.setOdataType("#microsoft.graph.authenticationMethodsRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

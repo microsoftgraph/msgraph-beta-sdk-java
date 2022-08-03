@@ -20,6 +20,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      */
     public VppTokenRevokeLicensesActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.vppTokenRevokeLicensesActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

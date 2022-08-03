@@ -68,6 +68,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     public WindowsWifiEnterpriseEAPConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsWifiEnterpriseEAPConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,6 +24,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      */
     public DeviceManagementIntentUserStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntentUserStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

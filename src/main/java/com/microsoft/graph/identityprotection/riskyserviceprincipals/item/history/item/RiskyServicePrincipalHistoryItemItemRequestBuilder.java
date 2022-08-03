@@ -307,7 +307,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder {
         @javax.annotation.Nullable
         public RiskyServicePrincipalHistoryItemItemRequestBuilderGetQueryParameters queryParameters = new RiskyServicePrincipalHistoryItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new riskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
 import microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsNotAutopilotReadyDevice property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class CloudPcGalleryImageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcGalleryImageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcGalleryImageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcGalleryImageItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcGalleryImageItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcGalleryImageItemRequestBuilderGetQueryParameters queryParameters = new CloudPcGalleryImageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcGalleryImageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcGalleryImageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcGalleryImageItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcGalleryImageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcGalleryImageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcGalleryImageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcGalleryImageItemRequestBuilderPatchRequestConfiguration() {

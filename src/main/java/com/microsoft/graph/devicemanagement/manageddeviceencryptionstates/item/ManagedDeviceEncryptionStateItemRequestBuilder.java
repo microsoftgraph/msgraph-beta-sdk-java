@@ -307,7 +307,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceEncryptionStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceEncryptionStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceEncryptionStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceEncryptionStateItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceEncryptionStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceEncryptionStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceEncryptionStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceEncryptionStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceEncryptionStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceEncryptionStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceEncryptionStateItemRequestBuilderPatchRequestConfiguration() {

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class LookupResultRow extends Entity implements Parsable {
     /** The row property */
     private String _row;
@@ -17,6 +17,7 @@ public class LookupResultRow extends Entity implements Parsable {
      */
     public LookupResultRow() {
         super();
+        this.setOdataType("#microsoft.graph.lookupResultRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

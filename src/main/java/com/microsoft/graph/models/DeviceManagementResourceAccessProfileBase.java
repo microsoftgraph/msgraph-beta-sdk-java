@@ -29,7 +29,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      */
     public DeviceManagementResourceAccessProfileBase() {
         super();
-        this.setType("#microsoft.graph.deviceManagementResourceAccessProfileBase");
+        this.setOdataType("#microsoft.graph.deviceManagementResourceAccessProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,6 +44,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.windows10XCertificateProfile": return new Windows10XCertificateProfile();
+                case "#microsoft.graph.windows10XSCEPCertificateProfile": return new Windows10XSCEPCertificateProfile();
                 case "#microsoft.graph.windows10XTrustedRootCertificate": return new Windows10XTrustedRootCertificate();
                 case "#microsoft.graph.windows10XVpnConfiguration": return new Windows10XVpnConfiguration();
                 case "#microsoft.graph.windows10XWifiConfiguration": return new Windows10XWifiConfiguration();

@@ -322,7 +322,7 @@ public class LegalHoldItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.siteSources.item collection
      * @param id Unique identifier of the item
-     * @return a siteSourceItemRequestBuilder
+     * @return a SiteSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteSourceItemRequestBuilder siteSources(@javax.annotation.Nonnull final String id) {
@@ -334,7 +334,7 @@ public class LegalHoldItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.unifiedGroupSources.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedGroupSourceItemRequestBuilder
+     * @return a UnifiedGroupSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedGroupSourceItemRequestBuilder unifiedGroupSources(@javax.annotation.Nonnull final String id) {
@@ -346,7 +346,7 @@ public class LegalHoldItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.userSources.item collection
      * @param id Unique identifier of the item
-     * @return a userSourceItemRequestBuilder
+     * @return a UserSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserSourceItemRequestBuilder userSources(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class LegalHoldItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new legalHoldItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new LegalHoldItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public LegalHoldItemRequestBuilderDeleteRequestConfiguration() {
@@ -393,7 +393,7 @@ public class LegalHoldItemRequestBuilder {
         @javax.annotation.Nullable
         public LegalHoldItemRequestBuilderGetQueryParameters queryParameters = new LegalHoldItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new legalHoldItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new LegalHoldItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public LegalHoldItemRequestBuilderGetRequestConfiguration() {
@@ -408,7 +408,7 @@ public class LegalHoldItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new legalHoldItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new LegalHoldItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public LegalHoldItemRequestBuilderPatchRequestConfiguration() {

@@ -27,6 +27,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      */
     public Custodian() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.custodian");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

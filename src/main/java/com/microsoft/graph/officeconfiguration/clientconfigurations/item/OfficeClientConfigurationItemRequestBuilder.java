@@ -52,7 +52,7 @@ public class OfficeClientConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.officeConfiguration.clientConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a officeClientConfigurationAssignmentItemRequestBuilder
+     * @return a OfficeClientConfigurationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OfficeClientConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -344,7 +344,7 @@ public class OfficeClientConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new officeClientConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OfficeClientConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfficeClientConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -373,7 +373,7 @@ public class OfficeClientConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public OfficeClientConfigurationItemRequestBuilderGetQueryParameters queryParameters = new OfficeClientConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new officeClientConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OfficeClientConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfficeClientConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -388,7 +388,7 @@ public class OfficeClientConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new officeClientConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OfficeClientConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfficeClientConfigurationItemRequestBuilderPatchRequestConfiguration() {

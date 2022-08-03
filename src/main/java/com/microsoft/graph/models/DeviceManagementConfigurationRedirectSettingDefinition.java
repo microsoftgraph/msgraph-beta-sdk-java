@@ -20,6 +20,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      */
     public DeviceManagementConfigurationRedirectSettingDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationRedirectSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,7 @@ import microsoft.graph.sites.item.lists.item.items.delta.DeltaRequestBuilder;
 import microsoft.graph.sites.item.lists.item.items.deltawithtoken.DeltaWithTokenRequestBuilder;
 /** Provides operations to manage the items property of the microsoft.graph.list entity. */
 public class ItemsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

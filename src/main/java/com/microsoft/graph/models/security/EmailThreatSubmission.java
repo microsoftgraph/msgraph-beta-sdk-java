@@ -9,23 +9,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailThreatSubmission extends ThreatSubmission implements Parsable {
-    /** The attackSimulationInfo property */
+    /** If the email is phishing simulation, this field will not be null. */
     private AttackSimulationInfo _attackSimulationInfo;
-    /** The internetMessageId property */
+    /** Specifies the internet message id of the email being submitted. This information is present in the email header. */
     private String _internetMessageId;
-    /** The originalCategory property */
+    /** The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue. */
     private SubmissionCategory _originalCategory;
-    /** The receivedDateTime property */
+    /** Specifies the date and time stamp when the email was received. */
     private OffsetDateTime _receivedDateTime;
-    /** The recipientEmailAddress property */
+    /** Specifies the email address (in smtp format) of the recipient who received the email. */
     private String _recipientEmailAddress;
-    /** The sender property */
+    /** Specifies the email address of the sender. */
     private String _sender;
-    /** The senderIP property */
+    /** Specifies the IP address of the sender. */
     private String _senderIP;
-    /** The subject property */
+    /** Specifies the subject of the email . */
     private String _subject;
-    /** The tenantAllowOrBlockListAction property */
+    /** It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed. */
     private TenantAllowOrBlockListAction _tenantAllowOrBlockListAction;
     /**
      * Instantiates a new EmailThreatSubmission and sets the default values.
@@ -33,7 +33,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     public EmailThreatSubmission() {
         super();
-        this.setType("#microsoft.graph.security.emailThreatSubmission");
+        this.setOdataType("#microsoft.graph.security.emailThreatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +54,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return new EmailThreatSubmission();
     }
     /**
-     * Gets the attackSimulationInfo property value. The attackSimulationInfo property
+     * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field will not be null.
      * @return a attackSimulationInfo
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         }};
     }
     /**
-     * Gets the internetMessageId property value. The internetMessageId property
+     * Gets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._internetMessageId;
     }
     /**
-     * Gets the originalCategory property value. The originalCategory property
+     * Gets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @return a submissionCategory
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._originalCategory;
     }
     /**
-     * Gets the receivedDateTime property value. The receivedDateTime property
+     * Gets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._receivedDateTime;
     }
     /**
-     * Gets the recipientEmailAddress property value. The recipientEmailAddress property
+     * Gets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._recipientEmailAddress;
     }
     /**
-     * Gets the sender property value. The sender property
+     * Gets the sender property value. Specifies the email address of the sender.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._sender;
     }
     /**
-     * Gets the senderIP property value. The senderIP property
+     * Gets the senderIP property value. Specifies the IP address of the sender.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._senderIP;
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. Specifies the subject of the email .
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this._subject;
     }
     /**
-     * Gets the tenantAllowOrBlockListAction property value. The tenantAllowOrBlockListAction property
+     * Gets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @return a tenantAllowOrBlockListAction
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         writer.writeObjectValue("tenantAllowOrBlockListAction", this.getTenantAllowOrBlockListAction());
     }
     /**
-     * Sets the attackSimulationInfo property value. The attackSimulationInfo property
+     * Sets the attackSimulationInfo property value. If the email is phishing simulation, this field will not be null.
      * @param value Value to set for the attackSimulationInfo property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._attackSimulationInfo = value;
     }
     /**
-     * Sets the internetMessageId property value. The internetMessageId property
+     * Sets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
@@ -179,7 +179,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._internetMessageId = value;
     }
     /**
-     * Sets the originalCategory property value. The originalCategory property
+     * Sets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @param value Value to set for the originalCategory property.
      * @return a void
      */
@@ -187,7 +187,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._originalCategory = value;
     }
     /**
-     * Sets the receivedDateTime property value. The receivedDateTime property
+     * Sets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
@@ -195,7 +195,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._receivedDateTime = value;
     }
     /**
-     * Sets the recipientEmailAddress property value. The recipientEmailAddress property
+     * Sets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
      * @param value Value to set for the recipientEmailAddress property.
      * @return a void
      */
@@ -203,7 +203,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._recipientEmailAddress = value;
     }
     /**
-     * Sets the sender property value. The sender property
+     * Sets the sender property value. Specifies the email address of the sender.
      * @param value Value to set for the sender property.
      * @return a void
      */
@@ -211,7 +211,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._sender = value;
     }
     /**
-     * Sets the senderIP property value. The senderIP property
+     * Sets the senderIP property value. Specifies the IP address of the sender.
      * @param value Value to set for the senderIP property.
      * @return a void
      */
@@ -219,7 +219,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._senderIP = value;
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. Specifies the subject of the email .
      * @param value Value to set for the subject property.
      * @return a void
      */
@@ -227,7 +227,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this._subject = value;
     }
     /**
-     * Sets the tenantAllowOrBlockListAction property value. The tenantAllowOrBlockListAction property
+     * Sets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @param value Value to set for the tenantAllowOrBlockListAction property.
      * @return a void
      */

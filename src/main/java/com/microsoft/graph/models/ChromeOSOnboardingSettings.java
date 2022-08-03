@@ -23,6 +23,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
      */
     public ChromeOSOnboardingSettings() {
         super();
+        this.setOdataType("#microsoft.graph.chromeOSOnboardingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

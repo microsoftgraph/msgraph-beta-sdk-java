@@ -32,6 +32,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      */
     public DepMacOSEnrollmentProfile() {
         super();
+        this.setOdataType("#microsoft.graph.depMacOSEnrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

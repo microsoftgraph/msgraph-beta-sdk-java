@@ -11,16 +11,19 @@ import java.util.Objects;
 public class SubmissionDetectedFile implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The fileHash property */
+    /** The file hash. */
     private String _fileHash;
-    /** The fileName property */
+    /** The file name. */
     private String _fileName;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new submissionDetectedFile and sets the default values.
      * @return a void
      */
     public SubmissionDetectedFile() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.submissionDetectedFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,13 +50,14 @@ public class SubmissionDetectedFile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubmissionDetectedFile currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("fileHash", (n) -> { currentObject.setFileHash(n.getStringValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the fileHash property value. The fileHash property
+     * Gets the fileHash property value. The file hash.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,12 +65,20 @@ public class SubmissionDetectedFile implements AdditionalDataHolder, Parsable {
         return this._fileHash;
     }
     /**
-     * Gets the fileName property value. The fileName property
+     * Gets the fileName property value. The file name.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getFileName() {
         return this._fileName;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SubmissionDetectedFile implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fileHash", this.getFileHash());
         writer.writeStringValue("fileName", this.getFileName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -88,7 +101,7 @@ public class SubmissionDetectedFile implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the fileHash property value. The fileHash property
+     * Sets the fileHash property value. The file hash.
      * @param value Value to set for the fileHash property.
      * @return a void
      */
@@ -96,11 +109,19 @@ public class SubmissionDetectedFile implements AdditionalDataHolder, Parsable {
         this._fileHash = value;
     }
     /**
-     * Sets the fileName property value. The fileName property
+     * Sets the fileName property value. The file name.
      * @param value Value to set for the fileName property.
      * @return a void
      */
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -15,12 +15,15 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
     private java.util.List<ExactMatchDetectedSensitiveContent> _classification;
     /** The errors property */
     private java.util.List<ClassificationError> _errors;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new exactMatchClassificationResult and sets the default values.
      * @return a void
      */
     public ExactMatchClassificationResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.exactMatchClassificationResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchClassificationResult currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getCollectionOfObjectValues(ExactMatchDetectedSensitiveContent::createFromDiscriminatorValue)); });
             this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(ClassificationError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classification", this.getClassification());
         writer.writeCollectionOfObjectValues("errors", this.getErrors());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
      */
     public void setErrors(@javax.annotation.Nullable final java.util.List<ClassificationError> value) {
         this._errors = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

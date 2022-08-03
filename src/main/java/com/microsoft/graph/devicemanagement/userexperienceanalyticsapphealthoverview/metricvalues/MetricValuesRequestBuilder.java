@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsMetric;
 import microsoft.graph.models.UserExperienceAnalyticsMetricCollectionResponse;
 /** Provides operations to manage the metricValues property of the microsoft.graph.userExperienceAnalyticsCategory entity. */
 public class MetricValuesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

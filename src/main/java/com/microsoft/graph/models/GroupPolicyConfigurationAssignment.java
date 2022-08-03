@@ -20,6 +20,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      */
     public GroupPolicyConfigurationAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

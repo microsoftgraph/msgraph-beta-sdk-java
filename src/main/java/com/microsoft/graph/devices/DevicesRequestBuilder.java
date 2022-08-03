@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.devices.count.CountRequestBuilder;
+import microsoft.graph.devices.delta.DeltaRequestBuilder;
 import microsoft.graph.devices.getbyids.GetByIdsRequestBuilder;
 import microsoft.graph.devices.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
 import microsoft.graph.devices.validateproperties.ValidatePropertiesRequestBuilder;
@@ -23,7 +24,7 @@ import microsoft.graph.models.DeviceCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of device entities. */
 public class DevicesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -138,6 +139,14 @@ public class DevicesRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @return a deltaRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Retrieve a list of devices registered in the directory. 

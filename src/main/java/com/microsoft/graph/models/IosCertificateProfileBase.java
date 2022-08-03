@@ -24,7 +24,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
      */
     public IosCertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.iosCertificateProfileBase");
+        this.setOdataType("#microsoft.graph.iosCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

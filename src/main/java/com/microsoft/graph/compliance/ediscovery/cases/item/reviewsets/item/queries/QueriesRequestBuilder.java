@@ -20,7 +20,7 @@ import microsoft.graph.models.ediscovery.ReviewSetQueryCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the queries property of the microsoft.graph.ediscovery.reviewSet entity. */
 public class QueriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

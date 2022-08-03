@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsDeviceScoresItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceScoresItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceScoresItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceScoresItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsDeviceScoresItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsDeviceScoresItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsDeviceScoresItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceScoresItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceScoresItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceScoresItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsDeviceScoresItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceScoresItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceScoresItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceScoresItemRequestBuilderPatchRequestConfiguration() {

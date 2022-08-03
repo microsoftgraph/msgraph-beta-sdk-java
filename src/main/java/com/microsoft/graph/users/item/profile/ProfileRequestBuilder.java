@@ -160,7 +160,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.account.item collection
      * @param id Unique identifier of the item
-     * @return a userAccountInformationItemRequestBuilder
+     * @return a UserAccountInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserAccountInformationItemRequestBuilder account(@javax.annotation.Nonnull final String id) {
@@ -172,7 +172,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.addresses.item collection
      * @param id Unique identifier of the item
-     * @return a itemAddressItemRequestBuilder
+     * @return a ItemAddressItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemAddressItemRequestBuilder addresses(@javax.annotation.Nonnull final String id) {
@@ -184,7 +184,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.anniversaries.item collection
      * @param id Unique identifier of the item
-     * @return a personAnnualEventItemRequestBuilder
+     * @return a PersonAnnualEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonAnnualEventItemRequestBuilder anniversaries(@javax.annotation.Nonnull final String id) {
@@ -196,7 +196,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.awards.item collection
      * @param id Unique identifier of the item
-     * @return a personAwardItemRequestBuilder
+     * @return a PersonAwardItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonAwardItemRequestBuilder awards(@javax.annotation.Nonnull final String id) {
@@ -208,7 +208,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.certifications.item collection
      * @param id Unique identifier of the item
-     * @return a personCertificationItemRequestBuilder
+     * @return a PersonCertificationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonCertificationItemRequestBuilder certifications(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.educationalActivities.item collection
      * @param id Unique identifier of the item
-     * @return a educationalActivityItemRequestBuilder
+     * @return a EducationalActivityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationalActivityItemRequestBuilder educationalActivities(@javax.annotation.Nonnull final String id) {
@@ -400,7 +400,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.emails.item collection
      * @param id Unique identifier of the item
-     * @return a itemEmailItemRequestBuilder
+     * @return a ItemEmailItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemEmailItemRequestBuilder emails(@javax.annotation.Nonnull final String id) {
@@ -463,7 +463,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.interests.item collection
      * @param id Unique identifier of the item
-     * @return a personInterestItemRequestBuilder
+     * @return a PersonInterestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonInterestItemRequestBuilder interests(@javax.annotation.Nonnull final String id) {
@@ -475,7 +475,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.languages.item collection
      * @param id Unique identifier of the item
-     * @return a languageProficiencyItemRequestBuilder
+     * @return a LanguageProficiencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LanguageProficiencyItemRequestBuilder languages(@javax.annotation.Nonnull final String id) {
@@ -487,7 +487,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.names.item collection
      * @param id Unique identifier of the item
-     * @return a personNameItemRequestBuilder
+     * @return a PersonNameItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonNameItemRequestBuilder names(@javax.annotation.Nonnull final String id) {
@@ -499,7 +499,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.notes.item collection
      * @param id Unique identifier of the item
-     * @return a personAnnotationItemRequestBuilder
+     * @return a PersonAnnotationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonAnnotationItemRequestBuilder notes(@javax.annotation.Nonnull final String id) {
@@ -566,7 +566,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.patents.item collection
      * @param id Unique identifier of the item
-     * @return a itemPatentItemRequestBuilder
+     * @return a ItemPatentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemPatentItemRequestBuilder patents(@javax.annotation.Nonnull final String id) {
@@ -578,7 +578,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.phones.item collection
      * @param id Unique identifier of the item
-     * @return a itemPhoneItemRequestBuilder
+     * @return a ItemPhoneItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemPhoneItemRequestBuilder phones(@javax.annotation.Nonnull final String id) {
@@ -590,7 +590,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.positions.item collection
      * @param id Unique identifier of the item
-     * @return a workPositionItemRequestBuilder
+     * @return a WorkPositionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WorkPositionItemRequestBuilder positions(@javax.annotation.Nonnull final String id) {
@@ -602,7 +602,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.projects.item collection
      * @param id Unique identifier of the item
-     * @return a projectParticipationItemRequestBuilder
+     * @return a ProjectParticipationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProjectParticipationItemRequestBuilder projects(@javax.annotation.Nonnull final String id) {
@@ -614,7 +614,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.publications.item collection
      * @param id Unique identifier of the item
-     * @return a itemPublicationItemRequestBuilder
+     * @return a ItemPublicationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemPublicationItemRequestBuilder publications(@javax.annotation.Nonnull final String id) {
@@ -626,7 +626,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.skills.item collection
      * @param id Unique identifier of the item
-     * @return a skillProficiencyItemRequestBuilder
+     * @return a SkillProficiencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SkillProficiencyItemRequestBuilder skills(@javax.annotation.Nonnull final String id) {
@@ -638,7 +638,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.webAccounts.item collection
      * @param id Unique identifier of the item
-     * @return a webAccountItemRequestBuilder
+     * @return a WebAccountItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WebAccountItemRequestBuilder webAccounts(@javax.annotation.Nonnull final String id) {
@@ -650,7 +650,7 @@ public class ProfileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.profile.websites.item collection
      * @param id Unique identifier of the item
-     * @return a personWebsiteItemRequestBuilder
+     * @return a PersonWebsiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonWebsiteItemRequestBuilder websites(@javax.annotation.Nonnull final String id) {

@@ -15,6 +15,8 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** The expiration date of the update. */
     private OffsetDateTime _expirationDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The posting date of the update. */
     private OffsetDateTime _postingDateTime;
     /** The version of the update. */
@@ -27,6 +29,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
      */
     public IosAvailableUpdateVersion() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosAvailableUpdateVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,12 +64,21 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosAvailableUpdateVersion currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("postingDateTime", (n) -> { currentObject.setPostingDateTime(n.getOffsetDateTimeValue()); });
             this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
             this.put("supportedDevices", (n) -> { currentObject.setSupportedDevices(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the postingDateTime property value. The posting date of the update.
@@ -100,6 +112,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("postingDateTime", this.getPostingDateTime());
         writer.writeStringValue("productVersion", this.getProductVersion());
         writer.writeCollectionOfPrimitiveValues("supportedDevices", this.getSupportedDevices());
@@ -120,6 +133,14 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
      */
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the postingDateTime property value. The posting date of the update.

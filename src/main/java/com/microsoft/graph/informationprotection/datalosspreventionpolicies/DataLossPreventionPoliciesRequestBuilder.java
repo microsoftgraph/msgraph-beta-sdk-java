@@ -21,7 +21,7 @@ import microsoft.graph.models.DataLossPreventionPolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the dataLossPreventionPolicies property of the microsoft.graph.informationProtection entity. */
 public class DataLossPreventionPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -17,16 +17,22 @@ public class Settings extends Entity implements Parsable {
     private Integer _deletedUserPersonalSiteRetentionPeriodInDays;
     /** Collection of file extensions not uploaded by the OneDrive sync app. */
     private java.util.List<String> _excludedFileExtensionsForSyncApp;
+    /** Specifies the idle session sign-out policies for the tenant. */
+    private IdleSessionSignOut _idleSessionSignOut;
     /** Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced. */
     private ImageTaggingChoice _imageTaggingOption;
     /** Indicates whether comments are allowed on modern site pages in SharePoint. */
     private Boolean _isCommentingOnSitePagesEnabled;
     /** Indicates whether push notifications are enabled for OneDrive events. */
     private Boolean _isFileActivityNotificationEnabled;
+    /** Indicates whether legacy authentication protocols are enabled for the tenant. */
+    private Boolean _isLegacyAuthProtocolsEnabled;
     /** Indicates whetherif Fluid Framework is allowed on SharePoint sites. */
     private Boolean _isLoopEnabled;
     /** Indicates whether files can be synced using the OneDrive sync app for Mac. */
     private Boolean _isMacSyncAppEnabled;
+    /** Indicates whether guests must sign in using the same account to which sharing invitations are sent. */
+    private Boolean _isRequireAcceptingUserToMatchInvitedUserEnabled;
     /** Indicates whether guests are allowed to reshare files, folders, and sites they don't own. */
     private Boolean _isResharingByExternalUsersEnabled;
     /** Indicates whether mobile push notifications are enabled for SharePoint. */
@@ -67,6 +73,7 @@ public class Settings extends Entity implements Parsable {
      */
     public Settings() {
         super();
+        this.setOdataType("#microsoft.graph.tenantAdmin.settings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -122,11 +129,14 @@ public class Settings extends Entity implements Parsable {
             this.put("availableManagedPathsForSiteCreation", (n) -> { currentObject.setAvailableManagedPathsForSiteCreation(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("deletedUserPersonalSiteRetentionPeriodInDays", (n) -> { currentObject.setDeletedUserPersonalSiteRetentionPeriodInDays(n.getIntegerValue()); });
             this.put("excludedFileExtensionsForSyncApp", (n) -> { currentObject.setExcludedFileExtensionsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("idleSessionSignOut", (n) -> { currentObject.setIdleSessionSignOut(n.getObjectValue(IdleSessionSignOut::createFromDiscriminatorValue)); });
             this.put("imageTaggingOption", (n) -> { currentObject.setImageTaggingOption(n.getEnumValue(ImageTaggingChoice.class)); });
             this.put("isCommentingOnSitePagesEnabled", (n) -> { currentObject.setIsCommentingOnSitePagesEnabled(n.getBooleanValue()); });
             this.put("isFileActivityNotificationEnabled", (n) -> { currentObject.setIsFileActivityNotificationEnabled(n.getBooleanValue()); });
+            this.put("isLegacyAuthProtocolsEnabled", (n) -> { currentObject.setIsLegacyAuthProtocolsEnabled(n.getBooleanValue()); });
             this.put("isLoopEnabled", (n) -> { currentObject.setIsLoopEnabled(n.getBooleanValue()); });
             this.put("isMacSyncAppEnabled", (n) -> { currentObject.setIsMacSyncAppEnabled(n.getBooleanValue()); });
+            this.put("isRequireAcceptingUserToMatchInvitedUserEnabled", (n) -> { currentObject.setIsRequireAcceptingUserToMatchInvitedUserEnabled(n.getBooleanValue()); });
             this.put("isResharingByExternalUsersEnabled", (n) -> { currentObject.setIsResharingByExternalUsersEnabled(n.getBooleanValue()); });
             this.put("isSharePointMobileNotificationEnabled", (n) -> { currentObject.setIsSharePointMobileNotificationEnabled(n.getBooleanValue()); });
             this.put("isSharePointNewsfeedEnabled", (n) -> { currentObject.setIsSharePointNewsfeedEnabled(n.getBooleanValue()); });
@@ -145,6 +155,14 @@ public class Settings extends Entity implements Parsable {
             this.put("siteCreationDefaultStorageLimitInMB", (n) -> { currentObject.setSiteCreationDefaultStorageLimitInMB(n.getIntegerValue()); });
             this.put("tenantDefaultTimezone", (n) -> { currentObject.setTenantDefaultTimezone(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the idleSessionSignOut property value. Specifies the idle session sign-out policies for the tenant.
+     * @return a idleSessionSignOut
+     */
+    @javax.annotation.Nullable
+    public IdleSessionSignOut getIdleSessionSignOut() {
+        return this._idleSessionSignOut;
     }
     /**
      * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
@@ -171,6 +189,14 @@ public class Settings extends Entity implements Parsable {
         return this._isFileActivityNotificationEnabled;
     }
     /**
+     * Gets the isLegacyAuthProtocolsEnabled property value. Indicates whether legacy authentication protocols are enabled for the tenant.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsLegacyAuthProtocolsEnabled() {
+        return this._isLegacyAuthProtocolsEnabled;
+    }
+    /**
      * Gets the isLoopEnabled property value. Indicates whetherif Fluid Framework is allowed on SharePoint sites.
      * @return a boolean
      */
@@ -185,6 +211,14 @@ public class Settings extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getIsMacSyncAppEnabled() {
         return this._isMacSyncAppEnabled;
+    }
+    /**
+     * Gets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. Indicates whether guests must sign in using the same account to which sharing invitations are sent.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsRequireAcceptingUserToMatchInvitedUserEnabled() {
+        return this._isRequireAcceptingUserToMatchInvitedUserEnabled;
     }
     /**
      * Gets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
@@ -334,11 +368,14 @@ public class Settings extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("availableManagedPathsForSiteCreation", this.getAvailableManagedPathsForSiteCreation());
         writer.writeIntegerValue("deletedUserPersonalSiteRetentionPeriodInDays", this.getDeletedUserPersonalSiteRetentionPeriodInDays());
         writer.writeCollectionOfPrimitiveValues("excludedFileExtensionsForSyncApp", this.getExcludedFileExtensionsForSyncApp());
+        writer.writeObjectValue("idleSessionSignOut", this.getIdleSessionSignOut());
         writer.writeEnumValue("imageTaggingOption", this.getImageTaggingOption());
         writer.writeBooleanValue("isCommentingOnSitePagesEnabled", this.getIsCommentingOnSitePagesEnabled());
         writer.writeBooleanValue("isFileActivityNotificationEnabled", this.getIsFileActivityNotificationEnabled());
+        writer.writeBooleanValue("isLegacyAuthProtocolsEnabled", this.getIsLegacyAuthProtocolsEnabled());
         writer.writeBooleanValue("isLoopEnabled", this.getIsLoopEnabled());
         writer.writeBooleanValue("isMacSyncAppEnabled", this.getIsMacSyncAppEnabled());
+        writer.writeBooleanValue("isRequireAcceptingUserToMatchInvitedUserEnabled", this.getIsRequireAcceptingUserToMatchInvitedUserEnabled());
         writer.writeBooleanValue("isResharingByExternalUsersEnabled", this.getIsResharingByExternalUsersEnabled());
         writer.writeBooleanValue("isSharePointMobileNotificationEnabled", this.getIsSharePointMobileNotificationEnabled());
         writer.writeBooleanValue("isSharePointNewsfeedEnabled", this.getIsSharePointNewsfeedEnabled());
@@ -390,6 +427,14 @@ public class Settings extends Entity implements Parsable {
         this._excludedFileExtensionsForSyncApp = value;
     }
     /**
+     * Sets the idleSessionSignOut property value. Specifies the idle session sign-out policies for the tenant.
+     * @param value Value to set for the idleSessionSignOut property.
+     * @return a void
+     */
+    public void setIdleSessionSignOut(@javax.annotation.Nullable final IdleSessionSignOut value) {
+        this._idleSessionSignOut = value;
+    }
+    /**
      * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
      * @param value Value to set for the imageTaggingOption property.
      * @return a void
@@ -414,6 +459,14 @@ public class Settings extends Entity implements Parsable {
         this._isFileActivityNotificationEnabled = value;
     }
     /**
+     * Sets the isLegacyAuthProtocolsEnabled property value. Indicates whether legacy authentication protocols are enabled for the tenant.
+     * @param value Value to set for the isLegacyAuthProtocolsEnabled property.
+     * @return a void
+     */
+    public void setIsLegacyAuthProtocolsEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isLegacyAuthProtocolsEnabled = value;
+    }
+    /**
      * Sets the isLoopEnabled property value. Indicates whetherif Fluid Framework is allowed on SharePoint sites.
      * @param value Value to set for the isLoopEnabled property.
      * @return a void
@@ -428,6 +481,14 @@ public class Settings extends Entity implements Parsable {
      */
     public void setIsMacSyncAppEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isMacSyncAppEnabled = value;
+    }
+    /**
+     * Sets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. Indicates whether guests must sign in using the same account to which sharing invitations are sent.
+     * @param value Value to set for the isRequireAcceptingUserToMatchInvitedUserEnabled property.
+     * @return a void
+     */
+    public void setIsRequireAcceptingUserToMatchInvitedUserEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isRequireAcceptingUserToMatchInvitedUserEnabled = value;
     }
     /**
      * Sets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.

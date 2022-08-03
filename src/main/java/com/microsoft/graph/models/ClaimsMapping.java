@@ -17,6 +17,8 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
     private String _email;
     /** The claim that provides the first name of the user. */
     private String _givenName;
+    /** The OdataType property */
+    private String _odataType;
     /** The claim that provides the last name of the user. */
     private String _surname;
     /** The claim that provides the unique identifier for the signed-in user. It is a required propoerty. */
@@ -27,6 +29,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
      */
     public ClaimsMapping() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.claimsMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,10 +72,11 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClaimsMapping currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
@@ -84,6 +88,14 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getGivenName() {
         return this._givenName;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the surname property value. The claim that provides the last name of the user.
@@ -111,6 +123,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
         writer.writeStringValue("givenName", this.getGivenName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("surname", this.getSurname());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
      */
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the surname property value. The claim that provides the last name of the user.

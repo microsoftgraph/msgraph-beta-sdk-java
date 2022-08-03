@@ -307,7 +307,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppProvisioningConfigGroupAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetQueryParameters queryParameters = new MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppProvisioningConfigGroupAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppProvisioningConfigGroupAssignmentItemRequestBuilderPatchRequestConfiguration() {

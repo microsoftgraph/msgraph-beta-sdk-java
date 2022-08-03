@@ -331,7 +331,7 @@ public class UpdatableAssetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new updatableAssetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UpdatableAssetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UpdatableAssetItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class UpdatableAssetItemRequestBuilder {
         @javax.annotation.Nullable
         public UpdatableAssetItemRequestBuilderGetQueryParameters queryParameters = new UpdatableAssetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new updatableAssetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UpdatableAssetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UpdatableAssetItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class UpdatableAssetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new updatableAssetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UpdatableAssetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UpdatableAssetItemRequestBuilderPatchRequestConfiguration() {

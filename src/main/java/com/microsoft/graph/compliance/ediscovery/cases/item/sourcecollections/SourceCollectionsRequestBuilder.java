@@ -20,7 +20,7 @@ import microsoft.graph.models.ediscovery.SourceCollectionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the sourceCollections property of the microsoft.graph.ediscovery.case entity. */
 public class SourceCollectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementDomainJoinConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementDomainJoinConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementDomainJoinConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementDomainJoinConnectorItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementDomainJoinConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementDomainJoinConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementDomainJoinConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementDomainJoinConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementDomainJoinConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementDomainJoinConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementDomainJoinConnectorItemRequestBuilderPatchRequestConfiguration() {

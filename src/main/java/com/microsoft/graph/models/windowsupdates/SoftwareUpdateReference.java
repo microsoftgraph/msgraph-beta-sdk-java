@@ -14,7 +14,7 @@ public class SoftwareUpdateReference extends DeployableContent implements Parsab
      */
     public SoftwareUpdateReference() {
         super();
-        this.setType("#microsoft.graph.windowsUpdates.softwareUpdateReference");
+        this.setOdataType("#microsoft.graph.windowsUpdates.softwareUpdateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +28,9 @@ public class SoftwareUpdateReference extends DeployableContent implements Parsab
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.expeditedQualityUpdateReference": return new ExpeditedQualityUpdateReference();
+                case "#microsoft.graph.windowsUpdates.featureUpdateReference": return new FeatureUpdateReference();
+                case "#microsoft.graph.windowsUpdates.qualityUpdateReference": return new QualityUpdateReference();
                 case "#microsoft.graph.windowsUpdates.windowsUpdateReference": return new WindowsUpdateReference();
             }
         }

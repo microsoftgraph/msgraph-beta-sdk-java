@@ -9,27 +9,27 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ThreatSubmission extends Entity implements Parsable {
-    /** The adminReview property */
+    /** Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as. */
     private SubmissionAdminReview _adminReview;
     /** The category property */
     private SubmissionCategory _category;
-    /** The clientSource property */
+    /** Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue. */
     private SubmissionClientSource _clientSource;
-    /** The contentType property */
+    /** Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue. */
     private SubmissionContentType _contentType;
-    /** The createdBy property */
+    /** Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'. */
     private SubmissionUserIdentity _createdBy;
-    /** The createdDateTime property */
+    /** Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
-    /** The result property */
+    /** Specifies the result of the analysis performed by Microsoft. */
     private SubmissionResult _result;
-    /** The source property */
+    /** Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue. */
     private SubmissionSource _source;
-    /** The status property */
+    /** Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue. */
     private LongRunningOperationStatus _status;
-    /** The tenantId property */
+    /** Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call. */
     private String _tenantId;
     /**
      * Instantiates a new threatSubmission and sets the default values.
@@ -37,7 +37,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      */
     public ThreatSubmission() {
         super();
-        this.setType("#microsoft.graph.security.threatSubmission");
+        this.setOdataType("#microsoft.graph.security.threatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,15 +51,19 @@ public class ThreatSubmission extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.security.emailContentThreatSubmission": return new EmailContentThreatSubmission();
                 case "#microsoft.graph.security.emailThreatSubmission": return new EmailThreatSubmission();
+                case "#microsoft.graph.security.emailUrlThreatSubmission": return new EmailUrlThreatSubmission();
+                case "#microsoft.graph.security.fileContentThreatSubmission": return new FileContentThreatSubmission();
                 case "#microsoft.graph.security.fileThreatSubmission": return new FileThreatSubmission();
+                case "#microsoft.graph.security.fileUrlThreatSubmission": return new FileUrlThreatSubmission();
                 case "#microsoft.graph.security.urlThreatSubmission": return new UrlThreatSubmission();
             }
         }
         return new ThreatSubmission();
     }
     /**
-     * Gets the adminReview property value. The adminReview property
+     * Gets the adminReview property value. Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
      * @return a submissionAdminReview
      */
     @javax.annotation.Nullable
@@ -75,7 +79,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._category;
     }
     /**
-     * Gets the clientSource property value. The clientSource property
+     * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
      * @return a submissionClientSource
      */
     @javax.annotation.Nullable
@@ -83,7 +87,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._clientSource;
     }
     /**
-     * Gets the contentType property value. The contentType property
+     * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
      * @return a submissionContentType
      */
     @javax.annotation.Nullable
@@ -91,7 +95,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._contentType;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
      * @return a submissionUserIdentity
      */
     @javax.annotation.Nullable
@@ -99,7 +103,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -127,7 +131,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the result property value. The result property
+     * Gets the result property value. Specifies the result of the analysis performed by Microsoft.
      * @return a submissionResult
      */
     @javax.annotation.Nullable
@@ -135,7 +139,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._result;
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
      * @return a submissionSource
      */
     @javax.annotation.Nullable
@@ -143,7 +147,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._source;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
      * @return a longRunningOperationStatus
      */
     @javax.annotation.Nullable
@@ -151,7 +155,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -178,7 +182,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the adminReview property value. The adminReview property
+     * Sets the adminReview property value. Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
      * @param value Value to set for the adminReview property.
      * @return a void
      */
@@ -194,7 +198,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._category = value;
     }
     /**
-     * Sets the clientSource property value. The clientSource property
+     * Sets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
      * @param value Value to set for the clientSource property.
      * @return a void
      */
@@ -202,7 +206,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._clientSource = value;
     }
     /**
-     * Sets the contentType property value. The contentType property
+     * Sets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
      * @param value Value to set for the contentType property.
      * @return a void
      */
@@ -210,7 +214,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._contentType = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -218,7 +222,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -226,7 +230,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the result property value. The result property
+     * Sets the result property value. Specifies the result of the analysis performed by Microsoft.
      * @param value Value to set for the result property.
      * @return a void
      */
@@ -234,7 +238,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._result = value;
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
      * @param value Value to set for the source property.
      * @return a void
      */
@@ -242,7 +246,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._source = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -250,7 +254,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
      * @param value Value to set for the tenantId property.
      * @return a void
      */

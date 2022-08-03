@@ -16,6 +16,7 @@ public class EdgeHomeButtonOpensCustomURL extends EdgeHomeButtonConfiguration im
      */
     public EdgeHomeButtonOpensCustomURL() {
         super();
+        this.setOdataType("#microsoft.graph.edgeHomeButtonOpensCustomURL");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.serviceprincipals.item.synchronization.templates.item.schema.directories.count.CountRequestBuilder;
 /** Provides operations to manage the directories property of the microsoft.graph.synchronizationSchema entity. */
 public class DirectoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

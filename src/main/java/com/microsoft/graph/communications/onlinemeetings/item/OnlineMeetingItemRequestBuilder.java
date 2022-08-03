@@ -21,6 +21,9 @@ import microsoft.graph.communications.onlinemeetings.item.attendeereport.Attende
 import microsoft.graph.communications.onlinemeetings.item.meetingattendancereport.MeetingAttendanceReportRequestBuilder;
 import microsoft.graph.communications.onlinemeetings.item.recording.RecordingRequestBuilder;
 import microsoft.graph.communications.onlinemeetings.item.registration.RegistrationRequestBuilder;
+import microsoft.graph.communications.onlinemeetings.item.transcripts.item.CallTranscriptItemRequestBuilder;
+import microsoft.graph.communications.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
+import microsoft.graph.communications.onlinemeetings.item.virtualappointment.VirtualAppointmentRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.OnlineMeeting;
 /** Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity. */
@@ -59,12 +62,22 @@ public class OnlineMeetingItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The transcripts property */
+    @javax.annotation.Nonnull
+    public TranscriptsRequestBuilder transcripts() {
+        return new TranscriptsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The virtualAppointment property */
+    @javax.annotation.Nonnull
+    public VirtualAppointmentRequestBuilder virtualAppointment() {
+        return new VirtualAppointmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Gets an item from the Microsoft.Graph.communications.onlineMeetings.item.attendanceReports.item collection
      * @param id Unique identifier of the item
-     * @return a meetingAttendanceReportItemRequestBuilder
+     * @return a MeetingAttendanceReportItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MeetingAttendanceReportItemRequestBuilder attendanceReports(@javax.annotation.Nonnull final String id) {
@@ -347,6 +360,18 @@ public class OnlineMeetingItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
+    /**
+     * Gets an item from the Microsoft.Graph.communications.onlineMeetings.item.transcripts.item collection
+     * @param id Unique identifier of the item
+     * @return a CallTranscriptItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CallTranscriptItemRequestBuilder transcripts(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("callTranscript%2Did", id);
+        return new CallTranscriptItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class OnlineMeetingItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
@@ -356,7 +381,7 @@ public class OnlineMeetingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onlineMeetingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnlineMeetingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnlineMeetingItemRequestBuilderDeleteRequestConfiguration() {
@@ -385,7 +410,7 @@ public class OnlineMeetingItemRequestBuilder {
         @javax.annotation.Nullable
         public OnlineMeetingItemRequestBuilderGetQueryParameters queryParameters = new OnlineMeetingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onlineMeetingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnlineMeetingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnlineMeetingItemRequestBuilderGetRequestConfiguration() {
@@ -400,7 +425,7 @@ public class OnlineMeetingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onlineMeetingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnlineMeetingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnlineMeetingItemRequestBuilderPatchRequestConfiguration() {

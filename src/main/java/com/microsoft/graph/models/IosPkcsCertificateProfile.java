@@ -30,6 +30,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      */
     public IosPkcsCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.iosPkcsCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

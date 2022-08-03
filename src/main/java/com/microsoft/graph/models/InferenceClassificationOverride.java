@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class InferenceClassificationOverride extends Entity implements Parsable {
     /** Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other. */
     private InferenceClassificationType _classifyAs;
@@ -19,6 +19,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     public InferenceClassificationOverride() {
         super();
+        this.setOdataType("#microsoft.graph.inferenceClassificationOverride");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

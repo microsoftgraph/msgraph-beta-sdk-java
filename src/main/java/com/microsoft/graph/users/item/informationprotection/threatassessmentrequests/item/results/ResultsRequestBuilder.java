@@ -20,7 +20,7 @@ import microsoft.graph.models.ThreatAssessmentResultCollectionResponse;
 import microsoft.graph.users.item.informationprotection.threatassessmentrequests.item.results.count.CountRequestBuilder;
 /** Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity. */
 public class ResultsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

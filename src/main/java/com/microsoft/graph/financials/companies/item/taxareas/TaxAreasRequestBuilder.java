@@ -20,7 +20,7 @@ import microsoft.graph.models.TaxArea;
 import microsoft.graph.models.TaxAreaCollectionResponse;
 /** Provides operations to manage the taxAreas property of the microsoft.graph.company entity. */
 public class TaxAreasRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -18,6 +18,7 @@ public class AndroidTrustedRootCertificate extends DeviceConfiguration implement
      */
     public AndroidTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.androidTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

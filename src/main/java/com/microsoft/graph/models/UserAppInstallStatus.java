@@ -29,6 +29,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      */
     public UserAppInstallStatus() {
         super();
+        this.setOdataType("#microsoft.graph.userAppInstallStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

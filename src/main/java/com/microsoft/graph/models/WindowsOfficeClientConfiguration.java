@@ -14,6 +14,7 @@ public class WindowsOfficeClientConfiguration extends OfficeClientConfiguration 
      */
     public WindowsOfficeClientConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsOfficeClientConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class DispositionReviewStageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dispositionReviewStageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DispositionReviewStageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DispositionReviewStageItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DispositionReviewStageItemRequestBuilder {
         @javax.annotation.Nullable
         public DispositionReviewStageItemRequestBuilderGetQueryParameters queryParameters = new DispositionReviewStageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dispositionReviewStageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DispositionReviewStageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DispositionReviewStageItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DispositionReviewStageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dispositionReviewStageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DispositionReviewStageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DispositionReviewStageItemRequestBuilderPatchRequestConfiguration() {

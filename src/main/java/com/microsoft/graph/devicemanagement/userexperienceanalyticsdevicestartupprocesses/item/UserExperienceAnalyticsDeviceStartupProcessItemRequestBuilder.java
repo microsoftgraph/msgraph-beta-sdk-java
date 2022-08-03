@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupProcessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupProcessItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilderPatchRequestConfiguration() {

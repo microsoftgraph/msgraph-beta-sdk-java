@@ -13,12 +13,15 @@ public class DetectedSensitiveContentWrapper implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** The classification property */
     private java.util.List<DetectedSensitiveContent> _classification;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new detectedSensitiveContentWrapper and sets the default values.
      * @return a void
      */
     public DetectedSensitiveContentWrapper() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.detectedSensitiveContentWrapper");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class DetectedSensitiveContentWrapper implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedSensitiveContentWrapper currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getCollectionOfObjectValues(DetectedSensitiveContent::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class DetectedSensitiveContentWrapper implements AdditionalDataHolder, Pa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classification", this.getClassification());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class DetectedSensitiveContentWrapper implements AdditionalDataHolder, Pa
      */
     public void setClassification(@javax.annotation.Nullable final java.util.List<DetectedSensitiveContent> value) {
         this._classification = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

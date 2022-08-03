@@ -13,6 +13,8 @@ public class LicenseInfoDetail implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The licenseType property */
     private AzureADLicenseType _licenseType;
+    /** The OdataType property */
+    private String _odataType;
     /** The totalAssignedCount property */
     private Integer _totalAssignedCount;
     /** The totalLicenseCount property */
@@ -25,6 +27,7 @@ public class LicenseInfoDetail implements AdditionalDataHolder, Parsable {
      */
     public LicenseInfoDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.licenseInfoDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,8 +54,9 @@ public class LicenseInfoDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseInfoDetail currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(AzureADLicenseType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("totalAssignedCount", (n) -> { currentObject.setTotalAssignedCount(n.getIntegerValue()); });
             this.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
             this.put("totalUsageCount", (n) -> { currentObject.setTotalUsageCount(n.getIntegerValue()); });
@@ -65,6 +69,14 @@ public class LicenseInfoDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AzureADLicenseType getLicenseType() {
         return this._licenseType;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the totalAssignedCount property value. The totalAssignedCount property
@@ -98,6 +110,7 @@ public class LicenseInfoDetail implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("licenseType", this.getLicenseType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("totalAssignedCount", this.getTotalAssignedCount());
         writer.writeIntegerValue("totalLicenseCount", this.getTotalLicenseCount());
         writer.writeIntegerValue("totalUsageCount", this.getTotalUsageCount());
@@ -118,6 +131,14 @@ public class LicenseInfoDetail implements AdditionalDataHolder, Parsable {
      */
     public void setLicenseType(@javax.annotation.Nullable final AzureADLicenseType value) {
         this._licenseType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the totalAssignedCount property value. The totalAssignedCount property

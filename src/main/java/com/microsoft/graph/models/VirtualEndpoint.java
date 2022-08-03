@@ -14,7 +14,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     private java.util.List<CloudPC> _cloudPCs;
     /** The image resource on Cloud PC. */
     private java.util.List<CloudPcDeviceImage> _deviceImages;
-    /** The externalPartnerSettings property */
+    /** The external partner settings on a Cloud PC. */
     private java.util.List<CloudPcExternalPartnerSetting> _externalPartnerSettings;
     /** The gallery image resource on Cloud PC. */
     private java.util.List<CloudPcGalleryImage> _galleryImages;
@@ -38,6 +38,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public VirtualEndpoint() {
         super();
+        this.setOdataType("#microsoft.graph.virtualEndpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,7 +75,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this._deviceImages;
     }
     /**
-     * Gets the externalPartnerSettings property value. The externalPartnerSettings property
+     * Gets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
      * @return a cloudPcExternalPartnerSetting
      */
     @javax.annotation.Nullable
@@ -213,7 +214,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this._deviceImages = value;
     }
     /**
-     * Sets the externalPartnerSettings property value. The externalPartnerSettings property
+     * Sets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
      * @param value Value to set for the externalPartnerSettings property.
      * @return a void
      */

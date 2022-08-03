@@ -20,7 +20,7 @@ import microsoft.graph.models.LinkedResource_v2CollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the linkedResources property of the microsoft.graph.baseTask entity. */
 public class LinkedResourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

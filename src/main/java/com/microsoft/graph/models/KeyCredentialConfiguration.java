@@ -15,6 +15,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** The maxLifetime property */
     private Period _maxLifetime;
+    /** The OdataType property */
+    private String _odataType;
     /** Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable. */
     private OffsetDateTime _restrictForAppsCreatedAfterDateTime;
     /** The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy. */
@@ -25,6 +27,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     public KeyCredentialConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.keyCredentialConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,8 +54,9 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KeyCredentialConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("maxLifetime", (n) -> { currentObject.setMaxLifetime(n.getPeriodValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("restrictForAppsCreatedAfterDateTime", (n) -> { currentObject.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
             this.put("restrictionType", (n) -> { currentObject.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType.class)); });
         }};
@@ -64,6 +68,14 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Period getMaxLifetime() {
         return this._maxLifetime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
@@ -89,6 +101,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("maxLifetime", this.getMaxLifetime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restrictForAppsCreatedAfterDateTime", this.getRestrictForAppsCreatedAfterDateTime());
         writer.writeEnumValue("restrictionType", this.getRestrictionType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -108,6 +121,14 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     public void setMaxLifetime(@javax.annotation.Nullable final Period value) {
         this._maxLifetime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.

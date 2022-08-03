@@ -15,6 +15,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     private Boolean _allowMultipleOccurrences;
     /** Parameter name. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** true if the parameter is required; otherwise false. */
     private Boolean _required;
     /** The type property */
@@ -25,6 +27,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     public AttributeMappingParameterSchema() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attributeMappingParameterSchema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeMappingParameterSchema currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowMultipleOccurrences", (n) -> { currentObject.setAllowMultipleOccurrences(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttributeType.class)); });
         }};
@@ -73,6 +77,14 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the required property value. true if the parameter is required; otherwise false.
@@ -99,6 +111,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleOccurrences", this.getAllowMultipleOccurrences());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("required", this.getRequired());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the required property value. true if the parameter is required; otherwise false.

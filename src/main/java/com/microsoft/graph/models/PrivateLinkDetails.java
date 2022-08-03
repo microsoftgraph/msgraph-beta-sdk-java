@@ -11,6 +11,8 @@ import java.util.Objects;
 public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The unique identifier for the Private Link policy. */
     private String _policyId;
     /** The name of the Private Link policy in Azure AD. */
@@ -25,6 +27,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      */
     public PrivateLinkDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.privateLinkDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +54,21 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivateLinkDetails currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
             this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
             this.put("policyTenantId", (n) -> { currentObject.setPolicyTenantId(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the policyId property value. The unique identifier for the Private Link policy.
@@ -97,6 +109,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeStringValue("policyName", this.getPolicyName());
         writer.writeStringValue("policyTenantId", this.getPolicyTenantId());
@@ -110,6 +123,14 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the policyId property value. The unique identifier for the Private Link policy.

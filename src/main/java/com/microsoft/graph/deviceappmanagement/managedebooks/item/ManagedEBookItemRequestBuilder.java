@@ -67,7 +67,7 @@ public class ManagedEBookItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a managedEBookAssignmentItemRequestBuilder
+     * @return a ManagedEBookAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedEBookAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -79,7 +79,7 @@ public class ManagedEBookItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.categories.item collection
      * @param id Unique identifier of the item
-     * @return a managedEBookCategoryItemRequestBuilder
+     * @return a ManagedEBookCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedEBookCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
@@ -259,7 +259,7 @@ public class ManagedEBookItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.deviceStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceInstallStateItemRequestBuilder
+     * @return a DeviceInstallStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceInstallStateItemRequestBuilder deviceStates(@javax.annotation.Nonnull final String id) {
@@ -377,7 +377,7 @@ public class ManagedEBookItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
      * @param id Unique identifier of the item
-     * @return a userInstallStateSummaryItemRequestBuilder
+     * @return a UserInstallStateSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserInstallStateSummaryItemRequestBuilder userStateSummary(@javax.annotation.Nonnull final String id) {
@@ -395,7 +395,7 @@ public class ManagedEBookItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedEBookItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookItemRequestBuilderDeleteRequestConfiguration() {
@@ -424,7 +424,7 @@ public class ManagedEBookItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedEBookItemRequestBuilderGetQueryParameters queryParameters = new ManagedEBookItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedEBookItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookItemRequestBuilderGetRequestConfiguration() {
@@ -439,7 +439,7 @@ public class ManagedEBookItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedEBookItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookItemRequestBuilderPatchRequestConfiguration() {

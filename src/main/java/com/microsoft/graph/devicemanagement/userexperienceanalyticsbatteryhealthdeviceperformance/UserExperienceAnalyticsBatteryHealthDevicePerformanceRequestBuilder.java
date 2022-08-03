@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDevicePerforma
 import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsBatteryHealthDevicePerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

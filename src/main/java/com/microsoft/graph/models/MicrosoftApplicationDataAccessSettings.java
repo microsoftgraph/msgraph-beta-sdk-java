@@ -18,6 +18,7 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      */
     public MicrosoftApplicationDataAccessSettings() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftApplicationDataAccessSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

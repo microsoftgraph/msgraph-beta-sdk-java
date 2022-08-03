@@ -20,6 +20,7 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
      */
     public Windows10XTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.windows10XTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

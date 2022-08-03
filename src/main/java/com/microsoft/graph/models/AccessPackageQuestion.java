@@ -17,19 +17,19 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     private Boolean _isAnswerEditable;
     /** Whether the requestor is required to supply an answer or not. */
     private Boolean _isRequired;
+    /** The OdataType property */
+    private String _odataType;
     /** Relative position of this question when displaying a list of questions to the requestor. */
     private Integer _sequence;
     /** The text of the question to show to the requestor. */
     private AccessPackageLocalizedContent _text;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new accessPackageQuestion and sets the default values.
      * @return a void
      */
     public AccessPackageQuestion() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.accessPackageQuestion");
+        this.setOdataType("#microsoft.graph.accessPackageQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,9 +68,9 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isAnswerEditable", (n) -> { currentObject.setIsAnswerEditable(n.getBooleanValue()); });
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sequence", (n) -> { currentObject.setSequence(n.getIntegerValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getObjectValue(AccessPackageLocalizedContent::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -98,6 +98,14 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         return this._isRequired;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @return a integer
      */
@@ -114,14 +122,6 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         return this._text;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -131,9 +131,9 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isAnswerEditable", this.getIsAnswerEditable());
         writer.writeBooleanValue("isRequired", this.getIsRequired());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("sequence", this.getSequence());
         writer.writeObjectValue("text", this.getText());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -169,6 +169,14 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         this._isRequired = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @param value Value to set for the sequence property.
      * @return a void
@@ -183,13 +191,5 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     public void setText(@javax.annotation.Nullable final AccessPackageLocalizedContent value) {
         this._text = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

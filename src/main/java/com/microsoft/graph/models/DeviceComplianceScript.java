@@ -43,6 +43,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      */
     public DeviceComplianceScript() {
         super();
+        this.setOdataType("#microsoft.graph.deviceComplianceScript");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

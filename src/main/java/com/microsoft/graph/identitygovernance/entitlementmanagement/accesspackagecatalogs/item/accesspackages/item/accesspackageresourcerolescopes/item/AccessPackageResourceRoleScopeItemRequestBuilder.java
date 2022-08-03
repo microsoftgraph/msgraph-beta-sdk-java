@@ -319,7 +319,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageResourceRoleScopeItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageResourceRoleScopeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration() {

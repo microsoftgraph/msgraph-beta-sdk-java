@@ -307,7 +307,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new softwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public SoftwareOathAuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new SoftwareOathAuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new softwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new softwareOathAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SoftwareOathAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SoftwareOathAuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

@@ -307,7 +307,7 @@ public class CloudPcServicePlanItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcServicePlanItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcServicePlanItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcServicePlanItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CloudPcServicePlanItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcServicePlanItemRequestBuilderGetQueryParameters queryParameters = new CloudPcServicePlanItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcServicePlanItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcServicePlanItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcServicePlanItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CloudPcServicePlanItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcServicePlanItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcServicePlanItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcServicePlanItemRequestBuilderPatchRequestConfiguration() {

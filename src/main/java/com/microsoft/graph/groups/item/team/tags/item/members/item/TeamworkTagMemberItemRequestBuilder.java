@@ -307,7 +307,7 @@ public class TeamworkTagMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkTagMemberItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TeamworkTagMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamworkTagMemberItemRequestBuilderGetQueryParameters queryParameters = new TeamworkTagMemberItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamworkTagMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkTagMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkTagMemberItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TeamworkTagMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkTagMemberItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkTagMemberItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkTagMemberItemRequestBuilderPatchRequestConfiguration() {

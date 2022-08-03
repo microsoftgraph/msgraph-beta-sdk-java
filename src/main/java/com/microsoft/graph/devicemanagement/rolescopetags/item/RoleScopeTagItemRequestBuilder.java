@@ -40,7 +40,7 @@ public class RoleScopeTagItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.roleScopeTags.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a roleScopeTagAutoAssignmentItemRequestBuilder
+     * @return a RoleScopeTagAutoAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RoleScopeTagAutoAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class RoleScopeTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleScopeTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class RoleScopeTagItemRequestBuilder {
         @javax.annotation.Nullable
         public RoleScopeTagItemRequestBuilderGetQueryParameters queryParameters = new RoleScopeTagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new roleScopeTagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class RoleScopeTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleScopeTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RoleScopeTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleScopeTagItemRequestBuilderPatchRequestConfiguration() {

@@ -53,6 +53,7 @@ public class Employee extends Entity implements Parsable {
      */
     public Employee() {
         super();
+        this.setOdataType("#microsoft.graph.employee");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

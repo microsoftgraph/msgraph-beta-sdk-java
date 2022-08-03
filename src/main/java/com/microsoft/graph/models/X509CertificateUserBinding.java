@@ -11,6 +11,8 @@ import java.util.Objects;
 public class X509CertificateUserBinding implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required */
     private Integer _priority;
     /** Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required. */
@@ -23,6 +25,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      */
     public X509CertificateUserBinding() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.x509CertificateUserBinding");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,11 +52,20 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final X509CertificateUserBinding currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
             this.put("userProperty", (n) -> { currentObject.setUserProperty(n.getStringValue()); });
             this.put("x509CertificateField", (n) -> { currentObject.setX509CertificateField(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
@@ -86,6 +98,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("priority", this.getPriority());
         writer.writeStringValue("userProperty", this.getUserProperty());
         writer.writeStringValue("x509CertificateField", this.getX509CertificateField());
@@ -98,6 +111,14 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required

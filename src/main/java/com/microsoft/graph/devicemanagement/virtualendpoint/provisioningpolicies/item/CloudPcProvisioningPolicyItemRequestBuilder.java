@@ -40,7 +40,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.provisioningPolicies.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPcProvisioningPolicyAssignmentItemRequestBuilder
+     * @return a CloudPcProvisioningPolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcProvisioningPolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public CloudPcProvisioningPolicyItemRequestBuilderGetQueryParameters queryParameters = new CloudPcProvisioningPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration() {

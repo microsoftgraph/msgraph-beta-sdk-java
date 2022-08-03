@@ -308,7 +308,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.outboundSharedUserProfiles.item.tenants.item collection
      * @param id Unique identifier of the item
-     * @return a tenantReferenceTenantItemRequestBuilder
+     * @return a TenantReferenceTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantReferenceTenantItemRequestBuilder tenants(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outboundSharedUserProfileUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OutboundSharedUserProfileUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutboundSharedUserProfileUserItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder {
         @javax.annotation.Nullable
         public OutboundSharedUserProfileUserItemRequestBuilderGetQueryParameters queryParameters = new OutboundSharedUserProfileUserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new outboundSharedUserProfileUserItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OutboundSharedUserProfileUserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutboundSharedUserProfileUserItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outboundSharedUserProfileUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OutboundSharedUserProfileUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutboundSharedUserProfileUserItemRequestBuilderPatchRequestConfiguration() {

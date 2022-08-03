@@ -17,6 +17,8 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     private String _minOSVersion;
     /** Name for object. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Supported Applicability rule types for Device Configuration */
     private DeviceManagementApplicabilityRuleType _ruleType;
     /**
@@ -25,6 +27,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
      */
     public DeviceManagementApplicabilityRuleOsVersion() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementApplicabilityRuleOsVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,10 +54,11 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementApplicabilityRuleOsVersion currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("maxOSVersion", (n) -> { currentObject.setMaxOSVersion(n.getStringValue()); });
             this.put("minOSVersion", (n) -> { currentObject.setMinOSVersion(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleType", (n) -> { currentObject.setRuleType(n.getEnumValue(DeviceManagementApplicabilityRuleType.class)); });
         }};
     }
@@ -83,6 +87,14 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @return a deviceManagementApplicabilityRuleType
      */
@@ -100,6 +112,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         writer.writeStringValue("maxOSVersion", this.getMaxOSVersion());
         writer.writeStringValue("minOSVersion", this.getMinOSVersion());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("ruleType", this.getRuleType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the ruleType property value. Supported Applicability rule types for Device Configuration

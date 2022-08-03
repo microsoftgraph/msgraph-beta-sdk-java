@@ -26,6 +26,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      */
     public ReferenceAttachment() {
         super();
+        this.setOdataType("#microsoft.graph.referenceAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

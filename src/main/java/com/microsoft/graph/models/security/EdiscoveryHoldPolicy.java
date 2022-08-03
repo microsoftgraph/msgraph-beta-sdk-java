@@ -14,9 +14,9 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     private java.util.List<String> _errors;
     /** Indicates whether the hold is enabled and actively holding content. */
     private Boolean _isEnabled;
-    /** The siteSources property */
+    /** Data sources that represent SharePoint sites. */
     private java.util.List<SiteSource> _siteSources;
-    /** The userSources property */
+    /** Data sources that represent Exchange mailboxes. */
     private java.util.List<UserSource> _userSources;
     /**
      * Instantiates a new EdiscoveryHoldPolicy and sets the default values.
@@ -24,6 +24,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      */
     public EdiscoveryHoldPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryHoldPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,7 +76,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         return this._isEnabled;
     }
     /**
-     * Gets the siteSources property value. The siteSources property
+     * Gets the siteSources property value. Data sources that represent SharePoint sites.
      * @return a siteSource
      */
     @javax.annotation.Nullable
@@ -83,7 +84,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         return this._siteSources;
     }
     /**
-     * Gets the userSources property value. The userSources property
+     * Gets the userSources property value. Data sources that represent Exchange mailboxes.
      * @return a userSource
      */
     @javax.annotation.Nullable
@@ -129,7 +130,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         this._isEnabled = value;
     }
     /**
-     * Sets the siteSources property value. The siteSources property
+     * Sets the siteSources property value. Data sources that represent SharePoint sites.
      * @param value Value to set for the siteSources property.
      * @return a void
      */
@@ -137,7 +138,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
         this._siteSources = value;
     }
     /**
-     * Sets the userSources property value. The userSources property
+     * Sets the userSources property value. Data sources that represent Exchange mailboxes.
      * @param value Value to set for the userSources property.
      * @return a void
      */

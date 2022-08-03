@@ -36,6 +36,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      */
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      */
     public EncryptWithTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.encryptWithTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

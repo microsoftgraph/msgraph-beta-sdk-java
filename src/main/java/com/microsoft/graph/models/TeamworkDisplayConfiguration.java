@@ -21,12 +21,15 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     private Boolean _isContentDuplicationAllowed;
     /** True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices. */
     private Boolean _isDualDisplayModeEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamworkDisplayConfiguration and sets the default values.
      * @return a void
      */
     public TeamworkDisplayConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkDisplayConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,12 +72,13 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDisplayConfiguration currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("configuredDisplays", (n) -> { currentObject.setConfiguredDisplays(n.getCollectionOfObjectValues(TeamworkConfiguredPeripheral::createFromDiscriminatorValue)); });
             this.put("displayCount", (n) -> { currentObject.setDisplayCount(n.getIntegerValue()); });
             this.put("inBuiltDisplayScreenConfiguration", (n) -> { currentObject.setInBuiltDisplayScreenConfiguration(n.getObjectValue(TeamworkDisplayScreenConfiguration::createFromDiscriminatorValue)); });
             this.put("isContentDuplicationAllowed", (n) -> { currentObject.setIsContentDuplicationAllowed(n.getBooleanValue()); });
             this.put("isDualDisplayModeEnabled", (n) -> { currentObject.setIsDualDisplayModeEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
         return this._isDualDisplayModeEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -113,6 +125,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
         writer.writeObjectValue("inBuiltDisplayScreenConfiguration", this.getInBuiltDisplayScreenConfiguration());
         writer.writeBooleanValue("isContentDuplicationAllowed", this.getIsContentDuplicationAllowed());
         writer.writeBooleanValue("isDualDisplayModeEnabled", this.getIsDualDisplayModeEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,5 +175,13 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      */
     public void setIsDualDisplayModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isDualDisplayModeEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

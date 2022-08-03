@@ -17,6 +17,7 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
      */
     public WindowsDriverUpdateProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDriverUpdateProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chromeOSOnboardingSettingsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ChromeOSOnboardingSettingsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChromeOSOnboardingSettingsItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder {
         @javax.annotation.Nullable
         public ChromeOSOnboardingSettingsItemRequestBuilderGetQueryParameters queryParameters = new ChromeOSOnboardingSettingsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new chromeOSOnboardingSettingsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChromeOSOnboardingSettingsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChromeOSOnboardingSettingsItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chromeOSOnboardingSettingsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ChromeOSOnboardingSettingsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChromeOSOnboardingSettingsItemRequestBuilderPatchRequestConfiguration() {

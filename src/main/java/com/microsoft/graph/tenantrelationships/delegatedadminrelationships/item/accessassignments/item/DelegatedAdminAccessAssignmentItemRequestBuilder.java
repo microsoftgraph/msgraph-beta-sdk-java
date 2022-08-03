@@ -307,7 +307,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DelegatedAdminAccessAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DelegatedAdminAccessAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new delegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration() {

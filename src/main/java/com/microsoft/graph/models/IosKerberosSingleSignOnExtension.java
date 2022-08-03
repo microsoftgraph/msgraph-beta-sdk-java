@@ -60,6 +60,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      */
     public IosKerberosSingleSignOnExtension() {
         super();
+        this.setOdataType("#microsoft.graph.iosKerberosSingleSignOnExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

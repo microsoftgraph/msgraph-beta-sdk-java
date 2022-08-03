@@ -16,6 +16,7 @@ public class Presentation extends Entity implements Parsable {
      */
     public Presentation() {
         super();
+        this.setOdataType("#microsoft.graph.presentation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

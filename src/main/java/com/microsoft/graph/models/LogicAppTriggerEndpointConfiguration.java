@@ -20,6 +20,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      */
     public LogicAppTriggerEndpointConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.logicAppTriggerEndpointConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

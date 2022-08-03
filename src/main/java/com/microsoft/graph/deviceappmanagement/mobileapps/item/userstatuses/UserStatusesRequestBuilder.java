@@ -20,7 +20,7 @@ import microsoft.graph.models.UserAppInstallStatus;
 import microsoft.graph.models.UserAppInstallStatusCollectionResponse;
 /** Provides operations to manage the userStatuses property of the microsoft.graph.mobileApp entity. */
 public class UserStatusesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

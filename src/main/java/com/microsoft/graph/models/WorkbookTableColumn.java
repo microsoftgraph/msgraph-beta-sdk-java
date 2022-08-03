@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class WorkbookTableColumn extends Entity implements Parsable {
     /** Retrieve the filter applied to the column. Read-only. */
     private WorkbookFilter _filter;
@@ -23,6 +23,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     public WorkbookTableColumn() {
         super();
+        this.setOdataType("#microsoft.graph.workbookTableColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

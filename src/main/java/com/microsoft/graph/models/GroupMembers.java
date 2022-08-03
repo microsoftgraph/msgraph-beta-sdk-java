@@ -18,6 +18,7 @@ public class GroupMembers extends UserSet implements Parsable {
      */
     public GroupMembers() {
         super();
+        this.setOdataType("#microsoft.graph.groupMembers");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

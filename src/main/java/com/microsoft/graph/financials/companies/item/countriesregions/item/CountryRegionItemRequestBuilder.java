@@ -307,7 +307,7 @@ public class CountryRegionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new countryRegionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CountryRegionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CountryRegionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CountryRegionItemRequestBuilder {
         @javax.annotation.Nullable
         public CountryRegionItemRequestBuilderGetQueryParameters queryParameters = new CountryRegionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new countryRegionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CountryRegionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CountryRegionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CountryRegionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new countryRegionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CountryRegionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CountryRegionItemRequestBuilderPatchRequestConfiguration() {

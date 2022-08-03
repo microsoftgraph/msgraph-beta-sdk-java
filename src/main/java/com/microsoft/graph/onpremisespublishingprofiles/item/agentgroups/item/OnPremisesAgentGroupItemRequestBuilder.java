@@ -41,7 +41,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item.agents.item collection
      * @param id Unique identifier of the item
-     * @return a onPremisesAgentItemRequestBuilder
+     * @return a OnPremisesAgentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentItemRequestBuilder agents(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item.publishedResources.item collection
      * @param id Unique identifier of the item
-     * @return a publishedResourceItemRequestBuilder
+     * @return a PublishedResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PublishedResourceItemRequestBuilder publishedResources(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onPremisesAgentGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesAgentGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesAgentGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public OnPremisesAgentGroupItemRequestBuilderGetQueryParameters queryParameters = new OnPremisesAgentGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onPremisesAgentGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesAgentGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesAgentGroupItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onPremisesAgentGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesAgentGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesAgentGroupItemRequestBuilderPatchRequestConfiguration() {

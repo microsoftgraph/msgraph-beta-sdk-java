@@ -247,7 +247,7 @@ public class SalesCreditMemoItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesCreditMemos.item.salesCreditMemoLines.item collection
      * @param id Unique identifier of the item
-     * @return a salesCreditMemoLineItemRequestBuilder
+     * @return a SalesCreditMemoLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesCreditMemoLineItemRequestBuilder salesCreditMemoLines(@javax.annotation.Nonnull final String id) {
@@ -279,7 +279,7 @@ public class SalesCreditMemoItemRequestBuilder {
         @javax.annotation.Nullable
         public SalesCreditMemoItemRequestBuilderGetQueryParameters queryParameters = new SalesCreditMemoItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new salesCreditMemoItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SalesCreditMemoItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesCreditMemoItemRequestBuilderGetRequestConfiguration() {
@@ -294,7 +294,7 @@ public class SalesCreditMemoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new salesCreditMemoItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SalesCreditMemoItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SalesCreditMemoItemRequestBuilderPatchRequestConfiguration() {

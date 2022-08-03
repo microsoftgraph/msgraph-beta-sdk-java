@@ -308,7 +308,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.roleAssignments.item.roleScopeTags.item collection
      * @param id Unique identifier of the item
-     * @return a roleScopeTagItemRequestBuilder
+     * @return a RoleScopeTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RoleScopeTagItemRequestBuilder roleScopeTags(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration() {

@@ -18,6 +18,7 @@ public class IosTrustedRootCertificate extends DeviceConfiguration implements Pa
      */
     public IosTrustedRootCertificate() {
         super();
+        this.setOdataType("#microsoft.graph.iosTrustedRootCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

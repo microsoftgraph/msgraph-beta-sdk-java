@@ -307,7 +307,7 @@ public class PolicySetAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new policySetAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PolicySetAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public PolicySetAssignmentItemRequestBuilderGetQueryParameters queryParameters = new PolicySetAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new policySetAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PolicySetAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new policySetAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PolicySetAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PolicySetAssignmentItemRequestBuilderPatchRequestConfiguration() {

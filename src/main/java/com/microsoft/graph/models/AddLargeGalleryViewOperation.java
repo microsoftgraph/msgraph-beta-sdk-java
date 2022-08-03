@@ -14,6 +14,7 @@ public class AddLargeGalleryViewOperation extends CommsOperation implements Pars
      */
     public AddLargeGalleryViewOperation() {
         super();
+        this.setOdataType("#microsoft.graph.addLargeGalleryViewOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

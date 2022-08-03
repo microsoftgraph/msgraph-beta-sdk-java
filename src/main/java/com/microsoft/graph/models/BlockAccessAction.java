@@ -14,6 +14,7 @@ public class BlockAccessAction extends DlpActionInfo implements Parsable {
      */
     public BlockAccessAction() {
         super();
+        this.setOdataType("#microsoft.graph.blockAccessAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

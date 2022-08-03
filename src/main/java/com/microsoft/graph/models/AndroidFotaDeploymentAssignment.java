@@ -12,8 +12,10 @@ import java.util.Objects;
 public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Key for the Android FOTA Assignment entity */
+    /** A unique identifier assigned to each Android FOTA Assignment entity */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** The AAD Group we are deploying firmware updates to */
     private AndroidFotaDeploymentAssignmentTarget _target;
     /**
@@ -22,6 +24,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      */
     public AndroidFotaDeploymentAssignment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.androidFotaDeploymentAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,18 +51,27 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidFotaDeploymentAssignment currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(AndroidFotaDeploymentAssignmentTarget::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the id property value. Key for the Android FOTA Assignment entity
+     * Gets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
      * @return a string
      */
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the target property value. The AAD Group we are deploying firmware updates to
@@ -77,6 +89,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("target", this.getTarget());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -89,12 +102,20 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
         this._additionalData = value;
     }
     /**
-     * Sets the id property value. Key for the Android FOTA Assignment entity
+     * Sets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
      * @param value Value to set for the id property.
      * @return a void
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the target property value. The AAD Group we are deploying firmware updates to

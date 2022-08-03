@@ -32,6 +32,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      */
     public Windows10PkcsCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windows10PkcsCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,19 +8,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdminReportSettings extends Entity implements Parsable {
-    /** The displayConcealedNames property */
+    /** If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required. */
     private Boolean _displayConcealedNames;
     /**
-     * Instantiates a new adminReportSettings and sets the default values.
+     * Instantiates a new AdminReportSettings and sets the default values.
      * @return a void
      */
     public AdminReportSettings() {
         super();
+        this.setOdataType("#microsoft.graph.adminReportSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a adminReportSettings
+     * @return a AdminReportSettings
      */
     @javax.annotation.Nonnull
     public static AdminReportSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +29,7 @@ public class AdminReportSettings extends Entity implements Parsable {
         return new AdminReportSettings();
     }
     /**
-     * Gets the displayConcealedNames property value. The displayConcealedNames property
+     * Gets the displayConcealedNames property value. If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class AdminReportSettings extends Entity implements Parsable {
         writer.writeBooleanValue("displayConcealedNames", this.getDisplayConcealedNames());
     }
     /**
-     * Sets the displayConcealedNames property value. The displayConcealedNames property
+     * Sets the displayConcealedNames property value. If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      * @param value Value to set for the displayConcealedNames property.
      * @return a void
      */

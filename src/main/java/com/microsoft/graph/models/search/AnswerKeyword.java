@@ -15,6 +15,8 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _keywords;
     /** If true, indicates that the search term contains similar words to the keywords that should trigger the search answer. */
     private Boolean _matchSimilarKeywords;
+    /** The OdataType property */
+    private String _odataType;
     /** Unique keywords that will guarantee the search answer is triggered. */
     private java.util.List<String> _reservedKeywords;
     /**
@@ -23,6 +25,7 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
      */
     public AnswerKeyword() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.search.answerKeyword");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerKeyword currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("keywords", (n) -> { currentObject.setKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("matchSimilarKeywords", (n) -> { currentObject.setMatchSimilarKeywords(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reservedKeywords", (n) -> { currentObject.setReservedKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -72,6 +76,14 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
         return this._matchSimilarKeywords;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the reservedKeywords property value. Unique keywords that will guarantee the search answer is triggered.
      * @return a string
      */
@@ -88,6 +100,7 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("keywords", this.getKeywords());
         writer.writeBooleanValue("matchSimilarKeywords", this.getMatchSimilarKeywords());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("reservedKeywords", this.getReservedKeywords());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
      */
     public void setMatchSimilarKeywords(@javax.annotation.Nullable final Boolean value) {
         this._matchSimilarKeywords = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reservedKeywords property value. Unique keywords that will guarantee the search answer is triggered.

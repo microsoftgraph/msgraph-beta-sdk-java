@@ -20,6 +20,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      */
     public AccessReviewInstanceDecisionItemUserTarget() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemUserTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

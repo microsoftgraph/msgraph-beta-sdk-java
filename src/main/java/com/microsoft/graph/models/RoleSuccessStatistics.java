@@ -11,6 +11,8 @@ import java.util.Objects;
 public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The permanentFail property */
     private Long _permanentFail;
     /** The permanentSuccess property */
@@ -35,6 +37,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      */
     public RoleSuccessStatistics() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.roleSuccessStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +64,8 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleSuccessStatistics currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permanentFail", (n) -> { currentObject.setPermanentFail(n.getLongValue()); });
             this.put("permanentSuccess", (n) -> { currentObject.setPermanentSuccess(n.getLongValue()); });
             this.put("removeFail", (n) -> { currentObject.setRemoveFail(n.getLongValue()); });
@@ -72,6 +76,14 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
             this.put("temporarySuccess", (n) -> { currentObject.setTemporarySuccess(n.getLongValue()); });
             this.put("unknownFail", (n) -> { currentObject.setUnknownFail(n.getLongValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the permanentFail property value. The permanentFail property
@@ -152,6 +164,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("permanentFail", this.getPermanentFail());
         writer.writeLongValue("permanentSuccess", this.getPermanentSuccess());
         writer.writeLongValue("removeFail", this.getRemoveFail());
@@ -170,6 +183,14 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the permanentFail property value. The permanentFail property

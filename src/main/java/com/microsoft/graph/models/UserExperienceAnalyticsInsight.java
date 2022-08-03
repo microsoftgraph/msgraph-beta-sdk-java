@@ -14,6 +14,8 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     private Map<String, Object> _additionalData;
     /** The unique identifier of the user experience analytics insight. */
     private String _insightId;
+    /** The OdataType property */
+    private String _odataType;
     /** The severity property */
     private UserExperienceAnalyticsInsightSeverity _severity;
     /** The unique identifier of the user experience analytics insight. */
@@ -26,6 +28,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     public UserExperienceAnalyticsInsight() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,8 +55,9 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsInsight currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("insightId", (n) -> { currentObject.setInsightId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(UserExperienceAnalyticsInsightSeverity.class)); });
             this.put("userExperienceAnalyticsMetricId", (n) -> { currentObject.setUserExperienceAnalyticsMetricId(n.getStringValue()); });
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsightValue::createFromDiscriminatorValue)); });
@@ -66,6 +70,14 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public String getInsightId() {
         return this._insightId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the severity property value. The severity property
@@ -99,6 +111,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("insightId", this.getInsightId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeStringValue("userExperienceAnalyticsMetricId", this.getUserExperienceAnalyticsMetricId());
         writer.writeCollectionOfObjectValues("values", this.getValues());
@@ -119,6 +132,14 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     public void setInsightId(@javax.annotation.Nullable final String value) {
         this._insightId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the severity property value. The severity property

@@ -14,6 +14,7 @@ public class PersonExtension extends Extension implements Parsable {
      */
     public PersonExtension() {
         super();
+        this.setOdataType("#microsoft.graph.personExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

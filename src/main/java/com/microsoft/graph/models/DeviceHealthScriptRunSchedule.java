@@ -14,15 +14,15 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
     private Map<String, Object> _additionalData;
     /** The x value of every x hours for hourly schedule, every x days for Daily Schedule, every x weeks for weekly schedule, every x months for Monthly Schedule. Valid values 1 to 23 */
     private Integer _interval;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceHealthScriptRunSchedule and sets the default values.
      * @return a void
      */
     public DeviceHealthScriptRunSchedule() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.deviceHealthScriptRunSchedule");
+        this.setOdataType("#microsoft.graph.deviceHealthScriptRunSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +36,9 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.deviceHealthScriptDailySchedule": return new DeviceHealthScriptDailySchedule();
                 case "#microsoft.graph.deviceHealthScriptHourlySchedule": return new DeviceHealthScriptHourlySchedule();
+                case "#microsoft.graph.deviceHealthScriptRunOnceSchedule": return new DeviceHealthScriptRunOnceSchedule();
                 case "#microsoft.graph.deviceHealthScriptTimeSchedule": return new DeviceHealthScriptTimeSchedule();
             }
         }
@@ -59,7 +61,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
         final DeviceHealthScriptRunSchedule currentObject = this;
         return new HashMap<>(2) {{
             this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -71,12 +73,12 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
         return this._interval;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -86,7 +88,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("interval", this.getInterval());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -106,11 +108,11 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
         this._interval = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

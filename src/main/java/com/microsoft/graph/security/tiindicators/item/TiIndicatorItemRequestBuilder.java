@@ -307,7 +307,7 @@ public class TiIndicatorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tiIndicatorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TiIndicatorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TiIndicatorItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TiIndicatorItemRequestBuilder {
         @javax.annotation.Nullable
         public TiIndicatorItemRequestBuilderGetQueryParameters queryParameters = new TiIndicatorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tiIndicatorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TiIndicatorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TiIndicatorItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TiIndicatorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tiIndicatorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TiIndicatorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TiIndicatorItemRequestBuilderPatchRequestConfiguration() {

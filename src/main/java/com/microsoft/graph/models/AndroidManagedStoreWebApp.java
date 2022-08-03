@@ -14,6 +14,7 @@ public class AndroidManagedStoreWebApp extends AndroidManagedStoreApp implements
      */
     public AndroidManagedStoreWebApp() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedStoreWebApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

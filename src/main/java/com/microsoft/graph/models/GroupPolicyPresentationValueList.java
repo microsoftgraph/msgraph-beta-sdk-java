@@ -16,6 +16,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      */
     public GroupPolicyPresentationValueList() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicyPresentationValueList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

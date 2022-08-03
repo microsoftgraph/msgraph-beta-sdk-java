@@ -14,12 +14,15 @@ public class GovernanceSubject extends Entity implements Parsable {
     private String _email;
     /** The principal name of the user subject. If the subject is in other types, it is empty. */
     private String _principalName;
+    /** The type of the subject. The value can be User, Group, and ServicePrincipal. */
+    private String _type;
     /**
      * Instantiates a new governanceSubject and sets the default values.
      * @return a void
      */
     public GovernanceSubject() {
         super();
+        this.setOdataType("#microsoft.graph.governanceSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,6 +61,7 @@ public class GovernanceSubject extends Entity implements Parsable {
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -67,6 +71,14 @@ public class GovernanceSubject extends Entity implements Parsable {
     @javax.annotation.Nullable
     public String getPrincipalName() {
         return this._principalName;
+    }
+    /**
+     * Gets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -79,6 +91,7 @@ public class GovernanceSubject extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
         writer.writeStringValue("principalName", this.getPrincipalName());
+        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the displayName property value. The display name of the subject.
@@ -103,5 +116,13 @@ public class GovernanceSubject extends Entity implements Parsable {
      */
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
         this._principalName = value;
+    }
+    /**
+     * Sets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

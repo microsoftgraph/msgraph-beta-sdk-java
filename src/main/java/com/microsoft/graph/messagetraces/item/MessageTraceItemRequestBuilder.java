@@ -308,7 +308,7 @@ public class MessageTraceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.messageTraces.item.recipients.item collection
      * @param id Unique identifier of the item
-     * @return a messageRecipientItemRequestBuilder
+     * @return a MessageRecipientItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageRecipientItemRequestBuilder recipients(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class MessageTraceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageTraceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MessageTraceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageTraceItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class MessageTraceItemRequestBuilder {
         @javax.annotation.Nullable
         public MessageTraceItemRequestBuilderGetQueryParameters queryParameters = new MessageTraceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new messageTraceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MessageTraceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageTraceItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class MessageTraceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new messageTraceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MessageTraceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MessageTraceItemRequestBuilderPatchRequestConfiguration() {

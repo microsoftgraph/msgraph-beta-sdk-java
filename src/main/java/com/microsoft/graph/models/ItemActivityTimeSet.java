@@ -16,6 +16,8 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastRecordedDateTime;
     /** When the activity was observed to take place. */
     private OffsetDateTime _observedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** When the observation was recorded on the service. */
     private OffsetDateTime _recordedDateTime;
     /**
@@ -24,6 +26,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      */
     public ItemActivityTimeSet() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.itemActivityTimeSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,9 +53,10 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActivityTimeSet currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("lastRecordedDateTime", (n) -> { currentObject.setLastRecordedDateTime(n.getOffsetDateTimeValue()); });
             this.put("observedDateTime", (n) -> { currentObject.setObservedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recordedDateTime", (n) -> { currentObject.setRecordedDateTime(n.getOffsetDateTimeValue()); });
         }};
     }
@@ -73,6 +77,14 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
         return this._observedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the recordedDateTime property value. When the observation was recorded on the service.
      * @return a OffsetDateTime
      */
@@ -89,6 +101,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastRecordedDateTime", this.getLastRecordedDateTime());
         writer.writeOffsetDateTimeValue("observedDateTime", this.getObservedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("recordedDateTime", this.getRecordedDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      */
     public void setObservedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._observedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recordedDateTime property value. When the observation was recorded on the service.

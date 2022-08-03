@@ -21,7 +21,7 @@ import microsoft.graph.models.DepOnboardingSettingCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the depOnboardingSettings property of the microsoft.graph.deviceManagement entity. */
 public class DepOnboardingSettingsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

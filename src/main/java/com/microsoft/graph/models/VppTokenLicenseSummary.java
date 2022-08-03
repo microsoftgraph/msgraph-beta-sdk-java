@@ -16,6 +16,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     private String _appleId;
     /** The number of VPP licenses available. */
     private Integer _availableLicenseCount;
+    /** The OdataType property */
+    private String _odataType;
     /** The organization associated with the Apple Volume Purchase Program Token. */
     private String _organizationName;
     /** The number of VPP licenses in use. */
@@ -28,6 +30,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      */
     public VppTokenLicenseSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.vppTokenLicenseSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,13 +73,22 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppTokenLicenseSummary currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
             this.put("availableLicenseCount", (n) -> { currentObject.setAvailableLicenseCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("organizationName", (n) -> { currentObject.setOrganizationName(n.getStringValue()); });
             this.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
             this.put("vppTokenId", (n) -> { currentObject.setVppTokenId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token.
@@ -111,6 +123,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appleId", this.getAppleId());
         writer.writeIntegerValue("availableLicenseCount", this.getAvailableLicenseCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("organizationName", this.getOrganizationName());
         writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
         writer.writeStringValue("vppTokenId", this.getVppTokenId());
@@ -139,6 +152,14 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      */
     public void setAvailableLicenseCount(@javax.annotation.Nullable final Integer value) {
         this._availableLicenseCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token.

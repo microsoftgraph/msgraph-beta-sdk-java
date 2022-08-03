@@ -319,7 +319,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidDeviceOwnerEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderGetQueryParameters queryParameters = new AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new androidDeviceOwnerEnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidDeviceOwnerEnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidDeviceOwnerEnrollmentProfileItemRequestBuilderPatchRequestConfiguration() {

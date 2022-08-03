@@ -17,12 +17,15 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
     private Boolean _isContentCameraOptional;
     /** True if the content enhancement is enabled. */
     private Boolean _isContentEnhancementEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamworkContentCameraConfiguration and sets the default values.
      * @return a void
      */
     public TeamworkContentCameraConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkContentCameraConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkContentCameraConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isContentCameraInverted", (n) -> { currentObject.setIsContentCameraInverted(n.getBooleanValue()); });
             this.put("isContentCameraOptional", (n) -> { currentObject.setIsContentCameraOptional(n.getBooleanValue()); });
             this.put("isContentEnhancementEnabled", (n) -> { currentObject.setIsContentEnhancementEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
         return this._isContentEnhancementEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
         writer.writeBooleanValue("isContentCameraInverted", this.getIsContentCameraInverted());
         writer.writeBooleanValue("isContentCameraOptional", this.getIsContentCameraOptional());
         writer.writeBooleanValue("isContentEnhancementEnabled", this.getIsContentEnhancementEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      */
     public void setIsContentEnhancementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isContentEnhancementEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

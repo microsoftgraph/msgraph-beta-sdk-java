@@ -313,7 +313,7 @@ public class DirectoryDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DirectoryDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public DirectoryDefinitionItemRequestBuilderGetQueryParameters queryParameters = new DirectoryDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new directoryDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DirectoryDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryDefinitionItemRequestBuilderPatchRequestConfiguration() {

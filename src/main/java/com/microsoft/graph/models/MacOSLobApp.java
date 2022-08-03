@@ -34,6 +34,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     public MacOSLobApp() {
         super();
+        this.setOdataType("#microsoft.graph.macOSLobApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

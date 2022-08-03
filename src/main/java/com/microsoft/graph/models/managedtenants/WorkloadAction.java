@@ -21,6 +21,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The licenses property */
     private java.util.List<String> _licenses;
+    /** The OdataType property */
+    private String _odataType;
     /** The service associated with workload action. Optional. Read-only. */
     private String _service;
     /** The collection of settings associated with the workload action. Optional. Read-only. */
@@ -31,6 +33,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     public WorkloadAction() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.workloadAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,12 +92,13 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkloadAction currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("actionId", (n) -> { currentObject.setActionId(n.getStringValue()); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(WorkloadActionCategory.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("licenses", (n) -> { currentObject.setLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(Setting::createFromDiscriminatorValue)); });
         }};
@@ -106,6 +110,14 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<String> getLicenses() {
         return this._licenses;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the service property value. The service associated with workload action. Optional. Read-only.
@@ -135,6 +147,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("licenses", this.getLicenses());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("service", this.getService());
         writer.writeCollectionOfObjectValues("settings", this.getSettings());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -186,6 +199,14 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     public void setLicenses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._licenses = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the service property value. The service associated with workload action. Optional. Read-only.

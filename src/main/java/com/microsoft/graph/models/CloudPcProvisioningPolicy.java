@@ -44,6 +44,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public CloudPcProvisioningPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcProvisioningPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

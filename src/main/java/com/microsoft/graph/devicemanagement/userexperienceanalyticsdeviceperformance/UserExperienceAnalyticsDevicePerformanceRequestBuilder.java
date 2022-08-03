@@ -21,7 +21,7 @@ import microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
 import microsoft.graph.models.UserExperienceAnalyticsDevicePerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDevicePerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDevicePerformanceRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

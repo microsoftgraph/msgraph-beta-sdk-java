@@ -20,6 +20,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      */
     public SecurityBaselineTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.securityBaselineTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

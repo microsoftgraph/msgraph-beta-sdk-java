@@ -253,7 +253,7 @@ public class MobilityManagementPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.mobileAppManagementPolicies.item.includedGroups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder includedGroups(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class MobilityManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobilityManagementPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobilityManagementPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobilityManagementPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class MobilityManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public MobilityManagementPolicyItemRequestBuilderGetQueryParameters queryParameters = new MobilityManagementPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobilityManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobilityManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobilityManagementPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class MobilityManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobilityManagementPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobilityManagementPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobilityManagementPolicyItemRequestBuilderPatchRequestConfiguration() {

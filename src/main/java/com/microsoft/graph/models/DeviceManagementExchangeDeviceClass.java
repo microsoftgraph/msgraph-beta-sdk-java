@@ -14,6 +14,8 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
     private Map<String, Object> _additionalData;
     /** Name of the device class which will be impacted by this rule. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Criteria which defines the type of device this access rule will apply to */
     private DeviceManagementExchangeAccessRuleType _type;
     /**
@@ -22,6 +24,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      */
     public DeviceManagementExchangeDeviceClass() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementExchangeDeviceClass");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeDeviceClass currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(DeviceManagementExchangeAccessRuleType.class)); });
         }};
     }
@@ -60,6 +64,14 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. Criteria which defines the type of device this access rule will apply to
@@ -77,6 +89,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Criteria which defines the type of device this access rule will apply to

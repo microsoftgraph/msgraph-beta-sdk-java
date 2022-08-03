@@ -23,6 +23,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     public DeviceManagementDomainJoinConnector() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementDomainJoinConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

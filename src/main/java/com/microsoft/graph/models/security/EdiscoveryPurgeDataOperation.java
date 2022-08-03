@@ -14,6 +14,7 @@ public class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsa
      */
     public EdiscoveryPurgeDataOperation() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryPurgeDataOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

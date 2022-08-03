@@ -20,7 +20,7 @@ import microsoft.graph.models.GovernanceInsightCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity. */
 public class InsightsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

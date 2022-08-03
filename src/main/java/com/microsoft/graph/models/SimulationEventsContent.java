@@ -15,12 +15,15 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
     private Double _compromisedRate;
     /** List of simulation events in an attack simulation and training campaign. */
     private java.util.List<SimulationEvent> _events;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new simulationEventsContent and sets the default values.
      * @return a void
      */
     public SimulationEventsContent() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.simulationEventsContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationEventsContent currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("compromisedRate", (n) -> { currentObject.setCompromisedRate(n.getDoubleValue()); });
             this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(SimulationEvent::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("compromisedRate", this.getCompromisedRate());
         writer.writeCollectionOfObjectValues("events", this.getEvents());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
      */
     public void setEvents(@javax.annotation.Nullable final java.util.List<SimulationEvent> value) {
         this._events = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

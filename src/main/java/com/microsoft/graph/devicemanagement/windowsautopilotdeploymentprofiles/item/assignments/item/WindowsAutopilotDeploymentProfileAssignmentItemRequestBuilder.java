@@ -307,7 +307,7 @@ public class WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsAutopilotDeploymentProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderGetQueryParameters queryParameters = new WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsAutopilotDeploymentProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsAutopilotDeploymentProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilderPatchRequestConfiguration() {

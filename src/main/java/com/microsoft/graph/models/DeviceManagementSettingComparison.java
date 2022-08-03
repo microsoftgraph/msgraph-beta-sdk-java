@@ -24,12 +24,15 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
     private String _id;
     /** JSON representation of new template setting's value */
     private String _newValueJson;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new deviceManagementSettingComparison and sets the default values.
      * @return a void
      */
     public DeviceManagementSettingComparison() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementSettingComparison");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,13 +91,14 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingComparison currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("comparisonResult", (n) -> { currentObject.setComparisonResult(n.getEnumValue(DeviceManagementComparisonResult.class)); });
             this.put("currentValueJson", (n) -> { currentObject.setCurrentValueJson(n.getStringValue()); });
             this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("newValueJson", (n) -> { currentObject.setNewValueJson(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -114,6 +118,14 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         return this._newValueJson;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -126,6 +138,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("newValueJson", this.getNewValueJson());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -183,5 +196,13 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      */
     public void setNewValueJson(@javax.annotation.Nullable final String value) {
         this._newValueJson = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

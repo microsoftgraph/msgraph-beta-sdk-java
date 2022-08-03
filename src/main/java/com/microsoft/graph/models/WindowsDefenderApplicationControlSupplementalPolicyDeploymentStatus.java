@@ -36,6 +36,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

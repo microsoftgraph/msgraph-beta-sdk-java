@@ -14,6 +14,7 @@ public class PayloadResponse extends Entity implements Parsable {
      */
     public PayloadResponse() {
         super();
+        this.setOdataType("#microsoft.graph.payloadResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.SalesInvoiceLine;
 import microsoft.graph.models.SalesInvoiceLineCollectionResponse;
 /** Provides operations to manage the salesInvoiceLines property of the microsoft.graph.salesInvoice entity. */
 public class SalesInvoiceLinesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

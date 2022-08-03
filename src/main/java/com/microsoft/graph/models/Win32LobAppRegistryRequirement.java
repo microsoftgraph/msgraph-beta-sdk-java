@@ -22,6 +22,7 @@ public class Win32LobAppRegistryRequirement extends Win32LobAppRequirement imple
      */
     public Win32LobAppRegistryRequirement() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppRegistryRequirement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

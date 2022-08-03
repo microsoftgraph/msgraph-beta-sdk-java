@@ -28,6 +28,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

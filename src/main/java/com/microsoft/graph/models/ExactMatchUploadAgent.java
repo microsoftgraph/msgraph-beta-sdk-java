@@ -19,6 +19,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      */
     public ExactMatchUploadAgent() {
         super();
+        this.setOdataType("#microsoft.graph.exactMatchUploadAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

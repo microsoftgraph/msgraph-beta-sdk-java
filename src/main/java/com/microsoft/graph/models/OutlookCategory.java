@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OutlookCategory extends Entity implements Parsable {
     /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below. */
     private CategoryColor _color;
@@ -19,6 +19,7 @@ public class OutlookCategory extends Entity implements Parsable {
      */
     public OutlookCategory() {
         super();
+        this.setOdataType("#microsoft.graph.outlookCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

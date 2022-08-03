@@ -26,6 +26,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      */
     public DeviceManagementIntentUserState() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementIntentUserState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

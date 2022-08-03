@@ -24,6 +24,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      */
     public DeviceManagementDerivedCredentialSettings() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementDerivedCredentialSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

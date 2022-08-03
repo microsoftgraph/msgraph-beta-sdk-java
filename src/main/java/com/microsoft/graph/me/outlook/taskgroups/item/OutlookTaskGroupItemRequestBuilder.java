@@ -308,7 +308,7 @@ public class OutlookTaskGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item collection
      * @param id Unique identifier of the item
-     * @return a outlookTaskFolderItemRequestBuilder
+     * @return a OutlookTaskFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookTaskFolderItemRequestBuilder taskFolders(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class OutlookTaskGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outlookTaskGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookTaskGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookTaskGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -351,7 +351,7 @@ public class OutlookTaskGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public OutlookTaskGroupItemRequestBuilderGetQueryParameters queryParameters = new OutlookTaskGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new outlookTaskGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookTaskGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookTaskGroupItemRequestBuilderGetRequestConfiguration() {
@@ -366,7 +366,7 @@ public class OutlookTaskGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outlookTaskGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookTaskGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookTaskGroupItemRequestBuilderPatchRequestConfiguration() {

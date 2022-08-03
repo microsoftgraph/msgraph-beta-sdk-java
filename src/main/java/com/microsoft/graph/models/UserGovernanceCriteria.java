@@ -16,6 +16,7 @@ public class UserGovernanceCriteria extends GovernanceCriteria implements Parsab
      */
     public UserGovernanceCriteria() {
         super();
+        this.setOdataType("#microsoft.graph.userGovernanceCriteria");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -289,7 +289,7 @@ public class TeamworkDeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teamwork.devices.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a teamworkDeviceOperationItemRequestBuilder
+     * @return a TeamworkDeviceOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamworkDeviceOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -362,7 +362,7 @@ public class TeamworkDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkDeviceItemRequestBuilderDeleteRequestConfiguration() {
@@ -391,7 +391,7 @@ public class TeamworkDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamworkDeviceItemRequestBuilderGetQueryParameters queryParameters = new TeamworkDeviceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamworkDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkDeviceItemRequestBuilderGetRequestConfiguration() {
@@ -406,7 +406,7 @@ public class TeamworkDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamworkDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamworkDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamworkDeviceItemRequestBuilderPatchRequestConfiguration() {

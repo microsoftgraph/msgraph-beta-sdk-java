@@ -307,7 +307,7 @@ public class ProfileCardPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new profileCardPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ProfileCardPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProfileCardPropertyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ProfileCardPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public ProfileCardPropertyItemRequestBuilderGetQueryParameters queryParameters = new ProfileCardPropertyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new profileCardPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ProfileCardPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProfileCardPropertyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ProfileCardPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new profileCardPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ProfileCardPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProfileCardPropertyItemRequestBuilderPatchRequestConfiguration() {

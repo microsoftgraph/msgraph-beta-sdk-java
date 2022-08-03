@@ -319,7 +319,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidForWorkEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidForWorkEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidForWorkEnrollmentProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public AndroidForWorkEnrollmentProfileItemRequestBuilderGetQueryParameters queryParameters = new AndroidForWorkEnrollmentProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new androidForWorkEnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidForWorkEnrollmentProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidForWorkEnrollmentProfileItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidForWorkEnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidForWorkEnrollmentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidForWorkEnrollmentProfileItemRequestBuilderPatchRequestConfiguration() {

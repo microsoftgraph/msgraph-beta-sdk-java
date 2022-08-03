@@ -18,6 +18,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      */
     public BookingCustomer() {
         super();
+        this.setOdataType("#microsoft.graph.bookingCustomer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

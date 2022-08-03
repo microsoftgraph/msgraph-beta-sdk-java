@@ -16,6 +16,7 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
      */
     public TeamMembersNotificationRecipient() {
         super();
+        this.setOdataType("#microsoft.graph.teamMembersNotificationRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
      */
     public ManagedAppProtectionPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.managedAppProtectionPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

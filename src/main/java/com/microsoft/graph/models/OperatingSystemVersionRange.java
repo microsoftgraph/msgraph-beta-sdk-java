@@ -18,12 +18,15 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
     private String _highestVersion;
     /** The lowest inclusive version that this range contains. */
     private String _lowestVersion;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new operatingSystemVersionRange and sets the default values.
      * @return a void
      */
     public OperatingSystemVersionRange() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.operatingSystemVersionRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,10 +61,11 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OperatingSystemVersionRange currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("highestVersion", (n) -> { currentObject.setHighestVersion(n.getStringValue()); });
             this.put("lowestVersion", (n) -> { currentObject.setLowestVersion(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +85,14 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
         return this._lowestVersion;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +102,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("highestVersion", this.getHighestVersion());
         writer.writeStringValue("lowestVersion", this.getLowestVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      */
     public void setLowestVersion(@javax.annotation.Nullable final String value) {
         this._lowestVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

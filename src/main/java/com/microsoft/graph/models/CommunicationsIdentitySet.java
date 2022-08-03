@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
-    /** The assertedIdentity property */
+    /** An identity the participant would like to present itself as to the other participants in the call. */
     private Identity _assertedIdentity;
-    /** The azureCommunicationServicesUser property */
+    /** The Azure Communication Services user associated with this action. */
     private Identity _azureCommunicationServicesUser;
-    /** The endpointType property */
+    /** Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. */
     private EndpointType _endpointType;
     /**
      * Instantiates a new CommunicationsIdentitySet and sets the default values.
@@ -20,6 +20,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     public CommunicationsIdentitySet() {
         super();
+        this.setOdataType("#microsoft.graph.communicationsIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,7 +33,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return new CommunicationsIdentitySet();
     }
     /**
-     * Gets the assertedIdentity property value. The assertedIdentity property
+     * Gets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -40,7 +41,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this._assertedIdentity;
     }
     /**
-     * Gets the azureCommunicationServicesUser property value. The azureCommunicationServicesUser property
+     * Gets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -48,7 +49,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this._azureCommunicationServicesUser;
     }
     /**
-     * Gets the endpointType property value. The endpointType property
+     * Gets the endpointType property value. Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @return a endpointType
      */
     @javax.annotation.Nullable
@@ -81,7 +82,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         writer.writeEnumValue("endpointType", this.getEndpointType());
     }
     /**
-     * Sets the assertedIdentity property value. The assertedIdentity property
+     * Sets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
      * @param value Value to set for the assertedIdentity property.
      * @return a void
      */
@@ -89,7 +90,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         this._assertedIdentity = value;
     }
     /**
-     * Sets the azureCommunicationServicesUser property value. The azureCommunicationServicesUser property
+     * Sets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
      * @param value Value to set for the azureCommunicationServicesUser property.
      * @return a void
      */
@@ -97,7 +98,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         this._azureCommunicationServicesUser = value;
     }
     /**
-     * Sets the endpointType property value. The endpointType property
+     * Sets the endpointType property value. Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @param value Value to set for the endpointType property.
      * @return a void
      */

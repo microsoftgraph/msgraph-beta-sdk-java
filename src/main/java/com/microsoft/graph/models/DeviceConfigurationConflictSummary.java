@@ -21,6 +21,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
      */
     public DeviceConfigurationConflictSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceConfigurationConflictSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

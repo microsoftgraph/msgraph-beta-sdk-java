@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Subscription extends Entity implements Parsable {
     /** Optional. Identifier of the application used to create the subscription. Read-only. */
     private String _applicationId;
@@ -46,6 +46,7 @@ public class Subscription extends Entity implements Parsable {
      */
     public Subscription() {
         super();
+        this.setOdataType("#microsoft.graph.subscription");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

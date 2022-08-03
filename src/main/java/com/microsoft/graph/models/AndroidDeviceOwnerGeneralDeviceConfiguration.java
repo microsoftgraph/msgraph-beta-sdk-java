@@ -282,6 +282,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      */
     public AndroidDeviceOwnerGeneralDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerGeneralDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

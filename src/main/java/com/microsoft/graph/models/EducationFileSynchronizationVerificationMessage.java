@@ -15,6 +15,8 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     private String _description;
     /** The fileName property */
     private String _fileName;
+    /** The OdataType property */
+    private String _odataType;
     /** Type of the message. Possible values are: error, warning, information. */
     private String _type;
     /**
@@ -23,6 +25,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      */
     public EducationFileSynchronizationVerificationMessage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationFileSynchronizationVerificationMessage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,9 +60,10 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFileSynchronizationVerificationMessage currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
@@ -70,6 +74,14 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     @javax.annotation.Nullable
     public String getFileName() {
         return this._fileName;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. Type of the message. Possible values are: error, warning, information.
@@ -88,6 +100,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("fileName", this.getFileName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      */
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Type of the message. Possible values are: error, warning, information.

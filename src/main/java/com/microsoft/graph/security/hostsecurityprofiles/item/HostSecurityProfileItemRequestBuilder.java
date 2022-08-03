@@ -307,7 +307,7 @@ public class HostSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new hostSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new HostSecurityProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public HostSecurityProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class HostSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public HostSecurityProfileItemRequestBuilderGetQueryParameters queryParameters = new HostSecurityProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new hostSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new HostSecurityProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public HostSecurityProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class HostSecurityProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new hostSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new HostSecurityProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public HostSecurityProfileItemRequestBuilderPatchRequestConfiguration() {

@@ -340,7 +340,7 @@ public class TrustFrameworkKeySetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new trustFrameworkKeySetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TrustFrameworkKeySetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrustFrameworkKeySetItemRequestBuilderDeleteRequestConfiguration() {
@@ -369,7 +369,7 @@ public class TrustFrameworkKeySetItemRequestBuilder {
         @javax.annotation.Nullable
         public TrustFrameworkKeySetItemRequestBuilderGetQueryParameters queryParameters = new TrustFrameworkKeySetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new trustFrameworkKeySetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TrustFrameworkKeySetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrustFrameworkKeySetItemRequestBuilderGetRequestConfiguration() {
@@ -384,7 +384,7 @@ public class TrustFrameworkKeySetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new trustFrameworkKeySetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TrustFrameworkKeySetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrustFrameworkKeySetItemRequestBuilderPatchRequestConfiguration() {

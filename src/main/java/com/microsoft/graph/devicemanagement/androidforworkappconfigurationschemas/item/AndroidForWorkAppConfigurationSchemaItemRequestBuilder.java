@@ -307,7 +307,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidForWorkAppConfigurationSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidForWorkAppConfigurationSchemaItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidForWorkAppConfigurationSchemaItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public AndroidForWorkAppConfigurationSchemaItemRequestBuilderGetQueryParameters queryParameters = new AndroidForWorkAppConfigurationSchemaItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new androidForWorkAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidForWorkAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidForWorkAppConfigurationSchemaItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidForWorkAppConfigurationSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidForWorkAppConfigurationSchemaItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidForWorkAppConfigurationSchemaItemRequestBuilderPatchRequestConfiguration() {

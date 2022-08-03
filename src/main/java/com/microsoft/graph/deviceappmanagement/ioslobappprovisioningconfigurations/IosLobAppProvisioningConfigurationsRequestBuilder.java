@@ -21,7 +21,7 @@ import microsoft.graph.models.IosLobAppProvisioningConfigurationCollectionRespon
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class IosLobAppProvisioningConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

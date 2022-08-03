@@ -14,6 +14,7 @@ public class JustifyAction extends InformationProtectionAction implements Parsab
      */
     public JustifyAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.justifyAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

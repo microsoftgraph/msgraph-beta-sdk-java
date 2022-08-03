@@ -319,7 +319,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new inboundSharedUserProfileUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new InboundSharedUserProfileUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public InboundSharedUserProfileUserItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder {
         @javax.annotation.Nullable
         public InboundSharedUserProfileUserItemRequestBuilderGetQueryParameters queryParameters = new InboundSharedUserProfileUserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new inboundSharedUserProfileUserItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new InboundSharedUserProfileUserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public InboundSharedUserProfileUserItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new inboundSharedUserProfileUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new InboundSharedUserProfileUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public InboundSharedUserProfileUserItemRequestBuilderPatchRequestConfiguration() {

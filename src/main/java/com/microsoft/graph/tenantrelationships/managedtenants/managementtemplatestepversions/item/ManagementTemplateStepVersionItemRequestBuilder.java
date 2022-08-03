@@ -214,7 +214,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateStepVersions.item.deployments.item collection
      * @param id Unique identifier of the item
-     * @return a managementTemplateStepDeploymentItemRequestBuilder
+     * @return a ManagementTemplateStepDeploymentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepDeploymentItemRequestBuilder deployments(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateStepVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepVersionItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementTemplateStepVersionItemRequestBuilderGetQueryParameters queryParameters = new ManagementTemplateStepVersionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementTemplateStepVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepVersionItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateStepVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepVersionItemRequestBuilderPatchRequestConfiguration() {

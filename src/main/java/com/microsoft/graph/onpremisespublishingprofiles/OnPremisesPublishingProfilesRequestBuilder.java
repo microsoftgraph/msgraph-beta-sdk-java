@@ -20,7 +20,7 @@ import microsoft.graph.models.OnPremisesPublishingProfileCollectionResponse;
 import microsoft.graph.onpremisespublishingprofiles.count.CountRequestBuilder;
 /** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
 public class OnPremisesPublishingProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

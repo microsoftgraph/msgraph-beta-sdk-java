@@ -155,7 +155,7 @@ public class AccountItemRequestBuilder {
         @javax.annotation.Nullable
         public AccountItemRequestBuilderGetQueryParameters queryParameters = new AccountItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accountItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccountItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccountItemRequestBuilderGetRequestConfiguration() {

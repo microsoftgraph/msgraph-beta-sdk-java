@@ -43,6 +43,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      */
     public PrivilegedOperationEvent() {
         super();
+        this.setOdataType("#microsoft.graph.privilegedOperationEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

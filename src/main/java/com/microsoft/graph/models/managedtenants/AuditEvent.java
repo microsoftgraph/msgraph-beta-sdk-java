@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AuditEvent extends Entity implements Parsable {
     /** A string which uniquely represents the operation that occurred. Required. Read-only. */
     private String _activity;
@@ -43,6 +43,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     public AuditEvent() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.auditEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

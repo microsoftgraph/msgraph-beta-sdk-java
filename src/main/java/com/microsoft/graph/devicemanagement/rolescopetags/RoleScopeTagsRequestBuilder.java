@@ -22,7 +22,7 @@ import microsoft.graph.models.RoleScopeTag;
 import microsoft.graph.models.RoleScopeTagCollectionResponse;
 /** Provides operations to manage the roleScopeTags property of the microsoft.graph.deviceManagement entity. */
 public class RoleScopeTagsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

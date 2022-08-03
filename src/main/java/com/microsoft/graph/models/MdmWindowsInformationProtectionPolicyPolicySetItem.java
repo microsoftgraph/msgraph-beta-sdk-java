@@ -14,6 +14,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItem extends PolicySe
      */
     public MdmWindowsInformationProtectionPolicyPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.mdmWindowsInformationProtectionPolicyPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

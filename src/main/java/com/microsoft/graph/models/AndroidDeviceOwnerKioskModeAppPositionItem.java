@@ -14,6 +14,8 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     private Map<String, Object> _additionalData;
     /** Represents an item on the Android Device Owner Managed Home Screen (application, weblink or folder */
     private AndroidDeviceOwnerKioskModeHomeScreenItem _item;
+    /** The OdataType property */
+    private String _odataType;
     /** Position of the item on the grid. Valid values 0 to 9999999 */
     private Integer _position;
     /**
@@ -22,6 +24,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
      */
     public AndroidDeviceOwnerKioskModeAppPositionItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeAppPositionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeAppPositionItem currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("item", (n) -> { currentObject.setItem(n.getObjectValue(AndroidDeviceOwnerKioskModeHomeScreenItem::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("position", (n) -> { currentObject.setPosition(n.getIntegerValue()); });
         }};
     }
@@ -60,6 +64,14 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeHomeScreenItem getItem() {
         return this._item;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the position property value. Position of the item on the grid. Valid values 0 to 9999999
@@ -77,6 +89,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("item", this.getItem());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("position", this.getPosition());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
      */
     public void setItem(@javax.annotation.Nullable final AndroidDeviceOwnerKioskModeHomeScreenItem value) {
         this._item = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the position property value. Position of the item on the grid. Valid values 0 to 9999999

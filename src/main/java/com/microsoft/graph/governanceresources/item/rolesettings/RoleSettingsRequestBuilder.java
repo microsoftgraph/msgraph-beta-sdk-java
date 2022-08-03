@@ -20,7 +20,7 @@ import microsoft.graph.models.GovernanceRoleSettingCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the roleSettings property of the microsoft.graph.governanceResource entity. */
 public class RoleSettingsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -14,7 +14,7 @@ public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManag
      */
     public DeviceManagementConfigurationSimpleSettingValue() {
         super();
-        this.setType("#microsoft.graph.deviceManagementConfigurationSimpleSettingValue");
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -29,6 +29,7 @@ public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManag
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue": return new DeviceManagementConfigurationIntegerSettingValue();
+                case "#microsoft.graph.deviceManagementConfigurationReferenceSettingValue": return new DeviceManagementConfigurationReferenceSettingValue();
                 case "#microsoft.graph.deviceManagementConfigurationSecretSettingValue": return new DeviceManagementConfigurationSecretSettingValue();
                 case "#microsoft.graph.deviceManagementConfigurationStringSettingValue": return new DeviceManagementConfigurationStringSettingValue();
             }

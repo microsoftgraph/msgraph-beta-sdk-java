@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum DeviceCustomAttributeValueType implements ValuedEnum {
     /** Indicates the value for a custom attribute script is an integer. */
     Integer("integer"),

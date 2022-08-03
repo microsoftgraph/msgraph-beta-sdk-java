@@ -20,7 +20,7 @@ import microsoft.graph.models.ZebraFotaDeployment;
 import microsoft.graph.models.ZebraFotaDeploymentCollectionResponse;
 /** Provides operations to manage the zebraFotaDeployments property of the microsoft.graph.deviceManagement entity. */
 public class ZebraFotaDeploymentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

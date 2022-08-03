@@ -16,6 +16,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
      */
     public Windows10PFXImportCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windows10PFXImportCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

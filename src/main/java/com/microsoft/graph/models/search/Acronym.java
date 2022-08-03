@@ -18,6 +18,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      */
     public Acronym() {
         super();
+        this.setOdataType("#microsoft.graph.search.acronym");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

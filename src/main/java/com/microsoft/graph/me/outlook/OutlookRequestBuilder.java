@@ -277,7 +277,7 @@ public class OutlookRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.outlook.masterCategories.item collection
      * @param id Unique identifier of the item
-     * @return a outlookCategoryItemRequestBuilder
+     * @return a OutlookCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookCategoryItemRequestBuilder masterCategories(@javax.annotation.Nonnull final String id) {
@@ -370,7 +370,7 @@ public class OutlookRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.outlook.taskFolders.item collection
      * @param id Unique identifier of the item
-     * @return a outlookTaskFolderItemRequestBuilder
+     * @return a OutlookTaskFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookTaskFolderItemRequestBuilder taskFolders(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class OutlookRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item collection
      * @param id Unique identifier of the item
-     * @return a outlookTaskGroupItemRequestBuilder
+     * @return a OutlookTaskGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookTaskGroupItemRequestBuilder taskGroups(@javax.annotation.Nonnull final String id) {
@@ -394,7 +394,7 @@ public class OutlookRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.outlook.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a outlookTaskItemRequestBuilder
+     * @return a OutlookTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {

@@ -14,6 +14,7 @@ public class SubjectRightsRequestAllMailboxLocation extends SubjectRightsRequest
      */
     public SubjectRightsRequestAllMailboxLocation() {
         super();
+        this.setOdataType("#microsoft.graph.subjectRightsRequestAllMailboxLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

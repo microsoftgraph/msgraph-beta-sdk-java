@@ -313,7 +313,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRbacResourceActionItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRbacResourceActionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration() {

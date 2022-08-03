@@ -307,7 +307,7 @@ public class PersonWebsiteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personWebsiteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PersonWebsiteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonWebsiteItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PersonWebsiteItemRequestBuilder {
         @javax.annotation.Nullable
         public PersonWebsiteItemRequestBuilderGetQueryParameters queryParameters = new PersonWebsiteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new personWebsiteItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PersonWebsiteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonWebsiteItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PersonWebsiteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new personWebsiteItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PersonWebsiteItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PersonWebsiteItemRequestBuilderPatchRequestConfiguration() {

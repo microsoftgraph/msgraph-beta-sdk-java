@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.manageddevices.item.detectedapps.count.CountRequestBuilder;
 /** Provides operations to manage the detectedApps property of the microsoft.graph.managedDevice entity. */
 public class DetectedAppsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

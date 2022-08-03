@@ -13,6 +13,8 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     private Map<String, Object> _additionalData;
     /** User in an attack simulation and training campaign. */
     private AttackSimulationUser _attackSimulationUser;
+    /** The OdataType property */
+    private String _odataType;
     /** List of assigned trainings' and their statuses for the user. */
     private java.util.List<UserTrainingStatusInfo> _userTrainings;
     /**
@@ -21,6 +23,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      */
     public AttackSimulationTrainingUserCoverage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.attackSimulationTrainingUserCoverage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationTrainingUserCoverage currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userTrainings", (n) -> { currentObject.setUserTrainings(n.getCollectionOfObjectValues(UserTrainingStatusInfo::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userTrainings property value. List of assigned trainings' and their statuses for the user.
@@ -76,6 +88,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("userTrainings", this.getUserTrainings());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      */
     public void setAttackSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
         this._attackSimulationUser = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userTrainings property value. List of assigned trainings' and their statuses for the user.

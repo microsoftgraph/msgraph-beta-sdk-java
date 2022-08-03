@@ -22,6 +22,7 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     public OrganizationSettings() {
         super();
+        this.setOdataType("#microsoft.graph.organizationSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

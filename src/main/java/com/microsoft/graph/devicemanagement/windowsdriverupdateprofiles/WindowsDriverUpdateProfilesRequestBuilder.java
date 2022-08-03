@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsDriverUpdateProfile;
 import microsoft.graph.models.WindowsDriverUpdateProfileCollectionResponse;
 /** Provides operations to manage the windowsDriverUpdateProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsDriverUpdateProfilesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

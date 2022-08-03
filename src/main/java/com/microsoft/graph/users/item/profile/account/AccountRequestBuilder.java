@@ -20,7 +20,7 @@ import microsoft.graph.models.UserAccountInformationCollectionResponse;
 import microsoft.graph.users.item.profile.account.count.CountRequestBuilder;
 /** Provides operations to manage the account property of the microsoft.graph.profile entity. */
 public class AccountRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

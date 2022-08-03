@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsMetric;
 import microsoft.graph.models.UserExperienceAnalyticsMetricCollectionResponse;
 /** Provides operations to manage the manufacturerRegression property of the microsoft.graph.userExperienceAnalyticsRegressionSummary entity. */
 public class ManufacturerRegressionRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

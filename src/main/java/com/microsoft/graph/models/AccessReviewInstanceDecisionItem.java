@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
     private String _accessReviewId;
@@ -50,6 +50,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     public AccessReviewInstanceDecisionItem() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

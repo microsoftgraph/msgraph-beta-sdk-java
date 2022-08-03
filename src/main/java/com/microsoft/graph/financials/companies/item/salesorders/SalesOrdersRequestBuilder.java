@@ -20,7 +20,7 @@ import microsoft.graph.models.SalesOrder;
 import microsoft.graph.models.SalesOrderCollectionResponse;
 /** Provides operations to manage the salesOrders property of the microsoft.graph.company entity. */
 public class SalesOrdersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

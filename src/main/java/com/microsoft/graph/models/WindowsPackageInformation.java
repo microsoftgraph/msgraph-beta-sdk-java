@@ -26,12 +26,15 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     private String _identityVersion;
     /** The value for the minimum applicable operating system. */
     private WindowsMinimumOperatingSystem _minimumSupportedOperatingSystem;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new windowsPackageInformation and sets the default values.
      * @return a void
      */
     public WindowsPackageInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsPackageInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,7 +77,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPackageInformation currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("applicableArchitecture", (n) -> { currentObject.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
@@ -82,6 +85,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
             this.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
             this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
             this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -125,6 +129,14 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         return this._minimumSupportedOperatingSystem;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -138,6 +150,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         writer.writeStringValue("identityResourceIdentifier", this.getIdentityResourceIdentifier());
         writer.writeStringValue("identityVersion", this.getIdentityVersion());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -203,5 +216,13 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

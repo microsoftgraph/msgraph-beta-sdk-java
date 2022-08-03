@@ -43,6 +43,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     public SourceCollection() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.sourceCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

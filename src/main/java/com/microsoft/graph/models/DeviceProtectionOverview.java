@@ -18,6 +18,8 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     private Integer _criticalFailuresDeviceCount;
     /** Device with inactive threat agent count */
     private Integer _inactiveThreatAgentDeviceCount;
+    /** The OdataType property */
+    private String _odataType;
     /** Pending full scan device count. */
     private Integer _pendingFullScanDeviceCount;
     /** Pending manual steps device count. */
@@ -40,6 +42,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      */
     public DeviceProtectionOverview() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceProtectionOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,10 +85,11 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceProtectionOverview currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("cleanDeviceCount", (n) -> { currentObject.setCleanDeviceCount(n.getIntegerValue()); });
             this.put("criticalFailuresDeviceCount", (n) -> { currentObject.setCriticalFailuresDeviceCount(n.getIntegerValue()); });
             this.put("inactiveThreatAgentDeviceCount", (n) -> { currentObject.setInactiveThreatAgentDeviceCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("pendingFullScanDeviceCount", (n) -> { currentObject.setPendingFullScanDeviceCount(n.getIntegerValue()); });
             this.put("pendingManualStepsDeviceCount", (n) -> { currentObject.setPendingManualStepsDeviceCount(n.getIntegerValue()); });
             this.put("pendingOfflineScanDeviceCount", (n) -> { currentObject.setPendingOfflineScanDeviceCount(n.getIntegerValue()); });
@@ -103,6 +107,14 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public Integer getInactiveThreatAgentDeviceCount() {
         return this._inactiveThreatAgentDeviceCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the pendingFullScanDeviceCount property value. Pending full scan device count.
@@ -178,6 +190,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
         writer.writeIntegerValue("cleanDeviceCount", this.getCleanDeviceCount());
         writer.writeIntegerValue("criticalFailuresDeviceCount", this.getCriticalFailuresDeviceCount());
         writer.writeIntegerValue("inactiveThreatAgentDeviceCount", this.getInactiveThreatAgentDeviceCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("pendingFullScanDeviceCount", this.getPendingFullScanDeviceCount());
         writer.writeIntegerValue("pendingManualStepsDeviceCount", this.getPendingManualStepsDeviceCount());
         writer.writeIntegerValue("pendingOfflineScanDeviceCount", this.getPendingOfflineScanDeviceCount());
@@ -219,6 +232,14 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      */
     public void setInactiveThreatAgentDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._inactiveThreatAgentDeviceCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the pendingFullScanDeviceCount property value. Pending full scan device count.

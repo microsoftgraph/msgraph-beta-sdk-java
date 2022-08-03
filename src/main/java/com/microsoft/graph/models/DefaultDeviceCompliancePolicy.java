@@ -14,6 +14,7 @@ public class DefaultDeviceCompliancePolicy extends DeviceCompliancePolicy implem
      */
     public DefaultDeviceCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.defaultDeviceCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

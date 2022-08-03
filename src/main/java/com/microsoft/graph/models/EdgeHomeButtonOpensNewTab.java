@@ -14,6 +14,7 @@ public class EdgeHomeButtonOpensNewTab extends EdgeHomeButtonConfiguration imple
      */
     public EdgeHomeButtonOpensNewTab() {
         super();
+        this.setOdataType("#microsoft.graph.edgeHomeButtonOpensNewTab");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

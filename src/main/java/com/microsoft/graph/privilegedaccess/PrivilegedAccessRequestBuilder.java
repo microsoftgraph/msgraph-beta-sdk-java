@@ -20,7 +20,7 @@ import microsoft.graph.models.PrivilegedAccessCollectionResponse;
 import microsoft.graph.privilegedaccess.count.CountRequestBuilder;
 /** Provides operations to manage the collection of privilegedAccess entities. */
 public class PrivilegedAccessRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

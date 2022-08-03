@@ -222,7 +222,7 @@ public class UpdatesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.deployments.item collection
      * @param id Unique identifier of the item
-     * @return a deploymentItemRequestBuilder
+     * @return a DeploymentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeploymentItemRequestBuilder deployments(@javax.annotation.Nonnull final String id) {
@@ -340,7 +340,7 @@ public class UpdatesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.resourceConnections.item collection
      * @param id Unique identifier of the item
-     * @return a resourceConnectionItemRequestBuilder
+     * @return a ResourceConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ResourceConnectionItemRequestBuilder resourceConnections(@javax.annotation.Nonnull final String id) {
@@ -352,7 +352,7 @@ public class UpdatesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.windows.updates.updatableAssets.item collection
      * @param id Unique identifier of the item
-     * @return a updatableAssetItemRequestBuilder
+     * @return a UpdatableAssetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UpdatableAssetItemRequestBuilder updatableAssets(@javax.annotation.Nonnull final String id) {

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /** Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required. */
     private String _downloadUri;
@@ -30,6 +30,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     public AccessReviewHistoryInstance() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewHistoryInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

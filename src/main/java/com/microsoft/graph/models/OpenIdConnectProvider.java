@@ -26,6 +26,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
      */
     public OpenIdConnectProvider() {
         super();
+        this.setOdataType("#microsoft.graph.openIdConnectProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

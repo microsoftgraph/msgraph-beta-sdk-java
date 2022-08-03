@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class OutlookItem extends Entity implements Parsable {
     /** The categories associated with the item */
     private java.util.List<String> _categories;
@@ -24,7 +24,7 @@ public class OutlookItem extends Entity implements Parsable {
      */
     public OutlookItem() {
         super();
-        this.setType("#microsoft.graph.outlookItem");
+        this.setOdataType("#microsoft.graph.outlookItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,12 @@ public class OutlookItem extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.calendarSharingMessage": return new CalendarSharingMessage();
                 case "#microsoft.graph.contact": return new Contact();
                 case "#microsoft.graph.event": return new Event();
+                case "#microsoft.graph.eventMessage": return new EventMessage();
+                case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
+                case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
                 case "#microsoft.graph.message": return new Message();
                 case "#microsoft.graph.note": return new Note();
                 case "#microsoft.graph.outlookTask": return new OutlookTask();

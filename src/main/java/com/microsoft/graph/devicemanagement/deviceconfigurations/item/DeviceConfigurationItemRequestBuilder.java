@@ -93,7 +93,7 @@ public class DeviceConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationAssignmentItemRequestBuilder
+     * @return a DeviceConfigurationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -273,7 +273,7 @@ public class DeviceConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceSettingStateSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a settingStateDeviceSummaryItemRequestBuilder
+     * @return a SettingStateDeviceSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SettingStateDeviceSummaryItemRequestBuilder deviceSettingStateSummaries(@javax.annotation.Nonnull final String id) {
@@ -285,7 +285,7 @@ public class DeviceConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationDeviceStatusItemRequestBuilder
+     * @return a DeviceConfigurationDeviceStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -358,7 +358,7 @@ public class DeviceConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.groupAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationGroupAssignmentItemRequestBuilder
+     * @return a DeviceConfigurationGroupAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationGroupAssignmentItemRequestBuilder groupAssignments(@javax.annotation.Nonnull final String id) {
@@ -425,7 +425,7 @@ public class DeviceConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.userStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationUserStatusItemRequestBuilder
+     * @return a DeviceConfigurationUserStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
@@ -443,7 +443,7 @@ public class DeviceConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -472,7 +472,7 @@ public class DeviceConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceConfigurationItemRequestBuilderGetQueryParameters queryParameters = new DeviceConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -487,7 +487,7 @@ public class DeviceConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationItemRequestBuilderPatchRequestConfiguration() {

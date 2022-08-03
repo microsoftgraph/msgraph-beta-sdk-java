@@ -207,7 +207,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.servicePrincipalCreationPolicies.item.excludes.item collection
      * @param id Unique identifier of the item
-     * @return a servicePrincipalCreationConditionSetItemRequestBuilder
+     * @return a ServicePrincipalCreationConditionSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.serviceprincipalcreationpolicies.item.excludes.item.ServicePrincipalCreationConditionSetItemRequestBuilder excludes(@javax.annotation.Nonnull final String id) {
@@ -270,7 +270,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.servicePrincipalCreationPolicies.item.includes.item collection
      * @param id Unique identifier of the item
-     * @return a servicePrincipalCreationConditionSetItemRequestBuilder
+     * @return a ServicePrincipalCreationConditionSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.item.ServicePrincipalCreationConditionSetItemRequestBuilder includes(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalCreationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalCreationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalCreationPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -372,7 +372,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public ServicePrincipalCreationPolicyItemRequestBuilderGetQueryParameters queryParameters = new ServicePrincipalCreationPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new servicePrincipalCreationPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalCreationPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalCreationPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -387,7 +387,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalCreationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalCreationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalCreationPolicyItemRequestBuilderPatchRequestConfiguration() {

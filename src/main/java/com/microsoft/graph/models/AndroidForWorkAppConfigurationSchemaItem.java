@@ -26,6 +26,8 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     private String _description;
     /** Human readable name */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** Unique key the application uses to identify the item */
     private String _schemaItemKey;
     /** List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only) */
@@ -36,6 +38,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      */
     public AndroidForWorkAppConfigurationSchemaItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.androidForWorkAppConfigurationSchemaItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -118,7 +121,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidForWorkAppConfigurationSchemaItemDataType.class)); });
             this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
             this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });
@@ -126,9 +129,18 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
             this.put("defaultStringValue", (n) -> { currentObject.setDefaultStringValue(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("schemaItemKey", (n) -> { currentObject.setSchemaItemKey(n.getStringValue()); });
             this.put("selections", (n) -> { currentObject.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the schemaItemKey property value. Unique key the application uses to identify the item
@@ -160,6 +172,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
         writer.writeStringValue("defaultStringValue", this.getDefaultStringValue());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("schemaItemKey", this.getSchemaItemKey());
         writer.writeCollectionOfObjectValues("selections", this.getSelections());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -227,6 +240,14 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the schemaItemKey property value. Unique key the application uses to identify the item

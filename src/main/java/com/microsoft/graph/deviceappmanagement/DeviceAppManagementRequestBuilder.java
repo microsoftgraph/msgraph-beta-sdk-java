@@ -213,7 +213,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.androidManagedAppProtections.item collection
      * @param id Unique identifier of the item
-     * @return a androidManagedAppProtectionItemRequestBuilder
+     * @return a AndroidManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AndroidManagedAppProtectionItemRequestBuilder androidManagedAppProtections(@javax.annotation.Nonnull final String id) {
@@ -314,7 +314,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item collection
      * @param id Unique identifier of the item
-     * @return a defaultManagedAppProtectionItemRequestBuilder
+     * @return a DefaultManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DefaultManagedAppProtectionItemRequestBuilder defaultManagedAppProtections(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.deviceAppManagementTasks.item collection
      * @param id Unique identifier of the item
-     * @return a deviceAppManagementTaskItemRequestBuilder
+     * @return a DeviceAppManagementTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceAppManagementTaskItemRequestBuilder deviceAppManagementTasks(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.enterpriseCodeSigningCertificates.item collection
      * @param id Unique identifier of the item
-     * @return a enterpriseCodeSigningCertificateItemRequestBuilder
+     * @return a EnterpriseCodeSigningCertificateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EnterpriseCodeSigningCertificateItemRequestBuilder enterpriseCodeSigningCertificates(@javax.annotation.Nonnull final String id) {
@@ -401,7 +401,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a iosLobAppProvisioningConfigurationItemRequestBuilder
+     * @return a IosLobAppProvisioningConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IosLobAppProvisioningConfigurationItemRequestBuilder iosLobAppProvisioningConfigurations(@javax.annotation.Nonnull final String id) {
@@ -413,7 +413,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item collection
      * @param id Unique identifier of the item
-     * @return a iosManagedAppProtectionItemRequestBuilder
+     * @return a IosManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IosManagedAppProtectionItemRequestBuilder iosManagedAppProtections(@javax.annotation.Nonnull final String id) {
@@ -425,7 +425,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppPolicyItemRequestBuilder
+     * @return a ManagedAppPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppPolicyItemRequestBuilder managedAppPolicies(@javax.annotation.Nonnull final String id) {
@@ -437,7 +437,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppRegistrationItemRequestBuilder
+     * @return a ManagedAppRegistrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationItemRequestBuilder managedAppRegistrations(@javax.annotation.Nonnull final String id) {
@@ -449,7 +449,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppStatusItemRequestBuilder
+     * @return a ManagedAppStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppStatusItemRequestBuilder managedAppStatuses(@javax.annotation.Nonnull final String id) {
@@ -461,7 +461,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBookCategories.item collection
      * @param id Unique identifier of the item
-     * @return a managedEBookCategoryItemRequestBuilder
+     * @return a ManagedEBookCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedEBookCategoryItemRequestBuilder managedEBookCategories(@javax.annotation.Nonnull final String id) {
@@ -473,7 +473,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item collection
      * @param id Unique identifier of the item
-     * @return a managedEBookItemRequestBuilder
+     * @return a ManagedEBookItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedEBookItemRequestBuilder managedEBooks(@javax.annotation.Nonnull final String id) {
@@ -485,7 +485,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a mdmWindowsInformationProtectionPolicyItemRequestBuilder
+     * @return a MdmWindowsInformationProtectionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MdmWindowsInformationProtectionPolicyItemRequestBuilder mdmWindowsInformationProtectionPolicies(@javax.annotation.Nonnull final String id) {
@@ -497,7 +497,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppCategories.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppCategoryItemRequestBuilder
+     * @return a MobileAppCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppCategoryItemRequestBuilder mobileAppCategories(@javax.annotation.Nonnull final String id) {
@@ -509,7 +509,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceMobileAppConfigurationItemRequestBuilder
+     * @return a ManagedDeviceMobileAppConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationItemRequestBuilder mobileAppConfigurations(@javax.annotation.Nonnull final String id) {
@@ -521,7 +521,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppItemRequestBuilder
+     * @return a MobileAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppItemRequestBuilder mobileApps(@javax.annotation.Nonnull final String id) {
@@ -588,7 +588,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.policySets.item collection
      * @param id Unique identifier of the item
-     * @return a policySetItemRequestBuilder
+     * @return a PolicySetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PolicySetItemRequestBuilder policySets(@javax.annotation.Nonnull final String id) {
@@ -600,7 +600,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.sideLoadingKeys.item collection
      * @param id Unique identifier of the item
-     * @return a sideLoadingKeyItemRequestBuilder
+     * @return a SideLoadingKeyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SideLoadingKeyItemRequestBuilder sideLoadingKeys(@javax.annotation.Nonnull final String id) {
@@ -612,7 +612,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a targetedManagedAppConfigurationItemRequestBuilder
+     * @return a TargetedManagedAppConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TargetedManagedAppConfigurationItemRequestBuilder targetedManagedAppConfigurations(@javax.annotation.Nonnull final String id) {
@@ -624,7 +624,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.vppTokens.item collection
      * @param id Unique identifier of the item
-     * @return a vppTokenItemRequestBuilder
+     * @return a VppTokenItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public VppTokenItemRequestBuilder vppTokens(@javax.annotation.Nonnull final String id) {
@@ -636,7 +636,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a windowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder wdacSupplementalPolicies(@javax.annotation.Nonnull final String id) {
@@ -648,7 +648,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsInformationProtectionDeviceRegistrations.item collection
      * @param id Unique identifier of the item
-     * @return a windowsInformationProtectionDeviceRegistrationItemRequestBuilder
+     * @return a WindowsInformationProtectionDeviceRegistrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationItemRequestBuilder windowsInformationProtectionDeviceRegistrations(@javax.annotation.Nonnull final String id) {
@@ -660,7 +660,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsInformationProtectionPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a windowsInformationProtectionPolicyItemRequestBuilder
+     * @return a WindowsInformationProtectionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionPolicyItemRequestBuilder windowsInformationProtectionPolicies(@javax.annotation.Nonnull final String id) {
@@ -672,7 +672,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsInformationProtectionWipeActions.item collection
      * @param id Unique identifier of the item
-     * @return a windowsInformationProtectionWipeActionItemRequestBuilder
+     * @return a WindowsInformationProtectionWipeActionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionWipeActionItemRequestBuilder windowsInformationProtectionWipeActions(@javax.annotation.Nonnull final String id) {
@@ -684,7 +684,7 @@ public class DeviceAppManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsManagedAppProtections.item collection
      * @param id Unique identifier of the item
-     * @return a windowsManagedAppProtectionItemRequestBuilder
+     * @return a WindowsManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsManagedAppProtectionItemRequestBuilder windowsManagedAppProtections(@javax.annotation.Nonnull final String id) {

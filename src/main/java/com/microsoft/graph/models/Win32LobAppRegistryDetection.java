@@ -26,6 +26,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     public Win32LobAppRegistryDetection() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppRegistryDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

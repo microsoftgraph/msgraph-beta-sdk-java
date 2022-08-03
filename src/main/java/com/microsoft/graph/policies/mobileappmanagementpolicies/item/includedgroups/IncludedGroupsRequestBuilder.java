@@ -20,14 +20,14 @@ import microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.
 import microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the includedGroups property of the microsoft.graph.mobilityManagementPolicy entity. */
 public class IncludedGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

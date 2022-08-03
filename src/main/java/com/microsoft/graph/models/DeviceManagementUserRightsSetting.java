@@ -14,6 +14,8 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     private Map<String, Object> _additionalData;
     /** Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements. */
     private java.util.List<DeviceManagementUserRightsLocalUserOrGroup> _localUsersOrGroups;
+    /** The OdataType property */
+    private String _odataType;
     /** State Management Setting. */
     private StateManagementSetting _state;
     /**
@@ -22,6 +24,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
      */
     public DeviceManagementUserRightsSetting() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementUserRightsSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementUserRightsSetting currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("localUsersOrGroups", (n) -> { currentObject.setLocalUsersOrGroups(n.getCollectionOfObjectValues(DeviceManagementUserRightsLocalUserOrGroup::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(StateManagementSetting.class)); });
         }};
     }
@@ -60,6 +64,14 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementUserRightsLocalUserOrGroup> getLocalUsersOrGroups() {
         return this._localUsersOrGroups;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. State Management Setting.
@@ -77,6 +89,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("localUsersOrGroups", this.getLocalUsersOrGroups());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
      */
     public void setLocalUsersOrGroups(@javax.annotation.Nullable final java.util.List<DeviceManagementUserRightsLocalUserOrGroup> value) {
         this._localUsersOrGroups = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. State Management Setting.

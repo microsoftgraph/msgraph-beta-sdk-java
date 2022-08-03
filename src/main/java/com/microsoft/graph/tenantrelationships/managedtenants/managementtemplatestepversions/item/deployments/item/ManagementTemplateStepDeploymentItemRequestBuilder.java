@@ -319,7 +319,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateStepDeploymentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepDeploymentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepDeploymentItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagementTemplateStepDeploymentItemRequestBuilderGetQueryParameters queryParameters = new ManagementTemplateStepDeploymentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managementTemplateStepDeploymentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepDeploymentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepDeploymentItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managementTemplateStepDeploymentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagementTemplateStepDeploymentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagementTemplateStepDeploymentItemRequestBuilderPatchRequestConfiguration() {

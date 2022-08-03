@@ -252,7 +252,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.depOnboardingSettings.item.enrollmentProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a enrollmentProfileItemRequestBuilder
+     * @return a EnrollmentProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EnrollmentProfileItemRequestBuilder enrollmentProfiles(@javax.annotation.Nonnull final String id) {
@@ -323,7 +323,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.depOnboardingSettings.item.importedAppleDeviceIdentities.item collection
      * @param id Unique identifier of the item
-     * @return a importedAppleDeviceIdentityItemRequestBuilder
+     * @return a ImportedAppleDeviceIdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ImportedAppleDeviceIdentityItemRequestBuilder importedAppleDeviceIdentities(@javax.annotation.Nonnull final String id) {
@@ -396,7 +396,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new depOnboardingSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DepOnboardingSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DepOnboardingSettingItemRequestBuilderDeleteRequestConfiguration() {
@@ -425,7 +425,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public DepOnboardingSettingItemRequestBuilderGetQueryParameters queryParameters = new DepOnboardingSettingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new depOnboardingSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DepOnboardingSettingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DepOnboardingSettingItemRequestBuilderGetRequestConfiguration() {
@@ -440,7 +440,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new depOnboardingSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration() {

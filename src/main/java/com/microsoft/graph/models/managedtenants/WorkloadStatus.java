@@ -14,6 +14,8 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The display name for the workload. Required. Read-only. */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** The date and time the workload was offboarded. Optional. Read-only. */
     private OffsetDateTime _offboardedDateTime;
     /** The date and time the workload was onboarded. Optional. Read-only. */
@@ -26,6 +28,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
      */
     public WorkloadStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.managedTenants.workloadStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,12 +63,21 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkloadStatus currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("offboardedDateTime", (n) -> { currentObject.setOffboardedDateTime(n.getOffsetDateTimeValue()); });
             this.put("onboardedDateTime", (n) -> { currentObject.setOnboardedDateTime(n.getOffsetDateTimeValue()); });
             this.put("onboardingStatus", (n) -> { currentObject.setOnboardingStatus(n.getEnumValue(WorkloadOnboardingStatus.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the offboardedDateTime property value. The date and time the workload was offboarded. Optional. Read-only.
@@ -99,6 +111,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("offboardedDateTime", this.getOffboardedDateTime());
         writer.writeOffsetDateTimeValue("onboardedDateTime", this.getOnboardedDateTime());
         writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
@@ -119,6 +132,14 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the offboardedDateTime property value. The date and time the workload was offboarded. Optional. Read-only.

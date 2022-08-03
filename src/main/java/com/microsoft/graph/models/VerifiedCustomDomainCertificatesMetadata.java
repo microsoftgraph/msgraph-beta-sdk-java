@@ -18,6 +18,8 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
     private OffsetDateTime _issueDate;
     /** The issuer name of the custom domain certificate. */
     private String _issuerName;
+    /** The OdataType property */
+    private String _odataType;
     /** The subject name of the custom domain certificate. */
     private String _subjectName;
     /** The thumbprint associated with the custom domain certificate. */
@@ -28,6 +30,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      */
     public VerifiedCustomDomainCertificatesMetadata() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.verifiedCustomDomainCertificatesMetadata");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,10 +65,11 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifiedCustomDomainCertificatesMetadata currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("expiryDate", (n) -> { currentObject.setExpiryDate(n.getOffsetDateTimeValue()); });
             this.put("issueDate", (n) -> { currentObject.setIssueDate(n.getOffsetDateTimeValue()); });
             this.put("issuerName", (n) -> { currentObject.setIssuerName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
             this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
         }};
@@ -85,6 +89,14 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
     @javax.annotation.Nullable
     public String getIssuerName() {
         return this._issuerName;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the subjectName property value. The subject name of the custom domain certificate.
@@ -112,6 +124,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
         writer.writeOffsetDateTimeValue("expiryDate", this.getExpiryDate());
         writer.writeOffsetDateTimeValue("issueDate", this.getIssueDate());
         writer.writeStringValue("issuerName", this.getIssuerName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("subjectName", this.getSubjectName());
         writer.writeStringValue("thumbprint", this.getThumbprint());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,6 +160,14 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      */
     public void setIssuerName(@javax.annotation.Nullable final String value) {
         this._issuerName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the subjectName property value. The subject name of the custom domain certificate.

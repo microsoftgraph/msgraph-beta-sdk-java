@@ -307,7 +307,7 @@ public class EmbeddedSIMDeviceStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new embeddedSIMDeviceStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMDeviceStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMDeviceStateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EmbeddedSIMDeviceStateItemRequestBuilder {
         @javax.annotation.Nullable
         public EmbeddedSIMDeviceStateItemRequestBuilderGetQueryParameters queryParameters = new EmbeddedSIMDeviceStateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new embeddedSIMDeviceStateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMDeviceStateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMDeviceStateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EmbeddedSIMDeviceStateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new embeddedSIMDeviceStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EmbeddedSIMDeviceStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EmbeddedSIMDeviceStateItemRequestBuilderPatchRequestConfiguration() {

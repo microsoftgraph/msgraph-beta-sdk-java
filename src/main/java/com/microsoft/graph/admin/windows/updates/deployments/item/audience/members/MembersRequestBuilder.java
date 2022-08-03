@@ -24,7 +24,7 @@ import microsoft.graph.models.windowsupdates.UpdatableAsset;
 import microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 /** Provides operations to manage the members property of the microsoft.graph.windowsUpdates.deploymentAudience entity. */
 public class MembersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

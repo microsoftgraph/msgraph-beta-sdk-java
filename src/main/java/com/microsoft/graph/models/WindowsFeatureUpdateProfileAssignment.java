@@ -17,6 +17,7 @@ public class WindowsFeatureUpdateProfileAssignment extends Entity implements Par
      */
     public WindowsFeatureUpdateProfileAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.windowsFeatureUpdateProfileAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsDriverUpdateProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDriverUpdateProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDriverUpdateProfileAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsDriverUpdateProfileAssignmentItemRequestBuilderGetQueryParameters queryParameters = new WindowsDriverUpdateProfileAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsDriverUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDriverUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDriverUpdateProfileAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsDriverUpdateProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsDriverUpdateProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsDriverUpdateProfileAssignmentItemRequestBuilderPatchRequestConfiguration() {

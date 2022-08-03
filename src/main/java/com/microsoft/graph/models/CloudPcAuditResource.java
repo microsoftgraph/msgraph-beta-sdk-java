@@ -15,6 +15,8 @@ public class CloudPcAuditResource implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** A list of modified properties. */
     private java.util.List<CloudPcAuditProperty> _modifiedProperties;
+    /** The OdataType property */
+    private String _odataType;
     /** The ID of the audit resource. */
     private String _resourceId;
     /** The type of the audit resource. */
@@ -25,6 +27,7 @@ public class CloudPcAuditResource implements AdditionalDataHolder, Parsable {
      */
     public CloudPcAuditResource() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudPcAuditResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class CloudPcAuditResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcAuditResource currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(CloudPcAuditProperty::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
@@ -73,6 +77,14 @@ public class CloudPcAuditResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<CloudPcAuditProperty> getModifiedProperties() {
         return this._modifiedProperties;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the resourceId property value. The ID of the audit resource.
@@ -99,6 +111,7 @@ public class CloudPcAuditResource implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("modifiedProperties", this.getModifiedProperties());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("resourceId", this.getResourceId());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class CloudPcAuditResource implements AdditionalDataHolder, Parsable {
      */
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<CloudPcAuditProperty> value) {
         this._modifiedProperties = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the resourceId property value. The ID of the audit resource.

@@ -20,7 +20,7 @@ import microsoft.graph.models.WorkPositionCollectionResponse;
 import microsoft.graph.users.item.profile.positions.count.CountRequestBuilder;
 /** Provides operations to manage the positions property of the microsoft.graph.profile entity. */
 public class PositionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

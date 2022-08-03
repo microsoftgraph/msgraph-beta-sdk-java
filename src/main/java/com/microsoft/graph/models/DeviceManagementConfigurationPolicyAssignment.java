@@ -21,6 +21,7 @@ public class DeviceManagementConfigurationPolicyAssignment extends Entity implem
      */
     public DeviceManagementConfigurationPolicyAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

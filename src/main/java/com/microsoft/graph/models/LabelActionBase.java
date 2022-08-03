@@ -13,15 +13,15 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The name property */
     private String _name;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new labelActionBase and sets the default values.
      * @return a void
      */
     public LabelActionBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.labelActionBase");
+        this.setOdataType("#microsoft.graph.labelActionBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,7 +35,12 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.addFooter": return new AddFooter();
+                case "#microsoft.graph.addHeader": return new AddHeader();
+                case "#microsoft.graph.addWatermark": return new AddWatermark();
                 case "#microsoft.graph.encryptContent": return new EncryptContent();
+                case "#microsoft.graph.encryptWithTemplate": return new EncryptWithTemplate();
+                case "#microsoft.graph.encryptWithUserDefinedRights": return new EncryptWithUserDefinedRights();
                 case "#microsoft.graph.markContent": return new MarkContent();
                 case "#microsoft.graph.protectGroup": return new ProtectGroup();
                 case "#microsoft.graph.protectOnlineMeetingAction": return new ProtectOnlineMeetingAction();
@@ -61,7 +66,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
         final LabelActionBase currentObject = this;
         return new HashMap<>(2) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -73,12 +78,12 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -88,7 +93,7 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -108,11 +113,11 @@ public class LabelActionBase implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

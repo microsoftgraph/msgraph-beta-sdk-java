@@ -30,6 +30,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     public DeviceComplianceScriptDeviceState() {
         super();
+        this.setOdataType("#microsoft.graph.deviceComplianceScriptDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

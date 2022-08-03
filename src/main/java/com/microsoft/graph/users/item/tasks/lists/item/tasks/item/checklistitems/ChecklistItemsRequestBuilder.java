@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.tasks.lists.item.tasks.item.checklistitems.count.CountRequestBuilder;
 /** Provides operations to manage the checklistItems property of the microsoft.graph.baseTask entity. */
 public class ChecklistItemsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

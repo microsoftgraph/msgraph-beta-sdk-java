@@ -55,6 +55,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      */
     public GroupPolicySettingMapping() {
         super();
+        this.setOdataType("#microsoft.graph.groupPolicySettingMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -15,6 +15,8 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
     private Integer _length;
     /** The match property */
     private String _match;
+    /** The OdataType property */
+    private String _odataType;
     /** The offset property */
     private Integer _offset;
     /**
@@ -23,6 +25,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      */
     public SensitiveContentEvidence() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sensitiveContentEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitiveContentEvidence currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
             this.put("match", (n) -> { currentObject.setMatch(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
         return this._match;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the offset property value. The offset property
      * @return a integer
      */
@@ -88,6 +100,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("length", this.getLength());
         writer.writeStringValue("match", this.getMatch());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("offset", this.getOffset());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      */
     public void setMatch(@javax.annotation.Nullable final String value) {
         this._match = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the offset property value. The offset property

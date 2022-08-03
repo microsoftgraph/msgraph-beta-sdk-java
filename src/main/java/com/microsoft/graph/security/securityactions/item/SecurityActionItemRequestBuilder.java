@@ -313,7 +313,7 @@ public class SecurityActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new securityActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityActionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityActionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class SecurityActionItemRequestBuilder {
         @javax.annotation.Nullable
         public SecurityActionItemRequestBuilderGetQueryParameters queryParameters = new SecurityActionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new securityActionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityActionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityActionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class SecurityActionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new securityActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SecurityActionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecurityActionItemRequestBuilderPatchRequestConfiguration() {

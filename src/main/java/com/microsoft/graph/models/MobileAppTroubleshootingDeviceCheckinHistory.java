@@ -14,6 +14,7 @@ public class MobileAppTroubleshootingDeviceCheckinHistory extends MobileAppTroub
      */
     public MobileAppTroubleshootingDeviceCheckinHistory() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingDeviceCheckinHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

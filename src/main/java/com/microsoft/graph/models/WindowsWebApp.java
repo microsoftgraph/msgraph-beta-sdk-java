@@ -16,6 +16,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
      */
     public WindowsWebApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsWebApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

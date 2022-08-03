@@ -16,6 +16,8 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
     private Integer _coManagedDeviceCount;
     /** The count of intune devices that are not autopilot registerd. */
     private Integer _intuneDeviceCount;
+    /** The OdataType property */
+    private String _odataType;
     /** Total count of tenant attach devices. */
     private Integer _tenantAttachDeviceCount;
     /**
@@ -24,6 +26,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     public UserExperienceAnalyticsCloudManagementDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsCloudManagementDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsCloudManagementDevicesSummary currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("coManagedDeviceCount", (n) -> { currentObject.setCoManagedDeviceCount(n.getIntegerValue()); });
             this.put("intuneDeviceCount", (n) -> { currentObject.setIntuneDeviceCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tenantAttachDeviceCount", (n) -> { currentObject.setTenantAttachDeviceCount(n.getIntegerValue()); });
         }};
     }
@@ -71,6 +75,14 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
     @javax.annotation.Nullable
     public Integer getIntuneDeviceCount() {
         return this._intuneDeviceCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tenantAttachDeviceCount property value. Total count of tenant attach devices.
@@ -89,6 +101,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("coManagedDeviceCount", this.getCoManagedDeviceCount());
         writer.writeIntegerValue("intuneDeviceCount", this.getIntuneDeviceCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("tenantAttachDeviceCount", this.getTenantAttachDeviceCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      */
     public void setIntuneDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._intuneDeviceCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tenantAttachDeviceCount property value. Total count of tenant attach devices.

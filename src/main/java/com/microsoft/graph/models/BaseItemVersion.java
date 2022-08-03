@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class BaseItemVersion extends Entity implements Parsable {
     /** Identity of the user which last modified the version. Read-only. */
     private IdentitySet _lastModifiedBy;
@@ -22,7 +22,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     public BaseItemVersion() {
         super();
-        this.setType("#microsoft.graph.baseItemVersion");
+        this.setOdataType("#microsoft.graph.baseItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,6 +36,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
                 case "#microsoft.graph.driveItemVersion": return new DriveItemVersion();
                 case "#microsoft.graph.listItemVersion": return new ListItemVersion();
             }

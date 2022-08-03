@@ -20,6 +20,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      */
     public MobileAppDependency() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppDependency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

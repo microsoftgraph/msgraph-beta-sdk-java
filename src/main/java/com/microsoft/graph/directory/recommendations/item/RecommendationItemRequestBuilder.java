@@ -277,7 +277,7 @@ public class RecommendationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.recommendations.item.impactedResources.item collection
      * @param id Unique identifier of the item
-     * @return a recommendationResourceItemRequestBuilder
+     * @return a RecommendationResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RecommendationResourceItemRequestBuilder impactedResources(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class RecommendationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new recommendationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RecommendationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RecommendationItemRequestBuilderDeleteRequestConfiguration() {
@@ -379,7 +379,7 @@ public class RecommendationItemRequestBuilder {
         @javax.annotation.Nullable
         public RecommendationItemRequestBuilderGetQueryParameters queryParameters = new RecommendationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new recommendationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RecommendationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RecommendationItemRequestBuilderGetRequestConfiguration() {
@@ -394,7 +394,7 @@ public class RecommendationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new recommendationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RecommendationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RecommendationItemRequestBuilderPatchRequestConfiguration() {

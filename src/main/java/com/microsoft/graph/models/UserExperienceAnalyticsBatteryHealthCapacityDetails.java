@@ -25,6 +25,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      */
     public UserExperienceAnalyticsBatteryHealthCapacityDetails() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthCapacityDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

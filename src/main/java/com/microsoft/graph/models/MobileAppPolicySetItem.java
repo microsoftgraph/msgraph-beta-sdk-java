@@ -18,6 +18,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      */
     public MobileAppPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

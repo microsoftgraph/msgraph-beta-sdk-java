@@ -314,7 +314,7 @@ public class ItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuotes.item.salesQuoteLines.item.item.picture.item collection
      * @param id Unique identifier of the item
-     * @return a pictureItemRequestBuilder
+     * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {

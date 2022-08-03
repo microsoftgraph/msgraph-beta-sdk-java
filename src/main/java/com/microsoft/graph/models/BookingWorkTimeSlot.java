@@ -14,6 +14,8 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The time of the day when work stops. For example, 17:00:00.0000000. */
     private LocalTime _end;
+    /** The OdataType property */
+    private String _odataType;
     /** The time of the day when work starts. For example, 08:00:00.0000000. */
     private LocalTime _start;
     /**
@@ -22,6 +24,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     public BookingWorkTimeSlot() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bookingWorkTimeSlot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,10 +59,19 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingWorkTimeSlot currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getLocalTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("start", (n) -> { currentObject.setStart(n.getLocalTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the start property value. The time of the day when work starts. For example, 08:00:00.0000000.
@@ -77,6 +89,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalTimeValue("end", this.getEnd());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("start", this.getStart());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     public void setEnd(@javax.annotation.Nullable final LocalTime value) {
         this._end = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the start property value. The time of the day when work starts. For example, 08:00:00.0000000.

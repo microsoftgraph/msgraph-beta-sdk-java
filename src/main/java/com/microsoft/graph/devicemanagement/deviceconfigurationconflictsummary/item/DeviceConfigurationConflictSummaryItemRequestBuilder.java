@@ -307,7 +307,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationConflictSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationConflictSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationConflictSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceConfigurationConflictSummaryItemRequestBuilderGetQueryParameters queryParameters = new DeviceConfigurationConflictSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceConfigurationConflictSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationConflictSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationConflictSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationConflictSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationConflictSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationConflictSummaryItemRequestBuilderPatchRequestConfiguration() {

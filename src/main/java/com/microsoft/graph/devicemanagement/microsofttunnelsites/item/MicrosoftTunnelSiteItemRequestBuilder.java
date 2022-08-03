@@ -265,7 +265,7 @@ public class MicrosoftTunnelSiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.microsoftTunnelSites.item.microsoftTunnelServers.item collection
      * @param id Unique identifier of the item
-     * @return a microsoftTunnelServerItemRequestBuilder
+     * @return a MicrosoftTunnelServerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MicrosoftTunnelServerItemRequestBuilder microsoftTunnelServers(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class MicrosoftTunnelSiteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelSiteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelSiteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelSiteItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class MicrosoftTunnelSiteItemRequestBuilder {
         @javax.annotation.Nullable
         public MicrosoftTunnelSiteItemRequestBuilderGetQueryParameters queryParameters = new MicrosoftTunnelSiteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new microsoftTunnelSiteItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelSiteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelSiteItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class MicrosoftTunnelSiteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftTunnelSiteItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftTunnelSiteItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftTunnelSiteItemRequestBuilderPatchRequestConfiguration() {

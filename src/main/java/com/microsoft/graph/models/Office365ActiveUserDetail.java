@@ -63,6 +63,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     public Office365ActiveUserDetail() {
         super();
+        this.setOdataType("#microsoft.graph.office365ActiveUserDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

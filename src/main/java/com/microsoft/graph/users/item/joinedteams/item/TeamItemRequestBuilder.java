@@ -155,7 +155,7 @@ public class TeamItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamItemRequestBuilderGetQueryParameters queryParameters = new TeamItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamItemRequestBuilderGetRequestConfiguration() {

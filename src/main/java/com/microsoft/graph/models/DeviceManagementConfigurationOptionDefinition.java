@@ -25,6 +25,8 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     private String _itemId;
     /** Name of the option */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Value of the option */
     private DeviceManagementConfigurationSettingValue _optionValue;
     /**
@@ -33,6 +35,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      */
     public DeviceManagementConfigurationOptionDefinition() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationOptionDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,7 +94,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationOptionDefinition currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
             this.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -99,6 +102,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
             this.put("helpText", (n) -> { currentObject.setHelpText(n.getStringValue()); });
             this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("optionValue", (n) -> { currentObject.setOptionValue(n.getObjectValue(DeviceManagementConfigurationSettingValue::createFromDiscriminatorValue)); });
         }};
     }
@@ -127,6 +131,14 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the optionValue property value. Value of the option
      * @return a deviceManagementConfigurationSettingValue
      */
@@ -148,6 +160,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
         writer.writeStringValue("helpText", this.getHelpText());
         writer.writeStringValue("itemId", this.getItemId());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("optionValue", this.getOptionValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -214,6 +227,14 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the optionValue property value. Value of the option

@@ -18,6 +18,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     public EducationFeedbackResourceOutcome() {
         super();
+        this.setOdataType("#microsoft.graph.educationFeedbackResourceOutcome");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

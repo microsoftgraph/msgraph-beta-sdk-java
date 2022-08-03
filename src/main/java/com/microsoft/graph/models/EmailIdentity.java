@@ -16,6 +16,7 @@ public class EmailIdentity extends Identity implements Parsable {
      */
     public EmailIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.emailIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

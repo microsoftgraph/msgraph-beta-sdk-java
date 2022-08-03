@@ -13,6 +13,8 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The email address. */
     private String _address;
+    /** The OdataType property */
+    private String _odataType;
     /** The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals. */
     private Double _rank;
     /**
@@ -21,6 +23,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
      */
     public RankedEmailAddress() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.rankedEmailAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RankedEmailAddress currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rank", (n) -> { currentObject.setRank(n.getDoubleValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the rank property value. The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals.
@@ -76,6 +88,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeDoubleValue("rank", this.getRank());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
      */
     public void setAddress(@javax.annotation.Nullable final String value) {
         this._address = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the rank property value. The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals.

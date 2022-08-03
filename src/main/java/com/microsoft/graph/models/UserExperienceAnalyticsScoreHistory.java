@@ -17,6 +17,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      */
     public UserExperienceAnalyticsScoreHistory() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsScoreHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

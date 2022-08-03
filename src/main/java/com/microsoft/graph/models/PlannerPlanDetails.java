@@ -20,6 +20,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      */
     public PlannerPlanDetails() {
         super();
+        this.setOdataType("#microsoft.graph.plannerPlanDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

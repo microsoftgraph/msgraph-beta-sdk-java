@@ -319,7 +319,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedApprovalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedApprovalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedApprovalItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedApprovalItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedApprovalItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedApprovalItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedApprovalItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedApprovalItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class PrivilegedApprovalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedApprovalItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedApprovalItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedApprovalItemRequestBuilderPatchRequestConfiguration() {

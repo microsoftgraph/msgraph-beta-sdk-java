@@ -21,8 +21,10 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The name of the content source which the externalItem is part of . */
     private String _contentSource;
-    /** The internal identifier for the item. */
+    /** The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format. */
     private String _hitId;
+    /** The OdataType property */
+    private String _odataType;
     /** The rank or the order of the result. */
     private Integer _rank;
     /** The resource property */
@@ -37,6 +39,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     public SearchHit() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchHit");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -103,13 +106,14 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchHit currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("_id", (n) -> { currentObject.set_id(n.getStringValue()); });
             this.put("_score", (n) -> { currentObject.set_score(n.getIntegerValue()); });
             this.put("_source", (n) -> { currentObject.set_source(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
             this.put("_summary", (n) -> { currentObject.set_summary(n.getStringValue()); });
             this.put("contentSource", (n) -> { currentObject.setContentSource(n.getStringValue()); });
             this.put("hitId", (n) -> { currentObject.setHitId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rank", (n) -> { currentObject.setRank(n.getIntegerValue()); });
             this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
             this.put("resultTemplateId", (n) -> { currentObject.setResultTemplateId(n.getStringValue()); });
@@ -117,12 +121,20 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the hitId property value. The internal identifier for the item.
+     * Gets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getHitId() {
         return this._hitId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the rank property value. The rank or the order of the result.
@@ -169,6 +181,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("_summary", this.get_summary());
         writer.writeStringValue("contentSource", this.getContentSource());
         writer.writeStringValue("hitId", this.getHitId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("rank", this.getRank());
         writer.writeObjectValue("resource", this.getResource());
         writer.writeStringValue("resultTemplateId", this.getResultTemplateId());
@@ -224,12 +237,20 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         this._contentSource = value;
     }
     /**
-     * Sets the hitId property value. The internal identifier for the item.
+     * Sets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      * @param value Value to set for the hitId property.
      * @return a void
      */
     public void setHitId(@javax.annotation.Nullable final String value) {
         this._hitId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the rank property value. The rank or the order of the result.

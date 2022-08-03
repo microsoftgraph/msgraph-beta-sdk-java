@@ -307,7 +307,7 @@ public class InformationProtectionLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new informationProtectionLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new InformationProtectionLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public InformationProtectionLabelItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class InformationProtectionLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public InformationProtectionLabelItemRequestBuilderGetQueryParameters queryParameters = new InformationProtectionLabelItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new informationProtectionLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new InformationProtectionLabelItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public InformationProtectionLabelItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class InformationProtectionLabelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new informationProtectionLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new InformationProtectionLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public InformationProtectionLabelItemRequestBuilderPatchRequestConfiguration() {

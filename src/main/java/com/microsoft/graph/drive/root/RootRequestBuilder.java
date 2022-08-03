@@ -163,7 +163,7 @@ public class RootRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.root.activities.item collection
      * @param id Unique identifier of the item
-     * @return a itemActivityOLDItemRequestBuilder
+     * @return a ItemActivityOLDItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemActivityOLDItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
@@ -175,7 +175,7 @@ public class RootRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.root.children.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
@@ -493,7 +493,7 @@ public class RootRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.root.permissions.item collection
      * @param id Unique identifier of the item
-     * @return a permissionItemRequestBuilder
+     * @return a PermissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PermissionItemRequestBuilder permissions(@javax.annotation.Nonnull final String id) {
@@ -515,7 +515,7 @@ public class RootRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.root.subscriptions.item collection
      * @param id Unique identifier of the item
-     * @return a subscriptionItemRequestBuilder
+     * @return a SubscriptionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {
@@ -527,7 +527,7 @@ public class RootRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.root.thumbnails.item collection
      * @param id Unique identifier of the item
-     * @return a thumbnailSetItemRequestBuilder
+     * @return a ThumbnailSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ThumbnailSetItemRequestBuilder thumbnails(@javax.annotation.Nonnull final String id) {
@@ -539,7 +539,7 @@ public class RootRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.root.versions.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemVersionItemRequestBuilder
+     * @return a DriveItemVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {

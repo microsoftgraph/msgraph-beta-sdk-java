@@ -272,7 +272,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.emailMethods.item collection
      * @param id Unique identifier of the item
-     * @return a emailAuthenticationMethodItemRequestBuilder
+     * @return a EmailAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmailAuthenticationMethodItemRequestBuilder emailMethods(@javax.annotation.Nonnull final String id) {
@@ -284,7 +284,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.fido2Methods.item collection
      * @param id Unique identifier of the item
-     * @return a fido2AuthenticationMethodItemRequestBuilder
+     * @return a Fido2AuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public Fido2AuthenticationMethodItemRequestBuilder fido2Methods(@javax.annotation.Nonnull final String id) {
@@ -347,7 +347,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.methods.item collection
      * @param id Unique identifier of the item
-     * @return a authenticationMethodItemRequestBuilder
+     * @return a AuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuthenticationMethodItemRequestBuilder methods(@javax.annotation.Nonnull final String id) {
@@ -359,7 +359,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item collection
      * @param id Unique identifier of the item
-     * @return a microsoftAuthenticatorAuthenticationMethodItemRequestBuilder
+     * @return a MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder microsoftAuthenticatorMethods(@javax.annotation.Nonnull final String id) {
@@ -371,7 +371,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.operations.item collection
      * @param id Unique identifier of the item
-     * @return a longRunningOperationItemRequestBuilder
+     * @return a LongRunningOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -383,7 +383,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item collection
      * @param id Unique identifier of the item
-     * @return a passwordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
+     * @return a PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder passwordlessMicrosoftAuthenticatorMethods(@javax.annotation.Nonnull final String id) {
@@ -395,7 +395,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.passwordMethods.item collection
      * @param id Unique identifier of the item
-     * @return a passwordAuthenticationMethodItemRequestBuilder
+     * @return a PasswordAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PasswordAuthenticationMethodItemRequestBuilder passwordMethods(@javax.annotation.Nonnull final String id) {
@@ -462,7 +462,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.phoneMethods.item collection
      * @param id Unique identifier of the item
-     * @return a phoneAuthenticationMethodItemRequestBuilder
+     * @return a PhoneAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PhoneAuthenticationMethodItemRequestBuilder phoneMethods(@javax.annotation.Nonnull final String id) {
@@ -474,7 +474,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.softwareOathMethods.item collection
      * @param id Unique identifier of the item
-     * @return a softwareOathAuthenticationMethodItemRequestBuilder
+     * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SoftwareOathAuthenticationMethodItemRequestBuilder softwareOathMethods(@javax.annotation.Nonnull final String id) {
@@ -486,7 +486,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.temporaryAccessPassMethods.item collection
      * @param id Unique identifier of the item
-     * @return a temporaryAccessPassAuthenticationMethodItemRequestBuilder
+     * @return a TemporaryAccessPassAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TemporaryAccessPassAuthenticationMethodItemRequestBuilder temporaryAccessPassMethods(@javax.annotation.Nonnull final String id) {
@@ -498,7 +498,7 @@ public class AuthenticationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item collection
      * @param id Unique identifier of the item
-     * @return a windowsHelloForBusinessAuthenticationMethodItemRequestBuilder
+     * @return a WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder windowsHelloForBusinessMethods(@javax.annotation.Nonnull final String id) {

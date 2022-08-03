@@ -20,6 +20,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      */
     public CrossTenantAccessPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.crossTenantAccessPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

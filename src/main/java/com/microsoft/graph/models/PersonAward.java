@@ -27,6 +27,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      */
     public PersonAward() {
         super();
+        this.setOdataType("#microsoft.graph.personAward");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

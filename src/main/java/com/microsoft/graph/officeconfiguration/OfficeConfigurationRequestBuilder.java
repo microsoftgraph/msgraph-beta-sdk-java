@@ -34,7 +34,7 @@ public class OfficeConfigurationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.officeConfiguration.clientConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a officeClientConfigurationItemRequestBuilder
+     * @return a OfficeClientConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OfficeClientConfigurationItemRequestBuilder clientConfigurations(@javax.annotation.Nonnull final String id) {

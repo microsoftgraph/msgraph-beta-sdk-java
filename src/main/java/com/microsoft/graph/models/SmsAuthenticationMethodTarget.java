@@ -16,6 +16,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      */
     public SmsAuthenticationMethodTarget() {
         super();
+        this.setOdataType("#microsoft.graph.smsAuthenticationMethodTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

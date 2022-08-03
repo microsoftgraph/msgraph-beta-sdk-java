@@ -210,7 +210,7 @@ public class SchemaRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.synchronization.jobs.item.schema.directories.item collection
      * @param id Unique identifier of the item
-     * @return a directoryDefinitionItemRequestBuilder
+     * @return a DirectoryDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryDefinitionItemRequestBuilder directories(@javax.annotation.Nonnull final String id) {

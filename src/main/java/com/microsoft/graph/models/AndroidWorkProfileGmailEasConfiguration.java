@@ -14,6 +14,7 @@ public class AndroidWorkProfileGmailEasConfiguration extends AndroidWorkProfileE
      */
     public AndroidWorkProfileGmailEasConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidWorkProfileGmailEasConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

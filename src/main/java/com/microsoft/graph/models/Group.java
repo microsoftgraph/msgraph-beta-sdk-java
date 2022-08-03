@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Group extends DirectoryObject implements Parsable {
     /** The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post. */
     private java.util.List<DirectoryObject> _acceptedSenders;
@@ -172,6 +172,7 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public Group() {
         super();
+        this.setOdataType("#microsoft.graph.group");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -88,6 +88,7 @@ public class SalesOrder extends Entity implements Parsable {
      */
     public SalesOrder() {
         super();
+        this.setOdataType("#microsoft.graph.salesOrder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

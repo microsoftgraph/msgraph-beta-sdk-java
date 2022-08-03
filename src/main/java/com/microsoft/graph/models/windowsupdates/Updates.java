@@ -13,7 +13,7 @@ public class Updates extends Entity implements Parsable {
     private Catalog _catalog;
     /** Deployments created using the deployment service. Read-only. */
     private java.util.List<Deployment> _deployments;
-    /** The resourceConnections property */
+    /** Service connections to external resources such as analytics workspaces. */
     private java.util.List<ResourceConnection> _resourceConnections;
     /** Assets registered with the deployment service that can receive updates. Read-only. */
     private java.util.List<UpdatableAsset> _updatableAssets;
@@ -23,6 +23,7 @@ public class Updates extends Entity implements Parsable {
      */
     public Updates() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdates.updates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +66,7 @@ public class Updates extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the resourceConnections property value. The resourceConnections property
+     * Gets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
      * @return a resourceConnection
      */
     @javax.annotation.Nullable
@@ -110,7 +111,7 @@ public class Updates extends Entity implements Parsable {
         this._deployments = value;
     }
     /**
-     * Sets the resourceConnections property value. The resourceConnections property
+     * Sets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
      * @param value Value to set for the resourceConnections property.
      * @return a void
      */

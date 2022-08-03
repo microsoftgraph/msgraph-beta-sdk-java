@@ -25,6 +25,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      */
     public EducationSynchronizationProfileStatus() {
         super();
+        this.setOdataType("#microsoft.graph.educationSynchronizationProfileStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

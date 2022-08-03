@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagementActionTenantDeploymentStatus extends Entity implements Parsable {
     /** The collection of deployment status for each instance of a management action. Optional. */
     private java.util.List<ManagementActionDeploymentStatus> _statuses;
@@ -22,6 +22,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      */
     public ManagementActionTenantDeploymentStatus() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managementActionTenantDeploymentStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

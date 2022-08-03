@@ -11,6 +11,8 @@ import java.util.Objects;
 public class SimulationReportOverview implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type. */
     private java.util.List<RecommendedAction> _recommendedActions;
     /** Number of valid users in the attack simulation and training campaign. */
@@ -25,6 +27,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     public SimulationReportOverview() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.simulationReportOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +54,21 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationReportOverview currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommendedActions", (n) -> { currentObject.setRecommendedActions(n.getCollectionOfObjectValues(RecommendedAction::createFromDiscriminatorValue)); });
             this.put("resolvedTargetsCount", (n) -> { currentObject.setResolvedTargetsCount(n.getIntegerValue()); });
             this.put("simulationEventsContent", (n) -> { currentObject.setSimulationEventsContent(n.getObjectValue(SimulationEventsContent::createFromDiscriminatorValue)); });
             this.put("trainingEventsContent", (n) -> { currentObject.setTrainingEventsContent(n.getObjectValue(TrainingEventsContent::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
@@ -97,6 +109,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("recommendedActions", this.getRecommendedActions());
         writer.writeIntegerValue("resolvedTargetsCount", this.getResolvedTargetsCount());
         writer.writeObjectValue("simulationEventsContent", this.getSimulationEventsContent());
@@ -110,6 +123,14 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.

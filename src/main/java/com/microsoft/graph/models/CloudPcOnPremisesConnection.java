@@ -36,6 +36,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     private String _subscriptionId;
     /** The name of the target Azure subscription. Read-only. */
     private String _subscriptionName;
+    /** Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue. */
+    private CloudPcOnPremisesConnectionType _type;
     /** The ID of the target virtual network. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}. */
     private String _virtualNetworkId;
     /**
@@ -44,6 +46,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     public CloudPcOnPremisesConnection() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPcOnPremisesConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -117,6 +120,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
             this.put("subnetId", (n) -> { currentObject.setSubnetId(n.getStringValue()); });
             this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
             this.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CloudPcOnPremisesConnectionType.class)); });
             this.put("virtualNetworkId", (n) -> { currentObject.setVirtualNetworkId(n.getStringValue()); });
         }};
     }
@@ -193,6 +197,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._subscriptionName;
     }
     /**
+     * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * @return a cloudPcOnPremisesConnectionType
+     */
+    @javax.annotation.Nullable
+    public CloudPcOnPremisesConnectionType getType() {
+        return this._type;
+    }
+    /**
      * Gets the virtualNetworkId property value. The ID of the target virtual network. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}.
      * @return a string
      */
@@ -222,6 +234,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("subnetId", this.getSubnetId());
         writer.writeStringValue("subscriptionId", this.getSubscriptionId());
         writer.writeStringValue("subscriptionName", this.getSubscriptionName());
+        writer.writeEnumValue("type", this.getType());
         writer.writeStringValue("virtualNetworkId", this.getVirtualNetworkId());
     }
     /**
@@ -335,6 +348,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     public void setSubscriptionName(@javax.annotation.Nullable final String value) {
         this._subscriptionName = value;
+    }
+    /**
+     * Sets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
+        this._type = value;
     }
     /**
      * Sets the virtualNetworkId property value. The ID of the target virtual network. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}.

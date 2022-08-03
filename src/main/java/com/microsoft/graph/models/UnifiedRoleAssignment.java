@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class UnifiedRoleAssignment extends Entity implements Parsable {
     /** Details of the app specific scope when the assignment scope is app specific. Containment entity. */
     private AppScope _appScope;
@@ -37,6 +37,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      */
     public UnifiedRoleAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

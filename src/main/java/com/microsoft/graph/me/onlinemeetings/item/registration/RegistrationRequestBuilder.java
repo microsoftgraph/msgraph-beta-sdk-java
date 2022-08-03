@@ -151,7 +151,7 @@ public class RegistrationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onlineMeetings.item.registration.customQuestions.item collection
      * @param id Unique identifier of the item
-     * @return a meetingRegistrationQuestionItemRequestBuilder
+     * @return a MeetingRegistrationQuestionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MeetingRegistrationQuestionItemRequestBuilder customQuestions(@javax.annotation.Nonnull final String id) {

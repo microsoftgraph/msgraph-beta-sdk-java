@@ -28,7 +28,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      */
     public AndroidDeviceOwnerCertificateProfileBase() {
         super();
-        this.setType("#microsoft.graph.androidDeviceOwnerCertificateProfileBase");
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerCertificateProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

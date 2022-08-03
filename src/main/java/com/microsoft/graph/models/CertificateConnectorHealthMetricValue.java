@@ -17,6 +17,8 @@ public class CertificateConnectorHealthMetricValue implements AdditionalDataHold
     private OffsetDateTime _dateTime;
     /** Count of failed requests/operations. */
     private Long _failureCount;
+    /** The OdataType property */
+    private String _odataType;
     /** Count of successful requests/operations. */
     private Long _successCount;
     /**
@@ -25,6 +27,7 @@ public class CertificateConnectorHealthMetricValue implements AdditionalDataHold
      */
     public CertificateConnectorHealthMetricValue() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.certificateConnectorHealthMetricValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,11 +70,20 @@ public class CertificateConnectorHealthMetricValue implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateConnectorHealthMetricValue currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
             this.put("failureCount", (n) -> { currentObject.setFailureCount(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("successCount", (n) -> { currentObject.setSuccessCount(n.getLongValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the successCount property value. Count of successful requests/operations.
@@ -90,6 +102,7 @@ public class CertificateConnectorHealthMetricValue implements AdditionalDataHold
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("dateTime", this.getDateTime());
         writer.writeLongValue("failureCount", this.getFailureCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("successCount", this.getSuccessCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +129,14 @@ public class CertificateConnectorHealthMetricValue implements AdditionalDataHold
      */
     public void setFailureCount(@javax.annotation.Nullable final Long value) {
         this._failureCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the successCount property value. Count of successful requests/operations.

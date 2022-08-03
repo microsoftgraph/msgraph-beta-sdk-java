@@ -314,7 +314,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.resourceNamespaces.item.resourceActions.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRbacResourceActionItemRequestBuilder
+     * @return a UnifiedRbacResourceActionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRbacResourceActionItemRequestBuilder resourceActions(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRbacResourceNamespaceItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRbacResourceNamespaceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration() {

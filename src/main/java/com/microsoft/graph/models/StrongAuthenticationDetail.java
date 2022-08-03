@@ -18,6 +18,7 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
      */
     public StrongAuthenticationDetail() {
         super();
+        this.setOdataType("#microsoft.graph.strongAuthenticationDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

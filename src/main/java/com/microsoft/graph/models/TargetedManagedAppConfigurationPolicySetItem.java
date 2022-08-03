@@ -14,6 +14,7 @@ public class TargetedManagedAppConfigurationPolicySetItem extends PolicySetItem 
      */
     public TargetedManagedAppConfigurationPolicySetItem() {
         super();
+        this.setOdataType("#microsoft.graph.targetedManagedAppConfigurationPolicySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

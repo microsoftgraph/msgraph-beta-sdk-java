@@ -307,7 +307,7 @@ public class AllowedDataLocationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new allowedDataLocationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AllowedDataLocationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AllowedDataLocationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AllowedDataLocationItemRequestBuilder {
         @javax.annotation.Nullable
         public AllowedDataLocationItemRequestBuilderGetQueryParameters queryParameters = new AllowedDataLocationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new allowedDataLocationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AllowedDataLocationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AllowedDataLocationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AllowedDataLocationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new allowedDataLocationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AllowedDataLocationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AllowedDataLocationItemRequestBuilderPatchRequestConfiguration() {

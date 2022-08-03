@@ -18,6 +18,7 @@ public class EdiscoveryFile extends File implements Parsable {
      */
     public EdiscoveryFile() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

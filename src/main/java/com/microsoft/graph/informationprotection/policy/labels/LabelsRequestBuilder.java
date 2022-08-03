@@ -24,7 +24,7 @@ import microsoft.graph.models.InformationProtectionLabelCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the labels property of the microsoft.graph.informationProtectionPolicy entity. */
 public class LabelsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

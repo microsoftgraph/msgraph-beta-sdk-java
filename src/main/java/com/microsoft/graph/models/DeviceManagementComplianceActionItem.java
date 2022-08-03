@@ -23,6 +23,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      */
     public DeviceManagementComplianceActionItem() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementComplianceActionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

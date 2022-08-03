@@ -34,7 +34,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.customSecurityAttributeDefinitions.item.allowedValues.item collection
      * @param id Unique identifier of the item
-     * @return a allowedValueItemRequestBuilder
+     * @return a AllowedValueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AllowedValueItemRequestBuilder allowedValues(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CustomSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public CustomSecurityAttributeDefinitionItemRequestBuilderGetQueryParameters queryParameters = new CustomSecurityAttributeDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new customSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration() {

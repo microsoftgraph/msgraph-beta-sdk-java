@@ -28,16 +28,17 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     /** Software updates available for the device. */
     private TeamworkSoftwareUpdateHealth _softwareUpdateHealth;
     /**
-     * Instantiates a new teamworkDeviceHealth and sets the default values.
+     * Instantiates a new TeamworkDeviceHealth and sets the default values.
      * @return a void
      */
     public TeamworkDeviceHealth() {
         super();
+        this.setOdataType("#microsoft.graph.teamworkDeviceHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceHealth
+     * @return a TeamworkDeviceHealth
      */
     @javax.annotation.Nonnull
     public static TeamworkDeviceHealth createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

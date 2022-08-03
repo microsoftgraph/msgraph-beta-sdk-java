@@ -15,6 +15,8 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     private String _domain;
     /** The domain and username of the console device, for example, Seattle/RanierConf. */
     private String _domainUserName;
+    /** The OdataType property */
+    private String _odataType;
     /** The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used. */
     private String _smtpAddress;
     /**
@@ -23,6 +25,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
      */
     public TeamworkOnPremisesCalendarSyncConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkOnPremisesCalendarSyncConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkOnPremisesCalendarSyncConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
             this.put("domainUserName", (n) -> { currentObject.setDomainUserName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("smtpAddress", (n) -> { currentObject.setSmtpAddress(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the smtpAddress property value. The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
@@ -88,6 +100,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
         Objects.requireNonNull(writer);
         writer.writeStringValue("domain", this.getDomain());
         writer.writeStringValue("domainUserName", this.getDomainUserName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("smtpAddress", this.getSmtpAddress());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
      */
     public void setDomainUserName(@javax.annotation.Nullable final String value) {
         this._domainUserName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the smtpAddress property value. The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.

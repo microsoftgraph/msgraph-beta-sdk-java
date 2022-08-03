@@ -28,6 +28,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      */
     public MacOSExtensionsConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSExtensionsConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

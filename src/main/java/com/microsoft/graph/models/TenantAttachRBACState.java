@@ -14,12 +14,15 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Indicates whether the tenant is enabled for Tenant Attach with role management.  TRUE if enabled, FALSE if the Tenant Attach with rolemanagement is disabled. */
     private Boolean _enabled;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new tenantAttachRBACState and sets the default values.
      * @return a void
      */
     public TenantAttachRBACState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.tenantAttachRBACState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantAttachRBACState currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enabled", this.getEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
      */
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

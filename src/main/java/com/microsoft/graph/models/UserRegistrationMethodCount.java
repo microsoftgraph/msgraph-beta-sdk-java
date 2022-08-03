@@ -13,6 +13,8 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
     private Map<String, Object> _additionalData;
     /** Name of authentication method. */
     private String _authenticationMethod;
+    /** The OdataType property */
+    private String _odataType;
     /** Number of users registered. */
     private Long _userCount;
     /**
@@ -21,6 +23,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      */
     public UserRegistrationMethodCount() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userRegistrationMethodCount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationMethodCount currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userCount", (n) -> { currentObject.setUserCount(n.getLongValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userCount property value. Number of users registered.
@@ -76,6 +88,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("authenticationMethod", this.getAuthenticationMethod());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("userCount", this.getUserCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      */
     public void setAuthenticationMethod(@javax.annotation.Nullable final String value) {
         this._authenticationMethod = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userCount property value. Number of users registered.

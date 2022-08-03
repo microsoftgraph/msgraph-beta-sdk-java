@@ -1126,7 +1126,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.androidDeviceOwnerEnrollmentProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a androidDeviceOwnerEnrollmentProfileItemRequestBuilder
+     * @return a AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder androidDeviceOwnerEnrollmentProfiles(@javax.annotation.Nonnull final String id) {
@@ -1138,7 +1138,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.androidForWorkAppConfigurationSchemas.item collection
      * @param id Unique identifier of the item
-     * @return a androidForWorkAppConfigurationSchemaItemRequestBuilder
+     * @return a AndroidForWorkAppConfigurationSchemaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AndroidForWorkAppConfigurationSchemaItemRequestBuilder androidForWorkAppConfigurationSchemas(@javax.annotation.Nonnull final String id) {
@@ -1150,7 +1150,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.androidForWorkEnrollmentProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a androidForWorkEnrollmentProfileItemRequestBuilder
+     * @return a AndroidForWorkEnrollmentProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AndroidForWorkEnrollmentProfileItemRequestBuilder androidForWorkEnrollmentProfiles(@javax.annotation.Nonnull final String id) {
@@ -1162,7 +1162,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.androidManagedStoreAppConfigurationSchemas.item collection
      * @param id Unique identifier of the item
-     * @return a androidManagedStoreAppConfigurationSchemaItemRequestBuilder
+     * @return a AndroidManagedStoreAppConfigurationSchemaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AndroidManagedStoreAppConfigurationSchemaItemRequestBuilder androidManagedStoreAppConfigurationSchemas(@javax.annotation.Nonnull final String id) {
@@ -1174,7 +1174,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.appleUserInitiatedEnrollmentProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a appleUserInitiatedEnrollmentProfileItemRequestBuilder
+     * @return a AppleUserInitiatedEnrollmentProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppleUserInitiatedEnrollmentProfileItemRequestBuilder appleUserInitiatedEnrollmentProfiles(@javax.annotation.Nonnull final String id) {
@@ -1186,7 +1186,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.assignmentFilters.item collection
      * @param id Unique identifier of the item
-     * @return a deviceAndAppManagementAssignmentFilterItemRequestBuilder
+     * @return a DeviceAndAppManagementAssignmentFilterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceAndAppManagementAssignmentFilterItemRequestBuilder assignmentFilters(@javax.annotation.Nonnull final String id) {
@@ -1198,7 +1198,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.auditEvents.item collection
      * @param id Unique identifier of the item
-     * @return a auditEventItemRequestBuilder
+     * @return a AuditEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
@@ -1210,7 +1210,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.autopilotEvents.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementAutopilotEventItemRequestBuilder
+     * @return a DeviceManagementAutopilotEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementAutopilotEventItemRequestBuilder autopilotEvents(@javax.annotation.Nonnull final String id) {
@@ -1222,7 +1222,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.cartToClassAssociations.item collection
      * @param id Unique identifier of the item
-     * @return a cartToClassAssociationItemRequestBuilder
+     * @return a CartToClassAssociationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CartToClassAssociationItemRequestBuilder cartToClassAssociations(@javax.annotation.Nonnull final String id) {
@@ -1234,7 +1234,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.categories.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementSettingCategoryItemRequestBuilder
+     * @return a DeviceManagementSettingCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementSettingCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
@@ -1246,7 +1246,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.certificateConnectorDetails.item collection
      * @param id Unique identifier of the item
-     * @return a certificateConnectorDetailsItemRequestBuilder
+     * @return a CertificateConnectorDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CertificateConnectorDetailsItemRequestBuilder certificateConnectorDetails(@javax.annotation.Nonnull final String id) {
@@ -1258,7 +1258,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.chromeOSOnboardingSettings.item collection
      * @param id Unique identifier of the item
-     * @return a chromeOSOnboardingSettingsItemRequestBuilder
+     * @return a ChromeOSOnboardingSettingsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChromeOSOnboardingSettingsItemRequestBuilder chromeOSOnboardingSettings(@javax.annotation.Nonnull final String id) {
@@ -1270,7 +1270,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.cloudPCConnectivityIssues.item collection
      * @param id Unique identifier of the item
-     * @return a cloudPCConnectivityIssueItemRequestBuilder
+     * @return a CloudPCConnectivityIssueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPCConnectivityIssueItemRequestBuilder cloudPCConnectivityIssues(@javax.annotation.Nonnull final String id) {
@@ -1282,7 +1282,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.comanagedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceItemRequestBuilder
+     * @return a ManagedDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.comanageddevices.item.ManagedDeviceItemRequestBuilder comanagedDevices(@javax.annotation.Nonnull final String id) {
@@ -1294,7 +1294,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.comanagementEligibleDevices.item collection
      * @param id Unique identifier of the item
-     * @return a comanagementEligibleDeviceItemRequestBuilder
+     * @return a ComanagementEligibleDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ComanagementEligibleDeviceItemRequestBuilder comanagementEligibleDevices(@javax.annotation.Nonnull final String id) {
@@ -1306,7 +1306,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.complianceCategories.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationCategoryItemRequestBuilder
+     * @return a DeviceManagementConfigurationCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.compliancecategories.item.DeviceManagementConfigurationCategoryItemRequestBuilder complianceCategories(@javax.annotation.Nonnull final String id) {
@@ -1318,7 +1318,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.complianceManagementPartners.item collection
      * @param id Unique identifier of the item
-     * @return a complianceManagementPartnerItemRequestBuilder
+     * @return a ComplianceManagementPartnerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ComplianceManagementPartnerItemRequestBuilder complianceManagementPartners(@javax.annotation.Nonnull final String id) {
@@ -1330,7 +1330,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.compliancePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementCompliancePolicyItemRequestBuilder
+     * @return a DeviceManagementCompliancePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementCompliancePolicyItemRequestBuilder compliancePolicies(@javax.annotation.Nonnull final String id) {
@@ -1342,7 +1342,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.complianceSettings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationSettingDefinitionItemRequestBuilder
+     * @return a DeviceManagementConfigurationSettingDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.compliancesettings.item.DeviceManagementConfigurationSettingDefinitionItemRequestBuilder complianceSettings(@javax.annotation.Nonnull final String id) {
@@ -1354,7 +1354,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.configManagerCollections.item collection
      * @param id Unique identifier of the item
-     * @return a configManagerCollectionItemRequestBuilder
+     * @return a ConfigManagerCollectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConfigManagerCollectionItemRequestBuilder configManagerCollections(@javax.annotation.Nonnull final String id) {
@@ -1366,7 +1366,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.configurationCategories.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationCategoryItemRequestBuilder
+     * @return a DeviceManagementConfigurationCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.configurationcategories.item.DeviceManagementConfigurationCategoryItemRequestBuilder configurationCategories(@javax.annotation.Nonnull final String id) {
@@ -1378,7 +1378,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.configurationPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationPolicyItemRequestBuilder
+     * @return a DeviceManagementConfigurationPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationPolicyItemRequestBuilder configurationPolicies(@javax.annotation.Nonnull final String id) {
@@ -1390,7 +1390,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.configurationPolicyTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationPolicyTemplateItemRequestBuilder
+     * @return a DeviceManagementConfigurationPolicyTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationPolicyTemplateItemRequestBuilder configurationPolicyTemplates(@javax.annotation.Nonnull final String id) {
@@ -1402,7 +1402,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.configurationSettings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationSettingDefinitionItemRequestBuilder
+     * @return a DeviceManagementConfigurationSettingDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.configurationsettings.item.DeviceManagementConfigurationSettingDefinitionItemRequestBuilder configurationSettings(@javax.annotation.Nonnull final String id) {
@@ -1503,7 +1503,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.dataSharingConsents.item collection
      * @param id Unique identifier of the item
-     * @return a dataSharingConsentItemRequestBuilder
+     * @return a DataSharingConsentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DataSharingConsentItemRequestBuilder dataSharingConsents(@javax.annotation.Nonnull final String id) {
@@ -1515,7 +1515,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.depOnboardingSettings.item collection
      * @param id Unique identifier of the item
-     * @return a depOnboardingSettingItemRequestBuilder
+     * @return a DepOnboardingSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DepOnboardingSettingItemRequestBuilder depOnboardingSettings(@javax.annotation.Nonnull final String id) {
@@ -1527,7 +1527,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.derivedCredentials.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementDerivedCredentialSettingsItemRequestBuilder
+     * @return a DeviceManagementDerivedCredentialSettingsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementDerivedCredentialSettingsItemRequestBuilder derivedCredentials(@javax.annotation.Nonnull final String id) {
@@ -1539,7 +1539,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.detectedApps.item collection
      * @param id Unique identifier of the item
-     * @return a detectedAppItemRequestBuilder
+     * @return a DetectedAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DetectedAppItemRequestBuilder detectedApps(@javax.annotation.Nonnull final String id) {
@@ -1551,7 +1551,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCategories.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCategoryItemRequestBuilder
+     * @return a DeviceCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCategoryItemRequestBuilder deviceCategories(@javax.annotation.Nonnull final String id) {
@@ -1563,7 +1563,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCompliancePolicyItemRequestBuilder
+     * @return a DeviceCompliancePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyItemRequestBuilder deviceCompliancePolicies(@javax.annotation.Nonnull final String id) {
@@ -1575,7 +1575,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCompliancePolicySettingStateSummaryItemRequestBuilder
+     * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder deviceCompliancePolicySettingStateSummaries(@javax.annotation.Nonnull final String id) {
@@ -1587,7 +1587,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceComplianceScripts.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceScriptItemRequestBuilder
+     * @return a DeviceComplianceScriptItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceScriptItemRequestBuilder deviceComplianceScripts(@javax.annotation.Nonnull final String id) {
@@ -1599,7 +1599,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurationConflictSummary.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationConflictSummaryItemRequestBuilder
+     * @return a DeviceConfigurationConflictSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationConflictSummaryItemRequestBuilder deviceConfigurationConflictSummary(@javax.annotation.Nonnull final String id) {
@@ -1611,7 +1611,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurationRestrictedAppsViolations.item collection
      * @param id Unique identifier of the item
-     * @return a restrictedAppsViolationItemRequestBuilder
+     * @return a RestrictedAppsViolationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RestrictedAppsViolationItemRequestBuilder deviceConfigurationRestrictedAppsViolations(@javax.annotation.Nonnull final String id) {
@@ -1623,7 +1623,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationItemRequestBuilder
+     * @return a DeviceConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationItemRequestBuilder deviceConfigurations(@javax.annotation.Nonnull final String id) {
@@ -1635,7 +1635,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurationsAllManagedDeviceCertificateStates.item collection
      * @param id Unique identifier of the item
-     * @return a managedAllDeviceCertificateStateItemRequestBuilder
+     * @return a ManagedAllDeviceCertificateStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAllDeviceCertificateStateItemRequestBuilder deviceConfigurationsAllManagedDeviceCertificateStates(@javax.annotation.Nonnull final String id) {
@@ -1647,7 +1647,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCustomAttributeShellScriptItemRequestBuilder
+     * @return a DeviceCustomAttributeShellScriptItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCustomAttributeShellScriptItemRequestBuilder deviceCustomAttributeShellScripts(@javax.annotation.Nonnull final String id) {
@@ -1659,7 +1659,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceEnrollmentConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a deviceEnrollmentConfigurationItemRequestBuilder
+     * @return a DeviceEnrollmentConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceEnrollmentConfigurationItemRequestBuilder deviceEnrollmentConfigurations(@javax.annotation.Nonnull final String id) {
@@ -1671,7 +1671,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceHealthScripts.item collection
      * @param id Unique identifier of the item
-     * @return a deviceHealthScriptItemRequestBuilder
+     * @return a DeviceHealthScriptItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceHealthScriptItemRequestBuilder deviceHealthScripts(@javax.annotation.Nonnull final String id) {
@@ -1683,7 +1683,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementPartners.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementPartnerItemRequestBuilder
+     * @return a DeviceManagementPartnerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementPartnerItemRequestBuilder deviceManagementPartners(@javax.annotation.Nonnull final String id) {
@@ -1695,7 +1695,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementScripts.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementScriptItemRequestBuilder
+     * @return a DeviceManagementScriptItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementScriptItemRequestBuilder deviceManagementScripts(@javax.annotation.Nonnull final String id) {
@@ -1707,7 +1707,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceShellScripts.item collection
      * @param id Unique identifier of the item
-     * @return a deviceShellScriptItemRequestBuilder
+     * @return a DeviceShellScriptItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceShellScriptItemRequestBuilder deviceShellScripts(@javax.annotation.Nonnull final String id) {
@@ -1719,7 +1719,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.domainJoinConnectors.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementDomainJoinConnectorItemRequestBuilder
+     * @return a DeviceManagementDomainJoinConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementDomainJoinConnectorItemRequestBuilder domainJoinConnectors(@javax.annotation.Nonnull final String id) {
@@ -1731,7 +1731,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item collection
      * @param id Unique identifier of the item
-     * @return a embeddedSIMActivationCodePoolItemRequestBuilder
+     * @return a EmbeddedSIMActivationCodePoolItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmbeddedSIMActivationCodePoolItemRequestBuilder embeddedSIMActivationCodePools(@javax.annotation.Nonnull final String id) {
@@ -1743,7 +1743,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.exchangeConnectors.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementExchangeConnectorItemRequestBuilder
+     * @return a DeviceManagementExchangeConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementExchangeConnectorItemRequestBuilder exchangeConnectors(@javax.annotation.Nonnull final String id) {
@@ -1755,7 +1755,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.exchangeOnPremisesPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementExchangeOnPremisesPolicyItemRequestBuilder
+     * @return a DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder exchangeOnPremisesPolicies(@javax.annotation.Nonnull final String id) {
@@ -1890,7 +1890,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyCategories.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyCategoryItemRequestBuilder
+     * @return a GroupPolicyCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyCategoryItemRequestBuilder groupPolicyCategories(@javax.annotation.Nonnull final String id) {
@@ -1902,7 +1902,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyConfigurationItemRequestBuilder
+     * @return a GroupPolicyConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyConfigurationItemRequestBuilder groupPolicyConfigurations(@javax.annotation.Nonnull final String id) {
@@ -1914,7 +1914,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitionFiles.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyDefinitionFileItemRequestBuilder
+     * @return a GroupPolicyDefinitionFileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyDefinitionFileItemRequestBuilder groupPolicyDefinitionFiles(@javax.annotation.Nonnull final String id) {
@@ -1926,7 +1926,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyDefinitionItemRequestBuilder
+     * @return a GroupPolicyDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyDefinitionItemRequestBuilder groupPolicyDefinitions(@javax.annotation.Nonnull final String id) {
@@ -1938,7 +1938,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyMigrationReportItemRequestBuilder
+     * @return a GroupPolicyMigrationReportItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyMigrationReportItemRequestBuilder groupPolicyMigrationReports(@javax.annotation.Nonnull final String id) {
@@ -1950,7 +1950,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyObjectFiles.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyObjectFileItemRequestBuilder
+     * @return a GroupPolicyObjectFileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyObjectFileItemRequestBuilder groupPolicyObjectFiles(@javax.annotation.Nonnull final String id) {
@@ -1962,7 +1962,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyUploadedDefinitionFiles.item collection
      * @param id Unique identifier of the item
-     * @return a groupPolicyUploadedDefinitionFileItemRequestBuilder
+     * @return a GroupPolicyUploadedDefinitionFileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupPolicyUploadedDefinitionFileItemRequestBuilder groupPolicyUploadedDefinitionFiles(@javax.annotation.Nonnull final String id) {
@@ -1974,7 +1974,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.importedDeviceIdentities.item collection
      * @param id Unique identifier of the item
-     * @return a importedDeviceIdentityItemRequestBuilder
+     * @return a ImportedDeviceIdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ImportedDeviceIdentityItemRequestBuilder importedDeviceIdentities(@javax.annotation.Nonnull final String id) {
@@ -1986,7 +1986,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.importedWindowsAutopilotDeviceIdentities.item collection
      * @param id Unique identifier of the item
-     * @return a importedWindowsAutopilotDeviceIdentityItemRequestBuilder
+     * @return a ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder importedWindowsAutopilotDeviceIdentities(@javax.annotation.Nonnull final String id) {
@@ -1998,7 +1998,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intents.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementIntentItemRequestBuilder
+     * @return a DeviceManagementIntentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementIntentItemRequestBuilder intents(@javax.annotation.Nonnull final String id) {
@@ -2010,7 +2010,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.intuneBrandingProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a intuneBrandingProfileItemRequestBuilder
+     * @return a IntuneBrandingProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IntuneBrandingProfileItemRequestBuilder intuneBrandingProfiles(@javax.annotation.Nonnull final String id) {
@@ -2022,7 +2022,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.iosUpdateStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a iosUpdateDeviceStatusItemRequestBuilder
+     * @return a IosUpdateDeviceStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IosUpdateDeviceStatusItemRequestBuilder iosUpdateStatuses(@javax.annotation.Nonnull final String id) {
@@ -2034,7 +2034,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.macOSSoftwareUpdateAccountSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a macOSSoftwareUpdateAccountSummaryItemRequestBuilder
+     * @return a MacOSSoftwareUpdateAccountSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MacOSSoftwareUpdateAccountSummaryItemRequestBuilder macOSSoftwareUpdateAccountSummaries(@javax.annotation.Nonnull final String id) {
@@ -2046,7 +2046,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.managedDeviceEncryptionStates.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceEncryptionStateItemRequestBuilder
+     * @return a ManagedDeviceEncryptionStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceEncryptionStateItemRequestBuilder managedDeviceEncryptionStates(@javax.annotation.Nonnull final String id) {
@@ -2058,7 +2058,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.managedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceItemRequestBuilder
+     * @return a ManagedDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.manageddevices.item.ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
@@ -2070,7 +2070,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.microsoftTunnelConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a microsoftTunnelConfigurationItemRequestBuilder
+     * @return a MicrosoftTunnelConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MicrosoftTunnelConfigurationItemRequestBuilder microsoftTunnelConfigurations(@javax.annotation.Nonnull final String id) {
@@ -2082,7 +2082,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.microsoftTunnelHealthThresholds.item collection
      * @param id Unique identifier of the item
-     * @return a microsoftTunnelHealthThresholdItemRequestBuilder
+     * @return a MicrosoftTunnelHealthThresholdItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MicrosoftTunnelHealthThresholdItemRequestBuilder microsoftTunnelHealthThresholds(@javax.annotation.Nonnull final String id) {
@@ -2094,7 +2094,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.microsoftTunnelServerLogCollectionResponses.item collection
      * @param id Unique identifier of the item
-     * @return a microsoftTunnelServerLogCollectionResponseItemRequestBuilder
+     * @return a MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder microsoftTunnelServerLogCollectionResponses(@javax.annotation.Nonnull final String id) {
@@ -2106,7 +2106,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.microsoftTunnelSites.item collection
      * @param id Unique identifier of the item
-     * @return a microsoftTunnelSiteItemRequestBuilder
+     * @return a MicrosoftTunnelSiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MicrosoftTunnelSiteItemRequestBuilder microsoftTunnelSites(@javax.annotation.Nonnull final String id) {
@@ -2118,7 +2118,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.mobileAppTroubleshootingEvents.item collection
      * @param id Unique identifier of the item
-     * @return a mobileAppTroubleshootingEventItemRequestBuilder
+     * @return a MobileAppTroubleshootingEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppTroubleshootingEventItemRequestBuilder mobileAppTroubleshootingEvents(@javax.annotation.Nonnull final String id) {
@@ -2130,7 +2130,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.mobileThreatDefenseConnectors.item collection
      * @param id Unique identifier of the item
-     * @return a mobileThreatDefenseConnectorItemRequestBuilder
+     * @return a MobileThreatDefenseConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileThreatDefenseConnectorItemRequestBuilder mobileThreatDefenseConnectors(@javax.annotation.Nonnull final String id) {
@@ -2142,7 +2142,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.ndesConnectors.item collection
      * @param id Unique identifier of the item
-     * @return a ndesConnectorItemRequestBuilder
+     * @return a NdesConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public NdesConnectorItemRequestBuilder ndesConnectors(@javax.annotation.Nonnull final String id) {
@@ -2154,7 +2154,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.notificationMessageTemplates.item collection
      * @param id Unique identifier of the item
-     * @return a notificationMessageTemplateItemRequestBuilder
+     * @return a NotificationMessageTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public NotificationMessageTemplateItemRequestBuilder notificationMessageTemplates(@javax.annotation.Nonnull final String id) {
@@ -2166,7 +2166,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.oemWarrantyInformationOnboarding.item collection
      * @param id Unique identifier of the item
-     * @return a oemWarrantyInformationOnboardingItemRequestBuilder
+     * @return a OemWarrantyInformationOnboardingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OemWarrantyInformationOnboardingItemRequestBuilder oemWarrantyInformationOnboarding(@javax.annotation.Nonnull final String id) {
@@ -2233,7 +2233,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.remoteActionAudits.item collection
      * @param id Unique identifier of the item
-     * @return a remoteActionAuditItemRequestBuilder
+     * @return a RemoteActionAuditItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RemoteActionAuditItemRequestBuilder remoteActionAudits(@javax.annotation.Nonnull final String id) {
@@ -2245,7 +2245,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.remoteAssistancePartners.item collection
      * @param id Unique identifier of the item
-     * @return a remoteAssistancePartnerItemRequestBuilder
+     * @return a RemoteAssistancePartnerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RemoteAssistancePartnerItemRequestBuilder remoteAssistancePartners(@javax.annotation.Nonnull final String id) {
@@ -2257,7 +2257,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.resourceAccessProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementResourceAccessProfileBaseItemRequestBuilder
+     * @return a DeviceManagementResourceAccessProfileBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementResourceAccessProfileBaseItemRequestBuilder resourceAccessProfiles(@javax.annotation.Nonnull final String id) {
@@ -2269,7 +2269,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.resourceOperations.item collection
      * @param id Unique identifier of the item
-     * @return a resourceOperationItemRequestBuilder
+     * @return a ResourceOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ResourceOperationItemRequestBuilder resourceOperations(@javax.annotation.Nonnull final String id) {
@@ -2281,7 +2281,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementReusablePolicySettingItemRequestBuilder
+     * @return a DeviceManagementReusablePolicySettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementReusablePolicySettingItemRequestBuilder reusablePolicySettings(@javax.annotation.Nonnull final String id) {
@@ -2293,7 +2293,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reusableSettings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationSettingDefinitionItemRequestBuilder
+     * @return a DeviceManagementConfigurationSettingDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.reusablesettings.item.DeviceManagementConfigurationSettingDefinitionItemRequestBuilder reusableSettings(@javax.annotation.Nonnull final String id) {
@@ -2305,7 +2305,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.roleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceAndAppManagementRoleAssignmentItemRequestBuilder
+     * @return a DeviceAndAppManagementRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceAndAppManagementRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
@@ -2317,7 +2317,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.roleDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a roleDefinitionItemRequestBuilder
+     * @return a RoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
@@ -2329,7 +2329,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.roleScopeTags.item collection
      * @param id Unique identifier of the item
-     * @return a roleScopeTagItemRequestBuilder
+     * @return a RoleScopeTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RoleScopeTagItemRequestBuilder roleScopeTags(@javax.annotation.Nonnull final String id) {
@@ -2351,7 +2351,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.settingDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementSettingDefinitionItemRequestBuilder
+     * @return a DeviceManagementSettingDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementSettingDefinitionItemRequestBuilder settingDefinitions(@javax.annotation.Nonnull final String id) {
@@ -2363,7 +2363,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.telecomExpenseManagementPartners.item collection
      * @param id Unique identifier of the item
-     * @return a telecomExpenseManagementPartnerItemRequestBuilder
+     * @return a TelecomExpenseManagementPartnerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TelecomExpenseManagementPartnerItemRequestBuilder telecomExpenseManagementPartners(@javax.annotation.Nonnull final String id) {
@@ -2375,7 +2375,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.templates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementTemplateItemRequestBuilder
+     * @return a DeviceManagementTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementTemplateItemRequestBuilder templates(@javax.annotation.Nonnull final String id) {
@@ -2387,7 +2387,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.templateSettings.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationSettingTemplateItemRequestBuilder
+     * @return a DeviceManagementConfigurationSettingTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationSettingTemplateItemRequestBuilder templateSettings(@javax.annotation.Nonnull final String id) {
@@ -2399,7 +2399,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.termsAndConditions.item collection
      * @param id Unique identifier of the item
-     * @return a termsAndConditionsItemRequestBuilder
+     * @return a TermsAndConditionsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TermsAndConditionsItemRequestBuilder termsAndConditions(@javax.annotation.Nonnull final String id) {
@@ -2411,7 +2411,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.troubleshootingEvents.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementTroubleshootingEventItemRequestBuilder
+     * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementTroubleshootingEventItemRequestBuilder troubleshootingEvents(@javax.annotation.Nonnull final String id) {
@@ -2423,7 +2423,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthApplicationPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthApplicationPerformanceItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance(@javax.annotation.Nonnull final String id) {
@@ -2435,7 +2435,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(@javax.annotation.Nonnull final String id) {
@@ -2447,7 +2447,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@javax.annotation.Nonnull final String id) {
@@ -2459,7 +2459,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@javax.annotation.Nonnull final String id) {
@@ -2471,7 +2471,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionItemRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(@javax.annotation.Nonnull final String id) {
@@ -2483,7 +2483,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthDeviceModelPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance(@javax.annotation.Nonnull final String id) {
@@ -2495,7 +2495,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthDevicePerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance(@javax.annotation.Nonnull final String id) {
@@ -2507,7 +2507,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthDevicePerformanceDetails.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetailsItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsItemRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails(@javax.annotation.Nonnull final String id) {
@@ -2519,7 +2519,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsAppHealthOSVersionPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance(@javax.annotation.Nonnull final String id) {
@@ -2531,7 +2531,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBaselines.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBaselineItemRequestBuilder
+     * @return a UserExperienceAnalyticsBaselineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBaselineItemRequestBuilder userExperienceAnalyticsBaselines(@javax.annotation.Nonnull final String id) {
@@ -2543,7 +2543,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBatteryHealthAppImpact.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder userExperienceAnalyticsBatteryHealthAppImpact(@javax.annotation.Nonnull final String id) {
@@ -2555,7 +2555,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBatteryHealthDeviceAppImpact.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthDeviceAppImpactItemRequestBuilder userExperienceAnalyticsBatteryHealthDeviceAppImpact(@javax.annotation.Nonnull final String id) {
@@ -2567,7 +2567,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBatteryHealthDevicePerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthDevicePerformanceItemRequestBuilder userExperienceAnalyticsBatteryHealthDevicePerformance(@javax.annotation.Nonnull final String id) {
@@ -2579,7 +2579,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequestBuilder userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(@javax.annotation.Nonnull final String id) {
@@ -2591,7 +2591,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBatteryHealthModelPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuilder userExperienceAnalyticsBatteryHealthModelPerformance(@javax.annotation.Nonnull final String id) {
@@ -2603,7 +2603,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsBatteryHealthOsPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder userExperienceAnalyticsBatteryHealthOsPerformance(@javax.annotation.Nonnull final String id) {
@@ -2615,7 +2615,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsCategories.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsCategoryItemRequestBuilder
+     * @return a UserExperienceAnalyticsCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsCategoryItemRequestBuilder userExperienceAnalyticsCategories(@javax.annotation.Nonnull final String id) {
@@ -2627,7 +2627,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDeviceMetricHistory.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricHistoryItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricHistoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory.item.UserExperienceAnalyticsMetricHistoryItemRequestBuilder userExperienceAnalyticsDeviceMetricHistory(@javax.annotation.Nonnull final String id) {
@@ -2639,7 +2639,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDevicePerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDevicePerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsDevicePerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDevicePerformanceItemRequestBuilder userExperienceAnalyticsDevicePerformance(@javax.annotation.Nonnull final String id) {
@@ -2651,7 +2651,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDeviceScopes.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDeviceScopeItemRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceScopeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDeviceScopeItemRequestBuilder userExperienceAnalyticsDeviceScopes(@javax.annotation.Nonnull final String id) {
@@ -2663,7 +2663,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDeviceScores.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDeviceScoresItemRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceScoresItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDeviceScoresItemRequestBuilder userExperienceAnalyticsDeviceScores(@javax.annotation.Nonnull final String id) {
@@ -2675,7 +2675,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDeviceStartupHistory.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder userExperienceAnalyticsDeviceStartupHistory(@javax.annotation.Nonnull final String id) {
@@ -2687,7 +2687,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDeviceStartupProcesses.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDeviceStartupProcessItemRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder userExperienceAnalyticsDeviceStartupProcesses(@javax.annotation.Nonnull final String id) {
@@ -2699,7 +2699,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDeviceStartupProcessPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBuilder userExperienceAnalyticsDeviceStartupProcessPerformance(@javax.annotation.Nonnull final String id) {
@@ -2711,7 +2711,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsDevicesWithoutCloudIdentity.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder userExperienceAnalyticsDevicesWithoutCloudIdentity(@javax.annotation.Nonnull final String id) {
@@ -2723,7 +2723,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsImpactingProcess.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsImpactingProcessItemRequestBuilder
+     * @return a UserExperienceAnalyticsImpactingProcessItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsImpactingProcessItemRequestBuilder userExperienceAnalyticsImpactingProcess(@javax.annotation.Nonnull final String id) {
@@ -2735,7 +2735,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsMetricHistory.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricHistoryItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricHistoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devicemanagement.userexperienceanalyticsmetrichistory.item.UserExperienceAnalyticsMetricHistoryItemRequestBuilder userExperienceAnalyticsMetricHistory(@javax.annotation.Nonnull final String id) {
@@ -2747,7 +2747,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsModelScores.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsModelScoresItemRequestBuilder
+     * @return a UserExperienceAnalyticsModelScoresItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsModelScoresItemRequestBuilder userExperienceAnalyticsModelScores(@javax.annotation.Nonnull final String id) {
@@ -2759,7 +2759,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsNotAutopilotReadyDevice.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder
+     * @return a UserExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder userExperienceAnalyticsNotAutopilotReadyDevice(@javax.annotation.Nonnull final String id) {
@@ -2771,7 +2771,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRemoteConnection.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsRemoteConnectionItemRequestBuilder
+     * @return a UserExperienceAnalyticsRemoteConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsRemoteConnectionItemRequestBuilder userExperienceAnalyticsRemoteConnection(@javax.annotation.Nonnull final String id) {
@@ -2783,7 +2783,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsResourcePerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsResourcePerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsResourcePerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsResourcePerformanceItemRequestBuilder userExperienceAnalyticsResourcePerformance(@javax.annotation.Nonnull final String id) {
@@ -2795,7 +2795,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsScoreHistory.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsScoreHistoryItemRequestBuilder
+     * @return a UserExperienceAnalyticsScoreHistoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsScoreHistoryItemRequestBuilder userExperienceAnalyticsScoreHistory(@javax.annotation.Nonnull final String id) {
@@ -2815,7 +2815,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsWorkFromAnywhereMetrics.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder
+     * @return a UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics(@javax.annotation.Nonnull final String id) {
@@ -2827,7 +2827,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsWorkFromAnywhereModelPerformance.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder
+     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance(@javax.annotation.Nonnull final String id) {
@@ -2839,7 +2839,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userPfxCertificates.item collection
      * @param id Unique identifier of the item
-     * @return a userPFXCertificateItemRequestBuilder
+     * @return a UserPFXCertificateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserPFXCertificateItemRequestBuilder userPfxCertificates(@javax.annotation.Nonnull final String id) {
@@ -2861,7 +2861,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a windowsAutopilotDeploymentProfileItemRequestBuilder
+     * @return a WindowsAutopilotDeploymentProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsAutopilotDeploymentProfileItemRequestBuilder windowsAutopilotDeploymentProfiles(@javax.annotation.Nonnull final String id) {
@@ -2873,7 +2873,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeviceIdentities.item collection
      * @param id Unique identifier of the item
-     * @return a windowsAutopilotDeviceIdentityItemRequestBuilder
+     * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsAutopilotDeviceIdentityItemRequestBuilder windowsAutopilotDeviceIdentities(@javax.annotation.Nonnull final String id) {
@@ -2885,7 +2885,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsDriverUpdateProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a windowsDriverUpdateProfileItemRequestBuilder
+     * @return a WindowsDriverUpdateProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDriverUpdateProfileItemRequestBuilder windowsDriverUpdateProfiles(@javax.annotation.Nonnull final String id) {
@@ -2897,7 +2897,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsFeatureUpdateProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a windowsFeatureUpdateProfileItemRequestBuilder
+     * @return a WindowsFeatureUpdateProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsFeatureUpdateProfileItemRequestBuilder windowsFeatureUpdateProfiles(@javax.annotation.Nonnull final String id) {
@@ -2909,7 +2909,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsInformationProtectionAppLearningSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a windowsInformationProtectionAppLearningSummaryItemRequestBuilder
+     * @return a WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionAppLearningSummaryItemRequestBuilder windowsInformationProtectionAppLearningSummaries(@javax.annotation.Nonnull final String id) {
@@ -2921,7 +2921,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsInformationProtectionNetworkLearningSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a windowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
+     * @return a WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder windowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nonnull final String id) {
@@ -2933,7 +2933,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsMalwareInformation.item collection
      * @param id Unique identifier of the item
-     * @return a windowsMalwareInformationItemRequestBuilder
+     * @return a WindowsMalwareInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsMalwareInformationItemRequestBuilder windowsMalwareInformation(@javax.annotation.Nonnull final String id) {
@@ -2945,7 +2945,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsQualityUpdateProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a windowsQualityUpdateProfileItemRequestBuilder
+     * @return a WindowsQualityUpdateProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsQualityUpdateProfileItemRequestBuilder windowsQualityUpdateProfiles(@javax.annotation.Nonnull final String id) {
@@ -2957,7 +2957,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.windowsUpdateCatalogItems.item collection
      * @param id Unique identifier of the item
-     * @return a windowsUpdateCatalogItemItemRequestBuilder
+     * @return a WindowsUpdateCatalogItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsUpdateCatalogItemItemRequestBuilder windowsUpdateCatalogItems(@javax.annotation.Nonnull final String id) {
@@ -2969,7 +2969,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.zebraFotaArtifacts.item collection
      * @param id Unique identifier of the item
-     * @return a zebraFotaArtifactItemRequestBuilder
+     * @return a ZebraFotaArtifactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ZebraFotaArtifactItemRequestBuilder zebraFotaArtifacts(@javax.annotation.Nonnull final String id) {
@@ -2981,7 +2981,7 @@ public class DeviceManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.zebraFotaDeployments.item collection
      * @param id Unique identifier of the item
-     * @return a zebraFotaDeploymentItemRequestBuilder
+     * @return a ZebraFotaDeploymentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ZebraFotaDeploymentItemRequestBuilder zebraFotaDeployments(@javax.annotation.Nonnull final String id) {

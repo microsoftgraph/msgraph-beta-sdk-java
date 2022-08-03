@@ -103,7 +103,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.classifyFileJobs.item collection
      * @param id Unique identifier of the item
-     * @return a jobResponseBaseItemRequestBuilder
+     * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder classifyFileJobs(@javax.annotation.Nonnull final String id) {
@@ -115,7 +115,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.classifyTextJobs.item collection
      * @param id Unique identifier of the item
-     * @return a jobResponseBaseItemRequestBuilder
+     * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder classifyTextJobs(@javax.annotation.Nonnull final String id) {
@@ -216,7 +216,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.evaluateDlpPoliciesJobs.item collection
      * @param id Unique identifier of the item
-     * @return a jobResponseBaseItemRequestBuilder
+     * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder evaluateDlpPoliciesJobs(@javax.annotation.Nonnull final String id) {
@@ -228,7 +228,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.evaluateLabelJobs.item collection
      * @param id Unique identifier of the item
-     * @return a jobResponseBaseItemRequestBuilder
+     * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder evaluateLabelJobs(@javax.annotation.Nonnull final String id) {
@@ -240,7 +240,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.exactMatchDataStores.item collection
      * @param id Unique identifier of the item
-     * @return a exactMatchDataStoreItemRequestBuilder
+     * @return a ExactMatchDataStoreItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExactMatchDataStoreItemRequestBuilder exactMatchDataStores(@javax.annotation.Nonnull final String id) {
@@ -252,7 +252,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.exactMatchUploadAgents.item collection
      * @param id Unique identifier of the item
-     * @return a exactMatchUploadAgentItemRequestBuilder
+     * @return a ExactMatchUploadAgentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExactMatchUploadAgentItemRequestBuilder exactMatchUploadAgents(@javax.annotation.Nonnull final String id) {
@@ -315,7 +315,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.jobs.item collection
      * @param id Unique identifier of the item
-     * @return a jobResponseBaseItemRequestBuilder
+     * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder jobs(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.sensitiveTypes.item collection
      * @param id Unique identifier of the item
-     * @return a sensitiveTypeItemRequestBuilder
+     * @return a SensitiveTypeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SensitiveTypeItemRequestBuilder sensitiveTypes(@javax.annotation.Nonnull final String id) {
@@ -394,7 +394,7 @@ public class DataClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.dataClassification.sensitivityLabels.item collection
      * @param id Unique identifier of the item
-     * @return a sensitivityLabelItemRequestBuilder
+     * @return a SensitivityLabelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SensitivityLabelItemRequestBuilder sensitivityLabels(@javax.annotation.Nonnull final String id) {

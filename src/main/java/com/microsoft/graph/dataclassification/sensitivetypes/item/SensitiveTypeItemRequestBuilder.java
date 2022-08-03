@@ -307,7 +307,7 @@ public class SensitiveTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sensitiveTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SensitiveTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitiveTypeItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SensitiveTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public SensitiveTypeItemRequestBuilderGetQueryParameters queryParameters = new SensitiveTypeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sensitiveTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SensitiveTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitiveTypeItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SensitiveTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sensitiveTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SensitiveTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SensitiveTypeItemRequestBuilderPatchRequestConfiguration() {

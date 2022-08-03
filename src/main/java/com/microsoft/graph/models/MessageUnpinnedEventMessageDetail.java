@@ -19,6 +19,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
      */
     public MessageUnpinnedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.messageUnpinnedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

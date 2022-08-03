@@ -21,7 +21,7 @@ import microsoft.graph.users.item.owneddevices.device.DeviceRequestBuilder;
 import microsoft.graph.users.item.owneddevices.endpoint.EndpointRequestBuilder;
 /** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
 public class OwnedDevicesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

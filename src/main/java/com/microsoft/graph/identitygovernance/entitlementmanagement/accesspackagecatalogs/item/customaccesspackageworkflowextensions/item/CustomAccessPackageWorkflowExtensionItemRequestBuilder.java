@@ -307,7 +307,7 @@ public class CustomAccessPackageWorkflowExtensionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customAccessPackageWorkflowExtensionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CustomAccessPackageWorkflowExtensionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomAccessPackageWorkflowExtensionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CustomAccessPackageWorkflowExtensionItemRequestBuilder {
         @javax.annotation.Nullable
         public CustomAccessPackageWorkflowExtensionItemRequestBuilderGetQueryParameters queryParameters = new CustomAccessPackageWorkflowExtensionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new customAccessPackageWorkflowExtensionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CustomAccessPackageWorkflowExtensionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomAccessPackageWorkflowExtensionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CustomAccessPackageWorkflowExtensionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new customAccessPackageWorkflowExtensionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CustomAccessPackageWorkflowExtensionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CustomAccessPackageWorkflowExtensionItemRequestBuilderPatchRequestConfiguration() {

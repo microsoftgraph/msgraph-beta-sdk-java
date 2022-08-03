@@ -121,7 +121,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.columns.item collection
      * @param id Unique identifier of the item
-     * @return a columnDefinitionItemRequestBuilder
+     * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.sites.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
@@ -160,7 +160,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.contentTypes.item collection
      * @param id Unique identifier of the item
-     * @return a contentTypeItemRequestBuilder
+     * @return a ContentTypeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContentTypeItemRequestBuilder contentTypes(@javax.annotation.Nonnull final String id) {
@@ -234,7 +234,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.drives.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemRequestBuilder
+     * @return a DriveItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
@@ -246,7 +246,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.externalColumns.item collection
      * @param id Unique identifier of the item
-     * @return a columnDefinitionItemRequestBuilder
+     * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder externalColumns(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a baseItemItemRequestBuilder
+     * @return a BaseItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BaseItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -355,7 +355,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.lists.item collection
      * @param id Unique identifier of the item
-     * @return a listItemRequestBuilder
+     * @return a ListItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ListItemRequestBuilder lists(@javax.annotation.Nonnull final String id) {
@@ -367,7 +367,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a richLongRunningOperationItemRequestBuilder
+     * @return a RichLongRunningOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RichLongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -379,7 +379,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.pages.item collection
      * @param id Unique identifier of the item
-     * @return a sitePageItemRequestBuilder
+     * @return a SitePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SitePageItemRequestBuilder pages(@javax.annotation.Nonnull final String id) {
@@ -446,7 +446,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.permissions.item collection
      * @param id Unique identifier of the item
-     * @return a permissionItemRequestBuilder
+     * @return a PermissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PermissionItemRequestBuilder permissions(@javax.annotation.Nonnull final String id) {
@@ -458,7 +458,7 @@ public class SiteItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.sites.item collection
      * @param id Unique identifier of the item
-     * @return a siteItemRequestBuilder
+     * @return a SiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
@@ -490,7 +490,7 @@ public class SiteItemRequestBuilder {
         @javax.annotation.Nullable
         public SiteItemRequestBuilderGetQueryParameters queryParameters = new SiteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new siteItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SiteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SiteItemRequestBuilderGetRequestConfiguration() {
@@ -505,7 +505,7 @@ public class SiteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new siteItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SiteItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SiteItemRequestBuilderPatchRequestConfiguration() {

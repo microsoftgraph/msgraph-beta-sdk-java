@@ -22,6 +22,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
     private String _logoUrl;
     /** The name of the publisher for this application. */
     private String _publisher;
+    /** The supportedClaimConfiguration property */
+    private SupportedClaimConfiguration _supportedClaimConfiguration;
     /** The list of provisioning modes supported by this application. The only valid value is sync. */
     private java.util.List<String> _supportedProvisioningTypes;
     /** The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported. */
@@ -32,6 +34,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     public ApplicationTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.applicationTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,6 +85,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
             this.put("informationalUrls", (n) -> { currentObject.setInformationalUrls(n.getObjectValue(InformationalUrls::createFromDiscriminatorValue)); });
             this.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
             this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+            this.put("supportedClaimConfiguration", (n) -> { currentObject.setSupportedClaimConfiguration(n.getObjectValue(SupportedClaimConfiguration::createFromDiscriminatorValue)); });
             this.put("supportedProvisioningTypes", (n) -> { currentObject.setSupportedProvisioningTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("supportedSingleSignOnModes", (n) -> { currentObject.setSupportedSingleSignOnModes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
@@ -119,6 +123,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return this._publisher;
     }
     /**
+     * Gets the supportedClaimConfiguration property value. The supportedClaimConfiguration property
+     * @return a supportedClaimConfiguration
+     */
+    @javax.annotation.Nullable
+    public SupportedClaimConfiguration getSupportedClaimConfiguration() {
+        return this._supportedClaimConfiguration;
+    }
+    /**
      * Gets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
      * @return a string
      */
@@ -149,6 +161,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         writer.writeObjectValue("informationalUrls", this.getInformationalUrls());
         writer.writeStringValue("logoUrl", this.getLogoUrl());
         writer.writeStringValue("publisher", this.getPublisher());
+        writer.writeObjectValue("supportedClaimConfiguration", this.getSupportedClaimConfiguration());
         writer.writeCollectionOfPrimitiveValues("supportedProvisioningTypes", this.getSupportedProvisioningTypes());
         writer.writeCollectionOfPrimitiveValues("supportedSingleSignOnModes", this.getSupportedSingleSignOnModes());
     }
@@ -207,6 +220,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
+    }
+    /**
+     * Sets the supportedClaimConfiguration property value. The supportedClaimConfiguration property
+     * @param value Value to set for the supportedClaimConfiguration property.
+     * @return a void
+     */
+    public void setSupportedClaimConfiguration(@javax.annotation.Nullable final SupportedClaimConfiguration value) {
+        this._supportedClaimConfiguration = value;
     }
     /**
      * Sets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.

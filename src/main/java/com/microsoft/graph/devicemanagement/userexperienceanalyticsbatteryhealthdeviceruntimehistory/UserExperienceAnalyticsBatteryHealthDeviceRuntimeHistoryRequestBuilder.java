@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeH
 import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

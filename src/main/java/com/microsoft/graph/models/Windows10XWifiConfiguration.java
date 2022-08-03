@@ -20,6 +20,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      */
     public Windows10XWifiConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10XWifiConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

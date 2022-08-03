@@ -12,12 +12,15 @@ public class RoomList extends Place implements Parsable {
     private String _emailAddress;
     /** The rooms property */
     private java.util.List<Room> _rooms;
+    /** The workspaces property */
+    private java.util.List<Workspace> _workspaces;
     /**
      * Instantiates a new RoomList and sets the default values.
      * @return a void
      */
     public RoomList() {
         super();
+        this.setOdataType("#microsoft.graph.roomList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,6 +50,7 @@ public class RoomList extends Place implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
             this.put("rooms", (n) -> { currentObject.setRooms(n.getCollectionOfObjectValues(Room::createFromDiscriminatorValue)); });
+            this.put("workspaces", (n) -> { currentObject.setWorkspaces(n.getCollectionOfObjectValues(Workspace::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class RoomList extends Place implements Parsable {
         return this._rooms;
     }
     /**
+     * Gets the workspaces property value. The workspaces property
+     * @return a workspace
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Workspace> getWorkspaces() {
+        return this._workspaces;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -67,6 +79,7 @@ public class RoomList extends Place implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeCollectionOfObjectValues("rooms", this.getRooms());
+        writer.writeCollectionOfObjectValues("workspaces", this.getWorkspaces());
     }
     /**
      * Sets the emailAddress property value. The email address of the room list.
@@ -83,5 +96,13 @@ public class RoomList extends Place implements Parsable {
      */
     public void setRooms(@javax.annotation.Nullable final java.util.List<Room> value) {
         this._rooms = value;
+    }
+    /**
+     * Sets the workspaces property value. The workspaces property
+     * @param value Value to set for the workspaces property.
+     * @return a void
+     */
+    public void setWorkspaces(@javax.annotation.Nullable final java.util.List<Workspace> value) {
+        this._workspaces = value;
     }
 }

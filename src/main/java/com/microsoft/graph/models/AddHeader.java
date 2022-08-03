@@ -18,6 +18,7 @@ public class AddHeader extends MarkContent implements Parsable {
      */
     public AddHeader() {
         super();
+        this.setOdataType("#microsoft.graph.addHeader");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

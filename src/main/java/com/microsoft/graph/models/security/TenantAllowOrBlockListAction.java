@@ -10,15 +10,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsable {
-    /** The action property */
+    /** Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue. */
     private TenantAllowBlockListAction _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The expirationDateTime property */
+    /** Specifies when the tenant allow-block-list expires in date time. */
     private OffsetDateTime _expirationDateTime;
-    /** The note property */
+    /** Specifies the note added to the tenant allow block list entry in the format of string. */
     private String _note;
-    /** The results property */
+    /** The OdataType property */
+    private String _odataType;
+    /** Contains the result of the submission that lead to the tenant allow-block-list entry creation. */
     private java.util.List<TenantAllowBlockListEntryResult> _results;
     /**
      * Instantiates a new tenantAllowOrBlockListAction and sets the default values.
@@ -26,6 +28,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      */
     public TenantAllowOrBlockListAction() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.tenantAllowOrBlockListAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +41,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         return new TenantAllowOrBlockListAction();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      * @return a tenantAllowBlockListAction
      */
     @javax.annotation.Nullable
@@ -54,7 +57,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Specifies when the tenant allow-block-list expires in date time.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -68,15 +71,16 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantAllowOrBlockListAction currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(TenantAllowBlockListAction.class)); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("note", (n) -> { currentObject.setNote(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("results", (n) -> { currentObject.setResults(n.getCollectionOfObjectValues(TenantAllowBlockListEntryResult::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the note property value. The note property
+     * Gets the note property value. Specifies the note added to the tenant allow block list entry in the format of string.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +88,15 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         return this._note;
     }
     /**
-     * Gets the results property value. The results property
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the results property value. Contains the result of the submission that lead to the tenant allow-block-list entry creation.
      * @return a tenantAllowBlockListEntryResult
      */
     @javax.annotation.Nullable
@@ -101,11 +113,12 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         writer.writeEnumValue("action", this.getAction());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("note", this.getNote());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("results", this.getResults());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      * @param value Value to set for the action property.
      * @return a void
      */
@@ -121,7 +134,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Specifies when the tenant allow-block-list expires in date time.
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
@@ -129,7 +142,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         this._expirationDateTime = value;
     }
     /**
-     * Sets the note property value. The note property
+     * Sets the note property value. Specifies the note added to the tenant allow block list entry in the format of string.
      * @param value Value to set for the note property.
      * @return a void
      */
@@ -137,7 +150,15 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         this._note = value;
     }
     /**
-     * Sets the results property value. The results property
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the results property value. Contains the result of the submission that lead to the tenant allow-block-list entry creation.
      * @param value Value to set for the results property.
      * @return a void
      */

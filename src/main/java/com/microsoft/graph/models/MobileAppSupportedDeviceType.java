@@ -16,6 +16,8 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
     private String _maximumOperatingSystemVersion;
     /** Minimum OS version */
     private String _minimumOperatingSystemVersion;
+    /** The OdataType property */
+    private String _odataType;
     /** Device type. */
     private DeviceType _type;
     /**
@@ -24,6 +26,7 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
      */
     public MobileAppSupportedDeviceType() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mobileAppSupportedDeviceType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,9 +53,10 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppSupportedDeviceType currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("maximumOperatingSystemVersion", (n) -> { currentObject.setMaximumOperatingSystemVersion(n.getStringValue()); });
             this.put("minimumOperatingSystemVersion", (n) -> { currentObject.setMinimumOperatingSystemVersion(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(DeviceType.class)); });
         }};
     }
@@ -73,6 +77,14 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
         return this._minimumOperatingSystemVersion;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the type property value. Device type.
      * @return a deviceType
      */
@@ -89,6 +101,7 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeStringValue("maximumOperatingSystemVersion", this.getMaximumOperatingSystemVersion());
         writer.writeStringValue("minimumOperatingSystemVersion", this.getMinimumOperatingSystemVersion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
      */
     public void setMinimumOperatingSystemVersion(@javax.annotation.Nullable final String value) {
         this._minimumOperatingSystemVersion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Device type.

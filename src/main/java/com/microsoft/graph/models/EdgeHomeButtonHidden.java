@@ -14,6 +14,7 @@ public class EdgeHomeButtonHidden extends EdgeHomeButtonConfiguration implements
      */
     public EdgeHomeButtonHidden() {
         super();
+        this.setOdataType("#microsoft.graph.edgeHomeButtonHidden");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

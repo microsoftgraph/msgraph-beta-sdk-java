@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceComplianceScriptDeviceStateCollectionRespons
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceRunStates property of the microsoft.graph.deviceComplianceScript entity. */
 public class DeviceRunStatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

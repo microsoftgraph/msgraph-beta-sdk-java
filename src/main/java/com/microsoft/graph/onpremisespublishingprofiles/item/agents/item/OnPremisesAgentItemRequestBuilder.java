@@ -34,7 +34,7 @@ public class OnPremisesAgentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agents.item.agentGroups.item collection
      * @param id Unique identifier of the item
-     * @return a onPremisesAgentGroupItemRequestBuilder
+     * @return a OnPremisesAgentGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentGroupItemRequestBuilder agentGroups(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class OnPremisesAgentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onPremisesAgentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesAgentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesAgentItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class OnPremisesAgentItemRequestBuilder {
         @javax.annotation.Nullable
         public OnPremisesAgentItemRequestBuilderGetQueryParameters queryParameters = new OnPremisesAgentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onPremisesAgentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesAgentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesAgentItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class OnPremisesAgentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onPremisesAgentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnPremisesAgentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnPremisesAgentItemRequestBuilderPatchRequestConfiguration() {

@@ -307,7 +307,7 @@ public class UserRegistrationDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UserRegistrationDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public UserRegistrationDetailsItemRequestBuilderGetQueryParameters queryParameters = new UserRegistrationDetailsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userRegistrationDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UserRegistrationDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userRegistrationDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserRegistrationDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserRegistrationDetailsItemRequestBuilderPatchRequestConfiguration() {

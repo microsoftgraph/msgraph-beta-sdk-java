@@ -17,6 +17,8 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
     private LocalDate _date;
     /** The number of devices that were found to have no issue by the device health script. */
     private Integer _noIssueDeviceCount;
+    /** The OdataType property */
+    private String _odataType;
     /** The number of devices remediated by the device health script. */
     private Integer _remediatedDeviceCount;
     /**
@@ -25,6 +27,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      */
     public DeviceHealthScriptRemediationHistoryData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceHealthScriptRemediationHistoryData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRemediationHistoryData currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
             this.put("noIssueDeviceCount", (n) -> { currentObject.setNoIssueDeviceCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
     @javax.annotation.Nullable
     public Integer getNoIssueDeviceCount() {
         return this._noIssueDeviceCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the remediatedDeviceCount property value. The number of devices remediated by the device health script.
@@ -90,6 +102,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("date", this.getDate());
         writer.writeIntegerValue("noIssueDeviceCount", this.getNoIssueDeviceCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("remediatedDeviceCount", this.getRemediatedDeviceCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +129,14 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      */
     public void setNoIssueDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._noIssueDeviceCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. The number of devices remediated by the device health script.

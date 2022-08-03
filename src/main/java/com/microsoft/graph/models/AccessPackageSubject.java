@@ -24,12 +24,17 @@ public class AccessPackageSubject extends Entity implements Parsable {
     private String _onPremisesSecurityIdentifier;
     /** The principal name, if known, of the subject. */
     private String _principalName;
+    /** The subjectLifecycle property */
+    private AccessPackageSubjectLifecycle _subjectLifecycle;
+    /** The resource type of the subject. */
+    private String _type;
     /**
      * Instantiates a new accessPackageSubject and sets the default values.
      * @return a void
      */
     public AccessPackageSubject() {
         super();
+        this.setOdataType("#microsoft.graph.accessPackageSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -97,6 +102,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
             this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
             this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
+            this.put("subjectLifecycle", (n) -> { currentObject.setSubjectLifecycle(n.getEnumValue(AccessPackageSubjectLifecycle.class)); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -124,6 +131,22 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this._principalName;
     }
     /**
+     * Gets the subjectLifecycle property value. The subjectLifecycle property
+     * @return a accessPackageSubjectLifecycle
+     */
+    @javax.annotation.Nullable
+    public AccessPackageSubjectLifecycle getSubjectLifecycle() {
+        return this._subjectLifecycle;
+    }
+    /**
+     * Gets the type property value. The resource type of the subject.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -139,6 +162,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
         writer.writeStringValue("objectId", this.getObjectId());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeStringValue("principalName", this.getPrincipalName());
+        writer.writeEnumValue("subjectLifecycle", this.getSubjectLifecycle());
+        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the altSecId property value. The altSecId property
@@ -203,5 +228,21 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
         this._principalName = value;
+    }
+    /**
+     * Sets the subjectLifecycle property value. The subjectLifecycle property
+     * @param value Value to set for the subjectLifecycle property.
+     * @return a void
+     */
+    public void setSubjectLifecycle(@javax.annotation.Nullable final AccessPackageSubjectLifecycle value) {
+        this._subjectLifecycle = value;
+    }
+    /**
+     * Sets the type property value. The resource type of the subject.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

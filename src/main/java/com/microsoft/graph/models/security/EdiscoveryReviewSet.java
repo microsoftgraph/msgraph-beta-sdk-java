@@ -18,6 +18,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      */
     public EdiscoveryReviewSet() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryReviewSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

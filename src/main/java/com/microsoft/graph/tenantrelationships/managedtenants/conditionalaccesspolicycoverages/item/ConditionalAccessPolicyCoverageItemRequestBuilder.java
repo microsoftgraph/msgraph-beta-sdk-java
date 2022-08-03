@@ -307,7 +307,7 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conditionalAccessPolicyCoverageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConditionalAccessPolicyCoverageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConditionalAccessPolicyCoverageItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder {
         @javax.annotation.Nullable
         public ConditionalAccessPolicyCoverageItemRequestBuilderGetQueryParameters queryParameters = new ConditionalAccessPolicyCoverageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new conditionalAccessPolicyCoverageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConditionalAccessPolicyCoverageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConditionalAccessPolicyCoverageItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conditionalAccessPolicyCoverageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConditionalAccessPolicyCoverageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConditionalAccessPolicyCoverageItemRequestBuilderPatchRequestConfiguration() {

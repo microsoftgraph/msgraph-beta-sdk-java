@@ -20,7 +20,7 @@ import microsoft.graph.models.PersonName;
 import microsoft.graph.models.PersonNameCollectionResponse;
 /** Provides operations to manage the names property of the microsoft.graph.profile entity. */
 public class NamesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

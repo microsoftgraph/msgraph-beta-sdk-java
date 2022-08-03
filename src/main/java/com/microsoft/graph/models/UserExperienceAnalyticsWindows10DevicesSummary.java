@@ -12,6 +12,8 @@ import java.util.Objects;
 public class UserExperienceAnalyticsWindows10DevicesSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The count of Windows 10 devices that have unsupported OS versions. */
     private Integer _unsupportedOSversionDeviceCount;
     /**
@@ -20,6 +22,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
      */
     public UserExperienceAnalyticsWindows10DevicesSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsWindows10DevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,9 +49,18 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWindows10DevicesSummary currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("unsupportedOSversionDeviceCount", (n) -> { currentObject.setUnsupportedOSversionDeviceCount(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the unsupportedOSversionDeviceCount property value. The count of Windows 10 devices that have unsupported OS versions.
@@ -65,6 +77,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("unsupportedOSversionDeviceCount", this.getUnsupportedOSversionDeviceCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -75,6 +88,14 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the unsupportedOSversionDeviceCount property value. The count of Windows 10 devices that have unsupported OS versions.

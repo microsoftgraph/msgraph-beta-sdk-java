@@ -26,6 +26,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     public AndroidManagedStoreAppConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedStoreAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

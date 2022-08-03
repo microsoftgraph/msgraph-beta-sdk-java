@@ -205,7 +205,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.appManagementPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a appManagementPolicyItemRequestBuilder
+     * @return a AppManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppManagementPolicyItemRequestBuilder appManagementPolicies(@javax.annotation.Nonnull final String id) {
@@ -217,7 +217,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.appRoleAssignedTo.item collection
      * @param id Unique identifier of the item
-     * @return a appRoleAssignmentItemRequestBuilder
+     * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.approleassignedto.item.AppRoleAssignmentItemRequestBuilder appRoleAssignedTo(@javax.annotation.Nonnull final String id) {
@@ -229,7 +229,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.appRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a appRoleAssignmentItemRequestBuilder
+     * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -241,7 +241,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.claimsMappingPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a claimsMappingPolicyItemRequestBuilder
+     * @return a ClaimsMappingPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ClaimsMappingPolicyItemRequestBuilder claimsMappingPolicies(@javax.annotation.Nonnull final String id) {
@@ -308,7 +308,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.createdObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.delegatedPermissionClassifications.item collection
      * @param id Unique identifier of the item
-     * @return a delegatedPermissionClassificationItemRequestBuilder
+     * @return a DelegatedPermissionClassificationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DelegatedPermissionClassificationItemRequestBuilder delegatedPermissionClassifications(@javax.annotation.Nonnull final String id) {
@@ -445,7 +445,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.endpoints.item collection
      * @param id Unique identifier of the item
-     * @return a endpointItemRequestBuilder
+     * @return a EndpointItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EndpointItemRequestBuilder endpoints(@javax.annotation.Nonnull final String id) {
@@ -457,7 +457,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.federatedIdentityCredentials.item collection
      * @param id Unique identifier of the item
-     * @return a federatedIdentityCredentialItemRequestBuilder
+     * @return a FederatedIdentityCredentialItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FederatedIdentityCredentialItemRequestBuilder federatedIdentityCredentials(@javax.annotation.Nonnull final String id) {
@@ -520,7 +520,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a homeRealmDiscoveryPolicyItemRequestBuilder
+     * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPolicyItemRequestBuilder homeRealmDiscoveryPolicies(@javax.annotation.Nonnull final String id) {
@@ -532,7 +532,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.licenseDetails.item collection
      * @param id Unique identifier of the item
-     * @return a licenseDetailsItemRequestBuilder
+     * @return a LicenseDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LicenseDetailsItemRequestBuilder licenseDetails(@javax.annotation.Nonnull final String id) {
@@ -544,7 +544,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -556,7 +556,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a oAuth2PermissionGrantItemRequestBuilder
+     * @return a OAuth2PermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
@@ -568,7 +568,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.ownedObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
@@ -580,7 +580,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.owners.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
@@ -647,7 +647,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a tokenIssuancePolicyItemRequestBuilder
+     * @return a TokenIssuancePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TokenIssuancePolicyItemRequestBuilder tokenIssuancePolicies(@javax.annotation.Nonnull final String id) {
@@ -659,7 +659,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a tokenLifetimePolicyItemRequestBuilder
+     * @return a TokenLifetimePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TokenLifetimePolicyItemRequestBuilder tokenLifetimePolicies(@javax.annotation.Nonnull final String id) {
@@ -671,7 +671,7 @@ public class ServicePrincipalItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.servicePrincipals.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.serviceprincipals.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -689,7 +689,7 @@ public class ServicePrincipalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalItemRequestBuilderDeleteRequestConfiguration() {
@@ -718,7 +718,7 @@ public class ServicePrincipalItemRequestBuilder {
         @javax.annotation.Nullable
         public ServicePrincipalItemRequestBuilderGetQueryParameters queryParameters = new ServicePrincipalItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new servicePrincipalItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalItemRequestBuilderGetRequestConfiguration() {
@@ -733,7 +733,7 @@ public class ServicePrincipalItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new servicePrincipalItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServicePrincipalItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServicePrincipalItemRequestBuilderPatchRequestConfiguration() {

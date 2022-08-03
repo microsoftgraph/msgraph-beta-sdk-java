@@ -27,6 +27,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     public ItemPublication() {
         super();
+        this.setOdataType("#microsoft.graph.itemPublication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

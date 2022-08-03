@@ -16,6 +16,7 @@ public class External extends Entity implements Parsable {
      */
     public External() {
         super();
+        this.setOdataType("#microsoft.graph.external");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

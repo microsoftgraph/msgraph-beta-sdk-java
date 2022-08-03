@@ -18,12 +18,15 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
     private String _createdByDisplayName;
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new alertComment and sets the default values.
      * @return a void
      */
     public AlertComment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.alertComment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,11 +77,20 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertComment currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
             this.put("createdByDisplayName", (n) -> { currentObject.setCreatedByDisplayName(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -90,6 +102,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("comment", this.getComment());
         writer.writeStringValue("createdByDisplayName", this.getCreatedByDisplayName());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      */
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

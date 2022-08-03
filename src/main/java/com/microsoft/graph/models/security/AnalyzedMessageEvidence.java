@@ -51,6 +51,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      */
     public AnalyzedMessageEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.analyzedMessageEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

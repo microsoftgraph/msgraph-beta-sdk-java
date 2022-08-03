@@ -253,7 +253,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsCategories.item.metricValues.item collection
      * @param id Unique identifier of the item
-     * @return a userExperienceAnalyticsMetricItemRequestBuilder
+     * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserExperienceAnalyticsMetricItemRequestBuilder metricValues(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public UserExperienceAnalyticsCategoryItemRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration() {

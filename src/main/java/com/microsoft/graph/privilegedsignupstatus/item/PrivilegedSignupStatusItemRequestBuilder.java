@@ -307,7 +307,7 @@ public class PrivilegedSignupStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedSignupStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedSignupStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedSignupStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PrivilegedSignupStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public PrivilegedSignupStatusItemRequestBuilderGetQueryParameters queryParameters = new PrivilegedSignupStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new privilegedSignupStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedSignupStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedSignupStatusItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PrivilegedSignupStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new privilegedSignupStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrivilegedSignupStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrivilegedSignupStatusItemRequestBuilderPatchRequestConfiguration() {

@@ -307,7 +307,7 @@ public class SideLoadingKeyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sideLoadingKeyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SideLoadingKeyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SideLoadingKeyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SideLoadingKeyItemRequestBuilder {
         @javax.annotation.Nullable
         public SideLoadingKeyItemRequestBuilderGetQueryParameters queryParameters = new SideLoadingKeyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sideLoadingKeyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SideLoadingKeyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SideLoadingKeyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SideLoadingKeyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sideLoadingKeyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SideLoadingKeyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SideLoadingKeyItemRequestBuilderPatchRequestConfiguration() {

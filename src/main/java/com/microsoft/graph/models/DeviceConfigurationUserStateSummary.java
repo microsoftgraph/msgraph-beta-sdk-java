@@ -28,6 +28,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      */
     public DeviceConfigurationUserStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceConfigurationUserStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

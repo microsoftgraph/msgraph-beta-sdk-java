@@ -307,7 +307,7 @@ public class CartToClassAssociationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cartToClassAssociationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CartToClassAssociationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CartToClassAssociationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CartToClassAssociationItemRequestBuilder {
         @javax.annotation.Nullable
         public CartToClassAssociationItemRequestBuilderGetQueryParameters queryParameters = new CartToClassAssociationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new cartToClassAssociationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CartToClassAssociationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CartToClassAssociationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CartToClassAssociationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new cartToClassAssociationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CartToClassAssociationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CartToClassAssociationItemRequestBuilderPatchRequestConfiguration() {

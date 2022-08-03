@@ -32,6 +32,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
      */
     public UserExperienceAnalyticsModelScores() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsModelScores");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

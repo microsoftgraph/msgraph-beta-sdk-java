@@ -15,12 +15,15 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.' */
     private java.util.List<DisplayNameLocalization> _localizations;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new profileCardAnnotation and sets the default values.
      * @return a void
      */
     public ProfileCardAnnotation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.profileCardAnnotation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProfileCardAnnotation currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
         return this._localizations;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("localizations", this.getLocalizations());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      */
     public void setLocalizations(@javax.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {
         this._localizations = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -18,6 +18,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      */
     public SkypeForBusinessUserConversationMember() {
         super();
+        this.setOdataType("#microsoft.graph.skypeForBusinessUserConversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

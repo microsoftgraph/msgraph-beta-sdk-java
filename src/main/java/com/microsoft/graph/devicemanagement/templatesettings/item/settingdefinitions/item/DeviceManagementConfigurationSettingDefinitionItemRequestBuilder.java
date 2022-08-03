@@ -307,7 +307,7 @@ public class DeviceManagementConfigurationSettingDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementConfigurationSettingDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementConfigurationSettingDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementConfigurationSettingDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementConfigurationSettingDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementConfigurationSettingDefinitionItemRequestBuilderPatchRequestConfiguration() {

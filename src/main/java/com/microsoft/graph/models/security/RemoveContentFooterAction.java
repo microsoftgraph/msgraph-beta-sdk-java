@@ -16,6 +16,7 @@ public class RemoveContentFooterAction extends InformationProtectionAction imple
      */
     public RemoveContentFooterAction() {
         super();
+        this.setOdataType("#microsoft.graph.security.removeContentFooterAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

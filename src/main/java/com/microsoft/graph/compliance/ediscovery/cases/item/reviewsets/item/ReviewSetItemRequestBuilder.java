@@ -320,7 +320,7 @@ public class ReviewSetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.reviewSets.item.queries.item collection
      * @param id Unique identifier of the item
-     * @return a reviewSetQueryItemRequestBuilder
+     * @return a ReviewSetQueryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ReviewSetQueryItemRequestBuilder queries(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class ReviewSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new reviewSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ReviewSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ReviewSetItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class ReviewSetItemRequestBuilder {
         @javax.annotation.Nullable
         public ReviewSetItemRequestBuilderGetQueryParameters queryParameters = new ReviewSetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new reviewSetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ReviewSetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ReviewSetItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class ReviewSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new reviewSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ReviewSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ReviewSetItemRequestBuilderPatchRequestConfiguration() {

@@ -110,7 +110,7 @@ public class InstanceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.pendingAccessReviewInstances.item.decisions.item.instance.contactedReviewers.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewReviewerItemRequestBuilder
+     * @return a AccessReviewReviewerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewReviewerItemRequestBuilder contactedReviewers(@javax.annotation.Nonnull final String id) {
@@ -369,7 +369,7 @@ public class InstanceRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.pendingAccessReviewInstances.item.decisions.item.instance.stages.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewStageItemRequestBuilder
+     * @return a AccessReviewStageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewStageItemRequestBuilder stages(@javax.annotation.Nonnull final String id) {

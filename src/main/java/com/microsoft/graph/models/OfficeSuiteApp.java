@@ -38,6 +38,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
      */
     public OfficeSuiteApp() {
         super();
+        this.setOdataType("#microsoft.graph.officeSuiteApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

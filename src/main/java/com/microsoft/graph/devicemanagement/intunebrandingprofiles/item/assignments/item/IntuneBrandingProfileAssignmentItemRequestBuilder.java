@@ -307,7 +307,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new intuneBrandingProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IntuneBrandingProfileAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IntuneBrandingProfileAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public IntuneBrandingProfileAssignmentItemRequestBuilderGetQueryParameters queryParameters = new IntuneBrandingProfileAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new intuneBrandingProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IntuneBrandingProfileAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IntuneBrandingProfileAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new intuneBrandingProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IntuneBrandingProfileAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IntuneBrandingProfileAssignmentItemRequestBuilderPatchRequestConfiguration() {

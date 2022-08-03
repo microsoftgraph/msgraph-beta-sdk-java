@@ -314,7 +314,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementConfigurationPolicyItemRequestBuilder
+     * @return a DeviceManagementConfigurationPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementConfigurationPolicyItemRequestBuilder referencingConfigurationPolicies(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementReusablePolicySettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementReusablePolicySettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementReusablePolicySettingItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementReusablePolicySettingItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementReusablePolicySettingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementReusablePolicySettingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementReusablePolicySettingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementReusablePolicySettingItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementReusablePolicySettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementReusablePolicySettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementReusablePolicySettingItemRequestBuilderPatchRequestConfiguration() {

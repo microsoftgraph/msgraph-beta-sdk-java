@@ -45,6 +45,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      */
     public DeviceManagementScript() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementScript");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

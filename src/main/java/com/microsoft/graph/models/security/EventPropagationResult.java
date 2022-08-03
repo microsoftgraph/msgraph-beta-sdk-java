@@ -13,6 +13,8 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The name of the specific location in the workload associated with the event. */
     private String _location;
+    /** The OdataType property */
+    private String _odataType;
     /** The name of the workload associated with the event. */
     private String _serviceName;
     /** Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success. */
@@ -25,6 +27,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     public EventPropagationResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.eventPropagationResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,8 +54,9 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventPropagationResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EventPropagationStatus.class)); });
             this.put("statusInformation", (n) -> { currentObject.setStatusInformation(n.getStringValue()); });
@@ -65,6 +69,14 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLocation() {
         return this._location;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the serviceName property value. The name of the workload associated with the event.
@@ -98,6 +110,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("location", this.getLocation());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("serviceName", this.getServiceName());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("statusInformation", this.getStatusInformation());
@@ -118,6 +131,14 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     public void setLocation(@javax.annotation.Nullable final String value) {
         this._location = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the serviceName property value. The name of the workload associated with the event.

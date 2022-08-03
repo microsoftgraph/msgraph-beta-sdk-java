@@ -24,6 +24,8 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     private java.util.List<NumberRange> _localPortRanges;
     /** Name. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Protocols (0-255). Valid values 0 to 255 */
     private Integer _protocols;
     /** Remote address range. This collection can contain a maximum of 500 elements. */
@@ -38,6 +40,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     public VpnTrafficRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.vpnTrafficRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,13 +91,14 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnTrafficRule currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(VpnTrafficRuleAppType.class)); });
             this.put("claims", (n) -> { currentObject.setClaims(n.getStringValue()); });
             this.put("localAddressRanges", (n) -> { currentObject.setLocalAddressRanges(n.getCollectionOfObjectValues(IPv4Range::createFromDiscriminatorValue)); });
             this.put("localPortRanges", (n) -> { currentObject.setLocalPortRanges(n.getCollectionOfObjectValues(NumberRange::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("protocols", (n) -> { currentObject.setProtocols(n.getIntegerValue()); });
             this.put("remoteAddressRanges", (n) -> { currentObject.setRemoteAddressRanges(n.getCollectionOfObjectValues(IPv4Range::createFromDiscriminatorValue)); });
             this.put("remotePortRanges", (n) -> { currentObject.setRemotePortRanges(n.getCollectionOfObjectValues(NumberRange::createFromDiscriminatorValue)); });
@@ -124,6 +128,14 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the protocols property value. Protocols (0-255). Valid values 0 to 255
@@ -170,6 +182,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("localAddressRanges", this.getLocalAddressRanges());
         writer.writeCollectionOfObjectValues("localPortRanges", this.getLocalPortRanges());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("protocols", this.getProtocols());
         writer.writeCollectionOfObjectValues("remoteAddressRanges", this.getRemoteAddressRanges());
         writer.writeCollectionOfObjectValues("remotePortRanges", this.getRemotePortRanges());
@@ -231,6 +244,14 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the protocols property value. Protocols (0-255). Valid values 0 to 255

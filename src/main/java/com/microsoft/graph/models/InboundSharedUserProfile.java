@@ -15,6 +15,8 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
     private String _displayName;
     /** The homeTenantId property */
     private String _homeTenantId;
+    /** The OdataType property */
+    private String _odataType;
     /** The userId property */
     private String _userId;
     /** The userPrincipalName property */
@@ -25,6 +27,7 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
      */
     public InboundSharedUserProfile() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.inboundSharedUserProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InboundSharedUserProfile currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
         }};
@@ -73,6 +77,14 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public String getHomeTenantId() {
         return this._homeTenantId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userId property value. The userId property
@@ -99,6 +111,7 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("homeTenantId", this.getHomeTenantId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
      */
     public void setHomeTenantId(@javax.annotation.Nullable final String value) {
         this._homeTenantId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userId property value. The userId property

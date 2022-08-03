@@ -20,7 +20,7 @@ import microsoft.graph.models.UserExperienceAnalyticsDeviceScope;
 import microsoft.graph.models.UserExperienceAnalyticsDeviceScopeCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceScopes property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceScopesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -131,7 +131,7 @@ public class DomainItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of domain object.
+     * Get entity from domains by key
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -139,7 +139,7 @@ public class DomainItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of domain object.
+     * Get entity from domains by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -246,7 +246,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.domainNameReferences.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder domainNameReferences(@javax.annotation.Nonnull final String id) {
@@ -258,7 +258,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.federationConfiguration.item collection
      * @param id Unique identifier of the item
-     * @return a internalDomainFederationItemRequestBuilder
+     * @return a InternalDomainFederationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public InternalDomainFederationItemRequestBuilder federationConfiguration(@javax.annotation.Nonnull final String id) {
@@ -268,7 +268,7 @@ public class DomainItemRequestBuilder {
         return new InternalDomainFederationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of domain object.
+     * Get entity from domains by key
      * @return a CompletableFuture of domain
      */
     public java.util.concurrent.CompletableFuture<Domain> get() {
@@ -284,7 +284,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of domain object.
+     * Get entity from domains by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
      */
@@ -301,7 +301,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of domain object.
+     * Get entity from domains by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of domain
@@ -376,7 +376,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.serviceConfigurationRecords.item collection
      * @param id Unique identifier of the item
-     * @return a domainDnsRecordItemRequestBuilder
+     * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder serviceConfigurationRecords(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.sharedEmailDomainInvitations.item collection
      * @param id Unique identifier of the item
-     * @return a sharedEmailDomainInvitationItemRequestBuilder
+     * @return a SharedEmailDomainInvitationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedEmailDomainInvitationItemRequestBuilder sharedEmailDomainInvitations(@javax.annotation.Nonnull final String id) {
@@ -400,7 +400,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.verificationDnsRecords.item collection
      * @param id Unique identifier of the item
-     * @return a domainDnsRecordItemRequestBuilder
+     * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder verificationDnsRecords(@javax.annotation.Nonnull final String id) {
@@ -418,13 +418,13 @@ public class DomainItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DomainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Retrieve the properties and relationships of domain object. */
+    /** Get entity from domains by key */
     public class DomainItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -447,7 +447,7 @@ public class DomainItemRequestBuilder {
         @javax.annotation.Nullable
         public DomainItemRequestBuilderGetQueryParameters queryParameters = new DomainItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new domainItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DomainItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainItemRequestBuilderGetRequestConfiguration() {
@@ -462,7 +462,7 @@ public class DomainItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DomainItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainItemRequestBuilderPatchRequestConfiguration() {

@@ -19,6 +19,8 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
     private java.util.List<TeamworkPeripheralHealth> _displayHealthCollection;
     /** The health details about the microphone. */
     private TeamworkPeripheralHealth _microphoneHealth;
+    /** The OdataType property */
+    private String _odataType;
     /** The health details about the room camera. */
     private TeamworkPeripheralHealth _roomCameraHealth;
     /** The health details about the speaker. */
@@ -29,6 +31,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      */
     public TeamworkPeripheralsHealth() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkPeripheralsHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,11 +82,12 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkPeripheralsHealth currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("communicationSpeakerHealth", (n) -> { currentObject.setCommunicationSpeakerHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
             this.put("contentCameraHealth", (n) -> { currentObject.setContentCameraHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
             this.put("displayHealthCollection", (n) -> { currentObject.setDisplayHealthCollection(n.getCollectionOfObjectValues(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
             this.put("microphoneHealth", (n) -> { currentObject.setMicrophoneHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("roomCameraHealth", (n) -> { currentObject.setRoomCameraHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
             this.put("speakerHealth", (n) -> { currentObject.setSpeakerHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
         }};
@@ -95,6 +99,14 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public TeamworkPeripheralHealth getMicrophoneHealth() {
         return this._microphoneHealth;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the roomCameraHealth property value. The health details about the room camera.
@@ -123,6 +135,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
         writer.writeObjectValue("contentCameraHealth", this.getContentCameraHealth());
         writer.writeCollectionOfObjectValues("displayHealthCollection", this.getDisplayHealthCollection());
         writer.writeObjectValue("microphoneHealth", this.getMicrophoneHealth());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("roomCameraHealth", this.getRoomCameraHealth());
         writer.writeObjectValue("speakerHealth", this.getSpeakerHealth());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -166,6 +179,14 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      */
     public void setMicrophoneHealth(@javax.annotation.Nullable final TeamworkPeripheralHealth value) {
         this._microphoneHealth = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the roomCameraHealth property value. The health details about the room camera.

@@ -24,6 +24,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      */
     public ProtectOnlineMeetingAction() {
         super();
+        this.setOdataType("#microsoft.graph.protectOnlineMeetingAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

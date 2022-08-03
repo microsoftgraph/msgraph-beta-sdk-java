@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics application performance entity contains app performance details by OS version. */
 public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity implements Parsable {
     /** The number of devices where the app has been active. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;
@@ -27,16 +28,17 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
     /** The os version of the application. */
     private String _osVersion;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByOSVersion and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion() {
         super();
+        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByOSVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByOSVersion
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

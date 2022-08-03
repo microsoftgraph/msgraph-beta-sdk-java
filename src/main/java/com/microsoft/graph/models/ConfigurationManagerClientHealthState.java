@@ -17,6 +17,8 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
     private Integer _errorCode;
     /** Datetime for last sync with configuration manager management point. */
     private OffsetDateTime _lastSyncDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Configuration manager client state */
     private ConfigurationManagerClientState _state;
     /**
@@ -25,6 +27,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      */
     public ConfigurationManagerClientHealthState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.configurationManagerClientHealthState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerClientHealthState currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
             this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ConfigurationManagerClientState.class)); });
         }};
     }
@@ -72,6 +76,14 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this._lastSyncDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. Configuration manager client state
@@ -90,6 +102,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("errorCode", this.getErrorCode());
         writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +129,14 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      */
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. Configuration manager client state

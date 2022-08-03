@@ -307,7 +307,7 @@ public class PaymentMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new paymentMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PaymentMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PaymentMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PaymentMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public PaymentMethodItemRequestBuilderGetQueryParameters queryParameters = new PaymentMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new paymentMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PaymentMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PaymentMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PaymentMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new paymentMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PaymentMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PaymentMethodItemRequestBuilderPatchRequestConfiguration() {

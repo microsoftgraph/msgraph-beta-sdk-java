@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Case_escaped extends Entity implements Parsable {
     /** The user who closed the case. */
     private IdentitySet _closedBy;
@@ -52,6 +52,7 @@ public class Case_escaped extends Entity implements Parsable {
      */
     public Case_escaped() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.case");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

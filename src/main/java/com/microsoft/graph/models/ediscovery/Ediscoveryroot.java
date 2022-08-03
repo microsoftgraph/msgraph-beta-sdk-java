@@ -17,6 +17,7 @@ public class Ediscoveryroot extends Entity implements Parsable {
      */
     public Ediscoveryroot() {
         super();
+        this.setOdataType("#microsoft.graph.ediscovery.ediscoveryroot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

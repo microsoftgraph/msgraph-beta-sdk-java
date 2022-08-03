@@ -19,6 +19,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      */
     public TermsAndConditionsGroupAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.termsAndConditionsGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

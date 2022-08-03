@@ -13,6 +13,8 @@ public class OfficeConfiguration implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** List of office Client configuration. */
     private java.util.List<OfficeClientConfiguration> _clientConfigurations;
+    /** The OdataType property */
+    private String _odataType;
     /** List of office Client check-in status. */
     private java.util.List<OfficeClientCheckinStatus> _tenantCheckinStatuses;
     /** Entity that describes tenant check-in statues */
@@ -23,6 +25,7 @@ public class OfficeConfiguration implements AdditionalDataHolder, Parsable {
      */
     public OfficeConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.officeConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class OfficeConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("clientConfigurations", (n) -> { currentObject.setClientConfigurations(n.getCollectionOfObjectValues(OfficeClientConfiguration::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tenantCheckinStatuses", (n) -> { currentObject.setTenantCheckinStatuses(n.getCollectionOfObjectValues(OfficeClientCheckinStatus::createFromDiscriminatorValue)); });
             this.put("tenantUserCheckinSummary", (n) -> { currentObject.setTenantUserCheckinSummary(n.getObjectValue(OfficeUserCheckinSummary::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tenantCheckinStatuses property value. List of office Client check-in status.
@@ -87,6 +99,7 @@ public class OfficeConfiguration implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("clientConfigurations", this.getClientConfigurations());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("tenantCheckinStatuses", this.getTenantCheckinStatuses());
         writer.writeObjectValue("tenantUserCheckinSummary", this.getTenantUserCheckinSummary());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class OfficeConfiguration implements AdditionalDataHolder, Parsable {
      */
     public void setClientConfigurations(@javax.annotation.Nullable final java.util.List<OfficeClientConfiguration> value) {
         this._clientConfigurations = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tenantCheckinStatuses property value. List of office Client check-in status.

@@ -20,6 +20,7 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
      */
     public WindowsKioskDesktopApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsKioskDesktopApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

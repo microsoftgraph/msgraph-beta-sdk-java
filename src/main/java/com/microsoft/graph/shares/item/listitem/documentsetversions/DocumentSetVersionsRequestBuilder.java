@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.shares.item.listitem.documentsetversions.count.CountRequestBuilder;
 /** Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity. */
 public class DocumentSetVersionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -38,6 +38,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      */
     public ManagementTemplateStepVersion() {
         super();
+        this.setOdataType("#microsoft.graph.managedTenants.managementTemplateStepVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

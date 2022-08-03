@@ -22,6 +22,7 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     public AttachmentSession() {
         super();
+        this.setOdataType("#microsoft.graph.attachmentSession");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

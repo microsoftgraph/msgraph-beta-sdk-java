@@ -31,6 +31,8 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
     private String _n;
     /** This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.) */
     private Long _nbf;
+    /** The OdataType property */
+    private String _odataType;
     /** RSA Key - first prime. Field cannot be read back. */
     private String _p;
     /** RSA Key - second prime. Field cannot be read back. */
@@ -49,6 +51,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     public TrustFrameworkKey() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.trustFrameworkKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -115,7 +118,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TrustFrameworkKey currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<>(17) {{
             this.put("d", (n) -> { currentObject.setD(n.getStringValue()); });
             this.put("dp", (n) -> { currentObject.setDp(n.getStringValue()); });
             this.put("dq", (n) -> { currentObject.setDq(n.getStringValue()); });
@@ -126,6 +129,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
             this.put("kty", (n) -> { currentObject.setKty(n.getStringValue()); });
             this.put("n", (n) -> { currentObject.setN(n.getStringValue()); });
             this.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("p", (n) -> { currentObject.setP(n.getStringValue()); });
             this.put("q", (n) -> { currentObject.setQ(n.getStringValue()); });
             this.put("qi", (n) -> { currentObject.setQi(n.getStringValue()); });
@@ -173,6 +177,14 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Long getNbf() {
         return this._nbf;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the p property value. RSA Key - first prime. Field cannot be read back.
@@ -239,6 +251,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("kty", this.getKty());
         writer.writeStringValue("n", this.getN());
         writer.writeLongValue("nbf", this.getNbf());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("p", this.getP());
         writer.writeStringValue("q", this.getQ());
         writer.writeStringValue("qi", this.getQi());
@@ -334,6 +347,14 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     public void setNbf(@javax.annotation.Nullable final Long value) {
         this._nbf = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the p property value. RSA Key - first prime. Field cannot be read back.

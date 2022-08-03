@@ -117,7 +117,7 @@ public class AccessReviewInstanceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.pendingAccessReviewInstances.item.contactedReviewers.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewReviewerItemRequestBuilder
+     * @return a AccessReviewReviewerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewReviewerItemRequestBuilder contactedReviewers(@javax.annotation.Nonnull final String id) {
@@ -219,7 +219,7 @@ public class AccessReviewInstanceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.pendingAccessReviewInstances.item.decisions.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewInstanceDecisionItemItemRequestBuilder
+     * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewInstanceDecisionItemItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class AccessReviewInstanceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.pendingAccessReviewInstances.item.stages.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewStageItemRequestBuilder
+     * @return a AccessReviewStageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewStageItemRequestBuilder stages(@javax.annotation.Nonnull final String id) {
@@ -406,7 +406,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewInstanceItemRequestBuilderDeleteRequestConfiguration() {
@@ -435,7 +435,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewInstanceItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewInstanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewInstanceItemRequestBuilderGetRequestConfiguration() {
@@ -450,7 +450,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewInstanceItemRequestBuilderPatchRequestConfiguration() {

@@ -21,7 +21,7 @@ import microsoft.graph.users.item.calendarview.item.exceptionoccurrences.count.C
 import microsoft.graph.users.item.calendarview.item.exceptionoccurrences.delta.DeltaRequestBuilder;
 /** Provides operations to manage the exceptionOccurrences property of the microsoft.graph.event entity. */
 public class ExceptionOccurrencesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -17,6 +17,8 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     private String _manufacturer;
     /** Devie model. */
     private String _model;
+    /** The OdataType property */
+    private String _odataType;
     /** Device serial number. */
     private String _serialNumber;
     /** The unique identifier for the device. */
@@ -27,6 +29,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     public TeamworkHardwareDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamworkHardwareDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,10 +56,11 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkHardwareDetail currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("macAddresses", (n) -> { currentObject.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
             this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
         }};
@@ -86,6 +90,14 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
         return this._model;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the serialNumber property value. Device serial number.
      * @return a string
      */
@@ -111,6 +123,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("macAddresses", this.getMacAddresses());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("model", this.getModel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("serialNumber", this.getSerialNumber());
         writer.writeStringValue("uniqueId", this.getUniqueId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the serialNumber property value. Device serial number.

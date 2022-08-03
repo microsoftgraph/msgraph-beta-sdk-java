@@ -20,7 +20,7 @@ import microsoft.graph.models.security.RetentionEventCollectionResponse;
 import microsoft.graph.security.triggers.retentionevents.count.CountRequestBuilder;
 /** Provides operations to manage the retentionEvents property of the microsoft.graph.security.triggersRoot entity. */
 public class RetentionEventsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -26,6 +26,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      */
     public Win32LobAppFileSystemDetection() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppFileSystemDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

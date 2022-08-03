@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity implements Parsable {
     /** The associated group assignments for this WindowsDefenderApplicationControl supplemental policy. */
     private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> _assignments;
@@ -33,16 +32,17 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     /** The WindowsDefenderApplicationControl supplemental policy's version. */
     private String _version;
     /**
-     * Instantiates a new windowsDefenderApplicationControlSupplementalPolicy and sets the default values.
+     * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicy and sets the default values.
      * @return a void
      */
     public WindowsDefenderApplicationControlSupplementalPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDefenderApplicationControlSupplementalPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDefenderApplicationControlSupplementalPolicy
+     * @return a WindowsDefenderApplicationControlSupplementalPolicy
      */
     @javax.annotation.Nonnull
     public static WindowsDefenderApplicationControlSupplementalPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

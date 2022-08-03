@@ -18,12 +18,15 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _dateTime;
     /** Notes about the timeCardEvent. */
     private ItemBody _notes;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new timeCardEvent and sets the default values.
      * @return a void
      */
     public TimeCardEvent() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.timeCardEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,10 +69,11 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeCardEvent currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("atApprovedLocation", (n) -> { currentObject.setAtApprovedLocation(n.getBooleanValue()); });
             this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
             this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +85,14 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
         return this._notes;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +102,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
         writer.writeOffsetDateTimeValue("dateTime", this.getDateTime());
         writer.writeObjectValue("notes", this.getNotes());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      */
     public void setNotes(@javax.annotation.Nullable final ItemBody value) {
         this._notes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

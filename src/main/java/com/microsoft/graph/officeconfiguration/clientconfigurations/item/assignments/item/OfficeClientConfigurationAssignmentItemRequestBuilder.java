@@ -307,7 +307,7 @@ public class OfficeClientConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new officeClientConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OfficeClientConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfficeClientConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class OfficeClientConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public OfficeClientConfigurationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new OfficeClientConfigurationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new officeClientConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OfficeClientConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfficeClientConfigurationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class OfficeClientConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new officeClientConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OfficeClientConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfficeClientConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration() {

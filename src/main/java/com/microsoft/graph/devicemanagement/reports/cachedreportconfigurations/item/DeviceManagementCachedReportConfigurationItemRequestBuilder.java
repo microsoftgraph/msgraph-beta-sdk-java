@@ -307,7 +307,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementCachedReportConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementCachedReportConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementCachedReportConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementCachedReportConfigurationItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementCachedReportConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementCachedReportConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementCachedReportConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementCachedReportConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementCachedReportConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementCachedReportConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementCachedReportConfigurationItemRequestBuilderPatchRequestConfiguration() {

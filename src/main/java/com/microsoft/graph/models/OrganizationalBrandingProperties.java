@@ -50,6 +50,10 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     private String _signInPageText;
     /** A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo. */
     private byte[] _squareLogo;
+    /** A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo. */
+    private byte[] _squareLogoDark;
+    /** A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
+    private String _squareLogoDarkRelativeUrl;
     /** A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
     private String _squareLogoRelativeUrl;
     /** A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters. */
@@ -60,7 +64,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     public OrganizationalBrandingProperties() {
         super();
-        this.setType("#microsoft.graph.organizationalBrandingProperties");
+        this.setOdataType("#microsoft.graph.organizationalBrandingProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -245,6 +249,8 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
             this.put("loginPageTextVisibilitySettings", (n) -> { currentObject.setLoginPageTextVisibilitySettings(n.getObjectValue(LoginPageTextVisibilitySettings::createFromDiscriminatorValue)); });
             this.put("signInPageText", (n) -> { currentObject.setSignInPageText(n.getStringValue()); });
             this.put("squareLogo", (n) -> { currentObject.setSquareLogo(n.getByteArrayValue()); });
+            this.put("squareLogoDark", (n) -> { currentObject.setSquareLogoDark(n.getByteArrayValue()); });
+            this.put("squareLogoDarkRelativeUrl", (n) -> { currentObject.setSquareLogoDarkRelativeUrl(n.getStringValue()); });
             this.put("squareLogoRelativeUrl", (n) -> { currentObject.setSquareLogoRelativeUrl(n.getStringValue()); });
             this.put("usernameHintText", (n) -> { currentObject.setUsernameHintText(n.getStringValue()); });
         }};
@@ -280,6 +286,22 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nullable
     public byte[] getSquareLogo() {
         return this._squareLogo;
+    }
+    /**
+     * Gets the squareLogoDark property value. A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
+     * @return a binary
+     */
+    @javax.annotation.Nullable
+    public byte[] getSquareLogoDark() {
+        return this._squareLogoDark;
+    }
+    /**
+     * Gets the squareLogoDarkRelativeUrl property value. A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSquareLogoDarkRelativeUrl() {
+        return this._squareLogoDarkRelativeUrl;
     }
     /**
      * Gets the squareLogoRelativeUrl property value. A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
@@ -326,6 +348,8 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         writer.writeObjectValue("loginPageTextVisibilitySettings", this.getLoginPageTextVisibilitySettings());
         writer.writeStringValue("signInPageText", this.getSignInPageText());
         writer.writeByteArrayValue("squareLogo", this.getSquareLogo());
+        writer.writeByteArrayValue("squareLogoDark", this.getSquareLogoDark());
+        writer.writeStringValue("squareLogoDarkRelativeUrl", this.getSquareLogoDarkRelativeUrl());
         writer.writeStringValue("squareLogoRelativeUrl", this.getSquareLogoRelativeUrl());
         writer.writeStringValue("usernameHintText", this.getUsernameHintText());
     }
@@ -496,6 +520,22 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     public void setSquareLogo(@javax.annotation.Nullable final byte[] value) {
         this._squareLogo = value;
+    }
+    /**
+     * Sets the squareLogoDark property value. A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
+     * @param value Value to set for the squareLogoDark property.
+     * @return a void
+     */
+    public void setSquareLogoDark(@javax.annotation.Nullable final byte[] value) {
+        this._squareLogoDark = value;
+    }
+    /**
+     * Sets the squareLogoDarkRelativeUrl property value. A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     * @param value Value to set for the squareLogoDarkRelativeUrl property.
+     * @return a void
+     */
+    public void setSquareLogoDarkRelativeUrl(@javax.annotation.Nullable final String value) {
+        this._squareLogoDarkRelativeUrl = value;
     }
     /**
      * Sets the squareLogoRelativeUrl property value. A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.

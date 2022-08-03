@@ -20,6 +20,7 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
      */
     public DeviceRestrictionAction() {
         super();
+        this.setOdataType("#microsoft.graph.deviceRestrictionAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

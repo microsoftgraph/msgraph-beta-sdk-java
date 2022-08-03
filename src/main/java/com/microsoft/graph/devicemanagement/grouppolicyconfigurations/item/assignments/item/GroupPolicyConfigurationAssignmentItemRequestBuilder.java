@@ -307,7 +307,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupPolicyConfigurationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new GroupPolicyConfigurationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupPolicyConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyConfigurationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupPolicyConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupPolicyConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupPolicyConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration() {

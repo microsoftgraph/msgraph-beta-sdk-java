@@ -24,6 +24,7 @@ public class CountryRegion extends Entity implements Parsable {
      */
     public CountryRegion() {
         super();
+        this.setOdataType("#microsoft.graph.countryRegion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
      */
     public ActivateDeviceEsimActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.activateDeviceEsimActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

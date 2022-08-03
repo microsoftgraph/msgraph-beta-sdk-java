@@ -36,6 +36,7 @@ public class AgedAccountsReceivable extends Entity implements Parsable {
      */
     public AgedAccountsReceivable() {
         super();
+        this.setOdataType("#microsoft.graph.agedAccountsReceivable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

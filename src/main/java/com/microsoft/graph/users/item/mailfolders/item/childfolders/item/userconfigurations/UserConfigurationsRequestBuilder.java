@@ -20,7 +20,7 @@ import microsoft.graph.models.UserConfigurationCollectionResponse;
 import microsoft.graph.users.item.mailfolders.item.childfolders.item.userconfigurations.count.CountRequestBuilder;
 /** Provides operations to manage the userConfigurations property of the microsoft.graph.mailFolder entity. */
 public class UserConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

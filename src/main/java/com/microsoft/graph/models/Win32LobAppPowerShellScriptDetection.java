@@ -20,6 +20,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      */
     public Win32LobAppPowerShellScriptDetection() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

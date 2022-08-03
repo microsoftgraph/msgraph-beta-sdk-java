@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsDriverUpdateInventory;
 import microsoft.graph.models.WindowsDriverUpdateInventoryCollectionResponse;
 /** Provides operations to manage the driverInventories property of the microsoft.graph.windowsDriverUpdateProfile entity. */
 public class DriverInventoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

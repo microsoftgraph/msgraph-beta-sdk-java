@@ -307,7 +307,7 @@ public class UrlThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new urlThreatSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UrlThreatSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UrlThreatSubmissionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UrlThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public UrlThreatSubmissionItemRequestBuilderGetQueryParameters queryParameters = new UrlThreatSubmissionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new urlThreatSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UrlThreatSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UrlThreatSubmissionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UrlThreatSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new urlThreatSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UrlThreatSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UrlThreatSubmissionItemRequestBuilderPatchRequestConfiguration() {

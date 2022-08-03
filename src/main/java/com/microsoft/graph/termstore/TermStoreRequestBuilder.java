@@ -181,7 +181,7 @@ public class TermStoreRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.termStore.groups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
@@ -248,7 +248,7 @@ public class TermStoreRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.termStore.sets.item collection
      * @param id Unique identifier of the item
-     * @return a setItemRequestBuilder
+     * @return a SetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SetItemRequestBuilder sets(@javax.annotation.Nonnull final String id) {

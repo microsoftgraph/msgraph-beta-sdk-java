@@ -16,7 +16,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      */
     public AppleExpeditedCheckinConfigurationBase() {
         super();
-        this.setType("#microsoft.graph.appleExpeditedCheckinConfigurationBase");
+        this.setOdataType("#microsoft.graph.appleExpeditedCheckinConfigurationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

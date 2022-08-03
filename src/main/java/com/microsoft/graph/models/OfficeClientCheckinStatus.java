@@ -24,6 +24,8 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
     private String _devicePlatformVersion;
     /** Error message if any associated for the last checkin. */
     private String _errorMessage;
+    /** The OdataType property */
+    private String _odataType;
     /** User identifier using the device. */
     private String _userId;
     /** User principal name using the device. */
@@ -36,6 +38,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      */
     public OfficeClientCheckinStatus() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.officeClientCheckinStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -110,17 +113,26 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeClientCheckinStatus currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("checkinDateTime", (n) -> { currentObject.setCheckinDateTime(n.getOffsetDateTimeValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("devicePlatform", (n) -> { currentObject.setDevicePlatform(n.getStringValue()); });
             this.put("devicePlatformVersion", (n) -> { currentObject.setDevicePlatformVersion(n.getStringValue()); });
             this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
             this.put("wasSuccessful", (n) -> { currentObject.setWasSuccessful(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userId property value. User identifier using the device.
@@ -159,6 +171,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
         writer.writeStringValue("devicePlatform", this.getDevicePlatform());
         writer.writeStringValue("devicePlatformVersion", this.getDevicePlatformVersion());
         writer.writeStringValue("errorMessage", this.getErrorMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeBooleanValue("wasSuccessful", this.getWasSuccessful());
@@ -219,6 +232,14 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      */
     public void setErrorMessage(@javax.annotation.Nullable final String value) {
         this._errorMessage = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userId property value. User identifier using the device.

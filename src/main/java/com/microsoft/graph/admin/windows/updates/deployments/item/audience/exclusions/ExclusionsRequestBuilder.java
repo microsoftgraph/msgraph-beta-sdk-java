@@ -24,7 +24,7 @@ import microsoft.graph.models.windowsupdates.UpdatableAsset;
 import microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 /** Provides operations to manage the exclusions property of the microsoft.graph.windowsUpdates.deploymentAudience entity. */
 public class ExclusionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

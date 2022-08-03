@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analyte connectivity issue entity. */
 public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /** The Intune DeviceId of the device the connection is associated with. */
     private String _deviceId;
@@ -22,16 +23,17 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /** The unique id of user who initialize the connection. */
     private String _userId;
     /**
-     * Instantiates a new CloudPCConnectivityIssue and sets the default values.
+     * Instantiates a new cloudPCConnectivityIssue and sets the default values.
      * @return a void
      */
     public CloudPCConnectivityIssue() {
         super();
+        this.setOdataType("#microsoft.graph.cloudPCConnectivityIssue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPCConnectivityIssue
+     * @return a cloudPCConnectivityIssue
      */
     @javax.annotation.Nonnull
     public static CloudPCConnectivityIssue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -15,6 +15,8 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     private String _customExtensionId;
     /** The unique run ID for the logic app. */
     private String _externalCorrelationId;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue. */
     private AccessPackageCustomExtensionStage _stage;
     /** Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue. */
@@ -25,6 +27,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      */
     public CustomExtensionHandlerInstance() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.customExtensionHandlerInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,12 +70,21 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionHandlerInstance currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("customExtensionId", (n) -> { currentObject.setCustomExtensionId(n.getStringValue()); });
             this.put("externalCorrelationId", (n) -> { currentObject.setExternalCorrelationId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccessPackageCustomExtensionHandlerStatus.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
@@ -99,6 +111,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
         Objects.requireNonNull(writer);
         writer.writeStringValue("customExtensionId", this.getCustomExtensionId());
         writer.writeStringValue("externalCorrelationId", this.getExternalCorrelationId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("stage", this.getStage());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      */
     public void setExternalCorrelationId(@javax.annotation.Nullable final String value) {
         this._externalCorrelationId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.

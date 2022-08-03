@@ -73,7 +73,7 @@ public class DriveRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.activities.item collection
      * @param id Unique identifier of the item
-     * @return a itemActivityOLDItemRequestBuilder
+     * @return a ItemActivityOLDItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemActivityOLDItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
@@ -85,7 +85,7 @@ public class DriveRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.bundles.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
@@ -186,7 +186,7 @@ public class DriveRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.following.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drive.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
@@ -249,7 +249,7 @@ public class DriveRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.items.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drive.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -342,7 +342,7 @@ public class DriveRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drive.special.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drive.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {

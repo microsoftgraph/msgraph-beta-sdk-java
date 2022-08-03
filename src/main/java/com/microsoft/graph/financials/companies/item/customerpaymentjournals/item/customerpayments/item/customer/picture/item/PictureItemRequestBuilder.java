@@ -313,7 +313,7 @@ public class PictureItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new pictureItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PictureItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PictureItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class PictureItemRequestBuilder {
         @javax.annotation.Nullable
         public PictureItemRequestBuilderGetQueryParameters queryParameters = new PictureItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new pictureItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PictureItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PictureItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class PictureItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new pictureItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PictureItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PictureItemRequestBuilderPatchRequestConfiguration() {

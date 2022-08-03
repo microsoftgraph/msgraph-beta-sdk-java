@@ -308,7 +308,7 @@ public class LabelsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.labels.retentionLabels.item collection
      * @param id Unique identifier of the item
-     * @return a retentionLabelItemRequestBuilder
+     * @return a RetentionLabelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RetentionLabelItemRequestBuilder retentionLabels(@javax.annotation.Nonnull final String id) {

@@ -20,7 +20,7 @@ import microsoft.graph.models.PersonCertification;
 import microsoft.graph.models.PersonCertificationCollectionResponse;
 /** Provides operations to manage the certifications property of the microsoft.graph.profile entity. */
 public class CertificationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

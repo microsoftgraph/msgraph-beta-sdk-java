@@ -16,6 +16,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
      */
     public DeviceManagementStringSettingInstance() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementStringSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,6 +28,8 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     private String _displayName;
     /** Unique index the application uses to maintain nested schema items */
     private Integer _index;
+    /** The OdataType property */
+    private String _odataType;
     /** Index of parent schema item to track nested schema items */
     private Integer _parentIndex;
     /** Unique key the application uses to identify the item */
@@ -40,6 +42,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     public AndroidManagedStoreAppConfigurationSchemaItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.androidManagedStoreAppConfigurationSchemaItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -122,7 +125,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidManagedStoreAppConfigurationSchemaItemDataType.class)); });
             this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
             this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });
@@ -131,6 +134,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentIndex", (n) -> { currentObject.setParentIndex(n.getIntegerValue()); });
             this.put("schemaItemKey", (n) -> { currentObject.setSchemaItemKey(n.getStringValue()); });
             this.put("selections", (n) -> { currentObject.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
@@ -143,6 +147,14 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     @javax.annotation.Nullable
     public Integer getIndex() {
         return this._index;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the parentIndex property value. Index of parent schema item to track nested schema items
@@ -183,6 +195,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeIntegerValue("index", this.getIndex());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("parentIndex", this.getParentIndex());
         writer.writeStringValue("schemaItemKey", this.getSchemaItemKey());
         writer.writeCollectionOfObjectValues("selections", this.getSelections());
@@ -259,6 +272,14 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     public void setIndex(@javax.annotation.Nullable final Integer value) {
         this._index = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the parentIndex property value. Index of parent schema item to track nested schema items

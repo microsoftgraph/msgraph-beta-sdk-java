@@ -54,6 +54,7 @@ public class Vendor extends Entity implements Parsable {
      */
     public Vendor() {
         super();
+        this.setOdataType("#microsoft.graph.vendor");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

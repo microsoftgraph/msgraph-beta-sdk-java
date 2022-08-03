@@ -20,6 +20,7 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      */
     public AndroidDeviceOwnerGlobalProxyDirect() {
         super();
+        this.setOdataType("#microsoft.graph.androidDeviceOwnerGlobalProxyDirect");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

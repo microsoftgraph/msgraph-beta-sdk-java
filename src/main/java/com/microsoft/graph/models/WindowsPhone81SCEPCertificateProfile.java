@@ -30,6 +30,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      */
     public WindowsPhone81SCEPCertificateProfile() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81SCEPCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

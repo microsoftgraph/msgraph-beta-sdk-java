@@ -20,7 +20,7 @@ import microsoft.graph.models.Picture;
 import microsoft.graph.models.PictureCollectionResponse;
 /** Provides operations to manage the picture property of the microsoft.graph.company entity. */
 public class PictureRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

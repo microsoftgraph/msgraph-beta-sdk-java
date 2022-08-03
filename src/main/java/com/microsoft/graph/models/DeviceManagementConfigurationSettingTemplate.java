@@ -19,6 +19,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      */
     public DeviceManagementConfigurationSettingTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
