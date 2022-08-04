@@ -12,12 +12,9 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ContentTypeInfo;
 import com.microsoft.graph.models.Deleted;
 import com.microsoft.graph.models.SharepointIds;
-import com.microsoft.graph.models.ItemActivityOLD;
 import com.microsoft.graph.models.ItemAnalytics;
-import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.FieldValueSet;
-import com.microsoft.graph.models.ListItemVersion;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.requests.ItemActivityOLDCollectionPage;
 import com.microsoft.graph.requests.DocumentSetVersionCollectionPage;
@@ -72,7 +69,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
 	@Nullable
-    public ItemActivityOLDCollectionPage activities;
+    public com.microsoft.graph.requests.ItemActivityOLDCollectionPage activities;
 
     /**
      * The Analytics.
@@ -90,7 +87,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "documentSetVersions", alternate = {"DocumentSetVersions"})
     @Expose
 	@Nullable
-    public DocumentSetVersionCollectionPage documentSetVersions;
+    public com.microsoft.graph.requests.DocumentSetVersionCollectionPage documentSetVersions;
 
     /**
      * The Drive Item.
@@ -117,7 +114,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
 	@Nullable
-    public ListItemVersionCollectionPage versions;
+    public com.microsoft.graph.requests.ListItemVersionCollectionPage versions;
 
 
     /**
@@ -130,15 +127,15 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities"), ItemActivityOLDCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities"), com.microsoft.graph.requests.ItemActivityOLDCollectionPage.class);
         }
 
         if (json.has("documentSetVersions")) {
-            documentSetVersions = serializer.deserializeObject(json.get("documentSetVersions"), DocumentSetVersionCollectionPage.class);
+            documentSetVersions = serializer.deserializeObject(json.get("documentSetVersions"), com.microsoft.graph.requests.DocumentSetVersionCollectionPage.class);
         }
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions"), ListItemVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), com.microsoft.graph.requests.ListItemVersionCollectionPage.class);
         }
     }
 }

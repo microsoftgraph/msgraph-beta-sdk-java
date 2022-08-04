@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DimensionValue;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DimensionValueCollectionPage;
 
@@ -62,7 +61,7 @@ public class Dimension extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dimensionValues", alternate = {"DimensionValues"})
     @Expose
 	@Nullable
-    public DimensionValueCollectionPage dimensionValues;
+    public com.microsoft.graph.requests.DimensionValueCollectionPage dimensionValues;
 
 
     /**
@@ -75,7 +74,7 @@ public class Dimension extends Entity implements IJsonBackedObject {
 
 
         if (json.has("dimensionValues")) {
-            dimensionValues = serializer.deserializeObject(json.get("dimensionValues"), DimensionValueCollectionPage.class);
+            dimensionValues = serializer.deserializeObject(json.get("dimensionValues"), com.microsoft.graph.requests.DimensionValueCollectionPage.class);
         }
     }
 }

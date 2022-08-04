@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AppleUserInitiatedEnrollmentProfile;
-import com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AppleUserInitiatedEnrollmentProfileRequestBuilder extends BaseReque
      * @return the collection request builder
      */
     @Nonnull
-    public AppleEnrollmentProfileAssignmentCollectionRequestBuilder assignments() {
-        return new AppleEnrollmentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -76,8 +74,8 @@ public class AppleUserInitiatedEnrollmentProfileRequestBuilder extends BaseReque
      * @param id the item identifier
      */
     @Nonnull
-    public AppleEnrollmentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new AppleEnrollmentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

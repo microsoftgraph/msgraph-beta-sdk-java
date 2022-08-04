@@ -44,10 +44,6 @@ public enum DeviceManagementConfigurationTechnologies
     */
     LINUX_MDM,
     /**
-    * enrollment
-    */
-    ENROLLMENT,
-    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

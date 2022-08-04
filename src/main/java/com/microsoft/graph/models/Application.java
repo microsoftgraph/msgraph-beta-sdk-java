@@ -24,20 +24,13 @@ import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.WindowsApplication;
 import com.microsoft.graph.models.OnPremisesPublishing;
-import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.models.FederatedIdentityCredential;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.ConnectorGroup;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 
@@ -67,7 +60,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -255,15 +248,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<RequiredResourceAccess> requiredResourceAccess;
 
     /**
-     * The Saml Metadata Url.
-     * The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
-     */
-    @SerializedName(value = "samlMetadataUrl", alternate = {"SamlMetadataUrl"})
-    @Expose
-	@Nullable
-    public String samlMetadataUrl;
-
-    /**
      * The Service Management Reference.
      * References application or service contact information from a Service or Asset Management database. Nullable.
      */
@@ -358,11 +342,11 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The appManagementPolicy applied to this application.
      */
 	@Nullable
-    public AppManagementPolicyCollectionPage appManagementPolicies;
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
 
     /**
      * The Created On Behalf Of.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -371,49 +355,49 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Read-only. Nullable.
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
 	@Nullable
-    public ExtensionPropertyCollectionPage extensionProperties;
+    public com.microsoft.graph.requests.ExtensionPropertyCollectionPage extensionProperties;
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
 	@Nullable
-    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+    public com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
 
     /**
      * The Home Realm Discovery Policies.
      * 
      */
 	@Nullable
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Owners.
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
      * 
      */
 	@Nullable
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * The tokenLifetimePolicies assigned to this application. Supports $expand.
      */
 	@Nullable
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
      * The Connector Group.
@@ -444,31 +428,31 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appManagementPolicies")) {
-            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), AppManagementPolicyCollectionPage.class);
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionPage.class);
         }
 
         if (json.has("extensionProperties")) {
-            extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), ExtensionPropertyCollectionPage.class);
+            extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), com.microsoft.graph.requests.ExtensionPropertyCollectionPage.class);
         }
 
         if (json.has("federatedIdentityCredentials")) {
-            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
         }
     }
 }

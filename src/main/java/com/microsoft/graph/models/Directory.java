@@ -9,17 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.RecommendationResource;
-import com.microsoft.graph.models.Recommendation;
-import com.microsoft.graph.models.AdministrativeUnit;
-import com.microsoft.graph.models.AttributeSet;
-import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
-import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.IdentityProviderBase;
-import com.microsoft.graph.models.InboundSharedUserProfile;
-import com.microsoft.graph.models.OutboundSharedUserProfile;
-import com.microsoft.graph.models.SharedEmailDomain;
-import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.RecommendationResourceCollectionPage;
 import com.microsoft.graph.requests.RecommendationCollectionPage;
@@ -55,7 +44,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "impactedResources", alternate = {"ImpactedResources"})
     @Expose
 	@Nullable
-    public RecommendationResourceCollectionPage impactedResources;
+    public com.microsoft.graph.requests.RecommendationResourceCollectionPage impactedResources;
 
     /**
      * The Recommendations.
@@ -64,7 +53,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "recommendations", alternate = {"Recommendations"})
     @Expose
 	@Nullable
-    public RecommendationCollectionPage recommendations;
+    public com.microsoft.graph.requests.RecommendationCollectionPage recommendations;
 
     /**
      * The Administrative Units.
@@ -73,7 +62,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose
 	@Nullable
-    public AdministrativeUnitCollectionPage administrativeUnits;
+    public com.microsoft.graph.requests.AdministrativeUnitCollectionPage administrativeUnits;
 
     /**
      * The Attribute Sets.
@@ -82,7 +71,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "attributeSets", alternate = {"AttributeSets"})
     @Expose
 	@Nullable
-    public AttributeSetCollectionPage attributeSets;
+    public com.microsoft.graph.requests.AttributeSetCollectionPage attributeSets;
 
     /**
      * The Custom Security Attribute Definitions.
@@ -91,7 +80,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customSecurityAttributeDefinitions", alternate = {"CustomSecurityAttributeDefinitions"})
     @Expose
 	@Nullable
-    public CustomSecurityAttributeDefinitionCollectionPage customSecurityAttributeDefinitions;
+    public com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage customSecurityAttributeDefinitions;
 
     /**
      * The Deleted Items.
@@ -100,7 +89,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage deletedItems;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage deletedItems;
 
     /**
      * The Federation Configurations.
@@ -109,7 +98,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "federationConfigurations", alternate = {"FederationConfigurations"})
     @Expose
 	@Nullable
-    public IdentityProviderBaseCollectionPage federationConfigurations;
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionPage federationConfigurations;
 
     /**
      * The Inbound Shared User Profiles.
@@ -118,7 +107,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "inboundSharedUserProfiles", alternate = {"InboundSharedUserProfiles"})
     @Expose
 	@Nullable
-    public InboundSharedUserProfileCollectionPage inboundSharedUserProfiles;
+    public com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage inboundSharedUserProfiles;
 
     /**
      * The Outbound Shared User Profiles.
@@ -127,7 +116,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "outboundSharedUserProfiles", alternate = {"OutboundSharedUserProfiles"})
     @Expose
 	@Nullable
-    public OutboundSharedUserProfileCollectionPage outboundSharedUserProfiles;
+    public com.microsoft.graph.requests.OutboundSharedUserProfileCollectionPage outboundSharedUserProfiles;
 
     /**
      * The Shared Email Domains.
@@ -136,18 +125,18 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sharedEmailDomains", alternate = {"SharedEmailDomains"})
     @Expose
 	@Nullable
-    public SharedEmailDomainCollectionPage sharedEmailDomains;
+    public com.microsoft.graph.requests.SharedEmailDomainCollectionPage sharedEmailDomains;
 
     /**
      * The Feature Rollout Policies.
-     * 
+     * Nullable.
      * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
      */
     @Deprecated
     @SerializedName(value = "featureRolloutPolicies", alternate = {"FeatureRolloutPolicies"})
     @Expose
 	@Nullable
-    public FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
+    public com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
 
 
     /**
@@ -160,47 +149,47 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("impactedResources")) {
-            impactedResources = serializer.deserializeObject(json.get("impactedResources"), RecommendationResourceCollectionPage.class);
+            impactedResources = serializer.deserializeObject(json.get("impactedResources"), com.microsoft.graph.requests.RecommendationResourceCollectionPage.class);
         }
 
         if (json.has("recommendations")) {
-            recommendations = serializer.deserializeObject(json.get("recommendations"), RecommendationCollectionPage.class);
+            recommendations = serializer.deserializeObject(json.get("recommendations"), com.microsoft.graph.requests.RecommendationCollectionPage.class);
         }
 
         if (json.has("administrativeUnits")) {
-            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), AdministrativeUnitCollectionPage.class);
+            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), com.microsoft.graph.requests.AdministrativeUnitCollectionPage.class);
         }
 
         if (json.has("attributeSets")) {
-            attributeSets = serializer.deserializeObject(json.get("attributeSets"), AttributeSetCollectionPage.class);
+            attributeSets = serializer.deserializeObject(json.get("attributeSets"), com.microsoft.graph.requests.AttributeSetCollectionPage.class);
         }
 
         if (json.has("customSecurityAttributeDefinitions")) {
-            customSecurityAttributeDefinitions = serializer.deserializeObject(json.get("customSecurityAttributeDefinitions"), CustomSecurityAttributeDefinitionCollectionPage.class);
+            customSecurityAttributeDefinitions = serializer.deserializeObject(json.get("customSecurityAttributeDefinitions"), com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage.class);
         }
 
         if (json.has("deletedItems")) {
-            deletedItems = serializer.deserializeObject(json.get("deletedItems"), DirectoryObjectCollectionPage.class);
+            deletedItems = serializer.deserializeObject(json.get("deletedItems"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("federationConfigurations")) {
-            federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), IdentityProviderBaseCollectionPage.class);
+            federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), com.microsoft.graph.requests.IdentityProviderBaseCollectionPage.class);
         }
 
         if (json.has("inboundSharedUserProfiles")) {
-            inboundSharedUserProfiles = serializer.deserializeObject(json.get("inboundSharedUserProfiles"), InboundSharedUserProfileCollectionPage.class);
+            inboundSharedUserProfiles = serializer.deserializeObject(json.get("inboundSharedUserProfiles"), com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage.class);
         }
 
         if (json.has("outboundSharedUserProfiles")) {
-            outboundSharedUserProfiles = serializer.deserializeObject(json.get("outboundSharedUserProfiles"), OutboundSharedUserProfileCollectionPage.class);
+            outboundSharedUserProfiles = serializer.deserializeObject(json.get("outboundSharedUserProfiles"), com.microsoft.graph.requests.OutboundSharedUserProfileCollectionPage.class);
         }
 
         if (json.has("sharedEmailDomains")) {
-            sharedEmailDomains = serializer.deserializeObject(json.get("sharedEmailDomains"), SharedEmailDomainCollectionPage.class);
+            sharedEmailDomains = serializer.deserializeObject(json.get("sharedEmailDomains"), com.microsoft.graph.requests.SharedEmailDomainCollectionPage.class);
         }
 
         if (json.has("featureRolloutPolicies")) {
-            featureRolloutPolicies = serializer.deserializeObject(json.get("featureRolloutPolicies"), FeatureRolloutPolicyCollectionPage.class);
+            featureRolloutPolicies = serializer.deserializeObject(json.get("featureRolloutPolicies"), com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage.class);
         }
     }
 }

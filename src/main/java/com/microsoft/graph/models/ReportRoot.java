@@ -9,19 +9,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ApplicationSignInDetailedSummary;
 import com.microsoft.graph.models.AuthenticationMethodsRoot;
-import com.microsoft.graph.models.CredentialUserRegistrationDetails;
-import com.microsoft.graph.models.UserCredentialUsageDetails;
-import com.microsoft.graph.models.PrintUsageByPrinter;
-import com.microsoft.graph.models.PrintUsageByUser;
-import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage;
 import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage;
 import com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage;
-import com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage;
-import com.microsoft.graph.requests.PrintUsageByUserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -45,7 +37,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "applicationSignInDetailedSummary", alternate = {"ApplicationSignInDetailedSummary"})
     @Expose
 	@Nullable
-    public ApplicationSignInDetailedSummaryCollectionPage applicationSignInDetailedSummary;
+    public com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage applicationSignInDetailedSummary;
 
     /**
      * The Authentication Methods.
@@ -63,7 +55,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "credentialUserRegistrationDetails", alternate = {"CredentialUserRegistrationDetails"})
     @Expose
 	@Nullable
-    public CredentialUserRegistrationDetailsCollectionPage credentialUserRegistrationDetails;
+    public com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage credentialUserRegistrationDetails;
 
     /**
      * The User Credential Usage Details.
@@ -72,7 +64,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userCredentialUsageDetails", alternate = {"UserCredentialUsageDetails"})
     @Expose
 	@Nullable
-    public UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
+    public com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
 
     /**
      * The Daily Print Usage By Printer.
@@ -81,7 +73,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dailyPrintUsageByPrinter", alternate = {"DailyPrintUsageByPrinter"})
     @Expose
 	@Nullable
-    public PrintUsageByPrinterCollectionPage dailyPrintUsageByPrinter;
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage dailyPrintUsageByPrinter;
 
     /**
      * The Daily Print Usage By User.
@@ -90,7 +82,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dailyPrintUsageByUser", alternate = {"DailyPrintUsageByUser"})
     @Expose
 	@Nullable
-    public PrintUsageByUserCollectionPage dailyPrintUsageByUser;
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionPage dailyPrintUsageByUser;
 
     /**
      * The Daily Print Usage Summaries By Printer.
@@ -99,7 +91,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dailyPrintUsageSummariesByPrinter", alternate = {"DailyPrintUsageSummariesByPrinter"})
     @Expose
 	@Nullable
-    public PrintUsageByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
 
     /**
      * The Daily Print Usage Summaries By User.
@@ -108,7 +100,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dailyPrintUsageSummariesByUser", alternate = {"DailyPrintUsageSummariesByUser"})
     @Expose
 	@Nullable
-    public PrintUsageByUserCollectionPage dailyPrintUsageSummariesByUser;
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionPage dailyPrintUsageSummariesByUser;
 
     /**
      * The Monthly Print Usage By Printer.
@@ -117,7 +109,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "monthlyPrintUsageByPrinter", alternate = {"MonthlyPrintUsageByPrinter"})
     @Expose
 	@Nullable
-    public PrintUsageByPrinterCollectionPage monthlyPrintUsageByPrinter;
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage monthlyPrintUsageByPrinter;
 
     /**
      * The Monthly Print Usage By User.
@@ -126,7 +118,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "monthlyPrintUsageByUser", alternate = {"MonthlyPrintUsageByUser"})
     @Expose
 	@Nullable
-    public PrintUsageByUserCollectionPage monthlyPrintUsageByUser;
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionPage monthlyPrintUsageByUser;
 
     /**
      * The Monthly Print Usage Summaries By Printer.
@@ -135,7 +127,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "monthlyPrintUsageSummariesByPrinter", alternate = {"MonthlyPrintUsageSummariesByPrinter"})
     @Expose
 	@Nullable
-    public PrintUsageByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
 
     /**
      * The Monthly Print Usage Summaries By User.
@@ -144,16 +136,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "monthlyPrintUsageSummariesByUser", alternate = {"MonthlyPrintUsageSummariesByUser"})
     @Expose
 	@Nullable
-    public PrintUsageByUserCollectionPage monthlyPrintUsageSummariesByUser;
-
-    /**
-     * The Security.
-     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
-     */
-    @SerializedName(value = "security", alternate = {"Security"})
-    @Expose
-	@Nullable
-    public SecurityReportsRoot security;
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionPage monthlyPrintUsageSummariesByUser;
 
 
     /**
@@ -166,47 +149,47 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("applicationSignInDetailedSummary")) {
-            applicationSignInDetailedSummary = serializer.deserializeObject(json.get("applicationSignInDetailedSummary"), ApplicationSignInDetailedSummaryCollectionPage.class);
+            applicationSignInDetailedSummary = serializer.deserializeObject(json.get("applicationSignInDetailedSummary"), com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage.class);
         }
 
         if (json.has("credentialUserRegistrationDetails")) {
-            credentialUserRegistrationDetails = serializer.deserializeObject(json.get("credentialUserRegistrationDetails"), CredentialUserRegistrationDetailsCollectionPage.class);
+            credentialUserRegistrationDetails = serializer.deserializeObject(json.get("credentialUserRegistrationDetails"), com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage.class);
         }
 
         if (json.has("userCredentialUsageDetails")) {
-            userCredentialUsageDetails = serializer.deserializeObject(json.get("userCredentialUsageDetails"), UserCredentialUsageDetailsCollectionPage.class);
+            userCredentialUsageDetails = serializer.deserializeObject(json.get("userCredentialUsageDetails"), com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageByPrinter")) {
-            dailyPrintUsageByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageByPrinter"), PrintUsageByPrinterCollectionPage.class);
+            dailyPrintUsageByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageByPrinter"), com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageByUser")) {
-            dailyPrintUsageByUser = serializer.deserializeObject(json.get("dailyPrintUsageByUser"), PrintUsageByUserCollectionPage.class);
+            dailyPrintUsageByUser = serializer.deserializeObject(json.get("dailyPrintUsageByUser"), com.microsoft.graph.requests.PrintUsageByUserCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageSummariesByPrinter")) {
-            dailyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByPrinter"), PrintUsageByPrinterCollectionPage.class);
+            dailyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByPrinter"), com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageSummariesByUser")) {
-            dailyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser"), PrintUsageByUserCollectionPage.class);
+            dailyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser"), com.microsoft.graph.requests.PrintUsageByUserCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageByPrinter")) {
-            monthlyPrintUsageByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageByPrinter"), PrintUsageByPrinterCollectionPage.class);
+            monthlyPrintUsageByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageByPrinter"), com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageByUser")) {
-            monthlyPrintUsageByUser = serializer.deserializeObject(json.get("monthlyPrintUsageByUser"), PrintUsageByUserCollectionPage.class);
+            monthlyPrintUsageByUser = serializer.deserializeObject(json.get("monthlyPrintUsageByUser"), com.microsoft.graph.requests.PrintUsageByUserCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageSummariesByPrinter")) {
-            monthlyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByPrinter"), PrintUsageByPrinterCollectionPage.class);
+            monthlyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByPrinter"), com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageSummariesByUser")) {
-            monthlyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser"), PrintUsageByUserCollectionPage.class);
+            monthlyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser"), com.microsoft.graph.requests.PrintUsageByUserCollectionPage.class);
         }
     }
 }

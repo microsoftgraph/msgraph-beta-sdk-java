@@ -28,18 +28,6 @@ public enum BookingStaffRole
     */
     EXTERNAL_GUEST,
     /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * scheduler
-    */
-    SCHEDULER,
-    /**
-    * team Member
-    */
-    TEAM_MEMBER,
-    /**
     * For BookingStaffRole values that were not expected from the service
     */
     UNEXPECTED_VALUE

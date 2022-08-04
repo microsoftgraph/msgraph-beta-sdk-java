@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnPremisesAgentGroup;
-import com.microsoft.graph.requests.OnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.PublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder<OnPre
      * @return the collection request builder
      */
     @Nonnull
-    public OnPremisesAgentCollectionRequestBuilder agents() {
-        return new OnPremisesAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agents"), getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentCollectionRequestBuilder agents() {
+        return new com.microsoft.graph.requests.OnPremisesAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agents"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder<OnPre
      * @param id the item identifier
      */
     @Nonnull
-    public OnPremisesAgentRequestBuilder agents(@Nonnull final String id) {
-        return new OnPremisesAgentRequestBuilder(getRequestUrlWithAdditionalSegment("agents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentRequestBuilder agents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnPremisesAgentRequestBuilder(getRequestUrlWithAdditionalSegment("agents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PublishedResource collection
@@ -86,8 +82,8 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder<OnPre
      * @return the collection request builder
      */
     @Nonnull
-    public PublishedResourceCollectionRequestBuilder publishedResources() {
-        return new PublishedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources"), getClient(), null);
+    public com.microsoft.graph.requests.PublishedResourceCollectionRequestBuilder publishedResources() {
+        return new com.microsoft.graph.requests.PublishedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder<OnPre
      * @param id the item identifier
      */
     @Nonnull
-    public PublishedResourceRequestBuilder publishedResources(@Nonnull final String id) {
-        return new PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PublishedResourceRequestBuilder publishedResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
     }
 }

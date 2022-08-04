@@ -14,7 +14,6 @@ import com.microsoft.graph.models.ApplicationMode;
 import com.microsoft.graph.models.LabelPolicy;
 import com.microsoft.graph.models.AutoLabeling;
 import com.microsoft.graph.models.LabelActionBase;
-import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SensitivityLabelCollectionPage;
 
@@ -148,7 +147,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sublabels", alternate = {"Sublabels"})
     @Expose
 	@Nullable
-    public SensitivityLabelCollectionPage sublabels;
+    public com.microsoft.graph.requests.SensitivityLabelCollectionPage sublabels;
 
 
     /**
@@ -161,7 +160,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sublabels")) {
-            sublabels = serializer.deserializeObject(json.get("sublabels"), SensitivityLabelCollectionPage.class);
+            sublabels = serializer.deserializeObject(json.get("sublabels"), com.microsoft.graph.requests.SensitivityLabelCollectionPage.class);
         }
     }
 }

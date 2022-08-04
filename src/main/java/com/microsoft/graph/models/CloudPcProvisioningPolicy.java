@@ -11,10 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcDomainJoinConfiguration;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyImageType;
-import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.MicrosoftManagedDesktop;
 import com.microsoft.graph.models.CloudPcWindowsSettings;
-import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage;
 
@@ -32,24 +30,6 @@ import javax.annotation.Nonnull;
  */
 public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Alternate Resource Url.
-     * The URL of the alternate resource that links to this provisioning policy. Read-only.
-     */
-    @SerializedName(value = "alternateResourceUrl", alternate = {"AlternateResourceUrl"})
-    @Expose
-	@Nullable
-    public String alternateResourceUrl;
-
-    /**
-     * The Cloud Pc Group Display Name.
-     * The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
-     */
-    @SerializedName(value = "cloudPcGroupDisplayName", alternate = {"CloudPcGroupDisplayName"})
-    @Expose
-	@Nullable
-    public String cloudPcGroupDisplayName;
 
     /**
      * The Description.
@@ -79,15 +59,6 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     public CloudPcDomainJoinConfiguration domainJoinConfiguration;
 
     /**
-     * The Grace Period In Hours.
-     * The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
-     */
-    @SerializedName(value = "gracePeriodInHours", alternate = {"GracePeriodInHours"})
-    @Expose
-	@Nullable
-    public Integer gracePeriodInHours;
-
-    /**
      * The Image Display Name.
      * The display name for the OS image you’re provisioning.
      */
@@ -113,24 +84,6 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public CloudPcProvisioningPolicyImageType imageType;
-
-    /**
-     * The Local Admin Enabled.
-     * Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
-     */
-    @SerializedName(value = "localAdminEnabled", alternate = {"LocalAdminEnabled"})
-    @Expose
-	@Nullable
-    public Boolean localAdminEnabled;
-
-    /**
-     * The Managed By.
-     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue. Read-only.
-     */
-    @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
-    @Expose
-	@Nullable
-    public EnumSet<CloudPcManagementService> managedBy;
 
     /**
      * The Microsoft Managed Desktop.
@@ -166,7 +119,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public CloudPcProvisioningPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage assignments;
 
 
     /**
@@ -179,7 +132,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), CloudPcProvisioningPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage.class);
         }
     }
 }

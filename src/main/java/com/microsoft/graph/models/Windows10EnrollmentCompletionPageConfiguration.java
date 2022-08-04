@@ -54,15 +54,6 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     public Boolean allowLogCollectionOnInstallFailure;
 
     /**
-     * The Allow Non Blocking App Installation.
-     * Install all required apps as non blocking apps during white glove
-     */
-    @SerializedName(value = "allowNonBlockingAppInstallation", alternate = {"AllowNonBlockingAppInstallation"})
-    @Expose
-	@Nullable
-    public Boolean allowNonBlockingAppInstallation;
-
-    /**
      * The Block Device Setup Retry By User.
      * Allow the user to retry the setup on installation failure
      */

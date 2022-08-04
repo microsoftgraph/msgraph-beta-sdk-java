@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrinterShareViewpoint;
-import com.microsoft.graph.models.Group;
-import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.models.PrinterBase;
 import com.microsoft.graph.requests.GroupCollectionPage;
@@ -64,14 +62,14 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The groups whose users have access to print using the printer.
      */
 	@Nullable
-    public GroupCollectionPage allowedGroups;
+    public com.microsoft.graph.requests.GroupCollectionPage allowedGroups;
 
     /**
      * The Allowed Users.
      * The users who have access to print using the printer.
      */
 	@Nullable
-    public UserCollectionPage allowedUsers;
+    public com.microsoft.graph.requests.UserCollectionPage allowedUsers;
 
     /**
      * The Printer.
@@ -93,11 +91,11 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
 
         if (json.has("allowedGroups")) {
-            allowedGroups = serializer.deserializeObject(json.get("allowedGroups"), GroupCollectionPage.class);
+            allowedGroups = serializer.deserializeObject(json.get("allowedGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
         }
 
         if (json.has("allowedUsers")) {
-            allowedUsers = serializer.deserializeObject(json.get("allowedUsers"), UserCollectionPage.class);
+            allowedUsers = serializer.deserializeObject(json.get("allowedUsers"), com.microsoft.graph.requests.UserCollectionPage.class);
         }
     }
 }

@@ -120,7 +120,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Info.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "roleInfo", alternate = {"RoleInfo"})
     @Expose

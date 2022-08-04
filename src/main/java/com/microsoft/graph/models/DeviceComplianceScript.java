@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RunAsAccountType;
-import com.microsoft.graph.models.DeviceHealthScriptAssignment;
-import com.microsoft.graph.models.DeviceComplianceScriptDeviceState;
 import com.microsoft.graph.models.DeviceComplianceScriptRunSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionPage;
@@ -138,7 +136,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceHealthScriptAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionPage assignments;
 
     /**
      * The Device Run States.
@@ -147,7 +145,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
     @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
 	@Nullable
-    public DeviceComplianceScriptDeviceStateCollectionPage deviceRunStates;
+    public com.microsoft.graph.requests.DeviceComplianceScriptDeviceStateCollectionPage deviceRunStates;
 
     /**
      * The Run Summary.
@@ -169,11 +167,11 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceHealthScriptAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceRunStates")) {
-            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), DeviceComplianceScriptDeviceStateCollectionPage.class);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), com.microsoft.graph.requests.DeviceComplianceScriptDeviceStateCollectionPage.class);
         }
     }
 }

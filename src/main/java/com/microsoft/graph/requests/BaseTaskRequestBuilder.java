@@ -8,13 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.BaseTask;
-import com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChecklistItemRequestBuilder;
-import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.LinkedResource_v2CollectionRequestBuilder;
-import com.microsoft.graph.requests.LinkedResource_v2RequestBuilder;
-import com.microsoft.graph.requests.BaseTaskListWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +63,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public ChecklistItemCollectionRequestBuilder checklistItems() {
-        return new ChecklistItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems"), getClient(), null);
+    public com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder checklistItems() {
+        return new com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems"), getClient(), null);
     }
 
     /**
@@ -81,8 +74,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public ChecklistItemRequestBuilder checklistItems(@Nonnull final String id) {
-        return new ChecklistItemRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ChecklistItemRequestBuilder checklistItems(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChecklistItemRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Extension collection
@@ -90,8 +83,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public ExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public com.microsoft.graph.requests.ExtensionCollectionRequestBuilder extensions() {
+        return new com.microsoft.graph.requests.ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
     /**
@@ -101,8 +94,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExtensionRequestBuilder extensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the LinkedResource_v2 collection
@@ -110,8 +103,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public LinkedResource_v2CollectionRequestBuilder linkedResources() {
-        return new LinkedResource_v2CollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
+    public com.microsoft.graph.requests.LinkedResource_v2CollectionRequestBuilder linkedResources() {
+        return new com.microsoft.graph.requests.LinkedResource_v2CollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
     }
 
     /**
@@ -121,8 +114,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public LinkedResource_v2RequestBuilder linkedResources(@Nonnull final String id) {
-        return new LinkedResource_v2RequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.LinkedResource_v2RequestBuilder linkedResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LinkedResource_v2RequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);
     }
 
     /**
@@ -131,8 +124,8 @@ public class BaseTaskRequestBuilder extends BaseRequestBuilder<BaseTask> {
      * @return the BaseTaskListWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public BaseTaskListWithReferenceRequestBuilder parentList() {
-        return new BaseTaskListWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parentList"), getClient(), null);
+    public com.microsoft.graph.requests.BaseTaskListWithReferenceRequestBuilder parentList() {
+        return new com.microsoft.graph.requests.BaseTaskListWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parentList"), getClient(), null);
     }
 
     /**

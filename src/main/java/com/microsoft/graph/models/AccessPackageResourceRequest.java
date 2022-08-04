@@ -83,7 +83,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request Status.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "requestStatus", alternate = {"RequestStatus"})
     @Expose
@@ -101,7 +101,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Access Package Resource.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose

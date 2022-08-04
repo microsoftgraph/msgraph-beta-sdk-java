@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.InformationProtectionPolicySetting;
-import com.microsoft.graph.security.models.SensitivityLabel;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.SensitivityLabelCollectionPage;
 
@@ -45,7 +44,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sensitivityLabels", alternate = {"SensitivityLabels"})
     @Expose
 	@Nullable
-    public SensitivityLabelCollectionPage sensitivityLabels;
+    public com.microsoft.graph.security.requests.SensitivityLabelCollectionPage sensitivityLabels;
 
 
     /**
@@ -58,7 +57,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sensitivityLabels")) {
-            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels"), SensitivityLabelCollectionPage.class);
+            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels"), com.microsoft.graph.security.requests.SensitivityLabelCollectionPage.class);
         }
     }
 }

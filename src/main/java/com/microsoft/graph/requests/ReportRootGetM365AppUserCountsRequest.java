@@ -4,6 +4,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests;
+import com.microsoft.graph.models.Report;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.requests.ReportRootGetM365AppUserCountsRequest;
 
@@ -20,7 +21,7 @@ import com.microsoft.graph.models.ReportRootGetM365AppUserCountsParameterSet;
 /**
  * The class for the Report Root Get M365App User Counts Request.
  */
-public class ReportRootGetM365AppUserCountsRequest extends BaseRequest<java.io.InputStream> {
+public class ReportRootGetM365AppUserCountsRequest extends BaseRequest<Report> {
     /**
      * The request for this ReportRootGetM365AppUserCounts
      *
@@ -29,27 +30,27 @@ public class ReportRootGetM365AppUserCountsRequest extends BaseRequest<java.io.I
      * @param requestOptions the options for this request
      */
     public ReportRootGetM365AppUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, java.io.InputStream.class);
+        super(requestUrl, client, requestOptions, Report.class);
     }
 
     /**
-     * Gets the java.io.InputStream
+     * Gets the Report
      *
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<java.io.InputStream> getAsync() {
+    public java.util.concurrent.CompletableFuture<Report> getAsync() {
         return sendAsync(HttpMethod.GET, null);
     }
 
     /**
-     * Gets the java.io.InputStream
+     * Gets the Report
      *
-     * @return the java.io.InputStream
+     * @return the Report
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    public java.io.InputStream get() throws ClientException {
+    public Report get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

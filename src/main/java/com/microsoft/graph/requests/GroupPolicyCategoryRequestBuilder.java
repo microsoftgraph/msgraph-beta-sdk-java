@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyCategory;
-import com.microsoft.graph.requests.GroupPolicyCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionFileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +62,8 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder<GroupP
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyCategoryCollectionWithReferencesRequestBuilder children() {
-        return new GroupPolicyCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyCategoryCollectionWithReferencesRequestBuilder children() {
+        return new com.microsoft.graph.requests.GroupPolicyCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder<GroupP
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyCategoryWithReferenceRequestBuilder children(@Nonnull final String id) {
-        return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder children(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
     }
 
     /**
@@ -88,8 +83,8 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder<GroupP
      * @return the GroupPolicyDefinitionFileWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
-        return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
     }
     /**
      *  Gets a request builder for the GroupPolicyDefinition collection
@@ -97,8 +92,8 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder<GroupP
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
-        return new GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
     }
 
     /**
@@ -108,8 +103,8 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder<GroupP
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyDefinitionWithReferenceRequestBuilder definitions(@Nonnull final String id) {
-        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder definitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
     }
 
     /**
@@ -118,7 +113,7 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder<GroupP
      * @return the GroupPolicyCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyCategoryWithReferenceRequestBuilder parent() {
-        return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder parent() {
+        return new com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
     }
 }

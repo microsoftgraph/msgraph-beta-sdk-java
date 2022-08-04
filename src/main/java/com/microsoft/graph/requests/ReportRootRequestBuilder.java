@@ -33,18 +33,6 @@ import com.microsoft.graph.models.OverallPrintUsageSummary;
 import com.microsoft.graph.models.PrinterUsageSummary;
 import com.microsoft.graph.models.PrintUsageSummary;
 import com.microsoft.graph.models.UserPrintUsageSummary;
-import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationMethodsRootRequestBuilder;
-import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.CredentialUserRegistrationDetailsRequestBuilder;
-import com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserCredentialUsageDetailsRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByUserRequestBuilder;
-import com.microsoft.graph.requests.SecurityReportsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -192,8 +180,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public ApplicationSignInDetailedSummaryCollectionRequestBuilder applicationSignInDetailedSummary() {
-        return new ApplicationSignInDetailedSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("applicationSignInDetailedSummary"), getClient(), null);
+    public com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionRequestBuilder applicationSignInDetailedSummary() {
+        return new com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("applicationSignInDetailedSummary"), getClient(), null);
     }
 
     /**
@@ -203,8 +191,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public ApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(@Nonnull final String id) {
-        return new ApplicationSignInDetailedSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("applicationSignInDetailedSummary") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApplicationSignInDetailedSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("applicationSignInDetailedSummary") + "/" + id, getClient(), null);
     }
 
     /**
@@ -213,8 +201,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the AuthenticationMethodsRootRequestBuilder instance
      */
     @Nonnull
-    public AuthenticationMethodsRootRequestBuilder authenticationMethods() {
-        return new AuthenticationMethodsRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethods"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodsRootRequestBuilder authenticationMethods() {
+        return new com.microsoft.graph.requests.AuthenticationMethodsRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethods"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CredentialUserRegistrationDetails collection
@@ -222,8 +210,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public CredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails() {
-        return new CredentialUserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails"), getClient(), null);
+    public com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails() {
+        return new com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails"), getClient(), null);
     }
 
     /**
@@ -233,8 +221,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public CredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails(@Nonnull final String id) {
-        return new CredentialUserRegistrationDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CredentialUserRegistrationDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserCredentialUsageDetails collection
@@ -242,8 +230,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public UserCredentialUsageDetailsCollectionRequestBuilder userCredentialUsageDetails() {
-        return new UserCredentialUsageDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userCredentialUsageDetails"), getClient(), null);
+    public com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionRequestBuilder userCredentialUsageDetails() {
+        return new com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userCredentialUsageDetails"), getClient(), null);
     }
 
     /**
@@ -253,8 +241,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public UserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails(@Nonnull final String id) {
-        return new UserCredentialUsageDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userCredentialUsageDetails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserCredentialUsageDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userCredentialUsageDetails") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByPrinter collection
@@ -262,8 +250,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter() {
-        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter() {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter"), getClient(), null);
     }
 
     /**
@@ -273,8 +261,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(@Nonnull final String id) {
-        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByUser collection
@@ -282,8 +270,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser() {
-        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser() {
+        return new com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser"), getClient(), null);
     }
 
     /**
@@ -293,8 +281,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByUserRequestBuilder dailyPrintUsageByUser(@Nonnull final String id) {
-        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserRequestBuilder dailyPrintUsageByUser(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByPrinter collection
@@ -302,8 +290,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageSummariesByPrinter() {
-        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByPrinter"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageSummariesByPrinter() {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByPrinter"), getClient(), null);
     }
 
     /**
@@ -313,8 +301,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter(@Nonnull final String id) {
-        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByPrinter") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByPrinter") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByUser collection
@@ -322,8 +310,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByUserCollectionRequestBuilder dailyPrintUsageSummariesByUser() {
-        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByUser"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder dailyPrintUsageSummariesByUser() {
+        return new com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByUser"), getClient(), null);
     }
 
     /**
@@ -333,8 +321,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByUserRequestBuilder dailyPrintUsageSummariesByUser(@Nonnull final String id) {
-        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByUser") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserRequestBuilder dailyPrintUsageSummariesByUser(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageSummariesByUser") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByPrinter collection
@@ -342,8 +330,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter() {
-        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter() {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter"), getClient(), null);
     }
 
     /**
@@ -353,8 +341,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(@Nonnull final String id) {
-        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByUser collection
@@ -362,8 +350,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser() {
-        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser() {
+        return new com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser"), getClient(), null);
     }
 
     /**
@@ -373,8 +361,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByUserRequestBuilder monthlyPrintUsageByUser(@Nonnull final String id) {
-        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserRequestBuilder monthlyPrintUsageByUser(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByPrinter collection
@@ -382,8 +370,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageSummariesByPrinter() {
-        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByPrinter"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageSummariesByPrinter() {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByPrinter"), getClient(), null);
     }
 
     /**
@@ -393,8 +381,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter(@Nonnull final String id) {
-        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByPrinter") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByPrinter") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByUser collection
@@ -402,8 +390,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByUserCollectionRequestBuilder monthlyPrintUsageSummariesByUser() {
-        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByUser"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder monthlyPrintUsageSummariesByUser() {
+        return new com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByUser"), getClient(), null);
     }
 
     /**
@@ -413,18 +401,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByUserRequestBuilder monthlyPrintUsageSummariesByUser(@Nonnull final String id) {
-        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByUser") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for SecurityReportsRoot
-     *
-     * @return the SecurityReportsRootRequestBuilder instance
-     */
-    @Nonnull
-    public SecurityReportsRootRequestBuilder security() {
-        return new SecurityReportsRootRequestBuilder(getRequestUrlWithAdditionalSegment("security"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserRequestBuilder monthlyPrintUsageSummariesByUser(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageSummariesByUser") + "/" + id, getClient(), null);
     }
 
     /**
@@ -1450,9 +1428,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-     * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
      */
-    @Deprecated
     @Nonnull
     public ReportRootGetAttackSimulationRepeatOffendersCollectionRequestBuilder getAttackSimulationRepeatOffenders() {
         return new ReportRootGetAttackSimulationRepeatOffendersCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationRepeatOffenders"), getClient(), null);
@@ -1461,9 +1437,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-     * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
      */
-    @Deprecated
     @Nonnull
     public ReportRootGetAttackSimulationSimulationUserCoverageCollectionRequestBuilder getAttackSimulationSimulationUserCoverage() {
         return new ReportRootGetAttackSimulationSimulationUserCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationSimulationUserCoverage"), getClient(), null);
@@ -1472,9 +1446,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-     * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
      */
-    @Deprecated
     @Nonnull
     public ReportRootGetAttackSimulationTrainingUserCoverageCollectionRequestBuilder getAttackSimulationTrainingUserCoverage() {
         return new ReportRootGetAttackSimulationTrainingUserCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationTrainingUserCoverage"), getClient(), null);

@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
 
     /**
      * The Claim Value.
-     * The value of the authentication context claim.
+     * Value of the authentication context claim.
      */
     @SerializedName(value = "claimValue", alternate = {"ClaimValue"})
     @Expose
@@ -36,7 +36,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
 
     /**
      * The Is Enabled.
-     * Whether this rule is enabled.
+     * Indicates if the setting is enabled.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

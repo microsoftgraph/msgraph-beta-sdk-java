@@ -11,10 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MobileAppIdentifier;
 import com.microsoft.graph.models.ManagedAppFlaggedReason;
-import com.microsoft.graph.models.ManagedAppPolicy;
-import com.microsoft.graph.models.ManagedAppOperation;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.ManagedAppPolicyCollectionPage;
 import com.microsoft.graph.requests.ManagedAppOperationCollectionPage;
 
 
@@ -183,7 +180,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     @SerializedName(value = "appliedPolicies", alternate = {"AppliedPolicies"})
     @Expose
 	@Nullable
-    public ManagedAppPolicyCollectionPage appliedPolicies;
+    public com.microsoft.graph.requests.ManagedAppPolicyCollectionPage appliedPolicies;
 
     /**
      * The Intended Policies.
@@ -192,7 +189,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     @SerializedName(value = "intendedPolicies", alternate = {"IntendedPolicies"})
     @Expose
 	@Nullable
-    public ManagedAppPolicyCollectionPage intendedPolicies;
+    public com.microsoft.graph.requests.ManagedAppPolicyCollectionPage intendedPolicies;
 
     /**
      * The Operations.
@@ -201,7 +198,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public ManagedAppOperationCollectionPage operations;
+    public com.microsoft.graph.requests.ManagedAppOperationCollectionPage operations;
 
 
     /**
@@ -214,15 +211,15 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
 
         if (json.has("appliedPolicies")) {
-            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies"), ManagedAppPolicyCollectionPage.class);
+            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies"), com.microsoft.graph.requests.ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("intendedPolicies")) {
-            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies"), ManagedAppPolicyCollectionPage.class);
+            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies"), com.microsoft.graph.requests.ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), ManagedAppOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.ManagedAppOperationCollectionPage.class);
         }
     }
 }

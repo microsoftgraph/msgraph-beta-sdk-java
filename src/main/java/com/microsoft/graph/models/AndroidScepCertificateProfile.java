@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.HashAlgorithms;
 import com.microsoft.graph.models.KeySize;
 import com.microsoft.graph.models.KeyUsages;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.AndroidCertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
 
@@ -92,7 +91,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 
     /**
@@ -105,7 +104,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

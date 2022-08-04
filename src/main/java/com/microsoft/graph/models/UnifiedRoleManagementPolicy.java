@@ -10,9 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Identity;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyRule;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -49,7 +47,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Is Organization Default.
-     * This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
+     * This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory.
      */
     @SerializedName(value = "isOrganizationDefault", alternate = {"IsOrganizationDefault"})
     @Expose
@@ -76,7 +74,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Scope Id.
-     * The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
+     * The id of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -94,21 +92,21 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Effective Rules.
-     * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
+     * Not implemented. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval.
      */
     @SerializedName(value = "effectiveRules", alternate = {"EffectiveRules"})
     @Expose
 	@Nullable
-    public UnifiedRoleManagementPolicyRuleCollectionPage effectiveRules;
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage effectiveRules;
 
     /**
      * The Rules.
-     * The collection of rules like approval rules and expiration rules. Supports $expand.
+     * The collection of rules like approval rules and expiration rules.
      */
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose
 	@Nullable
-    public UnifiedRoleManagementPolicyRuleCollectionPage rules;
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage rules;
 
 
     /**
@@ -121,11 +119,11 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
 
         if (json.has("effectiveRules")) {
-            effectiveRules = serializer.deserializeObject(json.get("effectiveRules"), UnifiedRoleManagementPolicyRuleCollectionPage.class);
+            effectiveRules = serializer.deserializeObject(json.get("effectiveRules"), com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage.class);
         }
 
         if (json.has("rules")) {
-            rules = serializer.deserializeObject(json.get("rules"), UnifiedRoleManagementPolicyRuleCollectionPage.class);
+            rules = serializer.deserializeObject(json.get("rules"), com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage.class);
         }
     }
 }

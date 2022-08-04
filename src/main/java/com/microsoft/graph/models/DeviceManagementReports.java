@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementCachedReportConfiguration;
-import com.microsoft.graph.models.DeviceManagementExportJob;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage;
@@ -37,7 +35,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
     @SerializedName(value = "cachedReportConfigurations", alternate = {"CachedReportConfigurations"})
     @Expose
 	@Nullable
-    public DeviceManagementCachedReportConfigurationCollectionPage cachedReportConfigurations;
+    public com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionPage cachedReportConfigurations;
 
     /**
      * The Export Jobs.
@@ -46,7 +44,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
     @SerializedName(value = "exportJobs", alternate = {"ExportJobs"})
     @Expose
 	@Nullable
-    public DeviceManagementExportJobCollectionPage exportJobs;
+    public com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage exportJobs;
 
 
     /**
@@ -59,11 +57,11 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
 
 
         if (json.has("cachedReportConfigurations")) {
-            cachedReportConfigurations = serializer.deserializeObject(json.get("cachedReportConfigurations"), DeviceManagementCachedReportConfigurationCollectionPage.class);
+            cachedReportConfigurations = serializer.deserializeObject(json.get("cachedReportConfigurations"), com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionPage.class);
         }
 
         if (json.has("exportJobs")) {
-            exportJobs = serializer.deserializeObject(json.get("exportJobs"), DeviceManagementExportJobCollectionPage.class);
+            exportJobs = serializer.deserializeObject(json.get("exportJobs"), com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage.class);
         }
     }
 }

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SynchronizationTemplate;
-import com.microsoft.graph.requests.SynchronizationSchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder<Sy
      * @return the SynchronizationSchemaRequestBuilder instance
      */
     @Nonnull
-    public SynchronizationSchemaRequestBuilder schema() {
-        return new SynchronizationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
+    public com.microsoft.graph.requests.SynchronizationSchemaRequestBuilder schema() {
+        return new com.microsoft.graph.requests.SynchronizationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 }

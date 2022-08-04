@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
-import com.microsoft.graph.models.PurchaseInvoiceLine;
 import com.microsoft.graph.models.Vendor;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PurchaseInvoiceLineCollectionPage;
@@ -281,7 +280,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "purchaseInvoiceLines", alternate = {"PurchaseInvoiceLines"})
     @Expose
 	@Nullable
-    public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
+    public com.microsoft.graph.requests.PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
 
     /**
      * The Vendor.
@@ -303,7 +302,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("purchaseInvoiceLines")) {
-            purchaseInvoiceLines = serializer.deserializeObject(json.get("purchaseInvoiceLines"), PurchaseInvoiceLineCollectionPage.class);
+            purchaseInvoiceLines = serializer.deserializeObject(json.get("purchaseInvoiceLines"), com.microsoft.graph.requests.PurchaseInvoiceLineCollectionPage.class);
         }
     }
 }

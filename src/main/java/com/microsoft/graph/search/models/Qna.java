@@ -77,7 +77,7 @@ public class Qna extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Language Tags.
-     * A list of language names that are geographically specific and that this QnA can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
+     * A list of language names that are geographically specific and that this QnA can be viewed in. Each language tag value follows the pattern {language}-{REGION}. As an example, en-US is English as used in the United States. See supported language tags for the list of possible values.
      */
     @SerializedName(value = "languageTags", alternate = {"LanguageTags"})
     @Expose

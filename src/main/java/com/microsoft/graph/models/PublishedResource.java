@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnPremisesPublishingType;
-import com.microsoft.graph.models.OnPremisesAgentGroup;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage;
 
@@ -63,7 +62,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose
 	@Nullable
-    public OnPremisesAgentGroupCollectionPage agentGroups;
+    public com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage agentGroups;
 
 
     /**
@@ -76,7 +75,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
 
 
         if (json.has("agentGroups")) {
-            agentGroups = serializer.deserializeObject(json.get("agentGroups"), OnPremisesAgentGroupCollectionPage.class);
+            agentGroups = serializer.deserializeObject(json.get("agentGroups"), com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage.class);
         }
     }
 }

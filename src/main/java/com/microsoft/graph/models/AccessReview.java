@@ -12,11 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.AccessReviewSettings;
-import com.microsoft.graph.models.AccessReviewDecision;
-import com.microsoft.graph.models.AccessReview;
-import com.microsoft.graph.models.AccessReviewReviewer;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.AccessReviewDecisionCollectionPage;
 import com.microsoft.graph.requests.AccessReviewCollectionPage;
 import com.microsoft.graph.requests.AccessReviewReviewerCollectionPage;
 
@@ -132,7 +128,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
 	@Nullable
-    public AccessReviewDecisionCollectionPage decisions;
+    public com.microsoft.graph.requests.AccessReviewDecisionCollectionPage decisions;
 
     /**
      * The Instances.
@@ -141,7 +137,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
 	@Nullable
-    public AccessReviewCollectionPage instances;
+    public com.microsoft.graph.requests.AccessReviewCollectionPage instances;
 
     /**
      * The My Decisions.
@@ -150,7 +146,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     @SerializedName(value = "myDecisions", alternate = {"MyDecisions"})
     @Expose
 	@Nullable
-    public AccessReviewDecisionCollectionPage myDecisions;
+    public com.microsoft.graph.requests.AccessReviewDecisionCollectionPage myDecisions;
 
     /**
      * The Reviewers.
@@ -159,7 +155,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
 	@Nullable
-    public AccessReviewReviewerCollectionPage reviewers;
+    public com.microsoft.graph.requests.AccessReviewReviewerCollectionPage reviewers;
 
 
     /**
@@ -172,19 +168,19 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
 
         if (json.has("decisions")) {
-            decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewDecisionCollectionPage.class);
+            decisions = serializer.deserializeObject(json.get("decisions"), com.microsoft.graph.requests.AccessReviewDecisionCollectionPage.class);
         }
 
         if (json.has("instances")) {
-            instances = serializer.deserializeObject(json.get("instances"), AccessReviewCollectionPage.class);
+            instances = serializer.deserializeObject(json.get("instances"), com.microsoft.graph.requests.AccessReviewCollectionPage.class);
         }
 
         if (json.has("myDecisions")) {
-            myDecisions = serializer.deserializeObject(json.get("myDecisions"), AccessReviewDecisionCollectionPage.class);
+            myDecisions = serializer.deserializeObject(json.get("myDecisions"), com.microsoft.graph.requests.AccessReviewDecisionCollectionPage.class);
         }
 
         if (json.has("reviewers")) {
-            reviewers = serializer.deserializeObject(json.get("reviewers"), AccessReviewReviewerCollectionPage.class);
+            reviewers = serializer.deserializeObject(json.get("reviewers"), com.microsoft.graph.requests.AccessReviewReviewerCollectionPage.class);
         }
     }
 }

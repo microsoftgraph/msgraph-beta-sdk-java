@@ -11,10 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DelegatedAdminAccessDetails;
 import com.microsoft.graph.models.DelegatedAdminRelationshipCustomerParticipant;
+import com.microsoft.graph.models.DelegatedAdminRelationshipParticipant;
 import com.microsoft.graph.models.DelegatedAdminRelationshipStatus;
-import com.microsoft.graph.models.DelegatedAdminAccessAssignment;
-import com.microsoft.graph.models.DelegatedAdminRelationshipOperation;
-import com.microsoft.graph.models.DelegatedAdminRelationshipRequest;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DelegatedAdminAccessAssignmentCollectionPage;
 import com.microsoft.graph.requests.DelegatedAdminRelationshipOperationCollectionPage;
@@ -108,6 +106,15 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
+     * The Partner.
+     * 
+     */
+    @SerializedName(value = "partner", alternate = {"Partner"})
+    @Expose
+	@Nullable
+    public DelegatedAdminRelationshipParticipant partner;
+
+    /**
      * The Status.
      * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
      */
@@ -123,7 +130,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     @SerializedName(value = "accessAssignments", alternate = {"AccessAssignments"})
     @Expose
 	@Nullable
-    public DelegatedAdminAccessAssignmentCollectionPage accessAssignments;
+    public com.microsoft.graph.requests.DelegatedAdminAccessAssignmentCollectionPage accessAssignments;
 
     /**
      * The Operations.
@@ -132,7 +139,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public DelegatedAdminRelationshipOperationCollectionPage operations;
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipOperationCollectionPage operations;
 
     /**
      * The Requests.
@@ -141,7 +148,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     @SerializedName(value = "requests", alternate = {"Requests"})
     @Expose
 	@Nullable
-    public DelegatedAdminRelationshipRequestCollectionPage requests;
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipRequestCollectionPage requests;
 
 
     /**
@@ -154,15 +161,15 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
 
         if (json.has("accessAssignments")) {
-            accessAssignments = serializer.deserializeObject(json.get("accessAssignments"), DelegatedAdminAccessAssignmentCollectionPage.class);
+            accessAssignments = serializer.deserializeObject(json.get("accessAssignments"), com.microsoft.graph.requests.DelegatedAdminAccessAssignmentCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), DelegatedAdminRelationshipOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.DelegatedAdminRelationshipOperationCollectionPage.class);
         }
 
         if (json.has("requests")) {
-            requests = serializer.deserializeObject(json.get("requests"), DelegatedAdminRelationshipRequestCollectionPage.class);
+            requests = serializer.deserializeObject(json.get("requests"), com.microsoft.graph.requests.DelegatedAdminRelationshipRequestCollectionPage.class);
         }
     }
 }

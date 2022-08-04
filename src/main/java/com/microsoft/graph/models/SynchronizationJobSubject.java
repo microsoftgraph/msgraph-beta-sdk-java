@@ -40,7 +40,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
 
     /**
      * The Links.
-     * Principals that you would like to provision.
+     * 
      */
     @SerializedName(value = "links", alternate = {"Links"})
     @Expose
@@ -58,7 +58,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
 
     /**
      * The Object Type Name.
-     * The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
+     * The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronization from Active Directory to Azure AD.User for synchronization from Azure AD to a third-party application. Worker for synchronization from Workday to either Active Directory or Azure AD.
      */
     @SerializedName(value = "objectTypeName", alternate = {"ObjectTypeName"})
     @Expose

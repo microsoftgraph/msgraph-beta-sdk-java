@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementTemplateSettingCategory;
-import com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
-        return new DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
+        return new com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
-        return new DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementSettingInstance collection
@@ -84,8 +82,8 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementSettingInstanceCollectionRequestBuilder recommendedSettings() {
-        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recommendedSettings"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder recommendedSettings() {
+        return new com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recommendedSettings"), getClient(), null);
     }
 
     /**
@@ -95,7 +93,7 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementSettingInstanceRequestBuilder recommendedSettings(@Nonnull final String id) {
-        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("recommendedSettings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder recommendedSettings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("recommendedSettings") + "/" + id, getClient(), null);
     }
 }

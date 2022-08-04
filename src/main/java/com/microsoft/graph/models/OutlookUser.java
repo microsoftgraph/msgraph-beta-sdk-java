@@ -9,10 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.OutlookCategory;
-import com.microsoft.graph.models.OutlookTaskFolder;
-import com.microsoft.graph.models.OutlookTaskGroup;
-import com.microsoft.graph.models.OutlookTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OutlookCategoryCollectionPage;
 import com.microsoft.graph.requests.OutlookTaskFolderCollectionPage;
@@ -41,7 +37,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "masterCategories", alternate = {"MasterCategories"})
     @Expose
 	@Nullable
-    public OutlookCategoryCollectionPage masterCategories;
+    public com.microsoft.graph.requests.OutlookCategoryCollectionPage masterCategories;
 
     /**
      * The Task Folders.
@@ -50,7 +46,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "taskFolders", alternate = {"TaskFolders"})
     @Expose
 	@Nullable
-    public OutlookTaskFolderCollectionPage taskFolders;
+    public com.microsoft.graph.requests.OutlookTaskFolderCollectionPage taskFolders;
 
     /**
      * The Task Groups.
@@ -59,7 +55,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "taskGroups", alternate = {"TaskGroups"})
     @Expose
 	@Nullable
-    public OutlookTaskGroupCollectionPage taskGroups;
+    public com.microsoft.graph.requests.OutlookTaskGroupCollectionPage taskGroups;
 
     /**
      * The Tasks.
@@ -68,7 +64,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public OutlookTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.OutlookTaskCollectionPage tasks;
 
 
     /**
@@ -81,19 +77,19 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("masterCategories")) {
-            masterCategories = serializer.deserializeObject(json.get("masterCategories"), OutlookCategoryCollectionPage.class);
+            masterCategories = serializer.deserializeObject(json.get("masterCategories"), com.microsoft.graph.requests.OutlookCategoryCollectionPage.class);
         }
 
         if (json.has("taskFolders")) {
-            taskFolders = serializer.deserializeObject(json.get("taskFolders"), OutlookTaskFolderCollectionPage.class);
+            taskFolders = serializer.deserializeObject(json.get("taskFolders"), com.microsoft.graph.requests.OutlookTaskFolderCollectionPage.class);
         }
 
         if (json.has("taskGroups")) {
-            taskGroups = serializer.deserializeObject(json.get("taskGroups"), OutlookTaskGroupCollectionPage.class);
+            taskGroups = serializer.deserializeObject(json.get("taskGroups"), com.microsoft.graph.requests.OutlookTaskGroupCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), OutlookTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.OutlookTaskCollectionPage.class);
         }
     }
 }

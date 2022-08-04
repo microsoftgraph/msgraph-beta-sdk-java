@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
 import com.microsoft.graph.models.MeetingChatMode;
-import com.microsoft.graph.models.OnlineMeetingRole;
 import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
 import com.microsoft.graph.models.MeetingCapabilities;
@@ -20,13 +19,9 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
-import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingRegistration;
-import com.microsoft.graph.models.CallTranscript;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
-import com.microsoft.graph.requests.CallTranscriptCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -87,15 +82,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean allowTeamworkReactions;
-
-    /**
-     * The Anonymize Identity For Roles.
-     * 
-     */
-    @SerializedName(value = "anonymizeIdentityForRoles", alternate = {"AnonymizeIdentityForRoles"})
-    @Expose
-	@Nullable
-    public java.util.List<OnlineMeetingRole> anonymizeIdentityForRoles;
 
     /**
      * The Audio Conferencing.
@@ -189,7 +175,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Meeting Id Settings.
-     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
+     * 
      */
     @SerializedName(value = "joinMeetingIdSettings", alternate = {"JoinMeetingIdSettings"})
     @Expose
@@ -269,22 +255,13 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public String videoTeleconferenceId;
 
     /**
-     * The Virtual Appointment.
-     * 
-     */
-    @SerializedName(value = "virtualAppointment", alternate = {"VirtualAppointment"})
-    @Expose
-	@Nullable
-    public VirtualAppointment virtualAppointment;
-
-    /**
      * The Attendance Reports.
      * The attendance reports of an online meeting. Read-only.
      */
     @SerializedName(value = "attendanceReports", alternate = {"AttendanceReports"})
     @Expose
 	@Nullable
-    public MeetingAttendanceReportCollectionPage attendanceReports;
+    public com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage attendanceReports;
 
     /**
      * The Meeting Attendance Report.
@@ -304,15 +281,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 	@Nullable
     public MeetingRegistration registration;
 
-    /**
-     * The Transcripts.
-     * The transcripts of an online meeting. Read-only.
-     */
-    @SerializedName(value = "transcripts", alternate = {"Transcripts"})
-    @Expose
-	@Nullable
-    public CallTranscriptCollectionPage transcripts;
-
 
     /**
      * Sets the raw JSON object
@@ -324,11 +292,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
 
         if (json.has("attendanceReports")) {
-            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), MeetingAttendanceReportCollectionPage.class);
-        }
-
-        if (json.has("transcripts")) {
-            transcripts = serializer.deserializeObject(json.get("transcripts"), CallTranscriptCollectionPage.class);
+            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage.class);
         }
     }
 }

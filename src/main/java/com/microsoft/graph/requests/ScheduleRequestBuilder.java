@@ -8,26 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Schedule;
-import com.microsoft.graph.requests.OfferShiftRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.OfferShiftRequestRequestBuilder;
-import com.microsoft.graph.requests.OpenShiftChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.OpenShiftChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.OpenShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.OpenShiftRequestBuilder;
-import com.microsoft.graph.requests.SchedulingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.SchedulingGroupRequestBuilder;
-import com.microsoft.graph.requests.ShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.ShiftRequestBuilder;
-import com.microsoft.graph.requests.SwapShiftsChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.SwapShiftsChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.TimeCardCollectionRequestBuilder;
-import com.microsoft.graph.requests.TimeCardRequestBuilder;
-import com.microsoft.graph.requests.TimeOffReasonCollectionRequestBuilder;
-import com.microsoft.graph.requests.TimeOffReasonRequestBuilder;
-import com.microsoft.graph.requests.TimeOffRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.TimeOffRequestRequestBuilder;
-import com.microsoft.graph.requests.TimeOffCollectionRequestBuilder;
-import com.microsoft.graph.requests.TimeOffRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -83,8 +63,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public OfferShiftRequestCollectionRequestBuilder offerShiftRequests() {
-        return new OfferShiftRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests"), getClient(), null);
+    public com.microsoft.graph.requests.OfferShiftRequestCollectionRequestBuilder offerShiftRequests() {
+        return new com.microsoft.graph.requests.OfferShiftRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests"), getClient(), null);
     }
 
     /**
@@ -94,8 +74,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public OfferShiftRequestRequestBuilder offerShiftRequests(@Nonnull final String id) {
-        return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OfferShiftRequestRequestBuilder offerShiftRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OpenShiftChangeRequest collection
@@ -103,8 +83,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public OpenShiftChangeRequestCollectionRequestBuilder openShiftChangeRequests() {
-        return new OpenShiftChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests"), getClient(), null);
+    public com.microsoft.graph.requests.OpenShiftChangeRequestCollectionRequestBuilder openShiftChangeRequests() {
+        return new com.microsoft.graph.requests.OpenShiftChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests"), getClient(), null);
     }
 
     /**
@@ -114,8 +94,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public OpenShiftChangeRequestRequestBuilder openShiftChangeRequests(@Nonnull final String id) {
-        return new OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OpenShiftChangeRequestRequestBuilder openShiftChangeRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OpenShift collection
@@ -123,8 +103,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public OpenShiftCollectionRequestBuilder openShifts() {
-        return new OpenShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts"), getClient(), null);
+    public com.microsoft.graph.requests.OpenShiftCollectionRequestBuilder openShifts() {
+        return new com.microsoft.graph.requests.OpenShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts"), getClient(), null);
     }
 
     /**
@@ -134,8 +114,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public OpenShiftRequestBuilder openShifts(@Nonnull final String id) {
-        return new OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OpenShiftRequestBuilder openShifts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SchedulingGroup collection
@@ -143,8 +123,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public SchedulingGroupCollectionRequestBuilder schedulingGroups() {
-        return new SchedulingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups"), getClient(), null);
+    public com.microsoft.graph.requests.SchedulingGroupCollectionRequestBuilder schedulingGroups() {
+        return new com.microsoft.graph.requests.SchedulingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups"), getClient(), null);
     }
 
     /**
@@ -154,8 +134,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public SchedulingGroupRequestBuilder schedulingGroups(@Nonnull final String id) {
-        return new SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SchedulingGroupRequestBuilder schedulingGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Shift collection
@@ -163,8 +143,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public ShiftCollectionRequestBuilder shifts() {
-        return new ShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shifts"), getClient(), null);
+    public com.microsoft.graph.requests.ShiftCollectionRequestBuilder shifts() {
+        return new com.microsoft.graph.requests.ShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shifts"), getClient(), null);
     }
 
     /**
@@ -174,8 +154,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public ShiftRequestBuilder shifts(@Nonnull final String id) {
-        return new ShiftRequestBuilder(getRequestUrlWithAdditionalSegment("shifts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ShiftRequestBuilder shifts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ShiftRequestBuilder(getRequestUrlWithAdditionalSegment("shifts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SwapShiftsChangeRequest collection
@@ -183,8 +163,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public SwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests() {
-        return new SwapShiftsChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests"), getClient(), null);
+    public com.microsoft.graph.requests.SwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests() {
+        return new com.microsoft.graph.requests.SwapShiftsChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests"), getClient(), null);
     }
 
     /**
@@ -194,8 +174,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public SwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(@Nonnull final String id) {
-        return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TimeCard collection
@@ -203,8 +183,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public TimeCardCollectionRequestBuilder timeCards() {
-        return new TimeCardCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeCards"), getClient(), null);
+    public com.microsoft.graph.requests.TimeCardCollectionRequestBuilder timeCards() {
+        return new com.microsoft.graph.requests.TimeCardCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeCards"), getClient(), null);
     }
 
     /**
@@ -214,8 +194,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public TimeCardRequestBuilder timeCards(@Nonnull final String id) {
-        return new TimeCardRequestBuilder(getRequestUrlWithAdditionalSegment("timeCards") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TimeCardRequestBuilder timeCards(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TimeCardRequestBuilder(getRequestUrlWithAdditionalSegment("timeCards") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TimeOffReason collection
@@ -223,8 +203,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public TimeOffReasonCollectionRequestBuilder timeOffReasons() {
-        return new TimeOffReasonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons"), getClient(), null);
+    public com.microsoft.graph.requests.TimeOffReasonCollectionRequestBuilder timeOffReasons() {
+        return new com.microsoft.graph.requests.TimeOffReasonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons"), getClient(), null);
     }
 
     /**
@@ -234,8 +214,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public TimeOffReasonRequestBuilder timeOffReasons(@Nonnull final String id) {
-        return new TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TimeOffReasonRequestBuilder timeOffReasons(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TimeOffRequest collection
@@ -243,8 +223,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public TimeOffRequestCollectionRequestBuilder timeOffRequests() {
-        return new TimeOffRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests"), getClient(), null);
+    public com.microsoft.graph.requests.TimeOffRequestCollectionRequestBuilder timeOffRequests() {
+        return new com.microsoft.graph.requests.TimeOffRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests"), getClient(), null);
     }
 
     /**
@@ -254,8 +234,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public TimeOffRequestRequestBuilder timeOffRequests(@Nonnull final String id) {
-        return new TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TimeOffRequestRequestBuilder timeOffRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TimeOff collection
@@ -263,8 +243,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @return the collection request builder
      */
     @Nonnull
-    public TimeOffCollectionRequestBuilder timesOff() {
-        return new TimeOffCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff"), getClient(), null);
+    public com.microsoft.graph.requests.TimeOffCollectionRequestBuilder timesOff() {
+        return new com.microsoft.graph.requests.TimeOffCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff"), getClient(), null);
     }
 
     /**
@@ -274,8 +254,8 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
      * @param id the item identifier
      */
     @Nonnull
-    public TimeOffRequestBuilder timesOff(@Nonnull final String id) {
-        return new TimeOffRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TimeOffRequestBuilder timesOff(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TimeOffRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff") + "/" + id, getClient(), null);
     }
 
     /**

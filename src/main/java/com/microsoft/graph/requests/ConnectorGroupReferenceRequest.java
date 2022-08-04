@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ConnectorGroup;
-import com.microsoft.graph.requests.ApplicationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ApplicationWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ConnectorCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ConnectorWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,31 +60,5 @@ public class ConnectorGroupReferenceRequest extends BaseReferenceRequest<Connect
     public ConnectorGroupReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
-    }
-    /**
-     * Puts the ConnectorGroup
-     *
-     * @param srcConnectorGroup the ConnectorGroup reference to PUT
-     * @return a future with the result
-     */
-    @Nonnull
-    public java.util.concurrent.CompletableFuture<ConnectorGroup> putAsync(@Nonnull final ConnectorGroup srcConnectorGroup) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/onPremisesPublishingProfiles/{id}/connectorGroups/" + srcConnectorGroup.id));
-        return sendAsync(HttpMethod.PUT, payload);
-    }
-
-    /**
-     * Puts the ConnectorGroup
-     *
-     * @param srcConnectorGroup the ConnectorGroup reference to PUT
-     * @return the ConnectorGroup
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    @Nullable
-    public ConnectorGroup put(@Nonnull final ConnectorGroup srcConnectorGroup) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/onPremisesPublishingProfiles/{id}/connectorGroups/" + srcConnectorGroup.id));
-        return send(HttpMethod.PUT, payload);
     }
 }

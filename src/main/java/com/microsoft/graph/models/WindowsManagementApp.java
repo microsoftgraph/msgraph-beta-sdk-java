@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ManagedInstallerStatus;
-import com.microsoft.graph.models.WindowsManagementAppHealthState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionPage;
 
@@ -63,7 +62,7 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "healthStates", alternate = {"HealthStates"})
     @Expose
 	@Nullable
-    public WindowsManagementAppHealthStateCollectionPage healthStates;
+    public com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionPage healthStates;
 
 
     /**
@@ -76,7 +75,7 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("healthStates")) {
-            healthStates = serializer.deserializeObject(json.get("healthStates"), WindowsManagementAppHealthStateCollectionPage.class);
+            healthStates = serializer.deserializeObject(json.get("healthStates"), com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionPage.class);
         }
     }
 }

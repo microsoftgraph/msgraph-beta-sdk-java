@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GroupPolicyUploadedLanguageFile;
 import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFileStatus;
-import com.microsoft.graph.models.GroupPolicyOperation;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
 import com.microsoft.graph.requests.GroupPolicyOperationCollectionPage;
 
@@ -82,7 +81,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     @SerializedName(value = "groupPolicyOperations", alternate = {"GroupPolicyOperations"})
     @Expose
 	@Nullable
-    public GroupPolicyOperationCollectionPage groupPolicyOperations;
+    public com.microsoft.graph.requests.GroupPolicyOperationCollectionPage groupPolicyOperations;
 
 
     /**
@@ -95,7 +94,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
 
         if (json.has("groupPolicyOperations")) {
-            groupPolicyOperations = serializer.deserializeObject(json.get("groupPolicyOperations"), GroupPolicyOperationCollectionPage.class);
+            groupPolicyOperations = serializer.deserializeObject(json.get("groupPolicyOperations"), com.microsoft.graph.requests.GroupPolicyOperationCollectionPage.class);
         }
     }
 }

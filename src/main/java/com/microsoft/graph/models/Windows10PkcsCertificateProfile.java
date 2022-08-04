@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CertificateStore;
 import com.microsoft.graph.models.CustomSubjectAlternativeName;
 import com.microsoft.graph.models.ExtendedKeyUsage;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.Windows10CertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
 
@@ -110,7 +109,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 
     /**
@@ -123,7 +122,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

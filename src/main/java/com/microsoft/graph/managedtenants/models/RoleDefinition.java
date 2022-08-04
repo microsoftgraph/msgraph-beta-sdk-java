@@ -39,7 +39,7 @@ public class RoleDefinition implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description for the role.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class RoleDefinition implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the role assignment.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class RoleDefinition implements IJsonBackedObject {
 
     /**
      * The Template Id.
-     * The unique identifier for the template.
+     * 
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose

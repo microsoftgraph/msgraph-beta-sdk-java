@@ -9,12 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AppScope;
-import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AppScopeCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -101,21 +98,21 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
     @SerializedName(value = "appScopes", alternate = {"AppScopes"})
     @Expose
 	@Nullable
-    public AppScopeCollectionPage appScopes;
+    public com.microsoft.graph.requests.AppScopeCollectionPage appScopes;
 
     /**
      * The Directory Scopes.
      * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage directoryScopes;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage directoryScopes;
 
     /**
      * The Principals.
      * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage principals;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage principals;
 
     /**
      * The Role Definition.
@@ -137,15 +134,15 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
 
         if (json.has("appScopes")) {
-            appScopes = serializer.deserializeObject(json.get("appScopes"), AppScopeCollectionPage.class);
+            appScopes = serializer.deserializeObject(json.get("appScopes"), com.microsoft.graph.requests.AppScopeCollectionPage.class);
         }
 
         if (json.has("directoryScopes")) {
-            directoryScopes = serializer.deserializeObject(json.get("directoryScopes"), DirectoryObjectCollectionPage.class);
+            directoryScopes = serializer.deserializeObject(json.get("directoryScopes"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("principals")) {
-            principals = serializer.deserializeObject(json.get("principals"), DirectoryObjectCollectionPage.class);
+            principals = serializer.deserializeObject(json.get("principals"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
     }
 }

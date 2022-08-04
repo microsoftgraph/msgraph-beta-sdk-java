@@ -13,8 +13,6 @@ import com.microsoft.graph.models.MobileAppRelationship;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.MobileAppRelationshipState;
 import com.microsoft.graph.models.MobileApp;
-import com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileContainedAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +70,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppAssignmentCollectionRequestBuilder assignments() {
-        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -83,8 +81,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppCategory collection
@@ -92,8 +90,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
-        return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     /**
@@ -103,8 +101,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
-        return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppInstallStatus collection
@@ -112,8 +110,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
-        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -123,8 +121,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppInstallStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppInstallStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -133,8 +131,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the MobileAppInstallSummaryRequestBuilder instance
      */
     @Nonnull
-    public MobileAppInstallSummaryRequestBuilder installSummary() {
-        return new MobileAppInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppInstallSummaryRequestBuilder installSummary() {
+        return new com.microsoft.graph.requests.MobileAppInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppRelationship collection
@@ -142,8 +140,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppRelationshipCollectionRequestBuilder relationships() {
-        return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppRelationshipCollectionRequestBuilder relationships() {
+        return new com.microsoft.graph.requests.MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
     }
 
     /**
@@ -153,8 +151,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppRelationshipRequestBuilder relationships(@Nonnull final String id) {
-        return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppRelationshipRequestBuilder relationships(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserAppInstallStatus collection
@@ -162,8 +160,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public UserAppInstallStatusCollectionRequestBuilder userStatuses() {
-        return new UserAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.UserAppInstallStatusCollectionRequestBuilder userStatuses() {
+        return new com.microsoft.graph.requests.UserAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
     /**
@@ -173,8 +171,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public UserAppInstallStatusRequestBuilder userStatuses(@Nonnull final String id) {
-        return new UserAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserAppInstallStatusRequestBuilder userStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileContainedApp collection
@@ -182,8 +180,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public MobileContainedAppCollectionRequestBuilder containedApps() {
-        return new MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps"), getClient(), null);
+    public com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder containedApps() {
+        return new com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps"), getClient(), null);
     }
 
     /**
@@ -193,8 +191,8 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public MobileContainedAppRequestBuilder containedApps(@Nonnull final String id) {
-        return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileContainedAppRequestBuilder containedApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps") + "/" + id, getClient(), null);
     }
 
     /**

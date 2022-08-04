@@ -134,7 +134,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Session Controls Not Satisfied.
-     * Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions).
+     * 
      */
     @SerializedName(value = "sessionControlsNotSatisfied", alternate = {"SessionControlsNotSatisfied"})
     @Expose

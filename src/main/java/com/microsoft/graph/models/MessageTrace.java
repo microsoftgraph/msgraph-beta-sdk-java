@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MessageRecipient;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MessageRecipientCollectionPage;
 
@@ -98,7 +97,7 @@ public class MessageTrace extends Entity implements IJsonBackedObject {
     @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
 	@Nullable
-    public MessageRecipientCollectionPage recipients;
+    public com.microsoft.graph.requests.MessageRecipientCollectionPage recipients;
 
 
     /**
@@ -111,7 +110,7 @@ public class MessageTrace extends Entity implements IJsonBackedObject {
 
 
         if (json.has("recipients")) {
-            recipients = serializer.deserializeObject(json.get("recipients"), MessageRecipientCollectionPage.class);
+            recipients = serializer.deserializeObject(json.get("recipients"), com.microsoft.graph.requests.MessageRecipientCollectionPage.class);
         }
     }
 }

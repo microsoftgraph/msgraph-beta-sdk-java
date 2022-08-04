@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoomList;
-import com.microsoft.graph.requests.RoomCollectionRequestBuilder;
-import com.microsoft.graph.requests.RoomRequestBuilder;
-import com.microsoft.graph.requests.WorkspaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkspaceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
      * @return the collection request builder
      */
     @Nonnull
-    public RoomCollectionRequestBuilder rooms() {
-        return new RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
+    public com.microsoft.graph.requests.RoomCollectionRequestBuilder rooms() {
+        return new com.microsoft.graph.requests.RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
     }
 
     /**
@@ -77,27 +73,7 @@ public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
      * @param id the item identifier
      */
     @Nonnull
-    public RoomRequestBuilder rooms(@Nonnull final String id) {
-        return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the Workspace collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public WorkspaceCollectionRequestBuilder workspaces() {
-        return new WorkspaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workspaces"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the Workspace item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public WorkspaceRequestBuilder workspaces(@Nonnull final String id) {
-        return new WorkspaceRequestBuilder(getRequestUrlWithAdditionalSegment("workspaces") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RoomRequestBuilder rooms(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }
 }

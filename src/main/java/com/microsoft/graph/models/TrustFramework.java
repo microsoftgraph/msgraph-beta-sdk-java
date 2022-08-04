@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TrustFrameworkKeySet;
-import com.microsoft.graph.models.TrustFrameworkPolicy;
 import com.microsoft.graph.requests.TrustFrameworkKeySetCollectionPage;
 import com.microsoft.graph.requests.TrustFrameworkPolicyCollectionPage;
 
@@ -49,7 +47,7 @@ public class TrustFramework implements IJsonBackedObject {
     @SerializedName(value = "keySets", alternate = {"KeySets"})
     @Expose
 	@Nullable
-    public TrustFrameworkKeySetCollectionPage keySets;
+    public com.microsoft.graph.requests.TrustFrameworkKeySetCollectionPage keySets;
 
     /**
      * The Policies.
@@ -58,7 +56,7 @@ public class TrustFramework implements IJsonBackedObject {
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose
 	@Nullable
-    public TrustFrameworkPolicyCollectionPage policies;
+    public com.microsoft.graph.requests.TrustFrameworkPolicyCollectionPage policies;
 
 
     /**
@@ -71,11 +69,11 @@ public class TrustFramework implements IJsonBackedObject {
 
 
         if (json.has("keySets")) {
-            keySets = serializer.deserializeObject(json.get("keySets"), TrustFrameworkKeySetCollectionPage.class);
+            keySets = serializer.deserializeObject(json.get("keySets"), com.microsoft.graph.requests.TrustFrameworkKeySetCollectionPage.class);
         }
 
         if (json.has("policies")) {
-            policies = serializer.deserializeObject(json.get("policies"), TrustFrameworkPolicyCollectionPage.class);
+            policies = serializer.deserializeObject(json.get("policies"), com.microsoft.graph.requests.TrustFrameworkPolicyCollectionPage.class);
         }
     }
 }

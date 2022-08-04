@@ -10,15 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.ProvisionChannelEmailResult;
 import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.SharedWithChannelTeamInfoCollectionRequestBuilder;
-import com.microsoft.graph.requests.SharedWithChannelTeamInfoRequestBuilder;
-import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -81,7 +72,7 @@ public class ChannelReferenceRequest extends BaseReferenceRequest<Channel> {
     @Nonnull
     public java.util.concurrent.CompletableFuture<Channel> putAsync(@Nonnull final Channel srcChannel) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamwork/deletedTeams/{id}/channels/" + srcChannel.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/joinedTeams/{id}/allChannels/" + srcChannel.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -95,7 +86,7 @@ public class ChannelReferenceRequest extends BaseReferenceRequest<Channel> {
     @Nullable
     public Channel put(@Nonnull final Channel srcChannel) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamwork/deletedTeams/{id}/channels/" + srcChannel.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/joinedTeams/{id}/allChannels/" + srcChannel.id));
         return send(HttpMethod.PUT, payload);
     }
 }

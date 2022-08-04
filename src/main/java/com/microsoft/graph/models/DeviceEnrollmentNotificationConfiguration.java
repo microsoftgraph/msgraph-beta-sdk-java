@@ -30,7 +30,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
 
     /**
      * The Branding Options.
-     * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails, unknownFutureValue.
+     * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails.
      */
     @SerializedName(value = "brandingOptions", alternate = {"BrandingOptions"})
     @Expose

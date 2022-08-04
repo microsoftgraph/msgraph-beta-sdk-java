@@ -8,8 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.Ediscoveryroot;
-import com.microsoft.graph.ediscovery.requests.CaseCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.CaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -9,23 +9,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.CloudPcAuditEvent;
-import com.microsoft.graph.models.CloudPC;
-import com.microsoft.graph.models.CloudPcDeviceImage;
-import com.microsoft.graph.models.CloudPcExternalPartnerSetting;
-import com.microsoft.graph.models.CloudPcGalleryImage;
-import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcOrganizationSettings;
-import com.microsoft.graph.models.CloudPcProvisioningPolicy;
-import com.microsoft.graph.models.CloudPcServicePlan;
-import com.microsoft.graph.models.CloudPcSnapshot;
-import com.microsoft.graph.models.CloudPcSupportedRegion;
-import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
-import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage;
 import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
@@ -56,7 +44,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
     @Expose
 	@Nullable
-    public CloudPcAuditEventCollectionPage auditEvents;
+    public com.microsoft.graph.requests.CloudPcAuditEventCollectionPage auditEvents;
 
     /**
      * The Cloud PCs.
@@ -65,7 +53,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cloudPCs", alternate = {"CloudPCs"})
     @Expose
 	@Nullable
-    public CloudPCCollectionPage cloudPCs;
+    public com.microsoft.graph.requests.CloudPCCollectionPage cloudPCs;
 
     /**
      * The Device Images.
@@ -74,16 +62,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceImages", alternate = {"DeviceImages"})
     @Expose
 	@Nullable
-    public CloudPcDeviceImageCollectionPage deviceImages;
-
-    /**
-     * The External Partner Settings.
-     * The external partner settings on a Cloud PC.
-     */
-    @SerializedName(value = "externalPartnerSettings", alternate = {"ExternalPartnerSettings"})
-    @Expose
-	@Nullable
-    public CloudPcExternalPartnerSettingCollectionPage externalPartnerSettings;
+    public com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage deviceImages;
 
     /**
      * The Gallery Images.
@@ -92,7 +71,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "galleryImages", alternate = {"GalleryImages"})
     @Expose
 	@Nullable
-    public CloudPcGalleryImageCollectionPage galleryImages;
+    public com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage galleryImages;
 
     /**
      * The On Premises Connections.
@@ -101,7 +80,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "onPremisesConnections", alternate = {"OnPremisesConnections"})
     @Expose
 	@Nullable
-    public CloudPcOnPremisesConnectionCollectionPage onPremisesConnections;
+    public com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage onPremisesConnections;
 
     /**
      * The Organization Settings.
@@ -119,7 +98,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "provisioningPolicies", alternate = {"ProvisioningPolicies"})
     @Expose
 	@Nullable
-    public CloudPcProvisioningPolicyCollectionPage provisioningPolicies;
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage provisioningPolicies;
 
     /**
      * The Service Plans.
@@ -128,7 +107,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose
 	@Nullable
-    public CloudPcServicePlanCollectionPage servicePlans;
+    public com.microsoft.graph.requests.CloudPcServicePlanCollectionPage servicePlans;
 
     /**
      * The Snapshots.
@@ -137,7 +116,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "snapshots", alternate = {"Snapshots"})
     @Expose
 	@Nullable
-    public CloudPcSnapshotCollectionPage snapshots;
+    public com.microsoft.graph.requests.CloudPcSnapshotCollectionPage snapshots;
 
     /**
      * The Supported Regions.
@@ -146,7 +125,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "supportedRegions", alternate = {"SupportedRegions"})
     @Expose
 	@Nullable
-    public CloudPcSupportedRegionCollectionPage supportedRegions;
+    public com.microsoft.graph.requests.CloudPcSupportedRegionCollectionPage supportedRegions;
 
     /**
      * The User Settings.
@@ -155,7 +134,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userSettings", alternate = {"UserSettings"})
     @Expose
 	@Nullable
-    public CloudPcUserSettingCollectionPage userSettings;
+    public com.microsoft.graph.requests.CloudPcUserSettingCollectionPage userSettings;
 
 
     /**
@@ -168,47 +147,43 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
 
         if (json.has("auditEvents")) {
-            auditEvents = serializer.deserializeObject(json.get("auditEvents"), CloudPcAuditEventCollectionPage.class);
+            auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.requests.CloudPcAuditEventCollectionPage.class);
         }
 
         if (json.has("cloudPCs")) {
-            cloudPCs = serializer.deserializeObject(json.get("cloudPCs"), CloudPCCollectionPage.class);
+            cloudPCs = serializer.deserializeObject(json.get("cloudPCs"), com.microsoft.graph.requests.CloudPCCollectionPage.class);
         }
 
         if (json.has("deviceImages")) {
-            deviceImages = serializer.deserializeObject(json.get("deviceImages"), CloudPcDeviceImageCollectionPage.class);
-        }
-
-        if (json.has("externalPartnerSettings")) {
-            externalPartnerSettings = serializer.deserializeObject(json.get("externalPartnerSettings"), CloudPcExternalPartnerSettingCollectionPage.class);
+            deviceImages = serializer.deserializeObject(json.get("deviceImages"), com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage.class);
         }
 
         if (json.has("galleryImages")) {
-            galleryImages = serializer.deserializeObject(json.get("galleryImages"), CloudPcGalleryImageCollectionPage.class);
+            galleryImages = serializer.deserializeObject(json.get("galleryImages"), com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage.class);
         }
 
         if (json.has("onPremisesConnections")) {
-            onPremisesConnections = serializer.deserializeObject(json.get("onPremisesConnections"), CloudPcOnPremisesConnectionCollectionPage.class);
+            onPremisesConnections = serializer.deserializeObject(json.get("onPremisesConnections"), com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage.class);
         }
 
         if (json.has("provisioningPolicies")) {
-            provisioningPolicies = serializer.deserializeObject(json.get("provisioningPolicies"), CloudPcProvisioningPolicyCollectionPage.class);
+            provisioningPolicies = serializer.deserializeObject(json.get("provisioningPolicies"), com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage.class);
         }
 
         if (json.has("servicePlans")) {
-            servicePlans = serializer.deserializeObject(json.get("servicePlans"), CloudPcServicePlanCollectionPage.class);
+            servicePlans = serializer.deserializeObject(json.get("servicePlans"), com.microsoft.graph.requests.CloudPcServicePlanCollectionPage.class);
         }
 
         if (json.has("snapshots")) {
-            snapshots = serializer.deserializeObject(json.get("snapshots"), CloudPcSnapshotCollectionPage.class);
+            snapshots = serializer.deserializeObject(json.get("snapshots"), com.microsoft.graph.requests.CloudPcSnapshotCollectionPage.class);
         }
 
         if (json.has("supportedRegions")) {
-            supportedRegions = serializer.deserializeObject(json.get("supportedRegions"), CloudPcSupportedRegionCollectionPage.class);
+            supportedRegions = serializer.deserializeObject(json.get("supportedRegions"), com.microsoft.graph.requests.CloudPcSupportedRegionCollectionPage.class);
         }
 
         if (json.has("userSettings")) {
-            userSettings = serializer.deserializeObject(json.get("userSettings"), CloudPcUserSettingCollectionPage.class);
+            userSettings = serializer.deserializeObject(json.get("userSettings"), com.microsoft.graph.requests.CloudPcUserSettingCollectionPage.class);
         }
     }
 }

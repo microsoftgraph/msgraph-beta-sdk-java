@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnPremisesAgent;
-import com.microsoft.graph.requests.OnPremisesAgentGroupCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesAgentGroupWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder<OnPremises
      * @return the collection request builder
      */
     @Nonnull
-    public OnPremisesAgentGroupCollectionWithReferencesRequestBuilder agentGroups() {
-        return new OnPremisesAgentGroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups"), getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
+        return new com.microsoft.graph.requests.OnPremisesAgentGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder<OnPremises
      * @param id the item identifier
      */
     @Nonnull
-    public OnPremisesAgentGroupWithReferenceRequestBuilder agentGroups(@Nonnull final String id) {
-        return new OnPremisesAgentGroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentGroupRequestBuilder agentGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
     }
 }

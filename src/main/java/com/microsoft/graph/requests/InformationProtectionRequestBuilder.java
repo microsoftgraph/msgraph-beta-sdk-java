@@ -12,15 +12,6 @@ import com.microsoft.graph.models.BufferDecryptionResult;
 import com.microsoft.graph.models.BufferEncryptionResult;
 import com.microsoft.graph.models.SigningResult;
 import com.microsoft.graph.models.VerificationResult;
-import com.microsoft.graph.requests.BitlockerRequestBuilder;
-import com.microsoft.graph.requests.DataLossPreventionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.DataLossPreventionPolicyRequestBuilder;
-import com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.SensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.SensitivityPolicySettingsRequestBuilder;
-import com.microsoft.graph.requests.InformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -80,8 +71,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the BitlockerRequestBuilder instance
      */
     @Nonnull
-    public BitlockerRequestBuilder bitlocker() {
-        return new BitlockerRequestBuilder(getRequestUrlWithAdditionalSegment("bitlocker"), getClient(), null);
+    public com.microsoft.graph.requests.BitlockerRequestBuilder bitlocker() {
+        return new com.microsoft.graph.requests.BitlockerRequestBuilder(getRequestUrlWithAdditionalSegment("bitlocker"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DataLossPreventionPolicy collection
@@ -89,8 +80,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the collection request builder
      */
     @Nonnull
-    public DataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies() {
-        return new DataLossPreventionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.DataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies() {
+        return new com.microsoft.graph.requests.DataLossPreventionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies"), getClient(), null);
     }
 
     /**
@@ -100,8 +91,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param id the item identifier
      */
     @Nonnull
-    public DataLossPreventionPolicyRequestBuilder dataLossPreventionPolicies(@Nonnull final String id) {
-        return new DataLossPreventionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DataLossPreventionPolicyRequestBuilder dataLossPreventionPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DataLossPreventionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SensitivityLabel collection
@@ -109,8 +100,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the collection request builder
      */
     @Nonnull
-    public SensitivityLabelCollectionRequestBuilder sensitivityLabels() {
-        return new SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
+    public com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder sensitivityLabels() {
+        return new com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
     }
 
     /**
@@ -120,8 +111,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param id the item identifier
      */
     @Nonnull
-    public SensitivityLabelRequestBuilder sensitivityLabels(@Nonnull final String id) {
-        return new SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SensitivityLabelRequestBuilder sensitivityLabels(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels") + "/" + id, getClient(), null);
     }
 
     /**
@@ -130,8 +121,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the SensitivityPolicySettingsRequestBuilder instance
      */
     @Nonnull
-    public SensitivityPolicySettingsRequestBuilder sensitivityPolicySettings() {
-        return new SensitivityPolicySettingsRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityPolicySettings"), getClient(), null);
+    public com.microsoft.graph.requests.SensitivityPolicySettingsRequestBuilder sensitivityPolicySettings() {
+        return new com.microsoft.graph.requests.SensitivityPolicySettingsRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityPolicySettings"), getClient(), null);
     }
 
     /**
@@ -140,8 +131,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the InformationProtectionPolicyRequestBuilder instance
      */
     @Nonnull
-    public InformationProtectionPolicyRequestBuilder policy() {
-        return new InformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
+    public com.microsoft.graph.requests.InformationProtectionPolicyRequestBuilder policy() {
+        return new com.microsoft.graph.requests.InformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ThreatAssessmentRequest collection
@@ -149,8 +140,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the collection request builder
      */
     @Nonnull
-    public ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
-        return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
+        return new com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
     }
 
     /**
@@ -160,8 +151,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param id the item identifier
      */
     @Nonnull
-    public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(@Nonnull final String id) {
-        return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
     }
 
     /**

@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.microsoft.graph.models.AppManagementLevel;
-import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedAppProtection;
 import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage;
 
@@ -50,7 +49,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
 
     /**
      * The Targeted App Management Levels.
-     * The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise, androidEnterpriseDedicatedDevicesWithAzureAdSharedMode, androidOpenSourceProjectUserAssociated, androidOpenSourceProjectUserless.
+     * The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise.
      */
     @SerializedName(value = "targetedAppManagementLevels", alternate = {"TargetedAppManagementLevels"})
     @Expose
@@ -64,7 +63,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
 
     /**
@@ -77,7 +76,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
     }
 }

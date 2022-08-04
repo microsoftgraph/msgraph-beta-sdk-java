@@ -8,9 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.InformationProtection;
-import com.microsoft.graph.security.requests.InformationProtectionPolicySettingRequestBuilder;
-import com.microsoft.graph.security.requests.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the InformationProtectionPolicySettingRequestBuilder instance
      */
     @Nonnull
-    public InformationProtectionPolicySettingRequestBuilder labelPolicySettings() {
-        return new InformationProtectionPolicySettingRequestBuilder(getRequestUrlWithAdditionalSegment("labelPolicySettings"), getClient(), null);
+    public com.microsoft.graph.security.requests.InformationProtectionPolicySettingRequestBuilder labelPolicySettings() {
+        return new com.microsoft.graph.security.requests.InformationProtectionPolicySettingRequestBuilder(getRequestUrlWithAdditionalSegment("labelPolicySettings"), getClient(), null);
     }
     /**
      *  Gets a request builder for the SensitivityLabel collection
@@ -75,8 +72,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the collection request builder
      */
     @Nonnull
-    public SensitivityLabelCollectionRequestBuilder sensitivityLabels() {
-        return new SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
+    public com.microsoft.graph.security.requests.SensitivityLabelCollectionRequestBuilder sensitivityLabels() {
+        return new com.microsoft.graph.security.requests.SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param id the item identifier
      */
     @Nonnull
-    public SensitivityLabelRequestBuilder sensitivityLabels(@Nonnull final String id) {
-        return new SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder sensitivityLabels(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels") + "/" + id, getClient(), null);
     }
 }

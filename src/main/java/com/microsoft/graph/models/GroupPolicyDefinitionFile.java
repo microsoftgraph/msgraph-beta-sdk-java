@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GroupPolicyType;
-import com.microsoft.graph.models.GroupPolicyDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage;
 
@@ -115,7 +114,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The group policy definitions associated with the file.
      */
 	@Nullable
-    public GroupPolicyDefinitionCollectionPage definitions;
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage definitions;
 
 
     /**
@@ -128,7 +127,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
 
 
         if (json.has("definitions")) {
-            definitions = serializer.deserializeObject(json.get("definitions"), GroupPolicyDefinitionCollectionPage.class);
+            definitions = serializer.deserializeObject(json.get("definitions"), com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage.class);
         }
     }
 }

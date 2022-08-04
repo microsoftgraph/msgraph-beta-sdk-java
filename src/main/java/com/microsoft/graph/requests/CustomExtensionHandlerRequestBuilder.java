@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CustomExtensionHandler;
-import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class CustomExtensionHandlerRequestBuilder extends BaseRequestBuilder<Cus
      * @return the CustomAccessPackageWorkflowExtensionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public CustomAccessPackageWorkflowExtensionWithReferenceRequestBuilder customExtension() {
-        return new CustomAccessPackageWorkflowExtensionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("customExtension"), getClient(), null);
+    public com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionWithReferenceRequestBuilder customExtension() {
+        return new com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("customExtension"), getClient(), null);
     }
 }

@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingInstanceTemplate;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
 
@@ -45,7 +44,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
     @SerializedName(value = "settingDefinitions", alternate = {"SettingDefinitions"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage settingDefinitions;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage settingDefinitions;
 
 
     /**
@@ -58,7 +57,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
 
 
         if (json.has("settingDefinitions")) {
-            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
     }
 }

@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OutlookTaskFolder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder<OutlookT
      * @return the collection request builder
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder<OutlookT
      * @param id the item identifier
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
-        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
@@ -88,8 +82,8 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder<OutlookT
      * @return the collection request builder
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder<OutlookT
      * @param id the item identifier
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
-        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OutlookTask collection
@@ -108,8 +102,8 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder<OutlookT
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookTaskCollectionRequestBuilder tasks() {
-        return new OutlookTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.OutlookTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder<OutlookT
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookTaskRequestBuilder tasks(@Nonnull final String id) {
-        return new OutlookTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

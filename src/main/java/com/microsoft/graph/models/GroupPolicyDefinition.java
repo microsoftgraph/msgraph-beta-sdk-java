@@ -14,7 +14,6 @@ import com.microsoft.graph.models.GroupPolicyType;
 import com.microsoft.graph.models.GroupPolicyCategory;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.GroupPolicyDefinition;
-import com.microsoft.graph.models.GroupPolicyPresentation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupPolicyPresentationCollectionPage;
 
@@ -175,7 +174,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "presentations", alternate = {"Presentations"})
     @Expose
 	@Nullable
-    public GroupPolicyPresentationCollectionPage presentations;
+    public com.microsoft.graph.requests.GroupPolicyPresentationCollectionPage presentations;
 
     /**
      * The Previous Version Definition.
@@ -197,7 +196,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("presentations")) {
-            presentations = serializer.deserializeObject(json.get("presentations"), GroupPolicyPresentationCollectionPage.class);
+            presentations = serializer.deserializeObject(json.get("presentations"), com.microsoft.graph.requests.GroupPolicyPresentationCollectionPage.class);
         }
     }
 }

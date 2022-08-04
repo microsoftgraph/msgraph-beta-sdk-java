@@ -34,7 +34,7 @@ public class Ediscoveryroot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cases", alternate = {"Cases"})
     @Expose
 	@Nullable
-    public CaseCollectionPage cases;
+    public com.microsoft.graph.ediscovery.requests.CaseCollectionPage cases;
 
 
     /**
@@ -47,7 +47,7 @@ public class Ediscoveryroot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("cases")) {
-            cases = serializer.deserializeObject(json.get("cases"), CaseCollectionPage.class);
+            cases = serializer.deserializeObject(json.get("cases"), com.microsoft.graph.ediscovery.requests.CaseCollectionPage.class);
         }
     }
 }

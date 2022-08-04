@@ -10,9 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.EdiscoveryIndexOperation;
-import com.microsoft.graph.security.models.SiteSource;
-import com.microsoft.graph.security.models.UnifiedGroupSource;
-import com.microsoft.graph.security.models.UserSource;
 import com.microsoft.graph.security.models.DataSourceContainer;
 import com.microsoft.graph.security.requests.SiteSourceCollectionPage;
 import com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionPage;
@@ -35,7 +32,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Acknowledged Date Time.
-     * Date and time the custodian acknowledged a hold notification.
+     * 
      */
     @SerializedName(value = "acknowledgedDateTime", alternate = {"AcknowledgedDateTime"})
     @Expose
@@ -44,7 +41,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Email.
-     * Email address of the custodian.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -53,7 +50,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Last Index Operation.
-     * Operation entity that represents the latest indexing for the custodian.
+     * 
      */
     @SerializedName(value = "lastIndexOperation", alternate = {"LastIndexOperation"})
     @Expose
@@ -62,30 +59,30 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Site Sources.
-     * Data source entity for SharePoint sites associated with the custodian.
+     * 
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
 	@Nullable
-    public SiteSourceCollectionPage siteSources;
+    public com.microsoft.graph.security.requests.SiteSourceCollectionPage siteSources;
 
     /**
      * The Unified Group Sources.
-     * Data source entity for groups associated with the custodian.
+     * 
      */
     @SerializedName(value = "unifiedGroupSources", alternate = {"UnifiedGroupSources"})
     @Expose
 	@Nullable
-    public UnifiedGroupSourceCollectionPage unifiedGroupSources;
+    public com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionPage unifiedGroupSources;
 
     /**
      * The User Sources.
-     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * 
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose
 	@Nullable
-    public UserSourceCollectionPage userSources;
+    public com.microsoft.graph.security.requests.UserSourceCollectionPage userSources;
 
 
     /**
@@ -98,15 +95,15 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
 
         if (json.has("siteSources")) {
-            siteSources = serializer.deserializeObject(json.get("siteSources"), SiteSourceCollectionPage.class);
+            siteSources = serializer.deserializeObject(json.get("siteSources"), com.microsoft.graph.security.requests.SiteSourceCollectionPage.class);
         }
 
         if (json.has("unifiedGroupSources")) {
-            unifiedGroupSources = serializer.deserializeObject(json.get("unifiedGroupSources"), UnifiedGroupSourceCollectionPage.class);
+            unifiedGroupSources = serializer.deserializeObject(json.get("unifiedGroupSources"), com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionPage.class);
         }
 
         if (json.has("userSources")) {
-            userSources = serializer.deserializeObject(json.get("userSources"), UserSourceCollectionPage.class);
+            userSources = serializer.deserializeObject(json.get("userSources"), com.microsoft.graph.security.requests.UserSourceCollectionPage.class);
         }
     }
 }

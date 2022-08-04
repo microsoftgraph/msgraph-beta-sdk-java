@@ -10,14 +10,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DomainState;
-import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.InternalDomainFederation;
-import com.microsoft.graph.models.DomainDnsRecord;
-import com.microsoft.graph.models.SharedEmailDomainInvitation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.InternalDomainFederationCollectionPage;
-import com.microsoft.graph.requests.DomainDnsRecordCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionPage;
 
 
@@ -139,7 +134,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      * The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage domainNameReferences;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage domainNameReferences;
 
     /**
      * The Federation Configuration.
@@ -148,7 +143,7 @@ public class Domain extends Entity implements IJsonBackedObject {
     @SerializedName(value = "federationConfiguration", alternate = {"FederationConfiguration"})
     @Expose
 	@Nullable
-    public InternalDomainFederationCollectionPage federationConfiguration;
+    public com.microsoft.graph.requests.InternalDomainFederationCollectionPage federationConfiguration;
 
     /**
      * The Service Configuration Records.
@@ -157,7 +152,7 @@ public class Domain extends Entity implements IJsonBackedObject {
     @SerializedName(value = "serviceConfigurationRecords", alternate = {"ServiceConfigurationRecords"})
     @Expose
 	@Nullable
-    public DomainDnsRecordCollectionPage serviceConfigurationRecords;
+    public com.microsoft.graph.requests.DomainDnsRecordCollectionPage serviceConfigurationRecords;
 
     /**
      * The Shared Email Domain Invitations.
@@ -166,7 +161,7 @@ public class Domain extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sharedEmailDomainInvitations", alternate = {"SharedEmailDomainInvitations"})
     @Expose
 	@Nullable
-    public SharedEmailDomainInvitationCollectionPage sharedEmailDomainInvitations;
+    public com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionPage sharedEmailDomainInvitations;
 
     /**
      * The Verification Dns Records.
@@ -175,7 +170,7 @@ public class Domain extends Entity implements IJsonBackedObject {
     @SerializedName(value = "verificationDnsRecords", alternate = {"VerificationDnsRecords"})
     @Expose
 	@Nullable
-    public DomainDnsRecordCollectionPage verificationDnsRecords;
+    public com.microsoft.graph.requests.DomainDnsRecordCollectionPage verificationDnsRecords;
 
 
     /**
@@ -188,23 +183,23 @@ public class Domain extends Entity implements IJsonBackedObject {
 
 
         if (json.has("domainNameReferences")) {
-            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences"), DirectoryObjectCollectionPage.class);
+            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("federationConfiguration")) {
-            federationConfiguration = serializer.deserializeObject(json.get("federationConfiguration"), InternalDomainFederationCollectionPage.class);
+            federationConfiguration = serializer.deserializeObject(json.get("federationConfiguration"), com.microsoft.graph.requests.InternalDomainFederationCollectionPage.class);
         }
 
         if (json.has("serviceConfigurationRecords")) {
-            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords"), DomainDnsRecordCollectionPage.class);
+            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords"), com.microsoft.graph.requests.DomainDnsRecordCollectionPage.class);
         }
 
         if (json.has("sharedEmailDomainInvitations")) {
-            sharedEmailDomainInvitations = serializer.deserializeObject(json.get("sharedEmailDomainInvitations"), SharedEmailDomainInvitationCollectionPage.class);
+            sharedEmailDomainInvitations = serializer.deserializeObject(json.get("sharedEmailDomainInvitations"), com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionPage.class);
         }
 
         if (json.has("verificationDnsRecords")) {
-            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords"), DomainDnsRecordCollectionPage.class);
+            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords"), com.microsoft.graph.requests.DomainDnsRecordCollectionPage.class);
         }
     }
 }

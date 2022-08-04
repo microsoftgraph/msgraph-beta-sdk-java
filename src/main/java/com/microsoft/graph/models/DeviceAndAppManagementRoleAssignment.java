@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.RoleScopeTag;
 import com.microsoft.graph.models.RoleAssignment;
 import com.microsoft.graph.requests.RoleScopeTagCollectionPage;
 
@@ -42,7 +41,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * The set of Role Scope Tags defined on the Role Assignment.
      */
 	@Nullable
-    public RoleScopeTagCollectionPage roleScopeTags;
+    public com.microsoft.graph.requests.RoleScopeTagCollectionPage roleScopeTags;
 
 
     /**
@@ -55,7 +54,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
 
 
         if (json.has("roleScopeTags")) {
-            roleScopeTags = serializer.deserializeObject(json.get("roleScopeTags"), RoleScopeTagCollectionPage.class);
+            roleScopeTags = serializer.deserializeObject(json.get("roleScopeTags"), com.microsoft.graph.requests.RoleScopeTagCollectionPage.class);
         }
     }
 }

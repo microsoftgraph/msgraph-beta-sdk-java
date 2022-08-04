@@ -9,9 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GovernanceRoleAssignmentRequest;
 import com.microsoft.graph.models.GovernanceSchedule;
-import com.microsoft.graph.requests.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +65,8 @@ public class GovernanceRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * @return the GovernanceResourceRequestBuilder instance
      */
     @Nonnull
-    public GovernanceResourceRequestBuilder resource() {
-        return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceResourceRequestBuilder resource() {
+        return new com.microsoft.graph.requests.GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 
     /**
@@ -78,8 +75,8 @@ public class GovernanceRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * @return the GovernanceRoleDefinitionRequestBuilder instance
      */
     @Nonnull
-    public GovernanceRoleDefinitionRequestBuilder roleDefinition() {
-        return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 
     /**
@@ -88,8 +85,8 @@ public class GovernanceRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * @return the GovernanceSubjectRequestBuilder instance
      */
     @Nonnull
-    public GovernanceSubjectRequestBuilder subject() {
-        return new GovernanceSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subject"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceSubjectRequestBuilder subject() {
+        return new com.microsoft.graph.requests.GovernanceSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subject"), getClient(), null);
     }
 
     /**

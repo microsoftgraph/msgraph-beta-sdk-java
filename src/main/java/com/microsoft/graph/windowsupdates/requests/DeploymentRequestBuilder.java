@@ -8,7 +8,6 @@ package com.microsoft.graph.windowsupdates.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.Deployment;
-import com.microsoft.graph.windowsupdates.requests.DeploymentAudienceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class DeploymentRequestBuilder extends BaseRequestBuilder<Deployment> {
      * @return the DeploymentAudienceRequestBuilder instance
      */
     @Nonnull
-    public DeploymentAudienceRequestBuilder audience() {
-        return new DeploymentAudienceRequestBuilder(getRequestUrlWithAdditionalSegment("audience"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.DeploymentAudienceRequestBuilder audience() {
+        return new com.microsoft.graph.windowsupdates.requests.DeploymentAudienceRequestBuilder(getRequestUrlWithAdditionalSegment("audience"), getClient(), null);
     }
 }

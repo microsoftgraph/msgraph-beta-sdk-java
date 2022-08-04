@@ -19,152 +19,29 @@ import com.microsoft.graph.models.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.WindowsMalwareOverview;
 import com.microsoft.graph.models.VirtualEndpoint;
-import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
-import com.microsoft.graph.models.AndroidForWorkAppConfigurationSchema;
-import com.microsoft.graph.models.AndroidForWorkEnrollmentProfile;
 import com.microsoft.graph.models.AndroidForWorkSettings;
 import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettings;
-import com.microsoft.graph.models.AndroidManagedStoreAppConfigurationSchema;
-import com.microsoft.graph.models.AuditEvent;
-import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
-import com.microsoft.graph.models.ChromeOSOnboardingSettings;
-import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingStateSummary;
-import com.microsoft.graph.models.CartToClassAssociation;
-import com.microsoft.graph.models.DeviceCompliancePolicy;
 import com.microsoft.graph.models.DeviceCompliancePolicyDeviceStateSummary;
-import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.models.DeviceConfigurationConflictSummary;
 import com.microsoft.graph.models.DeviceConfigurationDeviceStateSummary;
-import com.microsoft.graph.models.RestrictedAppsViolation;
-import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.models.ManagedAllDeviceCertificateState;
 import com.microsoft.graph.models.DeviceConfigurationUserStateSummary;
-import com.microsoft.graph.models.IosUpdateDeviceStatus;
-import com.microsoft.graph.models.MacOSSoftwareUpdateAccountSummary;
-import com.microsoft.graph.models.ManagedDeviceEncryptionState;
-import com.microsoft.graph.models.NdesConnector;
 import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
-import com.microsoft.graph.models.DeviceManagementConfigurationCategory;
-import com.microsoft.graph.models.DeviceManagementCompliancePolicy;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
-import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
-import com.microsoft.graph.models.ComplianceManagementPartner;
 import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
-import com.microsoft.graph.models.DeviceCategory;
-import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
-import com.microsoft.graph.models.DeviceManagementPartner;
-import com.microsoft.graph.models.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
-import com.microsoft.graph.models.MobileThreatDefenseConnector;
-import com.microsoft.graph.models.DeviceManagementSettingCategory;
-import com.microsoft.graph.models.DeviceManagementIntent;
-import com.microsoft.graph.models.DeviceManagementSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementTemplate;
 import com.microsoft.graph.models.ApplePushNotificationCertificate;
-import com.microsoft.graph.models.CloudPCConnectivityIssue;
-import com.microsoft.graph.models.ManagedDevice;
-import com.microsoft.graph.models.ComanagementEligibleDevice;
-import com.microsoft.graph.models.DataSharingConsent;
-import com.microsoft.graph.models.DetectedApp;
-import com.microsoft.graph.models.DeviceComplianceScript;
-import com.microsoft.graph.models.DeviceCustomAttributeShellScript;
-import com.microsoft.graph.models.DeviceHealthScript;
-import com.microsoft.graph.models.DeviceManagementScript;
-import com.microsoft.graph.models.DeviceShellScript;
 import com.microsoft.graph.models.ManagedDeviceOverview;
-import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
-import com.microsoft.graph.models.OemWarrantyInformationOnboarding;
-import com.microsoft.graph.models.RemoteActionAudit;
 import com.microsoft.graph.models.TenantAttachRBAC;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDeviceModelPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformanceDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthOSVersionPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
-import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpact;
 import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthCapacityDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceAppImpact;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDevicePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthModelPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
-import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScope;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistory;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcess;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
-import com.microsoft.graph.models.UserExperienceAnalyticsImpactingProcess;
-import com.microsoft.graph.models.UserExperienceAnalyticsModelScores;
-import com.microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
 import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
 import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
-import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
-import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsScoreHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
-import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
-import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformance;
-import com.microsoft.graph.models.WindowsMalwareInformation;
-import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
-import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
-import com.microsoft.graph.models.AppleUserInitiatedEnrollmentProfile;
-import com.microsoft.graph.models.DepOnboardingSetting;
-import com.microsoft.graph.models.ImportedDeviceIdentity;
-import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
-import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.WindowsAutopilotSettings;
-import com.microsoft.graph.models.ZebraFotaArtifact;
 import com.microsoft.graph.models.ZebraFotaConnector;
-import com.microsoft.graph.models.ZebraFotaDeployment;
-import com.microsoft.graph.models.GroupPolicyMigrationReport;
-import com.microsoft.graph.models.GroupPolicyObjectFile;
-import com.microsoft.graph.models.GroupPolicyCategory;
-import com.microsoft.graph.models.GroupPolicyConfiguration;
-import com.microsoft.graph.models.GroupPolicyDefinitionFile;
-import com.microsoft.graph.models.GroupPolicyDefinition;
-import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
-import com.microsoft.graph.models.MicrosoftTunnelConfiguration;
-import com.microsoft.graph.models.MicrosoftTunnelHealthThreshold;
-import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
-import com.microsoft.graph.models.MicrosoftTunnelSite;
-import com.microsoft.graph.models.NotificationMessageTemplate;
-import com.microsoft.graph.models.DeviceManagementDomainJoinConnector;
-import com.microsoft.graph.models.ConfigManagerCollection;
-import com.microsoft.graph.models.ResourceOperation;
-import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.models.RoleDefinition;
-import com.microsoft.graph.models.RoleScopeTag;
-import com.microsoft.graph.models.RemoteAssistancePartner;
 import com.microsoft.graph.models.RemoteAssistanceSettings;
 import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
-import com.microsoft.graph.models.TelecomExpenseManagementPartner;
-import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
-import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.models.WindowsDriverUpdateProfile;
-import com.microsoft.graph.models.WindowsFeatureUpdateProfile;
-import com.microsoft.graph.models.WindowsQualityUpdateProfile;
-import com.microsoft.graph.models.WindowsUpdateCatalogItem;
-import com.microsoft.graph.models.IntuneBrandingProfile;
-import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
-import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
-import com.microsoft.graph.models.CertificateConnectorDetails;
-import com.microsoft.graph.models.UserPFXCertificate;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage;
 import com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaCollectionPage;
@@ -185,9 +62,7 @@ import com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionPage;
 import com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage;
 import com.microsoft.graph.requests.NdesConnectorCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage;
@@ -197,14 +72,12 @@ import com.microsoft.graph.requests.DeviceCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementExchangeOnPremisesPolicyCollectionPage;
 import com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementSettingCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementIntentCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage;
 import com.microsoft.graph.requests.CloudPCConnectivityIssueCollectionPage;
-import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.ComanagementEligibleDeviceCollectionPage;
 import com.microsoft.graph.requests.DataSharingConsentCollectionPage;
 import com.microsoft.graph.requests.DetectedAppCollectionPage;
@@ -232,10 +105,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePe
 import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
@@ -453,6 +323,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
+     * The Android Device Owner Enrollment Profiles.
+     * Android device owner enrollment profile entities.
+     */
+    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
+
+    /**
      * The Virtual Endpoint.
      * 
      */
@@ -462,22 +341,13 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public VirtualEndpoint virtualEndpoint;
 
     /**
-     * The Android Device Owner Enrollment Profiles.
-     * Android device owner enrollment profile entities.
-     */
-    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
-    @Expose
-	@Nullable
-    public AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
-
-    /**
      * The Android For Work App Configuration Schemas.
      * Android for Work app configuration schema entities.
      */
     @SerializedName(value = "androidForWorkAppConfigurationSchemas", alternate = {"AndroidForWorkAppConfigurationSchemas"})
     @Expose
 	@Nullable
-    public AndroidForWorkAppConfigurationSchemaCollectionPage androidForWorkAppConfigurationSchemas;
+    public com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaCollectionPage androidForWorkAppConfigurationSchemas;
 
     /**
      * The Android For Work Enrollment Profiles.
@@ -486,7 +356,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "androidForWorkEnrollmentProfiles", alternate = {"AndroidForWorkEnrollmentProfiles"})
     @Expose
 	@Nullable
-    public AndroidForWorkEnrollmentProfileCollectionPage androidForWorkEnrollmentProfiles;
+    public com.microsoft.graph.requests.AndroidForWorkEnrollmentProfileCollectionPage androidForWorkEnrollmentProfiles;
 
     /**
      * The Android For Work Settings.
@@ -513,7 +383,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "androidManagedStoreAppConfigurationSchemas", alternate = {"AndroidManagedStoreAppConfigurationSchemas"})
     @Expose
 	@Nullable
-    public AndroidManagedStoreAppConfigurationSchemaCollectionPage androidManagedStoreAppConfigurationSchemas;
+    public com.microsoft.graph.requests.AndroidManagedStoreAppConfigurationSchemaCollectionPage androidManagedStoreAppConfigurationSchemas;
 
     /**
      * The Audit Events.
@@ -522,7 +392,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
     @Expose
 	@Nullable
-    public AuditEventCollectionPage auditEvents;
+    public com.microsoft.graph.requests.AuditEventCollectionPage auditEvents;
 
     /**
      * The Assignment Filters.
@@ -531,7 +401,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignmentFilters", alternate = {"AssignmentFilters"})
     @Expose
 	@Nullable
-    public DeviceAndAppManagementAssignmentFilterCollectionPage assignmentFilters;
+    public com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionPage assignmentFilters;
 
     /**
      * The Chrome OSOnboarding Settings.
@@ -540,7 +410,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "chromeOSOnboardingSettings", alternate = {"ChromeOSOnboardingSettings"})
     @Expose
 	@Nullable
-    public ChromeOSOnboardingSettingsCollectionPage chromeOSOnboardingSettings;
+    public com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionPage chromeOSOnboardingSettings;
 
     /**
      * The Terms And Conditions.
@@ -549,7 +419,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
     @Expose
 	@Nullable
-    public TermsAndConditionsCollectionPage termsAndConditions;
+    public com.microsoft.graph.requests.TermsAndConditionsCollectionPage termsAndConditions;
 
     /**
      * The Advanced Threat Protection Onboarding State Summary.
@@ -567,7 +437,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cartToClassAssociations", alternate = {"CartToClassAssociations"})
     @Expose
 	@Nullable
-    public CartToClassAssociationCollectionPage cartToClassAssociations;
+    public com.microsoft.graph.requests.CartToClassAssociationCollectionPage cartToClassAssociations;
 
     /**
      * The Device Compliance Policies.
@@ -576,7 +446,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCompliancePolicies", alternate = {"DeviceCompliancePolicies"})
     @Expose
 	@Nullable
-    public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
+    public com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
 
     /**
      * The Device Compliance Policy Device State Summary.
@@ -594,7 +464,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
     @Expose
 	@Nullable
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
+    public com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
     /**
      * The Device Configuration Conflict Summary.
@@ -603,7 +473,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceConfigurationConflictSummary", alternate = {"DeviceConfigurationConflictSummary"})
     @Expose
 	@Nullable
-    public DeviceConfigurationConflictSummaryCollectionPage deviceConfigurationConflictSummary;
+    public com.microsoft.graph.requests.DeviceConfigurationConflictSummaryCollectionPage deviceConfigurationConflictSummary;
 
     /**
      * The Device Configuration Device State Summaries.
@@ -621,7 +491,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceConfigurationRestrictedAppsViolations", alternate = {"DeviceConfigurationRestrictedAppsViolations"})
     @Expose
 	@Nullable
-    public RestrictedAppsViolationCollectionPage deviceConfigurationRestrictedAppsViolations;
+    public com.microsoft.graph.requests.RestrictedAppsViolationCollectionPage deviceConfigurationRestrictedAppsViolations;
 
     /**
      * The Device Configurations.
@@ -630,7 +500,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceConfigurations", alternate = {"DeviceConfigurations"})
     @Expose
 	@Nullable
-    public DeviceConfigurationCollectionPage deviceConfigurations;
+    public com.microsoft.graph.requests.DeviceConfigurationCollectionPage deviceConfigurations;
 
     /**
      * The Device Configurations All Managed Device Certificate States.
@@ -639,7 +509,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceConfigurationsAllManagedDeviceCertificateStates", alternate = {"DeviceConfigurationsAllManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedAllDeviceCertificateStateCollectionPage deviceConfigurationsAllManagedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedAllDeviceCertificateStateCollectionPage deviceConfigurationsAllManagedDeviceCertificateStates;
 
     /**
      * The Device Configuration User State Summaries.
@@ -657,7 +527,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "iosUpdateStatuses", alternate = {"IosUpdateStatuses"})
     @Expose
 	@Nullable
-    public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
+    public com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
     /**
      * The Mac OSSoftware Update Account Summaries.
@@ -666,7 +536,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "macOSSoftwareUpdateAccountSummaries", alternate = {"MacOSSoftwareUpdateAccountSummaries"})
     @Expose
 	@Nullable
-    public MacOSSoftwareUpdateAccountSummaryCollectionPage macOSSoftwareUpdateAccountSummaries;
+    public com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionPage macOSSoftwareUpdateAccountSummaries;
 
     /**
      * The Managed Device Encryption States.
@@ -675,7 +545,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedDeviceEncryptionStates", alternate = {"ManagedDeviceEncryptionStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceEncryptionStateCollectionPage managedDeviceEncryptionStates;
+    public com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage managedDeviceEncryptionStates;
 
     /**
      * The Ndes Connectors.
@@ -684,7 +554,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "ndesConnectors", alternate = {"NdesConnectors"})
     @Expose
 	@Nullable
-    public NdesConnectorCollectionPage ndesConnectors;
+    public com.microsoft.graph.requests.NdesConnectorCollectionPage ndesConnectors;
 
     /**
      * The Software Update Status Summary.
@@ -702,7 +572,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "complianceCategories", alternate = {"ComplianceCategories"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationCategoryCollectionPage complianceCategories;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage complianceCategories;
 
     /**
      * The Compliance Policies.
@@ -711,7 +581,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "compliancePolicies", alternate = {"CompliancePolicies"})
     @Expose
 	@Nullable
-    public DeviceManagementCompliancePolicyCollectionPage compliancePolicies;
+    public com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionPage compliancePolicies;
 
     /**
      * The Compliance Settings.
@@ -720,7 +590,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage complianceSettings;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage complianceSettings;
 
     /**
      * The Configuration Categories.
@@ -729,7 +599,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "configurationCategories", alternate = {"ConfigurationCategories"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationCategoryCollectionPage configurationCategories;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage configurationCategories;
 
     /**
      * The Configuration Policies.
@@ -738,7 +608,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "configurationPolicies", alternate = {"ConfigurationPolicies"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationPolicyCollectionPage configurationPolicies;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage configurationPolicies;
 
     /**
      * The Configuration Policy Templates.
@@ -747,7 +617,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "configurationPolicyTemplates", alternate = {"ConfigurationPolicyTemplates"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationPolicyTemplateCollectionPage configurationPolicyTemplates;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage configurationPolicyTemplates;
 
     /**
      * The Configuration Settings.
@@ -756,7 +626,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "configurationSettings", alternate = {"ConfigurationSettings"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage configurationSettings;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage configurationSettings;
 
     /**
      * The Reusable Policy Settings.
@@ -765,7 +635,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "reusablePolicySettings", alternate = {"ReusablePolicySettings"})
     @Expose
 	@Nullable
-    public DeviceManagementReusablePolicySettingCollectionPage reusablePolicySettings;
+    public com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage reusablePolicySettings;
 
     /**
      * The Reusable Settings.
@@ -774,7 +644,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "reusableSettings", alternate = {"ReusableSettings"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingDefinitionCollectionPage reusableSettings;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage reusableSettings;
 
     /**
      * The Template Settings.
@@ -783,7 +653,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "templateSettings", alternate = {"TemplateSettings"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingTemplateCollectionPage templateSettings;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage templateSettings;
 
     /**
      * The Compliance Management Partners.
@@ -792,7 +662,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "complianceManagementPartners", alternate = {"ComplianceManagementPartners"})
     @Expose
 	@Nullable
-    public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
+    public com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage complianceManagementPartners;
 
     /**
      * The Conditional Access Settings.
@@ -810,7 +680,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCategories", alternate = {"DeviceCategories"})
     @Expose
 	@Nullable
-    public DeviceCategoryCollectionPage deviceCategories;
+    public com.microsoft.graph.requests.DeviceCategoryCollectionPage deviceCategories;
 
     /**
      * The Device Enrollment Configurations.
@@ -819,7 +689,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceEnrollmentConfigurations", alternate = {"DeviceEnrollmentConfigurations"})
     @Expose
 	@Nullable
-    public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
+    public com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Device Management Partners.
@@ -828,7 +698,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceManagementPartners", alternate = {"DeviceManagementPartners"})
     @Expose
 	@Nullable
-    public DeviceManagementPartnerCollectionPage deviceManagementPartners;
+    public com.microsoft.graph.requests.DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
     /**
      * The Exchange Connectors.
@@ -837,7 +707,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "exchangeConnectors", alternate = {"ExchangeConnectors"})
     @Expose
 	@Nullable
-    public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
+    public com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
 
     /**
      * The Exchange On Premises Policies.
@@ -846,7 +716,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "exchangeOnPremisesPolicies", alternate = {"ExchangeOnPremisesPolicies"})
     @Expose
 	@Nullable
-    public DeviceManagementExchangeOnPremisesPolicyCollectionPage exchangeOnPremisesPolicies;
+    public com.microsoft.graph.requests.DeviceManagementExchangeOnPremisesPolicyCollectionPage exchangeOnPremisesPolicies;
 
     /**
      * The Exchange On Premises Policy.
@@ -864,7 +734,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "mobileThreatDefenseConnectors", alternate = {"MobileThreatDefenseConnectors"})
     @Expose
 	@Nullable
-    public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
+    public com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
 
     /**
      * The Categories.
@@ -873,7 +743,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.DeviceManagementSettingCategoryCollectionPage categories;
 
     /**
      * The Intents.
@@ -882,7 +752,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "intents", alternate = {"Intents"})
     @Expose
 	@Nullable
-    public DeviceManagementIntentCollectionPage intents;
+    public com.microsoft.graph.requests.DeviceManagementIntentCollectionPage intents;
 
     /**
      * The Setting Definitions.
@@ -891,7 +761,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "settingDefinitions", alternate = {"SettingDefinitions"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
+    public com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
 
     /**
      * The Templates.
@@ -900,7 +770,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "templates", alternate = {"Templates"})
     @Expose
 	@Nullable
-    public DeviceManagementTemplateCollectionPage templates;
+    public com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage templates;
 
     /**
      * The Apple Push Notification Certificate.
@@ -918,7 +788,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cloudPCConnectivityIssues", alternate = {"CloudPCConnectivityIssues"})
     @Expose
 	@Nullable
-    public CloudPCConnectivityIssueCollectionPage cloudPCConnectivityIssues;
+    public com.microsoft.graph.requests.CloudPCConnectivityIssueCollectionPage cloudPCConnectivityIssues;
 
     /**
      * The Comanaged Devices.
@@ -927,7 +797,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "comanagedDevices", alternate = {"ComanagedDevices"})
     @Expose
 	@Nullable
-    public ManagedDeviceCollectionPage comanagedDevices;
+    public com.microsoft.graph.requests.ManagedDeviceCollectionPage comanagedDevices;
 
     /**
      * The Comanagement Eligible Devices.
@@ -936,7 +806,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "comanagementEligibleDevices", alternate = {"ComanagementEligibleDevices"})
     @Expose
 	@Nullable
-    public ComanagementEligibleDeviceCollectionPage comanagementEligibleDevices;
+    public com.microsoft.graph.requests.ComanagementEligibleDeviceCollectionPage comanagementEligibleDevices;
 
     /**
      * The Data Sharing Consents.
@@ -945,7 +815,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dataSharingConsents", alternate = {"DataSharingConsents"})
     @Expose
 	@Nullable
-    public DataSharingConsentCollectionPage dataSharingConsents;
+    public com.microsoft.graph.requests.DataSharingConsentCollectionPage dataSharingConsents;
 
     /**
      * The Detected Apps.
@@ -954,7 +824,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "detectedApps", alternate = {"DetectedApps"})
     @Expose
 	@Nullable
-    public DetectedAppCollectionPage detectedApps;
+    public com.microsoft.graph.requests.DetectedAppCollectionPage detectedApps;
 
     /**
      * The Device Compliance Scripts.
@@ -963,7 +833,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceComplianceScripts", alternate = {"DeviceComplianceScripts"})
     @Expose
 	@Nullable
-    public DeviceComplianceScriptCollectionPage deviceComplianceScripts;
+    public com.microsoft.graph.requests.DeviceComplianceScriptCollectionPage deviceComplianceScripts;
 
     /**
      * The Device Custom Attribute Shell Scripts.
@@ -972,7 +842,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCustomAttributeShellScripts", alternate = {"DeviceCustomAttributeShellScripts"})
     @Expose
 	@Nullable
-    public DeviceCustomAttributeShellScriptCollectionPage deviceCustomAttributeShellScripts;
+    public com.microsoft.graph.requests.DeviceCustomAttributeShellScriptCollectionPage deviceCustomAttributeShellScripts;
 
     /**
      * The Device Health Scripts.
@@ -981,7 +851,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceHealthScripts", alternate = {"DeviceHealthScripts"})
     @Expose
 	@Nullable
-    public DeviceHealthScriptCollectionPage deviceHealthScripts;
+    public com.microsoft.graph.requests.DeviceHealthScriptCollectionPage deviceHealthScripts;
 
     /**
      * The Device Management Scripts.
@@ -990,7 +860,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceManagementScripts", alternate = {"DeviceManagementScripts"})
     @Expose
 	@Nullable
-    public DeviceManagementScriptCollectionPage deviceManagementScripts;
+    public com.microsoft.graph.requests.DeviceManagementScriptCollectionPage deviceManagementScripts;
 
     /**
      * The Device Shell Scripts.
@@ -999,7 +869,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceShellScripts", alternate = {"DeviceShellScripts"})
     @Expose
 	@Nullable
-    public DeviceShellScriptCollectionPage deviceShellScripts;
+    public com.microsoft.graph.requests.DeviceShellScriptCollectionPage deviceShellScripts;
 
     /**
      * The Managed Device Overview.
@@ -1017,7 +887,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
 	@Nullable
-    public ManagedDeviceCollectionPage managedDevices;
+    public com.microsoft.graph.requests.ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Mobile App Troubleshooting Events.
@@ -1026,7 +896,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "mobileAppTroubleshootingEvents", alternate = {"MobileAppTroubleshootingEvents"})
     @Expose
 	@Nullable
-    public MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
+    public com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
 
     /**
      * The Oem Warranty Information Onboarding.
@@ -1035,7 +905,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "oemWarrantyInformationOnboarding", alternate = {"OemWarrantyInformationOnboarding"})
     @Expose
 	@Nullable
-    public OemWarrantyInformationOnboardingCollectionPage oemWarrantyInformationOnboarding;
+    public com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage oemWarrantyInformationOnboarding;
 
     /**
      * The Remote Action Audits.
@@ -1044,7 +914,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "remoteActionAudits", alternate = {"RemoteActionAudits"})
     @Expose
 	@Nullable
-    public RemoteActionAuditCollectionPage remoteActionAudits;
+    public com.microsoft.graph.requests.RemoteActionAuditCollectionPage remoteActionAudits;
 
     /**
      * The Tenant Attach RBAC.
@@ -1062,7 +932,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformance", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage userExperienceAnalyticsAppHealthApplicationPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage userExperienceAnalyticsAppHealthApplicationPerformance;
 
     /**
      * The User Experience Analytics App Health Application Performance By App Version.
@@ -1071,7 +941,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
 
     /**
      * The User Experience Analytics App Health Application Performance By App Version Details.
@@ -1080,7 +950,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
 
     /**
      * The User Experience Analytics App Health Application Performance By App Version Device Id.
@@ -1089,7 +959,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
 
     /**
      * The User Experience Analytics App Health Application Performance By OSVersion.
@@ -1098,7 +968,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
 
     /**
      * The User Experience Analytics App Health Device Model Performance.
@@ -1107,7 +977,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthDeviceModelPerformance", alternate = {"UserExperienceAnalyticsAppHealthDeviceModelPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage userExperienceAnalyticsAppHealthDeviceModelPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage userExperienceAnalyticsAppHealthDeviceModelPerformance;
 
     /**
      * The User Experience Analytics App Health Device Performance.
@@ -1116,7 +986,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthDevicePerformance", alternate = {"UserExperienceAnalyticsAppHealthDevicePerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage userExperienceAnalyticsAppHealthDevicePerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage userExperienceAnalyticsAppHealthDevicePerformance;
 
     /**
      * The User Experience Analytics App Health Device Performance Details.
@@ -1125,7 +995,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthDevicePerformanceDetails", alternate = {"UserExperienceAnalyticsAppHealthDevicePerformanceDetails"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage userExperienceAnalyticsAppHealthDevicePerformanceDetails;
 
     /**
      * The User Experience Analytics App Health OSVersion Performance.
@@ -1134,7 +1004,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsAppHealthOSVersionPerformance", alternate = {"UserExperienceAnalyticsAppHealthOSVersionPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage userExperienceAnalyticsAppHealthOSVersionPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage userExperienceAnalyticsAppHealthOSVersionPerformance;
 
     /**
      * The User Experience Analytics App Health Overview.
@@ -1152,7 +1022,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBaselines", alternate = {"UserExperienceAnalyticsBaselines"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBaselineCollectionPage userExperienceAnalyticsBaselines;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage userExperienceAnalyticsBaselines;
 
     /**
      * The User Experience Analytics Battery Health App Impact.
@@ -1161,7 +1031,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBatteryHealthAppImpact", alternate = {"UserExperienceAnalyticsBatteryHealthAppImpact"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage userExperienceAnalyticsBatteryHealthAppImpact;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage userExperienceAnalyticsBatteryHealthAppImpact;
 
     /**
      * The User Experience Analytics Battery Health Capacity Details.
@@ -1179,7 +1049,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBatteryHealthDeviceAppImpact", alternate = {"UserExperienceAnalyticsBatteryHealthDeviceAppImpact"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage userExperienceAnalyticsBatteryHealthDeviceAppImpact;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage userExperienceAnalyticsBatteryHealthDeviceAppImpact;
 
     /**
      * The User Experience Analytics Battery Health Device Performance.
@@ -1188,7 +1058,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBatteryHealthDevicePerformance", alternate = {"UserExperienceAnalyticsBatteryHealthDevicePerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage userExperienceAnalyticsBatteryHealthDevicePerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage userExperienceAnalyticsBatteryHealthDevicePerformance;
 
     /**
      * The User Experience Analytics Battery Health Device Runtime History.
@@ -1197,7 +1067,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", alternate = {"UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
 
     /**
      * The User Experience Analytics Battery Health Model Performance.
@@ -1206,7 +1076,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBatteryHealthModelPerformance", alternate = {"UserExperienceAnalyticsBatteryHealthModelPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage userExperienceAnalyticsBatteryHealthModelPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage userExperienceAnalyticsBatteryHealthModelPerformance;
 
     /**
      * The User Experience Analytics Battery Health Os Performance.
@@ -1215,7 +1085,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsBatteryHealthOsPerformance", alternate = {"UserExperienceAnalyticsBatteryHealthOsPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage userExperienceAnalyticsBatteryHealthOsPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage userExperienceAnalyticsBatteryHealthOsPerformance;
 
     /**
      * The User Experience Analytics Battery Health Runtime Details.
@@ -1233,7 +1103,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsCategories", alternate = {"UserExperienceAnalyticsCategories"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsCategoryCollectionPage userExperienceAnalyticsCategories;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage userExperienceAnalyticsCategories;
 
     /**
      * The User Experience Analytics Device Metric History.
@@ -1242,7 +1112,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDeviceMetricHistory", alternate = {"UserExperienceAnalyticsDeviceMetricHistory"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsDeviceMetricHistory;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsDeviceMetricHistory;
 
     /**
      * The User Experience Analytics Device Performance.
@@ -1251,7 +1121,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDevicePerformance", alternate = {"UserExperienceAnalyticsDevicePerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDevicePerformanceCollectionPage userExperienceAnalyticsDevicePerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage userExperienceAnalyticsDevicePerformance;
 
     /**
      * The User Experience Analytics Device Scope.
@@ -1269,7 +1139,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDeviceScopes", alternate = {"UserExperienceAnalyticsDeviceScopes"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDeviceScopeCollectionPage userExperienceAnalyticsDeviceScopes;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeCollectionPage userExperienceAnalyticsDeviceScopes;
 
     /**
      * The User Experience Analytics Device Scores.
@@ -1278,7 +1148,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDeviceScores", alternate = {"UserExperienceAnalyticsDeviceScores"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDeviceScoresCollectionPage userExperienceAnalyticsDeviceScores;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage userExperienceAnalyticsDeviceScores;
 
     /**
      * The User Experience Analytics Device Startup History.
@@ -1287,7 +1157,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDeviceStartupHistory", alternate = {"UserExperienceAnalyticsDeviceStartupHistory"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDeviceStartupHistoryCollectionPage userExperienceAnalyticsDeviceStartupHistory;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage userExperienceAnalyticsDeviceStartupHistory;
 
     /**
      * The User Experience Analytics Device Startup Processes.
@@ -1296,7 +1166,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDeviceStartupProcesses", alternate = {"UserExperienceAnalyticsDeviceStartupProcesses"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDeviceStartupProcessCollectionPage userExperienceAnalyticsDeviceStartupProcesses;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage userExperienceAnalyticsDeviceStartupProcesses;
 
     /**
      * The User Experience Analytics Device Startup Process Performance.
@@ -1305,7 +1175,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDeviceStartupProcessPerformance", alternate = {"UserExperienceAnalyticsDeviceStartupProcessPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage userExperienceAnalyticsDeviceStartupProcessPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage userExperienceAnalyticsDeviceStartupProcessPerformance;
 
     /**
      * The User Experience Analytics Devices Without Cloud Identity.
@@ -1314,7 +1184,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsDevicesWithoutCloudIdentity", alternate = {"UserExperienceAnalyticsDevicesWithoutCloudIdentity"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
 
     /**
      * The User Experience Analytics Impacting Process.
@@ -1323,7 +1193,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsImpactingProcess", alternate = {"UserExperienceAnalyticsImpactingProcess"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsImpactingProcessCollectionPage userExperienceAnalyticsImpactingProcess;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage userExperienceAnalyticsImpactingProcess;
 
     /**
      * The User Experience Analytics Metric History.
@@ -1332,7 +1202,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsMetricHistory", alternate = {"UserExperienceAnalyticsMetricHistory"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsMetricHistory;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsMetricHistory;
 
     /**
      * The User Experience Analytics Model Scores.
@@ -1341,7 +1211,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsModelScores", alternate = {"UserExperienceAnalyticsModelScores"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsModelScoresCollectionPage userExperienceAnalyticsModelScores;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage userExperienceAnalyticsModelScores;
 
     /**
      * The User Experience Analytics Not Autopilot Ready Device.
@@ -1350,7 +1220,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsNotAutopilotReadyDevice", alternate = {"UserExperienceAnalyticsNotAutopilotReadyDevice"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage userExperienceAnalyticsNotAutopilotReadyDevice;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage userExperienceAnalyticsNotAutopilotReadyDevice;
 
     /**
      * The User Experience Analytics Overview.
@@ -1377,7 +1247,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsRemoteConnection", alternate = {"UserExperienceAnalyticsRemoteConnection"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsRemoteConnectionCollectionPage userExperienceAnalyticsRemoteConnection;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionPage userExperienceAnalyticsRemoteConnection;
 
     /**
      * The User Experience Analytics Resource Performance.
@@ -1386,7 +1256,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsResourcePerformance", alternate = {"UserExperienceAnalyticsResourcePerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsResourcePerformanceCollectionPage userExperienceAnalyticsResourcePerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage userExperienceAnalyticsResourcePerformance;
 
     /**
      * The User Experience Analytics Score History.
@@ -1395,7 +1265,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsScoreHistory", alternate = {"UserExperienceAnalyticsScoreHistory"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsScoreHistoryCollectionPage userExperienceAnalyticsScoreHistory;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage userExperienceAnalyticsScoreHistory;
 
     /**
      * The User Experience Analytics Work From Anywhere Hardware Readiness Metric.
@@ -1413,7 +1283,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereMetrics", alternate = {"UserExperienceAnalyticsWorkFromAnywhereMetrics"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage userExperienceAnalyticsWorkFromAnywhereMetrics;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage userExperienceAnalyticsWorkFromAnywhereMetrics;
 
     /**
      * The User Experience Analytics Work From Anywhere Model Performance.
@@ -1422,7 +1292,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereModelPerformance", alternate = {"UserExperienceAnalyticsWorkFromAnywhereModelPerformance"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage userExperienceAnalyticsWorkFromAnywhereModelPerformance;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage userExperienceAnalyticsWorkFromAnywhereModelPerformance;
 
     /**
      * The Windows Malware Information.
@@ -1431,7 +1301,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsMalwareInformation", alternate = {"WindowsMalwareInformation"})
     @Expose
 	@Nullable
-    public WindowsMalwareInformationCollectionPage windowsMalwareInformation;
+    public com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage windowsMalwareInformation;
 
     /**
      * The Derived Credentials.
@@ -1440,7 +1310,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "derivedCredentials", alternate = {"DerivedCredentials"})
     @Expose
 	@Nullable
-    public DeviceManagementDerivedCredentialSettingsCollectionPage derivedCredentials;
+    public com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionPage derivedCredentials;
 
     /**
      * The Resource Access Profiles.
@@ -1449,7 +1319,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "resourceAccessProfiles", alternate = {"ResourceAccessProfiles"})
     @Expose
 	@Nullable
-    public DeviceManagementResourceAccessProfileBaseCollectionPage resourceAccessProfiles;
+    public com.microsoft.graph.requests.DeviceManagementResourceAccessProfileBaseCollectionPage resourceAccessProfiles;
 
     /**
      * The Apple User Initiated Enrollment Profiles.
@@ -1458,7 +1328,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "appleUserInitiatedEnrollmentProfiles", alternate = {"AppleUserInitiatedEnrollmentProfiles"})
     @Expose
 	@Nullable
-    public AppleUserInitiatedEnrollmentProfileCollectionPage appleUserInitiatedEnrollmentProfiles;
+    public com.microsoft.graph.requests.AppleUserInitiatedEnrollmentProfileCollectionPage appleUserInitiatedEnrollmentProfiles;
 
     /**
      * The Dep Onboarding Settings.
@@ -1467,7 +1337,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "depOnboardingSettings", alternate = {"DepOnboardingSettings"})
     @Expose
 	@Nullable
-    public DepOnboardingSettingCollectionPage depOnboardingSettings;
+    public com.microsoft.graph.requests.DepOnboardingSettingCollectionPage depOnboardingSettings;
 
     /**
      * The Imported Device Identities.
@@ -1476,7 +1346,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "importedDeviceIdentities", alternate = {"ImportedDeviceIdentities"})
     @Expose
 	@Nullable
-    public ImportedDeviceIdentityCollectionPage importedDeviceIdentities;
+    public com.microsoft.graph.requests.ImportedDeviceIdentityCollectionPage importedDeviceIdentities;
 
     /**
      * The Imported Windows Autopilot Device Identities.
@@ -1485,7 +1355,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "importedWindowsAutopilotDeviceIdentities", alternate = {"ImportedWindowsAutopilotDeviceIdentities"})
     @Expose
 	@Nullable
-    public ImportedWindowsAutopilotDeviceIdentityCollectionPage importedWindowsAutopilotDeviceIdentities;
+    public com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage importedWindowsAutopilotDeviceIdentities;
 
     /**
      * The Windows Autopilot Deployment Profiles.
@@ -1494,7 +1364,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsAutopilotDeploymentProfiles", alternate = {"WindowsAutopilotDeploymentProfiles"})
     @Expose
 	@Nullable
-    public WindowsAutopilotDeploymentProfileCollectionPage windowsAutopilotDeploymentProfiles;
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileCollectionPage windowsAutopilotDeploymentProfiles;
 
     /**
      * The Windows Autopilot Device Identities.
@@ -1503,7 +1373,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsAutopilotDeviceIdentities", alternate = {"WindowsAutopilotDeviceIdentities"})
     @Expose
 	@Nullable
-    public WindowsAutopilotDeviceIdentityCollectionPage windowsAutopilotDeviceIdentities;
+    public com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage windowsAutopilotDeviceIdentities;
 
     /**
      * The Windows Autopilot Settings.
@@ -1521,7 +1391,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "zebraFotaArtifacts", alternate = {"ZebraFotaArtifacts"})
     @Expose
 	@Nullable
-    public ZebraFotaArtifactCollectionPage zebraFotaArtifacts;
+    public com.microsoft.graph.requests.ZebraFotaArtifactCollectionPage zebraFotaArtifacts;
 
     /**
      * The Zebra Fota Connector.
@@ -1539,7 +1409,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "zebraFotaDeployments", alternate = {"ZebraFotaDeployments"})
     @Expose
 	@Nullable
-    public ZebraFotaDeploymentCollectionPage zebraFotaDeployments;
+    public com.microsoft.graph.requests.ZebraFotaDeploymentCollectionPage zebraFotaDeployments;
 
     /**
      * The Group Policy Migration Reports.
@@ -1548,7 +1418,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyMigrationReports", alternate = {"GroupPolicyMigrationReports"})
     @Expose
 	@Nullable
-    public GroupPolicyMigrationReportCollectionPage groupPolicyMigrationReports;
+    public com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionPage groupPolicyMigrationReports;
 
     /**
      * The Group Policy Object Files.
@@ -1557,7 +1427,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyObjectFiles", alternate = {"GroupPolicyObjectFiles"})
     @Expose
 	@Nullable
-    public GroupPolicyObjectFileCollectionPage groupPolicyObjectFiles;
+    public com.microsoft.graph.requests.GroupPolicyObjectFileCollectionPage groupPolicyObjectFiles;
 
     /**
      * The Group Policy Categories.
@@ -1566,7 +1436,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyCategories", alternate = {"GroupPolicyCategories"})
     @Expose
 	@Nullable
-    public GroupPolicyCategoryCollectionPage groupPolicyCategories;
+    public com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage groupPolicyCategories;
 
     /**
      * The Group Policy Configurations.
@@ -1575,7 +1445,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyConfigurations", alternate = {"GroupPolicyConfigurations"})
     @Expose
 	@Nullable
-    public GroupPolicyConfigurationCollectionPage groupPolicyConfigurations;
+    public com.microsoft.graph.requests.GroupPolicyConfigurationCollectionPage groupPolicyConfigurations;
 
     /**
      * The Group Policy Definition Files.
@@ -1584,7 +1454,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyDefinitionFiles", alternate = {"GroupPolicyDefinitionFiles"})
     @Expose
 	@Nullable
-    public GroupPolicyDefinitionFileCollectionPage groupPolicyDefinitionFiles;
+    public com.microsoft.graph.requests.GroupPolicyDefinitionFileCollectionPage groupPolicyDefinitionFiles;
 
     /**
      * The Group Policy Definitions.
@@ -1593,7 +1463,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyDefinitions", alternate = {"GroupPolicyDefinitions"})
     @Expose
 	@Nullable
-    public GroupPolicyDefinitionCollectionPage groupPolicyDefinitions;
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage groupPolicyDefinitions;
 
     /**
      * The Group Policy Uploaded Definition Files.
@@ -1602,7 +1472,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupPolicyUploadedDefinitionFiles", alternate = {"GroupPolicyUploadedDefinitionFiles"})
     @Expose
 	@Nullable
-    public GroupPolicyUploadedDefinitionFileCollectionPage groupPolicyUploadedDefinitionFiles;
+    public com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionPage groupPolicyUploadedDefinitionFiles;
 
     /**
      * The Microsoft Tunnel Configurations.
@@ -1611,7 +1481,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftTunnelConfigurations", alternate = {"MicrosoftTunnelConfigurations"})
     @Expose
 	@Nullable
-    public MicrosoftTunnelConfigurationCollectionPage microsoftTunnelConfigurations;
+    public com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionPage microsoftTunnelConfigurations;
 
     /**
      * The Microsoft Tunnel Health Thresholds.
@@ -1620,7 +1490,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftTunnelHealthThresholds", alternate = {"MicrosoftTunnelHealthThresholds"})
     @Expose
 	@Nullable
-    public MicrosoftTunnelHealthThresholdCollectionPage microsoftTunnelHealthThresholds;
+    public com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionPage microsoftTunnelHealthThresholds;
 
     /**
      * The Microsoft Tunnel Server Log Collection Responses.
@@ -1629,7 +1499,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftTunnelServerLogCollectionResponses", alternate = {"MicrosoftTunnelServerLogCollectionResponses"})
     @Expose
 	@Nullable
-    public MicrosoftTunnelServerLogCollectionResponseCollectionPage microsoftTunnelServerLogCollectionResponses;
+    public com.microsoft.graph.requests.MicrosoftTunnelServerLogCollectionResponseCollectionPage microsoftTunnelServerLogCollectionResponses;
 
     /**
      * The Microsoft Tunnel Sites.
@@ -1638,7 +1508,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftTunnelSites", alternate = {"MicrosoftTunnelSites"})
     @Expose
 	@Nullable
-    public MicrosoftTunnelSiteCollectionPage microsoftTunnelSites;
+    public com.microsoft.graph.requests.MicrosoftTunnelSiteCollectionPage microsoftTunnelSites;
 
     /**
      * The Notification Message Templates.
@@ -1647,7 +1517,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "notificationMessageTemplates", alternate = {"NotificationMessageTemplates"})
     @Expose
 	@Nullable
-    public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
+    public com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage notificationMessageTemplates;
 
     /**
      * The Domain Join Connectors.
@@ -1656,7 +1526,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "domainJoinConnectors", alternate = {"DomainJoinConnectors"})
     @Expose
 	@Nullable
-    public DeviceManagementDomainJoinConnectorCollectionPage domainJoinConnectors;
+    public com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionPage domainJoinConnectors;
 
     /**
      * The Config Manager Collections.
@@ -1665,7 +1535,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "configManagerCollections", alternate = {"ConfigManagerCollections"})
     @Expose
 	@Nullable
-    public ConfigManagerCollectionCollectionPage configManagerCollections;
+    public com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage configManagerCollections;
 
     /**
      * The Resource Operations.
@@ -1674,7 +1544,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "resourceOperations", alternate = {"ResourceOperations"})
     @Expose
 	@Nullable
-    public ResourceOperationCollectionPage resourceOperations;
+    public com.microsoft.graph.requests.ResourceOperationCollectionPage resourceOperations;
 
     /**
      * The Role Assignments.
@@ -1683,7 +1553,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
 	@Nullable
-    public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
+    public com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
@@ -1692,7 +1562,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
 	@Nullable
-    public RoleDefinitionCollectionPage roleDefinitions;
+    public com.microsoft.graph.requests.RoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Role Scope Tags.
@@ -1701,7 +1571,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleScopeTags", alternate = {"RoleScopeTags"})
     @Expose
 	@Nullable
-    public RoleScopeTagCollectionPage roleScopeTags;
+    public com.microsoft.graph.requests.RoleScopeTagCollectionPage roleScopeTags;
 
     /**
      * The Remote Assistance Partners.
@@ -1710,7 +1580,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "remoteAssistancePartners", alternate = {"RemoteAssistancePartners"})
     @Expose
 	@Nullable
-    public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
+    public com.microsoft.graph.requests.RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
 
     /**
      * The Remote Assistance Settings.
@@ -1737,7 +1607,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "embeddedSIMActivationCodePools", alternate = {"EmbeddedSIMActivationCodePools"})
     @Expose
 	@Nullable
-    public EmbeddedSIMActivationCodePoolCollectionPage embeddedSIMActivationCodePools;
+    public com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionPage embeddedSIMActivationCodePools;
 
     /**
      * The Telecom Expense Management Partners.
@@ -1746,7 +1616,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "telecomExpenseManagementPartners", alternate = {"TelecomExpenseManagementPartners"})
     @Expose
 	@Nullable
-    public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
+    public com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
     /**
      * The Autopilot Events.
@@ -1755,7 +1625,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "autopilotEvents", alternate = {"AutopilotEvents"})
     @Expose
 	@Nullable
-    public DeviceManagementAutopilotEventCollectionPage autopilotEvents;
+    public com.microsoft.graph.requests.DeviceManagementAutopilotEventCollectionPage autopilotEvents;
 
     /**
      * The Troubleshooting Events.
@@ -1764,7 +1634,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "troubleshootingEvents", alternate = {"TroubleshootingEvents"})
     @Expose
 	@Nullable
-    public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
+    public com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 
     /**
      * The Windows Driver Update Profiles.
@@ -1773,7 +1643,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsDriverUpdateProfiles", alternate = {"WindowsDriverUpdateProfiles"})
     @Expose
 	@Nullable
-    public WindowsDriverUpdateProfileCollectionPage windowsDriverUpdateProfiles;
+    public com.microsoft.graph.requests.WindowsDriverUpdateProfileCollectionPage windowsDriverUpdateProfiles;
 
     /**
      * The Windows Feature Update Profiles.
@@ -1782,7 +1652,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsFeatureUpdateProfiles", alternate = {"WindowsFeatureUpdateProfiles"})
     @Expose
 	@Nullable
-    public WindowsFeatureUpdateProfileCollectionPage windowsFeatureUpdateProfiles;
+    public com.microsoft.graph.requests.WindowsFeatureUpdateProfileCollectionPage windowsFeatureUpdateProfiles;
 
     /**
      * The Windows Quality Update Profiles.
@@ -1791,7 +1661,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsQualityUpdateProfiles", alternate = {"WindowsQualityUpdateProfiles"})
     @Expose
 	@Nullable
-    public WindowsQualityUpdateProfileCollectionPage windowsQualityUpdateProfiles;
+    public com.microsoft.graph.requests.WindowsQualityUpdateProfileCollectionPage windowsQualityUpdateProfiles;
 
     /**
      * The Windows Update Catalog Items.
@@ -1800,7 +1670,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsUpdateCatalogItems", alternate = {"WindowsUpdateCatalogItems"})
     @Expose
 	@Nullable
-    public WindowsUpdateCatalogItemCollectionPage windowsUpdateCatalogItems;
+    public com.microsoft.graph.requests.WindowsUpdateCatalogItemCollectionPage windowsUpdateCatalogItems;
 
     /**
      * The Intune Branding Profiles.
@@ -1809,7 +1679,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "intuneBrandingProfiles", alternate = {"IntuneBrandingProfiles"})
     @Expose
 	@Nullable
-    public IntuneBrandingProfileCollectionPage intuneBrandingProfiles;
+    public com.microsoft.graph.requests.IntuneBrandingProfileCollectionPage intuneBrandingProfiles;
 
     /**
      * The Windows Information Protection App Learning Summaries.
@@ -1818,7 +1688,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsInformationProtectionAppLearningSummaries", alternate = {"WindowsInformationProtectionAppLearningSummaries"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
 
     /**
      * The Windows Information Protection Network Learning Summaries.
@@ -1827,7 +1697,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsInformationProtectionNetworkLearningSummaries", alternate = {"WindowsInformationProtectionNetworkLearningSummaries"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
+    public com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
 
     /**
      * The Certificate Connector Details.
@@ -1836,7 +1706,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "certificateConnectorDetails", alternate = {"CertificateConnectorDetails"})
     @Expose
 	@Nullable
-    public CertificateConnectorDetailsCollectionPage certificateConnectorDetails;
+    public com.microsoft.graph.requests.CertificateConnectorDetailsCollectionPage certificateConnectorDetails;
 
     /**
      * The User Pfx Certificates.
@@ -1845,7 +1715,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userPfxCertificates", alternate = {"UserPfxCertificates"})
     @Expose
 	@Nullable
-    public UserPFXCertificateCollectionPage userPfxCertificates;
+    public com.microsoft.graph.requests.UserPFXCertificateCollectionPage userPfxCertificates;
 
 
     /**
@@ -1858,527 +1728,527 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("androidDeviceOwnerEnrollmentProfiles")) {
-            androidDeviceOwnerEnrollmentProfiles = serializer.deserializeObject(json.get("androidDeviceOwnerEnrollmentProfiles"), AndroidDeviceOwnerEnrollmentProfileCollectionPage.class);
+            androidDeviceOwnerEnrollmentProfiles = serializer.deserializeObject(json.get("androidDeviceOwnerEnrollmentProfiles"), com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage.class);
         }
 
         if (json.has("androidForWorkAppConfigurationSchemas")) {
-            androidForWorkAppConfigurationSchemas = serializer.deserializeObject(json.get("androidForWorkAppConfigurationSchemas"), AndroidForWorkAppConfigurationSchemaCollectionPage.class);
+            androidForWorkAppConfigurationSchemas = serializer.deserializeObject(json.get("androidForWorkAppConfigurationSchemas"), com.microsoft.graph.requests.AndroidForWorkAppConfigurationSchemaCollectionPage.class);
         }
 
         if (json.has("androidForWorkEnrollmentProfiles")) {
-            androidForWorkEnrollmentProfiles = serializer.deserializeObject(json.get("androidForWorkEnrollmentProfiles"), AndroidForWorkEnrollmentProfileCollectionPage.class);
+            androidForWorkEnrollmentProfiles = serializer.deserializeObject(json.get("androidForWorkEnrollmentProfiles"), com.microsoft.graph.requests.AndroidForWorkEnrollmentProfileCollectionPage.class);
         }
 
         if (json.has("androidManagedStoreAppConfigurationSchemas")) {
-            androidManagedStoreAppConfigurationSchemas = serializer.deserializeObject(json.get("androidManagedStoreAppConfigurationSchemas"), AndroidManagedStoreAppConfigurationSchemaCollectionPage.class);
+            androidManagedStoreAppConfigurationSchemas = serializer.deserializeObject(json.get("androidManagedStoreAppConfigurationSchemas"), com.microsoft.graph.requests.AndroidManagedStoreAppConfigurationSchemaCollectionPage.class);
         }
 
         if (json.has("auditEvents")) {
-            auditEvents = serializer.deserializeObject(json.get("auditEvents"), AuditEventCollectionPage.class);
+            auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.requests.AuditEventCollectionPage.class);
         }
 
         if (json.has("assignmentFilters")) {
-            assignmentFilters = serializer.deserializeObject(json.get("assignmentFilters"), DeviceAndAppManagementAssignmentFilterCollectionPage.class);
+            assignmentFilters = serializer.deserializeObject(json.get("assignmentFilters"), com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionPage.class);
         }
 
         if (json.has("chromeOSOnboardingSettings")) {
-            chromeOSOnboardingSettings = serializer.deserializeObject(json.get("chromeOSOnboardingSettings"), ChromeOSOnboardingSettingsCollectionPage.class);
+            chromeOSOnboardingSettings = serializer.deserializeObject(json.get("chromeOSOnboardingSettings"), com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionPage.class);
         }
 
         if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), TermsAndConditionsCollectionPage.class);
+            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), com.microsoft.graph.requests.TermsAndConditionsCollectionPage.class);
         }
 
         if (json.has("cartToClassAssociations")) {
-            cartToClassAssociations = serializer.deserializeObject(json.get("cartToClassAssociations"), CartToClassAssociationCollectionPage.class);
+            cartToClassAssociations = serializer.deserializeObject(json.get("cartToClassAssociations"), com.microsoft.graph.requests.CartToClassAssociationCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicies")) {
-            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies"), DeviceCompliancePolicyCollectionPage.class);
+            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies"), com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
+            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationConflictSummary")) {
-            deviceConfigurationConflictSummary = serializer.deserializeObject(json.get("deviceConfigurationConflictSummary"), DeviceConfigurationConflictSummaryCollectionPage.class);
+            deviceConfigurationConflictSummary = serializer.deserializeObject(json.get("deviceConfigurationConflictSummary"), com.microsoft.graph.requests.DeviceConfigurationConflictSummaryCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationRestrictedAppsViolations")) {
-            deviceConfigurationRestrictedAppsViolations = serializer.deserializeObject(json.get("deviceConfigurationRestrictedAppsViolations"), RestrictedAppsViolationCollectionPage.class);
+            deviceConfigurationRestrictedAppsViolations = serializer.deserializeObject(json.get("deviceConfigurationRestrictedAppsViolations"), com.microsoft.graph.requests.RestrictedAppsViolationCollectionPage.class);
         }
 
         if (json.has("deviceConfigurations")) {
-            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations"), DeviceConfigurationCollectionPage.class);
+            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations"), com.microsoft.graph.requests.DeviceConfigurationCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationsAllManagedDeviceCertificateStates")) {
-            deviceConfigurationsAllManagedDeviceCertificateStates = serializer.deserializeObject(json.get("deviceConfigurationsAllManagedDeviceCertificateStates"), ManagedAllDeviceCertificateStateCollectionPage.class);
+            deviceConfigurationsAllManagedDeviceCertificateStates = serializer.deserializeObject(json.get("deviceConfigurationsAllManagedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedAllDeviceCertificateStateCollectionPage.class);
         }
 
         if (json.has("iosUpdateStatuses")) {
-            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses"), IosUpdateDeviceStatusCollectionPage.class);
+            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses"), com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionPage.class);
         }
 
         if (json.has("macOSSoftwareUpdateAccountSummaries")) {
-            macOSSoftwareUpdateAccountSummaries = serializer.deserializeObject(json.get("macOSSoftwareUpdateAccountSummaries"), MacOSSoftwareUpdateAccountSummaryCollectionPage.class);
+            macOSSoftwareUpdateAccountSummaries = serializer.deserializeObject(json.get("macOSSoftwareUpdateAccountSummaries"), com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionPage.class);
         }
 
         if (json.has("managedDeviceEncryptionStates")) {
-            managedDeviceEncryptionStates = serializer.deserializeObject(json.get("managedDeviceEncryptionStates"), ManagedDeviceEncryptionStateCollectionPage.class);
+            managedDeviceEncryptionStates = serializer.deserializeObject(json.get("managedDeviceEncryptionStates"), com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage.class);
         }
 
         if (json.has("ndesConnectors")) {
-            ndesConnectors = serializer.deserializeObject(json.get("ndesConnectors"), NdesConnectorCollectionPage.class);
+            ndesConnectors = serializer.deserializeObject(json.get("ndesConnectors"), com.microsoft.graph.requests.NdesConnectorCollectionPage.class);
         }
 
         if (json.has("complianceCategories")) {
-            complianceCategories = serializer.deserializeObject(json.get("complianceCategories"), DeviceManagementConfigurationCategoryCollectionPage.class);
+            complianceCategories = serializer.deserializeObject(json.get("complianceCategories"), com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage.class);
         }
 
         if (json.has("compliancePolicies")) {
-            compliancePolicies = serializer.deserializeObject(json.get("compliancePolicies"), DeviceManagementCompliancePolicyCollectionPage.class);
+            compliancePolicies = serializer.deserializeObject(json.get("compliancePolicies"), com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionPage.class);
         }
 
         if (json.has("complianceSettings")) {
-            complianceSettings = serializer.deserializeObject(json.get("complianceSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+            complianceSettings = serializer.deserializeObject(json.get("complianceSettings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
 
         if (json.has("configurationCategories")) {
-            configurationCategories = serializer.deserializeObject(json.get("configurationCategories"), DeviceManagementConfigurationCategoryCollectionPage.class);
+            configurationCategories = serializer.deserializeObject(json.get("configurationCategories"), com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage.class);
         }
 
         if (json.has("configurationPolicies")) {
-            configurationPolicies = serializer.deserializeObject(json.get("configurationPolicies"), DeviceManagementConfigurationPolicyCollectionPage.class);
+            configurationPolicies = serializer.deserializeObject(json.get("configurationPolicies"), com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage.class);
         }
 
         if (json.has("configurationPolicyTemplates")) {
-            configurationPolicyTemplates = serializer.deserializeObject(json.get("configurationPolicyTemplates"), DeviceManagementConfigurationPolicyTemplateCollectionPage.class);
+            configurationPolicyTemplates = serializer.deserializeObject(json.get("configurationPolicyTemplates"), com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage.class);
         }
 
         if (json.has("configurationSettings")) {
-            configurationSettings = serializer.deserializeObject(json.get("configurationSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+            configurationSettings = serializer.deserializeObject(json.get("configurationSettings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
 
         if (json.has("reusablePolicySettings")) {
-            reusablePolicySettings = serializer.deserializeObject(json.get("reusablePolicySettings"), DeviceManagementReusablePolicySettingCollectionPage.class);
+            reusablePolicySettings = serializer.deserializeObject(json.get("reusablePolicySettings"), com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage.class);
         }
 
         if (json.has("reusableSettings")) {
-            reusableSettings = serializer.deserializeObject(json.get("reusableSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+            reusableSettings = serializer.deserializeObject(json.get("reusableSettings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
 
         if (json.has("templateSettings")) {
-            templateSettings = serializer.deserializeObject(json.get("templateSettings"), DeviceManagementConfigurationSettingTemplateCollectionPage.class);
+            templateSettings = serializer.deserializeObject(json.get("templateSettings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage.class);
         }
 
         if (json.has("complianceManagementPartners")) {
-            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners"), ComplianceManagementPartnerCollectionPage.class);
+            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners"), com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage.class);
         }
 
         if (json.has("deviceCategories")) {
-            deviceCategories = serializer.deserializeObject(json.get("deviceCategories"), DeviceCategoryCollectionPage.class);
+            deviceCategories = serializer.deserializeObject(json.get("deviceCategories"), com.microsoft.graph.requests.DeviceCategoryCollectionPage.class);
         }
 
         if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), DeviceEnrollmentConfigurationCollectionPage.class);
+            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage.class);
         }
 
         if (json.has("deviceManagementPartners")) {
-            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners"), DeviceManagementPartnerCollectionPage.class);
+            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners"), com.microsoft.graph.requests.DeviceManagementPartnerCollectionPage.class);
         }
 
         if (json.has("exchangeConnectors")) {
-            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors"), DeviceManagementExchangeConnectorCollectionPage.class);
+            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors"), com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionPage.class);
         }
 
         if (json.has("exchangeOnPremisesPolicies")) {
-            exchangeOnPremisesPolicies = serializer.deserializeObject(json.get("exchangeOnPremisesPolicies"), DeviceManagementExchangeOnPremisesPolicyCollectionPage.class);
+            exchangeOnPremisesPolicies = serializer.deserializeObject(json.get("exchangeOnPremisesPolicies"), com.microsoft.graph.requests.DeviceManagementExchangeOnPremisesPolicyCollectionPage.class);
         }
 
         if (json.has("mobileThreatDefenseConnectors")) {
-            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors"), MobileThreatDefenseConnectorCollectionPage.class);
+            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors"), com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), DeviceManagementSettingCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.DeviceManagementSettingCategoryCollectionPage.class);
         }
 
         if (json.has("intents")) {
-            intents = serializer.deserializeObject(json.get("intents"), DeviceManagementIntentCollectionPage.class);
+            intents = serializer.deserializeObject(json.get("intents"), com.microsoft.graph.requests.DeviceManagementIntentCollectionPage.class);
         }
 
         if (json.has("settingDefinitions")) {
-            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), DeviceManagementSettingDefinitionCollectionPage.class);
+            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage.class);
         }
 
         if (json.has("templates")) {
-            templates = serializer.deserializeObject(json.get("templates"), DeviceManagementTemplateCollectionPage.class);
+            templates = serializer.deserializeObject(json.get("templates"), com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage.class);
         }
 
         if (json.has("cloudPCConnectivityIssues")) {
-            cloudPCConnectivityIssues = serializer.deserializeObject(json.get("cloudPCConnectivityIssues"), CloudPCConnectivityIssueCollectionPage.class);
+            cloudPCConnectivityIssues = serializer.deserializeObject(json.get("cloudPCConnectivityIssues"), com.microsoft.graph.requests.CloudPCConnectivityIssueCollectionPage.class);
         }
 
         if (json.has("comanagedDevices")) {
-            comanagedDevices = serializer.deserializeObject(json.get("comanagedDevices"), ManagedDeviceCollectionPage.class);
+            comanagedDevices = serializer.deserializeObject(json.get("comanagedDevices"), com.microsoft.graph.requests.ManagedDeviceCollectionPage.class);
         }
 
         if (json.has("comanagementEligibleDevices")) {
-            comanagementEligibleDevices = serializer.deserializeObject(json.get("comanagementEligibleDevices"), ComanagementEligibleDeviceCollectionPage.class);
+            comanagementEligibleDevices = serializer.deserializeObject(json.get("comanagementEligibleDevices"), com.microsoft.graph.requests.ComanagementEligibleDeviceCollectionPage.class);
         }
 
         if (json.has("dataSharingConsents")) {
-            dataSharingConsents = serializer.deserializeObject(json.get("dataSharingConsents"), DataSharingConsentCollectionPage.class);
+            dataSharingConsents = serializer.deserializeObject(json.get("dataSharingConsents"), com.microsoft.graph.requests.DataSharingConsentCollectionPage.class);
         }
 
         if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps"), DetectedAppCollectionPage.class);
+            detectedApps = serializer.deserializeObject(json.get("detectedApps"), com.microsoft.graph.requests.DetectedAppCollectionPage.class);
         }
 
         if (json.has("deviceComplianceScripts")) {
-            deviceComplianceScripts = serializer.deserializeObject(json.get("deviceComplianceScripts"), DeviceComplianceScriptCollectionPage.class);
+            deviceComplianceScripts = serializer.deserializeObject(json.get("deviceComplianceScripts"), com.microsoft.graph.requests.DeviceComplianceScriptCollectionPage.class);
         }
 
         if (json.has("deviceCustomAttributeShellScripts")) {
-            deviceCustomAttributeShellScripts = serializer.deserializeObject(json.get("deviceCustomAttributeShellScripts"), DeviceCustomAttributeShellScriptCollectionPage.class);
+            deviceCustomAttributeShellScripts = serializer.deserializeObject(json.get("deviceCustomAttributeShellScripts"), com.microsoft.graph.requests.DeviceCustomAttributeShellScriptCollectionPage.class);
         }
 
         if (json.has("deviceHealthScripts")) {
-            deviceHealthScripts = serializer.deserializeObject(json.get("deviceHealthScripts"), DeviceHealthScriptCollectionPage.class);
+            deviceHealthScripts = serializer.deserializeObject(json.get("deviceHealthScripts"), com.microsoft.graph.requests.DeviceHealthScriptCollectionPage.class);
         }
 
         if (json.has("deviceManagementScripts")) {
-            deviceManagementScripts = serializer.deserializeObject(json.get("deviceManagementScripts"), DeviceManagementScriptCollectionPage.class);
+            deviceManagementScripts = serializer.deserializeObject(json.get("deviceManagementScripts"), com.microsoft.graph.requests.DeviceManagementScriptCollectionPage.class);
         }
 
         if (json.has("deviceShellScripts")) {
-            deviceShellScripts = serializer.deserializeObject(json.get("deviceShellScripts"), DeviceShellScriptCollectionPage.class);
+            deviceShellScripts = serializer.deserializeObject(json.get("deviceShellScripts"), com.microsoft.graph.requests.DeviceShellScriptCollectionPage.class);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), com.microsoft.graph.requests.ManagedDeviceCollectionPage.class);
         }
 
         if (json.has("mobileAppTroubleshootingEvents")) {
-            mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), MobileAppTroubleshootingEventCollectionPage.class);
+            mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("oemWarrantyInformationOnboarding")) {
-            oemWarrantyInformationOnboarding = serializer.deserializeObject(json.get("oemWarrantyInformationOnboarding"), OemWarrantyInformationOnboardingCollectionPage.class);
+            oemWarrantyInformationOnboarding = serializer.deserializeObject(json.get("oemWarrantyInformationOnboarding"), com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage.class);
         }
 
         if (json.has("remoteActionAudits")) {
-            remoteActionAudits = serializer.deserializeObject(json.get("remoteActionAudits"), RemoteActionAuditCollectionPage.class);
+            remoteActionAudits = serializer.deserializeObject(json.get("remoteActionAudits"), com.microsoft.graph.requests.RemoteActionAuditCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformance")) {
-            userExperienceAnalyticsAppHealthApplicationPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformance"), UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage.class);
+            userExperienceAnalyticsAppHealthApplicationPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage.class);
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage.class);
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage.class);
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion")) {
-            userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"), UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage.class);
+            userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthDeviceModelPerformance")) {
-            userExperienceAnalyticsAppHealthDeviceModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDeviceModelPerformance"), UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage.class);
+            userExperienceAnalyticsAppHealthDeviceModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDeviceModelPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthDevicePerformance")) {
-            userExperienceAnalyticsAppHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformance"), UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage.class);
+            userExperienceAnalyticsAppHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthDevicePerformanceDetails")) {
-            userExperienceAnalyticsAppHealthDevicePerformanceDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformanceDetails"), UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage.class);
+            userExperienceAnalyticsAppHealthDevicePerformanceDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformanceDetails"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthOSVersionPerformance")) {
-            userExperienceAnalyticsAppHealthOSVersionPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthOSVersionPerformance"), UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage.class);
+            userExperienceAnalyticsAppHealthOSVersionPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthOSVersionPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBaselines")) {
-            userExperienceAnalyticsBaselines = serializer.deserializeObject(json.get("userExperienceAnalyticsBaselines"), UserExperienceAnalyticsBaselineCollectionPage.class);
+            userExperienceAnalyticsBaselines = serializer.deserializeObject(json.get("userExperienceAnalyticsBaselines"), com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBatteryHealthAppImpact")) {
-            userExperienceAnalyticsBatteryHealthAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthAppImpact"), UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage.class);
+            userExperienceAnalyticsBatteryHealthAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthAppImpact"), com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBatteryHealthDeviceAppImpact")) {
-            userExperienceAnalyticsBatteryHealthDeviceAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceAppImpact"), UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage.class);
+            userExperienceAnalyticsBatteryHealthDeviceAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceAppImpact"), com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBatteryHealthDevicePerformance")) {
-            userExperienceAnalyticsBatteryHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDevicePerformance"), UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage.class);
+            userExperienceAnalyticsBatteryHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDevicePerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory")) {
-            userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"), UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage.class);
+            userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBatteryHealthModelPerformance")) {
-            userExperienceAnalyticsBatteryHealthModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthModelPerformance"), UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage.class);
+            userExperienceAnalyticsBatteryHealthModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthModelPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsBatteryHealthOsPerformance")) {
-            userExperienceAnalyticsBatteryHealthOsPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthOsPerformance"), UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage.class);
+            userExperienceAnalyticsBatteryHealthOsPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthOsPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsCategories")) {
-            userExperienceAnalyticsCategories = serializer.deserializeObject(json.get("userExperienceAnalyticsCategories"), UserExperienceAnalyticsCategoryCollectionPage.class);
+            userExperienceAnalyticsCategories = serializer.deserializeObject(json.get("userExperienceAnalyticsCategories"), com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDeviceMetricHistory")) {
-            userExperienceAnalyticsDeviceMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceMetricHistory"), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+            userExperienceAnalyticsDeviceMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceMetricHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDevicePerformance")) {
-            userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance"), UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
+            userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDeviceScopes")) {
-            userExperienceAnalyticsDeviceScopes = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScopes"), UserExperienceAnalyticsDeviceScopeCollectionPage.class);
+            userExperienceAnalyticsDeviceScopes = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScopes"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScopeCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDeviceScores")) {
-            userExperienceAnalyticsDeviceScores = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScores"), UserExperienceAnalyticsDeviceScoresCollectionPage.class);
+            userExperienceAnalyticsDeviceScores = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScores"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDeviceStartupHistory")) {
-            userExperienceAnalyticsDeviceStartupHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupHistory"), UserExperienceAnalyticsDeviceStartupHistoryCollectionPage.class);
+            userExperienceAnalyticsDeviceStartupHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDeviceStartupProcesses")) {
-            userExperienceAnalyticsDeviceStartupProcesses = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcesses"), UserExperienceAnalyticsDeviceStartupProcessCollectionPage.class);
+            userExperienceAnalyticsDeviceStartupProcesses = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcesses"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDeviceStartupProcessPerformance")) {
-            userExperienceAnalyticsDeviceStartupProcessPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcessPerformance"), UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage.class);
+            userExperienceAnalyticsDeviceStartupProcessPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcessPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsDevicesWithoutCloudIdentity")) {
-            userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity"), UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
+            userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsImpactingProcess")) {
-            userExperienceAnalyticsImpactingProcess = serializer.deserializeObject(json.get("userExperienceAnalyticsImpactingProcess"), UserExperienceAnalyticsImpactingProcessCollectionPage.class);
+            userExperienceAnalyticsImpactingProcess = serializer.deserializeObject(json.get("userExperienceAnalyticsImpactingProcess"), com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsMetricHistory")) {
-            userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory"), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+            userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsModelScores")) {
-            userExperienceAnalyticsModelScores = serializer.deserializeObject(json.get("userExperienceAnalyticsModelScores"), UserExperienceAnalyticsModelScoresCollectionPage.class);
+            userExperienceAnalyticsModelScores = serializer.deserializeObject(json.get("userExperienceAnalyticsModelScores"), com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsNotAutopilotReadyDevice")) {
-            userExperienceAnalyticsNotAutopilotReadyDevice = serializer.deserializeObject(json.get("userExperienceAnalyticsNotAutopilotReadyDevice"), UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage.class);
+            userExperienceAnalyticsNotAutopilotReadyDevice = serializer.deserializeObject(json.get("userExperienceAnalyticsNotAutopilotReadyDevice"), com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsRemoteConnection")) {
-            userExperienceAnalyticsRemoteConnection = serializer.deserializeObject(json.get("userExperienceAnalyticsRemoteConnection"), UserExperienceAnalyticsRemoteConnectionCollectionPage.class);
+            userExperienceAnalyticsRemoteConnection = serializer.deserializeObject(json.get("userExperienceAnalyticsRemoteConnection"), com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsResourcePerformance")) {
-            userExperienceAnalyticsResourcePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsResourcePerformance"), UserExperienceAnalyticsResourcePerformanceCollectionPage.class);
+            userExperienceAnalyticsResourcePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsResourcePerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsScoreHistory")) {
-            userExperienceAnalyticsScoreHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsScoreHistory"), UserExperienceAnalyticsScoreHistoryCollectionPage.class);
+            userExperienceAnalyticsScoreHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsScoreHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsWorkFromAnywhereMetrics")) {
-            userExperienceAnalyticsWorkFromAnywhereMetrics = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereMetrics"), UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage.class);
+            userExperienceAnalyticsWorkFromAnywhereMetrics = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereMetrics"), com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsWorkFromAnywhereModelPerformance")) {
-            userExperienceAnalyticsWorkFromAnywhereModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage.class);
+            userExperienceAnalyticsWorkFromAnywhereModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage.class);
         }
 
         if (json.has("windowsMalwareInformation")) {
-            windowsMalwareInformation = serializer.deserializeObject(json.get("windowsMalwareInformation"), WindowsMalwareInformationCollectionPage.class);
+            windowsMalwareInformation = serializer.deserializeObject(json.get("windowsMalwareInformation"), com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage.class);
         }
 
         if (json.has("derivedCredentials")) {
-            derivedCredentials = serializer.deserializeObject(json.get("derivedCredentials"), DeviceManagementDerivedCredentialSettingsCollectionPage.class);
+            derivedCredentials = serializer.deserializeObject(json.get("derivedCredentials"), com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionPage.class);
         }
 
         if (json.has("resourceAccessProfiles")) {
-            resourceAccessProfiles = serializer.deserializeObject(json.get("resourceAccessProfiles"), DeviceManagementResourceAccessProfileBaseCollectionPage.class);
+            resourceAccessProfiles = serializer.deserializeObject(json.get("resourceAccessProfiles"), com.microsoft.graph.requests.DeviceManagementResourceAccessProfileBaseCollectionPage.class);
         }
 
         if (json.has("appleUserInitiatedEnrollmentProfiles")) {
-            appleUserInitiatedEnrollmentProfiles = serializer.deserializeObject(json.get("appleUserInitiatedEnrollmentProfiles"), AppleUserInitiatedEnrollmentProfileCollectionPage.class);
+            appleUserInitiatedEnrollmentProfiles = serializer.deserializeObject(json.get("appleUserInitiatedEnrollmentProfiles"), com.microsoft.graph.requests.AppleUserInitiatedEnrollmentProfileCollectionPage.class);
         }
 
         if (json.has("depOnboardingSettings")) {
-            depOnboardingSettings = serializer.deserializeObject(json.get("depOnboardingSettings"), DepOnboardingSettingCollectionPage.class);
+            depOnboardingSettings = serializer.deserializeObject(json.get("depOnboardingSettings"), com.microsoft.graph.requests.DepOnboardingSettingCollectionPage.class);
         }
 
         if (json.has("importedDeviceIdentities")) {
-            importedDeviceIdentities = serializer.deserializeObject(json.get("importedDeviceIdentities"), ImportedDeviceIdentityCollectionPage.class);
+            importedDeviceIdentities = serializer.deserializeObject(json.get("importedDeviceIdentities"), com.microsoft.graph.requests.ImportedDeviceIdentityCollectionPage.class);
         }
 
         if (json.has("importedWindowsAutopilotDeviceIdentities")) {
-            importedWindowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("importedWindowsAutopilotDeviceIdentities"), ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
+            importedWindowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("importedWindowsAutopilotDeviceIdentities"), com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
         }
 
         if (json.has("windowsAutopilotDeploymentProfiles")) {
-            windowsAutopilotDeploymentProfiles = serializer.deserializeObject(json.get("windowsAutopilotDeploymentProfiles"), WindowsAutopilotDeploymentProfileCollectionPage.class);
+            windowsAutopilotDeploymentProfiles = serializer.deserializeObject(json.get("windowsAutopilotDeploymentProfiles"), com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileCollectionPage.class);
         }
 
         if (json.has("windowsAutopilotDeviceIdentities")) {
-            windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), WindowsAutopilotDeviceIdentityCollectionPage.class);
+            windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage.class);
         }
 
         if (json.has("zebraFotaArtifacts")) {
-            zebraFotaArtifacts = serializer.deserializeObject(json.get("zebraFotaArtifacts"), ZebraFotaArtifactCollectionPage.class);
+            zebraFotaArtifacts = serializer.deserializeObject(json.get("zebraFotaArtifacts"), com.microsoft.graph.requests.ZebraFotaArtifactCollectionPage.class);
         }
 
         if (json.has("zebraFotaDeployments")) {
-            zebraFotaDeployments = serializer.deserializeObject(json.get("zebraFotaDeployments"), ZebraFotaDeploymentCollectionPage.class);
+            zebraFotaDeployments = serializer.deserializeObject(json.get("zebraFotaDeployments"), com.microsoft.graph.requests.ZebraFotaDeploymentCollectionPage.class);
         }
 
         if (json.has("groupPolicyMigrationReports")) {
-            groupPolicyMigrationReports = serializer.deserializeObject(json.get("groupPolicyMigrationReports"), GroupPolicyMigrationReportCollectionPage.class);
+            groupPolicyMigrationReports = serializer.deserializeObject(json.get("groupPolicyMigrationReports"), com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionPage.class);
         }
 
         if (json.has("groupPolicyObjectFiles")) {
-            groupPolicyObjectFiles = serializer.deserializeObject(json.get("groupPolicyObjectFiles"), GroupPolicyObjectFileCollectionPage.class);
+            groupPolicyObjectFiles = serializer.deserializeObject(json.get("groupPolicyObjectFiles"), com.microsoft.graph.requests.GroupPolicyObjectFileCollectionPage.class);
         }
 
         if (json.has("groupPolicyCategories")) {
-            groupPolicyCategories = serializer.deserializeObject(json.get("groupPolicyCategories"), GroupPolicyCategoryCollectionPage.class);
+            groupPolicyCategories = serializer.deserializeObject(json.get("groupPolicyCategories"), com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage.class);
         }
 
         if (json.has("groupPolicyConfigurations")) {
-            groupPolicyConfigurations = serializer.deserializeObject(json.get("groupPolicyConfigurations"), GroupPolicyConfigurationCollectionPage.class);
+            groupPolicyConfigurations = serializer.deserializeObject(json.get("groupPolicyConfigurations"), com.microsoft.graph.requests.GroupPolicyConfigurationCollectionPage.class);
         }
 
         if (json.has("groupPolicyDefinitionFiles")) {
-            groupPolicyDefinitionFiles = serializer.deserializeObject(json.get("groupPolicyDefinitionFiles"), GroupPolicyDefinitionFileCollectionPage.class);
+            groupPolicyDefinitionFiles = serializer.deserializeObject(json.get("groupPolicyDefinitionFiles"), com.microsoft.graph.requests.GroupPolicyDefinitionFileCollectionPage.class);
         }
 
         if (json.has("groupPolicyDefinitions")) {
-            groupPolicyDefinitions = serializer.deserializeObject(json.get("groupPolicyDefinitions"), GroupPolicyDefinitionCollectionPage.class);
+            groupPolicyDefinitions = serializer.deserializeObject(json.get("groupPolicyDefinitions"), com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage.class);
         }
 
         if (json.has("groupPolicyUploadedDefinitionFiles")) {
-            groupPolicyUploadedDefinitionFiles = serializer.deserializeObject(json.get("groupPolicyUploadedDefinitionFiles"), GroupPolicyUploadedDefinitionFileCollectionPage.class);
+            groupPolicyUploadedDefinitionFiles = serializer.deserializeObject(json.get("groupPolicyUploadedDefinitionFiles"), com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionPage.class);
         }
 
         if (json.has("microsoftTunnelConfigurations")) {
-            microsoftTunnelConfigurations = serializer.deserializeObject(json.get("microsoftTunnelConfigurations"), MicrosoftTunnelConfigurationCollectionPage.class);
+            microsoftTunnelConfigurations = serializer.deserializeObject(json.get("microsoftTunnelConfigurations"), com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionPage.class);
         }
 
         if (json.has("microsoftTunnelHealthThresholds")) {
-            microsoftTunnelHealthThresholds = serializer.deserializeObject(json.get("microsoftTunnelHealthThresholds"), MicrosoftTunnelHealthThresholdCollectionPage.class);
+            microsoftTunnelHealthThresholds = serializer.deserializeObject(json.get("microsoftTunnelHealthThresholds"), com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionPage.class);
         }
 
         if (json.has("microsoftTunnelServerLogCollectionResponses")) {
-            microsoftTunnelServerLogCollectionResponses = serializer.deserializeObject(json.get("microsoftTunnelServerLogCollectionResponses"), MicrosoftTunnelServerLogCollectionResponseCollectionPage.class);
+            microsoftTunnelServerLogCollectionResponses = serializer.deserializeObject(json.get("microsoftTunnelServerLogCollectionResponses"), com.microsoft.graph.requests.MicrosoftTunnelServerLogCollectionResponseCollectionPage.class);
         }
 
         if (json.has("microsoftTunnelSites")) {
-            microsoftTunnelSites = serializer.deserializeObject(json.get("microsoftTunnelSites"), MicrosoftTunnelSiteCollectionPage.class);
+            microsoftTunnelSites = serializer.deserializeObject(json.get("microsoftTunnelSites"), com.microsoft.graph.requests.MicrosoftTunnelSiteCollectionPage.class);
         }
 
         if (json.has("notificationMessageTemplates")) {
-            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates"), NotificationMessageTemplateCollectionPage.class);
+            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates"), com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage.class);
         }
 
         if (json.has("domainJoinConnectors")) {
-            domainJoinConnectors = serializer.deserializeObject(json.get("domainJoinConnectors"), DeviceManagementDomainJoinConnectorCollectionPage.class);
+            domainJoinConnectors = serializer.deserializeObject(json.get("domainJoinConnectors"), com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionPage.class);
         }
 
         if (json.has("configManagerCollections")) {
-            configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections"), ConfigManagerCollectionCollectionPage.class);
+            configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections"), com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage.class);
         }
 
         if (json.has("resourceOperations")) {
-            resourceOperations = serializer.deserializeObject(json.get("resourceOperations"), ResourceOperationCollectionPage.class);
+            resourceOperations = serializer.deserializeObject(json.get("resourceOperations"), com.microsoft.graph.requests.ResourceOperationCollectionPage.class);
         }
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), RoleDefinitionCollectionPage.class);
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), com.microsoft.graph.requests.RoleDefinitionCollectionPage.class);
         }
 
         if (json.has("roleScopeTags")) {
-            roleScopeTags = serializer.deserializeObject(json.get("roleScopeTags"), RoleScopeTagCollectionPage.class);
+            roleScopeTags = serializer.deserializeObject(json.get("roleScopeTags"), com.microsoft.graph.requests.RoleScopeTagCollectionPage.class);
         }
 
         if (json.has("remoteAssistancePartners")) {
-            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners"), RemoteAssistancePartnerCollectionPage.class);
+            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners"), com.microsoft.graph.requests.RemoteAssistancePartnerCollectionPage.class);
         }
 
         if (json.has("embeddedSIMActivationCodePools")) {
-            embeddedSIMActivationCodePools = serializer.deserializeObject(json.get("embeddedSIMActivationCodePools"), EmbeddedSIMActivationCodePoolCollectionPage.class);
+            embeddedSIMActivationCodePools = serializer.deserializeObject(json.get("embeddedSIMActivationCodePools"), com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionPage.class);
         }
 
         if (json.has("telecomExpenseManagementPartners")) {
-            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners"), TelecomExpenseManagementPartnerCollectionPage.class);
+            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners"), com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionPage.class);
         }
 
         if (json.has("autopilotEvents")) {
-            autopilotEvents = serializer.deserializeObject(json.get("autopilotEvents"), DeviceManagementAutopilotEventCollectionPage.class);
+            autopilotEvents = serializer.deserializeObject(json.get("autopilotEvents"), com.microsoft.graph.requests.DeviceManagementAutopilotEventCollectionPage.class);
         }
 
         if (json.has("troubleshootingEvents")) {
-            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
+            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents"), com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("windowsDriverUpdateProfiles")) {
-            windowsDriverUpdateProfiles = serializer.deserializeObject(json.get("windowsDriverUpdateProfiles"), WindowsDriverUpdateProfileCollectionPage.class);
+            windowsDriverUpdateProfiles = serializer.deserializeObject(json.get("windowsDriverUpdateProfiles"), com.microsoft.graph.requests.WindowsDriverUpdateProfileCollectionPage.class);
         }
 
         if (json.has("windowsFeatureUpdateProfiles")) {
-            windowsFeatureUpdateProfiles = serializer.deserializeObject(json.get("windowsFeatureUpdateProfiles"), WindowsFeatureUpdateProfileCollectionPage.class);
+            windowsFeatureUpdateProfiles = serializer.deserializeObject(json.get("windowsFeatureUpdateProfiles"), com.microsoft.graph.requests.WindowsFeatureUpdateProfileCollectionPage.class);
         }
 
         if (json.has("windowsQualityUpdateProfiles")) {
-            windowsQualityUpdateProfiles = serializer.deserializeObject(json.get("windowsQualityUpdateProfiles"), WindowsQualityUpdateProfileCollectionPage.class);
+            windowsQualityUpdateProfiles = serializer.deserializeObject(json.get("windowsQualityUpdateProfiles"), com.microsoft.graph.requests.WindowsQualityUpdateProfileCollectionPage.class);
         }
 
         if (json.has("windowsUpdateCatalogItems")) {
-            windowsUpdateCatalogItems = serializer.deserializeObject(json.get("windowsUpdateCatalogItems"), WindowsUpdateCatalogItemCollectionPage.class);
+            windowsUpdateCatalogItems = serializer.deserializeObject(json.get("windowsUpdateCatalogItems"), com.microsoft.graph.requests.WindowsUpdateCatalogItemCollectionPage.class);
         }
 
         if (json.has("intuneBrandingProfiles")) {
-            intuneBrandingProfiles = serializer.deserializeObject(json.get("intuneBrandingProfiles"), IntuneBrandingProfileCollectionPage.class);
+            intuneBrandingProfiles = serializer.deserializeObject(json.get("intuneBrandingProfiles"), com.microsoft.graph.requests.IntuneBrandingProfileCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionAppLearningSummaries")) {
-            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries"), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
+            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries"), com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
-            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries"), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
+            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries"), com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
         }
 
         if (json.has("certificateConnectorDetails")) {
-            certificateConnectorDetails = serializer.deserializeObject(json.get("certificateConnectorDetails"), CertificateConnectorDetailsCollectionPage.class);
+            certificateConnectorDetails = serializer.deserializeObject(json.get("certificateConnectorDetails"), com.microsoft.graph.requests.CertificateConnectorDetailsCollectionPage.class);
         }
 
         if (json.has("userPfxCertificates")) {
-            userPfxCertificates = serializer.deserializeObject(json.get("userPfxCertificates"), UserPFXCertificateCollectionPage.class);
+            userPfxCertificates = serializer.deserializeObject(json.get("userPfxCertificates"), com.microsoft.graph.requests.UserPFXCertificateCollectionPage.class);
         }
     }
 }

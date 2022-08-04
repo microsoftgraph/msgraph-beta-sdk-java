@@ -13,7 +13,6 @@ import com.microsoft.graph.ediscovery.models.ChildSelectability;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.ediscovery.models.Tag;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.ediscovery.requests.TagCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -80,7 +79,7 @@ public class Tag extends Entity implements IJsonBackedObject {
      * Returns the tags that are a child of a tag.
      */
 	@Nullable
-    public TagCollectionPage childTags;
+    public com.microsoft.graph.ediscovery.requests.TagCollectionPage childTags;
 
     /**
      * The Parent.
@@ -102,7 +101,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childTags")) {
-            childTags = serializer.deserializeObject(json.get("childTags"), TagCollectionPage.class);
+            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.ediscovery.requests.TagCollectionPage.class);
         }
     }
 }

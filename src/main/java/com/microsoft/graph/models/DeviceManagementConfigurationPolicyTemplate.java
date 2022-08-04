@@ -13,7 +13,6 @@ import com.microsoft.graph.models.DeviceManagementTemplateLifecycleState;
 import com.microsoft.graph.models.DeviceManagementConfigurationPlatforms;
 import com.microsoft.graph.models.DeviceManagementConfigurationTechnologies;
 import com.microsoft.graph.models.DeviceManagementConfigurationTemplateFamily;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage;
 
@@ -106,7 +105,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
     /**
      * The Technologies.
-     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, unknownFutureValue.
+     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose
@@ -138,7 +137,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     @SerializedName(value = "settingTemplates", alternate = {"SettingTemplates"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingTemplateCollectionPage settingTemplates;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage settingTemplates;
 
 
     /**
@@ -151,7 +150,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
 
         if (json.has("settingTemplates")) {
-            settingTemplates = serializer.deserializeObject(json.get("settingTemplates"), DeviceManagementConfigurationSettingTemplateCollectionPage.class);
+            settingTemplates = serializer.deserializeObject(json.get("settingTemplates"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage.class);
         }
     }
 }

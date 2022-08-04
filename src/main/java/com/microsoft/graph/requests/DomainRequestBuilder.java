@@ -8,14 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Domain;
-import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.InternalDomainFederationCollectionRequestBuilder;
-import com.microsoft.graph.requests.InternalDomainFederationRequestBuilder;
-import com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.DomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionRequestBuilder;
-import com.microsoft.graph.requests.SharedEmailDomainInvitationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +63,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
     }
 
     /**
@@ -82,8 +74,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder domainNameReferences(@Nonnull final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder domainNameReferences(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the InternalDomainFederation collection
@@ -91,8 +83,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the collection request builder
      */
     @Nonnull
-    public InternalDomainFederationCollectionRequestBuilder federationConfiguration() {
-        return new InternalDomainFederationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfiguration"), getClient(), null);
+    public com.microsoft.graph.requests.InternalDomainFederationCollectionRequestBuilder federationConfiguration() {
+        return new com.microsoft.graph.requests.InternalDomainFederationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfiguration"), getClient(), null);
     }
 
     /**
@@ -102,8 +94,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param id the item identifier
      */
     @Nonnull
-    public InternalDomainFederationRequestBuilder federationConfiguration(@Nonnull final String id) {
-        return new InternalDomainFederationRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfiguration") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.InternalDomainFederationRequestBuilder federationConfiguration(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.InternalDomainFederationRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfiguration") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DomainDnsRecord collection
@@ -111,8 +103,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the collection request builder
      */
     @Nonnull
-    public DomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
-        return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
+    public com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
+        return new com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
     }
 
     /**
@@ -122,8 +114,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param id the item identifier
      */
     @Nonnull
-    public DomainDnsRecordRequestBuilder serviceConfigurationRecords(@Nonnull final String id) {
-        return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DomainDnsRecordRequestBuilder serviceConfigurationRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SharedEmailDomainInvitation collection
@@ -131,8 +123,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the collection request builder
      */
     @Nonnull
-    public SharedEmailDomainInvitationCollectionRequestBuilder sharedEmailDomainInvitations() {
-        return new SharedEmailDomainInvitationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomainInvitations"), getClient(), null);
+    public com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionRequestBuilder sharedEmailDomainInvitations() {
+        return new com.microsoft.graph.requests.SharedEmailDomainInvitationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomainInvitations"), getClient(), null);
     }
 
     /**
@@ -142,8 +134,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param id the item identifier
      */
     @Nonnull
-    public SharedEmailDomainInvitationRequestBuilder sharedEmailDomainInvitations(@Nonnull final String id) {
-        return new SharedEmailDomainInvitationRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomainInvitations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SharedEmailDomainInvitationRequestBuilder sharedEmailDomainInvitations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SharedEmailDomainInvitationRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomainInvitations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DomainDnsRecord collection
@@ -151,8 +143,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the collection request builder
      */
     @Nonnull
-    public DomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
-        return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);
+    public com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
+        return new com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);
     }
 
     /**
@@ -162,8 +154,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param id the item identifier
      */
     @Nonnull
-    public DomainDnsRecordRequestBuilder verificationDnsRecords(@Nonnull final String id) {
-        return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DomainDnsRecordRequestBuilder verificationDnsRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
     }
 
     /**
@@ -174,15 +166,6 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
     @Nonnull
     public DomainForceDeleteRequestBuilder forceDelete(@Nonnull final DomainForceDeleteParameterSet parameters) {
         return new DomainForceDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forceDelete"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public DomainPromoteRequestBuilder promote() {
-        return new DomainPromoteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.promote"), getClient(), null);
     }
 
     /**

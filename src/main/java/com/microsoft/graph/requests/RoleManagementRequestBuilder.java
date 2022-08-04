@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoleManagement;
-import com.microsoft.graph.requests.RbacApplicationRequestBuilder;
-import com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
      * @return the RbacApplicationRequestBuilder instance
      */
     @Nonnull
-    public RbacApplicationRequestBuilder directory() {
-        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
+    public com.microsoft.graph.requests.RbacApplicationRequestBuilder directory() {
+        return new com.microsoft.graph.requests.RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
      * @return the RbacApplicationMultipleRequestBuilder instance
      */
     @Nonnull
-    public RbacApplicationMultipleRequestBuilder cloudPC() {
-        return new RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPC"), getClient(), null);
+    public com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder cloudPC() {
+        return new com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPC"), getClient(), null);
     }
 
     /**
@@ -85,8 +83,8 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
      * @return the RbacApplicationRequestBuilder instance
      */
     @Nonnull
-    public RbacApplicationRequestBuilder entitlementManagement() {
-        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
+    public com.microsoft.graph.requests.RbacApplicationRequestBuilder entitlementManagement() {
+        return new com.microsoft.graph.requests.RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
 
     /**
@@ -95,7 +93,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
      * @return the RbacApplicationMultipleRequestBuilder instance
      */
     @Nonnull
-    public RbacApplicationMultipleRequestBuilder deviceManagement() {
-        return new RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagement"), getClient(), null);
+    public com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder deviceManagement() {
+        return new com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagement"), getClient(), null);
     }
 }

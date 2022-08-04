@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
-import com.microsoft.graph.requests.UnifiedRbacResourceActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRbacResourceActionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class UnifiedRbacResourceNamespaceRequestBuilder extends BaseRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRbacResourceActionCollectionRequestBuilder resourceActions() {
-        return new UnifiedRbacResourceActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceActions"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRbacResourceActionCollectionRequestBuilder resourceActions() {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceActions"), getClient(), null);
     }
 
     /**
@@ -76,8 +74,8 @@ public class UnifiedRbacResourceNamespaceRequestBuilder extends BaseRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRbacResourceActionRequestBuilder resourceActions(@Nonnull final String id) {
-        return new UnifiedRbacResourceActionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceActions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRbacResourceActionRequestBuilder resourceActions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceActionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceActions") + "/" + id, getClient(), null);
     }
 
     /**

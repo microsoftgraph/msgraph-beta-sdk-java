@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus;
-import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @return the WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder policy() {
-        return new WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder policy() {
+        return new com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
 }

@@ -9,10 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.RiskDetection;
-import com.microsoft.graph.models.RiskyServicePrincipal;
-import com.microsoft.graph.models.RiskyUser;
-import com.microsoft.graph.models.ServicePrincipalRiskDetection;
 import com.microsoft.graph.requests.RiskDetectionCollectionPage;
 import com.microsoft.graph.requests.RiskyServicePrincipalCollectionPage;
 import com.microsoft.graph.requests.RiskyUserCollectionPage;
@@ -53,7 +49,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @SerializedName(value = "riskDetections", alternate = {"RiskDetections"})
     @Expose
 	@Nullable
-    public RiskDetectionCollectionPage riskDetections;
+    public com.microsoft.graph.requests.RiskDetectionCollectionPage riskDetections;
 
     /**
      * The Risky Service Principals.
@@ -62,7 +58,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @SerializedName(value = "riskyServicePrincipals", alternate = {"RiskyServicePrincipals"})
     @Expose
 	@Nullable
-    public RiskyServicePrincipalCollectionPage riskyServicePrincipals;
+    public com.microsoft.graph.requests.RiskyServicePrincipalCollectionPage riskyServicePrincipals;
 
     /**
      * The Risky Users.
@@ -71,7 +67,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
     @Expose
 	@Nullable
-    public RiskyUserCollectionPage riskyUsers;
+    public com.microsoft.graph.requests.RiskyUserCollectionPage riskyUsers;
 
     /**
      * The Service Principal Risk Detections.
@@ -80,7 +76,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @SerializedName(value = "servicePrincipalRiskDetections", alternate = {"ServicePrincipalRiskDetections"})
     @Expose
 	@Nullable
-    public ServicePrincipalRiskDetectionCollectionPage servicePrincipalRiskDetections;
+    public com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionPage servicePrincipalRiskDetections;
 
 
     /**
@@ -93,19 +89,19 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
 
         if (json.has("riskDetections")) {
-            riskDetections = serializer.deserializeObject(json.get("riskDetections"), RiskDetectionCollectionPage.class);
+            riskDetections = serializer.deserializeObject(json.get("riskDetections"), com.microsoft.graph.requests.RiskDetectionCollectionPage.class);
         }
 
         if (json.has("riskyServicePrincipals")) {
-            riskyServicePrincipals = serializer.deserializeObject(json.get("riskyServicePrincipals"), RiskyServicePrincipalCollectionPage.class);
+            riskyServicePrincipals = serializer.deserializeObject(json.get("riskyServicePrincipals"), com.microsoft.graph.requests.RiskyServicePrincipalCollectionPage.class);
         }
 
         if (json.has("riskyUsers")) {
-            riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), RiskyUserCollectionPage.class);
+            riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), com.microsoft.graph.requests.RiskyUserCollectionPage.class);
         }
 
         if (json.has("servicePrincipalRiskDetections")) {
-            servicePrincipalRiskDetections = serializer.deserializeObject(json.get("servicePrincipalRiskDetections"), ServicePrincipalRiskDetectionCollectionPage.class);
+            servicePrincipalRiskDetections = serializer.deserializeObject(json.get("servicePrincipalRiskDetections"), com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionPage.class);
         }
     }
 }

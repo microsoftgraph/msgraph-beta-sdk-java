@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.CustomExtensionHandlerCollectionRequestBuilder;
-import com.microsoft.graph.requests.CustomExtensionHandlerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @return the AccessPackageWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageWithReferenceRequestBuilder accessPackage() {
-        return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder accessPackage() {
+        return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @return the AccessPackageCatalogRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageCatalogRequestBuilder accessPackageCatalog() {
-        return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalog"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder accessPackageCatalog() {
+        return new com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalog"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CustomExtensionHandler collection
@@ -86,8 +82,8 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public CustomExtensionHandlerCollectionRequestBuilder customExtensionHandlers() {
-        return new CustomExtensionHandlerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customExtensionHandlers"), getClient(), null);
+    public com.microsoft.graph.requests.CustomExtensionHandlerCollectionRequestBuilder customExtensionHandlers() {
+        return new com.microsoft.graph.requests.CustomExtensionHandlerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customExtensionHandlers"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public CustomExtensionHandlerRequestBuilder customExtensionHandlers(@Nonnull final String id) {
-        return new CustomExtensionHandlerRequestBuilder(getRequestUrlWithAdditionalSegment("customExtensionHandlers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CustomExtensionHandlerRequestBuilder customExtensionHandlers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomExtensionHandlerRequestBuilder(getRequestUrlWithAdditionalSegment("customExtensionHandlers") + "/" + id, getClient(), null);
     }
 }

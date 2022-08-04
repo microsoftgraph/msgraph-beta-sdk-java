@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.GroupPolicyConfigurationAssignment;
-import com.microsoft.graph.models.GroupPolicyDefinitionValue;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.GroupPolicyDefinitionValueCollectionPage;
@@ -82,7 +80,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public GroupPolicyConfigurationAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Definition Values.
@@ -91,7 +89,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
     @SerializedName(value = "definitionValues", alternate = {"DefinitionValues"})
     @Expose
 	@Nullable
-    public GroupPolicyDefinitionValueCollectionPage definitionValues;
+    public com.microsoft.graph.requests.GroupPolicyDefinitionValueCollectionPage definitionValues;
 
 
     /**
@@ -104,11 +102,11 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), GroupPolicyConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("definitionValues")) {
-            definitionValues = serializer.deserializeObject(json.get("definitionValues"), GroupPolicyDefinitionValueCollectionPage.class);
+            definitionValues = serializer.deserializeObject(json.get("definitionValues"), com.microsoft.graph.requests.GroupPolicyDefinitionValueCollectionPage.class);
         }
     }
 }

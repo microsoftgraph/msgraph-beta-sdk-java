@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.X509CertificateAuthenticationModeConfiguration;
 import com.microsoft.graph.models.X509CertificateUserBinding;
-import com.microsoft.graph.models.AuthenticationMethodTarget;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage;
 
@@ -55,7 +54,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose
 	@Nullable
-    public AuthenticationMethodTargetCollectionPage includeTargets;
+    public com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage includeTargets;
 
 
     /**
@@ -68,7 +67,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
 
 
         if (json.has("includeTargets")) {
-            includeTargets = serializer.deserializeObject(json.get("includeTargets"), AuthenticationMethodTargetCollectionPage.class);
+            includeTargets = serializer.deserializeObject(json.get("includeTargets"), com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage.class);
         }
     }
 }

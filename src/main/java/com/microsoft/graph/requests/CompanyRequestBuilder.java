@@ -8,76 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Company;
-import com.microsoft.graph.requests.AccountCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccountRequestBuilder;
-import com.microsoft.graph.requests.AgedAccountsPayableCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgedAccountsPayableRequestBuilder;
-import com.microsoft.graph.requests.AgedAccountsReceivableCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgedAccountsReceivableRequestBuilder;
-import com.microsoft.graph.requests.CompanyInformationCollectionRequestBuilder;
-import com.microsoft.graph.requests.CompanyInformationRequestBuilder;
-import com.microsoft.graph.requests.CountryRegionCollectionRequestBuilder;
-import com.microsoft.graph.requests.CountryRegionRequestBuilder;
-import com.microsoft.graph.requests.CurrencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.CustomerPaymentJournalCollectionRequestBuilder;
-import com.microsoft.graph.requests.CustomerPaymentJournalRequestBuilder;
-import com.microsoft.graph.requests.CustomerPaymentCollectionRequestBuilder;
-import com.microsoft.graph.requests.CustomerPaymentRequestBuilder;
-import com.microsoft.graph.requests.CustomerCollectionRequestBuilder;
-import com.microsoft.graph.requests.CustomerRequestBuilder;
-import com.microsoft.graph.requests.DimensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DimensionRequestBuilder;
-import com.microsoft.graph.requests.DimensionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.DimensionValueRequestBuilder;
-import com.microsoft.graph.requests.EmployeeCollectionRequestBuilder;
-import com.microsoft.graph.requests.EmployeeRequestBuilder;
-import com.microsoft.graph.requests.GeneralLedgerEntryCollectionRequestBuilder;
-import com.microsoft.graph.requests.GeneralLedgerEntryRequestBuilder;
-import com.microsoft.graph.requests.ItemCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemCategoryRequestBuilder;
-import com.microsoft.graph.requests.ItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemRequestBuilder;
-import com.microsoft.graph.requests.JournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.JournalLineRequestBuilder;
-import com.microsoft.graph.requests.JournalCollectionRequestBuilder;
-import com.microsoft.graph.requests.JournalRequestBuilder;
-import com.microsoft.graph.requests.PaymentMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.PaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.PaymentTermCollectionRequestBuilder;
-import com.microsoft.graph.requests.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.PictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.PictureRequestBuilder;
-import com.microsoft.graph.requests.PurchaseInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.PurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.PurchaseInvoiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.PurchaseInvoiceRequestBuilder;
-import com.microsoft.graph.requests.SalesCreditMemoLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesCreditMemoLineRequestBuilder;
-import com.microsoft.graph.requests.SalesCreditMemoCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesCreditMemoRequestBuilder;
-import com.microsoft.graph.requests.SalesInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.SalesInvoiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesInvoiceRequestBuilder;
-import com.microsoft.graph.requests.SalesOrderLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesOrderLineRequestBuilder;
-import com.microsoft.graph.requests.SalesOrderCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesOrderRequestBuilder;
-import com.microsoft.graph.requests.SalesQuoteLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.SalesQuoteCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesQuoteRequestBuilder;
-import com.microsoft.graph.requests.ShipmentMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.ShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.TaxAreaCollectionRequestBuilder;
-import com.microsoft.graph.requests.TaxAreaRequestBuilder;
-import com.microsoft.graph.requests.TaxGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.TaxGroupRequestBuilder;
-import com.microsoft.graph.requests.UnitOfMeasureCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnitOfMeasureRequestBuilder;
-import com.microsoft.graph.requests.VendorCollectionRequestBuilder;
-import com.microsoft.graph.requests.VendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -132,8 +62,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public AccountCollectionRequestBuilder accounts() {
-        return new AccountCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accounts"), getClient(), null);
+    public com.microsoft.graph.requests.AccountCollectionRequestBuilder accounts() {
+        return new com.microsoft.graph.requests.AccountCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accounts"), getClient(), null);
     }
 
     /**
@@ -143,8 +73,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public AccountRequestBuilder accounts(@Nonnull final String id) {
-        return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("accounts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccountRequestBuilder accounts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccountRequestBuilder(getRequestUrlWithAdditionalSegment("accounts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AgedAccountsPayable collection
@@ -152,8 +82,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public AgedAccountsPayableCollectionRequestBuilder agedAccountsPayable() {
-        return new AgedAccountsPayableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsPayable"), getClient(), null);
+    public com.microsoft.graph.requests.AgedAccountsPayableCollectionRequestBuilder agedAccountsPayable() {
+        return new com.microsoft.graph.requests.AgedAccountsPayableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsPayable"), getClient(), null);
     }
 
     /**
@@ -163,8 +93,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public AgedAccountsPayableRequestBuilder agedAccountsPayable(@Nonnull final String id) {
-        return new AgedAccountsPayableRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsPayable") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgedAccountsPayableRequestBuilder agedAccountsPayable(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgedAccountsPayableRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsPayable") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AgedAccountsReceivable collection
@@ -172,8 +102,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public AgedAccountsReceivableCollectionRequestBuilder agedAccountsReceivable() {
-        return new AgedAccountsReceivableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsReceivable"), getClient(), null);
+    public com.microsoft.graph.requests.AgedAccountsReceivableCollectionRequestBuilder agedAccountsReceivable() {
+        return new com.microsoft.graph.requests.AgedAccountsReceivableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsReceivable"), getClient(), null);
     }
 
     /**
@@ -183,8 +113,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public AgedAccountsReceivableRequestBuilder agedAccountsReceivable(@Nonnull final String id) {
-        return new AgedAccountsReceivableRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsReceivable") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgedAccountsReceivableRequestBuilder agedAccountsReceivable(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgedAccountsReceivableRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsReceivable") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CompanyInformation collection
@@ -192,8 +122,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public CompanyInformationCollectionRequestBuilder companyInformation() {
-        return new CompanyInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("companyInformation"), getClient(), null);
+    public com.microsoft.graph.requests.CompanyInformationCollectionRequestBuilder companyInformation() {
+        return new com.microsoft.graph.requests.CompanyInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("companyInformation"), getClient(), null);
     }
 
     /**
@@ -203,8 +133,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public CompanyInformationRequestBuilder companyInformation(@Nonnull final String id) {
-        return new CompanyInformationRequestBuilder(getRequestUrlWithAdditionalSegment("companyInformation") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CompanyInformationRequestBuilder companyInformation(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CompanyInformationRequestBuilder(getRequestUrlWithAdditionalSegment("companyInformation") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CountryRegion collection
@@ -212,8 +142,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public CountryRegionCollectionRequestBuilder countriesRegions() {
-        return new CountryRegionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("countriesRegions"), getClient(), null);
+    public com.microsoft.graph.requests.CountryRegionCollectionRequestBuilder countriesRegions() {
+        return new com.microsoft.graph.requests.CountryRegionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("countriesRegions"), getClient(), null);
     }
 
     /**
@@ -223,8 +153,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public CountryRegionRequestBuilder countriesRegions(@Nonnull final String id) {
-        return new CountryRegionRequestBuilder(getRequestUrlWithAdditionalSegment("countriesRegions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CountryRegionRequestBuilder countriesRegions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CountryRegionRequestBuilder(getRequestUrlWithAdditionalSegment("countriesRegions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Currency collection
@@ -232,8 +162,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public CurrencyCollectionRequestBuilder currencies() {
-        return new CurrencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("currencies"), getClient(), null);
+    public com.microsoft.graph.requests.CurrencyCollectionRequestBuilder currencies() {
+        return new com.microsoft.graph.requests.CurrencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("currencies"), getClient(), null);
     }
 
     /**
@@ -243,8 +173,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public CurrencyRequestBuilder currencies(@Nonnull final String id) {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currencies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CurrencyRequestBuilder currencies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currencies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CustomerPaymentJournal collection
@@ -252,8 +182,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public CustomerPaymentJournalCollectionRequestBuilder customerPaymentJournals() {
-        return new CustomerPaymentJournalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPaymentJournals"), getClient(), null);
+    public com.microsoft.graph.requests.CustomerPaymentJournalCollectionRequestBuilder customerPaymentJournals() {
+        return new com.microsoft.graph.requests.CustomerPaymentJournalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPaymentJournals"), getClient(), null);
     }
 
     /**
@@ -263,8 +193,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public CustomerPaymentJournalRequestBuilder customerPaymentJournals(@Nonnull final String id) {
-        return new CustomerPaymentJournalRequestBuilder(getRequestUrlWithAdditionalSegment("customerPaymentJournals") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CustomerPaymentJournalRequestBuilder customerPaymentJournals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomerPaymentJournalRequestBuilder(getRequestUrlWithAdditionalSegment("customerPaymentJournals") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CustomerPayment collection
@@ -272,8 +202,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public CustomerPaymentCollectionRequestBuilder customerPayments() {
-        return new CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
+    public com.microsoft.graph.requests.CustomerPaymentCollectionRequestBuilder customerPayments() {
+        return new com.microsoft.graph.requests.CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
     }
 
     /**
@@ -283,8 +213,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public CustomerPaymentRequestBuilder customerPayments(@Nonnull final String id) {
-        return new CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CustomerPaymentRequestBuilder customerPayments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Customer collection
@@ -292,8 +222,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public CustomerCollectionRequestBuilder customers() {
-        return new CustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customers"), getClient(), null);
+    public com.microsoft.graph.requests.CustomerCollectionRequestBuilder customers() {
+        return new com.microsoft.graph.requests.CustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customers"), getClient(), null);
     }
 
     /**
@@ -303,8 +233,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public CustomerRequestBuilder customers(@Nonnull final String id) {
-        return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CustomerRequestBuilder customers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Dimension collection
@@ -312,8 +242,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public DimensionCollectionRequestBuilder dimensions() {
-        return new DimensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensions"), getClient(), null);
+    public com.microsoft.graph.requests.DimensionCollectionRequestBuilder dimensions() {
+        return new com.microsoft.graph.requests.DimensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensions"), getClient(), null);
     }
 
     /**
@@ -323,8 +253,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public DimensionRequestBuilder dimensions(@Nonnull final String id) {
-        return new DimensionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DimensionRequestBuilder dimensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DimensionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DimensionValue collection
@@ -332,8 +262,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public DimensionValueCollectionRequestBuilder dimensionValues() {
-        return new DimensionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues"), getClient(), null);
+    public com.microsoft.graph.requests.DimensionValueCollectionRequestBuilder dimensionValues() {
+        return new com.microsoft.graph.requests.DimensionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues"), getClient(), null);
     }
 
     /**
@@ -343,8 +273,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public DimensionValueRequestBuilder dimensionValues(@Nonnull final String id) {
-        return new DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DimensionValueRequestBuilder dimensionValues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Employee collection
@@ -352,8 +282,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public EmployeeCollectionRequestBuilder employees() {
-        return new EmployeeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("employees"), getClient(), null);
+    public com.microsoft.graph.requests.EmployeeCollectionRequestBuilder employees() {
+        return new com.microsoft.graph.requests.EmployeeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("employees"), getClient(), null);
     }
 
     /**
@@ -363,8 +293,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public EmployeeRequestBuilder employees(@Nonnull final String id) {
-        return new EmployeeRequestBuilder(getRequestUrlWithAdditionalSegment("employees") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EmployeeRequestBuilder employees(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EmployeeRequestBuilder(getRequestUrlWithAdditionalSegment("employees") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GeneralLedgerEntry collection
@@ -372,8 +302,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public GeneralLedgerEntryCollectionRequestBuilder generalLedgerEntries() {
-        return new GeneralLedgerEntryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("generalLedgerEntries"), getClient(), null);
+    public com.microsoft.graph.requests.GeneralLedgerEntryCollectionRequestBuilder generalLedgerEntries() {
+        return new com.microsoft.graph.requests.GeneralLedgerEntryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("generalLedgerEntries"), getClient(), null);
     }
 
     /**
@@ -383,8 +313,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public GeneralLedgerEntryRequestBuilder generalLedgerEntries(@Nonnull final String id) {
-        return new GeneralLedgerEntryRequestBuilder(getRequestUrlWithAdditionalSegment("generalLedgerEntries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GeneralLedgerEntryRequestBuilder generalLedgerEntries(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GeneralLedgerEntryRequestBuilder(getRequestUrlWithAdditionalSegment("generalLedgerEntries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemCategory collection
@@ -392,8 +322,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemCategoryCollectionRequestBuilder itemCategories() {
-        return new ItemCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategories"), getClient(), null);
+    public com.microsoft.graph.requests.ItemCategoryCollectionRequestBuilder itemCategories() {
+        return new com.microsoft.graph.requests.ItemCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategories"), getClient(), null);
     }
 
     /**
@@ -403,8 +333,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemCategoryRequestBuilder itemCategories(@Nonnull final String id) {
-        return new ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemCategoryRequestBuilder itemCategories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Item collection
@@ -412,8 +342,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemCollectionRequestBuilder items() {
-        return new ItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    public com.microsoft.graph.requests.ItemCollectionRequestBuilder items() {
+        return new com.microsoft.graph.requests.ItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
     /**
@@ -423,8 +353,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemRequestBuilder items(@Nonnull final String id) {
-        return new ItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemRequestBuilder items(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the JournalLine collection
@@ -432,8 +362,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public JournalLineCollectionRequestBuilder journalLines() {
-        return new JournalLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines"), getClient(), null);
+    public com.microsoft.graph.requests.JournalLineCollectionRequestBuilder journalLines() {
+        return new com.microsoft.graph.requests.JournalLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines"), getClient(), null);
     }
 
     /**
@@ -443,8 +373,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public JournalLineRequestBuilder journalLines(@Nonnull final String id) {
-        return new JournalLineRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JournalLineRequestBuilder journalLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JournalLineRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Journal collection
@@ -452,8 +382,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public JournalCollectionRequestBuilder journals() {
-        return new JournalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journals"), getClient(), null);
+    public com.microsoft.graph.requests.JournalCollectionRequestBuilder journals() {
+        return new com.microsoft.graph.requests.JournalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journals"), getClient(), null);
     }
 
     /**
@@ -463,8 +393,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public JournalRequestBuilder journals(@Nonnull final String id) {
-        return new JournalRequestBuilder(getRequestUrlWithAdditionalSegment("journals") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JournalRequestBuilder journals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JournalRequestBuilder(getRequestUrlWithAdditionalSegment("journals") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PaymentMethod collection
@@ -472,8 +402,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public PaymentMethodCollectionRequestBuilder paymentMethods() {
-        return new PaymentMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethods"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentMethodCollectionRequestBuilder paymentMethods() {
+        return new com.microsoft.graph.requests.PaymentMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethods"), getClient(), null);
     }
 
     /**
@@ -483,8 +413,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public PaymentMethodRequestBuilder paymentMethods(@Nonnull final String id) {
-        return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PaymentMethodRequestBuilder paymentMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PaymentTerm collection
@@ -492,8 +422,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public PaymentTermCollectionRequestBuilder paymentTerms() {
-        return new PaymentTermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerms"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentTermCollectionRequestBuilder paymentTerms() {
+        return new com.microsoft.graph.requests.PaymentTermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerms"), getClient(), null);
     }
 
     /**
@@ -503,8 +433,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public PaymentTermRequestBuilder paymentTerms(@Nonnull final String id) {
-        return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerms") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PaymentTermRequestBuilder paymentTerms(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerms") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Picture collection
@@ -512,8 +442,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public PictureCollectionRequestBuilder picture() {
-        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    public com.microsoft.graph.requests.PictureCollectionRequestBuilder picture() {
+        return new com.microsoft.graph.requests.PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
     /**
@@ -523,8 +453,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public PictureRequestBuilder picture(@Nonnull final String id) {
-        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PictureRequestBuilder picture(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PurchaseInvoiceLine collection
@@ -532,8 +462,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public PurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
-        return new PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
+    public com.microsoft.graph.requests.PurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
+        return new com.microsoft.graph.requests.PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
     }
 
     /**
@@ -543,8 +473,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public PurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(@Nonnull final String id) {
-        return new PurchaseInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PurchaseInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PurchaseInvoice collection
@@ -552,8 +482,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public PurchaseInvoiceCollectionRequestBuilder purchaseInvoices() {
-        return new PurchaseInvoiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoices"), getClient(), null);
+    public com.microsoft.graph.requests.PurchaseInvoiceCollectionRequestBuilder purchaseInvoices() {
+        return new com.microsoft.graph.requests.PurchaseInvoiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoices"), getClient(), null);
     }
 
     /**
@@ -563,8 +493,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public PurchaseInvoiceRequestBuilder purchaseInvoices(@Nonnull final String id) {
-        return new PurchaseInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PurchaseInvoiceRequestBuilder purchaseInvoices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PurchaseInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoices") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesCreditMemoLine collection
@@ -572,8 +502,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines() {
-        return new SalesCreditMemoLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines"), getClient(), null);
+    public com.microsoft.graph.requests.SalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines() {
+        return new com.microsoft.graph.requests.SalesCreditMemoLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines"), getClient(), null);
     }
 
     /**
@@ -583,8 +513,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesCreditMemoLineRequestBuilder salesCreditMemoLines(@Nonnull final String id) {
-        return new SalesCreditMemoLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesCreditMemoLineRequestBuilder salesCreditMemoLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesCreditMemoLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesCreditMemo collection
@@ -592,8 +522,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesCreditMemoCollectionRequestBuilder salesCreditMemos() {
-        return new SalesCreditMemoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemos"), getClient(), null);
+    public com.microsoft.graph.requests.SalesCreditMemoCollectionRequestBuilder salesCreditMemos() {
+        return new com.microsoft.graph.requests.SalesCreditMemoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemos"), getClient(), null);
     }
 
     /**
@@ -603,8 +533,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesCreditMemoRequestBuilder salesCreditMemos(@Nonnull final String id) {
-        return new SalesCreditMemoRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemos") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesCreditMemoRequestBuilder salesCreditMemos(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesCreditMemoRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemos") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesInvoiceLine collection
@@ -612,8 +542,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
-        return new SalesInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines"), getClient(), null);
+    public com.microsoft.graph.requests.SalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
+        return new com.microsoft.graph.requests.SalesInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines"), getClient(), null);
     }
 
     /**
@@ -623,8 +553,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesInvoiceLineRequestBuilder salesInvoiceLines(@Nonnull final String id) {
-        return new SalesInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesInvoiceLineRequestBuilder salesInvoiceLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesInvoice collection
@@ -632,8 +562,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesInvoiceCollectionRequestBuilder salesInvoices() {
-        return new SalesInvoiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoices"), getClient(), null);
+    public com.microsoft.graph.requests.SalesInvoiceCollectionRequestBuilder salesInvoices() {
+        return new com.microsoft.graph.requests.SalesInvoiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoices"), getClient(), null);
     }
 
     /**
@@ -643,8 +573,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesInvoiceRequestBuilder salesInvoices(@Nonnull final String id) {
-        return new SalesInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesInvoiceRequestBuilder salesInvoices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoices") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesOrderLine collection
@@ -652,8 +582,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesOrderLineCollectionRequestBuilder salesOrderLines() {
-        return new SalesOrderLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines"), getClient(), null);
+    public com.microsoft.graph.requests.SalesOrderLineCollectionRequestBuilder salesOrderLines() {
+        return new com.microsoft.graph.requests.SalesOrderLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines"), getClient(), null);
     }
 
     /**
@@ -663,8 +593,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesOrderLineRequestBuilder salesOrderLines(@Nonnull final String id) {
-        return new SalesOrderLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesOrderLineRequestBuilder salesOrderLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesOrderLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesOrder collection
@@ -672,8 +602,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesOrderCollectionRequestBuilder salesOrders() {
-        return new SalesOrderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrders"), getClient(), null);
+    public com.microsoft.graph.requests.SalesOrderCollectionRequestBuilder salesOrders() {
+        return new com.microsoft.graph.requests.SalesOrderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrders"), getClient(), null);
     }
 
     /**
@@ -683,8 +613,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesOrderRequestBuilder salesOrders(@Nonnull final String id) {
-        return new SalesOrderRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesOrderRequestBuilder salesOrders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesOrderRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesQuoteLine collection
@@ -692,8 +622,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
-        return new SalesQuoteLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines"), getClient(), null);
+    public com.microsoft.graph.requests.SalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
+        return new com.microsoft.graph.requests.SalesQuoteLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines"), getClient(), null);
     }
 
     /**
@@ -703,8 +633,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesQuoteLineRequestBuilder salesQuoteLines(@Nonnull final String id) {
-        return new SalesQuoteLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesQuoteLineRequestBuilder salesQuoteLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesQuoteLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesQuote collection
@@ -712,8 +642,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public SalesQuoteCollectionRequestBuilder salesQuotes() {
-        return new SalesQuoteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuotes"), getClient(), null);
+    public com.microsoft.graph.requests.SalesQuoteCollectionRequestBuilder salesQuotes() {
+        return new com.microsoft.graph.requests.SalesQuoteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuotes"), getClient(), null);
     }
 
     /**
@@ -723,8 +653,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public SalesQuoteRequestBuilder salesQuotes(@Nonnull final String id) {
-        return new SalesQuoteRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuotes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesQuoteRequestBuilder salesQuotes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesQuoteRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuotes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ShipmentMethod collection
@@ -732,8 +662,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public ShipmentMethodCollectionRequestBuilder shipmentMethods() {
-        return new ShipmentMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethods"), getClient(), null);
+    public com.microsoft.graph.requests.ShipmentMethodCollectionRequestBuilder shipmentMethods() {
+        return new com.microsoft.graph.requests.ShipmentMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethods"), getClient(), null);
     }
 
     /**
@@ -743,8 +673,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public ShipmentMethodRequestBuilder shipmentMethods(@Nonnull final String id) {
-        return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ShipmentMethodRequestBuilder shipmentMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TaxArea collection
@@ -752,8 +682,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public TaxAreaCollectionRequestBuilder taxAreas() {
-        return new TaxAreaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taxAreas"), getClient(), null);
+    public com.microsoft.graph.requests.TaxAreaCollectionRequestBuilder taxAreas() {
+        return new com.microsoft.graph.requests.TaxAreaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taxAreas"), getClient(), null);
     }
 
     /**
@@ -763,8 +693,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public TaxAreaRequestBuilder taxAreas(@Nonnull final String id) {
-        return new TaxAreaRequestBuilder(getRequestUrlWithAdditionalSegment("taxAreas") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TaxAreaRequestBuilder taxAreas(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TaxAreaRequestBuilder(getRequestUrlWithAdditionalSegment("taxAreas") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TaxGroup collection
@@ -772,8 +702,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public TaxGroupCollectionRequestBuilder taxGroups() {
-        return new TaxGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taxGroups"), getClient(), null);
+    public com.microsoft.graph.requests.TaxGroupCollectionRequestBuilder taxGroups() {
+        return new com.microsoft.graph.requests.TaxGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taxGroups"), getClient(), null);
     }
 
     /**
@@ -783,8 +713,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public TaxGroupRequestBuilder taxGroups(@Nonnull final String id) {
-        return new TaxGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taxGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TaxGroupRequestBuilder taxGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TaxGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taxGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnitOfMeasure collection
@@ -792,8 +722,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public UnitOfMeasureCollectionRequestBuilder unitsOfMeasure() {
-        return new UnitOfMeasureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unitsOfMeasure"), getClient(), null);
+    public com.microsoft.graph.requests.UnitOfMeasureCollectionRequestBuilder unitsOfMeasure() {
+        return new com.microsoft.graph.requests.UnitOfMeasureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unitsOfMeasure"), getClient(), null);
     }
 
     /**
@@ -803,8 +733,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public UnitOfMeasureRequestBuilder unitsOfMeasure(@Nonnull final String id) {
-        return new UnitOfMeasureRequestBuilder(getRequestUrlWithAdditionalSegment("unitsOfMeasure") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnitOfMeasureRequestBuilder unitsOfMeasure(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnitOfMeasureRequestBuilder(getRequestUrlWithAdditionalSegment("unitsOfMeasure") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Vendor collection
@@ -812,8 +742,8 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @return the collection request builder
      */
     @Nonnull
-    public VendorCollectionRequestBuilder vendors() {
-        return new VendorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vendors"), getClient(), null);
+    public com.microsoft.graph.requests.VendorCollectionRequestBuilder vendors() {
+        return new com.microsoft.graph.requests.VendorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vendors"), getClient(), null);
     }
 
     /**
@@ -823,7 +753,7 @@ public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
      * @param id the item identifier
      */
     @Nonnull
-    public VendorRequestBuilder vendors(@Nonnull final String id) {
-        return new VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VendorRequestBuilder vendors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendors") + "/" + id, getClient(), null);
     }
 }

@@ -41,7 +41,7 @@ public class DisplayTemplate implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
+     * The text identifier for the display template; for example, contosoTickets.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -59,7 +59,7 @@ public class DisplayTemplate implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
+     * Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose

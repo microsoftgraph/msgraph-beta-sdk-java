@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OfficeClientCheckinStatus;
 import com.microsoft.graph.models.OfficeUserCheckinSummary;
-import com.microsoft.graph.models.OfficeClientConfiguration;
 import com.microsoft.graph.requests.OfficeClientConfigurationCollectionPage;
 
 
@@ -67,7 +66,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
     @SerializedName(value = "clientConfigurations", alternate = {"ClientConfigurations"})
     @Expose
 	@Nullable
-    public OfficeClientConfigurationCollectionPage clientConfigurations;
+    public com.microsoft.graph.requests.OfficeClientConfigurationCollectionPage clientConfigurations;
 
 
     /**
@@ -80,7 +79,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
 
 
         if (json.has("clientConfigurations")) {
-            clientConfigurations = serializer.deserializeObject(json.get("clientConfigurations"), OfficeClientConfigurationCollectionPage.class);
+            clientConfigurations = serializer.deserializeObject(json.get("clientConfigurations"), com.microsoft.graph.requests.OfficeClientConfigurationCollectionPage.class);
         }
     }
 }

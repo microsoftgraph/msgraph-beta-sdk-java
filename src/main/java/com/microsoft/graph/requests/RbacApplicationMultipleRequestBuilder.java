@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RbacApplicationMultiple;
-import com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRbacResourceNamespaceRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder<Rb
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces() {
-        return new UnifiedRbacResourceNamespaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces() {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder<Rb
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(@Nonnull final String id) {
-        return new UnifiedRbacResourceNamespaceRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceNamespaceRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleAssignmentMultiple collection
@@ -88,8 +82,8 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder<Rb
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleAssignmentMultipleCollectionRequestBuilder roleAssignments() {
-        return new UnifiedRoleAssignmentMultipleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleCollectionRequestBuilder roleAssignments() {
+        return new com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder<Rb
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleAssignmentMultipleRequestBuilder roleAssignments(@Nonnull final String id) {
-        return new UnifiedRoleAssignmentMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleRequestBuilder roleAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleDefinition collection
@@ -108,8 +102,8 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder<Rb
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions() {
-        return new UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions() {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder<Rb
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
-        return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
 }

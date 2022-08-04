@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
-import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

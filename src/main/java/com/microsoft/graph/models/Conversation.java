@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConversationThreadCollectionPage;
 
@@ -80,7 +79,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
 	@Nullable
-    public ConversationThreadCollectionPage threads;
+    public com.microsoft.graph.requests.ConversationThreadCollectionPage threads;
 
 
     /**
@@ -93,7 +92,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads"), ConversationThreadCollectionPage.class);
+            threads = serializer.deserializeObject(json.get("threads"), com.microsoft.graph.requests.ConversationThreadCollectionPage.class);
         }
     }
 }

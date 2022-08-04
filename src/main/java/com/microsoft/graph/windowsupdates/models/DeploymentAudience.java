@@ -9,9 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.windowsupdates.models.UpdatableAsset;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,7 +33,7 @@ public class DeploymentAudience extends Entity implements IJsonBackedObject {
     @SerializedName(value = "exclusions", alternate = {"Exclusions"})
     @Expose
 	@Nullable
-    public UpdatableAssetCollectionPage exclusions;
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage exclusions;
 
     /**
      * The Members.
@@ -44,7 +42,7 @@ public class DeploymentAudience extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public UpdatableAssetCollectionPage members;
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage members;
 
 
     /**
@@ -57,11 +55,11 @@ public class DeploymentAudience extends Entity implements IJsonBackedObject {
 
 
         if (json.has("exclusions")) {
-            exclusions = serializer.deserializeObject(json.get("exclusions"), UpdatableAssetCollectionPage.class);
+            exclusions = serializer.deserializeObject(json.get("exclusions"), com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), UpdatableAssetCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage.class);
         }
     }
 }

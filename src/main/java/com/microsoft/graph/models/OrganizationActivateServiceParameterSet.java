@@ -18,9 +18,7 @@ import java.util.ArrayList;
 
 /**
  * The class for the Organization Activate Service Parameter Set.
- * @deprecated The activateService API will be deprecated and will stop returning data on Jun-30, 2022
  */
-@Deprecated
 public class OrganizationActivateServiceParameterSet {
     /**
      * The service.

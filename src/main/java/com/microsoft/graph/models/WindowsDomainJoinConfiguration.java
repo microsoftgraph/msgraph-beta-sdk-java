@@ -68,7 +68,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Reference to device configurations required for network connectivity
      */
 	@Nullable
-    public DeviceConfigurationCollectionPage networkAccessConfigurations;
+    public com.microsoft.graph.requests.DeviceConfigurationCollectionPage networkAccessConfigurations;
 
 
     /**
@@ -81,7 +81,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
 
 
         if (json.has("networkAccessConfigurations")) {
-            networkAccessConfigurations = serializer.deserializeObject(json.get("networkAccessConfigurations"), DeviceConfigurationCollectionPage.class);
+            networkAccessConfigurations = serializer.deserializeObject(json.get("networkAccessConfigurations"), com.microsoft.graph.requests.DeviceConfigurationCollectionPage.class);
         }
     }
 }

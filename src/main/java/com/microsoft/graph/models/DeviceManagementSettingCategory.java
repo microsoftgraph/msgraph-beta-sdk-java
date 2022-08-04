@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementSettingDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage;
 
@@ -53,7 +52,7 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
     @SerializedName(value = "settingDefinitions", alternate = {"SettingDefinitions"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
+    public com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
 
 
     /**
@@ -66,7 +65,7 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
 
 
         if (json.has("settingDefinitions")) {
-            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), DeviceManagementSettingDefinitionCollectionPage.class);
+            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage.class);
         }
     }
 }

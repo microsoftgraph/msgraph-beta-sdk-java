@@ -41,7 +41,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Endpoint Type.
-     * The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+     * The type of the endpoint. Possible values are: default, voicemail.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose

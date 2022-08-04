@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
-import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder appHealthMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appHealthMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder appHealthMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appHealthMetrics"), getClient(), null);
     }
 
     /**
@@ -74,8 +73,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder batteryHealthMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("batteryHealthMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder batteryHealthMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("batteryHealthMetrics"), getClient(), null);
     }
 
     /**
@@ -84,8 +83,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }
 
     /**
@@ -94,8 +93,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceBootPerformanceMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceBootPerformanceMetrics"), getClient(), null);
     }
 
     /**
@@ -104,8 +103,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rebootAnalyticsMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rebootAnalyticsMetrics"), getClient(), null);
     }
 
     /**
@@ -114,8 +113,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resourcePerformanceMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resourcePerformanceMetrics"), getClient(), null);
     }
 
     /**
@@ -124,7 +123,7 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder workFromAnywhereMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("workFromAnywhereMetrics"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder workFromAnywhereMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("workFromAnywhereMetrics"), getClient(), null);
     }
 }

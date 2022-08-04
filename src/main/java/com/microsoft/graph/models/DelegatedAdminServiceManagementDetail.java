@@ -26,6 +26,15 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements IJs
 
 
     /**
+     * The Service Id.
+     * 
+     */
+    @SerializedName(value = "serviceId", alternate = {"ServiceId"})
+    @Expose
+	@Nullable
+    public String serviceId;
+
+    /**
      * The Service Management Url.
      * The URL of the management portal for the managed service. Read-only.
      */

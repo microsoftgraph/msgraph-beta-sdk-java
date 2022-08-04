@@ -10,10 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PolicySet;
 import com.microsoft.graph.models.PolicySetItem;
 import com.microsoft.graph.models.PolicySetAssignment;
-import com.microsoft.graph.requests.PolicySetAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.PolicySetAssignmentRequestBuilder;
-import com.microsoft.graph.requests.PolicySetItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.PolicySetItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +65,8 @@ public class PolicySetRequestBuilder extends BaseRequestBuilder<PolicySet> {
      * @return the collection request builder
      */
     @Nonnull
-    public PolicySetAssignmentCollectionRequestBuilder assignments() {
-        return new PolicySetAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.PolicySetAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.PolicySetAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -80,8 +76,8 @@ public class PolicySetRequestBuilder extends BaseRequestBuilder<PolicySet> {
      * @param id the item identifier
      */
     @Nonnull
-    public PolicySetAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new PolicySetAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PolicySetAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PolicySetAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PolicySetItem collection
@@ -89,8 +85,8 @@ public class PolicySetRequestBuilder extends BaseRequestBuilder<PolicySet> {
      * @return the collection request builder
      */
     @Nonnull
-    public PolicySetItemCollectionRequestBuilder items() {
-        return new PolicySetItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    public com.microsoft.graph.requests.PolicySetItemCollectionRequestBuilder items() {
+        return new com.microsoft.graph.requests.PolicySetItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
     /**
@@ -100,8 +96,8 @@ public class PolicySetRequestBuilder extends BaseRequestBuilder<PolicySet> {
      * @param id the item identifier
      */
     @Nonnull
-    public PolicySetItemRequestBuilder items(@Nonnull final String id) {
-        return new PolicySetItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PolicySetItemRequestBuilder items(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PolicySetItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
     /**

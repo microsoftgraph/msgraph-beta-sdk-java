@@ -34,7 +34,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingInstanceCollectionPage value;
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage value;
 
 
     /**
@@ -47,7 +47,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
 
 
         if (json.has("value")) {
-            value = serializer.deserializeObject(json.get("value"), DeviceManagementSettingInstanceCollectionPage.class);
+            value = serializer.deserializeObject(json.get("value"), com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage.class);
         }
     }
 }

@@ -9,9 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary;
-import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage;
@@ -110,7 +108,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Deploy Summary.
@@ -128,7 +126,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage deviceStatuses;
 
 
     /**
@@ -141,11 +139,11 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage.class);
         }
     }
 }

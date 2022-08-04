@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MobileApp;
-import com.microsoft.graph.models.MobileAppInstallStatus;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage;
 
@@ -90,7 +89,7 @@ public class UserAppInstallStatus extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public MobileAppInstallStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage deviceStatuses;
 
 
     /**
@@ -103,7 +102,7 @@ public class UserAppInstallStatus extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), MobileAppInstallStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage.class);
         }
     }
 }

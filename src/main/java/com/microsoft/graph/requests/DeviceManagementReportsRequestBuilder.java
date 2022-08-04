@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -49,7 +45,6 @@ import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyFirewallRep
 import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyFirewallSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetAllCertificatesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCertificatesReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
@@ -64,7 +59,6 @@ import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementInte
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetHistoricalReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceMetadataParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceSummaryReportParameterSet;
@@ -122,8 +116,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementCachedReportConfigurationCollectionRequestBuilder cachedReportConfigurations() {
-        return new DeviceManagementCachedReportConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cachedReportConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionRequestBuilder cachedReportConfigurations() {
+        return new com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cachedReportConfigurations"), getClient(), null);
     }
 
     /**
@@ -133,8 +127,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementCachedReportConfigurationRequestBuilder cachedReportConfigurations(@Nonnull final String id) {
-        return new DeviceManagementCachedReportConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("cachedReportConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationRequestBuilder cachedReportConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementCachedReportConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("cachedReportConfigurations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementExportJob collection
@@ -142,8 +136,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementExportJobCollectionRequestBuilder exportJobs() {
-        return new DeviceManagementExportJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder exportJobs() {
+        return new com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs"), getClient(), null);
     }
 
     /**
@@ -153,8 +147,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementExportJobRequestBuilder exportJobs(@Nonnull final String id) {
-        return new DeviceManagementExportJobRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder exportJobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs") + "/" + id, getClient(), null);
     }
 
     /**
@@ -473,16 +467,6 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public DeviceManagementReportsGetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport(@Nonnull final DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet parameters) {
-        return new DeviceManagementReportsGetZebraFotaDeploymentReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getZebraFotaDeploymentReport"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
     public DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder getGroupPolicySettingsDeviceSettingsReport(@Nonnull final DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet parameters) {
         return new DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getGroupPolicySettingsDeviceSettingsReport"), getClient(), null, parameters);
     }
@@ -615,16 +599,6 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetHistoricalReportRequestBuilder getHistoricalReport(@Nonnull final DeviceManagementReportsGetHistoricalReportParameterSet parameters) {
         return new DeviceManagementReportsGetHistoricalReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getHistoricalReport"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport(@Nonnull final DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportParameterSet parameters) {
-        return new DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getNoncompliantDevicesAndSettingsReport"), getClient(), null, parameters);
     }
 
     /**

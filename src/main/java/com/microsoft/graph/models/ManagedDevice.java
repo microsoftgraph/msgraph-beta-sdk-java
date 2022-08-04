@@ -34,15 +34,7 @@ import com.microsoft.graph.models.OwnerType;
 import com.microsoft.graph.models.ManagedDevicePartnerReportedHealthState;
 import com.microsoft.graph.models.ManagedDeviceArchitecture;
 import com.microsoft.graph.models.LoggedOnUser;
-import com.microsoft.graph.models.AssignmentFilterEvaluationStatusDetails;
-import com.microsoft.graph.models.DeviceCompliancePolicyState;
-import com.microsoft.graph.models.DeviceConfigurationState;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationState;
-import com.microsoft.graph.models.SecurityBaselineState;
-import com.microsoft.graph.models.DetectedApp;
 import com.microsoft.graph.models.DeviceCategory;
-import com.microsoft.graph.models.DeviceLogCollectionResponse;
-import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.WindowsProtectionState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionPage;
@@ -142,15 +134,6 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public Boolean azureADRegistered;
 
     /**
-     * The Bootstrap Token Escrowed.
-     * Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
-     */
-    @SerializedName(value = "bootstrapTokenEscrowed", alternate = {"BootstrapTokenEscrowed"})
-    @Expose
-	@Nullable
-    public Boolean bootstrapTokenEscrowed;
-
-    /**
      * The Chassis Type.
      * Chassis type of the device. This property is read-only. Possible values are: unknown, desktop, laptop, worksWorkstation, enterpriseServer, phone, tablet, mobileOther, mobileUnknown.
      */
@@ -239,15 +222,6 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceEnrollmentType deviceEnrollmentType;
-
-    /**
-     * The Device Firmware Configuration Interface Managed.
-     * Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE.
-     */
-    @SerializedName(value = "deviceFirmwareConfigurationInterfaceManaged", alternate = {"DeviceFirmwareConfigurationInterfaceManaged"})
-    @Expose
-	@Nullable
-    public Boolean deviceFirmwareConfigurationInterfaceManaged;
 
     /**
      * The Device Health Attestation State.
@@ -805,7 +779,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignmentFilterEvaluationStatusDetails", alternate = {"AssignmentFilterEvaluationStatusDetails"})
     @Expose
 	@Nullable
-    public AssignmentFilterEvaluationStatusDetailsCollectionPage assignmentFilterEvaluationStatusDetails;
+    public com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionPage assignmentFilterEvaluationStatusDetails;
 
     /**
      * The Device Compliance Policy States.
@@ -814,7 +788,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
     @Expose
 	@Nullable
-    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
+    public com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
@@ -823,7 +797,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceConfigurationStates", alternate = {"DeviceConfigurationStates"})
     @Expose
 	@Nullable
-    public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
+    public com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**
      * The Managed Device Mobile App Configuration States.
@@ -832,7 +806,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedDeviceMobileAppConfigurationStates", alternate = {"ManagedDeviceMobileAppConfigurationStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationStateCollectionPage managedDeviceMobileAppConfigurationStates;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionPage managedDeviceMobileAppConfigurationStates;
 
     /**
      * The Security Baseline States.
@@ -841,14 +815,14 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "securityBaselineStates", alternate = {"SecurityBaselineStates"})
     @Expose
 	@Nullable
-    public SecurityBaselineStateCollectionPage securityBaselineStates;
+    public com.microsoft.graph.requests.SecurityBaselineStateCollectionPage securityBaselineStates;
 
     /**
      * The Detected Apps.
      * All applications currently installed on the device
      */
 	@Nullable
-    public DetectedAppCollectionPage detectedApps;
+    public com.microsoft.graph.requests.DetectedAppCollectionPage detectedApps;
 
     /**
      * The Device Category.
@@ -866,14 +840,14 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "logCollectionRequests", alternate = {"LogCollectionRequests"})
     @Expose
 	@Nullable
-    public DeviceLogCollectionResponseCollectionPage logCollectionRequests;
+    public com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionPage logCollectionRequests;
 
     /**
      * The Users.
      * The primary users associated with the managed device.
      */
 	@Nullable
-    public UserCollectionPage users;
+    public com.microsoft.graph.requests.UserCollectionPage users;
 
     /**
      * The Windows Protection State.
@@ -895,35 +869,35 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignmentFilterEvaluationStatusDetails")) {
-            assignmentFilterEvaluationStatusDetails = serializer.deserializeObject(json.get("assignmentFilterEvaluationStatusDetails"), AssignmentFilterEvaluationStatusDetailsCollectionPage.class);
+            assignmentFilterEvaluationStatusDetails = serializer.deserializeObject(json.get("assignmentFilterEvaluationStatusDetails"), com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), DeviceCompliancePolicyStateCollectionPage.class);
+            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationStates")) {
-            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), DeviceConfigurationStateCollectionPage.class);
+            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage.class);
         }
 
         if (json.has("managedDeviceMobileAppConfigurationStates")) {
-            managedDeviceMobileAppConfigurationStates = serializer.deserializeObject(json.get("managedDeviceMobileAppConfigurationStates"), ManagedDeviceMobileAppConfigurationStateCollectionPage.class);
+            managedDeviceMobileAppConfigurationStates = serializer.deserializeObject(json.get("managedDeviceMobileAppConfigurationStates"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionPage.class);
         }
 
         if (json.has("securityBaselineStates")) {
-            securityBaselineStates = serializer.deserializeObject(json.get("securityBaselineStates"), SecurityBaselineStateCollectionPage.class);
+            securityBaselineStates = serializer.deserializeObject(json.get("securityBaselineStates"), com.microsoft.graph.requests.SecurityBaselineStateCollectionPage.class);
         }
 
         if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps"), DetectedAppCollectionPage.class);
+            detectedApps = serializer.deserializeObject(json.get("detectedApps"), com.microsoft.graph.requests.DetectedAppCollectionPage.class);
         }
 
         if (json.has("logCollectionRequests")) {
-            logCollectionRequests = serializer.deserializeObject(json.get("logCollectionRequests"), DeviceLogCollectionResponseCollectionPage.class);
+            logCollectionRequests = serializer.deserializeObject(json.get("logCollectionRequests"), com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionPage.class);
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users"), UserCollectionPage.class);
+            users = serializer.deserializeObject(json.get("users"), com.microsoft.graph.requests.UserCollectionPage.class);
         }
     }
 }

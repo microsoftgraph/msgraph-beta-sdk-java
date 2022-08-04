@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementConfigurationPolicyTemplateRequestBuilder extends B
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder settingTemplates() {
-        return new DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingTemplates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder settingTemplates() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingTemplates"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementConfigurationPolicyTemplateRequestBuilder extends B
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingTemplateRequestBuilder settingTemplates(@Nonnull final String id) {
-        return new DeviceManagementConfigurationSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("settingTemplates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateRequestBuilder settingTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("settingTemplates") + "/" + id, getClient(), null);
     }
 }

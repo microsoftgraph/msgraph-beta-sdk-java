@@ -13,7 +13,6 @@ import com.microsoft.graph.models.IosDeviceType;
 import com.microsoft.graph.models.VppLicensingType;
 import com.microsoft.graph.models.IosVppAppRevokeLicensesActionResult;
 import com.microsoft.graph.models.VppTokenAccountType;
-import com.microsoft.graph.models.IosVppAppAssignedLicense;
 import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.requests.IosVppAppAssignedLicenseCollectionPage;
 
@@ -147,7 +146,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
     @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
 	@Nullable
-    public IosVppAppAssignedLicenseCollectionPage assignedLicenses;
+    public com.microsoft.graph.requests.IosVppAppAssignedLicenseCollectionPage assignedLicenses;
 
 
     /**
@@ -160,7 +159,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
 
 
         if (json.has("assignedLicenses")) {
-            assignedLicenses = serializer.deserializeObject(json.get("assignedLicenses"), IosVppAppAssignedLicenseCollectionPage.class);
+            assignedLicenses = serializer.deserializeObject(json.get("assignedLicenses"), com.microsoft.graph.requests.IosVppAppAssignedLicenseCollectionPage.class);
         }
     }
 }

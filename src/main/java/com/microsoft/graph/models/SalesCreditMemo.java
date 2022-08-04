@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.Customer;
 import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.SalesCreditMemoLine;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SalesCreditMemoLineCollectionPage;
 
@@ -318,7 +317,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesCreditMemoLines", alternate = {"SalesCreditMemoLines"})
     @Expose
 	@Nullable
-    public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
+    public com.microsoft.graph.requests.SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 
 
     /**
@@ -331,7 +330,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
 
 
         if (json.has("salesCreditMemoLines")) {
-            salesCreditMemoLines = serializer.deserializeObject(json.get("salesCreditMemoLines"), SalesCreditMemoLineCollectionPage.class);
+            salesCreditMemoLines = serializer.deserializeObject(json.get("salesCreditMemoLines"), com.microsoft.graph.requests.SalesCreditMemoLineCollectionPage.class);
         }
     }
 }

@@ -12,21 +12,13 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatType;
 import com.microsoft.graph.models.TeamworkOnlineMeetingInfo;
 import com.microsoft.graph.models.ChatViewpoint;
-import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ChatMessageInfo;
-import com.microsoft.graph.models.ConversationMember;
-import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.models.TeamsAsyncOperation;
-import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
-import com.microsoft.graph.models.PinnedChatMessageInfo;
-import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
-import com.microsoft.graph.requests.PinnedChatMessageInfoCollectionPage;
 import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
 
@@ -123,7 +115,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
 	@Nullable
-    public TeamsAppInstallationCollectionPage installedApps;
+    public com.microsoft.graph.requests.TeamsAppInstallationCollectionPage installedApps;
 
     /**
      * The Last Message Preview.
@@ -141,7 +133,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public ConversationMemberCollectionPage members;
+    public com.microsoft.graph.requests.ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
@@ -150,7 +142,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
 	@Nullable
-    public ChatMessageCollectionPage messages;
+    public com.microsoft.graph.requests.ChatMessageCollectionPage messages;
 
     /**
      * The Operations.
@@ -159,7 +151,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public TeamsAsyncOperationCollectionPage operations;
+    public com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage operations;
 
     /**
      * The Permission Grants.
@@ -168,16 +160,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose
 	@Nullable
-    public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
-
-    /**
-     * The Pinned Messages.
-     * A collection of all the pinned messages in the chat. Nullable.
-     */
-    @SerializedName(value = "pinnedMessages", alternate = {"PinnedMessages"})
-    @Expose
-	@Nullable
-    public PinnedChatMessageInfoCollectionPage pinnedMessages;
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage permissionGrants;
 
     /**
      * The Tabs.
@@ -186,7 +169,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose
 	@Nullable
-    public TeamsTabCollectionPage tabs;
+    public com.microsoft.graph.requests.TeamsTabCollectionPage tabs;
 
 
     /**
@@ -199,31 +182,27 @@ public class Chat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps"), TeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps"), com.microsoft.graph.requests.TeamsAppInstallationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.ConversationMemberCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.ChatMessageCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), TeamsAsyncOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage.class);
         }
 
         if (json.has("permissionGrants")) {
-            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), ResourceSpecificPermissionGrantCollectionPage.class);
-        }
-
-        if (json.has("pinnedMessages")) {
-            pinnedMessages = serializer.deserializeObject(json.get("pinnedMessages"), PinnedChatMessageInfoCollectionPage.class);
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("tabs")) {
-            tabs = serializer.deserializeObject(json.get("tabs"), TeamsTabCollectionPage.class);
+            tabs = serializer.deserializeObject(json.get("tabs"), com.microsoft.graph.requests.TeamsTabCollectionPage.class);
         }
     }
 }

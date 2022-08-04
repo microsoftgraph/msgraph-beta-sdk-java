@@ -9,11 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessPackageResourceRole;
-import com.microsoft.graph.models.AccessPackageResource;
-import com.microsoft.graph.models.AccessPackageResourceScope;
-import com.microsoft.graph.models.AccessPackage;
-import com.microsoft.graph.models.CustomAccessPackageWorkflowExtension;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
@@ -124,25 +119,25 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackageResourceRoles", alternate = {"AccessPackageResourceRoles"})
     @Expose
 	@Nullable
-    public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
+    public com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
 
     /**
      * The Access Package Resources.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageResources", alternate = {"AccessPackageResources"})
     @Expose
 	@Nullable
-    public AccessPackageResourceCollectionPage accessPackageResources;
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionPage accessPackageResources;
 
     /**
      * The Access Package Resource Scopes.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose
 	@Nullable
-    public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
+    public com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
 
     /**
      * The Access Packages.
@@ -151,7 +146,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
 	@Nullable
-    public AccessPackageCollectionPage accessPackages;
+    public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackages;
 
     /**
      * The Custom Access Package Workflow Extensions.
@@ -160,7 +155,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customAccessPackageWorkflowExtensions", alternate = {"CustomAccessPackageWorkflowExtensions"})
     @Expose
 	@Nullable
-    public CustomAccessPackageWorkflowExtensionCollectionPage customAccessPackageWorkflowExtensions;
+    public com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionPage customAccessPackageWorkflowExtensions;
 
 
     /**
@@ -173,23 +168,23 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageResourceRoles")) {
-            accessPackageResourceRoles = serializer.deserializeObject(json.get("accessPackageResourceRoles"), AccessPackageResourceRoleCollectionPage.class);
+            accessPackageResourceRoles = serializer.deserializeObject(json.get("accessPackageResourceRoles"), com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage.class);
         }
 
         if (json.has("accessPackageResources")) {
-            accessPackageResources = serializer.deserializeObject(json.get("accessPackageResources"), AccessPackageResourceCollectionPage.class);
+            accessPackageResources = serializer.deserializeObject(json.get("accessPackageResources"), com.microsoft.graph.requests.AccessPackageResourceCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceScopes")) {
-            accessPackageResourceScopes = serializer.deserializeObject(json.get("accessPackageResourceScopes"), AccessPackageResourceScopeCollectionPage.class);
+            accessPackageResourceScopes = serializer.deserializeObject(json.get("accessPackageResourceScopes"), com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage.class);
         }
 
         if (json.has("accessPackages")) {
-            accessPackages = serializer.deserializeObject(json.get("accessPackages"), AccessPackageCollectionPage.class);
+            accessPackages = serializer.deserializeObject(json.get("accessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
         }
 
         if (json.has("customAccessPackageWorkflowExtensions")) {
-            customAccessPackageWorkflowExtensions = serializer.deserializeObject(json.get("customAccessPackageWorkflowExtensions"), CustomAccessPackageWorkflowExtensionCollectionPage.class);
+            customAccessPackageWorkflowExtensions = serializer.deserializeObject(json.get("customAccessPackageWorkflowExtensions"), com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionPage.class);
         }
     }
 }

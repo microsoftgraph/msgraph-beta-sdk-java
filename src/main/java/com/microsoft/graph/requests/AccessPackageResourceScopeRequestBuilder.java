@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageResourceScope;
-import com.microsoft.graph.requests.AccessPackageResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class AccessPackageResourceScopeRequestBuilder extends BaseRequestBuilder
      * @return the AccessPackageResourceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageResourceRequestBuilder accessPackageResource() {
-        return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResource"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRequestBuilder accessPackageResource() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResource"), getClient(), null);
     }
 }

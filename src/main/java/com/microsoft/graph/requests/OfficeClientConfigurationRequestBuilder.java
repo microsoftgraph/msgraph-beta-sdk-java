@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OfficeClientConfiguration;
 import com.microsoft.graph.models.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.requests.OfficeClientConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.OfficeClientConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class OfficeClientConfigurationRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public OfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new OfficeClientConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.OfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.OfficeClientConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class OfficeClientConfigurationRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public OfficeClientConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OfficeClientConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

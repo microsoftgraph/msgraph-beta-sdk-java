@@ -50,7 +50,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Endpoint Type.
-     * The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
+     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
@@ -74,15 +74,6 @@ public class ParticipantInfo implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String languageId;
-
-    /**
-     * The Non Anonymized Identity.
-     * 
-     */
-    @SerializedName(value = "nonAnonymizedIdentity", alternate = {"NonAnonymizedIdentity"})
-    @Expose
-	@Nullable
-    public IdentitySet nonAnonymizedIdentity;
 
     /**
      * The Participant Id.

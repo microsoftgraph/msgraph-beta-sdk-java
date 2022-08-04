@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.OutlookTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage;
@@ -75,7 +72,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -84,7 +81,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Tasks.
@@ -93,7 +90,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public OutlookTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.OutlookTaskCollectionPage tasks;
 
 
     /**
@@ -106,15 +103,15 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), OutlookTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.OutlookTaskCollectionPage.class);
         }
     }
 }

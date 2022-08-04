@@ -12,9 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PolicyPlatformType;
 import com.microsoft.graph.models.DeviceManagementTemplateSubtype;
 import com.microsoft.graph.models.DeviceManagementTemplateType;
-import com.microsoft.graph.models.DeviceManagementTemplateSettingCategory;
-import com.microsoft.graph.models.DeviceManagementTemplate;
-import com.microsoft.graph.models.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage;
@@ -123,7 +120,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
 	@Nullable
-    public DeviceManagementTemplateSettingCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryCollectionPage categories;
 
     /**
      * The Migratable To.
@@ -132,7 +129,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     @SerializedName(value = "migratableTo", alternate = {"MigratableTo"})
     @Expose
 	@Nullable
-    public DeviceManagementTemplateCollectionPage migratableTo;
+    public com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage migratableTo;
 
     /**
      * The Settings.
@@ -141,7 +138,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingInstanceCollectionPage settings;
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage settings;
 
 
     /**
@@ -154,15 +151,15 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
 
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), DeviceManagementTemplateSettingCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryCollectionPage.class);
         }
 
         if (json.has("migratableTo")) {
-            migratableTo = serializer.deserializeObject(json.get("migratableTo"), DeviceManagementTemplateCollectionPage.class);
+            migratableTo = serializer.deserializeObject(json.get("migratableTo"), com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings"), DeviceManagementSettingInstanceCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage.class);
         }
     }
 }

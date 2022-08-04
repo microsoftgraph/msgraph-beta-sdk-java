@@ -9,8 +9,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
-import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

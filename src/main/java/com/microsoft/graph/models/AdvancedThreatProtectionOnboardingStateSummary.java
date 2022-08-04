@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingDeviceSettingState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage;
 
@@ -107,7 +106,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     @SerializedName(value = "advancedThreatProtectionOnboardingDeviceSettingStates", alternate = {"AdvancedThreatProtectionOnboardingDeviceSettingStates"})
     @Expose
 	@Nullable
-    public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage advancedThreatProtectionOnboardingDeviceSettingStates;
+    public com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage advancedThreatProtectionOnboardingDeviceSettingStates;
 
 
     /**
@@ -120,7 +119,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
 
 
         if (json.has("advancedThreatProtectionOnboardingDeviceSettingStates")) {
-            advancedThreatProtectionOnboardingDeviceSettingStates = serializer.deserializeObject(json.get("advancedThreatProtectionOnboardingDeviceSettingStates"), AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage.class);
+            advancedThreatProtectionOnboardingDeviceSettingStates = serializer.deserializeObject(json.get("advancedThreatProtectionOnboardingDeviceSettingStates"), com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage.class);
         }
     }
 }

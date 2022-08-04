@@ -56,7 +56,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements IJsonBa
 
     /**
      * The Status.
-     * The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
+     * The status of the request. Read-only. The possible values are: created, pending, complete, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

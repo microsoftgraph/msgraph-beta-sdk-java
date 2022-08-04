@@ -64,8 +64,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedEBookAssignmentCollectionRequestBuilder assignments() {
-        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -75,8 +75,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedEBookAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedEBookCategory collection
@@ -84,8 +84,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedEBookCategoryCollectionWithReferencesRequestBuilder categories() {
-        return new ManagedEBookCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new com.microsoft.graph.requests.ManagedEBookCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     /**
@@ -95,8 +95,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedEBookCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
-        return new ManagedEBookCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedEBookCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceInstallState collection
@@ -104,8 +104,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceInstallStateCollectionRequestBuilder deviceStates() {
-        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
     /**
@@ -115,8 +115,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
-        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -125,8 +125,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @return the EBookInstallSummaryRequestBuilder instance
      */
     @Nonnull
-    public EBookInstallSummaryRequestBuilder installSummary() {
-        return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
+    public com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder installSummary() {
+        return new com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
     /**
      *  Gets a request builder for the UserInstallStateSummary collection
@@ -134,8 +134,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @return the collection request builder
      */
     @Nonnull
-    public UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
-        return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
+    public com.microsoft.graph.requests.UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
+        return new com.microsoft.graph.requests.UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
 
     /**
@@ -145,8 +145,8 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
      * @param id the item identifier
      */
     @Nonnull
-    public UserInstallStateSummaryRequestBuilder userStateSummary(@Nonnull final String id) {
-        return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserInstallStateSummaryRequestBuilder userStateSummary(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
     }
 
     /**

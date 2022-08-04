@@ -9,25 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UserAccountInformation;
-import com.microsoft.graph.models.ItemAddress;
-import com.microsoft.graph.models.PersonAnnualEvent;
-import com.microsoft.graph.models.PersonAward;
-import com.microsoft.graph.models.PersonCertification;
-import com.microsoft.graph.models.EducationalActivity;
-import com.microsoft.graph.models.ItemEmail;
-import com.microsoft.graph.models.PersonInterest;
-import com.microsoft.graph.models.LanguageProficiency;
-import com.microsoft.graph.models.PersonName;
-import com.microsoft.graph.models.PersonAnnotation;
-import com.microsoft.graph.models.ItemPatent;
-import com.microsoft.graph.models.ItemPhone;
-import com.microsoft.graph.models.WorkPosition;
-import com.microsoft.graph.models.ProjectParticipation;
-import com.microsoft.graph.models.ItemPublication;
-import com.microsoft.graph.models.SkillProficiency;
-import com.microsoft.graph.models.WebAccount;
-import com.microsoft.graph.models.PersonWebsite;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UserAccountInformationCollectionPage;
 import com.microsoft.graph.requests.ItemAddressCollectionPage;
@@ -71,7 +52,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "account", alternate = {"Account"})
     @Expose
 	@Nullable
-    public UserAccountInformationCollectionPage account;
+    public com.microsoft.graph.requests.UserAccountInformationCollectionPage account;
 
     /**
      * The Addresses.
@@ -80,7 +61,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "addresses", alternate = {"Addresses"})
     @Expose
 	@Nullable
-    public ItemAddressCollectionPage addresses;
+    public com.microsoft.graph.requests.ItemAddressCollectionPage addresses;
 
     /**
      * The Anniversaries.
@@ -89,7 +70,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "anniversaries", alternate = {"Anniversaries"})
     @Expose
 	@Nullable
-    public PersonAnnualEventCollectionPage anniversaries;
+    public com.microsoft.graph.requests.PersonAnnualEventCollectionPage anniversaries;
 
     /**
      * The Awards.
@@ -98,7 +79,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "awards", alternate = {"Awards"})
     @Expose
 	@Nullable
-    public PersonAwardCollectionPage awards;
+    public com.microsoft.graph.requests.PersonAwardCollectionPage awards;
 
     /**
      * The Certifications.
@@ -107,7 +88,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "certifications", alternate = {"Certifications"})
     @Expose
 	@Nullable
-    public PersonCertificationCollectionPage certifications;
+    public com.microsoft.graph.requests.PersonCertificationCollectionPage certifications;
 
     /**
      * The Educational Activities.
@@ -116,7 +97,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "educationalActivities", alternate = {"EducationalActivities"})
     @Expose
 	@Nullable
-    public EducationalActivityCollectionPage educationalActivities;
+    public com.microsoft.graph.requests.EducationalActivityCollectionPage educationalActivities;
 
     /**
      * The Emails.
@@ -125,7 +106,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "emails", alternate = {"Emails"})
     @Expose
 	@Nullable
-    public ItemEmailCollectionPage emails;
+    public com.microsoft.graph.requests.ItemEmailCollectionPage emails;
 
     /**
      * The Interests.
@@ -134,7 +115,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "interests", alternate = {"Interests"})
     @Expose
 	@Nullable
-    public PersonInterestCollectionPage interests;
+    public com.microsoft.graph.requests.PersonInterestCollectionPage interests;
 
     /**
      * The Languages.
@@ -143,7 +124,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
 	@Nullable
-    public LanguageProficiencyCollectionPage languages;
+    public com.microsoft.graph.requests.LanguageProficiencyCollectionPage languages;
 
     /**
      * The Names.
@@ -152,7 +133,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
 	@Nullable
-    public PersonNameCollectionPage names;
+    public com.microsoft.graph.requests.PersonNameCollectionPage names;
 
     /**
      * The Notes.
@@ -161,7 +142,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
 	@Nullable
-    public PersonAnnotationCollectionPage notes;
+    public com.microsoft.graph.requests.PersonAnnotationCollectionPage notes;
 
     /**
      * The Patents.
@@ -170,7 +151,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "patents", alternate = {"Patents"})
     @Expose
 	@Nullable
-    public ItemPatentCollectionPage patents;
+    public com.microsoft.graph.requests.ItemPatentCollectionPage patents;
 
     /**
      * The Phones.
@@ -179,7 +160,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
 	@Nullable
-    public ItemPhoneCollectionPage phones;
+    public com.microsoft.graph.requests.ItemPhoneCollectionPage phones;
 
     /**
      * The Positions.
@@ -188,7 +169,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "positions", alternate = {"Positions"})
     @Expose
 	@Nullable
-    public WorkPositionCollectionPage positions;
+    public com.microsoft.graph.requests.WorkPositionCollectionPage positions;
 
     /**
      * The Projects.
@@ -197,7 +178,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "projects", alternate = {"Projects"})
     @Expose
 	@Nullable
-    public ProjectParticipationCollectionPage projects;
+    public com.microsoft.graph.requests.ProjectParticipationCollectionPage projects;
 
     /**
      * The Publications.
@@ -206,7 +187,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "publications", alternate = {"Publications"})
     @Expose
 	@Nullable
-    public ItemPublicationCollectionPage publications;
+    public com.microsoft.graph.requests.ItemPublicationCollectionPage publications;
 
     /**
      * The Skills.
@@ -215,7 +196,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "skills", alternate = {"Skills"})
     @Expose
 	@Nullable
-    public SkillProficiencyCollectionPage skills;
+    public com.microsoft.graph.requests.SkillProficiencyCollectionPage skills;
 
     /**
      * The Web Accounts.
@@ -224,7 +205,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "webAccounts", alternate = {"WebAccounts"})
     @Expose
 	@Nullable
-    public WebAccountCollectionPage webAccounts;
+    public com.microsoft.graph.requests.WebAccountCollectionPage webAccounts;
 
     /**
      * The Websites.
@@ -233,7 +214,7 @@ public class Profile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "websites", alternate = {"Websites"})
     @Expose
 	@Nullable
-    public PersonWebsiteCollectionPage websites;
+    public com.microsoft.graph.requests.PersonWebsiteCollectionPage websites;
 
 
     /**
@@ -246,79 +227,79 @@ public class Profile extends Entity implements IJsonBackedObject {
 
 
         if (json.has("account")) {
-            account = serializer.deserializeObject(json.get("account"), UserAccountInformationCollectionPage.class);
+            account = serializer.deserializeObject(json.get("account"), com.microsoft.graph.requests.UserAccountInformationCollectionPage.class);
         }
 
         if (json.has("addresses")) {
-            addresses = serializer.deserializeObject(json.get("addresses"), ItemAddressCollectionPage.class);
+            addresses = serializer.deserializeObject(json.get("addresses"), com.microsoft.graph.requests.ItemAddressCollectionPage.class);
         }
 
         if (json.has("anniversaries")) {
-            anniversaries = serializer.deserializeObject(json.get("anniversaries"), PersonAnnualEventCollectionPage.class);
+            anniversaries = serializer.deserializeObject(json.get("anniversaries"), com.microsoft.graph.requests.PersonAnnualEventCollectionPage.class);
         }
 
         if (json.has("awards")) {
-            awards = serializer.deserializeObject(json.get("awards"), PersonAwardCollectionPage.class);
+            awards = serializer.deserializeObject(json.get("awards"), com.microsoft.graph.requests.PersonAwardCollectionPage.class);
         }
 
         if (json.has("certifications")) {
-            certifications = serializer.deserializeObject(json.get("certifications"), PersonCertificationCollectionPage.class);
+            certifications = serializer.deserializeObject(json.get("certifications"), com.microsoft.graph.requests.PersonCertificationCollectionPage.class);
         }
 
         if (json.has("educationalActivities")) {
-            educationalActivities = serializer.deserializeObject(json.get("educationalActivities"), EducationalActivityCollectionPage.class);
+            educationalActivities = serializer.deserializeObject(json.get("educationalActivities"), com.microsoft.graph.requests.EducationalActivityCollectionPage.class);
         }
 
         if (json.has("emails")) {
-            emails = serializer.deserializeObject(json.get("emails"), ItemEmailCollectionPage.class);
+            emails = serializer.deserializeObject(json.get("emails"), com.microsoft.graph.requests.ItemEmailCollectionPage.class);
         }
 
         if (json.has("interests")) {
-            interests = serializer.deserializeObject(json.get("interests"), PersonInterestCollectionPage.class);
+            interests = serializer.deserializeObject(json.get("interests"), com.microsoft.graph.requests.PersonInterestCollectionPage.class);
         }
 
         if (json.has("languages")) {
-            languages = serializer.deserializeObject(json.get("languages"), LanguageProficiencyCollectionPage.class);
+            languages = serializer.deserializeObject(json.get("languages"), com.microsoft.graph.requests.LanguageProficiencyCollectionPage.class);
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names"), PersonNameCollectionPage.class);
+            names = serializer.deserializeObject(json.get("names"), com.microsoft.graph.requests.PersonNameCollectionPage.class);
         }
 
         if (json.has("notes")) {
-            notes = serializer.deserializeObject(json.get("notes"), PersonAnnotationCollectionPage.class);
+            notes = serializer.deserializeObject(json.get("notes"), com.microsoft.graph.requests.PersonAnnotationCollectionPage.class);
         }
 
         if (json.has("patents")) {
-            patents = serializer.deserializeObject(json.get("patents"), ItemPatentCollectionPage.class);
+            patents = serializer.deserializeObject(json.get("patents"), com.microsoft.graph.requests.ItemPatentCollectionPage.class);
         }
 
         if (json.has("phones")) {
-            phones = serializer.deserializeObject(json.get("phones"), ItemPhoneCollectionPage.class);
+            phones = serializer.deserializeObject(json.get("phones"), com.microsoft.graph.requests.ItemPhoneCollectionPage.class);
         }
 
         if (json.has("positions")) {
-            positions = serializer.deserializeObject(json.get("positions"), WorkPositionCollectionPage.class);
+            positions = serializer.deserializeObject(json.get("positions"), com.microsoft.graph.requests.WorkPositionCollectionPage.class);
         }
 
         if (json.has("projects")) {
-            projects = serializer.deserializeObject(json.get("projects"), ProjectParticipationCollectionPage.class);
+            projects = serializer.deserializeObject(json.get("projects"), com.microsoft.graph.requests.ProjectParticipationCollectionPage.class);
         }
 
         if (json.has("publications")) {
-            publications = serializer.deserializeObject(json.get("publications"), ItemPublicationCollectionPage.class);
+            publications = serializer.deserializeObject(json.get("publications"), com.microsoft.graph.requests.ItemPublicationCollectionPage.class);
         }
 
         if (json.has("skills")) {
-            skills = serializer.deserializeObject(json.get("skills"), SkillProficiencyCollectionPage.class);
+            skills = serializer.deserializeObject(json.get("skills"), com.microsoft.graph.requests.SkillProficiencyCollectionPage.class);
         }
 
         if (json.has("webAccounts")) {
-            webAccounts = serializer.deserializeObject(json.get("webAccounts"), WebAccountCollectionPage.class);
+            webAccounts = serializer.deserializeObject(json.get("webAccounts"), com.microsoft.graph.requests.WebAccountCollectionPage.class);
         }
 
         if (json.has("websites")) {
-            websites = serializer.deserializeObject(json.get("websites"), PersonWebsiteCollectionPage.class);
+            websites = serializer.deserializeObject(json.get("websites"), com.microsoft.graph.requests.PersonWebsiteCollectionPage.class);
         }
     }
 }

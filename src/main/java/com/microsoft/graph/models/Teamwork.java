@@ -9,13 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WorkforceIntegration;
-import com.microsoft.graph.models.DeletedTeam;
-import com.microsoft.graph.models.TeamworkDevice;
-import com.microsoft.graph.models.TeamsAppSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
-import com.microsoft.graph.requests.DeletedTeamCollectionPage;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionPage;
 
 
@@ -40,16 +35,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     @SerializedName(value = "workforceIntegrations", alternate = {"WorkforceIntegrations"})
     @Expose
 	@Nullable
-    public WorkforceIntegrationCollectionPage workforceIntegrations;
-
-    /**
-     * The Deleted Teams.
-     * A collection of deleted teams.
-     */
-    @SerializedName(value = "deletedTeams", alternate = {"DeletedTeams"})
-    @Expose
-	@Nullable
-    public DeletedTeamCollectionPage deletedTeams;
+    public com.microsoft.graph.requests.WorkforceIntegrationCollectionPage workforceIntegrations;
 
     /**
      * The Devices.
@@ -58,16 +44,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     @SerializedName(value = "devices", alternate = {"Devices"})
     @Expose
 	@Nullable
-    public TeamworkDeviceCollectionPage devices;
-
-    /**
-     * The Teams App Settings.
-     * Represents tenant-wide settings for all Teams apps in the tenant.
-     */
-    @SerializedName(value = "teamsAppSettings", alternate = {"TeamsAppSettings"})
-    @Expose
-	@Nullable
-    public TeamsAppSettings teamsAppSettings;
+    public com.microsoft.graph.requests.TeamworkDeviceCollectionPage devices;
 
 
     /**
@@ -80,15 +57,11 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("workforceIntegrations")) {
-            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), WorkforceIntegrationCollectionPage.class);
-        }
-
-        if (json.has("deletedTeams")) {
-            deletedTeams = serializer.deserializeObject(json.get("deletedTeams"), DeletedTeamCollectionPage.class);
+            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), com.microsoft.graph.requests.WorkforceIntegrationCollectionPage.class);
         }
 
         if (json.has("devices")) {
-            devices = serializer.deserializeObject(json.get("devices"), TeamworkDeviceCollectionPage.class);
+            devices = serializer.deserializeObject(json.get("devices"), com.microsoft.graph.requests.TeamworkDeviceCollectionPage.class);
         }
     }
 }

@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceGuardLocalSystemAuthorityCredentialGuardState;
 import com.microsoft.graph.models.DeviceGuardVirtualizationBasedSecurityHardwareRequirementState;
 import com.microsoft.graph.models.DeviceGuardVirtualizationBasedSecurityState;
-import com.microsoft.graph.models.DeviceLicensingStatus;
 import com.microsoft.graph.models.SharedAppleDeviceUser;
 
 
@@ -60,15 +59,6 @@ public class HardwareInformation implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer batteryHealthPercentage;
-
-    /**
-     * The Battery Level Percentage.
-     * The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
-     */
-    @SerializedName(value = "batteryLevelPercentage", alternate = {"BatteryLevelPercentage"})
-    @Expose
-	@Nullable
-    public Double batteryLevelPercentage;
 
     /**
      * The Battery Serial Number.
@@ -123,33 +113,6 @@ public class HardwareInformation implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceGuardVirtualizationBasedSecurityState deviceGuardVirtualizationBasedSecurityState;
-
-    /**
-     * The Device Licensing Last Error Code.
-     * A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
-     */
-    @SerializedName(value = "deviceLicensingLastErrorCode", alternate = {"DeviceLicensingLastErrorCode"})
-    @Expose
-	@Nullable
-    public Integer deviceLicensingLastErrorCode;
-
-    /**
-     * The Device Licensing Last Error Description.
-     * Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
-     */
-    @SerializedName(value = "deviceLicensingLastErrorDescription", alternate = {"DeviceLicensingLastErrorDescription"})
-    @Expose
-	@Nullable
-    public String deviceLicensingLastErrorDescription;
-
-    /**
-     * The Device Licensing Status.
-     * Device based subscription licensing status. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. In case it is not supported, the value will be set to unknown (-1). Possible values are: licenseRefreshStarted, licenseRefreshPending, deviceIsNotAzureActiveDirectoryJoined, verifyingMicrosoftDeviceIdentity, deviceIdentityVerificationFailed, verifyingMirosoftAccountIdentity, mirosoftAccountVerificationFailed, acquiringDeviceLicense, refreshingDeviceLicense, deviceLicenseRefreshSucceed, deviceLicenseRefreshFailed, removingDeviceLicense, deviceLicenseRemoveSucceed, deviceLicenseRemoveFailed, unknownFutureValue, unknown.
-     */
-    @SerializedName(value = "deviceLicensingStatus", alternate = {"DeviceLicensingStatus"})
-    @Expose
-	@Nullable
-    public DeviceLicensingStatus deviceLicensingStatus;
 
     /**
      * The Esim Identifier.
@@ -287,24 +250,6 @@ public class HardwareInformation implements IJsonBackedObject {
     public String phoneNumber;
 
     /**
-     * The Product Name.
-     * The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
-     */
-    @SerializedName(value = "productName", alternate = {"ProductName"})
-    @Expose
-	@Nullable
-    public String productName;
-
-    /**
-     * The Resident Users Count.
-     * The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
-     */
-    @SerializedName(value = "residentUsersCount", alternate = {"ResidentUsersCount"})
-    @Expose
-	@Nullable
-    public Integer residentUsersCount;
-
-    /**
      * The Serial Number.
      * Serial number.
      */
@@ -393,15 +338,6 @@ public class HardwareInformation implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String wifiMac;
-
-    /**
-     * The Wired IPv4Addresses.
-     * A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
-     */
-    @SerializedName(value = "wiredIPv4Addresses", alternate = {"WiredIPv4Addresses"})
-    @Expose
-	@Nullable
-    public java.util.List<String> wiredIPv4Addresses;
 
 
     /**

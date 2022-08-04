@@ -28,7 +28,7 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Email.
-     * Email address of the user's mailbox.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -37,7 +37,7 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Included Sources.
-     * Specifies which sources are included in this group. Possible values are: mailbox, site.
+     * 
      */
     @SerializedName(value = "includedSources", alternate = {"IncludedSources"})
     @Expose
@@ -46,7 +46,7 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Site Web Url.
-     * The URL of the user's OneDrive for Business site. Read-only.
+     * 
      */
     @SerializedName(value = "siteWebUrl", alternate = {"SiteWebUrl"})
     @Expose

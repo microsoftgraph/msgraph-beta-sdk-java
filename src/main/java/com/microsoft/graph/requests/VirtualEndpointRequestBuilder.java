@@ -8,29 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.VirtualEndpoint;
-import com.microsoft.graph.requests.CloudPcAuditEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcAuditEventRequestBuilder;
-import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPCRequestBuilder;
-import com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder;
-import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcExternalPartnerSettingRequestBuilder;
-import com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder;
-import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcOrganizationSettingsRequestBuilder;
-import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
-import com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder;
-import com.microsoft.graph.requests.CloudPcSnapshotCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcSnapshotRequestBuilder;
-import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcUserSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -85,8 +62,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcAuditEventCollectionRequestBuilder auditEvents() {
-        return new CloudPcAuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcAuditEventCollectionRequestBuilder auditEvents() {
+        return new com.microsoft.graph.requests.CloudPcAuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
     }
 
     /**
@@ -96,8 +73,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcAuditEventRequestBuilder auditEvents(@Nonnull final String id) {
-        return new CloudPcAuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcAuditEventRequestBuilder auditEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcAuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPC collection
@@ -105,8 +82,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPCCollectionRequestBuilder cloudPCs() {
-        return new CloudPCCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPCCollectionRequestBuilder cloudPCs() {
+        return new com.microsoft.graph.requests.CloudPCCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs"), getClient(), null);
     }
 
     /**
@@ -116,8 +93,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPCRequestBuilder cloudPCs(@Nonnull final String id) {
-        return new CloudPCRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPCRequestBuilder cloudPCs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPCRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcDeviceImage collection
@@ -125,8 +102,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcDeviceImageCollectionRequestBuilder deviceImages() {
-        return new CloudPcDeviceImageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder deviceImages() {
+        return new com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages"), getClient(), null);
     }
 
     /**
@@ -136,28 +113,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcDeviceImageRequestBuilder deviceImages(@Nonnull final String id) {
-        return new CloudPcDeviceImageRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the CloudPcExternalPartnerSetting collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public CloudPcExternalPartnerSettingCollectionRequestBuilder externalPartnerSettings() {
-        return new CloudPcExternalPartnerSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalPartnerSettings"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the CloudPcExternalPartnerSetting item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public CloudPcExternalPartnerSettingRequestBuilder externalPartnerSettings(@Nonnull final String id) {
-        return new CloudPcExternalPartnerSettingRequestBuilder(getRequestUrlWithAdditionalSegment("externalPartnerSettings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder deviceImages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcGalleryImage collection
@@ -165,8 +122,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcGalleryImageCollectionRequestBuilder galleryImages() {
-        return new CloudPcGalleryImageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("galleryImages"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder galleryImages() {
+        return new com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("galleryImages"), getClient(), null);
     }
 
     /**
@@ -176,8 +133,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcGalleryImageRequestBuilder galleryImages(@Nonnull final String id) {
-        return new CloudPcGalleryImageRequestBuilder(getRequestUrlWithAdditionalSegment("galleryImages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder galleryImages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder(getRequestUrlWithAdditionalSegment("galleryImages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcOnPremisesConnection collection
@@ -185,8 +142,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcOnPremisesConnectionCollectionRequestBuilder onPremisesConnections() {
-        return new CloudPcOnPremisesConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder onPremisesConnections() {
+        return new com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections"), getClient(), null);
     }
 
     /**
@@ -196,8 +153,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcOnPremisesConnectionRequestBuilder onPremisesConnections(@Nonnull final String id) {
-        return new CloudPcOnPremisesConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder onPremisesConnections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections") + "/" + id, getClient(), null);
     }
 
     /**
@@ -206,8 +163,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the CloudPcOrganizationSettingsRequestBuilder instance
      */
     @Nonnull
-    public CloudPcOrganizationSettingsRequestBuilder organizationSettings() {
-        return new CloudPcOrganizationSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("organizationSettings"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcOrganizationSettingsRequestBuilder organizationSettings() {
+        return new com.microsoft.graph.requests.CloudPcOrganizationSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("organizationSettings"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcProvisioningPolicy collection
@@ -215,8 +172,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcProvisioningPolicyCollectionRequestBuilder provisioningPolicies() {
-        return new CloudPcProvisioningPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder provisioningPolicies() {
+        return new com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies"), getClient(), null);
     }
 
     /**
@@ -226,8 +183,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
-        return new CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcServicePlan collection
@@ -235,8 +192,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcServicePlanCollectionRequestBuilder servicePlans() {
-        return new CloudPcServicePlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder servicePlans() {
+        return new com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans"), getClient(), null);
     }
 
     /**
@@ -246,8 +203,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcServicePlanRequestBuilder servicePlans(@Nonnull final String id) {
-        return new CloudPcServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder servicePlans(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcSnapshot collection
@@ -255,8 +212,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcSnapshotCollectionRequestBuilder snapshots() {
-        return new CloudPcSnapshotCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("snapshots"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcSnapshotCollectionRequestBuilder snapshots() {
+        return new com.microsoft.graph.requests.CloudPcSnapshotCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("snapshots"), getClient(), null);
     }
 
     /**
@@ -266,8 +223,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcSnapshotRequestBuilder snapshots(@Nonnull final String id) {
-        return new CloudPcSnapshotRequestBuilder(getRequestUrlWithAdditionalSegment("snapshots") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcSnapshotRequestBuilder snapshots(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcSnapshotRequestBuilder(getRequestUrlWithAdditionalSegment("snapshots") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcSupportedRegion collection
@@ -275,8 +232,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcSupportedRegionCollectionRequestBuilder supportedRegions() {
-        return new CloudPcSupportedRegionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("supportedRegions"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder supportedRegions() {
+        return new com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("supportedRegions"), getClient(), null);
     }
 
     /**
@@ -286,8 +243,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcSupportedRegionRequestBuilder supportedRegions(@Nonnull final String id) {
-        return new CloudPcSupportedRegionRequestBuilder(getRequestUrlWithAdditionalSegment("supportedRegions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder supportedRegions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder(getRequestUrlWithAdditionalSegment("supportedRegions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcUserSetting collection
@@ -295,8 +252,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcUserSettingCollectionRequestBuilder userSettings() {
-        return new CloudPcUserSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSettings"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder userSettings() {
+        return new com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSettings"), getClient(), null);
     }
 
     /**
@@ -306,8 +263,8 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcUserSettingRequestBuilder userSettings(@Nonnull final String id) {
-        return new CloudPcUserSettingRequestBuilder(getRequestUrlWithAdditionalSegment("userSettings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcUserSettingRequestBuilder userSettings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcUserSettingRequestBuilder(getRequestUrlWithAdditionalSegment("userSettings") + "/" + id, getClient(), null);
     }
 
     /**

@@ -13,7 +13,6 @@ import com.microsoft.graph.models.EducationSynchronizationDataProvider;
 import com.microsoft.graph.models.EducationIdentitySynchronizationConfiguration;
 import com.microsoft.graph.models.EducationSynchronizationLicenseAssignment;
 import com.microsoft.graph.models.EducationSynchronizationProfileState;
-import com.microsoft.graph.models.EducationSynchronizationError;
 import com.microsoft.graph.models.EducationSynchronizationProfileStatus;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationSynchronizationErrorCollectionPage;
@@ -103,7 +102,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
 	@Nullable
-    public EducationSynchronizationErrorCollectionPage errors;
+    public com.microsoft.graph.requests.EducationSynchronizationErrorCollectionPage errors;
 
     /**
      * The Profile Status.
@@ -125,7 +124,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
 
         if (json.has("errors")) {
-            errors = serializer.deserializeObject(json.get("errors"), EducationSynchronizationErrorCollectionPage.class);
+            errors = serializer.deserializeObject(json.get("errors"), com.microsoft.graph.requests.EducationSynchronizationErrorCollectionPage.class);
         }
     }
 }

@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MicrosoftTunnelSite;
-import com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder;
-import com.microsoft.graph.requests.MicrosoftTunnelServerCollectionRequestBuilder;
-import com.microsoft.graph.requests.MicrosoftTunnelServerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class MicrosoftTunnelSiteRequestBuilder extends BaseRequestBuilder<Micros
      * @return the MicrosoftTunnelConfigurationRequestBuilder instance
      */
     @Nonnull
-    public MicrosoftTunnelConfigurationRequestBuilder microsoftTunnelConfiguration() {
-        return new MicrosoftTunnelConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelConfiguration"), getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder microsoftTunnelConfiguration() {
+        return new com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelConfiguration"), getClient(), null);
     }
     /**
      *  Gets a request builder for the MicrosoftTunnelServer collection
@@ -75,8 +72,8 @@ public class MicrosoftTunnelSiteRequestBuilder extends BaseRequestBuilder<Micros
      * @return the collection request builder
      */
     @Nonnull
-    public MicrosoftTunnelServerCollectionRequestBuilder microsoftTunnelServers() {
-        return new MicrosoftTunnelServerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelServers"), getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftTunnelServerCollectionRequestBuilder microsoftTunnelServers() {
+        return new com.microsoft.graph.requests.MicrosoftTunnelServerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelServers"), getClient(), null);
     }
 
     /**
@@ -86,8 +83,8 @@ public class MicrosoftTunnelSiteRequestBuilder extends BaseRequestBuilder<Micros
      * @param id the item identifier
      */
     @Nonnull
-    public MicrosoftTunnelServerRequestBuilder microsoftTunnelServers(@Nonnull final String id) {
-        return new MicrosoftTunnelServerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelServers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftTunnelServerRequestBuilder microsoftTunnelServers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MicrosoftTunnelServerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelServers") + "/" + id, getClient(), null);
     }
 
     /**

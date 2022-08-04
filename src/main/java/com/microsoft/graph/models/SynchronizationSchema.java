@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SynchronizationRule;
-import com.microsoft.graph.models.DirectoryDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryDefinitionCollectionPage;
 
@@ -54,7 +53,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
     @SerializedName(value = "directories", alternate = {"Directories"})
     @Expose
 	@Nullable
-    public DirectoryDefinitionCollectionPage directories;
+    public com.microsoft.graph.requests.DirectoryDefinitionCollectionPage directories;
 
 
     /**
@@ -67,7 +66,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
 
 
         if (json.has("directories")) {
-            directories = serializer.deserializeObject(json.get("directories"), DirectoryDefinitionCollectionPage.class);
+            directories = serializer.deserializeObject(json.get("directories"), com.microsoft.graph.requests.DirectoryDefinitionCollectionPage.class);
         }
     }
 }

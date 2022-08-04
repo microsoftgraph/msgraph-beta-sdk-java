@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsProtectionState;
-import com.microsoft.graph.requests.WindowsDeviceMalwareStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsDeviceMalwareStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder<Win
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsDeviceMalwareStateCollectionRequestBuilder detectedMalwareState() {
-        return new WindowsDeviceMalwareStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDeviceMalwareStateCollectionRequestBuilder detectedMalwareState() {
+        return new com.microsoft.graph.requests.WindowsDeviceMalwareStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder<Win
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsDeviceMalwareStateRequestBuilder detectedMalwareState(@Nonnull final String id) {
-        return new WindowsDeviceMalwareStateRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsDeviceMalwareStateRequestBuilder detectedMalwareState(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsDeviceMalwareStateRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState") + "/" + id, getClient(), null);
     }
 }

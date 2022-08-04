@@ -16,10 +16,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationAssignmentGradeType;
 import com.microsoft.graph.models.EducationItemBody;
 import com.microsoft.graph.models.EducationAssignmentStatus;
-import com.microsoft.graph.models.EducationCategory;
-import com.microsoft.graph.models.EducationAssignmentResource;
 import com.microsoft.graph.models.EducationRubric;
-import com.microsoft.graph.models.EducationSubmission;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
 import com.microsoft.graph.requests.EducationAssignmentResourceCollectionPage;
@@ -158,15 +155,6 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime dueDateTime;
 
     /**
-     * The Feedback Resources Folder Url.
-     * Folder URL where all the feedback file resources for this assignment are stored.
-     */
-    @SerializedName(value = "feedbackResourcesFolderUrl", alternate = {"FeedbackResourcesFolderUrl"})
-    @Expose
-	@Nullable
-    public String feedbackResourcesFolderUrl;
-
-    /**
      * The Grading.
      * How the assignment will be graded.
      */
@@ -245,7 +233,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
 	@Nullable
-    public EducationCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.EducationCategoryCollectionPage categories;
 
     /**
      * The Resources.
@@ -254,7 +242,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
 	@Nullable
-    public EducationAssignmentResourceCollectionPage resources;
+    public com.microsoft.graph.requests.EducationAssignmentResourceCollectionPage resources;
 
     /**
      * The Rubric.
@@ -272,7 +260,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "submissions", alternate = {"Submissions"})
     @Expose
 	@Nullable
-    public EducationSubmissionCollectionPage submissions;
+    public com.microsoft.graph.requests.EducationSubmissionCollectionPage submissions;
 
 
     /**
@@ -285,15 +273,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), EducationCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.EducationCategoryCollectionPage.class);
         }
 
         if (json.has("resources")) {
-            resources = serializer.deserializeObject(json.get("resources"), EducationAssignmentResourceCollectionPage.class);
+            resources = serializer.deserializeObject(json.get("resources"), com.microsoft.graph.requests.EducationAssignmentResourceCollectionPage.class);
         }
 
         if (json.has("submissions")) {
-            submissions = serializer.deserializeObject(json.get("submissions"), EducationSubmissionCollectionPage.class);
+            submissions = serializer.deserializeObject(json.get("submissions"), com.microsoft.graph.requests.EducationSubmissionCollectionPage.class);
         }
     }
 }

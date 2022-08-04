@@ -10,11 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Bitlocker;
-import com.microsoft.graph.models.DataLossPreventionPolicy;
-import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.SensitivityPolicySettings;
 import com.microsoft.graph.models.InformationProtectionPolicy;
-import com.microsoft.graph.models.ThreatAssessmentRequest;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DataLossPreventionPolicyCollectionPage;
 import com.microsoft.graph.requests.SensitivityLabelCollectionPage;
@@ -51,7 +48,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dataLossPreventionPolicies", alternate = {"DataLossPreventionPolicies"})
     @Expose
 	@Nullable
-    public DataLossPreventionPolicyCollectionPage dataLossPreventionPolicies;
+    public com.microsoft.graph.requests.DataLossPreventionPolicyCollectionPage dataLossPreventionPolicies;
 
     /**
      * The Sensitivity Labels.
@@ -60,7 +57,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sensitivityLabels", alternate = {"SensitivityLabels"})
     @Expose
 	@Nullable
-    public SensitivityLabelCollectionPage sensitivityLabels;
+    public com.microsoft.graph.requests.SensitivityLabelCollectionPage sensitivityLabels;
 
     /**
      * The Sensitivity Policy Settings.
@@ -89,7 +86,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "threatAssessmentRequests", alternate = {"ThreatAssessmentRequests"})
     @Expose
 	@Nullable
-    public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
+    public com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 
 
     /**
@@ -102,15 +99,15 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("dataLossPreventionPolicies")) {
-            dataLossPreventionPolicies = serializer.deserializeObject(json.get("dataLossPreventionPolicies"), DataLossPreventionPolicyCollectionPage.class);
+            dataLossPreventionPolicies = serializer.deserializeObject(json.get("dataLossPreventionPolicies"), com.microsoft.graph.requests.DataLossPreventionPolicyCollectionPage.class);
         }
 
         if (json.has("sensitivityLabels")) {
-            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels"), SensitivityLabelCollectionPage.class);
+            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels"), com.microsoft.graph.requests.SensitivityLabelCollectionPage.class);
         }
 
         if (json.has("threatAssessmentRequests")) {
-            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests"), ThreatAssessmentRequestCollectionPage.class);
+            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests"), com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage.class);
         }
     }
 }

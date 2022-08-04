@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserAppInstallStatus;
-import com.microsoft.graph.requests.MobileAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.MobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppInstallStatusRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder<UserA
      * @return the MobileAppWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public MobileAppWithReferenceRequestBuilder app() {
-        return new MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppWithReferenceRequestBuilder app() {
+        return new com.microsoft.graph.requests.MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppInstallStatus collection
@@ -75,8 +72,8 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder<UserA
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
-        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder<UserA
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppInstallStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppInstallStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 }

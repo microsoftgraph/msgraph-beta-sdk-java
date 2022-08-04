@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
-import com.microsoft.graph.models.DelegatedAdminCustomer;
-import com.microsoft.graph.models.DelegatedAdminRelationship;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DelegatedAdminCustomerCollectionPage;
 import com.microsoft.graph.requests.DelegatedAdminRelationshipCollectionPage;
@@ -47,7 +45,7 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
     @SerializedName(value = "delegatedAdminCustomers", alternate = {"DelegatedAdminCustomers"})
     @Expose
 	@Nullable
-    public DelegatedAdminCustomerCollectionPage delegatedAdminCustomers;
+    public com.microsoft.graph.requests.DelegatedAdminCustomerCollectionPage delegatedAdminCustomers;
 
     /**
      * The Delegated Admin Relationships.
@@ -56,7 +54,7 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
     @SerializedName(value = "delegatedAdminRelationships", alternate = {"DelegatedAdminRelationships"})
     @Expose
 	@Nullable
-    public DelegatedAdminRelationshipCollectionPage delegatedAdminRelationships;
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipCollectionPage delegatedAdminRelationships;
 
 
     /**
@@ -69,11 +67,11 @@ public class TenantRelationship extends Entity implements IJsonBackedObject {
 
 
         if (json.has("delegatedAdminCustomers")) {
-            delegatedAdminCustomers = serializer.deserializeObject(json.get("delegatedAdminCustomers"), DelegatedAdminCustomerCollectionPage.class);
+            delegatedAdminCustomers = serializer.deserializeObject(json.get("delegatedAdminCustomers"), com.microsoft.graph.requests.DelegatedAdminCustomerCollectionPage.class);
         }
 
         if (json.has("delegatedAdminRelationships")) {
-            delegatedAdminRelationships = serializer.deserializeObject(json.get("delegatedAdminRelationships"), DelegatedAdminRelationshipCollectionPage.class);
+            delegatedAdminRelationships = serializer.deserializeObject(json.get("delegatedAdminRelationships"), com.microsoft.graph.requests.DelegatedAdminRelationshipCollectionPage.class);
         }
     }
 }

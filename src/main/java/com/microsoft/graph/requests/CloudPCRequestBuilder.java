@@ -10,7 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
-import com.microsoft.graph.models.CloudPcConnectivityEvent;
 import com.microsoft.graph.models.CloudPcLaunchInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -119,15 +118,6 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
     @Nonnull
     public CloudPCTroubleshootRequestBuilder troubleshoot() {
         return new CloudPCTroubleshootRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.troubleshoot"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     */
-    @Nonnull
-    public CloudPCGetCloudPcConnectivityHistoryCollectionRequestBuilder getCloudPcConnectivityHistory() {
-        return new CloudPCGetCloudPcConnectivityHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCloudPcConnectivityHistory"), getClient(), null);
     }
 
     /**

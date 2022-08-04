@@ -11,8 +11,6 @@ import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.DiscoveredSensitiveType;
 import com.microsoft.graph.models.CurrentLabel;
 import com.microsoft.graph.models.EvaluateLabelJobResponse;
-import com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.SensitivityLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

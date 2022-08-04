@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.Site;
-import com.microsoft.graph.security.models.DataSource;
+import com.microsoft.graph.ediscovery.models.DataSource;
 
 
 import com.google.gson.JsonObject;
@@ -28,7 +28,7 @@ public class SiteSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Site.
-     * The SharePoint site associated with the siteSource.
+     * 
      */
     @SerializedName(value = "site", alternate = {"Site"})
     @Expose

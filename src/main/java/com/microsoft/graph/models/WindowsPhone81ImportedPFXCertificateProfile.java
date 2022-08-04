@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IntendedPurpose;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.WindowsCertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
 
@@ -45,7 +44,7 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 
     /**
@@ -58,7 +57,7 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

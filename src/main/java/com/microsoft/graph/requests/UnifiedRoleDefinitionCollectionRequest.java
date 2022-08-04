@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RbacApplication;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
-import com.microsoft.graph.models.DirectoryObject;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

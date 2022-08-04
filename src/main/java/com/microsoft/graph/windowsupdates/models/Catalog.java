@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.windowsupdates.models.CatalogEntry;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionPage;
 
@@ -35,7 +34,7 @@ public class Catalog extends Entity implements IJsonBackedObject {
     @SerializedName(value = "entries", alternate = {"Entries"})
     @Expose
 	@Nullable
-    public CatalogEntryCollectionPage entries;
+    public com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionPage entries;
 
 
     /**
@@ -48,7 +47,7 @@ public class Catalog extends Entity implements IJsonBackedObject {
 
 
         if (json.has("entries")) {
-            entries = serializer.deserializeObject(json.get("entries"), CatalogEntryCollectionPage.class);
+            entries = serializer.deserializeObject(json.get("entries"), com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionPage.class);
         }
     }
 }

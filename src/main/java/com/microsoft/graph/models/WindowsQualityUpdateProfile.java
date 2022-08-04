@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExpeditedWindowsQualityUpdateSettings;
-import com.microsoft.graph.models.WindowsQualityUpdateProfileAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentCollectionPage;
 
@@ -108,7 +107,7 @@ public class WindowsQualityUpdateProfile extends Entity implements IJsonBackedOb
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public WindowsQualityUpdateProfileAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentCollectionPage assignments;
 
 
     /**
@@ -121,7 +120,7 @@ public class WindowsQualityUpdateProfile extends Entity implements IJsonBackedOb
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), WindowsQualityUpdateProfileAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentCollectionPage.class);
         }
     }
 }

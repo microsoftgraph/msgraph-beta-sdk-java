@@ -13,8 +13,6 @@ import com.microsoft.graph.models.MobileAppRelationship;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.MobileAppRelationshipState;
 import com.microsoft.graph.models.MobileApp;
-import com.microsoft.graph.requests.IosVppAppAssignedLicenseCollectionRequestBuilder;
-import com.microsoft.graph.requests.IosVppAppAssignedLicenseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

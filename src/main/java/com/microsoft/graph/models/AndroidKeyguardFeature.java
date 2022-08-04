@@ -44,18 +44,6 @@ public enum AndroidKeyguardFeature
     */
     ALL_FEATURES,
     /**
-    * face
-    */
-    FACE,
-    /**
-    * iris
-    */
-    IRIS,
-    /**
-    * biometrics
-    */
-    BIOMETRICS,
-    /**
     * For AndroidKeyguardFeature values that were not expected from the service
     */
     UNEXPECTED_VALUE

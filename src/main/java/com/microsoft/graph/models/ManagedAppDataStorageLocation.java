@@ -28,10 +28,6 @@ public enum ManagedAppDataStorageLocation
     */
     LOCAL_STORAGE,
     /**
-    * photo Library
-    */
-    PHOTO_LIBRARY,
-    /**
     * For ManagedAppDataStorageLocation values that were not expected from the service
     */
     UNEXPECTED_VALUE

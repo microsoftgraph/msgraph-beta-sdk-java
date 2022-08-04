@@ -12,11 +12,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationSubmissionRecipient;
 import com.microsoft.graph.models.EducationSubmissionStatus;
-import com.microsoft.graph.models.EducationOutcome;
-import com.microsoft.graph.models.EducationSubmissionResource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationOutcomeCollectionPage;
-import com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -134,30 +131,30 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Outcomes.
-     * 
+     * Read-Write. Nullable.
      */
     @SerializedName(value = "outcomes", alternate = {"Outcomes"})
     @Expose
 	@Nullable
-    public EducationOutcomeCollectionPage outcomes;
+    public com.microsoft.graph.requests.EducationOutcomeCollectionPage outcomes;
 
     /**
      * The Resources.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
 	@Nullable
-    public EducationSubmissionResourceCollectionPage resources;
+    public com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage resources;
 
     /**
      * The Submitted Resources.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "submittedResources", alternate = {"SubmittedResources"})
     @Expose
 	@Nullable
-    public EducationSubmissionResourceCollectionPage submittedResources;
+    public com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage submittedResources;
 
 
     /**
@@ -170,15 +167,15 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
 
         if (json.has("outcomes")) {
-            outcomes = serializer.deserializeObject(json.get("outcomes"), EducationOutcomeCollectionPage.class);
+            outcomes = serializer.deserializeObject(json.get("outcomes"), com.microsoft.graph.requests.EducationOutcomeCollectionPage.class);
         }
 
         if (json.has("resources")) {
-            resources = serializer.deserializeObject(json.get("resources"), EducationSubmissionResourceCollectionPage.class);
+            resources = serializer.deserializeObject(json.get("resources"), com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage.class);
         }
 
         if (json.has("submittedResources")) {
-            submittedResources = serializer.deserializeObject(json.get("submittedResources"), EducationSubmissionResourceCollectionPage.class);
+            submittedResources = serializer.deserializeObject(json.get("submittedResources"), com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage.class);
         }
     }
 }

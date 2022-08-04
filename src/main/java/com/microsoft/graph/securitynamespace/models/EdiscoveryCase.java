@@ -10,14 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
-import com.microsoft.graph.security.models.EdiscoveryCustodian;
-import com.microsoft.graph.security.models.EdiscoveryHoldPolicy;
-import com.microsoft.graph.security.models.EdiscoveryNoncustodialDataSource;
-import com.microsoft.graph.security.models.CaseOperation;
-import com.microsoft.graph.security.models.EdiscoveryReviewSet;
-import com.microsoft.graph.security.models.EdiscoverySearch;
 import com.microsoft.graph.security.models.EdiscoveryCaseSettings;
-import com.microsoft.graph.security.models.EdiscoveryReviewTag;
 import com.microsoft.graph.security.models.Case;
 import com.microsoft.graph.security.requests.EdiscoveryCustodianCollectionPage;
 import com.microsoft.graph.security.requests.EdiscoveryHoldPolicyCollectionPage;
@@ -44,7 +37,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Closed By.
-     * The user who closed the case.
+     * 
      */
     @SerializedName(value = "closedBy", alternate = {"ClosedBy"})
     @Expose
@@ -53,7 +46,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Closed Date Time.
-     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
@@ -62,7 +55,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * The external case number for customer reference.
+     * 
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -71,61 +64,61 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Custodians.
-     * Returns a list of case ediscoveryCustodian objects for this case.
+     * 
      */
     @SerializedName(value = "custodians", alternate = {"Custodians"})
     @Expose
 	@Nullable
-    public EdiscoveryCustodianCollectionPage custodians;
+    public com.microsoft.graph.security.requests.EdiscoveryCustodianCollectionPage custodians;
 
     /**
      * The Legal Holds.
-     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
+     * 
      */
     @SerializedName(value = "legalHolds", alternate = {"LegalHolds"})
     @Expose
 	@Nullable
-    public EdiscoveryHoldPolicyCollectionPage legalHolds;
+    public com.microsoft.graph.security.requests.EdiscoveryHoldPolicyCollectionPage legalHolds;
 
     /**
      * The Noncustodial Data Sources.
-     * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
+     * 
      */
     @SerializedName(value = "noncustodialDataSources", alternate = {"NoncustodialDataSources"})
     @Expose
 	@Nullable
-    public EdiscoveryNoncustodialDataSourceCollectionPage noncustodialDataSources;
+    public com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceCollectionPage noncustodialDataSources;
 
     /**
      * The Operations.
-     * Returns a list of case caseOperation objects for this case.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public CaseOperationCollectionPage operations;
+    public com.microsoft.graph.security.requests.CaseOperationCollectionPage operations;
 
     /**
      * The Review Sets.
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * 
      */
     @SerializedName(value = "reviewSets", alternate = {"ReviewSets"})
     @Expose
 	@Nullable
-    public EdiscoveryReviewSetCollectionPage reviewSets;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetCollectionPage reviewSets;
 
     /**
      * The Searches.
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * 
      */
     @SerializedName(value = "searches", alternate = {"Searches"})
     @Expose
 	@Nullable
-    public EdiscoverySearchCollectionPage searches;
+    public com.microsoft.graph.security.requests.EdiscoverySearchCollectionPage searches;
 
     /**
      * The Settings.
-     * Returns a list of eDIscoverySettings objects in the case.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -134,12 +127,12 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * 
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
 	@Nullable
-    public EdiscoveryReviewTagCollectionPage tags;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage tags;
 
 
     /**
@@ -152,31 +145,31 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
 
         if (json.has("custodians")) {
-            custodians = serializer.deserializeObject(json.get("custodians"), EdiscoveryCustodianCollectionPage.class);
+            custodians = serializer.deserializeObject(json.get("custodians"), com.microsoft.graph.security.requests.EdiscoveryCustodianCollectionPage.class);
         }
 
         if (json.has("legalHolds")) {
-            legalHolds = serializer.deserializeObject(json.get("legalHolds"), EdiscoveryHoldPolicyCollectionPage.class);
+            legalHolds = serializer.deserializeObject(json.get("legalHolds"), com.microsoft.graph.security.requests.EdiscoveryHoldPolicyCollectionPage.class);
         }
 
         if (json.has("noncustodialDataSources")) {
-            noncustodialDataSources = serializer.deserializeObject(json.get("noncustodialDataSources"), EdiscoveryNoncustodialDataSourceCollectionPage.class);
+            noncustodialDataSources = serializer.deserializeObject(json.get("noncustodialDataSources"), com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), CaseOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.security.requests.CaseOperationCollectionPage.class);
         }
 
         if (json.has("reviewSets")) {
-            reviewSets = serializer.deserializeObject(json.get("reviewSets"), EdiscoveryReviewSetCollectionPage.class);
+            reviewSets = serializer.deserializeObject(json.get("reviewSets"), com.microsoft.graph.security.requests.EdiscoveryReviewSetCollectionPage.class);
         }
 
         if (json.has("searches")) {
-            searches = serializer.deserializeObject(json.get("searches"), EdiscoverySearchCollectionPage.class);
+            searches = serializer.deserializeObject(json.get("searches"), com.microsoft.graph.security.requests.EdiscoverySearchCollectionPage.class);
         }
 
         if (json.has("tags")) {
-            tags = serializer.deserializeObject(json.get("tags"), EdiscoveryReviewTagCollectionPage.class);
+            tags = serializer.deserializeObject(json.get("tags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage.class);
         }
     }
 }

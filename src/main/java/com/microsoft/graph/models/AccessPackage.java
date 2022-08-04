@@ -9,15 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.models.AccessPackageResourceRoleScope;
-import com.microsoft.graph.models.AccessPackage;
-import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage;
-import com.microsoft.graph.requests.AccessPackageCollectionPage;
 import com.microsoft.graph.requests.GroupCollectionPage;
 
 
@@ -123,11 +118,11 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackageAssignmentPolicies", alternate = {"AccessPackageAssignmentPolicies"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
 
     /**
      * The Access Package Catalog.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageCatalog", alternate = {"AccessPackageCatalog"})
     @Expose
@@ -136,26 +131,26 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resource Role Scopes.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "accessPackageResourceRoleScopes", alternate = {"AccessPackageResourceRoleScopes"})
     @Expose
 	@Nullable
-    public AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
 
     /**
      * The Access Packages Incompatible With.
      * The access packages that are incompatible with this package. Read-only.
      */
 	@Nullable
-    public AccessPackageCollectionPage accessPackagesIncompatibleWith;
+    public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackagesIncompatibleWith;
 
     /**
      * The Incompatible Access Packages.
      * The  access packages whose assigned users are ineligible to be assigned this access package.
      */
 	@Nullable
-    public AccessPackageCollectionPage incompatibleAccessPackages;
+    public com.microsoft.graph.requests.AccessPackageCollectionPage incompatibleAccessPackages;
 
     /**
      * The Incompatible Groups.
@@ -164,7 +159,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "incompatibleGroups", alternate = {"IncompatibleGroups"})
     @Expose
 	@Nullable
-    public GroupCollectionPage incompatibleGroups;
+    public com.microsoft.graph.requests.GroupCollectionPage incompatibleGroups;
 
 
     /**
@@ -177,23 +172,23 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageAssignmentPolicies")) {
-            accessPackageAssignmentPolicies = serializer.deserializeObject(json.get("accessPackageAssignmentPolicies"), AccessPackageAssignmentPolicyCollectionPage.class);
+            accessPackageAssignmentPolicies = serializer.deserializeObject(json.get("accessPackageAssignmentPolicies"), com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceRoleScopes")) {
-            accessPackageResourceRoleScopes = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes"), AccessPackageResourceRoleScopeCollectionPage.class);
+            accessPackageResourceRoleScopes = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes"), com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage.class);
         }
 
         if (json.has("accessPackagesIncompatibleWith")) {
-            accessPackagesIncompatibleWith = serializer.deserializeObject(json.get("accessPackagesIncompatibleWith"), AccessPackageCollectionPage.class);
+            accessPackagesIncompatibleWith = serializer.deserializeObject(json.get("accessPackagesIncompatibleWith"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
         }
 
         if (json.has("incompatibleAccessPackages")) {
-            incompatibleAccessPackages = serializer.deserializeObject(json.get("incompatibleAccessPackages"), AccessPackageCollectionPage.class);
+            incompatibleAccessPackages = serializer.deserializeObject(json.get("incompatibleAccessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
         }
 
         if (json.has("incompatibleGroups")) {
-            incompatibleGroups = serializer.deserializeObject(json.get("incompatibleGroups"), GroupCollectionPage.class);
+            incompatibleGroups = serializer.deserializeObject(json.get("incompatibleGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
         }
     }
 }

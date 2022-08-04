@@ -13,10 +13,6 @@ import com.microsoft.graph.security.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.microsoft.graph.security.models.ExportOptions;
 import com.microsoft.graph.security.models.ExportFileStructure;
-import com.microsoft.graph.security.requests.EdiscoveryFileCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryFileRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -73,8 +69,8 @@ public class EdiscoveryReviewSetRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryFileCollectionRequestBuilder files() {
-        return new EdiscoveryFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryFileCollectionRequestBuilder files() {
+        return new com.microsoft.graph.security.requests.EdiscoveryFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
     /**
@@ -84,8 +80,8 @@ public class EdiscoveryReviewSetRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryFileRequestBuilder files(@Nonnull final String id) {
-        return new EdiscoveryFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryFileRequestBuilder files(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EdiscoveryReviewSetQuery collection
@@ -93,8 +89,8 @@ public class EdiscoveryReviewSetRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryReviewSetQueryCollectionRequestBuilder queries() {
-        return new EdiscoveryReviewSetQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("queries"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionRequestBuilder queries() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("queries"), getClient(), null);
     }
 
     /**
@@ -104,8 +100,8 @@ public class EdiscoveryReviewSetRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryReviewSetQueryRequestBuilder queries(@Nonnull final String id) {
-        return new EdiscoveryReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryRequestBuilder queries(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
     }
 
     /**

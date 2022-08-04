@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.PaymentMethod;
 import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.Picture;
 import com.microsoft.graph.models.ShipmentMethod;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PictureCollectionPage;
@@ -229,7 +228,7 @@ public class Customer extends Entity implements IJsonBackedObject {
     @SerializedName(value = "picture", alternate = {"Picture"})
     @Expose
 	@Nullable
-    public PictureCollectionPage picture;
+    public com.microsoft.graph.requests.PictureCollectionPage picture;
 
     /**
      * The Shipment Method.
@@ -251,7 +250,7 @@ public class Customer extends Entity implements IJsonBackedObject {
 
 
         if (json.has("picture")) {
-            picture = serializer.deserializeObject(json.get("picture"), PictureCollectionPage.class);
+            picture = serializer.deserializeObject(json.get("picture"), com.microsoft.graph.requests.PictureCollectionPage.class);
         }
     }
 }

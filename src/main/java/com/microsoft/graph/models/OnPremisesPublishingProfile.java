@@ -10,11 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.HybridAgentUpdaterConfiguration;
-import com.microsoft.graph.models.OnPremisesAgentGroup;
-import com.microsoft.graph.models.OnPremisesAgent;
-import com.microsoft.graph.models.ConnectorGroup;
-import com.microsoft.graph.models.Connector;
-import com.microsoft.graph.models.PublishedResource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage;
 import com.microsoft.graph.requests.OnPremisesAgentCollectionPage;
@@ -62,7 +57,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose
 	@Nullable
-    public OnPremisesAgentGroupCollectionPage agentGroups;
+    public com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage agentGroups;
 
     /**
      * The Agents.
@@ -71,7 +66,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     @SerializedName(value = "agents", alternate = {"Agents"})
     @Expose
 	@Nullable
-    public OnPremisesAgentCollectionPage agents;
+    public com.microsoft.graph.requests.OnPremisesAgentCollectionPage agents;
 
     /**
      * The Connector Groups.
@@ -80,7 +75,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     @SerializedName(value = "connectorGroups", alternate = {"ConnectorGroups"})
     @Expose
 	@Nullable
-    public ConnectorGroupCollectionPage connectorGroups;
+    public com.microsoft.graph.requests.ConnectorGroupCollectionPage connectorGroups;
 
     /**
      * The Connectors.
@@ -89,7 +84,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     @SerializedName(value = "connectors", alternate = {"Connectors"})
     @Expose
 	@Nullable
-    public ConnectorCollectionPage connectors;
+    public com.microsoft.graph.requests.ConnectorCollectionPage connectors;
 
     /**
      * The Published Resources.
@@ -98,7 +93,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     @SerializedName(value = "publishedResources", alternate = {"PublishedResources"})
     @Expose
 	@Nullable
-    public PublishedResourceCollectionPage publishedResources;
+    public com.microsoft.graph.requests.PublishedResourceCollectionPage publishedResources;
 
 
     /**
@@ -111,23 +106,23 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
 
         if (json.has("agentGroups")) {
-            agentGroups = serializer.deserializeObject(json.get("agentGroups"), OnPremisesAgentGroupCollectionPage.class);
+            agentGroups = serializer.deserializeObject(json.get("agentGroups"), com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage.class);
         }
 
         if (json.has("agents")) {
-            agents = serializer.deserializeObject(json.get("agents"), OnPremisesAgentCollectionPage.class);
+            agents = serializer.deserializeObject(json.get("agents"), com.microsoft.graph.requests.OnPremisesAgentCollectionPage.class);
         }
 
         if (json.has("connectorGroups")) {
-            connectorGroups = serializer.deserializeObject(json.get("connectorGroups"), ConnectorGroupCollectionPage.class);
+            connectorGroups = serializer.deserializeObject(json.get("connectorGroups"), com.microsoft.graph.requests.ConnectorGroupCollectionPage.class);
         }
 
         if (json.has("connectors")) {
-            connectors = serializer.deserializeObject(json.get("connectors"), ConnectorCollectionPage.class);
+            connectors = serializer.deserializeObject(json.get("connectors"), com.microsoft.graph.requests.ConnectorCollectionPage.class);
         }
 
         if (json.has("publishedResources")) {
-            publishedResources = serializer.deserializeObject(json.get("publishedResources"), PublishedResourceCollectionPage.class);
+            publishedResources = serializer.deserializeObject(json.get("publishedResources"), com.microsoft.graph.requests.PublishedResourceCollectionPage.class);
         }
     }
 }

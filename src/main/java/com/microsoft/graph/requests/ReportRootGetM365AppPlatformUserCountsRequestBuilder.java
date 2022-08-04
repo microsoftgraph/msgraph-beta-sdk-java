@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootGetM365AppPlatformUserCountsRequest;
 import com.microsoft.graph.models.ReportRoot;
-
+import com.microsoft.graph.models.Report;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetM365AppPlatformUserCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get M365App Platform User Counts Request Builder.
  */
-public class ReportRootGetM365AppPlatformUserCountsRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
+public class ReportRootGetM365AppPlatformUserCountsRequestBuilder extends BaseFunctionRequestBuilder<Report> {
 
     /**
      * The request builder for this ReportRootGetM365AppPlatformUserCounts

@@ -8,13 +8,6 @@ package com.microsoft.graph.windowsupdates.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.Updates;
-import com.microsoft.graph.windowsupdates.requests.CatalogRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.DeploymentCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.DeploymentRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.ResourceConnectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +63,8 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
      * @return the CatalogRequestBuilder instance
      */
     @Nonnull
-    public CatalogRequestBuilder catalog() {
-        return new CatalogRequestBuilder(getRequestUrlWithAdditionalSegment("catalog"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.CatalogRequestBuilder catalog() {
+        return new com.microsoft.graph.windowsupdates.requests.CatalogRequestBuilder(getRequestUrlWithAdditionalSegment("catalog"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Deployment collection
@@ -79,8 +72,8 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
      * @return the collection request builder
      */
     @Nonnull
-    public DeploymentCollectionRequestBuilder deployments() {
-        return new DeploymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deployments"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.DeploymentCollectionRequestBuilder deployments() {
+        return new com.microsoft.graph.windowsupdates.requests.DeploymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deployments"), getClient(), null);
     }
 
     /**
@@ -90,28 +83,8 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
      * @param id the item identifier
      */
     @Nonnull
-    public DeploymentRequestBuilder deployments(@Nonnull final String id) {
-        return new DeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("deployments") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the ResourceConnection collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public ResourceConnectionCollectionRequestBuilder resourceConnections() {
-        return new ResourceConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceConnections"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the ResourceConnection item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public ResourceConnectionRequestBuilder resourceConnections(@Nonnull final String id) {
-        return new ResourceConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceConnections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.DeploymentRequestBuilder deployments(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.DeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("deployments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UpdatableAsset collection
@@ -119,8 +92,8 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
      * @return the collection request builder
      */
     @Nonnull
-    public UpdatableAssetCollectionRequestBuilder updatableAssets() {
-        return new UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("updatableAssets"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder updatableAssets() {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("updatableAssets"), getClient(), null);
     }
 
     /**
@@ -130,7 +103,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
      * @param id the item identifier
      */
     @Nonnull
-    public UpdatableAssetRequestBuilder updatableAssets(@Nonnull final String id) {
-        return new UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("updatableAssets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder updatableAssets(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("updatableAssets") + "/" + id, getClient(), null);
     }
 }

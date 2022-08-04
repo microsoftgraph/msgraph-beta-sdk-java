@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements IJsonB
 
     /**
      * The Operator.
-     * Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals. Possible values are: none, equals, unknownFutureValue.
+     * Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements IJsonB
 
     /**
      * The Parameter.
-     * Device scope configuration parameter. It will be extended in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag. Possible values are: none, scopeTag, unknownFutureValue.
+     * Device scope configuration parameter. It will be extended in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
      */
     @SerializedName(value = "parameter", alternate = {"Parameter"})
     @Expose
@@ -102,7 +102,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements IJsonB
 
     /**
      * The Status.
-     * Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none. Possible values are: none, computing, insufficientData, completed, unknownFutureValue.
+     * Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -34,15 +34,6 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
 	@Nullable
     public Boolean isSingleLineQuestion;
 
-    /**
-     * The Regex Pattern.
-     * 
-     */
-    @SerializedName(value = "regexPattern", alternate = {"RegexPattern"})
-    @Expose
-	@Nullable
-    public String regexPattern;
-
 
     /**
      * Sets the raw JSON object

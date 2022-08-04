@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AllowedValue;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AllowedValueCollectionPage;
 
@@ -107,7 +106,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements IJsonBa
     @SerializedName(value = "allowedValues", alternate = {"AllowedValues"})
     @Expose
 	@Nullable
-    public AllowedValueCollectionPage allowedValues;
+    public com.microsoft.graph.requests.AllowedValueCollectionPage allowedValues;
 
 
     /**
@@ -120,7 +119,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements IJsonBa
 
 
         if (json.has("allowedValues")) {
-            allowedValues = serializer.deserializeObject(json.get("allowedValues"), AllowedValueCollectionPage.class);
+            allowedValues = serializer.deserializeObject(json.get("allowedValues"), com.microsoft.graph.requests.AllowedValueCollectionPage.class);
         }
     }
 }

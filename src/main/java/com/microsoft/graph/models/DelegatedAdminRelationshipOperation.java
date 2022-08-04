@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.DelegatedAdminRelationshipOperationType;
-import com.microsoft.graph.models.LongRunningOperationStatus;
+import com.microsoft.graph.models.DelegatedAdminRelationshipOperationStatus;
 import com.microsoft.graph.models.Entity;
 
 
@@ -65,12 +65,12 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Status.
-     * The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
+     * The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
 	@Nullable
-    public LongRunningOperationStatus status;
+    public DelegatedAdminRelationshipOperationStatus status;
 
 
     /**

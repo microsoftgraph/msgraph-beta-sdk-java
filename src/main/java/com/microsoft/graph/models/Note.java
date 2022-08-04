@@ -10,10 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ItemBody;
-import com.microsoft.graph.models.Attachment;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.OutlookItem;
 import com.microsoft.graph.requests.AttachmentCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -78,7 +74,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
 	@Nullable
-    public AttachmentCollectionPage attachments;
+    public com.microsoft.graph.requests.AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
@@ -87,7 +83,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The Multi Value Extended Properties.
@@ -96,7 +92,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -105,7 +101,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -118,19 +114,19 @@ public class Note extends OutlookItem implements IJsonBackedObject {
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments"), AttachmentCollectionPage.class);
+            attachments = serializer.deserializeObject(json.get("attachments"), com.microsoft.graph.requests.AttachmentCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

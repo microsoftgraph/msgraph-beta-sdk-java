@@ -8,8 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.Tag;
-import com.microsoft.graph.ediscovery.requests.TagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.TagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class TagRequestBuilder extends BaseRequestBuilder<Tag> {
      * @return the collection request builder
      */
     @Nonnull
-    public TagCollectionWithReferencesRequestBuilder childTags() {
-        return new TagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("childTags"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.TagCollectionWithReferencesRequestBuilder childTags() {
+        return new com.microsoft.graph.ediscovery.requests.TagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("childTags"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class TagRequestBuilder extends BaseRequestBuilder<Tag> {
      * @param id the item identifier
      */
     @Nonnull
-    public TagWithReferenceRequestBuilder childTags(@Nonnull final String id) {
-        return new TagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("childTags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.TagWithReferenceRequestBuilder childTags(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.TagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("childTags") + "/" + id, getClient(), null);
     }
 
     /**
@@ -85,7 +83,7 @@ public class TagRequestBuilder extends BaseRequestBuilder<Tag> {
      * @return the TagWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TagWithReferenceRequestBuilder parent() {
-        return new TagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.TagWithReferenceRequestBuilder parent() {
+        return new com.microsoft.graph.ediscovery.requests.TagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
     }
 }

@@ -8,33 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EntitlementManagement;
-import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
-import com.microsoft.graph.requests.ApprovalRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceEnvironmentRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRequestRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder;
-import com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageSubjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -89,8 +62,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public ApprovalCollectionRequestBuilder accessPackageAssignmentApprovals() {
-        return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals"), getClient(), null);
+    public com.microsoft.graph.requests.ApprovalCollectionRequestBuilder accessPackageAssignmentApprovals() {
+        return new com.microsoft.graph.requests.ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals"), getClient(), null);
     }
 
     /**
@@ -100,8 +73,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public ApprovalRequestBuilder accessPackageAssignmentApprovals(@Nonnull final String id) {
-        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ApprovalRequestBuilder accessPackageAssignmentApprovals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentPolicy collection
@@ -109,8 +82,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
-        return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
     }
 
     /**
@@ -120,8 +93,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(@Nonnull final String id) {
-        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentRequest collection
@@ -129,8 +102,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
-        return new AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests"), getClient(), null);
     }
 
     /**
@@ -140,8 +113,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(@Nonnull final String id) {
-        return new AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentResourceRole collection
@@ -149,8 +122,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles() {
-        return new AccessPackageAssignmentResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles"), getClient(), null);
     }
 
     /**
@@ -160,8 +133,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(@Nonnull final String id) {
-        return new AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignment collection
@@ -169,8 +142,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments() {
-        return new AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments"), getClient(), null);
     }
 
     /**
@@ -180,8 +153,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentRequestBuilder accessPackageAssignments(@Nonnull final String id) {
-        return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder accessPackageAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageCatalog collection
@@ -189,8 +162,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs() {
-        return new AccessPackageCatalogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs() {
+        return new com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs"), getClient(), null);
     }
 
     /**
@@ -200,8 +173,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageCatalogRequestBuilder accessPackageCatalogs(@Nonnull final String id) {
-        return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder accessPackageCatalogs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageResourceEnvironment collection
@@ -209,8 +182,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceEnvironmentCollectionRequestBuilder accessPackageResourceEnvironments() {
-        return new AccessPackageResourceEnvironmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironments"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionRequestBuilder accessPackageResourceEnvironments() {
+        return new com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironments"), getClient(), null);
     }
 
     /**
@@ -220,8 +193,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceEnvironmentRequestBuilder accessPackageResourceEnvironments(@Nonnull final String id) {
-        return new AccessPackageResourceEnvironmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceEnvironmentRequestBuilder accessPackageResourceEnvironments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceEnvironmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageResourceRequest collection
@@ -229,8 +202,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests() {
-        return new AccessPackageResourceRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests"), getClient(), null);
     }
 
     /**
@@ -240,8 +213,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceRequestRequestBuilder accessPackageResourceRequests(@Nonnull final String id) {
-        return new AccessPackageResourceRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRequestRequestBuilder accessPackageResourceRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageResourceRoleScope collection
@@ -249,8 +222,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes() {
-        return new AccessPackageResourceRoleScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes"), getClient(), null);
     }
 
     /**
@@ -260,8 +233,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(@Nonnull final String id) {
-        return new AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageResource collection
@@ -269,8 +242,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceCollectionRequestBuilder accessPackageResources() {
-        return new AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder accessPackageResources() {
+        return new com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
     }
 
     /**
@@ -280,8 +253,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceRequestBuilder accessPackageResources(@Nonnull final String id) {
-        return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRequestBuilder accessPackageResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackage collection
@@ -289,8 +262,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageCollectionRequestBuilder accessPackages() {
-        return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder accessPackages() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
     /**
@@ -300,8 +273,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
-        return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConnectedOrganization collection
@@ -309,8 +282,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
-        return new ConnectedOrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
+        return new com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations"), getClient(), null);
     }
 
     /**
@@ -320,8 +293,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
-        return new ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
     }
 
     /**
@@ -330,27 +303,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the EntitlementManagementSettingsRequestBuilder instance
      */
     @Nonnull
-    public EntitlementManagementSettingsRequestBuilder settings() {
-        return new EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the AccessPackageSubject collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public AccessPackageSubjectCollectionRequestBuilder subjects() {
-        return new AccessPackageSubjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subjects"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the AccessPackageSubject item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public AccessPackageSubjectRequestBuilder subjects(@Nonnull final String id) {
-        return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subjects") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder settings() {
+        return new com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 }

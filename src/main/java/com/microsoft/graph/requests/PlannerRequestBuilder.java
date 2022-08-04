@@ -8,14 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Planner;
-import com.microsoft.graph.requests.PlannerBucketCollectionRequestBuilder;
-import com.microsoft.graph.requests.PlannerBucketRequestBuilder;
-import com.microsoft.graph.requests.PlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.PlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.PlannerRosterCollectionRequestBuilder;
-import com.microsoft.graph.requests.PlannerRosterRequestBuilder;
-import com.microsoft.graph.requests.PlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.PlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +62,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerBucketCollectionRequestBuilder buckets() {
-        return new PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerBucketCollectionRequestBuilder buckets() {
+        return new com.microsoft.graph.requests.PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
     }
 
     /**
@@ -81,8 +73,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerBucketRequestBuilder buckets(@Nonnull final String id) {
-        return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerBucketRequestBuilder buckets(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PlannerPlan collection
@@ -90,8 +82,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerPlanCollectionRequestBuilder plans() {
-        return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerPlanCollectionRequestBuilder plans() {
+        return new com.microsoft.graph.requests.PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
     /**
@@ -101,8 +93,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
-        return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerPlanRequestBuilder plans(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PlannerRoster collection
@@ -110,8 +102,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerRosterCollectionRequestBuilder rosters() {
-        return new PlannerRosterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rosters"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerRosterCollectionRequestBuilder rosters() {
+        return new com.microsoft.graph.requests.PlannerRosterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rosters"), getClient(), null);
     }
 
     /**
@@ -121,8 +113,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerRosterRequestBuilder rosters(@Nonnull final String id) {
-        return new PlannerRosterRequestBuilder(getRequestUrlWithAdditionalSegment("rosters") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerRosterRequestBuilder rosters(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerRosterRequestBuilder(getRequestUrlWithAdditionalSegment("rosters") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PlannerTask collection
@@ -130,8 +122,8 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerTaskCollectionRequestBuilder tasks() {
-        return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
     /**
@@ -141,7 +133,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
-        return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

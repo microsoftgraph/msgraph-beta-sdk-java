@@ -15,7 +15,6 @@ import com.microsoft.graph.models.ApprovalSettings;
 import com.microsoft.graph.models.RequestorSettings;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.models.CustomExtensionHandler;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage;
 
@@ -63,7 +62,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Created By.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -117,7 +116,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Modified By.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -185,7 +184,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     @SerializedName(value = "customExtensionHandlers", alternate = {"CustomExtensionHandlers"})
     @Expose
 	@Nullable
-    public CustomExtensionHandlerCollectionPage customExtensionHandlers;
+    public com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage customExtensionHandlers;
 
 
     /**
@@ -198,7 +197,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
 
         if (json.has("customExtensionHandlers")) {
-            customExtensionHandlers = serializer.deserializeObject(json.get("customExtensionHandlers"), CustomExtensionHandlerCollectionPage.class);
+            customExtensionHandlers = serializer.deserializeObject(json.get("customExtensionHandlers"), com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage.class);
         }
     }
 }

@@ -172,18 +172,6 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     RESOURCE_AVAILABILITY_CHECK_RESOURCE_GROUP_LOCKED_FOR_DELETE,
     /**
-    * resource Availability Check No Intune Reader Role Error
-    */
-    RESOURCE_AVAILABILITY_CHECK_NO_INTUNE_READER_ROLE_ERROR,
-    /**
-    * resource Availability Check Intune Default Windows Restriction Violation
-    */
-    RESOURCE_AVAILABILITY_CHECK_INTUNE_DEFAULT_WINDOWS_RESTRICTION_VIOLATION,
-    /**
-    * resource Availability Check Intune Custom Windows Restriction Violation
-    */
-    RESOURCE_AVAILABILITY_CHECK_INTUNE_CUSTOM_WINDOWS_RESTRICTION_VIOLATION,
-    /**
     * resource Availability Check Transient Service Error
     */
     RESOURCE_AVAILABILITY_CHECK_TRANSIENT_SERVICE_ERROR,

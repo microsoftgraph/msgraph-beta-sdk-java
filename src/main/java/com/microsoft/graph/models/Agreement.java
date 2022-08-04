@@ -10,9 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TermsExpiration;
-import com.microsoft.graph.models.AgreementAcceptance;
 import com.microsoft.graph.models.AgreementFile;
-import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AgreementAcceptanceCollectionPage;
 import com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage;
@@ -84,7 +82,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "acceptances", alternate = {"Acceptances"})
     @Expose
 	@Nullable
-    public AgreementAcceptanceCollectionPage acceptances;
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionPage acceptances;
 
     /**
      * The File.
@@ -102,7 +100,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose
 	@Nullable
-    public AgreementFileLocalizationCollectionPage files;
+    public com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage files;
 
 
     /**
@@ -115,11 +113,11 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptances")) {
-            acceptances = serializer.deserializeObject(json.get("acceptances"), AgreementAcceptanceCollectionPage.class);
+            acceptances = serializer.deserializeObject(json.get("acceptances"), com.microsoft.graph.requests.AgreementAcceptanceCollectionPage.class);
         }
 
         if (json.has("files")) {
-            files = serializer.deserializeObject(json.get("files"), AgreementFileLocalizationCollectionPage.class);
+            files = serializer.deserializeObject(json.get("files"), com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage.class);
         }
     }
 }

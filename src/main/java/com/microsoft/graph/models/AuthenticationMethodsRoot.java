@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UserRegistrationDetails;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UserRegistrationDetailsCollectionPage;
 
@@ -35,7 +34,7 @@ public class AuthenticationMethodsRoot extends Entity implements IJsonBackedObje
     @SerializedName(value = "userRegistrationDetails", alternate = {"UserRegistrationDetails"})
     @Expose
 	@Nullable
-    public UserRegistrationDetailsCollectionPage userRegistrationDetails;
+    public com.microsoft.graph.requests.UserRegistrationDetailsCollectionPage userRegistrationDetails;
 
 
     /**
@@ -48,7 +47,7 @@ public class AuthenticationMethodsRoot extends Entity implements IJsonBackedObje
 
 
         if (json.has("userRegistrationDetails")) {
-            userRegistrationDetails = serializer.deserializeObject(json.get("userRegistrationDetails"), UserRegistrationDetailsCollectionPage.class);
+            userRegistrationDetails = serializer.deserializeObject(json.get("userRegistrationDetails"), com.microsoft.graph.requests.UserRegistrationDetailsCollectionPage.class);
         }
     }
 }

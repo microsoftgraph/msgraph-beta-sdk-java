@@ -8,7 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.DataSourceContainer;
-import com.microsoft.graph.ediscovery.requests.CaseIndexOperationWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class DataSourceContainerRequestBuilder extends BaseRequestBuilder<DataSo
      * @return the CaseIndexOperationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public CaseIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
-        return new CaseIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CaseIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
+        return new com.microsoft.graph.ediscovery.requests.CaseIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
     }
 }

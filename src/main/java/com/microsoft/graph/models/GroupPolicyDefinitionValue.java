@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GroupPolicyConfigurationType;
 import com.microsoft.graph.models.GroupPolicyDefinition;
-import com.microsoft.graph.models.GroupPolicyPresentationValue;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupPolicyPresentationValueCollectionPage;
 
@@ -82,7 +81,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
     @SerializedName(value = "presentationValues", alternate = {"PresentationValues"})
     @Expose
 	@Nullable
-    public GroupPolicyPresentationValueCollectionPage presentationValues;
+    public com.microsoft.graph.requests.GroupPolicyPresentationValueCollectionPage presentationValues;
 
 
     /**
@@ -95,7 +94,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
 
 
         if (json.has("presentationValues")) {
-            presentationValues = serializer.deserializeObject(json.get("presentationValues"), GroupPolicyPresentationValueCollectionPage.class);
+            presentationValues = serializer.deserializeObject(json.get("presentationValues"), com.microsoft.graph.requests.GroupPolicyPresentationValueCollectionPage.class);
         }
     }
 }

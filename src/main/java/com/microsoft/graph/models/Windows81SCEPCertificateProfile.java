@@ -13,7 +13,6 @@ import com.microsoft.graph.models.CertificateStore;
 import com.microsoft.graph.models.HashAlgorithms;
 import com.microsoft.graph.models.KeySize;
 import com.microsoft.graph.models.KeyUsages;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.Windows81TrustedRootCertificate;
 import com.microsoft.graph.models.Windows81CertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
@@ -103,7 +102,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
     /**
      * The Root Certificate.
@@ -125,7 +124,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

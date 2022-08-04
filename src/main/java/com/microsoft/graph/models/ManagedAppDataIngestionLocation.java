@@ -24,10 +24,6 @@ public enum ManagedAppDataIngestionLocation
     */
     CAMERA,
     /**
-    * photo Library
-    */
-    PHOTO_LIBRARY,
-    /**
     * For ManagedAppDataIngestionLocation values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -47,17 +47,8 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
     public Integer colorIndex;
 
     /**
-     * The Is Email Notification Enabled.
-     * 
-     */
-    @SerializedName(value = "isEmailNotificationEnabled", alternate = {"IsEmailNotificationEnabled"})
-    @Expose
-	@Nullable
-    public Boolean isEmailNotificationEnabled;
-
-    /**
      * The Role.
-     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
+     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

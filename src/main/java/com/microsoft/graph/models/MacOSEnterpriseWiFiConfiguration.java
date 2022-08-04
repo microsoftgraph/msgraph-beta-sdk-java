@@ -16,7 +16,6 @@ import com.microsoft.graph.models.NonEapAuthenticationMethodForEapTtlsType;
 import com.microsoft.graph.models.MacOSCertificateProfileBase;
 import com.microsoft.graph.models.MacOSTrustedRootCertificate;
 import com.microsoft.graph.models.MacOSWiFiConfiguration;
-import com.microsoft.graph.requests.MacOSTrustedRootCertificateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -112,7 +111,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose
 	@Nullable
-    public MacOSTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    public com.microsoft.graph.requests.MacOSTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 
     /**
@@ -125,7 +124,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), MacOSTrustedRootCertificateCollectionPage.class);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), com.microsoft.graph.requests.MacOSTrustedRootCertificateCollectionPage.class);
         }
     }
 }

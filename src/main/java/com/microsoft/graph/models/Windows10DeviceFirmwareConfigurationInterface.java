@@ -28,15 +28,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
 
     /**
-     * The Bluetooth.
-     * Defines whether a user is allowed to enable Bluetooth. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "bluetooth", alternate = {"Bluetooth"})
-    @Expose
-	@Nullable
-    public Enablement bluetooth;
-
-    /**
      * The Boot From Built In Network Adapters.
      * Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
      */
@@ -73,33 +64,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     public ChangeUefiSettingsPermission changeUefiSettingsPermission;
 
     /**
-     * The Front Camera.
-     * Defines whether a user is allowed to enable Front Camera. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "frontCamera", alternate = {"FrontCamera"})
-    @Expose
-	@Nullable
-    public Enablement frontCamera;
-
-    /**
-     * The Infrared Camera.
-     * Defines whether a user is allowed to enable Infrared camera. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "infraredCamera", alternate = {"InfraredCamera"})
-    @Expose
-	@Nullable
-    public Enablement infraredCamera;
-
-    /**
-     * The Microphone.
-     * Defines whether a user is allowed to enable Microphone. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "microphone", alternate = {"Microphone"})
-    @Expose
-	@Nullable
-    public Enablement microphone;
-
-    /**
      * The Microphones And Speakers.
      * Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
      */
@@ -107,15 +71,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     @Expose
 	@Nullable
     public Enablement microphonesAndSpeakers;
-
-    /**
-     * The Near Field Communication.
-     * Defines whether a user is allowed to enable Near Field Communication. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "nearFieldCommunication", alternate = {"NearFieldCommunication"})
-    @Expose
-	@Nullable
-    public Enablement nearFieldCommunication;
 
     /**
      * The Radios.
@@ -127,24 +82,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     public Enablement radios;
 
     /**
-     * The Rear Camera.
-     * Defines whether a user is allowed to enable rear camera. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "rearCamera", alternate = {"RearCamera"})
-    @Expose
-	@Nullable
-    public Enablement rearCamera;
-
-    /**
-     * The Sd Card.
-     * Defines whether a user is allowed to enable SD Card Port. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "sdCard", alternate = {"SdCard"})
-    @Expose
-	@Nullable
-    public Enablement sdCard;
-
-    /**
      * The Simultaneous Multi Threading.
      * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
      */
@@ -152,15 +89,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     @Expose
 	@Nullable
     public Enablement simultaneousMultiThreading;
-
-    /**
-     * The Usb Type APort.
-     * Defines whether a user is allowed to enable USB Type A Port. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "usbTypeAPort", alternate = {"UsbTypeAPort"})
-    @Expose
-	@Nullable
-    public Enablement usbTypeAPort;
 
     /**
      * The Virtualization Of Cpu And IO.
@@ -172,33 +100,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     public Enablement virtualizationOfCpuAndIO;
 
     /**
-     * The Wake On LAN.
-     * Defines whether a user is allowed to enable Wake on LAN. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "wakeOnLAN", alternate = {"WakeOnLAN"})
-    @Expose
-	@Nullable
-    public Enablement wakeOnLAN;
-
-    /**
-     * The Wake On Power.
-     * Defines whether a user is allowed to enable Wake On Power. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "wakeOnPower", alternate = {"WakeOnPower"})
-    @Expose
-	@Nullable
-    public Enablement wakeOnPower;
-
-    /**
-     * The Wi Fi.
-     * Defines whether a user is allowed to enable WiFi. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "wiFi", alternate = {"WiFi"})
-    @Expose
-	@Nullable
-    public Enablement wiFi;
-
-    /**
      * The Windows Platform Binary Table.
      * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
      */
@@ -206,15 +107,6 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     @Expose
 	@Nullable
     public Enablement windowsPlatformBinaryTable;
-
-    /**
-     * The Wireless Wide Area Network.
-     * Defines whether a user is allowed to enable Wireless Wide Area Network. Possible values are: notConfigured, enabled, disabled.
-     */
-    @SerializedName(value = "wirelessWideAreaNetwork", alternate = {"WirelessWideAreaNetwork"})
-    @Expose
-	@Nullable
-    public Enablement wirelessWideAreaNetwork;
 
 
     /**

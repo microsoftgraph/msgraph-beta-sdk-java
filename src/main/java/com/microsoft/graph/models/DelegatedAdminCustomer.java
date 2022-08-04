@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DelegatedAdminServiceManagementDetail;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailCollectionPage;
 
@@ -53,7 +52,7 @@ public class DelegatedAdminCustomer extends Entity implements IJsonBackedObject 
     @SerializedName(value = "serviceManagementDetails", alternate = {"ServiceManagementDetails"})
     @Expose
 	@Nullable
-    public DelegatedAdminServiceManagementDetailCollectionPage serviceManagementDetails;
+    public com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailCollectionPage serviceManagementDetails;
 
 
     /**
@@ -66,7 +65,7 @@ public class DelegatedAdminCustomer extends Entity implements IJsonBackedObject 
 
 
         if (json.has("serviceManagementDetails")) {
-            serviceManagementDetails = serializer.deserializeObject(json.get("serviceManagementDetails"), DelegatedAdminServiceManagementDetailCollectionPage.class);
+            serviceManagementDetails = serializer.deserializeObject(json.get("serviceManagementDetails"), com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailCollectionPage.class);
         }
     }
 }

@@ -91,7 +91,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
 
     /**
      * The Access Package Resource.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose

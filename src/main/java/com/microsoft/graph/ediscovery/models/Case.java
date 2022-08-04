@@ -11,14 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.ediscovery.models.CaseStatus;
-import com.microsoft.graph.ediscovery.models.Custodian;
-import com.microsoft.graph.ediscovery.models.LegalHold;
-import com.microsoft.graph.ediscovery.models.NoncustodialDataSource;
-import com.microsoft.graph.ediscovery.models.CaseOperation;
-import com.microsoft.graph.ediscovery.models.ReviewSet;
 import com.microsoft.graph.ediscovery.models.CaseSettings;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
-import com.microsoft.graph.ediscovery.models.Tag;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.ediscovery.requests.CustodianCollectionPage;
 import com.microsoft.graph.ediscovery.requests.LegalHoldCollectionPage;
@@ -131,7 +124,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "custodians", alternate = {"Custodians"})
     @Expose
 	@Nullable
-    public CustodianCollectionPage custodians;
+    public com.microsoft.graph.ediscovery.requests.CustodianCollectionPage custodians;
 
     /**
      * The Legal Holds.
@@ -140,7 +133,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "legalHolds", alternate = {"LegalHolds"})
     @Expose
 	@Nullable
-    public LegalHoldCollectionPage legalHolds;
+    public com.microsoft.graph.ediscovery.requests.LegalHoldCollectionPage legalHolds;
 
     /**
      * The Noncustodial Data Sources.
@@ -149,7 +142,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "noncustodialDataSources", alternate = {"NoncustodialDataSources"})
     @Expose
 	@Nullable
-    public NoncustodialDataSourceCollectionPage noncustodialDataSources;
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage noncustodialDataSources;
 
     /**
      * The Operations.
@@ -158,7 +151,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public CaseOperationCollectionPage operations;
+    public com.microsoft.graph.ediscovery.requests.CaseOperationCollectionPage operations;
 
     /**
      * The Review Sets.
@@ -167,7 +160,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "reviewSets", alternate = {"ReviewSets"})
     @Expose
 	@Nullable
-    public ReviewSetCollectionPage reviewSets;
+    public com.microsoft.graph.ediscovery.requests.ReviewSetCollectionPage reviewSets;
 
     /**
      * The Settings.
@@ -185,7 +178,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sourceCollections", alternate = {"SourceCollections"})
     @Expose
 	@Nullable
-    public SourceCollectionCollectionPage sourceCollections;
+    public com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionPage sourceCollections;
 
     /**
      * The Tags.
@@ -194,7 +187,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
 	@Nullable
-    public TagCollectionPage tags;
+    public com.microsoft.graph.ediscovery.requests.TagCollectionPage tags;
 
 
     /**
@@ -207,31 +200,31 @@ public class Case extends Entity implements IJsonBackedObject {
 
 
         if (json.has("custodians")) {
-            custodians = serializer.deserializeObject(json.get("custodians"), CustodianCollectionPage.class);
+            custodians = serializer.deserializeObject(json.get("custodians"), com.microsoft.graph.ediscovery.requests.CustodianCollectionPage.class);
         }
 
         if (json.has("legalHolds")) {
-            legalHolds = serializer.deserializeObject(json.get("legalHolds"), LegalHoldCollectionPage.class);
+            legalHolds = serializer.deserializeObject(json.get("legalHolds"), com.microsoft.graph.ediscovery.requests.LegalHoldCollectionPage.class);
         }
 
         if (json.has("noncustodialDataSources")) {
-            noncustodialDataSources = serializer.deserializeObject(json.get("noncustodialDataSources"), NoncustodialDataSourceCollectionPage.class);
+            noncustodialDataSources = serializer.deserializeObject(json.get("noncustodialDataSources"), com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), CaseOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.ediscovery.requests.CaseOperationCollectionPage.class);
         }
 
         if (json.has("reviewSets")) {
-            reviewSets = serializer.deserializeObject(json.get("reviewSets"), ReviewSetCollectionPage.class);
+            reviewSets = serializer.deserializeObject(json.get("reviewSets"), com.microsoft.graph.ediscovery.requests.ReviewSetCollectionPage.class);
         }
 
         if (json.has("sourceCollections")) {
-            sourceCollections = serializer.deserializeObject(json.get("sourceCollections"), SourceCollectionCollectionPage.class);
+            sourceCollections = serializer.deserializeObject(json.get("sourceCollections"), com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionPage.class);
         }
 
         if (json.has("tags")) {
-            tags = serializer.deserializeObject(json.get("tags"), TagCollectionPage.class);
+            tags = serializer.deserializeObject(json.get("tags"), com.microsoft.graph.ediscovery.requests.TagCollectionPage.class);
         }
     }
 }

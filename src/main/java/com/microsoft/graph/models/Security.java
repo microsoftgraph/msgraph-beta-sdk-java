@@ -10,32 +10,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityProviderStatus;
-import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.security.models.InformationProtection;
-import com.microsoft.graph.security.models.Alert;
-import com.microsoft.graph.security.models.Incident;
 import com.microsoft.graph.models.AttackSimulationRoot;
-import com.microsoft.graph.security.models.LabelsRoot;
-import com.microsoft.graph.security.models.TriggersRoot;
-import com.microsoft.graph.security.models.TriggerTypesRoot;
-import com.microsoft.graph.security.models.ThreatSubmissionRoot;
-import com.microsoft.graph.models.Alert;
-import com.microsoft.graph.models.CloudAppSecurityProfile;
-import com.microsoft.graph.models.DomainSecurityProfile;
-import com.microsoft.graph.models.FileSecurityProfile;
-import com.microsoft.graph.models.HostSecurityProfile;
-import com.microsoft.graph.models.IpSecurityProfile;
-import com.microsoft.graph.models.ProviderTenantSetting;
-import com.microsoft.graph.models.SecureScoreControlProfile;
-import com.microsoft.graph.models.SecureScore;
-import com.microsoft.graph.models.SecurityAction;
-import com.microsoft.graph.models.TiIndicator;
-import com.microsoft.graph.models.UserSecurityProfile;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SubjectRightsRequestCollectionPage;
-import com.microsoft.graph.security.requests.AlertCollectionPage;
-import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage;
 import com.microsoft.graph.requests.DomainSecurityProfileCollectionPage;
@@ -80,7 +59,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "subjectRightsRequests", alternate = {"SubjectRightsRequests"})
     @Expose
 	@Nullable
-    public SubjectRightsRequestCollectionPage subjectRightsRequests;
+    public com.microsoft.graph.requests.SubjectRightsRequestCollectionPage subjectRightsRequests;
 
     /**
      * The Cases.
@@ -101,24 +80,6 @@ public class Security extends Entity implements IJsonBackedObject {
     public InformationProtection informationProtection;
 
     /**
-     * The Alerts_v2.
-     * 
-     */
-    @SerializedName(value = "alerts_v2", alternate = {"Alerts_v2"})
-    @Expose
-	@Nullable
-    public AlertCollectionPage alerts_v2;
-
-    /**
-     * The Incidents.
-     * 
-     */
-    @SerializedName(value = "incidents", alternate = {"Incidents"})
-    @Expose
-	@Nullable
-    public IncidentCollectionPage incidents;
-
-    /**
      * The Attack Simulation.
      * Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
      */
@@ -128,49 +89,13 @@ public class Security extends Entity implements IJsonBackedObject {
     public AttackSimulationRoot attackSimulation;
 
     /**
-     * The Labels.
-     * 
-     */
-    @SerializedName(value = "labels", alternate = {"Labels"})
-    @Expose
-	@Nullable
-    public LabelsRoot labels;
-
-    /**
-     * The Triggers.
-     * 
-     */
-    @SerializedName(value = "triggers", alternate = {"Triggers"})
-    @Expose
-	@Nullable
-    public TriggersRoot triggers;
-
-    /**
-     * The Trigger Types.
-     * 
-     */
-    @SerializedName(value = "triggerTypes", alternate = {"TriggerTypes"})
-    @Expose
-	@Nullable
-    public TriggerTypesRoot triggerTypes;
-
-    /**
-     * The Threat Submission.
-     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
-     */
-    @SerializedName(value = "threatSubmission", alternate = {"ThreatSubmission"})
-    @Expose
-	@Nullable
-    public ThreatSubmissionRoot threatSubmission;
-
-    /**
      * The Alerts.
      * Notifications for suspicious or potential security issues in a customer’s tenant.
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
 	@Nullable
-    public AlertCollectionPage alerts;
+    public com.microsoft.graph.requests.AlertCollectionPage alerts;
 
     /**
      * The Cloud App Security Profiles.
@@ -179,7 +104,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cloudAppSecurityProfiles", alternate = {"CloudAppSecurityProfiles"})
     @Expose
 	@Nullable
-    public CloudAppSecurityProfileCollectionPage cloudAppSecurityProfiles;
+    public com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage cloudAppSecurityProfiles;
 
     /**
      * The Domain Security Profiles.
@@ -188,7 +113,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "domainSecurityProfiles", alternate = {"DomainSecurityProfiles"})
     @Expose
 	@Nullable
-    public DomainSecurityProfileCollectionPage domainSecurityProfiles;
+    public com.microsoft.graph.requests.DomainSecurityProfileCollectionPage domainSecurityProfiles;
 
     /**
      * The File Security Profiles.
@@ -197,7 +122,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "fileSecurityProfiles", alternate = {"FileSecurityProfiles"})
     @Expose
 	@Nullable
-    public FileSecurityProfileCollectionPage fileSecurityProfiles;
+    public com.microsoft.graph.requests.FileSecurityProfileCollectionPage fileSecurityProfiles;
 
     /**
      * The Host Security Profiles.
@@ -206,7 +131,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "hostSecurityProfiles", alternate = {"HostSecurityProfiles"})
     @Expose
 	@Nullable
-    public HostSecurityProfileCollectionPage hostSecurityProfiles;
+    public com.microsoft.graph.requests.HostSecurityProfileCollectionPage hostSecurityProfiles;
 
     /**
      * The Ip Security Profiles.
@@ -215,7 +140,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "ipSecurityProfiles", alternate = {"IpSecurityProfiles"})
     @Expose
 	@Nullable
-    public IpSecurityProfileCollectionPage ipSecurityProfiles;
+    public com.microsoft.graph.requests.IpSecurityProfileCollectionPage ipSecurityProfiles;
 
     /**
      * The Provider Tenant Settings.
@@ -224,7 +149,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "providerTenantSettings", alternate = {"ProviderTenantSettings"})
     @Expose
 	@Nullable
-    public ProviderTenantSettingCollectionPage providerTenantSettings;
+    public com.microsoft.graph.requests.ProviderTenantSettingCollectionPage providerTenantSettings;
 
     /**
      * The Secure Score Control Profiles.
@@ -233,7 +158,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "secureScoreControlProfiles", alternate = {"SecureScoreControlProfiles"})
     @Expose
 	@Nullable
-    public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
+    public com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
     /**
      * The Secure Scores.
@@ -242,7 +167,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "secureScores", alternate = {"SecureScores"})
     @Expose
 	@Nullable
-    public SecureScoreCollectionPage secureScores;
+    public com.microsoft.graph.requests.SecureScoreCollectionPage secureScores;
 
     /**
      * The Security Actions.
@@ -251,7 +176,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "securityActions", alternate = {"SecurityActions"})
     @Expose
 	@Nullable
-    public SecurityActionCollectionPage securityActions;
+    public com.microsoft.graph.requests.SecurityActionCollectionPage securityActions;
 
     /**
      * The Ti Indicators.
@@ -260,7 +185,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tiIndicators", alternate = {"TiIndicators"})
     @Expose
 	@Nullable
-    public TiIndicatorCollectionPage tiIndicators;
+    public com.microsoft.graph.requests.TiIndicatorCollectionPage tiIndicators;
 
     /**
      * The User Security Profiles.
@@ -269,7 +194,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userSecurityProfiles", alternate = {"UserSecurityProfiles"})
     @Expose
 	@Nullable
-    public UserSecurityProfileCollectionPage userSecurityProfiles;
+    public com.microsoft.graph.requests.UserSecurityProfileCollectionPage userSecurityProfiles;
 
 
     /**
@@ -282,63 +207,55 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("subjectRightsRequests")) {
-            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), SubjectRightsRequestCollectionPage.class);
-        }
-
-        if (json.has("alerts_v2")) {
-            alerts_v2 = serializer.deserializeObject(json.get("alerts_v2"), AlertCollectionPage.class);
-        }
-
-        if (json.has("incidents")) {
-            incidents = serializer.deserializeObject(json.get("incidents"), IncidentCollectionPage.class);
+            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), com.microsoft.graph.requests.SubjectRightsRequestCollectionPage.class);
         }
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts"), AlertCollectionPage.class);
+            alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.requests.AlertCollectionPage.class);
         }
 
         if (json.has("cloudAppSecurityProfiles")) {
-            cloudAppSecurityProfiles = serializer.deserializeObject(json.get("cloudAppSecurityProfiles"), CloudAppSecurityProfileCollectionPage.class);
+            cloudAppSecurityProfiles = serializer.deserializeObject(json.get("cloudAppSecurityProfiles"), com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage.class);
         }
 
         if (json.has("domainSecurityProfiles")) {
-            domainSecurityProfiles = serializer.deserializeObject(json.get("domainSecurityProfiles"), DomainSecurityProfileCollectionPage.class);
+            domainSecurityProfiles = serializer.deserializeObject(json.get("domainSecurityProfiles"), com.microsoft.graph.requests.DomainSecurityProfileCollectionPage.class);
         }
 
         if (json.has("fileSecurityProfiles")) {
-            fileSecurityProfiles = serializer.deserializeObject(json.get("fileSecurityProfiles"), FileSecurityProfileCollectionPage.class);
+            fileSecurityProfiles = serializer.deserializeObject(json.get("fileSecurityProfiles"), com.microsoft.graph.requests.FileSecurityProfileCollectionPage.class);
         }
 
         if (json.has("hostSecurityProfiles")) {
-            hostSecurityProfiles = serializer.deserializeObject(json.get("hostSecurityProfiles"), HostSecurityProfileCollectionPage.class);
+            hostSecurityProfiles = serializer.deserializeObject(json.get("hostSecurityProfiles"), com.microsoft.graph.requests.HostSecurityProfileCollectionPage.class);
         }
 
         if (json.has("ipSecurityProfiles")) {
-            ipSecurityProfiles = serializer.deserializeObject(json.get("ipSecurityProfiles"), IpSecurityProfileCollectionPage.class);
+            ipSecurityProfiles = serializer.deserializeObject(json.get("ipSecurityProfiles"), com.microsoft.graph.requests.IpSecurityProfileCollectionPage.class);
         }
 
         if (json.has("providerTenantSettings")) {
-            providerTenantSettings = serializer.deserializeObject(json.get("providerTenantSettings"), ProviderTenantSettingCollectionPage.class);
+            providerTenantSettings = serializer.deserializeObject(json.get("providerTenantSettings"), com.microsoft.graph.requests.ProviderTenantSettingCollectionPage.class);
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles"), SecureScoreControlProfileCollectionPage.class);
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles"), com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage.class);
         }
 
         if (json.has("secureScores")) {
-            secureScores = serializer.deserializeObject(json.get("secureScores"), SecureScoreCollectionPage.class);
+            secureScores = serializer.deserializeObject(json.get("secureScores"), com.microsoft.graph.requests.SecureScoreCollectionPage.class);
         }
 
         if (json.has("securityActions")) {
-            securityActions = serializer.deserializeObject(json.get("securityActions"), SecurityActionCollectionPage.class);
+            securityActions = serializer.deserializeObject(json.get("securityActions"), com.microsoft.graph.requests.SecurityActionCollectionPage.class);
         }
 
         if (json.has("tiIndicators")) {
-            tiIndicators = serializer.deserializeObject(json.get("tiIndicators"), TiIndicatorCollectionPage.class);
+            tiIndicators = serializer.deserializeObject(json.get("tiIndicators"), com.microsoft.graph.requests.TiIndicatorCollectionPage.class);
         }
 
         if (json.has("userSecurityProfiles")) {
-            userSecurityProfiles = serializer.deserializeObject(json.get("userSecurityProfiles"), UserSecurityProfileCollectionPage.class);
+            userSecurityProfiles = serializer.deserializeObject(json.get("userSecurityProfiles"), com.microsoft.graph.requests.UserSecurityProfileCollectionPage.class);
         }
     }
 }

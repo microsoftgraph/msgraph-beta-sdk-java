@@ -28,7 +28,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Assignment Type.
-     * Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
+     * Type of the assignment. It can either be Assigned or Activated.
      */
     @SerializedName(value = "assignmentType", alternate = {"AssignmentType"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The End Date Time.
-     * The end date of the schedule instance.
+     * Time that the roleAssignmentInstance will expire
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Member Type.
-     * How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
+     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Role Assignment Origin Id.
-     * The identifier of the role assignment in Azure AD.
+     * ID of the roleAssignment in the directory
      */
     @SerializedName(value = "roleAssignmentOriginId", alternate = {"RoleAssignmentOriginId"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Role Assignment Schedule Id.
-     * The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
+     * ID of the parent roleAssignmentSchedule for this instance
      */
     @SerializedName(value = "roleAssignmentScheduleId", alternate = {"RoleAssignmentScheduleId"})
     @Expose
@@ -73,7 +73,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Start Date Time.
-     * When this instance starts.
+     * Time that the roleAssignmentInstance will start
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -82,7 +82,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Activated Using.
-     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
+     * If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose

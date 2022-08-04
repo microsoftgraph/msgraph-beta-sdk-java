@@ -30,7 +30,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
 
     /**
      * The Authentication Type.
-     * The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "authenticationType", alternate = {"AuthenticationType"})
     @Expose
@@ -39,7 +39,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
 
     /**
      * The Frequency Interval.
-     * The possible values are timeBased, everyTime, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "frequencyInterval", alternate = {"FrequencyInterval"})
     @Expose
@@ -48,7 +48,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
 
     /**
      * The Type.
-     * Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * Possible values are: days, hours.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

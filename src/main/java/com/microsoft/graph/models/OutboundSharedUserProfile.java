@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TenantReference;
 import com.microsoft.graph.requests.TenantReferenceCollectionPage;
 
 
@@ -56,7 +55,7 @@ public class OutboundSharedUserProfile implements IJsonBackedObject {
     @SerializedName(value = "tenants", alternate = {"Tenants"})
     @Expose
 	@Nullable
-    public TenantReferenceCollectionPage tenants;
+    public com.microsoft.graph.requests.TenantReferenceCollectionPage tenants;
 
 
     /**
@@ -69,7 +68,7 @@ public class OutboundSharedUserProfile implements IJsonBackedObject {
 
 
         if (json.has("tenants")) {
-            tenants = serializer.deserializeObject(json.get("tenants"), TenantReferenceCollectionPage.class);
+            tenants = serializer.deserializeObject(json.get("tenants"), com.microsoft.graph.requests.TenantReferenceCollectionPage.class);
         }
     }
 }

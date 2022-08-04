@@ -39,7 +39,7 @@ public class JoinMeetingIdSettings implements IJsonBackedObject {
 
     /**
      * The Is Passcode Required.
-     * Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
+     * 
      */
     @SerializedName(value = "isPasscodeRequired", alternate = {"IsPasscodeRequired"})
     @Expose
@@ -48,7 +48,7 @@ public class JoinMeetingIdSettings implements IJsonBackedObject {
 
     /**
      * The Join Meeting Id.
-     * The meeting ID to be used to join a meeting. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "joinMeetingId", alternate = {"JoinMeetingId"})
     @Expose
@@ -57,7 +57,7 @@ public class JoinMeetingIdSettings implements IJsonBackedObject {
 
     /**
      * The Passcode.
-     * The passcode to join a meeting.  Optional. Read-only.
+     * 
      */
     @SerializedName(value = "passcode", alternate = {"Passcode"})
     @Expose

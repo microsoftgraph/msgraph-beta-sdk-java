@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
-import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.models.TenantRelationshipAccessPolicyBase;
 import com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage;
 
@@ -30,15 +29,6 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
 
 
     /**
-     * The Allowed Cloud Endpoints.
-     * Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
-     */
-    @SerializedName(value = "allowedCloudEndpoints", alternate = {"AllowedCloudEndpoints"})
-    @Expose
-	@Nullable
-    public java.util.List<String> allowedCloudEndpoints;
-
-    /**
      * The Default.
      * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      */
@@ -54,7 +44,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     @SerializedName(value = "partners", alternate = {"Partners"})
     @Expose
 	@Nullable
-    public CrossTenantAccessPolicyConfigurationPartnerCollectionPage partners;
+    public com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage partners;
 
 
     /**
@@ -67,7 +57,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
 
 
         if (json.has("partners")) {
-            partners = serializer.deserializeObject(json.get("partners"), CrossTenantAccessPolicyConfigurationPartnerCollectionPage.class);
+            partners = serializer.deserializeObject(json.get("partners"), com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage.class);
         }
     }
 }

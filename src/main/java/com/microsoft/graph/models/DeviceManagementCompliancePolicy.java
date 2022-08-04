@@ -11,9 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationPlatforms;
 import com.microsoft.graph.models.DeviceManagementConfigurationTechnologies;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicyAssignment;
-import com.microsoft.graph.models.DeviceManagementComplianceScheduledActionForRule;
-import com.microsoft.graph.models.DeviceManagementConfigurationSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementComplianceScheduledActionForRuleCollectionPage;
@@ -117,7 +114,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements IJsonBac
 
     /**
      * The Technologies.
-     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, unknownFutureValue.
+     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose
@@ -131,7 +128,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements IJsonBac
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Scheduled Actions For Rule.
@@ -140,7 +137,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements IJsonBac
     @SerializedName(value = "scheduledActionsForRule", alternate = {"ScheduledActionsForRule"})
     @Expose
 	@Nullable
-    public DeviceManagementComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
+    public com.microsoft.graph.requests.DeviceManagementComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
 
     /**
      * The Settings.
@@ -149,7 +146,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements IJsonBac
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingCollectionPage settings;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionPage settings;
 
 
     /**
@@ -162,15 +159,15 @@ public class DeviceManagementCompliancePolicy extends Entity implements IJsonBac
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceManagementConfigurationPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("scheduledActionsForRule")) {
-            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule"), DeviceManagementComplianceScheduledActionForRuleCollectionPage.class);
+            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule"), com.microsoft.graph.requests.DeviceManagementComplianceScheduledActionForRuleCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings"), DeviceManagementConfigurationSettingCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionPage.class);
         }
     }
 }

@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AttackSimulationRoot;
-import com.microsoft.graph.requests.SimulationAutomationCollectionRequestBuilder;
-import com.microsoft.graph.requests.SimulationAutomationRequestBuilder;
-import com.microsoft.graph.requests.SimulationCollectionRequestBuilder;
-import com.microsoft.graph.requests.SimulationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
      * @return the collection request builder
      */
     @Nonnull
-    public SimulationAutomationCollectionRequestBuilder simulationAutomations() {
-        return new SimulationAutomationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("simulationAutomations"), getClient(), null);
+    public com.microsoft.graph.requests.SimulationAutomationCollectionRequestBuilder simulationAutomations() {
+        return new com.microsoft.graph.requests.SimulationAutomationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("simulationAutomations"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
      * @param id the item identifier
      */
     @Nonnull
-    public SimulationAutomationRequestBuilder simulationAutomations(@Nonnull final String id) {
-        return new SimulationAutomationRequestBuilder(getRequestUrlWithAdditionalSegment("simulationAutomations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SimulationAutomationRequestBuilder simulationAutomations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SimulationAutomationRequestBuilder(getRequestUrlWithAdditionalSegment("simulationAutomations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Simulation collection
@@ -86,8 +82,8 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
      * @return the collection request builder
      */
     @Nonnull
-    public SimulationCollectionRequestBuilder simulations() {
-        return new SimulationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("simulations"), getClient(), null);
+    public com.microsoft.graph.requests.SimulationCollectionRequestBuilder simulations() {
+        return new com.microsoft.graph.requests.SimulationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("simulations"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
      * @param id the item identifier
      */
     @Nonnull
-    public SimulationRequestBuilder simulations(@Nonnull final String id) {
-        return new SimulationRequestBuilder(getRequestUrlWithAdditionalSegment("simulations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SimulationRequestBuilder simulations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SimulationRequestBuilder(getRequestUrlWithAdditionalSegment("simulations") + "/" + id, getClient(), null);
     }
 }

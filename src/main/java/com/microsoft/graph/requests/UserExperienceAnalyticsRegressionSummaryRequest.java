@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsSummarizedBy;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

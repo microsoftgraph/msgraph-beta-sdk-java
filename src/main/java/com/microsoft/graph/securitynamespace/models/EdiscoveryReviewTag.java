@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.ChildSelectability;
 import com.microsoft.graph.security.models.EdiscoveryReviewTag;
 import com.microsoft.graph.security.models.Tag;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,7 +30,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
     /**
      * The Child Selectability.
-     * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
+     * 
      */
     @SerializedName(value = "childSelectability", alternate = {"ChildSelectability"})
     @Expose
@@ -40,14 +39,14 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
     /**
      * The Child Tags.
-     * Returns the tags that are a child of a tag.
+     * 
      */
 	@Nullable
-    public EdiscoveryReviewTagCollectionPage childTags;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage childTags;
 
     /**
      * The Parent.
-     * Returns the parent tag of the specified tag.
+     * 
      */
     @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose
@@ -65,7 +64,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
 
         if (json.has("childTags")) {
-            childTags = serializer.deserializeObject(json.get("childTags"), EdiscoveryReviewTagCollectionPage.class);
+            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage.class);
         }
     }
 }

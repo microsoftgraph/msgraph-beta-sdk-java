@@ -12,8 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DepTokenType;
 import com.microsoft.graph.models.DepIOSEnrollmentProfile;
 import com.microsoft.graph.models.DepMacOSEnrollmentProfile;
-import com.microsoft.graph.models.EnrollmentProfile;
-import com.microsoft.graph.models.ImportedAppleDeviceIdentity;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EnrollmentProfileCollectionPage;
 import com.microsoft.graph.requests.ImportedAppleDeviceIdentityCollectionPage;
@@ -166,7 +164,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "enrollmentProfiles", alternate = {"EnrollmentProfiles"})
     @Expose
 	@Nullable
-    public EnrollmentProfileCollectionPage enrollmentProfiles;
+    public com.microsoft.graph.requests.EnrollmentProfileCollectionPage enrollmentProfiles;
 
     /**
      * The Imported Apple Device Identities.
@@ -175,7 +173,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "importedAppleDeviceIdentities", alternate = {"ImportedAppleDeviceIdentities"})
     @Expose
 	@Nullable
-    public ImportedAppleDeviceIdentityCollectionPage importedAppleDeviceIdentities;
+    public com.microsoft.graph.requests.ImportedAppleDeviceIdentityCollectionPage importedAppleDeviceIdentities;
 
 
     /**
@@ -188,11 +186,11 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
 
 
         if (json.has("enrollmentProfiles")) {
-            enrollmentProfiles = serializer.deserializeObject(json.get("enrollmentProfiles"), EnrollmentProfileCollectionPage.class);
+            enrollmentProfiles = serializer.deserializeObject(json.get("enrollmentProfiles"), com.microsoft.graph.requests.EnrollmentProfileCollectionPage.class);
         }
 
         if (json.has("importedAppleDeviceIdentities")) {
-            importedAppleDeviceIdentities = serializer.deserializeObject(json.get("importedAppleDeviceIdentities"), ImportedAppleDeviceIdentityCollectionPage.class);
+            importedAppleDeviceIdentities = serializer.deserializeObject(json.get("importedAppleDeviceIdentities"), com.microsoft.graph.requests.ImportedAppleDeviceIdentityCollectionPage.class);
         }
     }
 }

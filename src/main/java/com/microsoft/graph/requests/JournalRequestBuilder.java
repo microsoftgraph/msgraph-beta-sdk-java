@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Journal;
-import com.microsoft.graph.requests.AccountRequestBuilder;
-import com.microsoft.graph.requests.JournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.JournalLineRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class JournalRequestBuilder extends BaseRequestBuilder<Journal> {
      * @return the AccountRequestBuilder instance
      */
     @Nonnull
-    public AccountRequestBuilder account() {
-        return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    public com.microsoft.graph.requests.AccountRequestBuilder account() {
+        return new com.microsoft.graph.requests.AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
     /**
      *  Gets a request builder for the JournalLine collection
@@ -75,8 +72,8 @@ public class JournalRequestBuilder extends BaseRequestBuilder<Journal> {
      * @return the collection request builder
      */
     @Nonnull
-    public JournalLineCollectionRequestBuilder journalLines() {
-        return new JournalLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines"), getClient(), null);
+    public com.microsoft.graph.requests.JournalLineCollectionRequestBuilder journalLines() {
+        return new com.microsoft.graph.requests.JournalLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines"), getClient(), null);
     }
 
     /**
@@ -86,8 +83,8 @@ public class JournalRequestBuilder extends BaseRequestBuilder<Journal> {
      * @param id the item identifier
      */
     @Nonnull
-    public JournalLineRequestBuilder journalLines(@Nonnull final String id) {
-        return new JournalLineRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JournalLineRequestBuilder journalLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JournalLineRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines") + "/" + id, getClient(), null);
     }
 
     /**

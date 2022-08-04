@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsAutopilotDeploymentState;
 import com.microsoft.graph.models.EnrollmentState;
 import com.microsoft.graph.models.WindowsAutopilotEnrollmentType;
-import com.microsoft.graph.models.DeviceManagementAutopilotPolicyStatusDetail;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailCollectionPage;
 
@@ -272,7 +271,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
     @SerializedName(value = "policyStatusDetails", alternate = {"PolicyStatusDetails"})
     @Expose
 	@Nullable
-    public DeviceManagementAutopilotPolicyStatusDetailCollectionPage policyStatusDetails;
+    public com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailCollectionPage policyStatusDetails;
 
 
     /**
@@ -285,7 +284,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
 
         if (json.has("policyStatusDetails")) {
-            policyStatusDetails = serializer.deserializeObject(json.get("policyStatusDetails"), DeviceManagementAutopilotPolicyStatusDetailCollectionPage.class);
+            policyStatusDetails = serializer.deserializeObject(json.get("policyStatusDetails"), com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailCollectionPage.class);
         }
     }
 }

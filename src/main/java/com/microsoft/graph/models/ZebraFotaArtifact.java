@@ -27,7 +27,7 @@ public class ZebraFotaArtifact extends Entity implements IJsonBackedObject {
 
     /**
      * The Board Support Package Version.
-     * The version of the Board Support Package (BSP. E.g.: 01.18.02.00)
+     * The version of the Board Support Package.
      */
     @SerializedName(value = "boardSupportPackageVersion", alternate = {"BoardSupportPackageVersion"})
     @Expose
@@ -36,7 +36,7 @@ public class ZebraFotaArtifact extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Model.
-     * Applicable device model (e.g.: TC8300)
+     * Artifact device model.
      */
     @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
@@ -45,7 +45,7 @@ public class ZebraFotaArtifact extends Entity implements IJsonBackedObject {
 
     /**
      * The Os Version.
-     * Artifact OS version (e.g.: 8.1.0)
+     * Artifact OS version.
      */
     @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
@@ -54,7 +54,7 @@ public class ZebraFotaArtifact extends Entity implements IJsonBackedObject {
 
     /**
      * The Patch Version.
-     * Artifact patch version (e.g.: U00)
+     * Artifact patch version.
      */
     @SerializedName(value = "patchVersion", alternate = {"PatchVersion"})
     @Expose
@@ -63,7 +63,7 @@ public class ZebraFotaArtifact extends Entity implements IJsonBackedObject {
 
     /**
      * The Release Notes Url.
-     * Artifact release notes URL (e.g.: https://www.zebra.com/&amp;lt;filename.pdf&amp;gt;)
+     * Artifact release notes URL.
      */
     @SerializedName(value = "releaseNotesUrl", alternate = {"ReleaseNotesUrl"})
     @Expose

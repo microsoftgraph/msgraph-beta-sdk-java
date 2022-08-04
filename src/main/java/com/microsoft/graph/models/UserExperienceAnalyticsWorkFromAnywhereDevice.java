@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Health Status.
-     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

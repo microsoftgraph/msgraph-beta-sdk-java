@@ -18,7 +18,6 @@ import com.microsoft.graph.models.PrereleaseFeatures;
 import com.microsoft.graph.models.WindowsUpdateNotificationDisplayOption;
 import com.microsoft.graph.models.WindowsUpdateForBusinessUpdateWeeks;
 import com.microsoft.graph.models.Enablement;
-import com.microsoft.graph.models.WindowsUpdateState;
 import com.microsoft.graph.models.DeviceConfiguration;
 import com.microsoft.graph.requests.WindowsUpdateStateCollectionPage;
 
@@ -75,7 +74,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Deadline For Feature Updates In Days.
-     * Number of days before feature updates are installed automatically with valid range from 0 to 30 days
+     * Number of days before feature updates are installed automatically with valid range from 2 to 30 days
      */
     @SerializedName(value = "deadlineForFeatureUpdatesInDays", alternate = {"DeadlineForFeatureUpdatesInDays"})
     @Expose
@@ -84,7 +83,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Deadline For Quality Updates In Days.
-     * Number of days before quality updates are installed automatically with valid range from 0 to 30 days
+     * Number of days before quality updates are installed automatically with valid range from 2 to 30 days
      */
     @SerializedName(value = "deadlineForQualityUpdatesInDays", alternate = {"DeadlineForQualityUpdatesInDays"})
     @Expose
@@ -368,7 +367,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
     @Expose
 	@Nullable
-    public WindowsUpdateStateCollectionPage deviceUpdateStates;
+    public com.microsoft.graph.requests.WindowsUpdateStateCollectionPage deviceUpdateStates;
 
 
     /**
@@ -381,7 +380,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
         if (json.has("deviceUpdateStates")) {
-            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates"), WindowsUpdateStateCollectionPage.class);
+            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates"), com.microsoft.graph.requests.WindowsUpdateStateCollectionPage.class);
         }
     }
 }

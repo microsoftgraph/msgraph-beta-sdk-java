@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RiskDetail;
 import com.microsoft.graph.models.RiskLevel;
 import com.microsoft.graph.models.RiskState;
-import com.microsoft.graph.models.RiskyServicePrincipalHistoryItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionPage;
 
@@ -119,7 +118,7 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
     @SerializedName(value = "history", alternate = {"History"})
     @Expose
 	@Nullable
-    public RiskyServicePrincipalHistoryItemCollectionPage history;
+    public com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionPage history;
 
 
     /**
@@ -132,7 +131,7 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
 
 
         if (json.has("history")) {
-            history = serializer.deserializeObject(json.get("history"), RiskyServicePrincipalHistoryItemCollectionPage.class);
+            history = serializer.deserializeObject(json.get("history"), com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionPage.class);
         }
     }
 }

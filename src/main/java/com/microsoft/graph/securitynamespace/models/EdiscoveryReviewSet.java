@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.security.models.EdiscoveryFile;
-import com.microsoft.graph.security.models.EdiscoveryReviewSetQuery;
 import com.microsoft.graph.security.models.DataSet;
 import com.microsoft.graph.security.requests.EdiscoveryFileCollectionPage;
 import com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionPage;
@@ -32,21 +30,21 @@ public class EdiscoveryReviewSet extends DataSet implements IJsonBackedObject {
 
     /**
      * The Files.
-     * Represents files within the review set.
+     * 
      */
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose
 	@Nullable
-    public EdiscoveryFileCollectionPage files;
+    public com.microsoft.graph.security.requests.EdiscoveryFileCollectionPage files;
 
     /**
      * The Queries.
-     * Represents queries within the review set.
+     * 
      */
     @SerializedName(value = "queries", alternate = {"Queries"})
     @Expose
 	@Nullable
-    public EdiscoveryReviewSetQueryCollectionPage queries;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionPage queries;
 
 
     /**
@@ -59,11 +57,11 @@ public class EdiscoveryReviewSet extends DataSet implements IJsonBackedObject {
 
 
         if (json.has("files")) {
-            files = serializer.deserializeObject(json.get("files"), EdiscoveryFileCollectionPage.class);
+            files = serializer.deserializeObject(json.get("files"), com.microsoft.graph.security.requests.EdiscoveryFileCollectionPage.class);
         }
 
         if (json.has("queries")) {
-            queries = serializer.deserializeObject(json.get("queries"), EdiscoveryReviewSetQueryCollectionPage.class);
+            queries = serializer.deserializeObject(json.get("queries"), com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionPage.class);
         }
     }
 }

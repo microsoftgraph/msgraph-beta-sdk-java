@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfile;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfileAssignment;
-import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class WindowsFeatureUpdateProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder assignments() {
-        return new WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class WindowsFeatureUpdateProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsFeatureUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new WindowsFeatureUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

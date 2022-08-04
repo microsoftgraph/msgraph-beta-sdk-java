@@ -9,9 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ServicePrincipalCreationConditionSet;
 import com.microsoft.graph.models.PolicyBase;
-import com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -44,7 +42,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements IJsonB
     @SerializedName(value = "excludes", alternate = {"Excludes"})
     @Expose
 	@Nullable
-    public ServicePrincipalCreationConditionSetCollectionPage excludes;
+    public com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionPage excludes;
 
     /**
      * The Includes.
@@ -53,7 +51,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements IJsonB
     @SerializedName(value = "includes", alternate = {"Includes"})
     @Expose
 	@Nullable
-    public ServicePrincipalCreationConditionSetCollectionPage includes;
+    public com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionPage includes;
 
 
     /**
@@ -66,11 +64,11 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements IJsonB
 
 
         if (json.has("excludes")) {
-            excludes = serializer.deserializeObject(json.get("excludes"), ServicePrincipalCreationConditionSetCollectionPage.class);
+            excludes = serializer.deserializeObject(json.get("excludes"), com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionPage.class);
         }
 
         if (json.has("includes")) {
-            includes = serializer.deserializeObject(json.get("includes"), ServicePrincipalCreationConditionSetCollectionPage.class);
+            includes = serializer.deserializeObject(json.get("includes"), com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionPage.class);
         }
     }
 }

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.WindowsManagedAppProtection;
+import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ManagedMobileAppCollectionRequestBuilder extends BaseCollectionRequestBuilder<ManagedMobileApp, ManagedMobileAppRequestBuilder, ManagedMobileAppCollectionResponse, ManagedMobileAppCollectionPage, ManagedMobileAppCollectionRequest> {
 
     /**
-     * The request builder for this collection of WindowsManagedAppProtection
+     * The request builder for this collection of TargetedManagedAppConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

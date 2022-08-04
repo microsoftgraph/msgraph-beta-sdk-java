@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.Customer;
 import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.SalesInvoiceLine;
 import com.microsoft.graph.models.ShipmentMethod;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SalesInvoiceLineCollectionPage;
@@ -364,7 +363,7 @@ public class SalesInvoice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesInvoiceLines", alternate = {"SalesInvoiceLines"})
     @Expose
 	@Nullable
-    public SalesInvoiceLineCollectionPage salesInvoiceLines;
+    public com.microsoft.graph.requests.SalesInvoiceLineCollectionPage salesInvoiceLines;
 
     /**
      * The Shipment Method.
@@ -386,7 +385,7 @@ public class SalesInvoice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("salesInvoiceLines")) {
-            salesInvoiceLines = serializer.deserializeObject(json.get("salesInvoiceLines"), SalesInvoiceLineCollectionPage.class);
+            salesInvoiceLines = serializer.deserializeObject(json.get("salesInvoiceLines"), com.microsoft.graph.requests.SalesInvoiceLineCollectionPage.class);
         }
     }
 }

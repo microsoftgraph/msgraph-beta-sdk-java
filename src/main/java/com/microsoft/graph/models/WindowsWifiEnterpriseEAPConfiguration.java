@@ -17,7 +17,6 @@ import com.microsoft.graph.models.NetworkSingleSignOnType;
 import com.microsoft.graph.models.WindowsCertificateProfileBase;
 import com.microsoft.graph.models.Windows81TrustedRootCertificate;
 import com.microsoft.graph.models.WindowsWifiConfiguration;
-import com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -275,7 +274,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose
 	@Nullable
-    public Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    public com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 
     /**
@@ -288,7 +287,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), Windows81TrustedRootCertificateCollectionPage.class);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage.class);
         }
     }
 }

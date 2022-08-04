@@ -9,31 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.managedtenants.models.AggregatedPolicyCompliance;
-import com.microsoft.graph.managedtenants.models.AuditEvent;
-import com.microsoft.graph.managedtenants.models.CloudPcConnection;
-import com.microsoft.graph.managedtenants.models.CloudPcDevice;
-import com.microsoft.graph.managedtenants.models.CloudPcOverview;
-import com.microsoft.graph.managedtenants.models.ConditionalAccessPolicyCoverage;
-import com.microsoft.graph.managedtenants.models.CredentialUserRegistrationsSummary;
-import com.microsoft.graph.managedtenants.models.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.managedtenants.models.ManagedDeviceCompliance;
-import com.microsoft.graph.managedtenants.models.ManagedDeviceComplianceTrend;
-import com.microsoft.graph.managedtenants.models.ManagementAction;
-import com.microsoft.graph.managedtenants.models.ManagementActionTenantDeploymentStatus;
-import com.microsoft.graph.managedtenants.models.ManagementIntent;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
-import com.microsoft.graph.managedtenants.models.ManagementTemplate;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
-import com.microsoft.graph.managedtenants.models.MyRole;
-import com.microsoft.graph.managedtenants.models.TenantGroup;
-import com.microsoft.graph.managedtenants.models.Tenant;
-import com.microsoft.graph.managedtenants.models.TenantCustomizedInformation;
-import com.microsoft.graph.managedtenants.models.TenantDetailedInformation;
-import com.microsoft.graph.managedtenants.models.TenantTag;
-import com.microsoft.graph.managedtenants.models.WindowsDeviceMalwareState;
-import com.microsoft.graph.managedtenants.models.WindowsProtectionState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.AuditEventCollectionPage;
@@ -83,7 +58,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "aggregatedPolicyCompliances", alternate = {"AggregatedPolicyCompliances"})
     @Expose
 	@Nullable
-    public AggregatedPolicyComplianceCollectionPage aggregatedPolicyCompliances;
+    public com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage aggregatedPolicyCompliances;
 
     /**
      * The Audit Events.
@@ -92,7 +67,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
     @Expose
 	@Nullable
-    public AuditEventCollectionPage auditEvents;
+    public com.microsoft.graph.managedtenants.requests.AuditEventCollectionPage auditEvents;
 
     /**
      * The Cloud Pc Connections.
@@ -101,7 +76,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cloudPcConnections", alternate = {"CloudPcConnections"})
     @Expose
 	@Nullable
-    public CloudPcConnectionCollectionPage cloudPcConnections;
+    public com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionPage cloudPcConnections;
 
     /**
      * The Cloud Pc Devices.
@@ -110,7 +85,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cloudPcDevices", alternate = {"CloudPcDevices"})
     @Expose
 	@Nullable
-    public CloudPcDeviceCollectionPage cloudPcDevices;
+    public com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionPage cloudPcDevices;
 
     /**
      * The Cloud Pcs Overview.
@@ -119,7 +94,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "cloudPcsOverview", alternate = {"CloudPcsOverview"})
     @Expose
 	@Nullable
-    public CloudPcOverviewCollectionPage cloudPcsOverview;
+    public com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionPage cloudPcsOverview;
 
     /**
      * The Conditional Access Policy Coverages.
@@ -128,7 +103,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "conditionalAccessPolicyCoverages", alternate = {"ConditionalAccessPolicyCoverages"})
     @Expose
 	@Nullable
-    public ConditionalAccessPolicyCoverageCollectionPage conditionalAccessPolicyCoverages;
+    public com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageCollectionPage conditionalAccessPolicyCoverages;
 
     /**
      * The Credential User Registrations Summaries.
@@ -137,7 +112,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "credentialUserRegistrationsSummaries", alternate = {"CredentialUserRegistrationsSummaries"})
     @Expose
 	@Nullable
-    public CredentialUserRegistrationsSummaryCollectionPage credentialUserRegistrationsSummaries;
+    public com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionPage credentialUserRegistrationsSummaries;
 
     /**
      * The Device Compliance Policy Setting State Summaries.
@@ -146,7 +121,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
     @Expose
 	@Nullable
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
+    public com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
     /**
      * The Managed Device Compliances.
@@ -155,7 +130,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedDeviceCompliances", alternate = {"ManagedDeviceCompliances"})
     @Expose
 	@Nullable
-    public ManagedDeviceComplianceCollectionPage managedDeviceCompliances;
+    public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionPage managedDeviceCompliances;
 
     /**
      * The Managed Device Compliance Trends.
@@ -164,7 +139,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedDeviceComplianceTrends", alternate = {"ManagedDeviceComplianceTrends"})
     @Expose
 	@Nullable
-    public ManagedDeviceComplianceTrendCollectionPage managedDeviceComplianceTrends;
+    public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage managedDeviceComplianceTrends;
 
     /**
      * The Management Actions.
@@ -173,7 +148,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementActions", alternate = {"ManagementActions"})
     @Expose
 	@Nullable
-    public ManagementActionCollectionPage managementActions;
+    public com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPage managementActions;
 
     /**
      * The Management Action Tenant Deployment Statuses.
@@ -182,7 +157,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementActionTenantDeploymentStatuses", alternate = {"ManagementActionTenantDeploymentStatuses"})
     @Expose
 	@Nullable
-    public ManagementActionTenantDeploymentStatusCollectionPage managementActionTenantDeploymentStatuses;
+    public com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage managementActionTenantDeploymentStatuses;
 
     /**
      * The Management Intents.
@@ -191,7 +166,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementIntents", alternate = {"ManagementIntents"})
     @Expose
 	@Nullable
-    public ManagementIntentCollectionPage managementIntents;
+    public com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage managementIntents;
 
     /**
      * The Management Template Collections.
@@ -200,7 +175,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementTemplateCollections", alternate = {"ManagementTemplateCollections"})
     @Expose
 	@Nullable
-    public ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
 
     /**
      * The Management Templates.
@@ -209,7 +184,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementTemplates", alternate = {"ManagementTemplates"})
     @Expose
 	@Nullable
-    public ManagementTemplateCollectionPage managementTemplates;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage managementTemplates;
 
     /**
      * The Management Template Steps.
@@ -218,7 +193,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementTemplateSteps", alternate = {"ManagementTemplateSteps"})
     @Expose
 	@Nullable
-    public ManagementTemplateStepCollectionPage managementTemplateSteps;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage managementTemplateSteps;
 
     /**
      * The Management Template Step Versions.
@@ -227,16 +202,16 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementTemplateStepVersions", alternate = {"ManagementTemplateStepVersions"})
     @Expose
 	@Nullable
-    public ManagementTemplateStepVersionCollectionPage managementTemplateStepVersions;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage managementTemplateStepVersions;
 
     /**
      * The My Roles.
-     * The collection of role assignments to a signed-in user for a managed tenant.
+     * 
      */
     @SerializedName(value = "myRoles", alternate = {"MyRoles"})
     @Expose
 	@Nullable
-    public MyRoleCollectionPage myRoles;
+    public com.microsoft.graph.managedtenants.requests.MyRoleCollectionPage myRoles;
 
     /**
      * The Tenant Groups.
@@ -245,7 +220,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tenantGroups", alternate = {"TenantGroups"})
     @Expose
 	@Nullable
-    public TenantGroupCollectionPage tenantGroups;
+    public com.microsoft.graph.managedtenants.requests.TenantGroupCollectionPage tenantGroups;
 
     /**
      * The Tenants.
@@ -254,7 +229,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tenants", alternate = {"Tenants"})
     @Expose
 	@Nullable
-    public TenantCollectionPage tenants;
+    public com.microsoft.graph.managedtenants.requests.TenantCollectionPage tenants;
 
     /**
      * The Tenants Customized Information.
@@ -263,7 +238,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tenantsCustomizedInformation", alternate = {"TenantsCustomizedInformation"})
     @Expose
 	@Nullable
-    public TenantCustomizedInformationCollectionPage tenantsCustomizedInformation;
+    public com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionPage tenantsCustomizedInformation;
 
     /**
      * The Tenants Detailed Information.
@@ -272,7 +247,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tenantsDetailedInformation", alternate = {"TenantsDetailedInformation"})
     @Expose
 	@Nullable
-    public TenantDetailedInformationCollectionPage tenantsDetailedInformation;
+    public com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionPage tenantsDetailedInformation;
 
     /**
      * The Tenant Tags.
@@ -281,7 +256,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tenantTags", alternate = {"TenantTags"})
     @Expose
 	@Nullable
-    public TenantTagCollectionPage tenantTags;
+    public com.microsoft.graph.managedtenants.requests.TenantTagCollectionPage tenantTags;
 
     /**
      * The Windows Device Malware States.
@@ -290,7 +265,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsDeviceMalwareStates", alternate = {"WindowsDeviceMalwareStates"})
     @Expose
 	@Nullable
-    public WindowsDeviceMalwareStateCollectionPage windowsDeviceMalwareStates;
+    public com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionPage windowsDeviceMalwareStates;
 
     /**
      * The Windows Protection States.
@@ -299,7 +274,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsProtectionStates", alternate = {"WindowsProtectionStates"})
     @Expose
 	@Nullable
-    public WindowsProtectionStateCollectionPage windowsProtectionStates;
+    public com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionPage windowsProtectionStates;
 
 
     /**
@@ -312,103 +287,103 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
 
         if (json.has("aggregatedPolicyCompliances")) {
-            aggregatedPolicyCompliances = serializer.deserializeObject(json.get("aggregatedPolicyCompliances"), AggregatedPolicyComplianceCollectionPage.class);
+            aggregatedPolicyCompliances = serializer.deserializeObject(json.get("aggregatedPolicyCompliances"), com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage.class);
         }
 
         if (json.has("auditEvents")) {
-            auditEvents = serializer.deserializeObject(json.get("auditEvents"), AuditEventCollectionPage.class);
+            auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.managedtenants.requests.AuditEventCollectionPage.class);
         }
 
         if (json.has("cloudPcConnections")) {
-            cloudPcConnections = serializer.deserializeObject(json.get("cloudPcConnections"), CloudPcConnectionCollectionPage.class);
+            cloudPcConnections = serializer.deserializeObject(json.get("cloudPcConnections"), com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionPage.class);
         }
 
         if (json.has("cloudPcDevices")) {
-            cloudPcDevices = serializer.deserializeObject(json.get("cloudPcDevices"), CloudPcDeviceCollectionPage.class);
+            cloudPcDevices = serializer.deserializeObject(json.get("cloudPcDevices"), com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionPage.class);
         }
 
         if (json.has("cloudPcsOverview")) {
-            cloudPcsOverview = serializer.deserializeObject(json.get("cloudPcsOverview"), CloudPcOverviewCollectionPage.class);
+            cloudPcsOverview = serializer.deserializeObject(json.get("cloudPcsOverview"), com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionPage.class);
         }
 
         if (json.has("conditionalAccessPolicyCoverages")) {
-            conditionalAccessPolicyCoverages = serializer.deserializeObject(json.get("conditionalAccessPolicyCoverages"), ConditionalAccessPolicyCoverageCollectionPage.class);
+            conditionalAccessPolicyCoverages = serializer.deserializeObject(json.get("conditionalAccessPolicyCoverages"), com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageCollectionPage.class);
         }
 
         if (json.has("credentialUserRegistrationsSummaries")) {
-            credentialUserRegistrationsSummaries = serializer.deserializeObject(json.get("credentialUserRegistrationsSummaries"), CredentialUserRegistrationsSummaryCollectionPage.class);
+            credentialUserRegistrationsSummaries = serializer.deserializeObject(json.get("credentialUserRegistrationsSummaries"), com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
+            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
         }
 
         if (json.has("managedDeviceCompliances")) {
-            managedDeviceCompliances = serializer.deserializeObject(json.get("managedDeviceCompliances"), ManagedDeviceComplianceCollectionPage.class);
+            managedDeviceCompliances = serializer.deserializeObject(json.get("managedDeviceCompliances"), com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionPage.class);
         }
 
         if (json.has("managedDeviceComplianceTrends")) {
-            managedDeviceComplianceTrends = serializer.deserializeObject(json.get("managedDeviceComplianceTrends"), ManagedDeviceComplianceTrendCollectionPage.class);
+            managedDeviceComplianceTrends = serializer.deserializeObject(json.get("managedDeviceComplianceTrends"), com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage.class);
         }
 
         if (json.has("managementActions")) {
-            managementActions = serializer.deserializeObject(json.get("managementActions"), ManagementActionCollectionPage.class);
+            managementActions = serializer.deserializeObject(json.get("managementActions"), com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPage.class);
         }
 
         if (json.has("managementActionTenantDeploymentStatuses")) {
-            managementActionTenantDeploymentStatuses = serializer.deserializeObject(json.get("managementActionTenantDeploymentStatuses"), ManagementActionTenantDeploymentStatusCollectionPage.class);
+            managementActionTenantDeploymentStatuses = serializer.deserializeObject(json.get("managementActionTenantDeploymentStatuses"), com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage.class);
         }
 
         if (json.has("managementIntents")) {
-            managementIntents = serializer.deserializeObject(json.get("managementIntents"), ManagementIntentCollectionPage.class);
+            managementIntents = serializer.deserializeObject(json.get("managementIntents"), com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage.class);
         }
 
         if (json.has("managementTemplateCollections")) {
-            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionObjectCollectionPage.class);
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage.class);
         }
 
         if (json.has("managementTemplates")) {
-            managementTemplates = serializer.deserializeObject(json.get("managementTemplates"), ManagementTemplateCollectionPage.class);
+            managementTemplates = serializer.deserializeObject(json.get("managementTemplates"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage.class);
         }
 
         if (json.has("managementTemplateSteps")) {
-            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), ManagementTemplateStepCollectionPage.class);
+            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage.class);
         }
 
         if (json.has("managementTemplateStepVersions")) {
-            managementTemplateStepVersions = serializer.deserializeObject(json.get("managementTemplateStepVersions"), ManagementTemplateStepVersionCollectionPage.class);
+            managementTemplateStepVersions = serializer.deserializeObject(json.get("managementTemplateStepVersions"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage.class);
         }
 
         if (json.has("myRoles")) {
-            myRoles = serializer.deserializeObject(json.get("myRoles"), MyRoleCollectionPage.class);
+            myRoles = serializer.deserializeObject(json.get("myRoles"), com.microsoft.graph.managedtenants.requests.MyRoleCollectionPage.class);
         }
 
         if (json.has("tenantGroups")) {
-            tenantGroups = serializer.deserializeObject(json.get("tenantGroups"), TenantGroupCollectionPage.class);
+            tenantGroups = serializer.deserializeObject(json.get("tenantGroups"), com.microsoft.graph.managedtenants.requests.TenantGroupCollectionPage.class);
         }
 
         if (json.has("tenants")) {
-            tenants = serializer.deserializeObject(json.get("tenants"), TenantCollectionPage.class);
+            tenants = serializer.deserializeObject(json.get("tenants"), com.microsoft.graph.managedtenants.requests.TenantCollectionPage.class);
         }
 
         if (json.has("tenantsCustomizedInformation")) {
-            tenantsCustomizedInformation = serializer.deserializeObject(json.get("tenantsCustomizedInformation"), TenantCustomizedInformationCollectionPage.class);
+            tenantsCustomizedInformation = serializer.deserializeObject(json.get("tenantsCustomizedInformation"), com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionPage.class);
         }
 
         if (json.has("tenantsDetailedInformation")) {
-            tenantsDetailedInformation = serializer.deserializeObject(json.get("tenantsDetailedInformation"), TenantDetailedInformationCollectionPage.class);
+            tenantsDetailedInformation = serializer.deserializeObject(json.get("tenantsDetailedInformation"), com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionPage.class);
         }
 
         if (json.has("tenantTags")) {
-            tenantTags = serializer.deserializeObject(json.get("tenantTags"), TenantTagCollectionPage.class);
+            tenantTags = serializer.deserializeObject(json.get("tenantTags"), com.microsoft.graph.managedtenants.requests.TenantTagCollectionPage.class);
         }
 
         if (json.has("windowsDeviceMalwareStates")) {
-            windowsDeviceMalwareStates = serializer.deserializeObject(json.get("windowsDeviceMalwareStates"), WindowsDeviceMalwareStateCollectionPage.class);
+            windowsDeviceMalwareStates = serializer.deserializeObject(json.get("windowsDeviceMalwareStates"), com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionPage.class);
         }
 
         if (json.has("windowsProtectionStates")) {
-            windowsProtectionStates = serializer.deserializeObject(json.get("windowsProtectionStates"), WindowsProtectionStateCollectionPage.class);
+            windowsProtectionStates = serializer.deserializeObject(json.get("windowsProtectionStates"), com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionPage.class);
         }
     }
 }

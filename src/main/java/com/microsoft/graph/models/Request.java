@@ -46,7 +46,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The principal that created the request.
+     * The user who created this request.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose

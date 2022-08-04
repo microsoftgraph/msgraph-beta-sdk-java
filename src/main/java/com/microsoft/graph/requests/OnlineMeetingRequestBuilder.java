@@ -10,12 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.MeetingParticipants;
-import com.microsoft.graph.requests.VirtualAppointmentRequestBuilder;
-import com.microsoft.graph.requests.MeetingAttendanceReportCollectionRequestBuilder;
-import com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrationRequestBuilder;
-import com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder;
-import com.microsoft.graph.requests.CallTranscriptRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,24 +58,14 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     }
 
 
-
-    /**
-     * Gets the request builder for VirtualAppointment
-     *
-     * @return the VirtualAppointmentRequestBuilder instance
-     */
-    @Nonnull
-    public VirtualAppointmentRequestBuilder virtualAppointment() {
-        return new VirtualAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("virtualAppointment"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the MeetingAttendanceReport collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public MeetingAttendanceReportCollectionRequestBuilder attendanceReports() {
-        return new MeetingAttendanceReportCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports"), getClient(), null);
+    public com.microsoft.graph.requests.MeetingAttendanceReportCollectionRequestBuilder attendanceReports() {
+        return new com.microsoft.graph.requests.MeetingAttendanceReportCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports"), getClient(), null);
     }
 
     /**
@@ -91,8 +75,8 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
      * @param id the item identifier
      */
     @Nonnull
-    public MeetingAttendanceReportRequestBuilder attendanceReports(@Nonnull final String id) {
-        return new MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder attendanceReports(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports") + "/" + id, getClient(), null);
     }
 
     /**
@@ -101,8 +85,8 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
      * @return the MeetingAttendanceReportRequestBuilder instance
      */
     @Nonnull
-    public MeetingAttendanceReportRequestBuilder meetingAttendanceReport() {
-        return new MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("meetingAttendanceReport"), getClient(), null);
+    public com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder meetingAttendanceReport() {
+        return new com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("meetingAttendanceReport"), getClient(), null);
     }
 
     /**
@@ -111,28 +95,8 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
      * @return the MeetingRegistrationRequestBuilder instance
      */
     @Nonnull
-    public MeetingRegistrationRequestBuilder registration() {
-        return new MeetingRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("registration"), getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the CallTranscript collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public CallTranscriptCollectionRequestBuilder transcripts() {
-        return new CallTranscriptCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the CallTranscript item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public CallTranscriptRequestBuilder transcripts(@Nonnull final String id) {
-        return new CallTranscriptRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrationRequestBuilder registration() {
+        return new com.microsoft.graph.requests.MeetingRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("registration"), getClient(), null);
     }
 
     /**

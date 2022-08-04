@@ -13,7 +13,6 @@ import com.microsoft.graph.models.ActionStep;
 import com.microsoft.graph.models.RecommendationCategory;
 import com.microsoft.graph.models.RecommendationPriority;
 import com.microsoft.graph.models.RecommendationStatus;
-import com.microsoft.graph.models.RecommendationResource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.RecommendationResourceCollectionPage;
 
@@ -165,7 +164,7 @@ public class Recommendation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "impactedResources", alternate = {"ImpactedResources"})
     @Expose
 	@Nullable
-    public RecommendationResourceCollectionPage impactedResources;
+    public com.microsoft.graph.requests.RecommendationResourceCollectionPage impactedResources;
 
 
     /**
@@ -178,7 +177,7 @@ public class Recommendation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("impactedResources")) {
-            impactedResources = serializer.deserializeObject(json.get("impactedResources"), RecommendationResourceCollectionPage.class);
+            impactedResources = serializer.deserializeObject(json.get("impactedResources"), com.microsoft.graph.requests.RecommendationResourceCollectionPage.class);
         }
     }
 }

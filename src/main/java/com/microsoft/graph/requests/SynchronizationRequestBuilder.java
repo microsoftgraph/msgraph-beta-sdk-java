@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.models.SynchronizationSecretKeyStringValuePair;
-import com.microsoft.graph.requests.SynchronizationJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.SynchronizationJobRequestBuilder;
-import com.microsoft.graph.requests.SynchronizationTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.SynchronizationTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder<Synchroniz
      * @return the collection request builder
      */
     @Nonnull
-    public SynchronizationJobCollectionRequestBuilder jobs() {
-        return new SynchronizationJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    public com.microsoft.graph.requests.SynchronizationJobCollectionRequestBuilder jobs() {
+        return new com.microsoft.graph.requests.SynchronizationJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
     }
 
     /**
@@ -79,8 +75,8 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder<Synchroniz
      * @param id the item identifier
      */
     @Nonnull
-    public SynchronizationJobRequestBuilder jobs(@Nonnull final String id) {
-        return new SynchronizationJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SynchronizationJobRequestBuilder jobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SynchronizationJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SynchronizationTemplate collection
@@ -88,8 +84,8 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder<Synchroniz
      * @return the collection request builder
      */
     @Nonnull
-    public SynchronizationTemplateCollectionRequestBuilder templates() {
-        return new SynchronizationTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("templates"), getClient(), null);
+    public com.microsoft.graph.requests.SynchronizationTemplateCollectionRequestBuilder templates() {
+        return new com.microsoft.graph.requests.SynchronizationTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("templates"), getClient(), null);
     }
 
     /**
@@ -99,8 +95,8 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder<Synchroniz
      * @param id the item identifier
      */
     @Nonnull
-    public SynchronizationTemplateRequestBuilder templates(@Nonnull final String id) {
-        return new SynchronizationTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("templates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SynchronizationTemplateRequestBuilder templates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SynchronizationTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("templates") + "/" + id, getClient(), null);
     }
 
     /**

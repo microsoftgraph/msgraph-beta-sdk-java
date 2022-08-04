@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementResourceAccessProfileAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionPage;
 
@@ -89,7 +88,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceManagementResourceAccessProfileAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionPage assignments;
 
 
     /**
@@ -102,7 +101,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceManagementResourceAccessProfileAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionPage.class);
         }
     }
 }

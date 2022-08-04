@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceHealthScriptParameter;
 import com.microsoft.graph.models.RunAsAccountType;
-import com.microsoft.graph.models.DeviceHealthScriptAssignment;
-import com.microsoft.graph.models.DeviceHealthScriptDeviceState;
 import com.microsoft.graph.models.DeviceHealthScriptRunSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionPage;
@@ -184,7 +182,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceHealthScriptAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionPage assignments;
 
     /**
      * The Device Run States.
@@ -193,7 +191,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
 	@Nullable
-    public DeviceHealthScriptDeviceStateCollectionPage deviceRunStates;
+    public com.microsoft.graph.requests.DeviceHealthScriptDeviceStateCollectionPage deviceRunStates;
 
     /**
      * The Run Summary.
@@ -215,11 +213,11 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceHealthScriptAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceRunStates")) {
-            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), DeviceHealthScriptDeviceStateCollectionPage.class);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), com.microsoft.graph.requests.DeviceHealthScriptDeviceStateCollectionPage.class);
         }
     }
 }

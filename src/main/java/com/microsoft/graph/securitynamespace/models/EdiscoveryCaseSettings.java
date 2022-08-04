@@ -30,7 +30,7 @@ public class EdiscoveryCaseSettings extends Entity implements IJsonBackedObject 
 
     /**
      * The Ocr.
-     * The OCR (Optical Character Recognition) settings for the case.
+     * 
      */
     @SerializedName(value = "ocr", alternate = {"Ocr"})
     @Expose
@@ -39,7 +39,7 @@ public class EdiscoveryCaseSettings extends Entity implements IJsonBackedObject 
 
     /**
      * The Redundancy Detection.
-     * The redundancy (near duplicate and email threading) detection settings for the case.
+     * 
      */
     @SerializedName(value = "redundancyDetection", alternate = {"RedundancyDetection"})
     @Expose
@@ -48,7 +48,7 @@ public class EdiscoveryCaseSettings extends Entity implements IJsonBackedObject 
 
     /**
      * The Topic Modeling.
-     * The Topic Modeling (Themes) settings for the case.
+     * 
      */
     @SerializedName(value = "topicModeling", alternate = {"TopicModeling"})
     @Expose

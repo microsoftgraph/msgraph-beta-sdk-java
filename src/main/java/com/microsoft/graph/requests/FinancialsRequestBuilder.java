@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Financials;
-import com.microsoft.graph.requests.CompanyCollectionRequestBuilder;
-import com.microsoft.graph.requests.CompanyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder<Financials> {
      * @return the collection request builder
      */
     @Nonnull
-    public CompanyCollectionRequestBuilder companies() {
-        return new CompanyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("companies"), getClient(), null);
+    public com.microsoft.graph.requests.CompanyCollectionRequestBuilder companies() {
+        return new com.microsoft.graph.requests.CompanyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("companies"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder<Financials> {
      * @param id the item identifier
      */
     @Nonnull
-    public CompanyRequestBuilder companies(@Nonnull final String id) {
-        return new CompanyRequestBuilder(getRequestUrlWithAdditionalSegment("companies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CompanyRequestBuilder companies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CompanyRequestBuilder(getRequestUrlWithAdditionalSegment("companies") + "/" + id, getClient(), null);
     }
 }

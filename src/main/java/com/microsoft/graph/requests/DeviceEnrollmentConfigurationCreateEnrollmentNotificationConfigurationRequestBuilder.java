@@ -6,9 +6,8 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequest;
 import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
-import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
+
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -30,19 +29,6 @@ public class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurat
      */
     public DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
-    }
-    private DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet body;
-    /**
-     * The request builder for this DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfiguration
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
-     */
-    public DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationParameterSet parameters) {
-        super(requestUrl, client, requestOptions);
-        this.body = parameters;
     }
 
     /**
@@ -68,7 +54,6 @@ public class DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurat
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
-        request.body = this.body;
         return request;
     }
 }

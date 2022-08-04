@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PlannerRoster;
-import com.microsoft.graph.requests.PlannerRosterMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.PlannerRosterMemberRequestBuilder;
-import com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.PlannerPlanWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class PlannerRosterRequestBuilder extends BaseRequestBuilder<PlannerRoste
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerRosterMemberCollectionRequestBuilder members() {
-        return new PlannerRosterMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerRosterMemberCollectionRequestBuilder members() {
+        return new com.microsoft.graph.requests.PlannerRosterMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class PlannerRosterRequestBuilder extends BaseRequestBuilder<PlannerRoste
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerRosterMemberRequestBuilder members(@Nonnull final String id) {
-        return new PlannerRosterMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerRosterMemberRequestBuilder members(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerRosterMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PlannerPlan collection
@@ -86,8 +82,8 @@ public class PlannerRosterRequestBuilder extends BaseRequestBuilder<PlannerRoste
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerPlanCollectionWithReferencesRequestBuilder plans() {
-        return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesRequestBuilder plans() {
+        return new com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class PlannerRosterRequestBuilder extends BaseRequestBuilder<PlannerRoste
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerPlanWithReferenceRequestBuilder plans(@Nonnull final String id) {
-        return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerPlanWithReferenceRequestBuilder plans(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }

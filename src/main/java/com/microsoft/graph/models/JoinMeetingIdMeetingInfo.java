@@ -27,7 +27,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements IJsonBacked
 
     /**
      * The Join Meeting Id.
-     * The ID used to join the meeting.
+     * 
      */
     @SerializedName(value = "joinMeetingId", alternate = {"JoinMeetingId"})
     @Expose
@@ -36,7 +36,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements IJsonBacked
 
     /**
      * The Passcode.
-     * The passcode used to join the meeting. Optional.
+     * 
      */
     @SerializedName(value = "passcode", alternate = {"Passcode"})
     @Expose

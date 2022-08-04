@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsDeviceHealthState;
 import com.microsoft.graph.models.WindowsDefenderProductStatus;
-import com.microsoft.graph.models.WindowsDeviceMalwareState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsDeviceMalwareStateCollectionPage;
 
@@ -217,7 +216,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     @SerializedName(value = "detectedMalwareState", alternate = {"DetectedMalwareState"})
     @Expose
 	@Nullable
-    public WindowsDeviceMalwareStateCollectionPage detectedMalwareState;
+    public com.microsoft.graph.requests.WindowsDeviceMalwareStateCollectionPage detectedMalwareState;
 
 
     /**
@@ -230,7 +229,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
 
         if (json.has("detectedMalwareState")) {
-            detectedMalwareState = serializer.deserializeObject(json.get("detectedMalwareState"), WindowsDeviceMalwareStateCollectionPage.class);
+            detectedMalwareState = serializer.deserializeObject(json.get("detectedMalwareState"), com.microsoft.graph.requests.WindowsDeviceMalwareStateCollectionPage.class);
         }
     }
 }

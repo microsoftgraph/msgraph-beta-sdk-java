@@ -63,7 +63,7 @@ public class GroupPolicyPresentationComboBoxRequestBuilder extends BaseRequestBu
      * @return the GroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
-        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

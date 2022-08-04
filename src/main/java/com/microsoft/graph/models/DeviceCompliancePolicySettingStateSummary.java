@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PolicyPlatformType;
-import com.microsoft.graph.models.DeviceComplianceSettingState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceComplianceSettingStateCollectionPage;
 
@@ -126,7 +125,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     @SerializedName(value = "deviceComplianceSettingStates", alternate = {"DeviceComplianceSettingStates"})
     @Expose
 	@Nullable
-    public DeviceComplianceSettingStateCollectionPage deviceComplianceSettingStates;
+    public com.microsoft.graph.requests.DeviceComplianceSettingStateCollectionPage deviceComplianceSettingStates;
 
 
     /**
@@ -139,7 +138,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
         if (json.has("deviceComplianceSettingStates")) {
-            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates"), DeviceComplianceSettingStateCollectionPage.class);
+            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates"), com.microsoft.graph.requests.DeviceComplianceSettingStateCollectionPage.class);
         }
     }
 }

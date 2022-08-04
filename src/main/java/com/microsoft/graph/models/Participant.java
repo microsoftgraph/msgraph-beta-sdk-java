@@ -39,15 +39,6 @@ public class Participant extends Entity implements IJsonBackedObject {
     public ParticipantInfo info;
 
     /**
-     * The Is Identity Anonymized.
-     * 
-     */
-    @SerializedName(value = "isIdentityAnonymized", alternate = {"IsIdentityAnonymized"})
-    @Expose
-	@Nullable
-    public Boolean isIdentityAnonymized;
-
-    /**
      * The Is In Lobby.
      * true if the participant is in lobby.
      */

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SmsAuthenticationMethodConfiguration;
-import com.microsoft.graph.requests.SmsAuthenticationMethodTargetCollectionRequestBuilder;
-import com.microsoft.graph.requests.SmsAuthenticationMethodTargetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class SmsAuthenticationMethodConfigurationRequestBuilder extends BaseRequ
      * @return the collection request builder
      */
     @Nonnull
-    public SmsAuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
-        return new SmsAuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
+    public com.microsoft.graph.requests.SmsAuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
+        return new com.microsoft.graph.requests.SmsAuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class SmsAuthenticationMethodConfigurationRequestBuilder extends BaseRequ
      * @param id the item identifier
      */
     @Nonnull
-    public SmsAuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
-        return new SmsAuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SmsAuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SmsAuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
     }
 }

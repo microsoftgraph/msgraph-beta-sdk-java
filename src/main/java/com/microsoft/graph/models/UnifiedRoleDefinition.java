@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UnifiedRolePermission;
-import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage;
 
@@ -108,7 +107,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "inheritsPermissionsFrom", alternate = {"InheritsPermissionsFrom"})
     @Expose
 	@Nullable
-    public UnifiedRoleDefinitionCollectionPage inheritsPermissionsFrom;
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage inheritsPermissionsFrom;
 
 
     /**
@@ -121,7 +120,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("inheritsPermissionsFrom")) {
-            inheritsPermissionsFrom = serializer.deserializeObject(json.get("inheritsPermissionsFrom"), UnifiedRoleDefinitionCollectionPage.class);
+            inheritsPermissionsFrom = serializer.deserializeObject(json.get("inheritsPermissionsFrom"), com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage.class);
         }
     }
 }

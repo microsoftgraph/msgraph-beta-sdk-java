@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Connector;
-import com.microsoft.graph.requests.ConnectorGroupCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ConnectorGroupWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder<Connector> {
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectorGroupCollectionWithReferencesRequestBuilder memberOf() {
-        return new ConnectorGroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder memberOf() {
+        return new com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder<Connector> {
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectorGroupWithReferenceRequestBuilder memberOf(@Nonnull final String id) {
-        return new ConnectorGroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConnectorGroupRequestBuilder memberOf(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
 }

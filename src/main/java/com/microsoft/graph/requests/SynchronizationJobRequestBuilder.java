@@ -12,7 +12,6 @@ import com.microsoft.graph.models.SynchronizationJobApplicationParameters;
 import com.microsoft.graph.models.StringKeyStringValuePair;
 import com.microsoft.graph.models.SynchronizationJobRestartCriteria;
 import com.microsoft.graph.models.SynchronizationSecretKeyStringValuePair;
-import com.microsoft.graph.requests.SynchronizationSchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +70,8 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder<Synchro
      * @return the SynchronizationSchemaRequestBuilder instance
      */
     @Nonnull
-    public SynchronizationSchemaRequestBuilder schema() {
-        return new SynchronizationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
+    public com.microsoft.graph.requests.SynchronizationSchemaRequestBuilder schema() {
+        return new com.microsoft.graph.requests.SynchronizationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 
     /**

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ProgramControl;
-import com.microsoft.graph.requests.ProgramRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class ProgramControlRequestBuilder extends BaseRequestBuilder<ProgramCont
      * @return the ProgramRequestBuilder instance
      */
     @Nonnull
-    public ProgramRequestBuilder program() {
-        return new ProgramRequestBuilder(getRequestUrlWithAdditionalSegment("program"), getClient(), null);
+    public com.microsoft.graph.requests.ProgramRequestBuilder program() {
+        return new com.microsoft.graph.requests.ProgramRequestBuilder(getRequestUrlWithAdditionalSegment("program"), getClient(), null);
     }
 }

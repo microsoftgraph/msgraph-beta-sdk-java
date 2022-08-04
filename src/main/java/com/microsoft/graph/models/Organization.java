@@ -17,8 +17,6 @@ import com.microsoft.graph.models.VerifiedDomain;
 import com.microsoft.graph.models.CertificateConnectorSetting;
 import com.microsoft.graph.models.MdmAuthority;
 import com.microsoft.graph.models.OrganizationalBranding;
-import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
-import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.OrganizationSettings;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage;
@@ -257,7 +255,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Branding.
-     * Resource to manage the default branding for the organization. Nullable.
+     * 
      */
     @SerializedName(value = "branding", alternate = {"Branding"})
     @Expose
@@ -269,7 +267,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
 	@Nullable
-    public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
@@ -278,7 +276,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The Settings.
@@ -300,11 +298,11 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("certificateBasedAuthConfiguration")) {
-            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), CertificateBasedAuthConfigurationCollectionPage.class);
+            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
     }
 }

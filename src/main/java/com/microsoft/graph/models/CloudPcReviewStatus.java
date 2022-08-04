@@ -40,7 +40,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The Azure Storage Account Id.
-     * The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
+     * 
      */
     @SerializedName(value = "azureStorageAccountId", alternate = {"AzureStorageAccountId"})
     @Expose
@@ -49,7 +49,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The Azure Storage Account Name.
-     * The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
+     * 
      */
     @SerializedName(value = "azureStorageAccountName", alternate = {"AzureStorageAccountName"})
     @Expose
@@ -58,7 +58,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The In Review.
-     * True if the Cloud PC is set to in review by the administrator.
+     * 
      */
     @SerializedName(value = "inReview", alternate = {"InReview"})
     @Expose
@@ -67,7 +67,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The Restore Point Date Time.
-     * The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "restorePointDateTime", alternate = {"RestorePointDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The Review Start Date Time.
-     * The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "reviewStartDateTime", alternate = {"ReviewStartDateTime"})
     @Expose
@@ -85,7 +85,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The Subscription Id.
-     * The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
+     * 
      */
     @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose
@@ -94,7 +94,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The Subscription Name.
-     * The name of the Azure subscription in which the Cloud PC snapshot is being saved.
+     * 
      */
     @SerializedName(value = "subscriptionName", alternate = {"SubscriptionName"})
     @Expose
@@ -103,7 +103,7 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
 
     /**
      * The User Access Level.
-     * The access level of the end user on the Cloud PC. Possible values are: unrestricted, restricted.
+     * 
      */
     @SerializedName(value = "userAccessLevel", alternate = {"UserAccessLevel"})
     @Expose

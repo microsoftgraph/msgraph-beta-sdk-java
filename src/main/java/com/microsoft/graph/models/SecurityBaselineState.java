@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityBaselineComplianceState;
-import com.microsoft.graph.models.SecurityBaselineSettingState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SecurityBaselineSettingStateCollectionPage;
 
@@ -72,7 +71,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
     @SerializedName(value = "settingStates", alternate = {"SettingStates"})
     @Expose
 	@Nullable
-    public SecurityBaselineSettingStateCollectionPage settingStates;
+    public com.microsoft.graph.requests.SecurityBaselineSettingStateCollectionPage settingStates;
 
 
     /**
@@ -85,7 +84,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
 
 
         if (json.has("settingStates")) {
-            settingStates = serializer.deserializeObject(json.get("settingStates"), SecurityBaselineSettingStateCollectionPage.class);
+            settingStates = serializer.deserializeObject(json.get("settingStates"), com.microsoft.graph.requests.SecurityBaselineSettingStateCollectionPage.class);
         }
     }
 }

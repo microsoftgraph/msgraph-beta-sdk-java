@@ -207,15 +207,6 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerUserFacingMessage detailedHelpText;
 
     /**
-     * The Device Owner Lock Screen Message.
-     * Represents the customized lock screen message provided to users when they attempt to modify managed settings on their device.
-     */
-    @SerializedName(value = "deviceOwnerLockScreenMessage", alternate = {"DeviceOwnerLockScreenMessage"})
-    @Expose
-	@Nullable
-    public AndroidDeviceOwnerUserFacingMessage deviceOwnerLockScreenMessage;
-
-    /**
      * The Enrollment Profile.
      * Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
      */
@@ -963,15 +954,6 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean screenCaptureBlocked;
 
     /**
-     * The Security Common Criteria Mode Enabled.
-     * Represents the security common criteria mode enabled provided to users when they attempt to modify managed settings on their device.
-     */
-    @SerializedName(value = "securityCommonCriteriaModeEnabled", alternate = {"SecurityCommonCriteriaModeEnabled"})
-    @Expose
-	@Nullable
-    public Boolean securityCommonCriteriaModeEnabled;
-
-    /**
      * The Security Developer Settings Enabled.
      * Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.
      */
@@ -1240,15 +1222,6 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public AndroidDeviceOwnerRequiredPasswordType workProfilePasswordRequiredType;
-
-    /**
-     * The Work Profile Password Require Unlock.
-     * Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
-     */
-    @SerializedName(value = "workProfilePasswordRequireUnlock", alternate = {"WorkProfilePasswordRequireUnlock"})
-    @Expose
-	@Nullable
-    public AndroidDeviceOwnerRequiredPasswordUnlock workProfilePasswordRequireUnlock;
 
     /**
      * The Work Profile Password Sign In Failure Count Before Factory Reset.

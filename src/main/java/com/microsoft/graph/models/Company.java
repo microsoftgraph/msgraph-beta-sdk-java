@@ -9,41 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Account;
-import com.microsoft.graph.models.AgedAccountsPayable;
-import com.microsoft.graph.models.AgedAccountsReceivable;
-import com.microsoft.graph.models.CompanyInformation;
-import com.microsoft.graph.models.CountryRegion;
-import com.microsoft.graph.models.Currency;
-import com.microsoft.graph.models.CustomerPaymentJournal;
-import com.microsoft.graph.models.CustomerPayment;
-import com.microsoft.graph.models.Customer;
-import com.microsoft.graph.models.Dimension;
-import com.microsoft.graph.models.DimensionValue;
-import com.microsoft.graph.models.Employee;
-import com.microsoft.graph.models.GeneralLedgerEntry;
-import com.microsoft.graph.models.ItemCategory;
-import com.microsoft.graph.models.Item;
-import com.microsoft.graph.models.JournalLine;
-import com.microsoft.graph.models.Journal;
-import com.microsoft.graph.models.PaymentMethod;
-import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.Picture;
-import com.microsoft.graph.models.PurchaseInvoiceLine;
-import com.microsoft.graph.models.PurchaseInvoice;
-import com.microsoft.graph.models.SalesCreditMemoLine;
-import com.microsoft.graph.models.SalesCreditMemo;
-import com.microsoft.graph.models.SalesInvoiceLine;
-import com.microsoft.graph.models.SalesInvoice;
-import com.microsoft.graph.models.SalesOrderLine;
-import com.microsoft.graph.models.SalesOrder;
-import com.microsoft.graph.models.SalesQuoteLine;
-import com.microsoft.graph.models.SalesQuote;
-import com.microsoft.graph.models.ShipmentMethod;
-import com.microsoft.graph.models.TaxArea;
-import com.microsoft.graph.models.TaxGroup;
-import com.microsoft.graph.models.UnitOfMeasure;
-import com.microsoft.graph.models.Vendor;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccountCollectionPage;
 import com.microsoft.graph.requests.AgedAccountsPayableCollectionPage;
@@ -139,7 +104,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accounts", alternate = {"Accounts"})
     @Expose
 	@Nullable
-    public AccountCollectionPage accounts;
+    public com.microsoft.graph.requests.AccountCollectionPage accounts;
 
     /**
      * The Aged Accounts Payable.
@@ -148,7 +113,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "agedAccountsPayable", alternate = {"AgedAccountsPayable"})
     @Expose
 	@Nullable
-    public AgedAccountsPayableCollectionPage agedAccountsPayable;
+    public com.microsoft.graph.requests.AgedAccountsPayableCollectionPage agedAccountsPayable;
 
     /**
      * The Aged Accounts Receivable.
@@ -157,7 +122,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "agedAccountsReceivable", alternate = {"AgedAccountsReceivable"})
     @Expose
 	@Nullable
-    public AgedAccountsReceivableCollectionPage agedAccountsReceivable;
+    public com.microsoft.graph.requests.AgedAccountsReceivableCollectionPage agedAccountsReceivable;
 
     /**
      * The Company Information.
@@ -166,7 +131,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "companyInformation", alternate = {"CompanyInformation"})
     @Expose
 	@Nullable
-    public CompanyInformationCollectionPage companyInformation;
+    public com.microsoft.graph.requests.CompanyInformationCollectionPage companyInformation;
 
     /**
      * The Countries Regions.
@@ -175,7 +140,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "countriesRegions", alternate = {"CountriesRegions"})
     @Expose
 	@Nullable
-    public CountryRegionCollectionPage countriesRegions;
+    public com.microsoft.graph.requests.CountryRegionCollectionPage countriesRegions;
 
     /**
      * The Currencies.
@@ -184,7 +149,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "currencies", alternate = {"Currencies"})
     @Expose
 	@Nullable
-    public CurrencyCollectionPage currencies;
+    public com.microsoft.graph.requests.CurrencyCollectionPage currencies;
 
     /**
      * The Customer Payment Journals.
@@ -193,7 +158,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customerPaymentJournals", alternate = {"CustomerPaymentJournals"})
     @Expose
 	@Nullable
-    public CustomerPaymentJournalCollectionPage customerPaymentJournals;
+    public com.microsoft.graph.requests.CustomerPaymentJournalCollectionPage customerPaymentJournals;
 
     /**
      * The Customer Payments.
@@ -202,7 +167,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customerPayments", alternate = {"CustomerPayments"})
     @Expose
 	@Nullable
-    public CustomerPaymentCollectionPage customerPayments;
+    public com.microsoft.graph.requests.CustomerPaymentCollectionPage customerPayments;
 
     /**
      * The Customers.
@@ -211,7 +176,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose
 	@Nullable
-    public CustomerCollectionPage customers;
+    public com.microsoft.graph.requests.CustomerCollectionPage customers;
 
     /**
      * The Dimensions.
@@ -220,7 +185,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dimensions", alternate = {"Dimensions"})
     @Expose
 	@Nullable
-    public DimensionCollectionPage dimensions;
+    public com.microsoft.graph.requests.DimensionCollectionPage dimensions;
 
     /**
      * The Dimension Values.
@@ -229,7 +194,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dimensionValues", alternate = {"DimensionValues"})
     @Expose
 	@Nullable
-    public DimensionValueCollectionPage dimensionValues;
+    public com.microsoft.graph.requests.DimensionValueCollectionPage dimensionValues;
 
     /**
      * The Employees.
@@ -238,7 +203,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "employees", alternate = {"Employees"})
     @Expose
 	@Nullable
-    public EmployeeCollectionPage employees;
+    public com.microsoft.graph.requests.EmployeeCollectionPage employees;
 
     /**
      * The General Ledger Entries.
@@ -247,7 +212,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "generalLedgerEntries", alternate = {"GeneralLedgerEntries"})
     @Expose
 	@Nullable
-    public GeneralLedgerEntryCollectionPage generalLedgerEntries;
+    public com.microsoft.graph.requests.GeneralLedgerEntryCollectionPage generalLedgerEntries;
 
     /**
      * The Item Categories.
@@ -256,7 +221,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "itemCategories", alternate = {"ItemCategories"})
     @Expose
 	@Nullable
-    public ItemCategoryCollectionPage itemCategories;
+    public com.microsoft.graph.requests.ItemCategoryCollectionPage itemCategories;
 
     /**
      * The Items.
@@ -265,7 +230,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public ItemCollectionPage items;
+    public com.microsoft.graph.requests.ItemCollectionPage items;
 
     /**
      * The Journal Lines.
@@ -274,7 +239,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "journalLines", alternate = {"JournalLines"})
     @Expose
 	@Nullable
-    public JournalLineCollectionPage journalLines;
+    public com.microsoft.graph.requests.JournalLineCollectionPage journalLines;
 
     /**
      * The Journals.
@@ -283,7 +248,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "journals", alternate = {"Journals"})
     @Expose
 	@Nullable
-    public JournalCollectionPage journals;
+    public com.microsoft.graph.requests.JournalCollectionPage journals;
 
     /**
      * The Payment Methods.
@@ -292,7 +257,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "paymentMethods", alternate = {"PaymentMethods"})
     @Expose
 	@Nullable
-    public PaymentMethodCollectionPage paymentMethods;
+    public com.microsoft.graph.requests.PaymentMethodCollectionPage paymentMethods;
 
     /**
      * The Payment Terms.
@@ -301,7 +266,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "paymentTerms", alternate = {"PaymentTerms"})
     @Expose
 	@Nullable
-    public PaymentTermCollectionPage paymentTerms;
+    public com.microsoft.graph.requests.PaymentTermCollectionPage paymentTerms;
 
     /**
      * The Picture.
@@ -310,7 +275,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "picture", alternate = {"Picture"})
     @Expose
 	@Nullable
-    public PictureCollectionPage picture;
+    public com.microsoft.graph.requests.PictureCollectionPage picture;
 
     /**
      * The Purchase Invoice Lines.
@@ -319,7 +284,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "purchaseInvoiceLines", alternate = {"PurchaseInvoiceLines"})
     @Expose
 	@Nullable
-    public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
+    public com.microsoft.graph.requests.PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
 
     /**
      * The Purchase Invoices.
@@ -328,7 +293,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "purchaseInvoices", alternate = {"PurchaseInvoices"})
     @Expose
 	@Nullable
-    public PurchaseInvoiceCollectionPage purchaseInvoices;
+    public com.microsoft.graph.requests.PurchaseInvoiceCollectionPage purchaseInvoices;
 
     /**
      * The Sales Credit Memo Lines.
@@ -337,7 +302,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesCreditMemoLines", alternate = {"SalesCreditMemoLines"})
     @Expose
 	@Nullable
-    public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
+    public com.microsoft.graph.requests.SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 
     /**
      * The Sales Credit Memos.
@@ -346,7 +311,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesCreditMemos", alternate = {"SalesCreditMemos"})
     @Expose
 	@Nullable
-    public SalesCreditMemoCollectionPage salesCreditMemos;
+    public com.microsoft.graph.requests.SalesCreditMemoCollectionPage salesCreditMemos;
 
     /**
      * The Sales Invoice Lines.
@@ -355,7 +320,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesInvoiceLines", alternate = {"SalesInvoiceLines"})
     @Expose
 	@Nullable
-    public SalesInvoiceLineCollectionPage salesInvoiceLines;
+    public com.microsoft.graph.requests.SalesInvoiceLineCollectionPage salesInvoiceLines;
 
     /**
      * The Sales Invoices.
@@ -364,7 +329,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesInvoices", alternate = {"SalesInvoices"})
     @Expose
 	@Nullable
-    public SalesInvoiceCollectionPage salesInvoices;
+    public com.microsoft.graph.requests.SalesInvoiceCollectionPage salesInvoices;
 
     /**
      * The Sales Order Lines.
@@ -373,7 +338,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesOrderLines", alternate = {"SalesOrderLines"})
     @Expose
 	@Nullable
-    public SalesOrderLineCollectionPage salesOrderLines;
+    public com.microsoft.graph.requests.SalesOrderLineCollectionPage salesOrderLines;
 
     /**
      * The Sales Orders.
@@ -382,7 +347,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesOrders", alternate = {"SalesOrders"})
     @Expose
 	@Nullable
-    public SalesOrderCollectionPage salesOrders;
+    public com.microsoft.graph.requests.SalesOrderCollectionPage salesOrders;
 
     /**
      * The Sales Quote Lines.
@@ -391,7 +356,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesQuoteLines", alternate = {"SalesQuoteLines"})
     @Expose
 	@Nullable
-    public SalesQuoteLineCollectionPage salesQuoteLines;
+    public com.microsoft.graph.requests.SalesQuoteLineCollectionPage salesQuoteLines;
 
     /**
      * The Sales Quotes.
@@ -400,7 +365,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesQuotes", alternate = {"SalesQuotes"})
     @Expose
 	@Nullable
-    public SalesQuoteCollectionPage salesQuotes;
+    public com.microsoft.graph.requests.SalesQuoteCollectionPage salesQuotes;
 
     /**
      * The Shipment Methods.
@@ -409,7 +374,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "shipmentMethods", alternate = {"ShipmentMethods"})
     @Expose
 	@Nullable
-    public ShipmentMethodCollectionPage shipmentMethods;
+    public com.microsoft.graph.requests.ShipmentMethodCollectionPage shipmentMethods;
 
     /**
      * The Tax Areas.
@@ -418,7 +383,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "taxAreas", alternate = {"TaxAreas"})
     @Expose
 	@Nullable
-    public TaxAreaCollectionPage taxAreas;
+    public com.microsoft.graph.requests.TaxAreaCollectionPage taxAreas;
 
     /**
      * The Tax Groups.
@@ -427,7 +392,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "taxGroups", alternate = {"TaxGroups"})
     @Expose
 	@Nullable
-    public TaxGroupCollectionPage taxGroups;
+    public com.microsoft.graph.requests.TaxGroupCollectionPage taxGroups;
 
     /**
      * The Units Of Measure.
@@ -436,7 +401,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "unitsOfMeasure", alternate = {"UnitsOfMeasure"})
     @Expose
 	@Nullable
-    public UnitOfMeasureCollectionPage unitsOfMeasure;
+    public com.microsoft.graph.requests.UnitOfMeasureCollectionPage unitsOfMeasure;
 
     /**
      * The Vendors.
@@ -445,7 +410,7 @@ public class Company extends Entity implements IJsonBackedObject {
     @SerializedName(value = "vendors", alternate = {"Vendors"})
     @Expose
 	@Nullable
-    public VendorCollectionPage vendors;
+    public com.microsoft.graph.requests.VendorCollectionPage vendors;
 
 
     /**
@@ -458,143 +423,143 @@ public class Company extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accounts")) {
-            accounts = serializer.deserializeObject(json.get("accounts"), AccountCollectionPage.class);
+            accounts = serializer.deserializeObject(json.get("accounts"), com.microsoft.graph.requests.AccountCollectionPage.class);
         }
 
         if (json.has("agedAccountsPayable")) {
-            agedAccountsPayable = serializer.deserializeObject(json.get("agedAccountsPayable"), AgedAccountsPayableCollectionPage.class);
+            agedAccountsPayable = serializer.deserializeObject(json.get("agedAccountsPayable"), com.microsoft.graph.requests.AgedAccountsPayableCollectionPage.class);
         }
 
         if (json.has("agedAccountsReceivable")) {
-            agedAccountsReceivable = serializer.deserializeObject(json.get("agedAccountsReceivable"), AgedAccountsReceivableCollectionPage.class);
+            agedAccountsReceivable = serializer.deserializeObject(json.get("agedAccountsReceivable"), com.microsoft.graph.requests.AgedAccountsReceivableCollectionPage.class);
         }
 
         if (json.has("companyInformation")) {
-            companyInformation = serializer.deserializeObject(json.get("companyInformation"), CompanyInformationCollectionPage.class);
+            companyInformation = serializer.deserializeObject(json.get("companyInformation"), com.microsoft.graph.requests.CompanyInformationCollectionPage.class);
         }
 
         if (json.has("countriesRegions")) {
-            countriesRegions = serializer.deserializeObject(json.get("countriesRegions"), CountryRegionCollectionPage.class);
+            countriesRegions = serializer.deserializeObject(json.get("countriesRegions"), com.microsoft.graph.requests.CountryRegionCollectionPage.class);
         }
 
         if (json.has("currencies")) {
-            currencies = serializer.deserializeObject(json.get("currencies"), CurrencyCollectionPage.class);
+            currencies = serializer.deserializeObject(json.get("currencies"), com.microsoft.graph.requests.CurrencyCollectionPage.class);
         }
 
         if (json.has("customerPaymentJournals")) {
-            customerPaymentJournals = serializer.deserializeObject(json.get("customerPaymentJournals"), CustomerPaymentJournalCollectionPage.class);
+            customerPaymentJournals = serializer.deserializeObject(json.get("customerPaymentJournals"), com.microsoft.graph.requests.CustomerPaymentJournalCollectionPage.class);
         }
 
         if (json.has("customerPayments")) {
-            customerPayments = serializer.deserializeObject(json.get("customerPayments"), CustomerPaymentCollectionPage.class);
+            customerPayments = serializer.deserializeObject(json.get("customerPayments"), com.microsoft.graph.requests.CustomerPaymentCollectionPage.class);
         }
 
         if (json.has("customers")) {
-            customers = serializer.deserializeObject(json.get("customers"), CustomerCollectionPage.class);
+            customers = serializer.deserializeObject(json.get("customers"), com.microsoft.graph.requests.CustomerCollectionPage.class);
         }
 
         if (json.has("dimensions")) {
-            dimensions = serializer.deserializeObject(json.get("dimensions"), DimensionCollectionPage.class);
+            dimensions = serializer.deserializeObject(json.get("dimensions"), com.microsoft.graph.requests.DimensionCollectionPage.class);
         }
 
         if (json.has("dimensionValues")) {
-            dimensionValues = serializer.deserializeObject(json.get("dimensionValues"), DimensionValueCollectionPage.class);
+            dimensionValues = serializer.deserializeObject(json.get("dimensionValues"), com.microsoft.graph.requests.DimensionValueCollectionPage.class);
         }
 
         if (json.has("employees")) {
-            employees = serializer.deserializeObject(json.get("employees"), EmployeeCollectionPage.class);
+            employees = serializer.deserializeObject(json.get("employees"), com.microsoft.graph.requests.EmployeeCollectionPage.class);
         }
 
         if (json.has("generalLedgerEntries")) {
-            generalLedgerEntries = serializer.deserializeObject(json.get("generalLedgerEntries"), GeneralLedgerEntryCollectionPage.class);
+            generalLedgerEntries = serializer.deserializeObject(json.get("generalLedgerEntries"), com.microsoft.graph.requests.GeneralLedgerEntryCollectionPage.class);
         }
 
         if (json.has("itemCategories")) {
-            itemCategories = serializer.deserializeObject(json.get("itemCategories"), ItemCategoryCollectionPage.class);
+            itemCategories = serializer.deserializeObject(json.get("itemCategories"), com.microsoft.graph.requests.ItemCategoryCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), ItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.requests.ItemCollectionPage.class);
         }
 
         if (json.has("journalLines")) {
-            journalLines = serializer.deserializeObject(json.get("journalLines"), JournalLineCollectionPage.class);
+            journalLines = serializer.deserializeObject(json.get("journalLines"), com.microsoft.graph.requests.JournalLineCollectionPage.class);
         }
 
         if (json.has("journals")) {
-            journals = serializer.deserializeObject(json.get("journals"), JournalCollectionPage.class);
+            journals = serializer.deserializeObject(json.get("journals"), com.microsoft.graph.requests.JournalCollectionPage.class);
         }
 
         if (json.has("paymentMethods")) {
-            paymentMethods = serializer.deserializeObject(json.get("paymentMethods"), PaymentMethodCollectionPage.class);
+            paymentMethods = serializer.deserializeObject(json.get("paymentMethods"), com.microsoft.graph.requests.PaymentMethodCollectionPage.class);
         }
 
         if (json.has("paymentTerms")) {
-            paymentTerms = serializer.deserializeObject(json.get("paymentTerms"), PaymentTermCollectionPage.class);
+            paymentTerms = serializer.deserializeObject(json.get("paymentTerms"), com.microsoft.graph.requests.PaymentTermCollectionPage.class);
         }
 
         if (json.has("picture")) {
-            picture = serializer.deserializeObject(json.get("picture"), PictureCollectionPage.class);
+            picture = serializer.deserializeObject(json.get("picture"), com.microsoft.graph.requests.PictureCollectionPage.class);
         }
 
         if (json.has("purchaseInvoiceLines")) {
-            purchaseInvoiceLines = serializer.deserializeObject(json.get("purchaseInvoiceLines"), PurchaseInvoiceLineCollectionPage.class);
+            purchaseInvoiceLines = serializer.deserializeObject(json.get("purchaseInvoiceLines"), com.microsoft.graph.requests.PurchaseInvoiceLineCollectionPage.class);
         }
 
         if (json.has("purchaseInvoices")) {
-            purchaseInvoices = serializer.deserializeObject(json.get("purchaseInvoices"), PurchaseInvoiceCollectionPage.class);
+            purchaseInvoices = serializer.deserializeObject(json.get("purchaseInvoices"), com.microsoft.graph.requests.PurchaseInvoiceCollectionPage.class);
         }
 
         if (json.has("salesCreditMemoLines")) {
-            salesCreditMemoLines = serializer.deserializeObject(json.get("salesCreditMemoLines"), SalesCreditMemoLineCollectionPage.class);
+            salesCreditMemoLines = serializer.deserializeObject(json.get("salesCreditMemoLines"), com.microsoft.graph.requests.SalesCreditMemoLineCollectionPage.class);
         }
 
         if (json.has("salesCreditMemos")) {
-            salesCreditMemos = serializer.deserializeObject(json.get("salesCreditMemos"), SalesCreditMemoCollectionPage.class);
+            salesCreditMemos = serializer.deserializeObject(json.get("salesCreditMemos"), com.microsoft.graph.requests.SalesCreditMemoCollectionPage.class);
         }
 
         if (json.has("salesInvoiceLines")) {
-            salesInvoiceLines = serializer.deserializeObject(json.get("salesInvoiceLines"), SalesInvoiceLineCollectionPage.class);
+            salesInvoiceLines = serializer.deserializeObject(json.get("salesInvoiceLines"), com.microsoft.graph.requests.SalesInvoiceLineCollectionPage.class);
         }
 
         if (json.has("salesInvoices")) {
-            salesInvoices = serializer.deserializeObject(json.get("salesInvoices"), SalesInvoiceCollectionPage.class);
+            salesInvoices = serializer.deserializeObject(json.get("salesInvoices"), com.microsoft.graph.requests.SalesInvoiceCollectionPage.class);
         }
 
         if (json.has("salesOrderLines")) {
-            salesOrderLines = serializer.deserializeObject(json.get("salesOrderLines"), SalesOrderLineCollectionPage.class);
+            salesOrderLines = serializer.deserializeObject(json.get("salesOrderLines"), com.microsoft.graph.requests.SalesOrderLineCollectionPage.class);
         }
 
         if (json.has("salesOrders")) {
-            salesOrders = serializer.deserializeObject(json.get("salesOrders"), SalesOrderCollectionPage.class);
+            salesOrders = serializer.deserializeObject(json.get("salesOrders"), com.microsoft.graph.requests.SalesOrderCollectionPage.class);
         }
 
         if (json.has("salesQuoteLines")) {
-            salesQuoteLines = serializer.deserializeObject(json.get("salesQuoteLines"), SalesQuoteLineCollectionPage.class);
+            salesQuoteLines = serializer.deserializeObject(json.get("salesQuoteLines"), com.microsoft.graph.requests.SalesQuoteLineCollectionPage.class);
         }
 
         if (json.has("salesQuotes")) {
-            salesQuotes = serializer.deserializeObject(json.get("salesQuotes"), SalesQuoteCollectionPage.class);
+            salesQuotes = serializer.deserializeObject(json.get("salesQuotes"), com.microsoft.graph.requests.SalesQuoteCollectionPage.class);
         }
 
         if (json.has("shipmentMethods")) {
-            shipmentMethods = serializer.deserializeObject(json.get("shipmentMethods"), ShipmentMethodCollectionPage.class);
+            shipmentMethods = serializer.deserializeObject(json.get("shipmentMethods"), com.microsoft.graph.requests.ShipmentMethodCollectionPage.class);
         }
 
         if (json.has("taxAreas")) {
-            taxAreas = serializer.deserializeObject(json.get("taxAreas"), TaxAreaCollectionPage.class);
+            taxAreas = serializer.deserializeObject(json.get("taxAreas"), com.microsoft.graph.requests.TaxAreaCollectionPage.class);
         }
 
         if (json.has("taxGroups")) {
-            taxGroups = serializer.deserializeObject(json.get("taxGroups"), TaxGroupCollectionPage.class);
+            taxGroups = serializer.deserializeObject(json.get("taxGroups"), com.microsoft.graph.requests.TaxGroupCollectionPage.class);
         }
 
         if (json.has("unitsOfMeasure")) {
-            unitsOfMeasure = serializer.deserializeObject(json.get("unitsOfMeasure"), UnitOfMeasureCollectionPage.class);
+            unitsOfMeasure = serializer.deserializeObject(json.get("unitsOfMeasure"), com.microsoft.graph.requests.UnitOfMeasureCollectionPage.class);
         }
 
         if (json.has("vendors")) {
-            vendors = serializer.deserializeObject(json.get("vendors"), VendorCollectionPage.class);
+            vendors = serializer.deserializeObject(json.get("vendors"), com.microsoft.graph.requests.VendorCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OfficeClientConfiguration;
 import com.microsoft.graph.models.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.requests.OfficeClientConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.OfficeClientConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -10,12 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.models.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.PrinterCapabilities;
-import com.microsoft.graph.requests.PrintConnectorCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.PrintConnectorWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.PrinterShareWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.PrinterShareCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.PrintTaskTriggerCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintTaskTriggerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +64,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintJobCollectionRequestBuilder jobs() {
-        return new PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    public com.microsoft.graph.requests.PrintJobCollectionRequestBuilder jobs() {
+        return new com.microsoft.graph.requests.PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
     }
 
     /**
@@ -81,8 +75,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintJobRequestBuilder jobs(@Nonnull final String id) {
-        return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintJobRequestBuilder jobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintConnector collection
@@ -90,8 +84,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintConnectorCollectionWithReferencesRequestBuilder connectors() {
-        return new PrintConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
+    public com.microsoft.graph.requests.PrintConnectorCollectionWithReferencesRequestBuilder connectors() {
+        return new com.microsoft.graph.requests.PrintConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
     }
 
     /**
@@ -101,8 +95,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintConnectorWithReferenceRequestBuilder connectors(@Nonnull final String id) {
-        return new PrintConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintConnectorWithReferenceRequestBuilder connectors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
     }
 
     /**
@@ -111,8 +105,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @return the PrinterShareWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrinterShareWithReferenceRequestBuilder share() {
-        return new PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("share"), getClient(), null);
+    public com.microsoft.graph.requests.PrinterShareWithReferenceRequestBuilder share() {
+        return new com.microsoft.graph.requests.PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("share"), getClient(), null);
     }
     /**
      *  Gets a request builder for the PrinterShare collection
@@ -120,8 +114,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrinterShareCollectionWithReferencesRequestBuilder shares() {
-        return new PrinterShareCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shares"), getClient(), null);
+    public com.microsoft.graph.requests.PrinterShareCollectionWithReferencesRequestBuilder shares() {
+        return new com.microsoft.graph.requests.PrinterShareCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shares"), getClient(), null);
     }
 
     /**
@@ -131,8 +125,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrinterShareWithReferenceRequestBuilder shares(@Nonnull final String id) {
-        return new PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("shares") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrinterShareWithReferenceRequestBuilder shares(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("shares") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintTaskTrigger collection
@@ -140,8 +134,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintTaskTriggerCollectionRequestBuilder taskTriggers() {
-        return new PrintTaskTriggerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers"), getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskTriggerCollectionRequestBuilder taskTriggers() {
+        return new com.microsoft.graph.requests.PrintTaskTriggerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers"), getClient(), null);
     }
 
     /**
@@ -151,8 +145,8 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintTaskTriggerRequestBuilder taskTriggers(@Nonnull final String id) {
-        return new PrintTaskTriggerRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskTriggerRequestBuilder taskTriggers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintTaskTriggerRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers") + "/" + id, getClient(), null);
     }
 
     /**

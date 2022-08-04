@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsQualityUpdateProfile;
 import com.microsoft.graph.models.WindowsQualityUpdateProfileAssignment;
-import com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class WindowsQualityUpdateProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsQualityUpdateProfileAssignmentCollectionRequestBuilder assignments() {
-        return new WindowsQualityUpdateProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class WindowsQualityUpdateProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsQualityUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new WindowsQualityUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsQualityUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

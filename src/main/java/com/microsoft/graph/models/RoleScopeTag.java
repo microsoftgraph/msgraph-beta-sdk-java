@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.RoleScopeTagAutoAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.RoleScopeTagAutoAssignmentCollectionPage;
 
@@ -62,7 +61,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public RoleScopeTagAutoAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.RoleScopeTagAutoAssignmentCollectionPage assignments;
 
 
     /**
@@ -75,7 +74,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), RoleScopeTagAutoAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.RoleScopeTagAutoAssignmentCollectionPage.class);
         }
     }
 }
