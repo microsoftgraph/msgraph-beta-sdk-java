@@ -59,8 +59,6 @@ public class Connector extends Entity implements IJsonBackedObject {
      * The Member Of.
      * The connectorGroup that the connector is a member of. Read-only.
      */
-    @SerializedName(value = "memberOf", alternate = {"MemberOf"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.ConnectorGroupCollectionPage memberOf;
 

@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ManagedDeviceBulkReprovisionCloudPcRequest;
 import com.microsoft.graph.models.ManagedDevice;
-
+import com.microsoft.graph.models.CloudPcBulkRemoteActionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceBulkReprovisionCloudPcParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Managed Device Bulk Reprovision Cloud Pc Request Builder.
  */
-public class ManagedDeviceBulkReprovisionCloudPcRequestBuilder extends BaseActionRequestBuilder<ManagedDevice> {
+public class ManagedDeviceBulkReprovisionCloudPcRequestBuilder extends BaseActionRequestBuilder<CloudPcBulkRemoteActionResult> {
 
     /**
      * The request builder for this ManagedDeviceBulkReprovisionCloudPc

@@ -47,15 +47,6 @@ public class IdentityContainer implements IJsonBackedObject {
     }
 
     /**
-     * The Conditional Access.
-     * the entry point for the Conditional Access (CA) object model.
-     */
-    @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
-    @Expose
-	@Nullable
-    public ConditionalAccessRoot conditionalAccess;
-
-    /**
      * The Api Connectors.
      * Represents entry point for API connectors.
      */
@@ -110,6 +101,15 @@ public class IdentityContainer implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.IdentityUserFlowCollectionPage userFlows;
+
+    /**
+     * The Conditional Access.
+     * the entry point for the Conditional Access (CA) object model.
+     */
+    @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
+    @Expose
+	@Nullable
+    public ConditionalAccessRoot conditionalAccess;
 
     /**
      * The Continuous Access Evaluation Policy.

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
+import com.microsoft.graph.models.WindowsManagedAppProtection;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class TargetedManagedAppPolicyAssignmentCollectionRequestBuilder extends BaseCollectionRequestBuilder<TargetedManagedAppPolicyAssignment, TargetedManagedAppPolicyAssignmentRequestBuilder, TargetedManagedAppPolicyAssignmentCollectionResponse, TargetedManagedAppPolicyAssignmentCollectionPage, TargetedManagedAppPolicyAssignmentCollectionRequest> {
 
     /**
-     * The request builder for this collection of TargetedManagedAppConfiguration
+     * The request builder for this collection of WindowsManagedAppProtection
      *
      * @param requestUrl     the request URL
      * @param client         the service client

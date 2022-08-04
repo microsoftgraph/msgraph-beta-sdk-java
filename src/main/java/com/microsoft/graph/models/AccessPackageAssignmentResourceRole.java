@@ -68,7 +68,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Resource Role.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceRole", alternate = {"AccessPackageResourceRole"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Resource Scope.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceScope", alternate = {"AccessPackageResourceScope"})
     @Expose

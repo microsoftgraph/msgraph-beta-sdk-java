@@ -62,8 +62,8 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder<Connector> {
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder memberOf() {
-        return new com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectorGroupCollectionWithReferencesRequestBuilder memberOf() {
+        return new com.microsoft.graph.requests.ConnectorGroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
     /**
@@ -73,7 +73,7 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder<Connector> {
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.ConnectorGroupRequestBuilder memberOf(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConnectorGroupWithReferenceRequestBuilder memberOf(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConnectorGroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
 }

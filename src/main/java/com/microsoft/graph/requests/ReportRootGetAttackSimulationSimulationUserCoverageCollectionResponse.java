@@ -15,6 +15,8 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Report Root Get Attack Simulation Simulation User Coverage Collection Response.
+ * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
  */
+@Deprecated
 public class ReportRootGetAttackSimulationSimulationUserCoverageCollectionResponse extends BaseCollectionResponse<AttackSimulationSimulationUserCoverage> {
 }

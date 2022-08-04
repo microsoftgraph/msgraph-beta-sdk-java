@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.InformationalUrls;
+import com.microsoft.graph.models.SupportedClaimConfiguration;
 import com.microsoft.graph.models.Entity;
 
 
@@ -89,6 +90,15 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String publisher;
+
+    /**
+     * The Supported Claim Configuration.
+     * 
+     */
+    @SerializedName(value = "supportedClaimConfiguration", alternate = {"SupportedClaimConfiguration"})
+    @Expose
+	@Nullable
+    public SupportedClaimConfiguration supportedClaimConfiguration;
 
     /**
      * The Supported Provisioning Types.

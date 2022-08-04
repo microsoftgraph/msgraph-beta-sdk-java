@@ -62,7 +62,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Created By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -116,7 +116,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Modified By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose

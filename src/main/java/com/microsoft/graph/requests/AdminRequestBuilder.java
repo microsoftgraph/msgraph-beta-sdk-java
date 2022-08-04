@@ -58,6 +58,16 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
 
 
     /**
+     * Gets the request builder for Sharepoint
+     *
+     * @return the SharepointRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder sharepoint() {
+        return new com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ServiceAnnouncement
      *
      * @return the ServiceAnnouncementRequestBuilder instance
@@ -65,6 +75,16 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
     @Nonnull
     public com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AdminReportSettings
+     *
+     * @return the AdminReportSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdminReportSettingsRequestBuilder reportSettings() {
+        return new com.microsoft.graph.requests.AdminReportSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("reportSettings"), getClient(), null);
     }
 
     /**

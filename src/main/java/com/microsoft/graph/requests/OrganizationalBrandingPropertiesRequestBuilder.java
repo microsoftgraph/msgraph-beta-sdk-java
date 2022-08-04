@@ -96,4 +96,14 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
     public OrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder squareLogo() {
         return new OrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogo"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for squareLogoDark
+     *
+     * @return the OrganizationalBrandingPropertiesSquareLogoDarkStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesSquareLogoDarkStreamRequestBuilder squareLogoDark() {
+        return new OrganizationalBrandingPropertiesSquareLogoDarkStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogoDark"), getClient(), null);
+    }
 }

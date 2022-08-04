@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Activate Service Plan Request Builder.
+ * @deprecated The activateServicePlan API will be deprecated and will stop returning data on Jun-30, 2022
  */
+@Deprecated
 public class UserActivateServicePlanRequestBuilder extends BaseActionRequestBuilder<User> {
 
     /**

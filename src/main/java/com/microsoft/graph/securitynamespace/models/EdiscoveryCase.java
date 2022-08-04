@@ -37,7 +37,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Closed By.
-     * 
+     * The user who closed the case.
      */
     @SerializedName(value = "closedBy", alternate = {"ClosedBy"})
     @Expose
@@ -46,7 +46,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Closed Date Time.
-     * 
+     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * The external case number for customer reference.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -64,7 +64,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Custodians.
-     * 
+     * Returns a list of case ediscoveryCustodian objects for this case.
      */
     @SerializedName(value = "custodians", alternate = {"Custodians"})
     @Expose
@@ -73,7 +73,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Legal Holds.
-     * 
+     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      */
     @SerializedName(value = "legalHolds", alternate = {"LegalHolds"})
     @Expose
@@ -82,7 +82,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Noncustodial Data Sources.
-     * 
+     * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      */
     @SerializedName(value = "noncustodialDataSources", alternate = {"NoncustodialDataSources"})
     @Expose
@@ -91,7 +91,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * Returns a list of case caseOperation objects for this case.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -100,7 +100,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Review Sets.
-     * 
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      */
     @SerializedName(value = "reviewSets", alternate = {"ReviewSets"})
     @Expose
@@ -109,7 +109,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Searches.
-     * 
+     * Returns a list of eDiscoverySearch objects associated with this case.
      */
     @SerializedName(value = "searches", alternate = {"Searches"})
     @Expose
@@ -118,7 +118,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * Returns a list of eDIscoverySettings objects in the case.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -127,7 +127,7 @@ public class EdiscoveryCase extends Case implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose

@@ -306,4 +306,24 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
     public com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder settings() {
         return new com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the AccessPackageSubject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageSubjectCollectionRequestBuilder subjects() {
+        return new com.microsoft.graph.requests.AccessPackageSubjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subjects"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageSubject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder subjects(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subjects") + "/" + id, getClient(), null);
+    }
 }

@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SignInActivity;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
+import com.microsoft.graph.models.AuthorizationInfo;
 import com.microsoft.graph.models.CustomSecurityAttributeValue;
 import com.microsoft.graph.models.DeviceKey;
 import com.microsoft.graph.models.EmployeeOrgData;
@@ -89,7 +90,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Activity.
-     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.
+     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020.
      */
     @SerializedName(value = "signInActivity", alternate = {"SignInActivity"})
     @Expose
@@ -116,7 +117,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Licenses.
-     * The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq and not).
+     * The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
      */
     @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
@@ -131,6 +132,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AssignedPlan> assignedPlans;
+
+    /**
+     * The Authorization Info.
+     * 
+     */
+    @SerializedName(value = "authorizationInfo", alternate = {"AuthorizationInfo"})
+    @Expose
+	@Nullable
+    public AuthorizationInfo authorizationInfo;
 
     /**
      * The Business Phones.
@@ -386,7 +396,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+     * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -440,7 +450,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+     * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      */
     @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
@@ -494,7 +504,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -512,7 +522,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -575,7 +585,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
      */
     @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
@@ -592,8 +602,17 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public java.time.OffsetDateTime refreshTokensValidFromDateTime;
 
     /**
+     * The Security Identifier.
+     * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+     */
+    @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
+    @Expose
+	@Nullable
+    public String securityIdentifier;
+
+    /**
      * The Show In Address List.
-     * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false. Supports $filter (eq, ne, not, in).
+     * Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
      */
     @SerializedName(value = "showInAddressList", alternate = {"ShowInAddressList"})
     @Expose
@@ -746,7 +765,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Name.
-     * The preferred name for the user. Returned only on $select.
+     * The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      */
     @SerializedName(value = "preferredName", alternate = {"PreferredName"})
     @Expose
@@ -903,7 +922,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
@@ -989,7 +1008,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Joined Groups.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "joinedGroups", alternate = {"JoinedGroups"})
     @Expose
@@ -1059,7 +1078,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -1188,7 +1207,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Insights.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
@@ -1197,7 +1216,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -1206,7 +1225,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Onenote.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
@@ -1224,7 +1243,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Photos.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
@@ -1278,7 +1297,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authentication.
-     * TODO: Add Description
+     * The authentication methods that are supported for the user.
      */
     @SerializedName(value = "authentication", alternate = {"Authentication"})
     @Expose

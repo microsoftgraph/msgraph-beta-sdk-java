@@ -19,7 +19,9 @@ import com.microsoft.graph.models.OrganizationActivateServiceParameterSet;
 
 /**
  * The class for the Organization Activate Service Request.
+ * @deprecated The activateService API will be deprecated and will stop returning data on Jun-30, 2022
  */
+@Deprecated
 public class OrganizationActivateServiceRequest extends BaseRequest<Void> {
     /**
      * The request for this OrganizationActivateService

@@ -30,7 +30,7 @@ public class EdiscoveryFile extends File implements IJsonBackedObject {
 
     /**
      * The Custodian.
-     * 
+     * Custodians associated with the file.
      */
     @SerializedName(value = "custodian", alternate = {"Custodian"})
     @Expose
@@ -39,7 +39,7 @@ public class EdiscoveryFile extends File implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Tags associated with the file.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage tags;

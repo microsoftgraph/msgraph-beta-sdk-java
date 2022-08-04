@@ -86,6 +86,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     public com.microsoft.graph.requests.B2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
         return new com.microsoft.graph.requests.B2cAuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("b2cAuthenticationMethodsPolicy"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for DeviceRegistrationPolicy
+     *
+     * @return the DeviceRegistrationPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRegistrationPolicy"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the ActivityBasedTimeoutPolicy collection
      *

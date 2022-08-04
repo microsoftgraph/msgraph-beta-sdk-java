@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.B2cAuthenticationMethodsPolicy;
+import com.microsoft.graph.models.DeviceRegistrationPolicy;
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.graph.models.ExternalIdentitiesPolicy;
@@ -89,6 +90,15 @@ public class PolicyRoot implements IJsonBackedObject {
     public B2cAuthenticationMethodsPolicy b2cAuthenticationMethodsPolicy;
 
     /**
+     * The Device Registration Policy.
+     * 
+     */
+    @SerializedName(value = "deviceRegistrationPolicy", alternate = {"DeviceRegistrationPolicy"})
+    @Expose
+	@Nullable
+    public DeviceRegistrationPolicy deviceRegistrationPolicy;
+
+    /**
      * The Activity Based Timeout Policies.
      * The policy that controls the idle time out for web sessions for applications.
      */
@@ -144,7 +154,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The External Identities Policy.
-     * 
+     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
      */
     @SerializedName(value = "externalIdentitiesPolicy", alternate = {"ExternalIdentitiesPolicy"})
     @Expose

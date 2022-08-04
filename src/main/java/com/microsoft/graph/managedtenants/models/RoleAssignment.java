@@ -42,7 +42,7 @@ public class RoleAssignment implements IJsonBackedObject {
 
     /**
      * The Assignment Type.
-     * 
+     * The type of the admin relationship(s) associated with the role assignment. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges.
      */
     @SerializedName(value = "assignmentType", alternate = {"AssignmentType"})
     @Expose
@@ -51,7 +51,7 @@ public class RoleAssignment implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * 
+     * The collection of roles assigned.
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose

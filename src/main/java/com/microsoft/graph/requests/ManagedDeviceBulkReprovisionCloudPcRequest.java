@@ -4,6 +4,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests;
+import com.microsoft.graph.models.CloudPcBulkRemoteActionResult;
 import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.requests.ManagedDeviceBulkReprovisionCloudPcRequest;
 
@@ -20,7 +21,7 @@ import com.microsoft.graph.models.ManagedDeviceBulkReprovisionCloudPcParameterSe
 /**
  * The class for the Managed Device Bulk Reprovision Cloud Pc Request.
  */
-public class ManagedDeviceBulkReprovisionCloudPcRequest extends BaseRequest<Void> {
+public class ManagedDeviceBulkReprovisionCloudPcRequest extends BaseRequest<CloudPcBulkRemoteActionResult> {
     /**
      * The request for this ManagedDeviceBulkReprovisionCloudPc
      *
@@ -29,28 +30,53 @@ public class ManagedDeviceBulkReprovisionCloudPcRequest extends BaseRequest<Void
      * @param requestOptions the options for this request
      */
     public ManagedDeviceBulkReprovisionCloudPcRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, CloudPcBulkRemoteActionResult.class);
     }
 
 	/** The body for the method */
     @Nullable
     public ManagedDeviceBulkReprovisionCloudPcParameterSet body;
     /**
-     * Creates the ManagedDeviceBulkReprovisionCloudPc
-     *
-     * @return a future for the operation
+     * Invokes the method and returns a future with the result
+     * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Void> postAsync() {
-        return this.sendAsync(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**
-     * Creates the ManagedDeviceBulkReprovisionCloudPc
-     *
+     * Invokes the method and returns the result
+     * @return result of the method invocation
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public void post() throws ClientException {
-        this.send(HttpMethod.POST, body);
+    @Nullable
+    public CloudPcBulkRemoteActionResult post() throws ClientException {
+       return send(HttpMethod.POST, body);
     }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     * @return the updated request
+     */
+    @Nonnull
+    public ManagedDeviceBulkReprovisionCloudPcRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
+    }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     * @return the updated request
+     */
+    @Nonnull
+    public ManagedDeviceBulkReprovisionCloudPcRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
+    }
+
 }

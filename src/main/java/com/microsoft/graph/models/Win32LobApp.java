@@ -35,6 +35,15 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
 
 
     /**
+     * The Allow Available Uninstall.
+     * When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an Available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
+     */
+    @SerializedName(value = "allowAvailableUninstall", alternate = {"AllowAvailableUninstall"})
+    @Expose
+	@Nullable
+    public Boolean allowAvailableUninstall;
+
+    /**
      * The Applicable Architectures.
      * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
      */

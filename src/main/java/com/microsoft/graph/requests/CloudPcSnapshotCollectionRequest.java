@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.graph.models.CloudPcSnapshot;
+import com.microsoft.graph.models.CloudPcForensicStorageAccount;
+import com.microsoft.graph.models.CloudPcSubscription;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

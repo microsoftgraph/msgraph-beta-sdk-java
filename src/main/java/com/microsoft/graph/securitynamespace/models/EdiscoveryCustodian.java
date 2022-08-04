@@ -32,7 +32,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Acknowledged Date Time.
-     * 
+     * Date and time the custodian acknowledged a hold notification.
      */
     @SerializedName(value = "acknowledgedDateTime", alternate = {"AcknowledgedDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Email.
-     * 
+     * Email address of the custodian.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -50,7 +50,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Last Index Operation.
-     * 
+     * Operation entity that represents the latest indexing for the custodian.
      */
     @SerializedName(value = "lastIndexOperation", alternate = {"LastIndexOperation"})
     @Expose
@@ -59,7 +59,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Site Sources.
-     * 
+     * Data source entity for SharePoint sites associated with the custodian.
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
@@ -68,7 +68,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The Unified Group Sources.
-     * 
+     * Data source entity for groups associated with the custodian.
      */
     @SerializedName(value = "unifiedGroupSources", alternate = {"UnifiedGroupSources"})
     @Expose
@@ -77,7 +77,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The User Sources.
-     * 
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose

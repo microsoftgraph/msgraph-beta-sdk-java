@@ -323,15 +323,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
-     * The Android Device Owner Enrollment Profiles.
-     * Android device owner enrollment profile entities.
-     */
-    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
-
-    /**
      * The Virtual Endpoint.
      * 
      */
@@ -339,6 +330,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public VirtualEndpoint virtualEndpoint;
+
+    /**
+     * The Android Device Owner Enrollment Profiles.
+     * Android device owner enrollment profile entities.
+     */
+    @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
 
     /**
      * The Android For Work App Configuration Schemas.

@@ -104,6 +104,15 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
     public String description;
 
     /**
+     * The Is Anonymous Join Enabled.
+     * True if an anonymousJoinWebUrl(webrtcUrl) will be generated for the appointment booked for this service.
+     */
+    @SerializedName(value = "isAnonymousJoinEnabled", alternate = {"IsAnonymousJoinEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isAnonymousJoinEnabled;
+
+    /**
      * The Is Hidden From Customers.
      * True means this service is not available to customers for booking.
      */
@@ -120,6 +129,15 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
     @Expose
 	@Nullable
     public Boolean isLocationOnline;
+
+    /**
+     * The Language Tag.
+     * The language of the self service booking page.
+     */
+    @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
+    @Expose
+	@Nullable
+    public String languageTag;
 
     /**
      * The Maximum Attendees Count.

@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
 
     /**
      * The Health Status.
-     * The overall battery health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * The overall battery health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

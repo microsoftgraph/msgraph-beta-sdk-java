@@ -32,6 +32,10 @@ public enum NotificationTemplateBrandingOptions
     */
     INCLUDE_COMPANY_PORTAL_LINK,
     /**
+    * include Device Details
+    */
+    INCLUDE_DEVICE_DETAILS,
+    /**
     * For NotificationTemplateBrandingOptions values that were not expected from the service
     */
     UNEXPECTED_VALUE

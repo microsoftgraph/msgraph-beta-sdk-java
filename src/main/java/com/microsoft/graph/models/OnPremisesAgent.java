@@ -69,8 +69,6 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * The Agent Groups.
      * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
      */
-    @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage agentGroups;
 

@@ -57,6 +57,46 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
 
 
     /**
+     *  Gets a request builder for the AttachmentBase collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttachmentBaseCollectionRequestBuilder attachments() {
+        return new com.microsoft.graph.requests.AttachmentBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttachmentBase item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttachmentBaseRequestBuilder attachments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttachmentBaseRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AttachmentSession collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder attachmentSessions() {
+        return new com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttachmentSession item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttachmentSessionRequestBuilder attachmentSessions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttachmentSessionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ChecklistItem collection
      *
      * @return the collection request builder

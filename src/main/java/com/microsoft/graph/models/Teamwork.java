@@ -9,8 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.TeamsAppSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
+import com.microsoft.graph.requests.DeletedTeamCollectionPage;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionPage;
 
 
@@ -38,6 +40,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.WorkforceIntegrationCollectionPage workforceIntegrations;
 
     /**
+     * The Deleted Teams.
+     * A collection of deleted teams.
+     */
+    @SerializedName(value = "deletedTeams", alternate = {"DeletedTeams"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DeletedTeamCollectionPage deletedTeams;
+
+    /**
      * The Devices.
      * The Teams devices provisioned for the tenant.
      */
@@ -45,6 +56,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.TeamworkDeviceCollectionPage devices;
+
+    /**
+     * The Teams App Settings.
+     * Represents tenant-wide settings for all Teams apps in the tenant.
+     */
+    @SerializedName(value = "teamsAppSettings", alternate = {"TeamsAppSettings"})
+    @Expose
+	@Nullable
+    public TeamsAppSettings teamsAppSettings;
 
 
     /**
@@ -58,6 +78,10 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
         if (json.has("workforceIntegrations")) {
             workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), com.microsoft.graph.requests.WorkforceIntegrationCollectionPage.class);
+        }
+
+        if (json.has("deletedTeams")) {
+            deletedTeams = serializer.deserializeObject(json.get("deletedTeams"), com.microsoft.graph.requests.DeletedTeamCollectionPage.class);
         }
 
         if (json.has("devices")) {

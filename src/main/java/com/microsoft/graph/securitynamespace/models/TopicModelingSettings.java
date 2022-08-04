@@ -39,7 +39,7 @@ public class TopicModelingSettings implements IJsonBackedObject {
 
     /**
      * The Dynamically Adjust Topic Count.
-     * 
+     * Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
      */
     @SerializedName(value = "dynamicallyAdjustTopicCount", alternate = {"DynamicallyAdjustTopicCount"})
     @Expose
@@ -48,7 +48,7 @@ public class TopicModelingSettings implements IJsonBackedObject {
 
     /**
      * The Ignore Numbers.
-     * 
+     * Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
      */
     @SerializedName(value = "ignoreNumbers", alternate = {"IgnoreNumbers"})
     @Expose
@@ -57,7 +57,7 @@ public class TopicModelingSettings implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether themes model is enabled for the case.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -66,7 +66,7 @@ public class TopicModelingSettings implements IJsonBackedObject {
 
     /**
      * The Topic Count.
-     * 
+     * The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
      */
     @SerializedName(value = "topicCount", alternate = {"TopicCount"})
     @Expose

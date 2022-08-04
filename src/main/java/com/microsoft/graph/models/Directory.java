@@ -129,7 +129,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Feature Rollout Policies.
-     * Nullable.
+     * 
      * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
      */
     @Deprecated

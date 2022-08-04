@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsManagedDevice;
-import com.microsoft.graph.models.RestoreTimeRange;
 import com.microsoft.graph.models.CloudPcBulkRemoteActionResult;
+import com.microsoft.graph.models.RestoreTimeRange;
 import com.microsoft.graph.models.CloudPcReviewStatus;
 import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.BulkManagedDeviceActionResult;
@@ -465,6 +465,15 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     @Nonnull
     public ManagedDeviceRemoteLockRequestBuilder remoteLock() {
         return new ManagedDeviceRemoteLockRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remoteLock"), getClient(), null);
+    }
+
+    /**
+     * Remove device from Device Firmware Configuration Interface management
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceRemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
+        return new ManagedDeviceRemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeDeviceFirmwareConfigurationInterfaceManagement"), getClient(), null);
     }
 
     /**

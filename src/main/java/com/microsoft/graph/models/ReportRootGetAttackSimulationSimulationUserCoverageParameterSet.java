@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Report Root Get Attack Simulation Simulation User Coverage Parameter Set.
+ * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
  */
+@Deprecated
 public class ReportRootGetAttackSimulationSimulationUserCoverageParameterSet {
 
     /**

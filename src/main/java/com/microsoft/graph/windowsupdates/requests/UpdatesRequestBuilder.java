@@ -87,6 +87,26 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder<Updates> {
         return new com.microsoft.graph.windowsupdates.requests.DeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("deployments") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ResourceConnection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionRequestBuilder resourceConnections() {
+        return new com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceConnections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceConnection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.windowsupdates.requests.ResourceConnectionRequestBuilder resourceConnections(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.ResourceConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceConnections") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UpdatableAsset collection
      *
      * @return the collection request builder

@@ -61,4 +61,30 @@ public class ConnectorGroupReferenceRequest extends BaseReferenceRequest<Connect
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the ConnectorGroup
+     *
+     * @param srcConnectorGroup the ConnectorGroup reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ConnectorGroup> putAsync(@Nonnull final ConnectorGroup srcConnectorGroup) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/onPremisesPublishingProfiles/{id}/connectorGroups/" + srcConnectorGroup.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the ConnectorGroup
+     *
+     * @param srcConnectorGroup the ConnectorGroup reference to PUT
+     * @return the ConnectorGroup
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public ConnectorGroup put(@Nonnull final ConnectorGroup srcConnectorGroup) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/onPremisesPublishingProfiles/{id}/connectorGroups/" + srcConnectorGroup.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

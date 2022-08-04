@@ -67,6 +67,15 @@ public class AssignmentFilterEvaluateRequest implements IJsonBackedObject {
     public String rule;
 
     /**
+     * The Search.
+     * Search keyword applied to scope found devices.
+     */
+    @SerializedName(value = "search", alternate = {"Search"})
+    @Expose
+	@Nullable
+    public String search;
+
+    /**
      * The Skip.
      * Number of records to skip. Default value is 0
      */

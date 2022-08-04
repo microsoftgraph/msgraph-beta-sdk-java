@@ -68,17 +68,15 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * Read-only. Nullable.
+     * 
      */
 	@Nullable
     public com.microsoft.graph.requests.ApplicationCollectionPage applications;
 
     /**
      * The Members.
-     * Read-only. Nullable.
+     * 
      */
-    @SerializedName(value = "members", alternate = {"Members"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.ConnectorCollectionPage members;
 

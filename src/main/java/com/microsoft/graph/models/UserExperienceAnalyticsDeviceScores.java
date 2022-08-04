@@ -36,6 +36,15 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
     public Double appReliabilityScore;
 
     /**
+     * The Battery Health Score.
+     * The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "batteryHealthScore", alternate = {"BatteryHealthScore"})
+    @Expose
+	@Nullable
+    public Double batteryHealthScore;
+
+    /**
      * The Device Name.
      * The user experience analytics device name.
      */
@@ -55,7 +64,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

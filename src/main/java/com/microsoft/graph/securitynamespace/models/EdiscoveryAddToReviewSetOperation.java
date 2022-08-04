@@ -29,7 +29,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
 
     /**
      * The Review Set.
-     * 
+     * eDiscovery review set to which items matching source collection query gets added.
      */
     @SerializedName(value = "reviewSet", alternate = {"ReviewSet"})
     @Expose
@@ -38,7 +38,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
 
     /**
      * The Search.
-     * 
+     * eDiscovery search that gets added to review set.
      */
     @SerializedName(value = "search", alternate = {"Search"})
     @Expose

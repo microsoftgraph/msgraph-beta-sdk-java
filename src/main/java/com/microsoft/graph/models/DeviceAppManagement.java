@@ -34,6 +34,7 @@ import com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionPag
 import com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage;
 import com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionPage;
 import com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionPage;
+import com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.DeviceAppManagementTaskCollectionPage;
 import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyCollectionPage;
 
@@ -305,6 +306,15 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionPage windowsInformationProtectionWipeActions;
 
     /**
+     * The Windows Managed App Protections.
+     * Windows managed app policies.
+     */
+    @SerializedName(value = "windowsManagedAppProtections", alternate = {"WindowsManagedAppProtections"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionPage windowsManagedAppProtections;
+
+    /**
      * The Device App Management Tasks.
      * Device app management tasks.
      */
@@ -414,6 +424,10 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("windowsInformationProtectionWipeActions")) {
             windowsInformationProtectionWipeActions = serializer.deserializeObject(json.get("windowsInformationProtectionWipeActions"), com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionPage.class);
+        }
+
+        if (json.has("windowsManagedAppProtections")) {
+            windowsManagedAppProtections = serializer.deserializeObject(json.get("windowsManagedAppProtections"), com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("deviceAppManagementTasks")) {

@@ -117,6 +117,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
         return new com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the CloudPcExternalPartnerSetting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionRequestBuilder externalPartnerSettings() {
+        return new com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalPartnerSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcExternalPartnerSetting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcExternalPartnerSettingRequestBuilder externalPartnerSettings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcExternalPartnerSettingRequestBuilder(getRequestUrlWithAdditionalSegment("externalPartnerSettings") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the CloudPcGalleryImage collection
      *
      * @return the collection request builder

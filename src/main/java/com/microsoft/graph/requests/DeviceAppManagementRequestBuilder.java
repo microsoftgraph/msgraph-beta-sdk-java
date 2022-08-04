@@ -537,6 +537,26 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
         return new com.microsoft.graph.requests.WindowsInformationProtectionWipeActionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionWipeActions") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the WindowsManagedAppProtection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionRequestBuilder windowsManagedAppProtections() {
+        return new com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsManagedAppProtections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsManagedAppProtection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsManagedAppProtectionRequestBuilder windowsManagedAppProtections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsManagedAppProtections") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DeviceAppManagementTask collection
      *
      * @return the collection request builder

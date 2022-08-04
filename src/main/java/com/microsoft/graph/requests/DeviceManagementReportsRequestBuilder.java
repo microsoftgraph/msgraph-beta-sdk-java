@@ -45,6 +45,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyFirewallRep
 import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyFirewallSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetAllCertificatesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCertificatesReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
@@ -59,6 +60,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementInte
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetHistoricalReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceMetadataParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceSummaryReportParameterSet;
@@ -467,6 +469,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public DeviceManagementReportsGetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport(@Nonnull final DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet parameters) {
+        return new DeviceManagementReportsGetZebraFotaDeploymentReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getZebraFotaDeploymentReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder getGroupPolicySettingsDeviceSettingsReport(@Nonnull final DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet parameters) {
         return new DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getGroupPolicySettingsDeviceSettingsReport"), getClient(), null, parameters);
     }
@@ -599,6 +611,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetHistoricalReportRequestBuilder getHistoricalReport(@Nonnull final DeviceManagementReportsGetHistoricalReportParameterSet parameters) {
         return new DeviceManagementReportsGetHistoricalReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getHistoricalReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport(@Nonnull final DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportParameterSet parameters) {
+        return new DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getNoncompliantDevicesAndSettingsReport"), getClient(), null, parameters);
     }
 
     /**

@@ -41,7 +41,7 @@ public class SearchSettings implements IJsonBackedObject {
 
     /**
      * The Search Result Templates.
-     * Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed.
+     * Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of 2 search result templates per connection.
      */
     @SerializedName(value = "searchResultTemplates", alternate = {"SearchResultTemplates"})
     @Expose

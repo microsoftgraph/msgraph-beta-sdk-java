@@ -225,7 +225,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Channels.
-     * 
+     * List of channels shared with the team.
      */
 	@Nullable
     public com.microsoft.graph.requests.ChannelCollectionPage incomingChannels;

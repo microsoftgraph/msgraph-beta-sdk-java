@@ -406,6 +406,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     }
 
     /**
+     * Gets the request builder for SecurityReportsRoot
+     *
+     * @return the SecurityReportsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.SecurityReportsRootRequestBuilder security() {
+        return new com.microsoft.graph.requests.SecurityReportsRootRequestBuilder(getRequestUrlWithAdditionalSegment("security"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
@@ -1428,7 +1438,9 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
      */
+    @Deprecated
     @Nonnull
     public ReportRootGetAttackSimulationRepeatOffendersCollectionRequestBuilder getAttackSimulationRepeatOffenders() {
         return new ReportRootGetAttackSimulationRepeatOffendersCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationRepeatOffenders"), getClient(), null);
@@ -1437,7 +1449,9 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
      */
+    @Deprecated
     @Nonnull
     public ReportRootGetAttackSimulationSimulationUserCoverageCollectionRequestBuilder getAttackSimulationSimulationUserCoverage() {
         return new ReportRootGetAttackSimulationSimulationUserCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationSimulationUserCoverage"), getClient(), null);
@@ -1446,7 +1460,9 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API.
      */
+    @Deprecated
     @Nonnull
     public ReportRootGetAttackSimulationTrainingUserCoverageCollectionRequestBuilder getAttackSimulationTrainingUserCoverage() {
         return new ReportRootGetAttackSimulationTrainingUserCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationTrainingUserCoverage"), getClient(), null);

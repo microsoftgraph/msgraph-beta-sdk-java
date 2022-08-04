@@ -41,7 +41,7 @@ public class DeviceScopeActionResult implements IJsonBackedObject {
 
     /**
      * The Device Scope Action.
-     * The triggered action name.
+     * The triggered action name. Possible values are: .
      */
     @SerializedName(value = "deviceScopeAction", alternate = {"DeviceScopeAction"})
     @Expose
@@ -68,7 +68,7 @@ public class DeviceScopeActionResult implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger.
+     * Indicates the status of the attempt device scope action. When succeeded, the action was succeessfully triggered, When failed, the action was failed to trigger. Possible values are: failed, succeeded, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

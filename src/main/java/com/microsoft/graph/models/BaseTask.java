@@ -145,7 +145,7 @@ public class BaseTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Checklist Items.
-     * A collection of checklistItems linked to a task.
+     * A collection of smaller subtasks linked to the more complex parent task.
      */
     @SerializedName(value = "checklistItems", alternate = {"ChecklistItems"})
     @Expose

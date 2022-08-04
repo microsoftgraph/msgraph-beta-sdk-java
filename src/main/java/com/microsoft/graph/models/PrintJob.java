@@ -42,7 +42,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -96,7 +96,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Documents.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "documents", alternate = {"Documents"})
     @Expose

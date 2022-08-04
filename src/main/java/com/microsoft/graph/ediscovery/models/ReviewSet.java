@@ -57,7 +57,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The Queries.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "queries", alternate = {"Queries"})
     @Expose

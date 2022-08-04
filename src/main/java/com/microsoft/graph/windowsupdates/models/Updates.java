@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.windowsupdates.models.Catalog;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.windowsupdates.requests.DeploymentCollectionPage;
+import com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionPage;
 import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage;
 
 
@@ -48,6 +49,15 @@ public class Updates extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.windowsupdates.requests.DeploymentCollectionPage deployments;
 
     /**
+     * The Resource Connections.
+     * Service connections to external resources such as analytics workspaces.
+     */
+    @SerializedName(value = "resourceConnections", alternate = {"ResourceConnections"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionPage resourceConnections;
+
+    /**
      * The Updatable Assets.
      * Assets registered with the deployment service that can receive updates. Read-only.
      */
@@ -68,6 +78,10 @@ public class Updates extends Entity implements IJsonBackedObject {
 
         if (json.has("deployments")) {
             deployments = serializer.deserializeObject(json.get("deployments"), com.microsoft.graph.windowsupdates.requests.DeploymentCollectionPage.class);
+        }
+
+        if (json.has("resourceConnections")) {
+            resourceConnections = serializer.deserializeObject(json.get("resourceConnections"), com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionPage.class);
         }
 
         if (json.has("updatableAssets")) {

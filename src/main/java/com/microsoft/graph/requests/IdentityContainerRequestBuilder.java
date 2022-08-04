@@ -56,16 +56,6 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     }
 
 
-
-    /**
-     * Gets the request builder for ConditionalAccessRoot
-     *
-     * @return the ConditionalAccessRootRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder conditionalAccess() {
-        return new com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the IdentityApiConnector collection
      *
@@ -185,6 +175,16 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     @Nonnull
     public com.microsoft.graph.requests.IdentityUserFlowRequestBuilder userFlows(@Nonnull final String id) {
         return new com.microsoft.graph.requests.IdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ConditionalAccessRoot
+     *
+     * @return the ConditionalAccessRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder conditionalAccess() {
+        return new com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
     }
 
     /**

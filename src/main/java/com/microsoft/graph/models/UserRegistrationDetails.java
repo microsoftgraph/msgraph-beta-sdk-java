@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DefaultMfaMethodType;
+import com.microsoft.graph.models.SignInUserType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -25,6 +27,24 @@ import javax.annotation.Nonnull;
  */
 public class UserRegistrationDetails extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Default Mfa Method.
+     * The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
+     */
+    @SerializedName(value = "defaultMfaMethod", alternate = {"DefaultMfaMethod"})
+    @Expose
+	@Nullable
+    public DefaultMfaMethodType defaultMfaMethod;
+
+    /**
+     * The Is Admin.
+     * 
+     */
+    @SerializedName(value = "isAdmin", alternate = {"IsAdmin"})
+    @Expose
+	@Nullable
+    public Boolean isAdmin;
 
     /**
      * The Is Mfa Capable.
@@ -106,6 +126,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public String userPrincipalName;
+
+    /**
+     * The User Type.
+     * 
+     */
+    @SerializedName(value = "userType", alternate = {"UserType"})
+    @Expose
+	@Nullable
+    public SignInUserType userType;
 
 
     /**

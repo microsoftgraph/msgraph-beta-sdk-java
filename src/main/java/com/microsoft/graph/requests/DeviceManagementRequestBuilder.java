@@ -74,6 +74,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     }
 
 
+
+    /**
+     * Gets the request builder for VirtualEndpoint
+     *
+     * @return the VirtualEndpointRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEndpointRequestBuilder virtualEndpoint() {
+        return new com.microsoft.graph.requests.VirtualEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEndpoint"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the AndroidDeviceOwnerEnrollmentProfile collection
      *
@@ -93,16 +103,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileRequestBuilder androidDeviceOwnerEnrollmentProfiles(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileRequestBuilder(getRequestUrlWithAdditionalSegment("androidDeviceOwnerEnrollmentProfiles") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for VirtualEndpoint
-     *
-     * @return the VirtualEndpointRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.VirtualEndpointRequestBuilder virtualEndpoint() {
-        return new com.microsoft.graph.requests.VirtualEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEndpoint"), getClient(), null);
     }
     /**
      *  Gets a request builder for the AndroidForWorkAppConfigurationSchema collection

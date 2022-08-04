@@ -59,7 +59,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Query.
-     * 
+     * KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
     @Expose
@@ -122,7 +122,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -140,7 +140,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Include All Versions.
-     * 
+     * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "includeAllVersions", alternate = {"IncludeAllVersions"})
     @Expose
@@ -149,7 +149,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Include Authored Content.
-     * 
+     * Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "includeAuthoredContent", alternate = {"IncludeAuthoredContent"})
     @Expose
@@ -203,7 +203,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Pause After Estimate.
-     * 
+     * Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "pauseAfterEstimate", alternate = {"PauseAfterEstimate"})
     @Expose
@@ -239,7 +239,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * The status of the request. Possible values are: active, closed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -257,7 +257,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose

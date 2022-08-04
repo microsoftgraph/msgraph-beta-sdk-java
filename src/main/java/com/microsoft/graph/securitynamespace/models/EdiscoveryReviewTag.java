@@ -30,7 +30,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
     /**
      * The Child Selectability.
-     * 
+     * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      */
     @SerializedName(value = "childSelectability", alternate = {"ChildSelectability"})
     @Expose
@@ -39,14 +39,14 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
     /**
      * The Child Tags.
-     * 
+     * Returns the tags that are a child of a tag.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage childTags;
 
     /**
      * The Parent.
-     * 
+     * Returns the parent tag of the specified tag.
      */
     @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose

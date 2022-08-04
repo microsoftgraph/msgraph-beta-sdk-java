@@ -9,7 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.externalconnectors.models.ComplianceSettings;
 import com.microsoft.graph.externalconnectors.models.Configuration;
+import com.microsoft.graph.externalconnectors.models.ContentExperienceType;
 import com.microsoft.graph.externalconnectors.models.SearchSettings;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
 import com.microsoft.graph.externalconnectors.models.ConnectionQuota;
@@ -33,6 +35,15 @@ import javax.annotation.Nonnull;
  */
 public class ExternalConnection extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Compliance Settings.
+     * 
+     */
+    @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
+    @Expose
+	@Nullable
+    public ComplianceSettings complianceSettings;
 
     /**
      * The Configuration.
@@ -62,8 +73,17 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Ingested Items Count.
+     * The Enabled Content Experiences.
      * 
+     */
+    @SerializedName(value = "enabledContentExperiences", alternate = {"EnabledContentExperiences"})
+    @Expose
+	@Nullable
+    public EnumSet<ContentExperienceType> enabledContentExperiences;
+
+    /**
+     * The Ingested Items Count.
+     * The number of items ingested into a connection. This value is refreshed every 15 minutes. If the connection state is draft, then ingestedItemsCount will be null.
      */
     @SerializedName(value = "ingestedItemsCount", alternate = {"IngestedItemsCount"})
     @Expose
@@ -99,7 +119,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -108,7 +128,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Items.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -117,7 +137,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -135,7 +155,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Schema.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose

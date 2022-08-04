@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsRoot;
+import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage;
 import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage;
@@ -137,6 +138,15 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.PrintUsageByUserCollectionPage monthlyPrintUsageSummariesByUser;
+
+    /**
+     * The Security.
+     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
+     */
+    @SerializedName(value = "security", alternate = {"Security"})
+    @Expose
+	@Nullable
+    public SecurityReportsRoot security;
 
 
     /**

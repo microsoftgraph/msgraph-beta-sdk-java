@@ -241,6 +241,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public java.util.List<KeyValuePair> exemptedAppPackages;
 
     /**
+     * The Fingerprint And Biometric Enabled.
+     * If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
+     */
+    @SerializedName(value = "fingerprintAndBiometricEnabled", alternate = {"FingerprintAndBiometricEnabled"})
+    @Expose
+	@Nullable
+    public Boolean fingerprintAndBiometricEnabled;
+
+    /**
      * The Keyboards Restricted.
      * Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
      */
@@ -304,6 +313,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public String minimumWipePatchVersion;
 
     /**
+     * The Require Class3Biometrics.
+     * Require user to apply Class 3 Biometrics on their Android device.
+     */
+    @SerializedName(value = "requireClass3Biometrics", alternate = {"RequireClass3Biometrics"})
+    @Expose
+	@Nullable
+    public Boolean requireClass3Biometrics;
+
+    /**
      * The Required Android Safety Net Apps Verification Type.
      * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
      */
@@ -329,6 +347,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     @Expose
 	@Nullable
     public AndroidManagedAppSafetyNetEvaluationType requiredAndroidSafetyNetEvaluationType;
+
+    /**
+     * The Require Pin After Biometric Change.
+     * A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
+     */
+    @SerializedName(value = "requirePinAfterBiometricChange", alternate = {"RequirePinAfterBiometricChange"})
+    @Expose
+	@Nullable
+    public Boolean requirePinAfterBiometricChange;
 
     /**
      * The Screen Capture Blocked.

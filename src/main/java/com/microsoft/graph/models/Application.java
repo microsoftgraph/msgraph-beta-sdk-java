@@ -60,7 +60,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -248,6 +248,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<RequiredResourceAccess> requiredResourceAccess;
 
     /**
+     * The Saml Metadata Url.
+     * The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
+     */
+    @SerializedName(value = "samlMetadataUrl", alternate = {"SamlMetadataUrl"})
+    @Expose
+	@Nullable
+    public String samlMetadataUrl;
+
+    /**
      * The Service Management Reference.
      * References application or service contact information from a Service or Asset Management database. Nullable.
      */
@@ -346,7 +355,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created On Behalf Of.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -355,7 +364,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
@@ -364,7 +373,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose

@@ -127,7 +127,9 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The activateService API will be deprecated and will stop returning data on Jun-30, 2022
      */
+    @Deprecated
     @Nonnull
     public OrganizationActivateServiceRequestBuilder activateService(@Nonnull final OrganizationActivateServiceParameterSet parameters) {
         return new OrganizationActivateServiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activateService"), getClient(), null, parameters);

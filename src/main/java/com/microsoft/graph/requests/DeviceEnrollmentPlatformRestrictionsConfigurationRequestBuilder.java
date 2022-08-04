@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceEnrollmentPlatformRestrictionsConfiguration;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
+import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -89,15 +90,6 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder ext
     @Nonnull
     public DeviceEnrollmentConfigurationAssignRequestBuilder assign(@Nonnull final DeviceEnrollmentConfigurationAssignParameterSet parameters) {
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
-        return new DeviceEnrollmentConfigurationCreateEnrollmentNotificationConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createEnrollmentNotificationConfiguration"), getClient(), null);
     }
 
     /**

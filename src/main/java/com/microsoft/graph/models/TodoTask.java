@@ -15,6 +15,8 @@ import com.microsoft.graph.models.Importance;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AttachmentBaseCollectionPage;
+import com.microsoft.graph.requests.AttachmentSessionCollectionPage;
 import com.microsoft.graph.requests.ChecklistItemCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.LinkedResourceCollectionPage;
@@ -45,7 +47,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Body Last Modified Date Time.
-     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      */
     @SerializedName(value = "bodyLastModifiedDateTime", alternate = {"BodyLastModifiedDateTime"})
     @Expose
@@ -54,7 +56,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -87,6 +89,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DateTimeTimeZone dueDateTime;
+
+    /**
+     * The Has Attachments.
+     * Indicates whether the task has attachments.
+     */
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
+    @Expose
+	@Nullable
+    public Boolean hasAttachments;
 
     /**
      * The Importance.
@@ -134,6 +145,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     public DateTimeTimeZone reminderDateTime;
 
     /**
+     * The Start Date Time.
+     * The date in the specified time zone at which the task is scheduled to start.
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone startDateTime;
+
+    /**
      * The Status.
      * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      */
@@ -152,8 +172,26 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     public String title;
 
     /**
-     * The Checklist Items.
+     * The Attachments.
+     * A collection of file attachments for the task.
+     */
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AttachmentBaseCollectionPage attachments;
+
+    /**
+     * The Attachment Sessions.
      * 
+     */
+    @SerializedName(value = "attachmentSessions", alternate = {"AttachmentSessions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AttachmentSessionCollectionPage attachmentSessions;
+
+    /**
+     * The Checklist Items.
+     * A collection of smaller subtasks linked to the more complex parent task.
      */
     @SerializedName(value = "checklistItems", alternate = {"ChecklistItems"})
     @Expose
@@ -187,6 +225,14 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attachments")) {
+            attachments = serializer.deserializeObject(json.get("attachments"), com.microsoft.graph.requests.AttachmentBaseCollectionPage.class);
+        }
+
+        if (json.has("attachmentSessions")) {
+            attachmentSessions = serializer.deserializeObject(json.get("attachmentSessions"), com.microsoft.graph.requests.AttachmentSessionCollectionPage.class);
+        }
 
         if (json.has("checklistItems")) {
             checklistItems = serializer.deserializeObject(json.get("checklistItems"), com.microsoft.graph.requests.ChecklistItemCollectionPage.class);

@@ -23,6 +23,7 @@ import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage
 import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
 import com.microsoft.graph.requests.AccessPackageCollectionPage;
 import com.microsoft.graph.requests.ConnectedOrganizationCollectionPage;
+import com.microsoft.graph.requests.AccessPackageSubjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -41,7 +42,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignment Approvals.
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      */
     @SerializedName(value = "accessPackageAssignmentApprovals", alternate = {"AccessPackageAssignmentApprovals"})
     @Expose
@@ -77,7 +78,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignments.
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      */
     @SerializedName(value = "accessPackageAssignments", alternate = {"AccessPackageAssignments"})
     @Expose
@@ -86,7 +87,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Catalogs.
-     * Represents a group of access packages.
+     * A container of access packages.
      */
     @SerializedName(value = "accessPackageCatalogs", alternate = {"AccessPackageCatalogs"})
     @Expose
@@ -156,6 +157,15 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 	@Nullable
     public EntitlementManagementSettings settings;
 
+    /**
+     * The Subjects.
+     * 
+     */
+    @SerializedName(value = "subjects", alternate = {"Subjects"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageSubjectCollectionPage subjects;
+
 
     /**
      * Sets the raw JSON object
@@ -212,6 +222,10 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("connectedOrganizations")) {
             connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations"), com.microsoft.graph.requests.ConnectedOrganizationCollectionPage.class);
+        }
+
+        if (json.has("subjects")) {
+            subjects = serializer.deserializeObject(json.get("subjects"), com.microsoft.graph.requests.AccessPackageSubjectCollectionPage.class);
         }
     }
 }

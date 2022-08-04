@@ -1887,6 +1887,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the DeviceRegistrationPolicy
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+        return new com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder(getServiceRoot() + "/deviceRegistrationPolicy", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the OrganizationalBranding
      */
     @Nonnull
@@ -2047,6 +2057,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the ThreatSubmissionRoot
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.ThreatSubmissionRootRequestBuilder threatSubmission() {
+        return new com.microsoft.graph.security.requests.ThreatSubmissionRootRequestBuilder(getServiceRoot() + "/threatSubmission", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the CommsApplication
      */
     @Nonnull
@@ -2082,6 +2102,26 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.TeamworkRequestBuilder teamwork() {
         return new com.microsoft.graph.requests.TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Storage
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.StorageRequestBuilder storage() {
+        return new com.microsoft.graph.requests.StorageRequestBuilder(getServiceRoot() + "/storage", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the EmployeeExperience
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EmployeeExperienceRequestBuilder employeeExperience() {
+        return new com.microsoft.graph.requests.EmployeeExperienceRequestBuilder(getServiceRoot() + "/employeeExperience", this, null);
     }
 
     /**

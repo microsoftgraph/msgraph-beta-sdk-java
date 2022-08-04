@@ -54,7 +54,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Mfa Excluded User Count.
-     * 
+     * The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
      */
     @SerializedName(value = "mfaExcludedUserCount", alternate = {"MfaExcludedUserCount"})
     @Expose

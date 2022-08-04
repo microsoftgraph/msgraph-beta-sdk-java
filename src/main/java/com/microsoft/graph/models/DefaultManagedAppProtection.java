@@ -323,6 +323,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public Boolean filterOpenInToOnlyManagedApps;
 
     /**
+     * The Fingerprint And Biometric Enabled.
+     * Indicate to the client to enable both biometrics and fingerprints for the app.
+     */
+    @SerializedName(value = "fingerprintAndBiometricEnabled", alternate = {"FingerprintAndBiometricEnabled"})
+    @Expose
+	@Nullable
+    public Boolean fingerprintAndBiometricEnabled;
+
+    /**
      * The Minimum Required Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or app access will be blocked
      */
@@ -404,6 +413,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public Boolean protectInboundDataFromUnknownSources;
 
     /**
+     * The Require Class3Biometrics.
+     * Require user to apply Class 3 Biometrics on their Android device.
+     */
+    @SerializedName(value = "requireClass3Biometrics", alternate = {"RequireClass3Biometrics"})
+    @Expose
+	@Nullable
+    public Boolean requireClass3Biometrics;
+
+    /**
      * The Required Android Safety Net Apps Verification Type.
      * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
      */
@@ -429,6 +447,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @Expose
 	@Nullable
     public AndroidManagedAppSafetyNetEvaluationType requiredAndroidSafetyNetEvaluationType;
+
+    /**
+     * The Require Pin After Biometric Change.
+     * A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
+     */
+    @SerializedName(value = "requirePinAfterBiometricChange", alternate = {"RequirePinAfterBiometricChange"})
+    @Expose
+	@Nullable
+    public Boolean requirePinAfterBiometricChange;
 
     /**
      * The Screen Capture Blocked.

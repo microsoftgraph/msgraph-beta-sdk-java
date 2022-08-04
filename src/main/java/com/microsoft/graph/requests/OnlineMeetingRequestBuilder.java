@@ -58,6 +58,16 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     }
 
 
+
+    /**
+     * Gets the request builder for VirtualAppointment
+     *
+     * @return the VirtualAppointmentRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualAppointmentRequestBuilder virtualAppointment() {
+        return new com.microsoft.graph.requests.VirtualAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("virtualAppointment"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the MeetingAttendanceReport collection
      *
@@ -97,6 +107,26 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     @Nonnull
     public com.microsoft.graph.requests.MeetingRegistrationRequestBuilder registration() {
         return new com.microsoft.graph.requests.MeetingRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("registration"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CallTranscript collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder transcripts() {
+        return new com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CallTranscript item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallTranscriptRequestBuilder transcripts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CallTranscriptRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts") + "/" + id, getClient(), null);
     }
 
     /**

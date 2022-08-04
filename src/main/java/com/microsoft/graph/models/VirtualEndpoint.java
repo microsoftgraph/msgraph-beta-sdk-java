@@ -14,6 +14,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
+import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage;
 import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
@@ -63,6 +64,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage deviceImages;
+
+    /**
+     * The External Partner Settings.
+     * The external partner settings on a Cloud PC.
+     */
+    @SerializedName(value = "externalPartnerSettings", alternate = {"ExternalPartnerSettings"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage externalPartnerSettings;
 
     /**
      * The Gallery Images.
@@ -156,6 +166,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("deviceImages")) {
             deviceImages = serializer.deserializeObject(json.get("deviceImages"), com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage.class);
+        }
+
+        if (json.has("externalPartnerSettings")) {
+            externalPartnerSettings = serializer.deserializeObject(json.get("externalPartnerSettings"), com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage.class);
         }
 
         if (json.has("galleryImages")) {

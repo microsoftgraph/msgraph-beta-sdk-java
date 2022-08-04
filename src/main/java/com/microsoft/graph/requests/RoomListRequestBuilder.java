@@ -76,4 +76,24 @@ public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
     public com.microsoft.graph.requests.RoomRequestBuilder rooms(@Nonnull final String id) {
         return new com.microsoft.graph.requests.RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Workspace collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WorkspaceCollectionRequestBuilder workspaces() {
+        return new com.microsoft.graph.requests.WorkspaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workspaces"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Workspace item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WorkspaceRequestBuilder workspaces(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkspaceRequestBuilder(getRequestUrlWithAdditionalSegment("workspaces") + "/" + id, getClient(), null);
+    }
 }
