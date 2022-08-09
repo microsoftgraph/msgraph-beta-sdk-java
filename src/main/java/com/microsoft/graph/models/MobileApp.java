@@ -11,12 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MimeContent;
 import com.microsoft.graph.models.MobileAppPublishingState;
-import com.microsoft.graph.models.MobileAppAssignment;
-import com.microsoft.graph.models.MobileAppCategory;
-import com.microsoft.graph.models.MobileAppInstallStatus;
 import com.microsoft.graph.models.MobileAppInstallSummary;
-import com.microsoft.graph.models.MobileAppRelationship;
-import com.microsoft.graph.models.UserAppInstallStatus;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MobileAppAssignmentCollectionPage;
 import com.microsoft.graph.requests.MobileAppCategoryCollectionPage;
@@ -217,14 +212,14 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public MobileAppAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.MobileAppAssignmentCollectionPage assignments;
 
     /**
      * The Categories.
      * The list of categories for this app.
      */
 	@Nullable
-    public MobileAppCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionPage categories;
 
     /**
      * The Device Statuses.
@@ -233,7 +228,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public MobileAppInstallStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage deviceStatuses;
 
     /**
      * The Install Summary.
@@ -251,7 +246,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "relationships", alternate = {"Relationships"})
     @Expose
 	@Nullable
-    public MobileAppRelationshipCollectionPage relationships;
+    public com.microsoft.graph.requests.MobileAppRelationshipCollectionPage relationships;
 
     /**
      * The User Statuses.
@@ -260,7 +255,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
 	@Nullable
-    public UserAppInstallStatusCollectionPage userStatuses;
+    public com.microsoft.graph.requests.UserAppInstallStatusCollectionPage userStatuses;
 
 
     /**
@@ -273,23 +268,23 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), MobileAppAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.MobileAppAssignmentCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), MobileAppCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), MobileAppInstallStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage.class);
         }
 
         if (json.has("relationships")) {
-            relationships = serializer.deserializeObject(json.get("relationships"), MobileAppRelationshipCollectionPage.class);
+            relationships = serializer.deserializeObject(json.get("relationships"), com.microsoft.graph.requests.MobileAppRelationshipCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses"), UserAppInstallStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), com.microsoft.graph.requests.UserAppInstallStatusCollectionPage.class);
         }
     }
 }

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsAppIcon;
-import com.microsoft.graph.requests.TeamworkHostedContentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class TeamsAppIconRequestBuilder extends BaseRequestBuilder<TeamsAppIcon>
      * @return the TeamworkHostedContentRequestBuilder instance
      */
     @Nonnull
-    public TeamworkHostedContentRequestBuilder hostedContent() {
-        return new TeamworkHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContent"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkHostedContentRequestBuilder hostedContent() {
+        return new com.microsoft.graph.requests.TeamworkHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContent"), getClient(), null);
     }
 }

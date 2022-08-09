@@ -15,9 +15,6 @@ import com.microsoft.graph.models.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.WindowsAssignedAccessProfile;
 import com.microsoft.graph.models.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.IosAvailableUpdateVersion;
-import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.Windows81TrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -76,8 +73,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -87,8 +84,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SettingStateDeviceSummary collection
@@ -96,8 +93,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
     /**
@@ -107,8 +104,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationDeviceStatus collection
@@ -116,8 +113,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
-        return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -127,8 +124,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -137,8 +134,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
     @Nonnull
-    public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
-        return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
+        return new com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationGroupAssignment collection
@@ -146,8 +143,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new com.microsoft.graph.requests.DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
     }
 
     /**
@@ -157,8 +154,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
-        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationUserStatus collection
@@ -166,8 +163,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
     /**
@@ -177,8 +174,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
-        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -187,8 +184,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
     @Nonnull
-    public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
-        return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
+        return new com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceCertificateState collection
@@ -196,8 +193,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates() {
-        return new ManagedDeviceCertificateStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates() {
+        return new com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates"), getClient(), null);
     }
 
     /**
@@ -207,8 +204,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(@Nonnull final String id) {
-        return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -217,8 +214,8 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
      * @return the Windows81TrustedRootCertificateWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public Windows81TrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
-        return new Windows81TrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
+    public com.microsoft.graph.requests.Windows81TrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
+        return new com.microsoft.graph.requests.Windows81TrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 
     /**

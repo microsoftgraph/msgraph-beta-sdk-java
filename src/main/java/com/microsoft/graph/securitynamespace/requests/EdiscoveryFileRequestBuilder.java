@@ -8,9 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryFile;
-import com.microsoft.graph.security.requests.EdiscoveryCustodianWithReferenceRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class EdiscoveryFileRequestBuilder extends BaseRequestBuilder<EdiscoveryF
      * @return the EdiscoveryCustodianWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryCustodianWithReferenceRequestBuilder custodian() {
-        return new EdiscoveryCustodianWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("custodian"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryCustodianWithReferenceRequestBuilder custodian() {
+        return new com.microsoft.graph.security.requests.EdiscoveryCustodianWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("custodian"), getClient(), null);
     }
     /**
      *  Gets a request builder for the EdiscoveryReviewTag collection
@@ -75,8 +72,8 @@ public class EdiscoveryFileRequestBuilder extends BaseRequestBuilder<EdiscoveryF
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryReviewTagCollectionWithReferencesRequestBuilder tags() {
-        return new EdiscoveryReviewTagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder tags() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class EdiscoveryFileRequestBuilder extends BaseRequestBuilder<EdiscoveryF
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryReviewTagWithReferenceRequestBuilder tags(@Nonnull final String id) {
-        return new EdiscoveryReviewTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder tags(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
     }
 }

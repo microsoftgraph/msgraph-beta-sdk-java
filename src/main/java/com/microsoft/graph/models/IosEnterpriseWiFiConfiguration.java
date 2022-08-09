@@ -15,7 +15,6 @@ import com.microsoft.graph.models.EapType;
 import com.microsoft.graph.models.NonEapAuthenticationMethodForEapTtlsType;
 import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
 import com.microsoft.graph.models.IosCertificateProfileBase;
-import com.microsoft.graph.models.IosTrustedRootCertificate;
 import com.microsoft.graph.models.IosWiFiConfiguration;
 import com.microsoft.graph.requests.IosTrustedRootCertificateCollectionPage;
 
@@ -131,7 +130,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose
 	@Nullable
-    public IosTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    public com.microsoft.graph.requests.IosTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 
     /**
@@ -144,7 +143,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), IosTrustedRootCertificateCollectionPage.class);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), com.microsoft.graph.requests.IosTrustedRootCertificateCollectionPage.class);
         }
     }
 }

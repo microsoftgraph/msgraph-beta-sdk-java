@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
 import com.microsoft.graph.models.EmbeddedSIMActivationCodePoolAssignment;
-import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentRequestBuilder;
-import com.microsoft.graph.requests.EmbeddedSIMDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.EmbeddedSIMDeviceStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder assignments() {
-        return new EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -79,8 +75,8 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public EmbeddedSIMActivationCodePoolAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new EmbeddedSIMActivationCodePoolAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EmbeddedSIMDeviceState collection
@@ -88,8 +84,8 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public EmbeddedSIMDeviceStateCollectionRequestBuilder deviceStates() {
-        return new EmbeddedSIMDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
+    public com.microsoft.graph.requests.EmbeddedSIMDeviceStateCollectionRequestBuilder deviceStates() {
+        return new com.microsoft.graph.requests.EmbeddedSIMDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
     /**
@@ -99,8 +95,8 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public EmbeddedSIMDeviceStateRequestBuilder deviceStates(@Nonnull final String id) {
-        return new EmbeddedSIMDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EmbeddedSIMDeviceStateRequestBuilder deviceStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EmbeddedSIMDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**

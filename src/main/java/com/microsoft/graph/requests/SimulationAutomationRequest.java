@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SimulationAutomation;
-import com.microsoft.graph.requests.SimulationAutomationRunCollectionRequestBuilder;
-import com.microsoft.graph.requests.SimulationAutomationRunRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

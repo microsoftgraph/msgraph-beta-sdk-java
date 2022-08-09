@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AuthenticationEventsPolicy;
-import com.microsoft.graph.requests.AuthenticationListenerCollectionRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationListenerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AuthenticationEventsPolicyRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public AuthenticationListenerCollectionRequestBuilder onSignupStart() {
-        return new AuthenticationListenerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onSignupStart"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationListenerCollectionRequestBuilder onSignupStart() {
+        return new com.microsoft.graph.requests.AuthenticationListenerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onSignupStart"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AuthenticationEventsPolicyRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public AuthenticationListenerRequestBuilder onSignupStart(@Nonnull final String id) {
-        return new AuthenticationListenerRequestBuilder(getRequestUrlWithAdditionalSegment("onSignupStart") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationListenerRequestBuilder onSignupStart(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationListenerRequestBuilder(getRequestUrlWithAdditionalSegment("onSignupStart") + "/" + id, getClient(), null);
     }
 }

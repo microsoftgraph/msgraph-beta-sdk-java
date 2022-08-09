@@ -29,7 +29,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * 
+     * The color that the UI should display for the label, if configured.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -38,7 +38,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Formats.
-     * 
+     * Returns the supported content formats for the label.
      */
     @SerializedName(value = "contentFormats", alternate = {"ContentFormats"})
     @Expose
@@ -47,7 +47,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The admin-defined description for the label.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -56,7 +56,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Protection.
-     * 
+     * Indicates whether the label has protection actions configured.
      */
     @SerializedName(value = "hasProtection", alternate = {"HasProtection"})
     @Expose
@@ -65,7 +65,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * 
+     * Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -74,7 +74,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Appliable.
-     * 
+     * Indicates whether the label can be applied to content. False if the label is a parent with child labels.
      */
     @SerializedName(value = "isAppliable", alternate = {"IsAppliable"})
     @Expose
@@ -83,7 +83,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The plaintext name of the label.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -92,7 +92,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * 
+     * The sensitivity value of the label, where lower is less sensitive.
      */
     @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
@@ -101,7 +101,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Tooltip.
-     * 
+     * The tooltip that should be displayed for the label in a UI.
      */
     @SerializedName(value = "tooltip", alternate = {"Tooltip"})
     @Expose
@@ -110,7 +110,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent.
-     * 
+     * The parent label associated with a child label. Null if the label has no parent.
      */
     @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose

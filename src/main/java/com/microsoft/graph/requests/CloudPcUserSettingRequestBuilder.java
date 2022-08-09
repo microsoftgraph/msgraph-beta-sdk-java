@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.CloudPcUserSettingAssignment;
-import com.microsoft.graph.requests.CloudPcUserSettingAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcUserSettingAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class CloudPcUserSettingRequestBuilder extends BaseRequestBuilder<CloudPc
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcUserSettingAssignmentCollectionRequestBuilder assignments() {
-        return new CloudPcUserSettingAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcUserSettingAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.CloudPcUserSettingAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class CloudPcUserSettingRequestBuilder extends BaseRequestBuilder<CloudPc
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcUserSettingAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new CloudPcUserSettingAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcUserSettingAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcUserSettingAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

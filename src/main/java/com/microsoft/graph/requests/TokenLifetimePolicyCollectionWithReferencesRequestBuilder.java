@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.DirectoryObject;
 import java.util.Arrays;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequest, TokenLifetimePolicyReferenceRequestBuilder, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionWithReferencesPage, TokenLifetimePolicyCollectionReferenceRequest, TokenLifetimePolicyCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Application
      *
      * @param requestUrl     the request URL
      * @param client         the service client

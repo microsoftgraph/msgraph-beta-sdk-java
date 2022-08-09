@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RegistrationEnforcement;
-import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage;
 
@@ -90,7 +89,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
     @SerializedName(value = "authenticationMethodConfigurations", alternate = {"AuthenticationMethodConfigurations"})
     @Expose
 	@Nullable
-    public AuthenticationMethodConfigurationCollectionPage authenticationMethodConfigurations;
+    public com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage authenticationMethodConfigurations;
 
 
     /**
@@ -103,7 +102,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
 
         if (json.has("authenticationMethodConfigurations")) {
-            authenticationMethodConfigurations = serializer.deserializeObject(json.get("authenticationMethodConfigurations"), AuthenticationMethodConfigurationCollectionPage.class);
+            authenticationMethodConfigurations = serializer.deserializeObject(json.get("authenticationMethodConfigurations"), com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage.class);
         }
     }
 }

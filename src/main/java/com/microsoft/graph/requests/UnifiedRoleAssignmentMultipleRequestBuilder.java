@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleAssignmentMultiple;
-import com.microsoft.graph.requests.AppScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.AppScopeRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +62,8 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public AppScopeCollectionRequestBuilder appScopes() {
-        return new AppScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appScopes"), getClient(), null);
+    public com.microsoft.graph.requests.AppScopeCollectionRequestBuilder appScopes() {
+        return new com.microsoft.graph.requests.AppScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appScopes"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public AppScopeRequestBuilder appScopes(@Nonnull final String id) {
-        return new AppScopeRequestBuilder(getRequestUrlWithAdditionalSegment("appScopes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AppScopeRequestBuilder appScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppScopeRequestBuilder(getRequestUrlWithAdditionalSegment("appScopes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DirectoryObject collection
@@ -87,8 +82,8 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionWithReferencesRequestBuilder directoryScopes() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScopes"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder directoryScopes() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScopes"), getClient(), null);
     }
 
     /**
@@ -98,8 +93,8 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder directoryScopes(@Nonnull final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScopes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder directoryScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScopes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DirectoryObject collection
@@ -107,8 +102,8 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionWithReferencesRequestBuilder principals() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("principals"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder principals() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("principals"), getClient(), null);
     }
 
     /**
@@ -118,8 +113,8 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder principals(@Nonnull final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principals") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder principals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principals") + "/" + id, getClient(), null);
     }
 
     /**
@@ -128,7 +123,7 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @return the UnifiedRoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

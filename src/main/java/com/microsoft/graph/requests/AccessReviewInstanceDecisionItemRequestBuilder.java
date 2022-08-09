@@ -9,9 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.GovernanceInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceInsightRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class AccessReviewInstanceDecisionItemRequestBuilder extends BaseRequestB
      * @return the collection request builder
      */
     @Nonnull
-    public GovernanceInsightCollectionRequestBuilder insights() {
-        return new GovernanceInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceInsightCollectionRequestBuilder insights() {
+        return new com.microsoft.graph.requests.GovernanceInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
     }
 
     /**
@@ -77,8 +74,8 @@ public class AccessReviewInstanceDecisionItemRequestBuilder extends BaseRequestB
      * @param id the item identifier
      */
     @Nonnull
-    public GovernanceInsightRequestBuilder insights(@Nonnull final String id) {
-        return new GovernanceInsightRequestBuilder(getRequestUrlWithAdditionalSegment("insights") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GovernanceInsightRequestBuilder insights(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceInsightRequestBuilder(getRequestUrlWithAdditionalSegment("insights") + "/" + id, getClient(), null);
     }
 
     /**
@@ -87,7 +84,7 @@ public class AccessReviewInstanceDecisionItemRequestBuilder extends BaseRequestB
      * @return the AccessReviewInstanceRequestBuilder instance
      */
     @Nonnull
-    public AccessReviewInstanceRequestBuilder instance() {
-        return new AccessReviewInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instance"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder instance() {
+        return new com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instance"), getClient(), null);
     }
 }

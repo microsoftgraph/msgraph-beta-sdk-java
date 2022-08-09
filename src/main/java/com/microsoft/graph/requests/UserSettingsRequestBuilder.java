@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserSettings;
-import com.microsoft.graph.requests.UserInsightsSettingsRequestBuilder;
-import com.microsoft.graph.requests.ContactMergeSuggestionsRequestBuilder;
-import com.microsoft.graph.requests.RegionalAndLanguageSettingsRequestBuilder;
-import com.microsoft.graph.requests.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @return the UserInsightsSettingsRequestBuilder instance
      */
     @Nonnull
-    public UserInsightsSettingsRequestBuilder itemInsights() {
-        return new UserInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    public com.microsoft.graph.requests.UserInsightsSettingsRequestBuilder itemInsights() {
+        return new com.microsoft.graph.requests.UserInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @return the ContactMergeSuggestionsRequestBuilder instance
      */
     @Nonnull
-    public ContactMergeSuggestionsRequestBuilder contactMergeSuggestions() {
-        return new ContactMergeSuggestionsRequestBuilder(getRequestUrlWithAdditionalSegment("contactMergeSuggestions"), getClient(), null);
+    public com.microsoft.graph.requests.ContactMergeSuggestionsRequestBuilder contactMergeSuggestions() {
+        return new com.microsoft.graph.requests.ContactMergeSuggestionsRequestBuilder(getRequestUrlWithAdditionalSegment("contactMergeSuggestions"), getClient(), null);
     }
 
     /**
@@ -87,8 +83,8 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @return the RegionalAndLanguageSettingsRequestBuilder instance
      */
     @Nonnull
-    public RegionalAndLanguageSettingsRequestBuilder regionalAndLanguageSettings() {
-        return new RegionalAndLanguageSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("regionalAndLanguageSettings"), getClient(), null);
+    public com.microsoft.graph.requests.RegionalAndLanguageSettingsRequestBuilder regionalAndLanguageSettings() {
+        return new com.microsoft.graph.requests.RegionalAndLanguageSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("regionalAndLanguageSettings"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @return the ShiftPreferencesRequestBuilder instance
      */
     @Nonnull
-    public ShiftPreferencesRequestBuilder shiftPreferences() {
-        return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
+    public com.microsoft.graph.requests.ShiftPreferencesRequestBuilder shiftPreferences() {
+        return new com.microsoft.graph.requests.ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
     }
 }

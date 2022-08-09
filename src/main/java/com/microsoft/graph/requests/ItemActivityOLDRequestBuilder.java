@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ItemActivityOLD;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.ListItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder<ItemActivi
      * @return the DriveItemRequestBuilder instance
      */
     @Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder driveItem() {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder<ItemActivi
      * @return the ListItemRequestBuilder instance
      */
     @Nonnull
-    public ListItemRequestBuilder listItem() {
-        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    public com.microsoft.graph.requests.ListItemRequestBuilder listItem() {
+        return new com.microsoft.graph.requests.ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 }

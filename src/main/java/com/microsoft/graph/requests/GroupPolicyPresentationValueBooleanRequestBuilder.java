@@ -63,8 +63,8 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
      * @return the GroupPolicyDefinitionValueWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
-        return new GroupPolicyDefinitionValueWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValue"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionValueWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValue"), getClient(), null);
     }
 
     /**
@@ -73,7 +73,7 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
      * @return the GroupPolicyPresentationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyPresentationWithReferenceRequestBuilder presentation() {
-        return new GroupPolicyPresentationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presentation"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyPresentationWithReferenceRequestBuilder presentation() {
+        return new com.microsoft.graph.requests.GroupPolicyPresentationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presentation"), getClient(), null);
     }
 }

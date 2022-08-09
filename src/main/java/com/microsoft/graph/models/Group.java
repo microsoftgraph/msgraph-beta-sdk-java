@@ -16,36 +16,22 @@ import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.GroupWritebackConfiguration;
 import com.microsoft.graph.models.GroupAccessType;
 import com.microsoft.graph.models.MembershipRuleProcessingStatus;
-import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.Endpoint;
-import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
-import com.microsoft.graph.models.DirectorySetting;
 import com.microsoft.graph.models.Calendar;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.Conversation;
-import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.Site;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.GroupLifecyclePolicy;
 import com.microsoft.graph.models.PlannerGroup;
 import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.EndpointCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
 import com.microsoft.graph.requests.DirectorySettingCollectionPage;
-import com.microsoft.graph.requests.EventCollectionPage;
 import com.microsoft.graph.requests.ConversationCollectionPage;
 import com.microsoft.graph.requests.ConversationThreadCollectionPage;
-import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.GroupLifecyclePolicyCollectionPage;
-import com.microsoft.graph.requests.ProfilePhotoCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -118,7 +104,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -214,17 +200,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String mailNickname;
-
-    /**
-     * The Mdm App Id.
-     * 
-     * @deprecated 
-     */
-    @Deprecated
-    @SerializedName(value = "mdmAppId", alternate = {"MdmAppId"})
-    @Expose
-	@Nullable
-    public String mdmAppId;
 
     /**
      * The Membership Rule.
@@ -399,7 +374,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -408,7 +383,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Writeback Configuration.
-     * 
+     * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Azure AD Connect sync client.
      */
     @SerializedName(value = "writebackConfiguration", alternate = {"WritebackConfiguration"})
     @Expose
@@ -516,7 +491,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Archived.
-     * When a group is associated with a team, this property determines whether the team is in read-only mode.
+     * When a group is associated with a team, this property determines whether the team is in read-only mode. To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
      */
     @SerializedName(value = "isArchived", alternate = {"IsArchived"})
     @Expose
@@ -530,7 +505,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
 	@Nullable
-    public AppRoleAssignmentCollectionPage appRoleAssignments;
+    public com.microsoft.graph.requests.AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
      * The Created On Behalf Of.
@@ -548,35 +523,35 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose
 	@Nullable
-    public EndpointCollectionPage endpoints;
+    public com.microsoft.graph.requests.EndpointCollectionPage endpoints;
 
     /**
      * The Member Of.
      * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Members.
-     * Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
+     * Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
      */
 	@Nullable
-    public DirectoryObjectCollectionPage members;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage members;
 
     /**
      * The Members With License Errors.
      * A list of group members with license errors from this group-based license assignment. Read-only.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage membersWithLicenseErrors;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage membersWithLicenseErrors;
 
     /**
      * The Owners.
      * The owners of the group who can be users or service principals. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
      */
 	@Nullable
-    public DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
 
     /**
      * The Permission Grants.
@@ -585,7 +560,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose
 	@Nullable
-    public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage permissionGrants;
 
     /**
      * The Settings.
@@ -594,28 +569,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public DirectorySettingCollectionPage settings;
+    public com.microsoft.graph.requests.DirectorySettingCollectionPage settings;
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
      * The Transitive Members.
-     * 
+     * The direct and transitive members of a group. Nullable.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveMembers;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMembers;
 
     /**
      * The Accepted Senders.
      * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage acceptedSenders;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage acceptedSenders;
 
     /**
      * The Calendar.
@@ -633,7 +608,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
 	@Nullable
-    public EventCollectionPage calendarView;
+    public com.microsoft.graph.requests.EventCollectionPage calendarView;
 
     /**
      * The Conversations.
@@ -642,7 +617,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "conversations", alternate = {"Conversations"})
     @Expose
 	@Nullable
-    public ConversationCollectionPage conversations;
+    public com.microsoft.graph.requests.ConversationCollectionPage conversations;
 
     /**
      * The Events.
@@ -651,14 +626,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
 	@Nullable
-    public EventCollectionPage events;
+    public com.microsoft.graph.requests.EventCollectionPage events;
 
     /**
      * The Rejected Senders.
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
 	@Nullable
-    public DirectoryObjectCollectionPage rejectedSenders;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage rejectedSenders;
 
     /**
      * The Threads.
@@ -667,7 +642,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
 	@Nullable
-    public ConversationThreadCollectionPage threads;
+    public com.microsoft.graph.requests.ConversationThreadCollectionPage threads;
 
     /**
      * The Drive.
@@ -685,7 +660,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
 	@Nullable
-    public DriveCollectionPage drives;
+    public com.microsoft.graph.requests.DriveCollectionPage drives;
 
     /**
      * The Sites.
@@ -694,7 +669,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "sites", alternate = {"Sites"})
     @Expose
 	@Nullable
-    public SiteCollectionPage sites;
+    public com.microsoft.graph.requests.SiteCollectionPage sites;
 
     /**
      * The Extensions.
@@ -703,7 +678,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The Group Lifecycle Policies.
@@ -712,7 +687,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "groupLifecyclePolicies", alternate = {"GroupLifecyclePolicies"})
     @Expose
 	@Nullable
-    public GroupLifecyclePolicyCollectionPage groupLifecyclePolicies;
+    public com.microsoft.graph.requests.GroupLifecyclePolicyCollectionPage groupLifecyclePolicies;
 
     /**
      * The Planner.
@@ -748,7 +723,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
 	@Nullable
-    public ProfilePhotoCollectionPage photos;
+    public com.microsoft.graph.requests.ProfilePhotoCollectionPage photos;
 
     /**
      * The Team.
@@ -770,87 +745,87 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), com.microsoft.graph.requests.AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints"), EndpointCollectionPage.class);
+            endpoints = serializer.deserializeObject(json.get("endpoints"), com.microsoft.graph.requests.EndpointCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("membersWithLicenseErrors")) {
-            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors"), DirectoryObjectCollectionPage.class);
+            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("permissionGrants")) {
-            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), ResourceSpecificPermissionGrantCollectionPage.class);
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings"), DirectorySettingCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DirectorySettingCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMembers")) {
-            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers"), DirectoryObjectCollectionPage.class);
+            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("acceptedSenders")) {
-            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders"), DirectoryObjectCollectionPage.class);
+            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("conversations")) {
-            conversations = serializer.deserializeObject(json.get("conversations"), ConversationCollectionPage.class);
+            conversations = serializer.deserializeObject(json.get("conversations"), com.microsoft.graph.requests.ConversationCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("rejectedSenders")) {
-            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders"), DirectoryObjectCollectionPage.class);
+            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads"), ConversationThreadCollectionPage.class);
+            threads = serializer.deserializeObject(json.get("threads"), com.microsoft.graph.requests.ConversationThreadCollectionPage.class);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives"), com.microsoft.graph.requests.DriveCollectionPage.class);
         }
 
         if (json.has("sites")) {
-            sites = serializer.deserializeObject(json.get("sites"), SiteCollectionPage.class);
+            sites = serializer.deserializeObject(json.get("sites"), com.microsoft.graph.requests.SiteCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("groupLifecyclePolicies")) {
-            groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies"), GroupLifecyclePolicyCollectionPage.class);
+            groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies"), com.microsoft.graph.requests.GroupLifecyclePolicyCollectionPage.class);
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
+            photos = serializer.deserializeObject(json.get("photos"), com.microsoft.graph.requests.ProfilePhotoCollectionPage.class);
         }
     }
 }

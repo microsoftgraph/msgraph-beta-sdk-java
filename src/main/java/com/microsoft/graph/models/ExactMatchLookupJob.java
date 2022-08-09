@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.LookupResultRow;
 import com.microsoft.graph.models.ExactMatchJobBase;
 import com.microsoft.graph.requests.LookupResultRowCollectionPage;
 
@@ -44,7 +43,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements IJsonBacke
     @SerializedName(value = "matchingRows", alternate = {"MatchingRows"})
     @Expose
 	@Nullable
-    public LookupResultRowCollectionPage matchingRows;
+    public com.microsoft.graph.requests.LookupResultRowCollectionPage matchingRows;
 
 
     /**
@@ -57,7 +56,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements IJsonBacke
 
 
         if (json.has("matchingRows")) {
-            matchingRows = serializer.deserializeObject(json.get("matchingRows"), LookupResultRowCollectionPage.class);
+            matchingRows = serializer.deserializeObject(json.get("matchingRows"), com.microsoft.graph.requests.LookupResultRowCollectionPage.class);
         }
     }
 }

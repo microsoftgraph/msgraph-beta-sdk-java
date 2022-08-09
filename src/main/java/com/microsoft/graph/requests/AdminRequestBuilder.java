@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Admin;
-import com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder;
-import com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder;
-import com.microsoft.graph.requests.AdminReportSettingsRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
      * @return the SharepointRequestBuilder instance
      */
     @Nonnull
-    public SharepointRequestBuilder sharepoint() {
-        return new SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
+    public com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder sharepoint() {
+        return new com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
      * @return the ServiceAnnouncementRequestBuilder instance
      */
     @Nonnull
-    public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
-        return new ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder serviceAnnouncement() {
+        return new com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
     }
 
     /**
@@ -87,8 +83,8 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
      * @return the AdminReportSettingsRequestBuilder instance
      */
     @Nonnull
-    public AdminReportSettingsRequestBuilder reportSettings() {
-        return new AdminReportSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("reportSettings"), getClient(), null);
+    public com.microsoft.graph.requests.AdminReportSettingsRequestBuilder reportSettings() {
+        return new com.microsoft.graph.requests.AdminReportSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("reportSettings"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
      * @return the WindowsRequestBuilder instance
      */
     @Nonnull
-    public WindowsRequestBuilder windows() {
-        return new WindowsRequestBuilder(getRequestUrlWithAdditionalSegment("windows"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder windows() {
+        return new com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder(getRequestUrlWithAdditionalSegment("windows"), getClient(), null);
     }
 }

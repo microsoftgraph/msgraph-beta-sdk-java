@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TrustFramework;
-import com.microsoft.graph.requests.TrustFrameworkKeySetCollectionRequestBuilder;
-import com.microsoft.graph.requests.TrustFrameworkKeySetRequestBuilder;
-import com.microsoft.graph.requests.TrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.TrustFrameworkPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder<TrustFramew
      * @return the collection request builder
      */
     @Nonnull
-    public TrustFrameworkKeySetCollectionRequestBuilder keySets() {
-        return new TrustFrameworkKeySetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("keySets"), getClient(), null);
+    public com.microsoft.graph.requests.TrustFrameworkKeySetCollectionRequestBuilder keySets() {
+        return new com.microsoft.graph.requests.TrustFrameworkKeySetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("keySets"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder<TrustFramew
      * @param id the item identifier
      */
     @Nonnull
-    public TrustFrameworkKeySetRequestBuilder keySets(@Nonnull final String id) {
-        return new TrustFrameworkKeySetRequestBuilder(getRequestUrlWithAdditionalSegment("keySets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TrustFrameworkKeySetRequestBuilder keySets(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TrustFrameworkKeySetRequestBuilder(getRequestUrlWithAdditionalSegment("keySets") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TrustFrameworkPolicy collection
@@ -86,8 +82,8 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder<TrustFramew
      * @return the collection request builder
      */
     @Nonnull
-    public TrustFrameworkPolicyCollectionRequestBuilder policies() {
-        return new TrustFrameworkPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
+    public com.microsoft.graph.requests.TrustFrameworkPolicyCollectionRequestBuilder policies() {
+        return new com.microsoft.graph.requests.TrustFrameworkPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder<TrustFramew
      * @param id the item identifier
      */
     @Nonnull
-    public TrustFrameworkPolicyRequestBuilder policies(@Nonnull final String id) {
-        return new TrustFrameworkPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TrustFrameworkPolicyRequestBuilder policies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TrustFrameworkPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

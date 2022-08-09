@@ -12,10 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChannelMembershipType;
 import com.microsoft.graph.models.ChannelModerationSettings;
 import com.microsoft.graph.models.DriveItem;
-import com.microsoft.graph.models.ConversationMember;
-import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.models.SharedWithChannelTeamInfo;
-import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
@@ -134,7 +130,7 @@ public class Channel extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public ConversationMemberCollectionPage members;
+    public com.microsoft.graph.requests.ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
@@ -143,7 +139,7 @@ public class Channel extends Entity implements IJsonBackedObject {
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
 	@Nullable
-    public ChatMessageCollectionPage messages;
+    public com.microsoft.graph.requests.ChatMessageCollectionPage messages;
 
     /**
      * The Shared With Teams.
@@ -152,7 +148,7 @@ public class Channel extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sharedWithTeams", alternate = {"SharedWithTeams"})
     @Expose
 	@Nullable
-    public SharedWithChannelTeamInfoCollectionPage sharedWithTeams;
+    public com.microsoft.graph.requests.SharedWithChannelTeamInfoCollectionPage sharedWithTeams;
 
     /**
      * The Tabs.
@@ -161,7 +157,7 @@ public class Channel extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose
 	@Nullable
-    public TeamsTabCollectionPage tabs;
+    public com.microsoft.graph.requests.TeamsTabCollectionPage tabs;
 
 
     /**
@@ -174,19 +170,19 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.ConversationMemberCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.ChatMessageCollectionPage.class);
         }
 
         if (json.has("sharedWithTeams")) {
-            sharedWithTeams = serializer.deserializeObject(json.get("sharedWithTeams"), SharedWithChannelTeamInfoCollectionPage.class);
+            sharedWithTeams = serializer.deserializeObject(json.get("sharedWithTeams"), com.microsoft.graph.requests.SharedWithChannelTeamInfoCollectionPage.class);
         }
 
         if (json.has("tabs")) {
-            tabs = serializer.deserializeObject(json.get("tabs"), TeamsTabCollectionPage.class);
+            tabs = serializer.deserializeObject(json.get("tabs"), com.microsoft.graph.requests.TeamsTabCollectionPage.class);
         }
     }
 }

@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrivilegedRole;
 import com.microsoft.graph.models.PrivilegedRoleAssignment;
-import com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.PrivilegedRoleAssignmentWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.PrivilegedRoleSettingsRequestBuilder;
-import com.microsoft.graph.requests.PrivilegedRoleSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder<PrivilegedR
      * @return the collection request builder
      */
     @Nonnull
-    public PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder assignments() {
-        return new PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -79,8 +75,8 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder<PrivilegedR
      * @param id the item identifier
      */
     @Nonnull
-    public PrivilegedRoleAssignmentWithReferenceRequestBuilder assignments(@Nonnull final String id) {
-        return new PrivilegedRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentWithReferenceRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -89,8 +85,8 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder<PrivilegedR
      * @return the PrivilegedRoleSettingsRequestBuilder instance
      */
     @Nonnull
-    public PrivilegedRoleSettingsRequestBuilder settings() {
-        return new PrivilegedRoleSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.requests.PrivilegedRoleSettingsRequestBuilder settings() {
+        return new com.microsoft.graph.requests.PrivilegedRoleSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
     /**
@@ -99,8 +95,8 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder<PrivilegedR
      * @return the PrivilegedRoleSummaryRequestBuilder instance
      */
     @Nonnull
-    public PrivilegedRoleSummaryRequestBuilder summary() {
-        return new PrivilegedRoleSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("summary"), getClient(), null);
+    public com.microsoft.graph.requests.PrivilegedRoleSummaryRequestBuilder summary() {
+        return new com.microsoft.graph.requests.PrivilegedRoleSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("summary"), getClient(), null);
     }
 
     /**

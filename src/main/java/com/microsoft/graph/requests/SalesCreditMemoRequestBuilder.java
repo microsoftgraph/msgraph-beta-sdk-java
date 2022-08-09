@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SalesCreditMemo;
-import com.microsoft.graph.requests.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.CustomerRequestBuilder;
-import com.microsoft.graph.requests.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.SalesCreditMemoLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.SalesCreditMemoLineRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +63,8 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder<SalesCredi
      * @return the CurrencyRequestBuilder instance
      */
     @Nonnull
-    public CurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
+    public com.microsoft.graph.requests.CurrencyRequestBuilder currency() {
+        return new com.microsoft.graph.requests.CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder<SalesCredi
      * @return the CustomerRequestBuilder instance
      */
     @Nonnull
-    public CustomerRequestBuilder customer() {
-        return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
+    public com.microsoft.graph.requests.CustomerRequestBuilder customer() {
+        return new com.microsoft.graph.requests.CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
     }
 
     /**
@@ -88,8 +83,8 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder<SalesCredi
      * @return the PaymentTermRequestBuilder instance
      */
     @Nonnull
-    public PaymentTermRequestBuilder paymentTerm() {
-        return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentTermRequestBuilder paymentTerm() {
+        return new com.microsoft.graph.requests.PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
     /**
      *  Gets a request builder for the SalesCreditMemoLine collection
@@ -97,8 +92,8 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder<SalesCredi
      * @return the collection request builder
      */
     @Nonnull
-    public SalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines() {
-        return new SalesCreditMemoLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines"), getClient(), null);
+    public com.microsoft.graph.requests.SalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines() {
+        return new com.microsoft.graph.requests.SalesCreditMemoLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines"), getClient(), null);
     }
 
     /**
@@ -108,7 +103,7 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder<SalesCredi
      * @param id the item identifier
      */
     @Nonnull
-    public SalesCreditMemoLineRequestBuilder salesCreditMemoLines(@Nonnull final String id) {
-        return new SalesCreditMemoLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SalesCreditMemoLineRequestBuilder salesCreditMemoLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SalesCreditMemoLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines") + "/" + id, getClient(), null);
     }
 }

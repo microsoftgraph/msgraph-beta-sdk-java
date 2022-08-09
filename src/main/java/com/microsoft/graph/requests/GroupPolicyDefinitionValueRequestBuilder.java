@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyPresentationValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyPresentationValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
      * @return the GroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
-        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
     /**
      *  Gets a request builder for the GroupPolicyPresentationValue collection
@@ -75,8 +72,8 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyPresentationValueCollectionRequestBuilder presentationValues() {
-        return new GroupPolicyPresentationValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyPresentationValueCollectionRequestBuilder presentationValues() {
+        return new com.microsoft.graph.requests.GroupPolicyPresentationValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyPresentationValueRequestBuilder presentationValues(@Nonnull final String id) {
-        return new GroupPolicyPresentationValueRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyPresentationValueRequestBuilder presentationValues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyPresentationValueRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues") + "/" + id, getClient(), null);
     }
 }

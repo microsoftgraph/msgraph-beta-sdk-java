@@ -14,7 +14,6 @@ import com.microsoft.graph.models.CloudPcProvisioningPolicyImageType;
 import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.MicrosoftManagedDesktop;
 import com.microsoft.graph.models.CloudPcWindowsSettings;
-import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage;
 
@@ -166,7 +165,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public CloudPcProvisioningPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage assignments;
 
 
     /**
@@ -179,7 +178,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), CloudPcProvisioningPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage.class);
         }
     }
 }

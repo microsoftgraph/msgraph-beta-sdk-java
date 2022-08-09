@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DocumentComment;
-import com.microsoft.graph.requests.DocumentCommentReplyCollectionRequestBuilder;
-import com.microsoft.graph.requests.DocumentCommentReplyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder<DocumentCo
      * @return the collection request builder
      */
     @Nonnull
-    public DocumentCommentReplyCollectionRequestBuilder replies() {
-        return new DocumentCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
+    public com.microsoft.graph.requests.DocumentCommentReplyCollectionRequestBuilder replies() {
+        return new com.microsoft.graph.requests.DocumentCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder<DocumentCo
      * @param id the item identifier
      */
     @Nonnull
-    public DocumentCommentReplyRequestBuilder replies(@Nonnull final String id) {
-        return new DocumentCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DocumentCommentReplyRequestBuilder replies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DocumentCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

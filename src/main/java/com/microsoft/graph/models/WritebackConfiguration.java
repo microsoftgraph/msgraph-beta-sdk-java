@@ -39,7 +39,7 @@ public class WritebackConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether writeback of cloud groups to on-premise Active Directory is enabled. Default value is true for Microsoft 365 groups and false for security groups.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

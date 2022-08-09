@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RiskyServicePrincipal;
-import com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class RiskyServicePrincipalRequestBuilder extends BaseRequestBuilder<Risk
      * @return the collection request builder
      */
     @Nonnull
-    public RiskyServicePrincipalHistoryItemCollectionRequestBuilder history() {
-        return new RiskyServicePrincipalHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
+    public com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionRequestBuilder history() {
+        return new com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class RiskyServicePrincipalRequestBuilder extends BaseRequestBuilder<Risk
      * @param id the item identifier
      */
     @Nonnull
-    public RiskyServicePrincipalHistoryItemRequestBuilder history(@Nonnull final String id) {
-        return new RiskyServicePrincipalHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemRequestBuilder history(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
     }
 }

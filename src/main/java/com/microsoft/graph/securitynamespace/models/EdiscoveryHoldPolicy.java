@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.security.models.SiteSource;
-import com.microsoft.graph.security.models.UserSource;
 import com.microsoft.graph.security.models.PolicyBase;
 import com.microsoft.graph.security.requests.SiteSourceCollectionPage;
 import com.microsoft.graph.security.requests.UserSourceCollectionPage;
@@ -59,21 +57,21 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
     /**
      * The Site Sources.
-     * 
+     * Data sources that represent SharePoint sites.
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
 	@Nullable
-    public SiteSourceCollectionPage siteSources;
+    public com.microsoft.graph.security.requests.SiteSourceCollectionPage siteSources;
 
     /**
      * The User Sources.
-     * 
+     * Data sources that represent Exchange mailboxes.
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose
 	@Nullable
-    public UserSourceCollectionPage userSources;
+    public com.microsoft.graph.security.requests.UserSourceCollectionPage userSources;
 
 
     /**
@@ -86,11 +84,11 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements IJsonBackedObjec
 
 
         if (json.has("siteSources")) {
-            siteSources = serializer.deserializeObject(json.get("siteSources"), SiteSourceCollectionPage.class);
+            siteSources = serializer.deserializeObject(json.get("siteSources"), com.microsoft.graph.security.requests.SiteSourceCollectionPage.class);
         }
 
         if (json.has("userSources")) {
-            userSources = serializer.deserializeObject(json.get("userSources"), UserSourceCollectionPage.class);
+            userSources = serializer.deserializeObject(json.get("userSources"), com.microsoft.graph.security.requests.UserSourceCollectionPage.class);
         }
     }
 }

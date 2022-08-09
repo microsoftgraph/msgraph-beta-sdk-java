@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceConfigurationGroupAssignment;
-import com.microsoft.graph.requests.DeviceConfigurationWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
      * @return the DeviceConfigurationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DeviceConfigurationWithReferenceRequestBuilder deviceConfiguration() {
-        return new DeviceConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfiguration"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationWithReferenceRequestBuilder deviceConfiguration() {
+        return new com.microsoft.graph.requests.DeviceConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfiguration"), getClient(), null);
     }
 }

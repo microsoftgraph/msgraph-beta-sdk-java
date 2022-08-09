@@ -9,12 +9,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.externalconnectors.models.ActivitySettings;
+import com.microsoft.graph.externalconnectors.models.ComplianceSettings;
 import com.microsoft.graph.externalconnectors.models.Configuration;
+import com.microsoft.graph.externalconnectors.models.ContentExperienceType;
 import com.microsoft.graph.externalconnectors.models.SearchSettings;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
-import com.microsoft.graph.externalconnectors.models.ExternalGroup;
-import com.microsoft.graph.externalconnectors.models.ExternalItem;
-import com.microsoft.graph.externalconnectors.models.ConnectionOperation;
 import com.microsoft.graph.externalconnectors.models.ConnectionQuota;
 import com.microsoft.graph.externalconnectors.models.Schema;
 import com.microsoft.graph.models.Entity;
@@ -36,6 +36,24 @@ import javax.annotation.Nonnull;
  */
 public class ExternalConnection extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Activity Settings.
+     * Collects configurable settings related to activities involving connector content.
+     */
+    @SerializedName(value = "activitySettings", alternate = {"ActivitySettings"})
+    @Expose
+	@Nullable
+    public ActivitySettings activitySettings;
+
+    /**
+     * The Compliance Settings.
+     * 
+     */
+    @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
+    @Expose
+	@Nullable
+    public ComplianceSettings complianceSettings;
 
     /**
      * The Configuration.
@@ -63,6 +81,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Enabled Content Experiences.
+     * 
+     */
+    @SerializedName(value = "enabledContentExperiences", alternate = {"EnabledContentExperiences"})
+    @Expose
+	@Nullable
+    public EnumSet<ContentExperienceType> enabledContentExperiences;
 
     /**
      * The Ingested Items Count.
@@ -107,7 +134,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
 	@Nullable
-    public ExternalGroupCollectionPage groups;
+    public com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage groups;
 
     /**
      * The Items.
@@ -116,7 +143,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public ExternalItemCollectionPage items;
+    public com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionPage items;
 
     /**
      * The Operations.
@@ -125,7 +152,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public ConnectionOperationCollectionPage operations;
+    public com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionPage operations;
 
     /**
      * The Quota.
@@ -156,15 +183,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("groups")) {
-            groups = serializer.deserializeObject(json.get("groups"), ExternalGroupCollectionPage.class);
+            groups = serializer.deserializeObject(json.get("groups"), com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), ExternalItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), ConnectionOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionPage.class);
         }
     }
 }

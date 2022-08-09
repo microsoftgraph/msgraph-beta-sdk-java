@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppleOwnerTypeEnrollmentType;
 import com.microsoft.graph.models.AppleUserInitiatedEnrollmentType;
 import com.microsoft.graph.models.DevicePlatformType;
-import com.microsoft.graph.models.AppleEnrollmentProfileAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentCollectionPage;
 
@@ -110,7 +109,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public AppleEnrollmentProfileAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentCollectionPage assignments;
 
 
     /**
@@ -123,7 +122,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), AppleEnrollmentProfileAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.AppleEnrollmentProfileAssignmentCollectionPage.class);
         }
     }
 }

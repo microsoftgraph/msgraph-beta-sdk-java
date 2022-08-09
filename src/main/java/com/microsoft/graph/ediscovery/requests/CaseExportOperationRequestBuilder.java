@@ -8,7 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.CaseExportOperation;
-import com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class CaseExportOperationRequestBuilder extends BaseRequestBuilder<CaseEx
      * @return the ReviewSetWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ReviewSetWithReferenceRequestBuilder reviewSet() {
-        return new ReviewSetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSet"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder reviewSet() {
+        return new com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSet"), getClient(), null);
     }
 
     /**

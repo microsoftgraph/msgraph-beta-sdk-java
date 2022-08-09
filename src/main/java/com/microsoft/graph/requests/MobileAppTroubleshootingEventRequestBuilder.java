@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
-import com.microsoft.graph.requests.AppLogCollectionRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.AppLogCollectionRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public AppLogCollectionRequestCollectionRequestBuilder appLogCollectionRequests() {
-        return new AppLogCollectionRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests"), getClient(), null);
+    public com.microsoft.graph.requests.AppLogCollectionRequestCollectionRequestBuilder appLogCollectionRequests() {
+        return new com.microsoft.graph.requests.AppLogCollectionRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public AppLogCollectionRequestRequestBuilder appLogCollectionRequests(@Nonnull final String id) {
-        return new AppLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AppLogCollectionRequestRequestBuilder appLogCollectionRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests") + "/" + id, getClient(), null);
     }
 }

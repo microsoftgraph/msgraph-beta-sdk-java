@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.SmsAuthenticationMethodTarget;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.requests.SmsAuthenticationMethodTargetCollectionPage;
 
@@ -35,7 +34,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose
 	@Nullable
-    public SmsAuthenticationMethodTargetCollectionPage includeTargets;
+    public com.microsoft.graph.requests.SmsAuthenticationMethodTargetCollectionPage includeTargets;
 
 
     /**
@@ -48,7 +47,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
 
 
         if (json.has("includeTargets")) {
-            includeTargets = serializer.deserializeObject(json.get("includeTargets"), SmsAuthenticationMethodTargetCollectionPage.class);
+            includeTargets = serializer.deserializeObject(json.get("includeTargets"), com.microsoft.graph.requests.SmsAuthenticationMethodTargetCollectionPage.class);
         }
     }
 }

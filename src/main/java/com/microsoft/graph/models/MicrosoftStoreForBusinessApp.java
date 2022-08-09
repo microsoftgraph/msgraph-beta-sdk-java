@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftStoreForBusinessLicenseType;
 import com.microsoft.graph.models.VppLicensingType;
-import com.microsoft.graph.models.MobileContainedApp;
 import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.requests.MobileContainedAppCollectionPage;
 
@@ -91,7 +90,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
     @SerializedName(value = "containedApps", alternate = {"ContainedApps"})
     @Expose
 	@Nullable
-    public MobileContainedAppCollectionPage containedApps;
+    public com.microsoft.graph.requests.MobileContainedAppCollectionPage containedApps;
 
 
     /**
@@ -104,7 +103,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
 
 
         if (json.has("containedApps")) {
-            containedApps = serializer.deserializeObject(json.get("containedApps"), MobileContainedAppCollectionPage.class);
+            containedApps = serializer.deserializeObject(json.get("containedApps"), com.microsoft.graph.requests.MobileContainedAppCollectionPage.class);
         }
     }
 }

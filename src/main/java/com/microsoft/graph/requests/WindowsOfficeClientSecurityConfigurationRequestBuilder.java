@@ -64,8 +64,8 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public OfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new OfficeClientConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.OfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.OfficeClientConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -75,8 +75,8 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public OfficeClientConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OfficeClientConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

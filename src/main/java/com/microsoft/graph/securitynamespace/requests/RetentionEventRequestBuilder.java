@@ -8,7 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.RetentionEvent;
-import com.microsoft.graph.security.requests.RetentionEventTypeWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class RetentionEventRequestBuilder extends BaseRequestBuilder<RetentionEv
      * @return the RetentionEventTypeWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public RetentionEventTypeWithReferenceRequestBuilder retentionEventType() {
-        return new RetentionEventTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEventType"), getClient(), null);
+    public com.microsoft.graph.security.requests.RetentionEventTypeWithReferenceRequestBuilder retentionEventType() {
+        return new com.microsoft.graph.security.requests.RetentionEventTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEventType"), getClient(), null);
     }
 }

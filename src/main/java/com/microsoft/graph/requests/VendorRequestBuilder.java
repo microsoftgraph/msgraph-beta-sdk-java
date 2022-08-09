@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Vendor;
-import com.microsoft.graph.requests.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.PaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.PictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.PictureRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +63,8 @@ public class VendorRequestBuilder extends BaseRequestBuilder<Vendor> {
      * @return the CurrencyRequestBuilder instance
      */
     @Nonnull
-    public CurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
+    public com.microsoft.graph.requests.CurrencyRequestBuilder currency() {
+        return new com.microsoft.graph.requests.CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class VendorRequestBuilder extends BaseRequestBuilder<Vendor> {
      * @return the PaymentMethodRequestBuilder instance
      */
     @Nonnull
-    public PaymentMethodRequestBuilder paymentMethod() {
-        return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentMethodRequestBuilder paymentMethod() {
+        return new com.microsoft.graph.requests.PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
     }
 
     /**
@@ -88,8 +83,8 @@ public class VendorRequestBuilder extends BaseRequestBuilder<Vendor> {
      * @return the PaymentTermRequestBuilder instance
      */
     @Nonnull
-    public PaymentTermRequestBuilder paymentTerm() {
-        return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentTermRequestBuilder paymentTerm() {
+        return new com.microsoft.graph.requests.PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Picture collection
@@ -97,8 +92,8 @@ public class VendorRequestBuilder extends BaseRequestBuilder<Vendor> {
      * @return the collection request builder
      */
     @Nonnull
-    public PictureCollectionRequestBuilder picture() {
-        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    public com.microsoft.graph.requests.PictureCollectionRequestBuilder picture() {
+        return new com.microsoft.graph.requests.PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
     /**
@@ -108,7 +103,7 @@ public class VendorRequestBuilder extends BaseRequestBuilder<Vendor> {
      * @param id the item identifier
      */
     @Nonnull
-    public PictureRequestBuilder picture(@Nonnull final String id) {
-        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PictureRequestBuilder picture(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }

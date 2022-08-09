@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServicePrincipalCreationConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +67,8 @@ public class ServicePrincipalCreationPolicyRequestBuilder extends BaseRequestBui
      * @return the collection request builder
      */
     @Nonnull
-    public ServicePrincipalCreationConditionSetCollectionRequestBuilder excludes() {
-        return new ServicePrincipalCreationConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
+    public com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionRequestBuilder excludes() {
+        return new com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
 
     /**
@@ -80,8 +78,8 @@ public class ServicePrincipalCreationPolicyRequestBuilder extends BaseRequestBui
      * @param id the item identifier
      */
     @Nonnull
-    public ServicePrincipalCreationConditionSetRequestBuilder excludes(@Nonnull final String id) {
-        return new ServicePrincipalCreationConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServicePrincipalCreationConditionSetRequestBuilder excludes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServicePrincipalCreationConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ServicePrincipalCreationConditionSet collection
@@ -89,8 +87,8 @@ public class ServicePrincipalCreationPolicyRequestBuilder extends BaseRequestBui
      * @return the collection request builder
      */
     @Nonnull
-    public ServicePrincipalCreationConditionSetCollectionRequestBuilder includes() {
-        return new ServicePrincipalCreationConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
+    public com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionRequestBuilder includes() {
+        return new com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
     }
 
     /**
@@ -100,8 +98,8 @@ public class ServicePrincipalCreationPolicyRequestBuilder extends BaseRequestBui
      * @param id the item identifier
      */
     @Nonnull
-    public ServicePrincipalCreationConditionSetRequestBuilder includes(@Nonnull final String id) {
-        return new ServicePrincipalCreationConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServicePrincipalCreationConditionSetRequestBuilder includes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServicePrincipalCreationConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
     }
 
     /**

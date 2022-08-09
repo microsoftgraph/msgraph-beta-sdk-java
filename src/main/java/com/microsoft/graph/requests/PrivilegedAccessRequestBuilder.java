@@ -8,16 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrivilegedAccess;
-import com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +62,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @return the collection request builder
      */
     @Nonnull
-    public GovernanceResourceCollectionRequestBuilder resources() {
-        return new GovernanceResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder resources() {
+        return new com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
 
     /**
@@ -83,8 +73,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @param id the item identifier
      */
     @Nonnull
-    public GovernanceResourceRequestBuilder resources(@Nonnull final String id) {
-        return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GovernanceResourceRequestBuilder resources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GovernanceRoleAssignmentRequest collection
@@ -92,8 +82,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @return the collection request builder
      */
     @Nonnull
-    public GovernanceRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests() {
-        return new GovernanceRoleAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests() {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests"), getClient(), null);
     }
 
     /**
@@ -103,8 +93,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @param id the item identifier
      */
     @Nonnull
-    public GovernanceRoleAssignmentRequestRequestBuilder roleAssignmentRequests(@Nonnull final String id) {
-        return new GovernanceRoleAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestRequestBuilder roleAssignmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GovernanceRoleAssignment collection
@@ -112,8 +102,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @return the collection request builder
      */
     @Nonnull
-    public GovernanceRoleAssignmentCollectionRequestBuilder roleAssignments() {
-        return new GovernanceRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionRequestBuilder roleAssignments() {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
     /**
@@ -123,8 +113,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @param id the item identifier
      */
     @Nonnull
-    public GovernanceRoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
-        return new GovernanceRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GovernanceRoleDefinition collection
@@ -132,8 +122,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @return the collection request builder
      */
     @Nonnull
-    public GovernanceRoleDefinitionCollectionRequestBuilder roleDefinitions() {
-        return new GovernanceRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionRequestBuilder roleDefinitions() {
+        return new com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
     }
 
     /**
@@ -143,8 +133,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @param id the item identifier
      */
     @Nonnull
-    public GovernanceRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
-        return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GovernanceRoleSetting collection
@@ -152,8 +142,8 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @return the collection request builder
      */
     @Nonnull
-    public GovernanceRoleSettingCollectionRequestBuilder roleSettings() {
-        return new GovernanceRoleSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleSettings"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleSettingCollectionRequestBuilder roleSettings() {
+        return new com.microsoft.graph.requests.GovernanceRoleSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleSettings"), getClient(), null);
     }
 
     /**
@@ -163,7 +153,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder<Privilege
      * @param id the item identifier
      */
     @Nonnull
-    public GovernanceRoleSettingRequestBuilder roleSettings(@Nonnull final String id) {
-        return new GovernanceRoleSettingRequestBuilder(getRequestUrlWithAdditionalSegment("roleSettings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder roleSettings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder(getRequestUrlWithAdditionalSegment("roleSettings") + "/" + id, getClient(), null);
     }
 }

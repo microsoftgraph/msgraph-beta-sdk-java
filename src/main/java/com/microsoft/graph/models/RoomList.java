@@ -9,9 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Room;
 import com.microsoft.graph.models.Place;
 import com.microsoft.graph.requests.RoomCollectionPage;
+import com.microsoft.graph.requests.WorkspaceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -44,7 +44,16 @@ public class RoomList extends Place implements IJsonBackedObject {
     @SerializedName(value = "rooms", alternate = {"Rooms"})
     @Expose
 	@Nullable
-    public RoomCollectionPage rooms;
+    public com.microsoft.graph.requests.RoomCollectionPage rooms;
+
+    /**
+     * The Workspaces.
+     * 
+     */
+    @SerializedName(value = "workspaces", alternate = {"Workspaces"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.WorkspaceCollectionPage workspaces;
 
 
     /**
@@ -57,7 +66,11 @@ public class RoomList extends Place implements IJsonBackedObject {
 
 
         if (json.has("rooms")) {
-            rooms = serializer.deserializeObject(json.get("rooms"), RoomCollectionPage.class);
+            rooms = serializer.deserializeObject(json.get("rooms"), com.microsoft.graph.requests.RoomCollectionPage.class);
+        }
+
+        if (json.has("workspaces")) {
+            workspaces = serializer.deserializeObject(json.get("workspaces"), com.microsoft.graph.requests.WorkspaceCollectionPage.class);
         }
     }
 }

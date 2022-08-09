@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsManagementApp;
-import com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsManagementAppHealthStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder<Windo
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsManagementAppHealthStateCollectionRequestBuilder healthStates() {
-        return new WindowsManagementAppHealthStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionRequestBuilder healthStates() {
+        return new com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder<Windo
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsManagementAppHealthStateRequestBuilder healthStates(@Nonnull final String id) {
-        return new WindowsManagementAppHealthStateRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsManagementAppHealthStateRequestBuilder healthStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsManagementAppHealthStateRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates") + "/" + id, getClient(), null);
     }
 
     /**

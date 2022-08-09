@@ -8,6 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AndroidDeviceOwnerCertificateAccessType;
+import com.microsoft.graph.models.AndroidDeviceOwnerSilentCertificateAccess;
 import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
 import com.microsoft.graph.models.DeviceConfiguration;
 
@@ -25,6 +28,24 @@ import javax.annotation.Nonnull;
  */
 public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration extends DeviceConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Certificate Access Type.
+     * Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     */
+    @SerializedName(value = "certificateAccessType", alternate = {"CertificateAccessType"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerCertificateAccessType certificateAccessType;
+
+    /**
+     * The Silent Certificate Access Details.
+     * Certificate access information. This collection can contain a maximum of 50 elements.
+     */
+    @SerializedName(value = "silentCertificateAccessDetails", alternate = {"SilentCertificateAccessDetails"})
+    @Expose
+	@Nullable
+    public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
 
     /**
      * The Derived Credential Settings.

@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ContentTypeInfo;
 import com.microsoft.graph.models.DocumentSetContent;
-import com.microsoft.graph.models.ColumnDefinition;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -92,14 +90,14 @@ public class DocumentSet implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public ColumnDefinitionCollectionPage sharedColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage sharedColumns;
 
     /**
      * The Welcome Page Columns.
      * 
      */
 	@Nullable
-    public ColumnDefinitionCollectionPage welcomePageColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage welcomePageColumns;
 
 
     /**

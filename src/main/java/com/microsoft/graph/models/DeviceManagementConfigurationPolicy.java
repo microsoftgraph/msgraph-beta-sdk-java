@@ -12,8 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationPlatforms;
 import com.microsoft.graph.models.DeviceManagementConfigurationTechnologies;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplateReference;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicyAssignment;
-import com.microsoft.graph.models.DeviceManagementConfigurationSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionPage;
@@ -116,7 +114,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Technologies.
-     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
+     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, unknownFutureValue.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose
@@ -139,7 +137,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Settings.
@@ -148,7 +146,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationSettingCollectionPage settings;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionPage settings;
 
 
     /**
@@ -161,11 +159,11 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceManagementConfigurationPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings"), DeviceManagementConfigurationSettingCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionPage.class);
         }
     }
 }

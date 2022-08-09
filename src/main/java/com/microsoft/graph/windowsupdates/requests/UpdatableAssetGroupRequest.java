@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.UpdatableAssetGroup;
 import com.microsoft.graph.windowsupdates.models.UpdatableAsset;
 import com.microsoft.graph.windowsupdates.models.UpdateCategory;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

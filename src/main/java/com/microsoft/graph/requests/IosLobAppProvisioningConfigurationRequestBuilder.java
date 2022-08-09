@@ -11,14 +11,6 @@ import com.microsoft.graph.models.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -74,8 +66,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @return the collection request builder
      */
     @Nonnull
-    public IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -85,8 +77,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @param id the item identifier
      */
     @Nonnull
-    public IosLobAppProvisioningConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new IosLobAppProvisioningConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus collection
@@ -94,8 +86,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -105,8 +97,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppProvisioningConfigGroupAssignment collection
@@ -114,8 +106,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
     }
 
     /**
@@ -125,8 +117,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppProvisioningConfigGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
-        return new MobileAppProvisioningConfigGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus collection
@@ -134,8 +126,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
     /**
@@ -145,8 +137,8 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementConfigurationSetting;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementConfigurationSettingRequestBuilder extends BaseRequ
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder settingDefinitions() {
-        return new DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder settingDefinitions() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementConfigurationSettingRequestBuilder extends BaseRequ
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingDefinitionWithReferenceRequestBuilder settingDefinitions(@Nonnull final String id) {
-        return new DeviceManagementConfigurationSettingDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionWithReferenceRequestBuilder settingDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageResourceRequest;
-import com.microsoft.graph.requests.AccessPackageResourceWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
      * @return the AccessPackageResourceWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageResourceWithReferenceRequestBuilder accessPackageResource() {
-        return new AccessPackageResourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResource"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceWithReferenceRequestBuilder accessPackageResource() {
+        return new com.microsoft.graph.requests.AccessPackageResourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResource"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
      * @return the AccessPackageSubjectRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageSubjectRequestBuilder requestor() {
-        return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder requestor() {
+        return new com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
     }
 }

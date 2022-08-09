@@ -14,7 +14,6 @@ import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.DecisionItemPrincipalResourceMembership;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemTarget;
-import com.microsoft.graph.models.GovernanceInsight;
 import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GovernanceInsightCollectionPage;
@@ -176,7 +175,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
     @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
 	@Nullable
-    public GovernanceInsightCollectionPage insights;
+    public com.microsoft.graph.requests.GovernanceInsightCollectionPage insights;
 
     /**
      * The Instance.
@@ -198,7 +197,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
 
         if (json.has("insights")) {
-            insights = serializer.deserializeObject(json.get("insights"), GovernanceInsightCollectionPage.class);
+            insights = serializer.deserializeObject(json.get("insights"), com.microsoft.graph.requests.GovernanceInsightCollectionPage.class);
         }
     }
 }

@@ -64,8 +64,8 @@ public class AzureADWindowsAutopilotDeploymentProfileRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
-        return new WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
     }
 
     /**
@@ -75,8 +75,8 @@ public class AzureADWindowsAutopilotDeploymentProfileRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(@Nonnull final String id) {
-        return new WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsAutopilotDeploymentProfileAssignment collection
@@ -84,8 +84,8 @@ public class AzureADWindowsAutopilotDeploymentProfileRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
-        return new WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -95,8 +95,8 @@ public class AzureADWindowsAutopilotDeploymentProfileRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ChannelCollectionPage;
 
@@ -30,12 +29,12 @@ public class DeletedTeam extends Entity implements IJsonBackedObject {
 
     /**
      * The Channels.
-     * 
+     * The channels those are either shared with this deleted team or created in this deleted team.
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
 	@Nullable
-    public ChannelCollectionPage channels;
+    public com.microsoft.graph.requests.ChannelCollectionPage channels;
 
 
     /**
@@ -48,7 +47,7 @@ public class DeletedTeam extends Entity implements IJsonBackedObject {
 
 
         if (json.has("channels")) {
-            channels = serializer.deserializeObject(json.get("channels"), ChannelCollectionPage.class);
+            channels = serializer.deserializeObject(json.get("channels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
         }
     }
 }

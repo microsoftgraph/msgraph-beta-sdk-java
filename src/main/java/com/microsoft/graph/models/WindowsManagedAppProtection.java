@@ -13,8 +13,6 @@ import com.microsoft.graph.models.WindowsManagedAppDataTransferLevel;
 import com.microsoft.graph.models.WindowsManagedAppClipboardSharingLevel;
 import com.microsoft.graph.models.ManagedAppRemediationAction;
 import com.microsoft.graph.models.ManagedAppDeviceThreatLevel;
-import com.microsoft.graph.models.ManagedMobileApp;
-import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
 import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage;
@@ -239,7 +237,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements IJs
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
 	@Nullable
-    public ManagedMobileAppCollectionPage apps;
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionPage apps;
 
     /**
      * The Assignments.
@@ -248,7 +246,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements IJs
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
 
     /**
@@ -261,11 +259,11 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements IJs
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), com.microsoft.graph.requests.ManagedMobileAppCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
     }
 }

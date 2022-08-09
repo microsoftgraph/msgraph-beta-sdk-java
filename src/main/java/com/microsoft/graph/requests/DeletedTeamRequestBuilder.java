@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChannelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class DeletedTeamRequestBuilder extends BaseRequestBuilder<DeletedTeam> {
      * @return the collection request builder
      */
     @Nonnull
-    public ChannelCollectionRequestBuilder channels() {
-        return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
+    public com.microsoft.graph.requests.ChannelCollectionRequestBuilder channels() {
+        return new com.microsoft.graph.requests.ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
     }
 
     /**
@@ -76,7 +74,7 @@ public class DeletedTeamRequestBuilder extends BaseRequestBuilder<DeletedTeam> {
      * @param id the item identifier
      */
     @Nonnull
-    public ChannelRequestBuilder channels(@Nonnull final String id) {
-        return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ChannelRequestBuilder channels(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
     }
 }

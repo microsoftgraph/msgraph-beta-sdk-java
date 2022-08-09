@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DelegatedAdminRelationship;
-import com.microsoft.graph.requests.DelegatedAdminAccessAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DelegatedAdminAccessAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DelegatedAdminRelationshipOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.DelegatedAdminRelationshipOperationRequestBuilder;
-import com.microsoft.graph.requests.DelegatedAdminRelationshipRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.DelegatedAdminRelationshipRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class DelegatedAdminRelationshipRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public DelegatedAdminAccessAssignmentCollectionRequestBuilder accessAssignments() {
-        return new DelegatedAdminAccessAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminAccessAssignmentCollectionRequestBuilder accessAssignments() {
+        return new com.microsoft.graph.requests.DelegatedAdminAccessAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessAssignments"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class DelegatedAdminRelationshipRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public DelegatedAdminAccessAssignmentRequestBuilder accessAssignments(@Nonnull final String id) {
-        return new DelegatedAdminAccessAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminAccessAssignmentRequestBuilder accessAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DelegatedAdminAccessAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DelegatedAdminRelationshipOperation collection
@@ -88,8 +82,8 @@ public class DelegatedAdminRelationshipRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public DelegatedAdminRelationshipOperationCollectionRequestBuilder operations() {
-        return new DelegatedAdminRelationshipOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.DelegatedAdminRelationshipOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class DelegatedAdminRelationshipRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public DelegatedAdminRelationshipOperationRequestBuilder operations(@Nonnull final String id) {
-        return new DelegatedAdminRelationshipOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DelegatedAdminRelationshipOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DelegatedAdminRelationshipRequest collection
@@ -108,8 +102,8 @@ public class DelegatedAdminRelationshipRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public DelegatedAdminRelationshipRequestCollectionRequestBuilder requests() {
-        return new DelegatedAdminRelationshipRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("requests"), getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipRequestCollectionRequestBuilder requests() {
+        return new com.microsoft.graph.requests.DelegatedAdminRelationshipRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("requests"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class DelegatedAdminRelationshipRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public DelegatedAdminRelationshipRequestRequestBuilder requests(@Nonnull final String id) {
-        return new DelegatedAdminRelationshipRequestRequestBuilder(getRequestUrlWithAdditionalSegment("requests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminRelationshipRequestRequestBuilder requests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DelegatedAdminRelationshipRequestRequestBuilder(getRequestUrlWithAdditionalSegment("requests") + "/" + id, getClient(), null);
     }
 }

@@ -9,10 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.IosLobAppProvisioningConfigurationAssignment;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatus;
-import com.microsoft.graph.models.MobileAppProvisioningConfigGroupAssignment;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage;
@@ -122,7 +118,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public IosLobAppProvisioningConfigurationAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Device Statuses.
@@ -131,7 +127,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
      * The Group Assignments.
@@ -140,7 +136,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
     @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
 	@Nullable
-    public MobileAppProvisioningConfigGroupAssignmentCollectionPage groupAssignments;
+    public com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentCollectionPage groupAssignments;
 
     /**
      * The User Statuses.
@@ -149,7 +145,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 
 
     /**
@@ -162,19 +158,19 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), IosLobAppProvisioningConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.IosLobAppProvisioningConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("groupAssignments")) {
-            groupAssignments = serializer.deserializeObject(json.get("groupAssignments"), MobileAppProvisioningConfigGroupAssignmentCollectionPage.class);
+            groupAssignments = serializer.deserializeObject(json.get("groupAssignments"), com.microsoft.graph.requests.MobileAppProvisioningConfigGroupAssignmentCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses"), ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
         }
     }
 }

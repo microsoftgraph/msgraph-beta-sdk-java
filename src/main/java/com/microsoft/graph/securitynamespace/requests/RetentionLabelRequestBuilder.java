@@ -8,9 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.RetentionLabel;
-import com.microsoft.graph.security.requests.DispositionReviewStageCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.DispositionReviewStageRequestBuilder;
-import com.microsoft.graph.security.requests.RetentionEventTypeWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +62,8 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder<RetentionLa
      * @return the collection request builder
      */
     @Nonnull
-    public DispositionReviewStageCollectionRequestBuilder dispositionReviewStages() {
-        return new DispositionReviewStageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dispositionReviewStages"), getClient(), null);
+    public com.microsoft.graph.security.requests.DispositionReviewStageCollectionRequestBuilder dispositionReviewStages() {
+        return new com.microsoft.graph.security.requests.DispositionReviewStageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dispositionReviewStages"), getClient(), null);
     }
 
     /**
@@ -76,8 +73,8 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder<RetentionLa
      * @param id the item identifier
      */
     @Nonnull
-    public DispositionReviewStageRequestBuilder dispositionReviewStages(@Nonnull final String id) {
-        return new DispositionReviewStageRequestBuilder(getRequestUrlWithAdditionalSegment("dispositionReviewStages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.DispositionReviewStageRequestBuilder dispositionReviewStages(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.DispositionReviewStageRequestBuilder(getRequestUrlWithAdditionalSegment("dispositionReviewStages") + "/" + id, getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder<RetentionLa
      * @return the RetentionEventTypeWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public RetentionEventTypeWithReferenceRequestBuilder retentionEventType() {
-        return new RetentionEventTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEventType"), getClient(), null);
+    public com.microsoft.graph.security.requests.RetentionEventTypeWithReferenceRequestBuilder retentionEventType() {
+        return new com.microsoft.graph.security.requests.RetentionEventTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEventType"), getClient(), null);
     }
 }

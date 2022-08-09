@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MobileAppInstallStatus;
-import com.microsoft.graph.requests.MobileAppWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder<Mob
      * @return the MobileAppWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public MobileAppWithReferenceRequestBuilder app() {
-        return new MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppWithReferenceRequestBuilder app() {
+        return new com.microsoft.graph.requests.MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
     }
 }

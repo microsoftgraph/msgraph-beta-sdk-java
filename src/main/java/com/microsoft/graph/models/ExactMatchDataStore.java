@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExactMatchSession;
 import com.microsoft.graph.models.ExactMatchDataStoreBase;
 import com.microsoft.graph.requests.ExactMatchSessionCollectionPage;
 
@@ -35,7 +34,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements IJso
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose
 	@Nullable
-    public ExactMatchSessionCollectionPage sessions;
+    public com.microsoft.graph.requests.ExactMatchSessionCollectionPage sessions;
 
 
     /**
@@ -48,7 +47,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements IJso
 
 
         if (json.has("sessions")) {
-            sessions = serializer.deserializeObject(json.get("sessions"), ExactMatchSessionCollectionPage.class);
+            sessions = serializer.deserializeObject(json.get("sessions"), com.microsoft.graph.requests.ExactMatchSessionCollectionPage.class);
         }
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InformationProtectionPolicy;
-import com.microsoft.graph.requests.InformationProtectionLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.InformationProtectionLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public InformationProtectionLabelCollectionRequestBuilder labels() {
-        return new InformationProtectionLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("labels"), getClient(), null);
+    public com.microsoft.graph.requests.InformationProtectionLabelCollectionRequestBuilder labels() {
+        return new com.microsoft.graph.requests.InformationProtectionLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("labels"), getClient(), null);
     }
 
     /**
@@ -77,7 +75,7 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public InformationProtectionLabelRequestBuilder labels(@Nonnull final String id) {
-        return new InformationProtectionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("labels") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.InformationProtectionLabelRequestBuilder labels(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.InformationProtectionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("labels") + "/" + id, getClient(), null);
     }
 }

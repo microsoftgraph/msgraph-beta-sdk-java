@@ -11,12 +11,6 @@ import com.microsoft.graph.models.DeviceManagementTemplate;
 import com.microsoft.graph.models.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.DeviceManagementIntent;
 import com.microsoft.graph.models.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementTemplateRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -73,8 +67,8 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder<D
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories() {
-        return new DeviceManagementTemplateSettingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories() {
+        return new com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     /**
@@ -84,8 +78,8 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder<D
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementTemplateSettingCategoryRequestBuilder categories(@Nonnull final String id) {
-        return new DeviceManagementTemplateSettingCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementTemplateSettingCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementTemplate collection
@@ -93,8 +87,8 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder<D
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementTemplateCollectionRequestBuilder migratableTo() {
-        return new DeviceManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementTemplateCollectionRequestBuilder migratableTo() {
+        return new com.microsoft.graph.requests.DeviceManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo"), getClient(), null);
     }
 
     /**
@@ -104,8 +98,8 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder<D
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementTemplateRequestBuilder migratableTo(@Nonnull final String id) {
-        return new DeviceManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementTemplateRequestBuilder migratableTo(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementSettingInstance collection
@@ -113,8 +107,8 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder<D
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementSettingInstanceCollectionRequestBuilder settings() {
-        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder settings() {
+        return new com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
     /**
@@ -124,8 +118,8 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder<D
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementSettingInstanceRequestBuilder settings(@Nonnull final String id) {
-        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder settings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
 
     /**

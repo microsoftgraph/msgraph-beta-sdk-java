@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OrganizationSettings;
-import com.microsoft.graph.requests.MicrosoftApplicationDataAccessSettingsRequestBuilder;
-import com.microsoft.graph.requests.InsightsSettingsRequestBuilder;
-import com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
      * @return the MicrosoftApplicationDataAccessSettingsRequestBuilder instance
      */
     @Nonnull
-    public MicrosoftApplicationDataAccessSettingsRequestBuilder microsoftApplicationDataAccess() {
-        return new MicrosoftApplicationDataAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftApplicationDataAccess"), getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftApplicationDataAccessSettingsRequestBuilder microsoftApplicationDataAccess() {
+        return new com.microsoft.graph.requests.MicrosoftApplicationDataAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftApplicationDataAccess"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
      * @return the InsightsSettingsRequestBuilder instance
      */
     @Nonnull
-    public InsightsSettingsRequestBuilder itemInsights() {
-        return new InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder itemInsights() {
+        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
     }
 
     /**
@@ -87,8 +83,8 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
      * @return the InsightsSettingsRequestBuilder instance
      */
     @Nonnull
-    public InsightsSettingsRequestBuilder peopleInsights() {
-        return new InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("peopleInsights"), getClient(), null);
+    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder peopleInsights() {
+        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("peopleInsights"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ProfileCardProperty collection
@@ -96,8 +92,8 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
      * @return the collection request builder
      */
     @Nonnull
-    public ProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
-        return new ProfileCardPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties"), getClient(), null);
+    public com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
+        return new com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties"), getClient(), null);
     }
 
     /**
@@ -107,7 +103,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
      * @param id the item identifier
      */
     @Nonnull
-    public ProfileCardPropertyRequestBuilder profileCardProperties(@Nonnull final String id) {
-        return new ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder profileCardProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
     }
 }

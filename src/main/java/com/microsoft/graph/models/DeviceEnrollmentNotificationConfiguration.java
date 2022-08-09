@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EnrollmentNotificationBrandingOptions;
 import com.microsoft.graph.models.EnrollmentRestrictionPlatformType;
 import com.microsoft.graph.models.EnrollmentNotificationTemplateType;
@@ -30,7 +31,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
 
     /**
      * The Branding Options.
-     * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails.
+     * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails, unknownFutureValue.
      */
     @SerializedName(value = "brandingOptions", alternate = {"BrandingOptions"})
     @Expose
@@ -54,6 +55,15 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     @Expose
 	@Nullable
     public java.util.UUID notificationMessageTemplateId;
+
+    /**
+     * The Notification Templates.
+     * The list of notification data -
+     */
+    @SerializedName(value = "notificationTemplates", alternate = {"NotificationTemplates"})
+    @Expose
+	@Nullable
+    public java.util.List<String> notificationTemplates;
 
     /**
      * The Platform Type.

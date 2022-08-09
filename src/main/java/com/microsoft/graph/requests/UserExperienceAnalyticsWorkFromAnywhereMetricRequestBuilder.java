@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
-import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder extends
      * @return the collection request builder
      */
     @Nonnull
-    public UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionRequestBuilder metricDevices() {
-        return new UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("metricDevices"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionRequestBuilder metricDevices() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("metricDevices"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder extends
      * @param id the item identifier
      */
     @Nonnull
-    public UserExperienceAnalyticsWorkFromAnywhereDeviceRequestBuilder metricDevices(@Nonnull final String id) {
-        return new UserExperienceAnalyticsWorkFromAnywhereDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("metricDevices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceRequestBuilder metricDevices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("metricDevices") + "/" + id, getClient(), null);
     }
 }

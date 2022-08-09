@@ -11,6 +11,7 @@ import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.models.CloudPcBulkRemoteActionResult;
 import com.microsoft.graph.models.RestoreTimeRange;
 import com.microsoft.graph.models.CloudPcReviewStatus;
+import com.microsoft.graph.models.PowerliftDownloadRequest;
 import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.AdministratorConfiguredDeviceComplianceState;
@@ -18,27 +19,10 @@ import com.microsoft.graph.models.DeviceLogCollectionRequest;
 import com.microsoft.graph.models.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.ConfigurationManagerAction;
 import com.microsoft.graph.models.UpdateWindowsDeviceAccountActionParameter;
+import com.microsoft.graph.models.PowerliftIncidentMetadata;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
 import com.microsoft.graph.models.OemWarranty;
-import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.SecurityBaselineStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.SecurityBaselineStateRequestBuilder;
-import com.microsoft.graph.requests.DetectedAppCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.DetectedAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DeviceCategoryRequestBuilder;
-import com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceLogCollectionResponseRequestBuilder;
-import com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.WindowsProtectionStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -110,8 +94,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder assignmentFilterEvaluationStatusDetails() {
-        return new AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails"), getClient(), null);
+    public com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder assignmentFilterEvaluationStatusDetails() {
+        return new com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails"), getClient(), null);
     }
 
     /**
@@ -121,8 +105,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public AssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(@Nonnull final String id) {
-        return new AssignmentFilterEvaluationStatusDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceCompliancePolicyState collection
@@ -130,8 +114,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
-        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
     }
 
     /**
@@ -141,8 +125,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
-        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationState collection
@@ -150,8 +134,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
-        return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
+        return new com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
     }
 
     /**
@@ -161,8 +145,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationStateRequestBuilder deviceConfigurationStates(@Nonnull final String id) {
-        return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder deviceConfigurationStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceMobileAppConfigurationState collection
@@ -170,8 +154,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates() {
-        return new ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates"), getClient(), null);
     }
 
     /**
@@ -181,8 +165,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SecurityBaselineState collection
@@ -190,8 +174,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public SecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
-        return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
+    public com.microsoft.graph.requests.SecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
+        return new com.microsoft.graph.requests.SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
     }
 
     /**
@@ -201,8 +185,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public SecurityBaselineStateRequestBuilder securityBaselineStates(@Nonnull final String id) {
-        return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SecurityBaselineStateRequestBuilder securityBaselineStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DetectedApp collection
@@ -210,8 +194,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public DetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
-        return new DetectedAppCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);
+    public com.microsoft.graph.requests.DetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
+        return new com.microsoft.graph.requests.DetectedAppCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);
     }
 
     /**
@@ -221,8 +205,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public DetectedAppWithReferenceRequestBuilder detectedApps(@Nonnull final String id) {
-        return new DetectedAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DetectedAppWithReferenceRequestBuilder detectedApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DetectedAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps") + "/" + id, getClient(), null);
     }
 
     /**
@@ -231,8 +215,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the DeviceCategoryRequestBuilder instance
      */
     @Nonnull
-    public DeviceCategoryRequestBuilder deviceCategory() {
-        return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceCategoryRequestBuilder deviceCategory() {
+        return new com.microsoft.graph.requests.DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceLogCollectionResponse collection
@@ -240,8 +224,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests() {
-        return new DeviceLogCollectionResponseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests() {
+        return new com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests"), getClient(), null);
     }
 
     /**
@@ -251,8 +235,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceLogCollectionResponseRequestBuilder logCollectionRequests(@Nonnull final String id) {
-        return new DeviceLogCollectionResponseRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceLogCollectionResponseRequestBuilder logCollectionRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceLogCollectionResponseRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the User collection
@@ -260,8 +244,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public UserCollectionWithReferencesRequestBuilder users() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder users() {
+        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
     /**
@@ -271,8 +255,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder users(@Nonnull final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder users(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 
     /**
@@ -281,8 +265,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the WindowsProtectionStateRequestBuilder instance
      */
     @Nonnull
-    public WindowsProtectionStateRequestBuilder windowsProtectionState() {
-        return new WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionState"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsProtectionStateRequestBuilder windowsProtectionState() {
+        return new com.microsoft.graph.requests.WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionState"), getClient(), null);
     }
 
     /**
@@ -486,7 +470,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Remove device from Device Firmware Configuration Interface management
      * @return the request builder
      */
     @Nonnull

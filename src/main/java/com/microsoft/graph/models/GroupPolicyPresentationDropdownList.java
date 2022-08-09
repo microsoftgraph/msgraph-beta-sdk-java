@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GroupPolicyPresentationDropdownListItem;
-import com.microsoft.graph.models.GroupPolicyPresentation;
+import com.microsoft.graph.models.GroupPolicyUploadedPresentation;
 
 
 import com.google.gson.JsonObject;
@@ -24,7 +24,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Group Policy Presentation Dropdown List.
  */
-public class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation implements IJsonBackedObject {
+public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPresentation implements IJsonBackedObject {
 
 
     /**

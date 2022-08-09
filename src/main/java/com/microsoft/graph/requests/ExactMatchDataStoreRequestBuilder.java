@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ExactMatchDataStore;
-import com.microsoft.graph.requests.ExactMatchSessionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExactMatchSessionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class ExactMatchDataStoreRequestBuilder extends BaseRequestBuilder<ExactM
      * @return the collection request builder
      */
     @Nonnull
-    public ExactMatchSessionCollectionRequestBuilder sessions() {
-        return new ExactMatchSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sessions"), getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchSessionCollectionRequestBuilder sessions() {
+        return new com.microsoft.graph.requests.ExactMatchSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sessions"), getClient(), null);
     }
 
     /**
@@ -76,8 +74,8 @@ public class ExactMatchDataStoreRequestBuilder extends BaseRequestBuilder<ExactM
      * @param id the item identifier
      */
     @Nonnull
-    public ExactMatchSessionRequestBuilder sessions(@Nonnull final String id) {
-        return new ExactMatchSessionRequestBuilder(getRequestUrlWithAdditionalSegment("sessions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchSessionRequestBuilder sessions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExactMatchSessionRequestBuilder(getRequestUrlWithAdditionalSegment("sessions") + "/" + id, getClient(), null);
     }
 
     /**

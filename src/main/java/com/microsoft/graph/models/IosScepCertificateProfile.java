@@ -14,7 +14,6 @@ import com.microsoft.graph.models.CustomSubjectAlternativeName;
 import com.microsoft.graph.models.ExtendedKeyUsage;
 import com.microsoft.graph.models.KeySize;
 import com.microsoft.graph.models.KeyUsages;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.IosTrustedRootCertificate;
 import com.microsoft.graph.models.IosCertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
@@ -113,7 +112,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
     /**
      * The Root Certificate.
@@ -135,7 +134,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }
