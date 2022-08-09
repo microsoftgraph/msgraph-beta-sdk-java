@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics work from anywhere model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * The health state of the user experience analytics work from anywhere model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

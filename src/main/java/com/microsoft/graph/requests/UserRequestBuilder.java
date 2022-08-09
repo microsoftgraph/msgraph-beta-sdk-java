@@ -35,6 +35,8 @@ import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.UsageRightCollectionRequestBuilder;
 import com.microsoft.graph.requests.UsageRightRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -248,6 +250,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("informationProtection"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServicePrincipalCollectionWithReferencesRequestBuilder appRoleAssignedResources() {
+        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignedResources"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServicePrincipalWithReferenceRequestBuilder appRoleAssignedResources(@Nonnull final String id) {
+        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignedResources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AppRoleAssignment collection

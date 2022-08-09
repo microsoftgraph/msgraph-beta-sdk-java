@@ -35,6 +35,8 @@ import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.UsageRightCollectionRequestBuilder;
 import com.microsoft.graph.requests.UsageRightRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;

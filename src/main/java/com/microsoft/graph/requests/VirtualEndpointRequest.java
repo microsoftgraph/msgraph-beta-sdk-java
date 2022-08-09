@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder;
+import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcExternalPartnerSettingRequestBuilder;
 import com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder;

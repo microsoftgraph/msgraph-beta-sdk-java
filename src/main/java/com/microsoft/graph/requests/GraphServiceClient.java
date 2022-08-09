@@ -163,6 +163,7 @@ import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.SolutionsRootRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.PrivacyRequestBuilder;
@@ -177,6 +178,7 @@ import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
 import com.microsoft.graph.requests.TenantRelationshipRequestBuilder;
+import com.microsoft.graph.requests.AdminRequestBuilder;
 import com.microsoft.graph.requests.EducationRootRequestBuilder;
 import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
 import com.microsoft.graph.requests.CloudCommunicationsRequestBuilder;
@@ -187,12 +189,13 @@ import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.FinancialsRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
+import com.microsoft.graph.security.requests.ThreatSubmissionRootRequestBuilder;
 import com.microsoft.graph.requests.CommsApplicationRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
 import com.microsoft.graph.requests.StorageRequestBuilder;
-import com.microsoft.graph.requests.AdminRequestBuilder;
+import com.microsoft.graph.requests.EmployeeExperienceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -1982,6 +1985,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the SolutionsRoot
+     */
+    @Nonnull
+    public SolutionsRootRequestBuilder solutions() {
+        return new SolutionsRootRequestBuilder(getServiceRoot() + "/solutions", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the DeviceManagement
      */
     @Nonnull
@@ -2132,6 +2145,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Admin
+     */
+    @Nonnull
+    public AdminRequestBuilder admin() {
+        return new AdminRequestBuilder(getServiceRoot() + "/admin", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the EducationRoot
      */
     @Nonnull
@@ -2242,6 +2265,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the ThreatSubmissionRoot
+     */
+    @Nonnull
+    public ThreatSubmissionRootRequestBuilder threatSubmission() {
+        return new ThreatSubmissionRootRequestBuilder(getServiceRoot() + "/threatSubmission", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the CommsApplication
      */
     @Nonnull
@@ -2292,10 +2325,10 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Admin
+     * @return the EmployeeExperience
      */
     @Nonnull
-    public AdminRequestBuilder admin() {
-        return new AdminRequestBuilder(getServiceRoot() + "/admin", this, null);
+    public EmployeeExperienceRequestBuilder employeeExperience() {
+        return new EmployeeExperienceRequestBuilder(getServiceRoot() + "/employeeExperience", this, null);
     }
 }

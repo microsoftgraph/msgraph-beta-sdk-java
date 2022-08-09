@@ -27,7 +27,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
 
     /**
      * The Azure Resource Group Name.
-     * 
+     * The name of the Azure resource group that contains the Log Analytics workspace.
      */
     @SerializedName(value = "azureResourceGroupName", alternate = {"AzureResourceGroupName"})
     @Expose
@@ -36,7 +36,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
 
     /**
      * The Azure Subscription Id.
-     * 
+     * The Azure subscription ID that contains the Log Analytics workspace.
      */
     @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
@@ -45,7 +45,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
 
     /**
      * The Workspace Name.
-     * 
+     * The name of the Log Analytics workspace.
      */
     @SerializedName(value = "workspaceName", alternate = {"WorkspaceName"})
     @Expose

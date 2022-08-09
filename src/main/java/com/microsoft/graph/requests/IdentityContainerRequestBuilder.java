@@ -10,10 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityContainer;
 import com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationEventListenerCollectionRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationEventListenerRequestBuilder;
 import com.microsoft.graph.requests.B2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.CustomAuthenticationExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.CustomAuthenticationExtensionRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder;
@@ -91,6 +95,26 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
         return new IdentityApiConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the AuthenticationEventListener collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AuthenticationEventListenerCollectionRequestBuilder authenticationEventListeners() {
+        return new AuthenticationEventListenerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventListeners"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuthenticationEventListener item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AuthenticationEventListenerRequestBuilder authenticationEventListeners(@Nonnull final String id) {
+        return new AuthenticationEventListenerRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventListeners") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the B2cIdentityUserFlow collection
      *
      * @return the collection request builder
@@ -129,6 +153,26 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     @Nonnull
     public B2xIdentityUserFlowRequestBuilder b2xUserFlows(@Nonnull final String id) {
         return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CustomAuthenticationExtension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomAuthenticationExtensionCollectionRequestBuilder customAuthenticationExtensions() {
+        return new CustomAuthenticationExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customAuthenticationExtensions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomAuthenticationExtension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomAuthenticationExtensionRequestBuilder customAuthenticationExtensions(@Nonnull final String id) {
+        return new CustomAuthenticationExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("customAuthenticationExtensions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IdentityProviderBase collection

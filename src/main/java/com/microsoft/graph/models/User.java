@@ -28,6 +28,7 @@ import com.microsoft.graph.models.UserAnalytics;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.UsageRight;
 import com.microsoft.graph.models.InformationProtection;
+import com.microsoft.graph.models.ServicePrincipal;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.LicenseDetails;
@@ -78,6 +79,7 @@ import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.UsageRightCollectionPage;
+import com.microsoft.graph.requests.ServicePrincipalCollectionPage;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
@@ -491,7 +493,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+     * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      */
     @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
@@ -545,7 +547,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -563,7 +565,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -644,7 +646,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Security Identifier.
-     * 
+     * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
     @Expose
@@ -806,7 +808,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Name.
-     * The preferred name for the user. Returned only on $select.
+     * The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      */
     @SerializedName(value = "preferredName", alternate = {"PreferredName"})
     @Expose
@@ -875,6 +877,13 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public InformationProtection informationProtection;
+
+    /**
+     * The App Role Assigned Resources.
+     * 
+     */
+	@Nullable
+    public ServicePrincipalCollectionPage appRoleAssignedResources;
 
     /**
      * The App Role Assignments.
@@ -963,7 +972,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;
@@ -1119,7 +1128,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -1404,6 +1413,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("usageRights")) {
             usageRights = serializer.deserializeObject(json.get("usageRights"), UsageRightCollectionPage.class);
+        }
+
+        if (json.has("appRoleAssignedResources")) {
+            appRoleAssignedResources = serializer.deserializeObject(json.get("appRoleAssignedResources"), ServicePrincipalCollectionPage.class);
         }
 
         if (json.has("appRoleAssignments")) {

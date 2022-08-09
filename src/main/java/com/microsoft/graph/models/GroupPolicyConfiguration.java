@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.GroupPolicyConfigurationIngestionType;
 import com.microsoft.graph.models.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.GroupPolicyDefinitionValue;
 import com.microsoft.graph.models.Entity;
@@ -65,6 +66,15 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastModifiedDateTime;
+
+    /**
+     * The Policy Configuration Ingestion Type.
+     * Type of definitions configured for this policy. Possible values are: unknown, custom, builtIn, mixed, unknownFutureValue.
+     */
+    @SerializedName(value = "policyConfigurationIngestionType", alternate = {"PolicyConfigurationIngestionType"})
+    @Expose
+	@Nullable
+    public GroupPolicyConfigurationIngestionType policyConfigurationIngestionType;
 
     /**
      * The Role Scope Tag Ids.

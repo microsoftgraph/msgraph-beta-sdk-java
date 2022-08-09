@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.NdesConnectorState;
 import com.microsoft.graph.models.Entity;
 
@@ -27,6 +28,15 @@ public class NdesConnector extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Connector Version.
+     * The build version of the Ndes Connector.
+     */
+    @SerializedName(value = "connectorVersion", alternate = {"ConnectorVersion"})
+    @Expose
+	@Nullable
+    public String connectorVersion;
+
+    /**
      * The Display Name.
      * The friendly name of the Ndes Connector.
      */
@@ -36,6 +46,15 @@ public class NdesConnector extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Enrolled Date Time.
+     * Timestamp when on-prem certificate connector was enrolled in Intune.
+     */
+    @SerializedName(value = "enrolledDateTime", alternate = {"EnrolledDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime enrolledDateTime;
+
+    /**
      * The Last Connection Date Time.
      * Last connection time for the Ndes Connector
      */
@@ -43,6 +62,24 @@ public class NdesConnector extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastConnectionDateTime;
+
+    /**
+     * The Machine Name.
+     * Name of the machine running on-prem certificate connector service.
+     */
+    @SerializedName(value = "machineName", alternate = {"MachineName"})
+    @Expose
+	@Nullable
+    public String machineName;
+
+    /**
+     * The Role Scope Tag Ids.
+     * List of Scope Tags for this Entity instance.
+     */
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> roleScopeTagIds;
 
     /**
      * The State.

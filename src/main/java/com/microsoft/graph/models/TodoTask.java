@@ -52,7 +52,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Body Last Modified Date Time.
-     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      */
     @SerializedName(value = "bodyLastModifiedDateTime", alternate = {"BodyLastModifiedDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * The date in the specified time zone that the task was finished.
+     * The date and time in the specified time zone that the task was finished.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -88,7 +88,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * The date in the specified time zone that the task is to be finished.
+     * The date and time in the specified time zone that the task is to be finished.
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
@@ -97,7 +97,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * 
+     * Indicates whether the task has attachments.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -142,12 +142,21 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Reminder Date Time.
-     * The date and time for a reminder alert of the task to occur.
+     * The date and time in the specified time zone for a reminder alert of the task to occur.
      */
     @SerializedName(value = "reminderDateTime", alternate = {"ReminderDateTime"})
     @Expose
 	@Nullable
     public DateTimeTimeZone reminderDateTime;
+
+    /**
+     * The Start Date Time.
+     * The date and time in the specified time zone at which the task is scheduled to start.
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone startDateTime;
 
     /**
      * The Status.
@@ -169,7 +178,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * 
+     * A collection of file attachments for the task.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose

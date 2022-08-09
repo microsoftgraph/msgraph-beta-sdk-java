@@ -31,7 +31,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
     /**
      * The Label Policy Settings.
-     * 
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
      */
     @SerializedName(value = "labelPolicySettings", alternate = {"LabelPolicySettings"})
     @Expose
@@ -40,7 +40,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
     /**
      * The Sensitivity Labels.
-     * 
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      */
     @SerializedName(value = "sensitivityLabels", alternate = {"SensitivityLabels"})
     @Expose

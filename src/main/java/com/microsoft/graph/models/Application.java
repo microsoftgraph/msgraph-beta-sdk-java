@@ -18,6 +18,7 @@ import com.microsoft.graph.models.OptionalClaims;
 import com.microsoft.graph.models.ParentalControlSettings;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PublicClientApplication;
+import com.microsoft.graph.models.RequestSignatureVerification;
 import com.microsoft.graph.models.RequiredResourceAccess;
 import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
@@ -67,7 +68,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -246,6 +247,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String publisherDomain;
 
     /**
+     * The Request Signature Verification.
+     * 
+     */
+    @SerializedName(value = "requestSignatureVerification", alternate = {"RequestSignatureVerification"})
+    @Expose
+	@Nullable
+    public RequestSignatureVerification requestSignatureVerification;
+
+    /**
      * The Required Resource Access.
      * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
      */
@@ -362,7 +372,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created On Behalf Of.
-     * 
+     * Supports $filter (eq when counting empty collections). Read-only.
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -371,7 +381,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
@@ -396,7 +406,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      */
 	@Nullable
     public DirectoryObjectCollectionPage owners;

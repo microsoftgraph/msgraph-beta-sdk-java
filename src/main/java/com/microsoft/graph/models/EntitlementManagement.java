@@ -22,6 +22,7 @@ import com.microsoft.graph.models.AccessPackageResource;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.ConnectedOrganization;
 import com.microsoft.graph.models.EntitlementManagementSettings;
+import com.microsoft.graph.models.AccessPackageSubject;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApprovalCollectionPage;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
@@ -35,6 +36,7 @@ import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage
 import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
 import com.microsoft.graph.requests.AccessPackageCollectionPage;
 import com.microsoft.graph.requests.ConnectedOrganizationCollectionPage;
+import com.microsoft.graph.requests.AccessPackageSubjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -168,6 +170,15 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 	@Nullable
     public EntitlementManagementSettings settings;
 
+    /**
+     * The Subjects.
+     * 
+     */
+    @SerializedName(value = "subjects", alternate = {"Subjects"})
+    @Expose
+	@Nullable
+    public AccessPackageSubjectCollectionPage subjects;
+
 
     /**
      * Sets the raw JSON object
@@ -224,6 +235,10 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("connectedOrganizations")) {
             connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations"), ConnectedOrganizationCollectionPage.class);
+        }
+
+        if (json.has("subjects")) {
+            subjects = serializer.deserializeObject(json.get("subjects"), AccessPackageSubjectCollectionPage.class);
         }
     }
 }

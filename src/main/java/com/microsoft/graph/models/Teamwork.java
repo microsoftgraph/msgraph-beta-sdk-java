@@ -13,10 +13,12 @@ import com.microsoft.graph.models.WorkforceIntegration;
 import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.TeamworkDevice;
 import com.microsoft.graph.models.TeamsAppSettings;
+import com.microsoft.graph.models.TeamTemplate;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
 import com.microsoft.graph.requests.DeletedTeamCollectionPage;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionPage;
+import com.microsoft.graph.requests.TeamTemplateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -44,7 +46,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Teams.
-     * 
+     * A collection of deleted teams.
      */
     @SerializedName(value = "deletedTeams", alternate = {"DeletedTeams"})
     @Expose
@@ -62,12 +64,21 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App Settings.
-     * 
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      */
     @SerializedName(value = "teamsAppSettings", alternate = {"TeamsAppSettings"})
     @Expose
 	@Nullable
     public TeamsAppSettings teamsAppSettings;
+
+    /**
+     * The Team Templates.
+     * The templates associated with a team.
+     */
+    @SerializedName(value = "teamTemplates", alternate = {"TeamTemplates"})
+    @Expose
+	@Nullable
+    public TeamTemplateCollectionPage teamTemplates;
 
 
     /**
@@ -89,6 +100,10 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
         if (json.has("devices")) {
             devices = serializer.deserializeObject(json.get("devices"), TeamworkDeviceCollectionPage.class);
+        }
+
+        if (json.has("teamTemplates")) {
+            teamTemplates = serializer.deserializeObject(json.get("teamTemplates"), TeamTemplateCollectionPage.class);
         }
     }
 }

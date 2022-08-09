@@ -142,6 +142,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public Boolean azureADRegistered;
 
     /**
+     * The Bootstrap Token Escrowed.
+     * Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
+     */
+    @SerializedName(value = "bootstrapTokenEscrowed", alternate = {"BootstrapTokenEscrowed"})
+    @Expose
+	@Nullable
+    public Boolean bootstrapTokenEscrowed;
+
+    /**
      * The Chassis Type.
      * Chassis type of the device. This property is read-only. Possible values are: unknown, desktop, laptop, worksWorkstation, enterpriseServer, phone, tablet, mobileOther, mobileUnknown.
      */
@@ -230,6 +239,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceEnrollmentType deviceEnrollmentType;
+
+    /**
+     * The Device Firmware Configuration Interface Managed.
+     * Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE.
+     */
+    @SerializedName(value = "deviceFirmwareConfigurationInterfaceManaged", alternate = {"DeviceFirmwareConfigurationInterfaceManaged"})
+    @Expose
+	@Nullable
+    public Boolean deviceFirmwareConfigurationInterfaceManaged;
 
     /**
      * The Device Health Attestation State.

@@ -252,6 +252,10 @@ import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectio
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorRequestBuilder;
 import com.microsoft.graph.requests.ConfigManagerCollectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConfigManagerCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageDetailRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageGuidedContentRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
@@ -2826,6 +2830,46 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public ConfigManagerCollectionRequestBuilder configManagerCollections(@Nonnull final String id) {
         return new ConfigManagerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OrganizationalMessageDetail collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OrganizationalMessageDetailCollectionRequestBuilder organizationalMessageDetails() {
+        return new OrganizationalMessageDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageDetails"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OrganizationalMessageDetail item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OrganizationalMessageDetailRequestBuilder organizationalMessageDetails(@Nonnull final String id) {
+        return new OrganizationalMessageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageDetails") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OrganizationalMessageGuidedContent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OrganizationalMessageGuidedContentCollectionRequestBuilder organizationalMessageGuidedContents() {
+        return new OrganizationalMessageGuidedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageGuidedContents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OrganizationalMessageGuidedContent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OrganizationalMessageGuidedContentRequestBuilder organizationalMessageGuidedContents(@Nonnull final String id) {
+        return new OrganizationalMessageGuidedContentRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageGuidedContents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ResourceOperation collection

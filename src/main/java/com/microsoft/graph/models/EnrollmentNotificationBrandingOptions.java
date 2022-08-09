@@ -36,6 +36,10 @@ public enum EnrollmentNotificationBrandingOptions
     */
     INCLUDE_DEVICE_DETAILS,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For EnrollmentNotificationBrandingOptions values that were not expected from the service
     */
     UNEXPECTED_VALUE

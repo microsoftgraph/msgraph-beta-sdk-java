@@ -48,6 +48,15 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Enable Certificate Pinning.
+     * When set to true, certificate pinning will be enforced on connections between the Microsoft Tunnel server and Microsoft Tunnel clients. When set to false, certificate pinning will be disabled.
+     */
+    @SerializedName(value = "enableCertificatePinning", alternate = {"EnableCertificatePinning"})
+    @Expose
+	@Nullable
+    public Boolean enableCertificatePinning;
+
+    /**
      * The Internal Network Probe Url.
      * The MicrosoftTunnelSite's Internal Network Access Probe URL
      */

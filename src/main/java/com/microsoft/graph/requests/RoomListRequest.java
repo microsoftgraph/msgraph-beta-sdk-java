@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoomList;
 import com.microsoft.graph.requests.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.RoomRequestBuilder;
+import com.microsoft.graph.requests.WorkspaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.WorkspaceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

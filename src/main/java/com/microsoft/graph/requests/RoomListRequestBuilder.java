@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoomList;
 import com.microsoft.graph.requests.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.RoomRequestBuilder;
+import com.microsoft.graph.requests.WorkspaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.WorkspaceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,5 +79,25 @@ public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
     @Nonnull
     public RoomRequestBuilder rooms(@Nonnull final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Workspace collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WorkspaceCollectionRequestBuilder workspaces() {
+        return new WorkspaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workspaces"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Workspace item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WorkspaceRequestBuilder workspaces(@Nonnull final String id) {
+        return new WorkspaceRequestBuilder(getRequestUrlWithAdditionalSegment("workspaces") + "/" + id, getClient(), null);
     }
 }

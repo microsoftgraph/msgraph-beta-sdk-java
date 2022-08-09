@@ -13,10 +13,13 @@ import com.microsoft.graph.models.SecurityProviderStatus;
 import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.security.models.InformationProtection;
+import com.microsoft.graph.security.models.Alert;
+import com.microsoft.graph.security.models.Incident;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.security.models.LabelsRoot;
 import com.microsoft.graph.security.models.TriggersRoot;
 import com.microsoft.graph.security.models.TriggerTypesRoot;
+import com.microsoft.graph.security.models.ThreatSubmissionRoot;
 import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.CloudAppSecurityProfile;
 import com.microsoft.graph.models.DomainSecurityProfile;
@@ -31,6 +34,8 @@ import com.microsoft.graph.models.TiIndicator;
 import com.microsoft.graph.models.UserSecurityProfile;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SubjectRightsRequestCollectionPage;
+import com.microsoft.graph.security.requests.AlertCollectionPage;
+import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage;
 import com.microsoft.graph.requests.DomainSecurityProfileCollectionPage;
@@ -96,6 +101,24 @@ public class Security extends Entity implements IJsonBackedObject {
     public InformationProtection informationProtection;
 
     /**
+     * The Alerts_v2.
+     * 
+     */
+    @SerializedName(value = "alerts_v2", alternate = {"Alerts_v2"})
+    @Expose
+	@Nullable
+    public AlertCollectionPage alerts_v2;
+
+    /**
+     * The Incidents.
+     * 
+     */
+    @SerializedName(value = "incidents", alternate = {"Incidents"})
+    @Expose
+	@Nullable
+    public IncidentCollectionPage incidents;
+
+    /**
      * The Attack Simulation.
      * Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
      */
@@ -130,6 +153,15 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TriggerTypesRoot triggerTypes;
+
+    /**
+     * The Threat Submission.
+     * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
+     */
+    @SerializedName(value = "threatSubmission", alternate = {"ThreatSubmission"})
+    @Expose
+	@Nullable
+    public ThreatSubmissionRoot threatSubmission;
 
     /**
      * The Alerts.
@@ -251,6 +283,14 @@ public class Security extends Entity implements IJsonBackedObject {
 
         if (json.has("subjectRightsRequests")) {
             subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), SubjectRightsRequestCollectionPage.class);
+        }
+
+        if (json.has("alerts_v2")) {
+            alerts_v2 = serializer.deserializeObject(json.get("alerts_v2"), AlertCollectionPage.class);
+        }
+
+        if (json.has("incidents")) {
+            incidents = serializer.deserializeObject(json.get("incidents"), IncidentCollectionPage.class);
         }
 
         if (json.has("alerts")) {

@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.DeletedTeamRequestBuilder;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamworkDeviceRequestBuilder;
 import com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder;
+import com.microsoft.graph.requests.TeamTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -137,6 +139,26 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
     @Nonnull
     public TeamsAppSettingsRequestBuilder teamsAppSettings() {
         return new TeamsAppSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppSettings"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TeamTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamTemplateCollectionRequestBuilder teamTemplates() {
+        return new TeamTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("teamTemplates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamTemplateRequestBuilder teamTemplates(@Nonnull final String id) {
+        return new TeamTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("teamTemplates") + "/" + id, getClient(), null);
     }
 
     /**

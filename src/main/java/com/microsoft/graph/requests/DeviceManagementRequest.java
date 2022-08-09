@@ -252,6 +252,10 @@ import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectio
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorRequestBuilder;
 import com.microsoft.graph.requests.ConfigManagerCollectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConfigManagerCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageDetailRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalMessageGuidedContentRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;

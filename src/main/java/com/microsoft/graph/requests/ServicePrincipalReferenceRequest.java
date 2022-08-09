@@ -96,4 +96,30 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the ServicePrincipal
+     *
+     * @param srcServicePrincipal the ServicePrincipal reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> putAsync(@Nonnull final ServicePrincipal srcServicePrincipal) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/servicePrincipals/" + srcServicePrincipal.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the ServicePrincipal
+     *
+     * @param srcServicePrincipal the ServicePrincipal reference to PUT
+     * @return the ServicePrincipal
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public ServicePrincipal put(@Nonnull final ServicePrincipal srcServicePrincipal) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/servicePrincipals/" + srcServicePrincipal.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }
